@@ -2,12 +2,12 @@
 title: Objetos DataTable
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: 2849d159fbfdb0c0739b76fd288a987d4ce3d02f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f0f429d7f28360fd76dfff0e7d4a4eba019e5acf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653258"
 ---
 # <a name="datatables"></a>Objetos DataTable
 Un objeto <xref:System.Data.DataSet> está formado por una colección de tablas, relaciones y restricciones. En ADO.NET, <xref:System.Data.DataTable> objetos se utilizan para representar las tablas en un **DataSet**. Un **DataTable** representa una tabla de datos relacionales en memoria; los datos son locales para el. Aplicación basada en red en el que reside, pero se pueden llenar desde un origen de datos, como Microsoft SQL Server mediante un **DataAdapter** para obtener más información, consulte [llenar un DataSet desde un objeto DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
@@ -55,5 +55,5 @@ Un objeto <xref:System.Data.DataSet> está formado por una colección de tablas,
  [Información general de la biblioteca de clases](../../../../../docs/standard/class-library-overview.md)  
  Proporciona información general de la biblioteca de clases de .NET Framework, incluido el **sistema** espacio de nombres, así como su espacio de nombres de segundo nivel, **System.Data**.  
   
-## <a name="see-also"></a>Vea también  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

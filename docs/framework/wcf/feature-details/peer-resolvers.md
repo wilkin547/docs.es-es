@@ -2,12 +2,12 @@
 title: Resoluciones del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: 01320d98953c8fdc057aeec840ace4b818fcf115
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b16358d05b9e457b4542e41297908e225885dad9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870063"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496850"
 ---
 # <a name="peer-resolvers"></a>Resoluciones del mismo nivel
 Para conectar a una malla, un nodo del mismo nivel necesita las direcciones IP de otros nodos. Las direcciones IP se obtienen al establecer contacto con un servicio de resolución, que toma el identificador de la malla y devuelve una lista de direcciones que corresponden a los nodos registrados con ese identificador de malla concreto. La resolución mantiene una lista de direcciones registradas, que crea mediante el registro de cada nodo de la malla en el servicio.  
@@ -15,7 +15,7 @@ Para conectar a una malla, un nodo del mismo nivel necesita las direcciones IP d
  Puede especificar qué servicio PeerResolver se debe usar mediante la propiedad `Resolver` de <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
 ## <a name="supported-peer-resolvers"></a>Resoluciones del mismo nivel compatibles  
- El canal del mismo nivel admite dos tipos de resoluciones: protocolo de resolución de nombres del mismo nivel (PNRP) y servicios de resolución personalizados.  
+ Canal del mismo nivel admite dos tipos de resoluciones: Protocolo de resolución de nombres del mismo nivel (PNRP) y servicios de resolución personalizados.  
   
  De forma predeterminada, el canal del mismo nivel usa el servicio de resolución del mismo nivel PNRP para la detección de iguales y vecinos en la malla. Para situaciones/plataformas que PNRP no está disponible o factibles, Windows Communication Foundation (WCF) proporciona un servicio de detección alternativo, basada en servidor - la <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. También puede definir explícitamente un servicio de resolución personalizado escribiendo una clase que implemente la interfaz <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>.  
   
@@ -25,7 +25,7 @@ Para conectar a una malla, un nodo del mismo nivel necesita las direcciones IP d
 ### <a name="custom-resolver-services"></a>Servicios de resolución personalizados  
  Cuando el servicio PNRP no está disponible o cuando se desea el control absoluto de la forma de la malla, se puede usar un servicio de resolución personalizado basado en servidor. Este servicio se puede definir explícitamente escribiendo una clase de resolución que implemente la interfaz <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> o utilizando la implementación predeterminada de la bandeja de entrada, <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>.  
   
- Bajo la implementación predeterminada del servicio, los registros de cliente expiran después de una cierta cantidad de tiempo si el cliente no actualiza explícitamente el registro. Los clientes que usen el servicio de resolución deben reconocer el límite máximo de la latencia cliente-servidor para actualizar a tiempo y correctamente los registros. Esto implica elegir un tiempo de espera de actualización adecuado (`RefreshInterval`) en el servicio de resolución. (Para obtener más información, consulte [dentro de la CustomPeerResolverService: registros de cliente](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md).)  
+ Bajo la implementación predeterminada del servicio, los registros de cliente expiran después de una cierta cantidad de tiempo si el cliente no actualiza explícitamente el registro. Los clientes que usen el servicio de resolución deben reconocer el límite máximo de la latencia cliente-servidor para actualizar a tiempo y correctamente los registros. Esto implica elegir un tiempo de espera de actualización adecuado (`RefreshInterval`) en el servicio de resolución. (Para obtener más información, consulte [dentro de CustomPeerResolverService el: Los registros de cliente](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md).)  
   
  El escritor de la aplicación también ha de tener en cuenta la seguridad de la conexión entre los clientes y el servicio de resolución personalizado. Puede hacer esto mediante la configuración de seguridad en <xref:System.ServiceModel.NetTcpBinding> que los clientes usan para ponerse en contacto con el servicio de resolución. Debe especificar las credenciales (si se usan) en el `ChannelFactory` que se usa para crear el canal del mismo nivel. Estas credenciales se pasan a `ChannelFactory` que se usa para crear los canales a la resolución personalizada.  
   
@@ -35,9 +35,9 @@ Para conectar a una malla, un nodo del mismo nivel necesita las direcciones IP d
  Para ver una demostración de cómo implementar un solucionador personalizado, consulte [personalizada del mismo nivel resolución del canal del mismo nivel](https://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Dentro de CustomPeerResolverService: registros de cliente](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+ [Dentro de CustomPeerResolverService: Registros de cliente](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos del canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
- [Seguridad del canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
- [Creación de una aplicación de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>Vea también
+- [Conceptos del canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+- [Seguridad del canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
+- [Creación de una aplicación de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

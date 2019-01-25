@@ -12,19 +12,19 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 93e6365a70f52f730b016cd4d4ac9382baeeba55
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4170ca53252fef3afda026393300e34b99e9d018
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583089"
 ---
 # <a name="array-conversions-visual-basic"></a>Conversión de matrices (Visual Basic)
 Puede convertir un tipo de matriz a un tipo de matriz diferente siempre que se cumplan las condiciones siguientes:  
   
 -   **Rango igual.** Los rangos de las dos matrices deben ser el mismo, es decir, deben tener el mismo número de dimensiones. Sin embargo, las longitudes de las dimensiones correspondientes no es necesario ser el mismo.  
   
--   **Tipo de datos del elemento.** Los tipos de datos de los elementos de ambas matrices deben ser tipos de referencia. No puede convertir un `Integer` de matriz a un `Long` de matriz, o incluso en un `Object` de matriz, porque al menos un tipo de valor participa. Para obtener más información, consulte [tipos de valor y tipos de referencia](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+-   **Tipo de datos del elemento.** Los tipos de datos de los elementos de ambas matrices deben ser tipos de referencia. No puede convertir un `Integer` de matriz a un `Long` de matriz, o incluso en un `Object` de matriz, porque al menos un tipo de valor participa. Para obtener más información, consulta [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
 -   **Conversión de varianza.** Una conversión de ampliación o restricción, debe ser posible entre los tipos de elemento de las dos matrices. Un ejemplo que no cumple este requisito es un intento de conversión entre una `String` matriz y una matriz de una clase derivan de <xref:System.Attribute?displayProperty=nameWithType>. Estos dos tipos no tienen nada en común y no existe ninguna conversión de ningún tipo entre ellos.  
   
@@ -59,12 +59,12 @@ students = New Student(3) {}
 students = names  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Conversiones de tipos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Conversiones implícitas y explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Conversiones entre cadenas y otros tipos](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [Cómo: convertir un objeto a otro tipo en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [Tipos de datos](../../../../visual-basic/language-reference/data-types/index.md)  
- [Funciones de conversión de tipos](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>Vea también
+- [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Conversiones de tipos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Conversiones implícitas y explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Conversiones entre cadenas y otros tipos](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [Cómo: Convertir un objeto a otro tipo en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Tipos de datos](../../../../visual-basic/language-reference/data-types/index.md)
+- [Funciones de conversión de tipos](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

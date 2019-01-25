@@ -1,15 +1,15 @@
 ---
-title: Cómo migrar servicios web de ASP.NET con AJAX habilitado a WCF
+title: Procedimiento Migrar los servicios Web de ASP.NET con AJAX habilitado a WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: cd630fa8a583b5d1efdaefaf899cb6e345e7c7ad
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: de90f4b89f182c55dec3f6fee6836c64535aa2d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638293"
 ---
-# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Cómo migrar servicios web de ASP.NET con AJAX habilitado a WCF
+# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Procedimiento Migrar los servicios Web de ASP.NET con AJAX habilitado a WCF
 En este tema se describe los procedimientos para migrar un servicio AJAX de ASP.NET básico a un servicio de Windows Communication Foundation (WCF) con AJAX habilitado equivalente. Muestra cómo crear una versión WCF funcionalmente equivalente de un servicio AJAX de ASP.NET. Los dos servicios, a continuación, se pueden usar en paralelo, o el servicio de WCF puede utilizarse para reemplazar el servicio de AJAX de ASP.NET.
 
  Migración de ASP.NET AJAX existente servicio a un servicio AJAX de WCF le ofrece las siguientes ventajas:
@@ -22,7 +22,7 @@ En este tema se describe los procedimientos para migrar un servicio AJAX de ASP.
 
  El código resultado del procedimiento descrito en este tema se proporciona en el ejemplo que sigue a los procedimientos.
 
- Para obtener más información acerca de cómo exponer un servicio WCF a través de un extremo con AJAX habilitado, consulte el [Cómo: utilizar la configuración para agregar un extremo ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) tema.
+ Para obtener más información acerca de cómo exponer un servicio WCF a través de un extremo con AJAX habilitado, consulte el [Cómo: Usar configuración para agregar un extremo ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) tema.
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Crear y probar la aplicación de servicio web ASP.NET
 
@@ -36,7 +36,7 @@ En este tema se describe los procedimientos para migrar un servicio AJAX de ASP.
 
 5.  Desde el **compilar** menú, seleccione **compilar solución**.
 
-6.  Desde el **depurar** menú, seleccione **iniciar sin depurar**.
+6.  En el menú **Depurar**, seleccione **Iniciar sin depurar**.
 
 7.  En la página web generada, seleccione la operación `HelloWorld`.
 
@@ -213,4 +213,4 @@ d.Add("two", 2);
 |Caracteres con escape|Siempre con una barra diagonal de escape (/); nunca permite caracteres de JSON no válidos sin escape, como "\n".|Con una barra diagonal de escape (/) para los valores DateTime .|
 
 ## <a name="see-also"></a>Vea también
- [Uso de la configuración para agregar un punto de conexión AJAX de ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [Cómo: Usar la configuración para agregar un extremo de AJAX de ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - manipulating strings [Visual Basic]
 - strings [Visual Basic], manipulating
 ms.assetid: 5d3197eb-fe66-417e-9e2a-20450660c9c6
-ms.openlocfilehash: 350a2b520fbdb3b757975782c40870b8d45166cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 120a0a8d55107e8bd1fb4318da190be0a3647aac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543976"
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>Resumen de manipulaciones de cadenas (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
@@ -32,6 +32,6 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
 |Devolver una matriz de cadenas basada en un filtro.|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|  
 |Devolver un número de subcadenas especificado.|<xref:Microsoft.VisualBasic.Strings.Split%2A>, <xref:Microsoft.VisualBasic.Strings.Join%2A>|  
   
-## <a name="see-also"></a>Vea también  
- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)  
- [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>Vea también
+- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
+- [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

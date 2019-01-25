@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 796f8ea42cc5cbe13729f7b92e15bc214d62734d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4afbc41e680d8a20166095aeb1afbc0de9bbacbc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631772"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName (Método)
-Obtiene el nombre del dominio de aplicación que está representado por este [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
+Obtiene el nombre de dominio de aplicación que está representado por este [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,24 +43,24 @@ HRESULT GetName (
  [in] Tamaño de la matriz `szName`.  
   
  `pcchName`  
- [out] Un puntero al número de caracteres anchos, incluido el carácter null, devuelto en la `szName` matriz.  
+ [out] Un puntero al número de caracteres anchos, incluido el carácter null, devuelve en el `szName` matriz.  
   
  `szName`  
  [out] Matriz en la que se va a almacenar el nombre.  
   
 ## <a name="remarks"></a>Comentarios  
- Si `szName` es distinto de null, el `GetName` método copia hasta `cchName` caracteres (incluido el terminador null) en `szName`. Si se devuelve un valor no nulo en `pcchName`, el número real de caracteres del nombre (incluido el terminador null) se almacena en la `szName` matriz.  
+ Si `szName` es distinto de null, el `GetName` método copia hasta `cchName` caracteres (incluido el terminador nulo) en `szName`. Si se devuelve un valor no null en `pcchName`, el número real de caracteres del nombre (incluido el terminador null) se almacena en el `szName` matriz.  
   
- El `GetName` método devuelve un HRESULT de S_OK, independientemente de cuántos caracteres se han copiado.  
+ El `GetName` método devuelve S_OK HRESULT, independientemente de cuántos caracteres se han copiado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cordebug.idl, CorPub.h  
+ **Encabezado**: CorPub.idl, CorPub.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorPublishAppDomain (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorPublishAppDomain (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)

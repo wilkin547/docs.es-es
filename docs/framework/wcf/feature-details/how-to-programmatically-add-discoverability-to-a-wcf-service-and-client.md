@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Agregar detectabilidad mediante programación a un cliente y un servicio de WCF'
+title: Procedimiento Agregar detectabilidad mediante programación a un cliente y servicio WCF
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 407777b1545fb12eb3ed1787fdba86991c894fdb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a0240d09c07a23c2c578008885e5bca00169acdd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643135"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Cómo: Agregar detectabilidad mediante programación a un cliente y un servicio de WCF
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedimiento Agregar detectabilidad mediante programación a un cliente y servicio WCF
 En este tema se explica cómo hacer que un servicio de Windows Communication Foundation (WCF) que pueda detectar. Se basa en el [autohospedar](https://go.microsoft.com/fwlink/?LinkId=145523) ejemplo.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Para configurar el ejemplo de servicio de host automático existente repara para la detección  
@@ -122,7 +122,7 @@ En este tema se explica cómo hacer que un servicio de Windows Communication Fou
     }  
     ```  
   
-     Este método utiliza la dirección del extremo devuelta de `FindCalculatorServiceAddress` para llamar al servicio de calculadora.  
+     Este método utiliza la dirección del punto de conexión devuelta de `FindCalculatorServiceAddress` para llamar al servicio de calculadora.  
   
 11. Dentro del método `InvokeCalculatorService`, cree una instancia de la clase `CalculatorServiceClient`. Esta clase se define mediante el [autohospedar](https://go.microsoft.com/fwlink/?LinkId=145523) ejemplo. Se ha generado mediante Svcutil.exe.  
   
@@ -340,6 +340,6 @@ namespace DiscoveryClientApp
 }  
 ```  
 
-## <a name="see-also"></a>Vea también  
- [Información general de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Modelo de objetos de detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+## <a name="see-also"></a>Vea también
+- [Información general de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [Modelo de objetos de detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

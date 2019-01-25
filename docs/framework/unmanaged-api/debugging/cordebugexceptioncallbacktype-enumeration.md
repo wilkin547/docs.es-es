@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fc0919a7c05bfcbfb4b54dd0b618564f019f3fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0e9a3b0320ac0be785f0823afef1819ab8a35eb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585554"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType (Enumeración)
 Indica el tipo de devolución de llamada que se realiza desde un [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) eventos.  
@@ -41,19 +41,19 @@ typedef enum CorDebugExceptionCallbackType {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_FIRST_CHANCE`|Se inició una excepción.|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|El proceso de conclusión de la excepción al escribir código de usuario.|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|El proceso de conclusión de la excepción se encontró un `catch` bloque de código de usuario.|  
+|`DEBUG_EXCEPTION_FIRST_CHANCE`|Se produjo una excepción.|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|El proceso de conclusión de la excepción escribió el código de usuario.|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|El proceso de conclusión de la excepción se encuentra un `catch` bloque de código de usuario.|  
 |`DEBUG_EXCEPTION_UNHANDLED`|No se controló la excepción.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

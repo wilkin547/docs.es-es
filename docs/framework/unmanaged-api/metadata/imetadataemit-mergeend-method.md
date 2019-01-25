@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b794a62a0ac0d253f1431be29b43101816dc7233
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 45d85be4e4987e5a5234ca2d57c85a56f9f544bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657030"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd (Método)
-Definir el ámbito de mezclas en actual todos los ámbitos de metadatos especificados por una o más llamadas anteriores a [IMetaDataEmit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).  
+Combina en el actual ámbito de todos los ámbitos de los metadatos especificados por una o varias llamadas anteriores al [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,39 +37,39 @@ HRESULT MergeEnd ();
  Este método no toma ningún parámetro.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta rutina desencadena la verdadera combinación de metadatos, de todos los ámbitos especificados por delante de las llamadas a de importación `IMetaDataEmit::Merge`, en el ámbito de salida actual.  
+ Esta rutina desencadena la combinación real de los metadatos, de todos los ámbitos especificados utilizando delante de las llamadas a de importación `IMetaDataEmit::Merge`, en el ámbito de salida actual.  
   
- Las siguientes condiciones especiales se aplican a la combinación:  
+ Se aplican las siguientes condiciones especiales para la fusión mediante combinación:  
   
--   Nunca se importa un identificador de versión de módulo (MVID), porque es único para los metadatos en el ámbito de importación.  
+-   Un identificador de versión de módulo (MVID) nunca se importa, porque es único para los metadatos en el ámbito de importación.  
   
--   No todo el módulo de las propiedades existentes se sobrescriben.  
+-   No hay propiedades de todo el módulo existentes se sobrescriben.  
   
-     Si ya se han establecido las propiedades del módulo para el ámbito actual, no se importa ninguna propiedad de módulo. Sin embargo, si las propiedades del módulo no se han configurado en el ámbito actual, se importan solo una vez, cuando se encuentran en primer lugar. Si se vuelven a encontrar esas propiedades de módulo, son duplicados. Si se comparan los valores de todas las propiedades de módulo (excepto el MVID) y no se encuentran duplicados, se produce un error.  
+     Si ya se han establecido propiedades del módulo para el ámbito actual, no hay propiedades del módulo se importan. Sin embargo, si no se han establecido las propiedades de módulo en el ámbito actual, se importan solo una vez, cuando se encuentran en primer lugar. Si se vuelven a encontrar las propiedades de módulo, son duplicados. Si se comparan los valores de todas las propiedades de módulo (excepto el MVID) y no se encuentran duplicados, se produce un error.  
   
--   Para obtener definiciones de tipo (`TypeDef`), duplicados no se combinan en el ámbito actual. `TypeDef` se comprueban los objetos duplicados en todas *nombre de objeto completo* + *GUID* + *número de versión*. Si hay una coincidencia de nombre o GUID y cualquiera de los otros dos elementos es diferente, se produce un error. En caso contrario, si coincide con los tres elementos, `MergeEnd` realiza una comprobación rápida para asegurarse de que las entradas son en realidad duplicados; en caso contrario, se produce un error. Esta comprobación superficial busca:  
+-   Para obtener definiciones de tipo (`TypeDef`), no hay duplicados se combinan en el ámbito actual. `TypeDef` se comprueban los objetos duplicados en cada *nombre de objeto completo* + *GUID* + *número de versión*. Si hay una coincidencia en el nombre o GUID y cualquiera de los otros dos elementos es diferente, se produce un error. En caso contrario, si coincide con los tres elementos, `MergeEnd` realiza una comprobación rápida para asegurarse de que las entradas son en realidad duplicados; en caso contrario, se produce un error. Esta comprobación superficial busca:  
   
-    -   Las declaraciones de miembro mismo, que se producen en el mismo orden. Los miembros que estén marcados como `mdPrivateScope` (consulte la [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeración) no se incluyen en esta comprobación; se combinan de manera especial.  
+    -   Las declaraciones de miembro mismo, que se producen en el mismo orden. Los miembros que se marcan como `mdPrivateScope` (consulte la [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeración) no se incluyen en esta comprobación; se combinan de manera especial.  
   
     -   El mismo diseño de clase.  
   
-     Esto significa que un `TypeDef` objeto debe siempre completa y coherente definirse en cada ámbito de metadatos donde se declara; si sus implementaciones de miembros (para una clase) se reparten entre varias unidades de compilación, la definición completa se supone que presentes en cada ámbito y no de forma incremental a cada ámbito. Por ejemplo, si los nombres de parámetro son relevantes para el contrato, se debe emitir la misma manera en cada ámbito; Si no son relevantes, no se emite en metadatos.  
+     Esto significa que un `TypeDef` objeto debe siempre por completo y coherente definirse en cada ámbito de metadatos donde se declara; si sus implementaciones de miembros (para una clase) se reparten entre varias unidades de compilación, la definición completa se supone que presente en cada ámbito y no es incremental para cada ámbito. Por ejemplo, si los nombres de parámetro son relevantes para el contrato, se debe emitir la misma manera en cada ámbito; Si no son relevantes, no se emiten en metadatos.  
   
-     La excepción es que un `TypeDef` objeto puede tener miembros incrementales marcados como `mdPrivateScope`. Al encontrar estos, `MergeEnd` agrega incrementalmente al ámbito actual sin tener en cuenta para los duplicados. Dado que el compilador reconoce el ámbito privado, el compilador debe ser responsable de aplicar las reglas.  
+     La excepción es que un `TypeDef` objeto puede tener miembros incrementales marcados como `mdPrivateScope`. Al encontrar estos, `MergeEnd` agrega incrementalmente el ámbito actual sin tener en cuenta los duplicados. Dado que el compilador reconoce el ámbito privado, el compilador debe ser responsable de aplicar las reglas.  
   
--   Direcciones virtuales relativas (RVA) no se importan o se combinan; el compilador debe volver a emitir esta información.  
+-   No se importan o se combinan; direcciones virtuales relativas (RVA) el compilador se espera volver a emitir esta información.  
   
--   Atributos personalizados se combinan solo cuando se combina el elemento al que se adjunta. Por ejemplo, se combinan los atributos personalizados asociados a una clase cuando la clase aparece por primera vez. Si los atributos personalizados están asociados con un `TypeDef` o `MemberDef` que es específico de la unidad de compilación (por ejemplo, la marca de tiempo de una compilación de miembro), no se combinan y se deja al compilador que quitar o actualizar tales metadatos.  
+-   Se combinan los atributos personalizados solo cuando se combina el elemento al que están conectados. Por ejemplo, se combinan los atributos personalizados asociados a una clase cuando la clase se encuentra en primer lugar. Si los atributos personalizados que están asociados con un `TypeDef` o `MemberDef` específica de la unidad de compilación (por ejemplo, la marca de tiempo de compilación de un miembro), no se combinan y se deja al compilador que quitar o actualizar estos metadatos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MSCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

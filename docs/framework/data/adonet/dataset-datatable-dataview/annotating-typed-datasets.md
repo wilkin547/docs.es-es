@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: c66a11e0662cd007797243c136ec0617ce5be47c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 737f98dd11d6172bb79aaa925ac153c64728e9ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629620"
 ---
 # <a name="annotating-typed-datasets"></a>Comentar conjuntos de datos con tipo
 Las anotaciones permiten modificar los nombres de los elementos del <xref:System.Data.DataSet> con información de tipos sin modificar el esquema subyacente. Modificación de los nombres de los elementos de esquema subyacente haría que el objeto **DataSet** para hacer referencia a objetos que no existen en el origen de datos, así como perder una referencia a los objetos que existen en el origen de datos.  
@@ -46,7 +46,7 @@ Las anotaciones permiten modificar los nombres de los elementos del <xref:System
 |Anotación|Descripción|  
 |----------------|-----------------|  
 |**typedName**|Nombre del objeto.|  
-|**Customers**|Nombre de una colección de objetos.|  
+|**typedPlural**|Nombre de una colección de objetos.|  
 |**typedParent**|Nombre del objeto cuando se hace referencia al mismo en una relación primaria.|  
 |**typedChildren**|Nombre del método para devolver objetos de una relación secundaria.|  
 |**nullValue**|El valor si el valor subyacente es **DBNull**. Consulte la tabla siguiente para **nullValue** anotaciones. El valor predeterminado es **_throw**.|  
@@ -58,7 +58,7 @@ Las anotaciones permiten modificar los nombres de los elementos del <xref:System
 |*Valor de reemplazo*|Especifica un valor que se va a devolver. El valor devuelto debe coincidir con el tipo del elemento. Por ejemplo, utilice `nullValue="0"` para devolver 0 en el caso de campos null integer.|  
 |**_throw**|Iniciar una excepción. Este es el valor predeterminado.|  
 |**_null**|Devuelve una referencia nula o inicia una excepción si se encuentra un tipo primitivo.|  
-|**_vacío**|Para las cadenas, devolver **String.Empty**, en caso contrario, devuelve un objeto creado desde un constructor vacío. Si se encuentra un tipo primitivo, inicia una excepción.|  
+|**_empty**|Para las cadenas, devolver **String.Empty**, en caso contrario, devuelve un objeto creado desde un constructor vacío. Si se encuentra un tipo primitivo, inicia una excepción.|  
   
  La siguiente tabla muestra los valores predeterminados para los objetos en un tipo **DataSet** y las anotaciones disponibles.  
   
@@ -68,7 +68,7 @@ Las anotaciones permiten modificar los nombres de los elementos del <xref:System
 |**DataTable** métodos|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
-|**Objeto DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
+|**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
 |**Property**|PropertyName|typedName|  
 |**Secundarios** descriptor de acceso|GetChildTableNameRows|typedChildren|  
 |**Elemento primario** descriptor de acceso|TableNameRow|typedParent|  
@@ -222,9 +222,9 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
     }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Data.DataColumnCollection>  
- <xref:System.Data.DataSet>  
- [Objetos DataSet con tipo](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- <xref:System.Data.DataColumnCollection>
+- <xref:System.Data.DataSet>
+- [Objetos DataSet con tipo](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
+- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

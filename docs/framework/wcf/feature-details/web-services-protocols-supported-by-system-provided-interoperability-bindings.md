@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: 0539f2144c85fe20a440f8b99425936025a186c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0aa75fe4812553ecbf00542da37f232aca32c1a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606626"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protocolos de servicios Web compatibles con los enlaces de interoperabilidad proporcionados por el sistema
 Windows Communication Foundation (WCF) se crea para interoperar con servicios Web que admiten un conjunto de especificaciones conocidas como especificaciones de servicios Web. Para simplificar la configuración del servicio para los procedimientos recomendados de interoperabilidad, WCF introduce tres enlaces proporcionados por el sistema interoperables: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, y <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Para la interoperabilidad con la organización de los estándares de avance de Structured información Standards (OASIS), WCF incluye un enlace proporcionado por el sistema interoperable: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Para la publicación de metadatos, WCF incluye dos enlaces proporcionados por el sistema interoperables: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) y [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). En este tema se enumeran las especificaciones que admiten los enlaces interoperables proporcionados por el sistema.  
@@ -47,18 +47,18 @@ Windows Communication Foundation (WCF) se crea para interoperar con servicios We
   
 |Categoría|Protocolo|Especificación y uso|  
 |--------------|--------------|-----------------------------|  
-|Mensajería|SOAP 1.2|[Consistency](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Marco de mensajería](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuntos (incluido el enlace HTTP)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
+|Mensajería|SOAP 1.2|[Primer](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Marco de mensajería](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuntos (incluido el enlace HTTP)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
 |Mensajería|WS-Addressing 2005/08|[Web Services Addressing 1.0 - núcleo](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [1.0 - SOAP direccionamiento de servicios Web](https://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> `wsHttpBinding`, `ws2007HttpBinding`y `wsDualHttpBinding` implementan la recomendación WS-Addressing del World Wide Web Consortium (W3C) para habilitar la mensajería asincrónica, la correlación de mensajes y mecanismos de direccionamiento independiente del transporte.<br /><br /> WCF no admite el cifrado de encabezados de WS-Addressing aunque lo permiten las especificaciones de WS-*.|  
 |Mensajería|WS-Addressing 1.0 - Metadatos|[WS-Addressing 1.0 metadatos](https://www.w3.org/2007/05/addressing/metadata) compatibilidad con este protocolo se habilita estableciendo la versión de directiva en el comportamiento de ServiceMetadata, con policyversion establecido en 1.2 (el valor predeterminado), la descripción wsdl es conforme con WS-Addressing wsdl, con policyversion establecido en 1.5, la descripción wsdl es conforme con los metadatos de ws-addressing.<br /><br /> WCF no admite el cifrado de encabezados de WS-Addressing aunque lo permiten las especificaciones de WS-*.|  
 |Seguridad|WSS SOAP Message Security 1.0|[WSS SOAP Message Security 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> Utilícese cuando el atributo `securityMode` está definido como "wsSecurityOverHttp" (valor predeterminado) y los parámetros se configuran utilizando un elemento secundario `wsSecurity`.<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
 |Seguridad|WSS SOAP Message Security UsernameToken Profile 1.1|[WSS SOAP Message Security UsernameToken Profile 1.0](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> Utilice cuando el atributo `wsSecurity` del elemento `authenticationMode` esté definido como "Nombre de usuario."<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="UserName        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security> </binding> </wsHttpBinding>`|  
 |Seguridad|WSS SOAP Message Security X.509 Certificate Token Profile 1.1|[WSS SOAP Message Security Token perfil de certificado X.509 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)<br /><br /> Utilice para la protección del mensaje cuando el atributo `wsSecurity` del elemento `authenticationMode` está definido como "Nombre de usuario", "Certificado" o "Ninguno." Además, utilice esto para la autenticación del cliente cuando el atributo del `wsSecurity` de elemento `authenticationMode` se defina como "Certificado".<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Certificate"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
 |Seguridad|WSS SOAP Message Security Kerberos Token Profile 1.1|[WSS SOAP Message Security Kerberos Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)<br /><br /> Utilice para la autenticación y protección de mensajes cuando el atributo `wsSecurity` del elemento `authenticationMode` esté definido en "Windows".<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Windows"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
-|Seguridad|WS-SecureConversation|[WS-SecureConversation.](https://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Utilice para proporcionar una sesión segura cuando el atributo `security/@mode` esté establecido en "Mensaje" y el atributo `message/@establishSecurityContext` está establecido en "true" (valor predeterminado).|  
-|Seguridad|WS-Trust|[WS-Trust.](https://go.microsoft.com/fwlink/?LinkId=95318)<br /><br /> Utilizado por WS-SecureConversation (vea arriba).|  
+|Seguridad|WS-SecureConversation|[WS-SecureConversation](https://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Utilice para proporcionar una sesión segura cuando el atributo `security/@mode` esté establecido en "Mensaje" y el atributo `message/@establishSecurityContext` está establecido en "true" (valor predeterminado).|  
+|Seguridad|WS-Trust|[WS-Trust](https://go.microsoft.com/fwlink/?LinkId=95318)<br /><br /> Utilizado por WS-SecureConversation (vea arriba).|  
 |Mensajería de confianza|WS-ReliableMessaging|[WS-ReliableMessaging](https://go.microsoft.com/fwlink/?LinkId=95322)<br /><br /> Utilícese cuando se configura el enlace para que use `reliableSession`.<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
 |Transacciones|Transacción WS-Atomic|[WS-AtomicTransaction](https://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> Se usa para la comunicación entre administradores de transacciones. Servicios y los clientes de WCF siempre utilizan administradores de transacciones locales.|  
-|Transacciones|WS-Coordination|[WS-Coordination.](https://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> Utilícese para hacer fluir el contexto de transacción cuando el atributo `flowTransactions` se establece en "Allowed" (Permitido) o "Required" (Obligatorio).<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
+|Transacciones|WS-Coordination|[WS-Coordination](https://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> Utilícese para hacer fluir el contexto de transacción cuando el atributo `flowTransactions` se establece en "Allowed" (Permitido) o "Required" (Obligatorio).<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
   
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding y ws2007FederationHttpBinding  
  El [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) y [ \<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elementos se introducen para proporcionar compatibilidad para escenarios federados, donde un tercero entidad emite un token utilizado para autenticar a un cliente. Además de los protocolos utilizados por `wsHttpBinding`, `wsFederationHttpBinding` utiliza:  
@@ -94,7 +94,7 @@ Windows Communication Foundation (WCF) se crea para interoperar con servicios We
 |Categoría|Protocolo|Especificación y uso|  
 |--------------|--------------|-----------------------------|  
 |Transporte|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)|  
-|Mensajería|SOAP 1.2|[Consistency](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Marco de mensajería](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuntos (incluido el enlace HTTP)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
+|Mensajería|SOAP 1.2|[Primer](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Marco de mensajería](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuntos (incluido el enlace HTTP)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
 |Mensajería|WS-Addressing 2005/08|[Web Services Addressing 1.0 - núcleo](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [1.0 - SOAP direccionamiento de servicios Web](https://go.microsoft.com/fwlink/?LinkId=95330)|  
 |Metadatos|WS-MetadataExchange|[WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF implementa WS-MetadataExchange para recuperar el esquema XML, WSDL y WS-Policy.|  
   
@@ -104,14 +104,14 @@ Windows Communication Foundation (WCF) se crea para interoperar con servicios We
 |Categoría|Protocolo|Especificación y uso|  
 |--------------|--------------|-----------------------------|  
 |Transporte|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> La seguridad de transporte está habilitada.|  
-|Mensajería|SOAP 1.2|[Consistency](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Marco de mensajería](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuntos (incluido el enlace HTTP)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
+|Mensajería|SOAP 1.2|[Primer](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Marco de mensajería](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuntos (incluido el enlace HTTP)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
 |Mensajería|WS-Addressing 2005/08|[Web Services Addressing 1.0 - núcleo](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [1.0 - SOAP direccionamiento de servicios Web](https://go.microsoft.com/fwlink/?LinkId=95330)|  
 |Metadatos|WS-MetadataExchange|[WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF implementa WS-MetadataExchange para recuperar el esquema XML, WSDL y WS-Policy.|  
   
-## <a name="see-also"></a>Vea también  
- [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)  
- [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)  
- [\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)  
- [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)  
- [\<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)
+## <a name="see-also"></a>Vea también
+- [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)
+- [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+- [\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)
+- [\<mexHttpsBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)
+- [\<mexHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)

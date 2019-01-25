@@ -1,5 +1,5 @@
 ---
-title: '&lt;configSections&gt; , elemento de &lt;configuración&gt;'
+title: '&lt;configSections&gt; (elemento) para &lt;configuración&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 33406a67389cdf857fa5030e20d8a4dec7662741
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f46c84a1674a3e9352d0a4ccda23d44e650a70ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629493"
 ---
 # <a name="configsections-element-for-configuration"></a>\<configSections > (elemento) para \<configuración >
 
 Contiene las declaraciones de espacio de nombres y la sección de configuración.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<configSections >**
+&nbsp;&nbsp;**\<configSections>**
 
 ## <a name="attributes"></a>Atributos
 
@@ -37,9 +37,9 @@ Ninguna
 
 |     | Descripción |
 | --- | ----------- |
-| [**\<sección >**](~/docs/framework/configure-apps/file-schema/section-element.md) | Contiene una declaración de sección de configuración. |
-| [**\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Define un espacio de nombres de secciones de configuración. |
-| [**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Quita una sección predefinido o un grupo de sección. |
+| [**\<sección >**](~/docs/framework/configure-apps/file-schema/section-element.md) | Contiene una declaración de la sección de configuración. |
+| [**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Define un espacio de nombres para las secciones de configuración. |
+| [**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Quita una sección predefinida o un grupo de sección. |
 | [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Borra todas las secciones definidas anteriormente y grupos de sección. |
 
 ## <a name="remarks"></a>Comentarios
@@ -48,7 +48,7 @@ Si este elemento está en un archivo de configuración, debe ser el primer eleme
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo definir una sección de configuración y definir la configuración de esa sección:
+El ejemplo siguiente muestra cómo definir una sección de configuración y definir la configuración de esa sección:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ En el ejemplo siguiente se muestra cómo definir una sección de configuración 
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración de máquina (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.
+Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración del equipo (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.
 
 ## <a name="see-also"></a>Vea también
 
-[Esquema de archivos de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

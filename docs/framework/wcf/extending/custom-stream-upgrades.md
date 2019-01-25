@@ -2,12 +2,12 @@
 title: Actualizaciones personalizadas de secuencias
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 84edac7a4dbaaf1a01332f5c0af29319c279dd1b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 12c2b56d65b2ff41d6919e978dfad7560d05782c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806037"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611324"
 ---
 # <a name="custom-stream-upgrades"></a>Actualizaciones personalizadas de secuencias
 Los transportes orientados a secuencia como TCP y las canalizaciones con nombre funcionan en una secuencia continua de bytes entre el cliente y servidor. Esta secuencia la realiza un objeto <xref:System.IO.Stream>. En una actualización de secuencia, el cliente desea agregar una capa de protocolo opcional a la pila del canal y pide al otro lado del canal de comunicación que lo haga. La actualización de secuencia consiste en reemplazar el objeto <xref:System.IO.Stream> original con uno actualizado.  
@@ -19,9 +19,9 @@ Los transportes orientados a secuencia como TCP y las canalizaciones con nombre 
 ## <a name="how-stream-upgrades-work"></a>Cómo funcionan las actualizaciones de secuencia  
  Hay cuatro componentes en el proceso de actualización de secuencia.  
   
-1.  Una secuencia de actualización *iniciador* comienza el proceso: en tiempo de ejecución puede iniciar una solicitud al otro extremo de la conexión para actualizar el nivel de transporte del canal.  
+1.  Una secuencia de actualización *iniciador* comienza el proceso: tiempo de ejecución puede iniciar una solicitud al otro extremo de la conexión para actualizar el nivel de transporte de canal.  
   
-2.  Una secuencia de actualización *aceptador* lleva a cabo la actualización: en tiempo de ejecución recibe la solicitud de actualización desde otro equipo y, si es posible, acepta la actualización.  
+2.  Una secuencia de actualización *aceptador* lleva a cabo la actualización: en tiempo de ejecución recibe la solicitud de actualización de la otra máquina y, si es posible, acepta la actualización.  
   
 3.  Una actualización *proveedor* crea el *iniciador* en el cliente y el *aceptador* en el servidor.  
   
@@ -67,7 +67,7 @@ Los transportes orientados a secuencia como TCP y las canalizaciones con nombre 
 ## <a name="security-upgrades"></a>Actualizaciones de seguridad  
  Agregar una actualización de seguridad es una versión especializada del proceso de actualización de secuencia general.  
   
- WCF ya proporciona dos elementos de enlace de seguridad de secuencia de actualización. La configuración de la seguridad de nivel de transporte la encapsula <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> y <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>, que se pueden configurar y agregar a un enlace personalizado. Estos elementos de enlace extienden la clase <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> que crea los proveedores de actualización de secuencia del cliente y el servidor. Estos elementos de enlace tienen métodos que crean las clases de proveedor de actualización de secuencia de seguridad especializadas, que no son `public`, por lo que para estos dos casos solamente se necesita agregar el elemento de enlace a este enlace.  
+ WCF ya proporciona dos elementos de enlace para la actualización de seguridad de secuencia. La configuración de la seguridad de nivel de transporte la encapsula <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> y <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>, que se pueden configurar y agregar a un enlace personalizado. Estos elementos de enlace extienden la clase <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> que crea los proveedores de actualización de secuencia del cliente y el servidor. Estos elementos de enlace tienen métodos que crean las clases de proveedor de actualización de secuencia de seguridad especializadas, que no son `public`, por lo que para estos dos casos solamente se necesita agregar el elemento de enlace a este enlace.  
   
  Para los escenarios de seguridad que no se incluyan en los dos elementos de enlace anteriores, tres clases `abstract` relacionadas con seguridad se derivan de las clases base de iniciador, aceptador y proveedor anteriores:  
   
@@ -92,13 +92,13 @@ Los transportes orientados a secuencia como TCP y las canalizaciones con nombre 
   
 4.  La secuencia se actualizará después de cada llamada a <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> y <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>  
- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>  
- <xref:System.ServiceModel.Channels.StreamUpgradeProvider>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>  
- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>  
- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>
+- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>
+- <xref:System.ServiceModel.Channels.StreamUpgradeProvider>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>
+- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>

@@ -2,12 +2,12 @@
 title: Inferir tablas
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: 38709f91e01c7f85d9e8482bdd49bc0892121f09
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f777b225f9fbf4e8ce38778842d30a0a3054e22a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573506"
 ---
 # <a name="inferring-tables"></a>Inferir tablas
 Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML, ADO.NET determina en primer lugar qué elementos XML representan tablas. Las siguientes estructuras XML como resultado una tabla para la **DataSet** esquema:  
@@ -30,7 +30,7 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
   
  El proceso de inferencia produce una tabla denominada "Element1".  
   
- **Conjunto de datos:** DocumentElement  
+ **DataSet:** DocumentElement  
   
  **Tabla:** Element1  
   
@@ -52,7 +52,7 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
   
  El proceso de inferencia produce una tabla denominada "Element1".  
   
- **Conjunto de datos:** DocumentElement  
+ **DataSet:** DocumentElement  
   
  **Tabla:** Element1  
   
@@ -71,7 +71,7 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
   
  El proceso de inferencia produce una tabla denominada "DocumentElement".  
   
- **Conjunto de datos:** NewDataSet  
+ **DataSet:** NewDataSet  
   
  **Tabla:** DocumentElement  
   
@@ -89,7 +89,7 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
   
  El proceso de inferencia produce un **DataSet** denominada "DocumentElement" que contiene una tabla denominada "Element1".  
   
- **Conjunto de datos:** DocumentElement  
+ **DataSet:** DocumentElement  
   
  **Tabla:** Element1  
   
@@ -109,7 +109,7 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
   
  El proceso de inferencia produce una tabla denominada "Element1".  
   
- **Conjunto de datos:** DocumentElement  
+ **DataSet:** DocumentElement  
   
  **Tabla:** Element1  
   
@@ -118,10 +118,10 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
 |Text1|  
 |Text2|  
   
-## <a name="see-also"></a>Vea también  
- [Inferencia de una estructura relacional de un conjunto de datos a partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [Carga de un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [Carga de información del esquema de un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Inferencia de una estructura relacional de un conjunto de datos a partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [Carga de un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [Carga de información del esquema de un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
+- [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

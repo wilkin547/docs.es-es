@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Acelerar el acceso a un objeto con una ruta de acceso de calificación larga (Visual Basic)'
+title: Procedimiento Acelerar el acceso a un objeto con una ruta de acceso de calificación larga (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], accessing
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: d52d13feb0f85065c0623b5937f558b841c036dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 827d7d1574e85a30ec2724f7739f6c3a08dbd975
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650204"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519729"
 ---
-# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Cómo: Acelerar el acceso a un objeto con una ruta de acceso de calificación larga (Visual Basic)
-Si frecuentemente tiene acceso a un objeto que se requiere una ruta de acceso de calificación de varios métodos y propiedades, puede acelerar el código no repite la ruta de acceso de calificación.  
+# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Procedimiento Acelerar el acceso a un objeto con una ruta de acceso de calificación larga (Visual Basic)
+Si frecuentemente tiene acceso a un objeto que requiere una ruta de acceso de calificación de varios métodos y propiedades, puede acelerar su código no repite la ruta de acceso de calificación.  
   
- Hay dos maneras de evitar la repetición de la ruta de acceso de calificación. El objeto se puede asignar a una variable, o puede usar en un `With`... `End With` bloque.  
+ Hay dos maneras de evitar la repetición de la ruta de acceso de calificación. El objeto se puede asignar a una variable, o puede usarla en un `With`... `End With` bloque.  
   
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>Para agilizar el acceso a un objeto muy calificado asignándolo a una variable  
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>Para acelerar el acceso a un objeto muy calificado asignándolo a una variable  
   
 1.  Declare una variable del tipo del objeto que tiene acceso con frecuencia. Especifique la ruta de acceso de calificación en la parte de la inicialización de la declaración.  
   
@@ -28,7 +28,7 @@ Si frecuentemente tiene acceso a un objeto que se requiere una ruta de acceso de
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  Utilice la variable para tener acceso a los miembros del objeto.  
+2.  Use la variable para tener acceso a los miembros del objeto.  
   
     ```  
     ctrlActv.Text = "Test"  
@@ -36,7 +36,7 @@ Si frecuentemente tiene acceso a un objeto que se requiere una ruta de acceso de
     ctrlActv.Show()  
     ```  
   
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>Para agilizar el acceso a un objeto muy calificado mediante un With... Bloque End With  
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>Para acelerar el acceso a un objeto muy calificado mediante el uso de r con... Bloque End With  
   
 1.  Coloque la ruta de acceso de calificación en una `With` instrucción.  
   
@@ -53,6 +53,6 @@ Si frecuentemente tiene acceso a un objeto que se requiere una ruta de acceso de
     End With  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [With...End With (instrucción)](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+## <a name="see-also"></a>Vea también
+- [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [With...End With (instrucción)](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)

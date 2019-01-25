@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Agregar o quitar imágenes con el componente ImageList de formularios Windows Forms'
+title: Procedimiento Agregar o quitar imágenes con el componente ImageList de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 28dce033064517a427750ef99b1cd4f8bccaaf09
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a81cf11ea5ca405e2013b7c7375a863aeb1f110f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182975"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609621"
 ---
-# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Cómo: Agregar o quitar imágenes con el componente ImageList de formularios Windows Forms
+# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Procedimiento Agregar o quitar imágenes con el componente ImageList de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.ImageList> componente normalmente se rellena con las imágenes antes de asociarlo con un control. Sin embargo, puede agregar y quitar imágenes después de asociar la lista de imágenes con un control.  
   
 > [!NOTE]
@@ -141,7 +141,7 @@ imageList1.Images.Clear();
 imageList1.Images.RemoveByKey("myPhoto");  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 - [ImageList (componente)](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
 - [Información general sobre el componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)
 - [Imágenes, mapas de bits y metarchivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

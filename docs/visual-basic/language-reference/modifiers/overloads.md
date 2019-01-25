@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: b68c13d192845fc4bedf1b34a40165ccc1a5ff75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b20dbf20c580d08553ae22f6a62ee33a7354db74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624923"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 Especifica que una propiedad o procedimiento vuelve a declarar una o varias propiedades o procedimientos existentes con el mismo nombre.  
   
 ## <a name="remarks"></a>Comentarios  
- *Sobrecarga* es la práctica de proporcionar más de una definición para un nombre de propiedad o un procedimiento determinado en el mismo ámbito. Volver a declarar una propiedad o procedimiento con otra firma se denomina *ocultar mediante signatura*.  
+ *Sobrecarga* es la práctica de proporcionar más de una definición para un nombre de propiedad o procedimiento dado en el mismo ámbito. Si vuelve a declarar una propiedad o procedimiento con una firma diferente a veces se denomina *ocultar mediante signatura*.  
   
 ## <a name="rules"></a>Reglas  
   
--   **Contexto de la declaración.** Puede usar `Overloads` únicamente en una instrucción de declaración de procedimiento o propiedad.  
+-   **Contexto de declaración.** Puede usar `Overloads` únicamente en una instrucción de declaración de procedimiento o propiedad.  
   
--   **Modificadores combinados.** No se puede especificar `Overloads` junto con [sombras](../../../visual-basic/language-reference/modifiers/shadows.md) en la misma declaración de procedimiento.  
+-   **Modificadores combinados.** No puede especificar `Overloads` junto con [sombras](../../../visual-basic/language-reference/modifiers/shadows.md) en la misma declaración de procedimiento.  
   
 -   **Diferencias requeridas.** El *firma* en esta declaración debe ser diferente de la firma de cada propiedad o procedimiento que sobrecarga. La firma incluye el nombre de propiedad o procedimiento más lo siguiente:  
   
@@ -43,7 +43,7 @@ Especifica que una propiedad o procedimiento vuelve a declarar una o varias prop
   
      Todas las sobrecargas deben tener el mismo nombre, pero cada una debe diferir de todas las demás en uno o varios de los aspectos anteriores. Esto permite al compilador distinguir qué versión debe utilizar cuando el código llama a la propiedad o el procedimiento.  
   
--   **Diferencias no permitidas.** El cambio de uno o varios de los siguientes aspectos no es válido para sobrecargar una propiedad o un procedimiento, porque no forman parte de la firma:  
+-   **Diferencias de no permitidas.** El cambio de uno o varios de los siguientes aspectos no es válido para sobrecargar una propiedad o un procedimiento, porque no forman parte de la firma:  
   
     -   si devuelve o no un valor (para un procedimiento)  
   
@@ -73,9 +73,9 @@ Especifica que una propiedad o procedimiento vuelve a declarar una o varias prop
   
  [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Vea también  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Sobrecarga de procedimientos](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
- [Tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Procedimientos de operadores](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
- [Definir un operador de conversión](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+## <a name="see-also"></a>Vea también
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Sobrecarga de procedimientos](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Procedimientos de operadores](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
+- [Cómo: Definir un operador de conversión](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

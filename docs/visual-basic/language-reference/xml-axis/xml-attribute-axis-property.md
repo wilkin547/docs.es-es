@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: 9107b946394ab70980e4865364fc1ba9683e2025
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: cfc18df4487488bd90d7b0250a9053f55305d8a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631507"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>Propiedad de eje para atributos XML (Visual Basic)
 Proporciona acceso al valor de un atributo para un <xref:System.Xml.Linq.XElement> objeto o en el primer elemento de una colección de <xref:System.Xml.Linq.XElement> objetos.  
@@ -30,21 +30,21 @@ object.@<attribute>
   
 ## <a name="parts"></a>Elementos  
  `object`  
- Requerido. Un <xref:System.Xml.Linq.XElement> objeto o una colección de <xref:System.Xml.Linq.XElement> objetos.  
+ Obligatorio. Un <xref:System.Xml.Linq.XElement> objeto o una colección de <xref:System.Xml.Linq.XElement> objetos.  
   
  .@  
- Requerido. Denota el inicio de una propiedad de eje de atributo.  
+ Obligatorio. Denota el inicio de una propiedad de eje de atributo.  
   
  <  
  Opcional. Indica el principio del nombre del atributo cuando `attribute` no es un identificador válido en Visual Basic.  
   
  `attribute`  
- Requerido. Nombre del atributo para tener acceso a la forma [`prefix`:]`name`.  
+ Obligatorio. Nombre del atributo para tener acceso a la forma [`prefix`:]`name`.  
   
 |Parte|Descripción|  
 |----------|-----------------|  
 |`prefix`|Opcional. Prefijo de espacio de nombres XML para el atributo. Debe ser un espacio de nombres XML global definido con una instrucción `Imports`.|  
-|`name`|Requerido. Nombre del atributo local. Consulte [nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`name`|Obligatorio. Nombre del atributo local. Consulte [nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
   
  \>  
  Opcional. Denota el final del nombre del atributo cuando `attribute` no es un identificador válido en Visual Basic.  
@@ -106,9 +106,9 @@ object.@<attribute>
   
  `Phone type: home`  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XElement>  
- [Propiedades del eje XML](../../../visual-basic/language-reference/xml-axis/index.md)  
- [Literales XML](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Crear XML en Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Xml.Linq.XElement>
+- [Propiedades del eje XML](../../../visual-basic/language-reference/xml-axis/index.md)
+- [Literales XML](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Crear XML en Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

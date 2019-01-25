@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcddca2e435a3f5bf4b8d083784613254d9801a4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: ec91a1f6fba70e3c9706541dc641ddd019d44841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259775"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642209"
 ---
 # <a name="getpropertyqualifierset-function"></a>Función GetPropertyQualifierSet
 Recupera el calificador establecido para una propiedad específica.
@@ -59,10 +59,10 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Ha habido un error general. |
+|`WBEM_E_FAILED` | 0x80041001 | Ha habido un error general. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | El método especificado no existe. |
-|`WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para completar la operación. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Es un parámetro `null`. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para completar la operación. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Es un parámetro `null`. |
 | `WBEM_E_SYSTEM_PROPERTY` | 0x80041030 | La función intenta obtener calificadores de una propiedad del sistema. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
@@ -77,11 +77,11 @@ Dado que cada método puede tener su propio calificadores, el [IWbemQualifierSet
 Dado que las propiedades del sistema no tengan ningún calificador, la función devuelve `WBEM_E_SYSTEM_PROPERTY` si se intenta obtener un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) puntero para una propiedad del sistema.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

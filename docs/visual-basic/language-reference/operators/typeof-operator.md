@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: fe287794423048e993d953c83fc8590a06b7a5e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2695f517c42fb944d21f57aec829bbf8a864af17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596740"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf (Operador, Visual Basic)
 Compara una variable de referencia de objeto a un tipo de datos.  
@@ -37,10 +37,10 @@ result = TypeOf objectexpression IsNot typename
  Devuelto. Valor `Boolean`.  
   
  `objectexpression`  
- Requerido. Cualquier expresión que se evalúa como un tipo de referencia.  
+ Obligatorio. Cualquier expresión que se evalúa como un tipo de referencia.  
   
  `typename`  
- Requerido. Cualquier nombre de tipo de datos.  
+ Obligatorio. Cualquier nombre de tipo de datos.  
   
 ## <a name="remarks"></a>Comentarios  
  El operador `TypeOf` determina si el tipo en tiempo de ejecución de `objectexpression` es compatible con `typename`. La compatibilidad depende de la categoría del tipo de `typename`. En la tabla siguiente se muestra cómo se determina la compatibilidad.  
@@ -62,10 +62,10 @@ result = TypeOf objectexpression IsNot typename
   
  La variable `refInteger` tiene un tipo en tiempo de ejecución de `Integer`. Es compatible con `Integer` pero no con `Double`. La variable `refForm` tiene un tipo en tiempo de ejecución de <xref:System.Windows.Forms.Form>. Es compatible con <xref:System.Windows.Forms.Form> porque es su tipo, con <xref:System.Windows.Forms.Control> porque <xref:System.Windows.Forms.Form> hereda de <xref:System.Windows.Forms.Control>, y con <xref:System.ComponentModel.IComponent> porque <xref:System.Windows.Forms.Form> hereda de <xref:System.ComponentModel.Component>, que implementa <xref:System.ComponentModel.IComponent>. Sin embargo, `refForm` no es compatible con <xref:System.Windows.Forms.Label>.  
   
-## <a name="see-also"></a>Vea también  
- [Is (operador)](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot (operador)](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Operadores de comparación en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a>Vea también
+- [Is (operador)](../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot (operador)](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Operadores de comparación en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

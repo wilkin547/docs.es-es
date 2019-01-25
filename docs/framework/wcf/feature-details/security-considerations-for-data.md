@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5c7451e5e914c372c8631922001cfec5e84a586c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527957"
 ---
 # <a name="security-considerations-for-data"></a>Consideraciones de seguridad para datos
 Cuando se trabaja con datos en Windows Communication Foundation (WCF), debe considerar varias categorías de amenaza. La tabla siguiente enumera las clases más importantes de amenazas relacionadas con el procesamiento de datos. WCF proporciona herramientas para mitigar estas amenazas.  
@@ -205,7 +205,7 @@ Cuando se trabaja con datos en Windows Communication Foundation (WCF), debe cons
   
 -   Atributo<xref:System.Runtime.Serialization.KnownTypeAttribute> aplicado al tipo.  
   
--   Atributo `KnownTypeAttribute` que especifica un método que devuelve una lista de tipos.  
+-   Atributo`KnownTypeAttribute` que especifica un método que devuelve una lista de tipos.  
   
 -   Atributo`ServiceKnownTypeAttribute` .  
   
@@ -223,9 +223,9 @@ Cuando se trabaja con datos en Windows Communication Foundation (WCF), debe cons
   
  Al escribir un método que devuelve una lista de tipos conocidos o al pasar directamente una lista al constructor <xref:System.Runtime.Serialization.DataContractSerializer> , asegúrese de que el código que prepara la lista sea seguro y funcione solo en datos que sean de confianza.  
   
- Si especifica los tipos conocidos en configuración, asegúrese de que el archivo de configuración sea seguro. Utilice siempre nombres seguros en configuración (especificando la clave pública del ensamblado firmado donde el tipo reside), pero no especifique la versión del tipo a cargar. El cargador de tipo escoge automáticamente la última versión, si es posible. Si especifica una versión determinada en configuración, corre el riesgo siguiente: un tipo puede tener una vulnerabilidad de seguridad que se puede fijar en una versión futura, pero la versión vulnerable todavía se carga porque está explícitamente especificado en configuración.  
+ Si especifica los tipos conocidos en configuración, asegúrese de que el archivo de configuración sea seguro. Utilice siempre nombres seguros en configuración (especificando la clave pública del ensamblado firmado donde el tipo reside), pero no especifique la versión del tipo a cargar. El cargador de tipo escoge automáticamente la última versión, si es posible. Si especifica una versión concreta en la configuración, se corre el riesgo siguiente: Un tipo puede tener una vulnerabilidad de seguridad que se corregirá en una versión futura, pero la versión vulnerable todavía se carga porque se especifica explícitamente en la configuración.  
   
- Tener demasiados tipos conocidos tiene otra consecuencia: <xref:System.Runtime.Serialization.DataContractSerializer> crea una memoria caché de código de serialización/deserialización en el dominio de aplicación, con una entrada para cada tipo que debe serializar y deserializar. Esta memoria caché nunca se borra mientras se esté ejecutando el dominio de aplicación. Por consiguiente, un atacante que es consciente que una aplicación utiliza muchos tipos conocidos puede desencadenar la deserialización de todos estos tipos, haciendo que la caché utilice una cantidad desproporcionadamente grande de memoria.  
+ Tener demasiados tipos conocidos tiene otra consecuencia: El <xref:System.Runtime.Serialization.DataContractSerializer> crea una memoria caché de código de serialización/deserialización en el dominio de aplicación, con una entrada para cada tipo se debe serializar y deserializar. Esta memoria caché nunca se borra mientras se esté ejecutando el dominio de aplicación. Por consiguiente, un atacante que es consciente que una aplicación utiliza muchos tipos conocidos puede desencadenar la deserialización de todos estos tipos, haciendo que la caché utilice una cantidad desproporcionadamente grande de memoria.  
   
 ### <a name="preventing-types-from-being-in-an-unintended-state"></a>Evitando que los tipos estén en un estado imprevisto  
  Un tipo puede tener restricciones de coherencia internas que se deban cumplir. Se debe proceder con cuidado para evitar la ruptura de estas restricciones durante la deserialización.  
@@ -353,8 +353,8 @@ Cuando se trabaja con datos en Windows Communication Foundation (WCF), debe cons
   
 -   En general, al utilizar cualquier componente que acepte una cuota, entienda sus implicaciones de seguridad y establézcalo en un valor seguro.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.XmlDictionaryReader>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [Tipos conocidos de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.XmlDictionaryReader>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Tipos conocidos de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

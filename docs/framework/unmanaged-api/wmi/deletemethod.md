@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5996ce41c80cb54c4fcb9104c2993c85bcc2b466
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fb7b800bca1957c8c324ddb9c11cb4eabb49cd24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628492"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod (función)
 Elimina el método especificado de una definición de clase CIM.
@@ -56,7 +56,7 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_E_NOT_FOUND` | 0x80041002 | El método especificado no existe. |
-| `WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay memoria suficiente para completar la operación. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay memoria suficiente para completar la operación. |
 | `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
 
 ## <a name="remarks"></a>Comentarios
@@ -66,11 +66,11 @@ Esta función contiene una llamada a la [IWbemClassObject::DeleteMethod](/window
 No se admite la eliminación de método para [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) punteros que señalan a las instancias CIM.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

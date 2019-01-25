@@ -2,19 +2,19 @@
 title: Ensamblados de confianza (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9b3d5716-e6e4-47a7-a3e9-084d7fba5c28
-ms.openlocfilehash: 91bc33f33c4fc34c6e0f3ae197ecd2b876161de3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efb22ce25bdd39fd7a511503eb3ff6792639d29e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644386"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579802"
 ---
 # <a name="friend-assemblies-visual-basic"></a>Ensamblados de confianza (Visual Basic)
-A *ensamblado de confianza* es un ensamblado que puede tener acceso a otro ensamblado [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) tipos y miembros. Si identifica un ensamblado como ensamblado de confianza, ya no hay que marcar los tipos y miembros como públicos para que otros ensamblados accedan a ellos. Esto resulta especialmente útil en los siguientes escenarios:  
+Un *ensamblado de confianza* es un ensamblado que puede tener acceso a otro ensamblado [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) tipos y miembros. Si identifica un ensamblado como ensamblado de confianza, ya no hay que marcar los tipos y miembros como públicos para que otros ensamblados accedan a ellos. Esto resulta especialmente útil en los siguientes escenarios:  
   
--   Durante las pruebas unitarias, cuando se ejecuta el código de prueba un ensamblado independiente pero requiere acceso a los miembros del ensamblado que se está probando que están marcados como `Friend`.  
+-   Durante las pruebas unitarias, cuando se ejecuta el código de prueba en un ensamblado independiente, pero requiere acceso a los miembros del ensamblado que se está probando que están marcados como `Friend`.  
   
--   Cuando está desarrollando una biblioteca de clases y las adiciones a la biblioteca de contienen en ensamblados independientes pero requieren acceso a los miembros de los ensamblados existentes que están marcados como `Friend`.  
+-   Cuando está desarrollando una biblioteca de clases y las adiciones a la biblioteca de contienen en ensamblados independientes pero requieren acceso a los miembros de ensamblados existentes que están marcados como `Friend`.  
   
 ## <a name="remarks"></a>Comentarios  
  Puede usar el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para identificar uno o más ensamblados de confianza para un ensamblado determinado. En el ejemplo siguiente se usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> en el ensamblado A y se especifica el ensamblado `AssemblyB` como un ensamblado de confianza. Esto proporciona al ensamblado `AssemblyB` acceso a todos los tipos y miembros del ensamblado A marcados como `Friend`.  
@@ -50,9 +50,9 @@ End Class
   
      El nombre de ensamblado de confianza que se pasa al atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> no puede ser el nombre seguro del ensamblado *B*: no se incluyen la versión del ensamblado, la referencia cultural, la arquitectura o el token de clave pública.  
   
--   Si el ensamblado *A* no tiene nombre seguro, el nombre de ensamblado de confianza solo debe consistir en el nombre del ensamblado. Para obtener más información, consulte [Cómo: crear ensamblados de confianza sin signo (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md).  
+-   Si el ensamblado *A* no tiene nombre seguro, el nombre de ensamblado de confianza solo debe consistir en el nombre del ensamblado. Para obtener más información, vea [Cómo: Crear ensamblados de confianza sin firmar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md).  
   
--   Si el ensamblado *B* tiene nombre seguro, hay que especificar la clave de nombre seguro del ensamblado *B* mediante la configuración del proyecto o la opción `/keyfile` de línea de comandos del compilador. Para obtener más información, consulte [Cómo: crear ensamblados firmados de confianza (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md).  
+-   Si el ensamblado *B* tiene nombre seguro, hay que especificar la clave de nombre seguro del ensamblado *B* mediante la configuración del proyecto o la opción `/keyfile` de línea de comandos del compilador. Para obtener más información, vea [Cómo: Crear ensamblados de confianza firmados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md).  
   
  La clase <xref:System.Security.Permissions.StrongNameIdentityPermission> también proporciona la capacidad de compartir tipos, con las siguientes diferencias:  
   
@@ -62,12 +62,12 @@ End Class
   
 -   Si usa <xref:System.Security.Permissions.StrongNameIdentityPermission>, los tipos que quiere compartir tienen que declararse como públicos. Si usa un ensamblado de confianza, los tipos compartidos se declaran como `Friend`.  
   
- Para obtener información sobre cómo obtener acceso a un ensamblado `Friend` tipos y métodos de un archivo de módulo (archivo con la extensión de archivo .netmodule), consulte [/moduleassemblyname (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).  
+ Para obtener información acerca de cómo obtener acceso a un ensamblado `Friend` tipos y métodos desde un archivo de módulo (un archivo con la extensión .netmodule), consulte [/moduleassemblyname (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- <xref:System.Security.Permissions.StrongNameIdentityPermission>  
- [Cómo: crear ensamblados de confianza sin firmar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [Cómo: crear ensamblados de confianza firmados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [Ensamblados y caché global de ensamblados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- <xref:System.Security.Permissions.StrongNameIdentityPermission>
+- [Cómo: Crear ensamblados de confianza sin firmar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [Cómo: Crear ensamblados de confianza firmados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [Ensamblados y caché global de ensamblados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)

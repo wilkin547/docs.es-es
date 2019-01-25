@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e09bf424a41445f7e36397775d1578cdf4e7e75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf1be8d5c709f3d6e5991e4d33dde2e923291a95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569419"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC (Enumeración)
 Contiene valores que se usan para influir en el comportamiento durante la generación de metadatos.  
@@ -50,19 +50,19 @@ typedef enum CorSetENC {
 |------------|-----------------|  
 |`MDSetENCOn`|Obsoleto.|  
 |`MDSetENCOff`|Obsoleto.|  
-|`MDUpdateENC`|Indica que mientras que se puedan actualizar los metadatos no se puede mover los símbolos (tokens).|  
-|`MDUpdateFull`|Indica que se pueden mover tokens durante las actualizaciones.|  
-|`MDUpdateExtension`|Indica que las actualizaciones pueden constar solo de adiciones. No se puede mover los símbolos (tokens).|  
+|`MDUpdateENC`|Indica que mientras que se pueden actualizar los metadatos, no se pueden mover los tokens.|  
+|`MDUpdateFull`|Indica que se pueden mover los tokens durante las actualizaciones.|  
+|`MDUpdateExtension`|Indica que las actualizaciones pueden constar solo de las adiciones. No se puede mover los tokens.|  
 |`MDUpdateIncremental`|Indica que la compilación es incremental.|  
-|`MDUpdateDelta`|Indica que solo los metadatos modificados deben guardarse.|  
+|`MDUpdateDelta`|Indica que solo los metadatos modificados se deben guardar.|  
 |`MDUpdateMask`|Incluye `MDUpdateENC`, `MDUpdateFull` y `MDUpdateIncremental`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

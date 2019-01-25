@@ -1,5 +1,5 @@
 ---
-title: '&lt;etwEnable&gt; elemento'
+title: '&lt;etwEnable&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - etwEnable element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6ea2f8a32a18dfce6be54ce52ce8fef4abf92ce
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 788eee71c718c003110ad8242505f2d7868e836c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506932"
 ---
-# <a name="ltetwenablegt-element"></a>&lt;etwEnable&gt; elemento
+# <a name="ltetwenablegt-element"></a>&lt;etwEnable&gt; Element
 Especifica si se debe habilitar Seguimiento de eventos para Windows (ETW) para los eventos de Common Language Runtime.  
   
  \<Configuración > elemento  
 \<en tiempo de ejecución > elemento  
-\<etwEnabled >  
+\<etwEnabled>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -70,7 +70,7 @@ Especifica si se debe habilitar Seguimiento de eventos para Windows (ETW) para l
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Vea también
+- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Controlar el registro de .NET Framework](../../../../../docs/framework/performance/controlling-logging.md)

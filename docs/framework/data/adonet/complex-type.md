@@ -2,22 +2,22 @@
 title: tipo complejo
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-ms.openlocfilehash: 8daeac8309434b3c4e090d8e75f2de02d63e8b11
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4e18ecf18399f57769dcdfc77192e72ec47f5df3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555445"
 ---
 # <a name="complex-type"></a>tipo complejo
-A *tipo complejo* es una plantilla para definir propiedades enriquecidas y estructuradas para [tipos de entidad](../../../../docs/framework/data/adonet/entity-type.md) u otros tipos complejos. Cada plantilla contiene lo siguiente:  
+Un *tipo complejo* es una plantilla para definir propiedades estructuradas avanzadas en [tipos de entidad](../../../../docs/framework/data/adonet/entity-type.md) o en otros tipos complejos. Cada plantilla contiene lo siguiente:  
   
 -   Un nombre único. (Necesario)  
   
     > [!NOTE]
     >  El nombre de un tipo complejo no puede coincidir con el nombre de un tipo de entidad dentro del mismo espacio de nombres.  
   
--   Datos en forma de uno o varios [propiedades](../../../../docs/framework/data/adonet/property.md). (Opcional)  
+-   Datos del formulario de uno o varios [propiedades](../../../../docs/framework/data/adonet/property.md). (Opcional)  
   
     > [!NOTE]
     >  Una propiedad de un tipo complejo puede ser otro tipo complejo.  
@@ -26,7 +26,7 @@ A *tipo complejo* es una plantilla para definir propiedades enriquecidas y estru
   
 -   Los tipos complejos no tienen identidades y, por consiguiente, no pueden existir de forma independiente. Los tipos complejos solo pueden existir como propiedades en tipos de entidad u otros tipos complejos.  
   
--   Tipos complejos no pueden participar en [asociaciones](../../../../docs/framework/data/adonet/association-type.md). Los extremos de una asociación pueden ser un tipo complejo y, por tanto, [propiedades de navegación](../../../../docs/framework/data/adonet/navigation-property.md) no pueden definirse en tipos complejos.  
+-   Tipos complejos no pueden participar en [asociaciones](../../../../docs/framework/data/adonet/association-type.md). Los extremos de una asociación pueden ser un tipo complejo y por lo tanto, [las propiedades de navegación](../../../../docs/framework/data/adonet/navigation-property.md) no se pueden definir en los tipos complejos.  
   
 ## <a name="example"></a>Ejemplo  
  El [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales. El código CSDL siguiente define un tipo complejo, Address, con las propiedades de tipo primitivo `StreetAddress`, `City`, `StateOrProvince`, `Country` y `PostalCode`.  
@@ -37,6 +37,6 @@ A *tipo complejo* es una plantilla para definir propiedades enriquecidas y estru
   
  [!code-xml[EDM_Example_Model#EntityWithComplexType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#entitywithcomplextype)]  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos clave de Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>Vea también
+- [Conceptos clave de Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

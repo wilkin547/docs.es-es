@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: 71c29cc6d1c7955b889a56b0a6629690a2947c78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21f260262d434ffe3685b226193f2d6cd2125549
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540360"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548435"
 ---
 # <a name="collection-type-dependency-properties"></a>Propiedades de dependencia de tipo de colección
 En este tema se proporciona una guía y modelos recomendados para implementar una propiedad de dependencia donde el tipo de la propiedad es un tipo de colección.  
@@ -24,13 +24,13 @@ En este tema se proporciona una guía y modelos recomendados para implementar un
   
 <a name="implementing"></a>   
 ## <a name="implementing-a-collection-type-dependency-property"></a>Implementar una propiedad de dependencia de tipo de colección  
- Para una propiedad de dependencia en general, el modelo de implementación que debe seguir es definir una [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] contenedor de propiedad, donde esa propiedad está respaldada por un <xref:System.Windows.DependencyProperty> identificador en lugar de un campo u otra construcción. Siga este mismo modelo al implementar una propiedad de tipo de colección. Sin embargo, una propiedad de tipo de colección presenta cierta complejidad en el modelo cada vez que el tipo que se encuentra dentro de la colección es en sí misma un <xref:System.Windows.DependencyObject> o <xref:System.Windows.Freezable> clase derivada.  
+ Para una propiedad de dependencia en general, el modelo de implementación que seguir es que define un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] contenedor de propiedad, donde esa propiedad está respaldada por un <xref:System.Windows.DependencyProperty> identificador en lugar de un campo u otra construcción. Siga este mismo modelo al implementar una propiedad de tipo de colección. Sin embargo, una propiedad de tipo de colección presenta cierta complejidad en el modelo cada vez que el tipo que está dentro de la colección es en sí mismo un <xref:System.Windows.DependencyObject> o <xref:System.Windows.Freezable> clase derivada.  
   
 <a name="initializing"></a>   
 ## <a name="initializing-the-collection-beyond-the-default-value"></a>Inicialización de la colección más allá del valor predeterminado  
  Cuando cree una propiedad de dependencia, no especifique el valor predeterminado de la propiedad como el valor inicial del campo. En su lugar, especifique el valor predeterminado a través de los metadatos de la propiedad de dependencia. Si la propiedad es un tipo de referencia, el valor predeterminado especificado en los metadatos de la propiedad de dependencia no es un valor predeterminado por instancia; en su lugar, es un valor predeterminado que se aplica a todas las instancias del tipo. Por lo tanto, debe tener cuidado de no usar la colección estática singular definida por los metadatos de la propiedad de colección como el valor predeterminado operativo para las instancias recién creadas del tipo. En su lugar, debe asegurarse de establecer deliberadamente el valor de la colección en una colección única (instancia) como parte de la lógica del constructor de clase. De lo contrario, habrá creado involuntariamente una clase singleton.  
   
- Considere el ejemplo siguiente. En la siguiente sección del ejemplo se muestra la definición de una clase `Aquarium`. La clase define la propiedad de dependencia de tipo de colección `AquariumObjects`, que utiliza la interfaz genérica <xref:System.Collections.Generic.List%601> escriba con un <xref:System.Windows.FrameworkElement> restricción de tipo. En el <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> llamada para la propiedad de dependencia, los metadatos establece el valor predeterminado para que sea un tipo genérico nuevo <xref:System.Collections.Generic.List%601>.  
+ Considere el ejemplo siguiente. En la siguiente sección del ejemplo se muestra la definición de una clase `Aquarium`. La clase define la propiedad de dependencia de tipo de colección `AquariumObjects`, que utiliza el modelo genérico <xref:System.Collections.Generic.List%601> tipo con un <xref:System.Windows.FrameworkElement> restricción de tipo. En el <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> llamada para la propiedad de dependencia, los metadatos establece el valor predeterminado para que sea un nuevo genérico <xref:System.Collections.Generic.List%601>.  
   
  [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
  [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
@@ -42,24 +42,24 @@ En este tema se proporciona una guía y modelos recomendados para implementar un
   
  En lugar de tener un recuento de uno, cada colección tiene un recuento de dos. Esto se debe a que cada `Aquarium` agregó su `Fish` a la colección de valores predeterminados, que resultó de una única llamada de constructor en los metadatos y, por tanto, se compartió en todas las instancias. Esta situación casi nunca es la deseada.  
   
- Para corregir este problema, debe restablecer el valor de la propiedad de dependencia de la colección en una instancia única, como parte de la llamada al constructor de clase. Dado que la propiedad es una propiedad de dependencia de solo lectura, utilice el <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> método para establecer, mediante el <xref:System.Windows.DependencyPropertyKey> que solo es accesible dentro de la clase.  
+ Para corregir este problema, debe restablecer el valor de la propiedad de dependencia de la colección en una instancia única, como parte de la llamada al constructor de clase. Dado que la propiedad es una propiedad de dependencia de solo lectura, usa el <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> método establecerlo mediante el <xref:System.Windows.DependencyPropertyKey> que solo es accesible dentro de la clase.  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
   
  Ahora, si ejecutara el mismo código de prueba de nuevo, podría obtener resultados más previsibles, donde cada `Aquarium` admite su propia colección única.  
   
- Se produciría una ligera variación en este modelo si decidiera definir la propiedad de colección como de lectura y escritura. En ese caso, podría llamar el descriptor de acceso público desde el constructor para realizar la inicialización, que igualmente se llamaría a la firma sin clave de <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> dentro del contenedor set, utilizando un complemento público <xref:System.Windows.DependencyProperty> identificador.  
+ Se produciría una ligera variación en este modelo si decidiera definir la propiedad de colección como de lectura y escritura. En ese caso, podría llamar al descriptor de acceso set público desde el constructor para realizar la inicialización, que igualmente llamaría a la firma sin clave de <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> dentro del contenedor set, mediante una pública <xref:System.Windows.DependencyProperty> identificador.  
   
 ## <a name="reporting-binding-value-changes-from-collection-properties"></a>Notificación de cambios en los valores de enlace de las propiedades de colección  
- Una propiedad de colección que es una propiedad de dependencia no notifica automáticamente los cambios en sus subpropiedades. Si está creando enlaces en una colección, esto puede impedir que el enlace comunique los cambios, lo que invalidaría algunos escenarios de enlace de datos. Sin embargo, si utiliza el tipo de colección <xref:System.Windows.FreezableCollection%601> como el tipo de colección, a continuación, cambios de las subpropiedades a los elementos contenidos en la colección se comunican correctamente y enlace funciona según lo previsto.  
+ Una propiedad de colección que es una propiedad de dependencia no notifica automáticamente los cambios en sus subpropiedades. Si está creando enlaces en una colección, esto puede impedir que el enlace comunique los cambios, lo que invalidaría algunos escenarios de enlace de datos. Sin embargo, si usa el tipo de colección <xref:System.Windows.FreezableCollection%601> como su tipo de colección, a continuación, subpropiedades a los elementos contenidos en la colección se notifican los cambios correctamente y el enlace funciona según lo previsto.  
   
  Para habilitar el enlace de subpropiedades en una colección de objetos de dependencia, cree la propiedad de colección como tipo <xref:System.Windows.FreezableCollection%601>, con una restricción de tipo para esa colección a cualquier <xref:System.Windows.DependencyObject> clase derivada.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.FreezableCollection%601>  
- [Clases XAML y personalizadas para WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Metadatos de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.FreezableCollection%601>
+- [Clases XAML y personalizadas para WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Metadatos de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)

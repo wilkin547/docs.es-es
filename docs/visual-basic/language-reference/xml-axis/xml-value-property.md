@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 2b0719320db5843d5d010bfbd70e551646e3ded9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 54bd18b050ca58c286bfca3972b242348c61fe45
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737616"
 ---
 # <a name="xml-value-property-visual-basic"></a>Value (Propiedad XML) (Visual Basic)
 Proporciona acceso al valor del primer elemento de una colección de <xref:System.Xml.Linq.XElement> objetos.  
@@ -29,7 +29,7 @@ object.Value
   
 |Término|Definición|  
 |---|---|  
-|`object`|Requerido. Una colección de objetos <xref:System.Xml.Linq.XElement>.|  
+|`object`|Obligatorio. Una colección de objetos <xref:System.Xml.Linq.XElement>.|  
   
 ## <a name="return-value"></a>Valor devuelto  
  Un `String` que contiene el valor del primer elemento de la colección, o `Nothing` si la colección está vacía.  
@@ -67,13 +67,13 @@ object.Value
   
  `work`  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XElement>  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [Propiedades del eje XML](../../../visual-basic/language-reference/xml-axis/index.md)  
- [Literales XML](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Crear XML en Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Métodos de extensión](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
- [Propiedad de indexador de extensión](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)  
- [Propiedad del eje secundario XML](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
- [Propiedad del eje de atributo XML](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Xml.Linq.XElement>
+- <xref:System.Collections.Generic.IEnumerable%601>
+- [Propiedades del eje XML](../../../visual-basic/language-reference/xml-axis/index.md)
+- [Literales XML](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Crear XML en Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Métodos de extensión](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [Propiedad de indexador de extensión](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)
+- [Propiedad del eje secundario XML](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
+- [Propiedad del eje de atributo XML](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)

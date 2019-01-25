@@ -9,22 +9,22 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 135c44217debcddb15fd4cef7e73ca2f98903c43
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 90e3c8b61bd920ab06090f3f889d6cc61c354294
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003703"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650488"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Tipos de datos de resultados de operador (Visual Basic)
 Visual Basic determina el tipo de datos de resultado de una operación basada en los tipos de datos de los operandos. En algunos casos, esto podría ser un tipo de datos con un intervalo mayor que el de alguno de los operandos.  
   
-## <a name="data-type-ranges"></a>Intervalos de tipos de datos  
+## <a name="data-type-ranges"></a>Intervalos de tipo de datos  
  Los intervalos de los tipos de datos pertinentes, en orden de menor a mayor, son los siguientes:  
   
 -   [Booleano](../../../visual-basic/language-reference/data-types/boolean-data-type.md) , dos valores posibles  
   
--   [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [bytes](../../../visual-basic/language-reference/data-types/byte-data-type.md) : 256 valores posibles de enteros  
+-   [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) — 256 possible integral values  
   
 -   [Short](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) : 65.536 (6.5 … E + 4) valores integrales posibles  
   
@@ -86,7 +86,7 @@ Visual Basic determina el tipo de datos de resultado de una operación basada en
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
 |Unario `+`|Short|SByte|Byte|Short|UShort|Integer|UInteger|Long|ULong|  
-|Unario `–`|Short|SByte|Short|Short|Entero|Integer|Long|Long|Decimal|  
+|Unario `–`|Short|SByte|Short|Short|Integer|Integer|Long|Long|Decimal|  
   
 ### <a name="-and--operators"></a><\< y >> operadores  
  En la tabla siguiente se muestra el resultado los tipos de datos para los dos operadores de desplazamiento de bits, `<<` y `>>`. Visual Basic trata a cada operador de desplazamiento de bits como un operador unario de su operando izquierdo (el patrón de bits que se desplazarán).  
@@ -104,10 +104,10 @@ Visual Basic determina el tipo de datos de resultado de una operación basada en
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Short|SByte|Short|Short|Entero|Integer|Long|Long|Decimal|  
-|`SByte`|SByte|SByte|Short|Short|Entero|Integer|Long|Long|Decimal|  
+|`Boolean`|Short|SByte|Short|Short|Integer|Integer|Long|Long|Decimal|  
+|`SByte`|SByte|SByte|Short|Short|Integer|Integer|Long|Long|Decimal|  
 |`Byte`|Short|Short|Byte|Short|UShort|Integer|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|Entero|Integer|Long|Long|Decimal|  
+|`Short`|Short|Short|Short|Short|Integer|Integer|Long|Long|Decimal|  
 |`UShort`|Integer|Integer|UShort|Integer|UShort|Integer|UInteger|Long|ULong|  
 |`Integer`|Integer|Integer|Integer|Integer|Integer|Integer|Long|Long|Decimal|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
@@ -120,10 +120,10 @@ Visual Basic determina el tipo de datos de resultado de una operación basada en
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Short|SByte|Short|Short|Entero|Integer|Long|Long|Long|  
-|`SByte`|SByte|SByte|Short|Short|Entero|Integer|Long|Long|Long|  
+|`Boolean`|Short|SByte|Short|Short|Integer|Integer|Long|Long|Long|  
+|`SByte`|SByte|SByte|Short|Short|Integer|Integer|Long|Long|Long|  
 |`Byte`|Short|Short|Byte|Short|UShort|Integer|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|Entero|Integer|Long|Long|Long|  
+|`Short`|Short|Short|Short|Short|Integer|Integer|Long|Long|Long|  
 |`UShort`|Integer|Integer|UShort|Integer|UShort|Integer|UInteger|Long|ULong|  
 |`Integer`|Integer|Integer|Integer|Integer|Integer|Integer|Long|Long|Long|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
@@ -156,10 +156,10 @@ Visual Basic determina el tipo de datos de resultado de una operación basada en
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Booleano|SByte|Short|Short|Entero|Integer|Long|Long|Long|  
-|`SByte`|SByte|SByte|Short|Short|Entero|Integer|Long|Long|Long|  
+|`Boolean`|Booleano|SByte|Short|Short|Integer|Integer|Long|Long|Long|  
+|`SByte`|SByte|SByte|Short|Short|Integer|Integer|Long|Long|Long|  
 |`Byte`|Short|Short|Byte|Short|UShort|Integer|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|Entero|Integer|Long|Long|Long|  
+|`Short`|Short|Short|Short|Short|Integer|Integer|Long|Long|Long|  
 |`UShort`|Integer|Integer|UShort|Integer|UShort|Integer|UInteger|Long|ULong|  
 |`Integer`|Integer|Integer|Integer|Integer|Integer|Integer|Long|Long|Long|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
@@ -175,14 +175,14 @@ Visual Basic determina el tipo de datos de resultado de una operación basada en
   
  El `Like` operador está definido solo para la coincidencia de patrones de `String` operandos. Visual Basic intenta convertir cada operando según sea necesario para `String` antes de la operación. El tipo de datos de resultado siempre es `Boolean`.  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)  
- [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Operadores aritméticos en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Operadores de comparación en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Operadores](../../../visual-basic/language-reference/operators/index.md)  
- [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Operadores aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Operadores de comparación](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Vea también
+- [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)
+- [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Operadores aritméticos en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Operadores de comparación en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Operadores](../../../visual-basic/language-reference/operators/index.md)
+- [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Operadores aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Operadores de comparación](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md)

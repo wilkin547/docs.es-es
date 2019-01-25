@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 3094c82382292be3295238ef9cf2687f6eeb98f8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5c87b0f411c187e1497c8ec55771b80bb94c3629
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635683"
 ---
 # <a name="configuring-http-and-https"></a>Configuración de HTTP y HTTPS
 Los servicios y clientes de WCF se pueden comunicar a través de HTTP y HTTPS, que se configuran mediante el uso de Internet Information Services (IIS) o de una herramienta de la línea de comandos. Cuando un servicio WCF se hospeda bajo IIS y necesita la configuración de HTTP o HTTPS se puede configurar en IIS (con la herramienta inetmgr.exe). Si el servicio WCF se autohospeda, la configuración de HTTP o HTTPS se configura usando una herramienta de la línea de comandos.  
@@ -90,6 +90,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 ## <a name="issues-specific-to-windows-xp"></a>Problemas específicos de Windows XP  
  IIS no admite el uso compartido de puertos en [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Si se está ejecutando IIS y un servicio WCF intenta usar un espacio de nombres con el mismo puerto, el servicio de WCF no se puede iniciar. IIS y WCF que tienen un valor predeterminado a través del puerto 80. Cambie la asignación de puertos para uno de los servicios o use la lista de escucha de IP para asignar el servicio WCF a un adaptador de red no utilizado por IIS. IIS 6.0 y sus versiones posteriores se han rediseñado para utilizar los API de servidor HTTP.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- [Cómo: Configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- [Cómo: Configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

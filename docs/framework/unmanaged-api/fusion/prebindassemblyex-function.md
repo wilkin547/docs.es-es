@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d3e2535851d39be642de56a86b78c328ecaf446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea34c4087014091b92d6227177a2f08209cc2e10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570884"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx (Función)
-Obtiene el nombre para mostrar tras aplicar la directiva de un ensamblado.  
+Obtiene el nombre para mostrar tras aplicar la directiva para un ensamblado.  
   
- Esta función admite la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.  
+ Esta función admite la infraestructura de .NET Framework y no está pensada para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,7 +49,7 @@ HRESULT PreBindAssemblyEx (
  [in] Identifica el nombre del ensamblado.  
   
  `pAsmParent`  
- [in] Identifica el ensamblado primario. Este parámetro se ignora.  
+ [in] Identifica el ensamblado principal. Este parámetro se ignora.  
   
  `pwzRuntimeVersion`  
  [in] Identifica la versión en tiempo de ejecución.  
@@ -64,13 +64,13 @@ HRESULT PreBindAssemblyEx (
  El `ppNamePostPolicy` parámetro de salida se establece únicamente si la función devuelve HRESULT FUSION_E_REF_DEF_MISMATCH. En caso contrario, es null.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Fusion.h  
+ **Encabezado**: Fusion.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Vea también
+- [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

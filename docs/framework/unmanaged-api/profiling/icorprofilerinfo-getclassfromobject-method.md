@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 104dfcaa4120d72f3aa758b66134050f178fef75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9031ae9b4870c182922baaa41883de4cddb469d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453426"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676684"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject (Método)
-Obtiene el `ClassID` de un objeto, dados su `ObjectID`.  
+Obtiene el `ClassID` de un objeto, dada su `ObjectID`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,22 +37,22 @@ HRESULT GetClassFromObject(
   
 #### <a name="parameters"></a>Parámetros  
  `objectId`  
- [in] El identificador del objeto para el que se va a obtener el `ClassID`.  
+ [in] El identificador del objeto que se va a obtener el `ClassID`.  
   
  `pClassId`  
- [out] Un puntero para el valor devuelto `ClassID`.  
+ [out] Un puntero a la devuelta `ClassID`.  
   
 ## <a name="remarks"></a>Comentarios  
  Un valor null `pClassId` indica que `objectId` tiene un tipo que se está descargando.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

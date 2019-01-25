@@ -2,12 +2,12 @@
 title: Consideraciones sobre el rendimiento
 ms.date: 03/30/2017
 ms.assetid: 83082d4a-7350-4b04-ab2d-1fa5ffd643f5
-ms.openlocfilehash: 78daff1e0cf219f7ee66ae0b0493762113a49c93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b6f58f9db4d21fb62161eae3fc3fbb18460e6ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717134"
 ---
 # <a name="performance-considerations"></a>Consideraciones sobre el rendimiento
 Las consideraciones de rendimiento siempre son importantes al crear aplicaciones. Esta sección contiene entradas relacionadas con el rendimiento y la seguridad.  
@@ -19,6 +19,6 @@ Las consideraciones de rendimiento siempre son importantes al crear aplicaciones
  [Cifrado de firmas digitales](../../../../docs/framework/wcf/feature-details/encryption-of-digital-signatures.md)  
  Describe cómo el cifrado de la firma digital puede agregar una reducción del rendimiento y cómo deshabilitarlo.  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos recomendados de seguridad](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
- [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+## <a name="see-also"></a>Vea también
+- [Procedimientos recomendados de seguridad](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)
+- [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
