@@ -2,12 +2,12 @@
 title: Instalar Message Queuing (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: b54fab13d644cafda8a070280d672c60cf71b675
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2aae92ba6e373af2d8bc9cff0b4c9d317ba10136
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501473"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588030"
 ---
 # <a name="installing-message-queuing-msmq"></a>Instalar Message Queuing (MSMQ)
 Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Message Queuing 3.0.  
@@ -23,9 +23,9 @@ Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Mess
   
 3.  En la ventana resultante, expanda **Message Queue Server**.  
   
-4.  Expanda **servicios puesta en cola de mensajes**.  
+4.  Expanda **servicios de cola de mensajes**.  
   
-5.  Haga clic en **integración de servicios de directorio** (para los equipos unidos a un dominio), a continuación, haga clic en **compatibilidad con HTTP**.  
+5.  Haga clic en **integración de servicios de directorio** (para equipos unidos a un dominio), a continuación, haga clic en **compatibilidad con HTTP**.  
   
 6.  Haga clic en **siguiente**, a continuación, haga clic en **instalar**.  
   
@@ -33,7 +33,7 @@ Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Mess
   
 1.  Abra **Panel de Control**.  
   
-2.  Haga clic en **programas** y, a continuación, en **programas y características**, haga clic en **activar o desactivar las características de Windows**.  
+2.  Haga clic en **programas** y, a continuación, en **programas y características**, haga clic en **activar y desactivar las características de Windows**.  
   
 3.  Expanda Microsoft Message Queuing (MSMQ), expanda Núcleo de Microsoft Message Queuing (MSMQ) y, a continuación, active las casillas para que se instalen las siguientes características de Message Queuing:  
   
@@ -62,5 +62,5 @@ Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Mess
   
 6.  Si se le pide que reinicie el equipo, haga clic en **Aceptar** para completar la instalación.  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de instalación](../../../../docs/framework/wcf/samples/set-up-instructions.md)
+## <a name="see-also"></a>Vea también
+- [Instrucciones de instalación](../../../../docs/framework/wcf/samples/set-up-instructions.md)

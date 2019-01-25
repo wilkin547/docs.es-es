@@ -2,22 +2,22 @@
 title: Elemento &lt;message&gt; de &lt;ws2007FederationHttpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: 278464503b5576b5562de58a7cb3350aad9faa7a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 280d92978dba44d3347699959fb2cab3b98faca1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145957"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493812"
 ---
 # <a name="ltmessagegt-element-of-ltws2007federationhttpbindinggt"></a>Elemento &lt;message&gt; de &lt;ws2007FederationHttpBinding&gt;
 Define la configuración de seguridad de nivel de mensaje para el [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elemento.  
   
  \<system.ServiceModel>  
-\<enlaces >  
+\<bindings>  
 \<ws2007FederationHttpBinding>  
-\<enlace >  
-\<seguridad >  
-\<mensaje >  
+\<binding>  
+\<security>  
+\<message>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -87,7 +87,7 @@ Define la configuración de seguridad de nivel de mensaje para el [ \<ws2007Fede
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |`algorithmSuite`|Opcional. Establece el cifrado de mensajes, la firma y los algoritmos del ajuste de clave. La clase <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> determina los algoritmos y los tamaños de clave. Estos algoritmos se asignan a los indicados en la especificación Lenguaje de directiva de seguridad (WS-SecurityPolicy).<br /><br /> En la siguiente tabla se enumeran los posibles valores. El valor predeterminado es Basic256.|  
-|`issuedKeyType`|Especifica el tipo de clave que se va a emitir. Los valores válidos son los siguientes:<br /><br /> -SymmetricKey<br />-PublicKey<br />-BearerKey<br /><br /> El valor predeterminado es SymmetricKey. Este atributo es del tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|`issuedKeyType`|Especifica el tipo de clave que se va a emitir. Los valores válidos son los siguientes:<br /><br /> -SymmetricKey<br />-   PublicKey<br />-   BearerKey<br /><br /> El valor predeterminado es SymmetricKey. Este atributo es del tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
 |`issuedTokenType`|Un URI que especifica el tipo de token que se va a emitir. De manera predeterminada, es `null`.|  
 |`negotiateServiceCredential`|Un valor que especifica si la credencial del servicio se debería intercambiar como parte de negociación o estar disponible fuera de la banda. El valor predeterminado es `true`, que significa que se negocia la credencial del servicio.|  
   
@@ -116,23 +116,24 @@ Define la configuración de seguridad de nivel de mensaje para el [ \<ws2007Fede
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Especifica una colección de tipos de demanda para este enlace. Cada elemento es del tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
-|[\<emisor >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Especifica un punto de conexión que emite un token de seguridad. Este elemento es del tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
+|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Especifica una colección de tipos de demanda para este enlace. Cada elemento es del tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
+|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Especifica un punto de conexión que emite un token de seguridad. Este elemento es del tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
 |[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Especifica la dirección del punto de conexión del emisor.|  
-|[\<tokenRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Una colección de parámetros de solicitud de token. Cada parámetro es un elemento XML.|  
+|[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Una colección de parámetros de solicitud de token. Cada parámetro es un elemento XML.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|Define la configuración de seguridad de un enlace.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|Define la configuración de seguridad de un enlace.|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  
- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>  
- <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>  
- `System.ServiceModel.Configuration.FederatedMessageSecurityElement` [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
+- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
+- <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>
+ `System.ServiceModel.Configuration.FederatedMessageSecurityElement` 
+- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 41fd612695fbeacbc7b53cb9e5dbf67939e73482
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332605"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543453"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Cómo afecta la referencia cultural a las cadenas en Visual Basic
 Esta página de ayuda explica cómo Visual Basic usa la información de referencia cultural para realizar conversiones de cadenas y comparaciones.  
@@ -33,10 +33,10 @@ Esta página de ayuda explica cómo Visual Basic usa la información de referenc
   
 -   **Conversiones que utilizan una referencia cultural concreta.** Cada objeto number tiene un `ToString(IFormatProvider)` método que convierte un número en una cadena, y un `Parse(String, IFormatProvider)` método que convierte una cadena en un número. Por ejemplo, el `Double` tipo proporciona la <xref:System.Double.ToString%28System.IFormatProvider%29> y <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> métodos.  
   
- Para obtener más información, consulte <xref:Microsoft.VisualBasic.Conversion.Str%2A> y <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
+ Para obtener más información, vea <xref:Microsoft.VisualBasic.Conversion.Str%2A> y <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
 ## <a name="using-a-specific-culture"></a>Uso de una referencia cultural específica  
- Imagine que está desarrollando una aplicación que envía una fecha (con formato como una cadena) a un servicio Web. En este caso, la aplicación debe utilizar una referencia cultural específica para la conversión de cadena. Para ilustrar por qué, considere el resultado del uso de la fecha <xref:System.DateTime.ToString> método: si la aplicación utiliza ese método para dar formato a la fecha del 4 de julio de 2005, devuelve "7/4/2005 12:00:00 AM" cuando se ejecuta con la referencia cultural inglés de Estados Unidos (en-US), pero devuelve " 04.07.2005 00:00:00 "cuando se ejecuta con la referencia cultural de alemán (de-DE).  
+ Imagine que está desarrollando una aplicación que envía una fecha (con formato como una cadena) a un servicio Web. En este caso, la aplicación debe utilizar una referencia cultural específica para la conversión de cadena. Para ilustrar por qué, considere el resultado del uso de la fecha <xref:System.DateTime.ToString> método: Si la aplicación utiliza ese método para dar formato a la fecha del 4 de julio de 2005, devuelve "7/4/2005 12:00:00 AM" cuando se ejecuta con la referencia cultural inglés de Estados Unidos (en-US), pero devuelve "04.07.2005 00:00:00" cuando se ejecuta con la referencia cultural de alemán (de-DE).  
   
  Cuando necesite realizar una conversión de cadena en un formato de referencia cultural concreta, debe usar el `CultureInfo` clase que está integrado en el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Puede crear un nuevo `CultureInfo` objeto para una referencia cultural concreta, pasando el nombre de la referencia cultural a la <xref:System.Globalization.CultureInfo.%23ctor%2A> constructor. Se muestran los nombres de referencia cultural admitida en la <xref:System.Globalization.CultureInfo> página de Ayuda de la clase.  
   
@@ -78,7 +78,7 @@ Esta página de ayuda explica cómo Visual Basic usa la información de referenc
 ### <a name="security-considerations"></a>Consideraciones de seguridad  
  Si la aplicación toma decisiones de seguridad en función del resultado de una comparación o la operación de cambio de mayúsculas y, a continuación, la operación debe utilizar el <xref:System.String.Compare%2A?displayProperty=nameWithType> método y pase `Ordinal` o `OrdinalIgnoreCase` para el `comparisonType` argumento.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Globalization.CultureInfo>  
- [Introducción a las cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [Funciones de conversión de tipos](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Globalization.CultureInfo>
+- [Introducción a las cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Funciones de conversión de tipos](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

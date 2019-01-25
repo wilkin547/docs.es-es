@@ -1,17 +1,17 @@
 ---
-title: 'Ejemplo: control de excepciones al enlazar datos'
+title: 'Ejemplo: Control de excepciones al enlazar datos'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a861da011898c3648c66b6a0ea0f97cdb26ff288
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 9610eb6088a59e4f577ea6dfe679130b44988645
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725719"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a>Ejemplo: control de excepciones al enlazar datos
+# <a name="example-handling-exceptions-when-binding-data"></a>Ejemplo: Control de excepciones al enlazar datos
 > [!NOTE]
 >  En este tema se hace referencia a .NET Native Developer Preview, que es una versión preliminar del software. Puede descargar esta versión preliminar desde el [sitio web de Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (es necesario registrarse).  
   
@@ -59,6 +59,6 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
   
  Sin embargo, hay formas de especificar el `ViewModel` en la página XAML para que la cadena de herramientas pueda asociar enlaces de propiedad con el tipo correcto en tiempo de compilación y mantener los metadatos sin usar una directiva en tiempo de ejecución.  Por ejemplo, puede aplicar el <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> atributo en las propiedades. Esto hace que el compilador XAML genere la información de búsqueda necesaria y permite prescindir de una directiva en tiempo de ejecución en el archivo Default.rd.xml.  
   
-## <a name="see-also"></a>Vea también  
- [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [Ejemplo: solucionar problemas de programación dinámica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+## <a name="see-also"></a>Vea también
+- [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [Ejemplo: Solución de problemas de programación dinámica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

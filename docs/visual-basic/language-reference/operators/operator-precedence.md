@@ -14,43 +14,43 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: 211a710f4dba2310ea1ae74decdb1926ce612a62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a87407fe863569ff961f4a2dc320e73719ed4d9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601771"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Prioridad de operador en Visual Basic
-Cuando se producen varias operaciones en una expresión, cada parte se evalúa y se resuelve en un orden predeterminado denominado *precedencia de operadores*.  
+Cuando se producen varias operaciones en una expresión, cada parte se evalúa y se resuelve en un orden predeterminado llamado *prioridad de operador*.  
   
 ## <a name="precedence-rules"></a>Reglas de prioridad  
  Cuando las expresiones contienen operadores de más de una categoría, se evalúan según las reglas siguientes:  
   
--   Los operadores aritméticos y de concatenación tienen el orden de prioridad que se describe en la sección siguiente y todos tienen mayor prioridad que la comparación, lógicos y operadores bit a bit.  
+-   Los operadores aritméticos y de concatenación tienen el orden de prioridad que se describe en la sección siguiente, y todos tienen mayor prioridad que la comparación, lógicos y operadores bit a bit.  
   
--   Todos los operadores de comparación tienen la misma precedencia y todos tienen mayor prioridad que los operadores lógicos y bit a bit, pero menor prioridad que los operadores aritméticos y de concatenación.  
+-   Todos los operadores de comparación tienen la misma prioridad y todos tienen mayor prioridad que los operadores lógicos y bit a bit, pero con menor prioridad que los operadores aritméticos y de concatenación.  
   
--   Los operadores lógicos y bit a bit tienen el orden de prioridad que se describe en la sección siguiente y todos tienen menos prioridad que los aritméticos, de concatenación y operadores de comparación.  
+-   Los operadores lógicos y bit a bit tienen el orden de prioridad que se describe en la sección siguiente, y todas tienen menor prioridad que los operadores de comparación, concatenación y aritmética.  
   
--   Operadores con la misma prioridad se evalúan de izquierda a derecha en el orden en que aparecen en la expresión.  
+-   Los operadores con la misma prioridad se evalúan de izquierda a derecha en el orden en que aparecen en la expresión.  
   
 ## <a name="precedence-order"></a>Orden de prioridad  
- Los operadores se evalúan en el siguiente orden de prioridad:  
+ Los operadores se evalúan en el orden de precedencia siguiente:  
   
 ### <a name="await-operator"></a>Await (Operador)  
- await  
+ Await  
   
 ### <a name="arithmetic-and-concatenation-operators"></a>Operaciones aritméticas y operadores de concatenación  
  Exponenciación (`^`)  
   
- Unario identidad y negación (`+`, `–`)  
+ Unario identidad y la negación (`+`, `–`)  
   
- Multiplicación y división de coma flotante (`*`, `/`)  
+ Multiplicación y división de punto flotante (`*`, `/`)  
   
  División de enteros (`\`)  
   
- Módulo aritmético (`Mod`)  
+ MODULUS aritmético (`Mod`)  
   
  Suma y resta (`+`, `–`)  
   
@@ -73,9 +73,9 @@ Cuando se producen varias operaciones en una expresión, cada parte se evalúa y
 ### <a name="comments"></a>Comentarios  
  El `=` operador es solo el operador de comparación de igualdad, no el operador de asignación.  
   
- El operador de concatenación de cadenas (`&`) no es un operador aritmético, pero en prioridad, se agrupa con los operadores aritméticos.  
+ El operador de concatenación de cadenas (`&`) no es un operador aritmético, pero en la prioridad se agrupa con los operadores aritméticos.  
   
- El `Is` y `IsNot` operadores son operadores de comparación de referencia de objeto. No se comparan los valores de dos objetos; sólo comprueban y para determinar si dos variables de objeto hacen referencia a la misma instancia de objeto.  
+ El `Is` y `IsNot` operadores son operadores de comparación de referencia de objeto. No se comparan los valores de dos objetos; que se registren solo para determinar si dos variables de objeto hacen referencia a la misma instancia de objeto.  
   
 ## <a name="associativity"></a>asociatividad  
  Cuando los operadores tienen la misma precedencia aparecen juntas en una expresión, por ejemplo, multiplicación y división, el compilador evalúa cada operación tal y como encuentra de izquierda a derecha. Esto se ilustra en el siguiente ejemplo:  
@@ -86,12 +86,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)  
 ```  
   
- La primera expresión se evalúa como la división de 96 / 8 (que da como resultado 12) y, a continuación, la división de 12 / 4, lo que resulta en tres. Dado que el compilador evalúa las operaciones de `n1` de izquierda a derecha, la evaluación equivale cuando ese orden está indicado de forma explícita `n2`. Ambos `n1` y `n2` dan como resultado un de tres. Por el contrario, `n3` ha producido como resultado 48, porque los paréntesis fuerzan al compilador que evaluar 8 / 4 primero.  
+ La primera expresión se evalúa como la división de 96 / 8 (lo que da como resultado 12) y, a continuación, la división de 12 / 4, lo que resulta en tres. Dado que el compilador evalúa las operaciones de `n1` de izquierda a derecha, la evaluación es el mismo cuando ese criterio se indica explícitamente para `n2`. Ambos `n1` y `n2` tiene un resultado de tres. Por el contrario, `n3` tiene un resultado de 48, porque los paréntesis fuerzan al compilador que evaluar 8 / 4 primero.  
   
- Debido a este comportamiento, se dice que los operadores *asociativos a la izquierda* en Visual Basic.  
+ Debido a este comportamiento, los operadores se consideran *asociativos a la izquierda* en Visual Basic.  
   
-## <a name="overriding-precedence-and-associativity"></a>Reemplazar la prioridad y asociatividad  
- Puede usar paréntesis para forzar que algunas partes de una expresión se evalúe antes que otras. Esto puede invalidar el orden de prioridad y asociatividad por la izquierda. Visual Basic siempre realiza las operaciones que se encierran entre paréntesis antes de aquellos que no pertenecen. Sin embargo, entre paréntesis, mantiene normal prioridad y asociatividad, a menos que utilice paréntesis dentro del paréntesis. Esto se ilustra en el siguiente ejemplo:  
+## <a name="overriding-precedence-and-associativity"></a>Invalidación de precedencia y asociatividad  
+ Puede usar paréntesis para forzar que algunas partes de una expresión se evalúe antes que otras. Esto puede invalidar el orden de prioridad y asociatividad por la izquierda. Visual Basic siempre realiza las operaciones que se incluyen entre paréntesis antes de aquellos que no pertenecen. Sin embargo, entre paréntesis, mantiene normal prioridad y asociatividad, a menos que utilice paréntesis dentro del paréntesis. Esto se ilustra en el siguiente ejemplo:  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  
@@ -111,12 +111,12 @@ g = (a - (b + c)) / (d * e)
 ' The preceding line sets g to 0.5.  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Operador =](../../../visual-basic/language-reference/operators/assignment-operator.md)  
- [Is (operador)](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot (operador)](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Like (operador)](../../../visual-basic/language-reference/operators/like-operator.md)  
- [TypeOf (operador)](../../../visual-basic/language-reference/operators/typeof-operator.md)  
- [Await (operador)](../../../visual-basic/language-reference/operators/await-operator.md)  
- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a>Vea también
+- [Operador =](../../../visual-basic/language-reference/operators/assignment-operator.md)
+- [Is (operador)](../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot (operador)](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Like (operador)](../../../visual-basic/language-reference/operators/like-operator.md)
+- [TypeOf (operador)](../../../visual-basic/language-reference/operators/typeof-operator.md)
+- [Await (operador)](../../../visual-basic/language-reference/operators/await-operator.md)
+- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

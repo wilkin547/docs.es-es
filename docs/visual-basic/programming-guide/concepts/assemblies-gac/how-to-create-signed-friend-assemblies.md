@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: crear ensamblados de confianza firmados (Visual Basic)'
+title: Procedimiento Crear ensamblados de confianza firmados (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 6a9dcc65e7e496a436d81ad2d311a4174f111104
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 02acda34783afceaeb83d0d0752e5247747b5337
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188448"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667308"
 ---
-# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Cómo: crear ensamblados de confianza firmados (Visual Basic)
+# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Procedimiento Crear ensamblados de confianza firmados (Visual Basic)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Ambos ensamblados deben tener nombres seguros. Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Para crear un ensamblado con signo y un ensamblado de confianza  
@@ -84,12 +84,12 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Existen similitudes entre el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> y la clase <xref:System.Security.Permissions.StrongNameIdentityPermission>. La diferencia principal es que <xref:System.Security.Permissions.StrongNameIdentityPermission> puede exigir permisos de seguridad para ejecutar una sección determinada de código, mientras el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controla la visibilidad de los miembros y tipos `Friend`.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Ensamblados y caché global de ensamblados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Ensamblados de confianza (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Cómo: crear ensamblados de confianza sin firmar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Sn.exe (herramienta de nombre seguro)] [Sn.exe (herramienta de nombre seguro)](../../../../framework/tools/sn-exe-strong-name-tool.md))  
- [Crear y utilizar ensamblados con nombre seguro](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [Ensamblados y caché global de ensamblados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Ensamblados de confianza (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Cómo: Crear ensamblados de confianza sin firmar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
+- [Sn.exe (herramienta de nombre seguro)] [Sn.exe (herramienta de nombre seguro)](../../../../framework/tools/sn-exe-strong-name-tool.md))
+- [Crear y utilizar ensamblados con nombre seguro](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)

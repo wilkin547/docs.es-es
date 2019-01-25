@@ -1,18 +1,18 @@
 ---
-title: 'Ejemplos de sintaxis de expresiones de consulta: proyección'
+title: 'Ejemplos de sintaxis de expresiones de consulta: Proyección'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: cc50b2564d295f1c81feacdeb52008f9f0004adc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c12fdd70b7174d6e6fbae10d5132c9e3e2a7eb87
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396634"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733381"
 ---
-# <a name="query-expression-syntax-examples-projection"></a>Ejemplos de sintaxis de expresiones de consulta: proyección
+# <a name="query-expression-syntax-examples-projection"></a>Ejemplos de sintaxis de expresiones de consulta: Proyección
 Los ejemplos de este tema muestran cómo usar el `Select` método y el `From … From …` palabras clave para consultar el [modelo AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) con la sintaxis de expresión de consulta. `From … From …` es el equivalente basado en las consultas del método `SelectMany`. El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo AdventureWorks.  
   
  Los ejemplos de este tema usan los siguientes `using` / `Imports` instrucciones:  
@@ -60,5 +60,5 @@ Los ejemplos de este tema muestran cómo usar el `Select` método y el `From …
  [!code-csharp[DP L2E Examples#SelectManyFromAssignment](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectmanyfromassignment)]
  [!code-vb[DP L2E Examples#SelectManyFromAssignment](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectmanyfromassignment)]  
   
-## <a name="see-also"></a>Vea también  
- [Consultas en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Vea también
+- [Consultas en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

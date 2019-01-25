@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Exponer propiedades de controles constituyentes'
+title: Procedimiento Exponer propiedades de controles constituyentes
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 8f7b5c44a5cb20b5da10df5fd630b371cc959fa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3ad37032ee2bb85f37a0eb754277cc9bc040a38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532167"
 ---
-# <a name="how-to-expose-properties-of-constituent-controls"></a>Cómo: Exponer propiedades de controles constituyentes
-Los controles que componen un control compuesto se denominan *controles constituyentes*. Estos controles normalmente se ha declarado privados y, por tanto, no es accesible para el desarrollador. Si desea disponer de propiedades de estos controles para futuros usuarios, debe exponer al usuario. Una propiedad de un control constituyente se expone mediante la creación de una propiedad en el control de usuario y usando la `get` y `set` descriptores de acceso de esa propiedad para llevar a cabo el cambio en la propiedad privada del control que lo componen.  
+# <a name="how-to-expose-properties-of-constituent-controls"></a>Procedimiento Exponer propiedades de controles constituyentes
+Los controles que componen un control compuesto se denominan *controles constituyentes*. Estos controles suelen declararse como privados y, por tanto, no se puede acceder por el desarrollador. Si desea que las propiedades de estos controles disponibles para usuarios futuros, debe exponer al usuario. Se expone una propiedad de un control constituyente creando una propiedad en el control de usuario, y usando el `get` y `set` descriptores de acceso de esa propiedad para llevar a cabo el cambio en la propiedad privada del control constituyente.  
   
- Considere la posibilidad de un control de usuario hipotético con un botón constituyente denominado `MyButton`. En este ejemplo, cuando el usuario solicita la `ConstituentButtonBackColor` propiedad, el valor almacenado en el <xref:System.Windows.Forms.Control.BackColor%2A> propiedad de `MyButton` se entrega. Cuando el usuario asigna un valor a esta propiedad, ese valor se pasa automáticamente a la <xref:System.Windows.Forms.Control.BackColor%2A> propiedad de `MyButton` y `set` el código se ejecutará, cambiar el color del `MyButton`.  
+ Considere la posibilidad de un control de usuario hipotético con un botón constituyente denominado `MyButton`. En este ejemplo, cuando el usuario solicita la `ConstituentButtonBackColor` propiedad, el valor almacenado en el <xref:System.Windows.Forms.Control.BackColor%2A> propiedad de `MyButton` se entrega. Cuando el usuario asigna un valor a esta propiedad, ese valor se pasa automáticamente a la <xref:System.Windows.Forms.Control.BackColor%2A> propiedad de `MyButton` y `set` se ejecutará el código, cambiar el color de `MyButton`.  
   
- En el ejemplo siguiente se muestra cómo exponer el <xref:System.Windows.Forms.Control.BackColor%2A> propiedad del botón constituyente:  
+ El ejemplo siguiente muestra cómo exponer la <xref:System.Windows.Forms.Control.BackColor%2A> propiedad del botón constituyente:  
   
 ```vb  
 Public Property ButtonColor() as System.Drawing.Color  
@@ -53,11 +53,11 @@ public Color ButtonColor
   
 1.  Cree una propiedad pública para el control de usuario.  
   
-2.  En la `get` sección de la propiedad, escriba código que recupera el valor de la propiedad que desea exponer.  
+2.  En la `get` sección de la propiedad, escribir código que recupera el valor de la propiedad que desea exponer.  
   
-3.  En la `set` sección de la propiedad, escriba código que pasa el valor de la propiedad a la propiedad expuesta del control constituyente.  
+3.  En la `set` sección de la propiedad, escribir código que pasa el valor de la propiedad a la propiedad expuesta del control constituyente.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.UserControl>  
- [Propiedades de los controles de Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.UserControl>
+- [Propiedades de los controles de Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74d6852d14eec234b787ca0e852c333391a7b329
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4f1ceae32445fb350f6fcc98f3a1eec044fa7885
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655509"
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt; elemento
 Especifica que una aplicación puede hacer referencia al mismo ensamblado en dos implementaciones diferentes de .NET Framework, deshabilitando el comportamiento predeterminado que trata los ensamblados como equivalentes para los propósitos de portabilidad de aplicación.  
@@ -78,6 +78,6 @@ Especifica que una aplicación puede hacer referencia al mismo ensamblado en dos
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
-- [/appconfig (opciones del compilador de C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)  
+## <a name="see-also"></a>Vea también
+- [/appconfig (opciones del compilador de C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [Información general de unificación de ensamblados de .NET framework](https://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

@@ -2,12 +2,12 @@
 title: Contratos múltiples
 ms.date: 03/30/2017
 ms.assetid: 2bef319b-fe9c-4d49-ac6c-dfb23eb35099
-ms.openlocfilehash: 040ab9b80e9567139ca4588e3ddf83b8f43f2d76
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e942c6d4a20ae3578d946edb39a7a3d4b0ea8f27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523173"
 ---
 # <a name="multiple-contracts"></a>Contratos múltiples
 El ejemplo de contratos múltiples muestra cómo implementar más de un contrato en un servicio y cómo configurar los puntos de conexión para comunicarse con cada uno de los contratos implementados. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). El servicio se ha modificado para definir dos contratos: `ICalculator` y `ICalculatorSession`.  
@@ -17,7 +17,7 @@ El ejemplo de contratos múltiples muestra cómo implementar más de un contrato
   
  La clase de servicio implementa los contratos `ICalculator` e `ICalculatorSession`. Dado que uno de los contratos requiere una sesión, el servicio utiliza el modo de instancia <xref:System.ServiceModel.InstanceContextMode.PerSession> para mantener el estado en toda la duración de la sesión.  
   
- La configuración de servicio se ha modificado para definir dos extremos para exponer cada contrato. El extremo `ICalculator` se expone en la dirección base utilizando `basicHttpBinding`. El extremo `ICalculatorSession` se expone en la dirección base/sesión utilizando `wsHttpBinding` con el atributo `bindingConfiguration` establecido en `BindingWithSession`, tal y como se muestra en la configuración de ejemplo siguiente.  
+ La configuración de servicio se ha modificado para definir dos extremos para exponer cada contrato. El punto de conexión `ICalculator` se expone en la dirección base utilizando `basicHttpBinding`. El extremo `ICalculatorSession` se expone en la dirección base/sesión utilizando `wsHttpBinding` con el atributo `bindingConfiguration` establecido en `BindingWithSession`, tal y como se muestra en la configuración de ejemplo siguiente.  
   
 ```xml  
 <service   

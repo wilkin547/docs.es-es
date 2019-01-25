@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b49475bf7aea8d28ce057c7d4376cf7ad8285a0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506256"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Escribir la primera consulta con LINQ (Visual Basic)
 Una *consulta* es una expresión que recupera datos de un origen de datos. Las consultas se expresan en un lenguaje de consulta dedicado. Con el tiempo, distintos idiomas se han desarrollado para diferentes tipos de orígenes de datos, por ejemplo, SQL para bases de datos relacionales y XQuery para XML. Esto hace que sea necesario para el desarrollador de aplicaciones obtener información sobre un nuevo lenguaje de consulta para cada tipo de origen de datos o formato de datos que se admite.  
@@ -60,7 +60,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  Para obtener más información sobre cómo crear tipos específicos de orígenes de datos, vea la documentación de los distintos proveedores de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Para obtener una lista de estos proveedores, consulte [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) La regla básica es simple: un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] origen de datos es cualquier objeto que admite el tipo genérico <xref:System.Collections.Generic.IEnumerable%601> interfaz o una interfaz que hereda de ella.  
   
 > [!NOTE]
->  Los tipos, como <xref:System.Collections.ArrayList> que admiten la no genérica <xref:System.Collections.IEnumerable> interfaz también puede usarse como [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] orígenes de datos. Para obtener un ejemplo que usa un <xref:System.Collections.ArrayList>, consulte [Cómo: consultar un objeto ArrayList con LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
+>  Los tipos, como <xref:System.Collections.ArrayList> que admiten la no genérica <xref:System.Collections.IEnumerable> interfaz también puede usarse como [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] orígenes de datos. Para obtener un ejemplo que usa un <xref:System.Collections.ArrayList>, vea [Cómo: Consultar un objeto ArrayList con LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
   
 ## <a name="the-query"></a>La consulta  
  En la consulta, especifique qué desea recuperar desde el origen de datos u orígenes de información. También tiene la opción de especificar cómo debe ordenan, agrupan o estructurada antes de que se devuelva esa información. Para habilitar la creación de consultas, Visual Basic incorpora la nueva sintaxis de consulta en el lenguaje.  
@@ -120,9 +120,9 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción a LINQ en Visual Basic](getting-started-with-linq.md)  
-- [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Información general sobre operadores de consulta estándar (Visual Basic)](standard-query-operators-overview.md)  
-- [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Introducción a LINQ en Visual Basic](getting-started-with-linq.md)
+- [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Información general sobre operadores de consulta estándar (Visual Basic)](standard-query-operators-overview.md)
+- [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)

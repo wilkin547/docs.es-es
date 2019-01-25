@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Utilizar las propiedades Modifiers y GenerateMember'
+title: Procedimiento Utilice las propiedades Modifiers y GenerateMember
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 9bb6e6568822f3edcabf50a4fceb7cc6386f05ef
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 890290d75c6690f467e565a3d75a4b75102d7875
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558392"
 ---
-# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Cómo: Utilizar las propiedades Modifiers y GenerateMember
+# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Procedimiento Utilice las propiedades Modifiers y GenerateMember
 Cuando se coloca un componente en un formulario de Windows, el entorno de diseño proporciona dos propiedades: `GenerateMember` y `Modifiers`. El `GenerateMember` propiedad especifica que cuando el Diseñador de Windows Forms genera una variable miembro para un componente. El `Modifiers` propiedad es el modificador de acceso asignado a esa variable de miembro. Si el valor de la `GenerateMember` propiedad es `false`, el valor de la `Modifiers` propiedad no tiene ningún efecto.  
   
 > [!NOTE]
@@ -59,8 +59,8 @@ Cuando se coloca un componente en un formulario de Windows, el entorno de diseñ
 > [!NOTE]
 >  De forma predeterminada, el Diseñador de formularios de Windows asigna el `private` (`Friend` en Visual Basic) a los controles de contenedor como modificador de <xref:System.Windows.Forms.Panel>. Si la base de <xref:System.Windows.Forms.UserControl> o <xref:System.Windows.Forms.Form> tiene un control contenedor, no se aceptarán nuevos objetos secundarios en controles y formularios heredados. La solución es cambiar el modificador del control contenedor base para `protected` o `public`.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.Button>  
- [Herencia visual de Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
- [Tutorial: Demostración de la herencia visual](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  
- [Cómo: Heredar formularios Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.Button>
+- [Herencia visual de Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Tutorial: Demostración de la herencia Visual](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)
+- [Cómo: Heredar Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)

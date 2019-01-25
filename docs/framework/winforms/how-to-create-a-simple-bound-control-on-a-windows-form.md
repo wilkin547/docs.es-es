@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Crear un control con enlace simple en Windows Forms'
+title: Procedimiento Crear un Control con enlace Simple en un formulario de Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643577"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Cómo: Crear un control con enlace simple en Windows Forms
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procedimiento Crear un Control con enlace Simple en un formulario de Windows
 Con *enlace simple*, puede mostrar un elemento de datos único, como un valor de columna de una tabla de conjunto de datos en un control. Puede enlazar cualquier propiedad de un control de forma sencilla en un valor de datos.  
   
 > [!NOTE]
@@ -45,7 +45,7 @@ Con *enlace simple*, puede mostrar un elemento de datos único, como un valor de
     > [!NOTE]
     >  Dado que los controles de enlace simple muestran solo un único elemento de datos, es muy habitual incluir lógica de navegación en un formulario de Windows con controles de enlace simple.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.Binding>  
- [Enlace de datos en Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Enlace de datos y Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.Binding>
+- [Enlace de datos en Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Enlace de datos y Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

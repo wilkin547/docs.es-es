@@ -2,21 +2,21 @@
 title: Consideraciones de seguridad con metadatos
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: 4afa040744b1b1a8a25addb954d5785436899434
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa1a79a0be6682a8459043955a7956f6f8444bf5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585570"
 ---
 # <a name="security-considerations-with-metadata"></a>Consideraciones de seguridad con metadatos
 Al utilizar las funciones de metadatos de Windows Communication Foundation (WCF), tenga en cuenta las implicaciones de seguridad de publicar, recuperar y usar los metadatos del servicio.  
   
 ## <a name="when-to-publish-metadata"></a>Cuándo publicar metadatos  
- Los servicios WCF no publican datos de forma predeterminada. Para publicar metadatos para un servicio WCF debe habilitar explícitamente la publicación de metadatos mediante la adición de puntos de conexión de metadatos a su servicio (consulte [la publicación de metadatos](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Deshabilitar la publicación de metadatos reduce la superficie de ataque de su servicio y disminuye el riesgo de divulgación involuntaria de información. No todos los servicios deben publicar metadatos. Si no tiene que publicar metadatos, considere el mantener esta opción desactivada. Tenga en cuenta que todavía puede generar los metadatos y código de cliente directamente desde los ensamblados de servicio mediante el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obtener más información sobre cómo utilizar Svcutil.exe para exportar los metadatos, vea [Cómo: utilizar Svcutil.exe para exportar metadatos desde el código de servicio compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
+ Los servicios WCF no publican datos de forma predeterminada. Para publicar metadatos para un servicio WCF debe habilitar explícitamente la publicación de metadatos mediante la adición de puntos de conexión de metadatos a su servicio (consulte [la publicación de metadatos](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Deshabilitar la publicación de metadatos reduce la superficie de ataque de su servicio y disminuye el riesgo de divulgación involuntaria de información. No todos los servicios deben publicar metadatos. Si no tiene que publicar metadatos, considere el mantener esta opción desactivada. Tenga en cuenta que todavía puede generar los metadatos y código de cliente directamente desde los ensamblados de servicio mediante el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obtener más información sobre cómo utilizar Svcutil.exe para exportar los metadatos, vea [Cómo: Uso de Svcutil.exe para exportar metadatos desde el código de servicio compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>Publicar metadatos mediante un enlace seguro  
- Los enlaces de metadatos predeterminada que WCF proporciona no son seguros y permitir el acceso anónimo a los metadatos. Los metadatos del servicio que publica un servicio WCF contienen una descripción detallada sobre el servicio y pueden contener intencionadamente o por accidente información confidencial. Por ejemplo, los metadatos de servicio pueden contener información sobre operaciones de infraestructura que no se tenía intención de divulgar públicamente. Para proteger los metadatos de servicio de los accesos no autorizados, utilice un enlace de seguridad para el extremo de los metadatos. Los puntos de conexión de metadatos responden a las solicitudes HTTP/GET que pueden utilizar la capa de sockets seguros (SSL) para proteger los metadatos. Para obtener más información, consulte [Cómo: proteger los extremos de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+ Los enlaces de metadatos predeterminada que WCF proporciona no son seguros y permitir el acceso anónimo a los metadatos. Los metadatos del servicio que publica un servicio WCF contienen una descripción detallada sobre el servicio y pueden contener intencionadamente o por accidente información confidencial. Por ejemplo, los metadatos de servicio pueden contener información sobre operaciones de infraestructura que no se tenía intención de divulgar públicamente. Para proteger los metadatos de servicio de los accesos no autorizados, utilice un enlace de seguridad para el extremo de los metadatos. Los puntos de conexión de metadatos responden a las solicitudes HTTP/GET que pueden utilizar la capa de sockets seguros (SSL) para proteger los metadatos. Para obtener más información, vea [Cómo: Proteger los extremos de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
  La protección de los puntos de conexión de metadatos también proporciona un método para que los solicitantes recuperen metadatos de servicio de manera segura, sin el riesgo de manipulación o suplantación.  
   
@@ -38,6 +38,6 @@ Al utilizar las funciones de metadatos de Windows Communication Foundation (WCF)
 ## <a name="protecting-application-configuration-files"></a>Protección de los archivos de configuración de la aplicación  
  El archivo de configuración de la aplicación de un servicio puede controlar si se publican metadatos y cómo. Es recomendable proteger el archivo de configuración de la aplicación con listas de control de acceso (ACL) adecuadas, para asegurarse de que un atacante no pueda modificar esos valores.  
   
-## <a name="see-also"></a>Vea también  
- [Protección de los puntos de conexión de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
- [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Proteger los extremos de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)

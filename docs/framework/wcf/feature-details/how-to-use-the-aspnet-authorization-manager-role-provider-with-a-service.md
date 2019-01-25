@@ -1,15 +1,15 @@
 ---
-title: Cómo utilizar el proveedor de funciones del administrador de autorización de ASP.NET con un servicio
+title: Procedimiento Usar el proveedor de roles de administrador de autorización de ASP.NET con un servicio
 ms.date: 03/30/2017
 ms.assetid: f21deb81-91ef-49ef-94d6-494785143271
-ms.openlocfilehash: c21c1a80468bd81f2df69009afd2be86ee714250
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: de6c96fd8d0ea17954463d554504cdb4180a5268
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625567"
 ---
-# <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a>Cómo utilizar el proveedor de funciones del administrador de autorización de ASP.NET con un servicio
+# <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a>Procedimiento Usar el proveedor de roles de administrador de autorización de ASP.NET con un servicio
 Cuando [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hospeda un servicio web, se puede integrar el administrador de autorización en la aplicación para autorizar el servicio. El administrador de autorización permite a los desarrolladores de aplicaciones definir operaciones individuales que, a su vez, pueden agruparse para formar tareas. Un administrador puede autorizar funciones que realicen tareas específicas u operaciones individuales. El administrador de autorización proporciona una herramienta de administración, como complemento de Microsoft Management Console (MMC), para administrar funciones, tareas, operaciones y usuarios. Los administradores configuran un almacén de directivas del administrador de autorización en un archivo XML, en Active Directory, o en un almacén de Active Directory Application Mode (ADAM).  
   
  El administrador de autorización se integra en la aplicación mediante la configuración del [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proveedor de funciones del administrador de autorización de la aplicación [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que hospeda el servicio web. Al igual que otros proveedores de funciones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], el proveedor de funciones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] del administrador de autorización se configura mediante el elemento <`providers`>.  
@@ -29,7 +29,7 @@ Cuando [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hospeda un serv
 </system.web>  
 ```  
   
- Para obtener más información acerca de cómo integrar un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proveedor de roles con una aplicación de WCF, vea [Cómo: utilizar el proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md). Para obtener más información sobre cómo usar el Administrador de autorización con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], consulte [Cómo: usar el Administrador de autorización (AzMan) con ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=71303).  
+ Para obtener más información acerca de cómo integrar un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proveedor de roles con una aplicación de WCF, vea [Cómo: Usar el proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md). Para obtener más información sobre cómo usar el Administrador de autorización con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], vea [Cómo: Usar el Administrador de autorización (AzMan) con ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=71303).  
   
-## <a name="see-also"></a>Vea también  
- [Uso del proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Usar el proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)

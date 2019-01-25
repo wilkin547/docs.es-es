@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2efa46abf5a1fcedee4a4055331f7a59963be794
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709161"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Escenarios de aplicación (Data Services de WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] admite un conjunto básico de escenarios para exponer y consumir datos como [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuentes de distribución. Este tema remite a los temas importantes en estos escenarios.  
@@ -20,12 +20,12 @@ ms.locfileid: "43803335"
   
 -   [Exposición de los datos como servicio](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
   
--   [Creación de un servicio de datos con un origen de datos de ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
+-   [Cómo: Crear un servicio de datos mediante un origen de datos de ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
   
  Exponga clases de datos de CLR arbitrarias como una fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
  -   [Exposición de los datos como servicio](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
   
--   [Creación de un servicio de datos utilizando el proveedor de reflexión](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+-   [Cómo: Crear un servicio de datos mediante el proveedor de reflexión](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
   
 -   [Proveedores de Data Services](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
   
@@ -41,14 +41,14 @@ ms.locfileid: "43803335"
   
 -   [Operaciones asincrónicas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Cómo: enlazar datos de servicio de datos a controles (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [Cómo: Enlazar datos de servicio de datos a controles (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  Utilice una fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] en una aplicación cliente basada en AJAX.  
  -   [Uso de un servicio de datos en una aplicación cliente](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
 -   [OData: Convenciones de URI](https://go.microsoft.com/fwlink/?LinkId=185564)  
   
--   [OData: Formato objeto de JavaScript Notation (JSON)](https://go.microsoft.com/fwlink/?LinkId=185790)  
+-   [OData: Formato de objeto de JavaScript Notation (JSON)](https://go.microsoft.com/fwlink/?LinkId=185790)  
   
  Crear una solución de datos de extremo a otro que usa [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] para transferir datos entre cliente y servidor.  
  -   [Inicio rápido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
@@ -58,7 +58,7 @@ ms.locfileid: "43803335"
 -   [Biblioteca cliente de Servicios de datos de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  Cree una aplicación cliente basada en .NET Framework utiliza una fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] de forma asincrónica para evitar los problemas de latencia en el cliente.  
- -   [Ejecución de consultas asincrónicas de servicios de datos](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)  
+ -   [Cómo: Ejecutar consultas de servicios de datos asincrónica](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)  
   
 -   [Operaciones asincrónicas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
@@ -72,20 +72,20 @@ ms.locfileid: "43803335"
  Enlazar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuentes a controles en una aplicación de Windows Presentation Framework (WPF).  
  -   [Enlace de datos a los controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
   
--   [Cómo: enlazar datos a elementos de Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
+-   [Cómo: Enlazar datos a elementos de Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
   
--   [Enlace de datos mediante un origen de datos del proyecto](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)  
+-   [Cómo: Enlazar datos mediante un origen de datos del proyecto](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)  
   
  Intercepte los mensajes que entran al servicio de datos para realizar la validación de datos y el filtrado de consultas basado en roles.  
- -   [Interceptación de mensajes de servicios de datos](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)  
+ -   [Cómo: Interceptar mensajes de servicio de datos](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)  
   
 -   [Interceptores](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)  
   
  Cree puntos de conexión en un servicio de datos para habilitar comportamientos de servicio personalizados.  
- -   [Definición de una operación de servicio](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
+ -   [Cómo: Definir una operación de servicio](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
   
 -   [Operaciones de servicio](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
- [Inicio rápido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
- [Recursos](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+## <a name="see-also"></a>Vea también
+- [Inicio rápido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Recursos](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

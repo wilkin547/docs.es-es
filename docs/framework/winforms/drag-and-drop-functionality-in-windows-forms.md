@@ -5,12 +5,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: b1189da9fa0b76ede3261cf6da5305a09147bba5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 29ed138f80705539b96f82898e50e80dd0e3cb16
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527034"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Funcionalidad de arrastrar y colocar en formularios Windows Forms
 Windows Forms incluye un conjunto de métodos, eventos y clases que implementan el comportamiento de arrastrar y colocar. En este tema se proporciona una introducción a la compatibilidad para arrastrar y colocar en Windows Forms.  Consulte también [operaciones de arrastrar y colocar y la compatibilidad con el Portapapeles](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
@@ -43,5 +43,5 @@ Windows Forms incluye un conjunto de métodos, eventos y clases que implementan 
   
  La clase <xref:System.Windows.Forms.QueryContinueDragEventArgs> proporciona el estado actual de los botones del mouse y las teclas modificadoras del teclado, un valor que especifica si se presionó la tecla ESC y un valor <xref:System.Windows.Forms.DragAction> que se puede establecer para especificar si la operación de arrastrar y colocar debe continuar.  
   
-## <a name="see-also"></a>Vea también  
- [Entradas mediante el mouse en una aplicación de Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a>Vea también
+- [Entradas mediante el mouse en una aplicación de Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

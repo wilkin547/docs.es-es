@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4f75ebc3a40bddbaf2347b9ef559139888f83900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b0b5c6e70afffd12d3f0cdbbb92b20ac3a949e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635018"
 ---
 # <a name="linkresource-method"></a>LinkResource (Método)
 Vínculos de un recurso.  
@@ -40,19 +40,19 @@ HRESULT LinkResource(
   
 #### <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- Identificador del ensamblado.  
+ Id. del ensamblado.  
   
  `pszFileName`  
  Nombre del archivo.  
   
  `pszNewLocation`  
- Nuevo nombre de archivo opcional. Si no es NULL, `pszFileName` se copiará en pszNewLocation.  
+ Nuevo nombre de archivo opcional. Si no es NULL, `pszFileName` se copiarán en pszNewLocation.  
   
  `pszResourceName`  
  Nombre del recurso.  
   
  `dwFlags`  
- Indicadores de accesibilidad como `mrPublic` y `mrPrivate`. Este parámetro se puede pasar a [DefineManifestResource (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).  
+ Indicadores de accesibilidad como `mrPublic` y `mrPrivate`. Este parámetro puede pasarse a [DefineManifestResource (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).  
   
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si el método tiene éxito.  
@@ -60,7 +60,7 @@ HRESULT LinkResource(
 ## <a name="requirements"></a>Requisitos  
  Requiere alink.h.  
   
-## <a name="see-also"></a>Vea también  
- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vea también
+- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

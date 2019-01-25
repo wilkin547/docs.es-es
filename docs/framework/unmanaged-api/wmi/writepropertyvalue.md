@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2a4eb444967390492be33b25866de8a93a1698c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e5a2588023309867694f344041f62be53cab9c37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590125"
 ---
 # <a name="writepropertyvalue-function"></a>Función WritePropertyValue
-Escribe un número especificado de bytes en una propiedad identificada por un identificador de propiedad.
+Escribe un número específico de bytes en una propiedad identificada por un controlador de propiedad.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -63,8 +63,8 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un parámetro no es válido. |
-|`WBEM_E_TYPE_MISMATCH` | 0 x 80041005. | Se ha producido un error de coincidencia de tipo. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
+|`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Se ha producido un error de coincidencia de tipo. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
@@ -76,11 +76,11 @@ Use esta función para establecer la cadena y todos los otros que no sean de`DWO
 Para los valores de propiedad, `lNumBytes` debe ser el tamaño de datos correcto del tipo de propiedad especificado. Para los valores de propiedad de cadena, `lNumBytes` debe ser la longitud de la cadena especificada en bytes y la cadena debe tener una longitud en bytes incluso y seguir con un carácter de terminación null.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

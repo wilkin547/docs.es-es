@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41679d4041a6a5a7b9b71a451a083c539d6b4c7b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: dd46266286687881956e5de31963ac5957dede84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196496"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641582"
 ---
 # <a name="getting-started-with-net-native"></a>Introducción a .NET Native
 El conjunto de procedimientos que se debe seguir es el mismo, independientemente de si está creando una nueva aplicación de Windows para Windows 10 o si está migrando una aplicación que ya existe en la Tienda Windows. Siga estos pasos para crear una aplicación de [!INCLUDE[net_native](../../../includes/net-native-md.md)] :  
@@ -20,13 +20,13 @@ El conjunto de procedimientos que se debe seguir es el mismo, independientemente
   
 3.  [Implemente y pruebe las compilaciones de lanzamiento de la aplicación](#Step3).  
   
-4.  [Resuelva manualmente los metadatos que faltan](#Step4) y repita el [paso 3](#Step3) hasta que todos los problemas estén solucionados.  
+4.  [Resuelva manualmente los metadatos que faltan](#Step4)y repita el [paso 3](#Step3) hasta que todos los problemas estén solucionados.  
   
 > [!NOTE]
 >  Si va a migrar una aplicación existente de la Tienda Windows a [!INCLUDE[net_native](../../../includes/net-native-md.md)], no olvide repasar el tema [Migrar la aplicación de la Tienda Windows a .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
   
 <a name="Step1"></a>   
-## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Paso 1: desarrollar y probar compilaciones de depuración de la aplicación de UWP  
+## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Paso 1: Desarrollar y probar las compilaciones de depuración de la aplicación para UWP  
  Tanto si va a desarrollar una nueva aplicación o migrar una ya existente, el procedimiento es el mismo para cualquier aplicación de Windows.  
   
 1.  Crear un nuevo proyecto de UWP en Visual Studio mediante la plantilla de aplicación universal de Windows para Visual C# o Visual Basic. De forma predeterminada, todas las aplicaciones de UWP tienen como destino CoreCLR y sus versiones de lanzamiento se compilan con la cadena de herramientas de .NET Native.  
@@ -41,7 +41,7 @@ El conjunto de procedimientos que se debe seguir es el mismo, independientemente
  De forma predeterminada, las compilaciones de depuración están compiladas con JIT para permitir una rápida implementación F5, mientras que las versiones de lanzamiento se compilan mediante la tecnología de precompilación [!INCLUDE[net_native](../../../includes/net-native-md.md)] . Esto significa que debe compilar y probar las compilaciones de depuración de la aplicación para asegurarse de que funcionan normalmente antes de compilarlas con la cadena de herramientas de .NET Native.  
   
 <a name="Step2"></a>   
-## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Paso 2: Administrar el uso de reflexión y serialización adicionales  
+## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Paso 2: Administre el uso de reflexión y serialización adicionales  
  Se agrega de forma automática un archivo de directivas en tiempo de ejecución, Default.rd.xml, al proyecto cuando lo crea. Si desarrolla en C#, se encuentra en la carpeta **Propiedades** de su proyecto. Si desarrolla en Visual Basic, se encuentra en la carpeta **Mi proyecto** de su proyecto.  
   
 > [!NOTE]
@@ -63,7 +63,7 @@ El conjunto de procedimientos que se debe seguir es el mismo, independientemente
   
 -   Los métodos <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> y <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>  
   
--   Método <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>.  
+-   El método <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> .  
   
  Para obtener más información, consulta [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).  
   
@@ -71,10 +71,10 @@ El conjunto de procedimientos que se debe seguir es el mismo, independientemente
 >  Los nombres de tipo que se usan en los archivos de directivas en tiempo de ejecución deben ser nombres completos. Por ejemplo, el archivo debe mostrar "System.String" en lugar de "String".  
   
 <a name="Step3"></a>   
-## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Paso 3: implementar y probar las compilaciones de lanzamiento de la aplicación  
+## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Paso 3: Implementar y probar las compilaciones de lanzamiento de la aplicación  
  Después de actualizar el archivo de directivas en tiempo de ejecución, puede recompilar e implementar compilaciones de depuración de la aplicación. Los archivos binarios de .NET Native están en el subdirectorio ILC.out del directorio especificado en el cuadro de texto **Ruta de acceso de los resultados de la compilación** del cuadro de diálogo **Propiedades** del proyecto (pestaña **Compilar** ). Los archivos binarios que no estén en esta carpeta no se han compilado con .NET Native. Pruebe la aplicación exhaustivamente y pruebe todos los escenarios, incluidos los escenarios de error, en cada una de las plataformas de destino.  
   
- Si la aplicación no funciona correctamente (en especial, en los casos donde se generen excepciones [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) o [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) en tiempo de ejecución), siga las instrucciones de la siguiente sección, [Paso 4: Resolver manualmente los metadatos que faltan](#Step4). Habilitar las primeras excepciones puede ayudarle a encontrar estos errores.  
+ Si la aplicación no funciona correctamente (especialmente en los casos donde se [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) o [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) excepciones en tiempo de ejecución), siga las instrucciones en los próximos sección [paso 4: Resolver manualmente los metadatos que faltan](#Step4). Habilitar las primeras excepciones puede ayudarle a encontrar estos errores.  
   
  Cuando haya probado y depurado las compilaciones de depuración de la aplicación y esté seguro de que ha eliminado las excepciones [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) y [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) , debe probar la aplicación como una aplicación de [!INCLUDE[net_native](../../../includes/net-native-md.md)] optimizada. Para ello, cambie la configuración del proyecto activo de **Depurar** a **Liberar**.  
   
@@ -106,17 +106,17 @@ El conjunto de procedimientos que se debe seguir es el mismo, independientemente
   
  Si desea ver algunos ejemplos específicos de control de excepciones y otros problemas que se producen al probar la aplicación, consulte:  
   
--   [Ejemplo: control de excepciones al enlazar datos](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [Ejemplo: Control de excepciones al enlazar datos](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [Ejemplo: solucionar problemas de programación dinámica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [Ejemplo: Solución de problemas de programación dinámica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
 -   [Excepciones de tiempo de ejecución en las aplicaciones nativas de .NET](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
-## <a name="see-also"></a>Vea también  
- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [NIB: Instalación de .NET Native y configuración](https://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)  
- [.NET Native and Compilation](../../../docs/framework/net-native/net-native-and-compilation.md) (.NET Native y compilación)  
- [Reflection and .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) (Reflexión y .NET Native)  
- [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md) (API basadas en Reflection)  
- [Serialización y metadatos](../../../docs/framework/net-native/serialization-and-metadata.md)  
- [Migrar la aplicación de la Tienda Windows a .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+## <a name="see-also"></a>Vea también
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [NIB: Instalación de .NET Native y configuración](https://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)
+- [.NET Native and Compilation](../../../docs/framework/net-native/net-native-and-compilation.md) (.NET Native y compilación)
+- [Reflection and .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) (Reflexión y .NET Native)
+- [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md) (API basadas en Reflection)
+- [Serialización y metadatos](../../../docs/framework/net-native/serialization-and-metadata.md)
+- [Migrar la aplicación de la Tienda Windows a .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

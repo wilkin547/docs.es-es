@@ -2,12 +2,12 @@
 title: Objetos DataAdapter y DataReader
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f4588187aad910d0b50b0c804e6de20a477b567b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583514"
 ---
 # <a name="dataadapters-and-datareaders"></a>Objetos DataAdapter y DataReader
 Puede usar ADO.NET **DataReader** para recuperar una secuencia de sólo lectura, solo hacia delante de los datos de una base de datos. Los resultados se devuelven cuando la consulta se ejecuta y se almacenan en el búfer de red en el cliente hasta que se solicitan mediante el **lectura** método de la **DataReader**. Mediante el **DataReader** puede aumentar el rendimiento de la aplicación mediante la recuperación de datos tan pronto como está disponible y (de forma predeterminada) almacenar solo una fila a la vez en la memoria, lo que reduce la sobrecarga del sistema.  
@@ -44,9 +44,9 @@ Puede usar ADO.NET **DataReader** para recuperar una secuencia de sólo lectura,
  [Realización de operaciones por lotes utilizando objetos DataAdapter](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
  Describe cómo mejorar el rendimiento de la aplicación mediante la reducción del número de viajes de ida y vuelta (round trip) al servidor SQL Server al aplicar las actualizaciones desde el `DataSet`.  
   
-## <a name="see-also"></a>Vea también  
- [Conexión a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Objetos DataSet, DataTable y DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Conexión a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [Transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Objetos DataSet, DataTable y DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

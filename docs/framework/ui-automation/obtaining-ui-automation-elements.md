@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 16bc9475599510a5e55f246d49aaa0be19314979
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 23b1b92c52988761aa67eb2de16a1b9141a0de30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524874"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Obtener elementos de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  En este tema se describen las distintas formas de obtener objetos <xref:System.Windows.Automation.AutomationElement> para elementos [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
@@ -27,7 +27,7 @@ ms.locfileid: "47208690"
 ## <a name="root-element"></a>Elemento raíz  
  Todas las búsquedas de objetos <xref:System.Windows.Automation.AutomationElement> deben tener un punto de inicio. Puede ser cualquier elemento, incluidos el escritorio, una ventana de aplicación o un control.  
   
- El elemento raíz para el escritorio, desde el que todos los elementos son descendientes, se obtiene del estático <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> propiedad.  
+ El elemento raíz para el escritorio, del que descienden todos los elementos, se obtiene de la propiedad estática <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> .  
   
 > [!CAUTION]
 >  En general, debe intentar obtener solo elementos secundarios directos del elemento <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Una búsqueda de descendientes puede iterar a través de cientos o incluso miles de elementos, lo que posiblemente provocaría un desbordamiento de pila. Si intenta obtener un elemento concreto en un nivel inferior, debe iniciar la búsqueda desde la ventana de aplicación o desde un contenedor en un nivel inferior.  
@@ -98,7 +98,7 @@ ms.locfileid: "47208690"
 ### <a name="from-the-focused-control"></a>Desde el control con el foco  
  Puede recuperar un elemento <xref:System.Windows.Automation.AutomationElement> que representa el control con el foco desde la propiedad estática <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> .  
   
-## <a name="see-also"></a>Vea también  
- [Búsqueda de un elemento de Automatización de la interfaz de usuario basada en una condición de propiedad](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [Navegar entre elementos de Automatización de la interfaz de usuario con TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [Información general sobre el árbol de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+## <a name="see-also"></a>Vea también
+- [Búsqueda de un elemento de Automatización de la interfaz de usuario basada en una condición de propiedad](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Navegar entre elementos de Automatización de la interfaz de usuario con TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
+- [Información general sobre el árbol de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

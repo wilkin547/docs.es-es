@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ee2272a43d9f71cd49754a7f4233868b8bb9134
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d15f34c55f0ee261c65649e9d431944201c546f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506035"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept (Enumeración)
 Indica los tipos de código que se pueden interceptar, es decir, ejecutar paso a paso.  
@@ -49,20 +49,20 @@ typedef enum CorDebugIntercept {
 |`INTERCEPT_EXCEPTION_FILTER`|Se puede interceptar un filtro de excepción.|  
 |`INTERCEPT_SECURITY`|Se puede interceptar código que exija seguridad.|  
 |`INTERCEPT_CONTEXT_POLICY`|Se puede interceptar una directiva de contexto.|  
-|`INTERCEPT_INTERCEPTION`|No usado.|  
+|`INTERCEPT_INTERCEPTION`|No se utiliza.|  
 |`INTERCEPT_ALL`|Se puede interceptar todo el código.|  
   
 ## <a name="remarks"></a>Comentarios  
  Use la [SetInterceptMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md) método para establecer los tipos de código que se pueden interceptar.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

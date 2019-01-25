@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a712ed9e3534ca6bb2962989f1ab3750a25d539
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f2abb24a319d8d3aff940ddb7eabd16b3e238862
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611753"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap (Método)
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  
@@ -44,25 +44,25 @@ HRESULT GetInstrumentedILMap(
  [out] El número de valores COR_IL_MAP escritos en la matriz de asignaciones.  
   
  map  
- [out] Una matriz de valores COR_IL_MAP que proporcionan información sobre las asignaciones de IL instrumentado por el generador de perfiles al IL del método original.  
+ [out] Una matriz de valores COR_IL_MAP que proporcionan información sobre las asignaciones de IL instrumentado del generador de perfiles al IL del método original.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el generador de perfiles establece la asignación mediante una llamada a la [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) método, el depurador puede llamar a este método para recuperar la asignación y usar la asignación internamente al calcular IL los desplazamientos de pila seguimientos y duración de las variables.  
+ Si el generador de perfiles establece la asignación mediante una llamada a la [SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) método, el depurador puede llamar a este método para recuperar la asignación y usar la asignación internamente al calcular IL los desplazamientos de pila los seguimientos y duración de las variables.  
   
- Si `cMap` es 0 y `pcMap` no es**null**, `pcMap` se establece en el número de valores COR_IL_MAP disponibles. Si `cMap` no es cero, representa la capacidad de almacenamiento de la matriz `map`. Cuando el método vuelve, `map` contenga un máximo de `cMap` elementos, y `pcMap` se establece en el número de valores COR_IL_MAP escritos realmente en el `map` matriz.  
+ Si `cMap` es 0 y `pcMap` no es**null**, `pcMap` se establece en el número de valores COR_IL_MAP disponibles. Si `cMap` no es cero, representa la capacidad de almacenamiento de la matriz `map`. Cuando el método vuelve, `map` contiene un máximo de `cMap` elementos, y `pcMap` se establece en el número de valores COR_IL_MAP escritos realmente en el `map` matriz.  
   
  Si el IL no se ha instrumentado o un generador de perfiles no ha proporcionado la asignación, este método devuelve `S_OK` y establece `pcMap` en 0.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)  
- [ICorDebugILCode2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
+- [ICorDebugILCode2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

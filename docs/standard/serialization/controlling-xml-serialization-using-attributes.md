@@ -15,16 +15,16 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 28c7ebe1de3adb92e531597027e4b8bb7a63294c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 54660244c1b3cca8cb75539edbe23628b370afd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686171"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Controlar la serialización XML mediante atributos
 
-Los atributos se pueden utilizar para controlar la serialización XML de un objeto o crear una secuencia XML alternativa a partir del mismo conjunto de clases. Para obtener más información sobre la creación de una secuencia XML alternativa, vea [Cómo: Especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+Los atributos se pueden utilizar para controlar la serialización XML de un objeto o crear una secuencia XML alternativa a partir del mismo conjunto de clases. Para obtener más información acerca de cómo crear una secuencia XML alternativa, vea [Cómo: Especifique un nombre de elemento alternativo para un Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
 > Si el XML generado debe ajustarse a la sección 5 del documento de World Wide Web Consortium (W3C) titulado [protocolo de acceso de objeto Simple (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), utilice los atributos listados en [atributos que Control con codificación SOAP Serialización](attributes-that-control-encoded-soap-serialization.md).
@@ -70,7 +70,7 @@ Para obtener más información sobre atributos, vea [Atributos](../../../docs/st
 
 ## <a name="controlling-array-serialization"></a>Controlar la serialización de la matriz
 
-Los atributos <xref:System.Xml.Serialization.XmlArrayAttribute> y <xref:System.Xml.Serialization.XmlArrayItemAttribute> están diseñados para controlar la serialización de las matrices. Con estos atributos, puede controlar el nombre de elemento, espacio de nombres y tipo de datos de esquemas XML (XSD) (como se define en el documento de World Wide Web Consortium [www.w3.org] titulado "Esquema XML parte 2: Tipos de datos"). También puede especificar los tipos que pueden estar incluidos en una matriz.
+Los atributos <xref:System.Xml.Serialization.XmlArrayAttribute> y <xref:System.Xml.Serialization.XmlArrayItemAttribute> están diseñados para controlar la serialización de las matrices. Uso de estos atributos, puede controlar el nombre del elemento, el espacio de nombres y el tipo de datos de esquemas XML (XSD) (tal como se define en el documento de World Wide Web Consortium [www.w3.org] titulado "esquema XML parte 2: Tipos de datos"). También puede especificar los tipos que pueden estar incluidos en una matriz.
 
 <xref:System.Xml.Serialization.XmlArrayAttribute> determinará las propiedades del elemento envolvente XML que resulta cuando se serializa una matriz. Por ejemplo, de forma predeterminada, serializar la matriz siguiente producirá un elemento XML denominado `Employees`. El elemento `Employees` contendrá una serie de elementos denominados según el tipo de matriz `Employee`.
 
@@ -317,10 +317,10 @@ Podrían darse situaciones en las que una propiedad pública o el campo no neces
 
 ## <a name="see-also"></a>Vea también
 
-- [Atributos que controlan la serialización XML](attributes-that-control-xml-serialization.md)  
-- [Atributos que controlan la serialización SOAP codificada](attributes-that-control-encoded-soap-serialization.md)  
-- [Introducción a la serialización XML](introducing-xml-serialization.md)  
-- [Ejemplos de serialización XML](examples-of-xml-serialization.md)  
-- [Cómo: Especificar un nombre de elemento alternativo para una secuencia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
-- [Cómo: Serializar un objeto](how-to-serialize-an-object.md)  
-- [Cómo: Deserializar un objeto](how-to-deserialize-an-object.md)  
+- [Atributos que controlan la serialización XML](attributes-that-control-xml-serialization.md)
+- [Atributos que controlan la serialización SOAP codificada](attributes-that-control-encoded-soap-serialization.md)
+- [Introducción a la serialización XML](introducing-xml-serialization.md)
+- [Ejemplos de serialización XML](examples-of-xml-serialization.md)
+- [Cómo: Especifique un nombre de elemento alternativo para un Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Cómo: Serializar un objeto](how-to-serialize-an-object.md)
+- [Cómo: Deserializar un objeto](how-to-deserialize-an-object.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54c35f4f7a7f933bbc06a641d9ba00c5059b5ff9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 53d0f3bd991d502e4ddcad7df1e24d18af367e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598399"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken (Método)
 Obtiene la firma de metadatos binaria de la especificación de tipo representada por el token especificado.  
@@ -39,7 +39,7 @@ HRESULT GetTypeSpecFromToken (
   
 #### <a name="parameters"></a>Parámetros  
  `typespec`  
- [in] Símbolo (token) de TypeSpec asociado a la firma de metadatos solicitada.  
+ [in] El token de TypeSpec asociado con la firma de metadatos solicitada.  
   
  `ppvSig`  
  [out] Un puntero a la firma de metadatos binaria.  
@@ -48,17 +48,17 @@ HRESULT GetTypeSpecFromToken (
  [out] El tamaño, en bytes, de la firma de metadatos.  
   
 ## <a name="return-value"></a>Valor devuelto  
- HRESULT que indica éxito o error. Errores se pueden probar con la macro FAILED.  
+ Un HRESULT que indica éxito o error. Errores se pueden probar con la macro FAILED.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 343ee168809fc63ef63559eda0fd018abde684e7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 186238d8e823f028caaed2e2618d882d21e1358f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485747"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548955"
 ---
 # <a name="declare-statement"></a>Declare Statement
 Declara una referencia a un procedimiento implementado en un archivo externo.  
@@ -54,14 +54,14 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |Término|Definición|  
 |---|---|  
 |`attributelist`|Opcional. Consulte [lista de los atributos](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Opcional. Puede ser uno de los siguientes:<br /><br /> -   [público](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privado](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private protegida](../../language-reference/modifiers/private-protected.md)<br /><br /> Consulte [tener acceso a los niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`accessmodifier`|Opcional. Puede ser uno de los siguientes:<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privado](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private protegida](../../language-reference/modifiers/private-protected.md)<br /><br /> Vea [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Opcional. Consulte [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`charsetmodifier`|Opcional. Especifica el juego de caracteres y el archivo de información de búsqueda. Puede ser uno de los siguientes:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (valor predeterminado)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Automático](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|Opcional, pero cualquiera `Sub` o `Function` deben aparecer. Indica que el procedimiento externo no devuelve un valor.|  
 |`Function`|Opcional, pero cualquiera `Sub` o `Function` deben aparecer. Indica que el procedimiento externo devuelve un valor.|  
-|`name`|Requerido. Nombre de esta referencia externa. Para obtener más información, consulte [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Lib`|Requerido. Presenta un `Lib` cláusula que identifica el archivo externo (DLL o recurso de código) que contiene un procedimiento externo.|  
-|`libname`|Requerido. Nombre del archivo que contiene el procedimiento declarado.|  
+|`name`|Obligatorio. Nombre de esta referencia externa. Para obtener más información, consulte [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`Lib`|Obligatorio. Presenta un `Lib` cláusula que identifica el archivo externo (DLL o recurso de código) que contiene un procedimiento externo.|  
+|`libname`|Obligatorio. Nombre del archivo que contiene el procedimiento declarado.|  
 |`Alias`|Opcional. Indica que no se puede identificar el procedimiento que se declara dentro de su archivo por el nombre especificado en `name`. Especifique su identificación en `aliasname`.|  
 |`aliasname`|Obligatorio si se usa el `Alias` palabra clave. Cadena que identifica el procedimiento de dos maneras:<br /><br /> El nombre del punto de entrada del procedimiento dentro de su archivo entre comillas (`""`)<br /><br /> O bien<br /><br /> Un signo de número (`#`) seguido de un entero que especifica el número ordinal del punto de entrada del procedimiento dentro de su archivo|  
 |`parameterlist`|Requerido si el procedimiento toma parámetros. Consulte [Lista_de_parámetros](../../../visual-basic/language-reference/statements/parameter-list.md).|  
@@ -124,7 +124,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
     -   En una plataforma de Unicode, como Windows NT, Windows 2000 o Windows XP, busque primero el procedimiento externo sin modificar el nombre. Si se produce un error, anexe "W" al final del procedimiento externo asigne un nombre y buscar otra vez.  
   
--   **Mecanismo.** Visual Basic utiliza .NET Framework *de invocación de plataforma* mecanismo (PInvoke) para resolver y tener acceso a procedimientos externos. El `Declare` instrucción y el <xref:System.Runtime.InteropServices.DllImportAttribute> clase ambos utilizan este mecanismo automáticamente y no es necesario tener conocimientos de PInvoke. Para obtener más información, consulte [Tutorial: llamar a las API de Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+-   **Mecanismo.** Visual Basic utiliza .NET Framework *de invocación de plataforma* mecanismo (PInvoke) para resolver y tener acceso a procedimientos externos. El `Declare` instrucción y el <xref:System.Runtime.InteropServices.DllImportAttribute> clase ambos utilizan este mecanismo automáticamente y no es necesario tener conocimientos de PInvoke. Para obtener más información, vea [Tutorial: Llamar a las API de Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
 > [!IMPORTANT]
 >  Si el procedimiento externo se ejecuta fuera de common language runtime (CLR), es *código no administrado*. Cuando se llama a este tipo de procedimiento, por ejemplo, una función de la API de Win32 o un método COM, puede exponer su aplicación a riesgos de seguridad. Para obtener más información, consulte [instrucciones de codificación segura para código no administrado](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
@@ -141,12 +141,12 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
- [Imports (instrucción), espacio de nombres y tipo .NET](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [AddressOf (operador)](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Call (instrucción)](../../../visual-basic/language-reference/statements/call-statement.md)  
- [Tutorial: Llamar a las API de Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
+- [Imports (instrucción), espacio de nombres y tipo .NET](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [AddressOf (operador)](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Call (instrucción)](../../../visual-basic/language-reference/statements/call-statement.md)
+- [Tutorial: Llamar a las API de Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

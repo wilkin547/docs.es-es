@@ -1,16 +1,16 @@
 ---
-title: 'Cómo: habilitar el seguimiento de WIF'
+title: Cómo Habilitar el seguimiento de WIF
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: f763c279c29bec73d4fc20d59dc86726d84e21bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ab59b0809008f212269e2c4b9745ccaec8c9af5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605186"
 ---
-# <a name="how-to-enable-wif-tracing"></a>Cómo: habilitar el seguimiento de WIF
+# <a name="how-to-enable-wif-tracing"></a>Cómo Habilitar el seguimiento de WIF
 ## <a name="applies-to"></a>Se aplica a  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -18,7 +18,7 @@ ms.locfileid: "47207119"
 -   Formularios Web Forms ASP.NET®  
   
 ## <a name="summary"></a>Resumen  
- En este tema de procedimientos se proporcionan los procedimientos paso a paso detallados para habilitar el seguimiento de WIF en una aplicación ASP.NET. También se proporcionan instrucciones de prueba de la aplicación para comprobar que el registro y el agente de escucha de seguimiento funcionan correctamente. Esta sección de procedimientos no tiene instrucciones detalladas para crear un servicio de token de seguridad (STS) y en su lugar se utiliza el STS de desarrollo que se incluye con la extensión Identity and Access Tool. El STS de desarrollo no realiza la autenticación real y está pensado únicamente para pruebas. Para completar este procedimiento, tendrá que instalar la extensión Identity and Access Tool. Se puede descargar en la siguiente ubicación: [Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849).  
+ En este tema de procedimientos se proporcionan los procedimientos paso a paso detallados para habilitar el seguimiento de WIF en una aplicación ASP.NET. También se proporcionan instrucciones de prueba de la aplicación para comprobar que el registro y el agente de escucha de seguimiento funcionan correctamente. Esta sección de procedimientos no tiene instrucciones detalladas para crear un servicio de token de seguridad (STS) y en su lugar se utiliza el STS de desarrollo que se incluye con la extensión Identity and Access Tool. El STS de desarrollo no realiza la autenticación real y está pensado únicamente para pruebas. Para completar este procedimiento, tendrá que instalar la extensión Identity and Access Tool. Se puede descargar desde la ubicación siguiente: [Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 > [!IMPORTANT]
 >  Habilitar la traza de WIF para aplicaciones pasivas, es decir, aplicaciones que utilizan el protocolo de WS-Federation, podría exponer la aplicación a ataques de denegación de servicio (DoS) o a la divulgación de información a terceros malintencionados. Esto incluye tanto RP pasivos como STS pasivos. Por este motivo, es recomendable que no habilite el seguimiento de WIF para RP o STS pasivos en un entorno de producción.  
@@ -42,7 +42,7 @@ ms.locfileid: "47207119"
 -   Habilitar el seguimiento y comprobar que funciona  
   
 ## <a name="overview"></a>Información general  
- El seguimiento permite depurar y solucionar muchos tipos de problemas con WIF, como tokens, cookies, notificaciones, mensajes de protocolo, etc. El seguimiento de WIF es similar al seguimiento de WCF; por ejemplo, puede elegir el nivel de detalle de los seguimientos para mostrar cualquier tipo de mensaje, desde mensajes críticos a todos los mensajes. Los seguimientos de WIF se pueden generar en archivos **.xml** o en archivos **.svclog** que se pueden consultar mediante la herramienta Visor de seguimiento de servicios. Esta herramienta se encuentra en el directorio **bin** de la ruta de instalación de Windows SDK del equipo, por ejemplo: **C:\Archivos de programa\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.  
+ El seguimiento permite depurar y solucionar muchos tipos de problemas con WIF, como tokens, cookies, notificaciones, mensajes de protocolo, etc. El seguimiento de WIF es similar al seguimiento de WCF; por ejemplo, puede elegir el nivel de detalle de los seguimientos para mostrar cualquier tipo de mensaje, desde mensajes críticos a todos los mensajes. Los seguimientos de WIF se pueden generar en archivos **.xml** o en archivos **.svclog** que se pueden consultar mediante la herramienta Visor de seguimiento de servicios. Esta herramienta se encuentra en la **bin** directorio del SDK de Windows de ruta de instalación en el equipo, por ejemplo: **C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.  
   
 ## <a name="summary-of-steps"></a>Resumen de pasos  
   
@@ -65,14 +65,14 @@ ms.locfileid: "47207119"
   
 5.  Aparecerá la ventana **Identity and Access**. En **Proveedores**, seleccione **Test your application with the Local Development STS** (Probar la aplicación con el STS de desarrollo local) y haga clic en **Aplicar**.  
   
-6.  Cree una carpeta con el nombre **logs** en la raíz de la unidad **C:**, de la siguiente manera: **C:\logs**.  
+6.  Cree una nueva carpeta con el nombre **registros** en la raíz de la **C:** unidad, como se muestra: **C:\Logs**  
   
 7.  Agregue el siguiente elemento **\<system.diagnostics>** al archivo de configuración *Web.config* inmediatamente después del elemento **\</configSections>** de cierre, de la siguiente manera:  
   
     ```xml  
     <configuration>  
         <configSections>  
-        …  
+            ...
         </configSections>  
         <system.diagnostics>  
             <sources>  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8efcd62f39a7de397ef93231fd125a17c7e513e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd294037774721839b0c4f1f09bdc2a6e3b87841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562679"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod (Método)
 Obtiene los documentos que este método tiene líneas.  
@@ -38,7 +38,7 @@ HRESULT GetDocumentsForMethod(
   
 #### <a name="parameters"></a>Parámetros  
  `cDocs`  
- [in] La longitud del búfer que señala `pcDocs`.  
+ [in] La longitud del búfer que apunta `pcDocs`.  
   
  `pcDocs`  
  [out] Un puntero a un `ULONG32` que recibe el tamaño, en caracteres, del búfer necesario para contener los documentos.  
@@ -47,10 +47,10 @@ HRESULT GetDocumentsForMethod(
  [in] Búfer que contiene los documentos.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, un código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, un código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymENCUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymENCUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

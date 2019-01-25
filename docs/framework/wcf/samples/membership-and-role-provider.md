@@ -2,12 +2,12 @@
 title: Proveedor de pertenencia y roles
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 716aeeb57dc78ea9ff9205f75880b974d63fe39b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 9dde928beb348dcb41c6b908c8e5d2a04243172c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671478"
 ---
 # <a name="membership-and-role-provider"></a>Proveedor de pertenencia y roles
 El ejemplo de proveedor de pertenencia y función muestra el modo en que un servicio puede utilizar los proveedores de pertenencia y función de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] para autenticar y autorizar a los clientes.  

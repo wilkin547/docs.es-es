@@ -9,12 +9,12 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: d6b33df8574d9c25380d6d9319480d3c9df28660
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa0143aac4253b6a7648da589e01ac8abf9d4341
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492690"
 ---
 # <a name="storyboards-overview"></a>Información general sobre objetos Storyboard
 En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboard> objetos para organizar y aplicar animaciones. Describe cómo manipular interactivamente <xref:System.Windows.Media.Animation.Storyboard> objetos y se describe la sintaxis de establecimiento indirecto de propiedades.  
@@ -63,7 +63,7 @@ En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboa
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> y una <xref:System.Windows.EventTrigger>|Sí|Sí|Sí|Sí|[Animar una propiedad utilizando un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> y una propiedad <xref:System.Windows.Trigger>|No|Sí|Sí|Sí|[Activar una animación al cambiar el valor de una propiedad](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> y un <xref:System.Windows.DataTrigger>|No|Sí|Sí|Sí|[Cómo: Activar una animación cuando se cambian datos](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> y un <xref:System.Windows.DataTrigger>|No|Sí|Sí|Sí|[Cómo: Activar una animación cuando cambian los datos](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |Método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Sí|No|No|No|[Animar una propiedad utilizando un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  En el ejemplo siguiente se usa un <xref:System.Windows.Media.Animation.Storyboard> para animar la <xref:System.Windows.FrameworkElement.Width%2A> de un <xref:System.Windows.Shapes.Rectangle> elemento y el <xref:System.Windows.Media.SolidColorBrush.Color%2A> de un <xref:System.Windows.Media.SolidColorBrush> se usa para pintar que <xref:System.Windows.Shapes.Rectangle>.  
@@ -261,7 +261,7 @@ En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboa
   
  La ventaja de uso de estos métodos es que no necesita crear <xref:System.Windows.Trigger> o <xref:System.Windows.TriggerAction> objetos; solo necesita una referencia a la controlable <xref:System.Windows.Media.Animation.Storyboard> desea manipular.  
   
- **Nota:** todas las acciones interactivas realizadas en un <xref:System.Windows.Media.Animation.Clock>y por lo tanto, también en un <xref:System.Windows.Media.Animation.Storyboard> se producirán en el siguiente paso del motor de tiempo que se hará en breve antes de la siguiente representación. Por ejemplo, si usa el <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> método para saltar a otro punto en una animación, el valor de propiedad no cambia al instante, en su lugar, se cambia el valor en el siguiente paso del motor de tiempo.  
+ **Nota:** Todas las acciones interactivas realizadas en un <xref:System.Windows.Media.Animation.Clock>y por lo tanto, también en un <xref:System.Windows.Media.Animation.Storyboard> se producirán en el siguiente paso del motor de tiempo que se hará en breve antes de la siguiente representación. Por ejemplo, si usa el <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> método para saltar a otro punto en una animación, el valor de propiedad no cambia al instante, en su lugar, se cambia el valor en el siguiente paso del motor de tiempo.  
   
  El ejemplo siguiente muestra cómo aplicar y controlar animaciones mediante los métodos interactivos de la <xref:System.Windows.Media.Animation.Storyboard> clase.  
   
@@ -302,7 +302,7 @@ En este tema se muestra cómo usar <xref:System.Windows.Media.Animation.Storyboa
   
  Las animaciones aplicadas por la propiedad <xref:System.Windows.Trigger> se comportan los objetos en un modo más complejo que <xref:System.Windows.EventTrigger> animaciones o animaciones a usar <xref:System.Windows.Media.Animation.Storyboard> métodos.  Se "continúan" con animaciones definida por otros <xref:System.Windows.Trigger> objetos, pero se crean con <xref:System.Windows.EventTrigger> y animaciones activadas por métodos.  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Información general sobre técnicas de animación de propiedades](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Información general sobre técnicas de animación de propiedades](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)

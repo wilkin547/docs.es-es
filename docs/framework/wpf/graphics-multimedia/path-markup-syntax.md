@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 03f9c4f8156c5f14ff127dd47c7ade6f6ee22e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671270"
 ---
 # <a name="path-markup-syntax"></a>Sintaxis de marcado de trazados
 Las rutas de acceso se tratan en [formas y dibujo básico en WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) y [información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), sin embargo, este tema describe en detalle el eficaz y complejo minilenguaje puede usar para especificar la ruta de acceso geometrías de manera más compacta con [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -40,20 +40,20 @@ Las rutas de acceso se tratan en [formas y dibujo básico en WPF Overview](../..
 ### <a name="a-note-about-white-space"></a>Nota sobre los espacios en blanco  
  Por razones de brevedad, se muestra un solo espacio en las secciones de sintaxis siguientes, pero también se aceptan varios espacios cada vez que se muestra uno solo.  
   
- Dos números realmente no tienen que estar separados por comas o espacios en blanco, pero esto solo se puede hacer cuando la cadena resultante no es ambigua. Por ejemplo, `2..3` es realmente de dos números: "2". y ".3". De forma similar, `2-3` es "2" y "-3". Tampoco se necesitan espacios antes o después de los comandos.  
+ Dos números realmente no tienen que estar separados por comas o espacios en blanco, pero esto solo se puede hacer cuando la cadena resultante no es ambigua. Por ejemplo, `2..3` es realmente de dos números: "2." y ".3". De forma similar, `2-3` es "2" y "-3". Tampoco se necesitan espacios antes o después de los comandos.  
   
 ### <a name="syntax"></a>Sintaxis  
  El [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] atributo sintaxis de uso para un <xref:System.Windows.Media.StreamGeometry> se compone de un elemento opcional <xref:System.Windows.Media.FillRule> valor y uno o más descripciones de figura.  
   
 |Uso del atributo XAML StreamGeometry|  
 |-----------------------------------------|  
-|`<` *objeto* *propiedad* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
   
  El [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] atributo sintaxis de uso para un <xref:System.Windows.Media.PathFigureCollection> se compone de uno o más descripciones de figura.  
   
 |Uso del atributo XAML PathFigureCollection|  
 |-----------------------------------------------|  
-|`<` *objeto* *propiedad* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -69,7 +69,7 @@ Las rutas de acceso se tratan en [formas y dibujo básico en WPF Overview](../..
   
 |Sintaxis|  
 |------------|  
-|`M` *startPoint*<br /><br /> O bien<br /><br /> `m` *startPoint*|  
+|`M` *startPoint*<br /><br /> o bien<br /><br /> `m` *startPoint*|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -88,7 +88,7 @@ Las rutas de acceso se tratan en [formas y dibujo básico en WPF Overview](../..
   
 |Sintaxis|  
 |------------|  
-|`L` *endPoint*<br /><br /> O bien<br /><br /> `l` *endPoint*|  
+|`L` *endPoint*<br /><br /> o bien<br /><br /> `l` *endPoint*|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -102,7 +102,7 @@ En mayúscula `L` indica que `endPoint` es un valor absoluto; una minúscula `l`
   
 |Sintaxis|  
 |------------|  
-|`H`  *X*<br /><br /> O bien<br /><br /> `h`  *X*|  
+|`H`  *x*<br /><br /> o bien<br /><br /> `h`  *x*|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -129,7 +129,7 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
   
 |Sintaxis|  
 |------------|  
-|`C` `controlPoint`1`controlPoint`2`endPoint`<br /><br /> O bien<br /><br /> `c` `controlPoint`1`controlPoint`2`endPoint`|  
+|`C` `controlPoint`1`controlPoint`2`endPoint`<br /><br /> o bien<br /><br /> `c` `controlPoint`1`controlPoint`2`endPoint`|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -142,7 +142,7 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
   
 |Sintaxis|  
 |------------|  
-|`Q` `controlPoint` `endPoint`<br /><br /> O bien<br /><br /> `q` `controlPoint` `endPoint`|  
+|`Q` `controlPoint` `endPoint`<br /><br /> o bien<br /><br /> `q` `controlPoint` `endPoint`|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -154,7 +154,7 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
   
 |Sintaxis|  
 |------------|  
-|`S` `controlPoint`2`endPoint`<br /><br /> O bien<br /><br /> `s` `controlPoint`2`endPoint`|  
+|`S` `controlPoint`2`endPoint`<br /><br /> o bien<br /><br /> `s` `controlPoint`2`endPoint`|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -166,7 +166,7 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
   
 |Sintaxis|  
 |------------|  
-|`T` `controlPoint` `endPoint`<br /><br /> O bien<br /><br /> `t` `controlPoint` `endPoint`|  
+|`T` `controlPoint` `endPoint`<br /><br /> o bien<br /><br /> `t` `controlPoint` `endPoint`|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -178,7 +178,7 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
   
 |Sintaxis|  
 |------------|  
-|`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`<br /><br /> O bien<br /><br /> `a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`|  
+|`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`<br /><br /> o bien<br /><br /> `a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -194,7 +194,7 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
   
 |Sintaxis|  
 |------------|  
-|`Z`<br /><br /> O bien<br /><br /> `z`|  
+|`Z`<br /><br /> o bien<br /><br /> `z`|  
 
 <a name="pointsyntax"></a>   
 ## <a name="point-syntax"></a>Sintaxis de punto  
@@ -202,7 +202,7 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
   
 |Sintaxis|  
 |------------|  
-|`x` `,` `y`<br /><br /> O bien<br /><br /> `x` `y`|  
+|`x` `,` `y`<br /><br /> o bien<br /><br /> `x` `y`|  
   
 |Término|Descripción|  
 |----------|-----------------|  
@@ -224,11 +224,11 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
   
  También puede usar la notación científica. Por ejemplo, `+1.e17` es un valor válido.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Shapes.Path>  
- <xref:System.Windows.Media.StreamGeometry>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.PathFigureCollection>  
- [Información general sobre formas y dibujo básico en WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Shapes.Path>
+- <xref:System.Windows.Media.StreamGeometry>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.PathFigureCollection>
+- [Información general sobre formas y dibujo básico en WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

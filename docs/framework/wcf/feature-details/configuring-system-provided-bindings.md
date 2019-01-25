@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 343cdc4e30984e75bd2fede2706679839a573153
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0e3dd33e740d7e9f0b59b8568b35a83303e8b592
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845715"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517700"
 ---
 # <a name="configuring-system-provided-bindings"></a>Configuración de enlaces proporcionados por el sistema
 Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al hablar con un punto de conexión e indican cómo conectarse a un punto de conexión. Los enlaces están compuestos de elementos que definen cómo los canales de Windows Communication Foundation (WCF) se disponen en capa para proporcionar las características de comunicación necesaria. Un enlace contiene tres tipos de elementos:  
@@ -40,7 +40,7 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
 |<xref:System.ServiceModel.WS2007HttpBinding>|[\<ws2007HttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|Un enlace seguro e interoperable que proporciona compatibilidad para las versiones correctas de los elementos de enlace <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession> y <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A>.|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Un enlace seguro e interoperable adecuado para contratos de servicios dúplex o para la comunicación a través de intermediarios de SOAP.|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Un enlace seguro e interoperable que admite el protocolo WS-Federation, que permite a las organizaciones que están en una federación autenticar y autorizar eficazmente a los usuarios.|  
-|<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|Un enlace seguro e interoperable que deriva de <xref:System.ServiceModel.WS2007HttpBinding> y admite la seguridad federada.|  
+|<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|Un enlace seguro e interoperable que deriva de <xref:System.ServiceModel.WS2007HttpBinding> y admite la seguridad federada.|  
 |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Un enlace seguro y optimizado adecuado para la comunicación entre equipos entre aplicaciones de WCF.|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Un enlace seguro, confiable y optimizado que es adecuado para la comunicación en equipos entre aplicaciones de WCF.|  
 |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Un enlace en cola adecuado para la comunicación entre equipos entre aplicaciones de WCF.|  
@@ -63,7 +63,7 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Ninguno,<br /><br /> (Transporte)|Ninguno, (transporte)|(Ninguno), Sí|Sí|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Ninguno, mensaje, (transporte), ambos|(Ninguno)|(Ninguno), Sí|No|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Del mismo nivel|Ninguno, mensaje, (transporte), mixto|(Ninguno)|(Ninguno)|Sí|  
-|<xref:System.ServiceModel.WebHttpBinding>|.NET|Ninguno, transporte, TransportCredentialOnly|(Ninguno)|(Ninguno)|N/D|  
+|<xref:System.ServiceModel.WebHttpBinding>|.Net|Ninguno, transporte, TransportCredentialOnly|(Ninguno)|(Ninguno)|N/D|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|Ninguno, (transporte)|(Ninguno)|(Ninguno), Sí|N/D|  
   
  La siguiente tabla explica las características que se encuentran en la tabla anterior.  
@@ -71,13 +71,13 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
 |Característica|Descripción|  
 |-------------|-----------------|  
 |Tipo de interoperabilidad|Nombra el protocolo o tecnología con la que el enlace asegura la interoperación.|  
-|Seguridad|Especifica cómo se protege el canal:<br /><br /> -None: No se protege el mensaje SOAP y no se autentica el cliente.<br />-Transporte: Se cumplen los requisitos de seguridad en el nivel de transporte.<br />-Mensaje: Se cumplen los requisitos de seguridad en el nivel de mensaje.<br />-Mixto: Este modo de seguridad se conoce como `TransportWithMessageCredentials`. Administra las credenciales en el nivel de mensaje, y el nivel de transporte satisface los requisitos de integridad y confidencialidad.<br />-Ambos: Se utilizan ambos seguridad de nivel de transporte y del nivel de mensaje. Esta capacidad es única del <xref:System.ServiceModel.NetMsmqBinding>.|  
+|Seguridad|Especifica cómo se protege el canal:<br /><br /> -None: El mensaje SOAP no está protegido y no se autentica el cliente.<br />-Transporte: Se cumplen los requisitos de seguridad en el nivel de transporte.<br />-Mensaje: Se cumplen los requisitos de seguridad en el nivel de mensaje.<br />-Mixto: Este modo de seguridad se conoce como `TransportWithMessageCredentials`. Administra las credenciales en el nivel de mensaje, y el nivel de transporte satisface los requisitos de integridad y confidencialidad.<br />-Ambos: Se utilizan ambos seguridad de nivel de transporte y del nivel de mensaje. Esta capacidad es única del <xref:System.ServiceModel.NetMsmqBinding>.|  
 |Sesión|Especifica si este enlace admite contratos de sesión.|  
 |Transacciones|Especifica si las transacciones están habilitadas.|  
 |Dúplex|Especifica si se admiten los contratos dúplex. Observe que esta característica requiere que el enlace admita sesiones.|  
 |Streaming|Especifica si se admite la transmisión por secuencias del mensaje.|  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre la creación de puntos finales](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Utilización de enlaces para configurar servicios y clientes](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre la creación de puntos finales](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)

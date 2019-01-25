@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a221b286ada97c3c03387556cb30ee6ddd2c453
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 45e0099ea60a338f0ea1ef414f4d2fa1c33c9d70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436259"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726889"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy (Método)
 Modifica la directiva de enlace para el ensamblado especificado y crea una nueva versión de la directiva.  
@@ -55,38 +55,38 @@ HRESULT  ModifyApplicationPolicy (
  [in] El tamaño de la directiva de enlace que se debe reemplazar.  
   
  `dwPolicyModifyFlags`  
- [in] Combinación OR lógica de [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) valores, que indican el control de la redirección.  
+ [in] Una combinación OR lógica de [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) valores, que indica el control de la redirección.  
   
  `pbNewApplicationPolicy`  
- [out] Un puntero a un búfer que contiene los nuevos datos de directiva de enlace.  
+ [out] Un puntero a un búfer que contiene los nuevos datos de la directiva de enlace.  
   
  `pcbNewAppPolicySize`  
- [entrada, salida] Un puntero al tamaño del búfer de directiva de enlace nueva.  
+ [in, out] Un puntero al tamaño del búfer de nueva directiva de enlace.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|Se modificó correctamente la directiva.|  
+|S_OK|La directiva se modificó correctamente.|  
 |E_INVALIDARG|`pwzSourceAssemblyIdentity` o `pwzTargetAssemblyIdentity` era una referencia nula.|  
 |ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` es demasiado pequeño.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se han cargado en un proceso o el CLR está en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|La llamada agotó el tiempo de espera.|  
+|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|La llamada ha agotado el tiempo de espera.|  
 |HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra esperó en él.|  
-|E_FAIL|Se ha producido un error catastrófico desconocido. Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.|  
+|E_FAIL|Se ha producido un error irrecuperable desconocido. Después de un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `ModifyApplicationPolicy` método puede llamarse dos veces. La primera llamada debe proporcionar un valor null para la `pbNewApplicationPolicy` parámetro. Esta llamada devolverá el valor necesario para `pcbNewAppPolicySize`. La segunda llamada debe proporcionar este valor para `pcbNewAppPolicySize`y señalar un búfer de ese tamaño para `pbNewApplicationPolicy`.  
+ El `ModifyApplicationPolicy` método se puede llamar dos veces. La primera llamada debe proporcionar un valor null para el `pbNewApplicationPolicy` parámetro. Esta llamada devolverá el valor necesario para `pcbNewAppPolicySize`. La segunda llamada debe proporcionar este valor para `pcbNewAppPolicySize`y señale a un búfer de ese tamaño para `pbNewApplicationPolicy`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICLRHostBindingPolicyManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICLRHostBindingPolicyManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

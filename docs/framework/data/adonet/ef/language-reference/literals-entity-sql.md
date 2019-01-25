@@ -2,12 +2,12 @@
 title: Literales (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 90c065dff0f81a743cd66e224885de01f6129b56
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 71c77a3cb91d0981614e83221ad82d17067dc321
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767328"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643109"
 ---
 # <a name="literals-entity-sql"></a>Literales (Entity SQL)
 En este tema se describe la compatibilidad con los literales en [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
@@ -17,7 +17,7 @@ En este tema se describe la compatibilidad con los literales en [!INCLUDE[esql](
   
  Los valores null con tipo se pueden crear realizando una conversión de un literal null. Para obtener más información, consulte [conversión](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
   
- Para las reglas sobre dónde libre flotante literales null se puede utilizar, vea [literales Null e inferencia de tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
+ Para las reglas sobre dónde flotantes literales null se puede usar, vea [literales Null e inferencia de tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
   
 ## <a name="boolean"></a>Booleano  
  Los literales booleanos se representan mediante las palabras clave `true` y `false`.  
@@ -45,7 +45,7 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  Un literal datetime es independiente de la configuración regional y está compuesto de una fecha y una hora. Tanto la fecha como la hora deben aparecer y no hay valores predeterminados.  
   
- La fecha debe tener el formato: `YYYY` - `MM` - `DD`, donde `YYYY` es un valor de año de cuatro dígitos comprendido entre 0001 y 9999, `MM` es el mes comprendido entre 1 y 12 y `DD` es el valor de día es válido para el mes especificado `MM`.  
+ La fecha debe tener el formato: `YYYY` - `MM` - `DD`, donde `YYYY` es un valor de año de cuatro dígitos comprendido entre 0001 y 9999, `MM` es el mes, comprendido entre 1 y 12 y `DD` es el valor de día es válido para el mes especificado `MM`.  
   
  La hora debe tener el formato: `HH`:`MM`[:`SS`[.fffffff]], donde `HH` es el valor correspondiente a la hora comprendido entre 0 y 23, `MM` es el valor correspondiente a los minutos comprendido entre 0 y 59, `SS` es el valor correspondiente a los segundos comprendido entre 0 y 59, y fffffff es el valor correspondiente a la fracción de segundo comprendido entre 0 y 9999999. Todos los intervalos de valores incluyen los valores extremos. Las fracciones de segundo son opcionales. Los segundos son opcionales a menos que se especifiquen fracciones de segundo; en este caso, los segundos son necesarios. Cuando no se especifican segundos o fracciones de segundo, se usa el valor cero predeterminado.  
   
@@ -101,5 +101,5 @@ Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

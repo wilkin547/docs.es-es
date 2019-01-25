@@ -2,12 +2,12 @@
 title: Hospedar servicios de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: d51157863984314583c5d225bc9d8d0b6cf74874
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c933fd2bd46588ccd5c6115fbc2efca72bfadca4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594517"
 ---
 # <a name="hosting-workflow-services"></a>Hospedar servicios de flujo de trabajo
 Debe hospedarse un servicio del flujo de trabajo para que responda a los mensajes entrantes. Los servicios del flujo de trabajo usan la infraestructura de mensajería de WCF y, por lo tanto, se hospedan de maneras similares. Como los servicios WCF, servicios de flujo de trabajo se pueden hospedar en cualquier aplicación administrada, en Internet Information Services (IIS) o en Windows Process Activation Services (WAS). Además, los servicios de flujo de trabajo pueden hospedarse en Windows Server App Fabric. Para obtener más información acerca de Windows Server App Fabric, consulte [documentación de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric Hosting Features](https://go.microsoft.com/fwlink/?LinkId=196494), y [conceptos de hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495). Para obtener más información sobre las diversas maneras de hospedaje de WCF los servicios, consulte [servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md).

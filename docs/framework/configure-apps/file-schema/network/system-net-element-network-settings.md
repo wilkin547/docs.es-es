@@ -8,18 +8,18 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 82e022e28d3559791be3236fb80081807426a456
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2f387ecccac2c1c97d03e2c22a31ad2dd0577c77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567781"
 ---
 # <a name="ltsystemnetgt-element-network-settings"></a>&lt;system.Net&gt; elemento (configuración de red)
 Contiene valores que especifican cómo se conecta .NET Framework a la red.  
   
  \<configuration>  
-\<System.NET >  
+\<system.net>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,14 +43,14 @@ Contiene valores que especifican cómo se conecta .NET Framework a la red.
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).|  
 |[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Configura las opciones de envío de correo de Protocolo Simple de transferencia de correo (SMTP).|  
 |[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Controla el mecanismo de almacenamiento en caché para las solicitudes de red.|  
-|[Configuración](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura las opciones de red básica para las clases en el <xref:System.Net> y espacios de nombres secundarios relacionados.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura las opciones de red básica para las clases en el <xref:System.Net> y espacios de nombres secundarios relacionados.|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Especifica los módulos que se utilizan para solicitar información de hosts de Internet.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[Configuración](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contiene la configuración para todos los espacios de nombres.|  
+|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contiene la configuración para todos los espacios de nombres.|  
   
 ## <a name="remarks"></a>Comentarios  
  El [ \<system.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) elemento contiene los valores de las clases de la <xref:System.Net> y espacios de nombres secundarios relacionados. Configuración de la configuración de módulos de autenticación, administración de conexiones, configuración de correo, el servidor proxy y los módulos de solicitud de Internet para recibir información de hosts de Internet.  
@@ -92,5 +92,5 @@ Contiene valores que especifican cómo se conecta .NET Framework a la red.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 - [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

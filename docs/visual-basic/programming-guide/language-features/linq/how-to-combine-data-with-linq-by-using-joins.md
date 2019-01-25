@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Combinar datos con LINQ usando cláusulas Join (Visual Basic)'
+title: Procedimiento Combinar datos con LINQ usando cláusulas Join (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], joins
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: 4db5d288d79379b677bb19b2eba0d094e0d71bc8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fd1025d056dfb11d2253a39defb384c1d05efa32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553703"
 ---
-# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Cómo: Combinar datos con LINQ usando cláusulas Join (Visual Basic)
+# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Procedimiento Combinar datos con LINQ usando cláusulas Join (Visual Basic)
 Visual Basic proporciona el `Join` y `Group Join` cláusulas que le permite combinar el contenido de varias colecciones basadas en valores comunes entre las colecciones de consulta. Estos valores se conocen como *clave* valores. Reconocerán los desarrolladores familiarizados con conceptos de base de datos relacional el `Join` cláusula como INNER JOIN y `Group Join` cláusula as, de hecho, LEFT OUTER JOIN.  
   
  Los ejemplos de este tema muestran algunos ejemplos de cómo combinar datos mediante el uso de la `Join` y `Group Join` cláusulas de consulta.  
@@ -79,12 +79,12 @@ Visual Basic proporciona el `Join` y `Group Join` cláusulas que le permite comb
   
 2.  Presione F5 para ejecutar los ejemplos.  
   
-## <a name="see-also"></a>Vea también  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Join (cláusula)](../../../../visual-basic/language-reference/queries/join-clause.md)  
- [Group Join (cláusula)](../../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [From (cláusula)](../../../../visual-basic/language-reference/queries/from-clause.md)  
- [Where (cláusula)](../../../../visual-basic/language-reference/queries/where-clause.md)  
- [Consultas](../../../../visual-basic/language-reference/queries/index.md)  
- [Transformaciones de datos con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)
+## <a name="see-also"></a>Vea también
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Join (cláusula)](../../../../visual-basic/language-reference/queries/join-clause.md)
+- [Group Join (cláusula)](../../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [From (cláusula)](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where (cláusula)](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [Consultas](../../../../visual-basic/language-reference/queries/index.md)
+- [Transformaciones de datos con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)

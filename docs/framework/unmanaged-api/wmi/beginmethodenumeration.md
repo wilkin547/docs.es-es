@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e69625184aca7d1ebd4bb0b7dc7c4958596b906a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b682904a8e7f2eafa8833d784febe7b3b2a1e5f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611090"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration (función)
 Comienza una enumeración de los métodos disponibles para el objeto.  
@@ -51,8 +51,8 @@ HRESULT BeginMethodEnumeration (
 
 Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Limitar la enumeración a los métodos que se definen en la propia clase. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Limitar la enumeración de propiedades que se heredan de clases base. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limitar la enumeración a los métodos que se definen en la propia clase. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Limitar la enumeración de propiedades que se heredan de clases base. |
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -60,7 +60,7 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `lEnnumFlags` es distinto de cero y no es uno de los marcadores especificados. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` es distinto de cero y no es uno de los marcadores especificados. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
@@ -70,11 +70,11 @@ Esta función contiene una llamada a la [IWbemClassObject::BeginMethodEnumeratio
 Esta llamada al método solo se admite si el objeto actual es una definición de clase. Manipulación de método no está disponible en [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) punteros que señalan a las instancias. Se garantiza el orden en el que se enumeran los métodos invariantes para una instancia determinada de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject).
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

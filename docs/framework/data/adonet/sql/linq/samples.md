@@ -2,12 +2,12 @@
 title: Muestras
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: 0732a876d678967d25e41b9fbe767df506257ecb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 55d53642b1d98c798b164ca99d2a59d7ba299d22
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729036"
 ---
 # <a name="samples"></a>Muestras
 Este tema proporcionan vínculos a las soluciones de Visual Basic y C# que contienen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] código de ejemplo.  
@@ -27,6 +27,6 @@ Este tema proporcionan vínculos a las soluciones de Visual Basic y C# que conti
   
 -   Estudiar las notas que detalla [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnología, junto con ejemplos de código de Visual Basic y C#. Para obtener más información, consulte [LINQ to SQL: Language-Integrated Query para datos relacionales](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- [Tutoriales de LINQ to SQL](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)
+## <a name="see-also"></a>Vea también
+- [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [Tutoriales de LINQ to SQL](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)

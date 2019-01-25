@@ -2,22 +2,22 @@
 title: Elemento &lt;windowsAuthentication&gt; de &lt;serviceCredentials&gt;
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: acbb4f788d805d72dedcc7be711a38d1f1e82687
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 3077baf49c13c91c6293823aa841525bf07ca7f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148349"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616269"
 ---
 # <a name="ltwindowsauthenticationgt-of-ltservicecredentialsgt"></a>Elemento &lt;windowsAuthentication&gt; de &lt;serviceCredentials&gt;
 Especifica los valores de una credencial del servicio de Windows.  
   
  \<system.ServiceModel>  
 \<comportamientos >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<comportamiento >  
-\<serviceCredentials >  
-\<windowsAuthentication >  
+\<serviceCredentials>  
+\<windowsAuthentication>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,13 +43,13 @@ Especifica los valores de una credencial del servicio de Windows.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Especifica la credencial que se va a utilizar para autenticar el servicio y los valores relacionados con la validación de la credencial del cliente.|  
+|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Especifica la credencial que se va a utilizar para autenticar el servicio y los valores relacionados con la validación de la credencial del cliente.|  
   
 ## <a name="remarks"></a>Comentarios  
  Utilice este elemento para especificar si se permite a los usuarios anónimos de Windows obtener acceso estableciendo el atributo `allowAnonymousLogons`. También puede especificar si se incluye información del grupo a la que pertenecen los usuarios en AuthorizationContext estableciendo el atributo `includeWindowsGroups`. Si se establece como `true` (valor predeterminado), el servicio puede determinar los grupos de Windows a los que pertenece el cliente.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.WindowsServiceElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.WindowsAuthentication%2A>  
- <xref:System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication%2A>  
- <xref:System.ServiceModel.Security.WindowsServiceCredential>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.WindowsServiceElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.WindowsAuthentication%2A>
+- <xref:System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication%2A>
+- <xref:System.ServiceModel.Security.WindowsServiceCredential>

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 1dac93145b6e11a0d149f03b43e1e0b28b770925
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 33a9dd3144f6f51eb6a63ff93750019878cb4a03
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507478"
 ---
 # <a name="user-defined-data-type"></a>Tipo de datos definido por el usuario
 Contiene los datos en un formato que defina. El `Structure` instrucción define el formato.  
@@ -71,14 +71,14 @@ Contiene los datos en un formato que defina. El `Structure` instrucción define 
 End Structure  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ValueType>  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)  
- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [Estructuras](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ValueType>
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)
+- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
+- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [Estructuras](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

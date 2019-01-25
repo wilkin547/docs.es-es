@@ -2,12 +2,12 @@
 title: Seguridad de transporte HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 043154095d4600bd824457750effe9ea5494dcf5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bda749366b452a41a925fa36c90b3a2caa6bca32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603004"
 ---
 # <a name="http-transport-security"></a>Seguridad de transporte HTTP
 Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros (SSL) proporciona la seguridad. SSL se utiliza mucho en Internet para autenticar un servicio a un cliente y proporcionar la confidencialidad (cifrado) al canal. En este tema se explica cómo funciona SSL y cómo se implementa en Windows Communication Foundation (WCF).  
@@ -15,7 +15,7 @@ Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros
 ## <a name="basic-ssl"></a>SSL Básico  
  El funcionamiento de SSL se explica mejor a través de un escenario típico, en este caso, el sitio web de un banco. El sitio permite que un cliente inicie sesión con un nombre de usuario y contraseña. Después de autenticarse, el usuario puede realizar transacciones, como ver los saldos de la cuenta, pagar facturas y pasar dinero de una cuenta a otra.  
   
- Cuando un usuario visita el sitio por primera vez, el mecanismo de SSL comienza una serie de negociaciones, llamadas un *mutuo*, con el cliente del usuario (en este caso, Internet Explorer). SSL autentica primero el sitio bancario al cliente. Éste es un paso esencial porque los clientes deben conocer primero que están comunicando con el sitio real, y que no es un engaño que intenta hacer que escriban su nombre de usuario y contraseña. SSL hace esta autenticación utilizando un Certificado SSL proporcionado por una autoridad de confianza, como VeriSign. La lógica es así: VeriSign asegura la identidad del sitio bancario. Dado que Internet Explorer confía en VeriSign, se confía en el sitio. Si desea consultar con VeriSign, puede hacerlo haciendo clic en el logotipo de VeriSign. Eso presenta una instrucción de autenticidad con su fecha de caducidad y a quién se emite (el sitio bancario).  
+ Cuando un usuario visita el sitio por primera vez, el mecanismo de SSL comienza una serie de negociaciones, llamadas un *mutuo*, con el cliente del usuario (en este caso, Internet Explorer). SSL autentica primero el sitio bancario al cliente. Éste es un paso esencial porque los clientes deben conocer primero que están comunicando con el sitio real, y que no es un engaño que intenta hacer que escriban su nombre de usuario y contraseña. SSL hace esta autenticación utilizando un Certificado SSL proporcionado por una autoridad de confianza, como VeriSign. La lógica es similar al siguiente: VeriSign asegura la identidad del sitio bancario. Dado que Internet Explorer confía en VeriSign, se confía en el sitio. Si desea consultar con VeriSign, puede hacerlo haciendo clic en el logotipo de VeriSign. Eso presenta una instrucción de autenticidad con su fecha de caducidad y a quién se emite (el sitio bancario).  
   
  Para iniciar una sesión segura, el cliente envía el equivalente de un "hello" al servidor junto con una lista de algoritmos criptográficos que puede utilizar para firmar, generar los hash y cifrar y descifrar. En respuesta, el sitio devuelve un reconocimiento y su opción de uno de los conjuntos de algoritmos. Durante este protocolo de enlace inicial, ambas partes envían y reciben valores de seguridad (nonces). Un *nonce* es un fragmento de datos que se usan en combinación con la clave pública de la carpeta del sitio, para crear un hash generado aleatoriamente. Un *hash* es un número nuevo que se deriva de los dos números utilizando un algoritmo estándar, como SHA1. (El cliente y el sitio también intercambian mensajes para acordar qué algoritmo hash se debe usar.) El hash es único y se utiliza solo para la sesión entre el cliente y el sitio para cifrar y descifrar los mensajes. El cliente y el servicio tienen el nonce original y la clave pública del certificado, por lo que ambos lados pueden generar el mismo hash. Por consiguiente, el cliente valida el hash enviado por el servicio (a) usando el algoritmo acordado para calcular el hash a partir de los datos y (b) comparándolo con el hash enviado por el servicio; si ambos coinciden, el cliente tiene la convicción de que no se ha manipulado el hash. El cliente puede utilizar a continuación este hash como clave para cifrar un mensaje que todavía contiene otro nuevo hash. El servicio puede descifrar el mensaje mediante el hash y recupera este antepenúltimo hash. La información acumulada (nonces, clave pública y otros datos) se conoce ahora en ambos lados y se puede crear un hash (o clave maestra) final. Esta clave final se envía cifrada mediante el penúltimo hash. La clave maestra se utiliza a continuación para cifrar y descifrar los mensajes para el reinicio de la sesión. Como cliente y servicio utilizan la misma clave, también se denomina un *clave de sesión*.  
   
@@ -38,9 +38,9 @@ Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros
 ### <a name="using-iis-for-transport-security"></a>Utilizar IIS para seguridad de transporte   
   
 #### <a name="iis-70"></a>IIS 7.0  
- Para configurar [!INCLUDE[iisver](../../../../includes/iisver-md.md)] como un host seguro (utilizando SSL), consulte [IIS 7.0 Beta: configurar la capa de Sockets seguros en IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88600).  
+ Para configurar [!INCLUDE[iisver](../../../../includes/iisver-md.md)] como un host seguro (utilizando SSL), consulte [IIS 7.0 Beta: Configuración de Sockets seguros capa en IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88600).  
   
- Para configurar certificados para su uso con [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: configurar certificados de servidor en IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
+ Para configurar certificados para su uso con [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: Configuración de certificados de servidor en IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
   
 #### <a name="iis-60"></a>IIS 6,0  
  Para configurar [!INCLUDE[iis601](../../../../includes/iis601-md.md)] como un host seguro (utilizando SSL), consulte [capa de Sockets seguros](https://go.microsoft.com/fwlink/?LinkId=88601).  
@@ -50,8 +50,8 @@ Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros
 ### <a name="using-httpcfg-for-ssl"></a>Utilizar HttpCfg para SSL  
  Si va a crear una aplicación WCF autohospedada, descargue la herramienta HttpCfg.exe, disponible en el [sitio de Windows XP Service Pack 2 Support Tools](https://go.microsoft.com/fwlink/?LinkId=29002).  
   
- Para obtener más información sobre cómo usar la herramienta HttpCfg.exe para configurar un puerto con un certificado X.509, consulte [Cómo: configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Para obtener más información sobre cómo usar la herramienta HttpCfg.exe para configurar un puerto con un certificado X.509, vea [Cómo: Configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Seguridad de los mensajes](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+## <a name="see-also"></a>Vea también
+- [Seguridad de transporte](../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Seguridad de los mensajes](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)

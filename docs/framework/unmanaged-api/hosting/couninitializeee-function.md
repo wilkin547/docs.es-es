@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73fa281d28e9b5362ff386b55b07dd431f1915f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ef5faff6682ed6c043e81212f2cb27d4cfbd813d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429187"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601862"
 ---
 # <a name="couninitializeee-function"></a>CoUninitializeEE (Función)
 `CoUninitializeEE` está obsoleto y no proporciona ninguna funcionalidad.  
@@ -35,8 +35,8 @@ void CoUninitializeEE (
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El motor de ejecución de common language runtime no se puede descargar desde un proceso. Para cerrar la llamada del motor de ejecución [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).  
+ El motor de ejecución de common language runtime no se puede descargar desde un proceso. Para apagar la llamada del motor de ejecución [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).  
   
-## <a name="see-also"></a>Vea también  
- [CoInitializeEE (función)](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
- [Funciones estáticas globales para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Vea también
+- [CoInitializeEE (función)](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)
+- [Funciones estáticas globales para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

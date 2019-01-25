@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f3e5b3c4dcec98f293b4d6444d781705c700f88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6300195cafeedd8823e0b10b4ee0ebf9ff8e2055
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528074"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>Programación en SQL Server y atributos de protección de host
-La capacidad para cargar y ejecutar código administrado en un host de SQL Server requiere que se cumplan los requisitos del host tanto para la seguridad de acceso del código como para la protección de los recursos del host.  Los requisitos de la seguridad de acceso del código se especifican mediante uno de tres conjuntos de permisos de SQL Server: SAFE, EXTERNAL-ACCESS o UNSAFE. El código que se ejecuta dentro de los conjuntos de permisos SAFE o EXTERNAL-ACCESS debe evitar ciertos tipos o miembros que tienen aplicado el atributo <xref:System.Security.Permissions.HostProtectionAttribute>. <xref:System.Security.Permissions.HostProtectionAttribute> no es un permiso de seguridad, por más que una garantía de confiabilidad identifique construcciones de código específico (ya sean tipos o métodos) que el host podría rechazar.  El uso de <xref:System.Security.Permissions.HostProtectionAttribute> requiere un modelo de programación que ayude a proteger la estabilidad del host.  
+La capacidad para cargar y ejecutar código administrado en un host de SQL Server requiere que se cumplan los requisitos del host tanto para la seguridad de acceso del código como para la protección de los recursos del host.  Los requisitos de seguridad de acceso de código se especifican mediante uno de los tres conjuntos de permisos de SQL Server: SAFE, EXTERNAL-ACCESS o UNSAFE. El código que se ejecuta dentro de los conjuntos de permisos SAFE o EXTERNAL-ACCESS debe evitar ciertos tipos o miembros que tienen aplicado el atributo <xref:System.Security.Permissions.HostProtectionAttribute>. <xref:System.Security.Permissions.HostProtectionAttribute> no es un permiso de seguridad, por más que una garantía de confiabilidad identifique construcciones de código específico (ya sean tipos o métodos) que el host podría rechazar.  El uso de <xref:System.Security.Permissions.HostProtectionAttribute> requiere un modelo de programación que ayude a proteger la estabilidad del host.  
   
 ## <a name="host-protection-attributes"></a>Atributos de protección del host  
  Los atributos de protección del host identifican los tipos o los miembros que no se ajustan al modelo de programación del host y representan los siguientes niveles crecientes de amenaza de confiabilidad:  
@@ -53,7 +53,7 @@ La capacidad para cargar y ejecutar código administrado en un host de SQL Serve
 |`System.Windows.Forms`|Propiedad <xref:System.Windows.Forms.AutoCompleteStringCollection.SyncRoot%2A?displayProperty=nameWithType>|  
   
 ## <a name="sql-server-permission-sets"></a>Conjuntos de permisos de SQL Server  
- SQL Server permite a los usuarios especificar los requisitos de confiabilidad del código implementado en una base de datos. Al cargar los ensamblados en la base de datos, el autor del ensamblado puede especificar uno de los tres conjuntos de permisos para dicho ensamblado: SAFE, EXTERNAL-ACCESS o UNSAFE.  
+ SQL Server permite a los usuarios especificar los requisitos de confiabilidad del código implementado en una base de datos. Cuando se cargan los ensamblados en la base de datos, el autor del ensamblado puede especificar uno de los tres conjuntos de permisos para dicho ensamblado: SAFE, EXTERNAL-ACCESS o UNSAFE.  
   
 |Conjunto de permisos|SAFE|EXTERNAL-ACCESS|UNSAFE|  
 |--------------------|----------|----------------------|------------|  
@@ -75,6 +75,6 @@ La capacidad para cargar y ejecutar código administrado en un host de SQL Serve
   
  Dadas estas consideraciones, SQL Server no permite el uso de variables estáticas ni de miembros de datos estáticos. En cuanto a los ensamblados SAFE y EXTERNAL-ACCESS, SQL Server examina los metadatos del ensamblado al crear el ensamblado (CREATE ASSEMBLY). Se produce un error al crear dichos ensamblados si encuentra el uso de variables y miembros de datos estáticos.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Security.Permissions.HostProtectionAttribute>  
- <xref:System.Security.Permissions.HostProtectionResource>
+## <a name="see-also"></a>Vea también
+- <xref:System.Security.Permissions.HostProtectionAttribute>
+- <xref:System.Security.Permissions.HostProtectionResource>
