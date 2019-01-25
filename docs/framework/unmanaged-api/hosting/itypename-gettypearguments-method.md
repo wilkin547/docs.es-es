@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77b3a898dd929a6eeadc466a04a0fdb10571ed7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9c6d89372bd9c1e10412832e91dc7660dfe6bbfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732458"
 ---
-# <a name="itypenamegettypearguments-method"></a><span data-ttu-id="a30ef-102">ITypeName::GetTypeArguments (Método)</span><span class="sxs-lookup"><span data-stu-id="a30ef-102">ITypeName::GetTypeArguments Method</span></span>
-<span data-ttu-id="a30ef-103">Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.</span><span class="sxs-lookup"><span data-stu-id="a30ef-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamegettypearguments-method"></a><span data-ttu-id="201cc-102">ITypeName::GetTypeArguments (Método)</span><span class="sxs-lookup"><span data-stu-id="201cc-102">ITypeName::GetTypeArguments Method</span></span>
+<span data-ttu-id="201cc-103">Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.</span><span class="sxs-lookup"><span data-stu-id="201cc-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a30ef-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a30ef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="201cc-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="201cc-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeArguments (  
@@ -37,14 +37,14 @@ HRESULT GetTypeArguments (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="a30ef-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a30ef-105">Requirements</span></span>  
- <span data-ttu-id="a30ef-106">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a30ef-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="201cc-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="201cc-105">Requirements</span></span>  
+ <span data-ttu-id="201cc-106">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="201cc-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a30ef-107">**Encabezado:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a30ef-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="201cc-107">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="201cc-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="a30ef-108">**Biblioteca:** incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a30ef-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="201cc-108">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="201cc-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a30ef-109">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a30ef-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="201cc-109">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="201cc-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a30ef-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="a30ef-110">See Also</span></span>  
- [<span data-ttu-id="a30ef-111">Interfaces de hospedaje</span><span class="sxs-lookup"><span data-stu-id="a30ef-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="201cc-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="201cc-110">See also</span></span>
+- [<span data-ttu-id="201cc-111">Interfaces de hospedaje</span><span class="sxs-lookup"><span data-stu-id="201cc-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

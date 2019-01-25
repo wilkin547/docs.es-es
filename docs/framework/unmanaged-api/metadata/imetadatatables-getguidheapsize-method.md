@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97d196769b549022ce498958fc34cf08df442d0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7f9a7ddb85865545698809e1865ec571f7c5e9c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674224"
 ---
-# <a name="imetadatatablesgetguidheapsize-method"></a><span data-ttu-id="df218-102">IMetaDataTables::GetGuidHeapSize (Método)</span><span class="sxs-lookup"><span data-stu-id="df218-102">IMetaDataTables::GetGuidHeapSize Method</span></span>
-<span data-ttu-id="df218-103">Obtiene el tamaño, en bytes, del montón GUID.</span><span class="sxs-lookup"><span data-stu-id="df218-103">Gets the size, in bytes, of the GUID heap.</span></span>  
+# <a name="imetadatatablesgetguidheapsize-method"></a><span data-ttu-id="80c2c-102">IMetaDataTables::GetGuidHeapSize (Método)</span><span class="sxs-lookup"><span data-stu-id="80c2c-102">IMetaDataTables::GetGuidHeapSize Method</span></span>
+<span data-ttu-id="80c2c-103">Obtiene el tamaño, en bytes, del montón GUID.</span><span class="sxs-lookup"><span data-stu-id="80c2c-103">Gets the size, in bytes, of the GUID heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="df218-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="df218-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80c2c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="80c2c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGuidHeapSize (  
@@ -35,19 +35,19 @@ HRESULT GetGuidHeapSize (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="df218-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="df218-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="80c2c-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="80c2c-105">Parameters</span></span>  
  `pcbGuids`  
- <span data-ttu-id="df218-106">[out] Un puntero al tamaño, en bytes, del montón GUID.</span><span class="sxs-lookup"><span data-stu-id="df218-106">[out] A pointer to the size, in bytes, of the GUID heap.</span></span>  
+ <span data-ttu-id="80c2c-106">[out] Un puntero al tamaño, en bytes, del montón GUID.</span><span class="sxs-lookup"><span data-stu-id="80c2c-106">[out] A pointer to the size, in bytes, of the GUID heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="df218-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="df218-107">Requirements</span></span>  
- <span data-ttu-id="df218-108">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="df218-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80c2c-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="80c2c-107">Requirements</span></span>  
+ <span data-ttu-id="80c2c-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80c2c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="df218-109">**Encabezado:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="df218-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="80c2c-109">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="80c2c-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="df218-110">**Biblioteca:** usada como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="df218-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="80c2c-110">**Biblioteca:** Usar como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="80c2c-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="df218-111">**Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="df218-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="80c2c-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80c2c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df218-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="df218-112">See Also</span></span>  
- [<span data-ttu-id="df218-113">IMetaDataTables (interfaz)</span><span class="sxs-lookup"><span data-stu-id="df218-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="df218-114">IMetaDataTables2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="df218-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="80c2c-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="80c2c-112">See also</span></span>
+- [<span data-ttu-id="80c2c-113">IMetaDataTables (interfaz)</span><span class="sxs-lookup"><span data-stu-id="80c2c-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="80c2c-114">IMetaDataTables2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="80c2c-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
