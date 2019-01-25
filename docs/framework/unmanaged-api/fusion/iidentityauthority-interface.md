@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 692ac4ef4fe8ea64c6a63dc2f02cc04244a842c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab8965ca5d6c9c96cea5f5b351547ce2d4dfacc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546285"
 ---
 # <a name="iidentityauthority-interface"></a>IIdentityAuthority (Interfaz)
 Administra las claves de identidad para los objetos de código.  
@@ -30,12 +30,12 @@ Administra las claves de identidad para los objetos de código.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|`IIdentityAuthority::AreDefinitionsEqual`|Obtiene un valor que indica si las dos especificadas [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) instancias son iguales.|  
-|`IIdentityAuthority::AreReferencesEqual`|Obtiene un valor que indica si las dos especificadas [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) instancias son iguales.|  
-|`IIdentityAuthority::AreTextualDefinitionsEqual`|Obtiene un valor que indica si las dos representaciones de identidad de definición de la cadena especificada son iguales.|  
+|`IIdentityAuthority::AreDefinitionsEqual`|Obtiene un valor que indica si los dos especifica [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) instancias son iguales.|  
+|`IIdentityAuthority::AreReferencesEqual`|Obtiene un valor que indica si los dos especifica [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) instancias son iguales.|  
+|`IIdentityAuthority::AreTextualDefinitionsEqual`|Obtiene un valor que indica si las dos representaciones de identidad de definición de cadena especificada son iguales.|  
 |`IIdentityAuthority::AreTextualReferencesEqual`|Obtiene un valor que indica si las dos representaciones de identidad de referencia de la cadena especificada son iguales.|  
-|`IIdentityAuthority::CreateDefinition`|Obtiene un puntero a una nueva `IDefinitionIdentity` instancia que representa el objeto de código en el ámbito actual.|  
-|`IIdentityAuthority::CreateReference`|Obtiene un puntero a una nueva `IReferenceIdentity` instancia que representa el objeto de código en el ámbito actual.|  
+|`IIdentityAuthority::CreateDefinition`|Obtiene un puntero a un nuevo `IDefinitionIdentity` instancia que representa el objeto de código en el ámbito actual.|  
+|`IIdentityAuthority::CreateReference`|Obtiene un puntero a un nuevo `IReferenceIdentity` instancia que representa el objeto de código en el ámbito actual.|  
 |`IIdentityAuthority::DefinitionToText`|Obtiene una versión de cadena con formato del elemento especificado `IDefinitionIdentity`.|  
 |`IIdentityAuthority::DefinitionToTextBuffer`|Llena el búfer de carácter ancho especificado con una versión de cadena del elemento especificado `IDefinitionIdentity`.|  
 |`IIdentityAuthority::DoesDefinitionMatchReference`|Obtiene un valor que indica si el texto especificado `IDefinitionIdentity` y `IReferenceIdentity` instancias hacen referencia al mismo objeto de código.|  
@@ -46,15 +46,15 @@ Administra las claves de identidad para los objetos de código.
 |`IIdentityAuthority::HashReference`|Obtiene un valor hash para el elemento especificado `IreferenceIdentity`.|  
 |`IIdentityAuthority::ReferenceToText`|Obtiene una versión de cadena con formato del elemento especificado `IReferenceIdentity`.|  
 |`IIdentityAuthority::ReferenceToTextBuffer`|Llena el búfer de carácter ancho especificado con una versión de cadena del elemento especificado `IReferenceIdentity`.|  
-|`IIdentityAuthority::TextToDefinition`|Obtiene un puntero de interfaz a un `IDefinitionIdentity` instancia generada a partir de lo especificado la cadena con formato.|  
-|`IIdentityAuthority::TextToReference`|Obtiene un puntero de interfaz a un `IReferenceIdentity` instancia generada a partir de lo especificado la cadena con formato.|  
+|`IIdentityAuthority::TextToDefinition`|Obtiene un puntero de interfaz a un `IDefinitionIdentity` cadena con formato de instancia generado a partir de la especificada.|  
+|`IIdentityAuthority::TextToReference`|Obtiene un puntero de interfaz a un `IReferenceIdentity` cadena con formato de instancia generado a partir de la especificada.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Isolation.h  
+ **Encabezado**: Isolation.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

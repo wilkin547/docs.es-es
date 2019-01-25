@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 8fedec60b6152e77d6f99bf55cf11ec909fa8f80
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f15111fbd65896cc42ab3d1462dc567133a7b4ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566351"
 ---
 # <a name="specifying-an-assembly39s-location"></a>Especifica un ensamblado&#39;ubicación s
 Hay dos maneras de especificar una ubicación de ensamblado:  
@@ -67,8 +67,8 @@ Hay dos maneras de especificar una ubicación de ensamblado:
   
  El **privatePath** atributo contiene los directorios que el tiempo de ejecución debe buscar los ensamblados. Si la aplicación se encuentra en C:\Program programa\myapp, el tiempo de ejecución busca ensamblados que no especifican un código base en C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin2\Subbin y C:\Program Files\MyApp\Bin3. Los directorios especificados en **privatePath** deben ser subdirectorios del directorio base.  
   
-## <a name="see-also"></a>Vea también  
- [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Configurar aplicaciones de .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+## <a name="see-also"></a>Vea también
+- [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Configurar aplicaciones de .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

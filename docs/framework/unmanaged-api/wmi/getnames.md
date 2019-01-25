@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f53174bf060938d5a55cbd196944ac11916d59cd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583566"
 ---
 # <a name="getnames-function"></a>GetNames (función)
 Recupera un subconjunto o todos los nombres de las propiedades de un objeto. 
@@ -67,9 +67,9 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Ha habido un error general. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Uno o más parámetros no son válidos o se especificó una combinación de marcas y los parámetros incorrecta. |
-|`WBEM_E_OUT_OF_MEMORY` | 0 x 80041006 | No hay suficiente memoria disponible para completar la operación. |
+|`WBEM_E_FAILED` | 0x80041001 | Ha habido un error general. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o más parámetros no son válidos o se especificó una combinación de marcas y los parámetros incorrecta. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para completar la operación. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
@@ -97,19 +97,19 @@ Las marcas que se pueden pasar como el `lEnumFlags` argumento son campos de bits
 
 | Marcas de grupo 3 |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Devolver solo los nombres de propiedad que pertenecen a la clase más derivada. Excluir propiedades de las clases principales. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Devolver solo los nombres de propiedad que pertenecen a las clases principales. |
-|`WBEM_FLAG_SYSTEM_ONLY` | 0 x 30 | Devolver solo los nombres de las propiedades del sistema. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Devolver solo los nombres de propiedad que pertenecen a la clase más derivada. Excluir propiedades de las clases principales. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Devolver solo los nombres de propiedad que pertenecen a las clases principales. |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Devolver solo los nombres de las propiedades del sistema. |
 |`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Devolver solo los nombres de propiedades que no son de sistema. |
 
 La función siempre asigna un nuevo `SAFEARRAY` si devuelve `WBEM_S_NO_ERROR`, y `pstrNames` siempre se establece para que apunte a él. La matriz devuelta puede tener 0 elementos si no hay propiedades coinciden con los filtros especificados. Si la función devuelve un valor distinto de `WBM_S_NO_ERROR`, un nuevo `SAFEARRAY` estructura no se devuelve.
  
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado**: WMINet_Utils.idl  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Vea también  
-[WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+## <a name="see-also"></a>Vea también
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

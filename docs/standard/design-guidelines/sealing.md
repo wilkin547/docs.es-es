@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
-ms.openlocfilehash: fd1abdb4ff6f4850eea96bcfc3afbfe00a4ae56a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646664"
 ---
 # <a name="sealing"></a>Sellar
 Una de las características de marcos de trabajo orientado a objetos es que los desarrolladores pueden ampliar y personalizarlos en modos imprevistos por los diseñadores de framework. Se trata de la eficacia y el peligro de diseño extensible. Al diseñar su marco, es, por lo tanto, muy importante para diseñar cuidadosamente para la extensibilidad cuando lo desee y para limitar la extensibilidad cuando resulta peligroso.  
@@ -49,6 +49,6 @@ Una de las características de marcos de trabajo orientado a objetos es que los 
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
-- [Diseño de extensibilidad](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+- [Diseño de extensibilidad](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [Clases no selladas](../../../docs/standard/design-guidelines/unsealed-classes.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02f57fdbbc1ea9a391d9c58c7ab49af0ef02f001
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2a108ec27cc4f8ed9d9d3c9227bf6ab0815fa933
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739698"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>ISymUnmanagedWriter::OpenNamespace (Método)
-Abre un nuevo espacio de nombres. Llamar a este método antes de definir métodos o variables que ocupan un espacio de nombres. Espacios de nombres se pueden anidar.  
+Abre un nuevo espacio de nombres. Llame a este método antes de definir métodos o variables que ocupan un espacio de nombres. Los espacios de nombres se pueden anidar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,14 +36,14 @@ HRESULT OpenNamespace(
   
 #### <a name="parameters"></a>Parámetros  
  `name`  
- [in] Un puntero al nombre del espacio de nombres nuevo.  
+ [in] Un puntero al nombre del nuevo espacio de nombres.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [CloseNamespace (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [CloseNamespace (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)

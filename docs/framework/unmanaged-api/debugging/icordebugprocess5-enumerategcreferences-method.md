@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b5f66099eb4b1cb84d9911567cac4255bf20480
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 44093f84ea644757a5f5c73da54ce5bcfa717a4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728098"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences (Método)
-Obtiene un enumerador para todos los objetos que se recolectarán como elementos no utilizados en un proceso.  
+Obtiene un enumerador para todos los objetos que se van a recopilar los elementos no utilizados en un proceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,23 +38,23 @@ HRESULT EnumerateGCReferences(
   
 #### <a name="parameters"></a>Parámetros  
  `enumerateWeakReferences`  
- [in] Un valor booleano que indica si las referencias débiles también se van a enumerar. Si `enumerateWeakReferences` es `true`, el `ppEnum` enumerador incluye referencias fuertes y referencias débiles. Si `enumerateWeakReferences` es `false`, el enumerador incluye solo las referencias fuertes.  
+ [in] Un valor booleano que indica si las referencias débiles son también van a enumerar. Si `enumerateWeakReferences` es `true`, el `ppEnum` enumerador incluye referencias fuertes y las referencias débiles. Si `enumerateWeakReferences` es `false`, el enumerador incluye solo las referencias fuertes.  
   
  `ppEnum`  
- [out] Un puntero a la dirección de un [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) que es un enumerador para los objetos que se recolectarán como elementos no utilizados.  
+ [out] Un puntero a la dirección de un [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) que es un enumerador para los objetos de recopilar los elementos no utilizados.  
   
 ## <a name="remarks"></a>Comentarios  
- Este método proporciona una manera de determinar la cadena completa de raíz para cualquier objeto administrado en un proceso y puede usarse para determinar por qué un objeto mantiene la conexión.  
+ Este método proporciona una manera de determinar la cadena completa de raíz para cualquier objeto administrado en un proceso y se puede usar para determinar por qué un objeto todavía está activo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorDebugProcess5 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [ICorDebugProcess5 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

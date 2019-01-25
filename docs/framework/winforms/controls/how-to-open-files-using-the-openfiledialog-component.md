@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Abrir archivos mediante el componente OpenFileDialog'
+title: Procedimiento Abrir archivos mediante el componente OpenFileDialog
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - OpenFile method [Windows Forms], OpenFileDialog component
 - files [Windows Forms], opening with OpenFileDialog component
 ms.assetid: 9d88367a-cc21-4ffd-be74-89fd63767d35
-ms.openlocfilehash: d7e1ebb319576aa7a38d55d8cb9f3652626966b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 87e7640da76205341b9e95310314800ac9dbfe30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678816"
 ---
-# <a name="how-to-open-files-using-the-openfiledialog-component"></a>Cómo: Abrir archivos mediante el componente OpenFileDialog
-El <xref:System.Windows.Forms.OpenFileDialog> componente permite a los usuarios examinar las carpetas de su equipo o en cualquier equipo en la red y seleccionar uno o más archivos para abrirlos. El cuadro de diálogo devuelve la ruta de acceso y el nombre del archivo que seleccionó el usuario en el cuadro de diálogo.  
+# <a name="how-to-open-files-using-the-openfiledialog-component"></a>Procedimiento Abrir archivos mediante el componente OpenFileDialog
+El <xref:System.Windows.Forms.OpenFileDialog> componente permite a los usuarios examinar las carpetas de su equipo o en cualquier equipo en la red y seleccionar uno o varios archivos para abrirlos. El cuadro de diálogo devuelve la ruta de acceso y el nombre del archivo que seleccionó el usuario en el cuadro de diálogo.  
   
  Cuando el usuario haya seleccionado el archivo que se abrirá, hay dos enfoques para el mecanismo de apertura del archivo. Si prefiere trabajar con secuencias de archivo, puede crear una instancia de la <xref:System.IO.StreamReader> clase. Como alternativa, puede usar el <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método para abrir el archivo seleccionado.  
   
- El primer ejemplo siguiente implica un <xref:System.Security.Permissions.FileIOPermission> comprobación del permiso (como se describe en la "Nota de seguridad" más abajo), pero proporciona acceso al nombre del archivo. Puede usar esta técnica desde las zonas de máquina local, intranet e Internet. El segundo método también realiza una <xref:System.Security.Permissions.FileIOPermission> comprobación del permiso, pero es más adecuado para las aplicaciones en las zonas de Intranet o Internet.  
+ El primer ejemplo siguiente implica una <xref:System.Security.Permissions.FileIOPermission> comprobación del permiso (como se describe en la "Nota de seguridad" más abajo), pero le permite acceder al nombre de archivo. Puede usar esta técnica desde las zonas de máquina local, intranet e Internet. El segundo método también realiza un <xref:System.Security.Permissions.FileIOPermission> comprobación del permiso, pero es más adecuado para las aplicaciones en las zonas Intranet o Internet.  
   
 ### <a name="to-open-a-file-as-a-stream-using-the-openfiledialog-component"></a>Abrir archivos como secuencia mediante el componente OpenFileDialog  
   
 1.  Muestre el cuadro de diálogo **Abrir archivo** y llame a un método para abrir el archivo seleccionado por el usuario.  
   
-     Un enfoque consiste en usar la <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método para mostrar el cuadro de diálogo Abrir archivo y utilizar una instancia de la <xref:System.IO.StreamReader> clase para abrir el archivo.  
+     Un enfoque consiste en usar el <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método para mostrar el cuadro de diálogo Abrir archivo y usar una instancia de la <xref:System.IO.StreamReader> clase para abrir el archivo.  
   
-     El ejemplo siguiente utiliza la <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Click> controlador de eventos para abrir una instancia de la <xref:System.Windows.Forms.OpenFileDialog> componente. Cuando se elige un archivo y el usuario hace clic en **Aceptar**, se abre el archivo seleccionado en el cuadro de diálogo. En este caso, el contenido se muestra en un cuadro de mensaje para mostrar que se leyó la secuencia de archivo.  
+     El ejemplo siguiente usa el <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Click> controlador de eventos para abrir una instancia de la <xref:System.Windows.Forms.OpenFileDialog> componente. Cuando se elige un archivo y el usuario hace clic en **Aceptar**, se abre el archivo seleccionado en el cuadro de diálogo. En este caso, el contenido se muestra en un cuadro de mensaje para mostrar que se leyó la secuencia de archivo.  
   
     > [!IMPORTANT]
     >  Para obtener o establecer el <xref:System.Windows.Forms.FileDialog.FileName%2A> propiedad, el ensamblado requiere un nivel de privilegio concedido por la <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> clase. Si ejecuta el proceso en un contexto de confianza parcial, este podría desencadenar una excepción por falta de privilegios. Para obtener más información, vea [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md) (Aspectos básicos de seguridad de acceso del código).  
@@ -94,7 +94,7 @@ El <xref:System.Windows.Forms.OpenFileDialog> componente permite a los usuarios 
   
 1.  Use la <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método para mostrar el cuadro de diálogo y el <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método para abrir el archivo.  
   
-     El <xref:System.Windows.Forms.OpenFileDialog> del componente <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método devuelve los bytes que componen el archivo. Estos bytes proporcionan una secuencia de la que se puede leer. En el ejemplo siguiente, un <xref:System.Windows.Forms.OpenFileDialog> se crea una instancia de componente con un filtro "cursor", lo que permite al usuario elegir únicamente archivos con la extensión de nombre de archivo`.cur`. Si se elige un archivo`.cur`, el cursor del formulario se establece en el cursor seleccionado.  
+     El <xref:System.Windows.Forms.OpenFileDialog> del componente <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método devuelve los bytes que componen el archivo. Estos bytes proporcionan una secuencia de la que se puede leer. En el ejemplo siguiente, un <xref:System.Windows.Forms.OpenFileDialog> se crea una instancia de componente con un filtro "cursor", lo que permite al usuario elegir solo los archivos con la extensión de nombre de archivo`.cur`. Si se elige un archivo`.cur`, el cursor del formulario se establece en el cursor seleccionado.  
   
     > [!IMPORTANT]
     >  Para llamar a la <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> método, el ensamblado requiere un nivel de privilegio concedido por la <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> clase. Si ejecuta el proceso en un contexto de confianza parcial, este podría desencadenar una excepción por falta de privilegios. Para obtener más información, vea [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md) (Aspectos básicos de seguridad de acceso del código).  
@@ -173,6 +173,6 @@ El <xref:System.Windows.Forms.OpenFileDialog> componente permite a los usuarios 
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.OpenFileDialog>  
- [OpenFileDialog (componente)](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.OpenFileDialog>
+- [OpenFileDialog (componente)](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)

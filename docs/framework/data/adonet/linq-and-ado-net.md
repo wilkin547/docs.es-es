@@ -2,12 +2,12 @@
 title: LINQ y ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 13532401a56c6ab2c77a2df575d5b3dde573df2d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f57d50e6c76b3d95c1d87b6beafe345f9a251e04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714820"
 ---
 # <a name="linq-and-adonet"></a>LINQ y ADO.NET
 En la actualidad, muchos programadores empresariales deben usar dos (o más) lenguajes de programación: un lenguaje de alto nivel para las capas de presentación y lógica de negocios (por ejemplo, Visual C# o Visual Basic) y un lenguaje de consulta para interactuar con la base de datos (como [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Esto requiere que el programador tenga conocimientos de varios idiomas para ser efectivo y también causa discrepancias de idiomas en el entorno de desarrollo. Por ejemplo, una aplicación que utiliza API de acceso a datos para ejecutar una consulta en una base de datos especifica la consulta como un literal de cadena usando comillas. Esta cadena de consulta es ilegible y no se comprueba si contiene errores, tales como una sintaxis no válida o si existen las columnas o las filas a las que hace referencia. No hay ninguna comprobación de tipo de los parámetros de consulta y tampoco hay compatibilidad con `IntelliSense`.  
@@ -41,8 +41,8 @@ En la actualidad, muchos programadores empresariales deben usar dos (o más) len
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
-- [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)  
-- [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+- [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)
+- [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - [Language-Integrated Query (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)
 - [Información general sobre ADO.NET](ado-net-overview.md)

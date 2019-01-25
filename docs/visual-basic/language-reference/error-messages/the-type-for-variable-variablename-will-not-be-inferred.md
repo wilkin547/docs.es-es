@@ -1,5 +1,5 @@
 ---
-title: El tipo de variable &#39; &lt;variablename&gt; &#39; no se inferirá porque está enlazada a un campo en un ámbito de inclusión
+title: El tipo de variable &#39; &lt;variablename&gt; &#39; no se inferirá porque está enlazado a un campo en un ámbito de inclusión
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42110
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: cb423e8dcced6956eb86d484607915030c91412b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6adcc1c2a449c9192e488a5d714e1c3271568be0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672388"
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>El tipo de variable &#39; &lt;variablename&gt; &#39; no se inferirá porque está enlazada a un campo en un ámbito de inclusión
-El tipo de variable '\<variablename >' no se inferirá porque está enlazada a un campo en un ámbito de inclusión. Cambie el nombre de '\<variablename >', o utilice el nombre completo (por ejemplo, 'Me.nombreDeVariable' o 'MiBase.nombreDeVariable').  
+# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>El tipo de variable &#39; &lt;variablename&gt; &#39; no se inferirá porque está enlazado a un campo en un ámbito de inclusión
+El tipo de variable '\<NombreDeVariable >' no se inferirá porque está enlazado a un campo en un ámbito de inclusión. Cambie el nombre de '\<NombreDeVariable >', o utilice el nombre completo (por ejemplo, 'Me.nombreDeVariable' o 'MiBase.nombreDeVariable').  
   
  Una variable de control de bucle en su código tiene el mismo nombre que un campo de la clase u otro ámbito de inclusión. Dado que la variable de control se utiliza sin una cláusula `As`, se enlaza al campo en el ámbito de inclusión y el compilador no crea una nueva variable para ella ni infiere su tipo.  
   
@@ -38,9 +38,9 @@ Class Customer
 End Class  
 ```  
   
- De forma predeterminada, este mensaje es una advertencia. Para obtener información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [configurar advertencias en Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ De forma predeterminada, este mensaje es una advertencia. Para obtener información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Id. de error:** BC42110  
+ **Identificador de error:** BC42110  
   
 ### <a name="to-address-this-warning"></a>Para resolver esta advertencia  
   
@@ -81,10 +81,10 @@ Class Customer
 End Class  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Option Infer (instrucción)](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [For Each...Next (instrucción)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [For...Next (instrucción)](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Hacer referencia a la instancia actual de un objeto](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)  
- [Inferencia de tipo de variable local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Me, My, MyBase y MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a>Vea también
+- [Option Infer (instrucción)](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [For Each...Next (instrucción)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [For...Next (instrucción)](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Cómo: Hacer referencia a la instancia actual de un objeto](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
+- [Inferencia de tipo de variable local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Me, My, MyBase y MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bd1a55d4100d74b769b2bc1b8fe33d2042f5e739
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab637b33797ebc5b6d16873cb460c465405b6849
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645657"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute (Método)
-Define un atributo personalizado basándose en su nombre. Estos atributos se encuentran en el almacén de símbolos, a diferencia de los atributos personalizados de metadatos.  
+Define un atributo personalizado basándose en su nombre. Estos atributos se encuentran en el almacén de símbolos, a diferencia de los atributos de metadatos personalizados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,16 +45,16 @@ HRESULT SetSymAttribute(
  [in] Un puntero a un `WCHAR` que contiene el nombre del atributo.  
   
  `cData`  
- [in] A `ULONG32` que indica el tamaño de la `data` matriz.  
+ [in] Un `ULONG32` que indica el tamaño de la `data` matriz.  
   
  `data`  
  [in] El valor del atributo.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

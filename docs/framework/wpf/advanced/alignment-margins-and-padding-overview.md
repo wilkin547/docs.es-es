@@ -10,12 +10,12 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: 44c8814362ebb490d5e7676496309b2124782b78
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5c716c07fabe5b93f13c86f8d347e4fd4d058145
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569960"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Información general sobre alineación, márgenes y relleno
 La <xref:System.Windows.FrameworkElement> clase expone varias propiedades que se usan para posicionar elementos secundarios. En este tema se analiza cuatro de las propiedades más importantes: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, y <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Es importante comprender los efectos de estas propiedades, ya que proporcionan la base para controlar la posición de los elementos de las aplicaciones de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -141,11 +141,11 @@ La <xref:System.Windows.FrameworkElement> clase expone varias propiedades que se
   
  Existen recursos adicionales que explican el diseño de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] con mayor detalle. El [información general sobre](../../../../docs/framework/wpf/controls/panels-overview.md) tema contiene información más detallada sobre los distintos <xref:System.Windows.Controls.Panel> elementos. El tema [Tutorial: Mi primera aplicación de escritorio de WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) presenta técnicas avanzadas que usan elementos de diseño para posicionar componentes y enlazar sus acciones a orígenes de datos.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.Margin%2A>  
- [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Diseño](../../../../docs/framework/wpf/advanced/layout.md)  
- [Ejemplo WPF Layout Gallery](https://go.microsoft.com/fwlink/?LinkID=160054)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.Margin%2A>
+- [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Diseño](../../../../docs/framework/wpf/advanced/layout.md)
+- [Ejemplo WPF Layout Gallery](https://go.microsoft.com/fwlink/?LinkID=160054)

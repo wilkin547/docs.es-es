@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Where
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-ms.openlocfilehash: de7b4bf3e7dc1145b7e95197c7bd05c66acdabd6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ecfc523573a6ab8142a04557156a3819eed440e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662301"
 ---
 # <a name="where-clause-visual-basic"></a>Where (Cláusula, Visual Basic)
 Especifica la condición de filtrado para una consulta.  
@@ -26,7 +26,7 @@ Where condition
   
 ## <a name="parts"></a>Elementos  
  `condition`  
- Requerido. Una expresión que determina si se incluyen los valores para el elemento actual de la colección en la colección de salida. La expresión debe evaluarse como un `Boolean` valor o el equivalente de un `Boolean` valor. Si la condición se evalúa como `True`, el elemento se incluye en el resultado de la consulta; en caso contrario, se excluye el elemento de resultado de la consulta.  
+ Obligatorio. Una expresión que determina si se incluyen los valores para el elemento actual de la colección en la colección de salida. La expresión debe evaluarse como un `Boolean` valor o el equivalente de un `Boolean` valor. Si la condición se evalúa como `True`, el elemento se incluye en el resultado de la consulta; en caso contrario, se excluye el elemento de resultado de la consulta.  
   
 ## <a name="remarks"></a>Comentarios  
  El `Where` cláusula permite filtrar los datos de la consulta seleccionando únicamente los elementos que cumplen determinados criterios. Los elementos cuyos valores hacen que la `Where` cláusula se evalúe como `True` se incluyen en el resultado de la consulta; otros elementos se excluyen. La expresión que se usa en un `Where` cláusula debe evaluarse como un `Boolean` o el equivalente de un `Boolean`, como un entero que se evalúa como `False` cuando su valor es cero. Puede combinar varias expresiones en un `Where` cláusula mediante operadores lógicos, como `And`, `Or`, `AndAlso`, `OrElse`, `Is`, y `IsNot`.  
@@ -45,9 +45,9 @@ Where condition
   
  [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_2.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Consultas](../../../visual-basic/language-reference/queries/index.md)  
- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)  
- [For Each...Next (instrucción)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a>Vea también
+- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](../../../visual-basic/language-reference/queries/index.md)
+- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)
+- [For Each...Next (instrucción)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

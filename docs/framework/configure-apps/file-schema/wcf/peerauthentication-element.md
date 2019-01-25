@@ -2,12 +2,12 @@
 title: '&lt;peerAuthentication&gt; (elemento)'
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 8937df6a2fcab305a519d566f7d666a3d94b4061
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0491a175c237bf6dd18b607d8ad99f1057661d76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610024"
 ---
 # <a name="ltpeerauthenticationgt-element"></a>&lt;peerAuthentication&gt; (elemento)
 Especifica las opciones de autenticación de clientes punto a punto.  
@@ -16,11 +16,11 @@ Especifica las opciones de autenticación de clientes punto a punto.
   
  \<system.ServiceModel>  
 \<comportamientos >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<comportamiento >  
-\<clientCredentials >  
-\<elemento del mismo nivel >  
-\<peerAuthentication >  
+\<clientCredentials>  
+\<peer>  
+\<PeerAuthentication>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -74,7 +74,7 @@ Especifica las opciones de autenticación de clientes punto a punto.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<elemento del mismo nivel >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Especifica una credencial utilizada para autenticar el cliente a un servicio del mismo nivel.|  
+|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Especifica una credencial utilizada para autenticar el cliente a un servicio del mismo nivel.|  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento `<authentication>` corresponde a la clase <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>. Este elemento especifica un validador, que se invoca durante la autenticación entre vecinos en la malla. Cuando un nuevo par intenta establecer una conexión de vecino, pasa su propia credencial al par que responde. El validador del contestador se invoca para comprobar la credencial de la parte remota. Cuando una conexión del mismo nivel se establece en la malla, se autentican ambos pares mutuamente, lo que significa que se invocan los validadores en ambos extremos.  
@@ -100,14 +100,14 @@ Especifica las opciones de autenticación de clientes punto a punto.
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
- <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>  
- <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>  
- <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
- [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Conexión de redes punto a punto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [Autenticación de mensajes del canal del mismo nivel](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Canal del mismo nivel de autenticación personalizada](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
- [Protección de las aplicaciones de canal del mismo nivel](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.PeerCredentialElement>
+- <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
+- <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>
+- <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>
+- <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
+- [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Conexión de redes punto a punto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [Autenticación de mensajes del canal del mismo nivel](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
+- [Canal del mismo nivel de autenticación personalizada](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [Protección de las aplicaciones de canal del mismo nivel](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

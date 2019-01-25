@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Animar un punto mediante fotogramas clave'
+title: Procedimiento Animar un punto mediante fotogramas clave
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-ms.openlocfilehash: c2fd8c6c6fd84bbfd6d56f573588d7204249f31d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9d976bca77629b85226da3d4e018a35cb522afef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738344"
 ---
-# <a name="how-to-animate-a-point-by-using-key-frames"></a>Cómo: Animar un punto mediante fotogramas clave
+# <a name="how-to-animate-a-point-by-using-key-frames"></a>Procedimiento Animar un punto mediante fotogramas clave
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> clase para animar un <xref:System.Windows.Point>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -36,9 +36,9 @@ En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.Po
   
  Para mantener la coherencia con otros ejemplos de animación, las versiones de código de este ejemplo utiliza un <xref:System.Windows.Media.Animation.Storyboard> objeto al que aplicar el <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>. Sin embargo, al aplicar una animación única en código, resulta más fácil de usar el <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método en lugar de usar un <xref:System.Windows.Media.Animation.Storyboard>. Para obtener un ejemplo, vea [Animar una propiedad sin utilizar un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>  
- <xref:System.Windows.Media.EllipseGeometry.Center%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Media.EllipseGeometry>  
- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Temas de procedimientos de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>
+- <xref:System.Windows.Media.EllipseGeometry.Center%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Media.EllipseGeometry>
+- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Temas de procedimientos de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

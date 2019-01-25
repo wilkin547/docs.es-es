@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 56d90257389941189ff5036ebcb145fd0df17dc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 224684bd76ec3318b2c7f8197263d66973ce27aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716497"
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR (Enumeración)
-Especifica las constantes utilizadas por [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) cuando inicializa common language runtime.  
+Especifica las constantes utilizadas por [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) al inicializar common language runtime.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,13 +42,13 @@ typedef enum tagCOINITCOR
 |`COINITCOR`|Indica el modo de inicialización predeterminado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

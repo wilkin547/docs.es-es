@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e8c5021b00de503783adb3f1b1dc11964639afbf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 40bba9f89801a75ac8c9d15e67e060714d1a29d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680772"
 ---
 # <a name="ltcompilergt-element"></a>&lt;compilador&gt; elemento
 
@@ -62,7 +62,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 |Elemento|Descripción|
 |-------------|-----------------|
 |[Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
-|[\<System.CodeDom > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Especifica los valores de configuración del compilador para los proveedores de lenguaje disponibles.|
+|[\<system.codedom> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Especifica los valores de configuración del compilador para los proveedores de lenguaje disponibles.|
 |[\<los compiladores > elemento](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Contenedor para los elementos de configuración de compilador; contiene cero o más `<compiler>` elementos.|
 
 ## <a name="remarks"></a>Comentarios

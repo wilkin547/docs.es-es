@@ -2,12 +2,12 @@
 title: Creación de un BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 5b7fd3e88fa12a66e086906de6f0d7d6a7d1aa17
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 8c4f3b4b3f9a3e4694ece814de691c07ef88ec5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684884"
 ---
 # <a name="creating-a-bindingelement"></a>Creación de un BindingElement
 Los enlaces y elementos de enlace (objetos que extienden <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> y <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>, respectivamente) son el lugar donde el modelo de aplicación de Windows Communication Foundation (WCF) está asociado con los generadores de canales y escuchas de canales. Sin enlaces, utilizando los canales personalizados requiere programación en el nivel de canal como se describe en [a nivel de canal de servicio de programación](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) y [programación de nivel de canal de cliente](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Este tema describe el requisito mínimo para habilitar el uso de su canal de WCF, el desarrollo de un <xref:System.ServiceModel.Channels.BindingElement> de canal y habilitar el uso de la aplicación tal como se describe en el paso 4 de [desarrollar canales](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -71,7 +71,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
  Una vez haya creado un elemento de enlace para el canal, volver a la [desarrollar canales](../../../../docs/framework/wcf/extending/developing-channels.md) tema para ver si desea agregar compatibilidad con archivos de configuración a su elemento de enlace, si y cómo agregar compatibilidad con la publicación de metadatos, y Si y cómo para construir un enlace definido por el usuario que usa el elemento de enlace.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.BindingElement>  
- [Desarrollo de canales](../../../../docs/framework/wcf/extending/developing-channels.md)  
- [Transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Channels.BindingElement>
+- [Desarrollo de canales](../../../../docs/framework/wcf/extending/developing-channels.md)
+- [Transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

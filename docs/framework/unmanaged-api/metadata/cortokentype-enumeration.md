@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 769802eae048427325af9807d788b1fbc5a15665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9cc480d673648562638fbfd4a03df643dd734b9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620622"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType (Enumeración)
 Indica el tipo de un token de metadatos.  
@@ -65,42 +65,42 @@ typedef enum CorTokenType {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`mdtModule`|Un `mdModule` símbolo (token).|  
-|`mdtTypeRef`|Un `mdTypeRef` símbolo (token).|  
-|`mdtTypeDef`|Un `mdTypeDef` símbolo (token).|  
-|`mdtFieldDef`|Un `mdFieldDef` símbolo (token).|  
-|`mdtMethodDef`|Un `mdMethodDef` símbolo (token).|  
-|`mdtParamDef`|Un `mdParamDef` símbolo (token).|  
-|`mdtInterfaceImpl`|Un `mdInterfaceImpl` símbolo (token).|  
-|`mdtMemberRef`|Un `mdMemberRef` símbolo (token).|  
-|`mdtCustomAttribute`|Un `mdCustomAttribute` símbolo (token).|  
-|`mdtPermission`|Un `mdPermission` símbolo (token).|  
-|`mdtSignature`|Un `mdSignature` símbolo (token).|  
-|`mdtEvent`|Un `mdEvent` símbolo (token).|  
-|`mdtProperty`|Un `mdProperty` símbolo (token).|  
-|`mdtModuleRef`|Un `mdModuleRef` símbolo (token).|  
-|`mdtTypeSpec`|Un `mdTypeSpec` símbolo (token).|  
-|`mdtAssembly`|Un `mdAssembly` símbolo (token).|  
-|`mdtAssemblyRef`|Un `mdAssemblyRef` símbolo (token).|  
-|`mdtFile`|Un `mdFile` símbolo (token).|  
-|`mdtExportedType`|Un `mdExportedType` símbolo (token).|  
-|`mdtManifestResource`|Un `mdManifestResource` símbolo (token).|  
-|`mdtGenericParam`|Un `mdGenericParam` símbolo (token).|  
-|`mdtMethodSpec`|Un `mdMethodSpec` símbolo (token).|  
-|`mdtGenericParamConstraint`|Un `mdGenericParamConstraint` símbolo (token).|  
-|`mdtString`|Un `mdString` símbolo (token).|  
-|`mdtName`|Un `mdName` símbolo (token).|  
-|`mdtBaseType`|No usado.|  
+|`mdtModule`|Un `mdModule` token.|  
+|`mdtTypeRef`|Un `mdTypeRef` token.|  
+|`mdtTypeDef`|Un `mdTypeDef` token.|  
+|`mdtFieldDef`|Un `mdFieldDef` token.|  
+|`mdtMethodDef`|Un `mdMethodDef` token.|  
+|`mdtParamDef`|Un `mdParamDef` token.|  
+|`mdtInterfaceImpl`|Un `mdInterfaceImpl` token.|  
+|`mdtMemberRef`|Un `mdMemberRef` token.|  
+|`mdtCustomAttribute`|Un `mdCustomAttribute` token.|  
+|`mdtPermission`|Un `mdPermission` token.|  
+|`mdtSignature`|Un `mdSignature` token.|  
+|`mdtEvent`|Un `mdEvent` token.|  
+|`mdtProperty`|Un `mdProperty` token.|  
+|`mdtModuleRef`|Un `mdModuleRef` token.|  
+|`mdtTypeSpec`|Un `mdTypeSpec` token.|  
+|`mdtAssembly`|Un `mdAssembly` token.|  
+|`mdtAssemblyRef`|Un `mdAssemblyRef` token.|  
+|`mdtFile`|Un `mdFile` token.|  
+|`mdtExportedType`|Un `mdExportedType` token.|  
+|`mdtManifestResource`|Un `mdManifestResource` token.|  
+|`mdtGenericParam`|Un `mdGenericParam` token.|  
+|`mdtMethodSpec`|Un `mdMethodSpec` token.|  
+|`mdtGenericParamConstraint`|Un `mdGenericParamConstraint` token.|  
+|`mdtString`|Un `mdString` token.|  
+|`mdtName`|Un `mdName` token.|  
+|`mdtBaseType`|No se utiliza.|  
   
 ## <a name="remarks"></a>Comentarios  
- Cada valor es igual que el valor del byte superior en el token de metadatos correspondiente.  
+ Cada valor es igual al valor del byte superior en el token de metadatos correspondiente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

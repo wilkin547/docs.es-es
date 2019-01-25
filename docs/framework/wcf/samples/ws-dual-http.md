@@ -2,12 +2,12 @@
 title: WS Http dual
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 16795a32aaec84ec1ae5a1c445f2bc519ef56a3b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 93097c5f13a45ba399ec90d6282db8ca277a8ede
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502118"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640555"
 ---
 # <a name="ws-dual-http"></a>WS Http dual
 El ejemplo Http dual muestra cómo configurar el enlace `WSDualHttpBinding`. Este ejemplo está compuesto de un programa de consola de cliente (.exe) y una biblioteca de servicios (.dll) hospedados por Internet Information Services (IIS). El servicio implementa un contrato dúplex. La interfaz `ICalculatorDuplex`, que expone las operaciones matemáticas (sumar, restar, multiplicar y dividir), define el contrato. En este ejemplo, la interfaz `ICalculatorDuplex` permite al cliente realizar las operaciones matemáticas, calculando un resultado en ejecución sobre la sesión. Independientemente, el servicio devuelve los resultados en la interfaz `ICalculatorDuplexCallback`. Un contrato dúplex requiere una sesión, porque se debe establecer un contexto para poner en correlación el conjunto de mensajes que se envían entre el cliente y el servicio. El enlace `WSDualHttpBinding` admite la comunicación dúplex.  
@@ -24,7 +24,7 @@ El ejemplo Http dual muestra cómo configurar el enlace `WSDualHttpBinding`. Est
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`  
   
- Para configurar un extremo de servicio con `WSDualHttpBinding`, especifique el enlace en la configuración del extremo según se muestra.  
+ Para configurar un punto de conexión de servicio con `WSDualHttpBinding`, especifique el enlace en la configuración del punto de conexión según se muestra.  
   
 ```xml  
 <endpoint address=""  

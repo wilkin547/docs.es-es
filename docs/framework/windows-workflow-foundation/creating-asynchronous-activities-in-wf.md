@@ -2,12 +2,12 @@
 title: Crear actividades asincrónicas en WF
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 31c0d5a87a7979bc59c3e1d942ed0594d128c80a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 1b7fe1c5c998660f054d2ca060c108c758e36db7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650933"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Crear actividades asincrónicas en WF
 <xref:System.Activities.AsyncCodeActivity> proporciona a los autores de actividad el uso de una clase base que permite a las actividades derivadas implementar la lógica de ejecución asincrónica. Resulta útil para las actividades personalizadas que deben realizar el trabajo asincrónico sin retener el subproceso de programador de flujo de trabajo y bloquear cualquier actividad que pueda ejecutarse en paralelo. En este tema se proporciona información general de cómo crear actividades asincrónicas personalizadas mediante <xref:System.Activities.AsyncCodeActivity>.  
@@ -44,9 +44,9 @@ ms.locfileid: "48266564"
  [!code-csharp[CFX_ActivityExample#9](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>Programar acciones o actividades secundarias mediante AsyncCodeActivity  
- Las actividades personalizadas derivadas de <xref:System.Activities.AsyncCodeActivity> proporcionan un método para realizar el trabajo de forma asincrónica con respecto al subproceso del flujo de trabajo, pero no proporcionan la capacidad de programar actividades secundarias o acciones. Sin embargo, el comportamiento asincrónico se puede incorporar con la programación de actividades secundarias a través de composición. Una actividad asincrónica se puede crear, y después componer con una <xref:System.Activities.Activity> o una actividad derivada de <xref:System.Activities.NativeActivity> para proporcionar comportamiento asincrónico y programación de actividades o acciones secundarias. Por ejemplo, se podría crear una actividad que derive de <xref:System.Activities.Activity> y tenga como su implementación una <xref:System.Activities.Statements.Sequence> que contenga la actividad asincrónica, así como otras actividades que implementen la lógica de la actividad. Para obtener más ejemplos de cómo componer actividades mediante <xref:System.Activities.Activity> y <xref:System.Activities.NativeActivity>, consulte [Cómo: crear una actividad](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) y [opciones de creación de actividades](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
+ Las actividades personalizadas derivadas de <xref:System.Activities.AsyncCodeActivity> proporcionan un método para realizar el trabajo de forma asincrónica con respecto al subproceso del flujo de trabajo, pero no proporcionan la capacidad de programar actividades secundarias o acciones. Sin embargo, el comportamiento asincrónico se puede incorporar con la programación de actividades secundarias a través de composición. Una actividad asincrónica se puede crear, y después componer con una <xref:System.Activities.Activity> o una actividad derivada de <xref:System.Activities.NativeActivity> para proporcionar comportamiento asincrónico y programación de actividades o acciones secundarias. Por ejemplo, se podría crear una actividad que derive de <xref:System.Activities.Activity> y tenga como su implementación una <xref:System.Activities.Statements.Sequence> que contenga la actividad asincrónica, así como otras actividades que implementen la lógica de la actividad. Para obtener más ejemplos de cómo componer actividades mediante <xref:System.Activities.Activity> y <xref:System.Activities.NativeActivity>, vea [Cómo: Crear una actividad](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) y [opciones de creación de actividad](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 
-- <xref:System.Action>  
-- <xref:System.Func%602>  
+- <xref:System.Action>
+- <xref:System.Func%602>

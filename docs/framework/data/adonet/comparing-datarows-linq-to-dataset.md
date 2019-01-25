@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 79fc91092badfd871a1409e2ee602272f3eae100
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 546b877dc9eb1e7422505b710690d92937cf2b42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659194"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>Comparar objetos DataRow (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] define varios operadores de conjuntos para comparar elementos de origen y ver si son iguales. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] proporciona los siguientes operadores de conjuntos:  
@@ -38,7 +38,7 @@ ms.locfileid: "32756285"
   
  [!code-vb[DP LINQ to DataSet Examples#CompareDifferentRows](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#comparedifferentrows)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Data.DataRowComparer>  
- [Carga de datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [Ejemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Data.DataRowComparer>
+- [Carga de datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [Ejemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

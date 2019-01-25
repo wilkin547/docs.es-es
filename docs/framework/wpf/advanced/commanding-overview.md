@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: d41613ce2488fa572fa11def06350ab1e564df6c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 7358cc97f5b6b822be592c9e78aebbf9078fdd25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086224"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723542"
 ---
 # <a name="commanding-overview"></a>Información general sobre comandos
 <a name="introduction"></a> Los comandos constituyen un mecanismo de entrada de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], que permite el control de entrada en un nivel más semántico que la entrada del dispositivo. Algunos ejemplos de comandos son las operaciones **Copiar**, **Cortar** y **Pegar** presentes en numerosas aplicaciones.  
@@ -183,13 +183,13 @@ ms.locfileid: "44086224"
   
  Para obtener un ejemplo de cómo crear un <xref:System.Windows.Input.RoutedCommand> personalizado, vea [Create a Custom RoutedCommand Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand) (Crear un ejemplo de RoutedCommand personalizado).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Input.RoutedCommand>  
- <xref:System.Windows.Input.CommandBinding>  
- <xref:System.Windows.Input.InputBinding>  
- <xref:System.Windows.Input.CommandManager>  
- [Información general sobre acciones del usuario](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Implement ICommandSource (ejemplo)](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [Cómo: Agregar un comando a un elemento de menú](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)  
- [Crear un objeto RoutedCommand de muestra personalizado](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Input.RoutedCommand>
+- <xref:System.Windows.Input.CommandBinding>
+- <xref:System.Windows.Input.InputBinding>
+- <xref:System.Windows.Input.CommandManager>
+- [Información general sobre acciones del usuario](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Implement ICommandSource (ejemplo)](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)
+- [Cómo: Agregar un comando a un elemento de menú](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+- [Crear un objeto RoutedCommand de muestra personalizado](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 532f69afd949971fbb4f56a8fdbcc6eab159446f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d1c214918b4a41ac989a3804c9146c4a54c5909f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427712"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738214"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument (Método)
-Define un documento de origen. GUID se proporcionan para lenguajes, proveedores y tipos de documentos.  
+Define un documento de origen. Se proporcionan los GUID para lenguajes conocidos, proveedores y tipos de documento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,19 +46,19 @@ HRESULT DefineDocument(
  [in] Un puntero a un GUID que define el lenguaje del documento.  
   
  `languageVendor`  
- [in] Un puntero a un GUID que define la identidad del proveedor del lenguaje del documento.  
+ [in] Un puntero a un GUID que define la identidad del proveedor para el lenguaje del documento.  
   
  `documentType`  
  [in] Un puntero a un GUID que define el tipo del documento.  
   
  `pRetVal`  
- [out] Un puntero para el valor devuelto [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interfaz.  
+ [out] Un puntero a la devuelta [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interfaz.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

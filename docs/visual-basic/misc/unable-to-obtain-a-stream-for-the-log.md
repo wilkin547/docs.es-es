@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLog_ExhaustedPossibleStreamNames
 ms.assetid: 33994f52-8efb-4790-a459-033e5c1db632
-ms.openlocfilehash: 3f5ac83e6957d6d5883bf5ab191e2a922c874df3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0553da64ca8fcac148cd8da5c22227b5824387de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33639546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628752"
 ---
 # <a name="unable-to-obtain-a-stream-for-the-log"></a>No se pudo obtener un flujo para el registro
-No se pudo obtener un flujo para el registro. Los nombres de archivo potenciales basados en \<nombre > ya están en uso.  
+No se pudo obtener un flujo para el registro. Nombres de archivo potenciales basados en \<nombre > ya están en uso.  
   
- El <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> clase no pudo crear un nuevo archivo de registro porque todos los posibles nombres de archivo de registro se basan en \<nombre > ya están en uso.  
+ El <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> clase no pudo crear un nuevo archivo de registro porque todos los posibles nombres de archivo de registro según \<nombre > ya están en uso.  
   
  Si dispone de demasiados archivos de registro, podría ser un indicador de un problema de arquitectura con la aplicación. Consulte la documentación sobre la clase <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> para más información.  
   
@@ -24,8 +24,8 @@ No se pudo obtener un flujo para el registro. Los nombres de archivo potenciales
   
 2.  Almacene los registros existentes y quítelos del equipo para permitir que el objeto <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> cree nuevos registros.  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>  
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A>  
- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
- [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>
+- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A>
+- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

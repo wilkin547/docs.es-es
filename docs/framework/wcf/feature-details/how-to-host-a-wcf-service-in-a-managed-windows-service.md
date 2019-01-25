@@ -1,18 +1,18 @@
 ---
-title: Hospedaje de un servicio WCF en un servicio administrado de Windows
+title: Procedimiento Hospedar un servicio WCF en un servicio administrado de Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: edbc67ddf20eee6ebbe9091faa43bc1de91809d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b4cb2ae3b2db8cdfab962c61ead387baf1bb7158
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000770"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613836"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Hospedaje de un servicio WCF en un servicio administrado de Windows
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Procedimiento Hospedar un servicio WCF en un servicio administrado de Windows
 
 En este tema se describe los pasos básicos necesarios para crear un servicio de Windows Communication Foundation (WCF) que se hospeda en un servicio de Windows. El escenario se habilita mediante el servicio de Windows administrado, opción que es un servicio WCF de ejecución prolongada hospedado fuera de Internet Information Services (IIS) en un entorno seguro que no está activado el mensaje de hospedaje. En su lugar, el sistema operativo controla la duración del servicio. Esta opción de hospedaje está disponible en todas las versiones de Windows.
 
@@ -138,4 +138,4 @@ Como la opción de "autohospedaje", el entorno de hospedaje de servicio de Windo
 - [Configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md)
 - [Hospedaje en una aplicación administrada](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
 - [Servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md)
-- [Características de hospedaje de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Características de hospedaje de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

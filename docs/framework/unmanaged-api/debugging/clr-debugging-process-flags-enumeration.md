@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dff6b245c80050a5e85561b8bba6aa9ba8199ba8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 609bb050bb9c5addb5250f65a059a70d3ce32428
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662249"
 ---
 # <a name="clrdebuggingprocessflags-enumeration"></a>CLR_DEBUGGING_PROCESS_FLAGS (Enumeración)
 Proporciona valores que se usan por el [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) método.  
@@ -40,23 +40,23 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|Este tiempo de ejecución tiene un evento de depurador administrado-catch-up para enviar. Vea la sección Comentarios para la distinción entre eventos de puesta al día y -catch-up.|  
+|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|Este tiempo de ejecución tiene que enviar un evento de depurador administrado-catch-up. Consulte la sección Comentarios para la distinción entre los eventos de puesta al día y -catch-up.|  
 |`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|Es el evento administrado que está pendiente un <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> solicitud.|  
   
 ## <a name="remarks"></a>Comentarios  
- Eventos de puesta al día incluyen proceso, dominio de aplicación, ensamblado, módulo y las notificaciones de creación de subproceso que poner al depurador hasta el estado actual después de que ha adjuntado a un proceso. Eventos de no-catch-up, que se indican mediante el `CLR_DEBUGGING_MANAGED_EVENT_PENDING` marca, incluir todos los otros eventos del depurador, como las excepciones y administra depuración notificaciones Ayudante (MDA).  
+ Poner eventos incluyen el proceso, dominio de aplicación, ensamblado, módulo y las notificaciones de creación del subproceso que llevan al depurador hasta el estado actual después de que ha adjuntado a un proceso. Eventos Non-catch-up, que se indican mediante el `CLR_DEBUGGING_MANAGED_EVENT_PENDING` marca, incluir todos los demás eventos de depurador, como las excepciones y administra la depuración de las notificaciones de asistente (MDA).  
   
- El `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` marca permite que el tiempo de ejecución diferenciar entre una excepción de terminación y una solicitud para adjuntar un depurador administrado que se puede cancelar.  
+ El `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` marca permite diferenciar entre una excepción de terminación y una solicitud para asociar un depurador administrado que se puede cancelar el tiempo de ejecución.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Metahost.idl, Metahost.h  
+ **Encabezado**: Metahost.idl, Metahost.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

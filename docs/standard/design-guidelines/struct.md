@@ -12,12 +12,12 @@ helpviewer_keywords:
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: KrzysztofCwalina
-ms.openlocfilehash: 240492590fab4579b9d984d5dce759f6d9f8cbab
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cc5b8d7effda31b0236477b217bccf5cf2137f8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646612"
 ---
 # <a name="struct-design"></a>Diseño de structs
 El tipo de valor de uso general más a menudo se conoce como una estructura, su palabra clave de C#. Esta sección proporciona instrucciones para el diseño de la estructura general.  
@@ -48,6 +48,6 @@ El tipo de valor de uso general más a menudo se conoce como una estructura, su 
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)  
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Elección entre clase y estructura](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)

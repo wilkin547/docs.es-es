@@ -8,20 +8,20 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: fed2b39d92557f25c4f7427bccf28af616d1c0a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e30d38e3b925283b6048730aef2acc865be755b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651622"
 ---
 # <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt; elemento (configuración de red)
 Configura las conexiones a los recursos de red.  
   
  \<configuration>  
-\<System.NET >  
-\<Configuración >  
-\<servicePointManager >  
+\<system.net>  
+\<settings>  
+\<servicePointManager>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -66,7 +66,7 @@ Configura las conexiones a los recursos de red.
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
-## <a name="see-also"></a>Vea también  
-- <xref:System.Net.ServicePointManager>  
-- <xref:System.Net.Security.EncryptionPolicy>  
+## <a name="see-also"></a>Vea también
+- <xref:System.Net.ServicePointManager>
+- <xref:System.Net.Security.EncryptionPolicy>
 - [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

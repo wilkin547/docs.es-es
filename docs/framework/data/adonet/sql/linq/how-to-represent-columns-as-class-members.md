@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Representar columnas como miembros de clase'
+title: Procedimiento Representar columnas como miembros de clase
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab28021-4d15-4d9c-bf2e-6ccc0daa7d1a
-ms.openlocfilehash: 2de759d1b24ff1d5e354282e6299e7598f1698ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a772de27583f35b18a4fa5854e61768443e5ba5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652569"
 ---
-# <a name="how-to-represent-columns-as-class-members"></a>Cómo: Representar columnas como miembros de clase
+# <a name="how-to-represent-columns-as-class-members"></a>Procedimiento Representar columnas como miembros de clase
 Use la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute> atributo para asociar una columna de base de datos en un campo o propiedad.  
   
 ### <a name="to-map-a-field-or-property-to-a-database-column"></a>Para asignar un campo o una propiedad a una columna de base de datos  
@@ -27,6 +27,6 @@ Use la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref
   
  No tiene que especificar la propiedad <xref:System.Data.Linq.Mapping.DataAttribute.Name%2A> si se puede deducir el nombre. Si no especifica ningún nombre, se supone que es el mismo que el de la propiedad o campo.  
   
-## <a name="see-also"></a>Vea también  
- [Modelo de objetos de LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- [Personalización de clases de entidades con el editor de código](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+## <a name="see-also"></a>Vea también
+- [Modelo de objetos de LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Cómo: Personalizar las clases de entidad mediante el Editor de código](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

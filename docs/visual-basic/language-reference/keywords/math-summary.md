@@ -7,12 +7,12 @@ helpviewer_keywords:
 - math functions, Visual Basic
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
-ms.openlocfilehash: 167555be2e3602491ae12ddc8782a69bb64aa060
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1314bd56ab7fb26dc5bb53b959370caa2287dc87
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731860"
 ---
 # <a name="math-summary-visual-basic"></a>Resumen de funciones matemáticas (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
@@ -26,7 +26,7 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
 |Obtener el signo de una expresión.|<xref:System.Math.Sign%2A>|  
 |Ejecutar conversiones numéricas.|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
   
-## <a name="see-also"></a>Vea también  
- [Funciones matemáticas derivadas](../../../visual-basic/language-reference/keywords/derived-math-functions.md)  
- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)  
- [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>Vea también
+- [Funciones matemáticas derivadas](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
+- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
+- [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

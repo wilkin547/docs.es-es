@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: c29362a1e335e18b66821919e266b1ce57774692
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d30d452a7c140a0c56529386b14ef3a3512df490
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50196000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722158"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. ¿y? operadores condicionales null () (Visual Basic)
 
@@ -60,4 +60,4 @@ La nueva forma de hacerlo es segura para los subprocesos porque el compilador ge
 
 - [Operadores (Visual Basic)](index.md)
 - [Guía de programación en Visual Basic](../../../visual-basic/programming-guide/index.md)
-- [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)  
+- [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)

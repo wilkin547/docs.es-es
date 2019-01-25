@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: a11dcfc9030944365adda3656a8895912b0ef0d4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9db511579e273a19c18800f2e0861ef4e9c00ab0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700577"
 ---
 # <a name="tooltip-overview"></a>Información general de información sobre herramientas
 Información sobre herramientas es una pequeña ventana emergente que aparece cuando un usuario detiene el puntero del mouse sobre un elemento, tal como sobreutilizado un <xref:System.Windows.Controls.Button>. En este tema se presenta la información sobre herramientas y se explica cómo crear y personalizar el contenido de la información sobre herramientas.  
@@ -67,7 +67,7 @@ Información sobre herramientas es una pequeña ventana emergente que aparece cu
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Uso de las propiedades de intervalo de tiempo de ToolTipService  
  El <xref:System.Windows.Controls.ToolTipService> clase proporciona las siguientes propiedades para establecer información sobre herramientas muestran horas: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, y <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
   
- Use la <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> y <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> propiedades para especificar un retraso, normalmente breve, antes un <xref:System.Windows.Controls.ToolTip> aparece y también para especificar cuánto tiempo un <xref:System.Windows.Controls.ToolTip> permanece visible. Para obtener más información, consulte [How to: Delay the Display of a ToolTip](https://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7) (Cómo: Retrasar la visualización de una información sobre herramientas).  
+ Use la <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> y <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> propiedades para especificar un retraso, normalmente breve, antes un <xref:System.Windows.Controls.ToolTip> aparece y también para especificar cuánto tiempo un <xref:System.Windows.Controls.ToolTip> permanece visible. Para obtener más información, vea [Cómo: Retrasar la visualización de información sobre herramientas](https://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
   
  El <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propiedad determina si información sobre herramientas para los distintos controles aparece sin retraso inicial al mover el puntero del mouse rápidamente entre ellos. Para obtener más información sobre la <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propiedad, vea [usar la propiedad BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
   
@@ -75,9 +75,9 @@ Información sobre herramientas es una pequeña ventana emergente que aparece cu
   
  [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Controls.ToolTipService>  
- <xref:System.Windows.Controls.ToolTip>  
- <xref:System.Windows.Controls.ToolTipEventArgs>  
- <xref:System.Windows.Controls.ToolTipEventHandler>  
- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Controls.ToolTipService>
+- <xref:System.Windows.Controls.ToolTip>
+- <xref:System.Windows.Controls.ToolTipEventArgs>
+- <xref:System.Windows.Controls.ToolTipEventHandler>
+- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)

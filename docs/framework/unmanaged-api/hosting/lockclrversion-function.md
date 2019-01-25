@@ -17,16 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6956d73be0380baef96d94584f007e0683331784
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95f61170d401161dcf217f139dbe6e4c6d3a0e0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735044"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion (Función)
-Permite al host determinar qué versión de common language runtime (CLR) que se utilizará en el proceso antes de inicializar el CLR de forma explícita.  
+Permite al host determinar qué versión de common language runtime (CLR) que se usará dentro del proceso antes de inicializar CLR de forma explícita.  
   
- Esta función está desusada en [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Esta función está en desuso en [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,10 +41,10 @@ HRESULT LockClrVersion (
   
 #### <a name="parameters"></a>Parámetros  
  `hostCallback`  
- [in] La función que invocará el CLR en la inicialización.  
+ [in] La función para ser llamado por CLR en la inicialización.  
   
  `pBeginHostSetup`  
- [in] La función para ser llamado por el host para informar a CLR que la inicialización se está iniciando.  
+ [in] La función para ser llamado por el host para informar a CLR que la inicialización ha comenzado.  
   
  `pEndHostSetup`  
  [in] La función para ser llamado por el host para informar a CLR que la inicialización está completa.  
@@ -63,7 +64,7 @@ HRESULT LockClrVersion (
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
 ```  
   
- Los pasos siguientes se producen cuando se inicializa el tiempo de ejecución:  
+ Los pasos siguientes se producen durante la inicialización del tiempo de ejecución:  
   
 1.  El host llama [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) o una de las demás funciones de inicialización en tiempo de ejecución. Como alternativa, el host puede inicializar el tiempo de ejecución mediante la activación de objetos COM.  
   
@@ -75,22 +76,22 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
     -   `CorBindToRuntimeEx` (o a otra función de inicialización en tiempo de ejecución).  
   
-    -   [ICLRRuntimeHost:: SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    -   [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
   
-    -   [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    -   [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
   
     -   La función especificada por el `pEndHostSetup` parámetro.  
   
  Todas las llamadas de `pBeginHostSetup` a `pEndHostSetup` se debe producir en un único subproceso o fibra, con la misma pila lógica. Este subproceso puede ser diferente del subproceso en el que `hostCallback` se llama.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Vea también
+- [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

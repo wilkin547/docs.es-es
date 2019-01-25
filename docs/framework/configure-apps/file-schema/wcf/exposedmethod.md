@@ -2,19 +2,19 @@
 title: '&lt;exposedMethod&gt;'
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: c63689224e3bba69816f5904599425a235a51bae
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0bfb56395217283eeba69c2f3b7569a89f576423
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702046"
 ---
 # <a name="ltexposedmethodgt"></a>&lt;exposedMethod&gt;
 Representa un método de COM+ que se expone cuando la interfaz en un componente COM+ se expone como un servicio web.  
   
  \<system.ServiceModel>  
-\<comContracts >  
-\<comContract >  
+\<comContracts>  
+\<comContract>  
 \<métodos >  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -45,7 +45,7 @@ Representa un método de COM+ que se expone cuando la interfaz en un componente 
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<exposedMethods >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethods.md)|Una colección de [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elementos.|  
+|[\<exposedMethods>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethods.md)|Una colección de [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elementos.|  
   
 ## <a name="remarks"></a>Comentarios  
  La herramienta de configuración de integración (ComSvcConfig.exe) de COM+ se puede usar para agregar métodos concretos de una interfaz COM para que aparezca en el contrato del servicio generado.  
@@ -68,9 +68,9 @@ Representa un método de COM+ que se expone cuando la interfaz en un componente 
   
  En el momento de inicialización del servicio, el tiempo de ejecución intenta generar un contrato de servicio reflejando y agregando sólo los métodos incluidos en la lista de [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elementos. Un seguimiento se genera para cada método de interfaz que no está incluido en el contrato del servicio.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.ComMethodElementCollection>  
- <xref:System.ServiceModel.Configuration.ComMethodElement>  
- [\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [Integración en aplicaciones COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [Cómo: Configurar el servicio COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.ComMethodElementCollection>
+- <xref:System.ServiceModel.Configuration.ComMethodElement>
+- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
+- [Integración en aplicaciones COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Cómo: Configurar el servicio COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

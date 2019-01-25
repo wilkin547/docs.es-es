@@ -2,12 +2,12 @@
 title: Escenarios de seguimiento de traza de un extremo a otro
 ms.date: 03/30/2017
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
-ms.openlocfilehash: ee1f3f09ccd642edbde039bafeda6bbf58247744
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 976c3ad6fae2fa31b180d7635ac897bdf6b9ef1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704243"
 ---
 # <a name="end-to-end-tracing-scenarios"></a>Escenarios de seguimiento de traza de un extremo a otro
 Esta sección contiene temas que describen los diferentes escenarios de utilización del seguimiento de traza.  
@@ -38,6 +38,6 @@ Esta sección contiene temas que describen los diferentes escenarios de utilizac
   
 -   [COM+](../../../../../docs/framework/wcf/diagnostics/tracing/com.md)  
   
-## <a name="see-also"></a>Vea también  
- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+## <a name="see-also"></a>Vea también
+- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

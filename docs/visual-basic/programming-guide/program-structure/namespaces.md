@@ -16,17 +16,17 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 6b320d21c33fa798ca2fd3ef5a04363d141f99f2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b56644cdf44ac5bd9c755d1ee7ba7013c0245293
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492317"
 ---
 # <a name="namespaces-in-visual-basic"></a>Espacios de nombres en Visual Basic
 Los espacios de nombres organizan los objetos definidos en un ensamblado. Los ensamblados pueden contener varios espacios de nombres, que a su vez pueden contener otros espacios de nombres. Los espacios de nombres evitan las ambigüedades y simplifican las referencias cuando se usan grupos de objetos grandes, como las bibliotecas de clases.  
   
- Por ejemplo, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] define la clase <xref:System.Windows.Forms.ListBox> en el espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType>. En el siguiente fragmento de código se muestra cómo declarar una variable con el nombre completo de esta clase:  
+ Por ejemplo, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] define la clase <xref:System.Windows.Forms.ListBox> en el espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> . En el siguiente fragmento de código se muestra cómo declarar una variable con el nombre completo de esta clase:  
   
  [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_1.vb)]  
   
@@ -39,7 +39,7 @@ Los espacios de nombres organizan los objetos definidos en un ensamblado. Los en
   
  En la siguiente ilustración se muestran dos jerarquías de espacio de nombres que contienen un objeto denominado `ListBox`.  
   
- ![Jerarquía de Namespace](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
+ ![Namespace Hierarchy](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
   
  De forma predeterminada, todos los archivos ejecutables que cree con Visual Basic contienen un espacio de nombres con el mismo nombre que el proyecto. Por ejemplo, si define un objeto en un proyecto denominado `ListBoxProject`, el archivo ejecutable ListBoxProject.exe contiene un espacio de nombres llamado `ListBoxProject`.  
   
@@ -109,7 +109,7 @@ End Namespace
   
  En una declaración de espacio de nombres, no se puede anidar `Global` en otro espacio de nombres.  
   
- Puede usar el [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) para ver y modificar el **raíz Namespace** del proyecto.  En cuanto a los proyectos nuevos, el **espacio de nombres raíz** tiene como nombre predeterminado el nombre del proyecto. Para que `Global` sea el espacio de nombres de nivel superior, puede borrar la entrada **Espacio de nombres raíz** para que el cuadro esté vacío. Si se borra **Espacio de nombres raíz** , ya no es necesario usar la palabra clave `Global` en las declaraciones de espacio de nombres.  
+ Puede usar la [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) para ver y modificar el **espacio de nombres raíz** del proyecto.  En cuanto a los proyectos nuevos, el **espacio de nombres raíz** tiene como nombre predeterminado el nombre del proyecto. Para que `Global` sea el espacio de nombres de nivel superior, puede borrar la entrada **Espacio de nombres raíz** para que el cuadro esté vacío. Si se borra **Espacio de nombres raíz** , ya no es necesario usar la palabra clave `Global` en las declaraciones de espacio de nombres.  
   
  Si una instrucción `Namespace` declara un nombre que también es un espacio de nombres en .NET Framework, el espacio de nombres de .NET Framework dejará de estar disponible si la palabra clave `Global` no se usa en un nombre completo. Para habilitar el acceso al espacio de nombres de .NET Framework sin usar la palabra clave `Global` , puede incluir la palabra clave `Global` en la instrucción `Namespace` .  
   
@@ -121,10 +121,10 @@ End Namespace
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Windows.Forms.ListBox>  
-- <xref:System.Windows.Forms?displayProperty=nameWithType>  
-- [Ensamblados y Caché global de ensamblados](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
-- [Crear y utilizar ensamblados mediante la línea de comandos](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)  
-- [Referencias y la instrucción Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
-- [Imports (instrucción), espacio de nombres y tipo .NET](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
-- [Escribir código en soluciones de Office](/visualstudio/vsto/writing-code-in-office-solutions)
+- <xref:System.Windows.Forms.ListBox>
+- <xref:System.Windows.Forms?displayProperty=nameWithType>
+- [Ensamblados y Caché global de ensamblados](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Cómo: Crear y utilizar ensamblados mediante la línea de comandos](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).
+- [Referencias y la instrucción Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Imports (instrucción), espacio de nombres y tipo .NET](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Writing Code in Office Solutions](/visualstudio/vsto/writing-code-in-office-solutions)

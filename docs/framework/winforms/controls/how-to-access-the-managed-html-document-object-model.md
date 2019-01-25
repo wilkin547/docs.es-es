@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Obtener acceso al Modelo de objetos de documento HTML administrado'
+title: Procedimiento Obtener acceso al modelo de objeto de documento HTML administrado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 175a29322fe2af13992e267b3fc3308b70212272
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8799ac9897771a7cdf5a1e473914f461e435c061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637156"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>Cómo: Obtener acceso al Modelo de objetos de documento HTML administrado
+# <a name="how-to-access-the-managed-html-document-object-model"></a>Procedimiento Obtener acceso al modelo de objeto de documento HTML administrado
 Puede acceder al Document Object Model (DOM) HTML administrado desde dos tipos de aplicaciones:  
   
 -   Una aplicación de A Windows Forms (.exe) que hospedó el control <xref:System.Windows.Forms.WebBrowser> administrado. Estas dos tecnologías se complementan entre sí; el control <xref:System.Windows.Forms.WebBrowser> muestra la página al usuario y el DOM HTML representa la estructura lógica del documento.  
@@ -30,7 +30,7 @@ Puede acceder al Document Object Model (DOM) HTML administrado desde dos tipos d
 
 ### <a name="to-access-dom-from-a-usercontrol-hosted-in-internet-explorer"></a>Para acceder al DOM desde un UserControl hospedado en Internet Explorer  
   
-1.  Cree su propia clase derivada personalizada de la clase <xref:System.Windows.Forms.UserControl>. Para obtener más información, consulte [Cómo: Crear controles compuestos](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md).  
+1.  Cree su propia clase derivada personalizada de la clase <xref:System.Windows.Forms.UserControl>. Para obtener más información, vea [Cómo: Crear controles compuestos](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md).  
   
 2.  Coloque el código siguiente dentro del controlador de evento Load para su <xref:System.Windows.Forms.UserControl>:  
   
@@ -45,5 +45,5 @@ Puede acceder al Document Object Model (DOM) HTML administrado desde dos tipos d
   
 1.  Su aplicación o <xref:System.Windows.Forms.UserControl> requerirá confianza completa para poder acceder al DOM HTML administrado. Si está implementando una aplicación de Windows Forms mediante [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], puede solicitar confianza completa usando la elevación de permisos o una implementación de aplicación de confianza; consulte [Proteger las aplicaciones ClickOnce](/visualstudio/deployment/securing-clickonce-applications) para obtener más información.  
   
-## <a name="see-also"></a>Vea también  
- [Utilizar el Modelo de objetos de documento HTML administrado](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a>Vea también
+- [Utilizar el Modelo de objetos de documento HTML administrado](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b4caf27fe45ce0a85b7e1800827a1e5cd0893ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5b35abe6a11b96a88bdd610a4018469bf747fe90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550713"
 ---
 # <a name="imetadatadispenserexfindassembly-method"></a>IMetaDataDispenserEx::FindAssembly (Método)
 Este método no se implementa. Si se llama, devuelve E_NOTIMPL.  
@@ -43,19 +43,19 @@ HRESULT FindAssembly(
   
 #### <a name="parameters"></a>Parámetros  
  `szAppBase`  
- [in] No usado.  
+ [in] No se utiliza.  
   
  `szPrivateBin`  
- [in] No usado.  
+ [in] No se utiliza.  
   
  `szGlobalBin`  
- [in] No usado.  
+ [in] No se utiliza.  
   
  `szAssemblyName`  
- [in] El ensamblado va a calcular.  
+ [in] El ensamblado que se va a calcular.  
   
  `szName`  
- [out] El nombre simple del ensamblado.  
+ [out] El nombre sencillo del ensamblado.  
   
  `cchName`  
  [in] El tamaño, en bytes, de `szName`.  
@@ -64,14 +64,14 @@ HRESULT FindAssembly(
  [out] El número de caracteres devueltos realmente en `szName`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataDispenserEx (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [IMetaDataDispenser (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataDispenserEx (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [IMetaDataDispenser (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

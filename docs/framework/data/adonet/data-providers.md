@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: af7b444a391de56f516d84620b4dbd2eba3497fc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d96be73fc63856e317b129c1fdd8c381c9df6c07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521419"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627270"
 ---
 # <a name="net-framework-data-providers"></a>Proveedores de datos .NET Framework
 Los proveedores de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sirven para conectarse a una base de datos, ejecutar comandos y recuperar resultados. Esos resultados se procesan directamente, se colocan en un <xref:System.Data.DataSet> con el fin de que el usuario pueda verlos cuando los necesite, se combinan con datos de varios orígenes o se utilizan de forma remota entre niveles. Los proveedores de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] son ligeros, de manera que crean un nivel mínimo entre el origen de datos y el código, con lo que aumenta el rendimiento sin sacrificar funcionalidad.  
@@ -24,7 +24,7 @@ Los proveedores de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]para OBDC|Para orígenes de datos que se exponen mediante ODBC. Utiliza el espacio de nombres <xref:System.Data.Odbc> .|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle|Para orígenes de datos de Oracle. El proveedor de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle es compatible con la versión 8.1.7 y posteriores del software de cliente de Oracle y utiliza el espacio de nombres <xref:System.Data.OracleClient> .|  
 |Proveedor para EntityClient|Proporciona acceso a datos para las aplicaciones de Entity Data Model (EDM). Utiliza el espacio de nombres <xref:System.Data.EntityClient> .|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Proveedor de datos para SQL Server Compact 4.0.|Proporciona acceso a datos para Microsoft SQL Server Compact 4.0. Usa el [System.Data.SqlServerCe](https://msdn.microsoft.com/library/system.data.sqlserverce.aspx) espacio de nombres.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Proveedor de datos para SQL Server Compact 4.0.|Proporciona acceso a datos para Microsoft SQL Server Compact 4.0. Usa el espacio de nombres [System.Data.SqlServerCe](https://msdn.microsoft.com/library/system.data.sqlserverce.aspx) .|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Objetos principales de los proveedores de datos .NET Framework  
  En la tabla siguiente se describen los cuatro objetos centrales que constituyen un proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
@@ -42,7 +42,7 @@ Los proveedores de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort
 |------------|-----------------|  
 |`Transaction`|Incluye comandos en las transacciones que se realizan en el origen de datos. La clase base para todos los objetos `Transaction` es <xref:System.Data.Common.DbTransaction> . ADO.NET es también compatible con las transacciones que usan clases en el espacio de nombres <xref:System.Transactions> .|  
 |`CommandBuilder`|Un objeto auxiliar que genera automáticamente las propiedades de comando de un `DataAdapter` o que obtiene de un procedimiento almacenado información acerca de parámetros con la que puede rellenar la colección `Parameters` de un objeto `Command`. La clase base para todos los objetos `CommandBuilder` es <xref:System.Data.Common.DbCommandBuilder> .|  
-|`ConnectionStringBuilder`|Un objeto auxiliar que proporciona un modo sencillo de crear y administrar el contenido de las cadenas de conexión utilizadas por los objetos `Connection` . La clase base para todos los objetos `ConnectionStringBuilder` es <xref:System.Data.Common.DbConnectionStringBuilder> .|  
+|`ConnectionStringBuilder`|Un objeto del asistente que proporciona un modo sencillo de crear y administrar el contenido de las cadenas de conexión utilizadas por los objetos `Connection`. La clase base para todos los objetos `ConnectionStringBuilder` es <xref:System.Data.Common.DbConnectionStringBuilder> .|  
 |`Parameter`|Define los parámetros de entrada, salida y valores devueltos para los comandos y procedimientos almacenados. La clase base para todos los objetos `Parameter` es <xref:System.Data.Common.DbParameter> .|  
 |`Exception`|Se devuelve cuando se detecta un error en el origen de datos. En el caso de que el error se detecte en el cliente, los proveedores de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] generan una excepción de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. La clase base para todos los objetos `Exception` es <xref:System.Data.Common.DbException> .|  
 |`Error`|Expone la información relacionada con una advertencia o error devueltos por un origen de datos.|  
@@ -123,7 +123,7 @@ using System.Data.Odbc;
 ```  
   
 > [!NOTE]
->  El proveedor de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para ODBC necesita MDAC 2.6 o posterior, y se recomienda MDAC 2.8 SP1. Puede descargar MDAC 2.8 SP1 desde el [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?linkid=4173).  
+>  El proveedor de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para ODBC necesita MDAC 2.6 o posterior, y se recomienda MDAC 2.8 SP1. Puede descargar MDAC 2.8 SP1 del [Centro para programadores de acceso a datos y almacenamiento](https://go.microsoft.com/fwlink/?linkid=4173).  
   
 ## <a name="net-framework-data-provider-for-oracle"></a>Proveedor de datos .NET Framework para Oracle  
  El proveedor de datos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle (OracleClient) habilita el acceso a datos de orígenes de datos de Oracle mediante el software de conectividad de cliente de Oracle. El proveedor de datos es compatible con la versión 8.1.7 o posterior del software de cliente de Oracle. El proveedor de datos admite tanto transacciones locales como transacciones distribuidas. Para obtener más información, consulte [transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
@@ -155,9 +155,9 @@ using System.Data.OracleClient;
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] '' Para Oracle|Recomendado para aplicaciones de un único nivel y de nivel medio que utilizan orígenes de datos de Oracle.|  
   
 ## <a name="entityclient-provider"></a>Proveedor para EntityClient  
- El proveedor EntityClient se usa para obtener acceso a datos basándose en un Entity Data Model (EDM). A diferencia de otros proveedores de datos .NET Framework, no interactúa directamente con ningún origen de datos. En su lugar, usa Entity SQL para comunicarse con el proveedor de datos subyacente. Para obtener más información, consulte [EntityClient y Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
+ El proveedor EntityClient se usa para obtener acceso a datos basándose en un Entity Data Model (EDM). A diferencia de otros proveedores de datos .NET Framework, no interactúa directamente con ningún origen de datos. En su lugar, usa Entity SQL para comunicarse con el proveedor de datos subyacente. Para obtener más información, consulta [EntityClient and Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Información general sobre ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

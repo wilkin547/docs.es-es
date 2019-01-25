@@ -8,12 +8,12 @@ helpviewer_keywords:
 - visual layer [WPF], DrawingVisual objects
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
-ms.openlocfilehash: 799892424f92782d71b9a35e76d722d1725815ea
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0d4ba3939a95b665684713f3b1775bacd3d028b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675079"
 ---
 # <a name="using-drawingvisual-objects"></a>Usar objetos DrawingVisual
 En este tema proporciona información general sobre cómo usar <xref:System.Windows.Media.DrawingVisual> objetos en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] capa visual.  
@@ -53,7 +53,7 @@ En este tema proporciona información general sobre cómo usar <xref:System.Wind
   
 -   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Devuelve a un elemento secundario en el índice especificado de la colección de elementos secundarios.  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Obtiene el número de elementos visuales secundarios de este elemento.  
+-   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Obtiene el número de elementos secundarios visuales de este elemento.  
   
  En el ejemplo siguiente, invalidaciones para los dos <xref:System.Windows.FrameworkElement> miembros se implementan.  
   
@@ -69,8 +69,8 @@ En este tema proporciona información general sobre cómo usar <xref:System.Wind
  [!code-csharp[DrawingVisualSample#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#103)]
  [!code-vb[DrawingVisualSample#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#103)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.DrawingVisual>  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Realizar pruebas de posicionamiento en la capa visual](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.DrawingVisual>
+- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
+- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Realizar pruebas de posicionamiento en la capa visual](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 7be7c156ec20a15cf8d1a12d8d1f429b6c2c33a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548800"
 ---
 # <a name="creating-user-defined-bindings"></a>Creación de enlaces definidos por el usuario
 Hay varias maneras de crear enlaces no proporcionadas por el sistema:  
@@ -23,7 +23,7 @@ Hay varias maneras de crear enlaces no proporcionadas por el sistema:
 ## <a name="the-order-of-binding-elements"></a>El orden de elementos de enlace  
  Cada elemento de enlace representa un paso del procesamiento al enviar y recibir mensajes. En tiempo de ejecución, los elementos de enlace crean los canales y agentes de escucha necesarios para crear pilas de canales entrantes y salientes.  
   
- Hay tres tipos principales de elementos de enlace: elementos de enlaces de protocolo, elementos de enlaces de codificación y elementos de enlaces de transporte.  
+ Hay tres tipos principales de los elementos de enlace: Protocolo de enlace de elementos, codificación de elementos de enlace y los elementos de enlace de transporte.  
   
  Elementos de enlaces protocolares: estos elementos representan pasos de procesamiento de nivel superior que actúan sobre mensajes. Los canales y los agentes de escucha creados por estos elementos de enlace pueden agregar, quitar o modificar el contenido del mensaje. Un enlace determinado puede tener un número arbitrario de elementos de enlace de protocolo, cada uno de los cuales hereda de <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) incluye varios elementos de enlace de protocolo, incluidos el <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> y <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
@@ -118,6 +118,6 @@ public override BindingElementCollection CreateBindingElements()
 ## <a name="deriving-from-a-standard-binding"></a>Derivación a partir de un enlace estándar  
  En lugar de crear una clase de enlace completamente nueva, puede que sea posible extender uno de los enlaces existentes proporcionados por el sistema. De manera muy similar al caso anterior, debe invalidar el método <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> y la propiedad <xref:System.ServiceModel.Channels.Binding.Scheme%2A>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.Binding>  
- [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Channels.Binding>
+- [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)

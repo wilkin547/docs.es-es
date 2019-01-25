@@ -2,21 +2,21 @@
 title: '&lt;msmqTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
-ms.openlocfilehash: a0406ae6e91755707656e10c75cbd25dd68d07c2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 523f2fd030f40a6d55080a48773159ab4b5887ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660585"
 ---
 # <a name="ltmsmqtransportgt"></a>&lt;msmqTransport&gt;
 Produce un canal a los mensajes de las transferencias en el transporte de MSMQ cuando está incluido en un enlace personalizado.  
   
  \<system.serviceModel>  
-\<enlaces >  
-\<customBinding >  
-\<enlace >  
-\<msmqIntegration >  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<msmqIntegration>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -61,7 +61,7 @@ Produce un canal a los mensajes de las transferencias en el transporte de MSMQ c
 |maxPoolSize|Un entero positivo que especifica el tamaño máximo del grupo. El valor predeterminado es 524288.|  
 |maxReceivedMessageSize|Un entero positivo que especifica el tamaño de mensaje máximo en bytes incluidas los encabezados . El remitente de un mensaje recibe un error SOAP cuando el mensaje es demasiado grande para el receptor. El destinatario quita el mensaje y crea una entrada del evento en el registro de seguimiento. El valor predeterminado es 65536.|  
 |maxRetryCycles|Un entero que especifica el número máximo de ciclos de reintento para intentar la entrega de mensajes a la aplicación receptora. De manera predeterminada, es <xref:System.Int32.MaxValue>.<br /><br /> Un ciclo de reintento único intenta entregar un mensaje a una aplicación un número especificado de veces. El atributo `maxImmediateRetries` establece el número de intentos realizados. Si la aplicación no consigue consumir el mensaje una vez agotados los intentos en la entrega, el mensaje se envía a una cola de reintento. Los ciclos de reintento subsiguientes consisten en que el mensaje vuelva de la cola de reintento a la cola de aplicación para intentar de nuevo la entrega a la aplicación, después de un retraso especificado por el atributo `retryCycleDelay`. El atributo `maxRetryCycles` especifica el número de ciclos de reintento que la aplicación usa para intentar entregar el mensaje.|  
-|queueTransferProtocol|Especifica el transporte del canal de comunicación en cola que usa este enlace. Los valores válidos son<br /><br /> -Nativo:  Utilice el protocolo MSMQ nativo.<br />-Srmp:  Utilice el Protocolo de mensajería confiable de SOAP (SRMP).<br />-SrmpSecure: Utilice el transporte seguro del Protocolo de mensajería confiable de SOAP (SRMPS).<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.QueueTransferProtocol>.<br /><br /> Puesto que MSMQ no admite el direccionamiento de Active Directory cuando se usa el protocolo de mensajería confiable de SOAP, no debe establecer este atributo a Srmp o Srmps cuando `useActiveDirectory` está establecido en `true`.|  
+|queueTransferProtocol|Especifica el transporte del canal de comunicación en cola que usa este enlace. Los valores válidos son<br /><br /> -Nativo:  Utilice el protocolo MSMQ nativo.<br />-Srmp:  Utilice el Protocolo de mensajería confiable de SOAP (SRMP).<br />-   SrmpSecure: Utilice el transporte seguro del Protocolo de mensajería confiable de SOAP (SRMPS).<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.QueueTransferProtocol>.<br /><br /> Puesto que MSMQ no admite el direccionamiento de Active Directory cuando se usa el protocolo de mensajería confiable de SOAP, no debe establecer este atributo a Srmp o Srmps cuando `useActiveDirectory` está establecido en `true`.|  
 |rejectAfterLastRetry|Un valor booleano que especifica los que la acción va a realizar para un mensaje en el que se ha producido un error tras haber intentado el número máximo de reintentos.<br /><br /> `true` significa que se devuelve al remitente una confirmación de que no se pudo realizar la acción y se coloca el mensaje; `false` significa que el mensaje se envía a la cola de mensajes dudosos. De manera predeterminada, es `false`.<br /><br /> Si el valor es `false`, la aplicación receptora puede leer la cola de mensajes dudosos para procesarlos (es decir, mensajes que han producido un error en la entrega).<br /><br /> MSMQ 3.0 no permite devolver al remitente una confirmación de que no se pudo realizar la acción, por lo que este atributo se omitirá en MSMQ 3.0.|  
 |retryCycleDelay|Un <xref:System.TimeSpan> que especifica el tiempo de retardo entre los ciclos de reintento al intentar entregar un mensaje que no se pudo entregar inmediatamente. El valor predeterminado es 00:10:00.<br /><br /> Un ciclo de reintento único intenta entregar un mensaje a una aplicación receptora un número especificado de veces. El atributo `maxImmediateRetries` especifica el número de intentos realizados. Si la aplicación no consigue consumir el mensaje después del número especificado de intentos inmediatos, el mensaje se envía a una cola de reintento. Los ciclos de reintento subsiguientes consisten en que el mensaje vuelva de la cola de reintento a la cola de aplicación para intentar de nuevo la entrega a la aplicación, después de un retraso especificado por el atributo `retryCycleDelay`. El atributo `maxRetryCycles` especifica el número de ciclos de reintento.|  
 |timeToLive|Un <xref:System.TimeSpan> que especifica cuánto tiempo son válidos los mensajes antes de expirar y ser colocados en la cola de mensajes no enviados. El valor predeterminado es 1.00:00:00 (que significa 1 día).<br /><br /> Este atributo se establece para asegurarse de que los mensajes que dependen del tiempo no se vuelvan obsoletos antes de ser procesados por las aplicaciones receptoras. Un mensaje en una cola expira si no es consumido por la aplicación receptora dentro del intervalo de tiempo especificado. Los mensajes caducados se envían a la cola especial llamada cola de mensajes no enviados. La ubicación de la cola de mensajes no enviados se establece con el atributo `customDeadLetterQueue` o con el valor predeterminado adecuado, basado en garantías.|  
@@ -73,28 +73,28 @@ Produce un canal a los mensajes de las transferencias en el transporte de MSMQ c
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<msmqTransportSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|Especifica la configuración de seguridad de transporte para este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<msmqTransportSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|Especifica la configuración de seguridad de transporte para este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enlace >](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento `msmqTransport` permite al usuario establecer las propiedades del canal de comunicación en cola. El canal de comunicación en cola utiliza Message Queuing para su transporte.  
   
  Este elemento de enlace es el elemento de enlace predeterminado utilizado por el enlace estándar de Message Queuing (`netMsmqBinding`).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.MsmqTransportElement>  
- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Elección del transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.MsmqTransportElement>
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Elección del transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

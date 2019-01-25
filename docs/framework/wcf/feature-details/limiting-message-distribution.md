@@ -2,12 +2,12 @@
 title: Limitación de la distribución de mensajes
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: bec5a28abeff23929d2c0f1c363f4e08872a63fa
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3f660294bf9acea3ac5df7e0b4250885645a0835
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738651"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686769"
 ---
 # <a name="limiting-message-distribution"></a>Limitación de la distribución de mensajes
 El canal del mismo nivel es, por diseño, una malla de difusión. Su modelo de distribución básico implica la distribución de cada mensaje enviado por cualquier miembro de una malla a todos los demás miembros de esa malla. Esto es ideal en situaciones en las que cada mensaje generado por un miembro es relevante y útil para todos los demás miembros (por ejemplo, en un salón de chat). Sin embargo, muchas aplicaciones tienen una necesidad ocasional de limitar la distribución de mensajes. Por ejemplo, si un nuevo miembro se une a una malla y desea recuperar el último mensaje enviado a través de la malla, esta solicitud no necesita ser distribuida a cada miembro. La solicitud podría limitarse a los vecinos próximos o podrían filtrarse los mensajes generados localmente. Los mensajes también se pueden enviar a un nodo individual de la malla. En este tema se analiza el uso del número de saltos, de un filtro de propagación de mensajes, de un filtro local o de una conexión directa para controlar la forma en que los mensajes se reenvían a lo largo de la malla, y se proporcionan instrucciones de carácter general para elegir un enfoque.  
@@ -44,25 +44,25 @@ El canal del mismo nivel es, por diseño, una malla de difusión. Su modelo de d
   
  Las respuestas a estas preguntas pueden ayudarle a determinar si debe utilizar el número de saltos, un filtro de propagación de mensajes, un filtro local o una conexión directa. Considere las siguientes pautas de carácter general:  
   
--   **Quién**  
+-   **Who**  
   
-    -   *Nodo individual*: filtro Local o conexión directa.  
+    -   *Nodo individual*:  Filtro local o conexión directa.  
   
-    -   *Vecinos con una determinada proximidad*: PeerHopCount.  
+    -   *Vecinos con una determinada proximidad*:  PeerHopCount.  
   
-    -   *Subconjunto complejo de la malla*: MessagePropagationFilter.  
+    -   *Subconjunto complejo de la malla*:  MessagePropagationFilter.  
   
 -   **¿Con qué frecuencia**  
   
-    -   *Con mucha frecuencia*: conexión directa, PeerHopCount, MessagePropagationFilter.  
+    -   *Con mucha frecuencia*:  Conexión directa, PeerHopCount, MessagePropagationFilter.  
   
-    -   *Ocasional*: filtro Local.  
+    -   *Ocasional*:  Filtro local.  
   
 -   **Uso de ancho de banda**  
   
-    -   *Alta*: conexión directa; es menos aconsejable el uso de MessagePropagationFilter o filtro local.  
+    -   *Alta*:  Conexión directa, menos aconsejable el uso de MessagePropagationFilter o filtro local.  
   
-    -   *Baja*: cualquier, conexión directa probablemente no sea necesario.  
+    -   *Baja*:  Cualquier, conexión directa probablemente no sea necesario.  
   
-## <a name="see-also"></a>Vea también  
- [Creación de una aplicación de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>Vea también
+- [Creación de una aplicación de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

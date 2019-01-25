@@ -11,12 +11,12 @@ helpviewer_keywords:
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: KrzysztofCwalina
-ms.openlocfilehash: 54f98b3c685b77ecb9fe659522c599662aa8243c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 530c68ea5342263acd07f8dc8a8c8ce889652503
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632028"
 ---
 # <a name="event-design"></a>Diseño de eventos
 Los eventos son la forma más frecuente de las devoluciones de llamada (construcciones que permiten el marco de trabajo llamar a código de usuario). Otros mecanismos de devolución de llamada incluyen a miembros tomar basado en la interfaz de complementos, los miembros virtuales y los delegados. Datos de estudios de uso indican que la mayoría de los desarrolladores son más cómodos si usan los eventos que usan otros mecanismos de devolución de llamada. Los eventos se integran perfectamente con Visual Studio y muchos lenguajes.  
@@ -72,5 +72,5 @@ Los eventos son la forma más frecuente de las devoluciones de llamada (construc
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de diseño de miembros](../../../docs/standard/design-guidelines/member.md)  
+- [Instrucciones de diseño de miembros](../../../docs/standard/design-guidelines/member.md)
 - [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)

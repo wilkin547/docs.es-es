@@ -2,12 +2,12 @@
 title: Proveedor de token emitido duradero
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 7def23a00e42e134d8c0b9bd911710917681ad31
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 911c4928a179a6595c6ebec488055dd45ae91c36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504596"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736226"
 ---
 # <a name="durable-issued-token-provider"></a>Proveedor de token emitido duradero
 Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emitidos por el cliente.  
@@ -80,7 +80,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
 </bindings>  
 ```  
   
- En el elemento `security` de `wsFederationHttpBinding`, el valor `mode` configura qué modo de seguridad debería utilizarse. En este ejemplo, se utiliza la seguridad de los mensajes, que es por lo que se especifica el elemento `message` de `wsFederationHttpBinding` dentro del elemento `security` de `wsFederationHttpBinding`. El elemento `issuerMetadata` de `wsFederationHttpBinding` dentro del elemento `message` de `wsFederationHttpBinding` especifica la dirección e identidad de un extremo que se puede utilizar para recuperar los metadatos para el Servicio de token de seguridad.  
+ En el elemento `security` de `wsFederationHttpBinding`, el valor `mode` configura qué modo de seguridad debería utilizarse. En este ejemplo, se utiliza la seguridad de los mensajes, que es por lo que se especifica el elemento `message` de `wsFederationHttpBinding` dentro del elemento `security` de `wsFederationHttpBinding`. El elemento `issuerMetadata` de `wsFederationHttpBinding` dentro del elemento `message` de `wsFederationHttpBinding` especifica la dirección e identidad de un punto de conexión que se puede utilizar para recuperar los metadatos para el Servicio de token de seguridad.  
   
  El comportamiento para el servicio se muestra en el código siguiente.  
   

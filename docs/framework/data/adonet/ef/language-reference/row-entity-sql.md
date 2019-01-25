@@ -2,12 +2,12 @@
 title: ROW (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-ms.openlocfilehash: eb5062399eec9d8453d8922e05698ca9124d94d7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9d7631f0532a0d604c90861bc3f5623e85f23b7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765612"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677087"
 ---
 # <a name="row-entity-sql"></a>ROW (Entity SQL)
 Crea registros anónimos con tipos asignados estructuralmente a partir de uno o varios valores.  
@@ -43,7 +43,7 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
 -   Dos expresiones en el mismo constructor ROW no pueden tener el mismo alias.  
   
- Para obtener más información sobre los constructores de consulta, vea [construir tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+ Para obtener más información acerca de los constructores de consultas, vea [construir tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
   
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza el operador ROW para construir registros anónimos escritos estructuralmente. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
@@ -54,7 +54,7 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
  [!code-csharp[DP EntityServices Concepts 2#ROW](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#row)]  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de constructores](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Definiciones de tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)
+## <a name="see-also"></a>Vea también
+- [Tipos de constructores](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
+- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Definiciones de tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
 author: KrzysztofCwalina
-ms.openlocfilehash: 4ff79af968c8a0a360cade687b8c60cdd71de192
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fcf566c24677630fdbb1fcd0eb7628f830b3be2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702943"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstracciones (Tipos e interfaces abstractos)
 Una abstracción es un tipo que describe un contrato, pero no proporciona una implementación completa del contrato. Abstracciones normalmente se implementan como interfaces o clases abstractas y vienen con un conjunto de documentación de referencia que describe la semántica necesaria de los tipos que implementan el contrato bien definido. Algunas de las abstracciones más importantes en .NET Framework incluyen <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, y <xref:System.Object>.  
@@ -39,5 +39,5 @@ Una abstracción es un tipo que describe un contrato, pero no proporciona una im
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Diseño de extensibilidad](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

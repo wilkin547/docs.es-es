@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5da2936a46dcf3d8f69acc3367db64712165b0cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eb1268d9fd892a4400491aca7966d81a3e23f9c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515357"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock (Método)
 Obtiene un bloque de sección del código base.  
@@ -42,28 +42,28 @@ HRESULT GetSectionBlock (
   
 #### <a name="parameters"></a>Parámetros  
  `section`  
- [in] La sección de la que se va a recuperar un bloque de código base.  
+ [in] La sección desde el que se va a recuperar un bloque de la base de código.  
   
  `len`  
  [in] La longitud del bloque que se va a recuperar.  
   
  `align`  
- [in] El byte, relativa al comienzo de la sección, con el que se va a alinear el primer byte del bloque. Esta es la posición del bloque dentro de la sección.  
+ [in] El byte, con respecto al principio de la sección con la que se va a alinear el primer byte del bloque. Esta es la posición del bloque dentro de la sección.  
   
  `ppBytes`  
  [out] Un puntero a una ubicación que recibe la dirección del bloque recuperado.  
   
 ## <a name="remarks"></a>Comentarios  
- Llame a `GetSectionBlock` sólo si tiene requisitos de sección especiales que no se controlan mediante otros métodos.  
+ Llamar a `GetSectionBlock` sólo si tiene requisitos de sección especial que no se controlan mediante otros métodos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICeeGen (interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICeeGen (interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
