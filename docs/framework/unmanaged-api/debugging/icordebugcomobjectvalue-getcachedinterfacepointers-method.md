@@ -15,17 +15,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef6fb76ca25a1255393b66c52d82cb94df2b48b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46f5742f6f91fec303a37dcc1bab25bee8428c10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631027"
 ---
-# <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a><span data-ttu-id="3683b-102">ICorDebugComObjectValue::GetCachedInterfacePointers (Método)</span><span class="sxs-lookup"><span data-stu-id="3683b-102">ICorDebugComObjectValue::GetCachedInterfacePointers Method</span></span>
-<span data-ttu-id="3683b-103">Obtiene los punteros de interfaz sin formato que se almacena en caché en el contenedor invocable en tiempo de ejecución actual (RCW).</span><span class="sxs-lookup"><span data-stu-id="3683b-103">Gets the raw interface pointers cached on the current runtime callable wrapper (RCW).</span></span>  
+# <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a><span data-ttu-id="f3cf5-102">ICorDebugComObjectValue::GetCachedInterfacePointers (Método)</span><span class="sxs-lookup"><span data-stu-id="f3cf5-102">ICorDebugComObjectValue::GetCachedInterfacePointers Method</span></span>
+<span data-ttu-id="f3cf5-103">Obtiene los punteros de interfaz sin formato almacenados en caché en el contenedor invocable en tiempo de ejecución actual (RCW).</span><span class="sxs-lookup"><span data-stu-id="f3cf5-103">Gets the raw interface pointers cached on the current runtime callable wrapper (RCW).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3683b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="3683b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f3cf5-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f3cf5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCachedInterfacePointers(  
@@ -35,30 +35,30 @@ HRESULT GetCachedInterfacePointers(
     [out, size_is(celt), length_is(*pceltFetched) CORDB_ADDRESS *ptrs);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3683b-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="3683b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f3cf5-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f3cf5-105">Parameters</span></span>  
  `bIInspectableOnly`  
- <span data-ttu-id="3683b-106">[in] Un valor que indica si el método devolverá solo [!INCLUDE[wrt](../../../../includes/wrt-md.md)] interfaces (`IInspectable` interfaces) o todas las interfaces COM que se almacenan en caché por el contenedor invocable en tiempo de ejecución (RCW).</span><span class="sxs-lookup"><span data-stu-id="3683b-106">[in] A value that indicates whether the method will return only [!INCLUDE[wrt](../../../../includes/wrt-md.md)] interfaces (`IInspectable` interfaces) or all COM interfaces that are cached by the runtime callable wrapper (RCW).</span></span>  
+ <span data-ttu-id="f3cf5-106">[in] Un valor que indica si el método devolverá solo [!INCLUDE[wrt](../../../../includes/wrt-md.md)] interfaces (`IInspectable` interfaces) o todas las interfaces COM que se almacenan en caché por el contenedor invocable en tiempo de ejecución (RCW).</span><span class="sxs-lookup"><span data-stu-id="f3cf5-106">[in] A value that indicates whether the method will return only [!INCLUDE[wrt](../../../../includes/wrt-md.md)] interfaces (`IInspectable` interfaces) or all COM interfaces that are cached by the runtime callable wrapper (RCW).</span></span>  
   
  `celt`  
- <span data-ttu-id="3683b-107">[in] El número de objetos cuyas direcciones se van a recuperar.</span><span class="sxs-lookup"><span data-stu-id="3683b-107">[in] The number of objects whose addresses are to be retrieved.</span></span>  
+ <span data-ttu-id="f3cf5-107">[in] El número de objetos cuyas direcciones se van a recuperar.</span><span class="sxs-lookup"><span data-stu-id="f3cf5-107">[in] The number of objects whose addresses are to be retrieved.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="3683b-108">[out] Un puntero al número de `CORDB_ADDRESS` valores realmente devueltos en `ptrs`.</span><span class="sxs-lookup"><span data-stu-id="3683b-108">[out] A pointer to the number of `CORDB_ADDRESS` values actually returned in `ptrs`.</span></span>  
+ <span data-ttu-id="f3cf5-108">[out] Un puntero al número de `CORDB_ADDRESS` valores devueltos realmente en `ptrs`.</span><span class="sxs-lookup"><span data-stu-id="f3cf5-108">[out] A pointer to the number of `CORDB_ADDRESS` values actually returned in `ptrs`.</span></span>  
   
  `ptrs`  
- <span data-ttu-id="3683b-109">Un puntero a la dirección inicial de una matriz de `CORDB_ADDRESS` valores que contienen las direcciones de los objetos de interfaz en caché.</span><span class="sxs-lookup"><span data-stu-id="3683b-109">A pointer to the starting address of an array of `CORDB_ADDRESS` values that contain the addresses of cached interface objects.</span></span>  
+ <span data-ttu-id="f3cf5-109">Un puntero a la dirección inicial de una matriz de `CORDB_ADDRESS` valores que contienen las direcciones de almacenar en caché los objetos de interfaz.</span><span class="sxs-lookup"><span data-stu-id="f3cf5-109">A pointer to the starting address of an array of `CORDB_ADDRESS` values that contain the addresses of cached interface objects.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3683b-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="3683b-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f3cf5-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="f3cf5-110">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3683b-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3683b-111">Requirements</span></span>  
- <span data-ttu-id="3683b-112">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3683b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f3cf5-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f3cf5-111">Requirements</span></span>  
+ <span data-ttu-id="f3cf5-112">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f3cf5-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3683b-113">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3683b-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f3cf5-113">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f3cf5-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3683b-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3683b-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f3cf5-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f3cf5-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3683b-115">**Versiones de .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3683b-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="f3cf5-115">**Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3cf5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3683b-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="3683b-116">See Also</span></span>  
- [<span data-ttu-id="3683b-117">ICorDebugComObjectValue (interfaz)</span><span class="sxs-lookup"><span data-stu-id="3683b-117">ICorDebugComObjectValue Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)  
- [<span data-ttu-id="3683b-118">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="3683b-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f3cf5-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="f3cf5-116">See also</span></span>
+- [<span data-ttu-id="f3cf5-117">ICorDebugComObjectValue (interfaz)</span><span class="sxs-lookup"><span data-stu-id="f3cf5-117">ICorDebugComObjectValue Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)
+- [<span data-ttu-id="f3cf5-118">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="f3cf5-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

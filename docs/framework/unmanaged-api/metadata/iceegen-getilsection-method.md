@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6025b5914d4e96d10d83fc47a6baea7aa09605d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e75f46d73e068c6bdaac6ae01740ecf589c97d42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635915"
 ---
-# <a name="iceegengetilsection-method"></a><span data-ttu-id="95db4-102">ICeeGen::GetIlSection (Método)</span><span class="sxs-lookup"><span data-stu-id="95db4-102">ICeeGen::GetIlSection Method</span></span>
-<span data-ttu-id="95db4-103">Obtiene la sección de la base de código de lenguaje intermedio al que hace referencia el identificador especificado.</span><span class="sxs-lookup"><span data-stu-id="95db4-103">Gets the section of the intermediate language code base referenced by the specified handle.</span></span>  
+# <a name="iceegengetilsection-method"></a><span data-ttu-id="ccdba-102">ICeeGen::GetIlSection (Método)</span><span class="sxs-lookup"><span data-stu-id="ccdba-102">ICeeGen::GetIlSection Method</span></span>
+<span data-ttu-id="ccdba-103">Obtiene la sección de la base de código de lenguaje intermedio al que hace referencia el identificador especificado.</span><span class="sxs-lookup"><span data-stu-id="ccdba-103">Gets the section of the intermediate language code base referenced by the specified handle.</span></span>  
   
- <span data-ttu-id="95db4-104">Este método está obsoleto y no debe usarse.</span><span class="sxs-lookup"><span data-stu-id="95db4-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="ccdba-104">Este método está obsoleto y no debe usarse.</span><span class="sxs-lookup"><span data-stu-id="ccdba-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="95db4-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="95db4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ccdba-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ccdba-105">Syntax</span></span>  
   
 ```  
 HRESULT GetIlSection (  
@@ -37,18 +37,18 @@ HRESULT GetIlSection (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="95db4-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="95db4-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ccdba-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ccdba-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="95db4-107">[in] El identificador de la sección para obtener.</span><span class="sxs-lookup"><span data-stu-id="95db4-107">[in] The handle to the section to get.</span></span>  
+ <span data-ttu-id="ccdba-107">[in] El identificador de la sección para obtener.</span><span class="sxs-lookup"><span data-stu-id="ccdba-107">[in] The handle to the section to get.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="95db4-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="95db4-108">Requirements</span></span>  
- <span data-ttu-id="95db4-109">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="95db4-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ccdba-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ccdba-108">Requirements</span></span>  
+ <span data-ttu-id="ccdba-109">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ccdba-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="95db4-110">**Encabezado:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="95db4-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ccdba-110">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="ccdba-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="95db4-111">**Biblioteca:** usada como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="95db4-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ccdba-111">**Biblioteca:** Usar como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ccdba-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="95db4-112">**Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95db4-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ccdba-112">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ccdba-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95db4-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="95db4-113">See Also</span></span>  
- [<span data-ttu-id="95db4-114">ICeeGen (interfaz)</span><span class="sxs-lookup"><span data-stu-id="95db4-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ccdba-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="ccdba-113">See also</span></span>
+- [<span data-ttu-id="ccdba-114">ICeeGen (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ccdba-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
