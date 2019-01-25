@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c5e970a1677b1e43821cce9985e32ebd0726686
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97aded59f880412a6a26e7e3d664c50ff1c2f103
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557414"
 ---
 # <a name="malloctype-enumeration"></a>MALLOC_TYPE (enumeración)
-Contiene valores que especifican las características de la memoria que se asigna.  
+Contiene valores que especifican las características de la memoria que se está asignando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,16 +40,16 @@ typedef enum {
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`MALLOC_EXECUTABLE`|La memoria asignada puede contener un archivo ejecutable.|  
-|`MALLOC_THREADSAFE`|La memoria asignada es segura para subprocesos. Es decir, puede tener acceso a la memoria de varios subprocesos sin ninguna sincronización.<br /><br /> Si no se establece esta marca, se deben serializar las llamadas en el objeto.|  
+|`MALLOC_THREADSAFE`|La memoria asignada es segura para subprocesos. Es decir, la memoria puede obtenerse mediante varios subprocesos sin ninguna sincronización.<br /><br /> Si no se establece esta marca, se deben serializar las llamadas en el objeto.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

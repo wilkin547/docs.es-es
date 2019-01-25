@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear la configuración de la aplicación'
+title: Procedimiento Crear configuración de la aplicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558961"
 ---
-# <a name="how-to-create-application-settings"></a>Cómo: Crear la configuración de la aplicación
+# <a name="how-to-create-application-settings"></a>Procedimiento Crear configuración de la aplicación
 Usando código administrado, puede crear una nueva opción de configuración de la aplicación y enlazarla a las propiedades o a los controles del formulario para que esta opción de configuración se cargue y se guarde automáticamente en tiempo de ejecución.  
   
  En el siguiente procedimiento, creará manualmente una clase contenedora que deriva de <xref:System.Configuration.ApplicationSettingsBase>. A esta clase se agrega una propiedad públicamente accesible para cada opción de configuración de la aplicación que desee exponer.  
   
- También puede realizar este procedimiento con un mínimo de código en el diseñador de Visual Studio.  Consulte también [Cómo: crear configuración de aplicación mediante el diseñador](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ También puede realizar este procedimiento con un mínimo de código en el diseñador de Visual Studio.  Consulte también [Cómo: Crear configuración de la aplicación mediante el diseñador](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Para crear una nueva opción de configuración de la aplicación mediante programación  
   
@@ -46,8 +46,8 @@ Usando código administrado, puede crear una nueva opción de configuración de 
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  El proveedor de configuración predeterminado, <xref:System.Configuration.LocalFileSettingsProvider>, conserva la información en archivos de configuración como texto sin formato. Esto limita la seguridad a la seguridad de acceso a archivos proporcionada por el sistema operativo para el usuario actual. Por este motivo, debe tener cuidado con la información almacenada en los archivos de configuración. Por ejemplo, un uso común de la configuración de la aplicación es almacenar cadenas de conexión que apuntan al almacén de datos de la aplicación. Sin embargo, por motivos de seguridad, esas cadenas no deberían incluir contraseñas. Para obtener más información sobre las cadenas de conexión, consulte <xref:System.Configuration.SpecialSetting>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Configuration.SpecialSettingAttribute>  
- <xref:System.Configuration.LocalFileSettingsProvider>  
- [Introducción a la configuración de la aplicación](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Validar la configuración de la aplicación](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Configuration.SpecialSettingAttribute>
+- <xref:System.Configuration.LocalFileSettingsProvider>
+- [Introducción a la configuración de la aplicación](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Cómo: Validar la configuración de la aplicación](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)

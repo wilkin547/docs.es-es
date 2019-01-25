@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9902b96a6f9ca56435430b6120a34dfb6cfadd7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20bfe7794e1ac6259e5b70c2670801e4c7244520
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675363"
 ---
 # <a name="asmname-enumeration"></a>ASM_NAME (Enumeración)
-Indica la versión, compilación, referencia cultural, firma etc., del ensamblado cuyas propiedades se recuperarán o establecer [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) métodos.  
+Indica la versión, compilación, referencia cultural, firma etc., del ensamblado cuyas propiedades se recuperarán o establecidas por [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) métodos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -65,14 +65,14 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Fusion.h  
+ **Encabezado**: Fusion.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IAssemblyName (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- [Enumeraciones de fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [IAssemblyName (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Enumeraciones de fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

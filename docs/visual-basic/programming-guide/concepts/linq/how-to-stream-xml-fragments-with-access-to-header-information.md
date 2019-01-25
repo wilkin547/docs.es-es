@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Stream fragmentos XML con acceso a la información de encabezado (Visual Basic)'
+title: Procedimiento Stream fragmentos XML con acceso a la información de encabezado (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-ms.openlocfilehash: 60ec63c33d20fa38bed32d9c46c4acfe649ecd15
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 26d1d2166aaf8eaa62ba3ef7b3ffa9ab104574e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245190"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657329"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Cómo: Stream fragmentos XML con acceso a la información de encabezado (Visual Basic)
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Procedimiento Stream fragmentos XML con acceso a la información de encabezado (Visual Basic)
 A veces debe leer arbitrariamente los archivos XML grandes y escribir la aplicación para que la superficie de memoria de esta sea predecible. Si intenta rellenar un árbol XML con un archivo XML de gran tamaño, su utilización de memoria será proporcional al tamaño del archivo (es decir, excesivo). Por consiguiente, debe utilizar en su lugar una técnica de transmisión por secuencias.  
   
- Una opción consiste en escribir la aplicación usando <xref:System.Xml.XmlReader>. Pero quizás prefiera usar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para consultar el árbol XML. En ese caso, puede escribir su propio método de eje personalizado. Para obtener más información, consulte [Cómo: escribir un LINQ al método de eje XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Una opción consiste en escribir la aplicación usando <xref:System.Xml.XmlReader>. Pero quizás prefiera usar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para consultar el árbol XML. En ese caso, puede escribir su propio método de eje personalizado. Para obtener más información, vea [Cómo: Escribir un LINQ al método de eje XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
  Para escribir su propio método de eje, debe escribir un pequeño método que utiliza los nodos <xref:System.Xml.XmlReader> para leer hasta que llega a uno de los nodos en el que está interesado. A continuación el método llama a <xref:System.Xml.Linq.XNode.ReadFrom%2A>, que lee de <xref:System.Xml.XmlReader> y crea una instancia de un fragmento XML. A continuación puede escribir las consultas LINQ en su método de eje personalizado.  
   
@@ -230,5 +230,5 @@ End Class
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Avanzada de LINQ to XML (Visual Basic) de programación](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>Vea también
+- [Avanzada de LINQ to XML (Visual Basic) de programación](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

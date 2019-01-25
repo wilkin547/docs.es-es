@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear imágenes en miniatura'
+title: Procedimiento Crear imágenes en miniatura
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 870ea223698e48438bd4dd08597d0a6ab79cec27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd5e0b5341a712f25f9d41670f9b3ede5414dda4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497047"
 ---
-# <a name="how-to-create-thumbnail-images"></a>Cómo: Crear imágenes en miniatura
-Una imagen en miniatura es una versión reducida de una imagen. Puede crear una imagen en miniatura mediante una llamada a la <xref:System.Drawing.Image.GetThumbnailImage%2A> método de una <xref:System.Drawing.Image> objeto.  
+# <a name="how-to-create-thumbnail-images"></a>Procedimiento Crear imágenes en miniatura
+Una imagen en miniatura es una versión reducida de una imagen. Puede crear una imagen en miniatura mediante una llamada a la <xref:System.Drawing.Image.GetThumbnailImage%2A> método de un <xref:System.Drawing.Image> objeto.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crea un <xref:System.Drawing.Image> objeto desde un archivo JPG. La imagen original tiene un ancho de 640 píxeles y un alto de 479 píxeles. El código crea una imagen en miniatura que tiene un ancho de 100 píxeles y un alto de 100 píxeles.  
   
- En la siguiente ilustración muestra la imagen en miniatura.  
+ La siguiente ilustración muestra la imagen en miniatura.  
   
  ![Imagen en miniatura](../../../../docs/framework/winforms/advanced/media/thumbnail1.png "Thumbnail1")  
   
@@ -38,18 +38,18 @@ Una imagen en miniatura es una versión reducida de una imagen. Puede crear una 
   
 2.  Agregue el código de ejemplo al formulario.  
   
-3.  Crear un controlador para el formulario <xref:System.Windows.Forms.Control.Paint> eventos  
+3.  Cree un controlador para el formulario <xref:System.Windows.Forms.Control.Paint> eventos  
   
-4.  En el <xref:System.Windows.Forms.Control.Paint> controlador, llame a la `GetThumbnail` método y pase `e` para <xref:System.Windows.Forms.PaintEventArgs>.  
+4.  En el <xref:System.Windows.Forms.Control.Paint> controlador, llamada la `GetThumbnail` método y pase `e` para <xref:System.Windows.Forms.PaintEventArgs>.  
   
 5.  Buscar un archivo de imagen que desea realizar una miniatura.  
   
-6.  En el `GetThumbnail` (método), especifique la ruta de acceso y el nombre a la imagen de archivo.  
+6.  En el `GetThumbnail` método, especifique la ruta de acceso y nombre de la imagen de archivo.  
   
 7.  Presione F5 para ejecutar el ejemplo.  
   
-     Una imagen en miniatura de 100 por 100 aparece en el formulario.  
+     Aparece una imagen en miniatura del 100 por 100 en el formulario.  
   
-## <a name="see-also"></a>Vea también  
- [Imágenes, mapas de bits y metarchivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Trabajar con imágenes, mapas de bits, iconos y metarchivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>Vea también
+- [Imágenes, mapas de bits y metarchivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [Trabajar con imágenes, mapas de bits, iconos y metarchivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

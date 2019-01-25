@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f191c31ec5333fbea52c298f477c8c624beb92b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4355300d302e51a777d11855a023c1b56bf04a86
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495323"
 ---
 # <a name="icorpublishenumgetcount-method"></a>ICorPublishEnum::GetCount (Método)
 Obtiene el número de elementos de la enumeración.  
@@ -40,13 +40,13 @@ HRESULT GetCount (
  [out] Un puntero al número de elementos de la enumeración.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cordebug.idl, CorPub.h  
+ **Encabezado**: CorPub.idl, CorPub.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorPublishEnum (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorPublishEnum (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f8132296035e9ddcdcad76d93ed05358beb0b81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 37d91ca7935e114504864683075f4809de7270fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599119"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps (Método)
 Modifica la estructura de metadatos `Assembly` especificada.  
@@ -43,7 +43,7 @@ HRESULT SetAssemblyProps (
   
 #### <a name="parameters"></a>Parámetros  
  `pma`  
- [in] El token de metadatos que especifica el `Assembly` estructura de metadatos que puede modificar.  
+ [in] El token de metadatos que especifica el `Assembly` estructura de metadatos que se puede modificar.  
   
  `pbPublicKey`  
  [in] Un puntero a la clave pública del publicador del ensamblado.  
@@ -52,7 +52,7 @@ HRESULT SetAssemblyProps (
  [in] El tamaño en bytes de `pbPublicKey`.  
   
  `ulHashAlgId`  
- [in] El identificador para el algoritmo hash utilizado para resumir los archivos de ensamblado.  
+ [in] El identificador del algoritmo hash que usa un algoritmo hash a los archivos de ensamblado a.  
   
  `szName`  
  [in] El nombre de texto legible del ensamblado.  
@@ -64,16 +64,16 @@ HRESULT SetAssemblyProps (
  [in] Una combinación bit a bit de [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) valores que especifican distintos atributos del ensamblado.  
   
 ## <a name="remarks"></a>Comentarios  
- Para crear un `Assembly` estructura de los metadatos, use la [IMetaDataAssemblyEmit:: DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) método.  
+ Para crear un `Assembly` estructura de los metadatos, use el [DefineAssembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataAssemblyEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba8bca6d14308284c869b923853f7e27e045bca5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2296f6e386f35aed91a8aea4392a9cd00ec27ccb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724371"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState (Enumeración)
 Especifica el estado de un subproceso de depuración.  
@@ -39,22 +39,22 @@ typedef enum CorDebugThreadState {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`THREAD_RUN`|El subproceso se ejecuta libremente, a menos que se produce un evento de depuración.|  
+|`THREAD_RUN`|El subproceso se ejecuta de forma gratuita, a menos que se produce un evento de depuración.|  
 |`THREAD_SUSPEND`|No se puede ejecutar el subproceso.|  
   
 ## <a name="remarks"></a>Comentarios  
- El depurador utiliza el `CorDebugThreadState` enumeración para controlar la ejecución de un subproceso. El estado de un subproceso puede establecerse mediante el [SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) o [ICorDebugController:: SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) método.  
+ El depurador usa el `CorDebugThreadState` enumeración para controlar la ejecución de un subproceso. El estado de un subproceso puede establecerse mediante el [SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) o [ICorDebugController:: SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) método.  
   
- Una devolución de llamada proporcionada para el [API de hospedaje](../../../../docs/framework/unmanaged-api/hosting/index.md) permite el suministro de mensajes, por lo que no se necesita un estado interrumpido.  
+ Una devolución de llamada proporcionada para el [API de hospedaje](../../../../docs/framework/unmanaged-api/hosting/index.md) permite la distribución de mensajes, por lo que no es necesario un estado interrumpido.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDegug.h  
+ **Encabezado**: CorDebug.idl, CorDegug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

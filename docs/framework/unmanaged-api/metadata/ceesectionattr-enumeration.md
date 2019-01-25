@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b7f70162ae368934e1383683672fed86f9ce18c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e88dd0053ec7562d6223c18479f4a4fadc68c12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441418"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701799"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr (Enumeración)
 Proporciona valores que especifican los atributos de una sección para su uso por el [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfaz.  
@@ -44,18 +44,18 @@ typedef enum  {
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`sdNone`|Sección no tiene atributos.|  
-|`sdReadOnly`|Sección contiene datos inicializados que se pueden leer, no se actualiza.|  
-|`sdReadWrite`|Sección contiene datos inicializados que se pueden leer o actualizar.|  
-|`sdExecute`|Sección contiene código ejecutable que se permite para poder leer y ejecutar.|  
+|`sdReadOnly`|Sección contiene datos inicializados que se pueden leer, no se ha actualizado.|  
+|`sdReadWrite`|Sección contiene los datos inicializados que se pueden leer o actualizar.|  
+|`sdExecute`|Sección contiene código ejecutable que se permite leer y ejecutar.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

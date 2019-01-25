@@ -17,21 +17,21 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 5bf1a0e1d4d8f620f83aab50aa50009a0f6a6cf4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4a99f4826a34ff3ab022686b6615f199558d7af4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606301"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Archivos de recursos, contenido y datos de aplicaciones de WPF
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] las aplicaciones a menudo dependen de los archivos que contienen datos no ejecutable, como [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], imágenes, vídeo y audio. Windows Presentation Foundation (WPF) ofrece una compatibilidad especial para configurar, identificar y usar estos tipos de archivos de datos, que se denominan archivos de datos de aplicación. Esta compatibilidad gira en torno a un conjunto específico de tipos de archivo de datos de aplicación, entre los que se incluyen:  
   
--   **Archivos de recursos**: archivos de datos que se compilan en un archivo ejecutable o biblioteca [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ensamblado.  
+-   **Archivos de recursos**: Archivos de datos que se compilan en un archivo ejecutable o biblioteca [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ensamblado.  
   
--   **Archivos de contenido**: archivos de datos independientes que tienen una asociación explícita con un archivo ejecutable [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ensamblado.  
+-   **Archivos de contenido**: Archivos de datos independientes que tienen una asociación explícita con un archivo ejecutable [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ensamblado.  
   
--   **Sitio de archivos de origen**: archivos de datos independientes que no tienen ninguna asociación con un archivo ejecutable [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ensamblado.  
+-   **Sitio de archivos de origen**: Archivos de datos independientes que no tienen ninguna asociación con un archivo ejecutable [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ensamblado.  
   
  Una diferencia importante entre estos tres tipos de archivos es que tanto los archivos de recursos como los archivos de contenido se conocen en el momento de la compilación; un ensamblado tiene un conocimiento explícito de ellos. Para archivos de sitio de origen, sin embargo, un ensamblado puede tener ningún conocimiento de ellos, o un conocimiento implícito a través de un paquete [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] referencia; en el caso de que el último caso, no hay ninguna garantía de que el sitio del archivo de origen que se hace referencia existe realmente.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "43855977"
  En [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], un archivo de recursos es un archivo que se incluye en un [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] proyecto como un `Resource` elemento.  
   
 ```xml  
-<Project "xmlns=http://schemas.microsoft.com/developer/msbuild/2003" ... >  
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
   ...  
   <ItemGroup>  
     <Resource Include="ResourceFile.xaml" />  
@@ -238,5 +238,5 @@ ms.locfileid: "43855977"
 ## <a name="rebuilding-after-changing-build-type"></a>Nueva compilación después de cambiar el tipo de compilación  
  Después de cambiar el tipo de compilación de un archivo de datos de aplicación, es preciso volver a compilar toda la aplicación para asegurarse de que se aplican los cambios. Si solo compila la aplicación, no se aplican los cambios.  
   
-## <a name="see-also"></a>Vea también  
- [Identificadores URI de paquete en WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+## <a name="see-also"></a>Vea también
+- [Identificadores URI de paquete en WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)

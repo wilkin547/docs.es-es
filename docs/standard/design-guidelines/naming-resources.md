@@ -10,12 +10,12 @@ helpviewer_keywords:
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
 author: KrzysztofCwalina
-ms.openlocfilehash: 5331c82069bb289c282e746841f5a328e2e628f2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 44627aafd9ec779625413a0862412a8f6c408109
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497610"
 ---
 # <a name="naming-resources"></a>Asignar nombres a recursos
 Dado que los recursos localizables se pueden hacer referencia a través de ciertos objetos como si fueran propiedades, las directrices de nomenclatura para los recursos son similares a las directrices de la propiedad.  
@@ -42,5 +42,5 @@ Dado que los recursos localizables se pueden hacer referencia a través de ciert
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)
 - [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

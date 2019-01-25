@@ -2,12 +2,12 @@
 title: Programación funcional frente a Programación de procedimientos (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
-ms.openlocfilehash: 55f1e354f71e58c3592f91e198925c0fd5f0da71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5db2f686d72390cdb7e338235a39e4039281e6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645007"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>Programación funcional frente a Programación de procedimientos (LINQ to XML) (Visual Basic)
 Existen varios tipos de aplicaciones XML:  
@@ -38,7 +38,7 @@ Existen varios tipos de aplicaciones XML:
   
  Para obtener una comparación de los dos enfoques, vea [Diferencias entre la modificación del árbol XML en memoria y Construcción funcional (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md).  
   
- Para obtener un tutorial sobre cómo escribir transformaciones funcionales, vea [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Para ver un tutorial sobre cómo escribir transformaciones funcionales, consulte [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to XML de información general de programación (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>Vea también
+- [LINQ to XML de información general de programación (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

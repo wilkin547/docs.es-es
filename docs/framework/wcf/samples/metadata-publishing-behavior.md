@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, metadata publishing sample
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
-ms.openlocfilehash: b728d1c5a794fa6e0cadef136050d8fa31fb4afe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 00e20527de97cc2aac93d6f68b0620ba8b4b6de4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838798"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628131"
 ---
 # <a name="metadata-publishing-behavior"></a>Comportamiento de publicación de metadatos
 El ejemplo de comportamiento de publicación de metadatos muestra cómo controlar las características de publicación de metadatos de un servicio. Para evitar la divulgación involuntaria de metadatos de servicio potencialmente confidenciales, la configuración predeterminada para servicios Windows Communication Foundation (WCF) deshabilita la publicación de metadatos. Este comportamiento es seguro de forma predeterminada, pero también quiere decir que no puede usar una herramienta de importación de metadatos (como Svcutil.exe) Para compilar el código de cliente necesario para llamar al servicio a menos que el comportamiento de publicación de metadatos del servicio se habilite de manera explícita en la configuración.  
@@ -65,7 +65,7 @@ El ejemplo de comportamiento de publicación de metadatos muestra cómo controla
   
  Para obtener acceso a los metadatos del servicio mediante HTTP GET, dirija el explorador `http://localhost/servicemodelsamples/service.svc?wsdl`.  
   
- Si quita este comportamiento e intenta abrir el servicio, obtendrá una excepción. Este error se produce porque sin el comportamiento, el extremo configurado con el contrato `IMetadataExchange` no tiene ninguna implementación.  
+ Si quita este comportamiento e intenta abrir el servicio, obtendrá una excepción. Este error se produce porque sin el comportamiento, el punto de conexión configurado con el contrato `IMetadataExchange` no tiene ninguna implementación.  
   
  Si establece `HttpGetEnabled` en `false`, ve la página de ayuda de CalculatorService en lugar de ver los metadatos del servicio.  
   

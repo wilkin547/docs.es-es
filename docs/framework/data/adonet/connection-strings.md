@@ -2,12 +2,12 @@
 title: Cadenas de conexión de ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 078fdab257115296f9ff00330265cb14ff8674c8
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.openlocfilehash: c765eee661858499240344cb5059fe1fa9a58ab5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50409462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627569"
 ---
 # <a name="connection-strings-in-adonet"></a>Cadenas de conexión de ADO.NET
 
@@ -57,6 +57,6 @@ Las cadenas de conexión creadas manualmente en tiempo de ejecución desde una e
  [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  Muestra técnicas de protección de la información utilizada para conectarse a un origen de datos.
   
-## <a name="see-also"></a>Vea también  
- [Conexión a un origen de datos](/cpp/data/odbc/connecting-to-a-data-source)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Conexión a un origen de datos](/cpp/data/odbc/connecting-to-a-data-source)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

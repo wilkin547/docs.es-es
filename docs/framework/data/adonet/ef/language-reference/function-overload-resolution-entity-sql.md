@@ -2,12 +2,12 @@
 title: Resolución de la sobrecarga de funciones (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
-ms.openlocfilehash: 517bdb682213deff90a37eafcf32946fef63921f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b8e2a4f26c0101141292b768ee5870db78c90b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625180"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>Resolución de la sobrecarga de funciones (Entity SQL)
 En este tema se describe cómo se resuelven las funciones de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
@@ -22,7 +22,7 @@ En este tema se describe cómo se resuelven las funciones de [!INCLUDE[esql](../
   
 3.  **Coincidir en el subtipo**. Cada tipo de argumento de la función coincide exactamente con el tipo de parámetro o es un subtipo del mismo, o bien el argumento es el literal NULL. En caso de que varias funciones solo difieran en el número de conversiones de subtipo requeridas, la que tenga el menor número de conversiones de subtipo es la que se resuelve.  
   
-4.  **Búsqueda de coincidencias en la promoción de tipos o subtipos**. Cada tipo de argumento de la función coincide exactamente, es un subtipo o se puede promover al tipo de parámetro, o bien el argumento es el literal NULL. De nuevo, en caso de que varias funciones solo difieran en el número de conversiones de subtipo y en las promociones, la que tenga el menor número de conversiones de subtipo y promociones es la que se resuelve.  
+4.  **Coincidencia en la promoción de tipos o subtipos**. Cada tipo de argumento de la función coincide exactamente, es un subtipo o se puede promover al tipo de parámetro, o bien el argumento es el literal NULL. De nuevo, en caso de que varias funciones solo difieran en el número de conversiones de subtipo y en las promociones, la que tenga el menor número de conversiones de subtipo y promociones es la que se resuelve.  
   
  Si ninguno de estos criterios hace que se seleccione una función única, la expresión de invocación de función es ambigua.  
   
@@ -30,7 +30,7 @@ En este tema se describe cómo se resuelven las funciones de [!INCLUDE[esql](../
   
  Para las funciones definidas por el usuario, la definición de una función inline de consulta tiene prioridad incluso cuando existe una función definida por el modelo con una firma que es una coincidencia mejor para la función definida por el usuario.  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Funciones](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)
+## <a name="see-also"></a>Vea también
+- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Funciones](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

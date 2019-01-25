@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: e42e6f17a395edd8c765950832f2829a1aea1fe5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494449"
 ---
 # <a name="choosing-a-transport"></a>Elección del transporte
-En este tema se analiza los criterios para elegir entre los tres transportes principales que se incluyen en Windows Communication Foundation (WCF): HTTP, TCP y canalizaciones con nombre. WCF también incluye un message Queue Server (también conocido como MSMQ) de transporte, pero este documento no cubre message Queue Server.  
+En este tema se describe los criterios para elegir entre los tres transportes principales que se incluyen en Windows Communication Foundation (WCF): HTTP, TCP y canalizaciones con nombre. WCF también incluye un message Queue Server (también conocido como MSMQ) de transporte, pero este documento no cubre message Queue Server.  
   
  El modelo de programación WCF separa las operaciones de punto de conexión (tal y como se expresa en un contrato de servicio) desde el mecanismo de transporte que conecta dos puntos de conexión. Esto le proporciona la flexibilidad para decidir cómo exponer sus servicios a la red.  
   
@@ -45,7 +45,7 @@ En este tema se analiza los criterios para elegir entre los tres transportes pri
  Cuando se requiere comunicación entre distintas aplicaciones de WCF en un único equipo y desea evitar cualquier comunicación desde otro equipo, a continuación, use el transporte de canalizaciones con nombre. Una restricción adicional es que los procesos que se ejecutan desde el Escritorio remoto de Windows pueden estar limitados a la misma sesión de Escritorio remoto de Windows, a no ser que tengan privilegios elevados.  
   
 > [!WARNING]
->  Al utilizar el transporte de canalización con nombre con una reserva de direcciones URL de carácter comodín débil en varios sitios hospedados en IIS, puede producirse el siguiente error: se produjo un error en el servicio de activación 'NetPipeActivator' del protocolo 'net.pipe' al intentar realizar escuchas para el sitio '2', por lo tanto el protocolo está deshabilitado temporalmente para el sitio. Vea el mensaje de excepción para obtener más detalles. Dirección URL: WeakWildcard:net.pipe:/\<nombre del equipo > / estado: ConflictingRegistration excepción: nombre del proceso: SMSvcHost Id. de proceso: 1076\  
+>  Al utilizar el transporte de canalización con nombre con una reserva de direcciones URL de carácter comodín débil en varios sitios hospedados en IIS, puede producirse el error siguiente: Se produjo un error en el servicio de activación 'NetPipeActivator' del protocolo 'net.pipe' al intentar realizar escuchas para el sitio '2', por lo tanto el protocolo está deshabilitado temporalmente para el sitio. Vea el mensaje de excepción para obtener más detalles. Dirección URL: WeakWildcard:net.pipe:/\<nombre del equipo > / estado: ConflictingRegistration excepción:  Nombre del proceso: Id. de proceso SMSvcHost: 1076\  
   
 ## <a name="decision-points-for-choosing-a-transport"></a>Puntos de decisión para elegir un transporte  
  La tabla siguiente describe los puntos de decisión comunes utilizados para elegir un transporte. Debería considerar los atributos adicionales y transportes que se aplican a su aplicación. Identifique los atributos que son importantes para su aplicación, identifique los transportes que se asocian favorablemente con cada uno de sus atributos y, a continuación, seleccione los transportes que funcionen mejor con su configuración de atributos.  
@@ -61,16 +61,16 @@ En este tema se analiza los criterios para elegir entre los tres transportes pri
 |Rendimiento|El rendimiento mide la cantidad de datos que se pueden transmitir y se pueden procesar en un período de tiempo especificado. Como la latencia, el transporte escogido puede afectar al rendimiento de las operaciones de servicio. Maximizar el rendimiento de un transporte requiere minimizar tanto la sobrecarga de transmisión de contenido como el tiempo de espera empleado para que se completen los intercambios de mensajes. Tanto los transportes de canalización con nombre y TCP agregan sobrecarga pequeña al cuerpo del mensaje y admiten una forma dúplex nativa que reduce la espera en las respuestas de los mensaje.|TCP, canalización con nombre|  
 |Tooling|Las herramientas representan soporte de aplicaciones de terceros para un protocolo para el desarrollo, diagnóstico, hospedaje y otras actividades. Desarrollar herramientas y software para trabajar con el protocolo HTTP implica una inversión particularmente grande.|HTTP|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.WSHttpBinding>  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- <xref:System.ServiceModel.WSFederationHttpBinding>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.NetNamedPipeBinding>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- [Enlaces](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Creación de enlaces definidos por el usuario](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.WSHttpBinding>
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- <xref:System.ServiceModel.WSFederationHttpBinding>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.NetNamedPipeBinding>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- [Enlaces](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Creación de enlaces definidos por el usuario](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)

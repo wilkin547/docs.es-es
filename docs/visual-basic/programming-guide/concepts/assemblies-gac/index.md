@@ -2,17 +2,17 @@
 title: Ensamblados y caché global de ensamblados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
-ms.openlocfilehash: 6d1692d6b62e1f1f3a8f979d3de242003f034ed5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 413d3266546fa1d2b403509793c62e76bca5bc70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717264"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Ensamblados y caché global de ensamblados (Visual Basic)
 Los ensamblados componen la unidad fundamental de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad en una aplicación basada en .NET. Los ensamblados adoptan la forma de un archivo ejecutable (.exe) o de un archivo de biblioteca de vínculos dinámicos (.dll) y son bloques de compilación de .NET Framework. Proporcionan a Common Language Runtime la información necesaria para conocer las implementaciones de tipos. Puede pensar en un ensamblado como si fuera una colección de tipos y recursos que forman una unidad lógica de funcionalidad y se compilan para funcionar en conjunto.  
   
- Los ensamblados pueden contener uno o varios módulos. Por ejemplo, los proyectos más grandes pueden planearse de forma que varios desarrolladores individuales trabajen en módulos separados, que se unen para crear un ensamblado único. Para obtener más información sobre los módulos, vea el tema [Creación de un ensamblado de varios archivos](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md).  
+ Los ensamblados pueden contener uno o varios módulos. Por ejemplo, los proyectos más grandes pueden planearse de forma que varios desarrolladores individuales trabajen en módulos separados, que se unen para crear un ensamblado único. Para obtener más información acerca de los módulos, vea el tema [Cómo: Compilar un ensamblado de múltiples archivos](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Los ensamblados tienen las propiedades siguientes:  
   
@@ -48,12 +48,12 @@ Los ensamblados componen la unidad fundamental de implementación, control de ve
 > [!NOTE]
 >  Para compilar un ensamblado en Visual Studio, en el menú **Compilar**, seleccione **Compilar**.  
   
-## <a name="see-also"></a>Vea también  
- [Ensamblados en Common Language Runtime](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Ensamblados de confianza (Visual Basic)](friend-assemblies.md)  
- [Cómo: compartir un ensamblado con otras aplicaciones (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)  
- [Cómo: cargar y descargar ensamblados (Visual Basic)](how-to-load-and-unload-assemblies.md)  
- [Cómo: determinar si un archivo es un ensamblado (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)  
- [Cómo: crear y utilizar ensamblados desde la línea de comandos (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)  
- [Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
- [Tutorial: inserción de información de tipos desde ensamblados de Microsoft Office en Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
+## <a name="see-also"></a>Vea también
+- [Ensamblados en Common Language Runtime](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Ensamblados de confianza (Visual Basic)](friend-assemblies.md)
+- [Cómo: Compartir un ensamblado con otras aplicaciones (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)
+- [Cómo: Cargar y descargar ensamblados (Visual Basic)](how-to-load-and-unload-assemblies.md)
+- [Cómo: Determinar si un archivo es un ensamblado (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)
+- [Cómo: Crear y usar ensamblados desde la línea de comandos (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [Tutorial: Incrustar información de tipos de ensamblados de Microsoft Office en Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: 5358a3abe84c7fe7d753560611f0c7338b060826
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4510ac86cec556734d3d238ba1f02b00074e2609
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687172"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Seguimiento y traza del flujo de trabajo
 El seguimiento de Windows Workflow es una característica de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] diseñada para proporcionar visibilidad en la ejecución del flujo de trabajo. Proporciona una infraestructura de seguimiento para realizar el seguimiento de la ejecución de una instancia de flujo de trabajo. La infraestructura de seguimiento de WF sirve para que un flujo de trabajo emita registros de forma transparente que reflejen eventos clave durante la ejecución. Esta funcionalidad está disponible de forma predeterminada para cualquier flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. No es necesario hacer ningún cambio en un flujo de trabajo de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] para que se produzca el seguimiento. Simplemente se trata de decidir cuántos datos de seguimiento desea recibir. Cuando una instancia de flujo de trabajo se inicia o se completa, se emiten registros de seguimiento de procesamiento. El seguimiento también puede extraer datos comerciales relevantes asociados a las variables de flujo de trabajo. Por ejemplo, si el flujo de trabajo representa en un sistema de procesamiento de pedidos, el id. de pedido se puede extraer junto con el objeto <xref:System.Activities.Tracking.TrackingRecord>. En general, al habilitar el seguimiento de WF se facilita el acceso a los datos de diagnóstico o analíticos empresariales desde la ejecución de un flujo de trabajo.  
@@ -51,5 +51,5 @@ El seguimiento de Windows Workflow es una característica de [!INCLUDE[netfx_cur
  [Traza de flujos de trabajo](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)  
  Describe las dos maneras de habilitar la traza de depuración para un flujo de trabajo.  
   
-## <a name="see-also"></a>Vea también  
- [Seguimiento de SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+## <a name="see-also"></a>Vea también
+- [Seguimiento de SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)

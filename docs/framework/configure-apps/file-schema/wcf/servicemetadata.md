@@ -2,21 +2,21 @@
 title: '&lt;serviceMetadata&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-ms.openlocfilehash: 4cff141d7e012e865280e4397e6e3d65075a8f45
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 3e363e90f9436073a30c228eca5c962763418e8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610219"
 ---
 # <a name="ltservicemetadatagt"></a>&lt;serviceMetadata&gt;
 Especifica la publicación de metadatos e información asociada del servicio.  
   
 \<system.serviceModel>  
 \<comportamientos >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<comportamiento >  
-\<serviceMetadata >  
+\<serviceMetadata>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,7 +58,7 @@ Especifica la publicación de metadatos e información asociada del servicio.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<comportamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
   
 ## <a name="remarks"></a>Comentarios  
  Este elemento de configuración permite controlar los metadatos que publican características de un servicio. Para evitar la divulgación involuntaria de metadatos de servicio potencialmente confidenciales, la configuración predeterminada para servicios Windows Communication Foundation (WCF) deshabilita la publicación de metadatos. Este comportamiento es seguro de forma predeterminada, pero también quiere decir que no puede usar una herramienta de importación de metadatos (como Svcutil.exe) Para compilar el código de cliente necesario para llamar al servicio a menos que el comportamiento de publicación de metadatos del servicio se habilite de manera explícita en la configuración. Con este elemento de configuración, puede habilitar este comportamiento de publicación para su servicio.  
@@ -116,8 +116,8 @@ Especifica la publicación de metadatos e información asociada del servicio.
 </configuration>
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
- [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Comportamiento de publicación de metadatos](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
+- [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Comportamiento de publicación de metadatos](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)

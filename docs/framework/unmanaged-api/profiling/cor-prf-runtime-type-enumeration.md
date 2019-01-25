@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28e6e95bbcca35ad39f30adcf100519748c02838
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7c3a3581d2a9a1cb79f4ffe1d0a37269c18789a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450003"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652190"
 ---
 # <a name="corprfruntimetype-enumeration"></a>COR_PRF_RUNTIME_TYPE (Enumeración)
 Contiene valores que indican la versión de common language runtime (CLR): escritorio o CoreCLR, que se usa en Silverlight.  
@@ -40,19 +40,19 @@ typedef enum
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`COR_PRF_DESKTOP_CLR`|La versión de escritorio de CLR.|  
-|`COR_PRF_CORE_CLR`|La versión principal de CLR, que se usa en Silverlight.|  
+|`COR_PRF_DESKTOP_CLR`|La versión de CLR de escritorio.|  
+|`COR_PRF_CORE_CLR`|La versión principal de CLR, que usa en Silverlight.|  
   
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

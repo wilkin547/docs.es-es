@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 69d6deafb6aad88f5d379c7e8d4ac707e4c51815
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: a7b32f9cf797729aa0ca0d176b31732d06e73907
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701929"
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt; elemento
 Especifica el tamaño de la memoria global que comparten los contadores de rendimiento.  
   
  \<configuration>  
-\<System.Diagnostics >  
-\<performanceCounters >  
+\<system.diagnostics>  
+\<performanceCounters>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,7 +37,7 @@ Especifica el tamaño de la memoria global que comparten los contadores de rendi
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|FileMappingSize|Atributo necesario.<br /><br /> Especifica el tamaño, en bytes, de la memoria global compartida por los contadores de rendimiento. El valor predeterminado es 524288.|  
+|filemappingsize|Atributo necesario.<br /><br /> Especifica el tamaño, en bytes, de la memoria global compartida por los contadores de rendimiento. El valor predeterminado es 524288.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -56,8 +56,8 @@ Especifica el tamaño de la memoria global que comparten los contadores de rendi
   
  El tamaño de memoria compartida independiente, el valor de DWORD FileMappingSize en el registro de clave HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nombre de categoría >* \Performance se hace referencia en primer lugar, seguido por el valor especificado para la memoria compartida global en el archivo de configuración. Si el valor de FileMappingSize no existe, se establece el tamaño de memoria compartida independiente a un cuarto (1/4) la configuración global en el archivo de configuración.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Diagnostics.PerformanceCounter>  
- <xref:System.Diagnostics.PerformanceCounterCategory>  
- <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>  
- <xref:System.Diagnostics.PerformanceCounterInstanceLifetime>
+## <a name="see-also"></a>Vea también
+- <xref:System.Diagnostics.PerformanceCounter>
+- <xref:System.Diagnostics.PerformanceCounterCategory>
+- <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>
+- <xref:System.Diagnostics.PerformanceCounterInstanceLifetime>

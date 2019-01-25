@@ -2,12 +2,12 @@
 title: Arquitectura y diseño
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576335"
 ---
 # <a name="architecture-and-design"></a>Arquitectura y diseño
 El módulo de generación de SQL en el [proveedor de ejemplo](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) se implementa como un visitante en el árbol de expresión que representa el árbol de comandos. La generación se realiza en un paso único al árbol de expresión.  
@@ -18,7 +18,7 @@ El módulo de generación de SQL en el [proveedor de ejemplo](https://code.msdn.
   
 -   Para cambiar el nombre de los alias, debe identificar todos los alias que se hayan utilizado para evitar colisiones durante el cambio de nombre. Para aplazar las opciones de cambio de nombre en SqlBuilder, utilice objetos Symbol para representar las columnas candidatas al cambio de nombre.  
   
- ![Diagrama](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
  En la primera fase, cuando se visita el árbol de expresión, las expresiones se agrupan en instrucciones SqlSelectStatement y se elimina la información de estructura jerárquica de las combinaciones y de los alias de combinación. Durante esta fase, los objetos Symbol representan columnas o alias de entrada a los que se puede cambiar el nombre.  
   
@@ -414,5 +414,5 @@ IsEmpty(inut) = Not Exists(input)
   
  Para generar nombres únicos tanto para los alias de extensión como para las columnas, utilice <nombre_existente>_n, donde n es el alias más pequeño que no se ha utilizado todavía. La lista global de todos los alias aumenta la necesidad de realizar cambios de nombre en cascada.  
   
-## <a name="see-also"></a>Vea también  
- [Generación de SQL en el proveedor de ejemplo](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>Vea también
+- [Generación de SQL en el proveedor de ejemplo](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

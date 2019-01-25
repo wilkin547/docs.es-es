@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 06c74548ebe9d01a15cea72f409eaa6df9c8d6de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82d2a055f6780c81c601665f8c3403d9d95c85df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492578"
 ---
 # <a name="drag-and-drop-overview"></a>Información general sobre la función de arrastrar y colocar
 Este tema proporciona información general sobre la compatibilidad con arrastrar y colocar en aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Arrastrar y colocar se refiere normalmente a un método de transferencia de datos que implica el uso de un mouse (o cualquier otro dispositivo señalador) para seleccionar uno o más objetos, arrastrar estos objetos sobre un destino deseado en la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] y soltarlos.  
@@ -31,7 +31,7 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
   
  Las acciones concretas realizadas durante una operación de arrastrar y colocar son específicas de la aplicación y a menudo están determinadas por el contexto.  Por ejemplo, si se arrastra una selección de archivos de una carpeta a otra en el mismo dispositivo de almacenamiento los archivos se mueven de forma predeterminada, mientras que si se arrastran archivos de un recurso compartido [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] a una carpeta local los archivos se copian de forma predeterminada.  
   
- Las funciones de arrastrar y colocar proporcionadas por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] están diseñadas para ser altamente flexibles y personalizables, para que admitan una amplia variedad de escenarios de arrastrar y colocar.  Arrastrar y colocar permite manipular objetos en una sola aplicación o entre aplicaciones diferentes. Operación de arrastrar y colocar entre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y otras aplicaciones Windows es también totalmente compatible.  
+ Las funciones de arrastrar y colocar proporcionadas por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] están diseñadas para ser altamente flexibles y personalizables, para que admitan una amplia variedad de escenarios de arrastrar y colocar.  Arrastrar y colocar permite manipular objetos en una sola aplicación o entre aplicaciones diferentes. Operación de arrastrar y colocar entre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones y otras aplicaciones de Windows también es totalmente compatible.  
   
  En [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], cualquier <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> puede participar en una operación de arrastrar y colocar. Los eventos y los métodos necesarios para las operaciones de arrastrar y colocar están definidos en la clase <xref:System.Windows.DragDrop>. Las clases <xref:System.Windows.UIElement> y <xref:System.Windows.ContentElement> contienen un alias para los eventos adjuntos <xref:System.Windows.DragDrop>, de modo que los eventos aparezcan en la lista de miembros de clase cuando se hereda un <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> como elemento base. Los controladores de eventos que están asociados a estos eventos se asocian al evento adjunto <xref:System.Windows.DragDrop> subyacente y reciben la misma instancia de datos de evento. Para obtener más información, vea el evento <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>.  
   
@@ -123,7 +123,7 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Ejemplo de arrastrar y colocar  
- En esta sección se describe cómo se implementa una operación de arrastrar y colocar para un elemento <xref:System.Windows.Shapes.Ellipse>. <xref:System.Windows.Shapes.Ellipse> es tanto un origen de arrastre como un destino de colocación. Los datos transferidos son la representación de cadena de la propiedad <xref:System.Windows.Shapes.Shape.Fill%2A> de la elipse. El siguiente XAML muestra el elemento <xref:System.Windows.Shapes.Ellipse> y los eventos relacionados de arrastrar y colocar que controla. Si desea conocer los pasos completos para implementar una función de arrastrar y colocar, consulte [Tutorial: Habilitar la técnica de arrastrar y colocar en un control de usuario](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
+ En esta sección se describe cómo se implementa una operación de arrastrar y colocar para un elemento <xref:System.Windows.Shapes.Ellipse>. <xref:System.Windows.Shapes.Ellipse> es tanto un origen de arrastre como un destino de colocación. Los datos transferidos son la representación de cadena de la propiedad <xref:System.Windows.Shapes.Shape.Fill%2A> de la elipse. El siguiente XAML muestra el elemento <xref:System.Windows.Shapes.Ellipse> y los eventos relacionados de arrastrar y colocar que controla. Para conocer los pasos completos implementar arrastrar y colocar, vea [Tutorial: Lo que permite arrastrar y colocar en un Control de usuario](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
   
  [!code-xaml[DragDropSnippets#EllipseXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
@@ -216,8 +216,8 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
  [!code-csharp[DragDropSnippets#Drop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
  [!code-vb[DragDropSnippets#Drop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Clipboard>  
- [Tutorial: Habilitar la técnica de arrastrar y colocar en un control de usuario](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
- [Arrastrar y colocar](../../../../docs/framework/wpf/advanced/drag-and-drop.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Clipboard>
+- [Tutorial: Lo que permite arrastrar y colocar en un Control de usuario](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)
+- [Arrastrar y colocar](../../../../docs/framework/wpf/advanced/drag-and-drop.md)

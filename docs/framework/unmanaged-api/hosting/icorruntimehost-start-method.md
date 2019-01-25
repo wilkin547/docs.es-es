@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96e8d80e2dff88aa5a589f864278b4a4e9cc76ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 349f71691e166561d677e0ae792fa12fc5bb1fc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624317"
 ---
 # <a name="icorruntimehoststart-method"></a>ICorRuntimeHost::Start (Método)
-Inicia common language runtime (CLR).  
+Se inicia common language runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,19 +40,19 @@ HRESULT Start ();
 |S_OK|La operación fue correcta.|  
 |S_FALSE|No se pudo completar la operación.|  
 |E_FAIL|Se ha producido un error catastrófico desconocido. Si el método devuelve E_FAIL, CLR ya no es utilizable en el proceso. Las llamadas subsiguientes a cualquier API de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_CLRNOTAVAILABLE|El CLR no se han cargado en un proceso o el CLR está en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
+|HOST_E_CLRNOTAVAILABLE|El CLR no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
   
 ## <a name="remarks"></a>Comentarios  
  Normalmente no es necesario llamar a la `Start` método, ya que el CLR se inicia automáticamente tras la primera solicitud para ejecutar código administrado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
  **Versiones de .NET framework:** 1.0, 1.1  
   
-## <a name="see-also"></a>Vea también  
- [ICorRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

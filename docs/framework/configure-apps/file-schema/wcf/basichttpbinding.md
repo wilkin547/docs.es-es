@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-ms.openlocfilehash: ac88a2dcb8a47876b7b8a54abc4615c851172a90
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7d74ca7f4c44eafedaa95661797cce983967e846
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149959"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631785"
 ---
 # <a name="ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt;
 Representa un enlace que un servicio Windows Communication Foundation (WCF) puede usar para configurar y exponer puntos de conexión que puedan comunicarse con servicios web basados en ASMX y clientes y otros servicios que cumplan con WS-I Basic Profile 1.1.  
   
  \<system.ServiceModel>  
-\<enlaces >  
-\<basicHttpBinding >  
+\<bindings>  
+\<basicHttpBinding>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -77,7 +77,7 @@ Representa un enlace que un servicio Windows Communication Foundation (WCF) pued
 |`proxyAddress`|Un URI que contiene la dirección del proxy HTTP. Si `useSystemWebProxy` se establece como `true`, esta configuración debe ser `null`. De manera predeterminada, es `null`.|  
 |`receiveTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:10:00.|  
 |`sendTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
-|`textEncoding`|Establece el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace. Los valores válidos son los siguientes:<br /><br /> -BigEndianUnicode: Codificación Unicode BigEndian.<br />-Unicode: codificación de 16 bits.<br />-UTF8: codificación de 8 bits<br /><br /> El valor predeterminado es UTF8. Este atributo es del tipo <xref:System.Text.Encoding>.|  
+|`textEncoding`|Establece el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace. Los valores válidos son los siguientes:<br /><br /> -   BigEndianUnicode: Codificación Unicode BigEndian.<br />-Unicode: codificación de 16 bits.<br />-   UTF8: codificación de 8 bits<br /><br /> El valor predeterminado es UTF8. Este atributo es del tipo <xref:System.Text.Encoding>.|  
 |`transferMode`|Un valor <xref:System.ServiceModel.TransferMode> válido que especifica si los mensajes se almacenan en búfer, se transmiten o si son una solicitud o una respuesta.|  
 |`useDefaultWebProxy`|Valor de tipo booleano que especifica si se debería utilizar el proxy HTTP configurado automáticamente del sistema, si está disponible. De manera predeterminada, es `true`.|  
   
@@ -85,14 +85,14 @@ Representa un enlace que un servicio Windows Communication Foundation (WCF) pued
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>.|  
 |[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enlaces >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
  BasicHttpBinding usa HTTP como transporte para enviar mensajes SOAP 1.1. Un servicio puede utilizar este enlace para exponer extremos que cumplen con WS-I BP 1.1, como los que utilizan los clientes ASMX. De igual forma, un cliente puede utilizar BasicHttpBinding para comunicarse con servicios que exponen puntos de conexión que cumplen con WS-I BP 1.1, como el Servicio Web de ASMX o servicios configurados con BasicHttpBinding.  
@@ -173,12 +173,12 @@ Representa un enlace que un servicio Windows Communication Foundation (WCF) pued
   
  Para obtener más información acerca de la configuración predeterminada y sin especificar enlaces y comportamientos, consulte [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Imprimir un archivo de texto de varias páginas en formularios Windows Forms'
+title: Procedimiento Imprimir un archivo de texto de varias páginas en Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: b8cfba338bb318139bedf5595df8bad666c201bd
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 149f0ca6df60931f8bb567ef5e4876c779825f1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604380"
 ---
-# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Cómo: Imprimir un archivo de texto de varias páginas en formularios Windows Forms
+# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Procedimiento Imprimir un archivo de texto de varias páginas en Windows Forms
 Es muy común que las aplicaciones basadas en Windows impriman texto. La clase <xref:System.Drawing.Graphics> proporciona métodos para dibujar objetos (gráficos o texto) en un dispositivo, como una pantalla o una impresora.  
   
 > [!NOTE]
@@ -58,9 +58,9 @@ Es muy común que las aplicaciones basadas en Windows impriman texto. La clase <
   
 -   Referencias a los ensamblados System, System.Windows.Forms, System.Drawing.  
   
--   Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Vea también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+-   Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Drawing.Graphics>  
- <xref:System.Drawing.Brush>  
- [Windows Forms Print Support](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)
+## <a name="see-also"></a>Vea también
+- <xref:System.Drawing.Graphics>
+- <xref:System.Drawing.Brush>
+- [Windows Forms Print Support](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)

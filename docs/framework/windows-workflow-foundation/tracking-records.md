@@ -2,12 +2,12 @@
 title: Registros de seguimiento
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: 2be8dbcdd740dee1c5cddd1121716058bfa5c175
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 753541814497b62cf05f0c22cc4e08c0d127e91b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527044"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676112"
 ---
 # <a name="tracking-records"></a>Registros de seguimiento
 El tiempo de ejecución del flujo de trabajo sirve para emitir los registros de seguimiento con el fin de seguir la ejecución de una instancia de flujo de trabajo.  
@@ -60,6 +60,6 @@ El tiempo de ejecución del flujo de trabajo sirve para emitir los registros de 
   
 5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica que el flujo de trabajo se está completando.  
   
-## <a name="see-also"></a>Vea también  
- [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>Vea también
+- [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

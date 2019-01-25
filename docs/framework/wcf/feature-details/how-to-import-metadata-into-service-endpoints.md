@@ -1,16 +1,16 @@
 ---
-title: 'Cómo: Importar metadatos en puntos de conexión de servicio'
+title: Procedimiento Importar los metadatos en los puntos de conexión de servicio
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-ms.openlocfilehash: 88b48b95a62c000d88b302589ebc489089e77602
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a6375f0a0b0f657401a1ac2254be942d4e618aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548682"
 ---
-# <a name="how-to-import-metadata-into-service-endpoints"></a>Cómo: Importar metadatos en puntos de conexión de servicio
-Este tema explica cómo importar metadatos en una colección de extremos de servicio y usar el servicio definido en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). En este tema se muestra cómo crear una aplicación cliente que importa los metadatos desde el servicio y, a continuación, llama al método `Add` en el servicio.  
+# <a name="how-to-import-metadata-into-service-endpoints"></a>Procedimiento Importar los metadatos en los puntos de conexión de servicio
+En este tema se explica cómo importar los metadatos en una colección de extremos de servicio y usar el servicio definido en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). En este tema se muestra cómo crear una aplicación cliente que importa los metadatos desde el servicio y, a continuación, llama al método `Add` en el servicio.  
   
 ### <a name="to-import-metadata-into-service-endpoints"></a>Para importar metadatos a extremos de servicio  
   
@@ -27,7 +27,7 @@ Este tema explica cómo importar metadatos en una colección de extremos de serv
      [!code-csharp[UE_ImportMetadata#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#2)]  
   
     > [!NOTE]
-    >  Después de haber importado los metadatos, no podrá crear un canal de cliente o exportar los metadatos. Esto es porque ninguna información de tipo está disponible en este punto. Se exige información de tipo para interactuar realmente con el servicio o exportar los metadatos. Para generar la información de tipo, necesita generar el código, tal como se muestra en los pasos 4 y 5. También podría utilizar la clase auxiliar <xref:System.ServiceModel.Description.MetadataResolver>. Para obtener más información, consulte [Cómo: utilizar MetadataResolver para obtener dinámicamente metadatos de enlace](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md).  
+    >  Después de haber importado los metadatos, no podrá crear un canal de cliente o exportar los metadatos. Esto es porque ninguna información de tipo está disponible en este punto. Se exige información de tipo para interactuar realmente con el servicio o exportar los metadatos. Para generar la información de tipo, necesita generar el código, tal como se muestra en los pasos 4 y 5. También podría utilizar la clase del asistente <xref:System.ServiceModel.Description.MetadataResolver>. Para obtener más información, vea [Cómo: Utilizar MetadataResolver para obtener dinámicamente metadatos de enlace](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md).  
   
 4.  Genere información de tipo para cada contrato.  
   
@@ -37,6 +37,6 @@ Este tema explica cómo importar metadatos en una colección de extremos de serv
   
      [!code-csharp[UE_ImportMetadata#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#4)]  
   
-## <a name="see-also"></a>Vea también  
- [Metadatos](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+## <a name="see-also"></a>Vea también
+- [Metadatos](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md)

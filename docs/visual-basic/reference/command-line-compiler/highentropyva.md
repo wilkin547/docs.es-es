@@ -5,12 +5,12 @@ helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
-ms.openlocfilehash: 5d948817d4bc71aa31c5890f6740248f4c309588
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 546b563276e0db4ee2472ef325d09fd337a62513
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638761"
 ---
 # <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
 Indica si un archivo ejecutable de 64 bits o un archivo ejecutable que se ha marcado por el [/Platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) admite la opción del compilador dirección Space Layout Randomization (ASLR) de alta entropía.  
@@ -30,6 +30,6 @@ Indica si un archivo ejecutable de 64 bits o un archivo ejecutable que se ha mar
   
  Cuando la opción está activada, el archivo ejecutable de destino y los módulos en que dependa debe ser capaz de controlar los valores de puntero que son superiores a 4 gigabytes (GB) cuando dichos módulos se ejecutan como procesos de 64 bits.  
   
-## <a name="see-also"></a>Vea también  
- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Vea también
+- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4746e9e7c8c83caf09ccf51749e9e3cbe69ec52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397434"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579009"
 ---
 # <a name="loader-etw-events"></a>Eventos ETW de cargador
 <a name="top"></a> Estos eventos recopilan información relativa a la carga y descarga de dominios de aplicación, ensamblados y módulos.  
@@ -55,7 +55,7 @@ ms.locfileid: "33397434"
 |Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|Identificador único de un dominio de aplicación.|  
-|AppDomainFlags|win:UInt32|0x1: dominio predeterminado.<br /><br /> 0x2: ejecutable.<br /><br /> 0x4: dominio de aplicación, bit 28-31: directiva de uso compartido de este dominio.<br /><br /> 0: un dominio compartido.|  
+|AppDomainFlags|win:UInt32|0x1: Dominio predeterminado.<br /><br /> 0x2: Archivo ejecutable.<br /><br /> 0x4: Dominio de aplicación, bit 28-31: Directiva de este dominio de uso compartido.<br /><br /> 0: Un dominio compartido.|  
 |AppDomainName|win:UnicodeString|Nombre descriptivo de dominio de aplicación. Puede cambiar durante la vigencia del proceso.|  
 |AppDomainIndex|win:UInt32|Índice de este dominio de aplicación.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
@@ -88,7 +88,7 @@ ms.locfileid: "33397434"
 |AssemblyID|win:UInt64|Identificador único para el ensamblado.|  
 |AppDomainID|win:UInt64|Identificador del dominio de este ensamblado.|  
 |BindingID|win:UInt64|Identificador que identifica de forma exclusiva el enlace de ensamblado.|  
-|AssemblyFlags|win:UInt32|0x1: ensamblado neutro de dominio.<br /><br /> 0x2: ensamblado dinámico.<br /><br /> 0x4: ensamblado con una imagen nativa.<br /><br /> 0x8: ensamblado recopilable.|  
+|AssemblyFlags|win:UInt32|0x1: Ensamblado neutro de dominio.<br /><br /> 0x2: Ensamblado dinámico.<br /><br /> 0x4: Ensamblado con una imagen nativa.<br /><br /> 0x8: Ensamblado recopilable.|  
 |AssemblyName|win:UnicodeString|Nombre completo del ensamblado.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
@@ -120,7 +120,7 @@ ms.locfileid: "33397434"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|Identificador único para el módulo.|  
 |AssemblyID|win:UInt64|Identificador del ensamblado en el que reside este módulo.|  
-|ModuleFlags|win:UInt32|0x1: módulo neutro de dominio.<br /><br /> 0x2: módulo con una imagen nativa.<br /><br /> 0x4: módulo dinámico.<br /><br /> 0x8: módulo de manifiesto.|  
+|ModuleFlags|win:UInt32|0x1: Módulo neutro de dominio.<br /><br /> 0x2: Módulo tiene una imagen nativa.<br /><br /> 0x4: Módulo dinámico.<br /><br /> 0x8: Módulo de manifiesto.|  
 |Reserved1|win:UInt32|Campo reservado.|  
 |ModuleILPath|win:UnicodeString|Ruta de acceso de la imagen de lenguaje intermedio de Microsoft (MSIL) para el módulo, o nombre de módulo dinámico si es un ensamblado dinámico (terminado en null).|  
 |ModuleNativePath|win:UnicodeString|Ruta de acceso de la imagen nativa de módulo, si está presente (terminado en null).|  
@@ -167,7 +167,7 @@ ms.locfileid: "33397434"
 |ModuleID|win:UInt64|Identifica el ensamblado al que pertenece este módulo.|  
 |AssemblyID|win:UInt64|Identificador del ensamblado en el que reside este módulo.|  
 |AppDomainID|win:UInt64|Identificador del dominio de aplicación en el que se usa este módulo.|  
-|ModuleFlags|win:UInt32|0x1: módulo neutro de dominio.<br /><br /> 0x2: módulo con una imagen nativa.<br /><br /> 0x4: módulo dinámico.<br /><br /> 0x8: módulo de manifiesto.|  
+|ModuleFlags|win:UInt32|0x1: Módulo neutro de dominio.<br /><br /> 0x2: Módulo tiene una imagen nativa.<br /><br /> 0x4: Módulo dinámico.<br /><br /> 0x8: Módulo de manifiesto.|  
 |Reserved1|win:UInt32|Campo reservado.|  
 |ModuleILPath|win:UnicodeString|Ruta de acceso de la imagen de MSIL para el módulo, o nombre de módulo dinámico si es un ensamblado dinámico (terminado en null).|  
 |ModuleNativePath|win:UnicodeString|Ruta de acceso de la imagen nativa de módulo, si está presente (terminado en null).|  
@@ -212,5 +212,5 @@ ms.locfileid: "33397434"
   
  Los eventos del intervalo de módulo se desencadenan en cualquier nivel ETW mayor o igual que 4 y se clasifican como eventos informativos.  
   
-## <a name="see-also"></a>Vea también  
- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Vea también
+- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)

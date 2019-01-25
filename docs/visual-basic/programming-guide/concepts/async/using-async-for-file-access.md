@@ -2,15 +2,15 @@
 title: Usar Async en acceso a archivos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: e12eaa57d0f7186e9d281b89ec3abd26280e12ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76abb5460bbadd234d761a0cce2f0082bb5894a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587507"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>Usar Async en acceso a archivos (Visual Basic)
-Puede usar la característica asincrónica para tener acceso a archivos. Mediante la característica Async, se puede llamar a métodos asincrónicos sin definir continuaciones ni dividir el código en varios métodos o expresiones lambda. Para convertir código sincrónico en asincrónico, basta con llamar a un método asincrónico y no a un método sincrónico y agregar algunas palabras clave al código.  
+Puede usar la característica Async para acceder a archivos. Mediante la característica Async, se puede llamar a métodos asincrónicos sin definir continuaciones ni dividir el código en varios métodos o expresiones lambda. Para convertir código sincrónico en asincrónico, basta con llamar a un método asincrónico y no a un método sincrónico y agregar algunas palabras clave al código.  
   
  Podrían considerarse los siguientes motivos para agregar asincronía a las llamadas de acceso a archivos:  
   
@@ -158,9 +158,9 @@ Public Async Sub ProcessWriteMult()
 End Sub  
 ```  
   
- Al usar los métodos <xref:System.IO.Stream.WriteAsync%2A> y <xref:System.IO.Stream.ReadAsync%2A>, puede especificar un <xref:System.Threading.CancellationToken>, que puede usar para cancelar la operación en mitad de la secuencia. Para obtener más información, consulte [Fine la aplicación de Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) y [cancelación en subprocesos administrados](../../../../standard/threading/cancellation-in-managed-threads.md).  
+ Al usar los métodos <xref:System.IO.Stream.WriteAsync%2A> y <xref:System.IO.Stream.ReadAsync%2A>, puede especificar un <xref:System.Threading.CancellationToken>, que puede usar para cancelar la operación en mitad de la secuencia. Para obtener más información, consulte [ajustar una aplicación asincrónica (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) y [cancelación en subprocesos administrados](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
-## <a name="see-also"></a>Vea también  
- [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de Async [Visual Basic])  
- [Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md) (Flujo de control en programas asincrónicos [Visual Basic])
+## <a name="see-also"></a>Vea también
+- [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de Async [Visual Basic])
+- [Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md) (Flujo de control en programas asincrónicos [Visual Basic])

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52e3498b54f90e7d9d1d1d79ae0817cca511af4e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a3cfc222930359e1d7ab1a1720834e88c93c035e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737262"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler (Método)
 Asocia el generador de perfiles especificado al proceso especificado.  
@@ -53,7 +53,7 @@ HRESULT AttachProfiler(
  [in] Ruta de acceso completa al archivo DLL del generador de perfiles que se va a cargar. Esta cadena debe contener un máximo de 260 caracteres, incluido el terminador NULL. Si `wszProfilerPath` es NULL o una cadena vacía, Common Language Runtime (CLR) intentará encontrar la ubicación del archivo DLL del generador de perfiles; para ello, buscará en el Registro el CLSID al que `pClsidProfiler` apunta.  
   
  `pvClientData`  
- [in] Un puntero a datos que se va a pasar al generador de perfiles mediante el [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) método. El proceso desencadenador puede reutilizar esta memoria después de que `AttachProfiler` vuelva. Si `pvClientData` es NULL, `cbClientData` debe ser 0 (cero).  
+ [in] Un puntero a datos que se pasa al generador de perfiles la [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) método. El proceso desencadenador puede reutilizar esta memoria después de que `AttachProfiler` vuelva. Si `pvClientData` es NULL, `cbClientData` debe ser 0 (cero).  
   
  `cbClientData`  
  [in] Tamaño, en bytes, de los datos a los que señala `pvClientData`.  
@@ -74,7 +74,7 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|El tiempo de espera se agotó sin que el generador de perfiles comenzara a cargarse. Puede volver a intentar la operación de asociación. El tiempo de espera se agota cuando un finalizador del proceso de destino se ejecuta durante más tiempo que el valor del tiempo de espera.|  
 |E_INVALIDARG|Uno o más parámetros tienen valores no válidos.|  
 |E_FAIL|Se ha producido algún otro error no especificado.|  
-|Otros códigos de error|Si el generador de perfiles [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) método devuelve un HRESULT que indica un error, `AttachProfiler` devuelve ese mismo HRESULT. En este caso, E_NOTIMPL se convierte en CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
+|Otros códigos de error|Si el generador de perfiles [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) método devuelve un HRESULT que indica un error, `AttachProfiler` devuelve el mismo HRESULT. En este caso, E_NOTIMPL se convierte en CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -82,16 +82,16 @@ HRESULT AttachProfiler(
  En consonancia con las convenciones de COM, el llamador de `AttachProfiler` (por ejemplo, el código desencadenador creado por el desarrollador del generador de perfiles) es responsable de la asignación y desasignación de la memoria para los datos a los que el parámetro `pvClientData` apunta. Cuando el CLR ejecuta la llamada a `AttachProfiler`, realiza una copia de la memoria a la que `pvClientData` apunta y la transmite al proceso de destino. Cuando el CLR dentro del proceso de destino recibe su propia copia del bloque `pvClientData`, pasa el bloque al generador de perfiles con el método `InitializeForAttach` y, después, desasigna su copia del bloque `pvClientData` del proceso de destino.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerInfo3 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerInfo3 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/index.md)

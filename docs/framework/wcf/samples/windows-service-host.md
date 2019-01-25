@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 65797863fc8187ffebbcb660e9fb285bfa1aabd0
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f07bdacddfbaa35b17821d2a8a0191fef86e38f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583859"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579399"
 ---
 # <a name="windows-service-host"></a>Host de servicio de Windows
 Este ejemplo muestra un servicio de Windows Communication Foundation (WCF) hospedado en un servicio de Windows administrado. Servicios de Windows se controlan mediante el applet Servicios en **Panel de Control** y pueden configurarse para iniciarse automáticamente tras un reinicio del sistema. El ejemplo está compuesto de un programa cliente y un programa de servicio de Windows. El servicio se implementa como un programa .exe y contiene su propio código de hospedaje. No es necesario que escriba el código de hospedaje en otros entornos de hospedaje, como los Servicios de activación de procesos de Windows (WAS) o Internet Information Services (IIS).
@@ -63,5 +63,5 @@ Este ejemplo muestra un servicio de Windows Communication Foundation (WCF) hospe
   
 4.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplos de persistencia y el hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Vea también
+- [Ejemplos de persistencia y el hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

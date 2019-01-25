@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: 2c707d9ab2fd2be611fe0872501b45665d0a349e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6179837a072c9e4de8e0e8c71a2723942d010899
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636974"
 ---
 # <a name="application-settings-for-windows-forms"></a>Configuración de la aplicación en formularios Windows Forms
 La característica Configuración de la aplicación de Windows Forms facilita la creación, el almacenamiento y el mantenimiento de preferencias de usuarios y aplicaciones personalizadas en el cliente. Con la Configuración de aplicación de Windows Forms, no solo se pueden almacenar datos de las aplicaciones (por ejemplo, cadenas de conexión a bases de datos), sino también datos específicos de los usuarios (por ejemplo, posiciones de la barra de herramientas y listas de archivos usados recientemente).  
@@ -27,20 +27,20 @@ La característica Configuración de la aplicación de Windows Forms facilita la
  [Atributos de configuración de la aplicación](~/docs/framework/winforms/advanced/application-settings-attributes.md)  
  Enumera y describe los atributos que se pueden aplicar a una clase contenedora de la configuración de la aplicación o sus propiedades de configuración.  
   
- [Application Settings for Custom Controls](~/docs/framework/winforms/advanced/application-settings-for-custom-controls.md) (Configuración de la aplicación para controles personalizados)  
+ [Application Settings for Custom Controls](~/docs/framework/winforms/advanced/application-settings-for-custom-controls.md)  
  Describe lo que se debe hacer para proporcionar a los controles personalizados la capacidad para conservar la configuración de la aplicación cuando se hospeda en aplicaciones de terceros.   
   
- [Cómo: Crear la configuración de la aplicación](~/docs/framework/winforms/advanced/how-to-create-application-settings.md)  
+ [Cómo: Crear configuración de la aplicación](~/docs/framework/winforms/advanced/how-to-create-application-settings.md)  
  Muestra cómo crear una nueva configuración de la aplicación que se mantenga de una sesión de aplicación a otra.   
   
- [Validar la configuración de la aplicación](~/docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
+ [Cómo: Validar la configuración de la aplicación](~/docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
  Muestra cómo validar la configuración de la aplicación antes de conservarla.  
   
 ## <a name="related-topics"></a>Temas relacionados
 
 [Sección de configuración de Windows Forms](../../../../docs/framework/configure-apps/file-schema/winforms/index.md)    
-Documentos que admiten la configuración para habilitar valores altos de PPP en la aplicación de Windows Forms a partir de la 4.7 de .NET Framework.
+Los documentos que admiten la configuración para habilitar la alta concentración de PPP en la aplicación de Windows Forms a partir de .NET Framework 4.7.
 
-## <a name="see-also"></a>Vea también  
-  
-[Windows Forms](../index.md)
+## <a name="see-also"></a>Vea también
+
+- [Windows Forms](../index.md)

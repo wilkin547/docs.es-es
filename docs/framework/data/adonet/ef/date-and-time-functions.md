@@ -2,12 +2,12 @@
 title: Funciones de fecha y hora
 ms.date: 03/30/2017
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
-ms.openlocfilehash: 358d124da5fb60d38d5e906a821c0b4bc86baab2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b0272f4a9301b02bc654a00c09c1b8bb799d8309
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690779"
 ---
 # <a name="date-and-time-functions"></a>Funciones de fecha y hora
 El Proveedor de datos .NET Framework para SQL Server (SqlClient) proporciona funciones de fecha y hora que realizan operaciones en un valor de entrada `System.DateTime` y devuelven un resultado `string`, numérico o `System.DateTime`. Estas funciones están en el espacio de nombres SqlServer, que está disponible al utilizar SqlClient. La propiedad del espacio de nombres de un proveedor permite a Entity Framework detectar qué prefijo usa este proveedor para estructuras concretas, como tipos y funciones. La siguiente tabla muestra las funciones de fecha y hora de SqlClient.  
@@ -33,5 +33,5 @@ El Proveedor de datos .NET Framework para SQL Server (SqlClient) proporciona fun
 |---------------------|---------------------|---------------------|  
 |[Funciones de fecha y hora (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115908)|[Funciones de fecha y hora (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115909)|[Funciones de fecha y hora (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|  
   
-## <a name="see-also"></a>Vea también  
- [SqlClient para las funciones de Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+## <a name="see-also"></a>Vea también
+- [SqlClient para las funciones de Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)

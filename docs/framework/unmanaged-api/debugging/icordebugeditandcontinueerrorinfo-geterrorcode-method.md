@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1cd0753b1ebcda3de33953b96e9dcedd26a2cc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 026aab33207544e21a21f6c2374925d1d7923e55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583553"
 ---
 # <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a>ICorDebugEditAndContinueErrorInfo::GetErrorCode (Método)
 `GetErrorCode` está obsoleto. No llame a este método.  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

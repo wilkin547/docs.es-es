@@ -1,23 +1,23 @@
 ---
-title: '&lt;UserNameAuthentication&gt;'
+title: '&lt;userNameAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: 3ade257a81e218fa123a08624123af614df84956
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1b8a85a3b2699aa88db24d1f7afee3de67dbf39b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150050"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656653"
 ---
-# <a name="ltusernameauthenticationgt"></a>&lt;UserNameAuthentication&gt;
+# <a name="ltusernameauthenticationgt"></a>&lt;userNameAuthentication&gt;
 Especifica las credenciales de un servicio basadas en el nombre de usuario y contraseña.  
   
  \<system.ServiceModel>  
 \<comportamientos >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<comportamiento >  
-\<serviceCredentials >  
-\<userNameAuthentication >  
+\<serviceCredentials>  
+\<userNameAuthentication>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,15 +53,15 @@ Especifica las credenciales de un servicio basadas en el nombre de usuario y con
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Especifica la credencial que se va a utilizar para autenticar el servicio y los valores relacionados con la validación de la credencial del cliente.|  
+|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Especifica la credencial que se va a utilizar para autenticar el servicio y los valores relacionados con la validación de la credencial del cliente.|  
   
 ## <a name="remarks"></a>Comentarios  
  Si ninguno de los enlaces utilizados por un servicio se configura para la autenticación mediante el nombre de usuario/contraseña, se omiten los atributos para este elemento. Entre estos se incluyen los eventos `customUserNamePasswordValidatorType`, `includeWindowsGroups`, `membershipProviderName` y `userNamePasswordValidationMode`.  
   
  Si ninguno de los enlaces utilizados por un servicio configurado para utilizar la autenticación de Windows para el nombre de usuario/contraseña, se omite la configuración relacionada con almacenar en memoria caché los tokens de inicio de sesión. Éstos incluyen `cacheLogonTokenLifetime`, `cacheLogonTokens` y `maxCacheLogonTokens`.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.UserNameServiceElement>  
- <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>  
- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.UserNameAuthentication%2A>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.UserNameServiceElement>
+- <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>
+- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.UserNameAuthentication%2A>

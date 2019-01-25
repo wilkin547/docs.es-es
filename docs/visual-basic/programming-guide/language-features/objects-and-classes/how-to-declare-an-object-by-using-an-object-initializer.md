@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Declarar un objeto usando un inicializador de objeto (Visual Basic)'
+title: Procedimiento Declarar un objeto usando un inicializador de objeto (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring objects using object initializer
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 3a372ba91377b53c87c05976e416ca8ed55ccbbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eeaf3b4a611944395269fcae045bab00d25f0167
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561078"
 ---
-# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Cómo: Declarar un objeto usando un inicializador de objeto (Visual Basic)
-Inicializadores de objeto permiten declarar y crear una instancia de una clase en una sola instrucción. Además, puede inicializar a uno o varios miembros de la instancia a la vez, sin invocar un constructor con parámetros.  
+# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Procedimiento Declarar un objeto usando un inicializador de objeto (Visual Basic)
+Los inicializadores de objeto permiten declarar y crear una instancia de una clase en una sola instrucción. Además, puede inicializar a uno o varios miembros de la instancia al mismo tiempo, sin invocar un constructor parametrizado.  
   
- Cuando se usa un inicializador de objeto para crear una instancia de un tipo con nombre, se llama al constructor predeterminado para la clase, seguido de inicialización de los miembros designados en el orden que especifique.  
+ Cuando se usa un inicializador de objeto para crear una instancia de un tipo con nombre, el constructor predeterminado para la clase se llama, seguido de la inicialización de los miembros designados en el orden que especifique.  
   
- El siguiente procedimiento muestra cómo crear una instancia de un `Student` clase de tres maneras diferentes. La clase contiene el nombre, apellido y propiedades de año de la clase, entre otros. Cada una de las tres declaraciones crea una nueva instancia de `Student`, con la propiedad `First` establecida en "Michael", la propiedad `Last` establecida en "Tucker" y todos los otros miembros establecidos en sus valores predeterminados. El resultado de cada declaración en el procedimiento es equivalente al ejemplo siguiente, que no usa a un inicializador de objeto.  
+ El siguiente procedimiento muestra cómo crear una instancia de un `Student` clase de tres maneras diferentes. La clase tiene el nombre, apellido y propiedades de año de la clase, entre otros. Cada una de las tres declaraciones crea una nueva instancia de `Student`, con la propiedad `First` establecido en "Michael," propiedad `Last` establecida en "Tucker" y todos los demás miembros que se establezca en sus valores predeterminados. El resultado de cada declaración en el procedimiento es equivalente al ejemplo siguiente, que no usa a un inicializador de objeto.  
   
  [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_1.vb)]  
   
- Para obtener una implementación de la `Student` de clases, consulte [Cómo: crear una lista de elementos de](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Puede copiar el código de ese tema para configurar la clase y crear una lista de `Student` objetos que se va a trabajar con.  
+ Para obtener una implementación de la `Student` de clases, vea [Cómo: Crear una lista de elementos](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Puede copiar el código en ese tema para configurar la clase y crear una lista de `Student` para trabajar con los objetos.  
   
-### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>Para crear un objeto de una clase con nombre usando un inicializador de objeto  
+### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>Para crear un objeto de una clase con nombre mediante un inicializador de objeto  
   
 1.  Comience la declaración como si planea utilizar un constructor.  
   
@@ -35,21 +35,21 @@ Inicializadores de objeto permiten declarar y crear una instancia de una clase e
   
      `Dim student1 As New Student With { <initialization list> }`  
   
-3.  En la lista de inicializaciones, incluya cada propiedad que desea inicializar y asígnele un valor inicial. El nombre de la propiedad está precedido por un punto.  
+3.  En la lista de inicialización, incluya cada propiedad que desea inicializar y asignarle un valor inicial. El nombre de la propiedad está precedido por un punto.  
   
      [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_2.vb)]  
   
      Puede inicializar a uno o varios miembros de la clase.  
   
-4.  Como alternativa, puede declarar una nueva instancia de la clase y, a continuación, asignar un valor a él. Primero, declare una instancia de `Student`:  
+4.  Como alternativa, puede declarar una nueva instancia de la clase y, a continuación, asignarle un valor. En primer lugar, declare una instancia de `Student`:  
   
      `Dim student2 As Student`  
   
-5.  Iniciar la creación de una instancia de `Student` de la forma habitual.  
+5.  Comience la creación de una instancia de `Student` de la manera normal.  
   
      `Dim student2 As Student = New Student`  
   
-6.  Tipo de `With` y, a continuación, un inicializador de objeto para inicializar uno o varios miembros de la nueva instancia.  
+6.  Tipo `With` y, a continuación, un inicializador de objeto para inicializar uno o varios miembros de la nueva instancia.  
   
      [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_3.vb)]  
   
@@ -57,10 +57,10 @@ Inicializadores de objeto permiten declarar y crear una instancia de una clase e
   
      [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_4.vb)]  
   
-     Para obtener más información, consulte [inferencia de tipo Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+     Para obtener más información, consulte [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
-## <a name="see-also"></a>Vea también  
- [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Crear una lista de elementos](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)  
- [Inicializadores de objeto: Tipos con nombre y anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a>Vea también
+- [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Cómo: Crear una lista de elementos](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [Inicializadores de objeto: Tipos con nombre y anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

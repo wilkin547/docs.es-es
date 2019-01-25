@@ -2,12 +2,12 @@
 title: '&lt;dispatcherSynchronization&gt;'
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
-ms.openlocfilehash: 86660620113b162a9a5260b7026a64455284d184
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 537dee408f1af29a06042de439a2c1e7d7874222
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555393"
 ---
 # <a name="ltdispatchersynchronizationgt"></a>&lt;dispatcherSynchronization&gt;
   
@@ -15,7 +15,7 @@ Especifica un comportamiento del punto de conexión que permite que un servicio 
   
 \<system.serviceModel>  
 \<comportamientos >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<comportamiento >  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -48,8 +48,9 @@ Ninguno.
 
 | Elemento | Descripción |  
 | ------- | ----------- |  
-| [\<comportamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica el comportamiento de un punto de conexión. |
+| [\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica el comportamiento de un punto de conexión. |
 
 ## <a name="see-also"></a>Vea también
 
- <xref:System.ServiceModel.Configuration.DispatcherSynchronizationElement> <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior>
+- <xref:System.ServiceModel.Configuration.DispatcherSynchronizationElement>
+- <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior>

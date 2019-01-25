@@ -2,12 +2,12 @@
 title: ServiceBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 5faa266f-587f-4e03-828d-1c7dd5acfe65
-ms.openlocfilehash: c2915c636aec26cfb1f58d12da49151915c52c05
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 420686ebda7f23a5d883deece251b034147fafa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182962"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654586"
 ---
 # <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 ServiceBehaviorAttribute  
@@ -44,104 +44,104 @@ class ServiceBehaviorAttribute : Behavior
 ### <a name="automaticsessionshutdown"></a>AutomaticSessionShutdown  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Indica si cerrar automáticamente una sesión cuando un cliente cierra una sesión de salida.  
   
 ### <a name="concurrencymode"></a>ConcurrencyMode  
  Tipo de datos: cadena  
-Tipo de acceso: solo lectura  
+Tipo de acceso: De sólo lectura  
   
  Indica si un servicio admite un subproceso, varios subprocesos o las llamadas reentrantes.  
   
 ### <a name="configurationname"></a>ConfigurationName  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El nombre de la configuración del servicio.  
   
 ### <a name="ignoreextensiondataobject"></a>IgnoreExtensionDataObject  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Especifica si enviar datos de la serialización desconocidos hacia la conexión.  
   
 ### <a name="includeexceptiondetailinfaults"></a>IncludeExceptionDetailInFaults  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Especifica si incluir la información de excepción administrada en el detalle de errores  SOAP devueltos a los clientes para depuración.  
   
 ### <a name="instancecontextmode"></a>InstanceContextMode  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Especifica cuándo se crea un nuevo objeto de servicio.  
   
 ### <a name="maxitemsinobjectgraph"></a>MaxItemsInObjectGraph  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El número máximo de elementos permitido en un objeto serializado.  
   
 ### <a name="name"></a>nombre  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El atributo de nombre del servicio en WSDL.  
   
 ### <a name="namespace"></a>Espacio de nombres  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El espacio de nombres de destino del servicio en WSDL.  
   
 ### <a name="releaseserviceinstanceontransactioncomplete"></a>ReleaseServiceInstanceOnTransactionComplete  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Especifica si el objeto de servicio se recicla cuando la transacción actual completa.  
   
 ### <a name="transactionautocompleteonsessionclose"></a>TransactionAutoCompleteOnSessionClose  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Especifica si las transacciones pendientes se completan cuando la sesión actual se cierra.  
   
 ### <a name="transactionisolationlevel"></a>TransactionIsolationLevel  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Especifica el nivel de aislamiento de la transacción.  
   
 ### <a name="transactiontimeout"></a>TransactionTimeout  
  Tipo de datos: datetime  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El período dentro del que una transacción se debe completar.  
   
 ### <a name="usesynchronizationcontext"></a>UseSynchronizationContext  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Especifica si utilizar el contexto de sincronización actual para elegir la ejecución del subproceso.  
   
 ### <a name="validatemustunderstand"></a>ValidateMustUnderstand  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Especifica si el sistema o la aplicación exigen procesamiento de encabezados MustUnderstand de SOAP .  
   
@@ -151,5 +151,5 @@ Tipo de acceso: solo lectura
 |---------|-----------------------------------|  
 |Espacio de nombres|Se define en root\ServiceModel|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.ServiceBehaviorAttribute>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.ServiceBehaviorAttribute>

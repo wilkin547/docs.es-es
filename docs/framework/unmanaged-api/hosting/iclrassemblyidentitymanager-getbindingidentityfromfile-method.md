@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28e97289eda5949e6d124426eb58105e2e3ad33e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e19f6a51afd6d1e532631a950f4695c8e3d38eb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435047"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521457"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromFile (Método)
 Obtiene la identidad del ensamblado enlace de datos para el ensamblado en la ruta de acceso de archivo especificado.  
@@ -40,16 +40,16 @@ HRESULT GetBindingIdentityFromFile(
   
 #### <a name="parameters"></a>Parámetros  
  `pwzFilePath`  
- [in] La ruta de acceso al archivo que se debe evaluar.  
+ [in] La ruta de acceso al archivo que se va a evaluar.  
   
  `dwFlags`  
- [in] Un valor de la [ECLRAssemblyIdentityFlags](../../../../docs/framework/unmanaged-api/hosting/eclrassemblyidentityflags-enumeration.md) enumeración que indica el tipo de identidad de un ensamblado. Se proporciona para extensibilidad futura. CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT es el único valor admitido por common language runtime (CLR) versión 2.0.  
+ [in] Un valor de la [ECLRAssemblyIdentityFlags](../../../../docs/framework/unmanaged-api/hosting/eclrassemblyidentityflags-enumeration.md) enumeración que indica el tipo de identidad de un ensamblado. Se proporciona para extensibilidad futura. CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT es el único valor que es compatible con common language runtime (CLR) versión 2.0.  
   
  `pwzBuffer`  
  [out] Un búfer que contiene los datos de identidad de ensamblado opaco.  
   
  `pcchBufferSize`  
- [entrada, salida] Un puntero al tamaño de `pwzBuffer`.  
+ [in, out] Un puntero al tamaño de `pwzBuffer`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
@@ -58,25 +58,25 @@ HRESULT GetBindingIdentityFromFile(
 |S_OK|El método se devolvió correctamente.|  
 |E_INVALIDARG|Suministrado `pwzFilePath` es null.|  
 |ERROR_INSUFFICIENT_BUFFER|El tamaño de `pwzBuffer` es demasiado pequeño.|  
-|HOST_E_CLRNOTAVAILABLE|El CLR no se han cargado en un proceso o el CLR está en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|La llamada agotó el tiempo de espera.|  
+|HOST_E_CLRNOTAVAILABLE|El CLR no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|La llamada ha agotado el tiempo de espera.|  
 |HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra esperó en él.|  
-|E_FAIL|Se ha producido un error catastrófico desconocido. Si el método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.|  
+|E_FAIL|Se ha producido un error irrecuperable desconocido. Si el método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- `GetBindingIdentityFromFile` Normalmente se llama dos veces. La primera llamada proporciona un valor null para `pwzBuffer`, y el método devuelve el tamaño adecuado en `pcchBufferSize`. La segunda llamada proporciona un búfer correctamente asignado y el método devuelve con los datos del búfer reales cuando se complete.  
+ `GetBindingIdentityFromFile` Normalmente, se llama dos veces. La primera llamada proporciona un valor null para `pwzBuffer`, y el método devuelve el tamaño adecuado en `pcchBufferSize`. La segunda llamada proporciona un búfer asignado correctamente, y el método devuelve con los datos de búfer real tras la finalización.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
- **Biblioteca:** incluye como recurso en MSCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICLRAssemblyIdentityManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [ICLRAssemblyReferenceList (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- [ICLRHostBindingPolicyManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICLRAssemblyIdentityManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyReferenceList (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [ICLRHostBindingPolicyManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

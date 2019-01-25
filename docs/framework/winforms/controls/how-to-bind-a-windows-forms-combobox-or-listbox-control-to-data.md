@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Enlazar un control ComboBox o ListBox de formularios Windows Forms a datos'
+title: Procedimiento Enlazar un Control de ListBox o ComboBox de formularios Windows Forms a datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,25 +15,25 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 270ed1c9fab4013df72b715ce8b074d287616713
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4220e3e7d750e0d0caf0adbcbd2e1d96131e7c88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698380"
 ---
-# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Cómo: Enlazar un control ComboBox o ListBox de formularios Windows Forms a datos
-Puede enlazar la <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.ListBox> a los datos para realizar tareas como examinar datos en una base de datos, escribir nuevos datos o modificar datos existentes.  
+# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Procedimiento Enlazar un Control de ListBox o ComboBox de formularios Windows Forms a datos
+Puede enlazar el <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.ListBox> a datos para realizar tareas como la exploración de datos en una base de datos, escribir nuevos datos o modificar datos existentes.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>Para enlazar un control ComboBox o ListBox  
   
-1.  Establecer el `DataSource` propiedad a un objeto de origen de datos. Posibles orígenes de datos incluyen un <xref:System.Windows.Forms.BindingSource> enlazado a datos, una tabla de datos, una vista de datos, un conjunto de datos, la vista de datos de un administrador, una matriz o cualquier clase que implemente la <xref:System.Collections.IList> interfaz. Para obtener más información, consulte [orígenes de datos compatibles con formularios Windows Forms](../../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md).  
+1.  Establecer el `DataSource` propiedad a un objeto de origen de datos. Posibles orígenes de datos incluyen un <xref:System.Windows.Forms.BindingSource> enlazado a datos, una tabla de datos, una vista de datos, un conjunto de datos, la vista de datos de un administrador, una matriz o cualquier clase que implementa el <xref:System.Collections.IList> interfaz. Para obtener más información, consulte [Data Sources Supported by Windows Forms](../../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md).  
   
-2.  Si va a enlazar a una tabla, establecer el `DisplayMember` propiedad en el nombre de una columna en el origen de datos.  
+2.  Si va a enlazar a una tabla, establecer el `DisplayMember` propiedad en el nombre de una columna del origen de datos.  
   
      \- o -  
   
-     Si va a enlazar a un <xref:System.Collections.IList>, establezca el miembro de presentación en una propiedad pública del tipo en la lista.  
+     Si va a enlazar a un <xref:System.Collections.IList>, establezca el miembro de presentación a una propiedad pública del tipo en la lista.  
   
     ```vb  
     Private Sub BindComboBox()  
@@ -51,11 +51,11 @@ Puede enlazar la <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.For
     ```  
   
     > [!NOTE]
-    >  Si se enlazan a un origen de datos que no implementa la <xref:System.ComponentModel.IBindingList> interfaz, como un <xref:System.Collections.ArrayList>, no se actualizará los datos del control enlazado cuando se actualiza el origen de datos. Por ejemplo, si tiene un cuadro combinado enlazado a un <xref:System.Collections.ArrayList> y se agregan datos a la <xref:System.Collections.ArrayList>, estos nuevos elementos no aparecerán en el cuadro combinado. Sin embargo, puede forzar el cuadro combinado para actualizarse mediante una llamada a la <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> y <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> métodos en la instancia de la <xref:System.Windows.Forms.BindingContext> clase a la que está enlazado el control.  
+    >  Si está enlazado a un origen de datos que no implementa la <xref:System.ComponentModel.IBindingList> interfaz, como un <xref:System.Collections.ArrayList>, no se actualizará los datos del control enlazado cuando se actualiza el origen de datos. Por ejemplo, si tiene un cuadro combinado enlazado a un <xref:System.Collections.ArrayList> y se agregan datos a la <xref:System.Collections.ArrayList>, estos nuevos elementos no aparecerán en el cuadro combinado. Sin embargo, puede forzar el cuadro combinado para actualizarse mediante una llamada a la <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> y <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> métodos en la instancia de la <xref:System.Windows.Forms.BindingContext> al que está enlazado el control de clases.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.ComboBox>  
- <xref:System.Windows.Forms.ListBox>  
- [Enlace de datos en Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Enlace de datos y Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Controles de formularios Windows Forms usados para mostrar opciones](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.ListBox>
+- [Enlace de datos en Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Enlace de datos y Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Controles de formularios Windows Forms usados para mostrar opciones](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

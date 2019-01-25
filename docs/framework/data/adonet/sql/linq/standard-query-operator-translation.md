@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: fb4910e48af58463c5c851173f8e3caf4594cc3a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588579"
 ---
 # <a name="standard-query-operator-translation"></a>Traslación del operador de consulta estándar
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] convierte los operadores de consulta estándar en comandos SQL. El procesador de consultas de la base de datos determina la semántica de ejecución de la traducción de SQL.  
@@ -125,7 +125,7 @@ ORDER BY [t0].[CustomerID]
  [!code-vb[DLinqSQOTranslation#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]  
   
 ### <a name="visual-basic-function-translation"></a>Conversión de funciones de Visual Basic  
- Las siguientes funciones auxiliares que utiliza el compilador de Visual Basic se convierten a las funciones y operadores de SQL correspondientes:  
+ Las siguientes funciones del asistente que utiliza el compilador de Visual Basic se convierten a las funciones y operadores de SQL correspondientes:  
   
  `CompareString`  
   
@@ -147,7 +147,7 @@ ORDER BY [t0].[CustomerID]
 ## <a name="inheritance-support"></a>Compatibilidad de herencia  
   
 ### <a name="inheritance-mapping-restrictions"></a>Restricciones de la asignación de herencia  
- Para obtener más información, consulte [Cómo: asignar jerarquías de herencia](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).  
+ Para obtener más información, vea [Cómo: Asignar jerarquías de herencia](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).  
   
 ### <a name="inheritance-in-queries"></a>Herencia en consultas  
  Las conversión de tipos de C# solo se admite en la proyección. Las conversiones de tipos que se utilizan en otra parte no se convierten y se omiten. Además de los nombres de función de SQL, SQL realmente solo realiza la operación equivalente a <xref:System.Convert> de Common Language Runtime (CLR). Es decir, SQL puede cambiar el valor de un tipo a otro. No hay ningún equivalente de conversión de tipos de CLR porque no existe el concepto de reinterpretar los mismos bits que los de otro tipo. Por esa razón una conversión de tipos de C# solo funciona localmente. No es remota.  
@@ -225,10 +225,10 @@ ORDER BY [t0].[CustomerID]
   
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
-## <a name="see-also"></a>Vea también  
- [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Devolución u omisión de elementos de una secuencia](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
- [Concatenación de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
- [Devolución de la diferencia de conjuntos entre dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
- [Devolución de la intersección de conjuntos de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
- [Devolución de la unión de conjuntos de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+## <a name="see-also"></a>Vea también
+- [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Devolución u omisión de elementos de una secuencia](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
+- [Concatenación de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
+- [Devolución de la diferencia de conjuntos entre dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)
+- [Devolución de la intersección de conjuntos de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)
+- [Devolución de la unión de conjuntos de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

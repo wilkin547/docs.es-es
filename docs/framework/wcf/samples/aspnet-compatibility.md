@@ -2,12 +2,12 @@
 title: Compatibilidad de ASP.NET
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: eeb09914fc90848c987127c789379549917063f6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1128183e990567d15b133bf8aa4ff5d32f10c663
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541097"
 ---
 # <a name="aspnet-compatibility"></a>Compatibilidad de ASP.NET
 Este ejemplo muestra cómo habilitar el modo de compatibilidad de ASP.NET en Windows Communication Foundation (WCF). Servicios que se ejecutan en la compatibilidad de ASP.NET modo participan totalmente en la canalización de aplicación de ASP.NET y puede hacer usan de las características ASP.NET como archivo/autorización de URL, estado de sesión y el <xref:System.Web.HttpContext> clase. La <xref:System.Web.HttpContext> clase permite el acceso a las cookies, sesiones y otras características de ASP.NET. Este modo requiere que los enlaces utilicen el transporte HTTP y el propio servicio se debe hospedar en IIS.  
@@ -127,5 +127,5 @@ Press <ENTER> to terminate client.
   
 4.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplos de persistencia y el hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Vea también
+- [Ejemplos de persistencia y el hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

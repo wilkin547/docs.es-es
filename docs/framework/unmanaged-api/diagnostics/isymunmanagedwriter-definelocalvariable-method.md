@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6f8b896d50bb659897291d7bf85e836482611a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c62ad58cd7ad1bd752d5958a5630dc7a019131e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645449"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable (Método)
-Define una única variable en el ámbito léxico actual. Este método puede llamarse varias veces para una variable del mismo nombre que tenga varias ubicaciones en un ámbito. En este caso, sin embargo, los valores de la `startOffset` y `endOffset` no deben solaparse con parámetros.  
+Define una única variable en el ámbito léxico actual. Este método puede llamarse varias veces para una variable del mismo nombre que tenga varias ubicaciones en un ámbito. En este caso, sin embargo, los valores de la `startOffset` y `endOffset` parámetros no deben superponerse.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,7 +51,7 @@ HRESULT DefineLocalVariable(
  [in] Atributos de la variable locales.  
   
  `cSig`  
- [in] A `ULONG32` que indica el tamaño, en bytes, de la `signature` búfer.  
+ [in] Un `ULONG32` que indica el tamaño, en bytes, de la `signature` búfer.  
   
  `signature`  
  [in] La firma de variable local.  
@@ -60,27 +60,27 @@ HRESULT DefineLocalVariable(
  [in] El tipo de dirección.  
   
  `addr1`  
- [in] La primera dirección para la especificación de parámetros.  
+ [in] La primera dirección de la especificación de parámetro.  
   
  `addr2`  
- [in] La segunda dirección para la especificación de parámetros.  
+ [in] La segunda dirección de la especificación de parámetro.  
   
  `addr3`  
- [in] La tercera dirección de la especificación de parámetros.  
+ [in] Tercera dirección de la especificación de parámetro.  
   
  `startOffset`  
- [in] Desplazamiento inicial de la variable. Este parámetro es opcional. Si es 0, se omite este parámetro y la variable se define en todo el ámbito. Si es un valor distinto de cero, la variable se encuentra dentro de los desplazamientos del ámbito actual.  
+ [in] El desplazamiento inicial de la variable. Este parámetro es opcional. Si es 0, se omite este parámetro y la variable se define en todo el ámbito. Si es un valor distinto de cero, la variable está comprendida dentro de los desplazamientos del ámbito actual.  
   
  `endOffset`  
- [in] Desplazamiento final de la variable. Este parámetro es opcional. Si es 0, se omite este parámetro y la variable se define en todo el ámbito. Si es un valor distinto de cero, la variable se encuentra dentro de los desplazamientos del ámbito actual.  
+ [in] Desplazamiento final de la variable. Este parámetro es opcional. Si es 0, se omite este parámetro y la variable se define en todo el ámbito. Si es un valor distinto de cero, la variable está comprendida dentro de los desplazamientos del ámbito actual.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [DefineGlobalVariable (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)  
- [DefineLocalVariable2 (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-definelocalvariable2-method.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [DefineGlobalVariable (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
+- [DefineLocalVariable2 (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-definelocalvariable2-method.md)

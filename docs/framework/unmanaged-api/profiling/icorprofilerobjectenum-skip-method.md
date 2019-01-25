@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fe35757d895fef3c6267c671f3a91fc50df620a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f1e12e59eefece1aa3a2a2294b34f5cee7c700c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543112"
 ---
 # <a name="icorprofilerobjectenumskip-method"></a>ICorProfilerObjectEnum::Skip (Método)
-Desplaza el cursor de este enumerador desde su posición actual para que se omita el número especificado de elementos.  
+Desplaza el cursor de este enumerador desde su posición actual para que el número especificado de elementos se omite.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,13 +43,13 @@ HRESULT Skip (
  La nueva posición del cursor de este enumerador es: (posición actual) + `celt` .  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerObjectEnum (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerObjectEnum (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

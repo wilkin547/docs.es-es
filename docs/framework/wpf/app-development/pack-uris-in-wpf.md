@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 7addb503d0a7d4c7a4388144759e7f40264d7703
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 111b129b17d0fe473b0249c43e25ddc50bfe6fd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522440"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513456"
 ---
 # <a name="pack-uris-in-wpf"></a>Pack URI en WPF
 En Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] se usan para identificar y cargar archivos de muchas maneras, incluido lo siguiente:  
@@ -46,11 +46,11 @@ En Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
  ![Diagrama de paquete y elementos](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
   
- Para identificar los elementos, la especificación de OPC aprovecha la extensibilidad de RFC 2396 (identificadores uniformes de recursos (URI): sintaxis genérica) para definir el módulo [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] esquema.  
+ Para identificar los elementos, la especificación de OPC aprovecha la extensibilidad de RFC 2396 (identificadores uniformes de recursos (URI): La sintaxis genérica) para definir el módulo [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] esquema.  
   
  El esquema especificado por un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] se define por su prefijo; http, ftp y file son ejemplos conocidos. El módulo [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] esquema usa "pack" como su esquema y contiene dos componentes: autoridad y ruta de acceso. El siguiente es el formato de un módulo [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
   
- Pack: / /*autoridad*/*ruta de acceso*
+ pack://*authority*/*path*
   
  El *autoridad* especifica el tipo de paquete que contiene un elemento, mientras que el *ruta* especifica la ubicación de un elemento dentro de un paquete.  
   
@@ -89,7 +89,7 @@ En Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
 -   **Autoridad**: application:///.  
   
--   **Ruta de acceso**: nombre del archivo de recursos, incluida su ruta de acceso relativa a la carpeta raíz del proyecto de ensamblado local.  
+-   **Ruta de acceso**: El nombre del archivo de recursos, incluida su ruta de acceso relativa a la carpeta raíz del proyecto de ensamblado local.  
   
  El ejemplo siguiente muestra el pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] para un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivo de recursos que se encuentra en la raíz de la carpeta del proyecto del ensamblado local.  
   
@@ -105,7 +105,7 @@ En Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
 -   **Autoridad**: application:///.  
   
--   **Ruta de acceso**: nombre de un archivo de recursos que se compila en un ensamblado al que se hace referencia. La ruta de acceso debe tener el formato siguiente:  
+-   **Ruta de acceso**: El nombre de un archivo de recursos que se compila en un ensamblado de referencia. La ruta de acceso debe tener el formato siguiente:  
   
      *AssemblyShortName*{*; Versión*] {*; PublicKey*]; component /*ruta de acceso*  
   
@@ -141,7 +141,7 @@ En Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
 -   **Autoridad**: application:///.  
   
--   **Ruta de acceso**: nombre del archivo de contenido, incluida su ruta de acceso relativa a la ubicación del sistema de archivos del ensamblado ejecutable principal de la aplicación.  
+-   **Ruta de acceso**: El nombre del archivo de contenido, incluida su ruta de acceso relativa a la ubicación del sistema de archivo del ensamblado ejecutable principal de la aplicación.  
   
  El ejemplo siguiente muestra el pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] para un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivo de contenido, ubicado en la misma carpeta que el ensamblado ejecutable.  
   
@@ -160,7 +160,7 @@ En Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
 -   **Autoridad**: siteoforigin:///.  
   
--   **Ruta de acceso**: nombre del archivo de sitio de origen, incluida su ruta de acceso relativa a la ubicación desde donde se inició el ensamblado ejecutable.  
+-   **Ruta de acceso**: El nombre del sitio del archivo de origen, incluida su ruta de acceso relativa a la ubicación desde la que se inició el ensamblado ejecutable.  
   
  El ejemplo siguiente muestra el pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] para un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sitio del archivo de origen, almacenado en la ubicación desde donde se inició el ensamblado ejecutable.  
   
@@ -342,7 +342,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Tabla 3 se muestran los diversos pack relativo [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] que puede especificar en código mediante el uso de <xref:System.Uri?displayProperty=nameWithType>.  
   
- Tabla 3: Pack URI absolutos en el código  
+ Tabla 3: Pack URI absolutos en código  
   
 |Archivo|Pack absoluto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -358,7 +358,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Tabla 4 se muestran los diversos pack relativo [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] que se pueden especificar en el código mediante <xref:System.Uri?displayProperty=nameWithType>.  
   
- Tabla 4: Pack URI relativos en el código  
+ Tabla 4: Pack URI relativos en código  
   
 |Archivo|Módulo relativa [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -423,5 +423,5 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Para obtener información general de temas de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], consulte [aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
-## <a name="see-also"></a>Vea también  
- [Archivos de recursos, contenido y datos de aplicaciones de WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a>Vea también
+- [Archivos de recursos, contenido y datos de aplicaciones de WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

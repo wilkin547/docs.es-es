@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04b6c04868efff31253b2d723c5783060382212b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fc4e8140485902e4677bca0228bc125c64b497f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448978"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671868"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps (Método)
 Obtiene los metadatos asociados al campo al que hace referencia el token de FieldDef especificado.  
@@ -47,7 +47,7 @@ HRESULT GetFieldProps (
   
 #### <a name="parameters"></a>Parámetros  
  `mb`  
- [in] Símbolo (token) de FieldDef que representa el campo para obtener los metadatos asociados.  
+ [in] Un token de FieldDef que representa el campo para obtener los metadatos asociados.  
   
  `pClass`  
  [out] Un puntero a un token de TypeDef que representa el tipo de la clase a la que pertenece el campo.  
@@ -56,7 +56,7 @@ HRESULT GetFieldProps (
  [out] El nombre del campo.  
   
  `cchField`  
- [in] El tamaño en caracteres anchos del búfer de *szField*.  
+ [in] El tamaño en caracteres anchos del búfer para *szField*.  
   
  `pchField`  
  [out] El tamaño real del búfer devuelto.  
@@ -65,7 +65,7 @@ HRESULT GetFieldProps (
  [out] Marcas asociadas a los metadatos del campo.  
   
  `ppvSigBlob`  
- [in] Un puntero al valor de metadatos binaria que describe el campo.  
+ [in] Un puntero al valor binario de metadatos que describe el campo.  
   
  `pcbSigBlob`  
  [out] El tamaño en bytes de `ppvSigBlob`.  
@@ -80,14 +80,14 @@ HRESULT GetFieldProps (
  [out] El tamaño en caracteres de `ppValue`, o cero si no existe ninguna cadena.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20ce52108c1024ad3e07051b226aa65612580e2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e982fa7f6354f341ff4718440f345e282a1d20d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492227"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags (Enumeración)
-Contiene valores que indican el tipo de validación que se debe realizar en una llamada a la [ICLRValidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) método.  
+Contiene valores que indican el tipo de validación que se debe realizar en una llamada a la [ICLRValidator](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,20 +43,20 @@ enum ValidatorFlags {
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`VALIDATOR_CHECK_ILONLY`|Especifica que solo el lenguaje intermedio de Microsoft (MSIL) en el archivo ejecutable se debe validar.|  
-|`VALIDATOR_CHECK_PEFORMAT_ONLY`|Especifica que se debe validar sólo el formato del archivo ejecutable.|  
+|`VALIDATOR_CHECK_PEFORMAT_ONLY`|Especifica que sólo el formato del archivo ejecutable se debe validar.|  
 |`VALIDATOR_EXTRA_VERBOSE`|Especifica que deben realizarse y notifican en todos los tipos de validación.|  
 |`VALIDATOR_NOCHECK_PEFORMAT`|Especifica que no se debe validar el formato del archivo ejecutable.|  
 |`VALIDATOR_SHOW_SOURCE_LINES`|Especifica que los mensajes de error de validación deben incluir las líneas de código fuente que generan un error de validación. Este valor de campo no es válido en la versión 2.0 de .NET Framework.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** IValidator.idl, IValidator.h  
+ **Encabezado**: IValidator.idl, IValidator.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICLRErrorReportingManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [ICLRErrorReportingManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: 853f3fe060b70c8a43957d3c843fb95539981679
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: ef6a2e22c1394065ba6127aa3dd388b47238dea8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296161"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624800"
 ---
 # <a name="resume-statement"></a>Resume (Instrucción)
 Reanuda la ejecución una vez finalizada una rutina de control de errores.  
@@ -35,7 +35,7 @@ Resume [ Next | line ]
   
 ## <a name="parts"></a>Elementos  
  `Resume`  
- Requerido. Si se produjo el error en el mismo procedimiento que el controlador de errores, se reanuda la ejecución con la instrucción que produjo el error. Si se produjo el error en un procedimiento llamado, se reanuda la ejecución en la instrucción que llame por última vez fuera del procedimiento que contiene la rutina de control de errores.  
+ Obligatorio. Si se produjo el error en el mismo procedimiento que el controlador de errores, se reanuda la ejecución con la instrucción que produjo el error. Si se produjo el error en un procedimiento llamado, se reanuda la ejecución en la instrucción que llame por última vez fuera del procedimiento que contiene la rutina de control de errores.  
   
  `Next`  
  Opcional. Si se produjo el error en el mismo procedimiento que el controlador de errores, se reanuda la ejecución con la instrucción inmediatamente posterior a la instrucción que produjo el error. Si se produjo el error en un procedimiento llamado, se reanuda la ejecución con la instrucción inmediatamente posterior a la instrucción que llame por última vez fuera del procedimiento que contiene la rutina de control de errores (o `On Error Resume Next` instrucción).  
@@ -58,11 +58,11 @@ Resume [ Next | line ]
  [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Espacio de nombres**: [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Ensamblado:** biblioteca en tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
+ **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>Vea también  
- [Try...Catch...Finally (instrucción)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Error (instrucción)](../../../visual-basic/language-reference/statements/error-statement.md)  
- [On Error (instrucción)](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="see-also"></a>Vea también
+- [Try...Catch...Finally (instrucción)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Error (instrucción)](../../../visual-basic/language-reference/statements/error-statement.md)
+- [On Error (instrucción)](../../../visual-basic/language-reference/statements/on-error-statement.md)

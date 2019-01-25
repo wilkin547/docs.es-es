@@ -1,16 +1,16 @@
 ---
-title: 'Cómo: Recuperar metadatos mediante un enlace que no sea MEX'
+title: Procedimiento Recuperar metadatos mediante un enlace que no sea - MEX
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 198c343aa6f25d55e518990dc1dbd2667a8c17ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689560"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Cómo: Recuperar metadatos mediante un enlace que no sea MEX
-En este tema se describe cómo recuperar metadatos de un punto de conexión MEX mediante un enlace que no sea MEX. El código en este ejemplo se basa en el [personalizado extremo de metadatos seguros](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) ejemplo.  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procedimiento Recuperar metadatos mediante un enlace que no sea - MEX
+En este tema se describe cómo recuperar metadatos de un punto de conexión MEX mediante un enlace que no sea MEX. El código en este ejemplo se basa en el [extremo de metadatos personalizada Secure](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) ejemplo.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Para recuperar metadatos mediante un enlace que no sea MEX  
   
@@ -48,7 +48,7 @@ En este tema se describe cómo recuperar metadatos de un punto de conexión MEX 
      </bindings>  
     ```  
   
-2.  En el archivo de configuración del cliente, configure el mismo enlace personalizado. Aquí, el cliente también define un comportamiento `clientCredentials` para proporcionar un certificado que utilizar para autenticarse en el servicio al solicitar metadatos del extremo MEX. Al utilizar Svcutil.exe para solicitar metadatos mediante un enlace personalizado, debería agregar la configuración del punto de conexión MEX al archivo de configuración para Svcutil.exe (Svcutil.exe.config) y el nombre de la configuración del punto de conexión debería coincidir con el esquema del URI de la dirección del punto de conexión MEX, tal y como se muestra en el código siguiente:  
+2.  En el archivo de configuración del cliente, configure el mismo enlace personalizado. Aquí, el cliente también define un comportamiento `clientCredentials` para proporcionar un certificado que utilizar para autenticarse en el servicio al solicitar metadatos del punto de conexión MEX. Al utilizar Svcutil.exe para solicitar metadatos mediante un enlace personalizado, debería agregar la configuración del punto de conexión MEX al archivo de configuración para Svcutil.exe (Svcutil.exe.config) y el nombre de la configuración del punto de conexión debería coincidir con el esquema del URI de la dirección del punto de conexión MEX, tal y como se muestra en el código siguiente:  
   
     ```xml  
     <system.serviceModel>  
@@ -121,7 +121,7 @@ En este tema se describe cómo recuperar metadatos de un punto de conexión MEX 
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  En este punto, tiene una colección de puntos de conexión de servicio. Para obtener más información sobre la importación de metadatos, vea [Cómo: importar metadatos en los extremos de servicio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
+5.  En este punto, tiene una colección de puntos de conexión de servicio. Para obtener más información sobre la importación de metadatos, vea [Cómo: Importar los metadatos en los puntos de conexión de servicio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
-## <a name="see-also"></a>Vea también  
- [Metadatos](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a>Vea también
+- [Metadatos](../../../../docs/framework/wcf/feature-details/metadata.md)

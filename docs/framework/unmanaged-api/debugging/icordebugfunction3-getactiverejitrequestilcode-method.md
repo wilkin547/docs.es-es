@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c49a9543c7bfeb9882144fba74b9c48cfba64890
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 156166344cae2ab097f3641d9a2a13c8059994a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632106"
 ---
 # <a name="icordebugfunction3getactiverejitrequestilcode-method"></a>ICorDebugFunction3::GetActiveReJitRequestILCode (Método)
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  
@@ -44,15 +44,15 @@ HRESULT GetActiveReJitRequestILCode(
  Una solicitud ReJIT se convierte en activa justo después de la ejecución se devuelve desde el [Icorprofilercallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md) llamada al método. Puede que JIT aún no la haya compilado y que los subprocesos se estén ejecutando en la versión original del código. Una solicitud ReJIT pasa a estar inactiva durante la llamada del generador de perfiles a la [Icorprofilerinfo4](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrevert-method.md) método. Incluso después de revertir el IL, un subproceso puede seguir ejecutándose en el código JIT nuevamente compilado (ReJIT).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Vea [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorDebugFunction3 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-interface.md)  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [ReJIT: Una guía de procedimientos](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+## <a name="see-also"></a>Vea también
+- [ICorDebugFunction3 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ReJIT: Una guía de procedimientos](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)

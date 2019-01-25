@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 550b39445dfe4d97e712e9a4c73aa0f497b3fce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f03b25f7206df2bde3e1cc0b58efb57a40c1a7a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685430"
 ---
 # <a name="icordebugmda-interface"></a>ICorDebugMDA (Interfaz)
 Representa un mensaje del asistente para la depuración administrada (MDA).  
@@ -33,7 +33,7 @@ Representa un mensaje del asistente para la depuración administrada (MDA).
 |[GetDescription (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|Obtiene una cadena que contiene una descripción de este MDA.|  
 |[GetFlags (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getflags-method.md)|Obtiene las marcas asociadas a este MDA.|  
 |[GetName (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getname-method.md)|Obtiene una cadena que contiene el nombre de este MDA.|  
-|[GetOSThreadId (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|Obtiene el identificador de subproceso de sistema operativo en el que se está ejecutando este MDA.|  
+|[GetOSThreadId (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|Obtiene el identificador de subproceso del sistema operativo en el que se está ejecutando este MDA.|  
 |[GetXML (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|Obtiene la secuencia XML completa asociada a este MDA.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -42,14 +42,14 @@ Representa un mensaje del asistente para la depuración administrada (MDA).
 >  Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

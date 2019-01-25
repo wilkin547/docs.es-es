@@ -2,19 +2,19 @@
 title: Quitar elementos, atributos y nodos de un árbol XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5cf21919-4360-4b49-b29d-58ea3164ac72
-ms.openlocfilehash: dbc5cfd7bf6e1f1b77dd14a6771c387fac29d062
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eee761772d920c6f6fa49b3ddd8b3142ec9f5e43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645935"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495778"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>Quitar elementos, atributos y nodos de un árbol XML (Visual Basic)
 Puede modificar un árbol XML mediante la eliminación de elementos, atributos y otros tipos de nodos.  
   
  Quitar un elemento o un atributo de un documento XML resulta sencillo. Sin embargo, al quitar colecciones de elementos o atributos, primero debe materializar una colección en una lista y, a continuación, eliminar los elementos o los atributos de ésta. El mejor método consiste en usar el método de extensión <xref:System.Xml.Linq.Extensions.Remove%2A>, que se ocupará de todo esto.  
   
- El motivo principal radica en que la mayoría de las colecciones que se recuperan de un árbol XML se producen con una ejecución aplazada. Si no las materializa primero en una lista, o bien si no usa los métodos de extensión, es posible que aparezca una clase determinada de errores. Para obtener más información, consulte [mixto declarativa/errores de código imperativo (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).  
+ El motivo principal radica en que la mayoría de las colecciones que se recuperan de un árbol XML se producen con una ejecución aplazada. Si no las materializa primero en una lista, o bien si no usa los métodos de extensión, es posible que aparezca una clase determinada de errores. Para obtener más información, consulte [declarativa código/errores imperativos mixtos (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).  
   
  Los siguientes métodos sirven para quitar nodos y atributos de un árbol XML.  
   
@@ -34,7 +34,7 @@ Puede modificar un árbol XML mediante la eliminación de elementos, atributos y
 ### <a name="description"></a>Descripción  
  Este ejemplo demuestra tres métodos para quitar elementos. Primero, quita un solo elemento. En segundo lugar, recupera una colección de elementos, los materializa con el operador <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> y quita la colección. Por último, recupera una colección de elementos y los quita con el método de extensión <xref:System.Xml.Linq.Extensions.Remove%2A>.  
   
- Para obtener más información sobre la <xref:System.Linq.Enumerable.ToList%2A> (operador), consulte [convertir tipos de datos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md).  
+ Para obtener más información sobre la <xref:System.Linq.Enumerable.ToList%2A> operador, consulte [convertir tipos de datos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md).  
   
 ### <a name="code"></a>Código  
   
@@ -79,5 +79,5 @@ Console.WriteLine(root)
   
  Tenga en cuenta que el primer elemento descendiente del secundario se ha quitado de `Child1`. Todos los elementos descendientes del secundario se han quitado de `Child2` y `Child3`.  
   
-## <a name="see-also"></a>Vea también  
- [Modificar árboles XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>Vea también
+- [Modificar árboles XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
