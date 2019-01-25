@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a8617c9e818ec514c912a85373c916559d89df3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4ccbff4a4967e7525ee4e51650a4f53e5458666
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443042"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605523"
 ---
-# <a name="iceegengetstringsection-method"></a><span data-ttu-id="eb5d0-102">ICeeGen::GetStringSection (Método)</span><span class="sxs-lookup"><span data-stu-id="eb5d0-102">ICeeGen::GetStringSection Method</span></span>
-<span data-ttu-id="eb5d0-103">Obtiene una representación de cadena de la sección de código al que hace referencia el identificador especificado.</span><span class="sxs-lookup"><span data-stu-id="eb5d0-103">Gets a string representation of the code section referenced by the specified handle.</span></span>  
+# <a name="iceegengetstringsection-method"></a><span data-ttu-id="c9ba6-102">ICeeGen::GetStringSection (Método)</span><span class="sxs-lookup"><span data-stu-id="c9ba6-102">ICeeGen::GetStringSection Method</span></span>
+<span data-ttu-id="c9ba6-103">Obtiene una representación de cadena de la sección de código al que hace referencia el identificador especificado.</span><span class="sxs-lookup"><span data-stu-id="c9ba6-103">Gets a string representation of the code section referenced by the specified handle.</span></span>  
   
- <span data-ttu-id="eb5d0-104">Este método está obsoleto y no debe usarse.</span><span class="sxs-lookup"><span data-stu-id="eb5d0-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="c9ba6-104">Este método está obsoleto y no debe usarse.</span><span class="sxs-lookup"><span data-stu-id="c9ba6-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eb5d0-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="eb5d0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9ba6-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c9ba6-105">Syntax</span></span>  
   
 ```  
 HRESULT GetStringSection (  
@@ -37,18 +37,18 @@ HRESULT GetStringSection (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="eb5d0-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="eb5d0-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c9ba6-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c9ba6-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="eb5d0-107">[entrada, salida] El identificador de la sección de código.</span><span class="sxs-lookup"><span data-stu-id="eb5d0-107">[in, out] The handle to the code section.</span></span>  
+ <span data-ttu-id="c9ba6-107">[in, out] El identificador de la sección de código.</span><span class="sxs-lookup"><span data-stu-id="c9ba6-107">[in, out] The handle to the code section.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eb5d0-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="eb5d0-108">Requirements</span></span>  
- <span data-ttu-id="eb5d0-109">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eb5d0-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9ba6-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c9ba6-108">Requirements</span></span>  
+ <span data-ttu-id="c9ba6-109">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9ba6-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eb5d0-110">**Encabezado:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="eb5d0-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c9ba6-110">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="c9ba6-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="eb5d0-111">**Biblioteca:** usada como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="eb5d0-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c9ba6-111">**Biblioteca:** Usar como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c9ba6-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="eb5d0-112">**Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb5d0-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c9ba6-112">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9ba6-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb5d0-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="eb5d0-113">See Also</span></span>  
- [<span data-ttu-id="eb5d0-114">ICeeGen (interfaz)</span><span class="sxs-lookup"><span data-stu-id="eb5d0-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c9ba6-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="c9ba6-113">See also</span></span>
+- [<span data-ttu-id="c9ba6-114">ICeeGen (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c9ba6-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
