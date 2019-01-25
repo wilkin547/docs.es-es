@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c69be53a429e2f40741cc1e4c20fef3b7363654
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e5ed689ad7c456121f7687e7df09eca6c7ea617d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502564"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo (método)
 Recupera una asignación de diccionario genérico.  
@@ -33,9 +33,9 @@ HRESULT GetGenericDictionaryInfo(
   
  La asignación se compone de dos secciones de nivel superior:  
   
--   A [directory](#Directory) que contiene las direcciones virtuales relativas (RVA) de todos los diccionarios incluidos en esta asignación.  
+-   Un [directory](#Directory) que contiene las direcciones virtuales relativas (RVA) de todos los diccionarios incluidos en esta asignación.  
   
--   Alineación bytes [montón](#Heap) que contiene información sobre la creación de instancias de objetos. Se inicia inmediatamente después de la última entrada de directorio.  
+-   Una alineación de bytes [montón](#Heap) que contiene información de la creación de instancias de objeto. Se inicia inmediatamente después de la última entrada de directorio.  
   
 <a name="Directory"></a>   
 ## <a name="the-directory"></a>El directorio  
@@ -45,11 +45,11 @@ HRESULT GetGenericDictionaryInfo(
   
 -   Los primeros cuatro bytes contienen el número de entradas del diccionario (es decir, el número de direcciones virtuales relativas en el diccionario). Nos referiremos a este valor como *N*. Si se establece el bit alto, las entradas se ordenan por la dirección virtual relativa en orden ascendente.  
   
--   El *N* siguen entradas de directorio. Cada entrada consta de 8 bytes, en dos segmentos de 4 bytes:  
+-   El *N* siguen las entradas de directorio. Cada entrada consta de 8 bytes, en dos segmentos de 4 bytes:  
   
-    -   Bytes de 0 a 3: RVA; dirección virtual relativa del diccionario.  
+    -   Bytes 0-3: RVA; dirección virtual relativa del diccionario.  
   
-    -   Bytes de 4 a 7: desplazamiento; un desplazamiento relativo al inicio del montón.  
+    -   Bytes 4-7: Desplazamiento; un desplazamiento relativo al inicio del montón.  
   
 <a name="Heap"></a>   
 ## <a name="the-heap"></a>El montón  
@@ -65,21 +65,21 @@ Heap Size = Stream.Length – (Directory Size + 4)
   
 -   La longitud de este elemento de información sobre la creación de instancias en bytes, en el formato de metadatos ECMA comprimido. El valor excluye esta información de longitud.  
   
--   El número de tipos genéricos de la creación de instancias, o *T*, en formato de metadatos ECMA comprimido.  
+-   El número de tipos de creación de instancias genérica, o *T*, en formato de metadatos ECMA comprimido.  
   
--   *T* tipos, cada uno representado en el formato de firma de tipo ECMA.  
+-   *T* tipos, cada uno representado en el formato de firma del tipo ECMA.  
   
  Incluir la longitud de cada elemento del montón permite la ordenación simple de la sección del directorio sin afectar al montón.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorDebugSymbolProvider2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [ICorDebugSymbolProvider2 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ba2103003e3976e51e82ad6b42315a881582f5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d07c6de47038d5c52d76ad8ca8e0a5684551d59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491472"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr (Enumeración)
 Contiene valores que describen los metadatos de un parámetro de método.  
@@ -48,7 +48,7 @@ typedef enum CorParamAttr {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`pdIn`|Especifica que el parámetro se pasa en la llamada al método.|  
+|`pdIn`|Especifica que el parámetro se pasa a la llamada al método.|  
 |`pdOut`|Especifica que el parámetro se pasa desde el método de devolución.|  
 |`pdOptional`|Especifica que el parámetro es opcional.|  
 |`pdReservedMask`|Reservado para uso interno por common language runtime.|  
@@ -57,11 +57,11 @@ typedef enum CorParamAttr {
 |`pdUnused`|Sin usar.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

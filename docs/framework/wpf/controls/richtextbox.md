@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
-ms.openlocfilehash: 201dd8cfc76191fefb45ff01dd42f26fd8454f20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c521c5c5d4ecb2b20954b5b6e303bbbda0a26418
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508649"
 ---
 # <a name="richtextbox"></a>RichTextBox
-El <xref:System.Windows.Controls.RichTextBox> elemento define un control de edición con compatibilidad integrada para características como cortar y pegar, presentación de documentos enriquecida y selección de contenido.  
+El <xref:System.Windows.Controls.RichTextBox> elemento define un control de edición con compatibilidad integrada con características como cortar y pegar, presentación de documentos enriquecidos y selección de contenido.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [RichTextBox Overview](../../../../docs/framework/wpf/controls/richtextbox-overview.md) (Introducción a RichTextBox)  
  [Temas "Cómo..."](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Controls.TextBox>  
- [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Información general sobre documentos dinámicos](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Controls.TextBox>
+- [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Información general sobre documentos dinámicos](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

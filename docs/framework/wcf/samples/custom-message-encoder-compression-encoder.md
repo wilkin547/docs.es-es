@@ -1,15 +1,15 @@
 ---
-title: 'Codificador de mensaje personalizado: codificador de compresión'
+title: 'Codificador de mensaje personalizado: Codificador de compresión'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: dc1241f0652c55fee0db7ca7ff19b28fea656c16
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583638"
 ---
-# <a name="custom-message-encoder-compression-encoder"></a>Codificador de mensaje personalizado: codificador de compresión
+# <a name="custom-message-encoder-compression-encoder"></a>Codificador de mensaje personalizado: Codificador de compresión
 Este ejemplo muestra cómo implementar un codificador personalizado mediante la plataforma de Windows Communication Foundation (WCF).  
   
 > [!IMPORTANT]
@@ -59,7 +59,7 @@ Este ejemplo muestra cómo implementar un codificador personalizado mediante la 
   
  Para cada modo hay un método `ReadMessage` y `WriteMessage` acompañante en la clase `MessageEncoder` abstracta. Una mayoría del trabajo de codificación tiene lugar en estos métodos. El ejemplo ajusta el texto existente y los codificadores de mensaje binarios. Esto permite al ejemplo delegar la lectura y escritura de la representación de la conexión de mensajes en el codificador interno y permite al codificador de compresión comprimir o descomprimir los resultados. Dado que no hay ningún conductor para la codificación de mensajes, este es el único modelo para utilizar varios codificadores en WCF. Una vez descomprimido el mensaje, el mensaje resultante se pasa a la pila para que lo gestione la pila de canales. Durante la compresión, el mensaje comprimido resultante se escribe directamente en la secuencia proporcionada.  
   
- Este ejemplo utiliza los métodos auxiliares (`CompressBuffer` y `DecompressBuffer`) para realizar la conversión de los búferes a secuencias para utilizar la clase `GZipStream`.  
+ Este ejemplo utiliza los métodos del asistente (`CompressBuffer` y `DecompressBuffer`) para realizar la conversión de los búferes a secuencias para utilizar la clase `GZipStream`.  
   
  Las clases `ReadMessage` y `WriteMessage` almacenadas en búfer hacen uso de la clase `BufferManager`. Sólo se puede acceder al codificador mediante el generador de codificadores. La clase `MessageEncoderFactory` abstracta proporciona una propiedad denominada `Encoder` para tener acceso al codificador actual y a un método denominado `CreateSessionEncoder` para crear un codificador que admite sesiones. Este tipo de codificador se puede utilizar en el escenario donde el canal admite las sesiones, se ordena y es confiable. Este escenario permite la optimización en cada sesión de los datos escritos en la conexión. Si no es esto lo que se desea, no se debería sobrecargar el método base. La propiedad `Encoder` proporciona un mecanismo para tener acceso al codificador sin sesión. La implementación predeterminada del método `CreateSessionEncoder` devuelve el valor de la propiedad. Dado que el ejemplo ajusta un codificador existente para proporcionar la compresión, la implementación `MessageEncoderFactory` acepta `MessageEncoderFactory` que representa el generador de codificadores interno.  
   

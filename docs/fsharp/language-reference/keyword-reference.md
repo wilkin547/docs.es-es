@@ -2,12 +2,12 @@
 title: Referencia de palabras clave
 description: Encuentre vínculos a información acerca de todos los F# palabras clave del lenguaje.
 ms.date: 05/16/2016
-ms.openlocfilehash: 75adc609dc6feeda2be9aa76bbb50b47b3d738ea
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
+ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579850"
 ---
 # <a name="keyword-reference"></a>Referencia de palabras clave
 
@@ -20,7 +20,7 @@ La tabla siguiente se muestran todos los F# palabras clave en orden alfabético,
 |Palabra clave|Vínculo|Descripción|
 |-------|----|-----------|
 |`abstract`|[Miembros](members/index.md)<br /><br />[Clases abstractas](abstract-classes.md)|Indica un método que ya sea en el tipo en el que se declara o que es virtual y tiene una implementación predeterminada no tiene ninguna implementación.|
-|`and`|[`let` enlaces](functions/let-bindings.md)<br /><br />[Miembros](members/index.md)<br /><br />[Restricciones](generics/constraints.md)|Se utilizan en enlaces mutuamente recursivos, en las declaraciones de propiedad y con varias restricciones en parámetros genéricos.|
+|`and`|[`let` enlaces](functions/let-bindings.md)<br /><br />[Registros](records.md)<br /><br />[Miembros](members/index.md)<br /><br />[Restricciones](generics/constraints.md)|Usar en mutuamente los enlaces recursivos y registros, en las declaraciones de propiedad y con varias restricciones en parámetros genéricos.|
 |`as`|[Clases](classes.md)<br /><br />[Coincidencia de patrones](Pattern-Matching.md)|Se utiliza para proporcionar un nombre de objeto a objeto de clase actual. También se usa para asignar un nombre a un modelo completo en una coincidencia de patrones.|
 |`assert`|[Aserciones](assertions.md)|Se usa para comprobar el código durante la depuración.|
 |`base`|[Clases](classes.md)<br /><br />[Herencia](inheritance.md)|Se utiliza como el nombre del objeto de clase base.|
@@ -39,7 +39,7 @@ La tabla siguiente se muestran todos los F# palabras clave en orden alfabético,
 |`extern`|[Funciones externas](functions/external-functions.md)|Indica que un elemento de programa declarado está definido en otro archivo binario o ensamblado.|
 |`false`|[Tipos primitivos](primitive-types.md)|Se utiliza como un literal booleano.|
 |`finally`|[Excepciones: El `try...finally` expresión](exception-handling/the-try-finally-expression.md)|Puede usar junto con `try` para presentar un bloque de código que se ejecuta independientemente de si se produce una excepción.|
-|`fixed`|[se ha corregido](fixed.md)|Usa un puntero "anclar" en la pila para impedir que se recopila.|
+|`fixed`|[Fixed](fixed.md)|Usa un puntero "anclar" en la pila para impedir que se recopila.|
 |`for`|[Bucles: `for...to` Expresión](loops-for-to-expression.md)<br /><br />[Bucles: expresión for...in](loops-for-in-expression.md)|Se utiliza en construcciones de bucle.|
 |`fun`|[Expresiones lambda: `fun`Palabra clave](functions/lambda-expressions-the-fun-keyword.md)|Usar en expresiones lambda, también se conocen como funciones anónimas.|
 |`function`|[Expresiones de coincidencia](match-expressions.md)<br /><br />[Expresiones lambda: La palabra clave fun](functions/lambda-expressions-the-fun-keyword.md)|Usar como una alternativa más corta para la `fun` palabra clave y un `match` expresión en una expresión lambda que tiene la coincidencia de patrones en un único argumento.|

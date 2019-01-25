@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d49ac70aceb76f69711ea4bf514f69697ac156c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33bff2b72f2381fea461bb043506ee78f757dea8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447377"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504914"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam (Método)
-Crea una definición de parámetro con la firma especificada para el método al que hace referencia el token especificado y obtiene un símbolo (token) para esa definición de parámetro.  
+Crea una definición de parámetro con la firma especificada para el método al que hace referencia el token especificado y obtiene un token para esa definición de parámetro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,7 +53,7 @@ HRESULT DefineParam (
  [in] El nombre del parámetro en Unicode.  
   
  `dwParamFlags`  
- [in] Marcadores para el parámetro. Se trata de una máscara de bits de `CorParamAttr` valores.  
+ [in] Marcas para el parámetro. Se trata de una máscara de bits de `CorParamAttr` valores.  
   
  `dwCPlusTypeFlag`  
  [in] `ELEMENT_TYPE_` *\** para el valor constante.  
@@ -68,17 +68,17 @@ HRESULT DefineParam (
  [out] El `mdParamDef` token asignado.  
   
 ## <a name="remarks"></a>Comentarios  
- La secuencia de valores de `ulParamSeq` empiezan por 1 para los parámetros. Un valor devuelto tiene un número de secuencia de 0.  
+ Los valores de secuencia en `ulParamSeq` comienzan por 1 para los parámetros. Un valor devuelto tiene un número de secuencia de 0.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MSCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

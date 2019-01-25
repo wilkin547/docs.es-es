@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: d0ad7ee0bc3ea1d15197e6b8d9888d60b21a2f15
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c2bb9d2f67cfc0bf0a28492f77c16fdb39b07fe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595245"
 ---
 # <a name="wcf-performance-counters"></a>Contadores de rendimiento de WCF
 Windows Communication Foundation (WCF) incluye un conjunto grande de contadores de rendimiento para ayudarle a calibrar el rendimiento de su aplicación.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) incluye un conjunto grande de contadores 
   
  Puede establecer el atributo `performanceCounters` para habilitar un tipo específico de contadores de rendimiento. Los valores válidos son  
   
--   All: todos los contadores de categoría (ServiceModelService, ServiceModelEndpoint y ServiceModelOperation) están habilitados.  
+-   Todo: Todos los contadores de categoría (ServiceModelService, ServiceModelEndpoint y ServiceModelOperation) están habilitados.  
   
--   ServiceOnly: solo se habilitan los contadores de categoría ServiceModelService. Este es el valor predeterminado.  
+-   ServiceOnly: Contadores de categoría ServiceModelService sólo están habilitados. Este es el valor predeterminado.  
   
--   Off: los contadores de rendimiento ServiceModel* están deshabilitados.  
+-   OFF: Contadores de rendimiento ServiceModel * están deshabilitados.  
   
  Si desea habilitar los contadores de rendimiento para todas las aplicaciones de WCF, puede colocar los valores de configuración en el archivo Machine.config.  Consulte la **aumento del tamaño de memoria para los contadores de rendimiento** sección para obtener más información sobre cómo configurar memoria suficiente para los contadores de rendimiento en el equipo.  
   
@@ -59,7 +59,7 @@ config.Save();
 ## <a name="increasing-memory-size-for-performance-counters"></a>Aumento del tamaño de la memoria para los contadores de rendimiento  
  WCF usa memoria compartida independiente para sus categorías de contador de rendimiento.  
   
- De forma predeterminada, la memoria compartida independiente se establece en un cuarto del tamaño de la memoria global del contador de rendimiento. La memoria global del contador de rendimiento predeterminada es 524.288 bytes. Por lo tanto, las tres categorías de contador de rendimiento de WCF tienen un tamaño predeterminado de aproximadamente 128KB. Dependiendo de las características en tiempo de ejecución de las aplicaciones WCF en un equipo, se puede agotar la memoria de contador de rendimiento. Cuando esto sucede, WCF escribe un error en el registro de eventos de aplicación. El contenido del error indica que no se cargó un contador de rendimiento, y la entrada contiene la excepción "System.InvalidOperationException: Memoria insuficiente para la vista personaliza del archivo de contadores". Si se habilita la traza en el nivel de error, también se sigue la traza del error. Si se agota la memoria del contador de rendimiento, continuar ejecutando las aplicaciones WCF con contadores de rendimiento habilitados podría provocar una degradación del rendimiento. Si es administrador de la máquina, configúrela y asigne memoria suficiente para admitir el número máximo de contadores de rendimiento que puedan existir en cualquier momento.  
+ De forma predeterminada, la memoria compartida independiente se establece en un cuarto del tamaño de la memoria global del contador de rendimiento. La memoria global del contador de rendimiento predeterminada es 524.288 bytes. Por lo tanto, las tres categorías de contador de rendimiento de WCF tienen un tamaño predeterminado de aproximadamente 128KB. Dependiendo de las características en tiempo de ejecución de las aplicaciones WCF en un equipo, se puede agotar la memoria de contador de rendimiento. Cuando esto sucede, WCF escribe un error en el registro de eventos de aplicación. El contenido del error indica que no se cargó un contador de rendimiento, y la entrada contiene la excepción "System.InvalidOperationException: Vista de archivos de contadores personalizados es memoria insuficiente". Si se habilita la traza en el nivel de error, también se sigue la traza del error. Si se agota la memoria del contador de rendimiento, continuar ejecutando las aplicaciones WCF con contadores de rendimiento habilitados podría provocar una degradación del rendimiento. Si es administrador de la máquina, configúrela y asigne memoria suficiente para admitir el número máximo de contadores de rendimiento que puedan existir en cualquier momento.  
   
  Puede cambiar la cantidad de memoria del contador de rendimiento para las categorías WCF en el registro. Para cambiarla, es necesario agregar un nuevo valor DWORD, denominado `FileMappingSize`, a las tres ubicaciones siguientes y establecerlo en el valor en bytes deseado. Reinicie su equipo para que estos cambios se hagan efectivos.  
   
@@ -72,7 +72,7 @@ config.Save();
  Cuando se elimina un número importante de objetos (por ejemplo, ServiceHost) pero se espera recopilar los elementos no usados, el contador de rendimiento `PrivateBytes` registra un número excepcionalmente alto. Para solucionar este problema, puede agregar sus propios contadores específicos de la aplicación, o utilizar el atributo `performanceCounters` para habilitar solo los contadores del nivel de servicio.  
   
 ## <a name="types-of-performance-counters"></a>Tipos de contadores de rendimiento  
- Los contadores de rendimiento abarcan tres niveles diferentes: servicio, extremo y operación.  
+ Contadores de rendimiento se limitan a tres niveles diferentes: Servicio, extremo y operación.  
   
  Puede utilizar WMI para recuperar el nombre de una instancia del contador de rendimiento. Por ejemplo,  
   
@@ -138,5 +138,5 @@ ServiceName@ServiceBaseAddress
   
  Para obtener más información sobre cómo obtener acceso a los contadores mediante programación, vea [arquitectura de programación del contador de rendimiento](https://go.microsoft.com/fwlink/?LinkId=95179).  
   
-## <a name="see-also"></a>Vea también  
- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Vea también
+- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

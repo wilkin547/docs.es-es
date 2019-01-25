@@ -2,12 +2,12 @@
 title: Seguridad del canal del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
-ms.openlocfilehash: e66c532b253c8aa53ae508a72633fa255615e80f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09979cee48522355631c79e0bdf4c0fba6be782e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541760"
 ---
 # <a name="peer-channel-security"></a>Seguridad del canal del mismo nivel
 El canal del mismo nivel admite varios tipos de aplicaciones distribuidas que dependen de la mensajería entre varias entidades. Algunos ejemplos incluyen la distribución del contenido a escala de Internet, donde una fuente de confianza distribuye contenido (como multimedia o actualizaciones de software), un grupo de amigos intercambian música y fotos, o un equipo de compañeros de trabajo editan conjuntamente un documento. Cada uno de estos escenarios requiere un modelo de seguridad único. El modelo de seguridad del canal del mismo nivel está diseñado para resolver estos escenarios y proporciona un modelo de seguridad robusto para las necesidades respectivas de los diferentes modelos de identidad, autenticación y autorización.  
@@ -33,7 +33,7 @@ El canal del mismo nivel admite varios tipos de aplicaciones distribuidas que de
   
  El canal del mismo nivel no requiere un modelo de identidad concreto siempre y cuando la aplicación elija uno de los tipos de token admitidos. Las aplicaciones poseen completamente el ciclo de vida de estas identidades y decisiones de autenticación.  
   
-## <a name="see-also"></a>Vea también  
- [Protección de las aplicaciones de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
- [Conceptos del canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
- [Creación de una aplicación de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>Vea también
+- [Protección de las aplicaciones de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [Conceptos del canal del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+- [Creación de una aplicación de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

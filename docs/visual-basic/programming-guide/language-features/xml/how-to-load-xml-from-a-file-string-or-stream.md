@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Cargar XML desde un archivo, cadena o secuencia (Visual Basic)'
+title: Procedimiento Cargar XML desde un archivo, cadena o Stream (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [Visual Basic], loading
 - LINQ to XML [Visual Basic], loading XML from files
 ms.assetid: 2b02dcec-4cca-4575-b4ad-89ceb87b984c
-ms.openlocfilehash: 241f6552e46d7689b42a409ba44bc747984773ca
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: b660900c1ac29e40eeed36b1e07326dfbcf69ec8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492746"
 ---
-# <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Cómo: Cargar XML desde un archivo, cadena o secuencia (Visual Basic)
+# <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Procedimiento Cargar XML desde un archivo, cadena o Stream (Visual Basic)
 Puede crear [literales XML](../../../../visual-basic/language-reference/xml-literals/index.md) y rellenarlas con el contenido de un origen externo, como un archivo, una cadena o una secuencia mediante varios métodos. Estos métodos se muestran en los ejemplos siguientes.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -41,12 +41,12 @@ Puede crear [literales XML](../../../../visual-basic/language-reference/xml-lite
   
  [!code-vb[VbXMLSamples#46](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_3.vb)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType>  
- [Literales XML](../../../../visual-basic/language-reference/xml-literals/index.md)  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [Manipular XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XNode.ReadFrom%2A?displayProperty=nameWithType>
+- [Literales XML](../../../../visual-basic/language-reference/xml-literals/index.md)
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Manipular XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)

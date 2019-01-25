@@ -9,26 +9,26 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: c45500dc7a1e59a7ac83d43b826ca4cbfca6efb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d2cab1c40b1a84e9a3b6bed885b2a0020e53f01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654799"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529481"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda (expresiones) (Visual Basic)
-A *expresión lambda* es una función o subrutina sin nombre que puede usarse siempre que un delegado es válido. Las expresiones lambda pueden ser funciones o subrutinas y pueden ser una línea o de varias líneas. También puede pasar valores del ámbito actual a una expresión lambda.  
+Un *expresión lambda* es una función o subrutina sin un nombre que puede usarse siempre que un delegado es válido. Las expresiones lambda pueden ser funciones o subrutinas y pueden ser una línea o varias líneas. Puede pasar valores desde el ámbito actual a una expresión lambda.  
   
 > [!NOTE]
 >  El `RemoveHandler` instrucción es una excepción. No se puede pasar una expresión lambda para el parámetro de delegado de `RemoveHandler`.  
   
- Crear expresiones lambda con la `Function` o `Sub` (palabra clave), al igual que crea una función estándar o subrutina. Sin embargo, las expresiones lambda se incluyen en una instrucción.  
+ Crear expresiones lambda con la `Function` o `Sub` palabra clave, al igual que crear una subrutina o función estándar. Sin embargo, las expresiones lambda se incluyen en una instrucción.  
   
- El ejemplo siguiente es una expresión lambda que incrementa su argumento y devuelve el valor. En el ejemplo se muestra la sintaxis de expresiones lambda de varias líneas y de línea para una función.  
+ El ejemplo siguiente es una expresión lambda que incrementa su argumento y devuelve el valor. El ejemplo muestra la sintaxis de expresiones lambda de varias líneas y de línea para una función.  
   
  [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_1.vb)]  
   
- El ejemplo siguiente es una expresión lambda que escribe un valor en la consola. En el ejemplo se muestra la sintaxis de expresiones lambda de varias líneas y de línea de una subrutina.  
+ El ejemplo siguiente es una expresión lambda que escribe un valor en la consola. El ejemplo muestra la sintaxis de expresiones lambda de varias líneas y de línea de una subrutina.  
   
  [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_2.vb)]  
   
@@ -36,37 +36,37 @@ A *expresión lambda* es una función o subrutina sin nombre que puede usarse si
   
  [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_3.vb)]  
   
- Una expresión lambda puede devolverse como valor de una llamada de función (como se muestra en el ejemplo de la [contexto](#context) sección más adelante en este tema), o se pasa como argumento a un parámetro que toma un tipo de delegado, como se muestra en el siguiente ejemplo.  
+ Una expresión lambda puede devolverse como valor de una llamada de función (como se muestra en el ejemplo de la [contexto](#context) sección más adelante en este tema), o se pasa como argumento a un parámetro que toma un tipo de delegado, como se muestra en la siguiente ejemplo.  
   
  [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_4.vb)]  
   
 ## <a name="lambda-expression-syntax"></a>Sintaxis de la expresión lambda  
- La sintaxis de una expresión lambda es similar a la de una función estándar o subrutina. Las diferencias son los siguientes:  
+ La sintaxis de una expresión lambda es similar al de una subrutina o función estándar. Las diferencias son como sigue:  
   
 -   Una expresión lambda no tiene un nombre.  
   
 -   Las expresiones lambda no pueden tener modificadores, como `Overloads` o `Overrides`.  
   
--   Funciones lambda de línea no utilizan un `As` cláusula para designar el tipo de valor devuelto. En su lugar, el tipo se deduce del valor que se evalúa como el cuerpo de la expresión lambda. Por ejemplo, si el cuerpo de la expresión lambda es `cust.City = "London"`, su tipo de valor devuelto es `Boolean`.  
+-   No utilizan las funciones lambda de una línea un `As` cláusula para designar el tipo de valor devuelto. En su lugar, el tipo se deduce del valor que se evalúa como el cuerpo de la expresión lambda. Por ejemplo, si el cuerpo de la expresión lambda es `cust.City = "London"`, su tipo de valor devuelto es `Boolean`.  
   
--   En las funciones lambda de varias líneas, puede especificar un tipo de valor devuelto mediante el uso de un `As` cláusula, u omitir la `As` cláusula para que se deduce el tipo de valor devuelto. Cuando el `As` se omite la cláusula de una función lambda de varias líneas, se deduce el tipo de valor devuelto que sea el tipo dominante de todas las `Return` las instrucciones de la función lambda de varias líneas. El *tipo dominante* es un tipo único al que todos los demás tipos se pueden ampliar. Si no se puede determinar este tipo único, el tipo dominante es el tipo único al que todos los demás tipos de la matriz se pueden restringir. Si no se puede determinar ninguno de estos tipos únicos, el tipo dominante es `Object`. En este caso, si `Option Strict` se establece en `On`, se produce un error del compilador.  
+-   En las funciones lambda de varias líneas, puede especificar un tipo de valor devuelto mediante el uso de un `As` cláusula, u omita el `As` cláusula para que se deduce el tipo de valor devuelto. Cuando el `As` se omite la cláusula para una función lambda de varias líneas, el tipo de valor devuelto se infiere para ser el tipo dominante de todos los `Return` las instrucciones de la función lambda de varias líneas. El *tipo dominante* es un tipo único que todos los demás tipos se pueden ampliar. Si no se puede determinar este tipo único, el tipo dominante es el único tipo que todos los demás tipos de la matriz se pueden restringir. Si no se puede determinar ninguno de estos tipos únicos, el tipo dominante es `Object`. En este caso, si `Option Strict` está establecido en `On`, se produce un error del compilador.  
   
-     Por ejemplo, si las expresiones proporcionan a la `Return` instrucción contienen valores de tipo `Integer`, `Long`, y `Double`, la matriz resultante es de tipo `Double`. Ambos `Integer` y `Long` amplían `Double` y sólo `Double`. Por lo tanto, `Double` es el tipo dominante. Para obtener más información, consulta [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+     Por ejemplo, si las expresiones proporcionado a la `Return` instrucción contienen valores de tipo `Integer`, `Long`, y `Double`, la matriz resultante es de tipo `Double`. Ambos `Integer` y `Long` se convierten en `Double` y sólo `Double`. Por lo tanto, `Double` es el tipo dominante. Para obtener más información, consulta [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
--   El cuerpo de una función de la línea debe ser una expresión que devuelve un valor, no una instrucción. No hay ningún `Return` instrucción para las funciones de la línea. El valor devuelto por la función de la línea es el valor de la expresión en el cuerpo de la función.  
+-   El cuerpo de una sola línea de función debe ser una expresión que devuelve un valor, no una instrucción. No hay ningún `Return` instrucción para las funciones de la línea. El valor devuelto por la función de la línea es el valor de la expresión en el cuerpo de la función.  
   
--   El cuerpo de una subrutina de línea debe ser una instrucción de línea.  
+-   El cuerpo de una sola línea de subrutina debe ser una instrucción de línea.  
   
--   Funciones de la línea y las subrutinas no incluyen un `End Function` o `End Sub` instrucción.  
+-   Línea funciones y subrutinas no incluyen un `End Function` o `End Sub` instrucción.  
   
--   Puede especificar el tipo de datos de un parámetro de expresión lambda utilizando la `As` puede deducirse palabra clave o el tipo de datos del parámetro. Deben haber especificado todos los parámetros deben deducir los tipos de datos o todos.  
+-   Puede especificar el tipo de datos de un parámetro de expresión lambda utilizando la `As` puede deducir la palabra clave o el tipo de datos del parámetro. Deben haber especificado todos los parámetros deben deducir los tipos de datos o todos.  
   
 -   `Optional` y `Paramarray` no se permiten parámetros.  
   
 -   No se permiten parámetros genéricos.  
   
 ## <a name="async-lambdas"></a>Lambdas asincrónicas  
- Puede crear fácilmente expresiones lambda y las instrucciones que incorporen el procesamiento asincrónico mediante el [Async](../../../../visual-basic/language-reference/modifiers/async.md) y [operador Await](../../../../visual-basic/language-reference/operators/await-operator.md) palabras clave. Por ejemplo, en el siguiente ejemplo de formularios Windows Forms se incluye un controlador de eventos que llama y espera un método asincrónico, `ExampleMethodAsync`.  
+ Puede crear fácilmente expresiones lambda y las instrucciones que incorporen el procesamiento asincrónico mediante el uso de la [Async](../../../../visual-basic/language-reference/modifiers/async.md) y [operador Await](../../../../visual-basic/language-reference/operators/await-operator.md) palabras clave. Por ejemplo, en el siguiente ejemplo de formularios Windows Forms se incluye un controlador de eventos que llama y espera un método asincrónico, `ExampleMethodAsync`.  
   
 ```vb  
 Public Class Form1  
@@ -85,7 +85,7 @@ Public Class Form1
 End Class  
 ```  
   
- Puede agregar el mismo controlador de eventos mediante una expresión lambda asincrónica en un [AddHandler (instrucción)](../../../../visual-basic/language-reference/statements/addhandler-statement.md). Para agregar este controlador, agregue un modificador `Async` antes de la lista de parámetros lambda, como se muestra en el ejemplo siguiente.  
+ Puede agregar el mismo controlador de eventos mediante el uso de una expresión lambda asincrónica en un [AddHandler (instrucción)](../../../../visual-basic/language-reference/statements/addhandler-statement.md). Para agregar este controlador, agregue un modificador `Async` antes de la lista de parámetros lambda, como se muestra en el ejemplo siguiente.  
   
 ```vb  
 Public Class Form1  
@@ -110,28 +110,28 @@ End Class
  Para obtener más información acerca de cómo crear y usar métodos asincrónicos, vea [programación asincrónica con Async y Await](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
 ##  <a name="context"></a> Contexto  
- Una expresión lambda comparte su contexto con el ámbito dentro del cual se define. Tiene los mismos derechos de acceso que cualquier código escrito en el ámbito contenedor. Esto incluye el acceso a las variables de miembro, funciones y subrutinas, `Me`, parámetros y variables locales en el ámbito contenedor.  
+ Una expresión lambda comparte su contexto con el ámbito en el que se definió. Tiene los mismos derechos de acceso que cualquier código escrito en el ámbito contenedor. Esto incluye el acceso a las variables de miembro, funciones y subrutinas, `Me`, parámetros y variables locales en el ámbito contenedor.  
   
  Acceso a las variables locales y parámetros en el ámbito contenedor puede extender más allá de la duración de ese ámbito. Siempre que un delegado que hace referencia a una expresión lambda no está disponible para la recolección de elementos, se conserva el acceso a las variables del entorno original. En el ejemplo siguiente, la variable `target` es local para `makeTheGame`, el método en el que la expresión lambda `playTheGame` está definido. Tenga en cuenta que la expresión lambda devuelta, asignada a `takeAGuess` en `Main`, todavía tiene acceso a la variable local `target`.  
   
  [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_5.vb)]  
   
- En el ejemplo siguiente se muestra la amplia gama de derechos de acceso de la expresión lambda anidada. Cuando se ejecuta la expresión lambda devuelta desde `Main` como `aDel`, tiene acceso a estos elementos:  
+ El ejemplo siguiente muestra la amplia gama de derechos de acceso de la expresión lambda anidada. Cuando se ejecuta la expresión lambda devuelta desde `Main` como `aDel`, tiene acceso a estos elementos:  
   
--   Un campo de la clase en la que se define: `aField`  
+-   Un campo de la clase donde se define: `aField`  
   
--   Una propiedad de la clase en la que se define: `aProp`  
+-   Una propiedad de la clase donde se define: `aProp`  
   
--   Un parámetro de método `functionWithNestedLambda`, en la que está definido: `level1`  
+-   Un parámetro de método `functionWithNestedLambda`, en el que se define: `level1`  
   
 -   Una variable local de `functionWithNestedLambda`: `localVar`  
   
--   Un parámetro de la expresión lambda en el que está anidado: `level2`  
+-   Un parámetro de la expresión lambda en la que está anidado: `level2`  
   
  [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
   
 ## <a name="converting-to-a-delegate-type"></a>Convertir a un tipo delegado  
- Una expresión lambda se puede convertir implícitamente a un tipo de delegado compatibles. Para obtener información acerca de los requisitos generales de compatibilidad, vea [conversión de delegado flexible](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md). Por ejemplo, en el ejemplo de código siguiente se muestra una expresión lambda que se convierte implícitamente a `Func(Of Integer, Boolean)` o una firma de delegado correspondiente.  
+ Una expresión lambda se puede convertir implícitamente a un tipo delegado compatible. Para obtener información acerca de los requisitos generales para la compatibilidad, vea [conversión de delegado flexible](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md). Por ejemplo, en el ejemplo de código siguiente se muestra una expresión lambda que se convierte implícitamente a `Func(Of Integer, Boolean)` o una firma de delegado correspondiente.  
   
  [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_7.vb)]  
   
@@ -139,7 +139,7 @@ End Class
   
  [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_8.vb)]  
   
- Al asignar las expresiones lambda para los delegados o pasar como argumentos a los procedimientos, puede especificar los nombres de parámetro pero omitir sus tipos de datos, permitiendo que los tipos se toma del delegado.  
+ Al asignar las expresiones lambda a delegados o pasar como argumentos a los procedimientos, puede especificar los nombres de parámetro pero omite los tipos de datos, lo que permite a los tipos se toman de delegado.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -147,17 +147,17 @@ End Class
   
      [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_9.vb)]  
   
--   En el ejemplo siguiente se define una expresión lambda que devuelve el índice del último elemento de una matriz.  
+-   El ejemplo siguiente define una expresión lambda que devuelve el índice del último elemento de una matriz.  
   
      [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_10.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos](./index.md)  
- [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [Function (instrucción)](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub (instrucción)](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Tipos de valor que aceptan valores NULL](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
- [Paso de procedimientos a otro procedimiento en Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)  
- [Crear una expresión lambda](./how-to-create-a-lambda-expression.md)  
- [Conversión de delegado flexible](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+## <a name="see-also"></a>Vea también
+- [Procedimientos](./index.md)
+- [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [Function (instrucción)](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub (instrucción)](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Tipos de valor que aceptan valores NULL](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Cómo: Pasar procedimientos a otro procedimiento en Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Cómo: Crear una expresión Lambda](./how-to-create-a-lambda-expression.md)
+- [Conversión de delegado flexible](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

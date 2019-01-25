@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Utilizar los filtros'
+title: Cómo Uso de filtros
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: aee0f2e4fbf3b4e0802803b76aa557f2dec668bb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1d521162f2878a00d4d8ff7515ca2aabf32db97e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840763"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530994"
 ---
-# <a name="how-to-use-filters"></a>Cómo: Utilizar los filtros
+# <a name="how-to-use-filters"></a>Cómo Uso de filtros
 Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que utiliza múltiples filtros. En este ejemplo, los mensajes se enrutan a dos implementaciones de un servicio de la calculadora, regularCalc y roundingCalc. Ambas implementaciones admiten las mismas operaciones; sin embargo, un servicio redondea todos los cálculos al valor entero más cercano antes de devolverlos. Una aplicación cliente debe poder indicar si se debe utilizar la versión del redondeo del servicio; si no se especifica ninguna preferencia de servicio, la carga del mensaje se equilibra entre los dos servicios. Las operaciones expuestas por ambos servicios son:  
   
 -   Add  
@@ -115,7 +115,7 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
     > [!NOTE]
     > El prefijo de espacio de nombres s12 se define de forma predeterminada en la tabla de espacio de nombres y representa el espacio de nombres `http://www.w3.org/2003/05/soap-envelope`.
   
-2.  También debe definir los filtros que buscan mensajes recibidos en los dos puntos de conexión virtuales. El primer punto de conexión virtual es el punto de conexión "normal/calculadora". El cliente puede enviar solicitudes a este punto de conexión para indicar que el mensaje se debería enrutar al servicio de regularCalc. La siguiente configuración define un filtro que utiliza <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> para determinar si el mensaje llegó a través de un extremo con el nombre especificado en filterData.  
+2.  También debe definir los filtros que buscan mensajes recibidos en los dos puntos de conexión virtuales. El primer punto de conexión virtual es el punto de conexión "normal/calculadora". El cliente puede enviar solicitudes a este punto de conexión para indicar que el mensaje se debería enrutar al servicio de regularCalc. La siguiente configuración define un filtro que utiliza <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> para determinar si el mensaje llegó a través de un punto de conexión con el nombre especificado en filterData.  
   
     ```xml  
     <!--define an endpoint name filter looking for messages that show up on the virtual regular calculator endpoint-->  
@@ -325,5 +325,5 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>Vea también
+- [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución'
+title: Procedimiento Probar el comportamiento de tiempo de ejecución de una clase UserControl
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 40ec136a86b52dcb007d15d5a2917212745961f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fece6fda33ddb86e0aff0584af97ba085dfa9e1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506373"
 ---
-# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución
+# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Procedimiento Probar el comportamiento de tiempo de ejecución de una clase UserControl
 Al desarrollar un <xref:System.Windows.Forms.UserControl>, debe probar su comportamiento en tiempo de ejecución. Puede crear un proyecto de aplicación basada en Windows independiente y colocar el control en un formulario de prueba, pero este procedimiento es un problema. Una forma más rápida y sencilla es usar el **UserControl Test Container** proporcionadas por Visual Studio. Este contenedor de prueba se inicia directamente desde un proyecto de biblioteca de control de Windows.  
   
 > [!IMPORTANT]
@@ -41,7 +41,7 @@ Al desarrollar un <xref:System.Windows.Forms.UserControl>, debe probar su compor
   
 6.  Cierre el contenedor de prueba.  
   
-7.  Agregue otro control de usuario para el **TestContainerExample** proyecto. Para obtener más información, consulte [NIB: Cómo: agregar elementos existentes a un proyecto](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+7.  Agregue otro control de usuario para el **TestContainerExample** proyecto. Para obtener más información, consulte [NIB: Cómo: Agregar elementos existentes a un proyecto](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
   
 8.  En el **Diseñador de Windows Forms**, arrastre un <xref:System.Windows.Forms.Button> controlar desde la **cuadro de herramientas** hasta la superficie de diseño del control.  
   
@@ -66,9 +66,9 @@ Al desarrollar un <xref:System.Windows.Forms.UserControl>, debe probar su compor
   
 6.  Use la **seleccionar Control de usuario** <xref:System.Windows.Forms.ComboBox> para cambiar entre los dos controles de usuario desde el **TestContainerExample** proyecto.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.UserControl>  
- [Cómo: Crear controles compuestos](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
- [Tutorial: Crear un control compuesto con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [Tutorial: Crear un control compuesto con Visual C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- [Diseñador de controles de usuario](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.UserControl>
+- [Cómo: Crear controles compuestos](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
+- [Tutorial: Crear un Control compuesto con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Tutorial: Crear un Control compuesto con VisualC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Diseñador de controles de usuario](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
