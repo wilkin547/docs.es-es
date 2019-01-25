@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Establecer las propiedades de ancho de un elemento'
+title: Procedimiento Establecer las propiedades de ancho de un elemento
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - width properties [WPF]
 - Panel control [WPF], width properties of elements
 ms.assetid: 6ee04a9d-63f0-4f5b-a406-0a8cd4c35729
-ms.openlocfilehash: 261318e3d1433a47eeec2069f484124efd14653f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 739b041d8ca89abb9bd1934abb997d1154f08c95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673990"
 ---
-# <a name="how-to-set-the-width-properties-of-an-element"></a>Cómo: Establecer las propiedades de ancho de un elemento
+# <a name="how-to-set-the-width-properties-of-an-element"></a>Procedimiento Establecer las propiedades de ancho de un elemento
 ## <a name="example"></a>Ejemplo  
  Este ejemplo muestran las diferencias de comportamiento entre las cuatro propiedades de ancho en representación [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
@@ -33,13 +33,13 @@ ms.locfileid: "43523816"
   
  Para obtener un ejemplo completo, vea [ejemplo de comparación de las propiedades ancho](https://go.microsoft.com/fwlink/?LinkID=160050).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Controls.ListBox>  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.FrameworkElement.ActualWidth%2A>  
- <xref:System.Windows.FrameworkElement.MaxWidth%2A>  
- <xref:System.Windows.FrameworkElement.MinWidth%2A>  
- <xref:System.Windows.FrameworkElement.Width%2A>  
- [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Establecer las propiedades de alto de un elemento](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [Ejemplo de comparación de las propiedades de ancho](https://go.microsoft.com/fwlink/?LinkID=160050)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Controls.ListBox>
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.FrameworkElement.ActualWidth%2A>
+- <xref:System.Windows.FrameworkElement.MaxWidth%2A>
+- <xref:System.Windows.FrameworkElement.MinWidth%2A>
+- <xref:System.Windows.FrameworkElement.Width%2A>
+- [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Establecer las propiedades de alto de un elemento](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)
+- [Ejemplo de comparación de las propiedades de ancho](https://go.microsoft.com/fwlink/?LinkID=160050)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a88f8b2ad1ac59cf7044ca5d7ace5a468510b6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3492cac305370c8b9aa969dbb0a88e1d9c45af34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550661"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach (Interfaz)
-Define la interfaz para la asociación automática del depurador que invoca el servidor.  
+Define la interfaz para la asociación automática del depurador invocada por el servidor.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -33,7 +33,7 @@ Define la interfaz para la asociación automática del depurador que invoca el s
 |[AutoAttach (método)](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Realiza automática del depurador invocado por el servidor de adjuntar.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** DbgAutoAttach.idl  
+ **Encabezado**: DbgAutoAttach.idl  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

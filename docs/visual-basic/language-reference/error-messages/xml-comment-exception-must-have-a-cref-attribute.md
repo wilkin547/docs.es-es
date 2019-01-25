@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: abe9fe0f6216f81fa223fe83a122b580577e1c32
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0f276781165e80b2d869da2518dbe34b33085d5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649952"
 ---
 # <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>La excepción del comentario XML debe tener un &#39;cref&#39; atributo
 El \<excepción > etiqueta proporciona una manera de documentar las excepciones que se pueden iniciar mediante un método. Necesario `cref` atributo designa el nombre de un miembro, que está activado de forma que el generador de documentación. Si el miembro existe, se traduce en el nombre de elemento canónico en el archivo de documentación.  
@@ -27,7 +27,7 @@ El \<excepción > etiqueta proporciona una manera de documentar las excepciones 
     '''<exception cref="member">description</exception>  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [\<exception>](../../../visual-basic/language-reference/xmldoc/exception.md)  
- [Crear documentación XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>Vea también
+- [\<exception>](../../../visual-basic/language-reference/xmldoc/exception.md)
+- [Cómo: Crear documentación XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/index.md)

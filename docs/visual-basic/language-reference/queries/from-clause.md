@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 71573de48cc51c48291fc4b82a0628d2d0f96caa
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fd11d00ebfa42eda272db39965d25b905bd5c841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678790"
 ---
 # <a name="from-clause-visual-basic"></a>From (Cláusula, Visual Basic)
 Especifica uno o más variables de rango y una colección a la consulta.  
@@ -31,9 +31,9 @@ From element [ As type ] In collection [ _ ]
   
 |Término|Definición|  
 |---|---|  
-|`element`|Requerido. Un *variable de rango* utiliza para recorrer en iteración los elementos de la colección. Una variable de rango se usa para referirse a cada miembro de la `collection` como la consulta se recorre el `collection`. Debe ser un tipo enumerable.|  
+|`element`|Obligatorio. Un *variable de rango* utiliza para recorrer en iteración los elementos de la colección. Una variable de rango se usa para referirse a cada miembro de la `collection` como la consulta se recorre el `collection`. Debe ser un tipo enumerable.|  
 |`type`|Opcional. Tipo de `element`. Si no hay ningún `type` se especifica, el tipo de `element` se deduce del `collection`.|  
-|`collection`|Requerido. Hace referencia a la colección que se van a consultar. Debe ser un tipo enumerable.|  
+|`collection`|Obligatorio. Hace referencia a la colección que se van a consultar. Debe ser un tipo enumerable.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `From` cláusula se usa para identificar los datos de origen para una consulta y las variables que se usan para hacer referencia a un elemento de la colección de origen. Estas variables se denominan *las variables de rango*. El `From` cláusula se requiere para una consulta, excepto cuando la `Aggregate` cláusula se usa para identificar una consulta que devuelve resultados agregados solo. Para obtener más información, consulte [cláusula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
@@ -69,20 +69,20 @@ From element [ As type ] In collection [ _ ]
   
  [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Consultas](../../../visual-basic/language-reference/queries/index.md)  
- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [For Each...Next (instrucción)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [For...Next (instrucción)](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Where (cláusula)](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Aggregate (cláusula)](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [Distinct (cláusula)](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- [Join (cláusula)](../../../visual-basic/language-reference/queries/join-clause.md)  
- [Group Join (cláusula)](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- [Order By (cláusula)](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Let (cláusula)](../../../visual-basic/language-reference/queries/let-clause.md)  
- [Skip (cláusula)](../../../visual-basic/language-reference/queries/skip-clause.md)  
- [Take (cláusula)](../../../visual-basic/language-reference/queries/take-clause.md)  
- [Skip While (cláusula)](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Take While (cláusula)](../../../visual-basic/language-reference/queries/take-while-clause.md)
+## <a name="see-also"></a>Vea también
+- [Consultas](../../../visual-basic/language-reference/queries/index.md)
+- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [For Each...Next (instrucción)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [For...Next (instrucción)](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Where (cláusula)](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Aggregate (cláusula)](../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [Distinct (cláusula)](../../../visual-basic/language-reference/queries/distinct-clause.md)
+- [Join (cláusula)](../../../visual-basic/language-reference/queries/join-clause.md)
+- [Group Join (cláusula)](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [Order By (cláusula)](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Let (cláusula)](../../../visual-basic/language-reference/queries/let-clause.md)
+- [Skip (cláusula)](../../../visual-basic/language-reference/queries/skip-clause.md)
+- [Take (cláusula)](../../../visual-basic/language-reference/queries/take-clause.md)
+- [Skip While (cláusula)](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Take While (cláusula)](../../../visual-basic/language-reference/queries/take-while-clause.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45548fcd85e58086c2a43ac33e739c8ccb0e833f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ecd11b57d1901c4618ee0d27442753559b85c509
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428086"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738110"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument (Método)
 Busca un documento. El lenguaje del documento, el proveedor y el tipo son opcionales.  
@@ -46,7 +46,7 @@ HRESULT GetDocument (
  [in] El lenguaje del documento. Este parámetro es opcional.  
   
  `languageVendor`  
- [in] La identidad del proveedor del lenguaje del documento. Este parámetro es opcional.  
+ [in] La identidad del proveedor para el lenguaje del documento. Este parámetro es opcional.  
   
  `documentType`  
  [in] El tipo del documento. Este parámetro es opcional.  
@@ -55,10 +55,10 @@ HRESULT GetDocument (
  [out] Un puntero a la interfaz devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

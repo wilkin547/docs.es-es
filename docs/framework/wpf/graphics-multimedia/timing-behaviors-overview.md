@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: b4b89047cb1b85c4386f1bd9d2a16a06ec112b73
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c0f31f753a45bf4c13280febb164324535b0fdeb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715587"
 ---
 # <a name="timing-behaviors-overview"></a>Información general sobre comportamientos de control de tiempo
 En este tema se describe los comportamientos de temporización de animaciones y otros <xref:System.Windows.Media.Animation.Timeline> objetos.  
@@ -118,13 +118,13 @@ En este tema se describe los comportamientos de temporización de animaciones y 
   
 -   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> : Especifica la velocidad, en relación con su elemento primario, en el que pasa el tiempo para un <xref:System.Windows.Media.Animation.Timeline>. Los valores mayores que uno aumentan la velocidad de la <xref:System.Windows.Media.Animation.Timeline> y su elemento secundario <xref:System.Windows.Media.Animation.Timeline> objetos; los valores entre cero y uno la reducen. Un valor de uno indica que <xref:System.Windows.Media.Animation.Timeline> que avanza a la misma velocidad que su elemento primario. El <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> configuración de un objeto contenedor afecta a todos los de su elemento secundario <xref:System.Windows.Media.Animation.Timeline> también objetos.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> : Especifica el porcentaje de la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de una escala de tiempo transcurrido acelerando. Para obtener un ejemplo, vea [Cómo: aumentar o reducir la velocidad de una animación](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> : Especifica el porcentaje de la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de una escala de tiempo transcurrido acelerando. Como ejemplo, vea [Cómo: Aumentar o reducir la velocidad de una animación](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> : Especifica el porcentaje de la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de un objeto Timeline empleado en decelerar. Para obtener un ejemplo, vea [Cómo: aumentar o reducir la velocidad de una animación](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> : Especifica el porcentaje de la <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de un objeto Timeline empleado en decelerar. Como ejemplo, vea [Cómo: Aumentar o reducir la velocidad de una animación](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Información general sobre sistemas de control de tiempo y animación ](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [Información general sobre eventos de control de tiempo](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
- [Ejemplo del comportamiento del control de tiempo de la animación](https://go.microsoft.com/fwlink/?LinkID=159970)
+## <a name="see-also"></a>Vea también
+- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Información general sobre sistemas de control de tiempo y animación ](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Información general sobre eventos de control de tiempo](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)
+- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [Ejemplo del comportamiento del control de tiempo de la animación](https://go.microsoft.com/fwlink/?LinkID=159970)

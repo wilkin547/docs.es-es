@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7078b2eb98c15b7229132076da8af4691032bb08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8a4cc17bdcaea5099d0d2b0195ae4fa28e3d4744
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441797"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744616"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions (Enumeración)
 Contiene valores de marca que controlan el comportamiento durante la importación de un ensamblado fuera del ámbito actual.  
@@ -50,20 +50,20 @@ typedef enum CorImportOptions {
 |------------|-----------------|  
 |`MDImportOptionDefault`|Indica el comportamiento predeterminado, que se usa para omitir los registros eliminados.|  
 |`MDImportOptionAll`|Indica que se deben enumerar todos los metadatos.|  
-|`MDImportOptionAllTypeDefs`|Indica que se deben enumerar todas las definiciones de tipos, incluyendo los eliminados.|  
+|`MDImportOptionAllTypeDefs`|Indica que se deben enumerar todas las definiciones de tipos, incluidos los eliminados.|  
 |`MDImportOptionAllMethodDefs`|Indica que se deben enumerar todos los MethodDefs, incluyendo los eliminados.|  
 |`MDImportOptionAllFieldDefs`|Indica que se deben enumerar todos los FieldDefs, incluyendo los eliminados.|  
 |`MDImportOptionAllProperties`|Indica que se deben enumerar todos los PropertyDefs, incluyendo los eliminados.|  
 |`MDImportOptionAllEvents`|Indica que se deben enumerar todos los EventDefs, incluyendo los eliminados.|  
 |`MDImportOptionAllCustomAttributes`|Indica que se deben enumerar todos los atributos personalizados, incluyendo los eliminados.|  
-|`MDImportOptionAllExportedTypes`|Indica que se deben enumerar todos los tipos exportados, incluyendo los eliminados.|  
+|`MDImportOptionAllExportedTypes`|Indica que se deben enumerar todos los tipos exportados, incluidos los eliminados.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

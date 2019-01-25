@@ -5,15 +5,15 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: c71936d087ef046848c75d1fa0638aaafbe43c9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf67f3c68acc4cd8838be56d7c814f9e287ce62c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496199"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658057"
 ---
 # <a name="elevation-of-privilege"></a>Elevación de privilegios
-*Elevación de privilegios* resultante de dar una autorización atacante permisos más allá de aquéllos concedidos inicialmente. Por ejemplo, un atacante con un conjunto de privilegios de permisos de "solo lectura" eleva de algún modo el conjunto para incluir la "lectura y escritura".  
+*Elevación de privilegios* da como resultado de la concesión de permisos más allá de aquéllos concedidos inicialmente una autorización del atacante. Por ejemplo, un atacante con un conjunto de privilegios de permisos de "solo lectura" eleva de algún modo el conjunto para incluir la "lectura y escritura".  
   
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>El STS de confianza debería firmar las notificaciones de tokens de SAML  
  Un token del lenguaje de marcado de aserción de seguridad (SAML) es un token XML genérico que es del tipo predeterminado para tokens emitidos. Un servicio de tokens de seguridad (STS) puede construir un token SAML en el que confíe el servicio web final en un intercambio típico. Los tokens SAML contienen las notificaciones en declaraciones. Un atacante puede copiar las notificaciones desde un token válido, crear un nuevo token SAML y firmarlo con un emisor diferente. El objetivo es determinar si el servidor está validando a los emisores y, si no, utilizar esa debilidad para construir tokens SAML que concedan privilegios más allá de los proporcionados por un STS de confianza.  
@@ -23,9 +23,9 @@ ms.locfileid: "33496199"
 ## <a name="switching-identity-without-a-security-context"></a>Intercambio de identidad sin un contexto de seguridad  
  Lo siguiente solo se aplica a [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
   
- Cuando se establece una conexión entre un cliente y servidor, la identidad del cliente no cambia, excepto en una situación: una vez que se abre el cliente de WCF, si se cumplen todas las condiciones siguientes:  
+ Cuando se establece una conexión entre un cliente y servidor, la identidad del cliente no cambia, excepto en una situación: una vez abierto el cliente de WCF, si se cumplen todas las condiciones siguientes:  
   
--   Los procedimientos para establecer un contexto de seguridad (mediante la seguridad de transporte sesión o una sesión de seguridad de mensaje) está desactivada (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> propiedad está establecida en `false` en caso de seguridad de los mensajes o no sean capaces de establecer la seguridad de transporte las sesiones se utiliza en caso de seguridad de transporte. HTTPS es un ejemplo de dicho transporte).  
+-   Los procedimientos para establecer un contexto de seguridad (mediante la seguridad de transporte, sesión o una sesión de seguridad de mensaje) está desactivada (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> propiedad está establecida en `false` en el caso de seguridad de mensaje o no sean capaces de establecer la seguridad de transporte las sesiones se usa en caso de seguridad de transporte. HTTPS es un ejemplo de dicho transporte).  
   
 -   Está utilizando la autenticación de Windows.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "33496199"
   
 -   Está llamando al servicio bajo el contexto de seguridad suplantado.  
   
- Si se cumplen estas condiciones, puede cambiar la identidad utilizada para autenticar al cliente en el servicio (quizás no sea la identidad suplantada, sino la identidad del proceso en su lugar) una vez que se abre el cliente de WCF. Esto ocurre porque la credencial de Windows utilizada para autenticar el cliente en el servicio se transmite con cada mensaje, y la credencial utilizada para la autenticación se obtiene a partir de la identidad de Windows del subproceso actual. Si la identidad de Windows del subproceso actual cambia (por ejemplo, suplantando a un llamador diferente), la credencial adjunta al mensaje y utilizada para autenticar el cliente en el servicio también podría cambiar.  
+ Si se cumplen estas condiciones, puede cambiar la identidad utilizada para autenticar el cliente al servicio (podría no ser la identidad suplantada, pero la identidad del proceso en su lugar) después de que se abre el cliente WCF. Esto ocurre porque la credencial de Windows utilizada para autenticar el cliente en el servicio se transmite con cada mensaje, y la credencial utilizada para la autenticación se obtiene a partir de la identidad de Windows del subproceso actual. Si la identidad de Windows del subproceso actual cambia (por ejemplo, suplantando a un llamador diferente), la credencial adjunta al mensaje y utilizada para autenticar el cliente en el servicio también podría cambiar.  
   
  Si desea tener un comportamiento determinista al utilizar la autenticación de Windows junto con la suplantación, debe establecer explícitamente la credencial de Windows o debe establecer un contexto de seguridad con el servicio. Para ello, utilice una sesión de seguridad de mensajes o una sesión de seguridad de transporte. Por ejemplo, el transporte net.tcp puede proporcionar una sesión de seguridad de transporte. Además, debe utilizar solo una versión sincrónica de operaciones de cliente al llamar al servicio. Si establece un contexto de seguridad de mensajes, no debería mantener abierta la conexión con el servicio más tiempo del periodo de renovación de sesión configurado, puesto que la identidad también puede cambiar durante el proceso de renovación de sesión.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "33496199"
 >  Al utilizar el método `BeginOpen`, no se puede garantizar que las credenciales capturadas sean las credenciales del proceso que llama al método.  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>Las cachés de tokens permiten la repetición mediante datos obsoletos  
- WCF usa la autoridad de seguridad local (LSA) `LogonUser` función para autenticar a los usuarios por nombre de usuario y contraseña. Dado que la función de inicio de sesión es una operación costosa, WCF permite a los usuarios para aumentar el rendimiento en memoria caché los tokens que representan autenticó. El mecanismo de almacenamiento en caché guarda los resultados de `LogonUser` para los usos posteriores. Este mecanismo está deshabilitada de forma predeterminada. Para habilitarlo, establezca el <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> propiedad `true`, o usar el `cacheLogonTokens` atributo de la [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
+ WCF usa la entidad de seguridad local (LSA) `LogonUser` función para autenticar a los usuarios por nombre de usuario y contraseña. Dado que la función de inicio de sesión es una operación costosa, WCF permite le caché los tokens que representan a aumentar el rendimiento de los usuarios autenticados. El mecanismo de almacenamiento en caché guarda los resultados de `LogonUser` para los usos posteriores. Este mecanismo está deshabilitado de forma predeterminada; Para habilitarlo, establezca el <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> propiedad `true`, o usar el `cacheLogonTokens` atributo de la [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md).  
   
  Puede establecer un período de vida (TTL) para los tokens almacenados en memoria caché estableciendo la propiedad <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> en <xref:System.TimeSpan> o utilizar el atributo `cachedLogonTokenLifetime` del elemento `userNameAuthentication`; el valor predeterminado es de 15 minutos. Tenga en cuenta que mientras un token esté almacenado en memoria caché, cualquier cliente que presente el mismo nombre de usuario y contraseña podrá utilizar el token, aunque la cuenta de usuario se elimine de Windows o se haya cambiado su contraseña. Hasta que expire el período de vida y el token se quita de la memoria caché, WCF permite al usuario (posiblemente malintencionado) autenticarse.  
   
- Para paliar esto: disminuya la ventana de ataque estableciendo el valor de `cachedLogonTokenLifetime` en el intervalo de tiempo más corto que necesiten sus usuarios.  
+ Para mitigar esta situación: Reducir la ventana de ataque estableciendo el `cachedLogonTokenLifetime` valor el tiempo mínimo para abarcar necesiten sus usuarios.  
   
-## <a name="issued-token-authorization-expiration-reset-to-large-value"></a>Autorización de tokens emitidos: restablecimiento de la expiración a un valor mayor  
+## <a name="issued-token-authorization-expiration-reset-to-large-value"></a>Token de autorización de emisión: Restablecimiento de la expiración para valores grandes  
  Bajo ciertas condiciones, la propiedad <xref:System.IdentityModel.Policy.AuthorizationContext.ExpirationTime%2A> del <xref:System.IdentityModel.Policy.AuthorizationContext> puede establecerse en un valor inesperadamente mayor (el valor del campo <xref:System.DateTime.MaxValue> menos un día o el 20 de diciembre de 9999).  
   
  Esto ocurre al utilizar el <xref:System.ServiceModel.WSFederationHttpBinding> y cualquiera de los enlaces proporcionados por el sistema que tengan un token emitido como el tipo de credencial de cliente.  
@@ -82,10 +82,10 @@ ms.locfileid: "33496199"
   
  Para mitigar esto, haga referencia al certificado X.509 de otra manera, como, por ejemplo, mediante <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   
-## <a name="see-also"></a>Vea también  
- [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Divulgación de información](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [Denegación de servicio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Ataques por repetición](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [Manipulación](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Escenarios no admitidos](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>Vea también
+- [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Divulgación de información](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Denegación de servicio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Ataques por repetición](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Manipulación](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Escenarios no admitidos](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

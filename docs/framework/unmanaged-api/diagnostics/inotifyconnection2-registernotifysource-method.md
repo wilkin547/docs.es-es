@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b4731a9503ab29a7d90ddd28c7ac0a5a761c1e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5895dc3cb64b72380dead1e048c012b586c4f48e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432500"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550726"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource (Método)
 Instala un origen de notificación especificado.  
@@ -39,19 +39,19 @@ HRESULT RegisterNotifySource
   
 #### <a name="parameters"></a>Parámetros  
  `in_pNotifySource`  
- [in] Especifica el objeto que se usará como el origen de notificación.  
+ [in] Especifica el objeto que se usará como origen de notificación.  
   
  `out_ppNotifySink`  
- [out] Recibe el objeto que se usará como el receptor de notificación.  
+ [out] Recibe el objeto que se usará como el receptor de notificaciones.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si el método tiene éxito.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** ProtocolNotify2.idl  
+ **Encabezado**: ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Vea también  
- [INotifyConnection2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [INotifySource2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [INotifySink2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [UnregisterNotifySource (método)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)
+## <a name="see-also"></a>Vea también
+- [INotifyConnection2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [INotifySource2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [INotifySink2 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [UnregisterNotifySource (método)](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)

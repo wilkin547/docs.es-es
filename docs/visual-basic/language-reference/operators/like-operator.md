@@ -22,12 +22,12 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: c5b26bd1d3ebae5136718833c124e3c6e575e9b7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b1621131b3f5e4669eb637c054be1548597cf252
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198171"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703268"
 ---
 # <a name="like-operator-visual-basic"></a>Like (operador, Visual Basic)
 Compara una cadena con un patrón.  
@@ -40,13 +40,13 @@ result = string Like pattern
   
 ## <a name="parts"></a>Elementos  
  `result`  
- Requerido. Cualquier `Boolean` variable. El resultado es un `Boolean` valor que indica si el `string` satisface el `pattern`.  
+ Obligatorio. Cualquier `Boolean` variable. El resultado es un `Boolean` valor que indica si el `string` satisface el `pattern`.  
   
  `string`  
- Requerido. Cualquier expresión `String`.  
+ Obligatorio. Cualquier expresión `String` .  
   
  `pattern`  
- Requerido. Cualquier `String` expresión que cumpla las convenciones de coincidencia de patrones que se describe en la sección "comentarios".  
+ Obligatorio. Cualquier `String` expresión que cumpla las convenciones de coincidencia de patrones que se describe en la sección "comentarios".  
   
 ## <a name="remarks"></a>Comentarios  
  Si el valor de `string` ajusta al modelo incluido en `pattern`, `result` es `True`. Si la cadena no cumple el patrón, `result` es `False`. Si ambos `string` y `pattern` son cadenas vacías, el resultado es `True`.  
@@ -73,7 +73,7 @@ result = string Like pattern
 ## <a name="special-characters"></a>Caracteres especiales  
  Para que coincida con los caracteres especiales corchete izquierdo (`[`), signo de interrogación (`?`), signo de número (`#`) y el asterisco (`*`), incluya entre corchetes. El corchete derecho (`]`) no se puede usar dentro de un grupo para que coincida con sí mismo, pero se puede usar fuera de un grupo como un carácter individual.  
   
- La secuencia de caracteres `[]` se considera una cadena de longitud cero (`""`). Sin embargo, no puede formar parte de una lista de caracteres entre corchetes. Si desea comprobar si una posición en `string` contiene uno de un grupo de caracteres o ningún carácter en absoluto, puede usar `Like` dos veces. Para obtener un ejemplo, vea [Cómo: hacer coincidir una cadena con un patrón](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ La secuencia de caracteres `[]` se considera una cadena de longitud cero (`""`). Sin embargo, no puede formar parte de una lista de caracteres entre corchetes. Si desea comprobar si una posición en `string` contiene uno de un grupo de caracteres o ningún carácter en absoluto, puede usar `Like` dos veces. Como ejemplo, vea [Cómo: Coincide con una cadena con un patrón](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
   
 ## <a name="character-ranges"></a>Intervalos de caracteres  
  Con un guión (`–`) para separar los límites inferior y superior del intervalo, `charlist` puede especificar un intervalo de caracteres. Por ejemplo, `[A–Z]` da como resultado una coincidencia si el carácter correspondiente se coloque en `string` contiene cualquier carácter dentro del intervalo `A`–`Z`, y `[!H–L]` da como resultado una coincidencia si coloca el carácter correspondiente contiene cualquier carácter fuera del intervalo `H`–`L`.  
@@ -95,19 +95,19 @@ result = string Like pattern
  Cuando se especifica un idioma que utiliza un carácter dígrafo en la configuración regional del sistema, una aparición del carácter único dígrafo en cualquiera `pattern` o `string` coincide con la secuencia de dos caracteres equivalente en la otra cadena. De forma similar, un carácter dígrafo en `pattern` entre corchetes (por sí mismo, en una lista o en un intervalo) coincide con la secuencia de dos caracteres equivalente en `string`.  
   
 ## <a name="overloading"></a>Sobrecarga  
- El `Like` operador puede ser *sobrecargado*, lo que significa que una clase o estructura puede redefinir su comportamiento cuando un operando tiene el tipo de esa clase o estructura. Si el código usa este operador en una clase o estructura de este tipo, asegúrese de que conocer su comportamiento redefinido. Para obtener más información, consulte [procedimientos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ El `Like` operador puede ser *sobrecargado*, lo que significa que una clase o estructura puede redefinir su comportamiento cuando un operando tiene el tipo de esa clase o estructura. Si el código usa este operador en una clase o estructura de este tipo, asegúrese de que conocer su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo se usa el `Like` operador para comparar cadenas en varios modelos. Entre los resultados en un `Boolean` que indica si cada cadena ajusta al modelo de variable.  
   
  [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
- [Operadores de comparación](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Option Compare (instrucción)](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Comprobar si una cadena coincide con un modelo](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.VisualBasic.Strings.InStr%2A>
+- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
+- [Operadores de comparación](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Option Compare (instrucción)](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Cómo: Coincide con una cadena con un patrón](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

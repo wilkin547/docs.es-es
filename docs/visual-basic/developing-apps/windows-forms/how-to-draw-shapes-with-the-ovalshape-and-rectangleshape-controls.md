@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Dibujar formas con los controles OvalShape y RectangleShape (Visual Studio)'
+title: Procedimiento Dibujar formas con los controles OvalShape y RectangleShape (Visual Studio)
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - shapes, drawing
 - RectangleShape control [Visual Basic]
 ms.assetid: 0275b4c6-7a13-46c8-90f3-61db308c6b5d
-ms.openlocfilehash: f87865ba3aebe5739b87d6ae6bfeaa957af726d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe937236332591f6065e618c49ca5cf2c54b987c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701227"
 ---
-# <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Cómo: Dibujar formas con los controles OvalShape y RectangleShape (Visual Studio)
+# <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Procedimiento Dibujar formas con los controles OvalShape y RectangleShape (Visual Studio)
 Puede utilizar el control <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> para dibujar círculos u óvalos en un formulario o contenedor, tanto en tiempo de diseño como en tiempo de ejecución. Puede utilizar el control <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> para dibujar cuadrados, rectángulos o rectángulos con esquinas redondeadas en un formulario o contenedor. También puede utilizar este control para dibujar formas en tiempo de diseño y en tiempo de ejecución.  
   
  Puede personalizar la apariencia de una forma cambiando el ancho, el color y el estilo del borde. El fondo de una forma es transparente de manera predeterminada. Puede personalizar el fondo para mostrar un color sólido, una trama, un relleno de degradado (transición de un color a otro) o una imagen.  
@@ -73,7 +73,7 @@ using Microsoft.VisualBasic.PowerPacks;
   
 1.  Arrastre el `OvalShape` controlar desde la **Visual Basic PowerPacks** pestaña en el **cuadro de herramientas** a un control de formulario o contenedor.  
   
-2.  En el **propiedades** ventana, en la `Size` establecer la propiedad, `Height` y `Width` en los mismos valores.  
+2.  En el **propiedades** ventana, en el `Size` establecer la propiedad, `Height` y `Width` en los mismos valores.  
   
 3.  Establezca la propiedad `BorderColor` en el color que desee.  
   
@@ -85,7 +85,7 @@ using Microsoft.VisualBasic.PowerPacks;
   
 1.  Arrastre el `OvalShape` controlar desde la **Visual Basic PowerPacks** pestaña en el **cuadro de herramientas** a un control de formulario o contenedor.  
   
-2.  En el **propiedades** ventana, en la `Size` establecer la propiedad, `Height` y `Width` en los mismos valores.  
+2.  En el **propiedades** ventana, en el `Size` establecer la propiedad, `Height` y `Width` en los mismos valores.  
   
 3.  Establezca la propiedad `BackColor` en el color que desee.  
   
@@ -95,7 +95,7 @@ using Microsoft.VisualBasic.PowerPacks;
   
 1.  Arrastre el `OvalShape` controlar desde la **Visual Basic PowerPacks** pestaña en el **cuadro de herramientas** a un control de formulario o contenedor.  
   
-2.  En el **propiedades** ventana, en la `Size` establecer la propiedad, `Height` y `Width` en los mismos valores.  
+2.  En el **propiedades** ventana, en el `Size` establecer la propiedad, `Height` y `Width` en los mismos valores.  
   
 3.  Establezca la propiedad `BackColor` en el color que desee para el fondo.  
   
@@ -109,7 +109,7 @@ using Microsoft.VisualBasic.PowerPacks;
   
 1.  Arrastre el `OvalShape` controlar desde la **Visual Basic PowerPacks** pestaña en el **cuadro de herramientas** a un control de formulario o contenedor.  
   
-2.  En el **propiedades** ventana, en la `Size` establecer la propiedad, `Height` y `Width` en los mismos valores.  
+2.  En el **propiedades** ventana, en el `Size` establecer la propiedad, `Height` y `Width` en los mismos valores.  
   
 3.  Establezca la propiedad `FillColor` en el color que desee para el color inicial.  
   
@@ -121,7 +121,7 @@ using Microsoft.VisualBasic.PowerPacks;
   
 1.  Arrastre el `OvalShape` controlar desde la **Visual Basic PowerPacks** pestaña en el **cuadro de herramientas** a un control de formulario o contenedor.  
   
-2.  En el **propiedades** ventana, en la `Size` establecer la propiedad, `Height` y `Width` en los mismos valores.  
+2.  En el **propiedades** ventana, en el `Size` establecer la propiedad, `Height` y `Width` en los mismos valores.  
   
 3.  Seleccione el `BackgroundImage` propiedad y haga clic en el **puntos suspensivos** botón (…).  
   
@@ -129,8 +129,8 @@ using Microsoft.VisualBasic.PowerPacks;
   
 5.  Haga clic en **Aceptar** para insertar la imagen.  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>  
- <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>  
- [Introducción a los controles de líneas y formas](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)  
- [Dibujar líneas con el control LineShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>
+- <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>
+- [Introducción a los controles de líneas y formas](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)
+- [Cómo: Dibujar líneas con el Control LineShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)

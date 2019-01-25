@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 0cba481770708ae11aee9cb4e192019c733eba5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702592"
 ---
 # <a name="merging-dataset-contents"></a>Combinar contenido de DataSet
-Se puede utilizar el método <xref:System.Data.DataSet.Merge%2A> para combinar el contenido de <xref:System.Data.DataSet>, <xref:System.Data.DataTable> o matriz de <xref:System.Data.DataRow> en un `DataSet` existente. Hay varios factores y opciones que afectan a cómo se combinan los datos nuevos en un `DataSet` existente.  
+Se puede utilizar el método <xref:System.Data.DataSet.Merge%2A> para fusionar mediante combinación el contenido de <xref:System.Data.DataSet>, <xref:System.Data.DataTable> o matriz de <xref:System.Data.DataRow> en un `DataSet` existente. Hay varios factores y opciones que afectan a cómo se combinan los datos nuevos en un `DataSet` existente.  
   
 ## <a name="primary-keys"></a>Claves principales  
  Si la tabla que recibe datos y esquema nuevos a partir de una combinación tiene una clave principal, las nuevas filas de los datos entrantes se hacen coincidir con las filas existentes que tienen los mismos valores de clave principal <xref:System.Data.DataRowVersion.Original> que los de los datos entrantes. Si las columnas del esquema entrante coinciden con las del esquema existente, se modificarán los datos de las filas existentes. Las columnas que no coincidan con el esquema existente se pasarán por alto o se agregarán en función del parámetro <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>. Las nuevas filas con valores de clave principal que no coincidan con las filas existentes se agregarán a la tabla existente.  
@@ -78,10 +78,10 @@ Se puede utilizar el método <xref:System.Data.DataSet.Merge%2A> para combinar e
  [!code-csharp[DataWorks DataSet.MergeAcceptChanges#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/CS/source.cs#2)]
  [!code-vb[DataWorks DataSet.MergeAcceptChanges#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/VB/source.vb#2)]  
   
-## <a name="see-also"></a>Vea también  
- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Estados y versiones de filas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
- [Objetos DataAdapter y DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Recuperar y modificar datos en ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Recuperación de valores autonuméricos y de identidad](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Estados y versiones de filas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
+- [Objetos DataAdapter y DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Recuperar y modificar datos en ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Recuperación de valores autonuméricos y de identidad](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

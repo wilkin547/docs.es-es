@@ -10,20 +10,20 @@ helpviewer_keywords:
 - clear element, connectionManagement
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-ms.openlocfilehash: dba05128220b34bed34da4309a4994cbc4e1bd40
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0816a334e751d609b9c0735884d9682f7c1a087d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205105"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596415"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Borrar&gt; elemento para connectionManagement (configuración de red)
 Borra la lista de administración de conexiones.  
   
  \<configuration>  
-\<System.NET >  
-\<connectionManagement >  
-\<Borrar >  
+\<system.net>  
+\<connectionManagement>  
+\<clear>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -67,7 +67,7 @@ Borra la lista de administración de conexiones.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>Vea también
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

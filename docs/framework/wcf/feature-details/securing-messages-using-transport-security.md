@@ -2,12 +2,12 @@
 title: Protección de mensajes utilizando la seguridad de transporte
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: 660c3c002f1892a91a5c0eaefb2cc5c16bb460a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4a67cc8265254741a58c9b86bc45eff9c9366bcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747952"
 ---
 # <a name="securing-messages-using-transport-security"></a>Protección de mensajes utilizando la seguridad de transporte
 En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ) que puede utilizar para proteger los mensajes enviados a una cola.  
@@ -96,7 +96,7 @@ En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ)
   
  Los algoritmos admitidos son `MD5`, `SHA1`, `SHA256` y `SHA512`. De manera predeterminada, es `SHA1`.  
   
-## <a name="see-also"></a>Vea también  
- [Message Queue Server](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
- [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Vea también
+- [Message Queue Server](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+- [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

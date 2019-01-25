@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9a65f76aed00e2b848f8603f1fee4d6acc91f99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 164cdc5c04a55e9c33dda51e10dfb37f38ec1b6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746549"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize (Método)
-Obtiene el tamaño binario estimado del ensamblado y sus metadatos en el ámbito actual.  
+Obtiene el tamaño estimado de binario del ensamblado y sus metadatos en el ámbito actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,13 +38,13 @@ HRESULT GetSaveSize (
   
 #### <a name="parameters"></a>Parámetros  
  `fSave`  
- [in] Un valor de la [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) enumeración que especifica si se debe obtener un tamaño exacta o aproximado. Sólo hay tres valores son válidos: cssAccurate, cssQuick y cssDiscardTransientCAs:  
+ [in] Un valor de la [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) enumeración que especifica si se debe obtener un tamaño exacto o aproximado. Solo los tres valores son válidos: cssAccurate, cssQuick y cssDiscardTransientCAs:  
   
--   cssAccurate devuelve el tamaño de almacenamiento exacto, pero tarda más tiempo en calcular.  
+-   cssAccurate devuelve el tamaño de almacenamiento exacto, pero tarda más tiempo para calcular.  
   
--   cssQuick devuelve un tamaño con relleno por motivos de seguridad, pero necesita menos tiempo para calcular.  
+-   cssQuick devuelve un tamaño, rellenado por motivos de seguridad, pero tarda menos tiempo para calcular.  
   
--   cssDiscardTransientCAs indica a `GetSaveSize` que puede producir varios atributos personalizados descartables inmediatamente.  
+-   indica cssDiscardTransientCAs `GetSaveSize` que puede iniciar lejos los atributos personalizados que se puede descartar.  
   
  `pdwSaveSize`  
  [out] Un puntero al tamaño que es necesario para guardar el archivo.  
@@ -52,19 +52,19 @@ HRESULT GetSaveSize (
 ## <a name="remarks"></a>Comentarios  
  `GetSaveSize` calcula el espacio necesario, en bytes, para guardar el ensamblado y todos sus metadatos en el ámbito actual. (Una llamada a la [SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) método emitiría este número de bytes.)  
   
- Si el llamador implementa la [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interfaz (a través de [IMetaDataEmit:: SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) o [IMetaDataEmit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` llevará a cabo dos pasos los metadatos para optimizar y comprimirlos directamente. En caso contrario, no se realizan optimizaciones.  
+ Si el autor de llamada implementa el [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interfaz (a través de [SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) o [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` llevará a cabo dos pasos los metadatos para optimizar y comprimirlos directamente. En caso contrario, no se realizan optimizaciones.  
   
- Si se realiza la optimización, el primer paso simplemente ordena las estructuras de metadatos para optimizar el rendimiento de las búsquedas del momento de la importación. Este paso normalmente como resultado de desplazamiento de registros, con el inconveniente que dejan de símbolos (tokens) retenidos por la herramienta para futuras referencias. Los metadatos no informar al llamador de estos cambios en los símbolos hasta después del segundo paso, sin embargo. En el segundo paso, se realizan varias optimizaciones que están diseñados para reducir el tamaño total de los metadatos, como optimizar alejado (enlace temprano) `mdTypeRef` y `mdMemberRef` tokens cuando la referencia es un tipo o miembro que se declara en el ámbito de metadatos actual. En esta fase, se produce otra ronda de asignación de símbolo (token). Después de esta fase, el motor de metadatos notifica al llamador, a través de su `IMapToken` cambiará de interfaz, de los valores de token.  
+ Si se realiza la optimización, el primer paso simplemente ordena las estructuras de metadatos para optimizar el rendimiento de las búsquedas del momento de la importación. Este paso normalmente produce desplazamiento de registros, con el inconveniente de que se invalidan los tokens retenidos por la herramienta para futuras referencias. Los metadatos no informe al llamador de estos cambios en los tokens hasta después del segundo paso, sin embargo. En el segundo paso, se realizan varias optimizaciones que están diseñados para reducir el tamaño total de los metadatos, como la optimización de la ubicación (enlace temprano) `mdTypeRef` y `mdMemberRef` tokens cuando la referencia es un tipo o miembro que se declara en el ámbito de metadatos actual. En esta fase, se produce otra ronda de asignación del token. Después de esta fase, el motor de metadatos notifica al llamador, a través de su `IMapToken` interfaz, de cualquiera puede cambiar los valores de token.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MSCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

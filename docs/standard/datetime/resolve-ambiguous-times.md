@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: resolver horas ambiguas'
+title: Procedimiento Resolver horas ambiguas
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb09b1f087e0a0f726d32d85e06cfb2a9ec741a8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: aae3e5145d2fa85cd55fc5b1288ef4aaa0fef48f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569302"
 ---
-# <a name="how-to-resolve-ambiguous-times"></a>Cómo: resolver horas ambiguas
+# <a name="how-to-resolve-ambiguous-times"></a>Procedimiento Resolver horas ambiguas
 
 Una hora ambigua es aquella que se asigna a más de una hora universal coordinada (UTC). Esto sucede cuando la hora del reloj se atrasa, como durante la transición del horario de verano de una zona horaria al horario estándar. Cuando se enfrente a una hora ambigua, puede realizar una de las siguientes acciones:
 
@@ -59,5 +59,5 @@ Para este ejemplo se necesita:
 
 ## <a name="see-also"></a>Vea también
 
-* [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
-* [Permitir que los usuarios resuelvan horas ambiguas](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md)
+- [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
+- [Cómo: Permitir que los usuarios resuelvan horas ambiguas](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e22cf8e540bfdb53ad243640dac110b5750e53e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2dc1664551683066a33fb52e16e4909506601f2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588696"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout (Método)
-Complete el diseño de campos para una clase que se ha definido por una llamada anterior a [DefineTypeDef (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Se completa el diseño de campos para una clase que se ha definido por una llamada anterior a [DefineTypeDef (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,7 +43,7 @@ HRESULT SetClassLayout (
  [in] Un `mdTypeDef` símbolo (token) que especifica la clase que se coloquen.  
   
  `dwPackSize`  
- [in] El tamaño de empaquetado: 1, 2, 4, 8 o 16 bytes. El tamaño de empaquetado es el número de bytes entre los campos adyacentes.  
+ [in] El tamaño de empaquetado: 1, 2, 4, 8 ó 16 bytes. El tamaño de empaquetado es el número de bytes entre los campos adyacentes.  
   
  `rFieldOffsets`  
  [in] Una matriz de [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) estructuras, cada uno de los cuales especifica un campo de la clase y el campo de desplazamiento dentro de la clase. Finalice la matriz con `mdTokenNil`.  
@@ -52,23 +52,23 @@ HRESULT SetClassLayout (
  [in] El tamaño, en bytes, de la clase.  
   
 ## <a name="remarks"></a>Comentarios  
- La clase inicialmente se define mediante una llamada a la [IMetaDataEmit:: DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) método y especificando uno de tres diseños para los campos de la clase: automático, secuencial o explícita. Normalmente, debería usar el diseño automático y dejar que el tiempo de ejecución a elegir la mejor manera de diseñar los campos.  
+ La clase inicialmente se define mediante una llamada a la [DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) método y especifique uno de los tres diseños para los campos de la clase: automático, secuencial o explícito. Normalmente, debe usar el diseño automático y dejar que el tiempo de ejecución a elegir la mejor manera de diseñar los campos.  
   
- Sin embargo, puede que los campos que se dispone de acuerdo con la organización en el código no administrado. En este caso, elija diseño secuencial o explícito y llame al método `SetClassLayout` para completar el diseño de los campos:  
+ Sin embargo, es posible que desea que los campos que disponen de acuerdo con la disposición en el código no administrado. En este caso, elija un diseño secuencial o explícito y llame a `SetClassLayout` para completar el diseño de los campos:  
   
--   Un diseño secuencial: especifique el tamaño de empaquetado. Un campo se alinea según su tamaño natural o el tamaño de empaquetado, sea cual sea resultados en el desplazamiento más pequeño del campo. Establecer `rFieldOffsets` y `ulClassSize` a cero.  
+-   Diseño secuencial: Especifique el tamaño de empaquetado. Un campo se alinea según su tamaño natural o el tamaño de empaquetado, sea cual sea resultados en el desplazamiento del campo más pequeño. Establecer `rFieldOffsets` y `ulClassSize` a cero.  
   
--   Diseño explícito: especifique el desplazamiento de cada campo, o el tamaño de la clase y el tamaño de empaquetado.  
+-   Diseño explícito: Especificar el desplazamiento de cada campo o especificar el tamaño de la clase y el tamaño de empaquetado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MSCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 03615c1c49f2acf2a7c7f0910860f36de0a4f2d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e9e2f83e15e4e1703ed42dfb479efb8feed3bb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661287"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Modelos de constructores seguros para objetos DependencyObject
-En general, los constructores de clase no deben llamar a devoluciones de llamada como métodos virtuales o delegados, porque se puede llamar a los constructores como inicialización base de constructores para una clase derivada. Es posible entrar en el método virtual en un estado de inicialización incompleto de cualquier objeto determinado. Pero el propio sistema de propiedades llama y expone internamente las devoluciones de llamada, como parte del sistema de propiedades de dependencia. Una operación sencilla como como establecer un valor de propiedad de dependencia con <xref:System.Windows.DependencyObject.SetValue%2A> llamada potencialmente incluye una devolución de llamada en algún lugar de la determinación. Por esta razón, deben extremarse las precauciones al establecer los valores de propiedad de dependencia dentro del cuerpo de un constructor, algo que puede resultar problemático si el tipo se usa como una clase base. Hay un patrón determinado para implementar <xref:System.Windows.DependencyObject> constructores que evita problemas específicos de los Estados de propiedad de dependencia y las devoluciones de llamada inherentes, que se documenta aquí.  
+En general, los constructores de clase no deben llamar a devoluciones de llamada como métodos virtuales o delegados, porque se puede llamar a los constructores como inicialización base de constructores para una clase derivada. Es posible entrar en el método virtual en un estado de inicialización incompleto de cualquier objeto determinado. Pero el propio sistema de propiedades llama y expone internamente las devoluciones de llamada, como parte del sistema de propiedades de dependencia. Una operación tan sencilla como establecer un valor de propiedad de dependencia con <xref:System.Windows.DependencyObject.SetValue%2A> llamada potencialmente incluye una devolución de llamada en alguna parte de la determinación. Por esta razón, deben extremarse las precauciones al establecer los valores de propiedad de dependencia dentro del cuerpo de un constructor, algo que puede resultar problemático si el tipo se usa como una clase base. Hay un patrón concreto para implementar <xref:System.Windows.DependencyObject> constructores que evita los problemas concretos con los Estados de propiedad de dependencia y las devoluciones de llamada inherentes, que se documenta aquí.  
   
  
   
@@ -62,7 +62,7 @@ public class MyClass : DependencyObject
 }  
 ```  
   
- Cuando el código de aplicación llama a `new MyClass(objectvalue)`, se llama al constructor predeterminado y a los constructores de clase base. A continuación, establece `Property1 = object1`, que llama al método virtual `OnPropertyChanged` en la que posea `MyClass` <xref:System.Windows.DependencyObject>.  La invalidación hace referencia a `_myList`, que no se ha inicializado todavía.  
+ Cuando el código de aplicación llama a `new MyClass(objectvalue)`, se llama al constructor predeterminado y a los constructores de clase base. Después, se establece `Property1 = object1`, que llama al método virtual `OnPropertyChanged` en propietario `MyClass` <xref:System.Windows.DependencyObject>.  La invalidación hace referencia a `_myList`, que no se ha inicializado todavía.  
   
  Una manera de evitar estos problemas es asegurarse de que las devoluciones de llamada solo usan otras propiedades de dependencia, y que cada una de estas últimas tiene un valor predeterminado establecido como parte de sus metadatos registrados.  
   
@@ -112,9 +112,9 @@ public MyClass : SomeBaseClass {
  Para los casos en los que el tipo base tiene varias firmas, debe hacer coincidir deliberadamente todas las firmas posibles con una implementación de constructor propia que use el patrón recomendado consistente en llamar al constructor predeterminado de clase antes de establecer otras propiedades.  
   
 #### <a name="setting-dependency-properties-with-setvalue"></a>Establecer propiedades de dependencia con SetValue  
- Estos mismos patrones se aplican si va a configurar una propiedad que no tiene un contenedor para su comodidad del valor de propiedad y establecer los valores con <xref:System.Windows.DependencyObject.SetValue%2A>. Las llamadas a <xref:System.Windows.DependencyObject.SetValue%2A> que pasar a través de los parámetros del constructor también debe llamar al constructor predeterminado de la clase para la inicialización.  
+ Estos mismos patrones se aplican si va a establecer una propiedad que no tiene un contenedor para facilitar el establecimiento de propiedades y establecer valores con <xref:System.Windows.DependencyObject.SetValue%2A>. Las llamadas a <xref:System.Windows.DependencyObject.SetValue%2A> que pasar a través de los parámetros del constructor también debe llamar al constructor predeterminado de la clase para la inicialización.  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Seguridad de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+## <a name="see-also"></a>Vea también
+- [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Seguridad de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-security.md)

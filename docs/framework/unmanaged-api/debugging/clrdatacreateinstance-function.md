@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9d4965751db1a70871270317a644b0acb1302f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c22d9bf286a2241b0c1c5512e29532a01032cb3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405985"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648881"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance (Función)
 Crea un objeto de interfaz para el elemento de destino especificado.  
@@ -39,7 +39,7 @@ HRESULT CLRDataCreateInstance (
   
 #### <a name="parameters"></a>Parámetros  
  `iid`  
- [in] El identificador de la interfaz que se creará una instancia.  
+ [in] El identificador de la interfaz de creación de instancias.  
   
  `target`  
  [in] Un puntero a un usuario implementa [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) objeto que representa el elemento de destino para el que se va a crear el objeto de interfaz.  
@@ -48,16 +48,16 @@ HRESULT CLRDataCreateInstance (
  [out] Un puntero a la dirección del objeto de interfaz devuelto.  
   
 ## <a name="remarks"></a>Comentarios  
- La `ICLRDataTarget` objeto se implementa el escritor de la aplicación de depuración. La implementación depende del tipo de elemento de destino que se va a representar. El elemento de destino puede ser un proceso, volcado de memoria, equipo remoto y así sucesivamente.  
+ La `ICLRDataTarget` objeto es implementado por el sistema de escritura de la aplicación de depuración. La implementación depende del tipo de elemento de destino que se va a representar. El elemento de destino puede ser un proceso, volcado de memoria, equipo remoto y así sucesivamente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** ClrData.idl  
+ **Encabezado**: ClrData.idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Funciones estáticas globales de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Vea también
+- [Funciones estáticas globales de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: a29a645a05f0d3b0e8611dd722c5018f295f3070
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2913782d8179fb882f8e916ed25feafcb5740a3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690051"
 ---
 # <a name="xclass-directive"></a>x:Class (Directiva)
 Configura la compilación de marcado XAML para unirse a las clases parciales entre el marcado y código subyacente. La clase parcial del código se define en un archivo de código independiente en un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] lenguaje, mientras que la clase parcial de marcado se suelen crear mediante generación de código durante la compilación de XAML.  
@@ -33,7 +33,7 @@ Configura la compilación de marcado XAML para unirse a las clases parciales ent
 |||  
 |-|-|  
 |`namespace`|Opcional. Especifica un [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] espacio de nombres que contiene la clase parcial identificada por `classname`. Si `namespace` se especifica un punto (.) separa `namespace` y `classname`. Vea la sección Comentarios.|  
-|`classname`|Requerido. Especifica el [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] nombre de la clase parcial que conecta el XAML cargado y el código subyacente para esa XAML.|  
+|`classname`|Obligatorio. Especifica el [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] nombre de la clase parcial que conecta el XAML cargado y el código subyacente para esa XAML.|  
   
 ## <a name="dependencies"></a>Dependencias  
  `x:Class` solo puede especificarse en el elemento raíz de una producción de XAML. `x:Class` no es válido en cualquier objeto que tiene un elemento primario en la producción de XAML. Para obtener más información, consulte [ \[MS-XAML\] sección 4.3.1.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
@@ -60,8 +60,8 @@ Configura la compilación de marcado XAML para unirse a las clases parciales ent
 ## <a name="silverlight-usage-notes"></a>Notas de uso de Silverlight  
  `x:Class` para Silverlight se documenta por separado. Para obtener más información, consulte [XAML Namespace (x:) Características del lenguaje (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
-## <a name="see-also"></a>Vea también  
- [x:Subclass (Directiva)](../../../docs/framework/xaml-services/x-subclass-directive.md)  
- [Clases XAML y personalizadas para WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [x:ClassModifier (Directiva)](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  
- [Tipos migrados de WPF a System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>Vea también
+- [x:Subclass (Directiva)](../../../docs/framework/xaml-services/x-subclass-directive.md)
+- [Clases XAML y personalizadas para WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [x:ClassModifier (Directiva)](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
+- [Tipos migrados de WPF a System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

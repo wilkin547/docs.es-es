@@ -35,7 +35,7 @@ Puede agregar elementos a los formularios de Windows <xref:System.Windows.Forms.
     domainUpDown1->Items->Add("noodles");  
     ```  
   
-     -o bien-  
+     O bien  
   
 2.  Use el <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> método para insertar un elemento en la lista en una posición especificada.  
   

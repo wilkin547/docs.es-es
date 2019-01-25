@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83e32b2b69d53772f8a4ebaabe1c025b95d1da47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bb2bfe927eddaf6812b0185a586135e76f649c1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728127"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown (Método)
-Notifica al generador de perfiles que se está cerrando la aplicación.  
+Notifica al generador de perfiles que se va a cerrar la aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,21 +34,21 @@ HRESULT Shutdown();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El código del generador de perfiles con seguridad no puede llamar a métodos de la [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interfaz después de la `Shutdown` se llama al método. Las llamadas a `ICorProfilerInfo` métodos como resultado un comportamiento indefinido después el `Shutdown` devuelve del método. Algunos eventos inmutables todavía pueden producirse después de cerrarse la aplicación; el generador de perfiles debe tener cuidado para devolver inmediatamente cuando esto ocurre.  
+ El código del generador de perfiles no puede llamar con seguridad a los métodos de la [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) después de la interfaz del `Shutdown` se llama al método. Las llamadas a `ICorProfilerInfo` métodos como resultado un comportamiento indefinido después el `Shutdown` devuelve del método. Algunos eventos inmutables aún pueden producirse tras el apagado; el generador de perfiles debe tener cuidado para devolver inmediatamente cuando esto ocurre.  
   
- El `Shutdown` se llamará al método únicamente si ha iniciado la aplicación administrada que se está perfilando como código administrado (es decir, se administra el marco inicial en la pila de proceso). Si la aplicación se inicia como código no administrado pero posteriormente pasa a código administrado, con lo que se crea una instancia de common language runtime (CLR), a continuación, `Shutdown` no se llamará. Para estos casos, el generador de perfiles debe incluir en su biblioteca un `DllMain` rutina que use el DLL_PROCESS_DETACH valor que se debe liberar todos los recursos y realizar el procesamiento de limpieza de los datos, como el vaciado de seguimientos en el disco y así sucesivamente.  
+ El `Shutdown` se llamará al método únicamente si ha iniciado la aplicación administrada que se está generando el perfil como código administrado (es decir, se administra el marco inicial de la pila de proceso). Si la aplicación se inicia como código no administrado pero posteriormente pasa a código administrado, con lo que se crea una instancia de common language runtime (CLR), a continuación, `Shutdown` no se llamará. Para estos casos, el generador de perfiles debe incluir en su biblioteca un `DllMain` rutina que usa el DLL_PROCESS_DETACH valor para liberar los recursos y realizar el procesamiento de limpieza de sus datos, como vaciar los seguimientos en el disco y así sucesivamente.  
   
- En general, el generador de perfiles debe sobrellevar apagados inesperados. Por ejemplo, podría detener un proceso de Win32 `TerminateProcess` método (declarado en Winbase.h). En otros casos, CLR detendrá determinados subprocesos administrados (subprocesos en segundo plano) sin entregar los mensajes de destrucción ordenada para ellos.  
+ En general, el generador de perfiles debe hacer frente a los apagados inesperados. Por ejemplo, podría detener un proceso de Win32 `TerminateProcess` método (declarado en Winbase.h). En otros casos, CLR detendrá determinados subprocesos administrados (subprocesos en segundo plano) sin entregar los mensajes de destrucción ordenada para ellos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Initialize (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Initialize (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)
