@@ -8,27 +8,27 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: e4328e1628028be72d10ee2a59c3f53b18bd6580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b53b5666985305362d093e2e579abe83ce619fc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655860"
 ---
-# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="12852-102">Temas "Cómo..." sobre programación de capas visuales</span><span class="sxs-lookup"><span data-stu-id="12852-102">Visual Layer Programming How-to Topics</span></span>
-<span data-ttu-id="12852-103">Los temas de esta sección muestran cómo utilizar la capa visual para la creación de una prueba de posicionamiento y bajo nivel.</span><span class="sxs-lookup"><span data-stu-id="12852-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
+# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="de273-102">Temas "Cómo..." sobre programación de capas visuales</span><span class="sxs-lookup"><span data-stu-id="de273-102">Visual Layer Programming How-to Topics</span></span>
+<span data-ttu-id="de273-103">Los temas de esta sección muestran cómo utilizar la capa visual de composición de la prueba de posicionamiento y de bajo nivel.</span><span class="sxs-lookup"><span data-stu-id="de273-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="12852-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="12852-104">In This Section</span></span>  
- [<span data-ttu-id="12852-105">Obtener el desplazamiento de un objeto visual</span><span class="sxs-lookup"><span data-stu-id="12852-105">Get the Offset of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
- [<span data-ttu-id="12852-106">Enumerar el contenido de un dibujo de un objeto visual</span><span class="sxs-lookup"><span data-stu-id="12852-106">Enumerate Drawing Content of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
- [<span data-ttu-id="12852-107">Geometría de una prueba de posicionamiento en un objeto Visual</span><span class="sxs-lookup"><span data-stu-id="12852-107">Hit Test Geometry in a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [<span data-ttu-id="12852-108">Realizar una prueba de posicionamiento usando Geometry como parámetro</span><span class="sxs-lookup"><span data-stu-id="12852-108">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
- [<span data-ttu-id="12852-109">Realizar pruebas de posicionamiento mediante un contenedor host Win32</span><span class="sxs-lookup"><span data-stu-id="12852-109">Hit Test Using a Win32 Host Container</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
- [<span data-ttu-id="12852-110">Representar un intervalo para cada fotograma mediante CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="12852-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+## <a name="in-this-section"></a><span data-ttu-id="de273-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="de273-104">In This Section</span></span>  
+ [<span data-ttu-id="de273-105">Obtener el desplazamiento de un objeto visual</span><span class="sxs-lookup"><span data-stu-id="de273-105">Get the Offset of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
+ [<span data-ttu-id="de273-106">Enumerar el contenido de un dibujo de un objeto visual</span><span class="sxs-lookup"><span data-stu-id="de273-106">Enumerate Drawing Content of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
+ [<span data-ttu-id="de273-107">Geometría de una prueba de posicionamiento en un objeto Visual</span><span class="sxs-lookup"><span data-stu-id="de273-107">Hit Test Geometry in a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="de273-108">Realizar una prueba de posicionamiento usando Geometry como parámetro</span><span class="sxs-lookup"><span data-stu-id="de273-108">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [<span data-ttu-id="de273-109">Realizar pruebas de posicionamiento mediante un contenedor host Win32</span><span class="sxs-lookup"><span data-stu-id="de273-109">Hit Test Using a Win32 Host Container</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
+ [<span data-ttu-id="de273-110">Representar un intervalo para cada fotograma mediante CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="de273-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a><span data-ttu-id="12852-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="12852-111">See Also</span></span>  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [<span data-ttu-id="12852-112">Información general sobre la representación de gráficos en WPF</span><span class="sxs-lookup"><span data-stu-id="12852-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="12852-113">Gráficos y multimedia</span><span class="sxs-lookup"><span data-stu-id="12852-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="de273-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="de273-111">See also</span></span>
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [<span data-ttu-id="de273-112">Información general sobre la representación de gráficos en WPF</span><span class="sxs-lookup"><span data-stu-id="de273-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="de273-113">Gráficos y multimedia</span><span class="sxs-lookup"><span data-stu-id="de273-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

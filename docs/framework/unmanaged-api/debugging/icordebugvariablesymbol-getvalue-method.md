@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5916b1bd89c4f86d76ef4b61afa211b76be94928
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 14412c11010b94fdc462c5aa29e9bc769b2633cc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496759"
 ---
-# <a name="icordebugvariablesymbolgetvalue-method"></a><span data-ttu-id="07dd5-102">ICorDebugVariableSymbol::GetValue (método)</span><span class="sxs-lookup"><span data-stu-id="07dd5-102">ICorDebugVariableSymbol::GetValue Method</span></span>
-<span data-ttu-id="07dd5-103">Obtiene el valor de una variable como una matriz de bytes.</span><span class="sxs-lookup"><span data-stu-id="07dd5-103">Gets the value of a variable as a byte array.</span></span>  
+# <a name="icordebugvariablesymbolgetvalue-method"></a><span data-ttu-id="f26de-102">ICorDebugVariableSymbol::GetValue (método)</span><span class="sxs-lookup"><span data-stu-id="f26de-102">ICorDebugVariableSymbol::GetValue Method</span></span>
+<span data-ttu-id="f26de-103">Obtiene el valor de una variable como una matriz de bytes.</span><span class="sxs-lookup"><span data-stu-id="f26de-103">Gets the value of a variable as a byte array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="07dd5-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="07dd5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f26de-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f26de-104">Syntax</span></span>  
   
 ```  
 HRESULT GetValue(  
@@ -27,39 +27,39 @@ HRESULT GetValue(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="07dd5-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="07dd5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f26de-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f26de-105">Parameters</span></span>  
  `offset`  
- <span data-ttu-id="07dd5-106">[in] Desplazamiento inicial de la variable de la que se va a leer el valor.</span><span class="sxs-lookup"><span data-stu-id="07dd5-106">[in] The starting offset in the variable from which to read the value.</span></span> <span data-ttu-id="07dd5-107">Este parámetro se utiliza cuando se leen campos de miembro de un objeto.</span><span class="sxs-lookup"><span data-stu-id="07dd5-107">This parameter is used when reading member fields in an object.</span></span>  
+ <span data-ttu-id="f26de-106">[in] Desplazamiento inicial de la variable de la que se va a leer el valor.</span><span class="sxs-lookup"><span data-stu-id="f26de-106">[in] The starting offset in the variable from which to read the value.</span></span> <span data-ttu-id="f26de-107">Este parámetro se utiliza cuando se leen campos de miembro de un objeto.</span><span class="sxs-lookup"><span data-stu-id="f26de-107">This parameter is used when reading member fields in an object.</span></span>  
   
  `cbContext`  
- <span data-ttu-id="07dd5-108">[in] Tamaño del argumento `context` en bytes.</span><span class="sxs-lookup"><span data-stu-id="07dd5-108">[in] The size in bytes of the `context` argument.</span></span>  
+ <span data-ttu-id="f26de-108">[in] Tamaño del argumento `context` en bytes.</span><span class="sxs-lookup"><span data-stu-id="f26de-108">[in] The size in bytes of the `context` argument.</span></span>  
   
  `context`  
- <span data-ttu-id="07dd5-109">[in] Contexto del subproceso utilizado para leer el valor.</span><span class="sxs-lookup"><span data-stu-id="07dd5-109">[in] The thread context used to read the value.</span></span>  
+ <span data-ttu-id="f26de-109">[in] Contexto del subproceso utilizado para leer el valor.</span><span class="sxs-lookup"><span data-stu-id="f26de-109">[in] The thread context used to read the value.</span></span>  
   
  `cbValue`  
- <span data-ttu-id="07dd5-110">[in] Tamaño del búfer `pValue` en bytes.</span><span class="sxs-lookup"><span data-stu-id="07dd5-110">[in] The size in bytes of the `pValue` buffer.</span></span>  
+ <span data-ttu-id="f26de-110">[in] Tamaño del búfer `pValue` en bytes.</span><span class="sxs-lookup"><span data-stu-id="f26de-110">[in] The size in bytes of the `pValue` buffer.</span></span>  
   
  `pcbValue`  
- <span data-ttu-id="07dd5-111">[out] Número de bytes escritos realmente en el búfer `pValue`.</span><span class="sxs-lookup"><span data-stu-id="07dd5-111">[out] The number of bytes actually written to the `pValue` buffer.</span></span>  
+ <span data-ttu-id="f26de-111">[out] Número de bytes escritos realmente en el búfer `pValue`.</span><span class="sxs-lookup"><span data-stu-id="f26de-111">[out] The number of bytes actually written to the `pValue` buffer.</span></span>  
   
  `pValue`  
- <span data-ttu-id="07dd5-112">[out] Matriz de bytes que contiene el valor de la variable.</span><span class="sxs-lookup"><span data-stu-id="07dd5-112">[out] A byte array that contains the value of the variable.</span></span>  
+ <span data-ttu-id="f26de-112">[out] Matriz de bytes que contiene el valor de la variable.</span><span class="sxs-lookup"><span data-stu-id="f26de-112">[out] A byte array that contains the value of the variable.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="07dd5-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="07dd5-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f26de-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="f26de-113">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="07dd5-114">Este método solo está disponible con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="07dd5-114">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="f26de-114">Este método solo está disponible con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="f26de-114">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="07dd5-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="07dd5-115">Requirements</span></span>  
- <span data-ttu-id="07dd5-116">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="07dd5-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f26de-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f26de-115">Requirements</span></span>  
+ <span data-ttu-id="f26de-116">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f26de-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="07dd5-117">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="07dd5-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f26de-117">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f26de-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="07dd5-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="07dd5-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f26de-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f26de-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="07dd5-119">**Versiones de .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="07dd5-119">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="f26de-119">**Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f26de-119">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="07dd5-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="07dd5-120">See Also</span></span>  
- [<span data-ttu-id="07dd5-121">ICorDebugVariableSymbol (interfaz)</span><span class="sxs-lookup"><span data-stu-id="07dd5-121">ICorDebugVariableSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)  
- [<span data-ttu-id="07dd5-122">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="07dd5-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f26de-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="f26de-120">See also</span></span>
+- [<span data-ttu-id="f26de-121">ICorDebugVariableSymbol (interfaz)</span><span class="sxs-lookup"><span data-stu-id="f26de-121">ICorDebugVariableSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
+- [<span data-ttu-id="f26de-122">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="f26de-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

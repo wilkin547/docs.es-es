@@ -2,20 +2,20 @@
 title: System.ServiceModel.Channels.PipeConnectionAbort
 ms.date: 03/30/2017
 ms.assetid: 2243ef42-7705-4518-91f4-d8e3c40bab34
-ms.openlocfilehash: 13f1d349abb5d86111bb355b538469986e18ea2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ffe078a808337a0a0b54bb6ecce58fb4e2c95fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33478090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701240"
 ---
-# <a name="systemservicemodelchannelspipeconnectionabort"></a><span data-ttu-id="1e14b-102">System.ServiceModel.Channels.PipeConnectionAbort</span><span class="sxs-lookup"><span data-stu-id="1e14b-102">System.ServiceModel.Channels.PipeConnectionAbort</span></span>
-<span data-ttu-id="1e14b-103">System.ServiceModel.Channels.PipeConnectionAbort</span><span class="sxs-lookup"><span data-stu-id="1e14b-103">System.ServiceModel.Channels.PipeConnectionAbort</span></span>  
+# <a name="systemservicemodelchannelspipeconnectionabort"></a><span data-ttu-id="4d77f-102">System.ServiceModel.Channels.PipeConnectionAbort</span><span class="sxs-lookup"><span data-stu-id="4d77f-102">System.ServiceModel.Channels.PipeConnectionAbort</span></span>
+<span data-ttu-id="4d77f-103">System.ServiceModel.Channels.PipeConnectionAbort</span><span class="sxs-lookup"><span data-stu-id="4d77f-103">System.ServiceModel.Channels.PipeConnectionAbort</span></span>  
   
-## <a name="description"></a><span data-ttu-id="1e14b-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="1e14b-104">Description</span></span>  
- <span data-ttu-id="1e14b-105">PipeConnection anulada.</span><span class="sxs-lookup"><span data-stu-id="1e14b-105">PipeConnection aborted.</span></span>  
+## <a name="description"></a><span data-ttu-id="4d77f-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="4d77f-104">Description</span></span>  
+ <span data-ttu-id="4d77f-105">PipeConnection anulada.</span><span class="sxs-lookup"><span data-stu-id="4d77f-105">PipeConnection aborted.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e14b-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="1e14b-106">See Also</span></span>  
- [<span data-ttu-id="1e14b-107">Traza</span><span class="sxs-lookup"><span data-stu-id="1e14b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="1e14b-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="1e14b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="1e14b-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="1e14b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="4d77f-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="4d77f-106">See also</span></span>
+- [<span data-ttu-id="4d77f-107">Traza</span><span class="sxs-lookup"><span data-stu-id="4d77f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="4d77f-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="4d77f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="4d77f-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="4d77f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
