@@ -2,20 +2,20 @@
 title: System.IdentityModel.Selectors.StoreSignatureNotValid
 ms.date: 03/30/2017
 ms.assetid: 9087bf09-cb15-41ec-bd7a-6338789953d0
-ms.openlocfilehash: e264aa9b52866febef32774c7bd3aa5f414e606b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cf0d2abfb1885bb03099df0874aed3d13e06d6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33475148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591502"
 ---
-# <a name="systemidentitymodelselectorsstoresignaturenotvalid"></a><span data-ttu-id="9c4c4-102">System.IdentityModel.Selectors.StoreSignatureNotValid</span><span class="sxs-lookup"><span data-stu-id="9c4c4-102">System.IdentityModel.Selectors.StoreSignatureNotValid</span></span>
-<span data-ttu-id="9c4c4-103">System.IdentityModel.Selectors.StoreSignatureNotValid</span><span class="sxs-lookup"><span data-stu-id="9c4c4-103">System.IdentityModel.Selectors.StoreSignatureNotValid</span></span>  
+# <a name="systemidentitymodelselectorsstoresignaturenotvalid"></a><span data-ttu-id="864d1-102">System.IdentityModel.Selectors.StoreSignatureNotValid</span><span class="sxs-lookup"><span data-stu-id="864d1-102">System.IdentityModel.Selectors.StoreSignatureNotValid</span></span>
+<span data-ttu-id="864d1-103">System.IdentityModel.Selectors.StoreSignatureNotValid</span><span class="sxs-lookup"><span data-stu-id="864d1-103">System.IdentityModel.Selectors.StoreSignatureNotValid</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9c4c4-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="9c4c4-104">Description</span></span>  
- <span data-ttu-id="9c4c4-105">La firma del archivo no es válida.</span><span class="sxs-lookup"><span data-stu-id="9c4c4-105">The signature of the file is invalid.</span></span>  
+## <a name="description"></a><span data-ttu-id="864d1-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="864d1-104">Description</span></span>  
+ <span data-ttu-id="864d1-105">La firma del archivo no es válida.</span><span class="sxs-lookup"><span data-stu-id="864d1-105">The signature of the file is invalid.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c4c4-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="9c4c4-106">See Also</span></span>  
- [<span data-ttu-id="9c4c4-107">Traza</span><span class="sxs-lookup"><span data-stu-id="9c4c4-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="9c4c4-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="9c4c4-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="9c4c4-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="9c4c4-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="864d1-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="864d1-106">See also</span></span>
+- [<span data-ttu-id="864d1-107">Traza</span><span class="sxs-lookup"><span data-stu-id="864d1-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="864d1-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="864d1-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="864d1-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="864d1-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

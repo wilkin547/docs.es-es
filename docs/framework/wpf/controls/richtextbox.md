@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
-ms.openlocfilehash: 201dd8cfc76191fefb45ff01dd42f26fd8454f20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c521c5c5d4ecb2b20954b5b6e303bbbda0a26418
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554097"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508649"
 ---
-# <a name="richtextbox"></a><span data-ttu-id="137e6-102">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="137e6-102">RichTextBox</span></span>
-<span data-ttu-id="137e6-103">El <xref:System.Windows.Controls.RichTextBox> elemento define un control de edición con compatibilidad integrada para características como cortar y pegar, presentación de documentos enriquecida y selección de contenido.</span><span class="sxs-lookup"><span data-stu-id="137e6-103">The <xref:System.Windows.Controls.RichTextBox> element defines an editing control with built-in support for features such as cut and paste, rich document presentation, and content selection.</span></span>  
+# <a name="richtextbox"></a><span data-ttu-id="cf131-102">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="cf131-102">RichTextBox</span></span>
+<span data-ttu-id="cf131-103">El <xref:System.Windows.Controls.RichTextBox> elemento define un control de edición con compatibilidad integrada con características como cortar y pegar, presentación de documentos enriquecidos y selección de contenido.</span><span class="sxs-lookup"><span data-stu-id="cf131-103">The <xref:System.Windows.Controls.RichTextBox> element defines an editing control with built-in support for features such as cut and paste, rich document presentation, and content selection.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="137e6-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="137e6-104">In This Section</span></span>  
- <span data-ttu-id="137e6-105">[RichTextBox Overview](../../../../docs/framework/wpf/controls/richtextbox-overview.md) (Introducción a RichTextBox)</span><span class="sxs-lookup"><span data-stu-id="137e6-105">[RichTextBox Overview](../../../../docs/framework/wpf/controls/richtextbox-overview.md)</span></span>  
- [<span data-ttu-id="137e6-106">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="137e6-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cf131-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="cf131-104">In This Section</span></span>  
+ <span data-ttu-id="cf131-105">[RichTextBox Overview](../../../../docs/framework/wpf/controls/richtextbox-overview.md) (Introducción a RichTextBox)</span><span class="sxs-lookup"><span data-stu-id="cf131-105">[RichTextBox Overview](../../../../docs/framework/wpf/controls/richtextbox-overview.md)</span></span>  
+ [<span data-ttu-id="cf131-106">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="cf131-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="137e6-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="137e6-107">See Also</span></span>  
- <xref:System.Windows.Controls.TextBox>  
- [<span data-ttu-id="137e6-108">Documentos en WPF</span><span class="sxs-lookup"><span data-stu-id="137e6-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="137e6-109">Información general sobre documentos dinámicos</span><span class="sxs-lookup"><span data-stu-id="137e6-109">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a><span data-ttu-id="cf131-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="cf131-107">See also</span></span>
+- <xref:System.Windows.Controls.TextBox>
+- [<span data-ttu-id="cf131-108">Documentos en WPF</span><span class="sxs-lookup"><span data-stu-id="cf131-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [<span data-ttu-id="cf131-109">Información general sobre documentos dinámicos</span><span class="sxs-lookup"><span data-stu-id="cf131-109">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
