@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c259bc167d2d4fbadf0d4721e3329975cb0f0caf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dcc7770f95c0cb7d416480145a430d781e093f6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599678"
 ---
-# <a name="icorprofilerinfo2getobjectgeneration-method"></a><span data-ttu-id="abfc2-102">ICorProfilerInfo2::GetObjectGeneration (Método)</span><span class="sxs-lookup"><span data-stu-id="abfc2-102">ICorProfilerInfo2::GetObjectGeneration Method</span></span>
-<span data-ttu-id="abfc2-103">Obtiene el segmento del montón que contiene el objeto especificado.</span><span class="sxs-lookup"><span data-stu-id="abfc2-103">Gets the segment of the heap that contains the specified object.</span></span>  
+# <a name="icorprofilerinfo2getobjectgeneration-method"></a><span data-ttu-id="899af-102">ICorProfilerInfo2::GetObjectGeneration (Método)</span><span class="sxs-lookup"><span data-stu-id="899af-102">ICorProfilerInfo2::GetObjectGeneration Method</span></span>
+<span data-ttu-id="899af-103">Obtiene el segmento del montón que contiene el objeto especificado.</span><span class="sxs-lookup"><span data-stu-id="899af-103">Gets the segment of the heap that contains the specified object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="abfc2-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="abfc2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="899af-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="899af-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObjectGeneration(  
@@ -35,25 +35,25 @@ HRESULT GetObjectGeneration(
     [out] COR_PRF_GC_GENERATION_RANGE *range);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="abfc2-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="abfc2-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="899af-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="899af-105">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="abfc2-106">[in] El identificador del objeto.</span><span class="sxs-lookup"><span data-stu-id="abfc2-106">[in] The ID of the object.</span></span>  
+ <span data-ttu-id="899af-106">[in] El identificador del objeto.</span><span class="sxs-lookup"><span data-stu-id="899af-106">[in] The ID of the object.</span></span>  
   
  `range`  
- <span data-ttu-id="abfc2-107">[out] Un puntero a un [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) estructura que describe un intervalo (es decir, un bloque) de memoria en la generación que se está sometiendo a la recolección de elementos.</span><span class="sxs-lookup"><span data-stu-id="abfc2-107">[out] A pointer to a [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure, which describes a range (that is, a block) of memory within the generation that is undergoing garbage collection.</span></span> <span data-ttu-id="abfc2-108">Este intervalo contiene el objeto especificado.</span><span class="sxs-lookup"><span data-stu-id="abfc2-108">This range contains the specified object.</span></span>  
+ <span data-ttu-id="899af-107">[out] Un puntero a un [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) estructura que describe un intervalo (es decir, un bloque) de memoria dentro de la generación que se está sometiendo a la recolección de elementos.</span><span class="sxs-lookup"><span data-stu-id="899af-107">[out] A pointer to a [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure, which describes a range (that is, a block) of memory within the generation that is undergoing garbage collection.</span></span> <span data-ttu-id="899af-108">Este intervalo contiene el objeto especificado.</span><span class="sxs-lookup"><span data-stu-id="899af-108">This range contains the specified object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="abfc2-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="abfc2-109">Remarks</span></span>  
- <span data-ttu-id="abfc2-110">La `GetObjectGeneration` puede llamar al método desde cualquier devolución de llamada del generador de perfiles, siempre que la recolección de elementos no utilizados no está en curso.</span><span class="sxs-lookup"><span data-stu-id="abfc2-110">The `GetObjectGeneration` method may be called from any profiler callback, provided that garbage collection is not in progress.</span></span> <span data-ttu-id="abfc2-111">Es decir, pueden llamarse desde cualquier devolución de llamada excepto las que se producen entre [ICorProfilerCallback2:: GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) y [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).</span><span class="sxs-lookup"><span data-stu-id="abfc2-111">That is, it may be called from any callback except those that occur between [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) and [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="899af-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="899af-109">Remarks</span></span>  
+ <span data-ttu-id="899af-110">El `GetObjectGeneration` método puede llamarse desde cualquier devolución de llamada del generador de perfiles, siempre que la recolección de elementos no utilizados no está en curso.</span><span class="sxs-lookup"><span data-stu-id="899af-110">The `GetObjectGeneration` method may be called from any profiler callback, provided that garbage collection is not in progress.</span></span> <span data-ttu-id="899af-111">Es decir, se puede llamar desde cualquier devolución de llamada, excepto los que se producen entre [ICorProfilerCallback2:: GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) y [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).</span><span class="sxs-lookup"><span data-stu-id="899af-111">That is, it may be called from any callback except those that occur between [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) and [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="abfc2-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="abfc2-112">Requirements</span></span>  
- <span data-ttu-id="abfc2-113">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="abfc2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="899af-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="899af-112">Requirements</span></span>  
+ <span data-ttu-id="899af-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="899af-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="abfc2-114">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="abfc2-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="899af-114">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="899af-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="abfc2-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="abfc2-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="899af-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="899af-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="abfc2-116">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="abfc2-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="899af-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="899af-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="abfc2-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="abfc2-117">See Also</span></span>  
- [<span data-ttu-id="abfc2-118">ICorProfilerInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="abfc2-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [<span data-ttu-id="abfc2-119">ICorProfilerInfo2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="abfc2-119">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="899af-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="899af-117">See also</span></span>
+- [<span data-ttu-id="899af-118">ICorProfilerInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="899af-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="899af-119">ICorProfilerInfo2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="899af-119">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

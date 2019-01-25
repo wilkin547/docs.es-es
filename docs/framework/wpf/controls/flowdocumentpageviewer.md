@@ -7,18 +7,18 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: bad83378863cbc8b05fd3b74fe126e8147a20494
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f58ebbb3f0876c8c1aa23bae04fb46573bc234f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653767"
 ---
-# <a name="flowdocumentpageviewer"></a><span data-ttu-id="48834-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="48834-102">FlowDocumentPageViewer</span></span>
-<span data-ttu-id="48834-103">El <xref:System.Windows.Controls.FlowDocumentPageViewer> control sirve para ver los <xref:System.Windows.Documents.FlowDocument> contenido en cada página por separado.</span><span class="sxs-lookup"><span data-stu-id="48834-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="48834-104">Por otra parte del <xref:System.Windows.Controls.FlowDocumentScrollViewer>, que presenta <xref:System.Windows.Documents.FlowDocument> contenido en un visor de desplazamiento.</span><span class="sxs-lookup"><span data-stu-id="48834-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
+# <a name="flowdocumentpageviewer"></a><span data-ttu-id="fcd96-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="fcd96-102">FlowDocumentPageViewer</span></span>
+<span data-ttu-id="fcd96-103">El <xref:System.Windows.Controls.FlowDocumentPageViewer> control se usa para ver <xref:System.Windows.Documents.FlowDocument> contenido por página.</span><span class="sxs-lookup"><span data-stu-id="fcd96-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="fcd96-104">Compare con la <xref:System.Windows.Controls.FlowDocumentScrollViewer>, que presenta <xref:System.Windows.Documents.FlowDocument> contenido en un visor desplazable.</span><span class="sxs-lookup"><span data-stu-id="fcd96-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48834-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="48834-105">See Also</span></span>  
- <xref:System.Windows.Documents.FlowDocument>  
- [<span data-ttu-id="48834-106">Información general sobre documentos dinámicos</span><span class="sxs-lookup"><span data-stu-id="48834-106">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [<span data-ttu-id="48834-107">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="48834-107">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
- [<span data-ttu-id="48834-108">Documentos en WPF</span><span class="sxs-lookup"><span data-stu-id="48834-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="fcd96-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="fcd96-105">See also</span></span>
+- <xref:System.Windows.Documents.FlowDocument>
+- [<span data-ttu-id="fcd96-106">Información general sobre documentos dinámicos</span><span class="sxs-lookup"><span data-stu-id="fcd96-106">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [<span data-ttu-id="fcd96-107">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="fcd96-107">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)
+- [<span data-ttu-id="fcd96-108">Documentos en WPF</span><span class="sxs-lookup"><span data-stu-id="fcd96-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
