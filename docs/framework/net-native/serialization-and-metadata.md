@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e4db59da7a17e47b8e3df939ec64f5124e04454
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78c778cc4bc1172763c2473b472d02dc7b19d545
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395978"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622876"
 ---
 # <a name="serialization-and-metadata"></a>Serialización y metadatos
 Si la aplicación serializa y deserializa objetos, es posible que deba agregar entradas al archivo de directivas en tiempo de ejecución (.rd.xml) para asegurarse de que los metadatos necesarios están presentes en tiempo de ejecución. Existen dos categorías de serializadores y cada una requiere un tratamiento distinto en el archivo de directivas en tiempo de ejecución:  
@@ -64,8 +64,8 @@ Si la aplicación serializa y deserializa objetos, es posible que deba agregar e
   
  Para más información sobre la sintaxis usada en el ejemplo, vea [Elemento \<Type>](../../../docs/framework/net-native/type-element-net-native.md).  
   
-## <a name="see-also"></a>Vea también  
- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)  
- [Elemento \<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)
+## <a name="see-also"></a>Vea también
+- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
+- [Elemento \<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)

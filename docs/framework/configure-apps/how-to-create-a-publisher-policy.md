@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear una directiva de publicador'
+title: Procedimiento Crear una directiva de publicador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3969f066c0a17424d2c4527d2b4661b30f5bb6d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838479"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530530"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Cómo: Crear una directiva de publicador
+# <a name="how-to-create-a-publisher-policy"></a>Procedimiento Crear una directiva de publicador
 Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar una versión más reciente de un ensamblado mediante la inclusión de un archivo de directiva de publicador con el ensamblado actualizado. El archivo de directiva de publicador especifica redirección de ensamblado y la configuración de base de código y usa el mismo formato que un archivo de configuración de la aplicación. El archivo de directiva de publicador se compila en un ensamblado y colocar en la caché global de ensamblados.  
   
  Hay tres pasos implicados en la creación de una directiva de publicador:  
@@ -55,7 +55,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
   
 1.  En el símbolo del sistema, escriba el siguiente comando:  
   
-     **al/Link:** *directivas* **/out:** *publisherPolicyAssemblyFile* **/keyfile:**  *keyPairFile* **/Platform:** *processorArchitecture*  
+     **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
      En este comando:  
   
@@ -63,7 +63,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
   
     -   El *publisherPolicyAssemblyFile* argumento es el nombre del ensamblado de directiva de publicador que da como resultado de este comando. El nombre de archivo de ensamblado debe tener el formato:  
   
-         **Directiva.** *número principal* **.** *número secundario* **.** *nombre de ensamblado principal* **.dll**  
+         **policy.** *número principal* **.** *número secundario* **.** *mainAssemblyName* **.dll**  
   
     -   El *keyPairFile* argumento es el nombre del archivo que contiene el par de claves. Debe firmar el ensamblado y el ensamblado de directivas del publicador con el mismo par de claves.  
   
@@ -102,11 +102,11 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
     > [!IMPORTANT]
     >  No se puede agregar el ensamblado de directivas de publicador a la caché global de ensamblados, a menos que se encuentra el archivo de directiva de publicador original en el mismo directorio que el ensamblado.  
   
-## <a name="see-also"></a>Vea también  
- [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Configurar aplicaciones](../../../docs/framework/configure-apps/index.md)  
- [Configurar aplicaciones de .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
- [Esquema de la configuración de Common Language Runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)  
- [Redirigir versiones de ensamblado](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a>Vea también
+- [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Configurar aplicaciones](../../../docs/framework/configure-apps/index.md)
+- [Configurar aplicaciones de .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Esquema de la configuración de Common Language Runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)
+- [Redirigir versiones de ensamblado](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

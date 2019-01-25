@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: d27e1bda296a153343b450c84c65fa35d55d72f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 427840430a37f675ccc0f0ee4f423370f2a55550
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646375"
 ---
 # <a name="3-d-transformations-overview"></a>Información general sobre transformaciones de modelos 3D
 En este tema se describe cómo aplicar las transformaciones a los modelos 3D del sistema de gráficos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Las transformaciones permiten que el desarrollador cambie la posición y el tamaño de los modelos, así como que los vuelva a orientar sin cambiar los valores base que los definen.  
@@ -67,7 +67,7 @@ Ejemplo de ScaleCenter
   
  [!code-xaml[animation3dgallery_snip#Rotate3DUsingAxisAngleRotation3DExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotat3DUsingAxisAngleRotation3DExample.xaml#rotate3dusingaxisanglerotation3dexamplewholepage)]  
   
- Nota: 3D de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] es un sistema a la derecha, es decir, un valor angular positivo de un giro tiene como resultado un giro en el sentido contrario a las agujas del reloj sobre el eje.  
+ Nota:[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3-d es un sistema diestro, lo que significa que un valor angular positivo de un giro da como resultado un giro hacia la izquierda alrededor del eje.  
   
  Los giros angulares del eje presuponen el giro sobre el origen si no se especifica un valor para el <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterX%2A>, <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterY%2A>, y <xref:System.Windows.Media.Media3D.RotateTransform3D.CenterZ%2A> propiedades en RotateTransform3D. Como ocurre con el escalado, es útil recordar que el giro transforma el espacio de coordenadas de todo el modelo. Si el modelo no se creó sobre el origen, o se ha trasladado previamente, el giro podría "pivotar" sobre el origen en lugar de girar en contexto.  
   
@@ -105,7 +105,7 @@ Ejemplo de giro
   
  Puesto que las cámaras también son modelos, igualmente se pueden transformar las propiedades de la cámara.  Aunque puede cambiar el aspecto de la escena transformando la ubicación de la cámara o las distancias de los planos (de hecho, transformando toda la proyección de la escena), tenga en cuenta que muchos de los efectos obtenidos de esta forma quizá no tengan tanto "sentido visual" para el lector como las transformaciones aplicadas a la ubicación o posición de los modelos de la escena.  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre gráficos 3D](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
- [Información general sobre transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Ejemplo de transformaciones 2D](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>Vea también
+- [Información general sobre gráficos 3D](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [Información general sobre transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Ejemplo de transformaciones 2D](https://go.microsoft.com/fwlink/?LinkID=158252)

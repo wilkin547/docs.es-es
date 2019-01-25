@@ -6,17 +6,17 @@ helpviewer_keywords:
 - SoundPlayer class [Windows Forms], about SoundPlayer class
 - sounds [Windows Forms], playing
 ms.assetid: fcebb938-62b9-4677-9cbe-6465bc863e22
-ms.openlocfilehash: 31ce87303b7b96cfd14d4daf07fd21c9de91a548
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 041e7d0170bc98797278e209fd86cff0f82db9fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690697"
 ---
 # <a name="soundplayer-class-overview"></a>Información general sobre la clase SoundPlayer
 La clase <xref:System.Media.SoundPlayer> le permite incluir con facilidad sonidos en las aplicaciones.  
   
- La <xref:System.Media.SoundPlayer> clase puede reproducir archivos de sonido en el formato .wav, desde un recurso o desde ubicaciones HTTP o UNC. Además, la <xref:System.Media.SoundPlayer> clase le permite cargar o reproducir sonidos de forma asincrónica.  
+ La <xref:System.Media.SoundPlayer> clase puede reproducir archivos de sonido en formato .wav desde un recurso o desde ubicaciones HTTP o UNC. Además, el <xref:System.Media.SoundPlayer> clase le permite cargar o reproducir sonidos de forma asincrónica.  
   
  También puede utilizar la clase <xref:System.Media.SystemSounds> para reproducir sonidos de sistema comunes, incluso un bip.   
   
@@ -32,8 +32,8 @@ La clase <xref:System.Media.SoundPlayer> le permite incluir con facilidad sonido
 |Método <xref:System.Media.SoundPlayer.Play%2A>|Reproduce el sonido especificado en el <xref:System.Media.SoundPlayer.SoundLocation%2A> o <xref:System.Media.SoundPlayer.Stream%2A> propiedad en un nuevo subproceso.|  
 |Método <xref:System.Media.SoundPlayer.PlaySync%2A>|Reproduce el sonido especificado en el <xref:System.Media.SoundPlayer.SoundLocation%2A> o <xref:System.Media.SoundPlayer.Stream%2A> propiedad en el subproceso actual.|  
 |Método <xref:System.Media.SoundPlayer.Stop%2A>|Detiene cualquier sonido que se esté reproduciendo.|  
-|Evento <xref:System.Media.SoundPlayer.LoadCompleted>|Se genera después de que se intente cargar un sonido.|  
+|Evento<xref:System.Media.SoundPlayer.LoadCompleted> |Se genera después de que se intente cargar un sonido.|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Media.SoundPlayer>  
- <xref:System.Media.SystemSounds>
+## <a name="see-also"></a>Vea también
+- <xref:System.Media.SoundPlayer>
+- <xref:System.Media.SystemSounds>

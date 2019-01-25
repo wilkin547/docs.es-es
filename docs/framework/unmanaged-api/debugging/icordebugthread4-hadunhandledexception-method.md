@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8215ddfd0f59f835d0b0dcd278b8cae9c12027d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7415e7b5ee03353e8e0e45cf46aa47c4266109af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704308"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException (Método)
-Indica si el subproceso nunca ha tenido una excepción no controlada.  
+Indica si el subproceso ha tenido una excepción no controlada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,18 +48,18 @@ HRESULT GetBlockingObjects (
 |S_FALSE|El subproceso nunca ha tenido una excepción no controlada.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este método indica si el subproceso nunca ha tenido una excepción no controlada. Cuando se desencadena la devolución de llamada de excepción no controlada o se inicia la operación de adjuntar de JIT nativa, se garantiza que este método devuelve S_OK. No hay ninguna garantía de que el [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) método devolverá la excepción no controlada; sin embargo, hará lo siguiente si el proceso no se ha continuado después de obtener la devolución de llamada de excepción no controlada o en adjuntar de JIT nativa. Además, es posible (aunque improbable) que haya más de un subproceso con una excepción no controlada en el momento en que se desencadene la operación de adjuntar de JIT nativa. En tal caso, no hay ninguna manera de determinar qué excepción desencadenó la de adjuntos JIT.  
+ Este método indica si el subproceso ha tenido una excepción no controlada. Cuando se desencadena la devolución de llamada de excepción no controlada o adjuntar de JIT nativa se inicia, se garantiza que este método devuelve S_OK. No hay ninguna garantía de que el [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) método devolverá la excepción no controlada sin embargo, si el proceso no se ha continuado después de obtener la devolución de llamada de excepción no controlada o tras nativo de adjuntos JIT. Además, es posible (aunque improbable) tener más de un subproceso con una excepción no controlada al tiempo JIT-attach nativo se desencadena. En tal caso, no hay ninguna manera de determinar qué excepción desencadenó el JIT-attach.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorDebugThread4 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vea también
+- [ICorDebugThread4 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

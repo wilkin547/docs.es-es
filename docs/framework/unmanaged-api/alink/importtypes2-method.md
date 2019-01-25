@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51c696679626a598be422376e9dc89b5add1773d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 60f2057330f1a06cdd3e6ff5560f8ca7aeefe857
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400496"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725732"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 (Método)
-Inicia la importación de tipos. Llamar a este método para iniciar la importación de tipos de cada ámbito importado a través de [ImportFile (método)](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+Inicia la importación de tipos. Llame a este método para comenzar a importar los tipos de cada ámbito importado a través de [ImportFile (método)](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,7 +44,7 @@ HRESULT ImportTypes2(
  Identificador del ensamblado al que desea importar.  
   
  `FileToken`  
- Identificador del archivo desde el que se va a importar.  
+ Id. del archivo desde el que se va a importar.  
   
  `dwScope`  
  Ámbito de base cero de la que se va a importar.  
@@ -53,7 +53,7 @@ HRESULT ImportTypes2(
  Recibe el identificador de enumerador para los tipos en el ámbito especificado.  
   
  `ppImportScope`  
- Opcionalmente, recibe [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interfaz.  
+ Si lo desea recibe [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interfaz.  
   
  `pdwCountOfTypes`  
  Opcionalmente, recibe el recuento de tipos en el ámbito especificado.  
@@ -64,7 +64,7 @@ HRESULT ImportTypes2(
 ## <a name="requirements"></a>Requisitos  
  Requiere alink.h  
   
-## <a name="see-also"></a>Vea también  
- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vea también
+- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

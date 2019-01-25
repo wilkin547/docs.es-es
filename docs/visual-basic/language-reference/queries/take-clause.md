@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: bfaccf470d93a6a72451e7ad8b41e8dbb1171c71
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bdd12340c5a0bd522c09a22e74c7b4f487cc5821
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626737"
 ---
 # <a name="take-clause-visual-basic"></a>Take (Cláusula, Visual Basic)
 Devuelve un número especificado de elementos contiguos desde el principio de una colección.  
@@ -26,7 +26,7 @@ Take count
   
 ## <a name="parts"></a>Elementos  
  `count`  
- Requerido. Un valor o una expresión que se evalúa como el número de elementos de la secuencia que se va a devolver.  
+ Obligatorio. Un valor o una expresión que se evalúa como el número de elementos de la secuencia que se va a devolver.  
   
 ## <a name="remarks"></a>Comentarios  
  El `Take` cláusula hace una consulta incluir un número especificado de elementos contiguos desde el principio de una lista de resultados. Especificado por el número de elementos que desee incluir el `count` parámetro.  
@@ -42,11 +42,11 @@ Take count
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-clause_1.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Consultas](../../../visual-basic/language-reference/queries/index.md)  
- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Order By (cláusula)](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Take While (cláusula)](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- [Skip (cláusula)](../../../visual-basic/language-reference/queries/skip-clause.md)
+## <a name="see-also"></a>Vea también
+- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](../../../visual-basic/language-reference/queries/index.md)
+- [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Order By (cláusula)](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Take While (cláusula)](../../../visual-basic/language-reference/queries/take-while-clause.md)
+- [Skip (cláusula)](../../../visual-basic/language-reference/queries/skip-clause.md)

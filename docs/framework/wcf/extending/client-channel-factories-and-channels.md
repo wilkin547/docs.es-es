@@ -1,15 +1,15 @@
 ---
-title: 'Cliente: generadores de canales y canales'
+title: 'Cliente: Generadores de canales y canales'
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: 3f045f56f7b73c5416e7a21a3afde29d22212d68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 71ed9f9cbef35d14597ce6452d65bfca994dc23e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720319"
 ---
-# <a name="client-channel-factories-and-channels"></a>Cliente: generadores de canales y canales
+# <a name="client-channel-factories-and-channels"></a>Cliente: Generadores de canales y canales
 Este tema describe la creación de generadores de canales y de canales.  
   
 ## <a name="channel-factories-and-channels"></a>Generadores de canales y canales  
@@ -73,5 +73,5 @@ this.socket.SendTo(
 );  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Desarrollo de canales](../../../../docs/framework/wcf/extending/developing-channels.md)
+## <a name="see-also"></a>Vea también
+- [Desarrollo de canales](../../../../docs/framework/wcf/extending/developing-channels.md)

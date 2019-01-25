@@ -1,30 +1,30 @@
 ---
-title: 'Tarea 2: Hospedaje del Diseñador de flujo de trabajo'
+title: 'Tarea 2: Hospedar el Diseñador de flujo de trabajo'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 8ac6b3590d146909c1cb9fd8cf9cae2352b0155b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8895e4b2c90f189c88ec3a803615e736dada455
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519069"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572778"
 ---
-# <a name="task-2-host-the-workflow-designer"></a>Tarea 2: Hospedaje del Diseñador de flujo de trabajo
+# <a name="task-2-host-the-workflow-designer"></a>Tarea 2: Hospedar el Diseñador de flujo de trabajo
 Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] en una aplicación de Windows Presentation Foundation (WPF).  
   
- El procedimiento se configura el **cuadrícula** control que contiene el diseñador, crea mediante programación una instancia de la <xref:System.Activities.Presentation.WorkflowDesigner> que contiene el valor predeterminado es <xref:System.Activities.Statements.Sequence> actividad, registra los metadatos del diseñador para proporcionar compatibilidad con el diseñador para integrados todas las actividades y hospeda el [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] en el [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] aplicación.  
+ El procedimiento se configura el **cuadrícula** control que contiene el diseñador, se crea mediante programación una instancia de la <xref:System.Activities.Presentation.WorkflowDesigner> que contiene el valor predeterminado es <xref:System.Activities.Statements.Sequence> actividad, registra los metadatos del diseñador para proporcionar compatibilidad con el diseñador para las actividades integradas en todos los hosts y el [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] en el [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] aplicación.  
   
 ### <a name="to-host-the-workflow-designer"></a>Para hospedar el diseñador de flujo de trabajo  
   
-1.  Abra el HostingApplication proyecto que creó en [tarea 1: crear una nueva aplicación de Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
+1.  Abra el proyecto HostingApplication que creó en [tarea 1: Crear una nueva aplicación de Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
   
-2.  Ajuste el tamaño de la ventana para facilitar el uso de [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Para ello, seleccione **MainWindow** en el diseñador, presione F4 para mostrar la **propiedades** ventana y, en la **diseño** sección, establezca el **ancho** a un valor de 600 y **alto** en un valor de 350.  
+2.  Ajuste el tamaño de la ventana para facilitar el uso de [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Para ello, seleccione **MainWindow** en el diseñador, presione F4 para mostrar la **propiedades** ventana y, en el **diseño** sección no existe, establezca el **deancho** en un valor de 600 y **alto** en un valor de 350.  
   
-3.  Establecer el nombre de la cuadrícula, seleccione el **cuadrícula** panel en el Diseñador de (haga clic en el cuadro dentro de la **MainWindow**) y estableciendo el **nombre** propiedad en la parte superior de la  **Propiedades** ventana en "grid1".  
+3.  Establezca el nombre de la cuadrícula seleccionando el **cuadrícula** panel en el diseñador (haga clic en el cuadro de la **MainWindow**) y configuración de la **nombre** propiedad en la parte superior de la  **Propiedades** ventana en "grid1".  
   
 4.  En el **propiedades** ventana, haga clic en el botón de puntos suspensivos (**...** ) junto a la `ColumnDefinitions` propiedad para abrir el **Editor de la colección** cuadro de diálogo.  
   
-5.  En el **Editor de la colección** cuadro de diálogo, haga clic en el **agregar** tres veces para insertar tres columnas en el diseño de botón. La primera columna contendrá el **cuadro de herramientas**, la segunda columna va a hospedar la [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], y la tercera columna se utilizará para el inspector de propiedad.  
+5.  En el **Editor de la colección** cuadro de diálogo, haga clic en el **agregar** tres veces para insertar tres columnas en el diseño de botón. La primera columna contendrá el **cuadro de herramientas**, la segunda columna va a hospedar el [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], y la tercera columna se utilizará para el inspector de propiedad.  
   
 6.  Establecer el `Width` propiedad de la columna central en el valor "4 *".  
   
@@ -97,7 +97,7 @@ Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[
         }  
         ```  
   
-         Para obtener más información sobre el registro de los diseñadores de actividades, vea [Cómo: crear un diseñador de actividades personalizadas](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
+         Para obtener más información sobre el registro de los diseñadores de actividad, vea [Cómo: Crear un diseñador de actividad personalizado](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
   
     5.  En el constructor de clases `MainWindow`, agregue llamadas a los métodos declarados previamente para registrar los metadatos a fin de ser compatibles con el diseñador y crear <xref:System.Activities.Presentation.WorkflowDesigner>.  
   
@@ -119,9 +119,9 @@ Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[
   
 9. Presione F5 para compilar y ejecutar la solución.  
   
-10. Vea [tarea 3: crear el cuadro de herramientas y paneles de PropertyGrid](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) para obtener información sobre cómo agregar **cuadro de herramientas** y **PropertyGrid** admite su diseñador de flujo de trabajo rehospedado.  
+10. Consulte [tarea 3: Crear el cuadro de herramientas y PropertyGrid paneles](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) para obtener información sobre cómo agregar **cuadro de herramientas** y **PropertyGrid** soporte técnico para el Diseñador de flujo de trabajo rehospedado.  
   
-## <a name="see-also"></a>Vea también  
- [Rehospedaje del Diseñador de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [Tarea 1: Crear una aplicación de Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
- [Tarea 3: Crear los paneles de Cuadro de herramientas y PropertyGrid](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+## <a name="see-also"></a>Vea también
+- [Rehospedaje del Diseñador de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+- [Tarea 1: Crear una nueva aplicación de Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
+- [Tarea 3: Crear el cuadro de herramientas y PropertyGrid paneles](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)

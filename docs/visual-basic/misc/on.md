@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - On keyword [Visual Basic]
 ms.assetid: 8619c328-1637-4f41-b466-cbe693f4fe73
-ms.openlocfilehash: f7412d11acfa16b5e03f7ee9e917159e47409297
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e26a2380bbb0591788adf98078f4290df849ae0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640598"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684819"
 ---
 # <a name="on-visual-basic"></a>On (Visual Basic)
-Presenta una respuesta a un error de tiempo de ejecución o activa una opción del compilador.  
+Presenta una respuesta a un error en tiempo de ejecución o activa una opción del compilador.  
   
- En las consultas, identifica las claves para las colecciones que se está combina.  
+ En las consultas, identifica las claves para las colecciones que se están combina.  
   
 ## <a name="remarks"></a>Comentarios  
- El `On` se utiliza la palabra clave en los siguientes contextos:  
+ El `On` palabra clave se usa en estos contextos:  
   
  [Group Join (cláusula)](../../visual-basic/language-reference/queries/group-join-clause.md)  
   
@@ -34,5 +34,5 @@ Presenta una respuesta a un error de tiempo de ejecución o activa una opción d
   
  [Option Strict (instrucción)](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>Vea también  
- [Palabras clave](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vea también
+- [Palabras clave](../../visual-basic/language-reference/keywords/index.md)

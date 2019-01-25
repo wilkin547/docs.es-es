@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac4a8a0c13ba6aa0d5c65ec7fa1aa3b771c964eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b7f20dec86a85be85472037f58a2bd2002d9be1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620406"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags (Enumeración)
 Especifica el estado del subproceso en el que se activa el asistente para la depuración administrada (MDA).  
@@ -38,19 +38,19 @@ typedef enum CorDebugMDAFlags {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`MDA_FLAG_SLIP`|El subproceso en el que se activa el MDA ha cambiado desde que se inició el MDA.|  
+|`MDA_FLAG_SLIP`|El subproceso en el que se inició el MDA ha cambiado desde que se inició el MDA.|  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando la pila de llamadas ya no describe dónde se generó originalmente el MDA, el subproceso se considera que tiene *pospuesto*. Se trata de una circunstancia inusual producida por la ejecución del subproceso de una operación no válida al salir.  
+ Cuando la pila de llamadas ya no describe que originalmente se generó el MDA, el subproceso se considera que tiene *pospuesto*. Esta es una circunstancia inusual por la ejecución del subproceso de una operación no válida al salir.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

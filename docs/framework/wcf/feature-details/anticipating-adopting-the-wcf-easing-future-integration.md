@@ -2,12 +2,12 @@
 title: 'Anticipación de la adopción de Windows Communication Foundation: Cómo facilitar la futura integración'
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: f4cc450b04fd05d390a1f41f3d14c19f4b23be29
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c20011c6cf7a31d8c45769b6995bb6754088bba6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731288"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Anticipación de la adopción de Windows Communication Foundation: Cómo facilitar la futura integración
 Si utiliza ASP.NET hoy en día y prevé usar WCF en el futuro, este tema proporcionan instrucciones para asegurarse de que los nuevos servicios Web ASP.NET funcionarán bien junto con las aplicaciones WCF.  
@@ -43,5 +43,5 @@ public interface IEcho
 ## <a name="security"></a>Seguridad  
  Evite usar las opciones de autenticación proporcionadas por Internet Information Services (IIS). Los clientes de WCF no las admiten. Si es necesario proteger un servicio, utilice las opciones proporcionadas por WCF, ya que estas opciones son mejores y se basan en protocolos estándares.  
   
-## <a name="see-also"></a>Vea también  
- [Anticipación de la adopción de Windows Communication Foundation: Cómo facilitar la futura migración](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+## <a name="see-also"></a>Vea también
+- [Anticipación de la adopción de Windows Communication Foundation: Cómo facilitar la futura migración](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: d3b14881cc1366cefb4d11c9d14654c15952624b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a218df17412f713eec272e49c13956b2efb71b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620232"
 ---
 # <a name="shapes-how-to-topics"></a>Temas "Cómo..." de formas
-Los temas de esta sección muestran cómo usar <xref:System.Windows.Shapes.Shape> objetos para dibujar formas básicas en la pantalla.  
+Los temas de esta sección muestran cómo usar <xref:System.Windows.Shapes.Shape> objetos que se va a dibujar formas básicas en la pantalla.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Dibujar una forma cerrada utilizando el elemento Polygon](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
@@ -27,6 +27,6 @@ Los temas de esta sección muestran cómo usar <xref:System.Windows.Shapes.Shape
  [Dibujar un rectángulo](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
  [Modificar el extremo en el final de una línea o segmento](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Shapes.Shape>  
- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Shapes.Shape>
+- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

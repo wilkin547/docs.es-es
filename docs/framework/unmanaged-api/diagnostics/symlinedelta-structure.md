@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77cd8b7d791d11f6d40386f4747c60cd4832521a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2d534ae381e0dc105731cf0a537f81afe80d87e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732744"
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA (Estructura)
-Proporciona información al controlador de símbolos sobre métodos que se movieron como resultado de modificaciones.  
+Proporciona información al controlador de símbolos acerca de los métodos que se movieron como resultado de las modificaciones.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,11 +40,11 @@ typedef struct _SYMLINEDELTA
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`mdMethod`|Símbolo (token) de metadatos del método.|  
+|`mdMethod`|Token de metadatos del método.|  
 |`delta`|El número de líneas que se ha movido el método.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl  
+ **Encabezado**: CorSym.idl  
   
-## <a name="see-also"></a>Vea también  
- [Estructuras de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+## <a name="see-also"></a>Vea también
+- [Estructuras de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

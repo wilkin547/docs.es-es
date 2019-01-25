@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerFloodedMessageNotPropagated
 ms.date: 03/30/2017
 ms.assetid: a99275b9-4975-4899-8e21-594ba552f981
-ms.openlocfilehash: 2d6a5795519f20b199ac306b4a2df48c7b16423f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 117a172d11e67e23c4c3dca0449acb48c432b59c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33478197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629762"
 ---
 # <a name="systemservicemodelchannelspeerfloodedmessagenotpropagated"></a>System.ServiceModel.Channels.PeerFloodedMessageNotPropagated
 PeerNode recibió un mensaje, pero no propagado a los vecinos.  
@@ -18,7 +18,7 @@ PeerNode recibió un mensaje, pero no propagado a los vecinos.
 ## <a name="troubleshooting"></a>Solución de problemas  
  Compruebe si existe un filtro de propagación de mensaje.  
   
-## <a name="see-also"></a>Vea también  
- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Vea también
+- [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc610f4cc34b256867396a3390d5ccd0822f6454
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 34a2ca5b505c504115af47402c3d92a05ec0676f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450393"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737642"
 ---
 # <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE (Enumeración)
-Indica si un campo es estático y, si lo es, la calidad estática que se aplica al campo. Estos valores pueden combinarse mediante la operación OR bit a bit para indicar que el campo tiene varias cualidades estáticas.  
+Indica si un campo es estático y, si lo es, la calidad estática que se aplica al campo. Estos valores se pueden combinar con la operación OR bit a bit para indicar que el campo tiene varias calidades estáticas diferentes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,18 +44,18 @@ typedef enum {
 |------------|-----------------|  
 |`COR_PRF_FIELD_NOT_A_STATIC`|El campo no es estático.|  
 |`COR_PRF_FIELD_APP_DOMAIN_STATIC`|El campo es estático del dominio de aplicación.|  
-|`COR_PRF_FIELD_THREAD_STATIC`|El campo es estático de subproceso.|  
+|`COR_PRF_FIELD_THREAD_STATIC`|El campo es de subproceso estático.|  
 |`COR_PRF_FIELD_CONTEXT_STATIC`|El campo es estático de contexto.|  
-|`COR_PRF_FIELD_RVA_STATIC`|El campo es la dirección virtual relativa (RVA)-estático.|  
+|`COR_PRF_FIELD_RVA_STATIC`|El campo es la dirección virtual relativa (RVA)-static.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

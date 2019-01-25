@@ -1,16 +1,16 @@
 ---
-title: 'Cómo: Utilizar Svcutil.exe para validar el código del servicio compilado'
+title: Procedimiento Uso de Svcutil.exe para validar el código de servicio compilado
 ms.date: 03/30/2017
 ms.assetid: d0d820fb-41c2-45b8-8f22-0fa5aeebbbaa
-ms.openlocfilehash: 9e7bdf98f578e9b5f9ef2be9c46ccbe811358467
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a06cf57fce883753af4686b294396d6d6da73a13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531933"
 ---
-# <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>Cómo: Utilizar Svcutil.exe para validar el código del servicio compilado
-Puede usar el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para detectar errores en las configuraciones y las implementaciones del servicio sin hospedar el servicio.  
+# <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>Procedimiento Uso de Svcutil.exe para validar el código de servicio compilado
+Puede usar el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para detectar errores en las implementaciones de servicio y configuraciones sin hospedar el servicio.  
   
 ### <a name="to-validate-a-service"></a>Validar un servicio  
   
@@ -18,7 +18,7 @@ Puede usar el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.
   
 2.  Abra un símbolo del sistema de SDK.  
   
-3.  En el símbolo del sistema, inicie la herramienta Svcutil.exe mediante el formato siguiente. Para obtener más información sobre los distintos parámetros, consulte el Validationsection de servicio de la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tema.  
+3.  En el símbolo del sistema, inicie la herramienta Svcutil.exe mediante el formato siguiente. Para obtener más información sobre los distintos parámetros, vea la sección de validación del servicio la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tema.  
   
     ```  
     svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*  
@@ -35,5 +35,5 @@ Puede usar el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.
 svcutil /validate /serviceName:myServiceName myServiceHost.exe  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>Vea también
+- [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

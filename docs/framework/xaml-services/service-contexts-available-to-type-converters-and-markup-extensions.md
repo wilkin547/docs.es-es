@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: b68f00724ecd3a3edc64ee1e3dd7d97bffa20a62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3417ed53131a695623ea6c365314ab2c5eedd37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629307"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Contextos de servicio disponibles para los convertidores de tipos y las extensiones de marcado
 Los autores de los tipos que admiten los usos de la extensión de marcado y el convertidor de tipos deben tener a menudo la información contextual sobre dónde se encuentra un uso en el marcado o en la estructura gráfica del objeto adyacente. Puede ser necesaria cierta información para que se cree una instancia correcta del objeto proporcionado o para que puedan crearse referencias a objetos existentes del gráfico del objeto. Al usar los servicios XAML de .NET Framework, el contexto que puede ser necesario se expone como una serie de interfaces de servicio. El código de soporte de la extensión de marcado o el convertidor de tipos puede consultar un servicio usando un contexto de proveedor de servicio que esté disponible y se haya pasado desde <xref:System.Xaml.XamlObjectWriter> o tipos relacionados. El contexto de esquema XAML está disponible directamente con uno de estos servicios. En este tema se describe cómo acceder a los contextos de servicio desde una implementación de convertidor de valor y se enumeran los servicios normalmente disponibles y sus funciones.  
@@ -75,7 +75,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iserviceprovider"></a>IServiceProvider  
  **Documentación de referencia**: <xref:System.IServiceProvider>  
   
- **Relevante para:** operación básica de una infraestructura basada en servicios en .NET Framework para que se puede llamar a <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>.  
+ **Se ajusten al:** Funcionamiento básico de una infraestructura basada en servicios en .NET Framework para que se puede llamar a <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>.  
   
 ### <a name="itypedescriptorcontext"></a>ITypeDescriptorContext  
  **Documentación de referencia**: <xref:System.ComponentModel.ITypeDescriptorContext>  
@@ -85,14 +85,14 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="ivalueserializercontext"></a>IValueSerializerContext  
  **Documentación de referencia**: <xref:System.Windows.Markup.IValueSerializerContext>  
   
- Se deriva de <xref:System.ComponentModel.ITypeDescriptorContext> y también se basa en las implementaciones explícitas para suprimir las implicaciones falsas sobre el sistema de tipos XAML. Admite los métodos auxiliares de búsqueda estática en <xref:System.Windows.Markup.ValueSerializer>.  
+ Se deriva de <xref:System.ComponentModel.ITypeDescriptorContext> y también se basa en las implementaciones explícitas para suprimir las implicaciones falsas sobre el sistema de tipos XAML. Admite los métodos del asistente de búsqueda estática en <xref:System.Windows.Markup.ValueSerializer>.  
   
 ### <a name="ixamltyperesolver"></a>IXamlTypeResolver  
  **Documentación de referencia**: <xref:System.Windows.Markup.IXamlTypeResolver>  
   
  **Definida por:**  <xref:System.Windows.Markup> espacio de nombres, ensamblado System.Xaml  
   
- **Relevante para:** escenarios de ruta de acceso de carga y la interacción con el contexto de esquema XAML  
+ **Se ajusten al:** Escenarios de ruta de acceso de carga y la interacción con el contexto de esquema XAML  
   
  **API de servicio:**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>  
   
@@ -103,7 +103,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definida por:**  <xref:System.Windows.Markup> espacio de nombres, ensamblado System.Xaml  
   
- **Relevante para:** tratar rutas de acceso de carga y guardado de valores de miembro que son URI o valores `x:Uri` .  
+ **Se ajusten al:** Carga y guardado de control de ruta de acceso de los valores de miembro que son URI o `x:Uri` valores.  
   
  **API de servicio:**  <xref:System.Windows.Markup.IUriContext.BaseUri%2A>  
   
@@ -114,7 +114,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definida por:**  <xref:System.Xaml> espacio de nombres, ensamblado System.Xaml  
   
- **Relevante para:** el tratamiento de rutas de acceso de carga y aplazamientos de búsquedas de control u optimizaciones.  
+ **Se ajusten al:** Cargar aplazamientos de búsqueda de control y el tipo de ruta de acceso u optimizaciones.  
   
  **API de servicio:**  <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>y otras 3.  
   
@@ -125,7 +125,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definida por:**  <xref:System.Xaml> espacio de nombres, ensamblado System.Xaml  
   
- **Relevante para:** ruta de acceso de carga y cualquier operación que deba resolver un tipo XAML como un tipo de copia de seguridad.  
+ **Se ajusten al:** Ruta de acceso de carga y cualquier operación que deba resolver un tipo XAML como un tipo de respaldo.  
   
  **API de servicio:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
@@ -136,7 +136,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definida por:**  <xref:System.Xaml> espacio de nombres, ensamblado System.Xaml  
   
- **Relevante para:** ruta de acceso de carga.  
+ **Se ajusten al:** Ruta de acceso de carga.  
   
  **API de servicio:**  <xref:System.Xaml.IRootObjectProvider.RootObject%2A>  
   
@@ -147,7 +147,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definida por:**  <xref:System.Xaml> espacio de nombres, ensamblado System.Xaml  
   
- **Relevante para:** la ruta de acceso de carga y la ruta de acceso de guardado.  
+ **Se ajusten al:** Ruta de acceso de carga, guarde la ruta de acceso.  
   
  **API de servicio:** <xref:System.Xaml.IXamlNamespaceResolver.GetNamespace%2A> para la ruta de acceso de carga y <xref:System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes%2A> para la ruta de acceso de almacenamiento.  
   
@@ -158,7 +158,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definida por:**  <xref:System.Windows.Markup> espacio de nombres, ensamblado System.Xaml  
   
- **Relevante para:** la ruta de acceso de carga y la ruta de acceso de guardado.h.  
+ **Se ajusten al:** Ruta de acceso de carga y guarda la ruta de acceso.  
   
  **API de servicio:**  <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>y <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.  
   
@@ -169,7 +169,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definida por:**  <xref:System.Xaml> espacio de nombres, ensamblado System.Xaml  
   
- **Relevante para:** definición del gráfico de objeto de la ruta de acceso de carga, resolver objetos identificados por `x:Name`, `x:Reference`o técnicas específicas del marco.  
+ **Se ajusten al:** Cargar la definición del gráfico de objeto de ruta de acceso, resolver objetos identificados por `x:Name`, `x:Reference`, o técnicas específicas del marco.  
   
  **API de servicio:**  <xref:System.Xaml.IXamlNameResolver.Resolve%2A>; otras API para los escenarios más avanzados como el tratamiento de las referencias adelantadas.  
   
@@ -180,14 +180,14 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definida por:**  <xref:System.Xaml> espacio de nombres, ensamblado System.Xaml  
   
- **Relevante para:** la resolución de la ruta de acceso de carga de la información de tipo CLR indirecta.  
+ **Se ajusten al:** Cargar la resolución de la ruta de acceso de la información de tipo CLR indirecta.  
   
  **API de servicio:** <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A>  
   
  Para obtener más información, consulta <xref:System.Xaml.IDestinationTypeProvider>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Markup.MarkupExtension>  
- <xref:System.Xaml.XamlObjectWriter>  
- [Información general sobre las extensiones de marcado para el lenguaje XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  
- [Información general sobre los convertidores de tipos para XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Markup.MarkupExtension>
+- <xref:System.Xaml.XamlObjectWriter>
+- [Información general sobre las extensiones de marcado para el lenguaje XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)
+- [Información general sobre los convertidores de tipos para XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)

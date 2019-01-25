@@ -5,12 +5,12 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: f08a52add4e735ce794ecef2c3bd4b186b3c01a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8fdf11887d9ed7a52ac0d5f1abc81dcbb7932a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655700"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618914"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Solucionar problemas de variables en Visual Basic
 Esta página enumera algunos problemas comunes que pueden producirse al trabajar con variables en Visual Basic.  
@@ -29,10 +29,10 @@ Esta página enumera algunos problemas comunes que pueden producirse al trabajar
  En este ejemplo, `p` puede usar solo los miembros de la propia clase <xref:System.Object> , que no incluyen la propiedad `Left` . Por otro lado, `q` se ha declarado con el tipo <xref:System.Windows.Forms.Label>, así que puede usar todos los métodos y propiedades de la clase <xref:System.Windows.Forms.Label> en el espacio de nombres <xref:System.Windows.Forms> .  
   
 ### <a name="correct-approach"></a>Enfoque correcto  
- Para obtener acceso a todos los miembros de un objeto de una clase determinada, declare la variable de objeto con el tipo de dicha clase siempre que sea posible. Si no puede realizarlo de esta manera, por ejemplo si no conoce el tipo de objeto en tiempo de compilación, debe establecer `Option Strict` como `Off` y declarar la variable como [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). Esto permite que se asignen a la variable los objetos de cualquier tipo y debe realizar los pasos necesarios para asegurarse de que el objeto asignado actualmente es de un tipo válido. Puede usar el [del operador TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) para tomar esta decisión.  
+ Para obtener acceso a todos los miembros de un objeto de una clase determinada, declare la variable de objeto con el tipo de dicha clase siempre que sea posible. Si no puede realizarlo de esta manera, por ejemplo si no conoce el tipo de objeto en tiempo de compilación, debe establecer `Option Strict` como `Off` y declarar la variable como [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). Esto permite que se asignen a la variable los objetos de cualquier tipo y debe realizar los pasos necesarios para asegurarse de que el objeto asignado actualmente es de un tipo válido. Puede usar el [operador TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) para tomar esta decisión.  
   
 ## <a name="other-components-cannot-access-your-variable"></a>Otros componentes no pueden tener acceso a la variable  
- Nombres de Visual Basic son *entre mayúsculas y minúsculas*. Si dos nombres solo se distinguen por el uso de mayúsculas y minúsculas, el compilador los interpreta como el mismo nombre Por ejemplo, considera que `ABC` y `abc` hacen referencia al mismo elemento declarado.  
+ Los nombres de Visual Basic son *entre mayúsculas y minúsculas*. Si dos nombres solo se distinguen por el uso de mayúsculas y minúsculas, el compilador los interpreta como el mismo nombre Por ejemplo, considera que `ABC` y `abc` hacen referencia al mismo elemento declarado.  
   
  Sin embargo, Common Language Runtime (CLR) usa enlaces que *distinguen entre mayúsculas y minúsculas* . Por lo tanto, cuando genere un ensamblado o una DLL que pueda estar disponible para otros ensamblados, sus nombres ya no distinguirán entre mayúsculas o minúsculas. Por ejemplo, si define una clase que tiene un elemento denominado `ABC`, y otros ensamblados usan la clase mediante Common Language Runtime, deberán hacer referencia al elemento como `ABC`. Si, posteriormente, vuelve a compilar la clase y cambia el nombre del elemento a `abc`, los otros ensamblados que usen la clase ya no tendrán acceso a este elemento. Por lo tanto, cuando se lance una versión actualizada de un ensamblado, no se deben cambiar las mayúsculas o minúsculas de los elementos públicos.  
   
@@ -47,13 +47,13 @@ Esta página enumera algunos problemas comunes que pueden producirse al trabajar
 ### <a name="correct-approach"></a>Enfoque correcto  
  Evite usar variables con el mismo nombre pero con un ámbito diferente. Si usa otros ensamblados o proyectos, evite en la medida de lo posible usar nombres definidos en dichos componentes externos. Si tiene más de una variable con el mismo nombre, asegúrese de calificar todas las referencias a esta. Para obtener más información, consulta [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
-## <a name="see-also"></a>Vea también  
- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Declaración de variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [Obtener acceso a los miembros de un objeto](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
- [Valores de las variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [Determinar el tipo al que hace referencia una variable de objeto](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)  
- [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+## <a name="see-also"></a>Vea también
+- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Declaración de variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [Cómo: Obtener acceso a miembros de un objeto](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [Valores de las variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [Cómo: Determinar qué tipo de una Variable de objeto hace referencia a](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
+- [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

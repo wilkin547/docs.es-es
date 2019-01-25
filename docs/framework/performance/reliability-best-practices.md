@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6f29d15297fc7faff6bb3bb07ee535647c2bb7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 280e73ccd3d8a90b2f2b3a485d3f4240b434359b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397772"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714859"
 ---
 # <a name="reliability-best-practices"></a>Procedimientos recomendados para la confiabilidad
 Las siguientes reglas de confiabilidad están orientadas a SQL Server, pero también se aplican a cualquier aplicación de servidor basada en host. Es extremadamente importante que los servidores como SQL Server no pierdan recursos ni se interrumpan.  Pero eso no se puede realizar mediante la escritura de código devuelto para todos los métodos que modifican el estado de un objeto.  El objetivo no es escribir código administrado confiable al 100 por cien que se recupere de los errores en todas las ubicaciones con código devuelto.  Eso sería una tarea desalentadora con escasa probabilidad de éxito.  El Common Language Runtime (CLR) no puede proporcionar fácilmente garantías lo bastante seguras para el código administrado para que la escritura de código perfecto sea viable.  Tenga en cuenta que, a diferencia de ASP.NET, SQL Server solo usa un proceso que no se puede reciclar sin cerrar una base de datos durante un período inaceptablemente prolongado.  
@@ -278,6 +278,6 @@ public static MyClass SingletonProperty
   
  Hacer esto indica al compilador Just-In-Time que prepare todo el código en el bloque finally antes de ejecutar el bloque `try`. Esto garantiza que el código en el bloque finally se compila y se ejecuta en todos los casos. No es raro que una CER tenga un bloque `try` vacío. El uso de una CER protege frente a anulaciones de subprocesos asincrónicos y excepciones de memoria insuficiente. Vea <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> para obtener una forma de CER que además administra desbordamientos de pila para código excesivamente profundo.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.ConstrainedExecution>  
- [Programación en SQL Server y atributos de protección de host](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.ConstrainedExecution>
+- [Programación en SQL Server y atributos de protección de host](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)

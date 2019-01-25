@@ -37,12 +37,12 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-ms.openlocfilehash: 8afeba3f88c4bfe6e1c9777f950c3b458665e340
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 14eaacda83576b6c38d4783fba7c898a8c4aaa5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746795"
 ---
 # <a name="data-type-summary-visual-basic"></a>Resumen de tipos de datos (Visual Basic)
 En la tabla siguiente se muestra los tipos de datos de Visual Basic, sus tipos auxiliares de common language runtime, su asignación de almacenamiento nominal y sus intervalos de valores.  
@@ -91,10 +91,10 @@ En la tabla siguiente se muestra los tipos de datos de Visual Basic, sus tipos a
 ### <a name="object-overhead"></a>Sobrecarga de objetos  
  Un `Object` que hace referencia a ningún dato básico o compuesto tipo usa 4 bytes además de los datos contenidos en el tipo de datos.  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.Strings.StrConv%2A>  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Caracteres de tipo](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.VisualBasic.Strings.StrConv%2A>
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Caracteres de tipo](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

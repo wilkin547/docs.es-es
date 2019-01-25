@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1eae19d592dcf5243139e11bb6662953436e45a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b93dd3b1d08a939e03ccfa52f7fb2e97c97d7e96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408598"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600094"
 ---
 # <a name="ialink-interface"></a>IALink (Interfaz)
-Ayuda a construir los ensamblados de .NET Framework. Entre otras cosas, la interfaz contiene métodos que ayudan a escribir los manifiestos de ensamblado para los ensamblados de varios módulos, firmar los ensamblados con nombres seguros y crear archivos netmodule.  
+Ayuda a construir los ensamblados de .NET Framework. Entre otras cosas, la interfaz contiene métodos que ayudan a escribir los manifiestos de ensamblado para los ensamblados de varios módulos, firmar ensamblados con nombres seguros y crear netmodules.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [AddFile (método1)](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
@@ -63,7 +63,7 @@ Ayuda a construir los ensamblados de .NET Framework. Entre otras cosas, la inter
   
  [ImportTypes (método)](../../../../docs/framework/unmanaged-api/alink/importtypes-method.md)  
   
- "Init (método)"  
+ "Método Init"  
   
  [LinkResource (método)](../../../../docs/framework/unmanaged-api/alink/linkresource-method.md)  
   
@@ -75,7 +75,7 @@ Ayuda a construir los ensamblados de .NET Framework. Entre otras cosas, la inter
   
  [SetNonAssemblyFlags (método)](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a>Vea también  
- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)  
- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Vea también
+- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

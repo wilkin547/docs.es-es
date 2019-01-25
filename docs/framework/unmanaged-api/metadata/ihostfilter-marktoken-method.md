@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52375486eb9d7780a51808dedc5f876587efb115
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a4a1761f088732cf19d55f42d66288bb281885f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444569"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589456"
 ---
 # <a name="ihostfiltermarktoken-method"></a>IHostFilter::MarkToken (Método)
 Indica que se procesará el token de metadatos especificado.  
@@ -37,20 +37,20 @@ HRESULT MarkToken (
   
 #### <a name="parameters"></a>Parámetros  
  `tk`  
- [in] El token de metadatos para procesarse.  
+ [in] El token de metadatos que se va a procesar.  
   
 ## <a name="remarks"></a>Comentarios  
- Normalmente, deseará que un token que se puede procesar si se encuentra en el ámbito de metadatos. El `MarkToken` método se pasa al motor de metadatos a través de la [IMetaDataEmit:: SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) método.  
+ Normalmente, desea que un token en procesarse si se encuentra en el ámbito de metadatos. El `MarkToken` método se pasa al motor de metadatos a través de la [SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- [IHostFilter (interfaz)](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)
+## <a name="see-also"></a>Vea también
+- [Interfaces de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [IHostFilter (interfaz)](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)

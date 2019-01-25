@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Declarar una constante (Visual Basic)'
+title: Procedimiento Declare una constante (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.constant
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: ce45e4df7f74cd68bde0fb2adba10197a11edb1b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e45ca7eeca9ce178abf3ab5cab6d791f799f1d09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678842"
 ---
-# <a name="how-to-declare-a-constant-visual-basic"></a>Cómo: Declarar una constante (Visual Basic)
+# <a name="how-to-declare-a-constant-visual-basic"></a>Procedimiento Declare una constante (Visual Basic)
 Usa el `Const` instrucción declare una constante y establezca su valor. Al declarar una constante, asigna un nombre descriptivo a un valor. Una vez que se declara una constante, no se puede modificar o asignar un nuevo valor.  
   
  Declare una constante dentro de un procedimiento o en la sección de declaraciones de un módulo, clase o estructura. Constantes de nivel de la estructura o clase son `Private` de forma predeterminada, pero también pueden declararse como `Public`, `Friend`, `Protected`, o `Protected Friend` para el nivel adecuado de acceso al código.  
@@ -65,14 +65,25 @@ Usa el `Const` instrucción declare una constante y establezca su valor. Al decl
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Const (instrucción)](../../../../visual-basic/language-reference/statements/const-statement.md)  
- [Tipos de datos constantes y literales](constant-and-literal-data-types.md)  
- [Información general de las constantes](constants-overview.md) [Cómo: declarar una constante](how-to-declare-a-constant.md) [constantes definidas por el usuario](user-defined-constants.md) [tipos de datos constantes y literales](constant-and-literal-data-types.md) [Cómo: grupo Valores de constantes relacionadas](how-to-group-related-constant-values-together.md) [información general de las enumeraciones](enumerations-overview.md) [Cómo: declarar enumeraciones](how-to-declare-enumerations.md) [Cómo: hacer referencia a un miembro de enumeración](how-to-refer-to-an-enumeration-member.md) [Enumeraciones y calificación de nombres](enumerations-and-name-qualification.md) [Cómo: recorrer en iteración una enumeración](how-to-iterate-through-an-enumeration.md) [Cómo: determinar la cadena asociada con un valor de enumeración](how-to-determine-the-string-associated-with-an-enumeration-value.md) [Cuándo se debe utilizar una enumeración](when-to-use-an-enumeration.md)
+## <a name="see-also"></a>Vea también
+- [Const (instrucción)](../../../../visual-basic/language-reference/statements/const-statement.md)
+- [Tipos de datos constantes y literales](constant-and-literal-data-types.md)
+- [Información general sobre las constantes](constants-overview.md)
+- [Cómo: Declarar una constante](how-to-declare-a-constant.md)
+- [Constantes definidas por el usuario](user-defined-constants.md)
+- [Tipos de datos constantes y literales](constant-and-literal-data-types.md)
+- [Cómo: Agrupar valores de constantes relacionadas](how-to-group-related-constant-values-together.md)
+- [Información general sobre las enumeraciones](enumerations-overview.md)
+- [Cómo: Declarar enumeraciones](how-to-declare-enumerations.md)
+- [Cómo: Hacer referencia a un miembro de enumeración](how-to-refer-to-an-enumeration-member.md)
+- [Enumeraciones y calificación de nombres](enumerations-and-name-qualification.md)
+- [Cómo: Recorrer en iteración una enumeración](how-to-iterate-through-an-enumeration.md)
+- [Cómo: Determinar la cadena asociada con un valor de enumeración](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [Cuándo se debe utilizar una enumeración](when-to-use-an-enumeration.md)
 
- [Información general sobre las enumeraciones](enumerations-overview.md)  
- [Información general sobre las constantes](constants-overview.md)  
- [Cómo: declarar una enumeración](how-to-declare-enumerations.md)  
- [Enumeraciones y calificación de nombres](enumerations-and-name-qualification.md)  
- [Option Strict (instrucción)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Constantes y enumeraciones](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Información general sobre las enumeraciones](enumerations-overview.md)
+- [Información general sobre las constantes](constants-overview.md)
+- [Cómo: Declarar una enumeración](how-to-declare-enumerations.md)
+- [Enumeraciones y calificación de nombres](enumerations-and-name-qualification.md)
+- [Option Strict (instrucción)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Constantes y enumeraciones](../../../../visual-basic/language-reference/constants-and-enumerations.md)

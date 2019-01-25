@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Animar un objeto a lo largo de una trayectoria (animación de matriz)'
+title: Procedimiento Animar un objeto a lo largo de una trayectoria (animación de matriz)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation)
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
-ms.openlocfilehash: f88133a5e927a1a1f59b1aa02826d140c107d002
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 836f61e062b921c7e51166a35d8169f903fcbab9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738305"
 ---
-# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Cómo: Animar un objeto a lo largo de una trayectoria (animación de matriz)
+# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Procedimiento Animar un objeto a lo largo de una trayectoria (animación de matriz)
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> clase para animar un objeto a lo largo de una ruta de acceso que se define mediante un <xref:System.Windows.Media.PathGeometry>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -34,7 +34,7 @@ En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.Animation.Ma
   
  Para obtener un ejemplo completo, vea [ejemplo de animación de trazado](https://go.microsoft.com/fwlink/?LinkID=160028). Para obtener más información sobre los trazados geométricos, vea el [información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Ejemplo de animación de trazado](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [Temas de procedimientos de animación de trazado](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>Vea también
+- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Ejemplo de animación de trazado](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Temas de procedimientos de animación de trazado](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
