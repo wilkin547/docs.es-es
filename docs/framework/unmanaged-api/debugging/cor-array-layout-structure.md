@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a96542ab5113311bba79cc552afd7f29e6eafa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e6fee91146e99ba1f63ecafcbbdaae9d42675848
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406401"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731145"
 ---
 # <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT (Estructura)
 Proporciona información sobre la distribución de un objeto de matriz en la memoria.  
@@ -46,28 +46,28 @@ typedef struct COR_ARRAY_LAYOUT {
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`componentID`|El identificador del tipo de objetos que contiene la matriz.|  
-|`componentType`|Un valor de enumeración CorElementType que indica si el componente es una referencia de la colección de elementos no utilizados, una clase de valor o un tipo primitivo.|  
-|`firstElementOffset`|El desplazamiento hasta el primer elemento de la matriz.|  
+|`componentType`|Un valor de enumeración CorElementType que indica si el componente es un tipo primitivo, una clase de valor o una referencia de la colección de elementos no utilizados.|  
+|`firstElementOffset`|El desplazamiento al primer elemento de la matriz.|  
 |`elementSize`|El tamaño de cada elemento.|  
-|`countOffset`|El desplazamiento hasta el número de elementos de la matriz.|  
+|`countOffset`|El desplazamiento en el número de elementos de la matriz.|  
 |`rankSize`|El tamaño de la clasificación, en bytes.|  
 |`numRanks`|El número de rangos en la matriz.|  
 |`rankOffset`|El desplazamiento en el que iniciar los rangos.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `rankSize` campo especifica el tamaño de un rango en una matriz multidimensional. Es preciso para así matrices unidimensionales.  
+ El `rankSize` campo especifica el tamaño de un rango en una matriz multidimensional. Es preciso para las matrices unidimensionales también.  
   
  El valor de `numRanks` es 1 para una matriz unidimensional y `N` para una matriz multidimensional de `N` dimensiones.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vea también
+- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

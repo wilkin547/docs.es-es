@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32036058924aaf79fa7282144ced75040bc1f825
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b6afe0f0d8780a93a7d98f24a11bb67ef65ebf63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426026"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604280"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges (Método)
-Dada una posición en un documento, devuelve una matriz de pares de desplazamiento inicial y final que corresponden a los intervalos del lenguaje intermedio de Microsoft (MSIL) que cubre la posición dentro de este método. La matriz es una matriz de enteros y tiene el formato [inicio, fin, inicio, final]. El número de pares del intervalo es la longitud de la matriz dividida entre 2.  
+Dada una posición en un documento, devuelve una matriz de pares de desplazamiento inicial y final que corresponden a los intervalos de lenguaje intermedio de Microsoft (MSIL) que cubre la posición dentro de este método. La matriz es una matriz de enteros y tiene el formato [inicio, fin, inicio, final]. El número de pares del intervalo es la longitud de la matriz dividida por 2.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,10 +60,10 @@ HRESULT GetRanges(
  [out] Un puntero al búfer que recibe los intervalos.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método tiene éxito; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [ISymUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Vea también
+- [ISymUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

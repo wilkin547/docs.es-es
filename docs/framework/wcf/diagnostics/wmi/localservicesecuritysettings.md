@@ -2,12 +2,12 @@
 title: LocalServiceSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 490aa0e5-5242-4f8d-b505-5ec6287633b4
-ms.openlocfilehash: c1f3abe2d016ccab9b136752c4b2e6697ca59e66
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5c68706c5dcec3a5b0ec62bb9cfbea4e1496b4f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188851"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574604"
 ---
 # <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings
 LocalServiceSecuritySettings  
@@ -43,98 +43,98 @@ class LocalServiceSecuritySettings
 ### <a name="detectreplays"></a>DetectReplays  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un valor booleano que especifica si se detectan ataques de reproducción en el canal y si se abordan automáticamente.  
   
 ### <a name="inactivitytimeout"></a>InactivityTimeout  
  Tipo de datos: datetime  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El número máximo de sesiones de seguridad pendientes que el servicio admite.  
   
 ### <a name="issuedcookielifetime"></a>IssuedCookieLifetime  
  Tipo de datos: datetime  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un TimeSpan que especifica la duración emitida a todas las nuevas cookies de seguridad.  
   
 ### <a name="maxcachedcookies"></a>MaxCachedCookies  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El número máximo de cookies que pueden estar almacenadas en memoria caché.  
   
 ### <a name="maxclockskew"></a>MaxClockSkew  
  Tipo de datos: datetime  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un TimeSpan que especifica la diferencia máxima de tiempo entre los relojes del sistema de las dos partes en comunicación.  
   
 ### <a name="maxpendingsessions"></a>MaxPendingSessions  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El número máximo de conexiones pendientes en el servicio.  
   
 ### <a name="maxstatefulnegotiations"></a>MaxStatefulNegotiations  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El número de negociaciones de seguridad que pueden estar activas de manera simultánea.  
   
 ### <a name="negotiationtimeout"></a>NegotiationTimeout  
  Tipo de datos: datetime  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un TimeSpan que especifica la duración máxima para la fase de negociación de seguridad entre servidor y cliente.  
   
 ### <a name="reconnecttransportonfailure"></a>ReconnectTransportOnFailure  
  Tipo de datos: booleano  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un valor booleano que especifica si las conexiones que usan mensajería WS-Reliable intentan volverse a conectar después de los errores de transporte.  
   
 ### <a name="replaycachesize"></a>ReplayCacheSize  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El número de valores de seguridad (nonce) almacenados en memoria caché usados para la detección de reproducción.  
   
 ### <a name="replaywindow"></a>ReplayWindow  
  Tipo de datos: datetime  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un TimeSpan que especifica la duración en la que los nonces de mensajes particulares son válidos.  
   
 ### <a name="sessionkeyrenewalinterval"></a>SessionKeyRenewalInterval  
  Tipo de datos: datetime  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un TimeSpan que especifica la duración después de la cual el iniciador renueva la clave para la sesión de seguridad.  
   
 ### <a name="sessionkeyrolloverinterval"></a>SessionKeyRolloverInterval  
  Tipo de datos: datetime  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un TimeSpan que especifica el intervalo de tiempo durante el cual una clave de sesión anterior es válida en mensajes entrantes durante una renovación de clave.  
   
 ### <a name="timestampvalidityduration"></a>TimestampValidityDuration  
  Tipo de datos: datetime  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un TimeSpan positivo que especifica la duración en la que una marca de tiempo es válida.  
   
@@ -144,5 +144,5 @@ class LocalServiceSecuritySettings
 |---------|-----------------------------------|  
 |Espacio de nombres|Se define en root\ServiceModel|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

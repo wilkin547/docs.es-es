@@ -1,14 +1,15 @@
 ---
-title: Ejemplo que muestra los elementos de documento XML abierto de Office (Visual Basic)
+title: Ejemplo que da como resultado partes de documento de Office Open XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-ms.openlocfilehash: 2e4b03d89a5b1eabb5751d807ef78442a960389d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ad7dc9d6f68ecde88888b0f0250632f3f946f92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670256"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Ejemplo que muestra los elementos de documento XML abierto de Office (Visual Basic)
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Ejemplo que da como resultado partes de documento de Office Open XML (Visual Basic)
 Este tema muestra cómo abrir un documento XML abierto de Office y obtener acceso a sus partes.  
   
 ## <a name="example"></a>Ejemplo  
@@ -63,5 +64,5 @@ Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Re
 End Using  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Detalles de Office documentos WordprocessingML XML abierto (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>Vea también
+- [Detalles de Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

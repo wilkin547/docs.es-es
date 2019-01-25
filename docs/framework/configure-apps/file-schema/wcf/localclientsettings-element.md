@@ -2,21 +2,21 @@
 title: '&lt;localClientSettings&gt; (elemento)'
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: 6ed73cc2a74efbba356b71f7941cb8b1113b22b8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 67e872ea44a502c5b0fcdc5c1d326aad91eaa8fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600367"
 ---
 # <a name="ltlocalclientsettingsgt-element"></a>&lt;localClientSettings&gt; (elemento)
 Especifica la configuración de seguridad de un cliente local para este enlace.  
   
  \<system.serviceModel>  
-\<enlaces >  
-\<customBinding >  
-\<enlace >  
-\<seguridad >  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<security>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,21 +62,21 @@ Especifica la configuración de seguridad de un cliente local para este enlace.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica las opciones de seguridad de un enlace personalizado.|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Especifica los valores predeterminados usados para iniciar un servicio de conversación seguro.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica las opciones de seguridad de un enlace personalizado.|  
+|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Especifica los valores predeterminados usados para iniciar un servicio de conversación seguro.|  
   
 ## <a name="remarks"></a>Comentarios  
  La configuración es local en el sentido que no es la configuración derivada de la directiva de seguridad del servicio.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>  
- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalClientSettings%2A>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>  
- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Seguridad de enlace personalizado](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>
+- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalClientSettings%2A>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>
+- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Seguridad de enlace personalizado](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

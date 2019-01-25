@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - PrintForm component [Visual Basic], deploying
 ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
-ms.openlocfilehash: 6384ad6e3bf0520362267eddc8f7bbb05b37f283
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 78d332c88b45fa9b1204d9d5352a6027409254e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787652"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562432"
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>Implementación de aplicaciones que hacen referencia al componente PrintForm (Visual Basic)
 Si quiere implementar una aplicación que haga referencia al componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> , el componente debe estar instalado en el equipo de destino.  
   
- Los controles PowerPack ya no están incluidos en Visual Studio, pero puede descargarlos desde el [centro de descarga de](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Los controles PowerPack ya no están incluidos en Visual Studio, pero puede descargarlos desde el [Centro de descarga](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ## <a name="installing-the-printform-as-a-prerequisite"></a>Instalación de PrintForm como un requisito previo  
  Para implementar correctamente una aplicación, también debe implementar todos los componentes a los que hace referencia la aplicación. El proceso de instalación de componentes de requisito previo se conoce como *arranque*.  
@@ -30,6 +30,6 @@ Si quiere implementar una aplicación que haga referencia al componente <xref:Mi
   
  Como alternativa al arranque, puede realizar una implementación previa del componente <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> mediante un sistema electrónico de distribución de software, como Microsoft Systems Management Server.  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: Instalar requisitos previos mediante una aplicación ClickOnce](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)  
- [PrintForm (componente)](../../../visual-basic/developing-apps/printing/printform-component.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Instalación de requisitos previos con una aplicación ClickOnce](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)
+- [PrintForm (componente)](../../../visual-basic/developing-apps/printing/printform-component.md)

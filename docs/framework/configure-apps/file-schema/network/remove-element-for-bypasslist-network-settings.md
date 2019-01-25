@@ -10,21 +10,21 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: 83449aa2df2b0442f5ba5e1f152232b007bcdc15
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c9db8cc2cf05987db97f28d7f97967f5bb52404e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625671"
 ---
 # <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;quitar&gt; elemento para bypasslist (configuración de red)
 Quita una dirección IP o nombre DNS de la lista de omisión de proxy.  
   
  \<configuration>  
-\<System.NET >  
-\<defaultProxy >  
-\<bypasslist >  
-\<Quitar >  
+\<system.net>  
+\<defaultProxy>  
+\<bypasslist>  
+\<remove>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -78,6 +78,6 @@ Quita una dirección IP o nombre DNS de la lista de omisión de proxy.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>Vea también
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

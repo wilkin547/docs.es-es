@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a8617c9e818ec514c912a85373c916559d89df3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4ccbff4a4967e7525ee4e51650a4f53e5458666
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443042"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605523"
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection (Método)
 Obtiene una representación de cadena de la sección de código al que hace referencia el identificador especificado.  
@@ -39,16 +39,16 @@ HRESULT GetStringSection (
   
 #### <a name="parameters"></a>Parámetros  
  `section`  
- [entrada, salida] El identificador de la sección de código.  
+ [in, out] El identificador de la sección de código.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICeeGen (interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICeeGen (interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

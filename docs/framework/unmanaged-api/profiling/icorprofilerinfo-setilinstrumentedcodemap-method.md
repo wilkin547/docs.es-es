@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ecb80de1ae46b072df4bab8357e78e7a22ae298
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4780242dc34f31ecd0ff0dc2c339cdaa30278a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458074"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721167"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap (Método)
-Establece un mapa de código para la función especificada usando las entradas de mapa de lenguaje intermedio (MSIL) de Microsoft especificadas.  
+Establece un mapa de código para la función especificada con las entradas de asignación de lenguaje intermedio (MSIL) de Microsoft especificadas.  
   
 > [!NOTE]
->  En .NET Framework versión 2.0, una llamada a `SetILInstrumentedCodeMap` en un `FunctionID` que representa un tipo genérico se funcionen en un dominio de aplicación determinado afectarán a todas las instancias de esa función en el dominio de aplicación.  
+>  En .NET Framework versión 2.0, una llamada a `SetILInstrumentedCodeMap` en un `FunctionID` que representa genéricos funcionan en un determinado dominio de aplicación afectará a todas las instancias de esa función en el dominio de aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,23 +42,23 @@ HRESULT SetILInstrumentedCodeMap(
   
 #### <a name="parameters"></a>Parámetros  
  `functionId`  
- [in] El identificador de la función para que se establecerá el mapa de código.  
+ [in] El identificador de la función que se va a establecer el mapa de código.  
   
  `fStartJit`  
- [in] Un valor booleano que indica si la llamada a la `SetILInstrumentedCodeMap` método es la primera para una determinada `FunctionID`. Establecer `fStartJit` a `true` en la primera llamada a `SetILInstrumentedCodeMap` para un determinado `FunctionID`y a `false` a partir de ahí.  
+ [in] Un valor booleano que indica si la llamada a la `SetILInstrumentedCodeMap` método es la primera para una determinada `FunctionID`. Establecer `fStartJit` a `true` en la primera llamada a `SetILInstrumentedCodeMap` para un determinado `FunctionID`y a `false` a partir de entonces.  
   
  `cILMapEntries`  
  [in] El número de elementos de la `cILMapEntries` matriz.  
   
  `rgILMapEntries`  
- [in] Una matriz de estructuras COR_IL_MAP, cada uno de los cuales especifica un desplazamiento MSIL.  
+ [in] Una matriz de estructuras COR_IL_MAP, cada uno de los cuales especifica un desplazamiento de MSIL.  
   
 ## <a name="remarks"></a>Comentarios  
- A menudo, un generador de perfiles inserta instrucciones incluidas en el código fuente de un método para instrumentar ese método (por ejemplo, para notificar cuando se alcanza una línea de código fuente). `SetILInstrumentedCodeMap` permite a un generador de perfiles asignar las instrucciones de MSIL originales a sus nuevas ubicaciones. Un generador de perfiles puede usar el [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) método para obtener el desplazamiento MSIL original de un desplazamiento nativo dado.  
+ A menudo, un generador de perfiles inserta instrucciones dentro del código fuente de un método para instrumentar ese método (por ejemplo, para notificar cuando se alcanza una línea de código fuente). `SetILInstrumentedCodeMap` permite que un generador de perfiles asignar las instrucciones de MSIL originales a sus nuevas ubicaciones. Un generador de perfiles puede utilizar el [GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) método debe obtener el desplazamiento MSIL original para un determinado desplazamiento nativo.  
   
- El depurador supondrá que cada desplazamiento anterior hace referencia a un desplazamiento dentro del código MSIL original, sin modificar de MSIL, y que cada nuevo desplazamiento hace referencia al desplazamiento de MSIL dentro del nuevo código instrumentado. La asignación se debe ordenar en orden ascendente. Para la ejecución paso a paso para que funcionen correctamente, siga estas instrucciones:  
+ El depurador supondrá que cada desplazamiento anterior hace referencia a un desplazamiento dentro del código MSIL original, sin modificar de MSIL, y que cada nuevo desplazamiento hace referencia al desplazamiento de MSIL dentro del nuevo código instrumentado. El mapa se debe ordenar en orden ascendente. Para la ejecución paso a paso para que funcionen correctamente, siga estas instrucciones:  
   
--   No reordene el código MSIL instrumentado.  
+-   No volver a ordenar el código MSIL instrumentado.  
   
 -   No quite el código MSIL original.  
   
@@ -66,30 +66,30 @@ HRESULT SetILInstrumentedCodeMap(
   
      (0 anterior, 0 nuevo)  
   
-     (5 anterior, 10 nueva)  
+     (5 antiguo, 10 nuevos)  
   
-     (9 antiguo, 20 nueva)  
+     (9 antiguo, 20 nuevos)  
   
-    -   Un desplazamiento anterior de 0, 1, 2, 3 o 4 se asignarán al nuevo desplazamiento de 0.  
+    -   Un desplazamiento anterior de 0, 1, 2, 3 o 4 se asignará al nuevo desplazamiento de 0.  
   
-    -   Un desplazamiento anterior de 5, 6, 7 u 8 se asignarán al nuevo desplazamiento de 10.  
+    -   Un desplazamiento anterior de 5, 6, 7 u 8 se asignará al nuevo desplazamiento de 10.  
   
-    -   Un desplazamiento anterior de 9 o versiones posteriores se asignarán al nuevo desplazamiento de 20.  
+    -   Un desplazamiento anterior de 9 o versiones posteriores se asignará al nuevo desplazamiento de 20.  
   
     -   Se asignará un nuevo desplazamiento de 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 al anterior desplazamiento de 0.  
   
-    -   Un desplazamiento de 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 nuevos se asignarán al anterior desplazamiento de 5.  
+    -   Un nuevo desplazamiento de 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 se asignará al anterior desplazamiento 5.  
   
-    -   Se asignará un nuevo desplazamiento de 20 o superior al anterior desplazamiento de 9.  
+    -   Se asignará un nuevo desplazamiento de 20 o superior al desplazamiento anterior de 9.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

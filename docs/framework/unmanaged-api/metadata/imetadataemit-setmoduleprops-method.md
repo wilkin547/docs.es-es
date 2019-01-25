@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce8be38f6e146b2a8669ea5c694353615f6f2d66
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 86cb99023c0abfc70d292427b14986dbcea1d333
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445908"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586168"
 ---
 # <a name="imetadataemitsetmoduleprops-method"></a>IMetaDataEmit::SetModuleProps (Método)
-Actualiza las referencias a un módulo definido por una llamada anterior a [IMetaDataEmit:: DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).  
+Actualiza las referencias a un módulo definido por una llamada anterior a [DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,17 +37,17 @@ HRESULT SetModuleProps (
   
 #### <a name="parameters"></a>Parámetros  
  `szName`  
- [in] El nombre del módulo en Unicode. Esto es solo el nombre de archivo y no el nombre de ruta de acceso completa.  
+ [in] El nombre del módulo en Unicode. Esto es sólo el nombre de archivo y no el nombre de ruta de acceso completa.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MSCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

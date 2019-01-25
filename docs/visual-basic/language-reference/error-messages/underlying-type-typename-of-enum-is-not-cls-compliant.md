@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: 876a59d1441c1ba4c5057556d5ef2fb2ecb43af6
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ceda7e6ed6fc1744de14afcb0245ebabbd7fa733
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674799"
 ---
 # <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>El tipo subyacente &lt;typename&gt; de Enum no es conforme a CLS
 El tipo de datos especificado para esta enumeración no es parte de la [independencia del lenguaje y componentes independientes del lenguaje](../../../standard/language-independence-and-language-independent-components.md) (CLS). Esto no es un error en su componente, porque el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] y Visual Basic admite este tipo de datos. Sin embargo, es posible que otro componente escrito en código estrictamente conforme a CLS no admite este tipo de datos. Es posible que este componente no pueda interactuar correctamente con el componente.  
@@ -41,7 +41,7 @@ El tipo de datos especificado para esta enumeración no es parte de la [independ
   
 -   Si trabaja con objetos de automatización o COM, tenga en cuenta que algunos tipos tienen anchos de datos distintos que en [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Por ejemplo, `uint` suele ser de 16 bits en otros entornos. Si se pasa un argumento de 16 bits a esos componentes, declárelo como `UShort` en lugar de `UInteger` en el código administrado de Visual Basic.  
   
-## <a name="see-also"></a>Vea también  
- [Reflexión (Visual Basic)](../../programming-guide/concepts/reflection.md)  
- [Reflexión](../../../framework/reflection-and-codedom/reflection.md)  
- 
+## <a name="see-also"></a>Vea también
+- [Reflexión (Visual Basic)](../../programming-guide/concepts/reflection.md)
+- [Reflexión](../../../framework/reflection-and-codedom/reflection.md)
+

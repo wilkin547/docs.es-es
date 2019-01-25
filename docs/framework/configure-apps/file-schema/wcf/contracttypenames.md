@@ -2,18 +2,18 @@
 title: '&lt;contractTypeNames&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5ec5efc6-87f8-4160-9be0-dcd2e01df3df
-ms.openlocfilehash: 60647e6ec31e7228f09d084ff669a1829770ca14
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2c3f501f44d9e3c601e654041eb9d5a7de8a0a07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144736"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626776"
 ---
 # <a name="ltcontracttypenamesgt"></a>&lt;contractTypeNames&gt;
 Una sección de configuración que especifica una lista de nombres de tipos de contrato, que son los nombres del contrato de los servicios que se están buscando, y los criterios que suelen usarse al buscar un servicio. Si se especifica más de un nombre del contrato, solo responderán los puntos de conexión del servicio que coincidan con TODOS los contratos. Tenga en cuenta que en Windows Communication Foundation (WCF), un punto de conexión solo puede admitir un contrato.  
   
  \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,9 +58,9 @@ Una sección de configuración que especifica una lista de nombres de tipos de c
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<findCriteria >](../../../../../docs/framework/configure-apps/file-schema/wcf/findcriteria.md)|Elemento de configuración que proporciona un conjunto de criterios utilizado por una aplicación cliente para buscar un servicio de detección. Los criterios pueden agruparse en criterios de búsqueda (que especifican qué servicios está buscando) y encuentra criterios de finalización (cuánto tiempo debe durar la búsqueda).|  
+|[\<findCriteria>](../../../../../docs/framework/configure-apps/file-schema/wcf/findcriteria.md)|Elemento de configuración que proporciona un conjunto de criterios utilizado por una aplicación cliente para buscar un servicio de detección. Los criterios pueden agruparse en criterios de búsqueda (que especifican qué servicios está buscando) y encuentra criterios de finalización (cuánto tiempo debe durar la búsqueda).|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Discovery.FindCriteria>  
- <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>  
- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Discovery.FindCriteria>
+- <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>
+- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection>

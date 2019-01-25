@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 301d36820ed5ae1d6ba1cfd2961221095b02bea6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 675e2e4d5022f0260450f9f0b2025f215b3ead7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708292"
 ---
 # <a name="overlappedfreeerror-mda"></a>MDA de overlappedFreeError
 El Asistente para la depuración administrada (MDA) `overlappedFreeError` se activa cuando se llama al método <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> antes de que se haya completado la operación superpuesta.  
@@ -50,7 +50,7 @@ El Asistente para la depuración administrada (MDA) `overlappedFreeError` se act
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

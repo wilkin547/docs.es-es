@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a56d874e5e7ef491c24b0aef2ace700087de677
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d10fb391953e924feb553ae4516fb7674345ed3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592021"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs (Método)
 Enumera la `mdAssemblyRef` instancias que se definen en el manifiesto del ensamblado.  
@@ -40,7 +40,7 @@ HRESULT EnumAssemblyRefs (
   
 #### <a name="parameters"></a>Parámetros  
  `phEnum`  
- [entrada, salida] Un puntero para el enumerador. Debe ser un valor null valor cuando el `EnumAssemblyRefs` método se llama por primera vez.  
+ [in, out] Un puntero en el enumerador. Esto debe ser un valor null valor cuando el `EnumAssemblyRefs` se llama al método por primera vez.  
   
  `rAssemblyRefs`  
  [out] La enumeración de `mdAssemblyRef` los tokens de metadatos.  
@@ -49,23 +49,23 @@ HRESULT EnumAssemblyRefs (
  [in] El número máximo de tokens que se pueden colocar en el `rAssemblyRefs` matriz.  
   
  `pcTokens`  
- [out] El número de símbolos (tokens) realizó en `rAssemblyRefs`.  
+ [out] El número de tokens se realizó en `rAssemblyRefs`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |`S_OK`|`EnumAssemblyRefs` se devolvió correctamente.|  
-|`S_FALSE`|No hay ningún tokens para enumerar. En este caso, `pcTokens` se establece en cero.|  
+|`S_FALSE`|No hay ningún token para enumerar. En este caso, `pcTokens` se establece en cero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
