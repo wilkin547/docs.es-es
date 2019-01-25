@@ -2,20 +2,20 @@
 title: '&lt;namespaceTable&gt;'
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
-ms.openlocfilehash: 55b5565ffe9d3e9e7ea41d2a2e2f380490be1781
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: fb2b324a2c128b470f1a9a21343408280c5e1862
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151428"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743249"
 ---
 # <a name="ltnamespacetablegt"></a>&lt;namespaceTable&gt;
 
 Representa una sección de configuración para definir un conjunto de elementos que contienen el espacio de nombres para prefijar asignaciones que se pueden utilizar a continuación en filtros XPath para el enrutamiento.
 
-**\<system.serviceModel >**   
+**\<system.serviceModel>**   
 &nbsp;&nbsp;**\<enrutamiento >**   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<namespaceTable >**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<namespaceTable>**
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,7 +42,7 @@ Ninguna
 
 |     | Descripción |
 | --- | ----------- |
-| [**\<Filtro >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Define una asignación de prefijo de espacio de nombres usado para expresiones XPath. |
+| [**\<filter>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Define una asignación de prefijo de espacio de nombres usado para expresiones XPath. |
 
 ### <a name="parent-elements"></a>Elementos primarios
 
@@ -52,4 +52,4 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-<xref:System.ServiceModel.Routing.Configuration.NamespaceElementCollection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.NamespaceElementCollection?displayProperty=nameWithType>

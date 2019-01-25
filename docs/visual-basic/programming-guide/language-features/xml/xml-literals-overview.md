@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: 03fc8c11b5553c9c3a63bdcb69bf6135050e2c89
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c6d2600b590e01fff062828f8e0f48d9cfad0190
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681396"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>Información general sobre literales XML (Visual Basic)
 Un *literal XML* le permite incorporar XML directamente en el código de Visual Basic. La sintaxis de literales XML representa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objetos y es similar a la sintaxis XML 1.0. Esto facilita la creación de elementos y documentos XML mediante programación porque el código tiene la misma estructura que el código XML final.  
@@ -54,10 +54,10 @@ Un *literal XML* le permite incorporar XML directamente en el código de Visual 
   
  [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XElement>  
- [Crear XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Expresiones incrustadas en XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
- [Literal de documento XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)  
- [Literal de elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [Literales XML](../../../../visual-basic/language-reference/xml-literals/index.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Xml.Linq.XElement>
+- [Crear XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Expresiones incrustadas en XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [Literal de documento XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [Literal de elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [Literales XML](../../../../visual-basic/language-reference/xml-literals/index.md)

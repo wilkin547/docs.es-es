@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f147fef90d7a9033bdfd07b75e5c33efd2c6881f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59dad67db9f9f9184a139f848020cf866a3a6771
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716835"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps (Método)
-Obtiene las propiedades del archivo con la firma de metadatos especificados.  
+Obtiene las propiedades del archivo con la firma de metadatos especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,10 +43,10 @@ HRESULT GetFileProps (
   
 #### <a name="parameters"></a>Parámetros  
  `mdf`  
- [in] El `mdFile` símbolo (token) de metadatos que representa el archivo para el que se va a obtener las propiedades.  
+ [in] El `mdFile` token de metadatos que representa el archivo que se va a obtener las propiedades.  
   
  `szName`  
- [out] El nombre simple del archivo.  
+ [out] El nombre sencillo del archivo.  
   
  `cchName`  
  [in] El tamaño, en caracteres anchos, de `szName`.  
@@ -55,22 +55,22 @@ HRESULT GetFileProps (
  [out] El número de caracteres anchos realmente devueltos en `szName`.  
   
  `ppbHashValue`  
- [out] Un puntero con el valor hash. Este es el valor de hash, utilizando el algoritmo SHA-1, del archivo.  
+ [out] Un puntero con el valor hash. Este es el hash, utilizando el algoritmo SHA-1, del archivo.  
   
  `pcbHashValue`  
  [out] El número de caracteres anchos en el valor hash devuelto.  
   
  `pdwFileFlags`  
- [out] Un puntero a los marcadores que describen los metadatos aplicados a un archivo. El valor de flags es una combinación de uno o varios [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) valores.  
+ [out] Un puntero a los marcadores que describen los metadatos aplicados a un archivo. El valor de marcas es una combinación de uno o varios [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) valores.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** usada como recurso en MsCorEE.dll  
+ **Biblioteca:** Usar como un recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

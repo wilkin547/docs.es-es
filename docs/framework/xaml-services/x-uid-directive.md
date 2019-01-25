@@ -7,12 +7,12 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 7075f8258e617d2d13d4585fdd5fb7aefaa50664
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 361240c2d2c140c7bf521ece423df4aaed075ba4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528393"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745420"
 ---
 # <a name="xuid-directive"></a>x:Uid (Directiva)
 Proporciona un identificador único para los elementos de marcado. En muchos escenarios, se usa este identificador único mediante herramientas y procesos de localización de XAML.  
@@ -41,7 +41,7 @@ Proporciona un identificador único para los elementos de marcado. En muchos esc
 ## <a name="wpf-usage-notes"></a>Notas de uso WPF  
  Para obtener más información acerca de la función `x:Uid` en el proceso de localización de WPF como en el formulario BAML de XAML, vea [globalización de WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md) o <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
- <xref:Microsoft.Build.Tasks.Windows.UidManager>  
- [Globalización de WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
+- <xref:Microsoft.Build.Tasks.Windows.UidManager>
+- [Globalización de WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)

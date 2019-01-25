@@ -2,17 +2,17 @@
 title: WSDL y directivas
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 330a48989e9d6ca3cee0d11bf4b3fce38a25fa3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501100"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741436"
 ---
 # <a name="wsdl-and-policy"></a>WSDL y directivas
-Este tema abarca Windows Communication Foundation (WCF) WSDL 1.1, detalles de implementación de WS-Policy y WS-PolicyAttachment, así como las aserciones adicionales de WS-Policy y las extensiones de WSDL 1.1 introducidas por WCF.  
+En este tema se trata WSDL 1.1 de Windows Communication Foundation (WCF), los detalles de implementación de WS-Policy y WS-PolicyAttachment, así como las aserciones adicionales de WS-Policy y extensiones WSDL 1.1 introducidas por WCF.  
   
- WCF implementa las especificaciones de WS-Policy y WS-PolicyAttachment enviadas a W3C con las restricciones y clarificaciones descritas en este documento.  
+ WCF implementa las especificaciones de WS-Policy y WS-PolicyAttachment puede enviadas a W3C con las restricciones y clarificaciones descritas en este documento.  
   
  En este documento se utilizan los prefijos y espacios de nombres mostrados en la tabla siguiente.  
   
@@ -28,13 +28,13 @@ Este tema abarca Windows Communication Foundation (WCF) WSDL 1.1, detalles de im
 |cdp|http://schemas.microsoft.com/net/2006/06/duplex|  
   
 ## <a name="wcf-wsdl11-extensions"></a>Extensiones WCF WSDL1.1   
- WCF usa las extensiones WSDL1.1 siguientes para describir los requisitos de sesión de contrato.  
+ WCF usa las extensiones WSDL1.1 siguientes para describir los requisitos de la sesión de contrato.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
  xs: Boolean, indica que esta operación inicia una sesión WCF; el valor predeterminado es `false`.  
   
  wsdl:portType/wsdl:operation/@msc:isTerminating  
- xs: Boolean, indica que esta operación finaliza una sesión WCF; el valor predeterminado es `false`.  
+ xs: Boolean, indica que esta operación finaliza una sesión de WCF; el valor predeterminado es `false`.  
   
  wsdl:portType/wsdl:operation/@msc:usingSession  
  xs:boolean, indica que este contrato requiere establecer la sesión.  
@@ -50,7 +50,7 @@ Este tema abarca Windows Communication Foundation (WCF) WSDL 1.1, detalles de im
 |Canalizaciones con nombre|http://schemas.microsoft.com/soap/named-pipe|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>Aserciones de directivas implementadas por WCF  
- Además de las aserciones de directiva introducidas en las especificaciones de servicios Web (WS-*) y mencionadas en otras secciones de este documento, WCF implementa las aserciones de directiva siguientes.  
+ Además de las aserciones de directiva introducidas en las especificaciones de servicios Web (WS-*) y se ha mencionado en otras secciones de este documento, WCF implementa las aserciones de directiva siguientes.  
   
 |Aserción de directiva|Asunto de directiva|Descripción|  
 |----------------------|--------------------|-----------------|  
@@ -72,7 +72,7 @@ Este tema abarca Windows Communication Foundation (WCF) WSDL 1.1, detalles de im
 |mssp:MustNotSendCancel|Anidadas|Especifica un requisito que consiste en que un token de seguridad de solicitud (RST) solicite mensajes [WS-Trust] mediante el enlace de cancelación [WS-Trust, WS-SC] y no se envíe al emisor de un SecurityContextToken determinado. Si esta aserción está presente, no se deben enviar al emisor dichos mensajes de solicitud. Si esta aserción no está presente, se puede enviar al emisor dichos mensajes de solicitud.|  
 |mssp:RequireClientCertificate|Anidadas|Este elemento opcional especifica un requisito para un certificado de cliente que se proporcionará como parte del protocolo TLSNEGO. Si esta aserción está presente, se debe proporcionar un certificado de cliente. Si esta aserción no está presente, no se debe proporcionar un certificado de cliente. Esta aserción no se debe utilizar fuera de mssp:SslContextToken.|  
   
-## <a name="see-also"></a>Vea también  
- [Publicación de WSDL personalizada](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- [Exportación del WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [Importación de WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+## <a name="see-also"></a>Vea también
+- [Publicación de WSDL personalizada](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
+- [Cómo: Exportación de WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Cómo: Importar el WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

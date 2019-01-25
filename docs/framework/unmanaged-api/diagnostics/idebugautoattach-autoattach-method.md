@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5c95423a6918da7cc043f8d46de13d166b8d895
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6b45b5e1a7589329b788160df3ac4493efa48197
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426190"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663523"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach (Método)
 Realiza automática del depurador invocado por el servidor de adjuntar.  
@@ -45,7 +45,7 @@ HRESULT AutoAttach
  [in] Siempre se establece en `GUID_NULL`.  
   
  `dwPid`  
- [in] Procesar el Id., normalmente se recuperan con el `GetCurrentProcessId` función.  
+ [in] Identificador del proceso, normalmente se recuperan con el `GetCurrentProcessId` función.  
   
  `dwProgramType`  
  [in] Tipo de programa: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, o `AUTOATTACH_PROGRAM_UNKNOWN`.  
@@ -60,7 +60,7 @@ HRESULT AutoAttach
  S_OK si el método tiene éxito.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** DbgAutoAttach.h  
+ **Encabezado**: DbgAutoAttach.h  
   
-## <a name="see-also"></a>Vea también  
- [IDebugAutoAttach (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+## <a name="see-also"></a>Vea también
+- [IDebugAutoAttach (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

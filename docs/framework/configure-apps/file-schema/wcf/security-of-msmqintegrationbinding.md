@@ -2,21 +2,21 @@
 title: Elemento &lt;security&gt; de &lt;msmqIntegrationBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: a0c6e016980b5a40d74b9bd94dab96a0aa9fb243
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: db263148a5a0993b546ffdd565ae7cf2edef580c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493786"
 ---
 # <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a>Elemento &lt;security&gt; de &lt;msmqIntegrationBinding&gt;
 Define la configuración de seguridad de transporte para el canal de integración de Message Queuing (MSMQ).  
   
  \<system.ServiceModel>  
-\<enlaces >  
+\<bindings>  
 msmqIntegrationBinding  
-\<enlace >  
-\<seguridad >  
+\<binding>  
+\<security>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,23 +49,23 @@ msmqIntegrationBinding
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<transporte >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-msmqintegrationbinding.md)|Define la configuración de seguridad para el transporte de integración de Message Queuing. Este elemento es del tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-msmqintegrationbinding.md)|Define la configuración de seguridad para el transporte de integración de Message Queuing. Este elemento es del tipo <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<enlace >](../../../../../docs/framework/misc/binding.md)|El elemento de enlace de la [ \<msmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|El elemento de enlace de la [ \<msmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.Security%2A>  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>  
- [Colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<enlace >](../../../../../docs/framework/misc/binding.md)  
- [\<msmqIntegrationBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.Security%2A>
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>
+- [Colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [\<msmqIntegrationBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)

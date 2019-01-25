@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 1edcdefeaafbee3cfbc0810a47e64f38f9f97ddc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 078102da95222d45bec82269edf1eb8e40866408
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713145"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementar una transacción explícita mediante una transacción confirmable
 La clase <xref:System.Transactions.CommittableTransaction> proporciona a las aplicaciones una manera explícita de utilizar una transacción, a diferencia de utilizar implícitamente la clase <xref:System.Transactions.TransactionScope>. Es útil para las aplicaciones que desean utilizar la misma transacción por varias llamadas de función o llamadas de subproceso múltiples. A diferencia de la clase <xref:System.Transactions.TransactionScope>, el sistema de escritura de la aplicación ha de llamar específicamente a los métodos <xref:System.Transactions.CommittableTransaction.Commit%2A> y <xref:System.Transactions.Transaction.Rollback%2A> para confirmar o anular la transacción.  
@@ -43,7 +43,7 @@ La clase <xref:System.Transactions.CommittableTransaction> proporciona a las apl
   
  Puede llamar <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> para enviar el retraso de la confirmación a un subproceso del grupo de subprocesos. También puede llamar <xref:System.Transactions.CommittableTransaction.EndCommit%2A> para determinar si se ha confirmado la transacción realmente. Si la transacción no se confirma por cualquier razón, <xref:System.Transactions.CommittableTransaction.EndCommit%2A> se producirá una excepción de transacción. Si no se confirma la transacción todavía cuando se llama <xref:System.Transactions.CommittableTransaction.EndCommit%2A>, se bloquea el llamador hasta que la transacción se confirme o anule.  
   
- La manera más fácil de hacer una confirmación asincrónica es proporcionando un método de devolución de llamada, para ser llamado cuando la confirmación esté terminada. Sin embargo, debe llamar al método <xref:System.Transactions.CommittableTransaction.EndCommit%2A> en el objeto <xref:System.Transactions.CommittableTransaction> original utilizado para invocar la llamada. Para obtener ese objeto, puede convertir el *IAsyncResult* parámetro del método de devolución de llamada, ya que la <xref:System.Transactions.CommittableTransaction> la clase implementa <xref:System.IAsyncResult> clase.  
+ La manera más fácil de hacer una confirmación asincrónica es proporcionando un método de devolución de llamada, para ser llamado cuando la confirmación esté terminada. Sin embargo, debe llamar al método <xref:System.Transactions.CommittableTransaction.EndCommit%2A> en el objeto <xref:System.Transactions.CommittableTransaction> original utilizado para invocar la llamada. Para obtener ese objeto, puede inclinar hacia abajo el *IAsyncResult* parámetro del método de devolución de llamada, puesto que la <xref:System.Transactions.CommittableTransaction> la clase implementa <xref:System.IAsyncResult> clase.  
   
  El ejemplo siguiente muestra cómo se puede hacer una confirmación asincrónica.  
   
@@ -85,6 +85,6 @@ void OnCommitted(IAsyncResult asyncResult)
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Implementación de una transacción implícita mediante el ámbito de transacción](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
- [Procesar transacciones](../../../../docs/framework/data/transactions/index.md)
+## <a name="see-also"></a>Vea también
+- [Implementación de una transacción implícita mediante el ámbito de transacción](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
+- [Procesar transacciones](../../../../docs/framework/data/transactions/index.md)

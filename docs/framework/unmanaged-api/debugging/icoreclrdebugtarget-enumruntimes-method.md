@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14b5f2227991e38ba66889d7e966ab24e714294c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac0cee9affff03a95cd7635a8b1afd42e6edc6ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422587"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684336"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes (Método)
 Enumera los Common Language Runtime(CLR) del proceso especificado que se están ejecutando en un equipo remoto.  
@@ -41,7 +41,7 @@ HRESULT EnumRuntimes (
   
 #### <a name="parameters"></a>Parámetros  
  `dwInternalProcessID`  
- [in] Identificador de proceso interno del proceso para el que desea enumerar los tiempos de ejecución. Se trata de `m_dwInternalID` desde correspondiente [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).  
+ [in] Identificador de proceso interno del proceso para el que desea enumerar los tiempos de ejecución. Se trata de `m_dwInternalID` de las correspondientes [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).  
   
  `pcRuntimes`  
  [out] Número de tiempos de ejecución que se devuelve en `ppRuntimes`. Este valor puede ser 0 (cero).  
@@ -66,13 +66,13 @@ HRESULT EnumRuntimes (
  Para liberar la memoria asignada por este método, llame a la [Icoreclrdebugtarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CoreClrRemoteDebuggingInterfaces.h  
+ **Encabezado**: CoreClrRemoteDebuggingInterfaces.h  
   
- **Biblioteca:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86.dll  
   
  **Versiones de .NET framework:** 3.5 SP1  
   
-## <a name="see-also"></a>Vea también  
- [ICoreClrDebugTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICoreClrDebugTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

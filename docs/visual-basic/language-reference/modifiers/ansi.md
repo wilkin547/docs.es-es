@@ -8,31 +8,31 @@ helpviewer_keywords:
 - ANSI, Visual Basic
 - ANSI
 ms.assetid: 4f1fa6ff-5557-41ab-b6da-90baf4c15917
-ms.openlocfilehash: c7037acac58de56a396bd89f595ef897743ff4e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e474bd686cc753a0265df1fc2914a73d1b62f1b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737327"
 ---
 # <a name="ansi-visual-basic"></a>Ansi (Visual Basic)
-Especifica que Visual Basic debe calcular las referencias de todas las cadenas con valores de American National Standards Institute (ANSI) sin tener en cuenta el nombre del procedimiento externo que se declara.  
+Especifica que Visual Basic debe serializar todas las cadenas en valores de American National Standards Institute (ANSI) independientemente del nombre del procedimiento externo que se declara.  
   
- Cuando se llama a un procedimiento definido fuera del proyecto, el compilador de Visual Basic no tiene acceso a la información que necesita para llamar correctamente al procedimiento. Esta información incluye donde se encuentra el procedimiento, el lo identifica, su secuencia de llamada y el tipo de valor devuelto y juego de caracteres de la cadena que utiliza. El [instrucción Declare](../../../visual-basic/language-reference/statements/declare-statement.md) crea una referencia a un procedimiento externo y proporciona esta información necesaria.  
+ Cuando se llama a un procedimiento definido fuera del proyecto, el compilador de Visual Basic no tiene acceso a la información que necesita para llamar al procedimiento correctamente. Esta información incluye dónde se encuentra el procedimiento, el cómo se identifica, su secuencia de llamada y el tipo de valor devuelto y el carácter de cadena juego que utiliza. El [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) crea una referencia a un procedimiento externo y proporciona esta información necesaria.  
   
- El `charsetmodifier` parte de la `Declare` instrucción proporciona la información del conjunto de caracteres para calcular referencias de cadenas durante una llamada al procedimiento externo. También afecta al modo en que Visual Basic busca el archivo externo para el nombre del procedimiento externo. El `Ansi` modificador especifica que Visual Basic debe calcular las referencias de todas las cadenas a valores ANSI y debe buscar el procedimiento sin modificar su nombre durante la búsqueda.  
+ El `charsetmodifier` parte en la `Declare` instrucción proporciona la información del conjunto de caracteres para la serialización de cadenas durante una llamada al procedimiento externo. También afecta a cómo Visual Basic busca el archivo externo para el nombre del procedimiento externo. El `Ansi` modificador especifica que Visual Basic debe serializar todas las cadenas como valores ANSI y buscar el procedimiento sin modificar su nombre durante la búsqueda.  
   
- Si no se especifica ningún modificador de juego de caracteres, `Ansi` es el valor predeterminado.  
+ Si se especifica ningún modificador de conjunto de caracteres, `Ansi` es el valor predeterminado.  
   
 ## <a name="remarks"></a>Comentarios  
  El `Ansi` modificador se puede usar en este contexto:  
   
  [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>Notas de desarrollador de Smart Device  
+## <a name="smart-device-developer-notes"></a>Notas de desarrollador de dispositivos inteligentes  
  No se admite esta palabra clave.  
   
-## <a name="see-also"></a>Vea también  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)  
- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vea también
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)
+- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)

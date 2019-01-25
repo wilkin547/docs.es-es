@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: 5955d7361658c825c120e62e531b72d402a12650
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c78f608225d64a428b768fbc8d03f71a393d980d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516972"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Carga inmediata y carga diferida
 Al consultar un objeto, en realidad se recupera únicamente el objeto solicitado. El *relacionados* objetos no se capturan automáticamente al mismo tiempo. (Para obtener más información, consulte [consultas en varias relaciones](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) No hay forma de saber si los objetos relacionados están ya cargados, porque, si se intenta tener acceso a ellos, se genera una solicitud que los recupera.  
   
- Por ejemplo, desea consultar un conjunto determinado de pedidos y, a continuación, sólo ocasionalmente enviará una notificación por correo electrónico a determinados clientes. Inicialmente, no está obligado a recuperar todos los datos de clientes con todos los pedidos. Puede utilizar la carga aplazada para aplazar la recuperación de información adicional hasta que ésta no sea realmente necesaria. Considere el ejemplo siguiente:  
+ Por ejemplo, es posible que desee consultar un conjunto determinado de pedidos y, a continuación, en ocasiones, enviar una notificación por correo electrónico a determinados clientes. Inicialmente, no está obligado a recuperar todos los datos de clientes con todos los pedidos. Puede utilizar la carga aplazada para aplazar la recuperación de información adicional hasta que ésta no sea realmente necesaria. Considere el ejemplo siguiente:  
   
  [!code-csharp[DLinqQueryConcepts#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#1)]
  [!code-vb[DLinqQueryConcepts#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#1)]  
@@ -25,13 +25,13 @@ Al consultar un objeto, en realidad se recupera únicamente el objeto solicitado
  [!code-csharp[DLinqQueryConcepts#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#2)]
  [!code-vb[DLinqQueryConcepts#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#2)]  
   
- También puede combinar clientes y pedidos en una consulta si forma el producto cruzado y recupera todos los elementos de datos relativos como una gran proyección. Sin embargo, estos resultados no son entidades. (Para obtener más información, consulte [el modelo de LINQ to SQL objeto](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)). Las entidades son objetos que tienen identidad y que se pueden modificar, mientras que estos resultados serían proyecciones que no se pueden cambiar ni conservar. Lo que es peor, recuperaría una gran cantidad de datos redundantes, ya que cada cliente se repite para cada pedido en el resultado simplificado de la combinación.  
+ También puede combinar clientes y pedidos en una consulta si forma el producto cruzado y recupera todos los elementos de datos relativos como una gran proyección. Sin embargo, estos resultados no son entidades. (Para obtener más información, consulte [el modelo LINQ to SQL objeto](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)). Las entidades son objetos que tienen identidad y que se pueden modificar, mientras que estos resultados serían proyecciones que no se pueden cambiar ni conservar. Lo que es peor, recuperaría una gran cantidad de datos redundantes, ya que cada cliente se repite para cada pedido en el resultado simplificado de la combinación.  
   
- Lo que realmente necesita es una manera de recuperar al mismo tiempo un conjunto de objetos relacionados. El conjunto es una sección delineada de un gráfico, de tal forma que nunca recuperaría más o menos de lo necesario para el uso previsto. Para este propósito, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proporciona <xref:System.Data.Linq.DataLoadOptions> para la carga inmediata de una región de su modelo de objetos. Entre los métodos, se incluyen:  
+ Lo que realmente necesita es una manera de recuperar al mismo tiempo un conjunto de objetos relacionados. El conjunto es una sección delineada de un gráfico, de tal forma que nunca recuperaría más o menos de lo necesario para el uso previsto. Para este propósito, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proporciona <xref:System.Data.Linq.DataLoadOptions> carga inmediata de una región de su modelo de objetos. Entre los métodos, se incluyen:  
   
 -   El método <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>, para cargar inmediatamente los datos relacionados con el destino principal.  
   
 -   El método <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A>, para filtrar los objetos recuperados para una relación determinada.  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+## <a name="see-also"></a>Vea también
+- [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

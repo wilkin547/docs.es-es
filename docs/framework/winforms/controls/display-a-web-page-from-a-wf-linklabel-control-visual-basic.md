@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Mostrar una página Web desde un control LinkLabel de formularios Windows Forms (Visual Basic)'
+title: Procedimiento Mostrar una página Web desde un Control LinkLabel de formularios de Windows (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: a9964c8d333ea87dd995ec9111acc1a8ac1e79b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05b127099b85188b0df2f1f7821ceb147cc41e1d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698965"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Cómo: Mostrar una página Web desde un control LinkLabel de formularios Windows Forms (Visual Basic)
-Este ejemplo muestra una página Web en el explorador predeterminado cuando un usuario hace clic en un formulario Windows Forms <xref:System.Windows.Forms.LinkLabel> control.  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Procedimiento Mostrar una página Web desde un Control LinkLabel de formularios de Windows (Visual Basic)
+En este ejemplo se muestra una página Web en el explorador predeterminado cuando un usuario hace clic en un formulario Windows Forms <xref:System.Windows.Forms.LinkLabel> control.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -44,11 +44,11 @@ End Sub
   
 -   Control <xref:System.Windows.Forms.LinkLabel> denominado `LinkLabel1`.  
   
--   Una conexión a Internet activa.  
+-   Una conexión activa a Internet.  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  La llamada a la <xref:System.Diagnostics.Process.Start%2A> método requiere plena confianza. Para obtener más información, consulta <xref:System.Security.SecurityException>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.LinkLabel>  
- [LinkLabel (control)](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.LinkLabel>
+- [LinkLabel (control)](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

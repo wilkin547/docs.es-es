@@ -2,12 +2,12 @@
 title: Administrar la simultaneidad con DependentTransaction
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: 5bcf321c2c09411ddb720e2cb4be1ddb076bbe6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1943c8c8c03bb9598dc0c456d52fa962288d240c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363209"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664465"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Administrar la simultaneidad con DependentTransaction
 Se crea un objeto <xref:System.Transactions.Transaction> utilizando el método <xref:System.Transactions.Transaction.DependentClone%2A>. Su solo propósito es garantizar que la transacción no pueda confirmar mientras algunas otras partes de código (por ejemplo, un subproceso de trabajo) todavía están realizando el trabajo en la transacción. Cuando finalmente se completa el proceso de la transacción clonada y está preparada para confirmarse, se puede notificar al creador de la transacción con el método <xref:System.Transactions.DependentTransaction.Complete%2A>. Así se puede conservar la coherencia y exactitud de los datos.  
@@ -70,7 +70,7 @@ using(TransactionScope scope = new TransactionScope())
   
  El método `ThreadMethod` se ejecuta en el nuevo subproceso. El cliente inicia un nuevo subproceso, pasando la transacción dependiente como el parámetro `ThreadMethod`.  
   
- Dado que la transacción dependiente se crea con <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>, se garantiza que no se puede confirmar la transacción hasta que todo el trabajo transaccional hecho en el segundo subproceso esté finalizado y se llame a <xref:System.Transactions.DependentTransaction.Complete%2A> en la transacción dependiente. Esto significa que si finaliza el ámbito del cliente (cuando intenta eliminar el objeto de transacción al final de la **con** instrucción) antes de las nuevas llamadas de subprocesos <xref:System.Transactions.DependentTransaction.Complete%2A> en la transacción dependiente, el código de cliente se bloquea hasta que <xref:System.Transactions.DependentTransaction.Complete%2A> se llama en el dependiente. A continuación, la transacción puede terminar de confirmarse o anularse.  
+ Dado que la transacción dependiente se crea con <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>, se garantiza que no se puede confirmar la transacción hasta que todo el trabajo transaccional hecho en el segundo subproceso esté finalizado y se llame a <xref:System.Transactions.DependentTransaction.Complete%2A> en la transacción dependiente. Esto significa que si finaliza el ámbito del cliente (cuando intenta eliminar el objeto de transacción al final de la **mediante** instrucción) antes de las nuevas llamadas del subproceso <xref:System.Transactions.DependentTransaction.Complete%2A> en la transacción dependiente, el código de cliente se bloquea hasta que <xref:System.Transactions.DependentTransaction.Complete%2A> se llama en el dependiente. A continuación, la transacción puede terminar de confirmarse o anularse.  
   
 ## <a name="concurrency-issues"></a>Problemas de simultaneidad  
  Existen problemas de simultaneidad adicionales de los que necesita ser consciente al utilizar la clase <xref:System.Transactions.DependentTransaction>:  
@@ -81,5 +81,5 @@ using(TransactionScope scope = new TransactionScope())
   
 -   Si el subproceso de trabajo genera un nuevo subproceso de trabajo, asegúrese de crear un clon dependiente a partir del clon dependiente y pasarlo al nuevo subproceso.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Transactions.DependentTransaction>
+## <a name="see-also"></a>Vea también
+- <xref:System.Transactions.DependentTransaction>

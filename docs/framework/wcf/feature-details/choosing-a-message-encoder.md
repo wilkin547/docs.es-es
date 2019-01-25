@@ -2,12 +2,12 @@
 title: Elección de un codificador de mensajes
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 061869704674206739d81be24e105fc87ce0f129
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44248935"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538432"
 ---
 # <a name="choosing-a-message-encoder"></a>Elección de un codificador de mensajes
 En este tema se analiza los criterios para elegir entre los codificadores de mensajes que se incluyen en Windows Communication Foundation (WCF): binario, texto y Message Transmission Optimization Mechanism (MTOM).  
@@ -41,7 +41,7 @@ En este tema se analiza los criterios para elegir entre los codificadores de men
 |Compatibilidad con herramientas de terceros|Entre las áreas de compatibilidad de una codificación se incluyen el desarrollo y el diagnóstico. Los desarrolladores de terceros han realizado una gran inversión en bibliotecas y kits de herramientas para administrar mensajes codificados en formato POX.|Texto (POX)|  
 |Interoperabilidad|Este factor hace referencia a la capacidad de un codificador WCF para interoperar con servicios no WCF.|Texto<br /><br /> MTOM (parcial)|  
   
-Nota: cuando se usa el codificador binario, el uso del valor IgnoreWhitespace al crear un XMLReader no tendrá ningún efecto.  Por ejemplo, si hace lo siguiente dentro de una operación de servicio:  
+Nota: Cuando se usa el codificador binario, utilizando el valor de ignorewhitespace al crear un XMLReader no tendrá ningún efecto.  Por ejemplo, si hace lo siguiente dentro de una operación de servicio:  
 
 ```csharp
 public void OperationContract(XElement input)
@@ -84,4 +84,4 @@ El cliente y el servicio consiste en Aceptar enviar y recibir mensajes comprimid
   
 ## <a name="see-also"></a>Vea también
 
-[Enlaces](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Enlaces](../../../../docs/framework/wcf/feature-details/bindings.md)

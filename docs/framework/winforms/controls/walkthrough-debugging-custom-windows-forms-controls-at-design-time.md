@@ -15,15 +15,15 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 824c1e47cf50dc13a3a986e48a49158b15dbb935
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ceee83c9deb318f5912eb724cbd237c3d7b73152
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964852"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733342"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Tutorial: Depurar controles personalizados de formularios Windows Forms en tiempo de diseño
-Cuando se crea un control personalizado, a menudo encontrará lo necesario para depurar su comportamiento en tiempo de diseño. Esto es especialmente cierto si va a crear un diseñador personalizado para el control personalizado. Para obtener más información, consulte [Tutorial: crear un Windows Forms Control que toma las ventajas de tiempo de diseño de características de Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
+Cuando se crea un control personalizado, a menudo encontrará lo necesario para depurar su comportamiento en tiempo de diseño. Esto es especialmente cierto si va a crear un diseñador personalizado para el control personalizado. Para obtener más información, consulte [Tutorial: Crear un Windows Forms Control que aprovecha las características de tiempo de diseño de Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
   
  Puede depurar sus controles personalizados mediante Visual Studio, simplemente como lo haría cualquier otras clases de .NET Framework. La diferencia es que desea depurar una instancia independiente de Visual Studio que se está ejecutando código del control personalizado  
   
@@ -60,9 +60,9 @@ Cuando se crea un control personalizado, a menudo encontrará lo necesario para 
   
 1.  Agregar un **biblioteca de controles de Windows** proyecto a la solución.  
   
-2.  Agregue un nuevo **UserControl** al proyecto DebugControlLibrary. Para obtener más información, consulte [NIB: Cómo: agregar nuevos elementos de proyecto](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Asigne el nuevo archivo de origen en un nombre de base de "DebugControl".  
+2.  Agregue un nuevo **UserControl** al proyecto DebugControlLibrary. Para obtener más información, consulte [NIB: Cómo: Agregar nuevos elementos de proyecto](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Asigne el nuevo archivo de origen en un nombre de base de "DebugControl".  
   
-3.  Mediante el **el Explorador de soluciones**, elimine el control predeterminado del proyecto eliminando el archivo de código con el nombre de base "`UserControl1`". Para obtener más información, consulte [NIB: Cómo: quitar, eliminar y excluir elementos](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+3.  Mediante el **el Explorador de soluciones**, elimine el control predeterminado del proyecto eliminando el archivo de código con el nombre de base "`UserControl1`". Para obtener más información, consulte [NIB: Cómo: Quitar, eliminar y excluir elementos](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 4.  Compile la solución.  
   
@@ -159,7 +159,7 @@ Cuando se crea un control personalizado, a menudo encontrará lo necesario para 
   
 4.  Abra Form1 en el **Diseñador de formularios** y seleccione el **DebugControl** control.  
   
-5.  Cambie el valor de la `DemoString` propiedad. Tenga en cuenta que cuando se confirma el cambio, la instancia de depuración de Visual Studio adquiere el foco y la ejecución se detiene en el punto de interrupción. Puede paso a paso a través del descriptor de acceso de propiedad al igual que su cualquier otro código.  
+5.  Cambie el valor de la propiedad `DemoString` . Tenga en cuenta que cuando se confirma el cambio, la instancia de depuración de Visual Studio adquiere el foco y la ejecución se detiene en el punto de interrupción. Puede paso a paso a través del descriptor de acceso de propiedad al igual que su cualquier otro código.  
   
 6.  Cuando haya terminado con la sesión de depuración, puede salir descartando la instancia hospedada de Visual Studio o haciendo clic en el **Detener depuración** botón en la instancia de depuración.  
   
@@ -170,9 +170,9 @@ Cuando se crea un control personalizado, a menudo encontrará lo necesario para 
   
 -   Hay varios atributos puede aplicar a las propiedades del control para manipular la interacción del control personalizado con el diseñador. Puede encontrar estos atributos en el <xref:System.ComponentModel?displayProperty=nameWithType> espacio de nombres.  
   
--   Puede escribir un diseñador personalizado para el control personalizado. Esto le ofrece control completo sobre la experiencia de diseño mediante la infraestructura del diseñador extensible expuesta por Visual Studio. Para obtener más información, consulte [Tutorial: crear un Windows Forms Control que toma las ventajas de tiempo de diseño de características de Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
+-   Puede escribir un diseñador personalizado para el control personalizado. Esto le ofrece control completo sobre la experiencia de diseño mediante la infraestructura del diseñador extensible expuesta por Visual Studio. Para obtener más información, consulte [Tutorial: Crear un Windows Forms Control que aprovecha las características de tiempo de diseño de Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
   
-## <a name="see-also"></a>Vea también  
- [Tutorial: Crear un control de Windows Forms que aproveche las características en tiempo de diseño de Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
- [Cómo: obtener acceso a servicios en tiempo de diseño](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)  
- [Cómo: Obtener acceso a las funciones en tiempo de diseño de formularios Windows Forms](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+## <a name="see-also"></a>Vea también
+- [Tutorial: Crear un Control de Windows Forms que aproveche las características de tiempo de diseño de Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)
+- [Cómo: Acceso a servicios en tiempo de diseño](https://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)
+- [Cómo: Compatibilidad de tiempo de diseño de acceso en Windows Forms](https://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)

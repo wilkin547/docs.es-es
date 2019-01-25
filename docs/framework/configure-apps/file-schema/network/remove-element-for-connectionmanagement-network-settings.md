@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 03cac1523c0fce268c2df8d04134c0d5e88830e2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 899d64633447223fffc5a9c7323a9baa7d040297
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702553"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;quitar&gt; elemento para connectionManagement (configuración de red)
 Quita una dirección IP o nombre DNS de la lista de administración de conexiones.  
   
  \<configuration>  
-\<System.NET >  
-\<connectionManagement >  
-\<Quitar >  
+\<system.net>  
+\<connectionManagement>  
+\<remove>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -74,7 +74,7 @@ Quita una dirección IP o nombre DNS de la lista de administración de conexione
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>Vea también
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

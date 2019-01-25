@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Dibujar curvas spline cardinales'
+title: Procedimiento Dibujar curvas spline cardinales
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 3ad06eb28e1d8e6b5d5f4a77e545f174d8a68d9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f2fd0f54c95ff2185c1a1d17785d300c97f7f4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739805"
 ---
-# <a name="how-to-draw-cardinal-splines"></a>Cómo: Dibujar curvas spline cardinales
-Una curva spline cardinal es una curva que pasa suavemente por un determinado conjunto de puntos. Para dibujar una curva spline cardinal, cree un <xref:System.Drawing.Graphics> objeto y pasar la dirección de una matriz de puntos para la <xref:System.Drawing.Graphics.DrawCurve%2A> método.  
+# <a name="how-to-draw-cardinal-splines"></a>Procedimiento Dibujar curvas spline cardinales
+Una curva spline cardinal es una curva que se pasa sin problemas a través de un conjunto determinado de puntos. Para dibujar una curva spline cardinal, cree un <xref:System.Drawing.Graphics> objeto y pasar la dirección de una matriz de puntos para el <xref:System.Drawing.Graphics.DrawCurve%2A> método.  
   
 ### <a name="drawing-a-bell-shaped-cardinal-spline"></a>Dibujar una curva Cardinal Spline en forma de campana  
   
--   En el ejemplo siguiente se dibuja una curva spline cardinal en forma de campana que pasa por cinco puntos designados. En la siguiente ilustración se muestra la curva y cinco puntos.  
+-   El ejemplo siguiente dibuja una curva spline cardinal en forma de campana que pasa por cinco puntos designados. La siguiente ilustración muestra la curva y cinco puntos.  
   
      ![Curva cardinal Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline1.png "CardinalSpline1")  
   
@@ -30,16 +30,16 @@ Una curva spline cardinal es una curva que pasa suavemente por un determinado co
   
 ### <a name="drawing-a-closed-cardinal-spline"></a>Dibujar una curva Cardinal Spline cerrada  
   
--   Use la <xref:System.Drawing.Graphics.DrawClosedCurve%2A> método de la <xref:System.Drawing.Graphics> clase para dibujar una curva spline cardinal cerrada. En una curva spline cardinal cerrada, la curva continúa hasta el último punto de la matriz y se conecta con el primer punto de la matriz. En el ejemplo siguiente se dibuja una curva spline cardinal cerrada que pasan a través de seis puntos designados. La siguiente ilustración muestra la curva spline cerrada y los seis puntos.  
+-   Use la <xref:System.Drawing.Graphics.DrawClosedCurve%2A> método de la <xref:System.Drawing.Graphics> clase para dibujar una curva spline cardinal cerrada. En una curva spline cardinal cerrada, la curva continúa hasta el último punto de la matriz y se conecta con el primer punto de la matriz. El ejemplo siguiente dibuja una curva spline cardinal cerrada que pasa por seis puntos designados. La siguiente ilustración muestra la spline cerrada junto con los seis puntos.  
   
  ![Curva cardinal Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline1a.png "CardinalSpline1A")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#22)]  
   
-### <a name="changing-the-bend-of-a-cardinal-spline"></a>Cambiar la curva de una curva Cardinal Spline  
+### <a name="changing-the-bend-of-a-cardinal-spline"></a>Cambiar el plegado de una curva Cardinal Spline  
   
--   Cambiar la manera en que se dobla una curva spline cardinal pasando un argumento de tensión para el <xref:System.Drawing.Graphics.DrawCurve%2A> método. En el ejemplo siguiente se dibuja tres curvas spline cardinales que pasan por el mismo conjunto de puntos. La siguiente ilustración muestra las tres curvas spline junto con sus valores de tensión. Tenga en cuenta que cuando la tensión es 0, los puntos se conectan mediante líneas rectas.  
+-   Cambiar la forma en la inclinación de una curva spline cardinal pasando un argumento de tensión el <xref:System.Drawing.Graphics.DrawCurve%2A> método. El ejemplo siguiente dibuja tres curvas spline cardinales que pasan por el mismo conjunto de puntos. La siguiente ilustración muestra las tres curvas spline junto con sus valores de tensión. Tenga en cuenta que cuando la tensión es 0, los puntos están conectados mediante líneas rectas.  
   
  ![Curva cardinal Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline2.png "CardinalSpline2")  
   
@@ -47,8 +47,8 @@ Una curva spline cardinal es una curva que pasa suavemente por un determinado co
  [!code-vb[System.Drawing.ConstructingDrawingCurves#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#23)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Los ejemplos anteriores están diseñados para su uso con Windows Forms y requieren <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos.  
+ Los ejemplos anteriores están diseñados para su uso con Windows Forms y necesitan <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos.  
   
-## <a name="see-also"></a>Vea también  
- [Líneas, curvas y formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Crear y dibujar curvas](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)
+## <a name="see-also"></a>Vea también
+- [Líneas, curvas y formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Crear y dibujar curvas](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)

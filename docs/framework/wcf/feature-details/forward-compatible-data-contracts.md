@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-ms.openlocfilehash: 95a72d5d09538bc6f663f2376c7f8f928909cd57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 732c47b03c2769a6147c3c812ddd6e81dab11a55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492211"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695652"
 ---
 # <a name="forward-compatible-data-contracts"></a>Contratos de datos compatibles con el reenvío
-Una característica de la Windows Communication Foundation (WCF) es el sistema de contrato de datos que los contratos puede evolucionar con el tiempo sin causar interrupciones. Es decir, un cliente con una versión anterior de un contrato de datos puede comunicarse con un servicio con una versión más reciente del mismo contrato de datos, o un cliente con una versión más reciente de un contrato de datos puede comunicarse con una versión anterior del mismo contrato de datos. Para obtener más información, consulte [procedimientos recomendados: control de versiones de contrato de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+Una característica de la Windows Communication Foundation (WCF) es el sistema de contrato de datos que los contratos puede evolucionar con el tiempo sin causar interrupciones. Es decir, un cliente con una versión anterior de un contrato de datos puede comunicarse con un servicio con una versión más reciente del mismo contrato de datos, o un cliente con una versión más reciente de un contrato de datos puede comunicarse con una versión anterior del mismo contrato de datos. Para obtener más información, consulte [prácticas recomendadas: Control de versiones de contratos de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
- Puede aplicar la mayoría de las características del control de versiones en la medida que se necesite cuando se crean las nuevas versiones de un contrato del dato existente. Sin embargo, una característica de control de versiones, *round-tripping*, debe estar integrada en el tipo de la primera versión para que funcione correctamente.  
+ Puede aplicar la mayoría de las características del control de versiones en la medida que se necesite cuando se crean las nuevas versiones de un contrato del dato existente. Sin embargo, una característica de control de versiones, *round-tripping*, debe estar integrado en el tipo de la primera versión para que funcione correctamente.  
   
 ## <a name="round-tripping"></a>Round-Tripping (recorrido de ida y vuelta)  
  Round-tripping tiene lugar cuando los datos pasan de una nueva versión a una versión anterior y de vuelta a la nueva versión de un contrato de datos. El round-tripping garantiza que no se pierdan datos. Habilitar el round-tripping hace que el tipo sea compatible por adelantado con cualquier cambio futuro admitido por el modelo de control de versiones del contrato de datos.  
@@ -35,14 +35,14 @@ Una característica de la Windows Communication Foundation (WCF) es el sistema d
  [!code-csharp[C_DataContract#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#8)]
  [!code-vb[C_DataContract#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#8)]  
   
- Cuando la infraestructura de WCF encuentra datos que no forma parte del contrato de datos original, los datos se almacena en la propiedad y se conserva. No se procesa para nada más, salvo para el almacenamiento temporal. Si el objeto se devuelve a donde se originó, se devuelven también los datos originales (desconocidos). Por consiguiente, los datos han realizado un viaje de ida y vuelta (round trip) hasta y desde el punto de conexión de origen sin sufrir pérdidas. Tenga en cuenta, sin embargo, que si el punto de conexión de origen exigiera que se procesasen los datos, la expectativa no se cumple, y el punto de conexión debe detectar y adaptar el cambio de algún modo.  
+ Cuando la infraestructura de WCF encuentra datos que no forman parte del contrato de datos original, los datos se almacena en la propiedad y se conserva. No se procesa para nada más, salvo para el almacenamiento temporal. Si el objeto se devuelve a donde se originó, se devuelven también los datos originales (desconocidos). Por consiguiente, los datos han realizado un viaje de ida y vuelta (round trip) hasta y desde el punto de conexión de origen sin sufrir pérdidas. Tenga en cuenta, sin embargo, que si el punto de conexión de origen exigiera que se procesasen los datos, la expectativa no se cumple, y el punto de conexión debe detectar y adaptar el cambio de algún modo.  
   
  El tipo <xref:System.Runtime.Serialization.ExtensionDataObject> no contiene ningún método público ni propiedades. Por tanto, es imposible obtener acceso directo a los datos almacenados dentro de la propiedad <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>.  
   
  La característica de round-tripping puede desactivarse, estableciendo `ignoreExtensionDataObject` en `true` en el constructor <xref:System.Runtime.Serialization.DataContractSerializer> o estableciendo la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> en `true` en el <xref:System.ServiceModel.ServiceBehaviorAttribute>. Cuando esta característica está deshabilitada, el deserializador no rellenará la propiedad <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> y el serializador no emitirá el contenido de la propiedad.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- <xref:System.Runtime.Serialization.ExtensionDataObject>  
- [Versiones de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
- [Procedimientos recomendados: creación de versiones de contratos de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- <xref:System.Runtime.Serialization.ExtensionDataObject>
+- [Versiones de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Procedimientos recomendados: Versiones de contratos de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)

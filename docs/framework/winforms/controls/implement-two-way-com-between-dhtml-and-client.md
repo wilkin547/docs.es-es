@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Implementar la comunicación bidireccional entre código DHTML y código de la aplicación cliente'
+title: Procedimiento Implementar la comunicación bidireccional entre código DHTML y código de la aplicación cliente
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 10b6bb3f55c8acd62101a48ea53b42e331e4210f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3acc4fd200b547fc754c4151aedc8d70fd1fa0bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502161"
 ---
-# <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Cómo: Implementar la comunicación bidireccional entre código DHTML y código de la aplicación cliente
+# <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Procedimiento Implementar la comunicación bidireccional entre código DHTML y código de la aplicación cliente
 Puede usar el control <xref:System.Windows.Forms.WebBrowser> para agregar código de aplicación web de HTML dinámico (DHTML) existente a sus aplicaciones de cliente de Windows Forms. Esto es útil cuando se ha invertido un tiempo de desarrollo importante para crear controles basados en DHTML y quiere aprovechar las funciones de la interfaz de usuario enriquecida de Windows Forms sin tener que volver a escribir el código existente.  
   
  El control <xref:System.Windows.Forms.WebBrowser> permite implementar la comunicación bidireccional entre el código de la aplicación de cliente y el código de scripting de su página web mediante las propiedades <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> y <xref:System.Windows.Forms.WebBrowser.Document%2A>. Además, puede configurar el control <xref:System.Windows.Forms.WebBrowser> para que los controles web se combinen fácilmente con otros controles del formulario de la aplicación, ocultando su implementación DHTML. Para combinar los controles sin problemas, dé formato a la página mostrada para que el color de fondo y el estilo visual coincidan con el resto del formulario, y use las propiedades <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>, <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A>, y <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> para deshabilitar las características de explorador estándar.  
@@ -105,10 +105,10 @@ Puede usar el control <xref:System.Windows.Forms.WebBrowser> para agregar códig
   
 -   Referencias a los ensamblados System y System.Windows.Forms.  
   
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Vea también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.WebBrowser>  
- <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A?displayProperty=nameWithType>  
- [WebBrowser (control)](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.WebBrowser>
+- <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A?displayProperty=nameWithType>
+- [WebBrowser (control)](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)

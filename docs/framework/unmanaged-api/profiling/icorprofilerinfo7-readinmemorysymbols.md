@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9874c8e567a89fd3977be360666c86406f2cd395
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca71819214e614af5a0c269ed77b1cf7f9b7d7ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455936"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658681"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
 [compatible con la versión [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] y posteriores]  
@@ -41,13 +41,13 @@ HRESULT ReadInMemorySymbols(
  [in] El identificador del módulo que contiene la secuencia en memoria.  
   
  `symbolsReadOffset`  
- [in] El desplazamiento dentro de la secuencia en memoria en el que se va a comenzar la lectura de bytes.  
+ [in] El desplazamiento dentro de la secuencia en memoria en el que se va a empezar a leer los bytes.  
   
  `pSymbolBytes`  
  [out] Un puntero al búfer al que se copiarán los datos. Debe tener el búfer `countSymbolBytes` de espacio disponible.  
   
  `countSymbolBytes`  
- [in] El número de bytes que se va a copiar.  
+ [in] El número de bytes para copiar.  
   
  `pCountSymbolBytesRead`  
  [out] Cuando el método vuelve, contiene el número real de bytes leídos.  
@@ -58,19 +58,19 @@ HRESULT ReadInMemorySymbols(
  `CORPROF_E_MODULE_IS_DYNAMIC`, si se creó el módulo mediante <xref:System.Reflection.Emit>.  
   
 ## <a name="remarks"></a>Comentarios  
- El `ReadInMemorySymbols` método intenta leer `countSymbolBytes` de datos a partir del desplazamiento `symbolsReadOffset` dentro de la secuencia en memoria. Los datos se copian en `pSymbolBytes`, lo que se esperaba que `countSymbolBytes` de espacio disponible.     `pCountSymbolsBytesRead` contiene el número real de bytes leídos, lo que puede ser menor que `countSymbolBytes` si se alcanza el final de la secuencia.  
+ El `ReadInMemorySymbols` método intenta leer `countSymbolBytes` de datos empezando en el desplazamiento `symbolsReadOffset` dentro de la secuencia en memoria. Los datos se copian a `pSymbolBytes`, que se espera que tenga `countSymbolBytes` de espacio disponible.     `pCountSymbolsBytesRead` contiene el número real de bytes leídos, que puede ser menor que `countSymbolBytes` si se alcanza el final de la secuencia.  
   
 > [!NOTE]
 >  La implementación actual no admite Reflection.Emit. Si se creó el módulo mediante Reflection.Emit, el método devuelve `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorProf.idl, CorProf.h  
+ **Encabezado**: CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [ICorProfilerInfo7 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+## <a name="see-also"></a>Vea también
+- [ICorProfilerInfo7 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)

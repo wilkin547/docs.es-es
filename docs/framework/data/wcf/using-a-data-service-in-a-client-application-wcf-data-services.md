@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: 092f073a138a09fc25b96fbddde5b73992056981
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: db802e127cacec2243741310b8a885c7ffcd24e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736999"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Usar un servicio de datos en una aplicación cliente (Data Services de WCF)
 Puede tener acceso a un servicio que expone un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuente especificando un URI a un explorador Web. El URI proporciona la dirección de un recurso y los mensajes de solicitud se envían a estas direcciones para obtener acceso o cambiar los datos subyacentes que el recurso representa. El explorador emite un comando GET de HTTP y devuelve el recurso solicitado como una fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Para obtener más información, consulte [acceder al servicio desde un explorador Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -33,16 +33,16 @@ Puede tener acceso a un servicio que expone un [!INCLUDE[ssODataFull](../../../.
   
 -   **HTTP MERGE** : debido a las ineficacias en la ejecución de una eliminación seguida de una instrucción insert en el origen de datos solo para cambiar los datos de entidad, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] presenta una nueva acción MERGE de HTTP. La carga del mensaje de solicitud contiene las propiedades que se deben cambiar en el recurso de entidad direccionado. Dado que HTTP MERGE no se encuentra definido en la especificación HTTP, puede que sea necesario un procesamiento adicional para enrutar una solicitud HTTP MERGE a través de servidores que no reconocen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
   
- Para obtener más información, consulte [OData: operaciones](https://go.microsoft.com/fwlink/?LinkId=185792).  
+ Para obtener más información, consulte [OData: Las operaciones](https://go.microsoft.com/fwlink/?LinkId=185792).  
   
 ### <a name="payload-formats"></a>Formatos de carga  
  Para una solicitud PUT, POST o MERGE de HTTP, la carga de un mensaje de solicitud contiene los datos de entidad que el usuario envía al servicio de datos. El contenido de la carga depende del formato de datos del mensaje. Las respuestas HTTP a todas las acciones, excepto DELETE, también contienen este tipo de carga. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] admite los siguientes formatos de carga para tener acceso y cambiar datos con el servicio:  
   
--   **Atom** -codificación de mensajes basada en XML definida por [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] como una extensión para el protocolo de publicación Atom (AtomPub) para habilitar el intercambio de datos a través de HTTP para fuentes Web, podcasts, wikis y funcionalidad de Internet basado en XML. Para obtener más información, consulte [OData: formato Atom](https://go.microsoft.com/fwlink/?LinkId=185794).  
+-   **Atom** -codificación de mensajes basada en XML definida por [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] como una extensión para el protocolo de publicación Atom (AtomPub) para habilitar el intercambio de datos a través de HTTP para fuentes Web, podcasts, wikis y funcionalidad de Internet basado en XML. Para obtener más información, consulte [OData: Formato Atom](https://go.microsoft.com/fwlink/?LinkId=185794).  
   
--   **JSON** -JavaScript Object Notation (JSON) es un formato de intercambio de datos ligero que se basa en un subconjunto del lenguaje de programación JavaScript. Para obtener más información, consulte [OData: formato JSON](https://go.microsoft.com/fwlink/?LinkId=185795).  
+-   **JSON** -JavaScript Object Notation (JSON) es un formato de intercambio de datos ligero que se basa en un subconjunto del lenguaje de programación JavaScript. Para obtener más información, consulte [OData: Formato JSON](https://go.microsoft.com/fwlink/?LinkId=185795).  
   
- El formato de mensaje de la carga se solicita en el encabezado del mensaje de la solicitud HTTP. Para obtener más información, consulte [OData: operaciones](https://go.microsoft.com/fwlink/?LinkID=185792).  
+ El formato de mensaje de la carga se solicita en el encabezado del mensaje de la solicitud HTTP. Para obtener más información, consulte [OData: Las operaciones](https://go.microsoft.com/fwlink/?LinkID=185792).  
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>Acceso y modificación de datos mediante bibliotecas de cliente  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] incluye bibliotecas de cliente que permiten utilizar más fácilmente un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente de .NET Framework y las aplicaciones cliente basadas en Silverlight. Estas bibliotecas simplifican el envío y recepción de los mensajes HTTP. También traducen la carga del mensaje en objetos CLR que representan los datos de entidad. Las bibliotecas cliente representan las dos clases principales <xref:System.Data.Services.Client.DataServiceContext> y <xref:System.Data.Services.Client.DataServiceQuery%601>. Estas clases le permiten consultar un servicio de datos y, a continuación, trabajar con los datos de entidad devueltos como objetos CLR. Para obtener más información, consulte [biblioteca de cliente de WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) y [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30).  
@@ -51,6 +51,6 @@ Puede tener acceso a un servicio que expone un [!INCLUDE[ssODataFull](../../../.
   
  Hay bibliotecas de programación disponibles que puede usar para consumir un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuentes de distribución en otros tipos de aplicaciones cliente. Para obtener más información, consulte el [SDK de OData](https://go.microsoft.com/fwlink/?LinkId=185796).  
   
-## <a name="see-also"></a>Vea también  
- [Acceso a recursos de servicios de datos](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
- [Inicio rápido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+## <a name="see-also"></a>Vea también
+- [Acceso a recursos de servicios de datos](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [Inicio rápido](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

@@ -7,26 +7,26 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: 96e56ab315a739fef9d5499b076a077f5294f39e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee3bcd1358536e6fd9bed5c4fec7845fdf441d86
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723490"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Tutorial: Cifrar y descifrar cadenas en Visual Basic
-En este tutorial se muestra cómo utilizar el <xref:System.Security.Cryptography.DESCryptoServiceProvider> clase para cifrar y descifrar cadenas utilizando la versión de servicios criptográficos (CSP) del proveedor de Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) algoritmo. El primer paso es crear una clase contenedora simple que encapsula el algoritmo 3DES y almacena los datos cifrados como una cadena codificada en base 64. A continuación, ese contenedor se utiliza para almacenar de forma segura los datos privados del usuario en un archivo de texto públicamente accesible.  
+En este tutorial se muestra cómo usar el <xref:System.Security.Cryptography.DESCryptoServiceProvider> clase para cifrar y descifrar cadenas mediante la versión de servicios criptográficos (CSP) del proveedor de Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) algoritmo. El primer paso es crear una clase de contenedor simple que encapsula el algoritmo 3DES y almacena los datos cifrados como una cadena codificada en base 64. A continuación, ese contenedor se usa para almacenar de forma segura los datos privados del usuario en un archivo de texto accesible públicamente.  
   
- Puede utilizar el cifrado para proteger los secretos del usuario (por ejemplo, contraseñas) y para hacer que las credenciales sean ilegibles por los usuarios no autorizados. Esto puede proteger la identidad de un usuario autorizado pueda ser sustraída, que protege los activos del usuario y proporciona sin repudio. Cifrado también puede proteger los datos de un usuario desde la que se va a obtener acceso a usuarios no autorizados.  
+ Puede utilizar cifrado para proteger los secretos de usuario (por ejemplo, contraseñas) y hacer que las credenciales no se puede leer los usuarios no autorizados. Esto puede proteger la identidad de un usuario autorizado desde que se lo roban, que protege los activos del usuario y proporciona el no rechazo. Cifrado también puede proteger datos de un usuario está accediendo a los usuarios no autorizados.  
   
  Para más información, vea [Servicios criptográficos](../../../../standard/security/cryptographic-services.md).  
   
 > [!IMPORTANT]
->  Los algoritmos Triple Data Encryption Standard (3DES) y Rijndael (ahora conocido como estándar de cifrado avanzado [AES]) proporcionan una seguridad mayor que DES porque son más intensivo computacionalmente. Para obtener más información, consulte <xref:System.Security.Cryptography.DES> y <xref:System.Security.Cryptography.Rijndael>.  
+>  Los algoritmos de Triple Data Encryption Standard (3DES) y Rijndael (conocido ahora como estándar de cifrado avanzado [AES]) proporcionan mayor seguridad que DES porque son más intensivas. Para obtener más información, vea <xref:System.Security.Cryptography.DES> y <xref:System.Security.Cryptography.Rijndael>.  
   
 ### <a name="to-create-the-encryption-wrapper"></a>Para crear el contenedor de cifrado  
   
-1.  Crear la `Simple3Des` clase para encapsular los métodos de cifrado y descifrado.  
+1.  Crear el `Simple3Des` clase para encapsular los métodos de cifrado y descifrado.  
   
      [!code-vb[VbVbalrStrings#38](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_1.vb)]  
   
@@ -34,7 +34,7 @@ En este tutorial se muestra cómo utilizar el <xref:System.Security.Cryptography
   
      [!code-vb[VbVbalrStrings#77](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_2.vb)]  
   
-3.  En el `Simple3Des` de la clase, agregue un campo privado para almacenar el proveedor de servicios criptográficos 3DES.  
+3.  En el `Simple3Des` clase, agregue un campo privado para almacenar el proveedor de servicios de cifrado 3DES.  
   
      [!code-vb[VbVbalrStrings#39](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_3.vb)]  
   
@@ -42,9 +42,9 @@ En este tutorial se muestra cómo utilizar el <xref:System.Security.Cryptography
   
      [!code-vb[VbVbalrStrings#41](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_4.vb)]  
   
-5.  Agregue un constructor para inicializar el proveedor de servicios criptográficos 3DES.  
+5.  Agregue un constructor para inicializar el proveedor de servicios de cifrado 3DES.  
   
-     El `key` parámetro controla la `EncryptData` y `DecryptData` métodos.  
+     El `key` parámetro controla el `EncryptData` y `DecryptData` métodos.  
   
      [!code-vb[VbVbalrStrings#40](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_5.vb)]  
   
@@ -52,19 +52,19 @@ En este tutorial se muestra cómo utilizar el <xref:System.Security.Cryptography
   
      [!code-vb[VbVbalrStrings#42](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_6.vb)]  
   
-7.  Agregue un método público que se descifre una cadena.  
+7.  Agregue un método público que descifra una cadena.  
   
      [!code-vb[VbVbalrStrings#43](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_7.vb)]  
   
-     La clase contenedora puede usarse ahora para proteger los activos de usuario. En este ejemplo, se usa para almacenar de forma segura los datos privados del usuario en un archivo de texto públicamente accesible.  
+     Ahora se puede usar la clase contenedora para proteger los activos de usuario. En este ejemplo, sirve para almacenar de forma segura los datos privados del usuario en un archivo de texto accesible públicamente.  
   
 ### <a name="to-test-the-encryption-wrapper"></a>Para probar el contenedor de cifrado  
   
-1.  En una clase independiente, agregue un método que usa el contenedor `EncryptData` para cifrar una cadena y escribir al usuario de la carpeta Mis documentos.  
+1.  En una clase independiente, agregue un método que utiliza el contenedor `EncryptData` método para cifrar una cadena y escribirla en el usuario de la carpeta Mis documentos.  
   
      [!code-vb[VbVbalrStrings#78](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_8.vb)]  
   
-2.  Agregar un método que lee la cadena cifrada del usuario de la carpeta Mis documentos y descifra la cadena en el contenedor `DecryptData` método.  
+2.  Agregar un método que lee la cadena cifrada del usuario de la carpeta Mis documentos y descifra la cadena con el contenedor `DecryptData` método.  
   
      [!code-vb[VbVbalrStrings#79](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_9.vb)]  
   
@@ -74,10 +74,10 @@ En este tutorial se muestra cómo utilizar el <xref:System.Security.Cryptography
   
      Al probar la aplicación, tenga en cuenta que no descifrará los datos si se proporciona una contraseña incorrecta.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Security.Cryptography>  
- <xref:System.Security.Cryptography.DESCryptoServiceProvider>  
- <xref:System.Security.Cryptography.DES>  
- <xref:System.Security.Cryptography.TripleDES>  
- <xref:System.Security.Cryptography.Rijndael>  
- [Servicios criptográficos](../../../../standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Security.Cryptography>
+- <xref:System.Security.Cryptography.DESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.DES>
+- <xref:System.Security.Cryptography.TripleDES>
+- <xref:System.Security.Cryptography.Rijndael>
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)

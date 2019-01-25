@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 8030c0323a2f742de19a4761e24c66294c6dd5d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 990e82aa6b4f85458979adfa25965cbd16b7893e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865831"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707484"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Cadenas de conexión y archivos de configuración
 La incrustación de cadenas de conexión en el código de la aplicación puede producir vulnerabilidades en la seguridad y problemas de mantenimiento. Las cadenas de conexión sin cifrar compiladas en el código fuente de una aplicación se pueden ver con la herramienta [Ildasm.exe (Desensamblador de IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Además, si la cadena de conexión cambia en algún momento, será necesario compilar de nuevo la aplicación. Por estas razones, se recomienda almacenar las cadenas de conexión en un archivo de configuración de la aplicación.  
@@ -80,7 +80,7 @@ La incrustación de cadenas de conexión en el código de la aplicación puede p
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|Nombre completo del proveedor. Se asigna al atributo **providerName**.|  
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|La cadena de conexión. Se asigna al atributo **connectionString**.|  
   
-### <a name="example-listing-all-connection-strings"></a>Ejemplo: mostrar todas las cadenas de conexión  
+### <a name="example-listing-all-connection-strings"></a>Ejemplo: Enumerar todas las cadenas de conexión  
  Este ejemplo recorre en iteración la colección `ConnectionStringSettings` y muestra las propiedades <xref:System.Configuration.ConnectionStringSettings.Name%2A>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> y <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> en la ventana de la consola.  
   
 > [!NOTE]
@@ -89,13 +89,13 @@ La incrustación de cadenas de conexión en el código de la aplicación puede p
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-name"></a>Ejemplo: recuperar una cadena de conexión por su nombre  
+### <a name="example-retrieving-a-connection-string-by-name"></a>Ejemplo: Recuperar una cadena de conexión por nombre  
  El siguiente ejemplo muestra cómo recuperar una cadena de conexión de un archivo de configuración mediante la especificación del nombre. El código crea un objeto <xref:System.Configuration.ConnectionStringSettings>, de forma que el parámetro de entrada proporcionado coincida con el nombre de <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A>. Si no se encuentra una coincidencia de nombre, la función devuelve `null` (`Nothing` en Visual Basic).  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-provider-name"></a>Ejemplo: recuperar una cadena de conexión por el nombre de proveedor  
+### <a name="example-retrieving-a-connection-string-by-provider-name"></a>Ejemplo: Recuperar una cadena de conexión por el nombre de proveedor  
  En este ejemplo se muestra cómo recuperar una cadena de conexión mediante la especificación del nombre invariable de proveedor con el formato *Sistema.Datos.NombreDelProveedor*. El código recorre en iteración <xref:System.Configuration.ConnectionStringSettingsCollection> y devuelve la cadena de conexión del primer valor de <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> encontrado. Si no se encuentra el nombre del proveedor, la función devuelve `null` (`Nothing` en Visual Basic).  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
@@ -167,12 +167,12 @@ La incrustación de cadenas de conexión en el código de la aplicación puede p
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Para obtener más información sobre la protección de aplicaciones ASP.NET, vea [Proteger sitios web ASP.NET](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) y la sección sobre [prácticas de seguridad en ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=59997) en el Centro para desarrolladores de ASP.NET.  
+ Para obtener más información, protección de aplicaciones ASP.NET, vea [NIB: Seguridad de ASP.NET](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) y [prácticas de seguridad ASP.NET 2.0 con un solo vistazo](https://go.microsoft.com/fwlink/?LinkId=59997) en el Centro para desarrolladores de ASP.NET.  
   
-## <a name="see-also"></a>Vea también  
- [Generadores de cadenas de conexión](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [Utilizar las clases Configuration](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
- [Configurar aplicaciones](../../../../docs/framework/configure-apps/index.md)  
- [Administrar sitios web ASP.NET](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Generadores de cadenas de conexión](../../../../docs/framework/data/adonet/connection-string-builders.md)
+- [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Utilizar las clases Configuration](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)
+- [Configurar aplicaciones](../../../../docs/framework/configure-apps/index.md)
+- [Administrar sitios web ASP.NET](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

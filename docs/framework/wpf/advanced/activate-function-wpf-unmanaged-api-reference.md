@@ -1,5 +1,5 @@
 ---
-title: Activar la función (referencia de la API no administrada de WPF)
+title: Activate (función) (referencia de API no administrada de WPF)
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,15 +8,15 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 1400329c-b598-465f-80f2-e3dabf044811
-ms.openlocfilehash: 4931f64a525f14ad5b0b69c582a81cd15d98e541
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e79b74dc8bb7d57125c27e17e8f52d607fffcf1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539058"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722032"
 ---
-# <a name="activate-function-wpf-unmanaged-api-reference"></a>Activar la función (referencia de la API no administrada de WPF)
-Esta API es compatible con la infraestructura de Windows Presentation Foundation (WPF) y no está diseñada para utilizarse directamente desde el código.  
+# <a name="activate-function-wpf-unmanaged-api-reference"></a>Activate (función) (referencia de API no administrada de WPF)
+Esta API admite la infraestructura de Windows Presentation Foundation (WPF) y no está pensada para utilizarse directamente desde el código.  
   
  Usa la infraestructura de Windows Presentation Foundation (WPF) para la administración de windows.  
   
@@ -37,9 +37,9 @@ void Activate(
  Un puntero a la dirección de un búfer único elemento que contiene un puntero a un <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument> objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos de sistema de .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [requisitos del sistema de .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
- **DLL:**  
+ **ARCHIVO DLL:**  
   
  En .NET Framework 3.0 y 3.5: PresentationHostDLL.dll  
   
@@ -47,5 +47,5 @@ void Activate(
   
  **Versión de .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de API no administrada de WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+## <a name="see-also"></a>Vea también
+- [Referencia de API no administrada de WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

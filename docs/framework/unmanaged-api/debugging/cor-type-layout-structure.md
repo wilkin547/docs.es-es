@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b88a7b0672e15097c60afbe069ce5b78bd5c38d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 50fd730876f43be5da45f38fa2d4694cbb2b2d1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502577"
 ---
 # <a name="cortypelayout-structure"></a>COR_TYPE_LAYOUT (Estructura)
 Proporciona información sobre la distribución de un objeto en la memoria.  
@@ -42,24 +42,24 @@ typedef struct COR_TYPE_LAYOUT {
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`parentID`|El identificador del tipo primario para este tipo. Se usará el identificador de tipo NULL (símbolo1 = 0, símbolo2 = 0) si el identificador de tipo corresponde a <xref:System.Object?displayProperty=nameWithType>.|  
-|`objectSize`|El tamaño de la base de un objeto de este tipo. Este es el tamaño total para los objetos de tamaño no variable.|  
-|`numFields`|El número de campos que se incluyen en los objetos de este tipo.|  
-|`boxOffset`|Si este tipo es una conversión boxing, el principio de desplazamiento de campos de un objeto. Este campo es válida únicamente para los tipos de valor como tipos primitivos y las estructuras.|  
-|`type`|CorElementType al que pertenece este tipo.|  
+|`parentID`|El identificador del tipo primario para este tipo. Este será el identificador de tipo NULL (símbolo1 = 0, símbolo2 = 0) si el identificador de tipo corresponde a <xref:System.Object?displayProperty=nameWithType>.|  
+|`objectSize`|El tamaño de la base de un objeto de este tipo. Este es el tamaño total de objetos de tamaño no variable.|  
+|`numFields`|El número de campos incluidos en los objetos de este tipo.|  
+|`boxOffset`|Si se aplica este tipo, el principio de desplazamiento de campos de un objeto. Este campo es válido sólo para los tipos de valor como tipos primitivos y las estructuras.|  
+|`type`|El CorElementType al que pertenece este tipo.|  
   
 ## <a name="remarks"></a>Comentarios  
- Si `numFields` es mayor que cero, se puede llamar a la [icordebugprocess5:: Gettypefields](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) método para obtener información sobre los campos de este tipo. Si `type` es `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, o `ELEMENT_TYPE_SZARRAY`, el tamaño de los objetos de este tipo es variable y se puede pasar el [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) estructura especificada en el [icordebugprocess5:: Getarraylayout ](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) (método).  
+ Si `numFields` es mayor que cero, se puede llamar a la [Icordebugprocess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md) método para obtener información acerca de los campos de este tipo. Si `type` es `ELEMENT_TYPE_STRING`, `ELEMENT_TYPE_ARRAY`, o `ELEMENT_TYPE_SZARRAY`, el tamaño de los objetos de este tipo es variable y puede pasar la [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) estructura a la [Icordebugprocess5 ](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Vea también
+- [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 69dea99cf71bd1e091116e54e244abfca291ffdb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9da2fc05824fa7e412c1c4802852fd00ba2709e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399877"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658200"
 ---
 # <a name="operator-statement"></a>Operator Statement
 Declara el símbolo del operador, los operandos y el código que definen un procedimiento de operador en una clase o estructura.  
@@ -44,13 +44,13 @@ End Operator
  Opcional. Consulte [lista de los atributos](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `Public`  
- Requerido. Indica que este procedimiento de operador tiene [pública](../../../visual-basic/language-reference/modifiers/public.md) acceso.  
+ Obligatorio. Indica que este procedimiento de operador tiene [pública](../../../visual-basic/language-reference/modifiers/public.md) acceso.  
   
  `Overloads`  
  Opcional. Consulte [sobrecargas](../../../visual-basic/language-reference/modifiers/overloads.md).  
   
  `Shared`  
- Requerido. Indica que este procedimiento de operador es un [Shared](../../../visual-basic/language-reference/modifiers/shared.md) procedimiento.  
+ Obligatorio. Indica que este procedimiento de operador es un [Shared](../../../visual-basic/language-reference/modifiers/shared.md) procedimiento.  
   
  `Shadows`  
  Opcional. Consulte [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).  
@@ -62,10 +62,10 @@ End Operator
  Necesario para un operador de conversión a menos que especifique `Widening`. Indica que este procedimiento de operador define un [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md) conversión. Vea "Ampliación y Narrowing Conversions" en esta página de ayuda.  
   
  `operatorsymbol`  
- Requerido. El símbolo o el identificador del operador que define este procedimiento de operador.  
+ Obligatorio. El símbolo o el identificador del operador que define este procedimiento de operador.  
   
  `operand1`  
- Requerido. El nombre y tipo de operando único de un operador unario (incluido un operador de conversión) o el operando izquierdo de un operador binario.  
+ Obligatorio. El nombre y tipo de operando único de un operador unario (incluido un operador de conversión) o el operando izquierdo de un operador binario.  
   
  `operand2`  
  Se requiere para los operadores binarios. El nombre y tipo del operando derecho de un operador binario.  
@@ -77,7 +77,7 @@ End Operator
 |Parte|Descripción|  
 |----------|-----------------|  
 |`ByVal`|Debe ser opcional, pero el mecanismo de paso [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).|  
-|`operandname`|Requerido. Nombre de la variable que representa este operando. Consulte [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`operandname`|Obligatorio. Nombre de la variable que representa este operando. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`operandtype`|Opcional, a menos que `Option Strict` es `On`. Tipo de datos de este operando.|  
   
  `type`  
@@ -87,10 +87,10 @@ End Operator
  Opcional. Bloque de instrucciones que se ejecuta el procedimiento de operador.  
   
  `returnvalue`  
- Requerido. El valor que el procedimiento de operador devuelve al código de llamada.  
+ Obligatorio. El valor que el procedimiento de operador devuelve al código de llamada.  
   
  `End` `Operator`  
- Requerido. Termina la definición de este procedimiento de operador.  
+ Obligatorio. Termina la definición de este procedimiento de operador.  
   
 ## <a name="remarks"></a>Comentarios  
  Puede usar `Operator` solo en una clase o estructura. Esto significa que el *contexto de declaración* para un operador no puede ser un archivo de código fuente, espacio de nombres, módulo, interfaz, procedimiento o bloque. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).  
@@ -170,14 +170,14 @@ End Operator
   
  [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [IsFalse (operador)](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
- [IsTrue (operador)](../../../visual-basic/language-reference/operators/istrue-operator.md)  
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [Conversiones de ampliación y de restricción](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Procedimientos de operadores](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
- [Definir un operador](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [Definir un operador de conversión](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
- [Llamar a un procedimiento de operador](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)  
- [Utilizar una clase que define operadores](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)
+## <a name="see-also"></a>Vea también
+- [IsFalse (operador)](../../../visual-basic/language-reference/operators/isfalse-operator.md)
+- [IsTrue (operador)](../../../visual-basic/language-reference/operators/istrue-operator.md)
+- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
+- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [Conversiones de ampliación y de restricción](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Procedimientos de operadores](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
+- [Cómo: Definir un operador](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Cómo: Definir un operador de conversión](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Cómo: Llamar a un procedimiento de operador](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)
+- [Cómo: Usar una clase que define operadores](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)

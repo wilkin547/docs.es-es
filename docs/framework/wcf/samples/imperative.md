@@ -2,12 +2,12 @@
 title: Imperativo
 ms.date: 03/30/2017
 ms.assetid: 4f7ce807-c0e4-407a-92a6-22abafb40b51
-ms.openlocfilehash: 7547e3ed3d573cccce068aec239710e76d29bf38
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cb8cd0814c695f0f870b7b160ca99e411724d302
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677659"
 ---
 # <a name="imperative"></a>Imperativo
 Este ejemplo muestra cómo definir un <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> para un servicio mediante código, en lugar de definir el `wsHttpBinding` en la configuración de enlace. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  

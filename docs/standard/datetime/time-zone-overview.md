@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0eb24c7c4f2c60a9c16d903ab1e845b058e280f7
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: e5fa4376cdb0496cfd25f4764257c4f3afbc7268
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697055"
 ---
 # <a name="time-zone-overview"></a>Información general sobre zonas horarias
 
@@ -59,7 +59,7 @@ En. NET, un <xref:System.TimeZoneInfo> objeto representa una zona horaria. El <x
 
 La dependencia de la <xref:System.TimeZoneInfo> clase en el registro significa que una aplicación compatible con la zona horaria no puede estar seguro de que una zona horaria determinada se define en el registro. Por tanto, el intento de crear instancias de una zona horaria concreta (excepto la zona horaria local o la zona horaria que representa la hora UTC) debe usar el control de excepciones. Además, debe proporcionar algún método para permitir que la aplicación continúe si es necesaria <xref:System.TimeZoneInfo> no pueden crearse instancias de objeto del registro.
 
-Para controlar la ausencia de una zona horaria necesaria, el <xref:System.TimeZoneInfo> clase incluye un <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método, que puede usar para crear zonas horarias personalizadas que no se encuentran en el registro. Para obtener más información sobre la creación de una zona horaria personalizada, vea [Cómo: crear zonas horarias sin reglas de ajuste](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) y [Cómo: crear zonas horarias con reglas de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md). Además, puede usar el <xref:System.TimeZoneInfo.ToSerializedString%2A> método para convertir una zona horaria recién creada en una cadena y guardarla en un almacén de datos (por ejemplo, una base de datos, un archivo de texto, el registro o un recurso de aplicación). A continuación, puede usar el <xref:System.TimeZoneInfo.FromSerializedString%2A> nuevo método para convertir esta cadena a un <xref:System.TimeZoneInfo> objeto. Para obtener más información, consulte [Cómo: guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) y [Cómo: restaurar zonas horarias de un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+Para controlar la ausencia de una zona horaria necesaria, el <xref:System.TimeZoneInfo> clase incluye un <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método, que puede usar para crear zonas horarias personalizadas que no se encuentran en el registro. Para obtener más información sobre la creación de una zona horaria personalizada, vea [Cómo: Crear zonas horarias sin reglas de ajuste](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) y [Cómo: Creación de zonas horarias con reglas de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md). Además, puede usar el <xref:System.TimeZoneInfo.ToSerializedString%2A> método para convertir una zona horaria recién creada en una cadena y guardarla en un almacén de datos (por ejemplo, una base de datos, un archivo de texto, el registro o un recurso de aplicación). A continuación, puede usar el <xref:System.TimeZoneInfo.FromSerializedString%2A> nuevo método para convertir esta cadena a un <xref:System.TimeZoneInfo> objeto. Para obtener más información, vea [Cómo: Guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) y [Cómo: Restaurar zonas horarias de un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 Dado que cada zona horaria se caracteriza por un desplazamiento desde la hora UTC base, así como por un desplazamiento desde la hora UTC que refleja las reglas de ajuste existentes, la hora de una zona horaria se puede convertir fácilmente en la hora de otra zona horaria. Para este propósito, el <xref:System.TimeZoneInfo> objeto incluye varios métodos de conversión, como:
 
@@ -75,4 +75,4 @@ Para obtener más información sobre cómo convertir horas entre zonas horarias,
 
 ## <a name="see-also"></a>Vea también
 
-* [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
+- [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)

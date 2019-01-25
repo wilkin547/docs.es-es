@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: ea7c630be3f6d208f5c62e8b9e24606ff0df8466
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 659af630f697d7f2742bc71006241c4bded842c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718928"
 ---
 # <a name="themedictionary-markup-extension"></a>Extensión de marcado ThemeDictionary
 Proporciona a los autores de controles personalizados o a las aplicaciones que integran controles de otros fabricantes una manera de cargar los diccionarios de recursos específicos del tema para usarlos en la aplicación de estilos al control.  
@@ -45,7 +45,7 @@ Proporciona a los autores de controles personalizados o a las aplicaciones que i
   
  Mediante esta extensión, puede especificar un único ensamblado solo de recursos que contenga algunos estilos para usarlos solamente cuando se aplique el tema [!INCLUDE[TLA#tla_aero](../../../../includes/tlasharptla-aero-md.md)] al sistema del usuario, otros estilos cuando esté activo el tema Luna, y así sucesivamente. Al usar esta extensión, se puede invalidar automáticamente y volver a cargar el contenido de un diccionario de recursos específico del control de modo que sea específico de otro tema cuando se necesite.  
   
- El `assemblyUri` cadena (<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> valor de propiedad) constituye la base de una convención de nomenclatura que identifica qué diccionario se aplica a un tema determinado. El <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> lógica para `ThemeDictionary` completa la convención generando un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] que apunta a una variante de diccionario de tema en particular, como dentro de un ensamblado de recursos precompilado. En este artículo no se aborda plenamente la descripción de esta convención, ni el concepto de las interacciones de los temas con la aplicación general de estilos a controles o en el nivel de aplicación o de página. El escenario básico para utilizar `ThemeDictionary` consiste en especificar el <xref:System.Windows.ResourceDictionary.Source%2A> propiedad de un `ResourceDictionary` declarados en el nivel de aplicación. Cuando se proporciona un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] para el ensamblado mediante una extensión de `ThemeDictionary` en lugar de usar un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] directo, la lógica de la extensión proporciona la lógica de invalidación que se aplica cada vez que cambia el tema del sistema.  
+ El `assemblyUri` cadena (<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> valor de propiedad) constituye la base de una convención de nomenclatura que identifica qué diccionario se aplica a un tema determinado. El <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> lógica para `ThemeDictionary` completa la convención generando un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] que apunta a una variante de diccionario de tema en particular, contenida dentro de un ensamblado de recursos precompilado. En este artículo no se aborda plenamente la descripción de esta convención, ni el concepto de las interacciones de los temas con la aplicación general de estilos a controles o en el nivel de aplicación o de página. El escenario básico para utilizar `ThemeDictionary` consiste en especificar el <xref:System.Windows.ResourceDictionary.Source%2A> propiedad de un `ResourceDictionary` declarado en el nivel de aplicación. Cuando se proporciona un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] para el ensamblado mediante una extensión de `ThemeDictionary` en lugar de usar un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] directo, la lógica de la extensión proporciona la lógica de invalidación que se aplica cada vez que cambia el tema del sistema.  
   
  La sintaxis de atributo es la que se usa normalmente con esta extensión de marcado. El token de cadena que se proporciona después de la cadena de identificador `ThemeDictionary` se asigna como valor de <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> de la clase de extensión <xref:System.Windows.ThemeDictionaryExtension> subyacente.  
   
@@ -63,8 +63,8 @@ Proporciona a los autores de controles personalizados o a las aplicaciones que i
   
  `ThemeDictionary` es una extensión de marcado. Las extensiones de marcado se suelen implementar cuando se necesita que los valores de los atributos de escape no sean valores literales o nombres de controladores, y este requisito es de índole más global que limitarse a colocar los convertidores de tipos en determinados tipos o propiedades. Todas las extensiones de marcado de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usan los caracteres { y } en su sintaxis de atributo, que es la convención que permite que un procesador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reconozca que el atributo se debe procesar mediante una extensión de marcado. Para más información, vea [Extensiones de marcado y XAML de WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>Vea también  
- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Información general sobre XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Extensiones de marcado y XAML de WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [Archivos de recursos, contenido y datos de aplicaciones de WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a>Vea también
+- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Información general sobre XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Extensiones de marcado y XAML de WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Archivos de recursos, contenido y datos de aplicaciones de WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

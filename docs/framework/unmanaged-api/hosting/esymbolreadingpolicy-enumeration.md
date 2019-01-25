@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28f6bdbc3e382f82b7fdd632b9fc8c4d422629c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e17f88cf7f0d8572e65d00d8500a1fd83aa44eeb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429740"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663919"
 ---
 # <a name="esymbolreadingpolicy-enumeration"></a>ESymbolReadingPolicy (Enumeración)
 Contiene valores que establecen la directiva para leer los archivos de programa (PDB) de la base de datos.  
@@ -41,20 +41,20 @@ typedef enum {
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`eSymbolReadingAlways`|Especifica que el depurador siempre debe leer los archivos PDB.|  
-|`eSymbolReadingFullTrustOnly`|Especifica que el depurador debe leer solo PDB (archivos) que están asociados a ensamblados de plena confianza.|  
+|`eSymbolReadingFullTrustOnly`|Especifica que el depurador debe leer sólo los archivos PDB asociados a ensamblados de plena confianza.|  
 |`eSymbolReadingNever`|Especifica que el depurador nunca debe leer los archivos PDB.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `ESymbolReadingPolicy` enumeración se utiliza con la [ICLRDebugManager:: SetSymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md) método.  
+ El `ESymbolReadingPolicy` enumeración se utiliza con el [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** MSCorEE.h  
+ **Encabezado**: MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

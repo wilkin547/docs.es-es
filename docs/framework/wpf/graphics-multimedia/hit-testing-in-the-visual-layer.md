@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: fe54578407e881ec7d6782ec21100b29eded07a3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 27e5e8c939cf95b6406c810c25940cc04420b22c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988587"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692420"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Realizar pruebas de posicionamiento en la capa visual
 En este tema se proporciona información general sobre la funcionalidad de prueba de posicionamiento que proporciona la capa visual. Compatibilidad con pruebas de posicionamiento permite determinar si un valor de geometría o un punto está dentro del contenido representado de un <xref:System.Windows.Media.Visual>, lo que permite implementar el comportamiento de la interfaz de usuario, como un rectángulo de selección para seleccionar varios objetos.  
@@ -26,11 +26,11 @@ En este tema se proporciona información general sobre la funcionalidad de prueb
   
 -   Pruebas de posicionamiento frente a que no sean de<xref:System.Windows.UIElement> objetos: Esto se aplica si se alcanzan las pruebas que no sean de<xref:System.Windows.UIElement> objetos, como <xref:System.Windows.Media.DrawingVisual> u objetos gráficos.  
   
--   Pruebas de posicionamiento con la utilización de una geometría: esto se aplica si necesita realizar una prueba de posicionamiento con un objeto de geometría en lugar usar el valor de coordenadas de un punto.  
+-   La prueba de posicionamiento mediante un objeto geometry: Esto se aplica si necesita usar un objeto de geometría en lugar de con el valor de coordenadas de un punto de prueba de posicionamiento.  
   
--   Pruebas de posicionamiento frente a varios objetos: esto se aplica cuando es necesario realizar pruebas de posicionamiento frente a varios objetos, tales como objetos superpuestos. Puede obtener resultados para todos los elementos visuales que corten una geometría o un punto, no solamente para el primero.  
+-   La prueba de posicionamiento frente a varios objetos: Esto se aplica cuando se necesita la prueba varios objetos, tales como objetos superpuestos de posicionamiento. Puede obtener resultados para todos los elementos visuales que corten una geometría o un punto, no solamente para el primero.  
   
--   Omitiendo <xref:System.Windows.UIElement> directiva de la prueba de posicionamiento: Esto se aplica cuando se necesita pasar por alto la <xref:System.Windows.UIElement> directiva, que tiene en cuenta factores tales como si un elemento está deshabilitado o no visible de la prueba de posicionamiento.  
+-   Omitiendo <xref:System.Windows.UIElement> la directiva de prueba de posicionamiento: Esto se aplica cuando se necesita pasar por alto la <xref:System.Windows.UIElement> directiva, que tiene en cuenta factores tales como si un elemento está deshabilitado o no visible de la prueba de posicionamiento.  
   
 > [!NOTE]
 >  Para obtener un ejemplo de código completo que muestra la prueba de posicionamiento en la capa visual, vea [Ejemplo de prueba de posicionamiento con DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994) y [Ejemplo de prueba de posicionamiento de interoperabilidad con Win32](https://go.microsoft.com/fwlink/?LinkID=159995).  
@@ -138,13 +138,13 @@ Eliminar un árbol visual
  [!code-csharp[HitTestingOverview#108](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
  [!code-vb[HitTestingOverview#108](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- <xref:System.Windows.Media.HitTestResult>  
- <xref:System.Windows.Media.HitTestResultCallback>  
- <xref:System.Windows.Media.HitTestFilterCallback>  
- <xref:System.Windows.UIElement.IsHitTestVisible%2A>  
- [Prueba de posicionamiento con DrawingVisuals Sample](https://go.microsoft.com/fwlink/?LinkID=159994)  
- [Prueba con el ejemplo de interoperación de Win32 de posicionamiento](https://go.microsoft.com/fwlink/?LinkID=159995)  
- [Geometría de una prueba de posicionamiento en un objeto Visual](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [Realizar pruebas de posicionamiento mediante un contenedor host Win32](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
+- <xref:System.Windows.Media.HitTestResult>
+- <xref:System.Windows.Media.HitTestResultCallback>
+- <xref:System.Windows.Media.HitTestFilterCallback>
+- <xref:System.Windows.UIElement.IsHitTestVisible%2A>
+- [Prueba de posicionamiento con DrawingVisuals Sample](https://go.microsoft.com/fwlink/?LinkID=159994)
+- [Prueba con el ejemplo de interoperación de Win32 de posicionamiento](https://go.microsoft.com/fwlink/?LinkID=159995)
+- [Geometría de una prueba de posicionamiento en un objeto Visual](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)
+- [Realizar pruebas de posicionamiento mediante un contenedor host Win32](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)

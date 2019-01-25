@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f71e59eb13321517de61315d3ba06b96c5458f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af90055c0a51e61d4032e45d6fa4a4914ddd045f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667942"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr (Enumeración)
 Contiene valores que indican los metadatos de tipo.  
@@ -96,12 +96,12 @@ typedef enum CorTypeAttr {
 |`tdClass`|Especifica que el tipo es una clase.|  
 |`tdInterface`|Especifica que el tipo es una interfaz.|  
 |`tdAbstract`|Especifica que el tipo es abstracto.|  
-|`tdSealed`|Especifica que no se puede ampliar el tipo.|  
+|`tdSealed`|Especifica que no se puede extender el tipo.|  
 |`tdSpecialName`|Especifica que el nombre de clase es especial. Su nombre describe cómo.|  
 |`tdImport`|Especifica que el tipo se ha importado.|  
 |`tdSerializable`|Especifica que el tipo es serializable.|  
 |`tdWindowsRuntime`|Especifica que este tipo es un [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipo.|  
-|`tdStringFormatMask`|Obtiene información acerca de cómo las cadenas están codificadas y con formato.|  
+|`tdStringFormatMask`|Obtiene información sobre cómo se codifican y formato de cadenas.|  
 |`tdAnsiClass`|Especifica que este tipo interpreta LPTSTR como ANSI.|  
 |`tdUnicodeClass`|Especifica que este tipo interpreta LPTSTR como Unicode.|  
 |`tdAutoClass`|Especifica que este tipo interpreta LPTSTR automáticamente.|  
@@ -114,11 +114,11 @@ typedef enum CorTypeAttr {
 |`tdHasSecurity`|Especifica que el tipo tiene seguridad asociada a él.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorHdr.h  
+ **Encabezado**: CorHdr.h  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

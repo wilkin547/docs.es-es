@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Designar un botón de formularios Windows Forms como botón para aceptar'
+title: Procedimiento Designar un botón de formularios Windows Forms como botón Aceptar
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: 22cc9da6-b913-4e04-9554-dee443ac5c3a
-ms.openlocfilehash: a69964b83e9948a844483725616a150234a38c97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e35dbc2b66f743f5af3c405228439268590e1a5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531945"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660208"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>Cómo: Designar un botón de formularios Windows Forms como botón para aceptar
-En cualquier formulario Windows Forms, puede designar un <xref:System.Windows.Forms.Button> que sea el botón Aceptar, también conocido como el botón predeterminado del control. Cada vez que el usuario presiona la tecla ENTRAR, hacer clic en el botón predeterminado, sin tener en cuenta que otro control en el formulario tiene el foco.  
+# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>Procedimiento Designar un botón de formularios Windows Forms como botón Aceptar
+En cualquier formulario de Windows, se puede designar un <xref:System.Windows.Forms.Button> que sea el botón Aceptar, también conocido como el botón predeterminado del control. Cada vez que el usuario presiona la tecla ENTRAR, se hace clic en el botón predeterminado, independientemente de que otro control en el formulario tiene el foco.  
   
 > [!NOTE]
 >  Las excepciones a esto son cuando el control tiene el foco es otro botón, en ese caso, se hace clic en el botón con el foco, o un cuadro de texto multilínea o un control personalizado que intercepta la tecla ENTRAR.  
@@ -49,10 +49,10 @@ En cualquier formulario Windows Forms, puede designar un <xref:System.Windows.Fo
        }  
     ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Forms.Form.AcceptButton%2A>  
- [Información general sobre el control Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- [Maneras de seleccionar un control Button de formularios Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [Responder a clics de botones en Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [Designar un botón de Windows Forms como botón para cancelar](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-cancel-button.md)  
- [Botón (control)](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Forms.Form.AcceptButton%2A>
+- [Información general sobre el control Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)
+- [Maneras de seleccionar un control Button de formularios Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)
+- [Cómo: Responder a clics de botón de Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+- [Cómo: Designar un botón de formularios Windows Forms como botón para cancelar](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
+- [Botón (control)](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

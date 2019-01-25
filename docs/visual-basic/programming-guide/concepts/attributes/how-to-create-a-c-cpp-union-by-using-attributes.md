@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: crear una unión de C y C++ mediante el uso de atributos (Visual Basic)'
+title: Procedimiento Crear una unión de C/C ++ mediante atributos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: b07168df3fb7ec8195a3f64ef5b1bef0cc16dda2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e37aac03db7a24e6519acb4eb843b46b8c60b4f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663289"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Cómo: crear una unión de C/c ++ mediante atributos (Visual Basic)
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Procedimiento Crear una unión de C/c ++ mediante atributos (Visual Basic)
 Mediante el uso de atributos, puede personalizar la manera en que los structs se disponen en la memoria. Por ejemplo, puede crear lo que se conoce como una unión en C/ C++ mediante los atributos `StructLayout(LayoutKind.Explicit)` y `FieldOffset`.  
   
 ## <a name="example"></a>Ejemplo  
@@ -66,12 +66,12 @@ Structure TestExplicit
   
  Los dos campos enteros, `i1` e `i2`, tiene las mismas ubicaciones en la memoria que `lg`. Este tipo de control sobre el diseño del struct es útil cuando se usa la invocación de plataforma.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Guía de programación en Visual Basic](../../../../visual-basic/programming-guide/index.md)  
- [Atributos](../../../../standard/attributes/index.md)  
- [Reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
- [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Creación de atributos personalizados [Visual Basic])  
- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic])
+## <a name="see-also"></a>Vea también
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Guía de programación en Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Atributos](../../../../standard/attributes/index.md)
+- [Reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
+- [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Creación de atributos personalizados [Visual Basic])
+- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic])

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: f5b2775b2f0c8e35d398d5d0666d47bf0009a9e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 783ecb35408f63c7f3e7299e503c3f0fda3f36ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666441"
 ---
 # <a name="querying-across-relationships"></a>Realizar consultas en varias relaciones
 Las referencias a otros objetos o colecciones de otros objetos en sus definiciones de clase se corresponden directamente con relaciones de clave externa en la base de datos. Puede utilizar estas relaciones cuando realice consultas utilizando la notación de punto para tener acceso a las propiedades de la relación y navegar entre los objetos. Estas operaciones de acceso se convierten en combinaciones más complejas o subconsultas correlacionadas en el código SQL equivalente.  
@@ -20,18 +20,18 @@ Las referencias a otros objetos o colecciones de otros objetos en sus definicion
  [!code-csharp[DLinqQueryConcepts#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#3)]
  [!code-vb[DLinqQueryConcepts#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#3)]  
   
- Si no existieran propiedades de relación tendría que escribirlas manualmente como *combinaciones*, tal y como lo haría en una consulta SQL, como en el código siguiente:  
+ Si las propiedades de relación no existía tendría que escribirlas manualmente como *combinaciones*, tal como lo haría en una consulta SQL, como se muestra en el código siguiente:  
   
  [!code-csharp[DLinqQueryConcepts#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#4)]
  [!code-vb[DLinqQueryConcepts#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#4)]  
   
- Puede usar el *relación* propiedad que se va a definir esta relación concreta una vez. Después, puede utilizar la sintaxis de punto más apropiada. Sin embargo, la existencia de las propiedades de relación es más importante porque los modelos de objetos específicos del dominio se definen normalmente como jerarquías o gráficos. Los objetos para los que programa tienen referencias a otros objetos. Es una mera coincidencia que las relaciones de objeto a objeto se correspondan con tipos de relaciones de clave externa en las bases de datos. Por ello, el acceso de propiedad proporciona una manera apropiada de escribir combinaciones.  
+ Puede usar el *relación* propiedad para definir esta relación concreta una vez. Después, puede utilizar la sintaxis de punto más apropiada. Sin embargo, la existencia de las propiedades de relación es más importante porque los modelos de objetos específicos del dominio se definen normalmente como jerarquías o gráficos. Los objetos para los que programa tienen referencias a otros objetos. Es una mera coincidencia que las relaciones de objeto a objeto se correspondan con tipos de relaciones de clave externa en las bases de datos. Por ello, el acceso de propiedad proporciona una manera apropiada de escribir combinaciones.  
   
  A este respecto, las propiedades de relación son más importantes en el lado de los resultados de una consulta que como parte de la propia consulta. Una vez que la consulta ha recuperado los datos sobre un cliente determinado, la definición de clase indica que los clientes tienen pedidos. En otras palabras, se espera que la propiedad `Orders` de un cliente determinado sea una colección que se llena con todos los pedidos de ese cliente. De hecho, esa era su intención cuando definió las clases de esta manera. Espera ver allí los pedidos aun cuando la consulta no los ha solicitado. Espera que su modelo de objetos refleje lo que en realidad se encuentra en una extensión en memoria de la base de datos, con los objetos relacionados inmediatamente disponibles.  
   
- Ahora que tiene las relaciones, puede escribir consultas haciendo referencia a las propiedades de relación definidas en las clases. Estas referencias de relación se corresponden con las relaciones de clave externa de la base de datos. Las operaciones que utilizan estas relaciones se convierten en combinaciones más complejas en el código SQL equivalente. Siempre y cuando haya definido una relación (mediante el atributo <xref:System.Data.Linq.Mapping.AssociationAttribute> ), no tiene que codificar una combinación explícita en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ Ahora que tiene las relaciones, puede escribir consultas haciendo referencia a las propiedades de relación definidas en las clases. Estas referencias de relación se corresponden con las relaciones de clave externa de la base de datos. Las operaciones que utilizan estas relaciones se convierten en combinaciones más complejas en el código SQL equivalente. Siempre y cuando haya definido una relación (mediante el atributo <xref:System.Data.Linq.Mapping.AssociationAttribute> ), no tiene que programar una combinación explícita en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- Para ayudar a mantener esta ilusión, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementa una técnica denominada *carga aplazada*. Para obtener más información, consulte [ejecución diferida frente a carga inmediata](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+ Para ayudar a mantener esta ilusión, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementa una técnica denominada *la carga diferida*. Para obtener más información, consulte [carga inmediata y carga diferida](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
   
  Considere la siguiente consulta SQL para proyectar una lista de `CustomerID` - `OrderID` pares:  
   
@@ -42,7 +42,7 @@ FROM   Customers AS t0 INNER JOIN
 WHERE  (t0.City = @p0)  
 ```  
   
- Para obtener los mismos resultados en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], utilice la referencia de propiedad `Orders` que ya existe en la clase `Customer`. El `Orders` referencia proporciona la información necesaria para ejecutar la consulta y proyectar el `CustomerID` - `OrderID` pares, como en el código siguiente:  
+ Para obtener los mismos resultados en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], utilice la referencia de propiedad `Orders` que ya existe en la clase `Customer`. El `Orders` referencia proporciona la información necesaria para ejecutar la consulta y proyectar el `CustomerID` - `OrderID` pares, como se muestra en el código siguiente:  
   
  [!code-csharp[DLinqQueryConcepts#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#5)]
  [!code-vb[DLinqQueryConcepts#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#5)]  
@@ -52,5 +52,5 @@ WHERE  (t0.City = @p0)
  [!code-csharp[DLinqQueryConcepts#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#6)]
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+## <a name="see-also"></a>Vea también
+- [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

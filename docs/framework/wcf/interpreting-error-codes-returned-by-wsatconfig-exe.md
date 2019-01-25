@@ -2,12 +2,12 @@
 title: Interpretar códigos de error devueltos por wsatConfig.exe
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 9df059618b45ae65ffb3e6e31a87d5531c79d947
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70a917446415794f8d500818bdeff5b945834598
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510031"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretar códigos de error devueltos por wsatConfig.exe
 En este tema se hace una lista de todos los códigos de error generados por la utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe) y acciones recomendadas que se van a tomar.  
@@ -44,7 +44,7 @@ En este tema se hace una lista de todos los códigos de error generados por la u
 |28|La opción de línea de comandos `-network` no es válida.|Corrija la opción de línea de comandos `-network` para especificar correctamente "habilitar" o "deshabilitar".|  
 |29|La opción de línea de comandos `-maxTimeout` no es válida.|Corrija la opción de línea de comandos `-maxTimeout` como se indica.|  
 |30|La opción de línea de comandos `-timeout` no es válida.|Corrija la opción de línea de comandos `-timeout` como se indica.|  
-|31|La opción de línea de comandos `-traceLevel` no es válida.|Corrija la opción de línea de comandos `-traceLevel` para especificar un valor válido de lo siguientes<br /><br /> -Desactivado<br />: Error<br />-   Critical<br />: Advertencia<br />-Información<br />-Verbose<br />-Todo|  
+|31|La opción de línea de comandos `-traceLevel` no es válida.|Corrija la opción de línea de comandos `-traceLevel` para especificar un valor válido de lo siguientes<br /><br /> -Off<br />-Error<br />-   Critical<br />: Advertencia<br />-Información<br />-   Verbose<br />-Todas|  
 |32|La opción de línea de comandos `-traceActivity` no es válida.|Corrija la opción de línea de comandos `-traceActivity` especificando "habilitar" o "deshabilitar".|  
 |33|La opción de línea de comandos `-traceProp` no es válida.|Corrija la opción de línea de comandos `-traceProp` especificando "habilitar" o "deshabilitar".|  
 |34|La opción de línea de comandos `-tracePII` no es válida.|Corrija la opción de línea de comandos `-tracePII` especificando "habilitar" o "deshabilitar".|  
@@ -67,5 +67,5 @@ En este tema se hace una lista de todos los códigos de error generados por la u
 |55|Error inesperado al intentar iniciar la sesión de seguimiento ETW.|Póngase en contacto con Microsoft.|  
 |56|Error inesperado al intentar iniciar la sesión de seguimiento ETW.|Póngase en contacto con Microsoft.|  
   
-## <a name="see-also"></a>Vea también  
- [Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+## <a name="see-also"></a>Vea también
+- [Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 578aed02d5d44ae94763b6a254420a4976320f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e18d64bdc67bfa5dce01c9125ee2e8585ab7db9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398110"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671959"
 ---
 # <a name="method-etw-events"></a>Eventos ETW de método
 <a name="top"></a> Estos eventos recopilan información que es específica de los métodos. La carga de estos eventos es necesaria para la resolución de símbolos. Además, estos eventos proporcionan información útil como el número de veces que se llama a un método.  
@@ -38,7 +38,7 @@ ms.locfileid: "33398110"
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
 |`JITKeyword` (0x10)|Informativo (4)|  
-|Proveedor de runtime `NGenKeyword` (0x20)|Informativo (4)|  
+|`NGenKeyword` (0x20)|Informativo (4)|  
 |`JitRundownKeyword` (0x10)|Informativo (4)|  
 |`NGENRundownKeyword` (0x20)|Informativo (4)|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33398110"
   
 |Evento|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
-|`MethodLoad_V1`|136|Se genera cuando un método se carga just-in-time (carga JIT) o se carga una imagen NGEN. Los métodos dinámicos y genéricos no usan esta versión para cargas de método. Las aplicaciones auxiliares de JIT nunca usan esta versión.|  
+|`MethodLoad_V1`|136|Se genera cuando un método se carga just-in-time (carga JIT) o se carga una imagen NGEN. Los métodos dinámicos y genéricos no usan esta versión para cargas de método. Los asistentes de JIT nunca usan esta versión.|  
 |`MethodUnLoad_V1`|137|Se genera cuando se descarga un módulo o se destruye un dominio de aplicación. Los métodos dinámicos nunca usan esta versión para descargas de método.|  
 |`MethodDCStart_V1`|137|Enumera los métodos durante una detención de inicio.|  
 |`MethodDCEnd_V1`|138|Enumera los métodos durante una detención de fin.|  
@@ -55,12 +55,12 @@ ms.locfileid: "33398110"
   
 |Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
-|MethodID|win:UInt64|Identificador único de un método. Para los métodos auxiliares JIT, se establece en la dirección de inicio del método.|  
-|ModuleID|win:UInt64|Identificador del módulo al que pertenece este método (0 para aplicaciones auxiliares de JIT).|  
+|MethodID|win:UInt64|Identificador único de un método. Para los métodos del asistente JIT, se establece en la dirección de inicio del método.|  
+|ModuleID|win:UInt64|Identificador del módulo al que pertenece este método (0 para asistentes de JIT).|  
 |MethodStartAddress|win:UInt64|Dirección de inicio del método.|  
 |MethodSize|win:UInt32|Tamaño del método.|  
-|MethodToken|win:UInt32|0 para métodos dinámicos y aplicaciones auxiliares de JIT.|  
-|MethodFlags|win:UInt32|0x1: método dinámico.<br /><br /> 0x2: método genérico.<br /><br /> 0x4: método de código compilado JIT (en caso contrario, código de imagen nativa de NGEN).<br /><br /> 0x8: método auxiliar.|  
+|MethodToken|win:UInt32|0 para métodos dinámicos y asistentes de JIT.|  
+|MethodFlags|win:UInt32|0x1: Método dinámico.<br /><br /> 0x2: Método genérico.<br /><br /> 0x4: Método de código compilado JIT (código de imagen nativa de NGEN en caso contrario).<br /><br /> 0x8: Método auxiliar.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
  [Volver al principio](#top)  
@@ -100,16 +100,16 @@ ms.locfileid: "33398110"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|Proveedor de runtime `JITKeyword` (0x10)|Detallado (5)|  
+|`JITKeyword` (0x10)|Detallado (5)|  
 |`NGenKeyword` (0x20)|Detallado (5)|  
-|Proveedor de detención `JitRundownKeyword` (0x10)|Detallado (5)|  
-|Proveedor de detención `NGENRundownKeyword` (0x20)|Detallado (5)|  
+|`JitRundownKeyword` (0x10)|Detallado (5)|  
+|`NGENRundownKeyword` (0x20)|Detallado (5)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
 |Evento|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
-|`MethodLoadVerbose_V1`|143|Se genera cuando la carga de un método es JIT o se carga una imagen NGEN. Los métodos dinámicos y genéricos siempre usan esta versión para cargas de método. Las aplicaciones auxiliares de JIT siempre usan esta versión.|  
+|`MethodLoadVerbose_V1`|143|Se genera cuando la carga de un método es JIT o se carga una imagen NGEN. Los métodos dinámicos y genéricos siempre usan esta versión para cargas de método. Los asistentes de JIT siempre usan esta versión.|  
 |`MethodUnLoadVerbose_V1`|144|Se genera cuando se destruye un método dinámico, se descarga un módulo o se destruye un dominio de aplicación. Los métodos dinámicos siempre usan esta versión para descargas de método.|  
 |`MethodDCStartVerbose_V1`|141|Enumera los métodos durante una detención de inicio.|  
 |`MethodDCEndVerbose_V1`|142|Enumera los métodos durante una detención de fin.|  
@@ -118,12 +118,12 @@ ms.locfileid: "33398110"
   
 |Nombre de campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
-|MethodID|win:UInt64|Identificador único del método. Para los métodos auxiliares JIT, se establece en la dirección de inicio del método.|  
-|ModuleID|win:UInt64|Identificador del módulo al que pertenece este método (0 para aplicaciones auxiliares de JIT).|  
+|MethodID|win:UInt64|Identificador único del método. Para los métodos del asistente JIT, se establece en la dirección de inicio del método.|  
+|ModuleID|win:UInt64|Identificador del módulo al que pertenece este método (0 para asistentes de JIT).|  
 |MethodStartAddress|win:UInt64|Dirección de inicio.|  
 |MethodSize|win:UInt32|Longitud de método.|  
-|MethodToken|win:UInt32|0 para métodos dinámicos y aplicaciones auxiliares de JIT.|  
-|MethodFlags|win:UInt32|0x1: método dinámico.<br /><br /> 0x2: método genérico.<br /><br /> 0 x 4: método compilado JIT (de lo contrario, generado por NGen.exe)<br /><br /> 0x8: método auxiliar.|  
+|MethodToken|win:UInt32|0 para métodos dinámicos y asistentes de JIT.|  
+|MethodFlags|win:UInt32|0x1: Método dinámico.<br /><br /> 0x2: Método genérico.<br /><br /> 0x4: Método compilado JIT (en caso contrario, generado por NGen.exe)<br /><br /> 0x8: Método auxiliar.|  
 |MethodNameSpace|win:UnicodeString|Nombre del espacio de nombres completo que está asociado al método.|  
 |MethodName|win:UnicodeString|Nombre de clase completo que está asociado al método.|  
 |MethodSignature|win:UnicodeString|Signatura del método (lista separada por comas de nombres de tipo).|  
@@ -137,10 +137,10 @@ ms.locfileid: "33398110"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|Proveedor de runtime `JITKeyword` (0x10)|Detallado (5)|  
+|`JITKeyword` (0x10)|Detallado (5)|  
 |`NGenKeyword` (0x20)|Detallado (5)|  
-|Proveedor de detención `JitRundownKeyword` (0x10)|Detallado (5)|  
-|Proveedor de detención `NGENRundownKeyword` (0x20)|Detallado (5)|  
+|`JitRundownKeyword` (0x10)|Detallado (5)|  
+|`NGENRundownKeyword` (0x20)|Detallado (5)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
@@ -154,12 +154,12 @@ ms.locfileid: "33398110"
 |----------------|---------------|-----------------|  
 |MethodID|win:UInt64|Identificador único del método.|  
 |ModuleID|win:UInt64|Identificador del módulo al que pertenece este método.|  
-|MethodToken|win:UInt32|0 para métodos dinámicos y aplicaciones auxiliares de JIT.|  
+|MethodToken|win:UInt32|0 para métodos dinámicos y asistentes de JIT.|  
 |MethodILSize|win:UInt32|El tamaño del lenguaje intermedio de Microsoft (MSIL) del método en el que se está realizando la compilación JIT.|  
 |MethodNameSpace|win:UnicodeString|Nombre de clase completo que está asociado al método.|  
 |MethodName|win:UnicodeString|Nombre del método.|  
 |MethodSignature|win:UnicodeString|Signatura del método (lista separada por comas de nombres de tipo).|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
-## <a name="see-also"></a>Vea también  
- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Vea también
+- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)

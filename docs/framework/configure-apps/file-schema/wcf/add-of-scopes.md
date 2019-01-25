@@ -2,22 +2,22 @@
 title: '&lt;add&gt; de &lt;scopes&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: e2bf649259d6ccb0e55428ab3619fe561d051ff7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 961fb3e388e3ae756bd7511ea6c65df6dd2a1486
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146246"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705578"
 ---
 # <a name="ltaddgt-of-ltscopesgt"></a>&lt;add&gt; de &lt;scopes&gt;
 Agrega un Uri de ámbito personalizado que se puede utilizar para filtrar los puntos de conexión de servicio durante la consulta.  
   
 \<system.ServiceModel>  
 \<comportamientos >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<comportamiento >  
-\<endpointDiscovery >  
-\<ámbitos >  
+\<endpointDiscovery>  
+\<scopes>  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -52,7 +52,7 @@ Agrega un Uri de ámbito personalizado que se puede utilizar para filtrar los pu
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<ámbitos >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Contiene una colección de elementos de configuración que especifican URI del ámbito personalizado que se pueden usar para filtrar puntos de conexión de servicio durante la consulta.|  
+|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Contiene una colección de elementos de configuración que especifican URI del ámbito personalizado que se pueden usar para filtrar puntos de conexión de servicio durante la consulta.|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

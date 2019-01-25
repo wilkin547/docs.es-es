@@ -2,12 +2,12 @@
 title: Compatibilidad de SqlClient para alta disponibilidad y recuperación ante desastres
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 258922a1541c4594ce2b4673d4d68c279087aef2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513031"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609127"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SqlClient para alta disponibilidad y recuperación ante desastres
 Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) para grupos de disponibilidad AlwaysOn de alta disponibilidad y recuperación ante desastres.  Se agregó la característica de grupos de disponibilidad AlwaysOn para SQL Server 2012. Para obtener más información acerca de los grupos de disponibilidad AlwaysOn, vea los libros en pantalla de SQL Server.  
@@ -51,7 +51,7 @@ Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45]
   
 -   Conectarse a un servidor SQL Server configurada con más de 64 direcciones IP de instancia provocará un error de conexión.  
   
--   Comportamiento de una aplicación que usa el `MultiSubnetFailover` propiedad de conexión no se ve afectada en función del tipo de autenticación: autenticación de SQL Server, la autenticación Kerberos o autenticación de Windows.  
+-   Comportamiento de una aplicación que usa el `MultiSubnetFailover` propiedad de conexión no se ve afectada en función del tipo de autenticación: Autenticación de SQL Server, la autenticación Kerberos o autenticación de Windows.  
   
 -   Aumente el valor de `Connect Timeout` para alojar el tiempo de conmutación por error y reducir los reintentos de conexión de la aplicación.  
   
@@ -96,6 +96,6 @@ Este tema explica la compatibilidad de SqlClient (agregado en [!INCLUDE[net_v45]
   
  El enrutamiento de solo lectura puede tardar más que la conexión a la réplica primaria, ya que primero se conecta a la réplica primaria y después busca la mejor réplica secundaria legible disponible. Debido a esto, debe aumentar el tiempo de espera de inicio de sesión.  
   
-## <a name="see-also"></a>Vea también  
- [Características de SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Características de SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: 23f2004a34f5d6dc27c8263f6e66642dd32c6a5f
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 9ab55187fef11fba9c794ff0266656860bea3d1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672115"
 ---
 # <a name="attribute-list-visual-basic"></a>Lista de atributos (Visual Basic)
 Especifica los atributos que se aplicará a un elemento de programación declarado. Los diversos atributos se separan con comas. Siguiente es la sintaxis para un atributo.  
@@ -25,7 +25,7 @@ Especifica los atributos que se aplicará a un elemento de programación declara
 |||
 |---|---|
 |`attributemodifier`|Se requiere para los atributos aplicados al principio de un archivo de origen. Puede ser [ensamblado](../../../visual-basic/language-reference/modifiers/assembly.md) o [módulo](../../../visual-basic/language-reference/modifiers/module-keyword.md).|
-|`attributename`| Requerido. Nombre del atributo.|
+|`attributename`| Obligatorio. Nombre del atributo.|
 |`attributearguments`|Opcional. Lista de argumentos posicionales para este atributo. Varios argumentos están separados por comas.|
 |`attributeinitializer`|Opcional. Lista de inicializadores de variable o propiedad para este atributo. Los inicializadores múltiples se separan mediante comas.|
   
@@ -53,8 +53,8 @@ Especifica los atributos que se aplicará a un elemento de programación declara
   
  <xref:System.Runtime.InteropServices.DllImportAttribute> indica que el procedimiento con atributos representa un punto de entrada en una biblioteca de vínculos dinámicos (DLL) no administrada. El atributo proporciona el nombre del archivo DLL como un argumento posicional y el resto de información como inicializadores de variables.  
   
-## <a name="see-also"></a>Vea también  
- [Ensamblado](../../../visual-basic/language-reference/modifiers/assembly.md)  
- [Module \<keyword>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
- [Información general de atributos](../../../visual-basic/programming-guide/concepts/attributes/index.md)  
- [Interrumpir y combinar instrucciones en código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+## <a name="see-also"></a>Vea también
+- [Ensamblado](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [Module \<keyword>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [Información general de atributos](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Cómo: Interrumpir y combinar instrucciones en código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

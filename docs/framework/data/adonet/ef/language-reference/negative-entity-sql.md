@@ -2,12 +2,12 @@
 title: '- (Negativo) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 208e54ef-4741-4ec5-89d6-6ff700863cb0
-ms.openlocfilehash: 5d1726be6a4a59891646d05b344f59962d548c75
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f33b672ecd635234b8a8859651d117aabdaf14d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745862"
 ---
 # <a name="--negative-entity-sql"></a>- (Negativo) (Entity SQL)
 Devuelve el valor negativo de una expresión numérica.  
@@ -37,5 +37,5 @@ Devuelve el valor negativo de una expresión numérica.
   
  [!code-csharp[DP EntityServices Concepts 2#NEGATIVE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#negative)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Vea también
+- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

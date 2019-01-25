@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Agregar una pantalla de presentación a una aplicación WPF'
+title: Procedimiento Agregar una pantalla de presentación a una aplicación WPF
 ms.date: 08/18/2018
 helpviewer_keywords:
 - WPF [WPF], splash screen
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-ms.openlocfilehash: 46efa041736870c5c0f08baa321ef0dc53cacc0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 545fce07d0fab3dca8116f2cacfc068b62cbbde2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537548"
 ---
-# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Cómo: Agregar una pantalla de presentación a una aplicación WPF
+# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Procedimiento Agregar una pantalla de presentación a una aplicación WPF
 
 En este tema se muestra cómo agregar una ventana de inicio o *pantalla de presentación*, a una aplicación de Windows Presentation Foundation (WPF).
 
@@ -47,4 +47,4 @@ En **el Explorador de soluciones**, elimine la imagen de pantalla de presentaci�
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.SplashScreen>
-- [Cómo: agregar elementos existentes a un proyecto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))
+- [Cómo: Agregar elementos existentes a un proyecto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

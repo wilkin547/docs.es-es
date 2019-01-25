@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: a1cbd682faa4c60e50bc3b73b58ef226dd599da2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55925ee5e9c5a17f14bd199125dbaacbadb9d928
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720946"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Borrar > (elemento) para NameValueSectionHandler y DictionarySectionHandler
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Borrar > elemento para NameValueSectionHandler y DictionarySectionHandler
 
 Borra todos los valores definidos anteriormente en una sección.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Borrar >**
+&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -38,7 +38,7 @@ Ninguna
 
 |     | Descripción |
 | --- | ------------|
-| [**\<sectionName >** elemento](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Define los valores de las secciones de configuración personalizada que utilizan el <xref:System.Configuration.NameValueSectionHandler> y <xref:System.Configuration.DictionarySectionHandler> clases. |
+| [**\<sectionName >** elemento](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Define los valores de las secciones de configuración personalizada que utilicen el <xref:System.Configuration.NameValueSectionHandler> y <xref:System.Configuration.DictionarySectionHandler> clases. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
@@ -46,11 +46,11 @@ Ninguna
 
 ## <a name="remarks"></a>Comentarios
 
-Puede usar el  **\<borrar >** elemento para quitar toda la configuración de la aplicación que se han definido en un nivel superior en la jerarquía de archivos de configuración.
+Puede usar el  **\<borrar >** elemento para quitar toda la configuración de la aplicación que se han definido en un nivel superior de la jerarquía del archivo de configuración.
 
 ## <a name="example"></a>Ejemplo
 
-Este ejemplo define un archivo de configuración del equipo y un archivo de configuración de aplicación y muestra cómo utilizar el  **\<borrar >** elemento en un archivo de configuración de aplicación para borrar las secciones definidas anteriormente en el archivo de configuración del equipo.
+Este ejemplo define un archivo de configuración del equipo y un archivo de configuración de aplicación y se muestra cómo usar el  **\<borrar >** elemento en un archivo de configuración de aplicación para borrar las secciones definidas anteriormente en el archivo de configuración del equipo.
 
 El siguiente código de archivo de configuración del equipo declara la sección  **\<mySection >**:
 
@@ -67,7 +67,7 @@ El siguiente código de archivo de configuración del equipo declara la sección
 </configuration>
 ```
 
-El siguiente código de archivo de configuración de la aplicación quita todos los valores de  **\<mySection >**. La aplicación no puede recuperar la configuración que se declaran en el en el  **\<mySection >** sección del archivo de configuración del equipo.
+El siguiente código de archivo de configuración de la aplicación quita todos los valores de  **\<mySection >**. La aplicación no puede recuperar la configuración que se han declarado en la en la  **\<mySection >** sección del archivo de configuración del equipo.
 
 ```xml
 <!-- Application configuration file -->
@@ -80,8 +80,8 @@ El siguiente código de archivo de configuración de la aplicación quita todos 
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración de máquina (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.
+Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración del equipo (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.
 
 ## <a name="see-also"></a>Vea también
 
-[Esquema de archivos de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

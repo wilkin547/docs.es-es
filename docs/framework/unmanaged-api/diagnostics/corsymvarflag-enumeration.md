@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6a9c5ff91989fc1ad7da4e23df0e80d9d74ec7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 50367358ba5bcf335f8cc2ca3222f6cf7ea2ff70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670145"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag (Enumeración)
-Indica si una variable es generada por el compilador.  
+Indica si una variable es generado por el compilador.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,10 +39,10 @@ typedef enum CorSymVarFlag
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|Indica que la variable determinada es generado por el compilador.|  
+|`VAR_IS_COMP_GEN`|Indica que la variable dada es generado por el compilador.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Vea también  
- [Enumeraciones de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>Vea también
+- [Enumeraciones de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

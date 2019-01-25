@@ -2,12 +2,12 @@
 title: Reflexión (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: f47f78ff9989fc44ad46b66a447061c3fa84a86e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59910edda8e2dfc4ec8e697b1d5b9a0f47ff9dbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690116"
 ---
 # <a name="reflection-visual-basic"></a>Reflexión (Visual Basic)
 La reflexión proporciona objetos (de tipo <xref:System.Type>) que describen los ensamblados, módulos y tipos. Puede usar la reflexión para crear dinámicamente una instancia de un tipo, enlazar el tipo a un objeto existente u obtener el tipo desde un objeto existente e invocar sus métodos, o acceder a sus campos y propiedades. Si usa atributos en el código, la reflexión le permite acceder a ellos. Para obtener más información, consulte [Attributes](../../../standard/attributes/index.md) (Atributos).  
@@ -61,6 +61,6 @@ System.Console.WriteLine(info)
   
 -   [Retrieving Information Stored in Attributes](../../../standard/attributes/retrieving-information-stored-in-attributes.md) (Recuperar la información almacenada en atributos)  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación en Visual Basic](../../../visual-basic/programming-guide/index.md)  
- [Ensamblados en Common Language Runtime](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+## <a name="see-also"></a>Vea también
+- [Guía de programación en Visual Basic](../../../visual-basic/programming-guide/index.md)
+- [Ensamblados en Common Language Runtime](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)

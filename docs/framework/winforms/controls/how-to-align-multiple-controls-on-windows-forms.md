@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Alinear varios controles en formularios Windows Forms'
+title: Procedimiento Alinear varios controles en Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], aligning controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: 44bbf2503087a0e8b7f178b1c7b7fe65b50496d8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 003d45f9384caa6a5b63187d20fe3e3e040e3e5a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519806"
 ---
-# <a name="how-to-align-multiple-controls-on-windows-forms"></a>Cómo: Alinear varios controles en formularios Windows Forms
+# <a name="how-to-align-multiple-controls-on-windows-forms"></a>Procedimiento Alinear varios controles en Windows Forms
 Para estandarizar el diseño de la interfaz de usuario (UI) de la aplicación basada en Windows, puede colocar grupos de controles con un solo comando.  
   
 > [!NOTE]
@@ -28,13 +28,13 @@ Para estandarizar el diseño de la interfaz de usuario (UI) de la aplicación ba
   
 3.  En el **formato** menú, elija **alinear**y, a continuación, haga clic en una de las siete opciones disponibles.  
   
-## <a name="see-also"></a>Vea también  
- [Controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
- [Organizar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Controles de formularios Windows Forms por función](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- [Tutorial: Organizar controles en formularios Windows Forms mediante líneas de ajuste](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Tutorial: Organizar controles en Windows Forms mediante TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
- [Tutorial: Organizar controles en Windows Forms mediante FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
- [Procedimiento para reasignar controles existentes en un elemento primario diferente](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)
+## <a name="see-also"></a>Vea también
+- [Controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/index.md)
+- [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+- [Organizar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Controles de formularios Windows Forms por función](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Tutorial: Organizar controles en formularios de Windows Forms mediante líneas de ajuste](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Tutorial: Organizar controles en formularios de Windows Forms mediante TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Tutorial: Organizar controles en formularios de Windows Forms mediante FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Cómo: Reasignar controles existentes en un elemento primario diferente](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)

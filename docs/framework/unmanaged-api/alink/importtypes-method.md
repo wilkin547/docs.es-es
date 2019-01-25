@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 321038a148c27086ca499e2f448eb50cb93525ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6591fb4a2b4944dc0d02f70f0f90ffd87e071c47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735012"
 ---
 # <a name="importtypes-method"></a>ImportTypes (Método)
 Inicia la importación de los tipos de cada ámbito importado a través de [ImportFile (método)](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
@@ -41,10 +41,10 @@ HRESULT ImportTypes(
   
 #### <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- Id. del ensamblado que se va a importar.  
+ Id. del ensamblado para importar a.  
   
  `FileToken`  
- Identificador del archivo para importar desde.  
+ Id. del archivo para importar desde.  
   
  `dwScope`  
  Ámbito de base cero para importar.  
@@ -53,7 +53,7 @@ HRESULT ImportTypes(
  Recibe el identificador de enumerador para los tipos en este ámbito.  
   
  `ppImportScope`  
- Opcionalmente, recibe [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interfaz.  
+ Si lo desea recibe [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interfaz.  
   
  `pdwCountOfTypes`  
  Opcionalmente, recibe el recuento de tipos en el ámbito indicado.  
@@ -64,7 +64,7 @@ HRESULT ImportTypes(
 ## <a name="requirements"></a>Requisitos  
  Requiere alink.h  
   
-## <a name="see-also"></a>Vea también  
- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Vea también
+- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

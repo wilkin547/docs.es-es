@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98b99493e54b123d37eb281455180b9a25baddd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 79e65d86eda2f01e1d6f2af46c5ee8e15ff03ccb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730248"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>IMetaDataImport::EnumUserStrings (Método)
 Enumera los tokens de String que representan las cadenas codificadas de forma rígida en el ámbito de metadatos actual.  
@@ -40,36 +40,36 @@ HRESULT EnumUserStrings (
   
 #### <a name="parameters"></a>Parámetros  
  `phEnum`  
- [entrada, salida] Un puntero para el enumerador. Esto debe ser NULL para la primera llamada de este método.  
+ [in, out] Un puntero en el enumerador. Esto debe ser NULL para la primera llamada de este método.  
   
  `rStrings`  
- [out] La matriz que se utiliza para almacenar los tokens de String.  
+ [out] Matriz utilizada para almacenar los tokens de cadena.  
   
  `cMax`  
  [in] Tamaño máximo de la matriz `rStrings`.  
   
  `pcStrings`  
- [out] El número de tokens de String que se devuelve en `rStrings`.  
+ [out] El número de tokens de cadena devueltos en `rStrings`.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |`S_OK`|`EnumUserStrings` se devolvió correctamente.|  
-|`S_FALSE`|No hay ningún tokens para enumerar. En ese caso, `pcStrings` es cero.|  
+|`S_FALSE`|No hay ningún token para enumerar. En ese caso, `pcStrings` es cero.|  
   
 ## <a name="remarks"></a>Comentarios  
- Los tokens de String se crean mediante el [DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) método. Este método está diseñado para utilizarse con un explorador de metadatos en lugar de mediante un compilador.  
+ Los tokens de cadena se crean mediante el [DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) método. Este método está diseñado para usarse mediante un explorador de metadatos en lugar de un compilador.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** Cor.h  
+ **Encabezado**: Cor.h  
   
- **Biblioteca:** incluye como recurso en MsCorEE.dll  
+ **Biblioteca:** Incluye como recurso en MsCorEE.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Vea también
+- [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

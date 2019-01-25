@@ -10,24 +10,24 @@ helpviewer_keywords:
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 17b44ca93efc26f4732f5fe2926f894257d8f984
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 295cb8ee77c3042dc5742fb23cf4bbcd085b4d36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659220"
 ---
 # <a name="section-element"></a>\<sección > elemento
 
-Contiene una declaración de sección de configuración.
+Contiene una declaración de la sección de configuración.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp;**\<sección >**
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)   
+&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sección >**
 
 ## <a name="syntax"></a>Sintaxis
@@ -44,26 +44,26 @@ Contiene una declaración de sección de configuración.
 |           | Descripción |
 | --------- | ----------- |
 | **name**  | Especifica el nombre de la sección de configuración. |
-| **type**  | Especifica el nombre de la clase de controlador de sección de configuración que lee la sección del archivo de configuración. El valor de tipo tiene la sintaxis "fully-qualified-section-handler-class-name, nombre de ensamblado simple". El nombre sencillo de ensamblado es el nombre de archivo raíz sin el *.dll* la extensión de archivo. |
+| **type**  | Especifica el nombre de la clase de controlador de sección de configuración que lee la sección del archivo de configuración. El valor de tipo tiene la sintaxis "fully-qualified-section-handler-class-name, nombre de ensamblado simple". El nombre de ensamblado simple es el nombre de archivo raíz sin el *.dll* la extensión de archivo. |
 
 ## <a name="optional-attributes"></a>Atributos opcionales
 
-Los siguientes atributos son solo es aplicables a las aplicaciones ASP.NET. El sistema de configuración omite estos atributos para otros tipos de aplicaciones.
+Los atributos siguientes son aplicables solo para las aplicaciones ASP.NET. El sistema de configuración omite estos atributos para otros tipos de aplicaciones.
 
 |                     | Descripción |
 | ------------------- | ----------- |
-| **allowDefinition** | Especifica qué archivo de configuración se puede utilizar la sección. Utilice uno de los siguientes valores:<br><br>**En cualquier lugar**<br>Permite la sección para usarse en cualquier archivo de configuración. Este es el valor predeterminado.<br>**MachineOnly**<br>Permite la sección para usarse solo en el archivo de configuración de máquina (*Machine.config*).<br>**MachineToApplication**<br>Permite que la sección que se usará en el archivo de configuración del equipo o el archivo de configuración de aplicación. |
-| **allowLocation**   | Determina si se puede utilizar la sección en la  **\<ubicación >** elemento. Utilice uno de los siguientes valores:<br><br>**true**<br>Permite que la sección que se usará en el  **\<ubicación >** elemento. Este es el valor predeterminado.<br>**false**<br>No permite la sección que se usará en el  **\<ubicación >** elemento. |
+| **allowDefinition** | Especifica qué archivo de configuración se puede utilizar la sección. Utilice uno de los siguientes valores:<br><br>**Everywhere**<br>Permite la sección para usarse en cualquier archivo de configuración. Este es el valor predeterminado.<br>**MachineOnly**<br>Permite la sección que se usará solo en el archivo de configuración de máquina (*Machine.config*).<br>**MachineToApplication**<br>Permite la sección que se usará en el archivo de configuración del equipo o el archivo de configuración de la aplicación. |
+| **allowLocation**   | Determina si se puede usar la sección dentro de la  **\<ubicación >** elemento. Utilice uno de los siguientes valores:<br><br>**true**<br>Permite la sección para su uso en el  **\<ubicación >** elemento. Este es el valor predeterminado.<br>**false**<br>No se permite la sección para su uso en el  **\<ubicación >** elemento. |
 
 ## <a name="parent-elements"></a>Elementos primarios
 
 |     | Descripción |
 | --- | ----------- |
-| [**\<configSections >** elemento](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene las declaraciones de espacio de nombres y la sección de configuración. |
-| [**\<sectionGroup >** elemento](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Define un espacio de nombres de secciones de configuración. |
+| [**\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene las declaraciones de espacio de nombres y la sección de configuración. |
+| [**\<sectionGroup >** elemento](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Define un espacio de nombres para las secciones de configuración. |
 
 > [!NOTE]
-> A  **\<sección >** trata de un elemento secundario de uno de ellos  **\<configSections >** o  **\<sectionGroup >** pero no ambos.
+> Un  **\<sección >** elemento es un elemento secundario de uno de ellos  **\<configSections >** o  **\<sectionGroup >** pero no ambos.
 
 ## <a name="child-elements"></a>Elementos secundarios
 
@@ -71,13 +71,13 @@ Ninguna
 
 ## <a name="remarks"></a>Comentarios
 
-Declarar básicamente una sección de configuración define un nuevo elemento del archivo de configuración. El nuevo elemento contiene la configuración que una sección de configuración controlador (es decir, una clase que implementa el <xref:System.Configuration.IConfigurationSectionHandler> interfaz) lee. Los atributos y elementos secundarios de una sección que define dependen el controlador de sección que se utiliza para leer la configuración.
+Declarar esencialmente una sección de configuración define un nuevo elemento para el archivo de configuración. El nuevo elemento contiene la configuración que una sección de configuración controlador (es decir, una clase que implementa el <xref:System.Configuration.IConfigurationSectionHandler> interfaz) lee. El controlador de sección que se utiliza para leer la configuración de dependen de los atributos y elementos secundarios de una sección que defina.
 
-Declarar un controlador de la sección de configuración en el *Machine.config* archivo le permite usar la sección de configuración en cualquier archivo de configuración de la aplicación en ese equipo, a menos que el **allowDefinition**atributo especifica lo contrario.
+Declarar un controlador de la sección de configuración en el *Machine.config* archivo le permite usar la sección de configuración en cualquier archivo de configuración en ese equipo, a menos que el **allowDefinition**atributo especifique lo contrario.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo definir una sección de configuración y definir la configuración de esa sección:
+El ejemplo siguiente muestra cómo definir una sección de configuración y definir la configuración de esa sección:
 
 ```xml
 <configuration>
@@ -94,8 +94,8 @@ En el ejemplo siguiente se muestra cómo definir una sección de configuración 
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración de máquina (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.
+Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración del equipo (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.
 
 ## <a name="see-also"></a>Vea también
 
-[Esquema de archivos de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

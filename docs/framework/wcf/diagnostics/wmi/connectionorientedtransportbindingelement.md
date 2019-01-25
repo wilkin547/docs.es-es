@@ -2,12 +2,12 @@
 title: ConnectionOrientedTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: c1308313-f0e2-49e6-977d-6b4ce9ad35d1
-ms.openlocfilehash: 49f030c05f02280d483ac2a836cbe75716b7b5cc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5ec2ae0db7239ff0c376ab4a8f050cc4f1df4f71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683981"
 ---
 # <a name="connectionorientedtransportbindingelement"></a>ConnectionOrientedTransportBindingElement
 ConnectionOrientedTransportBindingElement  
@@ -37,56 +37,56 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 ### <a name="channelinitializationtimeout"></a>ChannelInitializationTimeout  
  Tipo de datos: datetime  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El timespan que especifica cuánto tiempo tiene la inicialización del canal para completarse antes de que se agote el tiempo de espera.  
   
 ### <a name="connectionbuffersize"></a>ConnectionBufferSize  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El tamaño del búfer usado para transmitir un fragmento del mensaje serializado en la conexión del cliente o servicio.  
   
 ### <a name="hostnamecomparisonmode"></a>HostNameComparisonMode  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un valor que indica si el nombre del host se usa para alcanzar el servicio al coincidir con el URI.  
   
 ### <a name="maxbuffersize"></a>MaxBufferSize  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El tamaño máximo del búfer que se va a usar.  
   
 ### <a name="maxoutputdelay"></a>MaxOutputDelay  
  Tipo de datos: datetime  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El intervalo máximo de tiempo que un fragmento de un mensaje o un mensaje completo pueden estar almacenados en búfer en memoria antes de que se envíen.  
   
 ### <a name="maxpendingaccepts"></a>MaxPendingAccepts  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El número máximo de subprocesos de aceptación asincrónica pendientes disponibles para procesar conexiones entrantes en el servicio.  
   
 ### <a name="maxpendingconnections"></a>MaxPendingConnections  
  Tipo de datos: sint32  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  El número máximo de conexiones pendientes.  
   
 ### <a name="transfermode"></a>TransferMode  
  Tipo de datos: cadena  
   
- Tipo de acceso: solo lectura  
+ Tipo de acceso: De sólo lectura  
   
  Un valor que especifica si los mensajes están almacenados en búfer o se transmiten mediante el transporte orientado a la conexión.  
   
@@ -96,5 +96,5 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 |---------|-----------------------------------|  
 |Espacio de nombres|Se define en root\ServiceModel|  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>

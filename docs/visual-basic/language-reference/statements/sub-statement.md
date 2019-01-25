@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 7baa4e25bc876ebfbe03c316b2020e01aedbc88d
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e7015474a0617b76ca537d2e84e8d7bfc72b6e12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924500"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737668"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub (Instrucción, Visual Basic)
 Declara el nombre, parámetros y código que definen un `Sub` procedimiento.  
@@ -74,9 +74,9 @@ End Sub
   
     - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
 
-    - [Private protegida](../../language-reference/modifiers/private-protected.md)
+    - [Private Protected](../../language-reference/modifiers/private-protected.md)
   
-     Consulte [tener acceso a los niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     Vea [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 -   `proceduremodifiers`  
   
@@ -110,7 +110,7 @@ End Sub
   
 -   `name`  
   
-     Requerido. Nombre del procedimiento. Consulte [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Para crear un procedimiento de constructor para una clase, establezca el nombre de un `Sub` procedimiento a la `New` palabra clave. Para obtener más información, consulte [duración de objetos: cómo los objetos son crean y destruyen](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+     Obligatorio. Nombre del procedimiento. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md). Para crear un procedimiento de constructor para una clase, establezca el nombre de un `Sub` procedimiento a la `New` palabra clave. Para obtener más información, consulte [duración del objeto: ¿Cómo se crean y destruyen objetos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
 -   `typeparamlist`  
   
@@ -136,8 +136,8 @@ End Sub
   
     |Parte|Descripción|  
     |---|---|  
-    |`interface`|Requerido. Nombre de una interfaz implementada por este procedimiento contenedora de clase o estructura.|  
-    |`definedname`|Requerido. Nombre por el que se define el procedimiento en `interface`.|  
+    |`interface`|Obligatorio. Nombre de una interfaz implementada por este procedimiento contenedora de clase o estructura.|  
+    |`definedname`|Obligatorio. Nombre por el que se define el procedimiento en `interface`.|  
   
 -   `Handles`  
   
@@ -155,8 +155,8 @@ End Sub
   
     |Parte|Descripción|  
     |---|---|  
-    |`eventvariable`|Requerido. Variable de objeto declarada con el tipo de datos de la clase o estructura que provoca el evento.|  
-    |`event`|Requerido. Nombre del evento que controla este procedimiento.|  
+    |`eventvariable`|Obligatorio. Variable de objeto declarada con el tipo de datos de la clase o estructura que provoca el evento.|  
+    |`event`|Obligatorio. Nombre del evento que controla este procedimiento.|  
   
 -   `statements`  
   
@@ -226,14 +226,14 @@ End Sub
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
   
-## <a name="see-also"></a>Vea también  
- [Implements (instrucción)](implements-statement.md)  
- [Function (instrucción)](function-statement.md)  
- [Lista de parámetros](parameter-list.md)  
- [Dim (instrucción)](dim-statement.md)  
- [Call (instrucción)](call-statement.md)  
- [Of](of-clause.md)  
- [Matrices de parámetros](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [Utilizar una clase genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Solución de problemas de procedimientos](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
- [Métodos Partial](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+## <a name="see-also"></a>Vea también
+- [Implements (instrucción)](implements-statement.md)
+- [Function (instrucción)](function-statement.md)
+- [Lista de parámetros](parameter-list.md)
+- [Dim (instrucción)](dim-statement.md)
+- [Call (instrucción)](call-statement.md)
+- [Of](of-clause.md)
+- [Matrices de parámetros](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
+- [Cómo: Utilizar una clase genérica](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Solución de problemas de procedimientos](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [Métodos Partial](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

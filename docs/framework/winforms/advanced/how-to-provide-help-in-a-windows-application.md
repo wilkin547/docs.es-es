@@ -40,7 +40,7 @@ Puede usar de la <xref:System.Windows.Forms.HelpProvider> componente para asocia
     |Nombre de miembro|Descripción|  
     |-----------------|-----------------|  
     |AssociateIndex|Especifica que el índice de un tema determinado se realiza en la dirección URL especificada.|  
-    |Buscar|Especifica que se muestre la página de búsqueda de una dirección URL especificada.|  
+    |Find|Especifica que se muestre la página de búsqueda de una dirección URL especificada.|  
     |Índice|Especifica que se muestre el índice de una dirección URL especificada.|  
     |KeywordIndex|Especifica una palabra clave que buscar y la acción que se realizará en la dirección URL especificada.|  
     |TableOfContents|Especifica que se muestra la tabla de contenidos del archivo de ayuda HTML 1.0.|  

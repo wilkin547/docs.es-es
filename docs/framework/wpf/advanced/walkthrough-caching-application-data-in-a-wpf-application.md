@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF'
+title: 'Tutorial: Almacenamiento en caché datos de la aplicación en una aplicación WPF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 1eddf3ad52bab6ef4665d7c3691353fa9c54574c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513729"
 ---
-# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF
+# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Tutorial: Almacenamiento en caché datos de la aplicación en una aplicación WPF
 El almacenamiento en caché permite almacenar datos en memoria para un acceso rápido. Cuando se tiene acceso a los datos de nuevo, las aplicaciones pueden obtener los datos de la memoria caché en su lugar la recuperación de la fuente original. Esto puede mejorar el rendimiento y la escalabilidad. Además, el almacenamiento en caché permite que los datos estén disponibles cuando el origen de datos no está disponible temporalmente.
 
  El [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proporciona clases que le permiten usar el almacenamiento en caché en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplicaciones. Estas clases se encuentran en el <xref:System.Runtime.Caching> espacio de nombres.
@@ -71,7 +71,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
 5.  En el **nombre** texto, escriba un nombre para el proyecto. Por ejemplo, puede escribir **WPFCaching**.
 
-6.  Seleccione el **crear directorio para la solución** casilla de verificación.
+6.  Active la casilla **Crear directorio para la solución**.
 
 7.  Haga clic en **Aceptar**.
 

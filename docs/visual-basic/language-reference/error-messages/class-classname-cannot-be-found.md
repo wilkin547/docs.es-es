@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-ms.openlocfilehash: 38f4fd0d10386476a5ca7b2ef6f1576cd5b69db9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f08fdb67611fe5fcee8b13f08162a62f6db59b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586495"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744991"
 ---
 # <a name="class-39ltclassnamegt39-cannot-be-found"></a>Clase &#39; &lt;classname&gt; &#39; no se encuentra
-Clase\<classname >' no se encuentra. Esta situación suele ser consecuencia de un 'Microsoft.VisualBasic.dll' discordante.  
+La clase\<classname >' no se encuentra. Esta situación suele ser consecuencia de un 'Microsoft.VisualBasic.dll' discordante.  
   
  No se pudo encontrar un miembro definido.  
   
- **Id. de error:** BC31098  
+ **Identificador de error:** BC31098  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
@@ -27,9 +27,9 @@ Clase\<classname >' no se encuentra. Esta situación suele ser consecuencia de u
   
 2.  Si el error se repite, guarde su trabajo y reinicie Visual Studio.  
   
-3.  Si el error persiste, vuelva a instalar Visual Basic.  
+3.  Si el error persiste, reinstale Visual Basic.  
   
 4.  Si el error persiste después de la reinstalación, informe al respecto a los Servicios de soporte técnico de Microsoft.  
   
-## <a name="see-also"></a>Vea también  
- [Hable con nosotros](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>Vea también
+- [Hable con nosotros](/visualstudio/ide/talk-to-us)

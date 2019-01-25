@@ -8,17 +8,17 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: b81c3c8b25f13ac5791b5d2116b8536575f9ebcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e9e75876862a73be7ace08c09610923d007de4b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540863"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Administrar el estado de un objeto Graphics
-El <xref:System.Drawing.Graphics> clase es la esencia de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Para dibujar cualquier cosa, obtendrá un <xref:System.Drawing.Graphics> objeto, establecer sus propiedades y llamar a sus métodos <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>etc.).  
+El <xref:System.Drawing.Graphics> clase es la esencia de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Para dibujar algo, obtendrá un <xref:System.Drawing.Graphics> objeto, establecer sus propiedades y llamar a sus métodos <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>etc.).  
   
- El ejemplo siguiente se llama el <xref:System.Drawing.Graphics.DrawRectangle%2A> método de una <xref:System.Drawing.Graphics> objeto. El primer argumento pasado a la <xref:System.Drawing.Graphics.DrawRectangle%2A> método es un <xref:System.Drawing.Pen> objeto.  
+ El ejemplo siguiente se llama el <xref:System.Drawing.Graphics.DrawRectangle%2A> método de un <xref:System.Drawing.Graphics> objeto. El primer argumento pasado a la <xref:System.Drawing.Graphics.DrawRectangle%2A> método es un <xref:System.Drawing.Pen> objeto.  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -33,7 +33,7 @@ graphics.DrawRectangle(pen, 10, 10, 200, 100);
 ```  
   
 ## <a name="graphics-state"></a>Estado de los gráficos  
- A <xref:System.Drawing.Graphics> objeto más de proporcionar métodos de dibujo, como <xref:System.Drawing.Graphics.DrawLine%2A> y <xref:System.Drawing.Graphics.DrawRectangle%2A>. Un <xref:System.Drawing.Graphics> objeto también mantiene el estado de los gráficos, que puede dividirse en las siguientes categorías:  
+ Un <xref:System.Drawing.Graphics> objeto más de proporcionar métodos de dibujo, como <xref:System.Drawing.Graphics.DrawLine%2A> y <xref:System.Drawing.Graphics.DrawRectangle%2A>. Un <xref:System.Drawing.Graphics> objeto también mantiene el estado de los gráficos, que puede dividirse en las siguientes categorías:  
   
 -   Configuración de calidad  
   
@@ -42,9 +42,9 @@ graphics.DrawRectangle(pen, 10, 10, 200, 100);
 -   Región de recorte  
   
 ### <a name="quality-settings"></a>Configuración de calidad  
- Un <xref:System.Drawing.Graphics> objeto tiene varias propiedades que afectan a la calidad de los elementos que se dibujan. Por ejemplo, puede establecer el <xref:System.Drawing.Graphics.TextRenderingHint%2A> propiedad para especificar el tipo de suavizado de contorno (si existe) que se aplica al texto. Otras propiedades que influyen en la calidad son <xref:System.Drawing.Graphics.SmoothingMode%2A>, <xref:System.Drawing.Graphics.CompositingMode%2A>, <xref:System.Drawing.Graphics.CompositingQuality%2A>, y <xref:System.Drawing.Graphics.InterpolationMode%2A>.  
+ Un <xref:System.Drawing.Graphics> objeto tiene varias propiedades que afectan a la calidad de los elementos que se dibujan. Por ejemplo, puede establecer el <xref:System.Drawing.Graphics.TextRenderingHint%2A> propiedad para especificar el tipo de suavizado de contorno (si existe) aplicado al texto. Otras propiedades que influyen en la calidad son <xref:System.Drawing.Graphics.SmoothingMode%2A>, <xref:System.Drawing.Graphics.CompositingMode%2A>, <xref:System.Drawing.Graphics.CompositingQuality%2A>, y <xref:System.Drawing.Graphics.InterpolationMode%2A>.  
   
- En el ejemplo siguiente se dibuja dos elipses, una con el modo de suavizado establecido en <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> y otra con el modo de suavizado establecido en <xref:System.Drawing.Drawing2D.SmoothingMode.HighSpeed>:  
+ En el ejemplo siguiente se dibuja dos elipses, uno con el modo suavizado establecido en <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> y otro con el modo suavizado establecido en <xref:System.Drawing.Drawing2D.SmoothingMode.HighSpeed>:  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -67,9 +67,9 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>Transformaciones  
- A <xref:System.Drawing.Graphics> objeto mantiene dos transformaciones (universal y página) que se aplican a todos los elementos dibujados por esa <xref:System.Drawing.Graphics> objeto. Las transformaciones afines se pueden almacenar en la transformación universal. Transformaciones afines incluyen escalar, girar, reflejar, sesgar y traducir. La transformación de página se puede utilizar para ajustar la escala y para modificar unidades (por ejemplo, píxeles a pulgadas). Para obtener más información, consulte [sistemas de coordenadas y transformaciones](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
+ Un <xref:System.Drawing.Graphics> objeto mantiene dos transformaciones (universal y página) que se aplican a todos los elementos dibujados por el que <xref:System.Drawing.Graphics> objeto. Las transformaciones afines se pueden almacenar en la transformación universal. Transformaciones afines incluyen escalar, girar, reflejar, sesgar y traducir. La transformación de página puede utilizarse para escalar y cambiar las unidades (por ejemplo, píxeles y pulgadas). Para obtener más información, consulte [sistemas de coordenadas y transformaciones](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
   
- En el ejemplo siguiente se establece las transformaciones universal y de página de un <xref:System.Drawing.Graphics> objeto. La transformación universal se establece en una rotación de 30 grados. La transformación de página se establece para que las coordenadas se pasan a la segunda <xref:System.Drawing.Graphics.DrawEllipse%2A> se tratará como milímetros en lugar de píxeles. El código hace dos llamadas idénticas a las <xref:System.Drawing.Graphics.DrawEllipse%2A> método. La transformación universal se aplica a la primera <xref:System.Drawing.Graphics.DrawEllipse%2A> llamada y ambas transformaciones (universal y página) se aplican a la segunda <xref:System.Drawing.Graphics.DrawEllipse%2A> llamar.  
+ El ejemplo siguiente establece las transformaciones universal y de página de un <xref:System.Drawing.Graphics> objeto. La transformación universal se establece en una rotación de 30 grados. La transformación de página se establece para que las coordenadas que se pasan a la segunda <xref:System.Drawing.Graphics.DrawEllipse%2A> se tratará como milímetros en lugar de píxeles. El código hace dos llamadas idénticas a la <xref:System.Drawing.Graphics.DrawEllipse%2A> método. La transformación universal se aplica a la primera <xref:System.Drawing.Graphics.DrawEllipse%2A> llamada y ambas transformaciones (universal y página) se aplican a la segunda <xref:System.Drawing.Graphics.DrawEllipse%2A> llamar.  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -93,14 +93,14 @@ graphics.PageUnit = GraphicsUnit.Millimeter;     // page transformation
 graphics.DrawEllipse(pen, 0, 0, 100, 50);  
 ```  
   
- En la siguiente ilustración se muestra las dos elipses. Tenga en cuenta que la rotación de 30 grados alrededor del origen del sistema de coordenadas (esquina superior izquierda del área de cliente), pero no los centros de los puntos suspensivos. Tenga en cuenta también que el ancho del lápiz 1 significa 1 píxel para la primera elipse y 1 milímetro para la segunda elipse.  
+ La siguiente ilustración muestra las dos elipses. Tenga en cuenta que la rotación de 30 grados sobre el origen del sistema de coordenadas (esquina superior izquierda del área de cliente), pero no los centros de los puntos suspensivos. Tenga en cuenta también que el ancho del lápiz de 1 significa 1 píxel de la primera elipse y 1 milímetro para la segunda.  
   
  ![Óvalos](../../../../docs/framework/winforms/advanced/media/csgraphicsascon1.png "csgraphicsascon1")  
   
 ### <a name="clipping-region"></a>Región de recorte  
- A <xref:System.Drawing.Graphics> objeto mantiene una región de recorte que se aplica a todos los elementos dibujados por esa <xref:System.Drawing.Graphics> objeto. Puede establecer la región de recorte mediante una llamada a la <xref:System.Drawing.Graphics.SetClip%2A> método.  
+ Un <xref:System.Drawing.Graphics> objeto mantiene una región de recorte que se aplica a todos los elementos dibujados por el que <xref:System.Drawing.Graphics> objeto. Puede establecer la región de recorte mediante una llamada a la <xref:System.Drawing.Graphics.SetClip%2A> método.  
   
- En el ejemplo siguiente se crea una región con forma de signo más mediante la unión de dos rectángulos. Dicha región se designa como la región de recorte de un <xref:System.Drawing.Graphics> objeto. A continuación, el código dibuja dos líneas que están restringidas al interior de la región de recorte.  
+ El ejemplo siguiente crea una región en forma más mediante la unión de dos rectángulos. Dicha región se designa como la región de recorte de un <xref:System.Drawing.Graphics> objeto. A continuación, el código dibuja dos líneas que están restringidas al interior de la región de recorte.  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -146,10 +146,10 @@ graphics.DrawLine(pen, 0, 30, 150, 160);
 graphics.DrawLine(pen, 40, 20, 190, 150);  
 ```  
   
- En la siguiente ilustración se muestra las líneas recortadas.  
+ La ilustración siguiente muestra las líneas recortadas.  
   
  ![Limita la región de recorte](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")  
   
-## <a name="see-also"></a>Vea también  
- [Gráficos y dibujos en Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Utilizar contenedores de gráficos anidados](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)
+## <a name="see-also"></a>Vea también
+- [Gráficos y dibujos en Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Utilizar contenedores de gráficos anidados](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)

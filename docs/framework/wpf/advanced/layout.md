@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 869780f2b6a625923ce869bcaafbbd2319f6cb23
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703029"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738831"
 ---
 # <a name="layout"></a>Diseño
 En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Comprender cómo y cuándo se producen los cálculos de diseño es esencial para crear interfaces de usuario en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -148,9 +148,9 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
 ## <a name="whats-next"></a>Pasos adicionales  
  Comprender cómo se miden y organizan los elementos es el primer paso para entender el diseño. Para obtener más información acerca de la disponible <xref:System.Windows.Controls.Panel> elementos, vea [información general sobre](../../../../docs/framework/wpf/controls/panels-overview.md). Para entender mejor las diversas propiedades de posición que pueden afectar al diseño, consulte [Información general sobre alineación, márgenes y relleno](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Para obtener un ejemplo de un personalizado <xref:System.Windows.Controls.Panel> elemento, vea [ejemplo de Panel Radial personalizado](https://go.microsoft.com/fwlink/?LinkID=159982). Cuando esté listo para poner todo junto en una aplicación ligera, consulte [Tutorial: Mi primera aplicación de escritorio de WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.UIElement>  
- [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Información general sobre alineación, márgenes y relleno](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Presentación y diseño](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.UIElement>
+- [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Información general sobre alineación, márgenes y relleno](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+- [Presentación y diseño](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

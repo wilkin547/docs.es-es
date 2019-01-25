@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 919c746b738246d76e90730c42882bfdd3ac6edc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9baf207f46082a4bb1ece4dba39c98cdd125d073
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458726"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702111"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>StrongNameSignatureVerificationFromImage (Función)
-Comprueba que un ensamblado que ya se ha asignado a la memoria es válido para la clave pública asociada.  
+Comprueba si un ensamblado que ya se ha asignado a la memoria es válido para la clave pública asociada.  
   
  Esta función está desusada. Use la [ICLRStrongName::StrongNameVerificationFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md) método en su lugar.  
   
@@ -49,17 +49,17 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
  `dwInFlags`  
  [in] Marcas que influyen en el comportamiento de la comprobación. Se admiten los siguientes valores:  
   
--   `SN_INFLAG_FORCE_VER` (0 x 00000001) - fuerza la comprobación aunque sea necesario invalidar la configuración del registro.  
+-   `SN_INFLAG_FORCE_VER` (0 x 00000001) - fuerza la comprobación incluso si es necesario invalidar la configuración del registro.  
   
--   `SN_INFLAG_INSTALL` (0 x 00000002): Especifica que se trata de la primera comprobación que se realiza en esta imagen.  
+-   `SN_INFLAG_INSTALL` (0 x 00000002): Especifica que se trata de la primera comprobación realizada en esta imagen.  
   
 -   `SN_INFLAG_ADMIN_ACCESS` (0 x 00000004): Especifica que la memoria caché permitirá el acceso únicamente a los usuarios que tienen privilegios administrativos.  
   
--   `SN_INFLAG_USER_ACCESS` (0 x 00000008): Especifica que el ensamblado estará accesible sólo para el usuario actual.  
+-   `SN_INFLAG_USER_ACCESS` (0 x 00000008): Especifica que el ensamblado será accesible solo para el usuario actual.  
   
 -   `SN_INFLAG_ALL_ACCESS` (0 x 00000010): Especifica que la memoria caché no proporcionará ninguna garantía de restricción de acceso.  
   
--   `SN_INFLAG_RUNTIME` (0 x 80000000) - reservado para la depuración interna.  
+-   `SN_INFLAG_RUNTIME` (0 x 80000000): reservado para la depuración interna.  
   
  `pdwOutFlags`  
  [out] Una marca para obtener información de salida adicional. Se admite el siguiente valor:  
@@ -70,17 +70,17 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
  `true` Cuando se finaliza correctamente; en caso contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el `StrongNameSignatureVerificationFromImage` función no se completan correctamente, llame a la [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) función para recuperar el último error generado.  
+ Si el `StrongNameSignatureVerificationFromImage` función no se completa correctamente, llame a la [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) función para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** StrongName.h  
+ **Encabezado**: StrongName.h  
   
- **Biblioteca:** incluye como recurso en mscoree.dll  
+ **Biblioteca:** Incluye como recurso en mscoree.dll  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [StrongNameSignatureVerificationFromImage (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)  
- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Vea también
+- [StrongNameSignatureVerificationFromImage (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)
+- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
