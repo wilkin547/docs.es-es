@@ -2,15 +2,19 @@
 title: Esquema de configuración web
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'Web.config configuration file [ASP.NET]'
-  - 'ASP.NET configuration system, Web settings schema'
-  - schema Web settings
-  - 'Web settings, schema [ASP.NET]'
-  - 'configuration files [ASP.NET]'
-  - 'configuration schema [.NET Framework], Web settings'
+- Web.config configuration file [ASP.NET]
+- ASP.NET configuration system, Web settings schema
+- schema Web settings
+- Web settings, schema [ASP.NET]
+- configuration files [ASP.NET]
+- configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-author: mcleblanc
-ms.author: markl
+ms.openlocfilehash: 4bde008661e78fc85c428fa5100f81483936b460
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083605"
 ---
 # <a name="web-settings-schema"></a>Esquema de configuración web
 La configuración web especifica la configuración de la CPU y de ASP.NET de nivel de ejecución que se aplica al comportamiento de todo el proceso administrado por el nivel de hospedaje de ASP.NET. Esta configuración difiere de la del tipo de dominio de la aplicación que se especifica en el archivo Web.config de una aplicación ASP.NET.  
