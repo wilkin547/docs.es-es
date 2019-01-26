@@ -2,12 +2,12 @@
 title: F#instrucciones de diseño del componente
 description: Obtenga información sobre las directrices para escribir en él F# componentes pensados para su uso por otros llamadores.
 ms.date: 05/14/2018
-ms.openlocfilehash: d72bfac1de5a57d5cce86f996f144af4bc181463
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415642"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066030"
 ---
 # <a name="f-component-design-guidelines"></a>F#instrucciones de diseño del componente
 
@@ -708,7 +708,7 @@ En su lugar, preferible devolver un tipo con nombre que contiene los datos agreg
 
 #### <a name="avoid-the-use-of-currying-of-parameters"></a>Evite el uso de la currificación de parámetros
 
-En su lugar, utilice las convenciones de llamada de .NET ``Method(arg1,arg2,…,argN)``.
+En su lugar, utilice las convenciones de llamada de .NET `Method(arg1,arg2,…,argN)`.
 
 ```fsharp
 member this.TupledArguments(str, num) = String.replicate num str

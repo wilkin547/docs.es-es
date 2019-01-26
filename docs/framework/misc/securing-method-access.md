@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4b2bab09d9ac9f14ae9d1bf78254c9c6a376677
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ad7c9aba84a769cb4ea16a2d288b1a9b4f17ca5
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691481"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066017"
 ---
 # <a name="securing-method-access"></a>Proteger acceso a métodos
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -234,7 +234,7 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Reemplazos internos virtuales o amigo reemplazable de sobrecargas  
   
 > [!NOTE]
->  En esta sección se advierte sobre un problema de seguridad cuando se declara un método como `virtual` y `internal` (`Overloads``Overridable``Friend` en Visual Basic). Esta advertencia solo se aplica a las versiones 1.0 y 1.1 de .NET Framework, no se aplica a las versiones posteriores.  
+>  En esta sección se advierte sobre un problema de seguridad cuando se declara un método como `virtual` y `internal` (`Overloads` `Overridable` `Friend` en Visual Basic). Esta advertencia solo se aplica a las versiones 1.0 y 1.1 de .NET Framework, no se aplica a las versiones posteriores.  
   
  En las versiones 1.0 y 1.1 de .NET Framework, debe tener en cuenta un matiz de la accesibilidad del sistema de tipo cuando se confirma que el código está disponible para otros ensamblados. Un método que se declara **virtual** y **interno** (**Overloads Overridable Friend** en Visual Basic) puede reemplazar la entrada vtable de la clase primaria y se puede usar solo desde dentro del mismo ensamblado porque es interno. Sin embargo, la accesibilidad para invalidar viene determinada por la **virtual** palabra clave y esto se puede invalidar desde otro ensamblado siempre que ese código tenga acceso a la propia clase. Si la posibilidad de una invalidación supone un problema, utilice la seguridad declarativa para solucionarlo o quite el **virtual** palabra clave si no es estrictamente necesario.  
   

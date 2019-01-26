@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo detectar y mitigar las vulnerabili
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123649"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066186"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de control de tiempo con descifrado simétrico modo CBC mediante el relleno
 
@@ -29,7 +29,7 @@ Los cifrados de bloques tienen otra propiedad, denominada el modo, que determina
 
 Un atacante puede usar un relleno oracle, en combinación con estructurar datos CBC, para enviar mensajes ligeramente modificados para el código que expone el oracle y seguir enviando datos hasta que les informa de oracle, los datos son correctos. De esta respuesta, el atacante puede descifrar el mensaje byte a byte.
 
-Las redes de equipos modernos son de alta calidad que un atacante puede detectar muy pequeña (menor que 0,1 ms) las diferencias en la ejecución de tiempo en sistemas remotos. Las aplicaciones que se están dando por sentado que un descifrado correcto solo puede ocurrir si no se ha manipulado los datos pueden ser vulnerables a ataques de las herramientas que están diseñadas para observar las diferencias en descifrado correcta e incorrecta. Aunque esta diferencia de tiempo puede ser más importante en algunos idiomas o bibliotecas que otras, ahora se cree que esto es una amenaza práctica para todos los lenguajes y bibliotecas cuando se toma la respuesta de la aplicación a un error en la cuenta.
+Las redes de equipos modernos son de alta calidad que un atacante puede detectar muy pequeña (menor que 0,1 ms) las diferencias en la ejecución de tiempo en sistemas remotos. Las aplicaciones que se están dando por sentado que un descifrado correcto solo puede ocurrir si no se ha manipulado los datos pueden ser vulnerables a ataques de las herramientas que están diseñadas para observar las diferencias en descifrado correcta e incorrecta. Aunque esta diferencia de tiempo puede ser más importante en algunos idiomas o bibliotecas que otras, ahora se cree que esto es una amenaza práctica para todos los lenguajes y bibliotecas cuando se toma la respuesta de la aplicación a un error en la cuenta.
 
 Este ataque se basa en la capacidad de cambiar los datos cifrados y pruebe el resultado con oracle. La única manera de mitigar por completo el ataque consiste en detectar los cambios realizados en los datos cifrados y rechazar realizar cualquier acción en él. La manera estándar de hacerlo es crear una firma para los datos y validar esa firma antes de que las operaciones se realizan. Se debe poder verificar la firma, no se puede crear el atacante, en caso contrario, podría cambiar los datos cifrados, a continuación, procesar una firma nueva en función de los datos modificados. Un tipo común de la firma apropiada se conoce como un código de autenticación de mensajes hash con claves (HMAC). Un HMAC difiere de una suma de comprobación en que tiene una clave secreta, conocidos solo a la persona que producen el HMAC y a la persona validarlo. Sin la posesión de la clave, no se puede producir un HMAC correcto. Cuando reciba los datos, podría tomar los datos cifrados, proceso por separado el HMAC con la clave secreta y el recurso compartido de remitente y, después, compare calcula el HMAC envían con el. Esta comparación debe ser tiempo constante, de lo contrario haya agregado otro oracle detectable, lo que permite un tipo diferente de ataque.
 
@@ -100,7 +100,7 @@ Se recomienda que las aplicaciones que no se puede cambiar su formato de mensaje
 
 ## <a name="finding-vulnerable-code---native-applications"></a>Buscar código vulnerable: aplicaciones nativas
 
-Para los programas que se compiló la criptografía de Windows: biblioteca de próxima generación (CNG):
+Para los programas que se compiló la criptografía de Windows: Biblioteca próxima generación (CNG):
 
 - La llamada de descifrado es [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), especificando el `BCRYPT_BLOCK_PADDING` marca.
 - El identificador de clave se ha inicializado mediante una llamada a [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) con [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) establecido en `BCRYPT_CHAIN_MODE_CBC`.
@@ -109,7 +109,7 @@ Para los programas que se compiló la criptografía de Windows: biblioteca de pr
 Para los programas que se compiló la API criptográfica de Windows anteriores:
 
 - La llamada de descifrado es [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) con `Final=TRUE`.
-- El identificador de clave se ha inicializado mediante una llamada a [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) con [KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE) establecido en `CRYPT_MODE_CBC`.
+- El identificador de clave se ha inicializado mediante una llamada a [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) con [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) establecido en `CRYPT_MODE_CBC`.
   - Puesto que `CRYPT_MODE_CBC` es el valor predeterminado, afectado código no ha asignado ningún valor para `KP_MODE`.
 
 ## <a name="finding-vulnerable-code---managed-applications"></a>Buscar código vulnerable - de las aplicaciones administradas

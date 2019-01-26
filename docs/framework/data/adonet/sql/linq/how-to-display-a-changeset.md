@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-ms.openlocfilehash: 773e72d52a934bc7c6fa80fe252d62e67f87a34b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6030a48a773dcf985eee5c4c113b02386780707
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596805"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065822"
 ---
 # <a name="how-to-display-a-changeset"></a>Procedimiento Mostrar un conjunto de cambios
 Puede ver los cambios de los que <xref:System.Data.Linq.DataContext> ha realizado un seguimiento mediante <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.  
@@ -22,58 +22,34 @@ Puede ver los cambios de los que <xref:System.Data.Linq.DataContext> ha realizad
  [!code-vb[DLinqDebuggingSupport#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#2)]  
   
  El resultado de este código es similar al siguiente. Observe que el resumen final indica que se realizaron ocho cambios.  
-  
- `CustomerID: AROUT`  
-  
- `Original value: London`  
-  
- `Updated value: Paris`  
-  
- `CustomerID: BSBEV`  
-  
- `Original value: London`  
-  
- `Updated value: Paris`  
-  
- `CustomerID: CONSH`  
-  
- `Original value: London`  
-  
- `Updated value: Paris`  
-  
- `CustomerID: EASTC`  
-  
- `Original value: London`  
-  
- `Updated value: Paris`  
-  
- `CustomerID: NORTS`  
-  
- `Original value: London`  
-  
- `Updated value: Paris`  
-  
- `CustomerID: PARIS`  
-  
- `Original value: London`  
-  
- `Updated value: Paris`  
-  
- `CustomerID: SEVES`  
-  
- `Original value: London`  
-  
- `Updated value: Paris`  
-  
- `CustomerID: SPECD`  
-  
- `Original value: London`  
-  
- `Updated value: Paris`  
-  
- ``  
-  
- `Total changes: {Added: 0, Removed: 0, Modified: 8}`  
+
+ ```console
+CustomerID: AROUT
+   Original value: London
+   Updated value: Paris
+CustomerID: BSBEV
+   Original value: London
+   Updated value: Paris
+CustomerID: CONSH
+   Original value: London
+   Updated value: Paris
+CustomerID: EASTC
+   Original value: London
+   Updated value: Paris
+CustomerID: NORTS
+    Original value: London
+    Updated value: Paris
+CustomerID: PARIS
+    Original value: London
+    Updated value: Paris
+CustomerID: SEVES
+    Original value: London
+    Updated value: Paris
+CustomerID: SPECD
+    Original value: London
+    Updated value: Paris
+Total changes: {Added: 0, Removed: 0, Modified: 8}
+```
   
 ## <a name="see-also"></a>Vea también
 - [Capacidad de depuración](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

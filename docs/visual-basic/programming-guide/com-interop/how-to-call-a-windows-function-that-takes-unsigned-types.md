@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 092f1acf6e6a8468890a371836979db4e0692d1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbe73ed5574261f1aab6134a15a5aeb5fbb8596c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669320"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065861"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Procedimiento Llamar a una función de Windows que adopta tipos sin signo (Visual Basic)
 Si está utilizando una clase, módulo o estructura que tiene miembros de tipos enteros sin signo, puede tener acceso a estos miembros con Visual Basic.  
@@ -32,7 +32,7 @@ Si está utilizando una clase, módulo o estructura que tiene miembros de tipos 
   
 3.  Consulte la documentación de la función de Windows que esté llamando para buscar los nombres y valores de las constantes que utiliza. Muchas de ellas se definen en el archivo WinUser.h.  
   
-4.  Declare las constantes necesarias en el código. Muchas de las constantes de Windows son valores sin signo de 32 bits, y se deben declarar estos `As``UInteger`.  
+4.  Declare las constantes necesarias en el código. Muchas de las constantes de Windows son valores sin signo de 32 bits, y se deben declarar estos `As UInteger`.  
   
 5.  Llame a la función de la manera normal. El ejemplo siguiente se llama a la función de Windows `MessageBox`, que toma un argumento de entero sin signo.  
   

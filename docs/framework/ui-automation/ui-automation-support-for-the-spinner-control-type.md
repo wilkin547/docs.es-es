@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d58ac91f42e07e3f556389a818d8118d846653c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e476674e99f0951148dc7cfc95deeeaede3862ae
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518168"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066303"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>Compatibilidad de UI Automation para el tipo de control Spinner
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.locfileid: "54518168"
 |------------------|------------------|  
 |Spinner<br /><br /> -Edit (0 o 1)<br />-Botón (2)<br />-Elemento de lista (0 o más)|Spinner<br /><br /> -ListItem (0 o más)|  
   
- Para garantizar que los dos botones del subárbol de la vista de control se pueden distinguir por herramientas de pruebas automatizadas, asigne `SmallIncrement` o `SmallDecrement``AutomationId` , según corresponda. Para algunas implementaciones, el control Edit asociado puede ser del mismo nivel que el control Spinner.  
+ Para garantizar que los dos botones del subárbol de la vista de control se pueden distinguir por herramientas de pruebas automatizadas, asigne el `SmallIncrement` o `SmallDecrement` `AutomationId` según corresponda. Para algunas implementaciones, el control Edit asociado puede ser del mismo nivel que el control Spinner.  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Propiedades necesarias para la automatización de la interfaz de usuario  

@@ -2,12 +2,12 @@
 title: Actividades de acceso a bases de datos
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: efcdd25ee3e6b86d87d551623b166eab4fa76845
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850407"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066095"
 ---
 # <a name="database-access-activities"></a>Actividades de acceso a bases de datos
 Las actividades de acceso a bases de datos permiten tener acceso a una base de datos dentro de un flujo de trabajo. Estas actividades permiten tener acceso a las bases de datos para recuperar o modificar información y usar [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) para tener acceso a la base de datos.  
@@ -88,7 +88,7 @@ Public class DbUpdate: AsyncCodeActivity
 
  La consulta que se va a ejecutar se configura en su propiedad `Sql` y los parámetros se pasan a través de la colección `Parameters`.
 
- Después de `DbQueryScalar` es ejecuta, se devuelve el valor escalar en el `Result``out` argumento (de tipo `TResult`, que es definido en la clase base <xref:System.Activities.AsyncCodeActivity%601>).
+ Después de `DbQueryScalar` es ejecuta, se devuelve el valor escalar en el `Result out` argumento (de tipo `TResult`, que es definido en la clase base <xref:System.Activities.AsyncCodeActivity%601>).
 
 ```
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
@@ -200,7 +200,7 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 
  La consulta que se va a ejecutar se configura en su propiedad `Sql` y los parámetros se pasan a través de la colección `Parameters`.
 
- Después de la `DbQueryDataSet` se ejecuta el `DataSet` se devuelve en el `Result``out` argumento (de tipo `TResult`, que se definido en la clase base <xref:System.Activities.AsyncCodeActivity%601>).
+ Después de la `DbQueryDataSet` se ejecuta el `DataSet` se devuelve en el `Result out` argumento (de tipo `TResult`, que se definido en la clase base <xref:System.Activities.AsyncCodeActivity%601>).
 
 ```
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>
@@ -247,7 +247,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 ## <a name="configuring-connection-information"></a>Configurar información de conexión
  Todas las actividades de base de datos comparten los mismos parámetros de configuración. Se pueden configurar de dos maneras:
 
--   `ConnectionString + InvariantName`: establezca el nombre invariable de proveedor de ADO.NET y la cadena de conexión.
+-   `ConnectionString + InvariantName`: Establecer al proveedor de ADO.NET de cadena de conexión y el nombre invariable.
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`: establezca el nombre de la sección de configuración que contiene la información de conexión.
+-   `ConfigName`: Establezca el nombre de la sección de configuración que contiene la información de conexión.
 
     ```xml
     <connectionStrings>

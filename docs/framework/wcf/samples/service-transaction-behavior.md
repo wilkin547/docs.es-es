@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: d9c3c63dece8a32280f17af6cc143b73bef58242
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df677e29534e2f451afa27b9b81159b4826c98ca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739289"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066147"
 ---
 # <a name="service-transaction-behavior"></a>Comportamiento de transacción de servicio
 Este ejemplo muestra el uso de una transacción coordinada por el cliente y la configuración de ServiceBehaviorAttribute y OperationBehaviorAttribute para controlar el comportamiento de las transacciones de servicio. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora, pero se extiende para mantener un registro del servidor de las operaciones realizadas en una tabla de base de datos y una con estado ejecutando total para las operaciones de cálculo. Las escrituras guardadas en la tabla de registro del servidor dependen del resultado de una transacción coordinada del cliente. Si la transacción del cliente no se completa, la transacción del servicio Web garantiza que las actualizaciones de la base de datos no se confirman.  
@@ -100,7 +100,7 @@ client.Close();
   
     -   La propiedad `ReleaseServiceInstanceOnTransactionComplete` especifica si se recicla la instancia del servicio cuando se completa una transacción. Si se establece en `false`, el servicio mantiene la misma instancia del servicio en las solicitudes de operación. Esto es necesario para mantener el total en ejecución. Si se establece en `true`, se genera una instancia nueva después de cada acción completada.  
   
-    -   La propiedad `TransactionAutoCompleteOnSessionClose` especifica si se completan las transacciones pendientes cuando la sesión se cierra. Si se establece en `false`, las operaciones individuales son necesarias para establecer el `OperationBehaviorAttribute``TransactionAutoComplete` propiedad `true` o exigir explícitamente una llamada a la `SetTransactionComplete` método para realizar transacciones. Este ejemplo muestra ambos enfoques.  
+    -   La propiedad `TransactionAutoCompleteOnSessionClose` especifica si se completan las transacciones pendientes cuando la sesión se cierra. Si se establece en `false`, las operaciones individuales son necesarias para establecer el <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> propiedad `true` o exigir explícitamente una llamada a la <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> método para realizar transacciones. Este ejemplo muestra ambos enfoques.  
   
 -   En `ServiceContractAttribute`:  
   
