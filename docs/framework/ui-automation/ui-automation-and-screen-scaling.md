@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 4fe6a0c39388e72807043e9e1ccd2deb59afb656
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: d4c3801e81efc7af1afbf15d882a9d13ad552524
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845972"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717563"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI Automation y ajuste de escala de la pantalla
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] permite a los usuarios cambiar la configuración [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] para que la mayoría de los elementos [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] de la pantalla parezcan de mayor tamaño. Aunque esta característica ha estado disponible desde hace mucho tiempo en [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], en las versiones anteriores, el escalado se tenía que implementar por las aplicaciones. En [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], el Administrador de ventanas de escritorio realiza el ajuste de escala predeterminado para todas las aplicaciones que no controlan su propia escala. Las aplicaciones cliente de automatización de la interfaz de usuario deben tener en cuenta esta característica.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "48845972"
   
  El escalado de pantalla crea nuevos desafíos para las aplicaciones a las que les preocupa de cualquier manera las coordenadas de pantalla. La pantalla contiene ahora dos sistemas de coordenadas: físico y lógico. Las coordenadas físicas de un punto son el desplazamiento real en píxeles desde la parte superior izquierda del origen. Las coordenadas lógicas son los desplazamientos de la manera que serían si se escalaran los propios píxeles.  
   
- Supongamos que diseña un cuadro de diálogo con un botón en las coordenadas (100, 48). Cuando este cuadro de diálogo se muestre en el [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]96 predeterminado, el botón se encuentra en las coordenadas físicas (100, 48). En [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]120, se encuentra en las coordenadas físicas (125, 60). Sin embargo, las coordenadas lógicas son las mismas en cualquier configuración [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] : (100, 48).  
+ Supongamos que diseña un cuadro de diálogo con un botón en las coordenadas (100, 48). Cuando este cuadro de diálogo se muestre en el [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]96 predeterminado, el botón se encuentra en las coordenadas físicas (100, 48). En [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]120, se encuentra en las coordenadas físicas (125, 60). Pero las coordenadas lógicas son las mismas en cualquier [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] configuración: (100, 48).  
   
  Las coordenadas lógicas son importantes porque hacen que el comportamiento del sistema operativo y las aplicaciones sea coherente independientemente de la configuración de [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] . Por ejemplo, <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> normalmente devuelve las coordenadas lógicas. Si mueve el cursor sobre un elemento en un cuadro de diálogo, se devuelven las mismas coordenadas con independencia de la configuración [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] . Si dibuja un control en (100, 100), se dibuja con esas coordenadas lógicas y ocupará la misma posición relativa en cualquier configuración [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
   
 <a name="Scaling_in_UI_Automation_Clients"></a>   
 ## <a name="scaling-in-ui-automation-clients"></a>Escalado en los clientes de automatización de la interfaz de usuario  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] no usa coordenadas lógicas. Los siguientes métodos y propiedades devuelven coordenadas físicas o las toman como parámetros.  
+  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] no usa coordenadas lógicas. Los siguientes métodos y propiedades devuelven coordenadas físicas o las toman como parámetros.  
   
 -   <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48845972"
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Esta función hace que todo el proceso sea para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], lo que significa que todas las ventanas que pertenecen al proceso sean sin escala. En el [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), por ejemplo, las cuatro ventanas que componen el rectángulo resaltado se encuentran en las coordenadas físicas obtenidas de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], no las coordenadas lógicas. Si el ejemplo no era para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], el resaltado se dibujaría en las coordenadas lógicas del escritorio, lo que daría lugar a una ubicación incorrecta en un entorno que no sea de 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
+     Esta función hace que todo el proceso sea para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], lo que significa que todas las ventanas que pertenecen al proceso sean sin escala. En [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), por ejemplo, las cuatro ventanas que componen el rectángulo resaltado se encuentran en las coordenadas físicas obtenidas de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], y no en las coordenadas lógicas. Si el ejemplo no era para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], el resaltado se dibujaría en las coordenadas lógicas del escritorio, lo que daría lugar a una ubicación incorrecta en un entorno que no sea de 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] .  
   
 2.  Para obtener coordenadas de cursor, llame a la función [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. En el ejemplo siguiente se muestra cómo declarar y usar esta función.  
   
@@ -77,5 +77,5 @@ ms.locfileid: "48845972"
   
  Si la aplicación realiza una comunicación directa entre procesos con aplicaciones que no son para [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], puede que tenga que convertir entre las coordenadas lógicas y físicas mediante las funciones [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `PhysicalToLogicalPoint` y `LogicalToPhysicalPoint`.  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de marcador de resaltado](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+## <a name="see-also"></a>Vea también
+- [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
