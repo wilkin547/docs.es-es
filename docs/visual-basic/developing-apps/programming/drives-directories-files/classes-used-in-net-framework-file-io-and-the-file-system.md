@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 4c13b482ddbb3c1c109ca8dfe36ed76a2025d61a
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9e84ac90054e4ac3d32bb436fc0756248e84fcd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39333044"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705328"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
 En las tablas siguientes se incluyen las clases usadas más comúnmente para las operaciones de E/S de archivos en .NET Framework, clasificadas en clases de E/S de archivos, clases usadas para crear secuencias y clases usadas para leer y escribir en secuencias.  
@@ -56,8 +56,8 @@ En las tablas siguientes se incluyen las clases usadas más comúnmente para las
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|Lee caracteres de `String`. El resultado puede ser una secuencia en cualquier codificación o `String`.|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Escribe caracteres en `String`. El resultado puede ser una secuencia en cualquier codificación o `String`.|  
   
-## <a name="see-also"></a>Vea también  
- [Crear secuencias](../../../../standard/io/composing-streams.md)  
- [E/S de archivos y secuencias](../../../../standard/io/index.md)  
- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md) (E/S de archivos asincrónica)  
- [Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+## <a name="see-also"></a>Vea también
+- [Crear secuencias](../../../../standard/io/composing-streams.md)
+- [E/S de archivos y secuencias](../../../../standard/io/index.md)
+- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

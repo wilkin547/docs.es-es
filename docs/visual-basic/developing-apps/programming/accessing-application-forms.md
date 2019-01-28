@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My.Forms object
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
-ms.openlocfilehash: eb40606f55785b4b6ec9271b55c8159a26822011
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44942827c4bfbaeffb3e424d8339ac6d001722ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566934"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Acceso a los formularios de aplicaciones (Visual Basic)
 El objeto `My.Forms` proporciona una manera fácil de tener acceso a una instancia de cada Windows Form declarado en el proyecto de la aplicación. También puede usar propiedades del objeto `My.Application` para tener acceso a la pantalla de presentación y el formulario principal de la aplicación y para obtener una lista de los formularios abiertos de la aplicación.  
@@ -27,7 +27,7 @@ El objeto `My.Forms` proporciona una manera fácil de tener acceso a una instanc
 |Mostrar los títulos de todos los formularios abiertos de la aplicación.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
 |Actualizar la pantalla de presentación con información de estado como los inicios de la aplicación.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>  
- [My.Forms (objeto)](../../../visual-basic/language-reference/objects/my-forms-object.md)
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>
+- [My.Forms (objeto)](../../../visual-basic/language-reference/objects/my-forms-object.md)

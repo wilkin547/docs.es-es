@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: a4c205d61e6de3e835954e405cece143520b4d2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623993"
 ---
 # <a name="localizability-review"></a>Revisión de adaptabilidad
 La revisión de localización es un paso intermedio en el desarrollo de una aplicación de uso internacional. Comprueba que una aplicación globalizada está preparada para la localización e identifica cualquier código o los aspectos de la interfaz de usuario que requieren un tratamiento especial. Este paso también ayuda a asegurarse de que el proceso de localización no introducirá defectos funcionales en la aplicación. Una vez solucionados todos los problemas que planteó la revisión de localización, la aplicación estará lista para la localización. Si la revisión de localización es exhaustiva, no tiene que modificar ningún código fuente durante el proceso de localización.  
@@ -75,7 +75,7 @@ La revisión de localización es un paso intermedio en el desarrollo de una apli
   
 ## <a name="see-also"></a>Vea también
 
-- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)  
-- [Localización](../../../docs/standard/globalization-localization/localization.md)  
-- [Globalización](../../../docs/standard/globalization-localization/globalization.md)  
+- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)
+- [Localización](../../../docs/standard/globalization-localization/localization.md)
+- [Globalización](../../../docs/standard/globalization-localization/globalization.md)
 - [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)

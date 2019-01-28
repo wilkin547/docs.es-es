@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 811a75c9f0350eefc98c32181e859b7583ff74ef
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 502e118a67e157ce7756efdece866564fddc6ab7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44186297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611496"
 ---
 # <a name="scheduling-threads"></a>Programación de subprocesos
 
@@ -23,5 +23,5 @@ Cada subproceso tiene una prioridad de subproceso asignada a él. A los subproce
   
 ## <a name="see-also"></a>Vea también
 
-- [Usar subprocesos y subprocesamiento](../../../docs/standard/threading/using-threads-and-threading.md)  
+- [Usar subprocesos y subprocesamiento](../../../docs/standard/threading/using-threads-and-threading.md)
 - [Subprocesamiento administrado y no administrado en Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)

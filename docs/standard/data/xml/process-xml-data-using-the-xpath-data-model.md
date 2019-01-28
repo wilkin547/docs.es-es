@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da8b623d3a73ca8791a0619c67b0ed3bd42447d3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 67fbacd24b888b9c45072bcb34031f38adc118e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728403"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>Procesamiento de datos XML con el modelo de datos XPath
 El espacio de nombres <xref:System.Xml?displayProperty=nameWithType> proporciona una representación mediante programación de documentos XML, fragmentos, nodos o conjuntos de nodos en memoria utilizando las clases <xref:System.Xml.XmlDocument> o <xref:System.Xml.XPath.XPathDocument>.  
@@ -37,7 +37,7 @@ El espacio de nombres <xref:System.Xml?displayProperty=nameWithType> proporciona
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
 - [Procesamiento de datos XML con el modelo DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)

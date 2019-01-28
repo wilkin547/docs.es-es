@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 822aedd3e08ad3f8950f6531fe687ec26df4622a
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415538"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066433"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Montón de objetos grandes en sistemas Windows
 
@@ -34,7 +34,7 @@ Los objetos pequeños siempre se asignan en la generación 0 y, según cuál sea
 
 Los objetos grandes pertenecen a la generación 2 porque se recolectan únicamente durante una recolección de generación 2. Cuando una generación se recolecta, también se recolectan todas sus generaciones más jóvenes. Por ejemplo, cuando se produce una recolección de elementos no utilizados de generación 1, se recolectan las generaciones 1 y 0, mientras que, cuando se produce una de generación 2, se recolecta todo el montón. Este es el motivo por el que las recolecciones de elementos no utilizados de generación 2 también se conocen como *recolecciones de elementos no utilizados completas*. En este artículo hablaremos de recolecciones de elementos no utilizados de generación 2 en lugar completas, si bien ambas son indistintas.
 
-Las generaciones proporcionan una vista lógica del montón del recolector de elementos no utilizados. Físicamente, los objetos se encuentran en segmentos de montón administrado. Un *segmento de montón administrado* es un fragmento de memoria que el recolector de elementos no utilizados reserva del sistema operativo, para lo cual llama a la [función VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) en nombre del código administrado. Cuando el CLR se carga, el recolector de elementos no utilizados asigna dos segmentos de montón iniciales: uno para objetos pequeños (montón de objeto pequeño) y otro para objetos grandes (montón de objetos grandes).
+Las generaciones proporcionan una vista lógica del montón del recolector de elementos no utilizados. Físicamente, los objetos se encuentran en segmentos de montón administrado. Un *segmento de montón administrado* es un fragmento de memoria que el recolector de elementos no utilizados reserva del sistema operativo, para lo cual llama a la [función VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) en nombre del código administrado. Cuando el CLR se carga, el recolector de elementos no utilizados asigna dos segmentos de montón iniciales: uno para objetos pequeños (montón de objeto pequeño) y otro para objetos grandes (montón de objetos grandes).
 
 Tras ello, las solicitudes de asignación se cumplen colocando objetos administrados en cualquiera de estos dos segmentos de montón administrados. Si el objeto tiene un tamaño inferior a 85 000 bytes, se coloca en el segmento de montón de objetos pequeños y, si no, se coloca en el segmento de montón de objetos grandes. Los segmentos se confirman (en fragmentos menores) a medida que más y más objetos se asignan a ellos.
 En el montón de objetos pequeños, aquellos objetos que sobrevivan a una recolección de elementos no utilizados se promueven a la siguiente generación. Los objetos que sobrevivan a una recolección de generación 0 pasarán a considerarse objetos de la generación 1, y así sucesivamente. En cambio, los objetos que sobrevivan a la generación más antigua se seguirán considerando pertenecientes a ella. Es decir, los supervivientes de la generación 2 son objetos de la generación 2 y los supervivientes del montón de objeto grande serán objetos de montón de objeto grande (que se recolectan con la generación 2).
@@ -57,9 +57,9 @@ Figura 2: Después de una recolección de elementos no utilizados de generación
 
 Si no existe suficiente espacio libre para las solicitudes de asignación de objeto grande, el recolector de elementos no utilizados intenta primero adquirir más segmentos del sistema operativo. Si esto no sirve, activa una recolección de elementos no utilizados de generación 2 con la esperanza de liberar algo de espacio.
 
-Durante una recolección de elementos no utilizados de generación 1 o de generación 2, el recolector de elementos no utilizados libera los segmentos que no tengan objetos activos para el sistema operativo (llamando a la función [VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx)). De este modo, se anula la confirmación del espacio tras el último objeto activo hasta el final del segmento (excepto en el segmento efímero de las generaciones 0 y 1, donde el recolector de elementos no utilizados mantiene confirmado algo de espacio, ya que es posible que la aplicación lo asigne inmediatamente). Además, los espacios libres se quedan confirmados aunque se restablezcan, lo que significa que el sistema operativo no necesita escribir los datos que contienen al disco.
+Durante una recolección de elementos no utilizados de generación 1 o de generación 2, el recolector de elementos no utilizados libera los segmentos que no tengan objetos activos para el sistema operativo (llamando a la función [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree)). De este modo, se anula la confirmación del espacio tras el último objeto activo hasta el final del segmento (excepto en el segmento efímero de las generaciones 0 y 1, donde el recolector de elementos no utilizados mantiene confirmado algo de espacio, ya que es posible que la aplicación lo asigne inmediatamente). Además, los espacios libres se quedan confirmados aunque se restablezcan, lo que significa que el sistema operativo no necesita escribir los datos que contienen al disco.
 
-Como el montón de objetos grandes solo se recopila durante las recolecciones de elementos no utilizados de generación 2, el segmento del montón de objetos grandes solo se puede liberar durante una recolección de este tipo. En la figura 3 se ilustra un escenario en el que el recolector de elementos no utilizados libera un segmento (segmento 2) para el sistema operativo y anula la confirmación de más espacio en los segmentos restantes. Si necesitara usar el espacio que no está confirmado al final del segmento para cumplir asignaciones de objetos grandes, confirmará la memoria de nuevo. Para obtener una explicación sobre cómo confirmar/anular confirmaciones, vea la documentación de [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx).
+Como el montón de objetos grandes solo se recopila durante las recolecciones de elementos no utilizados de generación 2, el segmento del montón de objetos grandes solo se puede liberar durante una recolección de este tipo. En la figura 3 se ilustra un escenario en el que el recolector de elementos no utilizados libera un segmento (segmento 2) para el sistema operativo y anula la confirmación de más espacio en los segmentos restantes. Si necesitara usar el espacio que no está confirmado al final del segmento para cumplir asignaciones de objetos grandes, confirmará la memoria de nuevo. Para obtener una explicación sobre cómo confirmar/anular confirmaciones, vea la documentación de [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc).
 
 ![Figura 3: Montón de objetos grandes después de una recolección de elementos no utilizados de generación 2](media/loh/loh-figure-3.jpg)  
 Figura 3: Montón de objetos grandes después de una recolección de elementos no utilizados de generación 2
@@ -302,13 +302,13 @@ Como el montón de objetos grandes no se compacta, a veces se considera que dich
 
 Es más habitual ver fragmentación de la memoria virtual provocada por objetos grandes temporales que requieren que el recolector de elementos no utilizados adquiera frecuentemente nuevos segmentos de montón administrados del sistema operativo y liberar los vacíos para el sistema operativo.
 
-Para comprobar si el montón de objetos grandes provoca fragmentación de la memoria virtual, puede establecer un punto de ruptura en [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) y [VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx), y ver quién los llama. Por ejemplo, para ver quién ha intentado asignar fragmentos de memoria virtual superiores a 8 MB desde el sistema operativo, podemos establecer un punto de ruptura como el siguiente:
+Para comprobar si el montón de objetos grandes provoca fragmentación de la memoria virtual, puede establecer un punto de ruptura en [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) y [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree), y ver quién los llama. Por ejemplo, para ver quién ha intentado asignar fragmentos de memoria virtual superiores a 8 MB desde el sistema operativo, podemos establecer un punto de ruptura como el siguiente:
 
 ```console
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-Este comando entra en el depurador y muestra la pila de llamadas solo si se llama a [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) con un tamaño de asignación superior a 8 MB (0x800000).
+Este comando entra en el depurador y muestra la pila de llamadas solo si se llama a [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) con un tamaño de asignación superior a 8 MB (0x800000).
 
 En CLR 2.0 se ha incluido una característica denominada *acumulación de memoria virtual* que puede resultar útil si se encuentra en una situación en la que los segmentos (incluidos los de los montones de objetos pequeños y de objetos grandes) se adquieren y liberan con frecuencia. Para establecer un valor de acumulación de memoria virtual, hay que especificar una marca de inicio denominada `STARTUP_HOARD_GC_VM` a través de la API de hospedaje. En vez de liberar los segmentos vacíos para el sistema operativo, CLR anula la confirmación de la memoria de estos segmentos y los coloca en una lista en espera (cabe decir que CLR no lleva esto a cabo en segmentos que son demasiado grandes). Más adelante, CLR usa esos segmentos para cumplir nuevas solicitudes de segmento. La próxima vez que la aplicación necesite un nuevo segmento, CLR usará uno de esta lista en espera (si encuentra uno lo suficientemente grande).
 

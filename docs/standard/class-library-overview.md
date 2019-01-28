@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b00d08f43874518e117739d4a9502bf9463db5c1
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: ab7d64a9c7f0b1a080fdf82ed2662c7256f16132
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029884"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555185"
 ---
 # <a name="net-class-library-overview"></a>Información general de la biblioteca de clases de .NET
 
@@ -112,6 +112,6 @@ Las implementaciones de .NET incluyen clases, interfaces, delegados y tipos de v
   
 ## <a name="see-also"></a>Vea también
 
-- [Sistema de tipos comunes](../../docs/standard/base-types/common-type-system.md)  
-- [Explorador de API de .NET](../../api/index.md)  
+- [Sistema de tipos comunes](../../docs/standard/base-types/common-type-system.md)
+- [Explorador de API de .NET](../../api/index.md)
 - [Información general](../../docs/framework/get-started/overview.md)

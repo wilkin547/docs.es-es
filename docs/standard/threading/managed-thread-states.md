@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a55409cd2c3bed2bc09db10622de1cceab934112
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cbf7db4d9369eade62767e55035df4118d5248ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47235288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646651"
 ---
 # <a name="managed-thread-states"></a>Estados de subprocesos administrados
 La propiedad <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> proporciona una máscara de bits que indica el estado del subproceso actual. Un subproceso está siempre en al menos uno de los estados posibles en la enumeración <xref:System.Threading.ThreadState> y puede estar en varios estados al mismo tiempo.  
@@ -50,7 +50,7 @@ if ((state & (Unstarted | Stopped)) == 0)   // implies Running
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Threading.ThreadAbortException>  
-- <xref:System.Threading.Thread>  
-- <xref:System.Threading.ThreadState>  
+- <xref:System.Threading.ThreadAbortException>
+- <xref:System.Threading.Thread>
+- <xref:System.Threading.ThreadState>
 - [Subprocesamiento](../../../docs/standard/threading/index.md)

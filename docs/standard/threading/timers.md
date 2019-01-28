@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 63f9b759621689c129fc356fe38d7e7c5ee41f30
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 644ccf5951e9d2556fc697d2fd763f026fd0ebdb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617231"
 ---
 # <a name="timers"></a>Temporizadores
 
@@ -58,6 +58,6 @@ Para obtener más información y ejemplos, vea <xref:System.Timers.Timer?display
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Threading.Timer?displayProperty=nameWithType>  
-- <xref:System.Timers.Timer?displayProperty=nameWithType>  
+- <xref:System.Threading.Timer?displayProperty=nameWithType>
+- <xref:System.Timers.Timer?displayProperty=nameWithType>
 - [Objetos y características de subprocesos](threading-objects-and-features.md)

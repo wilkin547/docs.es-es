@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83efda175b7e5cef8c7042682827d2fe0562c207
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: e932b3af0b952fa88d33df453917cb11c3ceed33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517765"
 ---
 # <a name="sorted-collection-types"></a>Tipos de colecciones ordenadas
 La clase <xref:System.Collections.SortedList?displayProperty=nameWithType>, la clase genérica <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> y la clase genérica <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> son similares a la clase <xref:System.Collections.Hashtable> y a la clase genérica <xref:System.Collections.Generic.Dictionary%602> en que implementan la interfaz <xref:System.Collections.IDictionary>, pero mantienen sus elementos en el criterio de ordenación mediante la clave, y no tienen la inserción O(1) y la característica de recuperación de las tablas hash. Las tres clases tienen varias características en común:  
@@ -50,7 +50,7 @@ La clase <xref:System.Collections.SortedList?displayProperty=nameWithType>, la c
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
-- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
-- <xref:System.Collections.Concurrent.ConcurrentDictionary%602>  
+- <xref:System.Collections.IDictionary?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
+- <xref:System.Collections.Concurrent.ConcurrentDictionary%602>
 - [Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)

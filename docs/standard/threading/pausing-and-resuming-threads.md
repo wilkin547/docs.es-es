@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b66881a8a42c0c34b5c2119f7404fe7787c8f3f2
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ce1855027e89f21d96e6cf761afcaaabb9b5138f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836263"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648224"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Pausa e interrupción de subprocesos
 
@@ -51,9 +51,9 @@ Las maneras más habituales de sincronizar las actividades de los subprocesos so
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Threading.Thread>  
-- <xref:System.Threading.ThreadInterruptedException>  
-- <xref:System.Threading.ThreadAbortException>  
-- [Subprocesamiento](../../../docs/standard/threading/index.md)  
-- [Usar subprocesos y subprocesamiento](../../../docs/standard/threading/using-threads-and-threading.md)  
+- <xref:System.Threading.Thread>
+- <xref:System.Threading.ThreadInterruptedException>
+- <xref:System.Threading.ThreadAbortException>
+- [Subprocesamiento](../../../docs/standard/threading/index.md)
+- [Usar subprocesos y subprocesamiento](../../../docs/standard/threading/using-threads-and-threading.md)
 - [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 028f8b978a7809fa9ae4710ab85d7dc84e7b04fc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c231c946897772a6f02cce6eb2d3c4936b72a35e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45744013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716044"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>Creación de subprocesos y análisis los datos en el inicio
 
@@ -43,7 +43,7 @@ Cuando se crea un proceso de sistema operativo, el sistema operativo inserta un 
 
  En .NET Framework 2.0, el delegado <xref:System.Threading.ParameterizedThreadStart> ofrece una forma sencilla de pasar un objeto que contiene datos a un subproceso al llamar a la sobrecarga del método <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>. Vea <xref:System.Threading.ParameterizedThreadStart> para obtener código muestra.  
   
- El uso del delegado <xref:System.Threading.ParameterizedThreadStart> no es una forma con seguridad de tipos de pasar datos, porque la sobrecarga del método <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> acepta cualquier objeto. Una alternativa consiste en encapsular el procedimiento de subprocesos y los datos en una clase auxiliar y utilizar el delegado <xref:System.Threading.ThreadStart> para ejecutar el procedimiento de subprocesos. En el siguiente ejemplo se muestra esta técnica:
+ El uso del delegado <xref:System.Threading.ParameterizedThreadStart> no es una forma con seguridad de tipos de pasar datos, porque la sobrecarga del método <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> acepta cualquier objeto. Una alternativa consiste en encapsular el procedimiento de subprocesos y los datos en una clase del asistente y utilizar el delegado <xref:System.Threading.ThreadStart> para ejecutar el procedimiento de subprocesos. En el siguiente ejemplo se muestra esta técnica:
 
  [!code-cpp[System.Threading.ThreadStart2#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source3.cpp#3)]
  [!code-csharp[System.Threading.ThreadStart2#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source3.cs#3)]
@@ -61,9 +61,9 @@ Ninguno de estos delegados, <xref:System.Threading.ThreadStart> ni <xref:System.
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Threading.Thread>  
-- <xref:System.Threading.ThreadStart>  
-- <xref:System.Threading.ParameterizedThreadStart>  
-- <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>  
-- [Subprocesamiento](index.md)  
+- <xref:System.Threading.Thread>
+- <xref:System.Threading.ThreadStart>
+- <xref:System.Threading.ParameterizedThreadStart>
+- <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>
+- [Subprocesamiento](index.md)
 - [Usar subprocesos y subprocesamiento](using-threads-and-threading.md)

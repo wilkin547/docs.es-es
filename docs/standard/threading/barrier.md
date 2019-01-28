@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbbf7055a250ae7fa630097f3014a6420228fed3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1e09f1464a5df751034639d8bc1cb5d79faacd0f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397012"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714196"
 ---
 # <a name="barrier"></a>Barrier
 
@@ -56,5 +56,5 @@ ms.locfileid: "47397012"
   
 ## <a name="see-also"></a>Vea también
 
-- [Objetos y características de subprocesos](threading-objects-and-features.md)  
+- [Objetos y características de subprocesos](threading-objects-and-features.md)
 - [Sincronizar operaciones simultáneas con una clase Barrier](how-to-synchronize-concurrent-operations-with-a-barrier.md)

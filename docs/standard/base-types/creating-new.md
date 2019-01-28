@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 477791a0d62186b6cb88d0fae3aa9b4e38b3ef35
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 94ac21dfdf58e8aa1b629604792ad2f0f57c60d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659506"
 ---
 # <a name="creating-new-strings-in-net"></a>Creación de cadenas en .NET
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permite crear cadenas mediante asignaciones simples y además sobrecarga a un constructor de clases para admitir la creación de cadenas con una serie de parámetros. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] también proporciona varios métodos en la clase <xref:System.String?displayProperty=nameWithType> que crean nuevos objetos de cadena al combinar varias cadenas, matrices de cadenas u objetos.  
@@ -82,5 +82,5 @@ ms.locfileid: "43870115"
   
 ## <a name="see-also"></a>Vea también
 
-- [Operaciones básicas de cadenas](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Operaciones básicas de cadenas](../../../docs/standard/base-types/basic-string-operations.md)
 - [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md)

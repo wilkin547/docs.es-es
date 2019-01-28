@@ -3,12 +3,12 @@ title: Conceptos básicos de las expresiones de consulta (LINQ en C#)
 description: En este tema se presentan los conceptos relacionados con las expresiones de consulta.
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 68f338381e354f4944539d63ca3a3cc3500031c1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 96ef75fe702e60eaa38acef77a73a5ea7f2076f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45625527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709122"
 ---
 # <a name="query-expression-basics"></a>Conceptos básicos de las expresiones de consultas
 
@@ -154,7 +154,7 @@ Use la cláusula `join` para asociar o combinar elementos de un origen de datos 
 
 [!code-csharp[csrefQueryExpBasics#61](~/samples/snippets/csharp/concepts/linq/query-expression-basics_17.cs)]
 
-También puede realizar una combinación agrupada. Para ello, almacene los resultados de la operación `join` en una variable temporal mediante el uso de la palabra clave [into](../language-reference/keywords/into.md). Para obtener más información, consulte [join (Cláusula, Referencia de C#)](../language-reference/keywords/join-clause.md).
+También puede realizar una combinación agrupada. Para ello, almacene los resultados de la operación `join` en una variable temporal mediante el uso de la palabra clave [into](../language-reference/keywords/into.md). Para obtener más información, vea [join (Cláusula, Referencia de C#)](../language-reference/keywords/join-clause.md).
 
 #### <a name="let-clause"></a>let (cláusula) 
 
@@ -174,7 +174,7 @@ Para obtener más información, vea [How to: perform a subquery on a grouping op
 
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../programming-guide/index.md)  
-- [Language-Integrated Query (LINQ)](index.md)  
-- [Palabras clave de consultas (LINQ)](../language-reference/keywords/query-keywords.md)  
-- [Información general sobre operadores de consulta estándar](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [Guía de programación de C#](../programming-guide/index.md)
+- [Language-Integrated Query (LINQ)](index.md)
+- [Palabras clave de consultas (LINQ)](../language-reference/keywords/query-keywords.md)
+- [Información general sobre operadores de consulta estándar](../programming-guide/concepts/linq/standard-query-operators-overview.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 4fd7d01a3592c76fc1bb4ff8afe280c50cdf9f12
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e5579dd05e11de9dd54023604f7515fb52fb29a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181308"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650738"
 ---
 # <a name="managing-connections"></a>Administrar conexiones
 Las aplicaciones que usan HTTP para conectarse a los recursos de datos pueden usar las clases <xref:System.Net.ServicePoint> y <xref:System.Net.ServicePointManager> de .NET Framework para administrar las conexiones a Internet y lograr una escala y un rendimiento óptimos.  
@@ -64,6 +64,6 @@ Dim sp As ServicePoint = ServicePointManager.FindServicePoint(uri)
 sp.ConnectionLimit = newLimit  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Agrupación de conexiones](../../../docs/framework/network-programming/connection-grouping.md)  
- [Usar protocolos de aplicaciones](../../../docs/framework/network-programming/using-application-protocols.md)
+## <a name="see-also"></a>Vea también
+- [Agrupación de conexiones](../../../docs/framework/network-programming/connection-grouping.md)
+- [Usar protocolos de aplicaciones](../../../docs/framework/network-programming/using-application-protocols.md)

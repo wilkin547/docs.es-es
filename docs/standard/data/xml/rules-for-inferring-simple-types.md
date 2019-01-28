@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 15e7692abfe06ec9e9f91a3b229bf99971eaecc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550505"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Reglas para deducir tipos simples
 Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el tipo de datos para atributos y elementos.  
@@ -37,8 +37,8 @@ Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el ti
 |unsignedLong|Enteros en un intervalo de 0 a 18446744073709551615.|  
 |enteros|Un número finito de dígitos posiblemente prefijado con "-".|  
 |decimal|Valores numéricos que contienen dígitos de precisión del 0 a 28.|  
-|float|Decimales opcionalmente seguidos por "E" o "e" seguidos de un valor entero representando el exponente. Los valores decimales pueden estar en el intervalo de -16777216 a 16777216. Los valores del exponente pueden estar en el intervalo de –149 a 104.<br /><br /> Float permite que valores especiales representen valores infinitos y no numéricos. Los valores especiales para float son: 0, -0, INF, - INF, NaN.|  
-|double|Lo mismo que float excepto que los valores decimales pueden estar en el intervalo de -9007199254740992 a 9007199254740992, y los valores del exponente pueden estar en el intervalo de –1075 a 970.<br /><br /> Double permite que valores especiales representen valores infinitos y no numéricos. Los valores especiales para float son: 0, -0, INF, - INF, NaN.|  
+|float|Decimales opcionalmente seguidos por "E" o "e" seguidos de un valor entero representando el exponente. Los valores decimales pueden estar en el intervalo de -16777216 a 16777216. Los valores del exponente pueden estar en el intervalo de –149 a 104.<br /><br /> Float permite que valores especiales representen valores infinitos y no numéricos. Los valores especiales para float son: 0, -0, INF, -INF, NaN.|  
+|double|Lo mismo que float excepto que los valores decimales pueden estar en el intervalo de -9007199254740992 a 9007199254740992, y los valores del exponente pueden estar en el intervalo de –1075 a 970.<br /><br /> Double permite que valores especiales representen valores infinitos y no numéricos. Los valores especiales para float son: 0, -0, INF, -INF, NaN.|  
 |duration|El formato de duración W3C.|  
 |dateTime|El formato dateTime W3C.|  
 |hora|El formato time W3C.|  
@@ -78,6 +78,6 @@ Los siguientes son atributos que definen el esquema que son omitidos durante la 
   
 ## <a name="see-also"></a>Vea también
 
-- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
-- [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [Modelo de objetos de esquema XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [Reglas para deducir los tipos de nodo de esquema y estructura](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

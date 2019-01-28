@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 20150326308513325a9f1219de3e3023e6c5192b
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 89645c489cb9f21ffe415fb7c02ae09fca9a7444
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505710"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Tutorial: Manipular archivos utilizando métodos de .NET Framework (Visual Basic)
 En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xref:System.IO.StreamReader>, comprobar si se ha tenido acceso a un archivo, buscar una cadena dentro de un archivo leído con una instancia de la clase <xref:System.IO.StreamReader> y escribir en un archivo mediante la clase <xref:System.IO.StreamWriter>.  
@@ -147,7 +147,7 @@ En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xre
   
  Para probar el código, pulse F5 para compilar la aplicación. Haga clic en **Obtener entradas**, seleccione una entrada y, después, haga clic en **Mostrar**. La entrada aparece en `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Haga clic en **Editar entrada**. La entrada aparece en `Entry`<xref:System.Windows.Forms.TextBox>. Edite la entrada de `Entry`<xref:System.Windows.Forms.TextBox> y haga clic en **Submit Edit** (Enviar edición). Abra el archivo `MyDiary.txt` para confirmar la corrección. Seleccione una entrada y haga clic en **Eliminar entrada**. Cuando <xref:System.Windows.Forms.MessageBox> solicite confirmación, haga clic en **Aceptar**. Cierre la aplicación y abra `MyDiary.txt` para confirmar la eliminación.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IO.StreamReader>  
- <xref:System.IO.StreamWriter>  
- [Tutoriales](../../../../visual-basic/walkthroughs.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.IO.StreamReader>
+- <xref:System.IO.StreamWriter>
+- [Tutoriales](../../../../visual-basic/walkthroughs.md)

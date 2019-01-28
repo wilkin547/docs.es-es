@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b98aa5b62718a2ff19cb50a09de1a0ddf55ddb91
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 2b3a2432deb1e956060ab3615db01821658f8782
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508684"
 ---
 # <a name="xml-document-object-model-dom"></a>Modelo de objetos de documento (DOM) XML
 La clase Modelo de objetos de documento XML (DOM) es una representación en la memoria de un documento XML. DOM permite leer, manipular y modificar un documento XML mediante programación. La clase **XmlReader** también lee XML, aunque proporciona acceso de solo avance y de solo lectura sin almacenamiento en memoria caché. Esto significa que no hay funciones para editar los valores de un atributo o contenido de un elemento, ni la posibilidad de agregar y quitar nodos con **XmlReader**. La edición es la función principal de DOM. Es la forma común y estructurada mediante la que se representan datos XML en la memoria, aunque los datos XML reales se almacenan de forma lineal cuando se encuentran en un archivo o proceden de otro objeto. A continuación se muestran datos XML:  
@@ -44,7 +44,7 @@ Estructura de documentos XML
 -   Recuperar nodos completos, además de la información que contiene el nodo, como el texto de un nodo de elemento.  
   
     > [!NOTE]
-    >  Si una aplicación no requiere la estructura o las funciones de edición proporcionadas por DOM, las clases **XmlReader** y **XmlWriter** proporcionan acceso a secuencias de XML de solo avance sin almacenamiento en caché. Para obtener más información, consulte <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter>.  
+    >  Si una aplicación no requiere la estructura o las funciones de edición proporcionadas por DOM, las clases **XmlReader** y **XmlWriter** proporcionan acceso a secuencias de XML de solo avance sin almacenamiento en caché. Para obtener más información, vea <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter>.  
   
  Los objetos **Node** tienen un conjunto de métodos y propiedades, así como características básicas y bien definidas. Algunas de estas características son:  
   
@@ -78,5 +78,5 @@ Estructura de documentos XML
   
 ## <a name="see-also"></a>Vea también
 
-- [Tipos de nodos XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+- [Tipos de nodos XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)
 - [Asignación de la jerarquía de objetos a datos XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

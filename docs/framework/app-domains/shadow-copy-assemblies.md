@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 572291fa5674c541136e587bc40818da85f71a65
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebec8c880f5b40ed3294585b9be0e83972ac12a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125710"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741711"
 ---
 # <a name="shadow-copying-assemblies"></a>Copias sombra de ensamblados
 Las instantáneas permiten que los ensamblados que se usan en un dominio de aplicación se actualicen sin descargar el dominio de aplicación. Esto es especialmente útil para las aplicaciones que tienen que estar disponibles continuamente, como los sitios de ASP.NET.  
@@ -77,9 +77,9 @@ Las instantáneas permiten que los ensamblados que se usan en un dominio de apli
 ## <a name="obsolete-methods"></a>Métodos obsoletos  
  La clase <xref:System.AppDomain> tiene varios métodos, como <xref:System.AppDomain.SetShadowCopyFiles%2A> y <xref:System.AppDomain.ClearShadowCopyPath%2A>, que pueden utilizarse para controlar la creación de instantáneas en un dominio de aplicación, pero estos métodos se marcaron como obsoletos en la versión 2.0 de .NET Framework. La forma recomendada de configurar un dominio de aplicación es utilizar las propiedades de la clase <xref:System.AppDomainSetup>.  
   
-## <a name="see-also"></a>Vea también  
-- <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>  
-- <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>  
+## <a name="see-also"></a>Vea también
+- <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
 - [Elemento \<shadowCopyVerifyByTimestamp>](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

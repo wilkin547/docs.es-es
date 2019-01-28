@@ -2,12 +2,12 @@
 title: Cachés PNRP
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 53df90a9bb3da90145ebe30bb274b4ff4950c00f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 375e193e618366b169d5c84073adb432cea3634c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736954"
 ---
 # <a name="pnrp-caches"></a>Cachés PNRP
 Las cachés del Protocolo de resolución de nombres de mismo nivel (PNRP) son colecciones locales de puntos de conexión de mismo nivel seleccionados de forma algorítmica y mantenidos en el elemento de mismo nivel.  
@@ -35,5 +35,5 @@ Las cachés del Protocolo de resolución de nombres de mismo nivel (PNRP) son co
   
  Los equipos de mismo nivel pueden registrar su interés por recibir objetos de otros equipos de mismo nivel. Cuando se actualiza un objeto, se notifica a la aplicación de colaboración y el nuevo objeto se pasa a todos los suscriptores de la aplicación. Por ejemplo, un equipo de mismo nivel en una aplicación de chat de grupo puede registrar su interés en recibir información de la aplicación, que se enviará todos los registros de chat como datos de la aplicación.  Esto le permite supervisar la actividad de chat dentro de la nube.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>Vea también
+- <xref:System.Net.PeerToPeer>

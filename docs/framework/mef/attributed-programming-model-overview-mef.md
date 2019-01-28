@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc929aba10d8a18e2a084707b69d3fef5f91a701
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 5429dfbf7b318b60d6c3150315dbe22ee73b4792
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563449"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Información general del modelo de programación con atributos (MEF)
 En Managed Extensibility Framework (MEF), un *modelo de programación* es una manera específica de definir el conjunto de objetos conceptuales en los que opera MEF. Estos objetos conceptuales incluyen partes, importaciones y exportaciones. MEF utiliza estos objetos, pero no especifica cómo se deben representar. Por consiguiente, es posible una gran variedad de modelos de programación, incluidos modelos personalizados.  
@@ -149,7 +149,7 @@ public class MyAddin
 }  
 ```  
   
- En esta clase, el método `DoSomething` toma un parámetro `int` único y devuelve `string`. Para coincidir con esta exportación, la parte de la importación debe declarar un miembro adecuado. La clase siguiente importa el método `DoSomething`.  
+ En esta clase, el método `DoSomething` toma un parámetro `int` único y devuelve `string`. Para coincidir con esta exportación, la parte de la importación debe declarar un miembro adecuado. La clase siguiente importa el método `DoSomething` .  
   
 ```vb  
 Public Class MyClass1  
@@ -670,7 +670,7 @@ public class NumFour : NumThree
 }  
 ```  
   
- Si hay metadatos asociados al atributo `InheritedExport`, también se heredarán. (Para obtener más información, vea la sección anterior "Metadatos y vistas de metadatos").  La subclase no puede modificar los metadatos heredados. Sin embargo, si se vuelve a declarar el atributo `InheritedExport` con el mismo nombre y tipo de contrato, pero con nuevos metadatos, la subclase puede reemplazar los metadatos heredados por los nuevos metadatos. La clase siguiente muestra este principio. La parte `MegaLogger` hereda de `Logger` e incluye el atributo `InheritedExport` . Puesto que `MegaLogger` vuelve a declarar nuevos metadatos denominados Status, no hereda los metadatos Name y Version de `Logger`.  
+ Si hay metadatos asociados al atributo `InheritedExport` , también se heredarán. (Para obtener más información, vea la sección anterior "Metadatos y vistas de metadatos").  La subclase no puede modificar los metadatos heredados. Sin embargo, si se vuelve a declarar el atributo `InheritedExport` con el mismo nombre y tipo de contrato, pero con nuevos metadatos, la subclase puede reemplazar los metadatos heredados por los nuevos metadatos. La clase siguiente muestra este principio. La parte `MegaLogger` hereda de `Logger` e incluye el atributo `InheritedExport` . Puesto que `MegaLogger` vuelve a declarar nuevos metadatos denominados Status, no hereda los metadatos Name y Version de `Logger`.  
   
 ```vb  
 <InheritedExport(GetType(IPlugin))>  
@@ -730,7 +730,7 @@ public class MegaLogger : Logger        {
 }  
 ```  
   
- Al volver a declarar el atributo `InheritedExport` para reemplazar los metadatos, asegúrese de que los tipos de contrato son los mismos. (En el ejemplo anterior, `IPlugin` es el tipo del contrato).  Si difieren, el segundo atributo creará, en lugar de reemplazar, una segunda exportación independiente de la parte. Generalmente, esto significa que tendrá que especificar el tipo de contrato explícitamente al reemplazar un atributo `InheritedExport`, como se muestra en el ejemplo anterior.  
+ Al volver a declarar el atributo `InheritedExport` para reemplazar los metadatos, asegúrese de que los tipos de contrato son los mismos. (En el ejemplo anterior, `IPlugin` es el tipo del contrato).  Si difieren, el segundo atributo creará, en lugar de reemplazar, una segunda exportación independiente de la parte. Generalmente, esto significa que tendrá que especificar el tipo de contrato explícitamente al reemplazar un atributo `InheritedExport` , como se muestra en el ejemplo anterior.  
   
  Puesto que no se pueden crear instancias de interfaces directamente, por lo general no se pueden decorar con atributos `Export` o `Import` . Sin embargo, una interfaz se puede decorar con un atributo `InheritedExport` en el nivel de interfaz y esa exportación junto con los metadatos asociados las heredarán las clases implementadoras. Sin embargo, la propia interfaz no estará disponible como una parte.  
   
@@ -957,6 +957,6 @@ public class PartSeven
   
  `IPartImportsSatisfiedNotification` contiene un método denominado `OnImportsSatisfied`. El contenedor de composición llama a este método en cualquier parte que implemente la interfaz cuando se ha completado la composición y las importaciones de la parte están listas para el uso. El motor de la composición crea las partes para completar las importaciones de otras partes. Antes de que las importaciones de una parte se hayan establecido, no puede realizar ninguna inicialización que confíe o manipule los valores importados en el constructor de la parte, a menos que esos valores se hayan especificado como requisitos previos mediante el atributo `ImportingConstructor` . Éste es normalmente el método preferido, pero en algunos casos, la inyección de constructor tal vez no esté disponible. En esos casos, la inicialización se puede realizar en `OnImportsSatisfied`y la parte debería implementar `IPartImportsSatisfiedNotification`.  
   
-## <a name="see-also"></a>Vea también  
- [Vídeo de Channel 9: Abrir las aplicaciones con Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
- [Vídeo de Channel 9: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+## <a name="see-also"></a>Vea también
+- [Vídeo de Channel 9: Abrir las aplicaciones con Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
+- [Vídeo de Channel 9: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

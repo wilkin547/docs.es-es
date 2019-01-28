@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842663"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617920"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizar datos para subprocesamiento múltiple
 Cuando varios subprocesos pueden realizar llamadas a las propiedades y los métodos de un objeto individual, es fundamental sincronizarlas. De lo contrario, un subproceso puede interrumpir lo que esté realizando otro y el objeto podría quedar en un estado no válido. La clase cuyos miembros están protegidos de tales interrupciones se conoce como segura para subprocesos.  
@@ -69,8 +69,8 @@ Cuando varios subprocesos pueden realizar llamadas a las propiedades y los méto
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
-- [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)  
-- [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización)  
-- [SyncLock (instrucción)](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
+- [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)
+- [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización)
+- [SyncLock (instrucción)](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
 - [lock (instrucción)](~/docs/csharp/language-reference/keywords/lock-statement.md)

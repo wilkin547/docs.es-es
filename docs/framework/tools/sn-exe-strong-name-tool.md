@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 127a059865250642c604288b0296b4152cf91f52
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 02568de0a1cc5cec6b92e646e000e69ae79b1646
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221653"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066394"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Herramienta de nombre seguro)
 La herramienta de nombre seguro (Sn.exe) permite firmar ensamblados con [nombres seguros](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe proporciona opciones para la administración de claves, así como para la generación y comprobación de firmas.  
@@ -65,7 +65,7 @@ sn [-quiet][option [parameter(s)]]
 |**-t**[**p**] *infile*|Muestra el token de la clave pública almacenada en *infile*. El contenido de *infile* debe ser una clave pública generada previamente a partir de un archivo de par de claves mediante **-p**.  No use la opción **-t[p]** para extraer el token directamente de un archivo de par de claves.<br /><br /> Sn.exe calcula el token mediante una función hash de la clave pública. Para ahorrar espacio, Common Language Runtime almacena tokens de clave pública en el manifiesto como parte de una referencia a otro ensamblado cuando graba una dependencia en un ensamblado que tiene un nombre seguro. La opción **-tp** muestra la clave pública además del token. Si se ha aplicado el atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> al ensamblado, el token es para la clave de identidad, y se muestran el nombre del algoritmo hash y la clave de identidad.<br /><br /> Tenga en cuenta que esta opción no comprueba la firma del ensamblado y no se debe usar para tomar decisiones de confianza.  Esta opción solo muestra los datos de token de clave pública sin formato.|  
 |**-T**[**p**] *assembly*|Muestra el token de clave pública de *assembly*. El argumento *assembly* debe ser el nombre de un archivo que contiene un manifiesto del ensamblado.<br /><br /> Sn.exe calcula el token mediante una función hash de la clave pública. Para ahorrar espacio, runtime almacena tokens de clave pública en el manifiesto como parte de una referencia a otro ensamblado cuando graba una dependencia en un ensamblado que tiene un nombre seguro. La opción **-Tp** muestra la clave pública además del token. Si se ha aplicado el atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> al ensamblado, el token es para la clave de identidad, y se muestran el nombre del algoritmo hash y la clave de identidad.<br /><br /> Tenga en cuenta que esta opción no comprueba la firma del ensamblado y no se debe usar para tomar decisiones de confianza.  Esta opción solo muestra los datos de token de clave pública sin formato.|  
 |`-TS` `assembly` `infile`|Aplica una firma de generación de prueba a un objeto `assembly` firmado parcial o totalmente con el par de claves de `infile`.|  
-|-`TSc``assembly``container`|Aplica una firma de generación de prueba a un objeto `assembly` firmado parcial o totalmente con el par de claves del contenedor de claves `container`.|  
+|-`TSc` `assembly` `container`|Aplica una firma de generación de prueba a un objeto `assembly` firmado parcial o totalmente con el par de claves del contenedor de claves `container`.|  
 |**-v** *assembly*|Comprueba el nombre seguro de *assembly*, donde *assembly* es el nombre de un archivo que contiene un manifiesto del ensamblado.|  
 |**-vf**  *assembly*|Comprueba el nombre seguro de *assembly*. A diferencia de la opción **-v**, **-vf** fuerza la comprobación aunque se haya deshabilitado con la opción **-Vr**.|  
 |**-Vk**  *regfile.reg* *assembly* [*userlist*] [*infile*]|Crea un archivo de entradas de registro (.reg) que puede usar para registrar el ensamblado especificado para pasar por alto la comprobación. Las reglas de nomenclatura de ensamblados que se aplican a la opción **-Vr** también se aplican a la opción **–Vk**. Para obtener información sobre las opciones *userlist* e *infile*, vea la opción **–Vr**.|  
@@ -124,8 +124,8 @@ sn -v MyAsm.dll
 sn -d MyContainer  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Herramientas](../../../docs/framework/tools/index.md)  
- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Vea también
+- [Herramientas](../../../docs/framework/tools/index.md)
+- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

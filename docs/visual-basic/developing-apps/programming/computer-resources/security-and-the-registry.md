@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: ddfe8f88763ee2db78d25d72e6c9cb3456ccd13f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62e9e68eafe55c4d4c3fb2bba05d54f55df74114
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671636"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>La seguridad y el Registro (Visual Basic)
 En esta página se describen las implicaciones de seguridad relativas al almacenamiento de datos en el Registro.  
@@ -38,6 +38,6 @@ En esta página se describen las implicaciones de seguridad relativas al almacen
 > [!IMPORTANT]
 >  Cuando se esté leyendo el Registro desde una aplicación Web, la identidad del usuario actual dependerá de la autenticación y suplantación implementadas en la aplicación Web.  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- [Leer y escribir en el Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
+- [Leer y escribir en el Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

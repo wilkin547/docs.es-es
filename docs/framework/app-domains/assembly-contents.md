@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1aed7e1e9e85f746c4b55b10c59dd82e85565b00
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 27bbc1b382d962379a50fba4557e3f2a408d9bc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194844"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649172"
 ---
 # <a name="assembly-contents"></a>Contenido de los ensamblados
 En general, un ensamblado estático está formado por cuatro elementos:  
@@ -48,7 +48,7 @@ Ensamblado de múltiples archivos
   
  Actualmente, al diseñar el código fuente, se toman decisiones explícitas sobre cómo repartir la funcionalidad de una aplicación entre uno o más archivos. Al diseñar el código de .NET Framework, tomará decisiones similares sobre cómo dividir la funcionalidad en uno o más ensamblados.  
   
-## <a name="see-also"></a>Vea también  
-- [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
-- [Manifiesto del ensamblado](../../../docs/framework/app-domains/assembly-manifest.md)  
+## <a name="see-also"></a>Vea también
+- [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Manifiesto del ensamblado](../../../docs/framework/app-domains/assembly-manifest.md)
 - [Consideraciones de seguridad sobre ensamblados](../../../docs/framework/app-domains/assembly-security-considerations.md)

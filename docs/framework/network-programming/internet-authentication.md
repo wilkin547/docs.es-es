@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 245e94cab61c0c60672476aadb417fc798b30362
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9ec1a003d981db99bec20778790fa4a3507ad0b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50181048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587965"
 ---
 # <a name="internet-authentication"></a>Autenticación de Internet
 Las clases <xref:System.Net> admiten diversos mecanismos de autenticación de cliente, incluidos los métodos de autenticación de Internet estándares básico, implícito, negociado, NTLM y autenticación Kerberos, así como métodos personalizados que puede crear.  
@@ -39,7 +39,7 @@ Las clases <xref:System.Net> admiten diversos mecanismos de autenticación de cl
   
  Algunos esquemas de autenticación pueden autenticar a un usuario sin realizar primero una solicitud para un recurso. Una aplicación puede ahorrar tiempo si autentica previamente al usuario con el recurso, lo que elimina al menos un recorrido de ida y vuelta al servidor. O bien, puede realizar la autenticación durante el inicio del programa para que responda mejor al usuario más adelante. Los esquemas de autenticación que pueden usar la autenticación previa establecen la propiedad <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> en **true**.  
   
-## <a name="see-also"></a>Vea también  
- [Autenticación básica e implícita](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
- [Autenticación NTLM y Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
- [Seguridad en la programación para redes](../../../docs/framework/network-programming/security-in-network-programming.md)
+## <a name="see-also"></a>Vea también
+- [Autenticación básica e implícita](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
+- [Autenticación NTLM y Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
+- [Seguridad en la programación para redes](../../../docs/framework/network-programming/security-in-network-programming.md)
