@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041605"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645904"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Construcciones de agrupamiento en expresiones regulares
 Las construcciones de agrupamiento definen las subexpresiones de una expresión regular y capturan las subcadenas de una cadena de entrada. Puede utilizar construcciones de agrupamiento para hacer lo siguiente:  
@@ -29,7 +29,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
 -   Aplicar un cuantificador a una subexpresión que tiene varios elementos del lenguaje de expresiones regulares. Para más información sobre los cuantificadores, vea [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
--   Incluir una subexpresión en la cadena devuelta por los métodos <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> y <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>.  
+-   Incluir una subexpresión en la cadena devuelta por los métodos <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> y <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> .  
   
 -   Recuperar subexpresiones individuales de la propiedad <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> y procesarlas por separado del texto coincidente en su conjunto.  
   
@@ -69,7 +69,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
 -   Usando la secuencia de reemplazo `$`*número* en una llamada al método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , donde *número* es el número ordinal de la subexpresión capturada.  
   
--   Mediante programación, usando el objeto <xref:System.Text.RegularExpressions.GroupCollection> devuelto por la propiedad <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. El miembro en la posición cero de la colección representa la coincidencia de la expresión regular completa. Cada miembro subsiguiente representa una subexpresión coincidente. Para más información, vea la sección [Grouping Constructs and Regular Expression Objects](#Objects) .  
+-   Mediante programación, usando el objeto <xref:System.Text.RegularExpressions.GroupCollection> devuelto por la propiedad <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . El miembro en la posición cero de la colección representa la coincidencia de la expresión regular completa. Cada miembro subsiguiente representa una subexpresión coincidente. Para más información, vea la sección [Grouping Constructs and Regular Expression Objects](#Objects) .  
   
  En el ejemplo siguiente se muestra una expresión regular que identifica las palabras duplicadas en el texto. Los dos grupos de captura del patrón de la expresión regular representan las dos instancias de la palabra duplicada. La segunda instancia se captura para notificar su posición inicial en la cadena de entrada.  
   
@@ -116,11 +116,11 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
 -   Usando la construcción de referencia inversa dentro de la expresión regular. Para hacer referencia a la subexpresión coincidente desde la misma expresión regular, se usa la sintaxis `\`*número*, donde *número* es el número ordinal de la subexpresión capturada. Las subexpresiones coincidentes con nombre se numeran consecutivamente de izquierda a derecha después de las subexpresiones coincidentes.  
   
--   Usando la secuencia de reemplazo `${`*nombre*`}` en una llamada al método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>, donde *nombre* es el nombre de la subexpresión capturada.  
+-   Usando la secuencia de reemplazo `${`*nombre*`}` en una llamada al método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , donde *nombre* es el nombre de la subexpresión capturada.  
   
 -   Usando la secuencia de reemplazo `$`*número* en una llamada al método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , donde *número* es el número ordinal de la subexpresión capturada.  
   
--   Mediante programación, usando el objeto <xref:System.Text.RegularExpressions.GroupCollection> devuelto por la propiedad <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. El miembro en la posición cero de la colección representa la coincidencia de la expresión regular completa. Cada miembro subsiguiente representa una subexpresión coincidente. Los grupos capturados con nombre se almacenan en la colección después de los grupos capturados numerados.  
+-   Mediante programación, usando el objeto <xref:System.Text.RegularExpressions.GroupCollection> devuelto por la propiedad <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . El miembro en la posición cero de la colección representa la coincidencia de la expresión regular completa. Cada miembro subsiguiente representa una subexpresión coincidente. Los grupos capturados con nombre se almacenan en la colección después de los grupos capturados numerados.  
   
 -   Mediante programación, proporcionando el nombre de la subexpresión al indizador del objeto <xref:System.Text.RegularExpressions.GroupCollection> (en C#) o a su propiedad <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> (en Visual Basic).  
   
@@ -187,7 +187,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  donde *nombre1* es el grupo actual (opcional), *nombre2* es un grupo definido previamente y *subexpresión* es cualquier patrón de expresión regular válido. La definición de grupo de compensación elimina la definición de *nombre2* y almacena el intervalo entre *nombre2* y *nombre1* en *nombre1*. Si no se ha definido el grupo *nombre2* , la búsqueda de coincidencias retrocede. Como al eliminar la última definición de *nombre2* se revela la definición anterior de *nombre2*, esta construcción permite usar la pila de capturas del grupo *nombre2* como contador para realizar el seguimiento de construcciones anidadas como paréntesis o corchetes de apertura y cierre.  
   
- La definición del grupo de compensación utiliza *nombre2* como pila. El carácter inicial de cada construcción anidada se coloca en el grupo y en su colección <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>. Cuando se encuentra una coincidencia con el carácter de cierre, el carácter de apertura correspondiente se quita del grupo, y la colección <xref:System.Text.RegularExpressions.Group.Captures%2A> disminuye en una unidad. Después de buscar las coincidencias con los caracteres de apertura y cierre de todas las construcciones anidadas, *nombre1* estará vacío.  
+ La definición del grupo de compensación utiliza *nombre2* como pila. El carácter inicial de cada construcción anidada se coloca en el grupo y en su colección <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> . Cuando se encuentra una coincidencia con el carácter de cierre, el carácter de apertura correspondiente se quita del grupo, y la colección <xref:System.Text.RegularExpressions.Group.Captures%2A> disminuye en una unidad. Después de buscar las coincidencias con los caracteres de apertura y cierre de todas las construcciones anidadas, *nombre1* estará vacío.  
   
 > [!NOTE]
 >  Después de modificar la expresión regular del ejemplo siguiente para que utilice el carácter de apertura y cierre adecuado de una construcción anidada, puede utilizarla con la mayoría de las estructuras anidadas, como expresiones matemáticas o líneas de código de programa que incluyen varias llamadas a métodos anidadas.  
@@ -444,7 +444,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
 <a name="Objects"></a>   
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>Construcciones de agrupamiento y objetos de las expresiones regulares  
- Las subcadenas con las que coincide un grupo de captura de una expresión regular se representan mediante objetos <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType>, que se pueden recuperar del objeto <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> que devuelve la propiedad <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. El objeto <xref:System.Text.RegularExpressions.GroupCollection> se rellena como sigue:  
+ Las subcadenas con las que coincide un grupo de captura de una expresión regular se representan mediante objetos <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> , que se pueden recuperar del objeto <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> que devuelve la propiedad <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . El objeto <xref:System.Text.RegularExpressions.GroupCollection> se rellena como sigue:  
   
 -   El primer objeto <xref:System.Text.RegularExpressions.Group> de la colección (el objeto con el índice cero) representa la coincidencia completa.  
   
@@ -452,7 +452,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
 -   El conjunto final de objetos <xref:System.Text.RegularExpressions.Group> representa los grupos de captura con nombre. Aparecen en el orden en el que se definen en la expresión regular, de izquierda a derecha. El valor de índice del primer grupo de captura con nombre es una unidad mayor que el índice del último grupo de captura sin nombre. Si no hay ningún grupo de captura sin nombre en la expresión regular, el valor de índice del primer grupo de captura con nombre es uno.  
   
- Si se aplica un cuantificador a un grupo de captura, las propiedades <xref:System.Text.RegularExpressions.Group>, <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType> e <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> del objeto <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> correspondiente reflejarán la última subcadena capturada por un grupo de captura. Se puede recuperar un conjunto completo de subcadenas capturadas por grupos que tienen cuantificadores desde el objeto <xref:System.Text.RegularExpressions.CaptureCollection> devuelto por la propiedad <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
+ Si se aplica un cuantificador a un grupo de captura, las propiedades <xref:System.Text.RegularExpressions.Group> , <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>e <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>del objeto <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> correspondiente reflejarán la última subcadena capturada por un grupo de captura. Se puede recuperar un conjunto completo de subcadenas capturadas por grupos que tienen cuantificadores desde el objeto <xref:System.Text.RegularExpressions.CaptureCollection> devuelto por la propiedad <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> .  
   
  El ejemplo siguiente aclara la relación entre los objetos <xref:System.Text.RegularExpressions.Group> y <xref:System.Text.RegularExpressions.Capture> .  
   
@@ -468,9 +468,9 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 |`\W+`|Coincide con uno o varios caracteres que no se usan para formar palabras.|  
 |`(\w+)\W+)+`|Coincide una o varias veces con el patrón de uno o varios caracteres que se usan para formar palabras seguidos de uno o varios caracteres que no se usan para formar palabras. Este es el primer grupo de captura.|  
   
- El primer grupo de captura coincide con cada palabra de la frase. El segundo grupo de captura coincide con cada palabra, junto con la puntuación y el espacio en blanco que siguen a la palabra. El objeto <xref:System.Text.RegularExpressions.Group> cuyo índice es 2 proporciona información sobre el texto coincidente con el segundo grupo de captura. El conjunto de palabras completo capturado por el grupo de captura está disponible desde el objeto <xref:System.Text.RegularExpressions.CaptureCollection> devuelto por la propiedad <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
+ El primer grupo de captura coincide con cada palabra de la frase. El segundo grupo de captura coincide con cada palabra, junto con la puntuación y el espacio en blanco que siguen a la palabra. El objeto <xref:System.Text.RegularExpressions.Group> cuyo índice es 2 proporciona información sobre el texto coincidente con el segundo grupo de captura. El conjunto de palabras completo capturado por el grupo de captura está disponible desde el objeto <xref:System.Text.RegularExpressions.CaptureCollection> devuelto por la propiedad <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> .  
   
 ## <a name="see-also"></a>Vea también
 
-- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
