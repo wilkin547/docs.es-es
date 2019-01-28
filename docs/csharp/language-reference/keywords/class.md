@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: d436dee14280d86062834ac131bbe4775705d748
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: 83e7d278b38e17dac668b32687a368211399d437
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286499"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652077"
 ---
 # <a name="class-c-reference"></a>class (Referencia de C#)
 
@@ -102,7 +102,7 @@ Por último, tenga en cuenta que, para el objeto creado mediante el constructor 
 
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
+- [Referencia de C#](../../../csharp/language-reference/index.md)
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
 - [Tipos de referencia](../../../csharp/language-reference/keywords/reference-types.md)

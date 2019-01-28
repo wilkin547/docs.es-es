@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a40d77f58d6a614f874e12f118f89f25f149e55
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dca1ddd1c7f13dd1ed00d06c30aa7e91acfc43ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554535"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Ejecutar aplicaciones de Intranet con plena confianza
 A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las aplicaciones y sus ensamblados de biblioteca se pueden ejecutar como ensamblados de plena confianza desde un recurso compartido de red. Se agrega automáticamente la evidencia de zona <xref:System.Security.SecurityZone.MyComputer> a los ensamblados que se cargan desde un recurso compartido en la intranet. Esta evidencia proporciona a dichos ensamblados el mismo conjunto de permisos (generalmente, de plena confianza) que tienen los ensamblados que residen en el equipo. Esta funcionalidad no se aplica a las aplicaciones ClickOnce o a las aplicaciones que están diseñadas para ejecutarse en un host.  
@@ -34,5 +34,5 @@ A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las aplicaciones y
   
 -   En equipos de 64 bits, cree una subclave en la clave HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework en el Registro del sistema. Use el nombre de clave LegacyMyComputerZone con un valor DWORD de 1. Cree la misma subclave en la clave HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 - [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)

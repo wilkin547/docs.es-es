@@ -8,12 +8,12 @@ helpviewer_keywords:
 - collectible assemblies, retrieving
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04a04e422fec14055d8ac3f50b9f2f18658a0f9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b26da264b2da40e19db4bc5e3b3575505f5c979c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637747"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>Ensamblados recopilables para la generación dinámica de tipos
 
@@ -77,9 +77,9 @@ Las siguientes restricciones se aplican a los ensamblados recopilables:
 - **Objetos enlazados a un contexto**    
    No se admiten las variables context-static. Los tipos de un ensamblado recopilable no pueden extender <xref:System.ContextBoundObject>. Pero el código de los ensamblados recopilables puede usar objetos enlazados a un contexto definidos en otro lugar.
 
-- **Datos thread-static**       
+- **Datos thread-static**       
    No se admiten las variables Thread-static.
 
 ## <a name="see-also"></a>Vea también
 
-[Emitir métodos y ensamblados dinámicos](emitting-dynamic-methods-and-assemblies.md)
+- [Emitir métodos y ensamblados dinámicos](emitting-dynamic-methods-and-assemblies.md)

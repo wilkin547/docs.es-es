@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 70f344fb4e5a74940219688190324beb8183d32b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ab846f423631c8238ff9a516f95d32ff32bd0335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616340"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Procedimiento Definir propiedades abstractas (Guía de programación de C#)
 En el ejemplo siguiente se muestra cómo definir las propiedades [abstract](../../../csharp/language-reference/keywords/abstract.md). Una declaración de propiedad abstracta no proporciona una implementación de los descriptores de acceso de propiedad, declara que la clase admite propiedades, pero deja la implementación del descriptor de acceso a las clases derivadas. En el ejemplo siguiente se muestra cómo implementar las propiedades abstractas heredadas de una clase base.  
@@ -55,8 +55,8 @@ En el ejemplo siguiente se muestra cómo definir las propiedades [abstract](../.
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
-- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
 - [Cómo: Crear y utilizar ensamblados mediante la línea de comandos](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).

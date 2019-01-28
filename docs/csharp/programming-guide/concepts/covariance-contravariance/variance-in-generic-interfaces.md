@@ -2,12 +2,12 @@
 title: Varianza en interfaces genéricas (C#)
 ms.date: 07/20/2015
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 11d0c8665412bb513cb68d58203a454b7c97e052
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b713cb4f2b13c54a4a60c522bbef492a5962cdc3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601798"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Varianza en interfaces genéricas (C#)
 En .NET Framework 4 se ha presentado la compatibilidad con la varianza para varias interfaces genéricas existentes. La compatibilidad con la varianza permite la conversión implícita de clases que implementan estas interfaces. Las interfaces siguientes ahora son variantes:  
@@ -91,7 +91,7 @@ IEnumerable<Object> listObjects = new List<String>();
   
 ## <a name="see-also"></a>Vea también
 
-- [Usar la varianza en interfaces para las colecciones genéricas (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)  
-- [Crear interfaces genéricas variantes (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)  
-- [Interfaces genéricas](../../../../standard/generics/interfaces.md)  
+- [Usar la varianza en interfaces para las colecciones genéricas (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
+- [Crear interfaces genéricas variantes (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
+- [Interfaces genéricas](../../../../standard/generics/interfaces.md)
 - [Varianza en delegados (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

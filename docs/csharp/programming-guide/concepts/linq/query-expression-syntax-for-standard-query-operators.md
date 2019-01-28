@@ -2,12 +2,12 @@
 title: Sintaxis de las expresiones de consulta para operadores de consulta estándar (C#)
 ms.date: 07/20/2015
 ms.assetid: e1e17ef2-68ff-4c26-b6e2-015668227fa5
-ms.openlocfilehash: 46923b34fce08a9ddb8152e51a5308aa7d557ca3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 232793e63673ef51b650d8188fea5733d02fd1b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501781"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>Sintaxis de las expresiones de consulta para operadores de consulta estándar (C#)
 Algunos de los operadores de consulta estándar que se usan con más frecuencia tienen una sintaxis especial de palabras clave de lenguaje C# para que se puedan invocar como parte de una *expresión de consulta*. Una expresión de consulta constituye una forma diferente de expresar una consulta, más legible que su equivalente *basada en métodos*. Las cláusulas de las expresiones de consulta se convierten en llamadas a los métodos de consulta en tiempo de compilación.  
@@ -18,7 +18,7 @@ Algunos de los operadores de consulta estándar que se usan con más frecuencia 
 |Método|Sintaxis de la expresión de consulta de C#|  
 |------------|---------------------------------|  
 |<xref:System.Linq.Enumerable.Cast%2A>|Use una variable de rango con tipo explícito, por ejemplo:<br /><br /> `from int i in numbers`<br /><br /> (Para obtener más información, vea [Cláusula from](../../../../csharp/language-reference/keywords/from-clause.md)).|  
-|<xref:System.Linq.Enumerable.GroupBy%2A>|`group … by`<br /><br /> O bien<br /><br /> `group … by … into …`<br /><br /> (Para obtener más información, vea [Cláusula group](../../../../csharp/language-reference/keywords/group-clause.md)).|  
+|<xref:System.Linq.Enumerable.GroupBy%2A>|`group … by`<br /><br /> o bien<br /><br /> `group … by … into …`<br /><br /> (Para obtener más información, vea [Cláusula group](../../../../csharp/language-reference/keywords/group-clause.md)).|  
 |<xref:System.Linq.Enumerable.GroupJoin%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2C%60%603%7D%29>|`join … in … on … equals … into …`<br /><br /> (Para obtener más información, vea [join (Cláusula, Referencia de C#)](../../../../csharp/language-reference/keywords/join-clause.md)).|  
 |<xref:System.Linq.Enumerable.Join%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%603%7D%29>|`join … in … on … equals …`<br /><br /> (Para obtener más información, vea [join (Cláusula, Referencia de C#)](../../../../csharp/language-reference/keywords/join-clause.md)).|  
 |<xref:System.Linq.Enumerable.OrderBy%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>|`orderby`<br /><br /> (Para obtener más información, vea [orderby (Cláusula)](../../../../csharp/language-reference/keywords/orderby-clause.md)).|  
@@ -31,7 +31,7 @@ Algunos de los operadores de consulta estándar que se usan con más frecuencia 
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Linq.Enumerable>  
-- <xref:System.Linq.Queryable>  
-- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))  
+- <xref:System.Linq.Enumerable>
+- <xref:System.Linq.Queryable>
+- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
 - [Clasificación de operadores de consulta estándar por modo de ejecución (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)

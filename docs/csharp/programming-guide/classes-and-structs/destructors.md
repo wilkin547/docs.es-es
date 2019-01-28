@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 96153dcc9c144df0f412678ec5c0928d4e832a40
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e70bc27606e51d3685d4f92484f632c8fa2eba76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235743"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652171"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guía de programación de C#)
 Los finalizadores (también denominados **destructores**) se usan para realizar cualquier limpieza final necesaria cuando el recolector de elementos no utilizados recopila una instancia de clase.  
@@ -89,7 +89,7 @@ Para más información, vea la sección sobre [destructores](~/_csharplang/spec/
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.IDisposable>  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- <xref:System.IDisposable>
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)
 - [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)

@@ -5,12 +5,12 @@ ms.date: 07/10/2017
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: b08a7e95e3ddf7e2392be30f2e69c4ec8f425107
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 32f434d9813b08254b72b713ec2f9a1bc9d1b06d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244016"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725017"
 ---
 # <a name="nested-types-c-programming-guide"></a>Tipos anidados (Guía de programación de C#)
 Un tipo definido en una [clase](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md) se denomina tipo anidado. Por ejemplo:  
@@ -43,7 +43,7 @@ En el ejemplo siguiente se convierte la clase `Nested` en public:
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)

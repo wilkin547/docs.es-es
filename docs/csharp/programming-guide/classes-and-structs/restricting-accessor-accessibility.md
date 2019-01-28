@@ -10,12 +10,12 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: d168444bb2e7df6aa71d729a44bd6f20f7bfce3d
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2f9580e018684f65762bc40e131a19215e9690c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544671"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Restringir la accesibilidad del descriptor de acceso (Guía de programación de C#)
 Las partes [get](../../../csharp/language-reference/keywords/get.md) y [set](../../../csharp/language-reference/keywords/set.md) de una propiedad o un indexador se denominan *descriptores de acceso*. De forma predeterminada, estos descriptores de acceso tienen la misma visibilidad o nivel de acceso de la propiedad o el indexador al que pertenecen. Para obtener más información, vea [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md). En cambio, a veces resulta útil restringir el acceso a uno de estos descriptores de acceso. Normalmente, esto implica restringir la accesibilidad del descriptor de acceso `set`, mientras que se mantiene el descriptor de acceso `get` accesible públicamente. Por ejemplo:  
@@ -66,7 +66,7 @@ Las partes [get](../../../csharp/language-reference/keywords/get.md) y [set](../
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Indizadores](../../../csharp/programming-guide/indexers/index.md)
 - [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)

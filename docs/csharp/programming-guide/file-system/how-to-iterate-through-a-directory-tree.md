@@ -6,12 +6,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 22d3883470f1435a50ae27f9d633ef566fec2913
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 93084d0b3c0e930f90b06c3d6ee244deef8d8290
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613849"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Procedimiento Recorrer en iteración un árbol de directorio (Guía de programación de C#)
 La frase "recorrer en iteración un árbol de directorios" significa obtener acceso a cada uno de los archivos de todos los subdirectorios anidados bajo una carpeta raíz especificada hasta un nivel de profundidad cualquiera. No es necesario abrir cada archivo. Simplemente puede recuperar el nombre del archivo o subdirectorio como un `string`, o puede recuperar información adicional en el formato de un objeto <xref:System.IO.FileInfo?displayProperty=nameWithType> o <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
@@ -59,6 +59,6 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.IO>  
-- [LINQ y directorios de archivos](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- <xref:System.IO>
+- [LINQ y directorios de archivos](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
 - [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)

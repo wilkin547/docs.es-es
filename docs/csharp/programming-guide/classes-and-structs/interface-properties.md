@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: c51064f9bb5e834648e0086fd8d28f9c0bd84b61
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: af80f403942f59d672854c80830e175ef7ebaff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652194"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Propiedades de interfaces (Guía de programación de C#)
 Las propiedades se pueden declarar en una [interfaz](../../../csharp/language-reference/keywords/interface.md). A continuación se muestra un ejemplo de un descriptor de acceso de propiedad de interfaz:  
@@ -53,9 +53,9 @@ Las propiedades se pueden declarar en una [interfaz](../../../csharp/language-re
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Utilizar propiedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
-- [Comparación entre propiedades e indizadores](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
-- [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Utilizar propiedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
+- [Comparación entre propiedades e indizadores](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)
+- [Indizadores](../../../csharp/programming-guide/indexers/index.md)
 - [Interfaces](../../../csharp/programming-guide/interfaces/index.md)

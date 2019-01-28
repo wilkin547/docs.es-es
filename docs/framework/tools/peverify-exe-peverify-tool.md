@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50513d62ab67afe88a147de9581ae7bbbfd0a417
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: cd1f7679a3c2ecc234724e6417c5b12a78ff7ddc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598296"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (Herramienta PEVerify)
 La herramienta PEVerify ayuda a los desarrolladores que generan lenguaje intermedio de Microsoft (MSIL) (como autores de compiladores, desarrolladores de motores de scripts, etc.) a determinar si el código MSIL y los metadatos asociados satisfacen los requisitos de seguridad de tipos. Algunos compiladores solo generan código con seguridad de tipos comprobable si se evita el uso de determinadas construcciones de lenguaje. Si, como desarrollador, está utilizando un compilador con estas características, puede que desee comprobar que no ha puesto en peligro la seguridad de tipos del código. Para ello, ejecute la herramienta PEVerify en los archivos con el fin de comprobar el lenguaje MSIL y los metadatos.  
@@ -120,8 +120,8 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 0xABCD1234  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Herramientas](../../../docs/framework/tools/index.md)  
- [Escritura de código con seguridad de tipos comprobable](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)  
- [Seguridad y protección de tipos](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)  
- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Vea también
+- [Herramientas](../../../docs/framework/tools/index.md)
+- [Escritura de código con seguridad de tipos comprobable](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
+- [Seguridad y protección de tipos](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)
+- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

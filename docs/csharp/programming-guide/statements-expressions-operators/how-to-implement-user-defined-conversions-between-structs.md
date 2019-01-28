@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
-ms.openlocfilehash: 85345203982679c0ab8dc9a6ae899312204c3230
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4b38271c1aaf582c8c58b7198765b679cdfe4881
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499569"
 ---
 # <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>Procedimiento Implementar conversiones definidas por el usuario entre structs (Guía de programación de C#)
 Este ejemplo define dos structs, `RomanNumeral` y `BinaryNumeral`, y muestra conversiones entre ellos.  
@@ -34,6 +34,6 @@ Este ejemplo define dos structs, `RomanNumeral` y `BinaryNumeral`, y muestra con
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Referencia de C#](../../../csharp/language-reference/index.md)
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
 - [Operadores de conversión](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)

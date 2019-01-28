@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 6acb40117c4f59deb084965cb3db9e4a96f7f61a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b0aaf6c0b2f614fa5ff8611407cea567da1faafb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616320"
 ---
 # <a name="char-c-reference"></a>char (Referencia de C#)
 
@@ -43,13 +43,13 @@ Para obtener más información, vea la sección [Tipos enteros](~/_csharplang/sp
 
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Char>  
-- [Referencia de C#](../../../csharp/language-reference/index.md)  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
-- [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [Tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/index.md)  
+- <xref:System.Char>
+- [Referencia de C#](../../../csharp/language-reference/index.md)
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
+- [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/index.md)
 - [Cadenas](../../../csharp/programming-guide/strings/index.md)

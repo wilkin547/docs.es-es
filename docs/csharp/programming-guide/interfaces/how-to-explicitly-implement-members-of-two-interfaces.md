@@ -6,12 +6,12 @@ helpviewer_keywords:
 - inheritance [C#], explicitly implementing interface members
 - interfaces [C#], explicitly implementing with inheritance
 ms.assetid: 8b402ddc-dff9-4869-89cb-d718c764e68e
-ms.openlocfilehash: 3e03e80279db8c36cb975715f390ff6899d593cb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b0725d63f77fbe0b9f3151c0b742777667e93311
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701253"
 ---
 # <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Procedimiento Implementar explícitamente miembros de dos interfaces (Guía de programación de C#)
 La implementación explícita de [interfaces](../../../csharp/language-reference/keywords/interface.md) también permite al programador implementar dos interfaces que tienen los mismos nombres de miembros y dar a cada miembro de una interfaz una implementación independiente. En este ejemplo se muestran las dimensiones de un cuadro en unidades métricas e inglesas. La [clase](../../../csharp/language-reference/keywords/class.md) Box implementa dos interfaces, IEnglishDimensions e IMetricDimensions, que representan los diferentes sistemas de medida. Ambas interfaces tienen nombres de miembros idénticos, Length y Width.  
@@ -30,7 +30,7 @@ La implementación explícita de [interfaces](../../../csharp/language-reference
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)
 - [Cómo: Implementar explícitamente miembros de interfaz](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-interface-members.md)

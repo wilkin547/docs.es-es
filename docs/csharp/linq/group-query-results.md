@@ -1,14 +1,14 @@
 ---
 title: Agrupar los resultados de consultas (LINQ en C#)
 description: Obtenga información sobre cómo agrupar los resultados con LINQ en C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
-ms.openlocfilehash: f768718cb1435efdc67791612776c9e9ce2b14b8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 577a358c31fcf5346e7aab7a2e2b6be10fd1beff
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798340"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857858"
 ---
 # <a name="group-query-results"></a>Agrupar los resultados de consultas
 
@@ -28,7 +28,7 @@ Además, las dos últimas consultas proyectan sus resultados en un nuevo tipo an
 
 ## <a name="example"></a>Ejemplo
 
-Todos los ejemplos de este tema usan los siguientes orígenes de datos y clases auxiliares.
+Todos los ejemplos de este tema usan los siguientes orígenes de datos y clases del asistente.
 
 [!code-csharp[csProgGuideLINQ#15](~/samples/snippets/csharp/concepts/linq/how-to-group-query-results_1.cs)]
 
@@ -50,7 +50,7 @@ Pegue el método siguiente en la clase `StudentClass`. Cambie la instrucción de
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo agrupar elementos de origen mediante un intervalo numérico como la clave de grupo. Después, la consulta proyecta los resultados en un tipo anónimo que solo contiene el nombre, los apellidos y el intervalo de percentil al que pertenece el alumno. Se usa un tipo anónimo porque no es necesario usar el objeto `Student` completo para mostrar los resultados. `GetPercentile` es una función auxiliar que calcula un percentil basado en la puntuación media del alumno. El método devuelve un entero entre 0 y 10.
+En el ejemplo siguiente se muestra cómo agrupar elementos de origen mediante un intervalo numérico como la clave de grupo. Después, la consulta proyecta los resultados en un tipo anónimo que solo contiene el nombre, los apellidos y el intervalo de percentil al que pertenece el alumno. Se usa un tipo anónimo porque no es necesario usar el objeto `Student` completo para mostrar los resultados. `GetPercentile` es una función del asistente que calcula un percentil basado en la puntuación media del alumno. El método devuelve un entero entre 0 y 10.
 
 [!code-csharp[csProgGuideLINQ#50](~/samples/snippets/csharp/concepts/linq/how-to-group-query-results_4.cs)]
 
@@ -76,11 +76,11 @@ Pegue el método siguiente en la clase `StudentClass`. Cambie la instrucción de
 
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Linq.Enumerable.GroupBy%2A>  
-- <xref:System.Linq.IGrouping%602>  
-- [Language-Integrated Query (LINQ)](index.md)  
-- [group (cláusula)](../language-reference/keywords/group-clause.md)  
-- [Tipos anónimos](../programming-guide/classes-and-structs/anonymous-types.md)  
-- [Realizar una subconsulta en una operación de agrupación](perform-a-subquery-on-a-grouping-operation.md)  
-- [Crear un grupo anidado](create-a-nested-group.md)  
-- [Agrupación de datos](../programming-guide/concepts/linq/grouping-data.md)  
+- <xref:System.Linq.Enumerable.GroupBy%2A>
+- <xref:System.Linq.IGrouping%602>
+- [Language-Integrated Query (LINQ)](index.md)
+- [group (cláusula)](../language-reference/keywords/group-clause.md)
+- [Tipos anónimos](../programming-guide/classes-and-structs/anonymous-types.md)
+- [Realizar una subconsulta en una operación de agrupación](perform-a-subquery-on-a-grouping-operation.md)
+- [Crear un grupo anidado](create-a-nested-group.md)
+- [Agrupación de datos](../programming-guide/concepts/linq/grouping-data.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 586ad5a59eebb03ed9ed6bea68d232a6b249c3c9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 077bc9d7a433c6fdf60f739f34c25a1b469fea02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241499"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509572"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Delegados con métodos con nombre y Métodos anónimos (Guía de programación de C#)
 Un [delegado](../../../csharp/language-reference/keywords/delegate.md) puede asociarse con un método con nombre. Cuando crea una instancia de un delegado mediante un método con nombre, el método se pasa como un parámetro, por ejemplo:  
@@ -39,8 +39,8 @@ Un [delegado](../../../csharp/language-reference/keywords/delegate.md) puede aso
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Delegados](../../../csharp/programming-guide/delegates/index.md)  
-- [Métodos anónimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
-- [Cómo: Combinar delegados (delegados de multidifusión)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Delegados](../../../csharp/programming-guide/delegates/index.md)
+- [Métodos anónimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Cómo: Combinar delegados (delegados de multidifusión)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
 - [Eventos](../../../csharp/programming-guide/events/index.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#else directive [C#]'
 ms.assetid: 6a347322-cfa2-4a86-98f8-ddfa2cb7d4db
-ms.openlocfilehash: eabbbb97c42af058c7426d4b72a53b41a96488ed
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 67d3e6b8fc136e16fb0e307a9f8ceca494169bfc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696144"
 ---
 # <a name="else-c-reference"></a>#else (Referencia de C#)
 `#else` permite crear una directiva condicional compuesta, de modo que, si ninguna de las expresiones de las directivas [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) o [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) (opcional) anteriores se evalúan como `true`, el compilador evaluará todo el código entre `#else` y la directiva `#endif` siguiente.  
@@ -22,6 +22,6 @@ ms.locfileid: "53237368"
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Referencia de C#](../../../csharp/language-reference/index.md)
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
 - [Directivas de preprocesador de C#](../../../csharp/language-reference/preprocessor-directives/index.md)

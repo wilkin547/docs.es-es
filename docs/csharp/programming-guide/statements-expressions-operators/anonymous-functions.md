@@ -7,12 +7,12 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: 9e0225960f16756820cdc095668cf7acfd4395cb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 05098d1f26526c60656cca2255a2f93922c025da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242885"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613732"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Funciones anónimas (Guía de programación de C#)
 Una función anónima es una instrucción o expresión "alineada" que se puede usar siempre que se espera un tipo delegado. Se puede usar para inicializar un delegado con nombre o se puede pasar como un parámetro de método en lugar de un tipo delegado con nombre.  
@@ -38,7 +38,7 @@ Una función anónima es una instrucción o expresión "alineada" que se puede u
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones, expresiones y operadores](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
-- [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [Delegados](../../../csharp/programming-guide/delegates/index.md)  
-- [Árboles de expresión (C#)](../concepts/expression-trees/index.md)  
+- [Instrucciones, expresiones y operadores](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+- [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Delegados](../../../csharp/programming-guide/delegates/index.md)
+- [Árboles de expresión (C#)](../concepts/expression-trees/index.md)

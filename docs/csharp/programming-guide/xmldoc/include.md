@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 05c671f029e9597db05fe2104424545d0ee2b98f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a9e87e803bef38ceb91849b976e2019deed54471
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541175"
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt; (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  
@@ -92,5 +92,5 @@ The summary for this other type.
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
 - [Etiquetas recomendadas para los comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

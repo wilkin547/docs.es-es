@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /preferreduilang compiler option [C#]
 - -preferreduilang compiler option [C#]
 ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
-ms.openlocfilehash: a1fbbb8415e5e3405f039489aa071b0624065a9d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d079441e91ff90bcc974564bbd7069e0548a7d77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575302"
 ---
 # <a name="-preferreduilang-c-compiler-options"></a>-preferreduilang (Opciones del compilador de C#)
 Mediante la opción del compilador `-preferreduilang`, puede especificar el idioma en el que el compilador de C# muestra el resultado, como los mensajes de error.  

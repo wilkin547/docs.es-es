@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d533ac4d4287af551e4fc0c3131c761dbbc135a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: face7f836ece3230ec1be745569060f8b34d814c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604363"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflexión en .NET Framework para aplicaciones de la Tienda Windows
 A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework incluye un conjunto de tipos y miembros de reflexión para su uso en aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Estos tipos y miembros están disponibles en la versión completa de .NET Framework, así como en [.NET para aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/?LinkID=225700). En este documento se explican las diferencias principales entre estos y sus homólogos en .NET Framework 4 y versiones anteriores.  
@@ -41,6 +41,6 @@ A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>Vea también  
- [Reflexión](../../../docs/framework/reflection-and-codedom/reflection.md)  
- [.NET para aplicaciones de la Tienda Windows: API admitidas](https://go.microsoft.com/fwlink/?LinkID=225700)
+## <a name="see-also"></a>Vea también
+- [Reflexión](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [.NET para aplicaciones de la Tienda Windows: API admitidas](https://go.microsoft.com/fwlink/?LinkID=225700)

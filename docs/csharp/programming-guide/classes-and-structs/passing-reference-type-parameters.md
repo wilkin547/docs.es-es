@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: faf9222d7850b9859f4bc61eb2a0bbe8f4b5bbc1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 84ac75ef35e42f50d0540ab362220117e00e02e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243639"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496223"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Pasar parámetros Reference-Type (Guía de programación de C#)
 Una variable de un [tipo de referencia](../../../csharp/language-reference/keywords/reference-types.md) no contiene sus datos directamente, contiene una referencia a sus datos. Al pasar un parámetro de tipo de referencia por valor, es posible cambiar los datos que pertenecen al objeto al que se hace referencia, como el valor de un miembro de clase. En cambio, no se puede cambiar el valor de la propia referencia; por ejemplo, no puede usar la misma referencia para asignar memoria para una nueva clase y hacer que persista fuera del método. Para ello, pase el parámetro mediante las palabras clave [ref](../../../csharp/language-reference/keywords/ref.md) u [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md). Para simplificar, en el ejemplo siguiente se usa `ref`.  
@@ -41,9 +41,9 @@ Una variable de un [tipo de referencia](../../../csharp/language-reference/keywo
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Pasar parámetros](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
-- [ref](../../../csharp/language-reference/keywords/ref.md)  
-- [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
-- [out](../../../csharp/language-reference/keywords/out.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Pasar parámetros](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
+- [ref](../../../csharp/language-reference/keywords/ref.md)
+- [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)
+- [out](../../../csharp/language-reference/keywords/out.md)
 - [Tipos de referencia](../../../csharp/language-reference/keywords/reference-types.md)

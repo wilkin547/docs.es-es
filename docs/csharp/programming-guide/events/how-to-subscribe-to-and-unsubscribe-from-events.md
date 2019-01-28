@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 89647687c73cdb9b81625b830f0c9a77f1c67d13
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 646ff22aed68cc3c37a7d581ffa078a2e06df5b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661625"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Procedimiento Suscribir y cancelar la suscripción a eventos (Guía de programación de C#)
 La suscripción a un evento publicado por otra clase se realiza cuando quiere escribir código personalizado al que se llama cuando se produce ese evento. Por ejemplo, puede suscribirse al evento `click` de un botón para que la aplicación realice alguna operación cuando el usuario haga clic en el botón.  
@@ -101,8 +101,8 @@ La suscripción a un evento publicado por otra clase se realiza cuando quiere es
   
 ## <a name="see-also"></a>Vea también
 
-- [Eventos](../../../csharp/programming-guide/events/index.md)  
-- [event](../../../csharp/language-reference/keywords/event.md)  
-- [Cómo: Publicar eventos que cumplan las directrices de .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
-- [Operador -= (Referencia de C#)](../../language-reference/operators/subtraction-assignment-operator.md)  
+- [Eventos](../../../csharp/programming-guide/events/index.md)
+- [event](../../../csharp/language-reference/keywords/event.md)
+- [Cómo: Publicar eventos que cumplan las directrices de .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [Operador -= (Referencia de C#)](../../language-reference/operators/subtraction-assignment-operator.md)
 - [Operador +=](../../../csharp/language-reference/operators/addition-assignment-operator.md)

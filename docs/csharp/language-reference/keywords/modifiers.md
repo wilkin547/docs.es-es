@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-ms.openlocfilehash: 645fc4bf4a64443c3816dbaec1904e08fd8dde41
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 915e34310b634311c922a6b2c89701e793fbb191
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511151"
 ---
 # <a name="modifiers-c-reference"></a>Modificadores (Referencia de C#)
 Los modificadores se usan para modificar las declaraciones de tipos y miembros de tipo. En esta sección se presentan los modificadores de C#.  
@@ -36,6 +36,6 @@ Los modificadores se usan para modificar las declaraciones de tipos y miembros d
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Referencia de C#](../../../csharp/language-reference/index.md)
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
 - [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)

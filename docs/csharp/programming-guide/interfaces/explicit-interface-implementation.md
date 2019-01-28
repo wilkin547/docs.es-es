@@ -6,12 +6,12 @@ helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: e985da878ca4160938f29911d4313ee6cd731aeb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c57ba732c5139d7ead85372323f9433bd3137622
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570218"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>Implementación de interfaz explícita (Guía de programación de C#)
 Si una [clase](../../../csharp/language-reference/keywords/class.md) implementa dos interfaces que contienen un miembro con la misma firma, entonces al implementar ese miembro en la clase ambas interfaces usarán ese miembro como su implementación. En el ejemplo siguiente, todas las llamadas a `Paint` invocan el mismo método.  
@@ -36,7 +36,7 @@ Si una [clase](../../../csharp/language-reference/keywords/class.md) implementa 
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)
 - [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
