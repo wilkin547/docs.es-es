@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear y depurar su primera aplicac
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: bd1e5bf9df929c2c38f737ec3112d3687dba877c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: ea8b93128e4acd435ad95fc42257df6ab22812fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620557"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introducción a C# y Visual Studio Code
 
@@ -140,5 +140,5 @@ La extensión C# de Visual Studio Code puede generar recursos para compilar y de
 
 ## <a name="see-also"></a>Vea también
 
-* [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) (Configuración de Visual Studio Code)
-* [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Depuración en Visual Studio Code)
+- [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) (Configuración de Visual Studio Code)
+- [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Depuración en Visual Studio Code)

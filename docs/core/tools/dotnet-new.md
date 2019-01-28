@@ -2,12 +2,12 @@
 title: Comando dotnet new
 description: El comando dotnet new crea proyectos de .NET Core basados en la plantilla especificada.
 ms.date: 10/24/2018
-ms.openlocfilehash: 3a10aaa93af57e7beb86771e7d3b00b06fca14b2
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 5177c920fee6fa946d2bf5d96644f26309ed0a99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169696"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516153"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -536,7 +536,7 @@ Creación de un archivo *global.json* en el directorio actual que establezca la 
 
 ## <a name="see-also"></a>Vea también
 
-* [Custom templates for dotnet new](custom-templates.md) (Plantillas personalizadas para dotnet new)  
-* [Creación de una plantilla personalizada para dotnet new](~/docs/core/tutorials/create-custom-template.md)  
-* [Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
-* [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Plantillas disponibles para dotnet new)
+- [Custom templates for dotnet new](custom-templates.md) (Plantillas personalizadas para dotnet new)
+- [Creación de una plantilla personalizada para dotnet new](~/docs/core/tutorials/create-custom-template.md)
+- [Repositorio de GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
+- [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Plantillas disponibles para dotnet new)
