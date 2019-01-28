@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear un control compuesto con Visual Basic'
+title: 'Tutorial: Crear un Control compuesto con Visual Basic'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: be2265f62092e6fdf43d8647a71d2c441beeefef
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e961826f4c33edf59934597734aec36ce301194e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694391"
 ---
-# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Tutorial: Crear un control compuesto con Visual Basic
+# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Tutorial: Crear un Control compuesto con Visual Basic
 Los controles compuestos proporcionan una forma de crear y reutilizar interfaces gráficas personalizadas. Un control compuesto es esencialmente un componente con una representación visual. Como tal, puede constar de uno o varios controles de Windows Forms, componentes o bloques de código que pueden extender funcionalidad al validar la entrada del usuario, modificar propiedades de presentación o realizar otras tareas requeridas por el autor. Los controles compuestos se pueden colocar en Windows Forms de la misma manera que otros controles. En la primera parte de este tutorial, creará un control compuesto simple denominado `ctlClock`. En la segunda parte, extenderá la funcionalidad de `ctlClock` mediante herencia.  
   
 > [!NOTE]
@@ -147,7 +147,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
 4.  En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.  
   
 ## <a name="testing-the-control"></a>Probar el control  
- Los controles no son proyectos independientes; deben hospedarse en un contenedor. Pruebe el comportamiento en tiempo de ejecución del control y sus propiedades con **UserControl Test Container**. Para más información, consulte [Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ Los controles no son proyectos independientes; deben hospedarse en un contenedor. Pruebe el comportamiento en tiempo de ejecución del control y sus propiedades con **UserControl Test Container**. Para obtener más información, vea [Cómo: Probar el comportamiento de tiempo de ejecución de una clase UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 #### <a name="to-test-your-control"></a>Para probar el control  
   
@@ -326,7 +326,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
 4.  En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.  
   
 ### <a name="using-the-inherited-control-on-a-form"></a>Usar el control heredado en un formulario  
- Puede probar el control heredado de la misma forma que probó el control de la clase base, `ctlClock`: presione F5 para compilar el proyecto y ejecute el control en **UserControl Test Container**. Para más información, consulte [Cómo: Comprobar el comportamiento de un control UserControl en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ Puede probar el control heredado de la misma manera que se ha probado el control de la clase base, `ctlClock`: Presione F5 para compilar el proyecto y ejecutar el control en **UserControl Test Container**. Para obtener más información, vea [Cómo: Probar el comportamiento de tiempo de ejecución de una clase UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
  Para utilizar el control, debe hospedarlo en un formulario. Al igual que con los controles compuestos estándar, los controles compuestos heredados no son independientes y deben hospedarse en un formulario o en otro contenedor. Puesto que `ctlAlarmClock` tiene un mayor grado de funcionalidad, se necesita código adicional para probarlo. En este procedimiento, escribirá un programa sencillo para probar la funcionalidad de `ctlAlarmClock`. Escribirá código para establecer y mostrar la propiedad `AlarmTime` de `ctlAlarmClock` y probar sus funciones inherentes.  
   
@@ -395,8 +395,8 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
   
      En este tutorial se han tratado varios conceptos clave. Ha aprendido a crear un control compuesto mediante la combinación de controles y componentes en un contenedor de control compuesto. Ha aprendido a agregar propiedades al control y a escribir código para implementar funcionalidad personalizada. En la última sección, ha aprendido a extender la funcionalidad de un control compuesto determinado mediante herencia y a modificar la funcionalidad de los métodos de host reemplazando estos últimos.  
   
-## <a name="see-also"></a>Vea también  
- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- [Cómo: Crear controles compuestos](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
- [Cómo: Mostrar un control en el cuadro de diálogo Seleccionar elementos del cuadro de herramientas](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [Tutoriales sobre la creación de componentes](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+## <a name="see-also"></a>Vea también
+- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Cómo: Crear controles compuestos](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
+- [Cómo: Mostrar un Control en la elija el cuadro de diálogo de elementos de cuadro de herramientas](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Tutoriales sobre la creación de componentes](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-ms.openlocfilehash: 608cec63f08869ebb3a6519f9de0fe7fa02a344f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0d089b27158a36d03245e6312dff0e0dc71d12f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599622"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Aplicaciones ASP.NET que usan identificadores de espera
 Los modelos de devolución de llamada y sondeo para el control de operaciones asincrónicas resultan de utilidad cuando la aplicación procesa una sola operación asincrónica cada vez. Los modelos Wait ofrecen una manera más flexible de procesar varias operaciones asincrónicas. Existen dos modelos Wait, cuyo nombre se debe a los métodos <xref:System.Threading.WaitHandle> usados para implementarlos: el modelo Wait (Any) y el modelo Wait (All).  
@@ -315,7 +315,7 @@ void Button1_Click(object sender, System.EventArgs e)
 ## <a name="example-wait-all-model"></a>Ejemplo: Modelo Wait (All)  
  El siguiente ejemplo ilustra el modelo Wait (All). Una vez iniciados tres procesos asincrónicos, se llama al método <xref:System.Threading.WaitHandle.WaitAll%2A> para esperar a que se completen los procesos o agoten su tiempo de espera.  
   
- Al igual que en el ejemplo del modelo Wait (Any), la hora en que se completa el proceso se agrega al cuadro de texto correspondiente al proceso. De nuevo, las horas de los cuadros de texto ilustran el punto: el código que sigue al método <xref:System.Threading.WaitHandle.WaitAny%2A> solo se ejecuta una vez completados todos los procesos.  
+ Al igual que en el ejemplo del modelo Wait (Any), la hora en que se completa el proceso se agrega al cuadro de texto correspondiente al proceso. De nuevo, las horas de los cuadros de texto ilustran el punto: el código que sigue al método <xref:System.Threading.WaitHandle.WaitAny%2A> sólo se ejecuta una vez completados todos los procesos.  
   
  Para realizar este ejemplo, cree un nuevo proyecto de sitio web de ASP.NET. Coloque un control <xref:System.Web.UI.WebControls.Button> y cuatro controles <xref:System.Web.UI.WebControls.TextBox> en la página, y acepte el nombre predeterminado de cada control.  
   
@@ -579,6 +579,6 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Operaciones asincrónicas](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también
+- [Operaciones asincrónicas](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
+- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

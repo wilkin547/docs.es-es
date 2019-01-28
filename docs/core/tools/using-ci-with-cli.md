@@ -4,12 +4,12 @@ description: Información sobre el uso del SDK de .NET Core y sus herramientas e
 author: guardrex
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 4c651983bb900d000de37a0e413ef9ab0f7893c9
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: c9fd9e359a22467cc8639109538522e4088df5ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704100"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Uso de .NET Core SDK y herramientas de integración continua (CI)
 
@@ -177,4 +177,4 @@ Dos enfoques generales que se aplican para estructurar el proceso de compilació
 
 ## <a name="see-also"></a>Vea también
 
-* [Descargas de .NET: Linux](https://dotnet.microsoft.com/download?initial-os=linux)
+- [Descargas de .NET: Linux](https://dotnet.microsoft.com/download?initial-os=linux)

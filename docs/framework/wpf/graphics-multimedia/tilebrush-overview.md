@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: e590732419396660221aa781e3c333311b6e88b4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9058c6c3256efad15e0811fcc1f21f440e13edbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683026"
 ---
 # <a name="tilebrush-overview"></a>Información general sobre objetos TileBrush
 <xref:System.Windows.Media.TileBrush> los objetos que proporcionan un gran control sobre cómo se pinta un área con una imagen, <xref:System.Windows.Media.Drawing>, o <xref:System.Windows.Media.Visual>. Este tema describe cómo usar <xref:System.Windows.Media.TileBrush> características para obtener más control sobre cómo un <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, o <xref:System.Windows.Media.VisualBrush> pinta un área.  
@@ -100,7 +100,7 @@ Componentes de TileBrush con un valor de TileMode de Tile
 ### <a name="tiling-behavior"></a>Comportamiento de la colocación en mosaico  
  Un <xref:System.Windows.Media.TileBrush> genera un patrón de mosaicos cuando su mosaico base no rellena completamente el área de salida y un modo de disposición en mosaico distinto <xref:System.Windows.Media.TileMode.None> se especifica. Cuando mosaico un icono de pincel de no rellena completamente el área de salida, su <xref:System.Windows.Media.TileBrush.TileMode%2A> propiedad especifica si el mosaico base se debe duplicar para rellenar el área de salida y, si es así, ¿cómo la base se debe duplicar. El <xref:System.Windows.Media.TileBrush.TileMode%2A> propiedad acepta los valores siguientes, definidos por el <xref:System.Windows.Media.TileMode> enumeración:  
   
--   <xref:System.Windows.Media.TileMode.None>: Solo el mosaico base se dibuja.  
+-   <xref:System.Windows.Media.TileMode.None>: Se dibuja el mosaico base.  
   
 -   <xref:System.Windows.Media.TileMode.Tile>: Se dibuja el mosaico base y el área restante se rellena repitiendo el mosaico base, que es adyacente al borde izquierdo del siguiente y el borde derecho de un mosaico de forma similar para los bordes superior e inferior.  
   
@@ -108,7 +108,7 @@ Componentes de TileBrush con un valor de TileMode de Tile
   
 -   <xref:System.Windows.Media.TileMode.FlipY>: Igual que <xref:System.Windows.Media.TileMode.Tile>, pero las filas alternas de los mosaicos se voltean verticalmente.  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>: Una combinación de <xref:System.Windows.Media.TileMode.FlipX> y <xref:System.Windows.Media.TileMode.FlipY>.  
+-   <xref:System.Windows.Media.TileMode.FlipXY>: Combinación de <xref:System.Windows.Media.TileMode.FlipX> y <xref:System.Windows.Media.TileMode.FlipY>.  
   
  La siguiente imagen ilustra los diferentes modos de colocación en mosaico.  
   
@@ -121,13 +121,13 @@ Componentes de TileBrush con un valor de TileMode de Tile
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Media.ImageBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- <xref:System.Windows.Media.VisualBrush>  
- <xref:System.Windows.Media.TileBrush>  
- [Pintar con imágenes, dibujos y elementos visuales](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Ejemplo de ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [Ejemplo de VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a>Vea también
+- <xref:System.Windows.Media.ImageBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- <xref:System.Windows.Media.VisualBrush>
+- <xref:System.Windows.Media.TileBrush>
+- [Pintar con imágenes, dibujos y elementos visuales](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
+- [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Ejemplo de ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [Ejemplo de VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)

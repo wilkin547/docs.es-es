@@ -4,12 +4,12 @@ description: Obtenga información sobre las características nuevas de .NET Core
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 4be579f2000c86b3dad412b24589fa8e7024d2f0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 5d21d2e07342d52dc438b67f9738f43fca47469a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45591768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679898"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novedades de .NET Core 2.0
 
@@ -163,4 +163,4 @@ Ahora es posible instalar el SDK de .NET Core de manera independiente de Visual 
 
 ## <a name="see-also"></a>Vea también
 
-* [Novedades de ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)
+- [Novedades de ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)
