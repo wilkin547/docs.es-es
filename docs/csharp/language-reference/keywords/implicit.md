@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - implicit keyword [C#]
 ms.assetid: 34db590e-eb3a-4f11-88d0-ffb3cd753dab
-ms.openlocfilehash: ee40db31aeb39a37c6ab15b26b48f1f7d02d6780
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d3e1cb9d6fb37617c6e2aa7070b006c594d39762
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661716"
 ---
 # <a name="implicit-c-reference"></a>implicit (Referencia de C#)
 
@@ -31,9 +31,9 @@ Si se eliminan las conversiones innecesarias, las conversiones implícitas puede
 
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../index.md)  
-- [Guía de programación de C#](../../programming-guide/index.md)  
-- [Palabras clave de C#](index.md)  
-- [explicit](explicit.md)  
-- [Operador (Referencia de C#)](operator.md)  
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Palabras clave de C#](index.md)
+- [explicit](explicit.md)
+- [Operador (Referencia de C#)](operator.md)
 - [Cómo: Implementar conversiones definidas por el usuario entre structs](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

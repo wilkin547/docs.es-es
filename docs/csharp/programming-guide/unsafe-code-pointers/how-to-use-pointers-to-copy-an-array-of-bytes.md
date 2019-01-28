@@ -6,12 +6,12 @@ helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: 49151c6d2a573a24e63f733a5279faeee40de1b7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d174f51fa1709a70b98473a4dbbad89b9c62c22a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640308"
 ---
 # <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>Procedimiento Utilizar punteros para copiar una matriz de bytes (Guía de programación de C#)
 
@@ -27,7 +27,7 @@ Este ejemplo accede a los elementos de ambas matrices con índices en lugar de c
 
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../index.md)  
-- [Código no seguro y punteros](index.md)  
-- [-unsafe (Opciones del compilador de C#)](../../language-reference/compiler-options/unsafe-compiler-option.md)  
-- [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)  
+- [Guía de programación de C#](../index.md)
+- [Código no seguro y punteros](index.md)
+- [-unsafe (Opciones del compilador de C#)](../../language-reference/compiler-options/unsafe-compiler-option.md)
+- [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)

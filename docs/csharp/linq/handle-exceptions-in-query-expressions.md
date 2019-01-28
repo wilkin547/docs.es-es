@@ -1,14 +1,14 @@
 ---
 title: Controlar excepciones en expresiones de consulta (LINQ en C#)
 description: Obtenga información sobre cómo controlar excepciones en expresiones de consulta de LINQ en C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 2bf0c397-13fb-4f68-bc2b-531c6c88a167
-ms.openlocfilehash: 5ad98565a74a96ac18829eb87f13eb398aa72967
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f900669412026e69598d3939c51ff8208b51b7ec
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528478"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857507"
 ---
 # <a name="handle-exceptions-in-query-expressions"></a>Controlar excepciones en expresiones de consulta
 
@@ -32,4 +32,4 @@ Tenga en cuenta que el bloque `try` encierra el bucle `foreach` y no la propia c
 
 ## <a name="see-also"></a>Vea también
 
-- [Language-Integrated Query (LINQ)](index.md)  
+- [Language-Integrated Query (LINQ)](index.md)

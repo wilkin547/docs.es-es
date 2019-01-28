@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: f26d812d8f4da8fae73ebbaee15441cd88860d04
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7bc806cd5516666c86780bb53842725f0c0c1617
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239464"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600705"
 ---
 # <a name="decimal-c-reference"></a>decimal (Referencia de C#)
 
@@ -97,12 +97,12 @@ En este ejemplo, se da formato a los resultados mediante la cadena de formato de
 
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Decimal>  
-- [Referencia de C#](../../../csharp/language-reference/index.md)  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)  
-- [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- <xref:System.Decimal>
+- [Referencia de C#](../../../csharp/language-reference/index.md)
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
+- [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
 - [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)

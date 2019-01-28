@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87346b28ff98c453949fe31aea4d0ef1880b0095
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a833bb0f412407d1f18793c356d4c207716eb101
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632626"
 ---
 # <a name="delay-signing-an-assembly"></a>Retrasar la firma de un ensamblado
 Una organización podría tener un par de claves muy bien guardado al que los desarrolladores no tuvieran acceso cada día. La clave pública suele estar disponible, pero el acceso a la clave privada estaría restringido a algunas personas. Al desarrollar ensamblados con nombres seguros, cada ensamblado que hace referencia al ensamblado de destino con nombre seguro contiene el token de la clave pública usada para asignar un nombre seguro al ensamblado de destino. Esto requiere que la clave pública esté disponible durante el proceso de desarrollo.  
@@ -72,8 +72,8 @@ Una organización podría tener un par de claves muy bien guardado al que los de
     sn -R myAssembly.dll sgKey.snk  
     ```  
   
-## <a name="see-also"></a>Vea también  
-- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)  
-- [Cómo: Crear un par de claves pública y privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
-- [Sn.exe (Herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+## <a name="see-also"></a>Vea también
+- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
+- [Cómo: Creación de un par de claves privada y pública](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Sn.exe (Herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)

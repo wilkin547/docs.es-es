@@ -1,14 +1,14 @@
 ---
 title: Realizar combinaciones externas izquierdas (LINQ en C#)
 description: Obtenga información sobre cómo realizar combinaciones externas izquierdas con LINQ en C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
-ms.openlocfilehash: 329fe9e17640931c5eb39b33b791a7a77a6f7b89
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cc08a1c8670623a10d1e0bf10221d02037a8d7bc
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506601"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857585"
 ---
 # <a name="perform-left-outer-joins"></a>Realizar operaciones de combinación externa izquierda
 
@@ -29,8 +29,8 @@ El segundo paso consiste en incluir cada elemento de la primera colección (izqu
 
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Linq.Enumerable.Join%2A>  
-- <xref:System.Linq.Enumerable.GroupJoin%2A>  
-- [Realizar combinaciones internas](perform-inner-joins.md)  
-- [Realizar combinaciones agrupadas](perform-grouped-joins.md)  
-- [Anonymous Types](../programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#])  
+- <xref:System.Linq.Enumerable.Join%2A>
+- <xref:System.Linq.Enumerable.GroupJoin%2A>
+- [Realizar combinaciones internas](perform-inner-joins.md)
+- [Realizar combinaciones agrupadas](perform-grouped-joins.md)
+- [Anonymous Types](../programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#])

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: e3b0834f27fd0673687dc00b861e80752a585737
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7c122f0d342acb3708072be89e08c7465a654815
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660390"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Procedimiento Obtener información sobre archivos, carpetas y unidades (Guía de programación de C#)
 En .NET Framework, puede tener acceso a información del sistema de archivos mediante las clases siguientes:  
@@ -55,6 +55,6 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
 - [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)

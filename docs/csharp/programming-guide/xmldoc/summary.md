@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: 5aaa9b08b422c06cc6b009e5e9d781e8be46af7e
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5447b9ea129c26fdbb9effe1a3aeac6d7290764a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740039"
 ---
 # <a name="ltsummarygt-c-programming-guide"></a>&lt;summary&gt; (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  
@@ -95,5 +95,5 @@ ms.locfileid: "53237303"
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
 - [Etiquetas recomendadas para los comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

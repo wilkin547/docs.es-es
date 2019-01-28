@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], vs. indexers
 - indexers [C#], vs. properties
 ms.assetid: 3358a89f-44a0-4a4d-bf8c-07237a90af39
-ms.openlocfilehash: 053eb7ee0fe9333f049e5b4f8a8e709e42aa2119
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 41b27905edb8a0e00a6af5a4cce38988161326d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53234466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537730"
 ---
 # <a name="comparison-between-properties-and-indexers-c-programming-guide"></a>Comparación entre propiedades e indizadores (Guía de programación de C#)
 Los indexadores son como propiedades. Excepto por las diferencias que se muestran en la tabla siguiente, todas las reglas que se definen para los descriptores de acceso de propiedad se aplican también a los descriptores de acceso de indexador.  
@@ -27,6 +27,6 @@ Los indexadores son como propiedades. Excepto por las diferencias que se muestra
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Indizadores](../../../csharp/programming-guide/indexers/index.md)
 - [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)

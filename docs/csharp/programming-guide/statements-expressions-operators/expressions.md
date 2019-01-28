@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600497"
 ---
 # <a name="expressions-c-programming-guide"></a>Expresiones (Guía de programación de C#)
 Una *expresión* es una secuencia de uno o más operandos y cero o más operadores que se pueden evaluar como un valor, objeto, método o espacio de nombres único. Las expresiones pueden constar de un valor literal, una invocación de método, un operador y sus operandos o un *nombre simple*. Los nombres simples pueden ser el nombre de una variable, el miembro de un tipo, el parámetro de un método, un espacio de nombres o un tipo.  
@@ -75,9 +75,9 @@ C# admite *miembros con forma de expresión*, que le permiten proporcionar una d
 
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Delegados](../../../csharp/programming-guide/delegates/index.md)  
-- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
-- [Tipos](../../../csharp/programming-guide/types/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Delegados](../../../csharp/programming-guide/delegates/index.md)
+- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [Tipos](../../../csharp/programming-guide/types/index.md)
 - [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

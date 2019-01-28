@@ -1,14 +1,14 @@
 ---
 title: Realizar operaciones de combinación personalizadas (LINQ en C#)
 description: Obtenga información sobre cómo realizar operaciones de combinación de LINQ personalizadas en C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
-ms.openlocfilehash: a0e08396c006f68949357c50a28b3b0982f0dd83
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7051007c67bd64cd11ede2f4d5352ce3d497255f
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44217430"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857871"
 ---
 # <a name="perform-custom-join-operations"></a>Realizar operaciones de combinación personalizadas
 
@@ -25,7 +25,7 @@ En cambio, la cláusula `join` no se puede usar en los siguientes casos:
  Para realizar combinaciones que no son de igualdad, puede usar varias cláusulas `from` para presentar cada origen de datos de forma independiente. Después, aplique una expresión de predicado de una cláusula `where` a la variable de rango para cada origen. La expresión también puede adoptar la forma de una llamada de método.
 
 > [!NOTE]
-> No confunda este tipo de operación de combinación personalizada con el uso de varias cláusulas `from` para acceder a colecciones internas. Para obtener más información, consulte [join (Cláusula, Referencia de C#)](../language-reference/keywords/join-clause.md).
+> No confunda este tipo de operación de combinación personalizada con el uso de varias cláusulas `from` para acceder a colecciones internas. Para obtener más información, vea [join (Cláusula, Referencia de C#)](../language-reference/keywords/join-clause.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -43,6 +43,6 @@ En el ejemplo siguiente, la consulta debe combinar dos secuencias basándose en 
 
 ## <a name="see-also"></a>Vea también
 
-- [Language-Integrated Query (LINQ)](index.md)  
-- [join (cláusula)](../language-reference/keywords/join-clause.md)  
-- [Ordenar los resultados de una cláusula join](order-the-results-of-a-join-clause.md)  
+- [Language-Integrated Query (LINQ)](index.md)
+- [join (cláusula)](../language-reference/keywords/join-clause.md)
+- [Ordenar los resultados de una cláusula join](order-the-results-of-a-join-clause.md)

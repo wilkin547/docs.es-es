@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ad6c87dcec55a332bced00370fe6ea888508793
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 92b72667101575aebea9b60a41979e374004b541
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143550"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499267"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Reenvío de tipos en Common Language Runtime
 El reenvío de tipos le permite mover un tipo a otro ensamblado sin tener que volver a compilar las aplicaciones que utilizan el ensamblado original.  
@@ -46,7 +46,7 @@ El reenvío de tipos le permite mover un tipo a otro ensamblado sin tener que vo
   
 4.  Vuelva a compilar el ensamblado donde se encontraba antes el tipo, con una referencia al ensamblado que contiene el tipo ahora. Por ejemplo, si está compilando un archivo de C# desde la línea de comandos, utilice la opción [/reference (opciones del compilador de C#)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) para especificar el ensamblado que contiene el tipo. En C++, utilice la directiva [#using](/cpp/preprocessor/hash-using-directive-cpp) en el archivo de código fuente para especificar el ensamblado que contiene el tipo.  
   
-## <a name="see-also"></a>Vea también  
-- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
-- [Reenvío de tipos (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>
+- [Reenvío de tipos (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)
 - [#using (directiva)](/cpp/preprocessor/hash-using-directive-cpp)

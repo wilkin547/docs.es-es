@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee829893d251b536448ba2ee78ea13e0d22ae41
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 95a060f047094d7f1336a3e1e26b34c7d47b5a42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221744"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495519"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Desensamblador de IL)
 
@@ -186,7 +186,7 @@ Un tipo anidado debe ir precedido de su clase contenedora delimitada por una bar
 
 ## <a name="see-also"></a>Vea también
 
-[Herramientas](../../../docs/framework/tools/index.md)  
-[Ilasm.exe (Ensamblador de IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  
-[Proceso de ejecución administrada](../../../docs/standard/managed-execution-process.md)  
-[Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Herramientas](../../../docs/framework/tools/index.md)
+- [Ilasm.exe (Ensamblador de IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Proceso de ejecución administrada](../../../docs/standard/managed-execution-process.md)
+- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

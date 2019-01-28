@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 503ef7066b5d66b05c1642512ab8d59a2b1d3f9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42257790b5a6e5005ca142bd5e32d4c6fc545195
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507088"
 ---
 # <a name="copying-and-pinning"></a>Copiar y fijar
 Al serializar datos, el serializador de interoperabilidad puede copiar o anclar los datos que se van a serializar. Copiar los datos coloca una copia de datos desde una ubicación de memoria en otra. En la siguiente ilustración se muestran las diferencias entre copiar un tipo de valor y copiar un tipo pasado por referencia de memoria administrada a memoria no administrada.  
@@ -77,8 +77,8 @@ Tipos de referencia pasados por valor y por referencia
   
  Cuando se pasa <xref:System.Text.StringBuilder?displayProperty=nameWithType> por valor, el serializador pasa una referencia al búfer interno de **StringBuilder** directamente al autor de la llamada. El autor de la llamada y el destinatario deben acordar el tamaño del búfer. El autor de la llamada es responsable de crear un **StringBuilder** de la longitud adecuada. El destinatario debe tomar las precauciones necesarias para asegurarse de que el búfer no se desborda. **StringBuilder** es una excepción a la regla de que los tipos de referencia que se pasan por valor se pasan como parámetros In de forma predeterminada. Siempre se pasa como In/Out.  
   
-## <a name="see-also"></a>Vea también  
- [Comportamiento predeterminado del cálculo de referencias](default-marshaling-behavior.md)  
- [Administración de memoria con el serializador de interoperabilidad](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))  
- [Atributos direccionales](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
- [Serialización de interoperabilidad](interop-marshaling.md)
+## <a name="see-also"></a>Vea también
+- [Comportamiento predeterminado del cálculo de referencias](default-marshaling-behavior.md)
+- [Administración de memoria con el serializador de interoperabilidad](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))
+- [Atributos direccionales](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [Serialización de interoperabilidad](interop-marshaling.md)

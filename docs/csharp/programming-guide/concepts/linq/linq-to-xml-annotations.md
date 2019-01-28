@@ -2,12 +2,12 @@
 title: Anotaciones de LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 54e7b9d0-07f5-488f-9065-b6e6b870f810
-ms.openlocfilehash: 13dd72a9016dea8c5b4389580f912625028e51ae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 753fc656d78f2cefde98a8cbfb48713c7a107f77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676726"
 ---
 # <a name="linq-to-xml-annotations"></a>Anotaciones de LINQ to XML
 Las anotaciones de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] le permiten asociar cualquier objeto de cualquier tipo con un componente XML de un árbol XML.  

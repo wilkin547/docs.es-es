@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: af5a342b83608d6a149879de8dec80a1e1746b76
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ac825940897df3a0f6105a6d9cca8e16cf69eb25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242728"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655678"
 ---
 # <a name="fields-c-programming-guide"></a>Campos (Guía de programación de C#)
 Un *campo* es una variable de cualquier tipo que se declara directamente en una [clase](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md). Los campos son *miembros* de su tipo contenedor.  
@@ -49,9 +49,9 @@ Un *campo* es una variable de cualquier tipo que se declara directamente en una 
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Utilizar constructores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
-- [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Utilizar constructores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
+- [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)

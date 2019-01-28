@@ -1,14 +1,14 @@
 ---
 title: Realizar combinaciones agrupadas (LINQ en C#)
 description: Obtenga información sobre cómo realizar combinaciones agrupadas con LINQ en C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-ms.openlocfilehash: f65faabcb039e186a2e0d18dda4373263ffd0b8b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: dfb75b55336d8ca486d5f10b187e955d20cd06fd
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911930"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857559"
 ---
 # <a name="perform-grouped-joins"></a>Realizar combinaciones agrupadas
 
@@ -35,8 +35,8 @@ Las combinaciones agrupadas resultan ideales para crear XML con LINQ to XML. El 
 
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Linq.Enumerable.Join%2A>  
-- <xref:System.Linq.Enumerable.GroupJoin%2A>  
-- [Realizar combinaciones internas](perform-inner-joins.md)  
-- [Realizar operaciones de combinación externa izquierda](perform-left-outer-joins.md)  
-- [Anonymous Types](../programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#])  
+- <xref:System.Linq.Enumerable.Join%2A>
+- <xref:System.Linq.Enumerable.GroupJoin%2A>
+- [Realizar combinaciones internas](perform-inner-joins.md)
+- [Realizar operaciones de combinación externa izquierda](perform-left-outer-joins.md)
+- [Anonymous Types](../programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#])

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: c37a273b4091d98ccc202f7d98859333658ccf7f
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676827"
 ---
 # <a name="properties-c-programming-guide"></a>Propiedades (Guía de programación de C#)
 
@@ -76,8 +76,8 @@ Para obtener más información, vea la sección [Propiedades](~/_csharplang/spec
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Utilizar propiedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
-- [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
-- [get (Palabra clave)](../../../csharp/language-reference/keywords/get.md)    
-- [set (palabra clave)](../../../csharp/language-reference/keywords/set.md)    
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Utilizar propiedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
+- [Indizadores](../../../csharp/programming-guide/indexers/index.md)
+- [get (Palabra clave)](../../../csharp/language-reference/keywords/get.md)
+- [set (palabra clave)](../../../csharp/language-reference/keywords/set.md)

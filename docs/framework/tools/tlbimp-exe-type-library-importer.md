@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfb73f6637be96d7994a808b8d9a2c77c2896838
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: f39f793d3d0a2cf815028ccdb49253c46dac2ec4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221731"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631313"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>TlbImp.exe (Importador de la biblioteca de tipos)
 El Importador de la biblioteca de tipos convierte las definiciones de tipos encontradas en una biblioteca de tipos COM en las definiciones equivalentes en un ensamblado de Common Language Runtime. El resultado de Tlbimp.exe es un archivo binario (un ensamblado) que contiene los metadatos en tiempo de ejecución para los tipos definidos en la biblioteca de tipos original. Este archivo se puede examinar con herramientas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  
@@ -125,13 +125,13 @@ bool SomeMethod();
 void SomeMethod(out bool x);  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Herramientas](index.md)  
- [Tlbexp.exe (Exportador de la biblioteca de tipos)](tlbexp-exe-type-library-exporter.md)  
- [Importar una biblioteca de tipos como un ensamblado](../interop/importing-a-type-library-as-an-assembly.md)  
- [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [Ildasm.exe (Desensamblador de IL)](ildasm-exe-il-disassembler.md)  
- [Sn.exe (Herramienta de nombre seguro)](sn-exe-strong-name-tool.md)  
- [Ensamblados con nombre seguro](../app-domains/strong-named-assemblies.md)  
- [Atributos para importar bibliotecas de tipos en ensamblados de interoperabilidad](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))  
- [Símbolos del sistema](developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Vea también
+- [Herramientas](index.md)
+- [Tlbexp.exe (Exportador de la biblioteca de tipos)](tlbexp-exe-type-library-exporter.md)
+- [Importar una biblioteca de tipos como un ensamblado](../interop/importing-a-type-library-as-an-assembly.md)
+- [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Ildasm.exe (Desensamblador de IL)](ildasm-exe-il-disassembler.md)
+- [Sn.exe (Herramienta de nombre seguro)](sn-exe-strong-name-tool.md)
+- [Ensamblados con nombre seguro](../app-domains/strong-named-assemblies.md)
+- [Atributos para importar bibliotecas de tipos en ensamblados de interoperabilidad](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))
+- [Símbolos del sistema](developer-command-prompt-for-vs.md)

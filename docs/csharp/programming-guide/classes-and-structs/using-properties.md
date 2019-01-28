@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: dd5d85feb520e10a5d89cf91878d092695efb13a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6aabdf9956365548d3f0cdf0cd046343d8129f04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243067"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560755"
 ---
 # <a name="using-properties-c-programming-guide"></a>Utilizar propiedades (Guía de programación de C#)
 Las propiedades combinan aspectos de los campos y los métodos. Para el usuario de un objeto, una propiedad que parece un campo, el acceso a la propiedad necesita la misma sintaxis. Para el implementador de una clase, una propiedad es uno o dos bloques de código que representa un descriptor de acceso [get](../../../csharp/language-reference/keywords/get.md) o un descriptor de acceso [set](../../../csharp/language-reference/keywords/set.md). El bloque de código del descriptor de acceso `get` se ejecuta cuando se lee la propiedad; el bloque de código del descriptor de acceso `set` se ejecuta cuando se asigna un nuevo valor a la propiedad. Una propiedad sin un descriptor de acceso `set` se considera de solo lectura. Una propiedad sin un descriptor de acceso `get` se considera de solo escritura. Una propiedad que tiene ambos descriptores de acceso es de lectura y escritura.  
@@ -102,7 +102,7 @@ Las propiedades combinan aspectos de los campos y los métodos. Para el usuario 
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Propiedades de interfaz](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Propiedades de interfaz](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)
 - [Propiedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)

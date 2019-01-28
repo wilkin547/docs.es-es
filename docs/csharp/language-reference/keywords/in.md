@@ -7,12 +7,12 @@ f1_keywords:
 - in_CSharpKeyword
 helpviewer_keywords:
 - in keyword [C#]
-ms.openlocfilehash: 1b2b68298047f682c3ed2abf6336ca32f073f7c2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 812390554b460579305815147cf0aec14c07ecd9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646742"
 ---
 # <a name="in-c-reference"></a>in (Referencia de C#)
 
@@ -26,5 +26,5 @@ La palabra clave `in` se usa en cuatro contextos:
   
 ## <a name="see-also"></a>Vea también
 
-- [Palabras clave de C#](index.md)  
+- [Palabras clave de C#](index.md)
 - [Referencia de C#](../index.md)

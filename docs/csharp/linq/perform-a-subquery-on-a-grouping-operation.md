@@ -1,14 +1,14 @@
 ---
 title: Realizar una subconsulta en una operación de agrupación (LINQ en C#)
 description: Obtenga información sobre cómo realizar una subconsulta en una operación de agrupación con LINQ en C#.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: d75a588e-9b6f-4f37-b195-f99ec8503855
-ms.openlocfilehash: 19be93fe695982e93abea9a59153a4245dce4a60
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a3757a7d358a310dd1404f85e34178f6e561bcb9
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846323"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857442"
 ---
 # <a name="perform-a-subquery-on-a-grouping-operation"></a>Realizar una subconsulta en una operación de agrupación
 

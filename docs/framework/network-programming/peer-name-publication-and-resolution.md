@@ -2,12 +2,12 @@
 title: Publicación y resolución de nombres del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 98ccfc79a25d547c751d8153d0f290860e5eb743
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4ecdd6a4c6b52368ce8cdfe57288000631077b07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682987"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Publicación y resolución de nombres del mismo nivel
 
@@ -47,5 +47,5 @@ El equipo de mismo nivel solicitante continúa con iteraciones sucesivas, hasta 
   
  En el espacio de nombres <xref:System.Net.PeerToPeer>, hay una relación de varios a varios entre los registros <xref:System.Net.PeerToPeer.PeerName> que contienen puntos de conexión y nubes PNRP o mallas en las que se comunican. Cuando hay entradas duplicadas u obsoletas, o varios nodos con el mismo nombre de mismo nivel, los nodos PNRP pueden obtener información actual mediante la clase <xref:System.Net.PeerToPeer.PeerNameResolver>. Los métodos <xref:System.Net.PeerToPeer.PeerNameResolver> usan un nombre de mismo nivel único para simplificar la perspectiva a registros de nombre de mismo nivel de uno a varios y del mismo equipo de mismo nivel a varias nubes. Esto es similar a una consulta realizada con una combinación de tabla relacional. Tras completarse correctamente, el objeto de resolución devuelve una <xref:System.Net.PeerToPeer.PeerNameRecordCollection> para el nombre de mismo nivel especificado.  Por ejemplo, un nombre de mismo nivel se produciría en todos los registros de nombre de mismo nivel en la colección, ordenados por nube. Estas son las instancias del nombre de mismo nivel cuyos datos auxiliares se pueden solicitar mediante una aplicación basada en PNRP.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 - <xref:System.Net.PeerToPeer>

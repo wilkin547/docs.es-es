@@ -2,12 +2,12 @@
 title: Colaboración de punto a punto
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: a7d382006921487ea91f82ee830c75b6355a01f3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 81900cac9bf3c4d2fb247c36f00d4aa8413944f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50180792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590547"
 ---
 # <a name="peer-to-peer-collaboration"></a>Colaboración de punto a punto
 
@@ -40,5 +40,5 @@ La infraestructura de colaboración de punto a punto es una implementación simp
  En un dominio de Active Directory, los controladores de dominio proporcionan servicios de autenticación mediante Kerberos. En un entorno de equipos de mismo nivel sin servidor, estos deben proporcionar su propia autenticación. En las redes punto a punto, cualquier nodo puede actuar como una entidad de certificación, eliminando el requisito de un certificado raíz en el almacén raíz de confianza de cada elemento de mismo nivel. La autenticación se proporciona mediante certificados autofirmados, con formato de certificados X.509. Estos son los certificados que crea cada elemento de mismo nivel, lo que genera el par de claves pública y privada, y el certificado que se firma con la clave privada. El certificado autofirmado se usa para la autenticación y para proporcionar información sobre la entidad de mismo nivel. Al igual que la autenticación X.509, la autenticación de redes de mismo nivel se basa en una cadena de certificados que tiene su origen en una clave pública que sea de confianza.  
   
 ## <a name="see-also"></a>Vea también
-- <xref:System.Net.PeerToPeer.Collaboration>  
+- <xref:System.Net.PeerToPeer.Collaboration>
 - [Acerca del espacio de nombres System.Net.PeerToPeer.Collaboration](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)

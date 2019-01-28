@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], type parameters
 - type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
-ms.openlocfilehash: 8b9e040beea0590320a34d35ca323374f357bf2f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 48fa90226b7a8a36f5f432921cf5d999e76c6fa8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681643"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>Parámetros de tipos genéricos (Guía de programación de C#)
 En un tipo genérico o en una definición de método, un parámetro de tipo es un marcador de posición para un tipo específico que un cliente especifica cuando crean instancias de una variable del tipo genérico. Una clase genérica, como `GenericList<T>` que se muestra en [Introducción a los genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md), no puede usarse como está porque no es realmente un tipo; es más parecida a un plano para un tipo. Para usar `GenericList<T>`, el código cliente debe declarar y crear instancias de un tipo construido especificando un argumento de tipo dentro de corchetes angulares. El argumento de tipo de esta clase determinada puede ser cualquier tipo reconocido por el compilador. Puede crearse cualquier número de instancias de tipo construidas, usando cada una un argumento de tipo diferente, de la manera siguiente:  
@@ -38,7 +38,7 @@ En un tipo genérico o en una definición de método, un parámetro de tipo es u
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Collections.Generic>  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [Genéricos](../../../csharp/programming-guide/generics/index.md)  
+- <xref:System.Collections.Generic>
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Genéricos](../../../csharp/programming-guide/generics/index.md)
 - [Diferencias entre plantillas de C++ y tipos genéricos de C#](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)

@@ -2,12 +2,12 @@
 title: Forma de documentos WordprocessingML (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: dee799583eae6bcc1660388e0b6a15185a33707c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4c034950006b7ce09ad03e4579cc298f0b2dd218
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145775"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739250"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>Forma de documentos WordprocessingML (C#)
 En este tema se presenta la forma XML de un documento WordprocessingML.  

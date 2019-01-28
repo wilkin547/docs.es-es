@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: 807b2297dd1b8e00aa9b646f28fefbcb1148fe83
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e37f1b47ae1f45b29697fee220d99e6698a8c96d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237953"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498338"
 ---
 # <a name="ltparagt-c-programming-guide"></a>&lt;para&gt; (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  
@@ -37,5 +37,5 @@ ms.locfileid: "53237953"
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
 - [Etiquetas recomendadas para los comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

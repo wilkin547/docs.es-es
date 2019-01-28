@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], about generics
 ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
-ms.openlocfilehash: fd53e0abaab4ff7d242b32d6f26be13e97f20c44
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ed767ca100ee0405ce918d2d842d951f09d19e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239032"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646349"
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>Introducción a los genéricos (Guía de programación de C#)
 Las clases y métodos genéricos combinan reusabilidad, seguridad de tipos y eficacia de una manera en que sus homólogos no genéricos no pueden. Los genéricos se usan frecuentemente con colecciones y los métodos que funcionan en ellas. La versión 2.0 de la biblioteca de clases .NET Framework proporciona un nuevo espacio de nombres, <xref:System.Collections.Generic>, que contiene varias clases de colección nuevas basadas en genéricos. Se recomienda que todas las aplicaciones destinadas a .NET Framework 2.0 y versiones posteriores usen las nuevas clases de colección genéricas en lugar de sus homólogas no genéricas anteriores como <xref:System.Collections.ArrayList>. Para más información, vea [Elementos genéricos en .NET](../../../standard/generics/index.md).  
@@ -33,6 +33,6 @@ Las clases y métodos genéricos combinan reusabilidad, seguridad de tipos y efi
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Collections.Generic>  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- <xref:System.Collections.Generic>
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
 - [Genéricos](../../../csharp/programming-guide/generics/index.md)

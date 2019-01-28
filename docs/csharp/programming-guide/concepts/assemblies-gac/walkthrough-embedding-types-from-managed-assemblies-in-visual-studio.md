@@ -2,12 +2,12 @@
 title: 'Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 33686dcfee90db2d0a99339a728eb6e2bd7139f5
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 39452702a3e757456ff00ee22e6eb1f90160ef38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415720"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500634"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (C#)
 Si inserta información de tipos de un ensamblado administrado con nombre seguro, puede acoplar tipos holgadamente en una aplicación para lograr independencia de versiones. Es decir, el programa puede escribirse de modo que use tipos de varias versiones de una biblioteca administrada sin tener que volver a compilarse para cada versión.  
@@ -234,7 +234,7 @@ Si inserta información de tipos de un ensamblado administrado con nombre seguro
   
 ## <a name="see-also"></a>Vea también
 
-- [/link (Opciones del compilador de C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
-- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)  
-- [Programar con ensamblados](../../../../framework/app-domains/programming-with-assemblies.md)  
+- [/link (Opciones del compilador de C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
+- [Programar con ensamblados](../../../../framework/app-domains/programming-with-assemblies.md)
 - [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])

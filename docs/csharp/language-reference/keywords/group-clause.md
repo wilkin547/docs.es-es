@@ -9,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 6c28f9f4cdcb2ec2d84f299dddb13dc821c1739a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 160b25bd93f7d7c69ec104a31a0608e930e2dee3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238174"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534896"
 ---
 # <a name="group-clause-c-reference"></a>group (Cláusula, Referencia de C#)
 
@@ -88,12 +88,12 @@ En tiempo de compilación, las cláusulas `group` se convierten en llamadas al m
 
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Linq.IGrouping%602>  
-- <xref:System.Linq.Enumerable.GroupBy%2A>  
-- <xref:System.Linq.Enumerable.ThenBy%2A>  
-- <xref:System.Linq.Enumerable.ThenByDescending%2A>  
-- [Palabras clave para consultas](query-keywords.md)  
-- [Language-Integrated Query (LINQ)](../../linq/index.md)  
-- [Crear grupos anidados](../../linq/create-a-nested-group.md)  
-- [Agrupar los resultados de consultas](../../linq/group-query-results.md)  
+- <xref:System.Linq.IGrouping%602>
+- <xref:System.Linq.Enumerable.GroupBy%2A>
+- <xref:System.Linq.Enumerable.ThenBy%2A>
+- <xref:System.Linq.Enumerable.ThenByDescending%2A>
+- [Palabras clave para consultas](query-keywords.md)
+- [Language-Integrated Query (LINQ)](../../linq/index.md)
+- [Crear grupos anidados](../../linq/create-a-nested-group.md)
+- [Agrupar los resultados de consultas](../../linq/group-query-results.md)
 - [Realizar una subconsulta en una operación de agrupación](../../linq/perform-a-subquery-on-a-grouping-operation.md)

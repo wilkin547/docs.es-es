@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baa5b9f250fe7117838f936b09b050ba500b7209
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a40b9524990213eaaf2ed78503b6f831776306ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389049"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524317"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Habilitar tipos de .NET para la interoperación
 Si tiene previsto exponer tipos en un ensamblado a las aplicaciones COM, tenga en cuenta los requisitos de interoperabilidad COM en tiempo de diseño. Los tipos administrados (clase, interfaz, estructura y enumeración) se integran fácilmente con los tipos COM si se cumplen las directrices siguientes:  
@@ -47,9 +47,9 @@ Si tiene previsto exponer tipos en un ensamblado a las aplicaciones COM, tenga e
   
  Cuando se exporta a COM, se simplifica la jerarquía de herencia de un tipo administrado. El control de versiones también difiere entre los entornos administrados y no administrados. Los tipos expuestos a COM no tienen las mismas características de control de versiones que otros tipos administrados.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
- [Exponer componentes de .NET Framework en COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Presentar la interfaz de clase](com-callable-wrapper.md#introducing-the-class-interface)  
- [Aplicar atributos de interoperabilidad](../../../docs/framework/interop/applying-interop-attributes.md)  
- [Empaquetar un ensamblado para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.InteropServices.ComVisibleAttribute>
+- [Exponer componentes de .NET Framework en COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Presentar la interfaz de clase](com-callable-wrapper.md#introducing-the-class-interface)
+- [Aplicar atributos de interoperabilidad](../../../docs/framework/interop/applying-interop-attributes.md)
+- [Empaquetar un ensamblado para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

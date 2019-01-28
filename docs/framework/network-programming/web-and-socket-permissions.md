@@ -15,12 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: b5767f4e16e691fec5714f98114b3ed9d5692a50
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b4395d26114425556f0457f03667d0f95f786ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677646"
 ---
 # <a name="web-and-socket-permissions"></a>Permisos de web y socket
 La seguridad de Internet para las aplicaciones que usan el espacio de nombres <xref:System.Net> se proporciona con las clases <xref:System.Net.WebPermission> y <xref:System.Net.SocketPermission>. La clase **WebPermission** controla el derecho de una aplicación a solicitar datos de un identificador URI o de servir un identificador URI en Internet. La clase **SocketPermission** controla el derecho de una aplicación a usar un <xref:System.Net.Sockets.Socket> para aceptar los datos en un puerto local o de ponerse en contacto con dispositivos remotos mediante un protocolo de transporte en otra dirección, en función del host, el número de puerto y el protocolo de transporte del socket.  
@@ -33,6 +33,6 @@ La seguridad de Internet para las aplicaciones que usan el espacio de nombres <x
   
  Para las instancias **WebPermission**, el permiso de aceptación implica que una aplicación puede exportar al mundo el identificador URI controlado por **WebPermission**, mientras que el permiso de conexión implica que una aplicación puede obtener acceso a ese URI (ya sea local o remoto).  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad](../../../docs/standard/security/index.md)  
- [Seguridad en la programación para redes](../../../docs/framework/network-programming/security-in-network-programming.md)
+## <a name="see-also"></a>Vea también
+- [Seguridad](../../../docs/standard/security/index.md)
+- [Seguridad en la programación para redes](../../../docs/framework/network-programming/security-in-network-programming.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cedcb20ba12e7c362c60d33dfedfa1882eaa7e7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bf7e1b0c3ef3c1e1c26e4dd308ae2326777b38da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625862"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Instrucciones para crear componentes para la ejecución en paralelo
 Siga estas instrucciones generales para crear aplicaciones administradas o componentes diseñados para la ejecución en paralelo:  
@@ -62,6 +62,6 @@ Siga estas instrucciones generales para crear aplicaciones administradas o compo
   
  La [herramienta de caché global de ensamblados (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) permite reemplazar un ensamblado solo cuando el número de versión del archivo es más reciente. Generalmente, el programa de instalación no instala encima de un ensamblado a menos que el número de versión del ensamblado sea mayor.  
   
-## <a name="see-also"></a>Vea también  
-- [Ejecución en paralelo](../../../docs/framework/deployment/side-by-side-execution.md)  
+## <a name="see-also"></a>Vea también
+- [Ejecución en paralelo](../../../docs/framework/deployment/side-by-side-execution.md)
 - [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
