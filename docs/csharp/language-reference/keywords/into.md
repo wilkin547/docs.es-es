@@ -8,29 +8,29 @@ f1_keywords:
 helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
-ms.openlocfilehash: 4445674c77be397bd6e1d7e385dbd839fbb916aa
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b209062a2a3e563ea8e70cb7883d9bbfa3662231
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238187"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631521"
 ---
-# <a name="into-c-reference"></a><span data-ttu-id="49cd3-102">into (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="49cd3-102">into (C# Reference)</span></span>
+# <a name="into-c-reference"></a><span data-ttu-id="38b69-102">into (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="38b69-102">into (C# Reference)</span></span>
 
-<span data-ttu-id="49cd3-103">La palabra clave contextual `into` puede usarse para crear un identificador temporal para almacenar los resultados de una cláusula [group](group-clause.md), [join](join-clause.md) o [select](select-clause.md) en un nuevo identificador.</span><span class="sxs-lookup"><span data-stu-id="49cd3-103">The `into` contextual keyword can be used to create a temporary identifier to store the results of a [group](group-clause.md), [join](join-clause.md) or [select](select-clause.md) clause into a new identifier.</span></span> <span data-ttu-id="49cd3-104">Este identificador puede ser un generador de comandos de consulta adicionales.</span><span class="sxs-lookup"><span data-stu-id="49cd3-104">This identifier can itself be a generator for additional query commands.</span></span> <span data-ttu-id="49cd3-105">Cuando se usa en una cláusula `group` o `select`, el uso del nuevo identificador se denomina a veces una *continuación*.</span><span class="sxs-lookup"><span data-stu-id="49cd3-105">When used in a `group` or `select` clause, the use of the new identifier is sometimes referred to as a *continuation*.</span></span>
+<span data-ttu-id="38b69-103">La palabra clave contextual `into` puede usarse para crear un identificador temporal para almacenar los resultados de una cláusula [group](group-clause.md), [join](join-clause.md) o [select](select-clause.md) en un nuevo identificador.</span><span class="sxs-lookup"><span data-stu-id="38b69-103">The `into` contextual keyword can be used to create a temporary identifier to store the results of a [group](group-clause.md), [join](join-clause.md) or [select](select-clause.md) clause into a new identifier.</span></span> <span data-ttu-id="38b69-104">Este identificador puede ser un generador de comandos de consulta adicionales.</span><span class="sxs-lookup"><span data-stu-id="38b69-104">This identifier can itself be a generator for additional query commands.</span></span> <span data-ttu-id="38b69-105">Cuando se usa en una cláusula `group` o `select`, el uso del nuevo identificador se denomina a veces una *continuación*.</span><span class="sxs-lookup"><span data-stu-id="38b69-105">When used in a `group` or `select` clause, the use of the new identifier is sometimes referred to as a *continuation*.</span></span>
 
-## <a name="example"></a><span data-ttu-id="49cd3-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="49cd3-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="38b69-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="38b69-106">Example</span></span>
 
-<span data-ttu-id="49cd3-107">En el ejemplo siguiente, se muestra el uso de la palabra clave `into` para habilitar un identificador temporal `fruitGroup` que tiene un tipo deducido de `IGrouping`.</span><span class="sxs-lookup"><span data-stu-id="49cd3-107">The following example shows the use of the `into` keyword to enable a temporary identifier `fruitGroup` which has an inferred type of `IGrouping`.</span></span> <span data-ttu-id="49cd3-108">Mediante el identificador, puede invocar el método <xref:System.Linq.Enumerable.Count%2A> en cada grupo y seleccionar solo los grupos que contienen dos o más palabras.</span><span class="sxs-lookup"><span data-stu-id="49cd3-108">By using the identifier, you can invoke the <xref:System.Linq.Enumerable.Count%2A> method on each group and select only those groups that contain two or more words.</span></span>
+<span data-ttu-id="38b69-107">En el ejemplo siguiente, se muestra el uso de la palabra clave `into` para habilitar un identificador temporal `fruitGroup` que tiene un tipo deducido de `IGrouping`.</span><span class="sxs-lookup"><span data-stu-id="38b69-107">The following example shows the use of the `into` keyword to enable a temporary identifier `fruitGroup` which has an inferred type of `IGrouping`.</span></span> <span data-ttu-id="38b69-108">Mediante el identificador, puede invocar el método <xref:System.Linq.Enumerable.Count%2A> en cada grupo y seleccionar solo los grupos que contienen dos o más palabras.</span><span class="sxs-lookup"><span data-stu-id="38b69-108">By using the identifier, you can invoke the <xref:System.Linq.Enumerable.Count%2A> method on each group and select only those groups that contain two or more words.</span></span>
 
 [!code-csharp[cscsrefQueryKeywords#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Into.cs#18)]
 
-<span data-ttu-id="49cd3-109">El uso de `into` en una cláusula `group` solo es necesario cuando quiere realizar operaciones de consulta adicionales en cada grupo.</span><span class="sxs-lookup"><span data-stu-id="49cd3-109">The use of `into` in a `group` clause is only necessary when you want to perform additional query operations on each group.</span></span> <span data-ttu-id="49cd3-110">Para obtener más información, vea [group (Cláusula)](group-clause.md).</span><span class="sxs-lookup"><span data-stu-id="49cd3-110">For more information, see [group clause](group-clause.md).</span></span>
+<span data-ttu-id="38b69-109">El uso de `into` en una cláusula `group` solo es necesario cuando quiere realizar operaciones de consulta adicionales en cada grupo.</span><span class="sxs-lookup"><span data-stu-id="38b69-109">The use of `into` in a `group` clause is only necessary when you want to perform additional query operations on each group.</span></span> <span data-ttu-id="38b69-110">Para obtener más información, vea [group (Cláusula)](group-clause.md).</span><span class="sxs-lookup"><span data-stu-id="38b69-110">For more information, see [group clause](group-clause.md).</span></span>
 
-<span data-ttu-id="49cd3-111">Para obtener un ejemplo del uso de `into` en una cláusula `join`, vea [join (Cláusula)](join-clause.md).</span><span class="sxs-lookup"><span data-stu-id="49cd3-111">For an example of the use of `into` in a `join` clause, see [join clause](join-clause.md).</span></span>
+<span data-ttu-id="38b69-111">Para obtener un ejemplo del uso de `into` en una cláusula `join`, vea [join (Cláusula)](join-clause.md).</span><span class="sxs-lookup"><span data-stu-id="38b69-111">For an example of the use of `into` in a `join` clause, see [join clause](join-clause.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="49cd3-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="49cd3-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="38b69-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="38b69-112">See also</span></span>
 
-- [<span data-ttu-id="49cd3-113">Palabras clave para consultas (LINQ)</span><span class="sxs-lookup"><span data-stu-id="49cd3-113">Query Keywords (LINQ)</span></span>](query-keywords.md)  
-- [<span data-ttu-id="49cd3-114">Expresiones de consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="49cd3-114">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [<span data-ttu-id="49cd3-115">group (cláusula)</span><span class="sxs-lookup"><span data-stu-id="49cd3-115">group clause</span></span>](group-clause.md)  
+- [<span data-ttu-id="38b69-113">Palabras clave para consultas (LINQ)</span><span class="sxs-lookup"><span data-stu-id="38b69-113">Query Keywords (LINQ)</span></span>](query-keywords.md)
+- [<span data-ttu-id="38b69-114">Expresiones de consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="38b69-114">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [<span data-ttu-id="38b69-115">group (cláusula)</span><span class="sxs-lookup"><span data-stu-id="38b69-115">group clause</span></span>](group-clause.md)

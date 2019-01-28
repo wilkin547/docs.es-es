@@ -8,46 +8,46 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: 70007c74efe9a41bdfc15e8fa7daf3c8fc0221ed
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cf87d8d2ac4531142288a8637f7fbeb9139382ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506700"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545834"
 ---
-# <a name="-nostdlib-c-compiler-options"></a><span data-ttu-id="4168a-102">-nostdlib (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="4168a-102">-nostdlib (C# Compiler Options)</span></span>
+# <a name="-nostdlib-c-compiler-options"></a><span data-ttu-id="672c9-102">-nostdlib (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="672c9-102">-nostdlib (C# Compiler Options)</span></span>
 
-<span data-ttu-id="4168a-103">**-nostdlib** impide la importación del archivo mscorlib.dll, que define el espacio de nombres System completo.</span><span class="sxs-lookup"><span data-stu-id="4168a-103">**-nostdlib** prevents the import of mscorlib.dll, which defines the entire System namespace.</span></span>
+<span data-ttu-id="672c9-103">**-nostdlib** impide la importación del archivo mscorlib.dll, que define el espacio de nombres System completo.</span><span class="sxs-lookup"><span data-stu-id="672c9-103">**-nostdlib** prevents the import of mscorlib.dll, which defines the entire System namespace.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="4168a-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4168a-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="672c9-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="672c9-104">Syntax</span></span>
 
 ```console
 -nostdlib[+ | -]
 ```
 
-## <a name="remarks"></a><span data-ttu-id="4168a-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="4168a-105">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="672c9-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="672c9-105">Remarks</span></span>
 
-<span data-ttu-id="4168a-106">Use esta opción si desea definir o crear sus propios objetos y espacio de nombres System.</span><span class="sxs-lookup"><span data-stu-id="4168a-106">Use this option if you want to define or create your own System namespace and objects.</span></span>
+<span data-ttu-id="672c9-106">Use esta opción si desea definir o crear sus propios objetos y espacio de nombres System.</span><span class="sxs-lookup"><span data-stu-id="672c9-106">Use this option if you want to define or create your own System namespace and objects.</span></span>
 
-<span data-ttu-id="4168a-107">Si no se especifica **-nostdlib**, el archivo mscorlib.dll se importa en el programa (equivale a especificar **-nostdlib-**).</span><span class="sxs-lookup"><span data-stu-id="4168a-107">If you do not specify **-nostdlib**, mscorlib.dll is imported into your program (same as specifying **-nostdlib-**).</span></span> <span data-ttu-id="4168a-108">Especificar **-nostdlib** es lo mismo que especificar **-nostdlib+**.</span><span class="sxs-lookup"><span data-stu-id="4168a-108">Specifying **-nostdlib** is the same as specifying **-nostdlib+**.</span></span>
+<span data-ttu-id="672c9-107">Si no se especifica **-nostdlib**, el archivo mscorlib.dll se importa en el programa (equivale a especificar **-nostdlib-**).</span><span class="sxs-lookup"><span data-stu-id="672c9-107">If you do not specify **-nostdlib**, mscorlib.dll is imported into your program (same as specifying **-nostdlib-**).</span></span> <span data-ttu-id="672c9-108">Especificar **-nostdlib** es lo mismo que especificar **-nostdlib+**.</span><span class="sxs-lookup"><span data-stu-id="672c9-108">Specifying **-nostdlib** is the same as specifying **-nostdlib+**.</span></span>
 
-### <a name="to-set-this-compiler-option-in-visual-studio"></a><span data-ttu-id="4168a-109">Para establecer esta opción del compilador en Visual Studio</span><span class="sxs-lookup"><span data-stu-id="4168a-109">To set this compiler option in Visual Studio</span></span>
+### <a name="to-set-this-compiler-option-in-visual-studio"></a><span data-ttu-id="672c9-109">Para establecer esta opción del compilador en Visual Studio</span><span class="sxs-lookup"><span data-stu-id="672c9-109">To set this compiler option in Visual Studio</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="4168a-110">Las instrucciones siguientes solo se aplican a Visual Studio 2015 (y versiones anteriores).</span><span class="sxs-lookup"><span data-stu-id="4168a-110">The following instructions apply to Visual Studio 2015 (and earlier versions) only.</span></span> <span data-ttu-id="4168a-111">La propiedad de compilación **No hacer referencia a mscorlib.dll** no existe en Visual Studio 2017.</span><span class="sxs-lookup"><span data-stu-id="4168a-111">The **Do not reference mscorlib.dll** build property doesn't exist in Visual Studio 2017.</span></span>
+> <span data-ttu-id="672c9-110">Las instrucciones siguientes solo se aplican a Visual Studio 2015 (y versiones anteriores).</span><span class="sxs-lookup"><span data-stu-id="672c9-110">The following instructions apply to Visual Studio 2015 (and earlier versions) only.</span></span> <span data-ttu-id="672c9-111">La propiedad de compilación **No hacer referencia a mscorlib.dll** no existe en Visual Studio 2017.</span><span class="sxs-lookup"><span data-stu-id="672c9-111">The **Do not reference mscorlib.dll** build property doesn't exist in Visual Studio 2017.</span></span>
 
-1. <span data-ttu-id="4168a-112">Abra la página **Propiedades** del proyecto.</span><span class="sxs-lookup"><span data-stu-id="4168a-112">Open the **Properties** page for the project.</span></span>
+1. <span data-ttu-id="672c9-112">Abra la página **Propiedades** del proyecto.</span><span class="sxs-lookup"><span data-stu-id="672c9-112">Open the **Properties** page for the project.</span></span>
 
-2. <span data-ttu-id="4168a-113">Haga clic en la página de propiedades de **Compilar** .</span><span class="sxs-lookup"><span data-stu-id="4168a-113">Click the **Build** properties page.</span></span>
+2. <span data-ttu-id="672c9-113">Haga clic en la página de propiedades de **Compilar** .</span><span class="sxs-lookup"><span data-stu-id="672c9-113">Click the **Build** properties page.</span></span>
 
-3. <span data-ttu-id="4168a-114">Haga clic en el botón **Avanzada** .</span><span class="sxs-lookup"><span data-stu-id="4168a-114">Click the **Advanced** button.</span></span>
+3. <span data-ttu-id="672c9-114">Haga clic en el botón **Avanzada** .</span><span class="sxs-lookup"><span data-stu-id="672c9-114">Click the **Advanced** button.</span></span>
 
-4. <span data-ttu-id="4168a-115">Modifique la propiedad **No hacer referencia al archivo mscorlib.dll** .</span><span class="sxs-lookup"><span data-stu-id="4168a-115">Modify the **Do not reference mscorlib.dll** property.</span></span>
+4. <span data-ttu-id="672c9-115">Modifique la propiedad **No hacer referencia al archivo mscorlib.dll** .</span><span class="sxs-lookup"><span data-stu-id="672c9-115">Modify the **Do not reference mscorlib.dll** property.</span></span>
 
-### <a name="to-set-this-compiler-option-programmatically"></a><span data-ttu-id="4168a-116">Para establecer esta opción del compilador mediante programación</span><span class="sxs-lookup"><span data-stu-id="4168a-116">To set this compiler option programmatically</span></span>
+### <a name="to-set-this-compiler-option-programmatically"></a><span data-ttu-id="672c9-116">Para establecer esta opción del compilador mediante programación</span><span class="sxs-lookup"><span data-stu-id="672c9-116">To set this compiler option programmatically</span></span>
 
-<span data-ttu-id="4168a-117">Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>.</span><span class="sxs-lookup"><span data-stu-id="4168a-117">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>.</span></span>
+<span data-ttu-id="672c9-117">Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>.</span><span class="sxs-lookup"><span data-stu-id="672c9-117">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="4168a-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="4168a-118">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="672c9-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="672c9-118">See also</span></span>
 
-- [<span data-ttu-id="4168a-119">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="4168a-119">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="672c9-119">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="672c9-119">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
