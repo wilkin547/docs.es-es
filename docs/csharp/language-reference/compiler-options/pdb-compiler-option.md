@@ -8,41 +8,41 @@ helpviewer_keywords:
 - pdb compiler option [C#]
 - /pdb compiler option [C#]
 ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
-ms.openlocfilehash: dc7ea6aae6aa429efdf1a2dca23a3d679cb21fb7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0a566931ac76a3adb191f423a497bc446e280c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575507"
 ---
-# <a name="-pdb-c-compiler-options"></a><span data-ttu-id="e9443-102">-pdb (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="e9443-102">-pdb (C# Compiler Options)</span></span>
-<span data-ttu-id="e9443-103">La opción del compilador **-pdb** especifica el nombre y la ubicación del archivo de símbolos de depuración.</span><span class="sxs-lookup"><span data-stu-id="e9443-103">The **-pdb** compiler option specifies the name and location of the debug symbols file.</span></span>  
+# <a name="-pdb-c-compiler-options"></a><span data-ttu-id="a951f-102">-pdb (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="a951f-102">-pdb (C# Compiler Options)</span></span>
+<span data-ttu-id="a951f-103">La opción del compilador **-pdb** especifica el nombre y la ubicación del archivo de símbolos de depuración.</span><span class="sxs-lookup"><span data-stu-id="a951f-103">The **-pdb** compiler option specifies the name and location of the debug symbols file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9443-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e9443-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a951f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a951f-104">Syntax</span></span>  
   
 ```console  
 -pdb:filename  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="e9443-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="e9443-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="a951f-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="a951f-105">Arguments</span></span>  
  `filename`  
- <span data-ttu-id="e9443-106">El nombre y la ubicación del archivo de símbolos de depuración.</span><span class="sxs-lookup"><span data-stu-id="e9443-106">The name and location of the debug symbols file.</span></span>  
+ <span data-ttu-id="a951f-106">El nombre y la ubicación del archivo de símbolos de depuración.</span><span class="sxs-lookup"><span data-stu-id="a951f-106">The name and location of the debug symbols file.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e9443-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e9443-107">Remarks</span></span>  
- <span data-ttu-id="e9443-108">Al especificar [-debug (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md), el compilador creará un archivo .pdb en el mismo directorio en que el compilador creará el archivo de salida (.exe o .dll) con un nombre de archivo que es el mismo que el nombre del archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="e9443-108">When you specify [-debug (C# Compiler Options)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md), the compiler will create a .pdb file in the same directory where the compiler will create the output file (.exe or .dll) with a file name that is the same as the name of the output file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a951f-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a951f-107">Remarks</span></span>  
+ <span data-ttu-id="a951f-108">Al especificar [-debug (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md), el compilador creará un archivo .pdb en el mismo directorio en que el compilador creará el archivo de salida (.exe o .dll) con un nombre de archivo que es el mismo que el nombre del archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="a951f-108">When you specify [-debug (C# Compiler Options)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md), the compiler will create a .pdb file in the same directory where the compiler will create the output file (.exe or .dll) with a file name that is the same as the name of the output file.</span></span>  
   
- <span data-ttu-id="e9443-109">**-pdb** le permite especificar un nombre de archivo y una ubicación distintos del valor predeterminado para el archivo .pdb.</span><span class="sxs-lookup"><span data-stu-id="e9443-109">**-pdb** allows you to specify a non-default file name and location for the .pdb file.</span></span>  
+ <span data-ttu-id="a951f-109">**-pdb** le permite especificar un nombre de archivo y una ubicación distintos del valor predeterminado para el archivo .pdb.</span><span class="sxs-lookup"><span data-stu-id="a951f-109">**-pdb** allows you to specify a non-default file name and location for the .pdb file.</span></span>  
   
- <span data-ttu-id="e9443-110">No se puede establecer esta opción del compilador en el entorno de desarrollo de Visual Studio, ni se puede cambiar mediante programación.</span><span class="sxs-lookup"><span data-stu-id="e9443-110">This compiler option cannot be set in the Visual Studio development environment, nor can it be changed programmatically.</span></span>  
+ <span data-ttu-id="a951f-110">No se puede establecer esta opción del compilador en el entorno de desarrollo de Visual Studio, ni se puede cambiar mediante programación.</span><span class="sxs-lookup"><span data-stu-id="a951f-110">This compiler option cannot be set in the Visual Studio development environment, nor can it be changed programmatically.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e9443-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e9443-111">Example</span></span>  
- <span data-ttu-id="e9443-112">Compile `t.cs` y cree un archivo .pdb denominado tt.pdb:</span><span class="sxs-lookup"><span data-stu-id="e9443-112">Compile `t.cs` and create a .pdb file called tt.pdb:</span></span>  
+## <a name="example"></a><span data-ttu-id="a951f-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a951f-111">Example</span></span>  
+ <span data-ttu-id="a951f-112">Compile `t.cs` y cree un archivo .pdb denominado tt.pdb:</span><span class="sxs-lookup"><span data-stu-id="a951f-112">Compile `t.cs` and create a .pdb file called tt.pdb:</span></span>  
   
 ```console  
 csc -debug -pdb:tt t.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e9443-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="e9443-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="a951f-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="a951f-113">See also</span></span>
 
-- [<span data-ttu-id="e9443-114">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="e9443-114">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
-- [<span data-ttu-id="e9443-115">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="e9443-115">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="a951f-114">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="a951f-114">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="a951f-115">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="a951f-115">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

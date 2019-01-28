@@ -5,22 +5,22 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: af83ae8c6c209886649d4eb1543c47e63bd97449
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: acbf45b5ccd4fcb9cb1c23b843072c2abdeeca25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685950"
 ---
-# <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="32edc-102">Atributo cref (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="32edc-102">cref Attribute (C# Programming Guide)</span></span>
-<span data-ttu-id="32edc-103">El atributo `cref` en una etiqueta de documentación XML significa "referencia de código".</span><span class="sxs-lookup"><span data-stu-id="32edc-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="32edc-104">Especifica que el texto interno de la etiqueta es un elemento de código, como un tipo, un método o una propiedad.</span><span class="sxs-lookup"><span data-stu-id="32edc-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="32edc-105">En herramientas de documentación como [Sandcastle](https://github.com/EWSoftware/SHFB), use los atributos `cref` para generar hipervínculos a la página donde se documenta el tipo o miembro de manera automática.</span><span class="sxs-lookup"><span data-stu-id="32edc-105">Documentation tools like [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>  
+# <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="aefd4-102">Atributo cref (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="aefd4-102">cref Attribute (C# Programming Guide)</span></span>
+<span data-ttu-id="aefd4-103">El atributo `cref` en una etiqueta de documentación XML significa "referencia de código".</span><span class="sxs-lookup"><span data-stu-id="aefd4-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="aefd4-104">Especifica que el texto interno de la etiqueta es un elemento de código, como un tipo, un método o una propiedad.</span><span class="sxs-lookup"><span data-stu-id="aefd4-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="aefd4-105">En herramientas de documentación como [Sandcastle](https://github.com/EWSoftware/SHFB), use los atributos `cref` para generar hipervínculos a la página donde se documenta el tipo o miembro de manera automática.</span><span class="sxs-lookup"><span data-stu-id="aefd4-105">Documentation tools like [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="32edc-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="32edc-106">Example</span></span>  
- <span data-ttu-id="32edc-107">En el ejemplo siguiente se muestran los atributos `cref` que se usan en las etiquetas [\<see>](../../../csharp/programming-guide/xmldoc/see.md).</span><span class="sxs-lookup"><span data-stu-id="32edc-107">The following example shows `cref` attributes used in [\<see>](../../../csharp/programming-guide/xmldoc/see.md) tags.</span></span>  
+## <a name="example"></a><span data-ttu-id="aefd4-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="aefd4-106">Example</span></span>  
+ <span data-ttu-id="aefd4-107">En el ejemplo siguiente se muestran los atributos `cref` que se usan en las etiquetas [\<see>](../../../csharp/programming-guide/xmldoc/see.md).</span><span class="sxs-lookup"><span data-stu-id="aefd4-107">The following example shows `cref` attributes used in [\<see>](../../../csharp/programming-guide/xmldoc/see.md) tags.</span></span>  
   
  [!code-csharp[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
   
- <span data-ttu-id="32edc-108">Cuando se compila, el programa genera el archivo XML siguiente.</span><span class="sxs-lookup"><span data-stu-id="32edc-108">When compiled, the program produces the following XML file.</span></span> <span data-ttu-id="32edc-109">Observe que, por ejemplo, el compilador ha transformado el atributo `cref` del método `GetZero` en `"M:TestNamespace.TestClass.GetZero"`.</span><span class="sxs-lookup"><span data-stu-id="32edc-109">Notice that the `cref` attribute for the `GetZero` method, for example, has been transformed by the compiler to `"M:TestNamespace.TestClass.GetZero"`.</span></span> <span data-ttu-id="32edc-110">El prefijo "M:" significa "método", una convención reconocida por las herramientas de documentación tales como Sandcastle.</span><span class="sxs-lookup"><span data-stu-id="32edc-110">The "M:" prefix means "method" and is a convention that is recognized by documentation tools such as Sandcastle.</span></span> <span data-ttu-id="32edc-111">Para obtener una lista completa de los prefijos, vea [Procesar el archivo XML](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="32edc-111">For a complete list of prefixes, see [Processing the XML File](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span></span>  
+ <span data-ttu-id="aefd4-108">Cuando se compila, el programa genera el archivo XML siguiente.</span><span class="sxs-lookup"><span data-stu-id="aefd4-108">When compiled, the program produces the following XML file.</span></span> <span data-ttu-id="aefd4-109">Observe que, por ejemplo, el compilador ha transformado el atributo `cref` del método `GetZero` en `"M:TestNamespace.TestClass.GetZero"`.</span><span class="sxs-lookup"><span data-stu-id="aefd4-109">Notice that the `cref` attribute for the `GetZero` method, for example, has been transformed by the compiler to `"M:TestNamespace.TestClass.GetZero"`.</span></span> <span data-ttu-id="aefd4-110">El prefijo "M:" significa "método", una convención reconocida por las herramientas de documentación tales como Sandcastle.</span><span class="sxs-lookup"><span data-stu-id="aefd4-110">The "M:" prefix means "method" and is a convention that is recognized by documentation tools such as Sandcastle.</span></span> <span data-ttu-id="aefd4-111">Para obtener una lista completa de los prefijos, vea [Procesar el archivo XML](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="aefd4-111">For a complete list of prefixes, see [Processing the XML File](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -119,7 +119,7 @@ ms.locfileid: "53235609"
 </doc>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="32edc-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="32edc-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aefd4-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="aefd4-112">See also</span></span>
 
-- [<span data-ttu-id="32edc-113">Comentarios de documentación XML</span><span class="sxs-lookup"><span data-stu-id="32edc-113">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
-- [<span data-ttu-id="32edc-114">Etiquetas recomendadas para los comentarios de documentación</span><span class="sxs-lookup"><span data-stu-id="32edc-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="aefd4-113">Comentarios de documentación XML</span><span class="sxs-lookup"><span data-stu-id="aefd4-113">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [<span data-ttu-id="aefd4-114">Etiquetas recomendadas para los comentarios de documentación</span><span class="sxs-lookup"><span data-stu-id="aefd4-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
