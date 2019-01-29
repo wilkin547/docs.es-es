@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 856b7c8a842b173fbf3e31323ce7224fc05a4f12
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1dc0570bedb1e7dbe02994b7df943609a42ca092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664740"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535313"
 ---
 # <a name="the-regular-expression-object-model"></a>El modelo de objetos de expresión regular
 <a name="introduction"></a> En este tema se describe el modelo de objetos usado para trabajar con expresiones regulares de .NET. Contiene las siguientes secciones:  
@@ -284,7 +284,7 @@ ms.locfileid: "45664740"
 |`:`|Buscar coincidencia con un signo de dos puntos.|  
 |`(?<value>\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. El nombre de este grupo de captura es `value`.|  
   
- Las propiedades de la clase <xref:System.Text.RegularExpressions.Group> proporcionan información sobre el grupo capturado: la propiedad `Group.Value` contiene la subcadena capturada, la propiedad `Group.Index` indica la posición inicial del grupo capturado en el texto de entrada, la propiedad `Group.Length` contiene la longitud del texto capturado y la propiedad `Group.Success` indica si una subcadena coincidió con el patrón definido por el grupo de captura.  
+ Las propiedades de la clase <xref:System.Text.RegularExpressions.Group> proporcionan información sobre el grupo capturado: La propiedad `Group.Value` contiene la subcadena capturada, la propiedad `Group.Index` indica la posición inicial del grupo capturado en el texto de entrada, la propiedad `Group.Length` contiene la longitud del texto capturado y la propiedad `Group.Success` indica si una subcadena coincidió con el patrón definido por el grupo de captura.  
   
  Al aplicar cuantificadores a un grupo (para obtener más información, consulte [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)), se modifica la relación de una captura por grupo de captura de dos maneras:  
   
@@ -301,7 +301,7 @@ ms.locfileid: "45664740"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
--   Los cuantificadores pueden coincidir con varias apariciones de un patrón definido por un grupo de captura. En este caso, las propiedades `Value` y `Length` de un objeto <xref:System.Text.RegularExpressions.Group> solo contienen información sobre la última subcadena capturada. Por ejemplo, la siguiente coincidencia de expresión regular coincide con una frase única que finaliza con un punto. Utiliza dos construcciones de agrupación: el primero captura palabras individuales junto con un carácter de espacio en blanco; el segundo captura palabras individuales. Como lo muestra el resultado del ejemplo, aunque la expresión regular logre capturar una frase completa, el segundo grupo de captura solo captura la última palabra.  
+-   Los cuantificadores pueden coincidir con varias apariciones de un patrón definido por un grupo de captura. En este caso, las propiedades `Value` y `Length` de un objeto <xref:System.Text.RegularExpressions.Group> solo contienen información sobre la última subcadena capturada. Por ejemplo, la siguiente coincidencia de expresión regular coincide con una frase única que finaliza con un punto. La expresión utiliza dos construcciones de agrupación: la primera captura palabras individuales junto con un carácter de espacio en blanco; la segunda captura palabras individuales. Como lo muestra el resultado del ejemplo, aunque la expresión regular logre capturar una frase completa, el segundo grupo de captura solo captura la última palabra.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -353,6 +353,6 @@ ms.locfileid: "45664740"
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Text.RegularExpressions>  
-- [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)  
+- <xref:System.Text.RegularExpressions>
+- [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)
 - [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

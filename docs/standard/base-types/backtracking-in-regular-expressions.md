@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 3a61c65b108cba6bb256949a120afc76b58949f2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615985"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retroceso en expresiones regulares
 <a name="top"></a> El retroceso se produce cuando un patrón de expresión regular contiene [cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) o [construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)opcionales y el motor de expresiones regulares vuelve a un estado guardado anterior para continuar la búsqueda de una coincidencia. El retroceso es fundamental para la eficacia de las expresiones regulares; permite que las expresiones sean eficaces y flexibles, y que coincidan con modelos muy complejos. Al mismo tiempo, esta eficacia tiene un costo. El retroceso suele ser el factor único más importante que afecta al rendimiento del motor de expresiones regulares. Afortunadamente, el desarrollador tiene control sobre el comportamiento del motor de expresiones regulares y cómo usa el retroceso. En este tema se explica cómo funciona el retroceso y cómo se puede controlar.  
@@ -157,7 +157,7 @@ ms.locfileid: "53130096"
   
  `(?<=` *subexpression* `)` es una aserción de búsqueda tardía positiva, es decir, el carácter o los caracteres situados antes de la posición actual deben coincidir con *subexpression*. `(?<!`*subexpression*`)` es una aserción de búsqueda tardía negativa, es decir, el carácter o los caracteres situados antes de la posición actual no deben coincidir con *subexpression*. Tanto las aserciones de búsqueda tardía positivas como las negativas son más útiles cuando *subexpression* es un subconjunto de la subexpresión anterior.  
   
- En el ejemplo siguiente se usan dos patrones de expresiones regulares equivalentes que validan el nombre de usuario de una dirección de correo electrónico. El primer patrón tiene un rendimiento bajo debido a un retroceso excesivo. El segundo patrón modifica la primera expresión regular reemplazando un cuantificador anidado con una aserción de búsqueda tardía positiva. El resultado del ejemplo muestra el tiempo de ejecución del método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>.  
+ En el ejemplo siguiente se usan dos patrones de expresiones regulares equivalentes que validan el nombre de usuario de una dirección de correo electrónico. El primer patrón tiene un rendimiento bajo debido a un retroceso excesivo. El segundo patrón modifica la primera expresión regular reemplazando un cuantificador anidado con una aserción de búsqueda tardía positiva. El resultado del ejemplo muestra el tiempo de ejecución del método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> .  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking5.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking5.vb#5)]  
@@ -167,7 +167,7 @@ ms.locfileid: "53130096"
 |Modelo|Descripción|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias en el principio de la cadena.|  
-|`[0-9A-Z]`|Buscar coincidencias de un carácter alfanumérico. Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
+|`[0-9A-Z]`|Buscar coincidencias de un carácter alfanumérico. Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
 |`[-.\w]*`|Buscar coincidencias con cero, una o más apariciones de un guión, un punto o un carácter alfabético.|  
 |`[0-9A-Z]`|Buscar coincidencias de un carácter alfanumérico.|  
 |`([-.\w]*[0-9A-Z])*`|Buscar coincidencias con cero o más apariciones de la combinación de cero o más guiones, puntos o caracteres alfabéticos, seguidos de un carácter alfanumérico. Este es el primer grupo de captura.|  
@@ -219,8 +219,8 @@ ms.locfileid: "53130096"
   
 ## <a name="see-also"></a>Vea también
 
-- [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)  
-- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
-- [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
-- [Construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+- [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md)
+- [Lenguaje de expresiones regulares: referencia rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
+- [Construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
 - [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
