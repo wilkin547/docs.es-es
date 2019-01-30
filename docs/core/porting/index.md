@@ -4,12 +4,12 @@ description: Comprenda el proceso de portabilidad y descubra herramientas que le
 author: cartermp
 ms.date: 12/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 5c7cd8b01672e71b0db7255dad23d994a95ce532
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e29750340cf272c2e05287482bcbeca703d8720a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170046"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266577"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Realice la portabilidad de su código de .NET Framework a .NET Core.
 
@@ -41,7 +41,7 @@ Este es el proceso que se recomienda al portar un proyecto a .NET Core. Cada pas
 
 En la lista siguiente se muestran las herramientas que puede resultarle útiles durante el proceso de portabilidad:
 
-* Api Portability Analyzer: [herramienta de línea de comandos](https://github.com/Microsoft/dotnet-apiport/releases) o [Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b), una cadena de herramientas que puede generar un informe de lo portátil que es su código entre .NET Framework y .NET Core, con un desglose de problemas ensamblado por ensamblado. Para más información, consulte [Analizador de portabilidad de .NET](../../standard/analyzers/portability-analyzer.md).
+* Api Portability Analyzer: [herramienta de línea de comandos](https://github.com/Microsoft/dotnet-apiport/releases) o [Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), una cadena de herramientas que puede generar un informe de lo portátil que es su código entre .NET Framework y .NET Core, con un desglose de problemas ensamblado por ensamblado. Para más información, consulte [Analizador de portabilidad de .NET](../../standard/analyzers/portability-analyzer.md).
 * Analizador de API en .NET: un analizador de Roslyn que detecta posibles riesgos de compatibilidad de las API de C# en distintas plataformas y detecta llamadas a API en desuso. Para más información, consulte [Analizador de API en .NET](../../standard/analyzers/api-analyzer.md).
 * Reverse Package Search: un [servicio web útil](https://packagesearch.azurewebsites.net) que le permite buscar un tipo y encontrar los paquetes que lo contienen.
 

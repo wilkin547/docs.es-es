@@ -5,6 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
+ms.openlocfilehash: 78dfaf46d1531e9d416b25d7ad4a595d5b3f947b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266915"
 ---
 # <a name="net-core-application-deployment"></a>Implementación de aplicaciones .NET Core
 
@@ -60,7 +66,7 @@ También tiene algunos inconvenientes:
 
 - El tamaño de su paquete de implementación es relativamente grande, ya que tendrá que incluir .NET Core, así como la aplicación y sus dependencias de terceros.
 
-  A partir de .NET Core 2.0, puede reducir el tamaño de la implementación en sistemas Linux en 28 MB aproximadamente con el [*modo invariable global*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) de .NET Core. Normalmente, .NET Core en Linux se basa en las [bibliotecas ICU](https://github.com/dotnet/docs/issues/http%22//icu-project.org) para la compatibilidad global. En modo invariable, las bibliotecas no se incluyen con la implementación y todas las referencias culturales se comportan como la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
+  A partir de .NET Core 2.0, puede reducir el tamaño de la implementación en sistemas Linux en 28 MB aproximadamente con el [*modo invariable global*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) de .NET Core. Normalmente, .NET Core en Linux se basa en las [bibliotecas ICU](http://icu-project.org) para la compatibilidad global. En modo invariable, las bibliotecas no se incluyen con la implementación y todas las referencias culturales se comportan como la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - La implementación de numerosas aplicaciones .NET Core autocontenidas en un sistema puede consumir importantes cantidades de espacio en disco, puesto que cada aplicación duplica archivos de .NET Core.
 
