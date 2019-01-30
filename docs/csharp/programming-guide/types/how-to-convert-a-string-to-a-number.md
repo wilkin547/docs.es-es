@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Procedimiento Convertir una cadena en un número: Guía de programación de C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
