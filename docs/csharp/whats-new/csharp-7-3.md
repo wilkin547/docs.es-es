@@ -163,7 +163,7 @@ Ahora, la sobrecarga por valor (primera en el ejemplo anterior) es mejor que la 
 > [!NOTE]
 > Esto se implementó como una corrección de errores. Ya no es ambiguo, incluso con la versión de lenguaje establecida en "7.2".
 
-Para obtener más información, consulte el artículo sobre el [modificador de parámetros`in`](../language-reference/keywords/in-parameter-modifier.md).
+Para obtener más información, consulte el artículo sobre el [modificador de parámetros `in`](../language-reference/keywords/in-parameter-modifier.md).
 
 ### <a name="extend-expression-variables-in-initializers"></a>Ampliación de variables de la expresión en inicializadores
 
