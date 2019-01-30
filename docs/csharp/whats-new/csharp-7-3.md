@@ -82,7 +82,7 @@ class C
 }
 ```
 
-Para más información, consulte el artículo sobre la [`fixed`instrucción](../language-reference/keywords/fixed-statement.md).
+Para más información, consulte el artículo sobre la [instrucción `fixed`](../language-reference/keywords/fixed-statement.md).
 
 ### <a name="ref-local-variables-may-be-reassigned"></a>Las variables locales de `ref` se pueden reasignar
 
@@ -138,7 +138,7 @@ El segundo tema proporciona las mejoras a las características del lenguaje. Est
 
 Los tipos de tupla de C# ahora admiten `==` y `!=`. Para más información, vea la sección que trata la [igualdad](../tuples.md#equality-and-tuples) en el artículo sobre [tuplas](../tuples.md).
 
-### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>Asociación de atributos campos de respaldo para las propiedades autoimplementadas
+### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>Asociación de atributos a los campos de respaldo para las propiedades autoimplementadas
 
 Esta sintaxis ahora se admite:
 
@@ -199,7 +199,7 @@ Solo notará este cambio porque encontrará menos errores de compilación para s
 
 ## <a name="new-compiler-options"></a>Nuevas opciones del compilador
 
-Las nuevas opciones de compilador admiten nuevos escenarios de DevOps y compilación de programas de C#.
+Las nuevas opciones del compilador admiten nuevos escenarios de DevOps y compilación de programas de C#.
 
 ### <a name="public-or-open-source-signing"></a>Firma pública o de código abierto
 
