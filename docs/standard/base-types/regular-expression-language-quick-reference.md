@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b191a01995b7c36d733b225672a3d79f488a276
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cedabbfff10b89f9755b14b963fd1d1a143cb0f0
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531426"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204891"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Lenguaje de expresiones regulares - Referencia rápida
 <a name="top"></a> Una expresión regular es un patrón con el que el motor de expresiones regulares intenta buscar una coincidencia en el texto de entrada. Un modelo consta de uno o más literales de carácter, operadores o estructuras.  Para obtener una breve introducción, consulte [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -58,10 +58,10 @@ ms.locfileid: "54531426"
 |`\f`|Coincide con un avance de página, \u000C.|`[\f]{2,}`|"\f\f\f" en "\f\f\f"|  
 |`\n`|Coincide con una nueva línea, \u000A.|`\r\n(\w+)`|"\r\nEstas" en "\r\nEstas son\ndos líneas."|  
 |`\e`|Coincide con un escape, \u001B.|`\e`|"\x001B" en "\x001B"|  
-|`\` *nnn*|Usa la representación octal para especificar un carácter (*nnn* consta de dos o tres dígitos).|`\w\040\w`|"a b", "c d" en<br /><br /> "a bc d"|  
-|`\x` *nn*|Usa la representación hexadecimal para especificar un carácter (*nn* consta de exactamente dos dígitos).|`\w\x20\w`|"a b", "c d" en<br /><br /> "a bc d"|  
+|`\` *nnn*|Usa la representación octal para especificar un carácter (*nnn* consta de dos o tres dígitos).|`\w\040\w`|"a b", "c d" en "a bc d"|  
+|`\x` *nn*|Usa la representación hexadecimal para especificar un carácter (*nn* consta de exactamente dos dígitos).|`\w\x20\w`|"a b", "c d" en "a bc d"|  
 |`\c` *X*<br /><br /> `\c` *x*|Coincide con el carácter de control ASCII especificado por *X* o *x*, donde *X* o *x* es la letra del carácter de control.|`\cC`|"\x0003" en "\x0003" (Ctrl-C)|  
-|`\u` *nnnn*|Coincide con un carácter Unicode usando la representación hexadecimal (exactamente cuatro dígitos, según representa *nnnn*).|`\w\u0020\w`|"a b", "c d" en<br /><br /> "a bc d"|  
+|`\u` *nnnn*|Coincide con un carácter Unicode usando la representación hexadecimal (exactamente cuatro dígitos, según representa *nnnn*).|`\w\u0020\w`|"a b", "c d" en "a bc d"|  
 |`\`|Cuando va seguido de un carácter que no se reconoce como un carácter de escape en esta y otras tablas de este tema, coincide con ese carácter. Por ejemplo, `\*` es igual que `\x2A`y `\.` es igual que `\x2E`. Esto permite que el motor de expresiones regulares elimine la ambigüedad de los elementos del lenguaje (como \* o ?) y los literales de carácter (representados por `\*` o `\?`).|`\d+[\+-x\*]\d+`|"2+2" y "3\*9" en "(2+2) \* 3\*9"|  
   
  [Volver al principio](#top)  
@@ -92,11 +92,11 @@ ms.locfileid: "54531426"
   
 |Aserción|Descripción|Modelo|Coincidencias|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|De forma predeterminada, la coincidencia debe comenzar al principio de la cadena; en el modo multilínea, debe comenzar al principio de la línea.|`^\d{3}`|"901" en<br /><br /> "901-333-"|  
-|`$`|De forma predeterminada, la coincidencia se debe producir al final de la cadena o antes de `\n` al final de la cadena; en el modo multilínea, se debe producir antes del final de la línea o antes de `\n` al final de la línea.|`-\d{3}$`|"-333" en<br /><br /> "-901-333"|  
-|`\A`|La coincidencia se debe producir al principio de la cadena.|`\A\d{3}`|"901" en<br /><br /> "901-333-"|  
-|`\Z`|La coincidencia se debe producir al final de la cadena o antes de `\n` al final de la cadena.|`-\d{3}\Z`|"-333" en<br /><br /> "-901-333"|  
-|`\z`|La coincidencia se debe producir al final de la cadena.|`-\d{3}\z`|"-333" en<br /><br /> "-901-333"|  
+|`^`|De forma predeterminada, la coincidencia debe comenzar al principio de la cadena; en el modo multilínea, debe comenzar al principio de la línea.|`^\d{3}`|"901" en "901-333-"|  
+|`$`|De forma predeterminada, la coincidencia se debe producir al final de la cadena o antes de `\n` al final de la cadena; en el modo multilínea, se debe producir antes del final de la línea o antes de `\n` al final de la línea.|`-\d{3}$`|"-333" en "-901-333"|  
+|`\A`|La coincidencia se debe producir al principio de la cadena.|`\A\d{3}`|"901" en "901-333-"|  
+|`\Z`|La coincidencia se debe producir al final de la cadena o antes de `\n` al final de la cadena.|`-\d{3}\Z`|"-333" en "-901-333"|  
+|`\z`|La coincidencia se debe producir al final de la cadena.|`-\d{3}\z`|"-333" en "-901-333"|  
 |`\G`|La coincidencia se debe producir en el punto en el que finalizó la coincidencia anterior.|`\G\(\d\)`|"(1)", "(3)", "(5)" en "(1)(3)(5)[7](9\)"|  
 |`\b`|La coincidencia se debe producir en un límite entre un carácter `\w` (alfanumérico) y un carácter `\W` (no alfanumérico).|`\b\w+\s\w+\b`|"ellos ello", "ellos ellos" en "ellos ello ellos ellos"|  
 |`\B`|La coincidencia no se debe producir en un límite `\b` .|`\Bend\w*\b`|"fin", "final" en "finalizar finalista finalizador finalizó"|  
@@ -218,7 +218,7 @@ ms.locfileid: "54531426"
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>
-- <xref:System.Text.RegularExpressions.Regex>
+- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [Expresiones regulares](regular-expressions.md)
 - [Clases de expresiones regulares](the-regular-expression-object-model.md)
 - [Ejemplos de expresiones regulares](regular-expression-examples.md)
