@@ -1,20 +1,20 @@
 ---
-title: '&lt;securityTokenHandlers&gt;'
+title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: e63f02add81495e474b59b6c5cc090bd69add3d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206189"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277529"
 ---
-# <a name="ltsecuritytokenhandlersgt"></a>&lt;securityTokenHandlers&gt;
+# <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
 Especifica una colección de controladores de token de seguridad que están registrados con el punto de conexión.  
   
- \<system.identityModel >  
-\<identityConfiguration >  
+ \<system.identityModel>  
+\<identityConfiguration>  
 \<securityTokenHandlers>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -44,13 +44,13 @@ Especifica una colección de controladores de token de seguridad que están regi
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Agrega un controlador de token de seguridad a la colección de controladores de token.|  
 |[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|Borra todos los controladores de token de seguridad de la colección de controladores de token.|  
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)|Quita un controlador de token de seguridad de la colección de controladores de token.|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Proporciona la configuración de la colección de controladores de token.|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Proporciona la configuración de la colección de controladores de token.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Especifica los valores de identidad de nivel de servicio.|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Especifica los valores de identidad de nivel de servicio.|  
   
 ## <a name="remarks"></a>Comentarios  
  Puede especificar una o varias colecciones con nombre de los controladores de token de seguridad en una configuración de servicio. Puede especificar un nombre para una colección mediante el `name` atributo. Los únicos nombres que controla el marco de trabajo son "ActAs" y "OnBehalfOf". Si existen controladores de estas recopilaciones, se utilizaron un servicio de token de seguridad (STS) en lugar de los controladores predeterminados al procesar `ActAs` y `OnBehalfOf` tokens.  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;filtro&gt; (elemento) para &lt;agregar&gt; para &lt;los agentes de escucha&gt; para &lt;seguimiento&gt;'
+title: Elemento <filter> de <add> de <listeners> de <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-ms.openlocfilehash: b53c3e4cc2362a1f1dc0312d59aff403ca924b5e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: f364590a419c3f31af49ea2c3dd6fa5901bf0272
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084190"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283184"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a>&lt;filtro&gt; (elemento) para &lt;agregar&gt; para &lt;los agentes de escucha&gt; para &lt;seguimiento&gt;
+# <a name="filter-element-for-add-for-listeners-for-trace"></a>\<Filtro > (elemento) para \<Agregar > para \<los agentes de escucha > para \<seguimiento >
 Agrega un filtro a un agente de escucha en el `Listeners` colección para un seguimiento.  
   
  \<configuration>  

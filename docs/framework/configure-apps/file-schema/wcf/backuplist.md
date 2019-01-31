@@ -1,15 +1,15 @@
 ---
-title: '&lt;backupList&gt;'
+title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: c11fd38e7c40f740d4c1c36ab87c44744ed0daab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e2b3eacbc845ad40030f3a48be2ef93c4ddbd8c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627997"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262440"
 ---
-# <a name="ltbackuplistgt"></a>&lt;backupList&gt;
+# <a name="backuplist"></a>\<backupList >
 Representa una sección de configuración para definir una lista de reserva que enumera un conjunto de puntos de conexión que desea que el servicio de enrutamiento use en caso de que no se puede alcanzar el punto de conexión principal. Si el primer punto de conexión en la lista está desconectado, el servicio de enrutamiento realizará automáticamente una conmutación por error al siguiente de la lista.  De este modo, dispone de una forma rápida de agregar confiabilidad a la aplicación sin tener que enseñar a la aplicación cliente cómo controlar modelos complejos o dónde implementar todos sus servicios.  
   
  \<system.serviceModel>  

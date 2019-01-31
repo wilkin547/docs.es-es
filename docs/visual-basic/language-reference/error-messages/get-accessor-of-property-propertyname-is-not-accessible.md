@@ -1,5 +1,5 @@
 ---
-title: '&#39;Obtener&#39; descriptor de acceso de propiedad &#39; &lt;propertyname&gt; &#39; no es accesible'
+title: El descriptor de acceso 'Get' de la propiedad '<propertyname>' no está accesible
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31103
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
-ms.openlocfilehash: 10b7168ac40ca7c7d696cd63cd823454f404bb94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72675f882676d3ded9ccc9ff245a1d757fa4393a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582219"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257790"
 ---
-# <a name="39get39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;Obtener&#39; descriptor de acceso de propiedad &#39; &lt;propertyname&gt; &#39; no es accesible
+# <a name="get-accessor-of-property-propertyname-is-not-accessible"></a>'Get' descriptor de acceso de propiedad '\<propertyname >' no es accesible
 Una instrucción intenta recuperar el valor de una propiedad cuando no tiene acceso a la propiedad `Get` procedimiento.  
   
  Si el [Get Statement](../../../visual-basic/language-reference/statements/get-statement.md) está marcada con un acceso más restrictivo nivel que su [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md), podría producirse un error de un intento de leer el valor de propiedad en los casos siguientes:  

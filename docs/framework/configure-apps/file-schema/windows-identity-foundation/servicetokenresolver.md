@@ -1,23 +1,23 @@
 ---
-title: '&lt;serviceTokenResolver&gt;'
+title: <serviceTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
-ms.openlocfilehash: d4b64e2c88e153834b7cf5a83bd6258b6dfd471f
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 1143717882652fc8a03947327b5f1ea89dde7373
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347535"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267435"
 ---
-# <a name="ltservicetokenresolvergt"></a>&lt;serviceTokenResolver&gt;
+# <a name="servicetokenresolver"></a>\<serviceTokenResolver>
 Registra a la resolución de tokens de servicio que se usa los controladores en la colección de controladores de token. La resolución del servicio de token se usa para resolver el token cifrado en los mensajes y los tokens entrantes.  
   
- \<system.identityModel >  
-\<identityConfiguration >  
+ \<system.identityModel>  
+\<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
-\<serviceTokenResolver >  
+\<securityTokenHandlerConfiguration>  
+\<serviceTokenResolver>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ Registra a la resolución de tokens de servicio que se usa los controladores en 
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|type|Especifica el tipo de la resolución de tokens de servicio. Ya sea el <xref:System.IdentityModel.Selectors.SecurityTokenResolver> tipo o un tipo que se deriva el <xref:System.IdentityModel.Selectors.SecurityTokenResolver> clase. Para obtener más información sobre cómo especificar el `type` atributo, vea [referencias de tipos personalizado]. Requerido.|  
+|type|Especifica el tipo de la resolución de tokens de servicio. Ya sea el <xref:System.IdentityModel.Selectors.SecurityTokenResolver> tipo o un tipo que se deriva el <xref:System.IdentityModel.Selectors.SecurityTokenResolver> clase. Para obtener más información sobre cómo especificar el `type` atributo, vea [referencias de tipos personalizado]. Obligatorio.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  
@@ -50,7 +50,7 @@ Registra a la resolución de tokens de servicio que se usa los controladores en 
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de seguridad controladores de token.|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de seguridad controladores de token.|  
   
 ## <a name="remarks"></a>Comentarios  
  La resolución del servicio de token puede usarse para resolver el token cifrado en los mensajes y los tokens entrantes. Sirve para recuperar la clave que debe usarse para descifrar tokens entrantes. Debe especificar el `type` atributo. El tipo especificado puede ser <xref:System.IdentityModel.Selectors.SecurityTokenResolver> o un tipo personalizado que deriva la <xref:System.IdentityModel.Selectors.SecurityTokenResolver> clase.  

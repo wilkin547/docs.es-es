@@ -1,5 +1,5 @@
 ---
-title: Acceso a la propiedad predeterminada es ambiguo entre los miembros heredados &#39; &lt;defaultpropertyname&gt; &#39; de interfaz &#39; &lt;interfacename1&gt; &#39; y &#39; &lt;defaultpropertyname&gt; &#39; de interfaz &#39; &lt;interfacename2&gt;&#39;
+title: Hay un acceso de propiedad Default ambiguo entre los miembros <defaultpropertyname> heredados de la interfaz <interfacename1> y <defaultpropertyname> de la interfaz <interfacename2>
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30686
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 1fae63506a35eb046676214a2b6c52977f24645d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7079ff3b56b94cb969a77707dbd79b1d7dd4bb1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518649"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270594"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>Acceso a la propiedad predeterminada es ambiguo entre los miembros heredados &#39; &lt;defaultpropertyname&gt; &#39; de interfaz &#39; &lt;interfacename1&gt; &#39; y &#39; &lt;defaultpropertyname&gt; &#39; de interfaz &#39; &lt;interfacename2&gt;&#39;
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Acceso a la propiedad predeterminada es ambiguo entre los miembros heredados\<defaultpropertyname >' de interfaz '\<interfacename1 >' y '\<defaultpropertyname >' de interfaz '\< interfacename2 >'
 Una interfaz hereda de dos interfaces, cada una de las cuales declara una propiedad predeterminada con el mismo nombre. El compilador no puede resolver un acceso a esta propiedad predeterminada sin calificación. Esto se ilustra en el siguiente ejemplo:  
   
 ```  

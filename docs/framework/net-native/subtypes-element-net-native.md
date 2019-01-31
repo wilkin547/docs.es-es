@@ -1,17 +1,17 @@
 ---
-title: Elemento &lt;Subtypes&gt; (.NET Native)
+title: <Subtypes> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5503e89006411887de9b0def929ac1155df5aa4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 712282153b79edc480ec387aa746e375ddd30d27
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537262"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273140"
 ---
-# <a name="ltsubtypesgt-element-net-native"></a>Elemento &lt;Subtypes&gt; (.NET Native)
+# <a name="subtypes-element-net-native"></a>\<Subtipos > elemento (.NET Native)
 Aplica la directiva en tiempo de ejecución a todas las clases heredadas del tipo contenedor.  
   
 ## <a name="syntax"></a>Sintaxis  
