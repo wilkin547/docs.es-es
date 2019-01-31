@@ -1,22 +1,22 @@
 ---
-title: Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (C#)
+title: Procedimiento para ordenar o filtrar datos de texto por palabra o campo (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: 46a6c81a2f6e937bbd567dd4ce1b1e448ca073db
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b2378a3f9d589640d50ca3cc80d5e82ba386bd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747978"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a><span data-ttu-id="ff83e-102">Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="ff83e-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (C#)</span></span>
-<span data-ttu-id="ff83e-103">En el ejemplo siguiente se muestra cómo ordenar líneas de texto estructurado, como valores separados por comas, por cualquier campo de la línea.</span><span class="sxs-lookup"><span data-stu-id="ff83e-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="ff83e-104">El campo se puede especificar dinámicamente en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="ff83e-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="ff83e-105">Supongamos que los campos de scores.csv representan el número de identificación de un alumno, seguido de una serie de cuatro calificaciones.</span><span class="sxs-lookup"><span data-stu-id="ff83e-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>  
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a><span data-ttu-id="913d0-102">Procedimiento para ordenar o filtrar datos de texto por palabra o campo (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="913d0-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (C#)</span></span>
+<span data-ttu-id="913d0-103">En el ejemplo siguiente se muestra cómo ordenar líneas de texto estructurado, como valores separados por comas, por cualquier campo de la línea.</span><span class="sxs-lookup"><span data-stu-id="913d0-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="913d0-104">El campo se puede especificar dinámicamente en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="913d0-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="913d0-105">Supongamos que los campos de scores.csv representan el número de identificación de un alumno, seguido de una serie de cuatro calificaciones.</span><span class="sxs-lookup"><span data-stu-id="913d0-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>  
   
-### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="ff83e-106">Para crear un archivo que contenga datos</span><span class="sxs-lookup"><span data-stu-id="ff83e-106">To create a file that contains data</span></span>  
+### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="913d0-106">Para crear un archivo que contenga datos</span><span class="sxs-lookup"><span data-stu-id="913d0-106">To create a file that contains data</span></span>  
   
-1.  <span data-ttu-id="ff83e-107">Copie los datos de scores.csv desde el tema [How to: Join Content from Dissimilar Files (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) [Cómo: Combinar contenido de archivos no similares (LINQ) (C#)] y guardarlos en la carpeta de la solución.</span><span class="sxs-lookup"><span data-stu-id="ff83e-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>  
+1.  <span data-ttu-id="913d0-107">Copie los datos de scores.csv desde el tema [Cómo: Combinar contenido de archivos no similares (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) y guárdelos en la carpeta de la solución.</span><span class="sxs-lookup"><span data-stu-id="913d0-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ff83e-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ff83e-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="913d0-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="913d0-108">Example</span></span>  
   
 ```csharp  
 public class SortLines  
@@ -72,12 +72,12 @@ public class SortLines
  */  
 ```  
   
- <span data-ttu-id="ff83e-109">En este ejemplo también se muestra cómo devolver una variable de consulta desde un método.</span><span class="sxs-lookup"><span data-stu-id="ff83e-109">This example also demonstrates how to return a query variable from a method.</span></span>  
+ <span data-ttu-id="913d0-109">En este ejemplo también se muestra cómo devolver una variable de consulta desde un método.</span><span class="sxs-lookup"><span data-stu-id="913d0-109">This example also demonstrates how to return a query variable from a method.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ff83e-110">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="ff83e-110">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="913d0-110">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="913d0-110">Compiling the Code</span></span>  
 
- <span data-ttu-id="ff83e-111">Cree un proyecto destinado a .NET Framework versión 3.5 o posterior, con una referencia a System.Core.dll y directivas `using` para los espacios de nombres System.Linq y System.IO.</span><span class="sxs-lookup"><span data-stu-id="ff83e-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+ <span data-ttu-id="913d0-111">Cree un proyecto destinado a .NET Framework versión 3.5 o posterior, con una referencia a System.Core.dll y directivas `using` para los espacios de nombres System.Linq y System.IO.</span><span class="sxs-lookup"><span data-stu-id="913d0-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ff83e-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="ff83e-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="913d0-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="913d0-112">See also</span></span>
 
-- [<span data-ttu-id="ff83e-113">LINQ y cadenas (C#)</span><span class="sxs-lookup"><span data-stu-id="ff83e-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="913d0-113">LINQ y cadenas (C#)</span><span class="sxs-lookup"><span data-stu-id="913d0-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

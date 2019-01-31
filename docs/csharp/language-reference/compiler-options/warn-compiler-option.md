@@ -12,59 +12,59 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 14656fa25ea1d01339bd63efb999e938e1243db8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5a4ecd1fbe5bb79a67d9df07d8f1a93830b03880
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865613"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499874"
 ---
-# <a name="-warn-c-compiler-options"></a><span data-ttu-id="44c31-102">-warn (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="44c31-102">-warn (C# Compiler Options)</span></span>
-<span data-ttu-id="44c31-103">La opción **-warn** especifica el nivel de advertencia que debe mostrar el compilador.</span><span class="sxs-lookup"><span data-stu-id="44c31-103">The **-warn** option specifies the warning level for the compiler to display.</span></span>  
+# <a name="-warn-c-compiler-options"></a><span data-ttu-id="e4cb8-102">-warn (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="e4cb8-102">-warn (C# Compiler Options)</span></span>
+<span data-ttu-id="e4cb8-103">La opción **-warn** especifica el nivel de advertencia que debe mostrar el compilador.</span><span class="sxs-lookup"><span data-stu-id="e4cb8-103">The **-warn** option specifies the warning level for the compiler to display.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="44c31-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="44c31-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e4cb8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e4cb8-104">Syntax</span></span>  
   
 ```console  
 -warn:option  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="44c31-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="44c31-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="e4cb8-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="e4cb8-105">Arguments</span></span>  
  `option`  
- <span data-ttu-id="44c31-106">El nivel de advertencia que quiere que se muestre para la compilación: los números más bajos muestran solo advertencias de gravedad alta; los números más altos muestran más advertencias.</span><span class="sxs-lookup"><span data-stu-id="44c31-106">The warning level you want displayed for the compilation: Lower numbers show only high severity warnings; higher numbers show more warnings.</span></span> <span data-ttu-id="44c31-107">Los valores válidos son 0 a 4:</span><span class="sxs-lookup"><span data-stu-id="44c31-107">Valid values are 0-4:</span></span>  
+ <span data-ttu-id="e4cb8-106">El nivel de advertencia que se quiere mostrar para la compilación: los números más bajos solo muestran advertencias de gravedad alta; los más altos muestran más advertencias.</span><span class="sxs-lookup"><span data-stu-id="e4cb8-106">The warning level you want displayed for the compilation: Lower numbers show only high severity warnings; higher numbers show more warnings.</span></span> <span data-ttu-id="e4cb8-107">Los valores válidos son 0 a 4:</span><span class="sxs-lookup"><span data-stu-id="e4cb8-107">Valid values are 0-4:</span></span>  
   
-|<span data-ttu-id="44c31-108">Nivel de advertencia</span><span class="sxs-lookup"><span data-stu-id="44c31-108">Warning level</span></span>|<span data-ttu-id="44c31-109">Significado</span><span class="sxs-lookup"><span data-stu-id="44c31-109">Meaning</span></span>|  
+|<span data-ttu-id="e4cb8-108">Nivel de advertencia</span><span class="sxs-lookup"><span data-stu-id="e4cb8-108">Warning level</span></span>|<span data-ttu-id="e4cb8-109">Significado</span><span class="sxs-lookup"><span data-stu-id="e4cb8-109">Meaning</span></span>|  
 |-------------------|-------------|  
-|<span data-ttu-id="44c31-110">0</span><span class="sxs-lookup"><span data-stu-id="44c31-110">0</span></span>|<span data-ttu-id="44c31-111">Desactiva la emisión de todos los mensajes de advertencia.</span><span class="sxs-lookup"><span data-stu-id="44c31-111">Turns off emission of all warning messages.</span></span>|  
-|<span data-ttu-id="44c31-112">1</span><span class="sxs-lookup"><span data-stu-id="44c31-112">1</span></span>|<span data-ttu-id="44c31-113">Muestra mensajes de advertencia graves.</span><span class="sxs-lookup"><span data-stu-id="44c31-113">Displays severe warning messages.</span></span>|  
-|<span data-ttu-id="44c31-114">2</span><span class="sxs-lookup"><span data-stu-id="44c31-114">2</span></span>|<span data-ttu-id="44c31-115">Muestra advertencias de nivel 1 además de determinadas advertencias menos graves, como advertencias sobre ocultar miembros de clase.</span><span class="sxs-lookup"><span data-stu-id="44c31-115">Displays level 1 warnings plus certain, less-severe warnings, such as warnings about hiding class members.</span></span>|  
-|<span data-ttu-id="44c31-116">3</span><span class="sxs-lookup"><span data-stu-id="44c31-116">3</span></span>|<span data-ttu-id="44c31-117">Muestra advertencias de nivel 2 además de determinadas advertencias menos graves, como advertencias sobre expresiones que siempre se evalúan como `true` o `false`.</span><span class="sxs-lookup"><span data-stu-id="44c31-117">Displays level 2 warnings plus certain, less-severe warnings, such as warnings about expressions that always evaluate to `true` or `false`.</span></span>|  
-|<span data-ttu-id="44c31-118">4 (el valor predeterminado)</span><span class="sxs-lookup"><span data-stu-id="44c31-118">4 (the default)</span></span>|<span data-ttu-id="44c31-119">Muestra todas las advertencias de nivel 3 además de advertencias informativas.</span><span class="sxs-lookup"><span data-stu-id="44c31-119">Displays all level 3 warnings plus informational warnings.</span></span>|  
+|<span data-ttu-id="e4cb8-110">0</span><span class="sxs-lookup"><span data-stu-id="e4cb8-110">0</span></span>|<span data-ttu-id="e4cb8-111">Desactiva la emisión de todos los mensajes de advertencia.</span><span class="sxs-lookup"><span data-stu-id="e4cb8-111">Turns off emission of all warning messages.</span></span>|  
+|<span data-ttu-id="e4cb8-112">1</span><span class="sxs-lookup"><span data-stu-id="e4cb8-112">1</span></span>|<span data-ttu-id="e4cb8-113">Muestra mensajes de advertencia graves.</span><span class="sxs-lookup"><span data-stu-id="e4cb8-113">Displays severe warning messages.</span></span>|  
+|<span data-ttu-id="e4cb8-114">2</span><span class="sxs-lookup"><span data-stu-id="e4cb8-114">2</span></span>|<span data-ttu-id="e4cb8-115">Muestra advertencias de nivel 1 además de determinadas advertencias menos graves, como advertencias sobre ocultar miembros de clase.</span><span class="sxs-lookup"><span data-stu-id="e4cb8-115">Displays level 1 warnings plus certain, less-severe warnings, such as warnings about hiding class members.</span></span>|  
+|<span data-ttu-id="e4cb8-116">3</span><span class="sxs-lookup"><span data-stu-id="e4cb8-116">3</span></span>|<span data-ttu-id="e4cb8-117">Muestra advertencias de nivel 2 además de determinadas advertencias menos graves, como advertencias sobre expresiones que siempre se evalúan como `true` o `false`.</span><span class="sxs-lookup"><span data-stu-id="e4cb8-117">Displays level 2 warnings plus certain, less-severe warnings, such as warnings about expressions that always evaluate to `true` or `false`.</span></span>|  
+|<span data-ttu-id="e4cb8-118">4 (el valor predeterminado)</span><span class="sxs-lookup"><span data-stu-id="e4cb8-118">4 (the default)</span></span>|<span data-ttu-id="e4cb8-119">Muestra todas las advertencias de nivel 3 además de advertencias informativas.</span><span class="sxs-lookup"><span data-stu-id="e4cb8-119">Displays all level 3 warnings plus informational warnings.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="44c31-120">Comentarios</span><span class="sxs-lookup"><span data-stu-id="44c31-120">Remarks</span></span>  
- <span data-ttu-id="44c31-121">Para obtener información sobre un error o advertencia, puede buscar el código de error en el Índice de la Ayuda.</span><span class="sxs-lookup"><span data-stu-id="44c31-121">To get information about an error or warning, you can look up the error code in the Help Index.</span></span> <span data-ttu-id="44c31-122">Para conocer otras maneras de obtener información sobre un error o advertencia, vea [Errores del compilador de C#](../../../csharp/language-reference/compiler-messages/index.md).</span><span class="sxs-lookup"><span data-stu-id="44c31-122">For other ways to get information about an error or warning, see [C# Compiler Errors](../../../csharp/language-reference/compiler-messages/index.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e4cb8-120">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e4cb8-120">Remarks</span></span>  
+ <span data-ttu-id="e4cb8-121">Para obtener información sobre un error o advertencia, puede buscar el código de error en el Índice de la Ayuda.</span><span class="sxs-lookup"><span data-stu-id="e4cb8-121">To get information about an error or warning, you can look up the error code in the Help Index.</span></span> <span data-ttu-id="e4cb8-122">Para conocer otras maneras de obtener información sobre un error o advertencia, vea [Errores del compilador de C#](../../../csharp/language-reference/compiler-messages/index.md).</span><span class="sxs-lookup"><span data-stu-id="e4cb8-122">For other ways to get information about an error or warning, see [C# Compiler Errors](../../../csharp/language-reference/compiler-messages/index.md).</span></span>  
   
- <span data-ttu-id="44c31-123">Use [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) para tratar todas las advertencias como errores.</span><span class="sxs-lookup"><span data-stu-id="44c31-123">Use [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) to treat all warnings as errors.</span></span> <span data-ttu-id="44c31-124">Use [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) para deshabilitar determinadas advertencias.</span><span class="sxs-lookup"><span data-stu-id="44c31-124">Use [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) to disable certain warnings.</span></span>  
+ <span data-ttu-id="e4cb8-123">Use [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) para tratar todas las advertencias como errores.</span><span class="sxs-lookup"><span data-stu-id="e4cb8-123">Use [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) to treat all warnings as errors.</span></span> <span data-ttu-id="e4cb8-124">Use [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) para deshabilitar determinadas advertencias.</span><span class="sxs-lookup"><span data-stu-id="e4cb8-124">Use [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) to disable certain warnings.</span></span>  
   
- <span data-ttu-id="44c31-125">**-w** es la forma abreviada de **-warn**.</span><span class="sxs-lookup"><span data-stu-id="44c31-125">**-w** is the short form of **-warn**.</span></span>  
+ <span data-ttu-id="e4cb8-125">**-w** es la forma abreviada de **-warn**.</span><span class="sxs-lookup"><span data-stu-id="e4cb8-125">**-w** is the short form of **-warn**.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="44c31-126">Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="44c31-126">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="e4cb8-126">Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="e4cb8-126">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="44c31-127">Abra la página **Propiedades** del proyecto.</span><span class="sxs-lookup"><span data-stu-id="44c31-127">Open the project's **Properties** page.</span></span>  
+1.  <span data-ttu-id="e4cb8-127">Abra la página **Propiedades** del proyecto.</span><span class="sxs-lookup"><span data-stu-id="e4cb8-127">Open the project's **Properties** page.</span></span>  
   
-2.  <span data-ttu-id="44c31-128">Haga clic en la página de propiedades de **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="44c31-128">Click the **Build** property page.</span></span>  
+2.  <span data-ttu-id="e4cb8-128">Haga clic en la página de propiedades de **Compilar**.</span><span class="sxs-lookup"><span data-stu-id="e4cb8-128">Click the **Build** property page.</span></span>  
   
-3.  <span data-ttu-id="44c31-129">Modifique la propiedad de **Nivel de advertencia**.</span><span class="sxs-lookup"><span data-stu-id="44c31-129">Modify the **Warning Level** property.</span></span>  
+3.  <span data-ttu-id="e4cb8-129">Modifique la propiedad de **Nivel de advertencia**.</span><span class="sxs-lookup"><span data-stu-id="e4cb8-129">Modify the **Warning Level** property.</span></span>  
   
- <span data-ttu-id="44c31-130">Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.</span><span class="sxs-lookup"><span data-stu-id="44c31-130">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.</span></span>  
+ <span data-ttu-id="e4cb8-130">Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.</span><span class="sxs-lookup"><span data-stu-id="e4cb8-130">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="44c31-131">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="44c31-131">Example</span></span>  
- <span data-ttu-id="44c31-132">Compile `in.cs` y haga que el compilador solo muestre advertencias de nivel 1:</span><span class="sxs-lookup"><span data-stu-id="44c31-132">Compile `in.cs` and have the compiler only display level 1 warnings:</span></span>  
+## <a name="example"></a><span data-ttu-id="e4cb8-131">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e4cb8-131">Example</span></span>  
+ <span data-ttu-id="e4cb8-132">Compile `in.cs` y haga que el compilador solo muestre advertencias de nivel 1:</span><span class="sxs-lookup"><span data-stu-id="e4cb8-132">Compile `in.cs` and have the compiler only display level 1 warnings:</span></span>  
   
 ```console  
 csc -warn:1 in.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="44c31-133">Vea también</span><span class="sxs-lookup"><span data-stu-id="44c31-133">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e4cb8-133">Vea también</span><span class="sxs-lookup"><span data-stu-id="e4cb8-133">See also</span></span>
 
-- [<span data-ttu-id="44c31-134">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="44c31-134">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
-- [<span data-ttu-id="44c31-135">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="44c31-135">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="e4cb8-134">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="e4cb8-134">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="e4cb8-135">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="e4cb8-135">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

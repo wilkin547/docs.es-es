@@ -1,21 +1,21 @@
 ---
-title: 'Cómo: Buscar un elemento con un atributo específico (C#)'
+title: Procedimiento para buscar un elemento con un atributo específico (C#)
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: 351fb4160328ebcf547b0b3442adef11a153c523
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 800e6cf5c499e616416ac90a561a440d4dcc2d7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629688"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a><span data-ttu-id="55f6a-102">Cómo: Buscar un elemento con un atributo específico (C#)</span><span class="sxs-lookup"><span data-stu-id="55f6a-102">How to: Find an Element with a Specific Attribute (C#)</span></span>
-<span data-ttu-id="55f6a-103">En este tema se muestra cómo buscar un elemento que tiene un atributo con un valor específico.</span><span class="sxs-lookup"><span data-stu-id="55f6a-103">This topic shows how to find an element that has an attribute that has a specific value.</span></span>  
+# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a><span data-ttu-id="cdda8-102">Procedimiento para buscar un elemento con un atributo específico (C#)</span><span class="sxs-lookup"><span data-stu-id="cdda8-102">How to: Find an Element with a Specific Attribute (C#)</span></span>
+<span data-ttu-id="cdda8-103">En este tema se muestra cómo buscar un elemento que tiene un atributo con un valor específico.</span><span class="sxs-lookup"><span data-stu-id="cdda8-103">This topic shows how to find an element that has an attribute that has a specific value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="55f6a-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="55f6a-104">Example</span></span>  
- <span data-ttu-id="55f6a-105">El ejemplo muestra cómo buscar el elemento `Address` que tiene un atributo `Type` con un valor de "Billing".</span><span class="sxs-lookup"><span data-stu-id="55f6a-105">The example shows how to find the `Address` element that has a `Type` attribute with a value of "Billing".</span></span>  
+## <a name="example"></a><span data-ttu-id="cdda8-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="cdda8-104">Example</span></span>  
+ <span data-ttu-id="cdda8-105">El ejemplo muestra cómo buscar el elemento `Address` que tiene un atributo `Type` con un valor de "Billing".</span><span class="sxs-lookup"><span data-stu-id="cdda8-105">The example shows how to find the `Address` element that has a `Type` attribute with a value of "Billing".</span></span>  
   
- <span data-ttu-id="55f6a-106">En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="55f6a-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
+ <span data-ttu-id="cdda8-106">Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="cdda8-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrder.xml");  
@@ -27,7 +27,7 @@ foreach (XElement el in address)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="55f6a-107">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="55f6a-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="cdda8-107">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="cdda8-107">This code produces the following output:</span></span>  
   
 ```xml  
 <Address Type="Billing">  
@@ -40,10 +40,10 @@ foreach (XElement el in address)
 </Address>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="55f6a-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="55f6a-108">Example</span></span>  
- <span data-ttu-id="55f6a-109">El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="55f6a-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="55f6a-110">Para obtener más información, vea [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) (Trabajar con espacios de nombres XML [C#]).</span><span class="sxs-lookup"><span data-stu-id="55f6a-110">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="cdda8-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="cdda8-108">Example</span></span>  
+ <span data-ttu-id="cdda8-109">El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="cdda8-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="cdda8-110">Para obtener más información, vea [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) (Trabajar con espacios de nombres XML [C#]).</span><span class="sxs-lookup"><span data-stu-id="cdda8-110">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- <span data-ttu-id="55f6a-111">En este ejemplo se usa el siguiente documento XML: [Sample XML File: Typical Purchase Order in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md) (Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres).</span><span class="sxs-lookup"><span data-stu-id="55f6a-111">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="cdda8-111">Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="cdda8-111">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrderInNamespace.xml");  
@@ -56,7 +56,7 @@ foreach (XElement el in address)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="55f6a-112">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="55f6a-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="cdda8-112">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="cdda8-112">This code produces the following output:</span></span>  
   
 ```xml  
 <aw:Address aw:Type="Billing" xmlns:aw="http://www.adventure-works.com">  
@@ -69,10 +69,10 @@ foreach (XElement el in address)
 </aw:Address>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="55f6a-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="55f6a-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cdda8-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="cdda8-113">See also</span></span>
 
-- <xref:System.Xml.Linq.XElement.Attribute%2A>  
-- <xref:System.Xml.Linq.XContainer.Elements%2A>  
-- [<span data-ttu-id="55f6a-114">Consultas básicas (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="55f6a-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
-- <span data-ttu-id="55f6a-115">[Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)(Información general sobre operadores de consulta estándar (C#))</span><span class="sxs-lookup"><span data-stu-id="55f6a-115">[Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)</span></span>  
-- <span data-ttu-id="55f6a-116">[Projection Operations (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md) (Operaciones de proyección [C#])</span><span class="sxs-lookup"><span data-stu-id="55f6a-116">[Projection Operations (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)</span></span>
+- <xref:System.Xml.Linq.XElement.Attribute%2A>
+- <xref:System.Xml.Linq.XContainer.Elements%2A>
+- [<span data-ttu-id="cdda8-114">Consultas básicas (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="cdda8-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- <span data-ttu-id="cdda8-115">[Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))</span><span class="sxs-lookup"><span data-stu-id="cdda8-115">[Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)</span></span>
+- <span data-ttu-id="cdda8-116">[Projection Operations (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md) (Operaciones de proyección [C#])</span><span class="sxs-lookup"><span data-stu-id="cdda8-116">[Projection Operations (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)</span></span>
