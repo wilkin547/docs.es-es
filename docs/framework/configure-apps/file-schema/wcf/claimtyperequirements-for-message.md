@@ -1,15 +1,15 @@
 ---
-title: '&lt;claimTypeRequirements&gt; para &lt;message&gt;'
+title: <claimTypeRequirements> para <message>
 ms.date: 03/30/2017
 ms.assetid: f95c5ecd-abb6-4b77-a6d7-a38727f4a142
-ms.openlocfilehash: 5c2bc05887701e78335629a37ce82815ac9abda5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cf77f6c026df5f78cc8ae6e6783e91f1c86e282
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628875"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256620"
 ---
-# <a name="ltclaimtyperequirementsgt-for-ltmessagegt"></a>&lt;claimTypeRequirements&gt; para &lt;message&gt;
+# <a name="claimtyperequirements-for-message"></a>\<claimTypeRequirements > para \<mensaje >
 Especifica una colección de tipos de notificación requeridos.  
   
  El servicio usa la colección para especificar cualquier notificación necesaria y opcional que debe estar en el token emitido que el cliente utiliza para tener acceso al servicio. El servicio expone los tipos de notificación necesarios en metadatos si se habilita la publicación de WSDL pero WCF no requiere que el token emitido contenga los tipos de notificación especificados. Los servicios que desean exigir tipos de notificación necesarios están presentes y deberían hacerlo con la directiva de autorización.  

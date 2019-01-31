@@ -1,15 +1,15 @@
 ---
-title: '&lt;protocolMapping&gt;'
+title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: 199a5d820a80565ccdfa2cb11fe749d63bd65087
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec17457c8742fdf17208c6588e0ab70ece7c42a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644265"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268682"
 ---
-# <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
+# <a name="protocolmapping"></a>\<protocolMapping>
 Representa una sección de configuración para definir un conjunto de asignación de protocolo predeterminado entre los esquemas de protocolos de transporte (por ejemplo, http, net.tcp, net.pipe, etc.) y enlaces WCF. Al crear puntos de conexión predeterminados en tiempo de ejecución, Windows Communication Foundation (WCF) examina las asignaciones configuradas y decide qué enlace usar para una determinada dirección base.  
   
 [**\<system.serviceModel>**](system-servicemodel.md)  

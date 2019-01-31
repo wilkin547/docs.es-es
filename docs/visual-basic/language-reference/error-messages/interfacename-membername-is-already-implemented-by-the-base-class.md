@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;InterfaceName&gt;.&lt; MemberName&gt; &#39; ya está implementado por la clase base &#39; &lt;nombredeclasebase&gt;&#39;. Reimplementación de &lt;tipo&gt; supone'
+title: "'<interfacename>. <membername>'ya está implementado por la clase base'<baseclassname>'. Reimplementación de <type> supone"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42015
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-ms.openlocfilehash: 22a3bd4e8c09c0d070e7fa5e75571a7215c3a274
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d5d9f21069c7b9aa54940525b7678bc3987b77c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507205"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264156"
 ---
-# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>&#39;&lt;InterfaceName&gt;.&lt; MemberName&gt; &#39; ya está implementado por la clase base &#39; &lt;nombredeclasebase&gt;&#39;. Reimplementación de &lt;tipo&gt; supone
+# <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>'\<nombreDeInterfaz >. \<membername >' ya está implementado por la clase base\<nombredeclasebase >'. Reimplementación de \<tipo > supone
 Una propiedad, procedimiento o evento en una clase derivada utiliza una `Implements` cláusula que especifica un miembro de interfaz que ya está implementado en la clase base.  
   
  Una clase derivada puede volver a implementar un miembro de interfaz implementado por su clase base. Esto no es el mismo que reemplazar la implementación de la clase base. Para obtener más información, consulte [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).  

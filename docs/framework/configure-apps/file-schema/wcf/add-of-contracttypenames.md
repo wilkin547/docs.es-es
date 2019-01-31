@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; de &lt;contractTypeNames&gt;'
+title: <add> de <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: cf9a1ae28b53b841ac5d8d85d31e1548e36369ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa67d2ec21494bb3d84861f4c2e2e39151aac28f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735732"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55253725"
 ---
-# <a name="ltaddgt-of-ltcontracttypenamesgt"></a>&lt;add&gt; de &lt;contractTypeNames&gt;
+# <a name="add-of-contracttypenames"></a>\<Agregar > de \<contractTypeNames >
 Un elemento de configuración que especifica el nombre del contrato de los servicios que se están buscando y los criterios que suelen usarse al buscar un servicio. Si se especifica más de un nombre del contrato, solo responderán los puntos de conexión del servicio que coincidan con TODOS los contratos. Tenga en cuenta que en Windows Communication Foundation (WCF), un punto de conexión solo puede admitir un contrato.  
   
  \<system.ServiceModel>  

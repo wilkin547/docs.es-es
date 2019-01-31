@@ -1,16 +1,16 @@
 ---
-title: '&lt;estados&gt; de &lt;activityStateQuery&gt;'
+title: <states> de <activityStateQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a7cc2018-2b79-44f1-825a-bb7ca08690a3
-ms.openlocfilehash: db50155af22cd8a50158b940a88599df1a66ce1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97664518f7c7c0078cef1c81035724a02c9857c0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635863"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257741"
 ---
-# <a name="ltstatesgt-of-ltactivitystatequerygt"></a>&lt;estados&gt; de &lt;activityStateQuery&gt;
+# <a name="states-of-activitystatequery"></a>\<Estados > de \<activityStateQuery >
 Una colección de elementos de configuración que contienen los estados de la actividad suscrita para la que se debería emitir un registro del seguimiento.  
   
  Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  

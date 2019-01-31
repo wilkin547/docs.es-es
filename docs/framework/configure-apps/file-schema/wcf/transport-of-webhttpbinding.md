@@ -1,15 +1,15 @@
 ---
-title: '&lt;transport&gt; de &lt;webHttpBinding&gt;'
+title: <transport> de <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: 657de92129d27e70834cb401cde42d24b633f7ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2c7ee3512ddeefae6e5551a58b3bab76742ed30
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677022"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286421"
 ---
-# <a name="lttransportgt-of-ltwebhttpbindinggt"></a>&lt;transport&gt; de &lt;webHttpBinding&gt;
+# <a name="transport-of-webhttpbinding"></a>\<transporte > de \<webHttpBinding >
 Define los valores de seguridad a nivel de transporte para un punto de conexión de servicio configurado para recibir solicitudes HTTP.  
   
  \<system.ServiceModel>  

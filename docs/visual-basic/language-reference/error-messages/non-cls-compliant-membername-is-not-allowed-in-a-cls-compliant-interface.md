@@ -1,5 +1,5 @@
 ---
-title: No compatible con CLS &lt;membername&gt; no se permite en una interfaz conforme a CLS
+title: <membername> no compatible con CLS no se permite en una interfaz compatible con CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40033
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: c837065d2d448fc2523cfbd18efac962445f8bf0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aeacc49faad6198a9341a1ec7d010f1cd173912d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627702"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288982"
 ---
-# <a name="non-cls-compliant-ltmembernamegt-is-not-allowed-in-a-cls-compliant-interface"></a>No compatible con CLS &lt;membername&gt; no se permite en una interfaz conforme a CLS
+# <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>No compatible con CLS \<membername > no se permite en una interfaz conforme a CLS
 Una propiedad, procedimiento o evento en una interfaz se marca como `<CLSCompliant(True)>` cuando la propia interfaz está marcada como `<CLSCompliant(False)>` o no está marcada.  
   
  Para una interfaz sea compatible con la [independencia del lenguaje y componentes independientes del lenguaje](../../../standard/language-independence-and-language-independent-components.md) (CLS), deben ser compatible con todos sus miembros.  

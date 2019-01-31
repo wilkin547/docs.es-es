@@ -1,5 +1,5 @@
 ---
-title: Tipo de miembro &#39; &lt;membername&gt; &#39; no es conforme a CLS
+title: El tipo de miembro '<membername>' no es compatible con CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40025
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: b304b28aa7d43a33111c49507bf02f004fcdd9c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b23ebca955d961771b194df2c7316cb1b7f4a50
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603857"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254098"
 ---
-# <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>Tipo de miembro &#39; &lt;membername&gt; &#39; no es conforme a CLS
+# <a name="type-of-member-membername-is-not-cls-compliant"></a>Tipo de miembro '\<membername >' no es conforme a CLS
 El tipo de datos especificado para este miembro no es parte de la [independencia del lenguaje y componentes independientes del lenguaje](../../../standard/language-independence-and-language-independent-components.md) (CLS). Esto no es un error en su componente, porque el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] y Visual Basic admite este tipo de datos. Sin embargo, es posible que otro componente escrito en código estrictamente conforme a CLS no admite este tipo de datos. Es posible que este componente no pueda interactuar correctamente con el componente.  
   
  Los siguientes tipos de datos de Visual Basic no son conformes a CLS:  

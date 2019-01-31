@@ -1,5 +1,5 @@
 ---
-title: Tipo de parámetro &#39; &lt;parametername&gt; &#39; no es conforme a CLS
+title: El tipo de parámetro '<parametername>' no es compatible con CLS
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40028
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-ms.openlocfilehash: 13a4e35cd27ed5aa135cec77c4415f223cba70f2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e0852536a86dd415334f95a47ceb800ed2c591ad
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403041"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265927"
 ---
-# <a name="type-of-parameter-39ltparameternamegt39-is-not-cls-compliant"></a>Tipo de parámetro &#39; &lt;parametername&gt; &#39; no es conforme a CLS
+# <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>Tipo de parámetro '\<parametername >' no es conforme a CLS
 Un procedimiento está marcado como `<CLSCompliant(True)>` pero declara un parámetro con un tipo que está marcado como `<CLSCompliant(False)>`, no está marcado o no cumple los requisitos porque es un tipo no conforme.  
   
  Para que un procedimiento sea conforme a la [Independencia del lenguaje y componentes independientes del lenguaje](../../../standard/language-independence-and-language-independent-components.md) (CLS), solo debe usar tipos conformes a CLS. Esto se aplica a los tipos de los parámetros, el tipo de valor devuelto y los tipos de todas sus variables locales.  
@@ -29,11 +29,11 @@ Un procedimiento está marcado como `<CLSCompliant(True)>` pero declara un pará
   
 -   [UShort (tipo de datos)](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
- Al aplicar <xref:System.CLSCompliantAttribute> a un elemento de programación, establezca el parámetro `isCompliant` del atributo en `True` o `False` para indicar conformidad o disconformidad. No hay ningún valor predeterminado para este parámetro y debe proporcionar un valor.  
+ Al aplicar <xref:System.CLSCompliantAttribute> a un elemento de programación, establezca el parámetro `isCompliant` del atributo en `True` o `False` para indicar conformidad o disconformidad. No hay ningún valor predeterminado para este parámetro, por lo que debe proporcionar uno.  
   
  Si no se aplica <xref:System.CLSCompliantAttribute> a un elemento, se considera que no es conforme.  
   
- De forma predeterminada, este mensaje es una advertencia. Para obtener información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ De forma predeterminada, este mensaje es una advertencia. Para obtener más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Identificador de error:** BC40028  
   

@@ -2,12 +2,12 @@
 title: F#instrucciones de formato de código
 description: Obtenga información sobre las directrices para dar formato a F# código.
 ms.date: 11/26/2018
-ms.openlocfilehash: d4b61646154c613093374ef3dcf7436de4b0d3ea
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b80a66f582d9fb8a2ec940ab565823483e7e4eea
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415447"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254835"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#instrucciones de formato de código
 
@@ -275,6 +275,17 @@ match x, y with
 | x, 1 -> 0
 | x, y -> 1
 ```
+
+Normalmente también se acepta para omitir los paréntesis si la tupla es el valor devuelto de una función:
+
+```fsharp
+// OK
+let update model msg =
+    match msg with
+    | 1 -> model + 1, []
+    | _ -> model, [ msg ]
+```
+En resumen, prefiere creaciones de instancias de tupla entre paréntesis, pero al usar tuplas para la coincidencia de patrones o un valor devuelto, se considera bien evitar los paréntesis.
 
 ## <a name="formatting-discriminated-union-declarations"></a>Formato discriminadas declaraciones de unión
 

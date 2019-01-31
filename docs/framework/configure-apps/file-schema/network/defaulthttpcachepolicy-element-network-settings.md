@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultHttpCachePolicy&gt; elemento (configuración de red)'
+title: <defaultHttpCachePolicy> (Elemento, Configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 8b71942380b750cd654c2d4c248bf5c93d82112e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a48fa5e4a5768f97d3aeabebe4d594ec9f498ca2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555103"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260676"
 ---
-# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt; elemento (configuración de red)
+# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy > elemento (configuración de red)
 Describe si el almacenamiento en caché de HTTP está activo y describe la directiva de caché de predeterminada.  
   
  \<configuration>  

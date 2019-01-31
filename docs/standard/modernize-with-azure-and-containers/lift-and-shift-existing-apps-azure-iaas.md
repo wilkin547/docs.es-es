@@ -4,12 +4,12 @@ description: Modernizar aplicaciones .NET existentes con contenedores de Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a6c13ba5bfd28cec87df1c021ed1f303d7d1f4f5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2b987d43f476f261bfdbd1b2af6ca7f792178cf8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154390"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266629"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Levantar y mover aplicaciones .NET existentes a Azure IaaS (infraestructura de nube-Ready)
 
@@ -87,9 +87,13 @@ Figura 2-3 se muestra la ejecución de varias migraciones de máquina virtual me
 
     [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
 
-- **Migrar de Azure**
+- **Azure Migrate**
 
-    [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
+    [https://aka.ms/azuremigrate](https://aka.ms/azuremigrate)
+
+- **Centro de migración de Azure**
+
+    [https://azure.microsoft.com/migration/](https://azure.microsoft.com/migration/)
 
 - **Migrar a Azure con Site Recovery**
 

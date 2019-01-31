@@ -1,5 +1,5 @@
 ---
-title: '&lt;specifiedPickupDirectory&gt; elemento (configuración de red)'
+title: <specifiedPickupDirectory> (Elemento, Configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#specifiedPickupDirectory
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: 7735aea55f03b0703ebb7b0e3c5f958b57f1238d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6abee1b01e690633dabfd225b30fcb9b8b408dad
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611311"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270828"
 ---
-# <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a>&lt;specifiedPickupDirectory&gt; elemento (configuración de red)
+# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory > elemento (configuración de red)
 Configura el directorio local de un servidor SMTP (Protocolo simple de transferencia de correo).  
   
  \<configuration>  

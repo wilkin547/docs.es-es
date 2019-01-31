@@ -1,5 +1,5 @@
 ---
-title: 'Error al crear el manifiesto del ensamblado: &lt;mensaje de error&gt;'
+title: 'Error al crear manifiesto del ensamblado: <error message>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30140
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: 7efdfa09ad7bf58fc3ddc8f702377a4d41b2fed6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9c8d9fe4b8bea45e4b655415b044937f248deab
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655392"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266486"
 ---
-# <a name="error-creating-assembly-manifest-lterror-messagegt"></a>Error al crear el manifiesto del ensamblado: &lt;mensaje de error&gt;
+# <a name="error-creating-assembly-manifest-error-message"></a>Error al crear el manifiesto del ensamblado: \<mensaje de error >
 El compilador de Visual Basic llama a la herramienta Assembly Linker (Al.exe, también denominado Alink) para generar un ensamblado con un manifiesto. El vinculador ha informado de un error en una fase previa a la emisión de la creación del ensamblado.  
   
  Esto puede suceder si existen problemas con el archivo de clave o el contenedor de claves especificado. Para firmar completamente un ensamblado, debe proporcionar un archivo de clave válido que contenga información sobre las claves pública y privada. Para retrasar la firma de un ensamblado, debe activar la casilla **Retrasar solo firma** y proporcionar un archivo de clave válido que contenga información sobre la clave pública. La clave privada no es necesaria cuando un ensamblado tiene la firma retrasada. Para obtener más información, vea [Cómo: Firmar un ensamblado con un nombre seguro](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  

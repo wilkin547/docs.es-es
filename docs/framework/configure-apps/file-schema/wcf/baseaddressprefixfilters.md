@@ -1,15 +1,15 @@
 ---
-title: '&lt;baseAddressPrefixFilters&gt;'
+title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 21a926d07aa818ce4ff5c2b85a04167fdd531047
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 303e1d0ab9150c16cb36439940ade73cf012b2d1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667250"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261817"
 ---
-# <a name="ltbaseaddressprefixfiltersgt"></a>&lt;baseAddressPrefixFilters&gt;
+# <a name="baseaddressprefixfilters"></a>\<baseAddressPrefixFilters>
 Representa una colección de configuración de elementos que especifican pasan a través de filtros, que proporcionan un mecanismo para escoger los enlaces adecuados de Internet Information Services (IIS) al hospedar la aplicación de Windows Communication Foundation (WCF) en IIS.  
   
 > [!WARNING]

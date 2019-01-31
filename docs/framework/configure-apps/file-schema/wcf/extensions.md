@@ -1,15 +1,15 @@
 ---
-title: '&lt;extensions&gt;'
+title: <extensions>
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
-ms.openlocfilehash: 9589eaf8ee133f0be670782574dfd30272f29b45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: feac4999438a67043899eef98bb8b49644ee30d9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556355"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270022"
 ---
-# <a name="ltextensionsgt"></a>&lt;extensions&gt;
+# <a name="extensions"></a>\<extensions>
 Este elemento de configuración contiene una colección de elementos XML que contienen metadatos personalizados que se van a publicar junto con los metadatos detectables estándar (EPR, ContractTypeName, BindingName, Scope y ListenURI). A continuación, se muestra un ejemplo del uso de este elemento de configuración.  
   
 ```xml  

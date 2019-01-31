@@ -1,17 +1,17 @@
 ---
-title: archivo '&lt;filename&gt;' no encontrado
+title: Archivo '<filename>' no encontrado
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_FileNotFound1
 ms.assetid: b45bffc9-5b16-4b9b-a413-98a8d726e226
-ms.openlocfilehash: d69cf9ffe83163a83e4f3f6c1ee6097965e99c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1ac8f5b726778055ff1808f89c958731fbd19e1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736421"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274526"
 ---
-# <a name="file-ltfilenamegt-not-found"></a>archivo '&lt;filename&gt;' no encontrado
+# <a name="file-filename-not-found"></a>Archivo '\<filename >' no encontrado
 Un nombre de archivo es incorrecto o el archivo no existe.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  

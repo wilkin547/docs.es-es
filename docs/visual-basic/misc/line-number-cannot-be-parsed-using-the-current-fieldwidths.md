@@ -1,17 +1,17 @@
 ---
-title: Línea &lt;número&gt; no se puede analizar mediante los FieldWidths actuales
+title: Línea <number> no se puede analizar mediante los FieldWidths actuales
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
-ms.openlocfilehash: 8e70eef9ec40b3506c4ac65e3114cf05698bdeba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3184f023ab4663d5616e3878420e3a75a7f3cde
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722626"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262400"
 ---
-# <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a>Línea &lt;número&gt; no se puede analizar mediante los FieldWidths actuales
+# <a name="line-number-cannot-be-parsed-using-the-current-fieldwidths"></a>Línea \<número > no se puede analizar mediante los FieldWidths actuales
 La línea especificada no se puede analizar porque sus campos tienen anchos distintos a los especificados.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; de &lt;namespaceTable&gt;'
+title: <add> de <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: 1d3b61fa6653b3910e65b95fa96fd0657e72bf7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e463ffa87e67bc5f100f9acf38ace6450b0ce40
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632916"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268709"
 ---
-# <a name="ltaddgt-of-ltnamespacetablegt"></a>&lt;add&gt; de &lt;namespaceTable&gt;
+# <a name="add-of-namespacetable"></a>\<Agregar > de \<namespaceTable >
 Representa un elemento de configuración que contiene un espacio de nombres para prefijar la asignación que después puede usarse en filtros XPath para el enrutamiento.  
   
  \<system.serviceModel>  

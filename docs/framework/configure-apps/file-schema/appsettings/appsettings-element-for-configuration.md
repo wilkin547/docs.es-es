@@ -1,5 +1,5 @@
 ---
-title: '&lt;appSettings&gt; (elemento) para &lt;configuración&gt;'
+title: <appSettings> (elemento para <configuration>)
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 0ba57f51d3b1e78239677317933507ff009db035
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dcdf8d0f11ae65353da08bba1f8d2fe5ab415c6b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190936"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289593"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > (elemento) para \<configuración >
 
 Contiene la configuración de aplicación personalizada. Se trata de una sección de configuración predefinidos proporcionada por .NET Framework.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<appSettings >**
+&nbsp;&nbsp;**\<appSettings>**
 
 ## <a name="syntax"></a>Sintaxis
 

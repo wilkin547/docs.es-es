@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
 ms.author: mairaw
-ms.openlocfilehash: 63158dd2dda5388870d3d5878fe29cb004aec401
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 820a43e3c766c7abc47e21ad9d8c6e9d7a1d749e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592620"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269840"
 ---
 # <a name="binary-serialization"></a>Serialización binaria
 
@@ -47,54 +47,54 @@ Al igual que la naturaleza de la serialización binaria permite la modificación
 - <xref:System.ArgumentNullException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.ArgumentOutOfRangeException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.ArithmeticException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Array?displayProperty=nameWithType>   
-- <xref:System.ArraySegment%601?displayProperty=nameWithType>   
+- <xref:System.Array?displayProperty=nameWithType>
+- <xref:System.ArraySegment%601?displayProperty=nameWithType>
 - <xref:System.ArrayTypeMismatchException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Attribute?displayProperty=nameWithType>
 - <xref:System.BadImageFormatException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Boolean?displayProperty=nameWithType>   
-- <xref:System.Byte?displayProperty=nameWithType>   
+- <xref:System.Boolean?displayProperty=nameWithType>
+- <xref:System.Byte?displayProperty=nameWithType>
 - <xref:System.CannotUnloadAppDomainException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Char?displayProperty=nameWithType>   
-- <xref:System.Collections.ArrayList?displayProperty=nameWithType>   
-- <xref:System.Collections.BitArray?displayProperty=nameWithType>   
-- <xref:System.Collections.Comparer?displayProperty=nameWithType>   
-- <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.Comparer%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.EqualityComparer%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.HashSet%601?displayProperty=nameWithType>   
+- <xref:System.Char?displayProperty=nameWithType>
+- <xref:System.Collections.ArrayList?displayProperty=nameWithType>
+- <xref:System.Collections.BitArray?displayProperty=nameWithType>
+- <xref:System.Collections.Comparer?displayProperty=nameWithType>
+- <xref:System.Collections.DictionaryEntry?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.Comparer%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.EqualityComparer%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.HashSet%601?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Collections.Generic.KeyValuePair%602?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.LinkedList%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.SortedSet%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Hashtable?displayProperty=nameWithType>   
-- <xref:System.Collections.ObjectModel.Collection%601?displayProperty=nameWithType>   
-- <xref:System.Collections.ObjectModel.KeyedCollection%602?displayProperty=nameWithType>   
-- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>   
-- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=nameWithType>   
-- <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=nameWithType>   
-- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>   
-- <xref:System.Collections.Queue?displayProperty=nameWithType>   
-- <xref:System.Collections.SortedList?displayProperty=nameWithType>   
-- <xref:System.Collections.Specialized.HybridDictionary?displayProperty=nameWithType>   
-- <xref:System.Collections.Specialized.ListDictionary?displayProperty=nameWithType>   
-- <xref:System.Collections.Specialized.OrderedDictionary?displayProperty=nameWithType>   
-- <xref:System.Collections.Specialized.StringCollection?displayProperty=nameWithType>   
-- <xref:System.Collections.Specialized.StringDictionary?displayProperty=nameWithType>   
-- <xref:System.Collections.Stack?displayProperty=nameWithType>   
-- `System.Collections.Generic.NonRandomizedStringEqualityComparer` <!--zz <xref:System.Collections.Generic.NonRandomizedStringEqualityComparer?displayProperty=nameWithType> --> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.ComponentModel.BindingList%601?displayProperty=nameWithType>   
+- <xref:System.Collections.Generic.KeyValuePair%602?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.LinkedList%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.SortedSet%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>
+- <xref:System.Collections.Hashtable?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel.Collection%601?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel.KeyedCollection%602?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>
+- <xref:System.Collections.Queue?displayProperty=nameWithType>
+- <xref:System.Collections.SortedList?displayProperty=nameWithType>
+- <xref:System.Collections.Specialized.HybridDictionary?displayProperty=nameWithType>
+- <xref:System.Collections.Specialized.ListDictionary?displayProperty=nameWithType>
+- <xref:System.Collections.Specialized.OrderedDictionary?displayProperty=nameWithType>
+- <xref:System.Collections.Specialized.StringCollection?displayProperty=nameWithType>
+- <xref:System.Collections.Specialized.StringDictionary?displayProperty=nameWithType>
+- <xref:System.Collections.Stack?displayProperty=nameWithType>
+- `System.Collections.Generic.NonRandomizedStringEqualityComparer` (disponible en .NET Core 2.0.4 y versiones posteriores)
+- <xref:System.ComponentModel.BindingList%601?displayProperty=nameWithType>
 - <xref:System.ComponentModel.DataAnnotations.ValidationException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.ComponentModel.Design.CheckoutException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.ComponentModel.InvalidAsynchronousStateException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.ComponentModel.LicenseException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores, la serialización de .NET Framework a .NET Core no es compatible)
+- <xref:System.ComponentModel.LicenseException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores, la serialización de .NET Framework a .NET Core no se admite)
 - <xref:System.ComponentModel.WarningException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.ComponentModel.Win32Exception?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Configuration.ConfigurationErrorsException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
@@ -104,13 +104,13 @@ Al igual que la naturaleza de la serialización binaria permite la modificación
 - <xref:System.Configuration.SettingsPropertyNotFoundException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Configuration.SettingsPropertyWrongTypeException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.ContextMarshalException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.DBNull?displayProperty=nameWithType> (disponible en .NET Core 2.0.2 y versiones posteriores)   
+- <xref:System.DBNull?displayProperty=nameWithType> (disponible en .NET Core 2.0.2 y versiones posteriores)
 - <xref:System.Data.Common.DbException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Data.ConstraintException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Data.DBConcurrencyException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Data.DataException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Data.DataSet?displayProperty=nameWithType>
-- <xref:System.Data.DataTable?displayProperty=nameWithType> (a menos que establezca RemotingFormat a SerializationFormat.Binary en cuyo caso solo se puede intercambiar con .NET Core 2.1 y versiones posteriores.)   
+- <xref:System.Data.DataTable?displayProperty=nameWithType> (a menos que establezca RemotingFormat a SerializationFormat.Binary en cuyo caso solo se puede intercambiar con .NET Core 2.1 y versiones posteriores.)
 - <xref:System.Data.DeletedRowInaccessibleException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Data.DuplicateNameException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Data.EvaluateException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
@@ -121,32 +121,32 @@ Al igual que la naturaleza de la serialización binaria permite la modificación
 - <xref:System.Data.NoNullAllowedException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Data.Odbc.OdbcException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Data.OperationAbortedException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Data.PropertyCollection?displayProperty=nameWithType>   
+- <xref:System.Data.PropertyCollection?displayProperty=nameWithType>
 - <xref:System.Data.ReadOnlyException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Data.RowNotInTableException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Data.SqlClient.SqlException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores, la serialización de .NET Framework a .NET Core no es compatible)
+- <xref:System.Data.SqlClient.SqlException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores, la serialización de .NET Framework a .NET Core no se admite)
 - <xref:System.Data.SqlTypes.SqlAlreadyFilledException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Data.SqlTypes.SqlBoolean?displayProperty=nameWithType>   
-- <xref:System.Data.SqlTypes.SqlByte?displayProperty=nameWithType>   
-- <xref:System.Data.SqlTypes.SqlDateTime?displayProperty=nameWithType>   
-- <xref:System.Data.SqlTypes.SqlDouble?displayProperty=nameWithType>   
-- <xref:System.Data.SqlTypes.SqlGuid?displayProperty=nameWithType>   
-- <xref:System.Data.SqlTypes.SqlInt16?displayProperty=nameWithType>   
-- <xref:System.Data.SqlTypes.SqlInt32?displayProperty=nameWithType>   
-- <xref:System.Data.SqlTypes.SqlInt64?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlBoolean?displayProperty=nameWithType>
+- <xref:System.Data.SqlTypes.SqlByte?displayProperty=nameWithType>
+- <xref:System.Data.SqlTypes.SqlDateTime?displayProperty=nameWithType>
+- <xref:System.Data.SqlTypes.SqlDouble?displayProperty=nameWithType>
+- <xref:System.Data.SqlTypes.SqlGuid?displayProperty=nameWithType>
+- <xref:System.Data.SqlTypes.SqlInt16?displayProperty=nameWithType>
+- <xref:System.Data.SqlTypes.SqlInt32?displayProperty=nameWithType>
+- <xref:System.Data.SqlTypes.SqlInt64?displayProperty=nameWithType>
 - <xref:System.Data.SqlTypes.SqlNotFilledException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Data.SqlTypes.SqlNullValueException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Data.SqlTypes.SqlString?displayProperty=nameWithType>   
+- <xref:System.Data.SqlTypes.SqlString?displayProperty=nameWithType>
 - <xref:System.Data.SqlTypes.SqlTruncateException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Data.SqlTypes.SqlTypeException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Data.StrongTypingException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Data.SyntaxErrorException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Data.VersionNotFoundException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.DataMisalignedException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.DateTime?displayProperty=nameWithType>   
-- <xref:System.DateTimeOffset?displayProperty=nameWithType>   
-- <xref:System.Decimal?displayProperty=nameWithType>   
-- `System.Diagnostics.Contracts.ContractException` <!--zz <xref:System.Diagnostics.Contracts.ContractException?displayProperty=nameWithType> --> (disponible en .NET Core 2.0.4 y versiones posteriores)
+- <xref:System.DateTime?displayProperty=nameWithType>
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>
+- <xref:System.Decimal?displayProperty=nameWithType>
+- `System.Diagnostics.Contracts.ContractException` (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Diagnostics.Tracing.EventSourceException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.DirectoryServices.AccountManagement.MultipleMatchesException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
@@ -170,27 +170,27 @@ Al igual que la naturaleza de la serialización binaria permite la modificación
 - <xref:System.DirectoryServices.Protocols.TlsOperationException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.DivideByZeroException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.DllNotFoundException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Double?displayProperty=nameWithType>   
-- <xref:System.Drawing.Color?displayProperty=nameWithType>   
-- <xref:System.Drawing.Point?displayProperty=nameWithType>   
-- <xref:System.Drawing.PointF?displayProperty=nameWithType>   
-- <xref:System.Drawing.Rectangle?displayProperty=nameWithType>   
-- <xref:System.Drawing.RectangleF?displayProperty=nameWithType>   
-- <xref:System.Drawing.Size?displayProperty=nameWithType>   
-- <xref:System.Drawing.SizeF?displayProperty=nameWithType>   
+- <xref:System.Double?displayProperty=nameWithType>
+- <xref:System.Drawing.Color?displayProperty=nameWithType>
+- <xref:System.Drawing.Point?displayProperty=nameWithType>
+- <xref:System.Drawing.PointF?displayProperty=nameWithType>
+- <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
+- <xref:System.Drawing.RectangleF?displayProperty=nameWithType>
+- <xref:System.Drawing.Size?displayProperty=nameWithType>
+- <xref:System.Drawing.SizeF?displayProperty=nameWithType>
 - <xref:System.DuplicateWaitObjectException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.EntryPointNotFoundException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Enum?displayProperty=nameWithType>   
+- <xref:System.Enum?displayProperty=nameWithType>
 - <xref:System.EventArgs?displayProperty=nameWithType> (disponible en .NET Core 2.0.6 y versiones posteriores)
-- <xref:System.Exception?displayProperty=nameWithType>   
+- <xref:System.Exception?displayProperty=nameWithType>
 - <xref:System.ExecutionEngineException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.FieldAccessException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.FormatException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Globalization.CompareInfo?displayProperty=nameWithType>   
+- <xref:System.Globalization.CompareInfo?displayProperty=nameWithType>
 - <xref:System.Globalization.CultureNotFoundException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Globalization.SortVersion?displayProperty=nameWithType>   
-- <xref:System.Guid?displayProperty=nameWithType>   
-- `System.IO.Compression.ZLibException` <!--zz <xref:System.IO.Compression.ZLibException?displayProperty=nameWithType --> (disponible en .NET Core 2.0.4 y versiones posteriores)
+- <xref:System.Globalization.SortVersion?displayProperty=nameWithType>
+- <xref:System.Guid?displayProperty=nameWithType>
+- `System.IO.Compression.ZLibException` (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.IO.DriveNotFoundException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.IO.EndOfStreamException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.IO.FileFormatException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
@@ -204,10 +204,10 @@ Al igual que la naturaleza de la serialización binaria permite la modificación
 - <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.InsufficientExecutionStackException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.InsufficientMemoryException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Int16?displayProperty=nameWithType>   
-- <xref:System.Int32?displayProperty=nameWithType>   
-- <xref:System.Int64?displayProperty=nameWithType>   
-- <xref:System.IntPtr?displayProperty=nameWithType>   
+- <xref:System.Int16?displayProperty=nameWithType>
+- <xref:System.Int32?displayProperty=nameWithType>
+- <xref:System.Int64?displayProperty=nameWithType>
+- <xref:System.IntPtr?displayProperty=nameWithType>
 - <xref:System.InvalidCastException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.InvalidOperationException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.InvalidProgramException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
@@ -218,9 +218,9 @@ Al igual que la naturaleza de la serialización binaria permite la modificación
 - <xref:System.MissingMemberException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.MissingMethodException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.MulticastNotSupportedException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Net.Cookie?displayProperty=nameWithType>   
-- <xref:System.Net.CookieCollection?displayProperty=nameWithType>   
-- <xref:System.Net.CookieContainer?displayProperty=nameWithType>   
+- <xref:System.Net.Cookie?displayProperty=nameWithType>
+- <xref:System.Net.CookieCollection?displayProperty=nameWithType>
+- <xref:System.Net.CookieContainer?displayProperty=nameWithType>
 - <xref:System.Net.CookieException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Net.HttpListenerException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Net.Mail.SmtpException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
@@ -236,10 +236,10 @@ Al igual que la naturaleza de la serialización binaria permite la modificación
 - <xref:System.NotImplementedException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.NotSupportedException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.NullReferenceException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Nullable%601?displayProperty=nameWithType>   
-- <xref:System.Numerics.BigInteger?displayProperty=nameWithType>   
-- <xref:System.Numerics.Complex?displayProperty=nameWithType>   
-- <xref:System.Object?displayProperty=nameWithType>   
+- <xref:System.Nullable%601?displayProperty=nameWithType>
+- <xref:System.Numerics.BigInteger?displayProperty=nameWithType>
+- <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- <xref:System.Object?displayProperty=nameWithType>
 - <xref:System.ObjectDisposedException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.OperationCanceledException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.OutOfMemoryException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
@@ -249,7 +249,7 @@ Al igual que la naturaleza de la serialización binaria permite la modificación
 - <xref:System.Reflection.AmbiguousMatchException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Reflection.CustomAttributeFormatException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Reflection.InvalidFilterCriteriaException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Reflection.ReflectionTypeLoadException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores, la serialización de .NET Framework a .NET Core no es compatible)
+- <xref:System.Reflection.ReflectionTypeLoadException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores, la serialización de .NET Framework a .NET Core no se admite)
 - <xref:System.Reflection.TargetException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Reflection.TargetInvocationException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Reflection.TargetParameterCountException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
@@ -266,13 +266,13 @@ Al igual que la naturaleza de la serialización binaria permite la modificación
 - <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Runtime.Serialization.InvalidDataContractException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Runtime.Serialization.SerializationException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.SByte?displayProperty=nameWithType>   
+- <xref:System.SByte?displayProperty=nameWithType>
 - <xref:System.Security.AccessControl.PrivilegeNotHeldException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Security.Authentication.AuthenticationException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Security.Authentication.InvalidCredentialException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Security.Cryptography.CryptographicException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- `System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException` <!--zz <xref:System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException?displayProperty=nameWithType --> (disponible en .NET Core 2.0.4 y versiones posteriores)
+- `System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException` (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Security.HostProtectionException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Security.Policy.PolicyException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Security.Principal.IdentityNotMappedException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
@@ -280,15 +280,15 @@ Al igual que la naturaleza de la serialización binaria permite la modificación
 - <xref:System.Security.VerificationException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Security.XmlSyntaxException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.ServiceProcess.TimeoutException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Single?displayProperty=nameWithType>   
+- <xref:System.Single?displayProperty=nameWithType>
 - <xref:System.StackOverflowException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.String?displayProperty=nameWithType>   
-- <xref:System.StringComparer?displayProperty=nameWithType>   
+- <xref:System.String?displayProperty=nameWithType>
+- <xref:System.StringComparer?displayProperty=nameWithType>
 - <xref:System.SystemException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Text.DecoderFallbackException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Text.EncoderFallbackException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Text.RegularExpressions.RegexMatchTimeoutException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Text.StringBuilder?displayProperty=nameWithType>   
+- <xref:System.Text.StringBuilder?displayProperty=nameWithType>
 - <xref:System.Threading.AbandonedMutexException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Threading.BarrierPostPhaseException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Threading.LockRecursionException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
@@ -301,9 +301,9 @@ Al igual que la naturaleza de la serialización binaria permite la modificación
 - <xref:System.Threading.ThreadStartException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Threading.ThreadStateException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Threading.WaitHandleCannotBeOpenedException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.TimeSpan?displayProperty=nameWithType>   
-- <xref:System.TimeZoneInfo.AdjustmentRule?displayProperty=nameWithType>   
-- <xref:System.TimeZoneInfo?displayProperty=nameWithType>   
+- <xref:System.TimeSpan?displayProperty=nameWithType>
+- <xref:System.TimeZoneInfo.AdjustmentRule?displayProperty=nameWithType>
+- <xref:System.TimeZoneInfo?displayProperty=nameWithType>
 - <xref:System.TimeZoneNotFoundException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.TimeoutException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Transactions.TransactionAbortedException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
@@ -311,23 +311,23 @@ Al igual que la naturaleza de la serialización binaria permite la modificación
 - <xref:System.Transactions.TransactionInDoubtException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Transactions.TransactionManagerCommunicationException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Transactions.TransactionPromotionException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Tuple?displayProperty=nameWithType>   
+- <xref:System.Tuple?displayProperty=nameWithType>
 - <xref:System.TypeAccessException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.TypeInitializationException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.TypeLoadException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.TypeUnloadedException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.UInt16?displayProperty=nameWithType>   
-- <xref:System.UInt32?displayProperty=nameWithType>   
-- <xref:System.UInt64?displayProperty=nameWithType>   
-- <xref:System.UIntPtr?displayProperty=nameWithType>   
+- <xref:System.UInt16?displayProperty=nameWithType>
+- <xref:System.UInt32?displayProperty=nameWithType>
+- <xref:System.UInt64?displayProperty=nameWithType>
+- <xref:System.UIntPtr?displayProperty=nameWithType>
 - <xref:System.UnauthorizedAccessException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.Uri?displayProperty=nameWithType>   
+- <xref:System.Uri?displayProperty=nameWithType>
 - <xref:System.UriFormatException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
-- <xref:System.ValueTuple?displayProperty=nameWithType> (no es serializable en .NET Framework 4.7 y versiones anteriores)  
-- <xref:System.ValueType?displayProperty=nameWithType>   
-- <xref:System.Version?displayProperty=nameWithType>   
-- <xref:System.WeakReference%601?displayProperty=nameWithType>   
-- <xref:System.WeakReference?displayProperty=nameWithType>   
+- <xref:System.ValueTuple?displayProperty=nameWithType> (no es serializable en .NET Framework 4.7 y versiones anteriores)
+- <xref:System.ValueType?displayProperty=nameWithType>
+- <xref:System.Version?displayProperty=nameWithType>
+- <xref:System.WeakReference%601?displayProperty=nameWithType>
+- <xref:System.WeakReference?displayProperty=nameWithType>
 - <xref:System.Xml.Schema.XmlSchemaException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Xml.Schema.XmlSchemaInferenceException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
 - <xref:System.Xml.Schema.XmlSchemaValidationException?displayProperty=nameWithType> (disponible en .NET Core 2.0.4 y versiones posteriores)
@@ -338,40 +338,42 @@ Al igual que la naturaleza de la serialización binaria permite la modificación
 
 ## <a name="in-this-section"></a>En esta sección
 
- [Conceptos de serialización](../../../docs/standard/serialization/serialization-concepts.md)  
- Describe dos escenarios en los que la serialización resulta útil: al almacenar datos persistentes y al pasar objetos a través de dominios de aplicaciones.  
-  
- [Serialización básica](../../../docs/standard/serialization/basic-serialization.md)  
- Describe cómo utilizar los formateadores SOAP y binario para serializar los objetos.  
-  
- [Serialización selectiva](../../../docs/standard/serialization/selective-serialization.md)  
- Describe cómo evitar que se serialicen algunos miembros de una clase.  
-  
- [Serialización personalizada](../../../docs/standard/serialization/custom-serialization.md)  
- Describe cómo personalizar la serialización de una clase mediante la interfaz <xref:System.Runtime.Serialization.ISerializable>.  
-  
- [Pasos del proceso de serialización](../../../docs/standard/serialization/steps-in-the-serialization-process.md)  
- Describe la medida que toma la serialización cuando se llama al método <xref:System.Runtime.Serialization.Formatter.Serialize%2A> en un formateador.  
-  
- [Serialización tolerante a versiones](../../../docs/standard/serialization/version-tolerant-serialization.md)  
- Explica cómo crear tipos serializables que se pueden modificar con el tiempo sin hacer que las aplicaciones produzcan las excepciones.  
-  
- [Directrices de serialización](../../../docs/standard/serialization/serialization-guidelines.md)  
- Proporciona algunas directrices general para decidir cuándo serializar un objeto.  
-  
-## <a name="reference"></a>Referencia  
- <xref:System.Runtime.Serialization>  
- Contiene clases que se pueden usar para serializar y deserializar objetos.  
-  
-## <a name="related-sections"></a>Secciones relacionadas  
- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- Describe el mecanismo de la serialización XML que está incluido con Common Language Runtime.  
-  
- [Seguridad y serialización](../../../docs/framework/misc/security-and-serialization.md)  
- Describe las instrucciones de la codificación seguras que hay que seguir al escribir el código que realiza la serialización.  
-  
- [Objetos remotos](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
- Describe los diversos métodos de comunicaciones disponibles en .NET Framework para las comunicaciones remotas.  
-  
- [Servicios Web XML creados con ASP.NET y clientes de servicio Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
- Proporciona los temas que describen y explican cómo programar los servicios Web XML creados utilizando ASP.NET.
+- [Conceptos de serialización](../../../docs/standard/serialization/serialization-concepts.md)\
+Describe dos escenarios en los que la serialización resulta útil: al almacenar datos persistentes y al pasar objetos a través de dominios de aplicaciones.
+
+- [Serialización básica](../../../docs/standard/serialization/basic-serialization.md)\
+Describe cómo utilizar los formateadores SOAP y binario para serializar los objetos.
+
+- [Serialización selectiva](../../../docs/standard/serialization/selective-serialization.md)\
+Describe cómo evitar que se serialicen algunos miembros de una clase.
+
+- [Serialización personalizada](../../../docs/standard/serialization/custom-serialization.md)\
+Describe cómo personalizar la serialización de una clase mediante la interfaz <xref:System.Runtime.Serialization.ISerializable>.
+
+- [Pasos del proceso de serialización](../../../docs/standard/serialization/steps-in-the-serialization-process.md)\
+Describe la medida que toma la serialización cuando se llama al método <xref:System.Runtime.Serialization.Formatter.Serialize%2A> en un formateador.
+
+- [Serialización tolerante a versiones](../../../docs/standard/serialization/version-tolerant-serialization.md)\
+Explica cómo crear tipos serializables que se pueden modificar con el tiempo sin hacer que las aplicaciones produzcan las excepciones.
+
+- [Directrices de serialización](../../../docs/standard/serialization/serialization-guidelines.md)\
+Proporciona algunas directrices general para decidir cuándo serializar un objeto.
+
+## <a name="reference"></a>Referencia
+
+- <xref:System.Runtime.Serialization>\
+Contiene clases que se pueden usar para serializar y deserializar objetos.
+
+## <a name="related-sections"></a>Secciones relacionadas
+
+- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)\
+Describe el mecanismo de la serialización XML que está incluido con Common Language Runtime.
+
+- [Seguridad y serialización](../../../docs/framework/misc/security-and-serialization.md)\
+Describe las instrucciones de la codificación seguras que hay que seguir al escribir el código que realiza la serialización.
+
+- [Objetos remotos](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)\
+Describe los diversos métodos de comunicaciones disponibles en .NET Framework para las comunicaciones remotas.
+
+- [Servicios Web XML creados con ASP.NET y clientes de servicios Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)\
+Proporciona los temas que describen y explican cómo programar los servicios Web XML creados utilizando ASP.NET.

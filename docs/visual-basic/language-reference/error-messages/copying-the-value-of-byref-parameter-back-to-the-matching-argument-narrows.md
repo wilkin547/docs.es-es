@@ -1,5 +1,5 @@
 ---
-title: Copiar el valor de &#39;ByRef&#39; parámetro &#39; &lt;parametername&gt; &#39; en el argumento coincidente restringe del tipo &#39; &lt;typename1&gt; &#39; al tipo &#39; &lt;typename2&gt;&#39;
+title: La acción de volver a copiar el valor del parámetro 'ByRef' '<parametername>' en el argumento coincidente restringe del tipo '<typename1>' al tipo '<typename2>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc32053
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: ec733ecd605d0a9db840ea3f0c3e0e3b5b698054
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5d427495e8eedae9dc0163c97401338fb6d0bbd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506291"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276619"
 ---
-# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Copiar el valor de &#39;ByRef&#39; parámetro &#39; &lt;parametername&gt; &#39; en el argumento coincidente restringe del tipo &#39; &lt;typename1&gt; &#39; al tipo &#39; &lt;typename2&gt;&#39;
+# <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>Copiar el valor del parámetro 'ByRef' '\<parametername >' en el argumento coincidente restringe del tipo '\<typename1 >' al tipo '\<nombredetipo2 >'
 Se llama a un procedimiento con un argumento que se amplía al tipo de parámetro correspondiente, y la conversión de parámetro para el argumento es de restricción.  
   
  Al definir una clase o estructura, puede definir uno o varios operadores de conversión para convertir ese tipo de clase o estructura a otros tipos. También puede definir operadores de conversión inversos para convertir esos otros tipos de nuevo a su clase o tipo de estructura. Cuando se usa el tipo de clase o estructura en una llamada a procedimiento, Visual Basic puede utilizar estos operadores de conversión para convertir al tipo de un argumento al tipo del parámetro correspondiente.  

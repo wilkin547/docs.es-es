@@ -1,15 +1,15 @@
 ---
-title: Elemento &lt;transport&gt; de &lt;netTcpBinding&gt;
+title: <transport> de <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 7372b94bde8325ec00116ee7022739f1b17a1ac9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de1f87d8074bbf3d85f6092a4ac316f5fd20052c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555497"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266369"
 ---
-# <a name="lttransportgt-of-ltnettcpbindinggt"></a>Elemento &lt;transport&gt; de &lt;netTcpBinding&gt;
+# <a name="transport-of-nettcpbinding"></a>\<transporte > de \<netTcpBinding >
 Define el tipo de requisitos de seguridad de nivel de mensaje para un extremo configurado con el [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
  \<system.ServiceModel>  

@@ -1,5 +1,5 @@
 ---
-title: 'La primera instrucción de este &#39;Sub New&#39; debe ser una llamada explícita a &#39;MyBase.New&#39; o &#39;MyClass.New&#39; porque el &#39; &lt;nombreconstructor&gt; &#39; en la clase base &#39; &lt;nombredeclasebase&gt; &#39; de &#39; &lt;derivedclassname&gt; &#39; está marcado como obsoleto: &#39; &lt;errormessage&gt;&#39;'
+title: "La primera instrucción de este 'Sub New' debe ser una llamada explícita a 'MyBase.New' o a 'MyClass.New' porque el constructor '<constructorname>' de la clase base '<baseclassname>' de '<derivedclassname>' está marcado como obsoleto: '<errormessage>'"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30920
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 9d07a68fd8d9790178427c512375323f23f46772
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31f92d1e52e50b2a87fd6a6af6e3c87292f4437f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566787"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268800"
 ---
-# <a name="first-statement-of-this-39sub-new39-must-be-an-explicit-call-to-39mybasenew39-or-39myclassnew39-because-the-39ltconstructornamegt39-in-the-base-class-39ltbaseclassnamegt39-of-39ltderivedclassnamegt39-is-marked-obsolete-39lterrormessagegt39"></a>La primera instrucción de este &#39;Sub New&#39; debe ser una llamada explícita a &#39;MyBase.New&#39; o &#39;MyClass.New&#39; porque el &#39; &lt;nombreconstructor&gt; &#39; en la clase base &#39; &lt;nombredeclasebase&gt; &#39; de &#39; &lt;derivedclassname&gt; &#39; está marcado como obsoleto: &#39; &lt;errormessage&gt;&#39;
+# <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>La primera instrucción de este 'Sub New' debe ser una llamada explícita a 'MyBase.New' o 'MyClass.New' porque el '\<nombreconstructor >' en la clase base\<nombredeclasebase >' de '\<derivedclassname >' está marcado como obsoleto: '\< ErrorMessage >'
 Un constructor de clase no realiza una llamada de manera explícita a un constructor de clase base y el constructor de clase base se marca con el atributo <xref:System.ObsoleteAttribute> y la directiva para tratarlo como un error.  
   
  Cuando un constructor de clase derivada no llama a un constructor de clase base, Visual Basic intenta generar una llamada implícita a un constructor de clase base sin parámetros. Si no hay ningún constructor accesible en la clase base que se pueda llamar sin argumentos, Visual Basic no se puede generar una llamada implícita. En este caso, el constructor necesario se marca con el <xref:System.ObsoleteAttribute> atributo, por lo que Visual Basic no puede llamarlo.  

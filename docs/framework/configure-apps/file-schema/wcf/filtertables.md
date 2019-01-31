@@ -1,15 +1,15 @@
 ---
-title: '&lt;filterTables&gt;'
+title: <filterTables>
 ms.date: 03/30/2017
 ms.assetid: 41f1ac35-f559-473a-b2c3-8cc83a6a3831
-ms.openlocfilehash: d73a3c25dbb4d2de41007149ef5864fcf37ad883
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a54386de369a11a1958e4d81ab01f053a0bc5b36
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573064"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55253982"
 ---
-# <a name="ltfiltertablesgt"></a>&lt;filterTables&gt;
+# <a name="filtertables"></a>\<filterTables>
 Representa una sección de configuración para definir tablas de enrutamiento que contienen las asignaciones entre los filtros de enrutamiento y los puntos de conexión de destino a los que enviar mensajes cuando coincida el filtro.  
   
  \<system.serviceModel>  

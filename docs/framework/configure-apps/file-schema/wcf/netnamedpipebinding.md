@@ -1,15 +1,15 @@
 ---
-title: '&lt;netNamedPipeBinding&gt;'
+title: <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: 54f1ad4feefe15f4901d8e493cadc0842f55224f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 183ce624d22162c2d665b173d8c04e132457a3fb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606678"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257257"
 ---
-# <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
+# <a name="netnamedpipebinding"></a>\<netNamedPipeBinding>
 Define un enlace que es seguro, confiable y optimizado para la comunicación del proceso cruzado en equipo. De forma predeterminada, genera una pila de comunicación de tiempo de ejecución con WS-ReliableMessaging para la fiabilidad, seguridad de transporte para la seguridad de transferencia, canalizaciones con nombre para la entrega de mensajes y codificación binaria de los mensajes.  
   
  \<system.ServiceModel>  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; de &lt;services&gt;'
+title: <add> de <services>
 ms.date: 03/30/2017
 ms.assetid: 6bdc4590-aa9c-4ec8-9345-879d780cd141
-ms.openlocfilehash: dc68357332ebe06affd18f1539a66587b6ed1b91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e1a9c67fa82262ab49be196b2e4fd31a69e688f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549999"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264536"
 ---
-# <a name="ltaddgt-of-ltservicesgt"></a>&lt;add&gt; de &lt;services&gt;
+# <a name="add-of-services"></a>\<Agregar > de \<services >
 Especifica la configuración de una instancia de <xref:System.Workflow.Runtime.WorkflowRuntime> para hospedar servicios de Windows Communication Foundation (WCF) basados en flujo de trabajo. Este elemento es del tipo <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  
   
  \<system.ServiceModel>  

@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;nombre1&gt; &#39; es ambiguo, se ha importado de los espacios de nombres o tipos &#39; &lt;nombre2&gt;&#39;'
+title: "'<name1>' es ambiguo y se ha importado de los espacios de nombres o tipos '<name2>'"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30561
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
-ms.openlocfilehash: 12cca32bc3c44926c5cd616152221f1efa63e971
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b867380661e3545db9ac64cb67ad4e3a5a1a6b1e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516777"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254748"
 ---
-# <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a>&#39;&lt;nombre1&gt; &#39; es ambiguo, se ha importado de los espacios de nombres o tipos &#39; &lt;nombre2&gt;&#39;
+# <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>'\<nombre1 >' es ambiguo y se ha importado de los espacios de nombres o tipos\<nombre2 >'
 Se proporcionó un nombre que es ambiguo y, por tanto, entra en conflicto con otro nombre. El compilador de Visual Basic no tiene ninguna regla de resolución de conflictos; deben eliminar la ambigüedad de los nombres usted mismo.  
   
  **Identificador de error:** BC30561  

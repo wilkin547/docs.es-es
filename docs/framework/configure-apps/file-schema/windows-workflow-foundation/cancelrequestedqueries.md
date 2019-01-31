@@ -1,16 +1,16 @@
 ---
-title: '&lt;cancelRequestedQueries&gt;'
+title: <cancelRequestedQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: eab5af7e-76fa-434d-9d36-873e995cee05
-ms.openlocfilehash: 5bc2e3ffeb93bdfcd45638d6b50e218c03706f42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 989d6e99457108336c38fb1eece4c9ac2444c974
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520690"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271504"
 ---
-# <a name="ltcancelrequestedqueriesgt"></a>&lt;cancelRequestedQueries&gt;
+# <a name="cancelrequestedqueries"></a>\<cancelRequestedQueries>
 Representa una colección de consultas que se usan para realizar el seguimiento de las solicitudes para cancelar una actividad secundaria por parte de la actividad primaria. La consulta es necesaria para que un participante del seguimiento se suscriba con el fin de cancelar los objetos de registro de solicitud.  
   
  Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

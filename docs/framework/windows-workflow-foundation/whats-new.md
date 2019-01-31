@@ -1,22 +1,22 @@
 ---
-title: ¿Qué&#39;s nuevos en Windows Workflow Foundation
+title: Novedades de Windows Workflow Foundation
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-ms.openlocfilehash: d45c16d4f16c239d1c1c8116b4b41dd41f8a953d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 327a2ddbf9a45bc1d4633548ced7a8f39928345b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518442"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263802"
 ---
-# <a name="what39s-new-in-windows-workflow-foundation"></a>¿Qué&#39;s nuevos en Windows Workflow Foundation
-Windows Workflow Foundation (WF) en [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] cambia varios paradigmas de desarrollo de las versiones anteriores. Los flujos de trabajo son ahora más fáciles de crear, ejecutar, mantener e implementan un host de nuevas funciones. Para obtener más información acerca de cómo migrar aplicaciones de flujo de trabajo de .NET 3.0 y 3.5 de .NET para usar la versión más reciente, consulte [Guía de migración](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+# <a name="whats-new-in-windows-workflow-foundation"></a>Novedades de Windows Workflow Foundation
+Windows Workflow Foundation (WF) en [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] cambia varios paradigmas de desarrollo de las versiones anteriores. Los flujos de trabajo son ahora más fáciles de crear, ejecutar, mantener e implementan un host de nuevas funciones. Para obtener más información sobre cómo migrar aplicaciones de flujo de trabajo de .NET 3.0 y 3.5 de .NET para usar la versión más reciente, consulte [Guía de migración](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 ## <a name="workflow-activity-model"></a>Modelo de la actividad de flujo de trabajo  
- La actividad es ahora la unidad base para crear un flujo de trabajo, en lugar de usar las clases <xref:System.Workflow.Activities.SequentialWorkflowActivity> o <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. La clase <xref:System.Activities.Activity> proporciona la abstracción básica del comportamiento del flujo de trabajo. Los autores de actividad pueden implementar <xref:System.Activities.CodeActivity> para la funcionalidad de actividad personalizada básica o <xref:System.Activities.NativeActivity> para la funcionalidad de actividad personalizada que usa toda la riqueza del runtime. <xref:System.Activities.Activity> es una clase usada por los autores de actividades para expresar nuevos comportamientos mediante declaración en cuanto a otros <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, o <xref:System.Activities.DynamicActivity> objetos, independientemente de si están desarrollados de forma personalizada o qué incluye la [integrada de actividades Biblioteca](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md).  
+ La actividad es ahora la unidad base para crear un flujo de trabajo, en lugar de usar las clases <xref:System.Workflow.Activities.SequentialWorkflowActivity> o <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. La clase <xref:System.Activities.Activity> proporciona la abstracción básica del comportamiento del flujo de trabajo. Los autores de actividad pueden implementar <xref:System.Activities.CodeActivity> para la funcionalidad de actividad personalizada básica o <xref:System.Activities.NativeActivity> para la funcionalidad de actividad personalizada que usa toda la riqueza del runtime. <xref:System.Activities.Activity> es una clase usada por los autores de actividad para expresar nuevos comportamientos mediante declaración en términos de otros <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, o <xref:System.Activities.DynamicActivity> objetos, independientemente de si están desarrollados de forma personalizada o esté incluida en la [integrada de actividades Biblioteca](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md).  
   
 ## <a name="rich-composite-activity-options"></a>Opciones de actividad compuestas y enriquecidas  
  <xref:System.Activities.Statements.Flowchart> es una nueva actividad eficaz de flujo de control que permite a los autores modelar bucles arbitrarios y bifurcaciones condicionales. <xref:System.Activities.Statements.Flowchart> proporciona un modelo de programación controlado por eventos que anteriormente solo se podía implementar con <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. Los flujos de trabajo de procedimiento se benefician de las nuevas actividades de control de flujo que modelan las estructuras de control de flujo tradicionales, como <xref:System.Activities.Statements.TryCatch> y <xref:System.Activities.Statements.Switch%601>.  
@@ -55,4 +55,4 @@ Windows Workflow Foundation (WF) en [!INCLUDE[netfx40_long](../../../includes/ne
 -   Actualmente, reanudar un flujo de trabajo pendiente se administra mediante un objeto <xref:System.Activities.Bookmark>.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Mejor capacidad para ampliar la experiencia de diseñador de WF  
- El nuevo diseñador de WF se basa en Windows Presentation Foundation (WPF) y proporciona un modelo más fácil de usar al realizar el rehospedaje del Diseñador de WF fuera de Visual Studio y también proporciona mecanismos más sencillos para crear diseñadores de actividad personalizados. Para obtener más información, consulte [puede personalizar la experiencia de diseño de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).
+ El nuevo diseñador de WF se basa en Windows Presentation Foundation (WPF) y proporciona un modelo más sencillo que se utilizará al rehospedar el Diseñador de WF fuera de Visual Studio y también proporciona mecanismos más sencillos para crear diseñadores de actividad personalizados. Para obtener más información, consulte [personalizar la experiencia de diseño de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).

@@ -1,5 +1,5 @@
 ---
-title: '&lt;agregar&gt; elemento para authenticationModules (configuración de red)'
+title: <add> (Elemento para authenticationModules, Configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: ae89ded216f3c9dbfe21070ac4a98c58290ef907
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12dc8be762e1158ddaabbd67e7165d7bdaca6461
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641036"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276333"
 ---
-# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;agregar&gt; elemento para authenticationModules (configuración de red)
+# <a name="add-element-for-authenticationmodules-network-settings"></a>\<Agregar > elemento para authenticationModules (configuración de red)
 Agrega un módulo de autenticación a la aplicación.  
   
  \<configuration>  
