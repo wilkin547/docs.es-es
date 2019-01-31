@@ -1,19 +1,19 @@
 ---
-title: '&lt;system.serviceModel.activation&gt;'
+title: <system.serviceModel.activation>
 ms.date: 03/30/2017
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
-ms.openlocfilehash: 10496b9624e1edb044187c08c9dfac0b852fe490
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddb9c03c2d4ec17198719544fba9da989a6b0eb4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666356"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271153"
 ---
-# <a name="ltsystemservicemodelactivationgt"></a><span data-ttu-id="6774b-102">&lt;system.serviceModel.activation&gt;</span><span class="sxs-lookup"><span data-stu-id="6774b-102">&lt;system.serviceModel.activation&gt;</span></span>
-<span data-ttu-id="6774b-103">Esta sección de configuración representa la configuración de la herramienta SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="6774b-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="6774b-104">Los elementos de configuración se pueden configurar en el archivo SMSvcHost.exe.config.</span><span class="sxs-lookup"><span data-stu-id="6774b-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="6774b-105">Específicamente, incluye todos los valores de equipo que se deben configurar.</span><span class="sxs-lookup"><span data-stu-id="6774b-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
+# <a name="systemservicemodelactivation"></a><span data-ttu-id="cf8b3-102">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="cf8b3-102">\<system.serviceModel.activation></span></span>
+<span data-ttu-id="cf8b3-103">Esta sección de configuración representa la configuración de la herramienta SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="cf8b3-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="cf8b3-104">Los elementos de configuración se pueden configurar en el archivo SMSvcHost.exe.config.</span><span class="sxs-lookup"><span data-stu-id="cf8b3-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="cf8b3-105">Específicamente, incluye todos los valores de equipo que se deben configurar.</span><span class="sxs-lookup"><span data-stu-id="cf8b3-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
   
-## <a name="sample-configuration-file"></a><span data-ttu-id="6774b-106">Archivo de configuración del ejemplo</span><span class="sxs-lookup"><span data-stu-id="6774b-106">Sample Configuration File</span></span>  
- <span data-ttu-id="6774b-107">A continuación, se muestra un archivo de configuración del ejemplo (SMSvcHost.exe.config), que es utilizado por el proceso de agente de escucha SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="6774b-107">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
+## <a name="sample-configuration-file"></a><span data-ttu-id="cf8b3-106">Archivo de configuración del ejemplo</span><span class="sxs-lookup"><span data-stu-id="cf8b3-106">Sample Configuration File</span></span>  
+ <span data-ttu-id="cf8b3-107">A continuación, se muestra un archivo de configuración del ejemplo (SMSvcHost.exe.config), que es utilizado por el proceso de agente de escucha SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="cf8b3-107">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
   
 ```xml  
 <configuration>
@@ -60,5 +60,5 @@ ms.locfileid: "54666356"
 </configuration>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6774b-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="6774b-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf8b3-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="cf8b3-108">See also</span></span>
 - <xref:System.ServiceModel.Activation.Configuration>
