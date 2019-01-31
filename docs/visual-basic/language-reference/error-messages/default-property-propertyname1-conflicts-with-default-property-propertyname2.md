@@ -1,5 +1,5 @@
 ---
-title: Propiedad predeterminada &#39; &lt;nombrepropiedad1&gt; &#39; entra en conflicto con la propiedad predeterminada &#39; &lt;propertyname2&gt; &#39; en &#39; &lt;classname&gt; &#39;, por lo que se debe declarar como &#39;sombras&#39;
+title: La propiedad predeterminada '<propertyname1>' está en conflicto con la propiedad predeterminada '<propertyname2>' en la base '<classname>' y, por tanto, se debe declarar como 'Shadows'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40007
@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: 3099467fa3c5a162c13c9235fb8d55375953ba3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc75b01532ffb112622d7f9bc837490c627883b3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521431"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270414"
 ---
-# <a name="default-property-39ltpropertyname1gt39-conflicts-with-default-property-39ltpropertyname2gt39-in-39ltclassnamegt39-and-so-should-be-declared-39shadows39"></a><span data-ttu-id="627bd-102">Propiedad predeterminada &#39; &lt;nombrepropiedad1&gt; &#39; entra en conflicto con la propiedad predeterminada &#39; &lt;propertyname2&gt; &#39; en &#39; &lt;classname&gt; &#39;, por lo que se debe declarar como &#39;sombras&#39;</span><span class="sxs-lookup"><span data-stu-id="627bd-102">Default property &#39;&lt;propertyname1&gt;&#39; conflicts with default property &#39;&lt;propertyname2&gt;&#39; in &#39;&lt;classname&gt;&#39; and so should be declared &#39;Shadows&#39;</span></span>
-<span data-ttu-id="627bd-103">Se declara una propiedad con el mismo nombre que una propiedad definida en la clase base.</span><span class="sxs-lookup"><span data-stu-id="627bd-103">A property is declared with the same name as a property defined in the base class.</span></span> <span data-ttu-id="627bd-104">En esta situación, la propiedad de esta clase debe ocultar la propiedad de clase base.</span><span class="sxs-lookup"><span data-stu-id="627bd-104">In this situation, the property in this class should shadow the base class property.</span></span>  
+# <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a><span data-ttu-id="1579b-102">Propiedad predeterminada '\<nombrepropiedad1 >' entra en conflicto con la propiedad predeterminada '\<nombrepropiedad2 >' en '\<classname >', por lo que se debe declarar como 'Shadows'</span><span class="sxs-lookup"><span data-stu-id="1579b-102">Default property '\<propertyname1>' conflicts with default property '\<propertyname2>' in '\<classname>' and so should be declared 'Shadows'</span></span>
+<span data-ttu-id="1579b-103">Se declara una propiedad con el mismo nombre que una propiedad definida en la clase base.</span><span class="sxs-lookup"><span data-stu-id="1579b-103">A property is declared with the same name as a property defined in the base class.</span></span> <span data-ttu-id="1579b-104">En esta situación, la propiedad de esta clase debe ocultar la propiedad de clase base.</span><span class="sxs-lookup"><span data-stu-id="1579b-104">In this situation, the property in this class should shadow the base class property.</span></span>  
   
- <span data-ttu-id="627bd-105">Este mensaje es una advertencia.</span><span class="sxs-lookup"><span data-stu-id="627bd-105">This message is a warning.</span></span> <span data-ttu-id="627bd-106">De forma predeterminada, se da por supuesto que es`Shadows` .</span><span class="sxs-lookup"><span data-stu-id="627bd-106">`Shadows` is assumed by default.</span></span> <span data-ttu-id="627bd-107">Para más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="627bd-107">For more information about hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="1579b-105">Este mensaje es una advertencia.</span><span class="sxs-lookup"><span data-stu-id="1579b-105">This message is a warning.</span></span> <span data-ttu-id="1579b-106">De forma predeterminada, se da por supuesto que es`Shadows` .</span><span class="sxs-lookup"><span data-stu-id="1579b-106">`Shadows` is assumed by default.</span></span> <span data-ttu-id="1579b-107">Para más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="1579b-107">For more information about hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="627bd-108">**Identificador de error:** BC40007</span><span class="sxs-lookup"><span data-stu-id="627bd-108">**Error ID:** BC40007</span></span>  
+ <span data-ttu-id="1579b-108">**Identificador de error:** BC40007</span><span class="sxs-lookup"><span data-stu-id="1579b-108">**Error ID:** BC40007</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="627bd-109">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="627bd-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1579b-109">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="1579b-109">To correct this error</span></span>  
   
--   <span data-ttu-id="627bd-110">Agregar el `Shadows` palabra clave para la declaración o cambie el nombre de la propiedad que se declara.</span><span class="sxs-lookup"><span data-stu-id="627bd-110">Add the `Shadows` keyword to the declaration, or change the name of the property being declared.</span></span>  
+-   <span data-ttu-id="1579b-110">Agregar el `Shadows` palabra clave para la declaración o cambie el nombre de la propiedad que se declara.</span><span class="sxs-lookup"><span data-stu-id="1579b-110">Add the `Shadows` keyword to the declaration, or change the name of the property being declared.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="627bd-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="627bd-111">See also</span></span>
-- [<span data-ttu-id="627bd-112">Shadows</span><span class="sxs-lookup"><span data-stu-id="627bd-112">Shadows</span></span>](../../../visual-basic/language-reference/modifiers/shadows.md)
-- [<span data-ttu-id="627bd-113">Sombrear en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="627bd-113">Shadowing in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a><span data-ttu-id="1579b-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="1579b-111">See also</span></span>
+- [<span data-ttu-id="1579b-112">Shadows</span><span class="sxs-lookup"><span data-stu-id="1579b-112">Shadows</span></span>](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [<span data-ttu-id="1579b-113">Sombrear en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1579b-113">Shadowing in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
