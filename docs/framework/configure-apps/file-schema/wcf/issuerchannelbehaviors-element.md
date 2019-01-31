@@ -1,15 +1,15 @@
 ---
-title: '&lt;issuerChannelBehaviors&gt; (elemento)'
+title: <issuerChannelBehaviors> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: b77d0ce79557dff4b5a243da4d24703ed45fde07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 624848db4cead14e46c97bba7404adcb65e43d4d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677113"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274151"
 ---
-# <a name="ltissuerchannelbehaviorsgt-element"></a>&lt;issuerChannelBehaviors&gt; (elemento)
+# <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors > elemento
 Contiene una colección de comportamientos de punto de conexión de cliente de Windows Communication Foundation (WCF) (definido en la configuración) que se usará al comunicarse con los servicios de Token de servicio especificado. Los comportamientos definidos no pueden contener ninguno [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementos.  
   
  \<system.ServiceModel>  

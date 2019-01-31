@@ -1,15 +1,15 @@
 ---
-title: '&lt;= (Menor o igual que) (Entity SQL)'
+title: <= (Menor o igual que) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 7c46da5c-fa09-4d90-adcc-c7e1b769d8e6
-ms.openlocfilehash: 66eb2dc5d4b23ea2f4e00888237b36c950c80602
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68a4c91800dce2ab6a632e849a8c58c378150535
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604033"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284718"
 ---
-# <a name="lt-less-than-or-equal-to-entity-sql"></a>&lt;= (Menor o igual que) (Entity SQL)
+# <a name="-less-than-or-equal-to-entity-sql"></a>\<= (Menor o igual que) (Entity SQL)
 Compara dos expresiones para determinar si la expresión izquierda tiene un valor igual o menor que el de la expresión derecha.  
   
 ## <a name="syntax"></a>Sintaxis  

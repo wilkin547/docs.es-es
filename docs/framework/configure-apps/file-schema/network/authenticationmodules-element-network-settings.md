@@ -1,5 +1,5 @@
 ---
-title: '&lt;authenticationModules&gt; elemento (configuración de red)'
+title: <authenticationModules> (Elemento, Configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: d143f91d31951f218631519a3182f5de6c4eca60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e40ee4a0bb0731c78d27b7ba9994884ef9ff447
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532128"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271595"
 ---
-# <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt; elemento (configuración de red)
+# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > elemento (configuración de red)
 Especifica los módulos que se usa para autenticar las solicitudes de red.  
   
  \<configuration>  

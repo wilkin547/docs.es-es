@@ -1,17 +1,17 @@
 ---
-title: '&lt;msmqIntegrationBinding&gt;'
+title: <msmqIntegrationBinding>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 1517fcaf75ea24bd3bd4e6e90276753c4973d191
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eaa08ae1d708f2498f459519683b4ffa05be9e49
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744926"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271920"
 ---
-# <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
+# <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding>
 Define un enlace que proporciona la compatibilidad de uso de colas enrutando los mensajes a través de MSMQ.  
   
  \<system.ServiceModel>  

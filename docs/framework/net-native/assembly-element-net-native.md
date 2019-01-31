@@ -1,17 +1,17 @@
 ---
-title: Elemento &lt;Assembly&gt; (.NET Native)
+title: <Assembly> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f723579d3ce545d6b9a3264467733039d9fcf0e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0eeaf0bd347b7aa6fe47387282a5237cf91a5f59
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653637"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281975"
 ---
-# <a name="ltassemblygt-element-net-native"></a>Elemento &lt;Assembly&gt; (.NET Native)
+# <a name="assembly-element-net-native"></a>\<Ensamblado > elemento (.NET Native)
 Aplica la directiva de reflexión en tiempo de ejecución a todos los tipos en un ensamblado especificado.  
   
 ## <a name="syntax"></a>Sintaxis  

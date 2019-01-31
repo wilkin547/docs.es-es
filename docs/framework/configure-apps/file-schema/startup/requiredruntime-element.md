@@ -1,5 +1,5 @@
 ---
-title: '&lt;requiredRuntime&gt; elemento'
+title: <requiredRuntime> (elemento)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requiredRuntime
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: 66de3e30ce862cd317e80ea267bf22ce728aca82
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 5e528a8b81fa3d9abc4f345d18f01e33f483a4a9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222134"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254735"
 ---
-# <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; elemento
+# <a name="requiredruntime-element"></a>\<requiredRuntime > elemento
 
 Especifica que la aplicación solo admite la versión 1.0 de Common Language Runtime. Este elemento está en desuso y ya no se debe usar. El [ `supportedRuntime` ](supportedruntime-element.md) elemento debe usarse en su lugar.
 
@@ -86,4 +86,4 @@ El ejemplo siguiente muestra cómo especificar la versión en tiempo de ejecuci�
 
 - [Esquema de la configuración de inicio](index.md)
 - [Esquema de los archivos de configuración](../index.md)
-- [Cómo: Configurar una aplicación para admitir .NET Framework 4 o versiones posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Cómo: Configuración de una aplicación para que admita .NET Framework 4 o versiones posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

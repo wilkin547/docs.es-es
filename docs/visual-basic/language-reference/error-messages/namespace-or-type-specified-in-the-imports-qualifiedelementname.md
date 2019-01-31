@@ -1,5 +1,5 @@
 ---
-title: Namespace o tipo especificado en las importaciones &#39; &lt;nombrecompletoelemento&gt; &#39; &#39;t tiene miembros públicos o no se encuentra
+title: El espacio de nombres o tipo especificado en las importaciones '<qualifiedelementname>' no contiene miembros públicos o no se encuentra
 ms.date: 07/20/2015
 f1_keywords:
 - bc40056
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-ms.openlocfilehash: 21c0794fb4ed6104204fba5d49e37394eff24865
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d19a769b33b3b63b7f431b73841f49632e41f9e6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552143"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288280"
 ---
-# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace o tipo especificado en las importaciones &#39; &lt;nombrecompletoelemento&gt; &#39; &#39;t tiene miembros públicos o no se encuentra
+# <a name="namespace-or-type-specified-in-the-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Namespace o tipo especificado en las importaciones\<nombrecompletoelemento >' no contiene ningún miembro público o no se encuentra
 Namespace o tipo especificado en las importaciones\<nombrecompletoelemento >' no contiene ningún miembro público o no se encuentra. Asegúrese de que el espacio de nombres o el tipo se define y contiene a al menos un miembro público. Asegúrese de que el nombre de alias no contiene otros alias.  
   
  Un `Imports` instrucción especifica un elemento contenedor que no se puede encontrar o no define `Public` miembros.  

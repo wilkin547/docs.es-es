@@ -1,27 +1,27 @@
 ---
-title: '&lt;workflowInstanceQuery&gt; de WCF'
+title: <workflowInstanceQuery> de WCF
 ms.date: 03/30/2017
 ms.assetid: 35c73f9d-474e-42eb-874d-ddc04b1987f3
-ms.openlocfilehash: 01867171941db82260d28b0825bdf3453e46e66c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 726d4db3bad9f57663790e2bb4e081faba28f1ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148180"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278777"
 ---
-# <a name="ltworkflowinstancequerygt-of-wcf"></a>&lt;workflowInstanceQuery&gt; de WCF
+# <a name="workflowinstancequery-of-wcf"></a>\<workflowInstanceQuery > de WCF
 
 Representa una consulta que realiza el seguimiento de los cambios del ciclo de vida de la instancia de flujo de trabajo, como por ejemplo, un evento iniciado o completado.  
   
 Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<seguimiento >  
-\<perfiles de >  
-\<trackingProfile >  
+\<tracking>  
+\<profiles>  
+\<trackingProfile>  
 \<flujo de trabajo >  
-\<workflowInstanceQueries >  
-\<workflowInstanceQuery >  
+\<workflowInstanceQueries>  
+\<workflowInstanceQuery>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,13 +55,13 @@ Ninguno.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Estados >](states-of-wcf-workflowinstancequery.md)|Una colección de estados subscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.|  
+|[\<states>](states-of-wcf-workflowinstancequery.md)|Una colección de estados subscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<workflowInstanceQueries >](workflowinstancequeries-of-wcf.md)|Representa una colección de elementos de configuración que realizan el seguimiento de los cambios del ciclo de vida de la instancia del flujo de trabajo, como un evento iniciado o completado.|  
+|[\<workflowInstanceQueries>](workflowinstancequeries-of-wcf.md)|Representa una colección de elementos de configuración que realizan el seguimiento de los cambios del ciclo de vida de la instancia del flujo de trabajo, como un evento iniciado o completado.|  
   
 ## <a name="remarks"></a>Comentarios  
 

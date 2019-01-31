@@ -1,22 +1,22 @@
 ---
-title: '&lt;CertificateReference&gt;'
+title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: e04dc90134aadfb8af7b0800c7144963d267f513
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6c9c77f96ff6032de43d9b5a257bc0796a19b858
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206896"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269346"
 ---
-# <a name="ltcertificatereferencegt"></a>&lt;CertificateReference&gt;
+# <a name="certificatereference"></a>\<certificateReference>
 Especifica la configuración que se usa para buscar y validar un certificado X.509 en un almacén de certificados.  
   
- \<system.identityModel.services >  
-\<federationConfiguration >  
-\<serviceCertificate >  
-\<certificateReference >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
+\<serviceCertificate>  
+\<certificateReference>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -56,7 +56,7 @@ Especifica la configuración que se usa para buscar y validar un certificado X.5
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Configura el certificado que se usa para cifrar y descifrar los tokens.|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Configura el certificado que se usa para cifrar y descifrar los tokens.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `<certificateReference>` elemento especifica la configuración que se usa para buscar y validar un certificado X.509 en un almacén de certificados. Cuando se especifica como el elemento secundario de la `<serviceCertficate>` elemento, especifica la configuración de ubicación y la comprobación del certificado X.509 que se usa para cifrar y descifrar los tokens. El `<certificateReference>` elemento representado por la <xref:System.ServiceModel.Configuration.CertificateReferenceElement> clase.

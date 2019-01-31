@@ -1,15 +1,15 @@
 ---
-title: '&lt;standardEndpoints&gt;'
+title: <standardEndpoints>
 ms.date: 03/30/2017
 ms.assetid: d62153d7-a6e6-462a-a784-cca61e9c2ba1
-ms.openlocfilehash: f3851ed4d6a166cf698a5acf18f92e29bb7545cc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7677d7f4c0ef7927fd50885bb887dccaa62a27b4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666701"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286798"
 ---
-# <a name="ltstandardendpointsgt"></a>&lt;standardEndpoints&gt;
+# <a name="standardendpoints"></a>\<standardEndpoints>
 Esta sección de configuración le permite definir una colección de puntos de conexión estándar, que son los puntos de conexión preconfigurados reutilizables. Un extremo estándar tendrá uno o más atributos de la dirección, el enlace y el contrato establecidos en un valor fijo. Por ejemplo, en el extremo de la detección el contrato es fijo. También puede usar los puntos de conexión estándar para extender el punto de conexión de servicio con nuevas propiedades similares a la definición de enlaces personalizados.  
   
  \<system.ServiceModel>  

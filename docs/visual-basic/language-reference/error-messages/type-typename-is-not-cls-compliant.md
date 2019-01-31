@@ -1,5 +1,5 @@
 ---
-title: Tipo de &lt;typename&gt; no es compatible con CLS
+title: El tipo <typename> no es compatible con CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40041
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40041
 ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
-ms.openlocfilehash: 9911b4fe7b88996f17cb5e9eec7d4a5f2c254b76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 243f51b3e6c798c82fdbe7b28557c4f96c728bf2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594613"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281728"
 ---
-# <a name="type-lttypenamegt-is-not-cls-compliant"></a>Tipo de &lt;typename&gt; no es compatible con CLS
+# <a name="type-typename-is-not-cls-compliant"></a>Tipo \<typename > no es conforme a CLS
 Una variable, propiedad o valor devuelto de función se declara con un tipo de datos que no es conforme a CLS.  
   
  Para una aplicación sea compatible con la [independencia del lenguaje y componentes independientes del lenguaje](../../../standard/language-independence-and-language-independent-components.md) (CLS), debe utilizar solo tipos conformes a CLS.  
@@ -29,10 +29,10 @@ Una variable, propiedad o valor devuelto de función se declara con un tipo de d
   
 -   [UShort (tipo de datos)](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
- **Id. de error:** BC40041  
+ **Identificador de error:** BC40041  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Si la aplicación debe ser conforme a CLS, cambie el tipo de datos de este elemento al tipo conforme a CLS más próximo. Por ejemplo, en lugar de `UInteger` , quizá pueda usar `Integer` si no necesita que el intervalo de valores esté por encima de 2.147.483.647. Si necesita el intervalo extendido, puede reemplazar `UInteger` por `Long`.  
+-   Si la aplicación debe ser conforme a CLS, cambie el tipo de datos de este elemento para el tipo conforme a CLS más próximo. Por ejemplo, en lugar de `UInteger` , quizá pueda usar `Integer` si no necesita que el intervalo de valores esté por encima de 2.147.483.647. Si necesita el intervalo extendido, puede reemplazar `UInteger` por `Long`.  
   
--   Si la aplicación no necesita ser conforme con CLS, no es necesario cambiar nada. Sin embargo debe ser consciente de su incumplimiento.
+-   Si la aplicación no necesita ser compatible con CLS, no es necesario cambiar nada. Sin embargo debe ser consciente de que no.

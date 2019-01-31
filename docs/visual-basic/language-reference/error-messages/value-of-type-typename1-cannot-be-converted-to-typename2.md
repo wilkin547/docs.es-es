@@ -1,5 +1,5 @@
 ---
-title: Valor de tipo &#39; &lt;typename1&gt; &#39; no se puede convertir a &#39; &lt;typename2&gt;&#39;
+title: Un valor de tipo '<typename1>' no se puede convertir a '<typename2>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30955
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 00ce143eecefbdf2f1b9e204ae2005be4bb81e39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd2f6e4b51bc327826301d3c7b39c97a4bed3793
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627608"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261248"
 ---
-# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>Valor de tipo &#39; &lt;typename1&gt; &#39; no se puede convertir a &#39; &lt;typename2&gt;&#39;
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Valor de tipo '\<typename1 >' no se puede convertir a '\<nombredetipo2 >'
 Valor de tipo '\<typename1 >' no se puede convertir a '\<nombredetipo2 >'. Discordancia de tipos podría ser debido a la mezcla de una referencia de archivo con una referencia de proyecto al ensamblado '\<assemblyname >'. Intente reemplazar la referencia de archivo a '\<filepath >' en el proyecto '\<projectname1 >' con una referencia de proyecto a '\<projectname2 >'.  
   
  En una situación donde un proyecto hace una referencia de proyecto y una referencia de archivo, el compilador no puede garantizar que se puede convertir un tipo a otro.  
