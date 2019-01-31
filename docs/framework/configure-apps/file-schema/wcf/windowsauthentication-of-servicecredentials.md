@@ -1,15 +1,15 @@
 ---
-title: Elemento &lt;windowsAuthentication&gt; de &lt;serviceCredentials&gt;
+title: <windowsAuthentication> de <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: 3077baf49c13c91c6293823aa841525bf07ca7f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f366c85f895356594cf8bd9049ca41c8fb458c4c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616269"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280970"
 ---
-# <a name="ltwindowsauthenticationgt-of-ltservicecredentialsgt"></a>Elemento &lt;windowsAuthentication&gt; de &lt;serviceCredentials&gt;
+# <a name="windowsauthentication-of-servicecredentials"></a>\<windowsAuthentication > de \<serviceCredentials >
 Especifica los valores de una credencial del servicio de Windows.  
   
  \<system.ServiceModel>  

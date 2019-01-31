@@ -1,18 +1,18 @@
 ---
-title: '&lt;Borrar&gt; (elemento) para &lt;namedCaches&gt;'
+title: <clear> (Elemento para <namedCaches>)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <clear> element for <namedCaches>
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
-ms.openlocfilehash: d71c5de42104961bc096b786dfe50bb4097bc4fc
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: aaf5c2360b53a1cd6e5775a195c89c96ed6440a3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083566"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288670"
 ---
-# <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;Borrar&gt; (elemento) para &lt;namedCaches&gt;
+# <a name="clear-element-for-namedcaches"></a>\<Borrar > (elemento) para \<namedCaches >
 Todos los borra `namedCache` entradas en el `namedCaches` colección de una memoria caché.  
   
  \<system.runtime.caching>  

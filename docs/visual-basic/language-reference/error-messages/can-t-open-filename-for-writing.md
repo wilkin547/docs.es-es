@@ -1,5 +1,5 @@
 ---
-title: Puede&#39;t abierto &#39; &lt;filename&gt; &#39; para escribir en él
+title: No se puede abrir '<filename>' para escritura
 ms.date: 07/20/2015
 f1_keywords:
 - vbc2012
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC2012
 ms.assetid: 73270fe4-a638-42c7-be21-5e156e2b18f6
-ms.openlocfilehash: b296d3b3bff3a96ce9b42d1fcbcca6a5efd06f2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5a7103358bcbeca21433d126a66430d5f0cb475
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683117"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279778"
 ---
-# <a name="can39t-open-39ltfilenamegt39-for-writing"></a>Puede&#39;t abierto &#39; &lt;filename&gt; &#39; para escribir en él
+# <a name="cant-open-filename-for-writing"></a>No se puede abrir '\<filename >' para escritura
 No se puede abrir el archivo especificado para escribir, quizás porque ya se ha abierto.  
   
  **Identificador de error:** BC2012  

@@ -1,17 +1,17 @@
 ---
-title: Ruta de acceso '&lt;pathname&gt;' no encontrado
+title: Ruta de acceso '<pathname>' no encontrado
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_PathNotFound1
 ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
-ms.openlocfilehash: 544fa64b584b5d1bc0a4293aae879033c1135dea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84f4b8dbc5636fb9e0bee24a2f7be0b129cb4399
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613888"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280879"
 ---
-# <a name="path-ltpathnamegt-not-found"></a>Ruta de acceso '&lt;pathname&gt;' no encontrado
+# <a name="path-pathname-not-found"></a>Ruta de acceso '\<pathname >' no encontrado
 El sistema operativo no puede encontrar la ruta de acceso especificada durante la operación de acceso a archivo o acceso a disco. La ruta de acceso a un archivo debe incluir la especificación de unidad y los directorios y subdirectorios que deben recorrerse para localizar el archivo. Una ruta de acceso puede ser relativa o absoluta.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  

@@ -1,5 +1,5 @@
 ---
-title: Valor de tipo &#39;type1&#39; no se puede convertir a &#39;type2&#39;
+title: Un valor de tipo 'tipo1' no se puede convertir en 'tipo2'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31194
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31194
 ms.assetid: 03d50c31-addd-4c90-9c53-725b84f9782e
-ms.openlocfilehash: 657e0feb675e15b9ece00d40c3d1ebe932a29099
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb30d63e83452e75f353c44a9d0445c7dbb1013a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568298"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287513"
 ---
-# <a name="value-of-type-39type139-cannot-be-converted-to-39type239"></a>Valor de tipo &#39;type1&#39; no se puede convertir a &#39;type2&#39;
+# <a name="value-of-type-type1-cannot-be-converted-to-type2"></a>Un valor de tipo 'tipo1' no se puede convertir en 'tipo2'
 No se puede convertir el valor de tipo 'tipo1' a 'tipo2'. Puede usar la propiedad 'Value' para obtener el valor de cadena del primer elemento de '\<Elementoprimario >'.  
   
  Se intentó convertir implícitamente un literal XML a un tipo específico. El literal XML no se puede convertir implícitamente al tipo especificado.  

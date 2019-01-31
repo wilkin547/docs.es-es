@@ -1,16 +1,16 @@
 ---
-title: '&lt;states&gt;'
+title: <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-ms.openlocfilehash: d1ec35b1c434b8188fde7b546e2dee42a93f5c91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 018ea20342475de40a8392a9272724e37902ecb9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550583"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257725"
 ---
-# <a name="ltstatesgt"></a>&lt;states&gt;
+# <a name="states"></a>\<states>
 Representa una colección de estados suscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.  
   
  Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

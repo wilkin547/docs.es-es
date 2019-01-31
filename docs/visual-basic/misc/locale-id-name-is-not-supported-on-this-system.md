@@ -1,17 +1,17 @@
 ---
-title: Identificador de configuración regional '&lt;nombre&gt;' no se admite en este sistema
+title: Identificador de configuración regional '<name>' no se admite en este sistema
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LCIDNotSupported1
 ms.assetid: 62701434-0ac2-45b8-8b40-a9adc09ae6df
-ms.openlocfilehash: 39a225b3164e700db9cd53aa0bf1e2b55d9bdbe7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7953b65204d1c38a8a8218829844cf0826d00cb8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701630"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285745"
 ---
-# <a name="locale-id-ltnamegt-is-not-supported-on-this-system"></a>Identificador de configuración regional '&lt;nombre&gt;' no se admite en este sistema
+# <a name="locale-id-name-is-not-supported-on-this-system"></a>Identificador de configuración regional '\<nombre >' no se admite en este sistema
 Está intentando usar `VbStrConv`, pero el sistema no admite la configuración regional especificada.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
