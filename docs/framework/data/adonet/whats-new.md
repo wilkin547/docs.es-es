@@ -1,15 +1,15 @@
 ---
-title: ¿Qué&#39;s nuevas en ADO.NET
+title: Novedades de ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: cfb1546ccddc6a4f6f3668210832db3d7a88f632
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: efba4d3f0822aa6654eb55bd0aff059dbf84d02e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501600"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283704"
 ---
-# <a name="what39s-new-in-adonet"></a>¿Qué&#39;s nuevas en ADO.NET
+# <a name="whats-new-in-adonet"></a>Novedades de ADO.NET
 Las siguientes características son nuevas en [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 ## <a name="sqlclient-data-provider"></a>Proveedor de datos SqlClient  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;claimTypeRequirements&gt; (elemento)'
+title: <claimTypeRequirements> (elemento)
 ms.date: 03/30/2017
 ms.assetid: a26efe73-4bad-4731-8cad-27f00d54354b
-ms.openlocfilehash: 32eafa3ce235b2087012bd5810a685ad5276e09d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95cc1adf7ab37475e8d3eeb01750531a7f8ab249
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632901"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279635"
 ---
-# <a name="ltclaimtyperequirementsgt-element"></a>&lt;claimTypeRequirements&gt; (elemento)
+# <a name="claimtyperequirements-element"></a>\<claimTypeRequirements > elemento
 Especifica una colección de tipos de notificación requeridos.  
   
  En un escenario aliado, los servicios indican los requisitos de las credenciales de entrada. Por ejemplo, las credenciales de entrada deben poseer un determinado conjunto de tipos de notificación. Cada elemento secundario de esta colección especifica los tipos de notificación necesarios y opcionales que se espera que aparezcan en una credencial aliada.  

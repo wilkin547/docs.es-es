@@ -1,15 +1,15 @@
 ---
-title: '&lt;clientCertificate&gt; de &lt;serviceCredentials&gt;'
+title: <clientCertificate> de <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
-ms.openlocfilehash: e1334e42149de29c4fc7534863f02ede93c638ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aceb30b6354bac5c327a5f4367344e5c9608b689
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536833"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286902"
 ---
-# <a name="ltclientcertificategt-of-ltservicecredentialsgt"></a>&lt;clientCertificate&gt; de &lt;serviceCredentials&gt;
+# <a name="clientcertificate-of-servicecredentials"></a>\<clientCertificate > de \<serviceCredentials >
 Define un certificado X.509 usado para firmar y cifrar mensajes a un formulario de cliente un servicio en un modelo de comunicación dúplex.  
   
  \<system.ServiceModel>  

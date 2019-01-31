@@ -1,15 +1,15 @@
 ---
-title: '&lt;security&gt; de &lt;peerTransport&gt;'
+title: <security> de <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: 8b0b8c5f230e8e93c07e13212201896010429af0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aadf2058c66cea4919d5dc9aa5aeab7850fcc395
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585385"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283769"
 ---
-# <a name="ltsecuritygt-of-ltpeertransportgt"></a>&lt;security&gt; de &lt;peerTransport&gt;
+# <a name="security-of-peertransport"></a>\<seguridad > de \<peerTransport >
 Contiene la configuración de seguridad asociada con un canal del mismo nivel, incluido el tipo de autenticación utilizado y la seguridad utilizada para el transporte del mensaje.  
   
  \<system.serviceModel>  

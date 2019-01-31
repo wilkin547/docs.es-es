@@ -1,16 +1,16 @@
 ---
-title: '&lt;etwTracking&gt;'
+title: <etwTracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: f9d1acd5dafb9df181b036db9d3ad783ca618874
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12589ab7c6cb65618a5f53a3e4be49d85a2ffbb7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684337"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277206"
 ---
-# <a name="ltetwtrackinggt"></a>&lt;etwTracking&gt;
+# <a name="etwtracking"></a>\<etwTracking>
 Un comportamiento del servicio que permite que un servicio usar el seguimiento de ETW utilizando un <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
   
 \<system.ServiceModel>  

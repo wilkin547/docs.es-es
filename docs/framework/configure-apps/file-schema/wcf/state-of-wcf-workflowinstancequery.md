@@ -1,28 +1,28 @@
 ---
-title: '&lt;state&gt; de WCF, &lt;workflowInstanceQuery&gt;'
+title: <state> de WCF, <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 168a6980e955f602ee60bff26461f06cb16c836a
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145931"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270871"
 ---
-# <a name="ltstategt-of-wcf-ltworkflowinstancequerygt"></a>&lt;state&gt; de WCF, &lt;workflowInstanceQuery&gt;
+# <a name="state-of-wcf-workflowinstancequery"></a>\<estado > de WCF, \<workflowInstanceQuery >
 Representa una colección de estados suscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.  
   
  Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<seguimiento >  
-\<perfiles de >  
-\<trackingProfile >  
+\<tracking>  
+\<profiles>  
+\<trackingProfile>  
 \<flujo de trabajo >  
-\<workflowInstanceQueries >  
-\<workflowInstanceQuery >  
-\<Estados >  
-\<estado >  
+\<workflowInstanceQueries>  
+\<workflowInstanceQuery>  
+\<states>  
+\<state>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,7 +62,7 @@ Ninguno.
 
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Estados >](states-of-wcf-workflowinstancequery.md)|Una colección de estados subscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.|  
+|[\<states>](states-of-wcf-workflowinstancequery.md)|Una colección de estados subscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.|  
   
 ## <a name="remarks"></a>Comentarios  
 

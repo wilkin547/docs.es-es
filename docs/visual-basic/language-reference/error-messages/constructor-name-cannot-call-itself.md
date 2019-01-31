@@ -1,5 +1,5 @@
 ---
-title: Constructor &#39; &lt;nombre&gt; &#39; no se puede llamar a sí mismo
+title: El constructor '<name>' no se puede llamar a sí mismo
 ms.date: 07/20/2015
 f1_keywords:
 - bc30298
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: 4a02277893147716098a3dcc327e221e0775d476
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67933e9365b1aa18063f0ccf3c2146a261e7eafc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662730"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276047"
 ---
-# <a name="constructor-39ltnamegt39-cannot-call-itself"></a>Constructor &#39; &lt;nombre&gt; &#39; no se puede llamar a sí mismo
+# <a name="constructor-name-cannot-call-itself"></a>Constructor '\<nombre >' no se puede llamar a sí mismo
 Un `Sub New` procedimiento en una clase o estructura se llama a sí mismo.  
   
  Es el propósito de un constructor inicializar una instancia de una clase o estructura cuando sea primera creado. Una clase o estructura puede tener varios constructores, siempre que tengan listas de parámetros diferentes. Se permite un constructor para llamar a otro constructor para llevar a cabo su funcionalidad además de su propio. Pero no tiene sentido que un constructor llame a sí mismo y de hecho el resultado sería una recursividad infinita si lo permite.  
