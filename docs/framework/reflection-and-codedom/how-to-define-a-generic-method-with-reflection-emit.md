@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Definir un método genérico con emisión de reflexión'
+title: Procedimiento para definir un tipo genérico con emisión de reflexión
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49531945b073a909ba49b2b0865b96f9658fba50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c0b6ee6fc789b2586d76b5ec8f10815e543e1d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596869"
 ---
-# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Cómo: Definir un método genérico con emisión de reflexión
+# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Procedimiento para definir un tipo genérico con emisión de reflexión
 El primer procedimiento explica cómo crear un método genérico simple con dos parámetros de tipo y cómo aplicar restricciones de clase, restricciones de interfaz y restricciones especiales a los parámetros de tipo.  
   
  El segundo procedimiento muestra cómo emitir el cuerpo del método y cómo utilizar los parámetros de tipo del método genérico para crear instancias de tipos genéricos y llamar a sus métodos.  
@@ -26,7 +26,7 @@ El primer procedimiento explica cómo crear un método genérico simple con dos 
  El tercero de los procedimientos explica cómo invocar el método genérico.  
   
 > [!IMPORTANT]
->  Un método no es genérico sólo porque pertenece a un tipo genérico y utiliza los parámetros de tipo de ese tipo genérico. Un método sólo es genérico si tiene su propia lista de parámetros de tipo. Un método genérico puede aparecer en un tipo no genérico, como se puede ver en este ejemplo. Para obtener un ejemplo de un método no genérico en un tipo genérico, consulte [Cómo: Definir un tipo genérico con emisión de reflexión](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
+>  Un método no es genérico sólo porque pertenece a un tipo genérico y utiliza los parámetros de tipo de ese tipo genérico. Un método sólo es genérico si tiene su propia lista de parámetros de tipo. Un método genérico puede aparecer en un tipo no genérico, como se puede ver en este ejemplo. Para obtener un ejemplo de un método no genérico en un tipo genérico, vea [Cómo: Definir un tipo genérico con emisión de reflexión](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-method"></a>Para definir un método genérico  
   
@@ -117,7 +117,7 @@ El primer procedimiento explica cómo crear un método genérico simple con dos 
   
 6.  Emita el código para el bucle. El primer paso es marcar el principio del bucle, llamando a <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> con la etiqueta `loopAgain`. Las instrucciones de bifurcación que utilicen la etiqueta señalarán ahora a este punto del código. El paso siguiente es colocar en la pila el objeto `TOutput`, convertido a `ICollection(Of TInput)`. No se necesita inmediatamente, pero debe estar en posición para llamar al método `Add`. A continuación, se inserta la matriz de entrada en la pila y, después, en la matriz se inserta la variable `index` que contiene el índice actual. El código de operación <xref:System.Reflection.Emit.OpCodes.Ldelem> extrae de la pila el índice y la matriz e inserta en la pila el elemento de matriz indizado. Ahora la pila está lista para la llamada al método <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType>, que extrae de la pila la colección y el nuevo elemento, y agrega el elemento a la colección.  
   
-     El resto del código del bucle incrementa el índice y comprueba si ha terminado el bucle: en la pila se insertan y se agregan el índice y un entero 1 de 32 bits, dejando la suma en la pila; la suma se almacena en `index`. Se invoca <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> para establecer este punto como punto de entrada del bucle. Se vuelve a cargar el índice. La matriz de entrada se inserta en la pila y se emite <xref:System.Reflection.Emit.OpCodes.Ldlen> para obtener su longitud. Ahora en la pila están el índice y la longitud, y se emite <xref:System.Reflection.Emit.OpCodes.Clt> para compararlos. Si el índice es menor que la longitud, <xref:System.Reflection.Emit.OpCodes.Brtrue_S> se vuelve a bifurcar hasta el principio del bucle.  
+     En el resto del código del bucle se incrementa el índice y se comprueba si el bucle ha finalizado: el índice y un entero de 32 bits se insertan en la pila y se suman, dejando la suma en la pila; la suma se almacena en `index`. Se invoca <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> para establecer este punto como punto de entrada del bucle. Se vuelve a cargar el índice. La matriz de entrada se inserta en la pila y se emite <xref:System.Reflection.Emit.OpCodes.Ldlen> para obtener su longitud. Ahora en la pila están el índice y la longitud, y se emite <xref:System.Reflection.Emit.OpCodes.Clt> para compararlos. Si el índice es menor que la longitud, <xref:System.Reflection.Emit.OpCodes.Brtrue_S> se vuelve a bifurcar hasta el principio del bucle.  
   
      [!code-csharp[GenericMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#13)]
      [!code-vb[GenericMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#13)]  
@@ -170,6 +170,6 @@ El primer procedimiento explica cómo crear un método genérico simple con dos 
   
 -   Compile el código en la línea de comandos mediante csc.exe, vbc.exe o cl.exe. Para compilar el código en Visual Studio, póngalo en una plantilla de proyecto de aplicación de consola.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Reflection.Emit.MethodBuilder>  
- [Definición de un tipo genérico con emisión de reflexión](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Reflection.Emit.MethodBuilder>
+- [Cómo: Definir un tipo genérico con emisión de reflexión](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)

@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 7d8c89793f26ab07917e71832d5f3511d9b1aa5a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 589d268e937cc9cbd37e88a53fb9e00935d19f55
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127555"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066356"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novedades de .NET Core 2.1
 
@@ -96,23 +96,30 @@ Todas las aplicaciones de .NET Core a partir de .NET Core 2.0 se ponen al día a
 A partir de .NET Core 2.0, si la versión de .NET Core que se creó una aplicación no está presente en tiempo de ejecución, la aplicación se ejecuta automáticamente en la *versión secundaria* instalada más reciente de .NET Core. En otras palabras, si una aplicación se compila con .NET Core 2.0, y .NET Core 2.0 no está presente en el sistema host pero sí lo está .NET Core 2.1, la aplicación se ejecuta con .NET Core 2.1.
 
 > [!IMPORTANT]
-> Este comportamiento de puesta al día no se aplica para versiones preliminares. Tampoco se aplica a las versiones principales. Por ejemplo, una aplicación .NET Core 1.0 no se actualizaría a .NET Core 2.0 o .NET Core 2.1.
+> Este comportamiento de puesta al día no se aplica para versiones preliminares. De forma predeterminada, tampoco se aplica a las versiones principales, pero se puede cambiar con las opciones siguientes.
 
-También puede deshabilitarla la puesta al día de versiones secundarias de cualquiera de estas tres formas:
+Este comportamiento se puede modificar si se cambia la configuración para la puesta al día en los marcos de trabajo compartidos que no sean candidatos. Los valores disponibles son los siguientes:
+- `0`: se deshabilita el comportamiento de puesta al día de las versiones secundarias. Con este valor, una aplicación compilada para .NET Core 2.0.0 se pondrá al día a .NET Core 2.0.1, pero no a .NET Core 2.2.0 ni .NET Core 3.0.0.
+- `1`: se habilita el comportamiento de puesta al día de las versiones secundarias. Este es el valor predeterminado de la opción. Con este valor, una aplicación compilada para .NET Core 2.0.0 se pondrá al día a .NET Core 2.0.1 o .NET Core 2.2.0, en función de la versión instalada, pero no a .NET Core 3.0.0.
+- `2`: se habilita el comportamiento de puesta al día de las versiones principales y secundarias. Si se establece, se tienen en cuenta incluso versiones principales diferentes, por lo que una aplicación compilada para .NET Core 2.0.0 se pondrá al día a .NET Core 3.0.0.
 
-- Establezca la variable de entorno `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` en 0.
+Esta configuración se puede modificar de estas tres maneras:
 
-- Agregue la siguiente línea al archivo runtimeconfig.json:
+- Si se establece la variable de entorno `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` en el valor deseado.
+
+- Si se agrega la línea siguiente con el valor deseado al archivo `runtimeconfig.json`:
 
    ```json
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- Cuando use [herramientas de la CLI de .NET Core](../tools/index.md), incluya la siguiente opción con un comando de .NET Core, como `run`:
+- Cuando se usan [herramientas de la CLI de .NET Core](../tools/index.md), si se agrega la opción siguiente con el valor deseado a un comando de .NET Core como `run`:
 
    ```console
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
+
+La puesta al día de versiones de revisión es independiente de esta configuración y se realiza después de aplicar la puesta al día de cualquier versión principal o secundaria posible.
 
 ## <a name="deployment"></a>Implementación
 
@@ -239,6 +246,6 @@ En Linux y macOS, solo se puede configurar <xref:System.Net.Http.HttpClient> par
 
 ## <a name="see-also"></a>Vea también
 
-* [Novedades de .NET Core](index.md)  
-* [Novedades de EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
-* [Novedades de ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)
+- [Novedades de .NET Core](index.md)
+- [Novedades de EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)
+- [Novedades de ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)

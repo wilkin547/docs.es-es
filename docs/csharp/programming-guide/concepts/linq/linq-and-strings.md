@@ -2,18 +2,18 @@
 title: LINQ y cadenas (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: da7a35f0fd66d1f7b8a72550c175b5428242fbc1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c7a1b86cc611d5f38ceab814b4594f5ad953fbc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886505"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744627"
 ---
 # <a name="linq-and-strings-c"></a>LINQ y cadenas (C#)
 
 Se puede usar LINQ para consultar y transformar cadenas y colecciones de cadenas. Puede resultar especialmente útil con datos semiestructurados de archivos de texto. Las consultas LINQ se pueden combinar con funciones de cadena tradicionales y expresiones regulares. Por ejemplo, puede usar el método <xref:System.String.Split%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> para crear una matriz de cadenas que después puede consultar o modificar mediante LINQ. Puede usar el método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> en la cláusula `where` de una consulta LINQ. Y puede usar LINQ para consultar o modificar los resultados <xref:System.Text.RegularExpressions.MatchCollection> que se han devuelto mediante una expresión regular.
 
-También puede usar las técnicas descritas en esta sección para transformar datos de texto semiestructurados en XML. Para más información, vea [Cómo generar un XML a partir de archivos CSV](how-to-generate-xml-from-csv-files.md).
+También puede usar las técnicas descritas en esta sección para transformar datos de texto semiestructurados en XML. Para obtener más información, vea [Cómo: Generar XML a partir de archivos CSV](how-to-generate-xml-from-csv-files.md).
 
 Los ejemplos de esta sección se dividen en dos categorías:
 
@@ -21,7 +21,7 @@ Los ejemplos de esta sección se dividen en dos categorías:
 
 Puede consultar, analizar y modificar bloques de texto dividiéndolos en una matriz consultable de cadenas más pequeñas mediante el método <xref:System.String.Split%2A?displayProperty=nameWithType> o el método <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType>. Puede dividir el texto de origen en palabras, frases, párrafos, páginas o cualquier otro criterio y luego realizar divisiones adicionales si son necesarias en la consulta.
 
-- [Realizar un recuento de las repeticiones de una palabra en una cadena (LINQ) (C#)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
+- [Cómo: Realizar un recuento de las repeticiones de una palabra en una cadena (LINQ) (C#)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
   Muestra cómo usar LINQ para consultas simples en texto.
 
 - [Cómo: Buscar frases que contengan un conjunto especificado de palabras (LINQ) (C#)](how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)
@@ -44,7 +44,7 @@ Muchos tipos diferentes de archivos de texto se componen de una serie de líneas
 
   Muestra cómo encontrar todas las cadenas que se encuentran en una lista pero no en la otra.
 
-- [Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (C#)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Cómo: Ordenar o filtrar datos de texto por palabra o campo (LINQ) (C#)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
 
   Muestra cómo ordenar líneas de texto según cualquier palabra o campo.
 
@@ -64,7 +64,7 @@ Muchos tipos diferentes de archivos de texto se componen de una serie de líneas
   
   Muestra cómo combinar cadenas de dos listas en una sola mediante una clave coincidente.
 
-- [Dividir un archivo en varios mediante el uso de grupos (LINQ) (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Cómo: Dividir un archivo en varios mediante el uso de grupos (LINQ) (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
   
   Muestra cómo crear nuevos archivos mediante un solo archivo como origen de datos.
 
@@ -74,5 +74,5 @@ Muchos tipos diferentes de archivos de texto se componen de una serie de líneas
 
 ## <a name="see-also"></a>Vea también
 
-- [Language-Integrated Query (LINQ) (C#)](index.md)
-- [Generar XML a partir de archivos CSV](how-to-generate-xml-from-csv-files.md)
+- [Language Integrated Query (LINQ) (C#)](index.md)
+- [Cómo: Generar XML a partir de archivos CSV](how-to-generate-xml-from-csv-files.md)

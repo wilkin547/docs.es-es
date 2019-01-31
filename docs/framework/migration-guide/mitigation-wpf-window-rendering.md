@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a91839ff12109b84c563dcd3fabd078f75dad9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71e1829716e0a9d5fc63692ca84c8bfefe4cefef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389573"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663471"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Mitigación: representación de ventanas de WPF
 En [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], ejecutado en Windows 8 y versiones posteriores, la ventana en su totalidad se representa sin recortes al extenderse más allá de una sola pantalla en un escenario de varios monitores.  
@@ -38,5 +38,5 @@ En [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], ejecutado en Windows 8 
   
 -   Estableciendo la propiedad <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> en `true` al iniciar la aplicación.  
   
-## <a name="see-also"></a>Vea también  
- [Cambios en el runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a>Vea también
+- [Cambios en el runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

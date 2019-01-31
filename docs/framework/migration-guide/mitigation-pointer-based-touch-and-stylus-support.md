@@ -1,5 +1,5 @@
 ---
-title: 'Mitigación: Compatibilidad del lápiz y la entrada táctil basados en el puntero'
+title: 'Mitigación: compatibilidad del lápiz y la entrada táctil basados en el puntero'
 ms.date: 04/07/2017
 helpviewer_keywords:
 - retargeting changes
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da7d55b34bc21f0c11f13565d017587b4276bad3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d750087cc000ad31a24d91411c0885a75d59e74f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387785"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501953"
 ---
-# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigación: Compatibilidad del lápiz y la entrada táctil basados en el puntero
+# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigación: compatibilidad del lápiz y la entrada táctil basados en el puntero
 
 Las aplicaciones de WPF que se destinan a .NET Framework 4.7 y que se ejecutan en sistemas Windows a partir de Windows 10 Creators Update pueden habilitar la pila de lápiz/entada táctil de WPF basado en `WM_POINTER`.
 
@@ -56,4 +56,4 @@ Si se quita esta entrada o se establece su valor en `false`, se desactiva esta p
 
 ## <a name="see-also"></a>Vea también
 
-[Cambios de redestinación en .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [Cambios de redestinación en .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)

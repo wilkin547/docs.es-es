@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b98095cd6afd408331ab8c8f6bb15e7741d3073a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b35db12c8da1f333b481d2bd2e7633026ae30c30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570728"
 ---
 # <a name="net-architectural-components"></a>Componentes de la arquitectura .NET
 
@@ -86,10 +86,10 @@ Tiene acceso a un amplio conjunto de herramientas y componentes de infraestructu
 
 ## <a name="see-also"></a>Vea también
 
-- [Selección entre .NET Core y .NET Framework para aplicaciones de servidor](choosing-core-framework-server.md)   
-- [.NET Standard](net-standard.md)  
-- [Guía de .NET Core](../core/index.md)  
-- [Guía de .NET Framework](../framework/index.md)  
-- [Guía de C#](../csharp/index.md)  
-- [Guía de F#](../fsharp/index.md)  
-- [Guía de VB.NET](../visual-basic/index.md)  
+- [Selección entre .NET Core y .NET Framework para aplicaciones de servidor](choosing-core-framework-server.md)
+- [.NET Standard](net-standard.md)
+- [Guía de .NET Core](../core/index.md)
+- [Guía de .NET Framework](../framework/index.md)
+- [Guía de C#](../csharp/index.md)
+- [Guía de F#](../fsharp/index.md)
+- [Guía de VB.NET](../visual-basic/index.md)

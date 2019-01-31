@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac17993a4980e96cbd05fc2523567138e7b56262
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c2eb1898f03a52306a8a2763059cf198208b7b88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551844"
 ---
 # <a name="deploying-the-net-framework"></a>Implementación de .NET Framework
 En esta sección de la documentación de .NET Framework se proporciona información para los desarrolladores que quieran instalar .NET Framework con sus aplicaciones y para los administradores que quieran implementar .NET Framework en una red. También se describen los problemas de activación y reinicio asociados a la implementación, así como la manera de supervisar el progreso de la instalación de .NET Framework.  
@@ -30,11 +30,11 @@ En esta sección de la documentación de .NET Framework se proporciona informaci
  [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
  Describe cómo iniciar y seguir en modo silencioso el proceso de instalación de .NET Framework, mientras se muestra la vista del progreso de la instalación.  
   
- [Errores de inicialización de .NET Framework: Administrar la experiencia del usuario](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
+ [Errores de inicialización de .NET Framework: administración de la experiencia del usuario](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
  Describe lo que ocurre cuando una aplicación de .NET Framework requiere una versión de CLR que no es válida o no está instalada en el equipo del usuario. Además, explica cómo resolver estos errores y cómo controlar el mensaje de error que se muestra al usuario.  
   
- [Cómo: Depurar problemas de activación de CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
+ [Cómo: Depuración de problemas de activación de CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
  Explica cómo ver y depurar los registros de activación de CLR para solucionar los problemas que se pueden producir al intentar que la aplicación se ejecute con la versión correcta de CLR.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 - [Guía de desarrollo](../../../docs/framework/development-guide.md)

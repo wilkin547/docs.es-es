@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: configurar el seguimiento de red'
+title: Procedimiento para configurar el seguimiento de la red
 ms.date: 03/30/2017
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 6b1a61ac7566f624f44480ffed2337dba5e51ca2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3930453e2ba3594e19d8eb7c3dfbceb49c3a1e80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540538"
 ---
-# <a name="how-to-configure-network-tracing"></a>Cómo: configurar el seguimiento de red
+# <a name="how-to-configure-network-tracing"></a>Procedimiento para configurar el seguimiento de la red
 El archivo de configuración de la aplicación o equipo contiene la configuración que determina el formato y el contenido del seguimiento de red. Antes de realizar este procedimiento, asegúrese de que el seguimiento está habilitado. Para obtener información sobre cómo habilitar el seguimiento de red, vea [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md) (Habilitar el seguimiento de red).  
   
  El archivo de configuración del equipo, machine.config, se almacena en la carpeta %Windir%\Microsoft.NET\Framework en el directorio donde se instaló Windows. Hay un archivo machine.config distinto en las carpetas de %Windir%\Microsoft.NET\Framework por cada versión de .NET Framework que haya instalada en el equipo (por ejemplo, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config o C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config).  
@@ -97,8 +97,8 @@ El archivo de configuración de la aplicación o equipo contiene la configuraci�
 |`maxdatasize`|Atributo <xref:System.Int32> opcional. Establece el número máximo de bytes de datos de red incluidos en cada seguimiento de línea. El valor predeterminado es 1024.<br /><br /> Este atributo debe establecerse en el elemento \<source> como se muestra en el ejemplo. Se produce una excepción si este atributo se establece en un elemento bajo el elemento \<switches>.|  
 |`Tracemode`|Atributo <xref:System.String> opcional. Establezca este atributo en `includehex` para mostrar el seguimiento del protocolo en formato hexadecimal y de texto. Establezca este atributo en `protocolonly` para mostrar solo texto. El valor predeterminado es `includehex`.<br /><br /> Este atributo debe establecerse en el elemento \<switches> como se muestra en el ejemplo. Se produce una excepción si este atributo se establece en un elemento bajo el elemento \<source>.|  
   
-## <a name="see-also"></a>Vea también  
- [Interpretación del seguimiento de red](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [Network Tracing in the .NET Framework (Seguimiento de red en .NET Framework)](../../../docs/framework/network-programming/network-tracing.md)  
- [Habilitar el seguimiento de red](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>Vea también
+- [Interpretación del seguimiento de red](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+- [Network Tracing in the .NET Framework (Seguimiento de red en .NET Framework)](../../../docs/framework/network-programming/network-tracing.md)
+- [Habilitar el seguimiento de red](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

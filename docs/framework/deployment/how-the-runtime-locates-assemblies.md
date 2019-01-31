@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661872"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
 Para implementar correctamente una aplicación de .NET Framework, debe entender la manera en que Common Language Runtime busca y enlaza los ensamblados que componen la aplicación. De forma predeterminada, runtime intenta enlazar con la versión exacta de un ensamblado con el que se creó la aplicación. Este comportamiento predeterminado puede reemplazarse con los valores del archivo de configuración.  
@@ -61,7 +61,7 @@ Para implementar correctamente una aplicación de .NET Framework, debe entender 
         >  No se produce ninguna comprobación de versión en busca de ensamblados sin nombres seguros, y el tiempo de ejecución no protege la caché global de ensamblados para los ensamblados sin nombres seguros.  
   
 <a name="step1"></a>   
-## <a name="step-1-examining-the-configuration-files"></a>Paso 1: Examinar los archivos de configuración  
+## <a name="step-1-examining-the-configuration-files"></a>Paso 1: Examen de los archivos de configuración  
  El comportamiento de enlace de ensamblados puede configurarse en niveles diferentes en función de tres archivos XML:  
   
 -   Archivo de configuración de la aplicación.  
@@ -138,7 +138,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  En tercer lugar, el tiempo de ejecución examina el archivo de configuración del equipo. Este archivo, denominado Machine.config, reside en el equipo local, el subdirectorio Config del directorio raíz donde está instalado el tiempo de ejecución. Los administradores pueden usar este archivo para especificar las restricciones de enlace de ensamblado locales de ese equipo. La configuración incluida en el archivo de configuración del equipo tiene prioridad sobre otras opciones de configuración; sin embargo, esto no significa que todos los valores de configuración deban colocarse en este archivo. La versión determinada por el archivo de directiva del administrador es final y no se puede invalidar. Los reemplazos especificados en el archivo Machine.config afectan a todas las aplicaciones. Para obtener más información acerca de los archivos de configuración, consulte [Configurar aplicaciones con archivos de configuración](../../../docs/framework/configure-apps/index.md).  
   
 <a name="step2"></a>   
-## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Paso 2: Comprobar los ensamblados a los que se hizo referencia previamente  
+## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Paso 2: Comprobación de los ensamblados a los que se ha hecho referencia previamente  
  Si el ensamblado solicitado también se solicitó en llamadas anteriores, Common Language Runtime usa el ensamblado que ya está cargado. Esto puede tener consecuencias cuando se asignan nombres a los ensamblados que componen una aplicación. Para obtener más información sobre los nombres de ensamblados, vea [Nombres de ensamblados](../../../docs/framework/app-domains/assembly-names.md).  
   
  Si una solicitud anterior para el ensamblado produjo un error, las solicitudes posteriores para el ensamblado producen un error inmediatamente sin intentar cargar el ensamblado. A partir de .NET Framework versión 2.0, los errores de enlace de ensamblado se almacenan en caché y la información en caché se usa para determinar si se intenta cargar el ensamblado.  
@@ -147,11 +147,11 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 >  Para revertir al comportamiento de .NET Framework versiones 1.0 y 1.1, que no almacenaban en caché los errores de enlace, incluya el [elemento \<disableCachingBindingFailures>](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) en el archivo de configuración.  
   
 <a name="step3"></a>   
-## <a name="step-3-checking-the-global-assembly-cache"></a>Paso 3: Comprobar la memoria caché global de ensamblados  
+## <a name="step-3-checking-the-global-assembly-cache"></a>Paso 3: Comprobación de la memoria caché global de ensamblados  
  Para los ensamblados con nombre seguro, el proceso de enlace continúa con la búsqueda en la caché global de ensamblados. La caché global de ensamblados almacena los ensamblados que varias aplicaciones pueden usar en un equipo. Todos los ensamblados de la caché global de ensamblados deben tener nombres seguros.  
   
 <a name="step4"></a>   
-## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>Paso 4: Ubicar el ensamblado a través de códigos base o sondeos  
+## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>Paso 4: Localización del ensamblado a través de códigos base o sondeos  
  Una vez determinada la versión correcta del ensamblado usando la información contenida en la referencia del ensamblado que realiza la llamada y en los archivos de configuración, y una vez protegida la caché global de ensamblados (solo para ensamblados con nombre seguro), Common Language Runtime intenta buscar el ensamblado. El proceso de buscar un ensamblado conlleva los pasos siguientes:  
   
 1.  Si se encuentra un elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) en el archivo de configuración de la aplicación, el tiempo de ejecución comprueba la ubicación especificada. Si se encuentra una coincidencia, se usa ese ensamblado y no se realiza ningún sondeo. Si no se encuentra ahí el ensamblado, se produce un error en la solicitud de enlace.  
@@ -247,6 +247,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  Por ejemplo, si Assembly1 hace referencia a Assembly2 y Assembly1 se descargó desde `http://www.code.microsoft.com/utils`, dicha ubicación se considera una pista sobre dónde buscar Assembly2.dll. Después, el runtime busca el ensamblado en `http://www.code.microsoft.com/utils/Assembly2.dll` y `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`. Si no se encuentra Assembly2 en ninguna de estas ubicaciones, el tiempo de ejecución consulta a Windows Installer.  
   
-## <a name="see-also"></a>Vea también  
-- [Procedimientos recomendados para cargar ensamblados](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+## <a name="see-also"></a>Vea también
+- [Procedimientos recomendados para cargar ensamblados](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [Implementación](../../../docs/framework/deployment/index.md)

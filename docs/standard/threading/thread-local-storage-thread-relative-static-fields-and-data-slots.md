@@ -1,5 +1,5 @@
 ---
-title: 'Almacenamiento local para los subprocesos: Campos estáticos relacionados con subprocesos y ranuras de datos'
+title: 'Almacenamiento local para el subproceso: Campos estáticos relacionados con subprocesos y ranuras de datos'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bea5dfd7c53b5b5f53ddab5d4d07ec6a603b14e8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 69107cd7f1f84fa402479bb8a76c4b9b8a825d69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718265"
 ---
-# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Almacenamiento local para los subprocesos: Campos estáticos relacionados con subprocesos y ranuras de datos
+# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Almacenamiento local para el subproceso: Campos estáticos relacionados con subprocesos y ranuras de datos
 Puede usar el almacenamiento local para el subproceso (TLS) administrado para almacenar los datos que sean exclusivos de un subproceso y un dominio de aplicación. .NET Framework proporciona dos maneras de utilizar el TLS administrado: ranuras para datos y campos estáticos relacionados con subprocesos.  
   
 -   Use campos estáticos relacionados con subprocesos (campos `Shared` relacionados con subprocesos en Visual Basic) si puede anticipar las necesidades exactas en tiempo de compilación. Los campos estáticos relacionados con subprocesos proporcionan el mejor rendimiento. También proporcionan las ventajas de la comprobación de tipos en tiempo de compilación.  
@@ -59,8 +59,8 @@ Puede usar el almacenamiento local para el subproceso (TLS) administrado para al
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.ContextStaticAttribute>  
-- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
-- <xref:System.ThreadStaticAttribute>  
-- <xref:System.Runtime.Remoting.Messaging.CallContext>  
+- <xref:System.ContextStaticAttribute>
+- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>
+- <xref:System.ThreadStaticAttribute>
+- <xref:System.Runtime.Remoting.Messaging.CallContext>
 - [Subprocesamiento](../../../docs/standard/threading/index.md)

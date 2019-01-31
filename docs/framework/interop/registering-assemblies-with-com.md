@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b92f36488dec113dcffffac3e6cdc0c26a690b5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3ba8cb41244157b1fca0f7e9d345625cc579d0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494046"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrar ensamblados con COM
 Puede ejecutar una herramienta de línea de comandos denominada [Registro de ensamblados (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) para registrar un ensamblado o anular su registro para su uso con COM. Regasm.exe agrega información sobre la clase al Registro del sistema, de modo que los clientes COM puedan usar la clase .NET Framework de forma transparente. La clase <xref:System.Runtime.InteropServices.RegistrationServices> proporciona la funcionalidad equivalente.  
   
  Para poder activar un componente administrado desde un cliente COM, es necesario registrarlo primero en el Registro de Windows. En la tabla siguiente se muestran las claves que Regasm.exe suele agregar al Registro de Windows. (000000 indica el valor real de GUID).  
   
-|GUID|Description|Clave del Registro|  
+|GUID|Descripción|Clave del Registro|  
 |----------|-----------------|------------------|  
 |CLSID|Identificador de clase|HKEY_CLASSES_ROOT\CLSID\\{000…000}|  
 |IID|Identificador de interfaz|HKEY_CLASSES_ROOT\Interface\\{000…000}|  
@@ -43,8 +43,8 @@ Puede ejecutar una herramienta de línea de comandos denominada [Registro de ens
   
  Para la subclave `InprocServer32`, aparece una referencia a Mscoree.dll en lugar de una biblioteca de tipos COM tradicional para indicar que Common Language Runtime crea el objeto administrado.  
   
-## <a name="see-also"></a>Vea también  
- [Exponer componentes de .NET Framework en COM](exposing-dotnet-components-to-com.md)  
- [Cómo: Hacer referencia a tipos de .NET desde COM](how-to-reference-net-types-from-com.md)  
- [Llamada a un objeto de .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
- [Implementar una aplicación para obtener acceso a COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))
+## <a name="see-also"></a>Vea también
+- [Exponer componentes de .NET Framework en COM](exposing-dotnet-components-to-com.md)
+- [Cómo: Hacer referencia a tipos de .NET desde COM](how-to-reference-net-types-from-com.md)
+- [Llamada a un objeto de .NET](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))
+- [Implementar una aplicación para obtener acceso a COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

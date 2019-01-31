@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-ms.openlocfilehash: 9f37c9ab0eb3b0943d1ae0720690a95e8c491704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4b719727f3264886f8c4c313d4e1154f0d04728
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549269"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>Acceso al teclado (Visual Basic)
 El objeto `My.Computer.Keyboard` proporciona propiedades para tener acceso al estado actual del teclado, como las teclas que se han presionado, y proporciona un método para enviar pulsaciones de teclas a la ventana activa.  
@@ -30,6 +30,6 @@ El objeto `My.Computer.Keyboard` proporciona propiedades para tener acceso al es
 |Determinar si BLOQ DESPL está activado|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
 |Iniciar una aplicación y enviarle pulsaciones de teclas|[Cómo: Iniciar una aplicación y enviarle pulsaciones de teclas (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.Devices.Keyboard>  
- <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.VisualBasic.Devices.Keyboard>
+- <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>

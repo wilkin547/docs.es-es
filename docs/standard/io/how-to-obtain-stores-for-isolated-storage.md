@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Obtener los almacenes de almacenamiento aislado'
+title: Procedimiento para obtener los almacenes de almacenamiento aislado
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e2f87bfe1e3e7f3a1c8135c047b25a998793453
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 0968443af28e2d403b08a1af50846e7a1369db49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524577"
 ---
-# <a name="how-to-obtain-stores-for-isolated-storage"></a>Cómo: Obtener los almacenes de almacenamiento aislado
+# <a name="how-to-obtain-stores-for-isolated-storage"></a>Procedimiento para obtener los almacenes de almacenamiento aislado
 Un almacén aislado expone un sistema de archivos virtual dentro de un compartimiento de datos. La clase <xref:System.IO.IsolatedStorage.IsolatedStorageFile> proporciona una serie de métodos para interactuar con un almacén aislado. Para crear y recuperar almacenes, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> proporciona tres métodos estáticos:  
   
 -   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> devuelve el almacenamiento que está aislado por usuario y ensamblado.  
@@ -58,8 +58,8 @@ Un almacén aislado expone un sistema de archivos virtual dentro de un compartim
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
-- [Almacenamiento aislado](../../../docs/standard/io/isolated-storage.md)  
-- [Tipos de aislamiento](../../../docs/standard/io/types-of-isolation.md)  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
+- [Almacenamiento aislado](../../../docs/standard/io/isolated-storage.md)
+- [Tipos de aislamiento](../../../docs/standard/io/types-of-isolation.md)
 - [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

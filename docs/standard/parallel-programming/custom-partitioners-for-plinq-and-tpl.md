@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b4e835d01ac0e1249a9a4c71a3a9db25082fec1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45964862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698896"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Particionadores personalizados para PLINQ y TPL
 Para paralelizar una operación en un origen de datos, uno de los pasos esenciales es *particionar* el origen en varias secciones a las que pueden acceder varios subprocesos al mismo tiempo. PLINQ y la biblioteca TPL proporcionan particionadores predeterminados que funcionan de manera transparente al escribir un bucle <xref:System.Threading.Tasks.Parallel.ForEach%2A> o una consulta en paralelo. Para escenarios más avanzados, puede conectar su propio particionador.  
@@ -110,11 +110,11 @@ Para paralelizar una operación en un origen de datos, uno de los pasos esencial
   
 -   Los siguientes captadores booleanos deben devolver siempre con precisión los siguientes valores para que no se altere el orden de salida:  
   
-    -   `KeysOrderedInEachPartition`: cada partición devuelve elementos con índices de claves crecientes.  
+    -   `KeysOrderedInEachPartition`: cada partición devuelve elementos con índices de clave crecientes.  
   
-    -   `KeysOrderedAcrossPartitions`: para todas las particiones que se devuelven, los índices de clave de la partición *i* son más altos que los índices de clave de la partición *i*-1.  
+    -   `KeysOrderedAcrossPartitions`: para todas las particiones que se devuelven, los índices de clave de la partición *i* son más altos que los de la partición *i*-1.  
   
-    -   `KeysNormalized`: todos los índices de claves aumentan ininterrumpidamente sin espacios, empezando desde cero.  
+    -   `KeysNormalized`: todos los índices de clave aumentan ininterrumpidamente sin espacios, empezando desde cero.  
   
 -   Todos los índices deben ser únicos. No puede haber índices duplicados. Si no se respeta esta regla, se puede alterar el orden de salida.  
   
@@ -122,6 +122,6 @@ Para paralelizar una operación en un origen de datos, uno de los pasos esencial
   
 ## <a name="see-also"></a>Vea también
 
-- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)  
-- [Implementar las particiones dinámicas](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
-- [Implementar un particionador para particionamiento estático](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
+- [Cómo: Implementar las particiones dinámicas](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
+- [Cómo: Implementar un particionador para particionamiento estático](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

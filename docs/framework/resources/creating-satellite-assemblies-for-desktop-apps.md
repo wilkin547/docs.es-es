@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c308c7e16f106d00e5fd1b5ad820f8b330f4bbbf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 719f71f42ac7b0c376525ab3a316a986af0b0f43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678803"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Crear ensamblados satélite para aplicaciones de escritorio
 Los archivos de recursos desempeñan un papel fundamental en las aplicaciones localizadas. Permiten que una aplicación muestre cadenas, imágenes y otros datos en el idioma y la referencia cultural del usuario, y que proporcione datos alternativos si los recursos para el idioma o la referencia cultural del usuario no están disponibles. .NET Framework usa un modelo de concentrador y radio para buscar y recuperar recursos localizados. El concentrador es el ensamblado principal que contiene el código ejecutable no localizable y los recursos de una referencia cultural única, denominada referencia cultural neutra o predeterminada. La referencia cultural predeterminada es la referencia cultural de reserva de la aplicación y se usa si no hay recursos localizados disponibles. El atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> se usa para designar la referencia cultural predeterminada de la aplicación. Cada radio se conecta a un ensamblado satélite que contiene los recursos de una única referencia cultural localizada, pero no contiene código. Debido a que los ensamblados satélite no forman parte del ensamblado principal, los recursos correspondientes a una referencia cultural específica se pueden actualizar o reemplazar fácilmente sin reemplazar el ensamblado principal de la aplicación.  
@@ -74,7 +74,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  En la tabla siguiente se describen detalladamente las opciones de Al.exe usadas en estos comandos.  
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**-target:** lib|Especifica que el ensamblado satélite se compila en un archivo de biblioteca (.dll). Dado que un ensamblado satélite no contiene código ejecutable y no es el ensamblado principal de la aplicación, debe guardar los ensamblados satélite como archivos DLL.|  
 |**-embed:** strings.de.resources|Especifica el nombre del archivo de recursos que se va a insertar cuando Al.exe compile el ensamblado. Puede insertar varios archivos .resources en un ensamblado satélite, pero si sigue el modelo de concentrador y radio, debe compilar un ensamblado satélite para cada referencia cultural. Aun así, puede crear archivos .resources independientes para cadenas y objetos.|  
@@ -84,7 +84,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  Para obtener una lista completa de las opciones disponibles con Al.exe, vea [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   
-## <a name="satellite-assemblies-an-example"></a>Ejemplo de ensamblados satélite  
+## <a name="satellite-assemblies-an-example"></a>Ensamblados satélite: Un ejemplo  
  A continuación se incluye un ejemplo sencillo de "Hola a todos" que muestra un cuadro de mensaje con un saludo localizado. El ejemplo incluye recursos para las referencias culturales de inglés (Estados Unidos), francés (Francia) y ruso (Rusia), y su referencia cultural de reserva es inglés. Para crear este ejemplo, haga lo siguiente:  
   
 1.  Cree un archivo de recursos denominado Greeting.resx o Greeting.txt para que contenga el recurso para la referencia cultural predeterminada. Almacene una sola cadena denominada `HelloString` cuyo valor sea "Hola a todos" en este archivo.  
@@ -199,7 +199,7 @@ gacutil -i:StringLibrary.resources.dll
   
  La opción **/i** especifica que Gacutil.exe debe instalar el ensamblado especificado en la caché global de ensamblados. Una vez que se ha instalado el ensamblado satélite en la caché, los recursos que contiene están disponibles para todas las aplicaciones que están diseñadas para usar el ensamblado satélite.  
   
-### <a name="resources-in-the-global-assembly-cache-an-example"></a>Ejemplo de recursos en la caché global de ensamblados  
+### <a name="resources-in-the-global-assembly-cache-an-example"></a>Recursos en la caché global de ensamblados: Un ejemplo  
  En el ejemplo siguiente se usa un método en una biblioteca de clases de .NET Framework para extraer y devolver un saludo localizado de un archivo de recursos. La biblioteca y sus recursos están registrados en la caché global de ensamblados. El ejemplo incluye recursos para las referencias culturales de inglés (Estados Unidos), francés (Francia), ruso (Rusia) e inglés. El inglés es la referencia cultural predeterminada y sus recursos están almacenados en el ensamblado principal. En el ejemplo inicialmente se retrasa la firma de la biblioteca y sus ensamblados satélite con una clave pública y, después, se vuelven a firmar con un par de claves pública y privada. Para crear este ejemplo, haga lo siguiente:  
   
 1.  Si no está usando Visual Studio, use el siguiente comando de la [herramienta de nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) para crear un par de claves pública y privada denominado ResKey.snk:  
@@ -308,10 +308,10 @@ gacutil -i:StringLibrary.resources.dll
   
 14. Ejecute Example.exe.  
   
-## <a name="see-also"></a>Vea también  
- [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Retrasar la firma de un ensamblado](../../../docs/framework/app-domains/delay-sign-assembly.md)  
- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Sn.exe (Herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [Gacutil.exe (Herramienta Caché global de ensamblados)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
- [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>Vea también
+- [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Retrasar la firma de un ensamblado](../../../docs/framework/app-domains/delay-sign-assembly.md)
+- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Sn.exe (Herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [Gacutil.exe (Herramienta Caché global de ensamblados)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)

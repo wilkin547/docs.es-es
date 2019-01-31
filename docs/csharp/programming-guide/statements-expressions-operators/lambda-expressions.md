@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 0feff32f3a2264b8e6cbd4746fdeaaaad728b8e5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 91d972f468f80c509a90ea293937b117d54a2e7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241293"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737525"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Expresiones lambda (Guía de programación de C#)
 
@@ -89,7 +89,8 @@ namespace ConsoleApplication1
 
  Observe en el ejemplo anterior que el cuerpo de una lambda de expresión puede estar compuesto de una llamada a método. Sin embargo, si crea árboles de expresiones que se evalúan fuera de .NET Framework, por ejemplo en SQL Server, no debe utilizar llamadas a métodos en expresiones lambda. Los métodos no tendrán ningún significado fuera del contexto de .NET Common Language Runtime.  
   
-## <a name="statement-lambdas"></a>Lambdas de instrucción  
+## <a name="statement-lambdas"></a>Lambdas de instrucción
+
  Una lambda de instrucción es similar a un lambda de expresión, salvo que las instrucciones se encierran entre llaves:  
   
 (parámetros de entrada) => { instrucción; }
@@ -102,7 +103,8 @@ namespace ConsoleApplication1
 
  Las lambdas de instrucción, como los métodos anónimos, no se pueden utilizar para crear árboles de expresión.  
   
-## <a name="async-lambdas"></a>Lambdas asincrónicas  
+## <a name="async-lambdas"></a>Lambdas asincrónicas
+
  Puede crear fácilmente expresiones e instrucciones lambda que incorporen el procesamiento asincrónico mediante las palabras clave [async](../../../csharp/language-reference/keywords/async.md) y [await](../../../csharp/language-reference/keywords/await.md) . Por ejemplo, en el siguiente ejemplo de formularios Windows Forms se incluye un controlador de eventos que llama y espera un método asincrónico, `ExampleMethodAsync`.  
   
 ```csharp
@@ -154,7 +156,8 @@ public partial class Form1 : Form
 
  Para obtener más información sobre cómo crear y usar métodos asincrónicos, vea [Programación asincrónica con async y await](../../../csharp/programming-guide/concepts/async/index.md).  
   
-## <a name="lambdas-with-the-standard-query-operators"></a>Lambdas con los operadores de consulta estándar  
+## <a name="lambdas-with-the-standard-query-operators"></a>Lambdas con los operadores de consulta estándar
+
  Muchos operadores de consulta estándar tienen un parámetro de entrada cuyo tipo es uno de la familia <xref:System.Func%602> de delegados genéricos. Estos delegados usan parámetros de tipo para definir el número y los tipos de los parámetros de entrada y el tipo de valor devuelto del delegado. Los delegados`Func` son muy útiles para encapsular expresiones definidas por el usuario que se aplican a cada elemento en un conjunto de datos de origen. Por ejemplo, considere el siguiente tipo delegado:  
   
 ```csharp  
@@ -191,7 +194,8 @@ var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);
 var firstSmallNumbers = numbers.TakeWhile((n, index) => n >= index);  
 ```  
   
-## <a name="type-inference-in-lambdas"></a>Inferencia de tipos en las lambdas  
+## <a name="type-inference-in-lambdas"></a>Inferencia de tipos en las lambdas
+
  Al escribir lambdas, no tiene por qué especificar un tipo para los parámetros de entrada, ya que el compilador puede deducir el tipo según el cuerpo de lambda, el tipo de delegado del parámetro y otros factores que se describen en la especificación del lenguaje C#. Para la mayoría de los operadores de consulta estándar, la primera entrada es el tipo de los elementos en la secuencia de origen. Por consiguiente, si está realizando una consulta sobre un `IEnumerable<Customer>`, se deducirá que la variable de entrada será un objeto `Customer` , lo cual significa que se podrá tener acceso a sus métodos y propiedades:  
   
 ```csharp  
@@ -208,7 +212,8 @@ customers.Where(c => c.City == "London");
   
  Observe que las expresiones lambda, en sí mismas, no tienen tipo, ya que el sistema de tipos comunes no tiene ningún concepto intrínseco de "expresión lambda". Sin embargo, a veces resulta práctico hablar coloquialmente del "tipo" de una expresión lambda. En estos casos, el tipo hace referencia al tipo del delegado o el tipo de <xref:System.Linq.Expressions.Expression> en el que se convierte la expresión lambda.  
   
-## <a name="variable-scope-in-lambda-expressions"></a>Ámbito de las variables en las expresiones lambda  
+## <a name="variable-scope-in-lambda-expressions"></a>Ámbito de las variables en las expresiones lambda
+
  Las lambdas pueden hacer referencia a las *variables externas* (vea [Métodos anónimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)) que están en el ámbito del método que define la función lambda o en el ámbito del tipo que contiene la expresión lambda. Las variables que se capturan de esta manera se almacenan para su uso en la expresión lambda, cuando de otro modo quedarían fuera de ámbito y serían eliminadas por la recolección de elementos no utilizados. Para poder utilizar una variable externa en una expresión lambda, debe estar previamente asignada. En el ejemplo siguiente se muestran estas reglas:  
   
 ```csharp  
@@ -269,18 +274,20 @@ class Test
   
 -   Una expresión lambda no puede contener una instrucción `goto` , `break` o `continue` que esté dentro de la función lambda si el destino de la instrucción de salto está fuera del bloque. También es un error utilizar una instrucción de salto fuera del bloque de la función lambda si el destino está dentro del bloque.  
   
-## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="featured-book-chapter"></a>Capítulo destacado del libro  
+## <a name="featured-book-chapter"></a>Capítulo destacado del libro
+
  [Delegates, Events, and Lambda Expressions](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) (Delegados, eventos y expresiones lambda) en [C# 3.0 Cookbook, Tercera edición: More than 250 solutions for C# 3.0 programmers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29) (Más de 250 soluciones para programadores de C# 3.0)  
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
-- [LINQ (Language Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)  
-- [Métodos anónimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
-- [is](../../../csharp/language-reference/keywords/is.md)  
-- [Árboles de expresión](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-- [Ejemplos de C# de Visual Studio 2008 (vea los archivos de ejemplos de consultas LINQ y el programa XQuery)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [LINQ (Language Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)
+- [Métodos anónimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [is](../../../csharp/language-reference/keywords/is.md)
+- [Árboles de expresión](../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Ejemplos de C# de Visual Studio 2008 (vea los archivos de ejemplos de consultas LINQ y el programa XQuery)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [Expresiones lambda recursivas](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

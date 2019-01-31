@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Leer un archivo de texto línea a línea (Visual C#) |'
+title: Procedimiento para leer un archivo de texto línea a línea (Visual C#)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ReadLine method [C#]
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 6ba479e341b71bebe60d9744f239b752d3d81167
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 831f306a19d926b70170c1a6ebc4ab670f1b9851
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43738773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718655"
 ---
-# <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Cómo: Leer un archivo de texto línea a línea (Visual C#) |
+# <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Procedimiento para leer un archivo de texto línea a línea (Visual C#)
 En este ejemplo se lee el contenido de un archivo de texto línea a línea en una cadena mediante el método `ReadLine` de la clase `StreamReader`. Cada línea de texto se almacena en la cadena `line` y se muestra en la pantalla.  
   
 ## <a name="example"></a>Ejemplo  
@@ -52,6 +52,6 @@ System.Console.ReadLine();
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
 - [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)

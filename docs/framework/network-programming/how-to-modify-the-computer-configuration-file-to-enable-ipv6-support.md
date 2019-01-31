@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6'
+title: Procedimiento para modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-ms.openlocfilehash: 32aa1c3fa50d5c0486da4ef6799c77ead605b504
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8427a1641b4d6c782f2b2585ab49d38073567f2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698081"
 ---
-# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Cómo: modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6
+# <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>Procedimiento para modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6
 En el ejemplo de código siguiente se muestra cómo modificar el archivo de configuración de equipo, *machine.config*, para permitir la compatibilidad con IPv6. El archivo *machine.config* se almacena en la carpeta *%Windir%\Microsoft.NET\Framework* en el directorio donde se ha instalado Windows. Hay un archivo *machine.config* distinto en las carpetas bajo *%Windir%\Microsoft.NET\Framework* para cada versión de .NET Framework instalada en el equipo (por ejemplo, *C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*).  
   
  Estos valores se pueden crear también en el archivo de configuración de la aplicación, que tiene prioridad sobre el archivo de configuración del equipo.  
@@ -35,7 +35,7 @@ En el ejemplo de código siguiente se muestra cómo modificar el archivo de conf
 <system.net>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Direccionamiento IPv6](../../../docs/framework/network-programming/ipv6-addressing.md)  
- [Esquema de la configuración de red](../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [Elemento \<ipv6> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+## <a name="see-also"></a>Vea también
+- [Direccionamiento IPv6](../../../docs/framework/network-programming/ipv6-addressing.md)
+- [Esquema de la configuración de red](../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Elemento \<ipv6> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)

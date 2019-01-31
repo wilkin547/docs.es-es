@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 22574df77250479250f1ce1369c4bfb59c456d26
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f2e9ed6ee23367e6ef3cd035ef5a485105da8a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653754"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opciones del compilador de C#, por orden alfabético
 
@@ -29,7 +29,7 @@ Las siguientes opciones del compilador están ordenadas alfabéticamente. Para o
 |[-baseaddress](baseaddress-compiler-option.md)|Especifica la dirección base de la biblioteca que se compilará.|
 |[-bugreport](bugreport-compiler-option.md)|Crea un archivo 'Informe de errores'. Este archivo se enviará junto con la información de bloqueo si se usa con -errorreport:prompt o -errorreport:send.|
 |[/checked](checked-compiler-option.md)|Hace que el compilador genere comprobaciones de desbordamiento.|
-|-checksumalgorithm:\<alg>|Especifica el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (predeterminado) o SHA256.|
+|-checksumalgorithm:\<alg>|Especifica el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (el predeterminado) o SHA256.|
 |[-codepage](codepage-compiler-option.md)|Especifica la página de códigos que se va a utilizar cuando se abren los archivos de código fuente.|
 |[-debug](debug-compiler-option.md)|Emite información de depuración.|
 |[-define](define-compiler-option.md)|Define símbolos de compilación condicional.|
@@ -44,7 +44,7 @@ Las siguientes opciones del compilador están ordenadas alfabéticamente. Para o
 |-incremental|Habilita la compilación incremental [obsoleto].|
 |[-keycontainer](keycontainer-compiler-option.md)|Especifica un contenedor de claves de nombre seguro.|
 |[-keyfile](keyfile-compiler-option.md)|Especifica un archivo de clave de nombre seguro.|
-|[-langversion:\<string>](langversion-compiler-option.md)|Especifica la versión de lenguaje: valor predeterminado, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o el más reciente |
+|[-langversion:\<string>](langversion-compiler-option.md)|Especifique la versión de lenguaje: predeterminada, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 o más reciente |
 |[/lib](lib-compiler-option.md)|Especifica más directorios donde buscar referencias.|
 |[-link](link-compiler-option.md)|Hace que la información de tipo COM de ensamblados específicos esté disponible en el proyecto.|
 |[-linkresource](linkresource-compiler-option.md)|Vincula el recurso especificado a este ensamblado.|
@@ -82,7 +82,7 @@ Las siguientes opciones del compilador están ordenadas alfabéticamente. Para o
 
 ## <a name="see-also"></a>Vea también
 
-- [Opciones del compilador de C#](index.md)  
-- [Opciones del compilador de C#, por categoría](listed-by-category.md)  
-- [Cómo: Establecer variables de entorno para la línea de comandos de Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+- [Opciones del compilador de C#](index.md)
+- [Opciones del compilador de C#, por categoría](listed-by-category.md)
+- [Cómo: Establecer variables de entorno para la línea de comandos de Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [Elemento \<compiler>](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

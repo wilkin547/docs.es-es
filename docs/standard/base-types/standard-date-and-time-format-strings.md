@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4c6d10fad075a70d80bf6e5aa32edf0f89c42dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151296"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532203"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora estándar
 Una cadena de formato de fecha y hora estándar usa un único especificador de formato para definir la representación de texto de un valor de fecha y hora. Cualquier cadena con formato de fecha y hora que contenga más de un carácter, incluido un espacio en blanco, se interpreta como una cadena con formato de fecha y hora personalizado; para obtener más información, consulte [Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Una cadena de formato estándar o personalizado se puede usar de dos maneras:  
@@ -53,9 +53,9 @@ Las cadenas con formato de fecha y hora estándar se pueden utilizar tanto con v
 |"s"|Patrón de fecha y hora que se puede ordenar.<br /><br /> Más información: [El especificador de formato que se puede ordenar ("s")](#Sortable).|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
 |"t"|Patrón de hora corta.<br /><br /> Más información: [El especificador de formato de hora corta ("t")](#ShortTime).|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|  
 |"T"|Patrón de hora larga.<br /><br /> Más información: [El especificador de formato de hora larga ("T")](#LongTime).|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|  
-|"u"|Patrón de fecha y hora universal que se puede ordenar.<br /><br /> Más información: [El especificador de formato universal que se puede ordenar ("u")](#UniversalSortable).|Con un valor <xref:System.DateTime>: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> Con un valor <xref:System.DateTimeOffset>: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|  
+|"u"|Patrón de fecha y hora universal que se puede ordenar.<br /><br /> Más información: [El especificador de formato universal que se puede ordenar ("u")](#UniversalSortable).|Con un valor <xref:System.DateTime> de: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> Con un valor <xref:System.DateTimeOffset> de: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|  
 |"U"|Patrón de fecha y hora completa universal.<br /><br /> Más información: [El especificador de formato completo universal ("U")](#UniversalFull).|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|  
-|"Y", "y"|Patrón de mes y año.<br /><br /> Más información: [El especificador de formato de mes y año ("Y", "y")](#YearMonth).|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|  
+|"Y", "y"|Patrón de mes y año.<br /><br /> Más información: [El especificador de formato de mes y año ("Y")](#YearMonth).|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|  
 |Cualquier otro carácter único|Especificador desconocido.|Produce una excepción <xref:System.FormatException> en tiempo de ejecución.|  
   
 ## <a name="how-standard-format-strings-work"></a>Cómo funcionan las cadenas con formato estándar  
@@ -81,7 +81,7 @@ Las cadenas con formato de fecha y hora estándar se pueden utilizar tanto con v
 > [!NOTE]
 >  Para obtener información sobre la personalización de patrones o cadenas usadas para dar formato a valores de fecha y hora, vea el tema sobre la clase <xref:System.Globalization.NumberFormatInfo>.  
   
- En algunos casos, la cadena con formato estándar actúa como la abreviatura correspondiente de una cadena con formato personalizado más larga que es invariable. Hay cuatro cadenas de formato estándar que pertenecen a esta categoría: "O" (o "o"), "R" (o "r"), "s" y "u". Estas cadenas se corresponden con las cadenas de formato personalizado definidas en la referencia cultural de todos los idiomas. Generan representaciones de cadena de valores de fecha y hora que están pensados para que sean idénticos en todas las referencias culturales. En la tabla siguiente se proporciona información sobre estas cuatro cadenas de formato de fecha y hora estándar.  
+ En algunos casos, la cadena con formato estándar actúa como la abreviatura correspondiente de una cadena con formato personalizado más larga que es invariable. Hay cuatro cadenas de formato estándar que pertenecen a esta categoría: "O" (u "o"), "R" (o "r"), "s" y "u". Estas cadenas se corresponden con las cadenas de formato personalizado definidas en la referencia cultural de todos los idiomas. Generan representaciones de cadena de valores de fecha y hora que están pensados para que sean idénticos en todas las referencias culturales. En la tabla siguiente se proporciona información sobre estas cuatro cadenas de formato de fecha y hora estándar.  
   
 |Cadena con formato estándar|Se define en la propiedad DateTimeFormatInfo.InvariantInfo|Cadena con formato personalizado|  
 |----------------------------|----------------------------------------------------------|--------------------------|  
@@ -415,8 +415,8 @@ Las cadenas con formato de fecha y hora estándar se pueden utilizar tanto con v
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.DateTime?displayProperty=nameWithType>  
-- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
-- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- <xref:System.DateTime?displayProperty=nameWithType>
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>
+- [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Ejemplo: Utilidad de formato de .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

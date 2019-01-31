@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Descargar un dominio de aplicación'
+title: Procedimiento para descargar un dominio de aplicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8b4cbdff72167cfc063254cf5370d22fb729b0a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 42356348ba454ffe0c3778e23dc9a0ff272c9f64
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50088577"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727747"
 ---
-# <a name="how-to-unload-an-application-domain"></a>Cómo: Descargar un dominio de aplicación
+# <a name="how-to-unload-an-application-domain"></a>Procedimiento para descargar un dominio de aplicación
 Cuando haya terminado de usar un dominio de aplicación, descárguelo con el método <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>. El método **Unload** cierra discretamente el dominio de aplicación especificado. Durante el proceso de descarga, ningún subproceso nuevo puede obtener acceso al dominio de aplicación. Además, se liberan todas las estructuras de datos específicas del dominio de aplicación.  
   
  Los ensamblados cargados en el dominio de aplicación se quitan y dejan de estar disponibles. Si un ensamblado del dominio de aplicación es neutral respecto al dominio, sus datos permanecen en la memoria hasta que se cierra todo el proceso. No existe ningún mecanismo para descargar un ensamblado neutral con respecto al dominio, aparte de cerrar todo el proceso. Existen situaciones en las que la solicitud para descargar un dominio de aplicación no funciona y genera como resultado una <xref:System.CannotUnloadAppDomainException>.  
@@ -31,7 +31,7 @@ Cuando haya terminado de usar un dominio de aplicación, descárguelo con el mé
  [!code-csharp[System.AppDomain.Load#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source3.cs#3)]
  [!code-vb[System.AppDomain.Load#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>Vea también  
-- [Programar con dominios de aplicación](application-domains.md#programming-with-application-domains)  
-- [Crear un dominio de aplicación](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+## <a name="see-also"></a>Vea también
+- [Programar con dominios de aplicación](application-domains.md#programming-with-application-domains)
+- [Cómo: Crear un dominio de aplicación](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)
 - [Utilizar dominios de aplicación](../../../docs/framework/app-domains/use.md)

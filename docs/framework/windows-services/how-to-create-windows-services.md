@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Crear servicios de Windows'
+title: Procedimiento para crear servicios de Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 7a529a94edf3a4cf71150c04994d82b8f21eb996
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d0a450483c05a272fe799c7ee04e691cefbd2085
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47204643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533759"
 ---
-# <a name="how-to-create-windows-services"></a>Cómo: Crear servicios de Windows
+# <a name="how-to-create-windows-services"></a>Procedimiento para crear servicios de Windows
 Al crear un servicio, puede usar una plantilla de proyecto de Visual Studio denominada **Servicio de Windows**. Esta plantilla realiza automáticamente gran parte del trabajo: hace referencia a las clases y los espacios de nombres correctos, configura la herencia de la clase base para los servicios y reemplazar algunos de los métodos que es probable que desee reemplazar.  
   
 > [!WARNING]
@@ -32,7 +32,7 @@ Al crear un servicio, puede usar una plantilla de proyecto de Visual Studio deno
 1.  Cree un proyecto de **Servicio Windows**.  
   
     > [!NOTE]
-    >  Para obtener instrucciones sobre cómo escribir un servicio sin usar la plantilla, consulte [Creación de servicios mediante programación](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    >  Para obtener instrucciones sobre cómo escribir un servicio sin usar la plantilla, vea [Cómo: Escribir servicios mediante programación](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
 2.  En la ventana **Propiedades**, establezca la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> para el servicio.  
   
@@ -49,7 +49,7 @@ Al crear un servicio, puede usar una plantilla de proyecto de Visual Studio deno
     |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` para indicar que el servicio desea recibir una notificación cuando se apaga el equipo en que reside, lo que le permite llamar al procedimiento <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>.|  
     |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True` para indicar que el servicio aceptará solicitudes para pausar o reanudar la ejecución; `false` para impedir que el servicio se pause y se reanude.|  
     |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` para indicar que el servicio puede controlar la notificación de cambios en el estado de alimentación del equipo; `false` para impedir la notificación al servicio de estos cambios.|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` para escribir entradas informativas en el registro de sucesos de aplicación cuando el servicio realice una acción; `false` para deshabilitar esta funcionalidad. Para más información, consulte [Registro de información sobre servicios](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Nota:** De manera predeterminada, <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> se establece en `true`.|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` para escribir entradas informativas en el registro de sucesos de aplicación cuando el servicio realice una acción; `false` para deshabilitar esta funcionalidad. Para obtener más información, vea [Cómo: Registrar información sobre servicios](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Nota:**  De manera predeterminada, <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> se establece en `true`.|  
   
     > [!NOTE]
     >  Cuando <xref:System.ServiceProcess.ServiceBase.CanStop%2A> o <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> se establecen en `false`, el **Administrador de control de servicios** deshabilitará las opciones de menú correspondientes para detener, pausar o continuar el servicio.  
@@ -58,21 +58,21 @@ Al crear un servicio, puede usar una plantilla de proyecto de Visual Studio deno
   
 5.  Reemplace los otros métodos para los que desee definir la funcionalidad.  
   
-6.  Agregar los instaladores necesarios para su aplicación de servicio. Para más información, consulte [Adición de instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+6.  Agregar los instaladores necesarios para su aplicación de servicio. Para obtener más información, vea [Cómo: Agregar instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 7.  En el menú **Compilar**, seleccione **Compilar solución** para compilar el proyecto.  
   
     > [!NOTE]
     >  No presione F5 para ejecutar el proyecto: no se puede ejecutar un proyecto de servicio de esta manera.  
   
-8.  Instale el servicio. Para obtener más información, consulta [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+8.  Instale el servicio. Para obtener más información, vea [Cómo: Instalar y desinstalar servicios](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Creación de servicios mediante programación](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)  
- [Adición de instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [Registro de información sobre servicios](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
- [Inicio de servicios](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Definición del contexto de seguridad de los servicios](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)  
- [Instalación y desinstalación de servicios](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Tutorial: Creación de una aplicación de servicios de Windows en el Diseñador de componentes](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+## <a name="see-also"></a>Vea también
+- [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Cómo: Escribir servicios mediante programación](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)
+- [Cómo: Adición de instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Cómo: Registrar información sobre servicios](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
+- [Cómo: Iniciar servicios](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Cómo: Especificar el contexto de seguridad de los servicios](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+- [Cómo: Instalar y desinstalar servicios](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [Tutorial: Creación de una aplicación de servicios de Windows en el Diseñador de componentes](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

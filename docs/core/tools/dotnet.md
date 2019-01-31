@@ -2,12 +2,12 @@
 title: comando dotnet
 description: Aprenda sobre el comando dotnet (el controlador genérico para las herramientas de la CLI de .NET Core) y su uso.
 ms.date: 06/04/2018
-ms.openlocfilehash: 081f295cc71c3cd46de465efb12f131e7b2d36d9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 53eb96ee6fe809b2e6e42eec4e7e9b5f7c5edf2a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170862"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066446"
 ---
 # <a name="dotnet-command"></a>comando dotnet
 
@@ -78,9 +78,14 @@ Muestra los tiempos de ejecución de .NET Core instalados.
 
 Muestra los SDK de .NET Core instalados.
 
-`--roll-forward-on-no-candidate-fx`
+`--roll-forward-on-no-candidate-fx <N>`
 
- Deshabilita la puesta al día de versiones secundarias, si está establecido en `0`. Para obtener más información, vea [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward) (Puesta al día).
+Define el comportamiento cuando el marco de trabajo compartido necesario no está disponible. `N` puede ser:
+ * `0`: se deshabilita la puesta al día incluso de las versiones secundarias.
+ * `1`: puesta al día de la versión secundaria, pero no de la versión principal. Éste es el comportamiento predeterminado.
+ * `2`: puesta al día de las versiones principales y secundarias.
+
+ Para obtener más información, vea [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward) (Puesta al día).
 
 `-v|--verbosity <LEVEL>`
 

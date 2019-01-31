@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03b77074323346e1a26fa07dc1ec873152da356b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 839772fac51ab006d03875920360824a73b033e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600003"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Procedimientos recomendados para modelos de diseño de observador
 En .NET Framework, el patrón de diseño de observador se implementa como un conjunto de interfaces. La interfaz <xref:System.IObservable%601?displayProperty=nameWithType> representa al proveedor de datos, que también es responsable de proporcionar una implementación <xref:System.IDisposable> que permite a los observadores cancelar la suscripción a las notificaciones. La interfaz <xref:System.IObserver%601?displayProperty=nameWithType> representa al observador. En este tema se describen los procedimientos recomendados que los desarrolladores deben seguir al implementar el patrón de diseño de observador con estas interfaces.  
@@ -55,6 +55,6 @@ En .NET Framework, el patrón de diseño de observador se implementa como un con
   
 ## <a name="see-also"></a>Vea también
 
-- [Modelo de diseño de observador](../../../docs/standard/events/observer-design-pattern.md)  
-- [Implementar un observador](../../../docs/standard/events/how-to-implement-an-observer.md)  
-- [Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md)
+- [Modelo de diseño de observador](../../../docs/standard/events/observer-design-pattern.md)
+- [Cómo: Implementar un observador](../../../docs/standard/events/how-to-implement-an-observer.md)
+- [Cómo: Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md)

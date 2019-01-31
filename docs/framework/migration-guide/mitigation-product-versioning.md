@@ -1,16 +1,17 @@
 ---
-title: 'Mitigación: Control de versiones de producto'
+title: 'Mitigación: control de versiones de producto'
 ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 483a6532ad62fb7e1561ac5cc4de37aeaaf45fa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8fa603381bec9d352eff705116c6dfc31380d523
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573184"
 ---
-# <a name="mitigation-product-versioning"></a>Mitigación: Control de versiones de producto
+# <a name="mitigation-product-versioning"></a>Mitigación: control de versiones de producto
 En [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] y versiones posteriores, el control de versiones del producto ha cambiado con respecto a las versiones anteriores de .NET Framework (.NET Framework 4, 4.5, 4.5.1 y 4.5.2).  
   
 ## <a name="product-versioning-changes"></a>Cambios en el control de versiones de producto  
@@ -27,7 +28,7 @@ En [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] y versiones posteriores,
 ### <a name="handling-the-product-versioning-changes"></a>Administrar los cambios en el control de versiones de producto  
  En general, las aplicaciones deben depender de las técnicas recomendadas para detectar elementos como la versión del tiempo de ejecución de .NET Framework y el directorio de instalación:  
   
--   Para detectar la versión de runtime de .NET Framework, consulte el artículo sobre la [determinación de las versiones instaladas de .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
+-   Para detectar la versión de tiempo de ejecución de .NET Framework, vea [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
   
 -   Para determinar la ruta de instalación de .NET Framework, utilice el valor de la entrada `InstallPath` en la clave `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full`.  
   
@@ -38,6 +39,6 @@ En [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] y versiones posteriores,
   
 -   Para obtener la versión de CLR, llame al método <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType>.   Para .NET Framework 4 y sus versiones secundarias (.NET Framework 4.5, 4.5.1, 4.5.2 y [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 y 4.7), devuelve la cadena `v4.0.30319`.  
   
-## <a name="see-also"></a>Vea también  
- [Cambios en el runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
- 
+## <a name="see-also"></a>Vea también
+- [Cambios en el runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+

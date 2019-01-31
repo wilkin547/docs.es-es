@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Rellenar colecciones de objetos de varios orígenes (LINQ) (C#)'
+title: Procedimiento para rellenar colecciones de objetos de varios orígenes (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 377b4a21c78be2b53d2bcd0e88d39d06609c462b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a40ff5ddcf606b0de8a1f41d96523526dc849462
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216098"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571342"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Cómo: Rellenar colecciones de objetos de varios orígenes (LINQ) (C#)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Procedimiento para rellenar colecciones de objetos de varios orígenes (LINQ) (C#)
 
 En este ejemplo se muestra cómo combinar datos de orígenes diferentes en una secuencia de tipos nuevos.
 
@@ -18,7 +18,7 @@ En este ejemplo se muestra cómo combinar datos de orígenes diferentes en una s
 
 ## <a name="to-create-the-data-file"></a>Para crear el archivo de datos
 
-Copie los archivos names.csv y scores.csv en la carpeta del proyecto, como se describe en [How to: Join Content from Dissimilar Files (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) (Cómo: Combinar contenido de archivos no similares (LINQ) (C#)).
+Copie los archivos names.csv y scores.csv en la carpeta del proyecto, como se describe en [Cómo: Combinar contenido de archivos no similares (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -149,6 +149,6 @@ Cree y compile un proyecto cuyo destino sea una de las opciones siguientes:
 
 ## <a name="see-also"></a>Vea también
 
-- [LINQ y cadenas (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-- [Inicializadores de objeto y colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [LINQ y cadenas (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [Inicializadores de objeto y colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

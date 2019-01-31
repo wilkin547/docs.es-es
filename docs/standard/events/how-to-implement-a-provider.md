@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Implementar un proveedor'
+title: Procedimiento para implementar un proveedor
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34ad5b9cc0014db05bc6e7483e389488e145beb3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: eecf16625c20ad5ff89791e221a4a40b2777956b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087331"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543794"
 ---
-# <a name="how-to-implement-a-provider"></a>Cómo: Implementar un proveedor
+# <a name="how-to-implement-a-provider"></a>Procedimiento para implementar un proveedor
 El modelo de diseño de observador requiere una división entre un proveedor, que controla los datos y envía notificaciones, y uno o varios observadores, que reciben notificaciones (devoluciones de llamada) del proveedor. En este tema se describe cómo crear un proveedor. En un tema relacionado, [Cómo: Implementar un observador](../../../docs/standard/events/how-to-implement-an-observer.md), se describe cómo crear un observador.  
   
 ### <a name="to-create-a-provider"></a>Para crear un proveedor  
@@ -62,7 +62,7 @@ El modelo de diseño de observador requiere una división entre un proveedor, qu
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.IObservable%601>  
-- [Modelo de diseño de observador](../../../docs/standard/events/observer-design-pattern.md)  
-- [Implementar un observador](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- <xref:System.IObservable%601>
+- [Modelo de diseño de observador](../../../docs/standard/events/observer-design-pattern.md)
+- [Cómo: Implementar un observador](../../../docs/standard/events/how-to-implement-an-observer.md)
 - [Procedimientos recomendados para modelos de diseño de observador](../../../docs/standard/events/observer-design-pattern-best-practices.md)

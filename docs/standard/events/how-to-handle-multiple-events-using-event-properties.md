@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Controlar varios eventos mediante propiedades de eventos'
+title: Procedimiento para controlar varios eventos mediante las propiedades de evento
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e16270fd900c1c786cfd74f484455481d91e5b52
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 158313bcecc8e4bd89f358aecf92324c10789b43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592226"
 ---
-# <a name="how-to-handle-multiple-events-using-event-properties"></a>Cómo: Controlar varios eventos mediante propiedades de eventos
+# <a name="how-to-handle-multiple-events-using-event-properties"></a>Procedimiento para controlar varios eventos mediante las propiedades de evento
 Para poder utilizar propiedades de evento, hay que definirlas en la clase que provoca los eventos y, a continuación, establecer los delegados de las propiedades de evento en las clases que controlan los eventos. Para implementar varias propiedades de evento en una clase, esta clase deberá almacenar internamente y mantener el delegado definido para cada evento. Para hacerlo, uno de los enfoques típicos consiste en implementar una colección de delegados que se indice por medio de una clave de evento.  
   
  Para almacenar los delegados de cada evento, puede utilizar la clase <xref:System.ComponentModel.EventHandlerList> o implementar su propia colección. La clase de colección debe proporcionar métodos para establecer, obtener acceso y recuperar el delegado del controlador de eventos basándose en la clave del evento. Por ejemplo, se puede utilizar una clase <xref:System.Collections.Hashtable> o derivar una clase personalizada a partir de la clase <xref:System.Collections.DictionaryBase>. No es necesario exponer los detalles de implementación de la colección de delegados fuera de la clase.  
@@ -52,7 +52,7 @@ Para poder utilizar propiedades de evento, hay que definirlas en la clase que pr
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>  
-- [Eventos](../../../docs/standard/events/index.md)  
-- <xref:System.Web.UI.Control.Events%2A>  
-- [Declarar eventos personalizados para conservar memoria](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
+- [Eventos](../../../docs/standard/events/index.md)
+- <xref:System.Web.UI.Control.Events%2A>
+- [Cómo: Declarar eventos personalizados para conservar memoria](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

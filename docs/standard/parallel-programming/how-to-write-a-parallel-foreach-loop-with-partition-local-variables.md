@@ -1,5 +1,5 @@
 ---
-title: 'How to: Write a Parallel.ForEach Loop with Partition-Local Variables (Cómo escribir un bucle Parallel.ForEach con variables locales de partición)'
+title: Procedimiento para escribir un bucle Parallel.ForEach con variables locales de partición
 ms.date: 06/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 2f27d1f11e4517653c9beb2d868d798c215741a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562312"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730989"
 ---
-# <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>How to: Write a Parallel.ForEach Loop with Partition-Local Variables (Cómo escribir un bucle Parallel.ForEach con variables locales de partición)
+# <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Procedimiento para escribir un bucle Parallel.ForEach con variables locales de partición
 En el ejemplo siguiente se muestra cómo escribir un método <xref:System.Threading.Tasks.Parallel.ForEach%2A> en el que se usan variables locales de partición. Cuando un bucle <xref:System.Threading.Tasks.Parallel.ForEach%2A> se ejecuta, divide su colección de origen en varias particiones. Cada partición tiene su propia copia de la variable local de partición. Una variable local de partición es similar a una [variable local de subproceso](xref:System.Threading.ThreadLocal%601), excepto por el hecho de que varias particiones se pueden ejecutar en un único subproceso.
   
- El código y los parámetros de este ejemplo se parecen mucho al método <xref:System.Threading.Tasks.Parallel.For%2A> correspondiente. Para más información, vea [Cómo: Escribir un bucle Parallel.For con variables locales de subproceso](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
+ El código y los parámetros de este ejemplo se parecen mucho al método <xref:System.Threading.Tasks.Parallel.For%2A> correspondiente. Para obtener más información, vea [Cómo: Escribir un bucle Parallel.For con variables locales de subproceso](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
   
  Para usar una variable local de partición en un bucle <xref:System.Threading.Tasks.Parallel.ForEach%2A>, debe llamar a una de las sobrecargas del método que toma dos parámetros de tipo. El primer parámetro de tipo, `TSource`, especifica el tipo del elemento de origen, mientras que el segundo parámetro de tipo, `TLocal`, especifica el tipo de la variable local de partición.  
   
@@ -50,6 +50,6 @@ En el ejemplo siguiente se muestra cómo escribir un método <xref:System.Thread
   
 ## <a name="see-also"></a>Vea también
 
-- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md) (Paralelismo de datos)  
-- [How to: Write a Parallel.For Loop with Thread-Local Variables](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) (Cómo: Escribir un bucle Parallel.For con variables locales de subproceso)  
+- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md) (Paralelismo de datos)
+- [Cómo: Escribir un bucle Parallel.For con variables locales de subproceso](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
 - [Expresiones lambda en PLINQ y TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

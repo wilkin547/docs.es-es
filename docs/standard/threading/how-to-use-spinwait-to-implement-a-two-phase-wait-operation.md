@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Usar SpinWait para implementar una operación de espera de dos fases'
+title: Procedimiento para usar SpinWait para implementar una operación de espera de dos fases
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcb2fbf5e0a310156fdc6fac5fe736692e8ec133
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 52b9164546d2061a65c79fb167b14543b0dae5a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44209217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576517"
 ---
-# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Cómo: Usar SpinWait para implementar una operación de espera de dos fases
+# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Procedimiento para usar SpinWait para implementar una operación de espera de dos fases
 En el ejemplo siguiente se muestra cómo utilizar un objeto <xref:System.Threading.SpinWait?displayProperty=nameWithType> para implementar una operación de espera de dos fases. En la primera fase, el objeto de sincronización, `Latch`, gira durante unos ciclos mientras comprueba si el bloqueo está disponible. En la segunda fase, si el bloqueo está disponible, el método `Wait` realiza la devolución sin usar <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> para la espera; en caso contrario, `Wait` realiza la espera.  
   
 ## <a name="example"></a>Ejemplo  
@@ -32,5 +32,5 @@ En el ejemplo siguiente se muestra cómo utilizar un objeto <xref:System.Threadi
   
 ## <a name="see-also"></a>Vea también
 
-- [SpinWait](../../../docs/standard/threading/spinwait.md)  
+- [SpinWait](../../../docs/standard/threading/spinwait.md)
 - [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md)

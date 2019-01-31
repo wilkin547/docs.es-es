@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4fd57de4c6e65c3c82d0dc71bcaf84d668f28bf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690623"
 ---
 # <a name="using-threads-and-threading"></a>Uso de subprocesos y subprocesamiento
 
@@ -24,11 +24,11 @@ Las aplicaciones que usan multithreading responden mejor a la entrada del usuari
 > [!NOTE]
 > Si necesita más control sobre el comportamiento de los subprocesos de la aplicación, puede administrar los subprocesos por su cuenta. Pero a partir de .NET Framework 4, la programación multiproceso se ha simplificado significativamente con las clases <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), clases de colecciones simultáneas nuevas en el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType> y un nuevo modelo de programación basado en el concepto de tareas en lugar de subprocesos. Para obtener más información, vea [Programación en paralelo](../parallel-programming/index.md) y [Biblioteca de procesamiento paralelo basado en tareas (TPL)](../parallel-programming/task-parallel-library-tpl.md).
 
-## <a name="how-to-create-and-start-a-new-thread"></a>Cómo: crear e iniciar un subproceso nuevo
+## <a name="how-to-create-and-start-a-new-thread"></a>Procedimiento para crear e iniciar un subproceso nuevo
 
 Un subproceso se crea mediante la creación de una instancia de la clase <xref:System.Threading.Thread?displayProperty=nameWithType> y proporcionando al constructor el nombre del método que se quiere ejecutar en un subproceso nuevo. Para iniciar un subproceso creado, llame al método <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>. Para obtener más información y ejemplos, vea el artículo [Creación de subprocesos y análisis de los datos en el inicio](creating-threads-and-passing-data-at-start-time.md) y la referencia de la API <xref:System.Threading.Thread>.
 
-## <a name="how-to-stop-a-thread"></a>Cómo: Detener un subproceso
+## <a name="how-to-stop-a-thread"></a>Procedimiento para detener un subproceso
 
 Para terminar la ejecución de un subproceso, use el método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Ese método genera una excepción <xref:System.Threading.ThreadAbortException> en el subproceso en el que se invoca. Para obtener más información, vea [Destruir subprocesos](destroying-threads.md).
 
@@ -36,7 +36,7 @@ A partir de .NET Framework 4, se puede usar <xref:System.Threading.CancellationT
 
 Use el método <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> para hacer que el subproceso que realiza la llamada espere a la finalización del subproceso en el que se invoca el método.
 
-## <a name="how-to-pause-or-interrupt-a-thread"></a>Cómo: Pausar o interrumpir un subproceso
+## <a name="how-to-pause-or-interrupt-a-thread"></a>Procedimiento para pausar o interrumpir un subproceso
 
 El método <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> se usa para pausar el subproceso actual durante un período de tiempo especificado. Un subproceso bloqueado se puede interrumpir mediante una llamada al método <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>. Para obtener más información, vea [Pausa e interrupción de subprocesos](pausing-and-resuming-threads.md).
 
@@ -54,6 +54,6 @@ En la tabla siguiente se muestran algunas de las propiedades de <xref:System.Thr
 
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Threading.Thread?displayProperty=nameWithType>  
-- [Subprocesos y subprocesamiento](threads-and-threading.md)  
-- [Programación en paralelo](../parallel-programming/index.md)  
+- <xref:System.Threading.Thread?displayProperty=nameWithType>
+- [Subprocesos y subprocesamiento](threads-and-threading.md)
+- [Programación en paralelo](../parallel-programming/index.md)

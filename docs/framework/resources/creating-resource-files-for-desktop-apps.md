@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8d5c151c728002ede0e29be77fa6e23aa2c1b3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8219888b7944a19b100f73aab3713c09fd93f45b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569945"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Crear archivos de recursos para aplicaciones de escritorio
 Puede incluir recursos, como cadenas, imágenes o datos de objeto, en los archivos de recursos para hacer que estén disponibles fácilmente en su aplicación. .NET Framework ofrece cinco mecanismos para crear archivos de recursos:  
@@ -196,9 +196,9 @@ csc greeting.cs -resource:GreetingResources.resources
   
  Si está agregando recursos localizados, deberá asignarles el mismo nombre de archivo raíz que el archivo de recursos principal. También deberá designar su referencia cultural en el nombre de archivo. Por ejemplo, si agrega un archivo de recursos denominado Resources.resx, también podrá crear los archivos de recursos denominados Resources.en-US.resx y Resources.fr-FR.resx para incluir los recursos localizados en las referencias culturales inglés (Estados Unidos) y francés (Francia), respectivamente. También deberá designar la referencia cultural predeterminada de la aplicación. Esta es la referencia cultural cuyos recursos van a usarse si no se encuentran recursos localizados en una determinada referencia cultural. Para especificar la referencia cultural predeterminada, en el Explorador de soluciones de Visual Studio, haga clic con el botón derecho en el nombre del proyecto, elija Aplicación, haga clic en **Información de ensamblado** y seleccione el idioma o la referencia cultural apropiada en la lista **Idioma neutro**.  
   
- En tiempo de compilación, Visual Studio convierte primero los archivos .resx en un proyecto para los archivos de recursos binarios (.resources) y los almacena en un subdirectorio del directorio obj del proyecto. Visual Studio incrusta los archivos de recursos que no contienen recursos localizados en el ensamblado principal que el proyecto genera. Si los archivos de recursos contienen recursos localizados, Visual Studio los incrusta en un ensamblado satélite distinto para cada referencia cultural localizada. A continuación, almacena cada ensamblado satélite en un directorio cuyo nombre se corresponde con la referencia cultural localizada. Por ejemplo, los recursos localizados en inglés (Estados Unidos) se almacenan en un ensamblado satélite del subdirectorio en-US.  
+ En tiempo de compilación, Visual Studio convierte primero los archivos .resx en un proyecto para los archivos de recursos binarios (.resources) y los almacena en un subdirectorio del directorio obj del proyecto. Visual Studio incrusta los archivos de recursos que no contienen recursos localizados en el ensamblado principal que el proyecto genera. Si los archivos de recursos contienen recursos localizados, Visual Studio los incrusta en un ensamblado satélite distinto para cada referencia cultural localizada. Después, almacena cada ensamblado satélite en un directorio cuyo nombre se corresponde con la referencia cultural localizada. Por ejemplo, los recursos localizados en inglés (Estados Unidos) se almacenan en un ensamblado satélite del subdirectorio en-US.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Resources>  
- [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)  
- [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Resources>
+- [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)
+- [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

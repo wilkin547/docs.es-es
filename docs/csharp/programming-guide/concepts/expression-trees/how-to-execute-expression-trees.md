@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Ejecutar árboles de expresiones (C#)'
+title: Procedimiento para ejecutar árboles de expresión (C#)
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 2aad970946e417d623907c9f832e2c6e29eef912
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bed37d8d96837062831f4a3017df8a3633446bf0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45641604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583277"
 ---
-# <a name="how-to-execute-expression-trees-c"></a>Cómo: Ejecutar árboles de expresiones (C#)
+# <a name="how-to-execute-expression-trees-c"></a>Procedimiento para ejecutar árboles de expresión (C#)
 En este tema se muestra cómo ejecutar un árbol de expresión. La ejecución de un árbol de expresión puede devolver un valor o simplemente realizar una acción, como llamar a un método.  
   
  Solo se pueden ejecutar los árboles de expresiones que representan expresiones lambda. Los árboles de expresiones que representan expresiones lambda son de tipo <xref:System.Linq.Expressions.LambdaExpression> o <xref:System.Linq.Expressions.Expression%601>. Para ejecutar estos árboles de expresiones, llame al método <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> para crear un delegado ejecutable y, después, invoque el delegado.  
@@ -50,5 +50,5 @@ Console.WriteLine(result);
   
 ## <a name="see-also"></a>Vea también
 
-- [Árboles de expresión (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-- [Cómo: Modificar árboles de expresiones (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [Árboles de expresión (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Cómo: Modificar árboles de expresión (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

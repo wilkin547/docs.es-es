@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Implementar un observador'
+title: Procedimiento para implementar un observador
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6426e8bd138d06d3655562de6384e46a12c09279
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 8b7534843c1f724dc4544b9a5a7062e79e973a34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738058"
 ---
-# <a name="how-to-implement-an-observer"></a>Cómo: Implementar un observador
+# <a name="how-to-implement-an-observer"></a>Procedimiento para implementar un observador
 El modelo de diseño de observador requiere una división entre un observador, que registra notificaciones, y un proveedor, que controla los datos y envía notificaciones a uno o varios observadores. En este tema se describe cómo crear un observador. En un tema relacionado, [Cómo: Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md), se describe cómo crear un proveedor.  
   
 ### <a name="to-create-an-observer"></a>Para crear un observador  
@@ -51,7 +51,7 @@ El modelo de diseño de observador requiere una división entre un observador, q
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.IObserver%601>  
-- [Modelo de diseño de observador](../../../docs/standard/events/observer-design-pattern.md)  
-- [Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md)  
+- <xref:System.IObserver%601>
+- [Modelo de diseño de observador](../../../docs/standard/events/observer-design-pattern.md)
+- [Cómo: Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md)
 - [Procedimientos recomendados para modelos de diseño de observador](../../../docs/standard/events/observer-design-pattern-best-practices.md)

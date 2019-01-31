@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Mostrar información localizada de fecha y hora a usuarios web'
+title: Procedimiento para mostrar información localizada de fecha y hora a usuarios web
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,19 +10,22 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085230"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857663"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Cómo: Mostrar información localizada de fecha y hora a usuarios web
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Procedimiento para mostrar información localizada de fecha y hora a usuarios web
 Dado que una página web puede mostrarse en cualquier lugar del mundo, las operaciones que analizarán y darán formato a valores de fecha y hora no deben basarse en un formato predeterminado (que suele ser el formato de referencia cultural local del servidor web) al interactuar con el usuario. En su lugar, los formularios Web Forms que controlan las entradas del usuario de cadenas de fecha y hora deben analizar estas cadenas usando la referencia cultural preferida del usuario. De forma similar, los datos de fecha y hora deben mostrarse al usuario en un formato que se ajuste a la referencia cultural del usuario. En este tema se explica cómo hacerlo.  
   
-### <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Para analizar las entradas del usuario de cadenas de fecha y hora  
+## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Para analizar las entradas del usuario de cadenas de fecha y hora  
   
 1.  Determine si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> se rellena. Si no es así, vaya al paso 6.  
   
@@ -40,7 +43,7 @@ Dado que una página web puede mostrarse en cualquier lugar del mundo, las opera
   
 6.  Si todavía existen errores de conversión o si la matriz de cadena devuelta por la propiedad <xref:System.Web.HttpRequest.UserLanguages%2A> está vacía, analice la cadena con la referencia cultural invariable devuelta por la propiedad <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
-### <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Para analizar la fecha y hora locales de la solicitud del usuario  
+## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Para analizar la fecha y hora locales de la solicitud del usuario  
   
 1.  Agregue un control <xref:System.Web.UI.WebControls.HiddenField> al formulario web.  
   
@@ -110,7 +113,7 @@ Dado que una página web puede mostrarse en cualquier lugar del mundo, las opera
   
 ## <a name="see-also"></a>Vea también
 
-- [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Análisis de cadenas de fecha y hora](../../../docs/standard/base-types/parsing-datetime.md)

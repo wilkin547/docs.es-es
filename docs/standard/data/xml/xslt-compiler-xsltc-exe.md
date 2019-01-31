@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 470dd0eb37d8081d388ef69b204293f568096a5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f423c37ca264c4f23aca3736a72164f5d13bdca3
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615055"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066005"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>Compilador XSLT (xsltc.exe)
 El compilador XSLT (xsltc.exe) compila hojas de estilo XSLT y genera un ensamblado. La hoja de estilos compilada se puede pasar directamente al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. No se pueden generar ensamblados firmados con xsltc.exe.  
@@ -34,7 +34,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |Opción|Descripción|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|Especifica el nombre de la clase para la hoja de estilos siguiente. El nombre de la clase puede ser completo.<br /><br /> De forma predeterminada, el nombre de la clase es igual al de la hoja de estilos. Por ejemplo, si se compila la hoja de estilos customer.xsl, el nombre predeterminado de la clase será customers.|  
-|`/debug[`+&#124;-`]`|Especifica si se debe generar o no información de depuración.<br /><br /> Si se especifica la opción `+` o `/debug`, el compilador generará información de depuración y la almacenará en el archivo de base de datos del programa (PDB). El nombre del archivo PDB generado será `assemblyName`.pdb.<br /><br /> Si se especifica la opción `-`, que será la utilizada en caso de que no especifique `/debug`, no se generará información de depuración. Se genera un ensamblado listo para ser distribuido. **Nota:** Si se compila en modo de depuración, es posible que ello afecte significativamente al rendimiento del XSLT.|  
+|`/debug[`+&#124;-`]`|Especifica si se debe generar o no información de depuración.<br /><br /> Si se especifica la opción `+` o `/debug`, el compilador generará información de depuración y la almacenará en el archivo de base de datos del programa (PDB). El nombre del archivo PDB generado será `assemblyName`.pdb.<br /><br /> Si se especifica la opción `-`, que será la utilizada en caso de que no especifique `/debug`, no se generará información de depuración. Se genera un ensamblado listo para ser distribuido. **Nota:**  Si se compila en modo depuración, es posible que ello afecte significativamente al rendimiento del XSLT.|  
 |`/help`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
 |`/nologo`|Suprime el mensaje de copyright del compilador.|  
 |`/platform:` `string`|Especifica las plataformas en las que se podrá ejecutar el ensamblado. A continuación se describen los valores permitidos para las plataformas:<br /><br /> `x86` compila el ensamblado de forma que el CLR de 32 bits compatible con x86 pueda ejecutarlo.<br /><br /> `x64` compila el ensamblado de forma que el CLR de 64 bits pueda ejecutarlo en equipos compatibles con el conjunto de instrucciones AMD64 o EM64T.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] compila el ensamblado de forma que el CLR del lenguaje común de 64 bits pueda ejecutarlo en equipos que tengan un procesador [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)].<br /><br /> `anycpu` compila en ensamblado de forma que se pueda ejecutar en cualquier plataforma. Este es el valor predeterminado.|  
@@ -49,7 +49,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 > [!NOTE]
 >  Por otro lado, deberá incluir en su aplicación el ensamblado compilado como una referencia.  
   
- La herramienta xsltc.exe no valida los nombres de la clase (`/class:``name`) o del ensamblado (`/out:``assemblyName`). En caso de que estos nombres no sean válidos, el CLR se encargará de generar los errores correspondientes.  
+ La herramienta xsltc.exe no valida los nombres de la clase (`/class:`*nombre*) o del ensamblado (`/out:`*nombreDelEnsamblado*). En caso de que estos nombres no sean válidos, el CLR se encargará de generar los errores correspondientes.  
   
 ## <a name="examples"></a>Ejemplos  
  La siguiente instrucción compila la hoja de estilos y crea un ensamblado llamado booksort.dll.  
@@ -84,6 +84,6 @@ xsltc booksort.xsl output.xsl
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Xml.Xsl.XslCompiledTransform>  
-- [Realización de una transformación XSLT mediante un ensamblado](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
+- <xref:System.Xml.Xsl.XslCompiledTransform>
+- [Cómo: Realizar una transformación XSLT mediante un ensamblado](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)
 - [Transformaciones XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

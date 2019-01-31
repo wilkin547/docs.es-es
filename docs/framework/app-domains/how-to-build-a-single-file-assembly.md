@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Compilar un ensamblado de un solo archivo'
+title: Procedimiento para compilar un ensamblado de un solo archivo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fff84266dd99b84cc99c1996a3063dc962fa2e94
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b5c0b5dc2e001121ab54447bae4a5eed3290a580
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597845"
 ---
-# <a name="how-to-build-a-single-file-assembly"></a>Cómo: Compilar un ensamblado de un solo archivo
+# <a name="how-to-build-a-single-file-assembly"></a>Procedimiento para compilar un ensamblado de un solo archivo
 
 Un ensamblado de único archivo, que es el tipo de ensamblado más sencillo, contiene información y la implementación del tipo, así como el [manifiesto del ensamblado](../../../docs/framework/app-domains/assembly-manifest.md). Puede usar los compiladores de la línea de comandos o Visual Studio para crear un ensamblado de único archivo. De forma predeterminada, el compilador crea un archivo de ensamblado con la extensión .exe.
 
@@ -92,5 +92,5 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 - [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
 - [Ensamblados de múltiples archivos](../../../docs/framework/app-domains/multifile-assemblies.md)
-- [Compilar un ensamblado de varios archivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Cómo: Compilar un ensamblado de varios archivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)

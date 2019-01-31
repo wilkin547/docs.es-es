@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 939630726f399184c264f73ee01270f50981e83a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a1e4dacf66cc17182265e8ea9f132938017a54e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698432"
 ---
 # <a name="registration-free-com-interop"></a>Interoperabilidad COM sin registro
 La interoperabilidad COM sin registrar activa un componente sin usar el Registro de Windows para almacenar la información de los ensamblados. En vez de registrar un componente en un equipo durante la implementación, se crean archivos de manifiesto del estilo de Win32 en tiempo de diseño, con información sobre enlace y activación. En lugar de las claves del Registro, estos archivos de manifiesto dirigen la activación de un objeto.  
@@ -54,5 +54,5 @@ La interoperabilidad COM sin registrar activa un componente sin usar el Registro
     > [!NOTE]
     >  La ejecución en paralelo es una característica de .NET Framework que permite ejecutar varias versiones del tiempo de ejecución y varias versiones de las aplicaciones y los componentes que usan una versión del tiempo de ejecución, en el mismo equipo y al mismo tiempo. La ejecución en paralelo y los ensamblados en paralelo son mecanismos diferentes para proporcionar una funcionalidad en paralelo.  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: Configurar componentes COM basados en .NET Framework para la activación sin registro](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
+## <a name="see-also"></a>Vea también
+- [Cómo: Configurar componentes COM basados en .NET Framework para la activación sin registro](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)

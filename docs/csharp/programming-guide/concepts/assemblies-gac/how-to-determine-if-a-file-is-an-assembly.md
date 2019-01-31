@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Determinar si un archivo es un ensamblado (C#)'
+title: Procedimiento para determinar si un archivo es un ensamblado (C#)
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: 0cf9258aa4a5a1a633ee0bb04808d384de8f48d0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a147081d16a6b9f7252466a06ebd8fc204e47c2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125540"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681773"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Cómo: Determinar si un archivo es un ensamblado (C#)
+# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Procedimiento para determinar si un archivo es un ensamblado (C#)
 Un archivo es un ensamblado únicamente si está administrado y contiene una entrada de ensamblado en sus metadatos. Para más información sobre ensamblados y metadatos, vea el tema [Manifiesto del ensamblado](../../../../../docs/framework/app-domains/assembly-manifest.md).  
   
 ### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Cómo determinar manualmente si un archivo es un ensamblado  
@@ -18,7 +18,7 @@ Un archivo es un ensamblado únicamente si está administrado y contiene una ent
   
 2.  Cargue el archivo que quiere probar.  
   
-3.  Si **ILDASM** notifica que el archivo no es un archivo ejecutable portable (PE), entonces no es un ensamblado. Para obtener más información, vea el tema [Cómo: Ver el contenido de un ensamblado](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
+3.  Si **ILDASM** notifica que el archivo no es un archivo ejecutable portable (PE), entonces no es un ensamblado. Para obtener más información, vea el tema [Cómo: Consulta del contenido de un ensamblado](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 ### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Cómo determinar mediante programación si un archivo es un ensamblado  
   
@@ -68,6 +68,6 @@ class TestAssembly
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Reflection.AssemblyName>  
-- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)  
+- <xref:System.Reflection.AssemblyName>
+- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
 - [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])

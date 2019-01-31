@@ -4,12 +4,12 @@ description: Procedimientos recomendados para explorar los cambios importantes a
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: e0e62cda1b7475cd5d1f8bcd3558dc2fe7f6e07c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a5cfd2dfb544b2e47a87bd0939990ae73e5eda9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564229"
 ---
 # <a name="breaking-changes"></a>Cambios importantes
 
@@ -66,9 +66,9 @@ Un cambio importante de archivo binario se produce al cambiar la API pública de
 
 Un cambio importante de archivo binario también puede afectar a un **ensamblado completo**. Cambiar el nombre de un ensamblado con `AssemblyName` cambiará la identidad del ensamblado, como lo hará agregar, quitar o cambiar la clave de nomenclatura segura del ensamblado. Un cambio de identidad de un ensamblado afectará a todo el código compilado que lo usa.
 
-**NO** cambie el nombre de un ensamblado.
+**❌ NO** cambie el nombre de un ensamblado.
 
-**NO** agregue, quite o cambie la clave de nombre seguro.
+**❌ NO** agregue, quite o cambie la clave de nombre seguro.
 
 **✔️ ES RECOMENDABLE** usar clases base abstractas en lugar de interfaces.
 
@@ -100,9 +100,9 @@ public class Document
 
 ## <a name="see-also"></a>Vea también
 
-* [Consideraciones sobre versiones y actualizaciones para desarrolladores de C#](../../csharp/whats-new/version-update-considerations.md)
-* [A definitive guide to API-breaking changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net) (Una guía definitiva para cambios importantes de API en .NET)
-* [CoreFX Breaking Change Rules](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md) (Reglas de cambios importantes de CoreFX)
+- [Consideraciones sobre versiones y actualizaciones para desarrolladores de C#](../../csharp/whats-new/version-update-considerations.md)
+- [A definitive guide to API-breaking changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net) (Una guía definitiva para cambios importantes de API en .NET)
+- [CoreFX Breaking Change Rules](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md) (Reglas de cambios importantes de CoreFX)
 
 >[!div class="step-by-step"]
 >[Anterior](versioning.md)

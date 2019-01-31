@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Escribir una función de agregado personalizada de PLINQ'
+title: Procedimiento para escribir una función de agregado personalizada de PLINQ
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82e4ed0f93d7c41bc36427159442cc88b0a7867d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 03bbb9b7cf33eda1cc479759740e6c5325f635fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580673"
 ---
-# <a name="how-to-write-a-custom-plinq-aggregate-function"></a>Cómo: Escribir una función de agregado personalizada de PLINQ
+# <a name="how-to-write-a-custom-plinq-aggregate-function"></a>Procedimiento para escribir una función de agregado personalizada de PLINQ
 En este ejemplo se muestra cómo utilizar el método <xref:System.Linq.ParallelEnumerable.Aggregate%2A> para aplicar una función de agregación personalizada a una secuencia de origen.  
   
 > [!WARNING]
@@ -35,5 +35,5 @@ En este ejemplo se muestra cómo utilizar el método <xref:System.Linq.ParallelE
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.Linq.ParallelEnumerable>  
+- <xref:System.Linq.ParallelEnumerable>
 - [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Rellenar un árbol XML desde el sistema de archivos (C#)'
+title: Procedimiento para rellenar un árbol XML desde el sistema de archivos (C#)
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: 7bddab1942c5a673969e271338f17705914f81a4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 664994dad75871a5b70f2c132df67d1658808c32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47231465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705815"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Cómo: Rellenar un árbol XML desde el sistema de archivos (C#)
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Procedimiento para rellenar un árbol XML desde el sistema de archivos (C#)
 Una aplicación habitual y útil de los árboles XML es un almacén de datos de nombres y valores jerárquicos. Puede rellenar un árbol XML con datos jerárquicos y, a continuación, consultarlo, transformarlo y, si es necesario, serializarlo. En este escenario de uso, gran parte de la semántica específica XML (por ejemplo, el comportamiento de los espacios en blanco y los espacios de nombres) no es importante. En su lugar, usará el árbol XML como una base de datos jerárquica, pequeña y en memoria, de usuario único.  
   
 ## <a name="example"></a>Ejemplo  

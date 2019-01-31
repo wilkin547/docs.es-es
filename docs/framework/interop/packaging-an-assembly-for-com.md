@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2906159c7474b42f81bdf066855072466b6be63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 453ace4af7ce07c8d81b6d7ece71140e04bfa9bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392401"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531517"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Empaquetar un ensamblado para COM
 Los programadores de COM pueden beneficiarse de la siguiente información sobre los tipos administrados que piensan incluir en su aplicación:  
@@ -80,13 +80,13 @@ Los programadores de COM pueden beneficiarse de la siguiente información sobre 
 ## <a name="net-services-installation-tool"></a>Herramienta de instalación de servicios de .NET  
  La [Herramienta de instalación de servicios de .NET (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) agrega clases administradas a servicios de componentes de Windows 2000 y combina varias tareas en una única herramienta. Además de cargar y registrar un ensamblado, Regsvcs.exe puede generar, registrar e instalar la biblioteca de tipos en una aplicación COM+ 1.0 existente.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.TypeLibConverter>  
- <xref:System.Runtime.InteropServices.ITypeLibConverter>  
- [Exponer componentes de .NET Framework en COM](exposing-dotnet-components-to-com.md)  
- [Habilitar tipos de .NET para la interoperación](qualifying-net-types-for-interoperation.md)  
- [Presentar la interfaz de clase](com-callable-wrapper.md#introducing-the-class-interface)  
- [Consideraciones de seguridad sobre ensamblados](../app-domains/assembly-security-considerations.md)  
- [Tlbexp.exe (Exportador de la biblioteca de tipos)](../tools/tlbexp-exe-type-library-exporter.md)  
- [Registrar ensamblados con COM](registering-assemblies-with-com.md)  
- [Cómo: Insertar bibliotecas de tipos como recursos de Win32 en aplicaciones](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))
+## <a name="see-also"></a>Vea también
+- <xref:System.Runtime.InteropServices.TypeLibConverter>
+- <xref:System.Runtime.InteropServices.ITypeLibConverter>
+- [Exponer componentes de .NET Framework en COM](exposing-dotnet-components-to-com.md)
+- [Habilitar tipos de .NET para la interoperación](qualifying-net-types-for-interoperation.md)
+- [Presentar la interfaz de clase](com-callable-wrapper.md#introducing-the-class-interface)
+- [Consideraciones de seguridad sobre ensamblados](../app-domains/assembly-security-considerations.md)
+- [Tlbexp.exe (Exportador de la biblioteca de tipos)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Registrar ensamblados con COM](registering-assemblies-with-com.md)
+- [Cómo: Insertar bibliotecas de tipos como recursos de Win32 en aplicaciones](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))

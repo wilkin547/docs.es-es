@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab4d3bf7db928f926b802c08ee5e61edf86055b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 32b212f336e622719d9979d46ea885deb919c51c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635031"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos en .NET Framework
 <a name="introduction"></a> En las tablas de este artículo se muestran los tipos que están obsoletos en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] organizados por ensamblados. Utilice los vínculos siguientes para ver una lista de tipos obsoletos y las alternativas recomendadas en cada ensamblado. Dado que estos tipos están en desuso, todos sus miembros también lo están. Para obtener una lista de miembros obsoletos adicionales de la biblioteca de clases de .NET Framework, vea [Miembros obsoletos](../../../docs/framework/whats-new/obsolete-members.md).
@@ -84,7 +84,7 @@ ms.locfileid: "47196761"
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|Use <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType> en su lugar.|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|La clase <xref:System.Configuration.Assemblies.AssemblyHash> está desusada.|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5. Use la clase <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> del espacio de nombres System.Runtime.CompilerServices en su lugar.|
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Hay una API alternativa disponible: emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|Hay una API alternativa disponible: Emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|
 |<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|Utilice <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType> en su lugar.|
 |<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|Utilice <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType> en su lugar.|
 |<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|Utilice <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType> en su lugar.|
@@ -240,7 +240,7 @@ ms.locfileid: "47196761"
  [Volver al principio](#introduction)
 
 <a name="servicemodel"></a>
-### <a name="assembly-systemservicemodeldll"></a>Ensamblado: System.ServiceModel.Channels.dll
+### <a name="assembly-systemservicemodeldll"></a>Ensamblado: System.ServiceModel.dll
 
 |Tipo|Mensaje|
 |----------|-------------|
@@ -777,4 +777,5 @@ ms.locfileid: "47196761"
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll es un ensamblado obsoleto y solamente existe por compatibilidad con versiones anteriores.|
 
 ## <a name="see-also"></a>Vea también
- [Lo obsoleto en la biblioteca de clases .NET Framework](../../../docs/framework/whats-new/whats-obsolete.md) [Miembros obsoletos](../../../docs/framework/whats-new/obsolete-members.md)
+- [Lo obsoleto en la biblioteca de clases](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Miembros obsoletos](../../../docs/framework/whats-new/obsolete-members.md)

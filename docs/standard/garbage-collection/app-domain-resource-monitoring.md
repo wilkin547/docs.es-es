@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f5ab93ca5cf616bd4a29ab5d297af1f4550623b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48266655"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606535"
 ---
 # <a name="application-domain-resource-monitoring"></a>Supervisión de recursos de dominio de aplicación
 La supervisión de recursos de dominio de aplicación (ARM) permite a los hosts supervisar el uso de CPU y de memoria por parte del dominio de aplicación. Esto es útil para los hosts como ASP.NET que utilizan varios dominios de aplicación en un proceso de ejecución prolongada. El host puede descargar el dominio de aplicación de una aplicación que afecta negativamente al rendimiento de todo el proceso, pero solo si puede identificar la aplicación problemática. ARM proporciona información que puede usarse para ayudar a tomar estas decisiones.  
@@ -48,7 +48,7 @@ La supervisión de recursos de dominio de aplicación (ARM) permite a los hosts 
   
     -   Eventos ETW: eventos `ThreadCreated`, `ThreadAppDomainEnter` y `ThreadTerminated`. Para obtener información sobre los proveedores y las palabras clave, vea "Eventos de supervisión de recursos de dominio de aplicación" en [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md).  
   
--   **Asignaciones administradas totales realizadas por un dominio de aplicación durante su vigencia, en bytes**: el total de asignaciones no siempre refleja la memoria que un dominio de aplicación usa, porque los objetos asignados pueden ser de corta duración. Sin embargo, si una aplicación asigna y libera grandes cantidades de objetos, el costo de las asignaciones podría ser significativo.  
+-   **Asignaciones administradas totales realizadas por un dominio de aplicación durante su vigencia, en bytes**: el total de asignaciones no siempre refleja la memoria que usa un dominio de aplicación, porque los objetos asignados pueden ser de corta duración. Sin embargo, si una aplicación asigna y libera grandes cantidades de objetos, el costo de las asignaciones podría ser significativo.  
   
     -   API administrada: propiedad <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>.  
   
@@ -56,7 +56,7 @@ La supervisión de recursos de dominio de aplicación (ARM) permite a los hosts 
   
     -   Eventos ETW: evento `AppDomainMemAllocated`, campo `Allocated`.  
   
--   **Memoria administrada, en bytes, a la que hace referencia un dominio de aplicación y que supervisó la colección con bloqueo completo más reciente**: este número es preciso solo después del bloqueo completo de una colección. (Esto difiere de las colecciones simultáneas, que se producen en segundo plano y no bloquean la aplicación). Por ejemplo, la sobrecarga del método <xref:System.GC.Collect?displayProperty=nameWithType> genera una colección con bloqueo completo.  
+-   **Memoria administrada, en bytes, a la que hace referencia un dominio de aplicación y que ha sobrevivido a la colección con bloqueo completo más reciente**: este número es preciso solo después de una colección con bloqueo completo. (Esto difiere de las colecciones simultáneas, que se producen en segundo plano y no bloquean la aplicación). Por ejemplo, la sobrecarga del método <xref:System.GC.Collect?displayProperty=nameWithType> genera una colección con bloqueo completo.  
   
     -   API administrada: propiedad <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>.  
   
@@ -64,7 +64,7 @@ La supervisión de recursos de dominio de aplicación (ARM) permite a los hosts 
   
     -   Eventos ETW: evento `AppDomainMemSurvived`, campo `Survived`.  
   
--   **Total de memoria administrada, en bytes, a la que hace referencia el proceso cuya duración va más allá de la colección con bloqueo completo más reciente**: la memoria de duración superior para los dominios de aplicación individuales puede compararse con este número.  
+-   **Total de memoria administrada, en bytes, a la que hace referencia el proceso cuya duración va más allá de la colección con bloqueo completo más reciente**: la memoria de duración superior para los dominios de aplicación individuales se puede comparar con este número.  
   
     -   API administrada: propiedad <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType>.  
   
@@ -85,7 +85,7 @@ La supervisión de recursos de dominio de aplicación (ARM) permite a los hosts 
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
-- [ICLRAppDomainResourceMonitor (interfaz)](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
-- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
+- [ICLRAppDomainResourceMonitor (interfaz)](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
 - [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)

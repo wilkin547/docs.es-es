@@ -1,16 +1,16 @@
 ---
-title: 'Cómo: Modificar el contenido de cadenas - Guía de C#'
+title: 'Procedimiento para modificar el contenido de cadenas: Guía de C#'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 349269f8158f7d4db5e2058791087a258f504460
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664032"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>Cómo: Modificar el contenido de cadenas en C\#
+# <a name="how-to-modify-string-contents-in-c"></a>Procedimiento para modificar el contenido de cadenas en C\#
 
 En este artículo se muestran varias técnicas para producir una `string` modificando una `string` existente. Todas las técnicas mostradas devuelven el resultado de las modificaciones como un objeto `string` nuevo. Para indicarlo de forma clara, en todos los ejemplos se almacena el resultado en una variable nueva. Entonces, podrá examinar tanto la `string` original como la `string` resultante de la modificación al ejecutar cada ejemplo.
 
@@ -73,5 +73,5 @@ Eche un vistazo al código de nuestro [repositorio de GitHub](https://github.com
 
 ## <a name="see-also"></a>Vea también
 
-- [Expresiones regulares de .NET Framework](../../standard/base-types/regular-expressions.md)  
-- [Lenguaje de expresiones regulares: referencia rápida](../../standard/base-types/regular-expression-language-quick-reference.md)  
+- [Expresiones regulares de .NET Framework](../../standard/base-types/regular-expressions.md)
+- [Lenguaje de expresiones regulares: referencia rápida](../../standard/base-types/regular-expression-language-quick-reference.md)

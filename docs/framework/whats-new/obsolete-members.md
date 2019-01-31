@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a0679dafda7935034d3a3ab0f4c43656ab5668b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635980"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Miembros obsoletos en .NET Framework
 En las tablas de este artículo se enumeran los miembros de tipo que están obsoletos en .NET Framework 4.5 y versiones posteriores organizados por ensamblado. Use los vínculos siguientes para ver una lista de miembros obsoletos y las alternativas recomendadas en cada ensamblado. En este tema no se muestran los miembros de los tipos obsoletos. Para obtener una lista de tipos obsoletos, vea [Tipos obsoletos](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -177,12 +177,12 @@ En las tablas de este artículo se enumeran los miembros de tipo que están obso
 |<xref:System.Reflection.AssemblyFlagsAttribute?displayProperty=nameWithType>|<xref:System.Reflection.AssemblyFlagsAttribute.%23ctor%28System.UInt32%29>|Este constructor está en desuso. Use <xref:System.Reflection.AssemblyFlagsAttribute.%23ctor%28System.Reflection.AssemblyNameFlags%29?displayProperty=nameWithType> en su lugar.|  
 |<xref:System.Reflection.AssemblyFlagsAttribute?displayProperty=nameWithType>|<xref:System.Reflection.AssemblyFlagsAttribute.Flags%2A>|Esta propiedad está en desuso. Use <xref:System.Reflection.AssemblyFlagsAttribute.AssemblyFlags%2A?displayProperty=nameWithType> en su lugar.|  
 |<xref:System.Reflection.Emit.ConstructorBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ConstructorBuilder.ReturnType%2A>|Esta propiedad está en desuso.|  
-|<xref:System.Reflection.Emit.FieldBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FieldBuilder.SetMarshal%2A>|Hay una API alternativa disponible: emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|  
+|<xref:System.Reflection.Emit.FieldBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FieldBuilder.SetMarshal%2A>|Hay una API alternativa disponible: Emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|  
 |<xref:System.Reflection.Emit.FlowControl?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FlowControl.Phi>|Esta API está en desuso.|  
-|<xref:System.Reflection.Emit.MethodBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.MethodBuilder.SetMarshal%2A>|Hay una API alternativa disponible: emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|  
+|<xref:System.Reflection.Emit.MethodBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.MethodBuilder.SetMarshal%2A>|Hay una API alternativa disponible: Emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|  
 |<xref:System.Reflection.Emit.OpCodeType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OpCodeType.Annotation>|Esta API está en desuso.|  
 |<xref:System.Reflection.Emit.OperandType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OperandType.InlinePhi>|Esta API está en desuso.|  
-|<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|Hay una API alternativa disponible: emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|  
+|<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|Hay una API alternativa disponible: Emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> en su lugar.|  
 |<xref:System.Resources.ResourceManager?displayProperty=nameWithType>|<xref:System.Resources.ResourceManager.ResourceSets>|En su lugar, llame a <xref:System.Resources.ResourceManager.InternalGetResourceSet%28System.Globalization.CultureInfo%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType>.|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A>|El método <xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A> está en desuso y se quitará en futuras versiones.|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A>|El método <xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A> está desusado. Utilice la API de hospedaje para realizar esta operación.|  
@@ -416,7 +416,7 @@ En las tablas de este artículo se enumeran los miembros de tipo que están obso
 |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.OnSetComponentDefaults%2A>|Este método está en desuso. Utilice <xref:System.ComponentModel.Design.ComponentDesigner.InitializeNewComponent%2A?displayProperty=nameWithType> en su lugar.|  
 |<xref:System.ComponentModel.Design.DesignSurface?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A>|El método <xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A> se ha reemplazado por <xref:System.ComponentModel.Design.DesignSurface.CreateInstance%28System.Type%29>.|  
 |<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer.SerializeToReferenceExpression%2A>|Este método está en desuso. Use <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToExpression%2A> o <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A> en su lugar.|  
-|<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A>|El uso de esta propiedad genera un error del compilador.<br /><br /> Error: ya no se puede hacer referencia a esta propiedad y se incluye para admitir aplicaciones compiladas existentes. La arquitectura de la vista del elemento diseño\-tiempo ya no se usa.|  
+|<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A>|El uso de esta propiedad genera un error del compilador.<br /><br /> Error: ya no se puede hacer referencia a esta propiedad, y se incluye para admitir las aplicaciones compiladas existentes. La arquitectura de la vista del elemento diseño\-tiempo ya no se usa.|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete%2A>|La alternativa recomendada es usar [`ControlDesigner.SetViewFlags(ViewFlags.DesignTimeHtmlRequiresLoadComplete, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A).|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.GetPersistInnerHtml%2A>|La alternativa recomendada es <xref:System.Web.UI.Design.ControlDesigner.GetPersistenceContent%2A?displayProperty=nameWithType>.|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.IsDirty%2A>|La alternativa recomendada es usar [`ControlDesigner.Tag.SetDirty`](xref:System.Web.UI.Design.IControlDesignerTag.SetDirty%2A) y [`ControlDesigner.Tag.IsDirty`](xref:System.Web.UI.Design.IControlDesignerTag.IsDirty%2A).|  
@@ -426,7 +426,7 @@ En las tablas de este artículo se enumeran los miembros de tipo que están obso
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.RaiseResizeEvent%2A>|No se recomienda el uso de este método porque el cambio de tamaño lo controla el método <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A?displayProperty=nameWithType>.|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.ReadOnly%2A>|La alternativa recomendada es heredar de <xref:System.Web.UI.Design.ContainerControlDesigner?displayProperty=nameWithType> en su lugar, y utilizar <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=nameWithType>. Las regiones permiten un control mejor del contenido en el diseñador.|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.Behavior%2A>|La alternativa recomendada es <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>.|  
-|<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.DesignTimeElement%2A>|El uso de esta propiedad genera un error del compilador.<br /><br /> Error: ya no se puede hacer referencia a esta propiedad y se incluye para admitir aplicaciones compiladas existentes. Es posible que el elemento tiempo\-diseño no proporcione siempre acceso al elemento del marcado. Existen otros métodos en <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=nameWithType> para procesar el script y los controles del cliente.|  
+|<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.DesignTimeElement%2A>|El uso de esta propiedad genera un error del compilador.<br /><br /> Error: ya no se puede hacer referencia a esta propiedad, y se incluye para admitir las aplicaciones compiladas existentes. Es posible que el elemento tiempo\-diseño no proporcione siempre acceso al elemento del marcado. Existen otros métodos en <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=nameWithType> para procesar el script y los controles del cliente.|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorAttached%2A>|La alternativa recomendada es <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>.|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorDetaching%2A>|La alternativa recomendada es <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>.|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBindingsCollectionChanged%2A>|La alternativa recomendada es controlar el evento [HtmlControlDesigner.DataBindings.Changed](xref:System.Web.UI.DataBindingCollection.Changed). La colección <xref:System.Web.UI.DataBindingCollection> devuelta por la propiedad <xref:System.Web.UI.Design.HtmlControlDesigner.DataBindings%2A?displayProperty=nameWithType> permite ejercer un mayor control sobre los enlaces de datos asociados al control.|  
@@ -581,7 +581,7 @@ En las tablas de este artículo se enumeran los miembros de tipo que están obso
 |<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=nameWithType>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Este constructor está en desuso. Use <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>.|  
   
 <a name="messaging"></a>   
-### <a name="assembly-systemmessagingdll"></a>Ensamblado:System.Messaging.dll  
+### <a name="assembly-systemmessagingdll"></a>Ensamblado: System.Messaging.dll  
   
 |Tipo|Miembro|Mensaje|  
 |----------|------------|-------------|  
@@ -589,7 +589,7 @@ En las tablas de este artículo se enumeran los miembros de tipo que están obso
 |<xref:System.Messaging.MessageQueue?displayProperty=nameWithType>|<xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A>|Este método devuelve un objeto <xref:System.Messaging.MessageEnumerator?displayProperty=nameWithType> que implementa la familia de métodos <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=nameWithType> incorrectamente. Use <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=nameWithType> en su lugar.|  
   
 <a name="servicemodel"></a>   
-### <a name="assembly-systemservicemodeldll"></a>Ensamblado: System.ServiceModel.Channels.dll  
+### <a name="assembly-systemservicemodeldll"></a>Ensamblado: System.ServiceModel.dll  
   
 |Tipo|Miembro|Mensaje|  
 |----------|------------|-------------|  
@@ -798,6 +798,6 @@ En las tablas de este artículo se enumeran los miembros de tipo que están obso
 |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|El uso de este miembro genera un error del compilador.<br /><br /> No utilice este método.|  
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|La clave del Registro `DynData` solo funciona en Win9x, que ya no es admitido por esta versión de .NET Framework. Utilice la clave del Registro `PerformanceData` en su lugar. Esta propiedad se quitará de futuras versiones de .NET Framework.|  
   
-## <a name="see-also"></a>Vea también  
- [Lo obsoleto en la biblioteca de clases](../../../docs/framework/whats-new/whats-obsolete.md)  
- [Tipos obsoletos](../../../docs/framework/whats-new/obsolete-types.md)
+## <a name="see-also"></a>Vea también
+- [Lo obsoleto en la biblioteca de clases](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Tipos obsoletos](../../../docs/framework/whats-new/obsolete-types.md)

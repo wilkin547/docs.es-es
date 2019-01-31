@@ -2,12 +2,12 @@
 title: Nombres de mismo nivel e identificadores PNRP
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: d842c66de7550c94f4e287449a238ff964093fb2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3f82d472e1f8913e2f518abbefa2bb6407d6f54c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187658"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690795"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nombres de mismo nivel e identificadores PNRP
 Un nombre de mismo nivel representa un punto de conexión para la comunicación, que puede ser un equipo, un usuario, un grupo, un servicio o cualquier elemento asociado a un elemento del mismo nivel que se puede resolver en una dirección IPv6. El Protocolo de resolución de nombres de mismo nivel (PNRP) toma el nombre de mismo nivel estadísticamente único para la creación de un identificador PNRP, que se usa para identificar a los miembros de la nube.  
@@ -24,12 +24,12 @@ Un nombre de mismo nivel representa un punto de conexión para la comunicación,
   
  Los identificadores PNRP se componen de lo siguiente:  
   
--   Los 128 bits de ordenación alta, conocidos como el identificador de punto a punto (P2P), son un hash de un nombre de mismo nivel asignado al punto de conexión. El nombre de mismo nivel tiene el formato siguiente: *Authority.Classifier*. Para los nombres seguros, *Authority* es el hash de Algoritmo hash seguro 1 (SHA1) de la clave pública del nombre de mismo nivel en caracteres hexadecimales. Para los nombres no seguros, *Authority* es el carácter "0" único. *Classifier* es una cadena que identifica la aplicación. Ningún clasificador de nombre de mismo nivel puede ser mayor que 149 caracteres, incluido el terminador `null`.  
+-   Los 128 bits de ordenación alta, conocidos como el identificador de punto a punto (P2P), son un hash de un nombre de mismo nivel asignado al punto de conexión. El nombre del mismo nivel tiene el formato siguiente: *Authority.Classifier*. Para los nombres seguros, *Authority* es el hash de Algoritmo hash seguro 1 (SHA1) de la clave pública del nombre de mismo nivel en caracteres hexadecimales. Para los nombres no seguros, *Authority* es el carácter "0" único. *Classifier* es una cadena que identifica la aplicación. Ningún clasificador de nombre de mismo nivel puede ser mayor que 149 caracteres, incluido el terminador `null`.  
   
 -   Los 128 bits de orden inferior se usan para la ubicación del servicio, que es un número generado que identifica las diferentes instancias del mismo identificador P2P en la misma nube.  
   
  Esta combinación de identificador P2P y ubicación del servicio permite registrar varios identificadores PNRP desde un solo equipo.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Net.PeerToPeer.PeerName>  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>Vea también
+- <xref:System.Net.PeerToPeer.PeerName>
+- <xref:System.Net.PeerToPeer>

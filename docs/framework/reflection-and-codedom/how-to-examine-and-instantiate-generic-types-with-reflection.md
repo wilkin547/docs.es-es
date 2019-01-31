@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Examinar y crear instancias de tipos genéricos mediante la reflexión'
+title: Procedimiento para examinar y crear instancias de tipos genéricos mediante la reflexión
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0f964ac73f070b99cdfd06e9037d06ce7888938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69864e647a7cf4e6193f4eb76ce2b7bc93b09404
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397577"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622057"
 ---
-# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Cómo: Examinar y crear instancias de tipos genéricos mediante la reflexión
+# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Procedimiento para examinar y crear instancias de tipos genéricos mediante la reflexión
 La información sobre los tipos genéricos se obtiene de la misma manera que la información sobre otros tipos: mediante el examen de un objeto <xref:System.Type> que representa el tipo genérico. La diferencia principal es que un tipo genérico tiene una lista de objetos <xref:System.Type> que representan sus parámetros de tipo genérico. En el primer procedimiento de esta sección se examinan tipos genéricos.  
   
  Puede crear un objeto <xref:System.Type> que representa un tipo construido. Para ello, se enlazan los argumentos de tipo a los parámetros de tipo de una definición de tipo genérico. En el segundo procedimiento se muestra cómo hacerlo.  
@@ -123,9 +123,9 @@ La información sobre los tipos genéricos se obtiene de la misma manera que la 
   
 -   Compile el código en la línea de comandos mediante csc.exe, vbc.exe o cl.exe. Para compilar el código en Visual Studio, póngalo en una plantilla de proyecto de aplicación de consola.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Type>  
- <xref:System.Reflection.MethodInfo>  
- [Reflection and Generic Types](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) (Reflexión y tipos genéricos)  
- [Viewing Type Information](../../../docs/framework/reflection-and-codedom/viewing-type-information.md) (Ver información tipos)  
- [Genéricos](../../../docs/standard/generics/index.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Type>
+- <xref:System.Reflection.MethodInfo>
+- [Reflection and Generic Types](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) (Reflexión y tipos genéricos)
+- [Viewing Type Information](../../../docs/framework/reflection-and-codedom/viewing-type-information.md) (Ver información tipos)
+- [Genéricos](../../../docs/standard/generics/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83b45d5cc8424acab789b9824af887f15036488d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebc41d4d59100b9e71bd6ed3abd2ff26937e7465
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554561"
 ---
 # <a name="in-process-side-by-side-execution"></a>Ejecución en paralelo y en proceso
 A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], puede usar el hospedaje en paralelo en el mismo proceso para ejecutar varias versiones de Common Language Runtime (CLR) en un único proceso. De forma predeterminada, los componentes COM administrados se ejecutan con la versión de .NET Framework con la que se han compilado, independientemente de la versión de .NET Framework que se haya cargado para el proceso.  
@@ -50,17 +50,17 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], pued
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>Escenarios comunes de hospedaje en paralelo  
   
--   **Escenario 1:** aplicación nativa que usa componentes COM compilados con versiones anteriores de .NET Framework.  
+-   **Escenario 1:** aplicación nativa en la que se usan componentes COM compilados con versiones anteriores de .NET Framework.  
   
      Versiones de .NET Framework instaladas: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] y todas las demás versiones de .NET Framework usadas por los componentes COM.  
   
-     Qué hacer: en este escenario, no haga nada. Los componentes COM se ejecutarán con la versión de .NET Framework con la que se han registrado.  
+     Qué se debe hacer: en este escenario, no haga nada. Los componentes COM se ejecutarán con la versión de .NET Framework con la que se han registrado.  
   
 -   **Escenario 2**: aplicación administrada compilada con [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] que preferiblemente debería ejecutarse con [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], pero que se puede ejecutar en [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] si la versión 2.0 no está presente.  
   
-     Versiones de .NET Framework instaladas: una versión anterior de .NET Framework y [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     Versiones de .NET Framework instaladas: Una versión anterior de .NET Framework y [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
-     Qué hacer: en el [archivo de configuración de la aplicación](../../../docs/framework/configure-apps/index.md) que está en el directorio de la aplicación, use el [elemento \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) y el [elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) establecidos de la manera siguiente:  
+     Qué se debe hacer: en el [archivo de configuración de la aplicación](../../../docs/framework/configure-apps/index.md) que está en el directorio de la aplicación, use el [elemento \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) y el [elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) establecidos de esta forma:  
   
     ```xml  
     <configuration>  
@@ -71,11 +71,11 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], pued
     </configuration>  
     ```  
   
--   **Escenario 3:** aplicación nativa que usa componentes COM compilados con versiones anteriores de .NET Framework que quiere ejecutar con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+-   **Escenario 3:** aplicación nativa en la que se usan componentes COM compilados con versiones anteriores de .NET Framework que quiere ejecutar con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
      Versiones de .NET Framework instaladas: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
-     Qué hacer: en el archivo de configuración de la aplicación en el directorio de la aplicación, use el elemento `<startup>` con el atributo `useLegacyV2RuntimeActivationPolicy` establecido en `true` y el elemento `<supportedRuntime>` establecido de la manera siguiente:  
+     Qué se debe hacer: en el archivo de configuración de la aplicación en el directorio de la aplicación, use el elemento `<startup>` con el atributo `useLegacyV2RuntimeActivationPolicy` establecido en `true` y el elemento `<supportedRuntime>` establecido de esta forma:  
   
     ```xml  
     <configuration>  
@@ -173,6 +173,6 @@ int _tmain(int argc, _TCHAR* argv[])
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
-- [Elemento \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+## <a name="see-also"></a>Vea también
+- [Elemento \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
 - [\<supportedRuntime > Elemento](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

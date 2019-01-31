@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Recibir notificaciones de excepciones de primera oportunidad'
+title: Procedimiento para recibir notificaciones de excepciones de primera oportunidad
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 875cdb2837109e922233f42d6241a7e1888e0693
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ed8aaa12e91654dcf0b688b14d7d2f38bc9096ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677762"
 ---
-# <a name="how-to-receive-first-chance-exception-notifications"></a>Cómo: Recibir notificaciones de excepciones de primera oportunidad
+# <a name="how-to-receive-first-chance-exception-notifications"></a>Procedimiento para recibir notificaciones de excepciones de primera oportunidad
 El evento <xref:System.AppDomain.FirstChanceException> de la clase <xref:System.AppDomain> permite recibir una notificación de que se ha producido una excepción antes de que Common Language Runtime empiece a buscar controladores de excepciones.
 
  El evento se genera en el nivel de dominio de aplicación. Un subproceso de ejecución puede pasar a través de varios dominios de aplicación, así que una excepción no controlada en un dominio de aplicación podría controlarse en otro. La notificación se produce en cada dominio de aplicación que haya agregado un controlador para el evento, hasta que un dominio de aplicación controle la excepción.

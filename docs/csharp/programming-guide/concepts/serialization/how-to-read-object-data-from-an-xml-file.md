@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Leer datos de objetos de un archivo XML (C#)'
+title: Procedimiento para leer datos de objetos en un archivo XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 7c3bad56c6a0bee51262586aea4ce97ff0491f24
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 33e4395c2be421385948d256a989d06ac215c9c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083941"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583491"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Cómo: Leer datos de objetos de un archivo XML (C#)
+# <a name="how-to-read-object-data-from-an-xml-file-c"></a>Procedimiento para leer datos de objetos en un archivo XML (C#)
 En este ejemplo se leen los datos de objetos que se han escrito anteriormente en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -43,7 +43,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Reemplace el nombre de archivo "c:\temp\SerializationOverview.xml" por el nombre del archivo que contiene los datos serializados. Para obtener más información sobre la serialización de datos, vea [How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Cómo: Escribir datos de objetos en un archivo XML (C#)).  
+ Reemplace el nombre de archivo "c:\temp\SerializationOverview.xml" por el nombre del archivo que contiene los datos serializados. Para más información sobre cómo serializar los datos, vea [Procedimiento para escribir datos de objeto en un archivo XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
   
  La clase debe tener un constructor público sin parámetros.  
   
@@ -63,7 +63,7 @@ public void ReadXML()
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.IO.StreamWriter>  
-- [How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Escritura de datos de objeto en un archivo XML [C#])  
-- [Serialización (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
+- <xref:System.IO.StreamWriter>
+- [Cómo: Escribir datos de objeto en un archivo XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [Serialización (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
 - [Guía de programación de C#](../../../../csharp/programming-guide/index.md)

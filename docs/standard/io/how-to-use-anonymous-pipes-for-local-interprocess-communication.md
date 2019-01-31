@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Usar canalizaciones anónimas para la comunicación local entre procesos'
+title: Procedimiento para usar canalizaciones anónimas para la comunicación local entre procesos
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db23b424d4357ad94b8b0de66ca71726b765321e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 810b29b4abde174e3634a03d5c7b5e0e43de11b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47234814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637773"
 ---
-# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Cómo: Usar canalizaciones anónimas para la comunicación local entre procesos
+# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Procedimiento para usar canalizaciones anónimas para la comunicación local entre procesos
 Las canalizaciones anónimas permiten la comunicación entre procesos en un equipo local. Proporcionan menos funcionalidad que las canalizaciones con nombre, pero también tienen menos carga de procesamiento. Puede utilizar las canalizaciones anónimas para facilitar la comunicación entre procesos en un equipo local. No se puede utilizar las canalizaciones anónimas para la comunicación a través de una red.  
   
  Para implementar canalizaciones anónimas, use las clases <xref:System.IO.Pipes.AnonymousPipeServerStream> y <xref:System.IO.Pipes.AnonymousPipeClientStream>.  
@@ -47,5 +47,5 @@ Las canalizaciones anónimas permiten la comunicación entre procesos en un equi
   
 ## <a name="see-also"></a>Vea también
 
-- [Pipes](../../../docs/standard/io/pipe-operations.md) (Operaciones de canalización de .NET Framework)  
-- [Usar canalizaciones con nombre para la comunicación de red entre procesos](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [Pipes](../../../docs/standard/io/pipe-operations.md) (Operaciones de canalización de .NET Framework)
+- [Cómo: Usar canalizaciones con nombre para la comunicación de red entre procesos](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

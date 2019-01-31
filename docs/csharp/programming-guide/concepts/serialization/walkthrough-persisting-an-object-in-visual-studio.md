@@ -1,12 +1,12 @@
 ---
 title: 'Tutorial: Conservar un objeto con C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 61e7496b39bcbc42b0ebb2642fcb1ad1d32696af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512455"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Tutorial: Conservar un objeto con C# #
 
@@ -101,5 +101,5 @@ En este punto, podrá compilar y ejecutar la aplicación de nuevo. La primera ve
 
 ## <a name="see-also"></a>Vea también
 
-- [Serialización (C#)](index.md)  
-- [Guía de programación de C#](../..//index.md)  
+- [Serialización (C#)](index.md)
+- [Guía de programación de C#](../..//index.md)

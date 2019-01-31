@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear un clase utilizando CodeDOM'
+title: Procedimiento para crear un clase mediante CodeDOM
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf244e796dad0f3817a3c5acd1fcda8eaf189e2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78c50b3813ebb0bb65955e411eb84e4cd9e0a001
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395393"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54581958"
 ---
-# <a name="how-to-create-a-class-using-codedom"></a>Cómo: Crear un clase utilizando CodeDOM
+# <a name="how-to-create-a-class-using-codedom"></a>Procedimiento para crear un clase mediante CodeDOM
 En los procedimientos siguientes se muestra cómo crear y compilar un gráfico CodeDOM que genera una clase que contiene dos campos, tres propiedades, un método, un constructor y un punto de entrada.  
   
 1.  Cree una aplicación de consola que usará el código CodeDOM para generar el código fuente para una clase.  
@@ -118,6 +118,6 @@ The object:
   
 -   En este ejemplo de código, el permiso `FullTrust` debe estar establecido para que se ejecute correctamente.  
   
-## <a name="see-also"></a>Vea también  
- [Usar CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)  
- [Generar y compilar código fuente a partir de un gráfico CodeDOM](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)
+## <a name="see-also"></a>Vea también
+- [Usar CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
+- [Generar y compilar código fuente a partir de un gráfico CodeDOM](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)

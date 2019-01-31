@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fe7e15e482028b9988d7e560b98be19b6c07427
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9b9d1c8a059a85f2b5137e568ec6ad562ca0eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509221"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680314"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Novedades de accesibilidad en .NET Framework
 
@@ -215,11 +215,11 @@ A partir de .NET Framework 4.7.1, se han realizado mejoras de contraste alto en 
 
     El objeto visual de foco del control <xref:System.Windows.Controls.Expander> ahora es visible. Los objetos visuales de teclado de los controles <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> y <xref:System.Windows.Controls.RadioButton> también son visibles. Por ejemplo:
 
-    Antes: 
+    Antes: 
     
     ![Control de expansor con foco antes de las mejoras de accesibilidad](media/expander-before.png)
 
-    Después: 
+    Después: 
 
     ![Control de expansor con foco después de las mejoras de accesibilidad](media/expander-after.png)
 
@@ -227,11 +227,11 @@ A partir de .NET Framework 4.7.1, se han realizado mejoras de contraste alto en 
  
     El texto de los controles <xref:System.Windows.Controls.CheckBox> y <xref:System.Windows.Controls.RadioButton> ahora es más fácil de ver cuando se selecciona en los temas de contraste alto. Por ejemplo:
 
-    Antes: 
+    Antes: 
 
     ![Botón de opción de contraste alto con foco antes de las mejoras de accesibilidad](media/radio-button-before.png)
     
-    Después: 
+    Después: 
 
     ![Botón de opción de contraste alto con foco después de las mejoras de accesibilidad](media/radio-button-after.png)
 
@@ -239,11 +239,11 @@ A partir de .NET Framework 4.7.1, se han realizado mejoras de contraste alto en 
  
     A partir de .NET Framework 4.7.1, el borde de un control <xref:System.Windows.Controls.ComboBox> deshabilitado es del mismo color que el texto deshabilitado. Por ejemplo:
     
-    Antes: 
+    Antes: 
 
      ![Borde y texto de cuadro combinado deshabilitado antes de las mejoras de accesibilidad](media/combo-disabled-before.png)
 
-    Después:   
+    Después:   
 
      ![Borde y texto de cuadro combinado deshabilitado después de las mejoras de accesibilidad](media/combo-disabled-after.png)
 
@@ -251,43 +251,43 @@ A partir de .NET Framework 4.7.1, se han realizado mejoras de contraste alto en 
 
     Antes:
 
-    ![Colores de tema de botón antes de las mejoras de accesibilidad](media/button-themes-before.png) 
+    ![Colores de tema de botón antes de las mejoras de accesibilidad](media/button-themes-before.png) 
     
-    Después: 
+    Después: 
 
-    ![Colores de tema de botón después de las mejoras de accesibilidad](media/button-themes-after.png) 
+    ![Colores de tema de botón después de las mejoras de accesibilidad](media/button-themes-after.png) 
 
     Por último, en .NET Framework 4.7 y versiones anteriores, al establecer el estilo de un control <xref:System.Windows.Controls.ComboBox> en `Toolbar.ComboBoxStyleKey`, la flecha de lista desplegable se hacía invisible. Este problema se corrigió a partir de .NET Framework 4.7.1. Por ejemplo:
 
-    Antes: 
+    Antes: 
 
-    ![Toolbar.ComboBoxStyleKey antes de las mejoras de accesibilidad](media/comboboxstylekey-before.png) 
+    ![Toolbar.ComboBoxStyleKey antes de las mejoras de accesibilidad](media/comboboxstylekey-before.png) 
     
-    Después: 
+    Después: 
 
-    ![Toolbar.ComboBoxStyleKey después de las mejoras de accesibilidad](media/comboboxstylekey-after.png) 
+    ![Toolbar.ComboBoxStyleKey después de las mejoras de accesibilidad](media/comboboxstylekey-after.png) 
 
 - Control <xref:System.Windows.Controls.DataGrid>
 
     A partir de .NET Framework 4.7.1, la flecha de indicador de orden de los controles <xref:System.Windows.Controls.DataGrid> usa los colores de tema correctos. Por ejemplo:
 
-    Antes: 
+    Antes: 
 
-    ![Flecha de indicador de orden antes de las mejoras de accesibilidad](media/sort-indicator-before.png) 
+    ![Flecha de indicador de orden antes de las mejoras de accesibilidad](media/sort-indicator-before.png) 
     
-    Después:   
+    Después:   
  
-    ![Flecha de indicador de orden después de las mejoras de accesibilidad](media/sort-indicator-after.png) 
+    ![Flecha de indicador de orden después de las mejoras de accesibilidad](media/sort-indicator-after.png) 
     
     Además, en .NET Framework 4.7 y versiones anteriores, el estilo de vínculo predeterminado cambiaba a un color incorrecto cuando se colocaba el mouse encima en los modos de contraste alto. Esto se ha resuelto a partir de .NET Framework 4.7.1. Del mismo modo, a partir de .NET Framework 4.7.1, las columnas de casilla <xref:System.Windows.Controls.DataGrid> usan los colores esperados para comentarios de foco de teclado.
 
-    Antes: 
+    Antes: 
 
-    ![Estilo de vínculo predeterminado de cuadrícula de datos antes de las mejoras de accesibilidad](media/default-link-style-before.png) 
+    ![Estilo de vínculo predeterminado de cuadrícula de datos antes de las mejoras de accesibilidad](media/default-link-style-before.png) 
  
-    Después:    
+    Después:    
   
-    ![Estilo de vínculo predeterminado de cuadrícula de datos después de las mejoras de accesibilidad](media/default-link-style-after.png)  
+    ![Estilo de vínculo predeterminado de cuadrícula de datos después de las mejoras de accesibilidad](media/default-link-style-after.png)  
 
 Para más información sobre las mejoras de accesibilidad de WPF en .NET Framework 4.7.1, vea [Mejoras de accesibilidad en WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -298,7 +298,7 @@ En .NET Framework 4.7.1, Windows Forms (WinForms) incluye cambios de accesibilid
 
 **Visualización mejorada en modo de contraste alto**
 
-A partir de .NET Framework 4.7.1, varios controles de WinForms ofrecen una representación mejorada en los modos de contraste alto disponibles en el sistema operativo. Windows 10 ha cambiado los valores de algunos colores del sistema de contraste alto y Windows Forms se basa en el marco de trabajo de Windows 10 Win32. Para obtener la mejor experiencia, trabaje en la versión más reciente de Windows y use los cambios más recientes del sistema operativo al agregar un archivo app.manifest en una aplicación de prueba y quitar los comentarios de la línea del sistema operativo compatible con Windows 10 para tenga este aspecto:
+A partir de .NET Framework 4.7.1, varios controles de WinForms ofrecen una representación mejorada en los modos de contraste alto disponibles en el sistema operativo. Windows 10 ha cambiado los valores de algunos colores del sistema de contraste alto y Windows Forms se basa en el marco de trabajo de Windows 10 Win32. Para obtener la mejor experiencia, trabaje en la versión más reciente de Windows y use los cambios más recientes del sistema operativo mediante la adición de un archivo app.manifest en una aplicación de prueba y quite los comentarios de la línea del sistema operativo compatible con Windows 10 para tenga este aspecto:
 
 ```xml
 <!-- Windows 10 -->
@@ -316,11 +316,11 @@ Algunos ejemplos de cambios de contraste alto:
 
     Antes:
 
-    ![Texto deshabilitado antes de las mejoras de accesibilidad](media/wf-disabled-before.png) 
+    ![Texto deshabilitado antes de las mejoras de accesibilidad](media/wf-disabled-before.png) 
 
     Después:
 
-    ![Texto deshabilitado después de las mejoras de accesibilidad](media/wf-disabled-after.png) 
+    ![Texto deshabilitado después de las mejoras de accesibilidad](media/wf-disabled-after.png) 
 
 - Mejoras de contraste alto en el cuadro de diálogo de excepción de subproceso.
 
@@ -441,5 +441,5 @@ Los cambios de accesibilidad en el Diseñador de flujo de trabajo son los siguie
 
 ## <a name="see-also"></a>Vea también
 
-[Novedades de .NET Framework](whats-new.md)
- 
+- [Novedades de .NET Framework](whats-new.md)
+

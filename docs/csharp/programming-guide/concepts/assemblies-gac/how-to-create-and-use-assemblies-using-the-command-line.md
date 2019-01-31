@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Crear y usar ensamblados desde la línea de comandos (C#)'
+title: Procedimiento para crear y usar ensamblados mediante la línea de comandos (C#)
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 0cb964991cdbcdb3fa528ac96a0e883a37439099
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3b582f3959ed4c703123fab99e98bedda0a0a3a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623851"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Cómo: Crear y usar ensamblados desde la línea de comandos (C#)
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Procedimiento para crear y usar ensamblados mediante la línea de comandos (C#)
 Un ensamblado, o una biblioteca de vínculos dinámicos (DLL), se vincula al programa en tiempo de ejecución. Para ilustrar la creación y uso de una DLL, considere el siguiente escenario:  
   
 -   `MathLibrary.DLL`: el archivo de biblioteca que contiene los métodos que se van a llamar en tiempo de ejecución. En este ejemplo, la DLL contiene dos métodos, `Add` y `Multiply`.  
@@ -124,6 +124,6 @@ csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)  
-- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])  
+- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
+- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])
 - [Creación de una clase para contener funciones de archivos DLL](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

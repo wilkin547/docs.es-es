@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Crear un archivo en Visual Basic'
+title: Procedimiento para crear un archivo en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
-ms.openlocfilehash: 6167ea0850308eec4b558a47dd881476325a8ea1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9eedb6dafdd181b254610331899b5df7ac0823f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584851"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661378"
 ---
-# <a name="how-to-create-a-file-in-visual-basic"></a>Cómo: Crear un archivo en Visual Basic
+# <a name="how-to-create-a-file-in-visual-basic"></a>Procedimiento para crear un archivo en Visual Basic
 En este ejemplo se crea un archivo de texto vacío en la ruta de acceso especificada usando el método <xref:System.IO.File.Create%2A> de la clase <xref:System.IO.File>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -45,8 +45,8 @@ En este ejemplo se crea un archivo de texto vacío en la ruta de acceso especifi
   
  Si el usuario no tiene permisos para crear el archivo, se produce una excepción <xref:System.UnauthorizedAccessException>.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IO>  
- <xref:System.IO.File.Create%2A>  
- [Utilizar bibliotecas de código que no es de plena confianza](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)  
- [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Conceptos básicos sobre la seguridad de acceso del código)
+## <a name="see-also"></a>Vea también
+- <xref:System.IO>
+- <xref:System.IO.File.Create%2A>
+- [Utilizar bibliotecas de código que no es de plena confianza](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)
+- [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Conceptos básicos sobre la seguridad de acceso del código)

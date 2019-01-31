@@ -1,5 +1,5 @@
 ---
-title: Determinación de las actualizaciones de seguridad y revisiones de .NET Framework que están instaladas
+title: Procedimiento para determinar las actualizaciones de seguridad y revisiones de .NET Framework que están instaladas
 description: Aprenda a determinar qué actualizaciones de seguridad y revisiones de .NET Framework están instaladas en un equipo.
 ms.date: 11/27/2017
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6373def6859023377bf899f02d710c2ac6d83c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e11b2588471e95b4e47fd0efaf41757430b9bb39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389605"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604191"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Determinación de las actualizaciones de seguridad y revisiones de .NET Framework que están instaladas
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Procedimiento para determinar las actualizaciones de seguridad y revisiones de .NET Framework que están instaladas
 
 En este artículo se muestra cómo determinar qué actualizaciones de seguridad y revisiones de .NET Framework están instaladas en un equipo.
 
@@ -37,7 +37,7 @@ Las actualizaciones de seguridad y las revisiones instaladas para cada versión 
 
      Las actualizaciones instaladas se muestran bajo subclaves que identifican la versión de .NET Framework a la que se aplican. Cada actualización se identifica mediante un número de la Knowledge Base (KB).
 
-En el Editor del Registro, las versiones de .NET Framework y las actualizaciones instaladas para cada versión se almacenan en diferentes subclaves. Para obtener información sobre cómo detectar los números de la versión instalada, consulte [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+En el Editor del Registro, las versiones de .NET Framework y las actualizaciones instaladas para cada versión se almacenan en diferentes subclaves. Para obtener información sobre cómo detectar los números de versión instalados, vea [Procedimiento para determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 ## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>Búsqueda de las actualizaciones instaladas mediante la consulta al Registro en código
 
@@ -108,6 +108,6 @@ KB2600217
 
 ## <a name="see-also"></a>Vea también
 
-[Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
-[Instalación de .NET Framework para desarrolladores](../../../docs/framework/install/guide-for-developers.md)  
-[Versiones y dependencias](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [Instalación de .NET Framework para desarrolladores](../../../docs/framework/install/guide-for-developers.md)
+- [Versiones y dependencias](../../../docs/framework/migration-guide/versions-and-dependencies.md)

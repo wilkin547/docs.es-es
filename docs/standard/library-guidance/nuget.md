@@ -4,12 +4,12 @@ description: Procedimientos recomendados para el empaquetado con NuGet para bibl
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 6c3c7feb95f0ebe6b348f42cdd243ce1d14b9c50
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 2ad8d2ed77610a3acead69b7c864785261ea5e7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333426"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724312"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -112,11 +112,14 @@ Una alternativa a la creación de un paquete de símbolos es insertar los archiv
 </Project>
 ```
 
-**✔️ ES RECOMENDABLE** insertar los archivos de símbolos en el paquete NuGet principal.
+La desventaja de los archivos de símbolos insertados es que aumentan el tamaño del paquete en aproximadamente un 30 % para las bibliotecas de .NET compiladas mediante proyectos de estilo SDK. Si el tamaño del paquete es un problema, debe publicar símbolos en un paquete de símbolos.
 
-> La inserción de archivos de símbolos en el paquete NuGet principal proporciona a los desarrolladores una mejor experiencia de depuración de forma predeterminada. No necesitan localizar y configurar el servidor de símbolos de NuGet en su IDE para obtener los archivos de símbolos.
+**✔️ CONSIDERE LA POSIBILIDAD DE** publicar los símbolos como paquete de símbolos (`*.snupkg`) en NuGet.org.
+
+> Los paquetes de símbolos (`*.snupkg`) ofrecen a los desarrolladores una buena experiencia de depuración a petición sin incrementar el tamaño del paquete principal ni afectar al rendimiento de restauración para los que no tengan pensado depurar el paquete NuGet.
 >
-> La desventaja de los archivos de símbolos insertados es que aumentan el tamaño del paquete en aproximadamente un 30 % para las bibliotecas de .NET compiladas mediante proyectos de estilo SDK. Si el tamaño del paquete es un problema, debe publicar símbolos en un paquete de símbolos.
+> La salvedad es que tendrán que localizar y configurar el servidor de símbolos de NuGet en su IDE (como una instalación única) para obtener los archivos de símbolos. En Visual Studio 2019 se pretende proporcionar el servidor de símbolos de NuGet.org como una de las opciones preconfiguradas. 
+
 
 >[!div class="step-by-step"]
 >[Anterior](strong-naming.md)

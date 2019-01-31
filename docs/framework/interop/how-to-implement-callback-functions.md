@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Implementar funciones de devolución de llamada'
+title: Procedimiento para implementar funciones de devolución de llamada
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e081347129ce367cf6b46ca29c07a016bb64ab95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bf972455aa54a7fe45ffd7858ac9e5da5eee6e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718681"
 ---
-# <a name="how-to-implement-callback-functions"></a>Cómo: Implementar funciones de devolución de llamada
+# <a name="how-to-implement-callback-functions"></a>Procedimiento para implementar funciones de devolución de llamada
 El procedimiento y el ejemplo siguiente muestran cómo una aplicación administrada, mediante la invocación de la plataforma, puede imprimir el valor del identificador de cada ventana en el equipo local. En concreto, el uso del procedimiento y el ejemplo usan la función **EnumWindows** para recorrer la lista de ventanas y una función de devolución de llamada administrada (denominada CallBack) para imprimir el valor del identificador de ventana.  
   
 ### <a name="to-implement-a-callback-function"></a>Para implementar una función de devolución de llamada  
@@ -129,6 +129,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de devolución de llamada](../../../docs/framework/interop/callback-functions.md)  
- [Llamar a una función DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>Vea también
+- [Funciones de devolución de llamada](../../../docs/framework/interop/callback-functions.md)
+- [Llamar a una función DLL](../../../docs/framework/interop/calling-a-dll-function.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Enlazar un delegado mediante la reflexión'
+title: Procedimiento para enlazar un delegado mediante la reflexión
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16c80dacbe71bb9052df1caa65fbd31e433957e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe90542d1ba106dd52e8995afab298b4b9f69899
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397941"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644396"
 ---
-# <a name="how-to-hook-up-a-delegate-using-reflection"></a>Cómo: Enlazar un delegado mediante la reflexión
+# <a name="how-to-hook-up-a-delegate-using-reflection"></a>Procedimiento para enlazar un delegado mediante la reflexión
 Cuando se usa la reflexión para cargar y ejecutar ensamblados, no se pueden usar características del lenguaje como el operador `+=` de C# o la [instrucción AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) de Visual Basic para enlazar eventos. Los procedimientos siguientes muestran cómo enlazar un método existente a un evento obteniendo todos los tipos necesarios mediante reflexión y cómo crear un método dinámico utilizando la emisión de la reflexión y enlazarlo a un evento.  
   
 > [!NOTE]
@@ -80,7 +80,7 @@ Cuando se usa la reflexión para cargar y ejecutar ensamblados, no se pueden usa
      [!code-csharp[HookUpDelegate#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#9)]
      [!code-vb[HookUpDelegate#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#9)]  
   
-2.  Genere un cuerpo del método. Este método carga una cadena, llama a la sobrecarga del método <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> que toma una cadena, saca el valor devuelto de la pila (porque el controlador no tiene tipo de valor devuelto) y vuelve. Para obtener más información sobre cómo emitir métodos dinámicos, vea [Cómo: Definir y ejecutar métodos dinámicos](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md).  
+2.  Genere un cuerpo del método. Este método carga una cadena, llama a la sobrecarga del método <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType> que toma una cadena, saca el valor devuelto de la pila (porque el controlador no tiene tipo de valor devuelto) y vuelve. Para más información sobre cómo emitir métodos dinámicos, vea [Cómo: Definir y ejecutar métodos dinámicos](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md).  
   
      [!code-cpp[HookUpDelegate#10](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#10)]
      [!code-csharp[HookUpDelegate#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#10)]
@@ -113,10 +113,10 @@ Cuando se usa la reflexión para cargar y ejecutar ensamblados, no se pueden usa
   
 -   Compile el código en la línea de comandos mediante csc.exe, vbc.exe o cl.exe. Para compilar el código en Visual Studio, póngalo en una plantilla de proyecto de aplicación de consola.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Emit.DynamicMethod>  
- <xref:System.Activator.CreateInstance%2A>  
- <xref:System.Delegate.CreateDelegate%2A>  
- [Definición y ejecución de métodos dinámicos](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)  
- [Reflexión](../../../docs/framework/reflection-and-codedom/reflection.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Emit.DynamicMethod>
+- <xref:System.Activator.CreateInstance%2A>
+- <xref:System.Delegate.CreateDelegate%2A>
+- [Cómo: Definir y ejecutar métodos dinámicos](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)
+- [Reflexión](../../../docs/framework/reflection-and-codedom/reflection.md)

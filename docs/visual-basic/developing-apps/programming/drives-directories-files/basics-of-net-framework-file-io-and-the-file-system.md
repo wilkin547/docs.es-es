@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e60aae158d822a3cfba93f6d714d83bcd7aa0e08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155030"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600770"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
 Las clases del espacio de nombres <xref:System.IO> se usan para trabajar con unidades, archivos y directorios.  
@@ -55,7 +55,7 @@ Las clases del espacio de nombres <xref:System.IO> se usan para trabajar con uni
   
  En la tabla siguiente se enumeran las tareas que se suelen realizar con una secuencia:  
   
-|Para|Vea|
+|En|Vea|
 |---|---|   
 |Leer y escribir en un archivo de datos|[Cómo: Leer y escribir en un archivo de datos recién creado](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
 |Leer texto de un archivo|[Cómo: Leer texto de un archivo](../../../../standard/io/how-to-read-text-from-a-file.md)|  
@@ -98,8 +98,8 @@ Las clases del espacio de nombres <xref:System.IO> se usan para trabajar con uni
 ## <a name="file-events"></a>Eventos de archivo  
  El componente <xref:System.IO.FileSystemWatcher> permite ver los cambios en los archivos y los directorios del sistema o en cualquier equipo al que tenga acceso de red. Por ejemplo, si se modifica un archivo, puede enviar una alerta a un usuario para indicarle que se ha realizado un cambio. Cuando se producen cambios, se generan uno o varios eventos que se almacenan en un búfer y se entregan al componente <xref:System.IO.FileSystemWatcher> para su procesamiento.  
   
-## <a name="see-also"></a>Vea también  
- [Crear secuencias](../../../../standard/io/composing-streams.md)  
- [E/S de archivos y secuencias](../../../../standard/io/index.md)  
- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)  
- [Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+## <a name="see-also"></a>Vea también
+- [Crear secuencias](../../../../standard/io/composing-streams.md)
+- [E/S de archivos y secuencias](../../../../standard/io/index.md)
+- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

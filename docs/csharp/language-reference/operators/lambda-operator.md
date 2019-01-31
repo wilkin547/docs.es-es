@@ -1,107 +1,59 @@
 ---
 title: Operador =&gt; - Referencia de C#
 ms.custom: seodec18
-ms.date: 10/02/2017
+ms.date: 01/22/2019
 f1_keywords:
 - =>_CSharpKeyword
 helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 8641757d9252c88cf30595cec06d27b964e4d95c
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: fa2e149f5b19e80e3171d08519be3ae249d2a112
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415291"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540811"
 ---
 # <a name="gt-operator-c-reference"></a>Operador =&gt; (Referencia de C#)
 
-El operador `=>` se puede usar de dos maneras en C#:
-
-- Como [operador lambda](#lambda-operator) en una [expresión lambda](../../lambda-expressions.md), para separar las variables de entrada del cuerpo de lambda.
- 
-- En una [definición de cuerpo de expresiones](#expression-body-definition), para separar un nombre de miembro de la implementación de miembro. 
+El token `=>` se admite de dos formas: como el operador lambda y como un separador de un nombre de miembro y la implementación del miembro en una definición de cuerpo de expresión.
 
 ## <a name="lambda-operator"></a>Operador lambda
 
-El token `=>` se denomina operador lambda. Se usa en *expresiones lambda* para separar las variables de entrada del lado izquierdo y el cuerpo lambda del lado derecho. Las expresiones lambda son expresiones insertadas similares a los métodos anónimos, pero más flexibles. Se usan ampliamente en las consultas LINQ que se expresan en la sintaxis de método. Para obtener más información, vea [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
-  
- En el ejemplo siguiente se muestran dos maneras de buscar y mostrar la longitud de la cadena más corta en una matriz de cadenas. La primera parte del ejemplo aplica una expresión lambda (`w => w.Length`) a cada elemento de la matriz `words` y, después, usa el método <xref:System.Linq.Enumerable.Min%2A> para buscar la longitud menor. Para comparar, la segunda parte del ejemplo muestra una solución más larga que usa la sintaxis de consulta para hacer lo mismo.  
-  
-```csharp  
-string[] words = { "cherry", "apple", "blueberry" };  
-  
-// Use method syntax to apply a lambda expression to each element  
-// of the words array.   
-int shortestWordLength = words.Min(w => w.Length);  
-Console.WriteLine(shortestWordLength);  
-  
-// Compare the following code that uses query syntax.  
-// Get the lengths of each word in the words array.  
-var query = from w in words  
-            select w.Length;  
-// Apply the Min method to execute the query and get the shortest length.  
-int shortestWordLength2 = query.Min();  
-Console.WriteLine(shortestWordLength2);  
-  
-// Output:   
-// 5  
-// 5  
-```  
-  
-### <a name="remarks"></a>Comentarios  
- El operador `=>` tiene la misma prioridad que el operador de asignación (`=`) y es asociativo a la derecha.  
-  
- Puede especificar explícitamente el tipo de la variable de entrada o dejar que el compilador la deduzca. En cualquier caso, la variable está fuertemente tipada en tiempo de compilación. Cuando especifique un tipo, debe incluir el nombre de tipo y el nombre de variable entre paréntesis, como se muestra en el ejemplo siguiente.  
-  
-```csharp  
-int shortestWordLength = words.Min((string w) => w.Length);  
-```  
-  
-### <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo escribir una expresión lambda para la sobrecarga del operador de consulta estándar <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> que toma dos argumentos. Dado que la expresión lambda tiene más de un parámetro, los parámetros deben ir entre paréntesis. El segundo parámetro, `index`, representa el índice del elemento actual de la colección. La expresión `Where` devuelve todas las cadenas cuyas longitudes son inferiores a sus posiciones de índice en la matriz.  
-  
-```csharp  
-static void Main(string[] args)  
-{  
-    string[] digits = { "zero", "one", "two", "three", "four", "five",   
-            "six", "seven", "eight", "nine" };  
-  
-    Console.WriteLine("Example that uses a lambda expression:");  
-    var shortDigits = digits.Where((digit, index) => digit.Length < index);  
-    foreach (var sD in shortDigits)  
-    {  
-        Console.WriteLine(sD);  
-    }  
-  
-    // Output:  
-    // Example that uses a lambda expression:  
-    // five  
-    // six  
-    // seven  
-    // eight  
-    // nine  
-}  
-```  
+En las [expresiones lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md), el operador lambda `=>` se usa para separar las variables de entrada del lado izquierdo y el cuerpo lambda del lado derecho.
+
+En el ejemplo siguiente se usa la característica [LINQ](../../programming-guide/concepts/linq/index.md) con sintaxis de método para demostrar el uso de las expresiones lambda:
+
+[!code-csharp-interactive[infer types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#InferredTypes)]
+
+Las variables de entrada de las expresiones lambda están fuertemente tipadas en tiempo de compilación. Cuando el compilador puede deducir los tipos de las variables de entrada, como en el ejemplo anterior, las declaraciones de tipos se pueden omitir. Si tiene que especificar el tipo de las variables de entrada, debe hacerlo para cada variable, como se muestra en el ejemplo siguiente:
+
+[!code-csharp-interactive[specify types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#ExplicitTypes)]
+
+En el ejemplo siguiente se muestra cómo definir una expresión lambda sin variables de entrada:
+
+[!code-csharp-interactive[without input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#WithoutInput)]
+
+Para obtener más información, vea [Expresiones lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
+
 ## <a name="expression-body-definition"></a>Definición de cuerpo de expresiones
 
-Una definición de cuerpo de expresiones proporciona la implementación de un miembro de una forma muy concisa y legible. Presenta la siguiente sintaxis general:
+Una definición de cuerpo de expresión tiene la siguiente sintaxis general:
 
 ```csharp
 member => expression;
 ```
-donde *expresión* es una expresión válida. Cabe mencionar que *expression* puede ser una *expresión de instrucción* únicamente si el tipo de valor devuelto del miembro es `void` o si el miembro es un constructor o un finalizador.
 
-Desde C# 6, se admite el uso de definiciones de cuerpos de expresiones en métodos e instrucciones de propiedad get. Desde C# 7, se admite el uso de definiciones de cuerpos de expresiones en constructores, finalizadores, instrucciones propiedad set e indizadores.
+donde *expresión* es una expresión válida. Tenga en cuenta que *expresión* puede ser una *expresión de instrucción* solo si el tipo de valor devuelto del miembro es `void`, o bien si el miembro es un constructor, un finalizador o un descriptor de acceso `set` de propiedad.
 
-Esta es una definición de cuerpo de expresiones de un método `Person.ToString`:
+En el ejemplo siguiente se muestra una definición de cuerpo de expresión para un método `Person.ToString`:
 
 ```csharp
 public override string ToString() => $"{fname} {lname}".Trim();
 ```
 
-Se trata de una versión abreviada de la siguiente definición de método:
+Es una versión abreviada de la definición de método siguiente:
 
 ```csharp
 public override string ToString()
@@ -109,11 +61,23 @@ public override string ToString()
    return $"{fname} {lname}".Trim();
 }
 ```
-Para más información sobre las definiciones de cuerpos de expresiones, vea [Expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) (Miembros con cuerpos de expresiones).
+
+A partir de C# 6, se admiten definiciones de cuerpos de expresión para métodos y propiedades de solo lectura. A partir de C# 7.0, se admiten definiciones de cuerpos de expresión para constructores, finalizadores, descriptores de acceso de propiedad e indizadores.
+
+Para obtener más información, vea [Miembros con forma de expresión](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
+
+## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
+
+El operador `=>` no se puede sobrecargar.
+
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
+
+Para obtener más información, vea la sección [Expresiones de función anónima](~/_csharplang/spec/expressions.md#anonymous-function-expressions) de la [Especificación del lenguaje C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)   
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
-- [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
-- [Expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) (Miembros con cuerpos de expresiones).
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Operadores de C#](index.md)
+- [Expresiones lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Miembros con forma de expresión](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)

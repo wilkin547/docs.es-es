@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be7120b9bff5c51141a1eac80051c4b464433aa
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0c58fe8aeeb9acdb886cb224046c68af0577eae7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539758"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperar recursos de aplicaciones de escritorio
 Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Framework, en principio se deberían empaquetar los recursos de la referencia cultural predeterminada o neutra con el ensamblado principal y, luego, crear un ensamblado satélite independiente para todos los idiomas o referencias culturales que admita la aplicación. Después podrá usar la clase <xref:System.Resources.ResourceManager> como se describe en la siguiente sección para obtener acceso a los recursos con nombre. Si opta por no insertar los recursos en el ensamblado principal y los ensamblados satélite, también puede obtener acceso directamente a los archivos .resources binarios, como se describe en la sección [Recuperar recursos desde archivos .resources](#from_file) , que aparece más adelante en este artículo.  Para recuperar recursos en las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] , consulte [Crear y recuperar recursos en las aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674) en el Centro de desarrollo de Windows.  
@@ -40,7 +40,7 @@ Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Frame
   
  El Administrador de recursos usa el proceso de reserva de recursos para controlar la forma en que la aplicación recupera los recursos específicos de referencia cultural. Para obtener más información, consulte la sección "El proceso de reserva de recursos" de [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Para obtener información sobre cómo crear una instancia de un objeto <xref:System.Resources.ResourceManager> , consulte la sección "Instantiating a ResourceManager Object" (Crear una instancia de un objeto ResourceManager) del tema de la clase <xref:System.Resources.ResourceManager> .  
   
-### <a name="retrieving-string-data-an-example"></a>Ejemplo de recuperación de datos de cadena  
+### <a name="retrieving-string-data-an-example"></a>Recuperación de datos de cadena: Un ejemplo  
  En el ejemplo siguiente se llama al método <xref:System.Resources.ResourceManager.GetString%28System.String%29> para recuperar los recursos de cadena de la referencia cultural de interfaz de usuario actual. Incluye un recurso de cadena neutro para la referencia cultural de inglés (Estados Unidos) y recursos localizados para las referencias culturales de ruso (Rusia) y de francés (Francia). El siguiente recurso de inglés (Estados Unidos) está en un archivo denominado Strings.txt:  
   
 ```  
@@ -81,7 +81,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
   
  Si la referencia cultural de interfaz de usuario actual es el español (España), tenga en cuenta que en el ejemplo se muestran los recursos del idioma inglés, ya que los recursos del idioma español no están disponibles y el inglés es la referencia cultural predeterminada del ejemplo.  
   
-### <a name="retrieving-object-data-two-examples"></a>Dos ejemplos de recuperación de datos de objeto  
+### <a name="retrieving-object-data-two-examples"></a>Recuperación de datos de objeto: dos ejemplos  
  Puede usar los métodos <xref:System.Resources.ResourceManager.GetObject%2A> y <xref:System.Resources.ResourceManager.GetStream%2A> para recuperar datos de objeto. Se incluyen los tipos de datos primitivos, los objetos serializables y los objetos que se almacenan en formato binario (como las imágenes).  
   
  En el ejemplo siguiente se usa el método <xref:System.Resources.ResourceManager.GetStream%28System.String%29> para recuperar un mapa de bits que se emplea en la ventana de inicio de una aplicación. El siguiente código fuente del archivo CreateResources.cs (para C#) o CreateResources.vb (para Visual Basic) genera un archivo .resx que contiene la imagen serializada. En este caso, la imagen se carga desde un archivo denominado SplashScreen.jpg; puede modificar el nombre del archivo para sustituir su propia imagen.  
@@ -200,9 +200,9 @@ Resgen Strings.ru-RU.txt Resources\Strings.ru-RU.resources
 csc Example.cs  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Resources.ResourceManager>  
- [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)  
- [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Crear y recuperar recursos en las aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674)
+## <a name="see-also"></a>Vea también
+- <xref:System.Resources.ResourceManager>
+- [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)
+- [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Crear y recuperar recursos en las aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674)

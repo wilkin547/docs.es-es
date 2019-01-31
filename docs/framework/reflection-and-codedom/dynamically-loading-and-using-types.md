@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9795fa411d3b81f9092ddab183c6978ee701ef67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8254d3de7dc282edb8ebe8bf0dd71ce1c943322d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689213"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Cargar y utilizar tipos dinámicamente
-La reflexión proporciona la infraestructura que los compiladores de lenguaje como [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] y JScript usan para implementar el enlace en tiempo de ejecución implícito. El enlace es el proceso de buscar la declaración (es decir, la implementación) que corresponde a un tipo especificado de manera exclusiva. Cuando este proceso se produce en tiempo de ejecución, en lugar de en tiempo de compilación, se denomina enlace en tiempo de ejecución. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] permite usar el enlace en tiempo de ejecución en el código; el compilador de Visual Basic llama a un método auxiliar que usa la reflexión para obtener el tipo de objeto. Los argumentos pasados al método auxiliar hacen que se invoque el método adecuado en tiempo de ejecución. Estos argumentos son la instancia (un objeto) en la que se invoca el método, el nombre del método invocado (una cadena) y los argumentos pasados al método invocado (una matriz de objetos).  
+La reflexión proporciona la infraestructura que los compiladores de lenguaje como [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] y JScript usan para implementar el enlace en tiempo de ejecución implícito. El enlace es el proceso de buscar la declaración (es decir, la implementación) que corresponde a un tipo especificado de manera exclusiva. Cuando este proceso se produce en tiempo de ejecución, en lugar de en tiempo de compilación, se denomina enlace en tiempo de ejecución. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] permite usar el enlace en tiempo de ejecución en el código; el compilador de Visual Basic llama a un método del asistente que usa la reflexión para obtener el tipo de objeto. Los argumentos pasados al método del asistente hacen que se invoque el método adecuado en tiempo de ejecución. Estos argumentos son la instancia (un objeto) en la que se invoca el método, el nombre del método invocado (una cadena) y los argumentos pasados al método invocado (una matriz de objetos).  
   
  En el ejemplo siguiente, el compilador de Visual Basic usa implícitamente la reflexión para llamar a un método en un objeto cuyo tipo se desconoce en tiempo de compilación. Una clase **HelloWorld** tiene un método **PrintHello** que imprime "Hello World" de forma concatenada con texto que se pasa al método **PrintHello**. El método **PrintHello** llamado en este ejemplo es en realidad <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>; el código de Visual Basic permite invocar el método **PrintHello** como si se conociera el tipo del objeto (helloObj) en tiempo de compilación (enlace anticipado), y no en tiempo de ejecución (enlace en tiempo de ejecución).  
   
@@ -67,11 +67,11 @@ End Module
   
  **BindToMethod** devuelve el <xref:System.Reflection.MethodBase> que se va a invocar o una referencia nula (**Nothing** en Visual Basic) si la invocación no es posible. No es necesario que el valor devuelto de **MethodBase** sea uno de los contenidos en el parámetro *match*, aunque esto es lo habitual.  
   
- Cuando hay argumentos ByRef, el llamador podría querer recuperarlos. Por lo tanto, **Binder** permite que un cliente asigne la matriz de argumentos de nuevo a su forma original si **BindToMethod** ha manipulado la matriz de argumentos. Para ello, debe garantizarse al llamador que el orden de los argumentos no se ha modificado. Cuando los argumentos se pasan por nombre, **Binder** reordena la matriz de argumentos, y esto es lo que ve el llamador. Para obtener más información, consulta <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
+ Cuando hay argumentos ByRef, el llamador podría querer recuperarlos. Por lo tanto, **Binder** permite que un cliente asigne la matriz de argumentos de nuevo a su forma original si **BindToMethod** ha manipulado la matriz de argumentos. Para ello, debe garantizarse al llamador que el orden de los argumentos no se ha modificado. Cuando los argumentos se pasan por nombre, **Binder** reordena la matriz de argumentos, y esto es lo que ve el llamador. Para obtener más información, vea <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
   
  El conjunto de miembros disponibles está integrado por los miembros definidos en el tipo o en cualquier tipo base. Si se especifica <xref:System.Reflection.BindingFlags>, se devolverán en el conjunto miembros de cualquier tipo de accesibilidad. Si no se especifica **BindingFlags.NonPublic**, el enlazador deberá imponer reglas de accesibilidad. Cuando especifique la marca de enlace **Public** o **NonPublic**, también debe especificar la marca de enlace **Instance** o **Static**. En caso contrario, no se devolverá ningún miembro.  
   
- Si solo hay un miembro con el nombre especificado, no es necesaria la devolución de la llamada y el enlace se realiza en dicho método. En el caso 1 del ejemplo de código se ilustra este punto: solo hay disponible un método **PrintBob** y, por lo tanto, no es necesaria la devolución de la llamada.  
+ Si solo hay un miembro con el nombre especificado, no es necesaria la devolución de la llamada y el enlace se realiza en dicho método. En el caso 1 del ejemplo de código se ilustra este punto: solo hay disponible un método **PrintBob** y, por tanto, no es necesaria la devolución de la llamada.  
   
  Si hay más de un miembro en el conjunto disponible, todos estos métodos se pasan a **BindToMethod**, que selecciona el método apropiado y lo devuelve. En el caso 2 del ejemplo de código, hay dos métodos denominados **PrintValue**. Mediante una llamada a **BindToMethod**, se selecciona el método apropiado.  
   
@@ -99,8 +99,8 @@ End Module
   
  La clase <xref:System.Type> tiene métodos **Get** que usan parámetros de tipo **Binder** para resolver las referencias a un miembro concreto. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> y <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> buscan un miembro determinado del tipo actual, para lo que proporcionan información de firma de ese miembro. Se vuelve a llamar a <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> y <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> para seleccionar la información de firma especificada de los métodos apropiados.  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
- [Viewing Type Information](../../../docs/framework/reflection-and-codedom/viewing-type-information.md) (Ver información tipos)  
- [Conversión de tipos en .NET Framework](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>Vea también
+- <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
+- [Viewing Type Information](../../../docs/framework/reflection-and-codedom/viewing-type-information.md) (Ver información tipos)
+- [Conversión de tipos en .NET Framework](../../../docs/standard/base-types/type-conversion.md)

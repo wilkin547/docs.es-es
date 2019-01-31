@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Configurar componentes COM basados en .NET Framework para la activación sin registro'
+title: Procedimiento para configurar componentes COM basados en .NET Framework para la activación sin registro
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9df1aa781bd54468d2273a335b3fda7d701854d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 140af66c9ea08d16aa442824ff7333eeeadf5173
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530711"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Cómo: Configurar componentes COM basados en .NET Framework para la activación sin registro
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedimiento para configurar componentes COM basados en .NET Framework para la activación sin registro
 La activación sin registro de los componentes de .NET Framework solo es un poco más complicada que la de los componentes COM. La configuración requiere dos manifiestos:  
   
 -   Las aplicaciones COM deben tener un manifiesto de aplicación de estilo Win32 para identificar el componente administrado.  
@@ -172,8 +172,8 @@ La activación sin registro de los componentes de .NET Framework solo es un poco
   
      Una vez más, `myresource.res` es el nombre del archivo de recursos que contiene el recurso incrustado.  
   
-## <a name="see-also"></a>Vea también  
- [Interoperabilidad COM sin registro](registration-free-com-interop.md)  
- [Requisitos para interoperabilidad COM sin registro](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))  
- [Configurar componentes COM para la activación sin registro](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))  
- [Registration-Free Activation of .NET-Based Components: A Walkthrough](https://msdn.microsoft.com/library/ms973915.aspx) (Tutorial: Activación sin registro de componentes basados en .NET)
+## <a name="see-also"></a>Vea también
+- [Interoperabilidad COM sin registro](registration-free-com-interop.md)
+- [Requisitos para interoperabilidad COM sin registro](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))
+- [Configurar componentes COM para la activación sin registro](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))
+- [Registration-Free Activation of .NET-Based Components: A Walkthrough](https://msdn.microsoft.com/library/ms973915.aspx) (Tutorial: Activación sin registro de componentes basados en .NET)

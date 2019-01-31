@@ -1,15 +1,15 @@
 ---
-title: Buscar un único descendiente utilizando el método Descendants (C#)
+title: Procedimiento para buscar un único descendiente con el método Descendants (C#)
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: fafb7dc4e2e65c913de46b64028f7dcd69fdd2c3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a13a4aef6a3d22d2b7c3adb8e37996de08978b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43784665"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690532"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Buscar un único descendiente utilizando el método Descendants (C#)
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Procedimiento para buscar un único descendiente con el método Descendants (C#)
 Puede utilizar el método de eje <xref:System.Xml.Linq.XContainer.Descendants%2A> para escribir rápidamente código para buscar un solo elemento cuyo nombre es único. Esta técnica es especialmente útil si desea buscar un descendiente particular con un nombre específico. Puede escribir el código para desplazarse al elemento deseado, pero a menudo resulta más rápido escribir el código usando el eje <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Ejemplo  

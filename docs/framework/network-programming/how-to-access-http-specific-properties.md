@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: obtener acceso a propiedades específicas de HTTP'
+title: Procedimiento para acceder a propiedades específicas de HTTP
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: c883321d74bb4309f483604d51057390d00189e6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: da696e40248a077e6b8e32e077509bc8a0b589b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50043021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619732"
 ---
-# <a name="how-to-access-http-specific-properties"></a>Cómo: obtener acceso a propiedades específicas de HTTP
+# <a name="how-to-access-http-specific-properties"></a>Procedimiento para acceder a propiedades específicas de HTTP
 En este ejemplo se muestra cómo desactivar el comportamiento de **conexión persistente** HTTP y obtener el número de versión del protocolo de servidor web.  
   
 ## <a name="example"></a>Ejemplo  
@@ -49,7 +49,7 @@ HttpWResp.Close();
   
 -   Referencias al espacio de nombres **System.Net**.  
   
-## <a name="see-also"></a>Vea también  
- [Acceso a Internet a través de un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [Usar protocolos de aplicaciones](../../../docs/framework/network-programming/using-application-protocols.md)  
- [HTTP](../../../docs/framework/network-programming/http.md)
+## <a name="see-also"></a>Vea también
+- [Acceso a Internet a través de un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [Usar protocolos de aplicaciones](../../../docs/framework/network-programming/using-application-protocols.md)
+- [HTTP](../../../docs/framework/network-programming/http.md)

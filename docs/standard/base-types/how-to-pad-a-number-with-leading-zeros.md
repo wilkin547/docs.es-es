@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Rellenar un número con ceros iniciales'
+title: Procedimiento para rellenar un número con ceros a la izquierda
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cc6e4d96378cfd8c065a3b04aab865f9b787438
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b48462e79c3e8ef3fdd6e0a91f5abecffc022b5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673041"
 ---
-# <a name="how-to-pad-a-number-with-leading-zeros"></a>Cómo: Rellenar un número con ceros iniciales
+# <a name="how-to-pad-a-number-with-leading-zeros"></a>Procedimiento para rellenar un número con ceros a la izquierda
 Si quiere agregar ceros a la izquierda de un entero, puede hacerlo mediante la [cadena de formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md) "D" con un especificador de precisión. Para agregar ceros a la izquierda tanto de enteros como de números de punto flotante, use una [cadena de formato numérico personalizada](../../../docs/standard/base-types/custom-numeric-format-strings.md). En este tema se explica cómo usar ambos métodos para rellenar un número con ceros a la izquierda.  
   
 ### <a name="to-pad-an-integer-with-leading-zeros-to-a-specific-length"></a>Para rellenar un entero con ceros a la izquierda hasta una longitud concreta  
@@ -80,7 +80,7 @@ Si quiere agregar ceros a la izquierda de un entero, puede hacerlo mediante la [
   
     2.  Si incluye un símbolo de separador decimal, determine el número de caracteres a la izquierda del separador decimal.  
   
-         O bien  
+         o bien  
   
          Si no incluye un símbolo de separador decimal, determine la longitud de la cadena.  
   
@@ -95,6 +95,6 @@ Si quiere agregar ceros a la izquierda de un entero, puede hacerlo mediante la [
   
 ## <a name="see-also"></a>Vea también
 
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md)

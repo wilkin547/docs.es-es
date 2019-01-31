@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Escribir un bucle Parallel.For con variables locales de subproceso'
+title: Procedimiento para escribir un bucle Parallel.For con variables locales de subproceso
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18458e52c6cf38b2900036613676adea3f3b2d0b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6ffac3df82268399aa35ff494e462e2b23c3894b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44188129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610804"
 ---
-# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Cómo: Escribir un bucle Parallel.For con variables locales de subproceso
-En este ejemplo se muestra la forma de usar variables locales de subproceso para almacenar y recuperar el estado en cada una de las tareas independientes creadas por un bucle <xref:System.Threading.Tasks.Parallel.For%2A>. Mediante el uso de datos locales de subproceso, se puede evitar la sobrecarga que supone la sincronización de un gran número de accesos a un estado compartido. En vez de escribir en un recurso compartido en cada iteración, se calcula y se almacena el valor hasta que finalizan todas las iteraciones de la tarea. A continuación, se escribe una vez el resultado final en el recurso compartido o se pasa a otro método.  
+# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Procedimiento para escribir un bucle Parallel.For con variables locales de subproceso
+En este ejemplo se muestra la forma de usar variables locales para el subproceso para almacenar y recuperar el estado en cada una de las tareas independientes creadas por un bucle <xref:System.Threading.Tasks.Parallel.For%2A>. Mediante el uso de datos locales de subproceso, se puede evitar la sobrecarga que supone la sincronización de un gran número de accesos a un estado compartido. En vez de escribir en un recurso compartido en cada iteración, se calcula y se almacena el valor hasta que finalizan todas las iteraciones de la tarea. A continuación, se escribe una vez el resultado final en el recurso compartido o se pasa a otro método.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se llama al método <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> para calcular la suma de los valores de una matriz que contiene un millón de elementos. El valor de cada elemento es igual a su índice.  
@@ -46,7 +46,7 @@ Function() new MyClass()
   
 ## <a name="see-also"></a>Vea también
 
-- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md) (Paralelismo de datos)  
-- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)  
-- [Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md) (Paralelismo de datos)
+- [Programación en paralelo](../../../docs/standard/parallel-programming/index.md)
+- [Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
 - [Expresiones lambda en PLINQ y TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

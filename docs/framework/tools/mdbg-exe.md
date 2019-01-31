@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c0a9f76852652ff5cfe0ff0049c2669441dbf51c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202925"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066407"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (depurador de línea de comandos .NET Framework)
 El Depurador de la línea de comandos de .NET Framework ayuda a los proveedores de herramientas y a los programadores de aplicaciones a encontrar y a corregir los errores que pueden producirse en programas orientados al Common Language Runtime de .NET Framework. Esta herramienta utiliza el runtime de la API de depuración para proporcionar servicios de depuración. Puede utilizar MDbg.exe para depurar solo código administrado; no se admite la depuración de código no administrado.  
@@ -52,12 +52,12 @@ MDbg [ProgramName[arguments]] [options]
 |**fo**[**reach**] [*OtherCommand*]|Ejecuta un comando en todos los subprocesos. *OtherCommand* es un comando válido que funciona en un subproceso; **foreach** *OtherCommand* ejecuta el mismo comando en todos los subprocesos.|  
 |**f**[**unceval**] [`-ad` *Num*] *functionName* [*args ...* ]|Realiza una evaluación de función en el subproceso activo actual donde la función que se va a evaluar es *functionName*. El nombre de la función debe estar completo, incluidos los espacios de nombres.<br /><br /> La opción `-ad` especifica el dominio de aplicación que se utiliza para resolver la función. Si no se especifica la opción `-ad`, el dominio de aplicación para la resolución establece su valor predeterminado en el dominio de aplicación donde esté ubicado el subproceso utilizado para la evaluación de la función.<br /><br /> Si la función que se evalúa no es estática, el primer parámetro pasado debería ser un puntero `this`. En todos los dominios de aplicación se buscan argumentos para la evaluación de función.<br /><br /> Para solicitar un valor de un dominio de aplicación, anteponga la variable con el módulo y el nombre de dominio de aplicación; por ejemplo, `funceval -ad 0 System.Object.ToString hello.exe#0!MyClass.g_rootRef`. Este comando evalúa la función `System.Object.ToString` en el dominio de aplicación `0`. Dado que el método `ToString` es una función de instancia, el primer parámetro debe ser un puntero `this`.|  
 |**g**[**o**]|Hace que el programa continúe hasta que encuentre un punto de interrupción, se cierre o se produzca un evento (por ejemplo, una excepción no controlada) que haga que el programa se detenga.|  
-|**h**[**elp**] [*command*]<br /><br /> O bien<br /><br /> **?** [*command*]|Muestra una descripción de todos los comandos o una descripción detallada de un comando específico.|  
+|**h**[**elp**] [*command*]<br /><br /> o bien<br /><br /> **?** [*command*]|Muestra una descripción de todos los comandos o una descripción detallada de un comando específico.|  
 |**ig**[**nore**] [*event*]|Hace que el depurador solo se detenga en excepciones no controladas.|  
 |**int**[**ercept**] *FrameNumber*|Revierte el depurador hasta un número de marco especificado.<br /><br /> Si el depurador encuentra una excepción, utilice este comando para revertir el depurador hasta el número de marco especificado. También puede cambiar el estado del programa mediante el comando **set** y seguir usando el comando **go**.|  
 |**k**[**ill**]|Detiene el proceso activo.|  
 |**l**[**ist**] [*modules* &#124; *appdomains* &#124; *assemblies*]|Muestra los módulos, dominios de aplicación o ensamblados cargados.|  
-|**lo**[**ad**] *assemblyName*|Carga una extensión de la forma siguiente: se carga el ensamblado especificado y se intenta ejecutar el método estático `LoadExtension` del tipo `Microsoft.Tools.Mdbg.Extension.Extension`.|  
+|**lo**[**ad**] *assemblyName*|Carga una extensión de la manera siguiente: se carga el ensamblado especificado y se intenta ejecutar el método estático `LoadExtension` del tipo `Microsoft.Tools.Mdbg.Extension.Extension`.|  
 |**log** [*eventType*]|Permite establecer o mostrar los eventos que se van a registrar.|  
 |**mo**[**de**] [*option on/off*]|Establece las distintas opciones de depurador. Utilice `mode` sin opciones para obtener una lista de los modos de depuración y su configuración actual.|  
 |**mon**[**itorInfo**] *monitorReference*|Muestra la información de bloqueo del monitor de objetos.|  
@@ -77,7 +77,7 @@ MDbg [ProgramName[arguments]] [options]
 |**sh**[**ow**] [*lines*]|Especifica el número de líneas que se van a mostrar.|  
 |**s**[**tep**]|Pasa la ejecución a la función siguiente en la línea actual o se desplaza a la línea siguiente si no hay ninguna función que procesar paso a paso.|  
 |**su**[**spend**] [\* &#124; [~]*threadNumber*]|Suspende el subproceso actual o el subproceso especificado por el parámetro *threadNumber*.  Si *threadNumber* se especifica como `*`, el comando se aplica a todos los subprocesos. Si el número del subproceso comienza con `~`, el comando se aplica a todos los subprocesos excepto al especificado por *threadNumber*. Los subprocesos suspendidos se excluyen de la ejecución cuando el proceso se ejecuta mediante el comando **go** o **step**. Si no hay ningún subproceso no suspendido en el proceso y se emite el comando **go**, el proceso no continuará. En ese caso, presione CTRL-C para interrumpir el proceso.|  
-|**sy**[**mbol**] *commandName* [*commandValue*]|Permite especificar uno de los siguientes comandos:<br /><br /> -   `symbol path` [`"``value``"`]: muestra o establece la ruta de acceso actual a los símbolos.<br />-   `symbol addpath` `"` `value` `"`: agrega a la ruta de acceso actual a los símbolos.<br />-   `symbol reload` [`"``module``"`]: recarga todos los símbolos o los símbolos del módulo especificado.<br />-   `symbol list` [`module`]: muestra los símbolos cargados actualmente para todos los módulos o para el módulo especificado.|  
+|**sy**[**mbol**] *commandName* [*commandValue*]|Permite especificar uno de los siguientes comandos:<br /><br /> -   `symbol path` [`"value"`]: muestra o establece la ruta de acceso actual a los símbolos.<br />-   `symbol addpath` `"value"`: agrega a la ruta de acceso actual a los símbolos.<br />-   `symbol reload` [`"module"`]: recarga todos los símbolos o los símbolos del módulo especificado.<br />-   `symbol list` [`module`]: muestra los símbolos cargados actualmente para todos los módulos o para el módulo especificado.|  
 |**t**[**hread**] [*newThread*] [-*nick nickname*`]`|El comando de subprocesos sin parámetros muestra todos los subprocesos administrados en el proceso actual. Los subprocesos suelen identificarse por sus números de subproceso; sin embargo, si un subproceso tiene asignado un alias, se muestra el alias en su lugar. Puede utilizar el parámetro `-nick` para asignar un alias a un subproceso.<br /><br /> -   **thread** `-nick` *threadName* asigna un alias al subproceso que se está ejecutando actualmente.<br /><br /> Los alias no pueden ser números. Si el subproceso actual ya tiene un alias asignado, el alias anterior se reemplaza con el nuevo. Si el nuevo alias es una cadena vacía (""), el alias del subproceso actual se elimina y no se asigna ninguno nuevo.|  
 |**u**[**p**]|Mueve el marco de pila activo hacia arriba.|  
 |**uwgc**[**handle**] [*var*] &#124; [*address*]|Imprime la variable en la que un identificador ha realizado el seguimiento. El identificador se puede especificar por nombre o dirección.|  
@@ -106,6 +106,6 @@ mdbg>
   
 ## <a name="examples"></a>Ejemplos  
   
-## <a name="see-also"></a>Vea también  
- [Herramientas](../../../docs/framework/tools/index.md)  
- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Vea también
+- [Herramientas](../../../docs/framework/tools/index.md)
+- [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

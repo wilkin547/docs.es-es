@@ -1,5 +1,5 @@
 ---
-title: Concatenación de varias cadenas (Guía de C#)
+title: Procedimiento para concatenar varias cadenas (C#)
 description: Hay varias maneras de concatenar cadenas en C#. Obtenga información sobre las opciones y las razones para las diferentes opciones.
 ms.date: 02/20/2018
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 355e56acf36b6212ee4563f34722b10b56a0fb47
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: da83a79f58c236692e284a7920c7b98c3520e5d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710422"
 ---
-# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Concatenación de varias cadenas (Guía de C#)
+# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Procedimiento para concatenar varias cadenas (C#)
 
 *Concatenación* es el proceso de anexar una cadena al final de otra cadena. Las cadenas se concatenan con el operador `+`. En el caso de los literales y las constantes de cadena, la concatenación se produce en tiempo de compilación, y no en tiempo de ejecución. En cambio, para las variables de cadena, la concatenación solo se produce en tiempo de ejecución.
 
@@ -55,7 +55,7 @@ Eche un vistazo al código de nuestro [repositorio de GitHub](https://github.com
 
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.String>  
-- <xref:System.Text.StringBuilder>  
-- [Guía de programación de C#](../programming-guide/index.md)  
+- <xref:System.String>
+- <xref:System.Text.StringBuilder>
+- [Guía de programación de C#](../programming-guide/index.md)
 - [Cadenas](../programming-guide/strings/index.md)

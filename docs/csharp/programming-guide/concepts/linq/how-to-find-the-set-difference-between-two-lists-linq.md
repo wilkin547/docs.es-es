@@ -1,20 +1,20 @@
 ---
-title: 'Cómo: Buscar la diferencia de conjuntos entre dos listas (LINQ) (C#)'
+title: Procedimiento para buscar la diferencia de conjuntos entre dos listas (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: e416e97b8fe3a1a76a0f04ea46353d9fd8c0ad8c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 13166aaeba50d8cca33861d5489d7839d3933099
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712738"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Cómo: Buscar la diferencia de conjuntos entre dos listas (LINQ) (C#)
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Procedimiento para buscar la diferencia de conjuntos entre dos listas (LINQ) (C#)
 En este ejemplo se muestra cómo usar LINQ para comparar dos listas de cadenas y generar estas líneas, que están en names1.txt pero no en names2.txt.  
   
 ### <a name="to-create-the-data-files"></a>Para crear los archivos de datos  
   
-1.  Copie names1.txt y names2.txt en la carpeta de la solución, como se muestra en [How to: Combine and Compare String Collections (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md) (Cómo: Combinar y comparar colecciones de cadenas (LINQ) (C#)).  
+1.  Copie names1.txt y names2.txt en la carpeta de la solución, como se muestra en [Cómo: Combinar y comparar colecciones de cadenas (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>Ejemplo  
   

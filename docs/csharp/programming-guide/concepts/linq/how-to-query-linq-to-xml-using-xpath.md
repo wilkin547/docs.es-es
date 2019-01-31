@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Consultar LINQ to XML mediante XPath (C#)'
+title: Procedimiento para consultar LINQ to XML mediante XPath (C#)
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
-ms.openlocfilehash: 3d4a75e4688725f2444d3bbc4d55bec828485a5d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a3e9cb29b9ba027cfc70eeb0cd163b24834dff83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564112"
 ---
-# <a name="how-to-query-linq-to-xml-using-xpath-c"></a>Cómo: Consultar LINQ to XML mediante XPath (C#)
+# <a name="how-to-query-linq-to-xml-using-xpath-c"></a>Procedimiento para consultar LINQ to XML mediante XPath (C#)
 Este tema presenta los métodos de extensión que permiten consultar un árbol XML con XPath. Para obtener información detallada acerca del uso de estos métodos de extensión, vea <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
   
  A menos que tenga un motivo muy específico para realizar consultas con XPath, como en el caso del uso intensivo de código heredado, no se recomienda usar XPath con LINQ to XML. Las consultas XPath no se realizarán tan bien como las consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

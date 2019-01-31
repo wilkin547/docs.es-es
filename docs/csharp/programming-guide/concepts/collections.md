@@ -2,12 +2,12 @@
 title: Colecciones (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 24b2155c07b6b66820d373d6310ff6b1c6ab224f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1f73081cacbc08fdaaca3cbc57dfe731eddab7ee
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679179"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084125"
 ---
 # <a name="collections-c"></a>Colecciones (C#)
 Para muchas aplicaciones, puede que desee crear y administrar grupos de objetos relacionados. Existen dos formas de agrupar objetos: mediante la creación de matrices de objetos y con la creación de colecciones de objetos.  
@@ -49,7 +49,7 @@ Para muchas aplicaciones, puede que desee crear y administrar grupos de objetos 
 ## <a name="using-a-simple-collection"></a>Uso de una colección Simple  
  Los ejemplos de esta sección usan la clase genérica <xref:System.Collections.Generic.List%601>, que le permite trabajar con una lista de objetos fuertemente tipados.  
   
- En el ejemplo siguiente se crea una lista de cadenas y luego se recorre en iteración las cadenas mediante una instrucción [foreach](../../../csharp/language-reference/keywords/foreach-in.md).  
+ En el ejemplo siguiente se crea una lista de cadenas y luego se recorren en iteración mediante una instrucción [foreach](../../../csharp/language-reference/keywords/foreach-in.md).  
   
 ```csharp  
 // Create a list of strings.  
@@ -577,13 +577,13 @@ private static IEnumerable<int> EvenSequence(
   
 ## <a name="see-also"></a>Vea también
 
-- [Inicializadores de objeto y colección](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [Conceptos de programación (C#)](../../../csharp/programming-guide/concepts/index.md)  
-- [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
-- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
-- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
-- [Colecciones y estructuras de datos](../../../standard/collections/index.md)  
-- [Crear y manipular colecciones](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
-- [Seleccionar una clase de colección](../../../standard/collections/selecting-a-collection-class.md)  
-- [Comparaciones y ordenaciones en colecciones](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
-- [Cuándo utilizar colecciones genéricas](../../../standard/collections/when-to-use-generic-collections.md)  
+- [Inicializadores de objeto y colección](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Conceptos de programación (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Colecciones y estructuras de datos](../../../standard/collections/index.md)
+- [Crear y manipular colecciones](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
+- [Seleccionar una clase de colección](../../../standard/collections/selecting-a-collection-class.md)
+- [Comparaciones y ordenaciones en colecciones](../../../standard/collections/comparisons-and-sorts-within-collections.md)
+- [Cuándo utilizar colecciones genéricas](../../../standard/collections/when-to-use-generic-collections.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Convertir flujos de .NET Framework en flujos de Windows Runtime, y viceversa'
+title: Procedimiento para convertir flujos de .NET Framework en flujos de Windows Runtime y viceversa
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,16 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 6a006d739b6fa9a31ad238702dd0b2d26254deca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087484"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492771"
 ---
-# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Cómo: Convertir flujos de .NET Framework en flujos de Windows Runtime, y viceversa
+# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Procedimiento para convertir flujos de .NET Framework en flujos de Windows Runtime y viceversa
 
-.NET Framework para aplicaciones de la Tienda Windows es un subconjunto de la plataforma .NET Framework completa. Debido a los requisitos de seguridad y de otro tipo de las aplicaciones de la Tienda Windows, no se puede usar el conjunto completo de API de .NET Framework para abrir y leer archivos. Para obtener más información, vea [Información general de .NET para aplicaciones de la Tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Sin embargo, puede que desee usar las API de .NET Framework para otras operaciones de manipulación de secuencias. Para manipular estas secuencias, puede que sea necesario convertir entre un tipo de secuencia de .NET Framework como <xref:System.IO.MemoryStream> o <xref:System.IO.FileStream>, y una secuencia de Windows Runtime como <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> o <xref:Windows.Storage.Streams.IRandomAccessStream>.
+.NET Framework para aplicaciones de la Tienda Windows es un subconjunto de la plataforma .NET Framework completa. Debido a los requisitos de seguridad y de otro tipo de las aplicaciones de la Tienda Windows, no se puede usar el conjunto completo de API de .NET Framework para abrir y leer archivos. Para más información, consulte [Información general de .NET para aplicaciones de la Tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Sin embargo, puede que desee usar las API de .NET Framework para otras operaciones de manipulación de secuencias. Para manipular estas secuencias, puede que sea necesario convertir entre un tipo de secuencia de .NET Framework como <xref:System.IO.MemoryStream> o <xref:System.IO.FileStream>, y una secuencia de Windows Runtime como <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> o <xref:Windows.Storage.Streams.IRandomAccessStream>.
 
 La clase [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx) contiene métodos que facilitan estas conversiones. Sin embargo, hay diferencias subyacentes entre las secuencias de .NET Framework y de Windows en tiempo de ejecución que afectarán a los resultados del uso de estos métodos. Los detalles se describen en las secciones siguientes.
 
@@ -79,6 +79,6 @@ Las secuencias de .NET Framework no admiten la clonación, incluso después de l
 
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial rápido: leer y escribir en un archivo (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-- [Información general de .NET para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-- [.NET para aplicaciones de la Tienda Windows: API admitidas](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [Inicio rápido: lectura y escritura en un archivo (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)
+- [Información general de .NET para aplicaciones de la Tienda Windows](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)
+- [.NET para aplicaciones de la Tienda Windows: API admitidas](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)

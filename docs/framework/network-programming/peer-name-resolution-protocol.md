@@ -2,12 +2,12 @@
 title: Protocolo de resolución de nombres del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9f1850ff3a42526de988df032c39aaa916987d25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662666"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocolo de resolución de nombres del mismo nivel
 En entornos punto a punto, los elementos del mismo nivel usan sistemas de resolución de nombres específicos para resolver sus respectivas ubicaciones de red (direcciones, protocolos y puertos) a partir de nombres u otros tipos de identificadores. Antes, la resolución de nombres del mismo nivel resultaba complicada por la conectividad intrínsecamente transitoria y por otras limitaciones del Sistema de nombres de dominio (DNS).  
@@ -38,7 +38,7 @@ El Protocolo de resolución de nombres de mismo nivel tiene las propiedades sigu
   
 -   <xref:System.Net.PeerToPeer.Cloud>: define la información que describe una nube PNRP disponible, incluido su ámbito.  
   
--   <xref:System.Net.PeerToPeer.PeerName>: define un nombre del mismo nivel que puede usarse para registrar y resolver posteriormente un elemento del mismo nivel dentro de una nube.  
+-   <xref:System.Net.PeerToPeer.PeerName>: define un nombre del mismo nivel que se puede usar para registrar y resolver posteriormente un elemento del mismo nivel dentro de una nube.  
   
 -   <xref:System.Net.PeerToPeer.PeerNameRecord>: define el registro de la nube PNRP que contiene la información de registro de un elemento del mismo nivel, que incluye los puntos de conexión de red en los que se puede establecer contacto con dicho elemento.  
   
@@ -46,8 +46,8 @@ El Protocolo de resolución de nombres de mismo nivel tiene las propiedades sigu
   
 -   <xref:System.Net.PeerToPeer.PeerNameResolver>: define el proceso para resolver un nombre del mismo nivel en sus puntos de conexión de red, incluidos los métodos sincrónicos y asincrónicos para la resolución.  
   
-## <a name="see-also"></a>Vea también  
-- <xref:System.ServiceModel.PeerResolvers>  
-- <xref:System.Net.PeerToPeer>  
+## <a name="see-also"></a>Vea también
+- <xref:System.ServiceModel.PeerResolvers>
+- <xref:System.Net.PeerToPeer>
 - [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Ejemplo de tecnología punto a punto](https://go.microsoft.com/fwlink/?LinkID=179571)

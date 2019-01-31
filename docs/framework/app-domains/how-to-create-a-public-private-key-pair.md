@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear un par de claves privada y pública'
+title: Procedimiento para crear un par de claves privada y pública
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08715f2824dcb7dbc2c6aa26fd3bd8bd71b97038
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ce346bfe0c20e94673009adb0134fbaab62cf551
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653923"
 ---
-# <a name="how-to-create-a-public-private-key-pair"></a>Cómo: Crear un par de claves privada y pública
+# <a name="how-to-create-a-public-private-key-pair"></a>Procedimiento para crear un par de claves privada y pública
 
 Para firmar un ensamblado con un nombre seguro, debe disponer de un par de claves privada/pública. Este par de claves criptográficas pública y privada se utiliza durante la compilación para crear un ensamblado con un nombre seguro. Puede crear un par de claves utilizando la [Herramienta Nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md). Normalmente, los archivos de par de claves tienen la extensión snk.
 

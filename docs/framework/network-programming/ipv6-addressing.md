@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: ac8b8bae69ba20f34bb74fbff533ba53f915a150
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633857"
 ---
 # <a name="ipv6-addressing"></a>Direccionamiento IPv6
 En el protocolo de Internet versión 6 (IPv6), las direcciones tienen una longitud de 128 bits. Entre otras razones, el espacio de direcciones es tan grande para subdividir las direcciones disponibles en una jerarquía de dominios de enrutamiento que reflejen la topología de Internet y para asignar las direcciones de los adaptadores de red (o interfaces) que conectan los dispositivos a la red. IPv6 se caracteriza por una capacidad inherente para resolver direcciones en su nivel más bajo, que es el nivel de la interfaz de red, y cuenta con funciones de configuración automática.  
@@ -60,11 +60,11 @@ En el protocolo de Internet versión 6 (IPv6), las direcciones tienen una longit
   
 -   **Dirección de unidifusión**. Identificador de una única interfaz. Un paquete enviado a esta dirección se entrega a la interfaz identificada. Las direcciones de unidifusión se diferencian de las direcciones de multidifusión por el valor del octeto de orden superior. El octeto de orden superior de las direcciones de multidifusión tiene el valor hexadecimal de FF. Los demás valores de este octeto identifican una dirección de unidifusión. A continuación se muestran diferentes tipos de direcciones de unidifusión:  
   
-    -   **Direcciones locales de vínculo**. Estas direcciones se usan en un único vínculo y tienen el formato siguiente: FE80::*InterfaceID*. Las direcciones locales de vínculo se usan entre nodos en un vínculo para la configuración de dirección automática, la detección de equipos cercanos o cuando no hay enrutadores presentes. Las direcciones locales de vínculo se usan principalmente en el inicio y cuando el sistema todavía no ha adquirido direcciones de ámbito mayor.  
+    -   **Direcciones locales de vínculo**. Estas direcciones se usan en un único vínculo y tienen el formato siguiente: FE80::*IdentificadorDeInterfaz*. Las direcciones locales de vínculo se usan entre nodos en un vínculo para la configuración de dirección automática, la detección de equipos cercanos o cuando no hay enrutadores presentes. Las direcciones locales de vínculo se usan principalmente en el inicio y cuando el sistema todavía no ha adquirido direcciones de ámbito mayor.  
   
-    -   **Direcciones locales de sitio**. Estas direcciones se usan en un único sitio y tienen el formato siguiente: FEC0::*SubnetID*:*InterfaceID*. Las direcciones locales de sitio se usan para el direccionamiento dentro de un sitio sin necesidad de un prefijo global.  
+    -   **Direcciones locales de sitio**. Estas direcciones se usan en un único sitio y tienen el formato siguiente: FEC0::*IdentificadorDeSubred*:*IdentificadorDeInterfaz*. Las direcciones locales de sitio se usan para el direccionamiento dentro de un sitio sin necesidad de un prefijo global.  
   
-    -   **Direcciones de unidifusión IPv6 globales**. Estas direcciones pueden usarse en Internet y tienen el formato siguiente: 010(FP, 3 bits) TLA ID (13 bits) Reserved (8 bits) NLA ID (24 bits) SLA ID (16 bits) *InterfaceID* (64 bits).  
+    -   **Direcciones de unidifusión IPv6 globales**. Estas direcciones se pueden usar en Internet y tienen el formato siguiente: 010(FP, 3 bits) TLA ID (13 bits) Reserved (8 bits) NLA ID (24 bits) SLA ID (16 bits) *IdentificadorDeInterfaz* (64 bits).  
   
 -   **Dirección de multidifusión**. Identificador para un conjunto de interfaces (normalmente pertenecientes a diferentes nodos). Un paquete enviado a esta dirección se entrega a todas las interfaces identificadas por la dirección. Los tipos de dirección de multidifusión sustituyen a las direcciones de difusión IPv4.  
   
@@ -72,6 +72,6 @@ En el protocolo de Internet versión 6 (IPv6), las direcciones tienen una longit
   
  En general, un nodo siempre tiene una dirección local de vínculo. Podría tener una dirección local de sitio y una o varias direcciones globales.  
   
-## <a name="see-also"></a>Vea también  
- [Protocolo de Internet versión 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [Sockets](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>Vea también
+- [Protocolo de Internet versión 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Sockets](../../../docs/framework/network-programming/sockets.md)

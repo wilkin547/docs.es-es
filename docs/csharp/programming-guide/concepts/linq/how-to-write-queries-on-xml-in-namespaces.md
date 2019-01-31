@@ -1,15 +1,15 @@
 ---
-title: Escribir consultas de XML en espacios de nombres (C#)
+title: Procedimiento para escribir consultas de XML en espacios de nombres (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: 29c4b01bfce75ce71d5214fef0cc55cd82c4e776
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e6b966e90d1f7fc86efaa422ecd8afb030d97163
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525648"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722107"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Escribir consultas de XML en espacios de nombres (C#)
+# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Procedimiento para escribir consultas de XML en espacios de nombres (C#)
 Para escribir una consulta en XML que esté en un espacio de nombres, debe usar objetos <xref:System.Xml.Linq.XName> que tengan el espacio de nombres correcto.  
   
  Para C#, el enfoque más común consiste en inicializar un objeto <xref:System.Xml.Linq.XNamespace> usando una cadena que contiene el identificador URI y, después, usar la sobrecarga del operador de suma para combinar el espacio de nombres con el nombre local.  

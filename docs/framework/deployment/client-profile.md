@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a104b6c755eb0b97f11e577fb3eeb182e465fe4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 06db09ac66164886b1dc99a37129201543c5ce4c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200828"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514327"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 El perfil de cliente .NET es un subconjunto de .NET Framework que se proporcionaba con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] y versiones anteriores, optimizado para las aplicaciones cliente. .NET Framework es una plataforma de desarrollo para Windows, Windows Phone y Microsoft Azure que proporciona un entorno de ejecución de aplicaciones administrado y la biblioteca de clases .NET Framework. En [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] y las versiones anteriores se proporcionaban dos opciones de implementación: .NET Framework completo y Client Profile. Client Profile permitía una implementación más rápida y el uso de paquetes de instalación de aplicaciones más pequeños que en la versión completa de .NET Framework.  
@@ -27,8 +27,8 @@ El perfil de cliente .NET es un subconjunto de .NET Framework que se proporciona
   
  Al instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework 4 Client Profile se actualiza a la versión completa de .NET Framework. Para obtener información sobre cómo instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], vea [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md) (Instalar .NET Framework para desarrolladores).  
   
-## <a name="see-also"></a>Vea también  
-- [.NET Framework Client Profile (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)  
-- [Información general sobre la compatibilidad con múltiples versiones (multi-targeting) en Visual Studio](/visualstudio/ide/visual-studio-multi-targeting-overview)  
-- [Solucionar problemas de versión de .NET Framework de destino](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)  
-- [Cómo: Usar como destino una versión de .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
+## <a name="see-also"></a>Vea también
+- [.NET Framework Client Profile (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
+- [Información general sobre la compatibilidad con múltiples versiones (multi-targeting) en Visual Studio](/visualstudio/ide/visual-studio-multi-targeting-overview)
+- [Solucionar problemas de versión de .NET Framework de destino](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
+- [Cómo: Usar una versión de .NET Framework como destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)

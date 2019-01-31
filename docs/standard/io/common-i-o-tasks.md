@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: ac2b0eafa64b809d2b40ac6471806dc9ab3c8c53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45641513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609634"
 ---
 # <a name="common-io-tasks"></a>Tareas de E/S comunes
 El espacio de nombres <xref:System.IO> proporciona varias clases que permiten realizar diferentes acciones, como leer y escribir, en archivos, directorios y secuencias. Para más información, vea [E/S de archivos y secuencias](../../../docs/standard/io/index.md).  
@@ -28,7 +28,7 @@ El espacio de nombres <xref:System.IO> proporciona varias clases que permiten re
 |Cambiar el nombre de un archivo o moverlo|Método <xref:System.IO.File.Move%2A?displayProperty=nameWithType><br /><br /> Método <xref:System.IO.FileInfo.MoveTo%2A?displayProperty=nameWithType>|  
 |Eliminar un archivo|Método <xref:System.IO.File.Delete%2A?displayProperty=nameWithType><br /><br /> Método <xref:System.IO.FileInfo.Delete%2A?displayProperty=nameWithType>|  
 |Copiar un archivo|Método <xref:System.IO.File.Copy%2A?displayProperty=nameWithType><br /><br /> Método <xref:System.IO.FileInfo.CopyTo%2A?displayProperty=nameWithType>|  
-|Obtener el tamaño de un archivo|Propiedad <xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>|  
+|Obtener el tamaño de un archivo|Propiedad<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType> |  
 |Obtener los atributos de un archivo|Método <xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType>|  
 |Establecer los atributos de un archivo|Método <xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType>|  
 |Determinar si existe un archivo|Método <xref:System.IO.File.Exists%2A?displayProperty=nameWithType>|  
@@ -44,17 +44,17 @@ El espacio de nombres <xref:System.IO> proporciona varias clases que permiten re
 |Para...|Vea el ejemplo de este tema...|  
 |-------------------|--------------------------------------|  
 |Obtener acceso a un archivo de una carpeta especial como Mis documentos|[Cómo: Escribir texto en un archivo](../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
-|Crear un directorio|Método <xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType><br /><br /> Propiedad <xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType>|  
+|Crear un directorio|Método <xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType><br /><br /> Propiedad<xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType> |  
 |Crear un subdirectorio|Método <xref:System.IO.DirectoryInfo.CreateSubdirectory%2A?displayProperty=nameWithType>|  
 |Cambiar el nombre de un directorio o moverlo|Método <xref:System.IO.Directory.Move%2A?displayProperty=nameWithType><br /><br /> Método <xref:System.IO.DirectoryInfo.MoveTo%2A?displayProperty=nameWithType>|  
-|Copiar un directorio|[Copiar directorios](../../../docs/standard/io/how-to-copy-directories.md)|  
+|Copiar un directorio|[Cómo: Copiar directorios](../../../docs/standard/io/how-to-copy-directories.md)|  
 |Eliminar un directorio|Método <xref:System.IO.Directory.Delete%2A?displayProperty=nameWithType><br /><br /> Método <xref:System.IO.DirectoryInfo.Delete%2A?displayProperty=nameWithType>|  
-|Ver los archivos y los subdirectorios de un directorio|[Enumerar directorios y archivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)|  
+|Ver los archivos y los subdirectorios de un directorio|[Cómo: Enumerar directorios y archivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)|  
 |Buscar el tamaño de un directorio|Clase <xref:System.IO.Directory?displayProperty=nameWithType>|  
 |Determinar si existe un directorio|Método <xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Vea también
 
-- [E/S de archivos y secuencias](../../../docs/standard/io/index.md)  
-- [Crear secuencias](../../../docs/standard/io/composing-streams.md)  
-- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md) (E/S de archivos asincrónica)
+- [E/S de archivos y secuencias](../../../docs/standard/io/index.md)
+- [Crear secuencias](../../../docs/standard/io/composing-streams.md)
+- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)

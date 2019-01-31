@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8717d00b706edf37ce1112bc6d96048d6daa9cd
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: ae6cb54d73c56db7c118b617e070ea86944adeaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53781081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720215"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework
 
@@ -33,7 +33,7 @@ En esta tabla, 4.5.*x* hace referencia a .NET Framework 4.5 y sus versiones secu
 |Si se desinstala Microsoft .NET Framework, puede dar lugar a que otras aplicaciones dejen de funcionar.|En general, no debe desinstalar ninguna versión de .NET Framework que esté instalada en el equipo, ya que puede haber aplicaciones que dependan de una versión concreta de .NET Framework. Para obtener más información, vea la sección [.NET Framework para usuarios](../../../docs/framework/get-started/index.md#ForUsers) en la guía *Introducción*.|  
 |Ya se ha instalado en el equipo .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* (ESN) o una versión posterior.|No se requiere ninguna acción.<br /><br /> Para determinar qué versiones de .NET Framework están instaladas en un sistema, vea [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* (*idioma*) requiere .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*. Instale .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* desde el Centro de descarga y vuelva a ejecutar el programa de instalación.|Debe instalar la versión en inglés de la versión especificada de .NET Framework antes de instalar un paquete de idioma. Para obtener más información, vea la sección [Para instalar paquetes de idioma](../../../docs/framework/install/guide-for-developers.md#to-install-language-packs) de la guía de instalación.|  
-|No se puede instalar .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*. Otras aplicaciones del equipo no son compatibles con este programa.<br /><br /> O bien<br /><br /> Otras aplicaciones del equipo no son compatibles con este programa.|La causa más probable de este mensaje es que se instaló una versión Preview o RC de .NET Framework. Desinstale la versión Preview o RC y vuelva a ejecutar el programa de instalación.|  
+|No se puede instalar .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*. Otras aplicaciones del equipo no son compatibles con este programa.<br /><br /> o bien<br /><br /> Otras aplicaciones del equipo no son compatibles con este programa.|La causa más probable de este mensaje es que se instaló una versión Preview o RC de .NET Framework. Desinstale la versión Preview o RC y vuelva a ejecutar el programa de instalación.|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* no se puede desinstalar con este paquete. Para desinstalar .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* en el equipo, vaya a **Panel de control**, elija **Programas y características**, escoja **Ver actualizaciones instaladas**, seleccione Actualización para Microsoft Windows (KB2828152) y, por último, elija **Desinstalar**.|El paquete que está instalando no desinstala la versión Preview o RC de .NET Framework.<br /><br /> Desinstale la versión Preview o RC desde el Panel de control.|  
 |No se puede desinstalar .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*. Otras aplicaciones del equipo dependen de este programa.|En general, no debe desinstalar ninguna versión de .NET Framework que esté instalada en el equipo, ya que puede haber aplicaciones que dependan de una versión concreta de .NET Framework. Para obtener más información, vea la sección [.NET Framework para usuarios](../../../docs/framework/get-started/index.md#ForUsers) en la guía *Introducción*.|  
 |El paquete redistribuible de .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* no se aplica a este sistema operativo. Descargue .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* para su sistema operativo desde el Centro de descarga de Microsoft.|Es posible que esté intentando instalar [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 o 4.7.2 en una plataforma no compatible o que haya elegido un paquete de instalación que no incluye los componentes para todos los sistemas operativos compatibles. Vuelva a ejecutar la instalación por medio del instalador sin conexión ([para 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=309493), [para 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706), [para 4.6](https://go.microsoft.com/fwlink/p/?LinkId=528233), [para 4.6.1](https://go.microsoft.com/fwlink/p/?LinkId=671744), para [4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604), para [4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)), para [4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090) o para [4.7.2](https://go.microsoft.com/fwlink/p/?LinkId=863265). Para obtener más información, consulte la [guía de instalación](../../../docs/framework/install/guide-for-developers.md) y los [requisitos del sistema](../../../docs/framework/get-started/system-requirements.md) para los sistemas operativos compatibles.|  
@@ -77,6 +77,6 @@ El programa de instalación de .NET Framework no se puede ejecutar en el modo de
 
 ## <a name="see-also"></a>Vea también
 
-[Instalación de .NET Framework para desarrolladores](../../../docs/framework/install/guide-for-developers.md)   
-[Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
-[Versiones y dependencias](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [Instalación de .NET Framework para desarrolladores](../../../docs/framework/install/guide-for-developers.md)
+- [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [Versiones y dependencias](../../../docs/framework/migration-guide/versions-and-dependencies.md)

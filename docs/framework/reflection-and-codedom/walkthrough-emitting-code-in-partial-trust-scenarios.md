@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Emitir código en escenarios que no son de plena confianza'
+title: 'Tutorial: Emisión de código en escenarios que no son de plena confianza'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8461e0a074e7bdf9e1e2631c3f65e16de7256fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712579"
 ---
-# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Tutorial: Emitir código en escenarios que no son de plena confianza
+# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Tutorial: Emisión de código en escenarios que no son de plena confianza
 La emisión de reflexión usa el mismo conjunto de API con confianza completa o parcial, pero algunas características requieren permisos especiales en entornos de confianza parcial. Además, la emisión de reflexión tiene una característica, los métodos dinámicos hospedados de forma anónima, diseñada para su uso en entornos de confianza parcial y por ensamblados transparentes en seguridad.  
   
 > [!NOTE]
@@ -67,7 +67,7 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
 2.  Cree un objeto <xref:System.AppDomainSetup> para inicializar el dominio de aplicación con una ruta de aplicación.  
   
     > [!IMPORTANT]
-    >  Para simplificar, en este ejemplo de código se usa la carpeta actual. Para ejecutar código que procede de Internet, use una carpeta independiente para el código que no es de confianza, tal y como se describe en [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+    >  Para simplificar, en este ejemplo de código se usa la carpeta actual. Para ejecutar código que procede de Internet, use una carpeta independiente para el código que no es de confianza, como se describe en [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
@@ -184,12 +184,12 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
 <a name="Example"></a>   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descripción  
  En el ejemplo de código siguiente se muestra cómo se utiliza el marcador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> para permitir que los métodos dinámicos hospedados de forma anónima omitan las comprobaciones de visibilidad JIT, pero sólo cuando el miembro de destino tiene un nivel de confianza igual o menor que el ensamblado que emite el código.  
   
  El ejemplo define una clase `Worker` cuyas referencias se pueden calcular en los límites del dominio de aplicación. La clase tiene dos sobrecargas de método `AccessPrivateMethod` que emiten y ejecutan métodos dinámicos. La primera sobrecarga emite un método dinámico que llama al método privado `PrivateMethod` de la clase `Worker` y puede emitir el método dinámico con o sin comprobaciones de visibilidad JIT. La segunda sobrecarga emite un método dinámico que tiene acceso a una propiedad `internal` (propiedad `Friend` en Visual Basic) de la clase <xref:System.String>.  
   
- El ejemplo usa un método de aplicación auxiliar para crear un conjunto de permisos concedidos limitado a los permisos de `Internet` y crea un dominio de aplicación mediante la sobrecarga del método <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> para especificar que todo el código que se ejecute en el dominio usa este conjunto de permisos concedidos. En el ejemplo se crea una instancia de la clase `Worker` en el dominio de aplicación y se ejecuta el método `AccessPrivateMethod` dos veces.  
+ El ejemplo usa un método del asistente para crear un conjunto de permisos concedidos limitado a los permisos de `Internet` y crea un dominio de aplicación mediante la sobrecarga del método <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> para especificar que todo el código que se ejecute en el dominio usa este conjunto de permisos concedidos. En el ejemplo se crea una instancia de la clase `Worker` en el dominio de aplicación y se ejecuta el método `AccessPrivateMethod` dos veces.  
   
 -   La primera vez que se ejecuta el método `AccessPrivateMethod`, se exigen las comprobaciones de visibilidad JIT. Se producirá un error en el método dinámico cuando se invoque, porque las comprobaciones de visibilidad JIT le impedirán el acceso al método privado.  
   
@@ -211,6 +211,6 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
   
 -   Si compila este código de ejemplo en Visual Studio, debe cambiar el nombre de la clase para que incluya el espacio de nombres al pasarla al método <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. De forma predeterminada, el espacio de nombres es el nombre del proyecto. Por ejemplo, si el proyecto es "PartialTrust", el nombre de clase debe ser "PartialTrust.Worker".  
   
-## <a name="see-also"></a>Vea también  
- [Problemas de seguridad en la emisión de la reflexión](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+## <a name="see-also"></a>Vea también
+- [Problemas de seguridad en la emisión de la reflexión](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
+- [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

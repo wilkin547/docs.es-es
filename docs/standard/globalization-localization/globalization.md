@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 84e44f0112a5d1b5fd38daf488d865f6e228f82b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453364"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713946"
 ---
 # <a name="globalization"></a>Globalización
 La globalización implica diseñar y desarrollar una aplicación de uso internacional que admita interfaces localizadas y datos regionales para usuarios de varias referencias culturales. Antes de comenzar la fase de diseño, debe determinar qué referencias culturales admitirá la aplicación. Aunque una aplicación se dirige a una sola referencia cultural o región de forma predeterminada, puede diseñarla y escribirla de tal forma que se pueda ampliar fácilmente a los usuarios de otras referencias culturales o regiones.  
@@ -99,7 +99,7 @@ La globalización implica diseñar y desarrollar una aplicación de uso internac
 > [!TIP]
 >  Puede usar la clase <xref:System.Globalization.StringInfo> para trabajar con los elementos de texto en lugar de los caracteres individuales de una cadena.  
   
- En búsquedas y comparaciones de cadenas, un error común es tratar la cadena como una colección de caracteres, cada uno de ellos se representa mediante un objeto <xref:System.Char>. De hecho, un solo carácter puede estar formado por uno, dos o más objetos <xref:System.Char>. Estos caracteres se encuentran con más frecuencia en cadenas de referencias culturales cuyos alfabetos constan de caracteres fuera del intervalo de caracteres de latín básico de Unicode (U+0021 a U+007E). En el ejemplo siguiente se intenta encontrar el índice del carácter LETRA LATINA A MAYÚSCULA CON ACENTO GRAVE (U+00C0) en una cadena. En cambio, este carácter se puede representar de dos formas diferentes: como una unidad de código única (U+00C0) o como un carácter compuesto (dos unidades de código: U+0021 y U+007E). En este caso, el carácter se representa en la instancia de cadena mediante dos objetos <xref:System.Char>, U+0021 y U+007E. El código de ejemplo llama a las sobrecargas <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> y <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> para buscar la posición de este carácter en la instancia de cadena, pero estas devuelven resultados diferentes. La primera llamada al método tiene un argumento <xref:System.Char>; realiza una comparación ordinal y, por tanto, no se puede encontrar una coincidencia. La segunda llamada tiene un argumento <xref:System.String>; realiza una comparación que tiene en cuenta la referencia cultural y, por tanto, se encuentra una coincidencia.  
+ En búsquedas y comparaciones de cadenas, un error común es tratar la cadena como una colección de caracteres, cada uno de ellos se representa mediante un objeto <xref:System.Char>. De hecho, un solo carácter puede estar formado por uno, dos o más objetos <xref:System.Char>. Estos caracteres se encuentran con más frecuencia en cadenas de referencias culturales cuyos alfabetos constan de caracteres fuera del intervalo de caracteres de latín básico de Unicode (U+0021 a U+007E). En el ejemplo siguiente se intenta encontrar el índice del carácter LETRA LATINA A MAYÚSCULA CON ACENTO GRAVE (U+00C0) en una cadena. Pero este carácter se puede representar de dos formas diferentes: como una única unidad de código (U+00C0), o bien como un carácter compuesto (dos unidades de código: U+0021 y U+007E). En este caso, el carácter se representa en la instancia de cadena mediante dos objetos <xref:System.Char>, U+0021 y U+007E. El código de ejemplo llama a las sobrecargas <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> y <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> para buscar la posición de este carácter en la instancia de cadena, pero estas devuelven resultados diferentes. La primera llamada al método tiene un argumento <xref:System.Char>; realiza una comparación ordinal y, por tanto, no se puede encontrar una coincidencia. La segunda llamada tiene un argumento <xref:System.String>; realiza una comparación que tiene en cuenta la referencia cultural y, por tanto, se encuentra una coincidencia.  
   
  [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
  [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]  
@@ -204,7 +204,7 @@ La globalización implica diseñar y desarrollar una aplicación de uso internac
   
 <a name="DatesAndTimes_TimeZones"></a>   
 ### <a name="serialization-and-time-zone-awareness"></a>Reconocimiento de la serialización y la zona horaria  
- Un valor de fecha y hora puede tener varias interpretaciones, desde una hora general ("Las tiendas abren el 2 de enero de 2013 a las 9:00 a. m.") hasta un momento específico en el tiempo ("Fecha de nacimiento: 2 de enero de 2013 a las 6:32:00 a. m."). Cuando un valor de tiempo representa un momento específico en el tiempo y lo restaura desde un valor serializado, debe asegurarse de que representa el mismo momento en el tiempo, independientemente de la ubicación geográfica o la zona horaria del usuario.  
+ Un valor de fecha y hora puede tener varias interpretaciones, desde una hora general ("Las tiendas abren el 2 de enero de 2013 a las 9:00") hasta un momento específico en el tiempo ("Fecha de nacimiento: 2 de enero de 2013 a las 6:32:00"). Cuando un valor de tiempo representa un momento específico en el tiempo y lo restaura desde un valor serializado, debe asegurarse de que representa el mismo momento en el tiempo, independientemente de la ubicación geográfica o la zona horaria del usuario.  
   
  El siguiente ejemplo ilustra este problema. Guarda un solo valor de fecha y hora local como una cadena en tres [formatos estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) ("G" para hora larga de fecha general, "s" para la fecha y hora que se puede ordenar y "o" para la fecha y hora de ida y vuelta), así como en formato binario.  
   
@@ -371,5 +371,5 @@ La globalización implica diseñar y desarrollar una aplicación de uso internac
   
 ## <a name="see-also"></a>Vea también
 
-- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)  
+- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)
 - [Procedimientos recomendados para el uso de cadenas](../../../docs/standard/base-types/best-practices-strings.md)

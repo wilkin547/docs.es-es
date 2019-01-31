@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Determinar el nombre completo de un ensamblado'
+title: Procedimiento para determinar el nombre completo de un ensamblado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb5978859ba25e1595ac3da7a2d7dad8cc2cad85
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b7124271c0118800883d4beb68591f8591ac43dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142728"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520716"
 ---
-# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Cómo: Determinar el nombre completo de un ensamblado
-Para conocer el nombre completo de un ensamblado de la caché global de ensamblados, use la herramienta Caché global de ensamblados ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Vea [Cómo: Consultar el contenido de la caché global de ensamblados](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
+# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Procedimiento para determinar el nombre completo de un ensamblado
+Para conocer el nombre completo de un ensamblado de la caché global de ensamblados, use la herramienta Caché global de ensamblados ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Vea [Cómo: Consultar el contenido de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
   
  En el caso de los ensamblados que no están en la caché global de ensamblados, puede obtener el nombre completo del ensamblado de varias formas: puede usar código para enviar la información a la consola o a una variable, o puede usar [Ildasm.exe (Desensamblador de MSIL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar los metadatos del ensamblado, que contienen el nombre completo.  
   
@@ -42,10 +42,10 @@ Para conocer el nombre completo de un ensamblado de la caché global de ensambla
  [!code-csharp[Assembly.Fullname#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.FullName/CS/example2.cs#2)]
  [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
-## <a name="see-also"></a>Vea también  
-- [Nombres de ensamblado](../../../docs/framework/app-domains/assembly-names.md)  
-- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)  
-- [Crear y utilizar ensamblados con nombre seguro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
-- [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)  
-- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>Vea también
+- [Nombres de ensamblado](../../../docs/framework/app-domains/assembly-names.md)
+- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
+- [Crear y utilizar ensamblados con nombre seguro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)
+- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)

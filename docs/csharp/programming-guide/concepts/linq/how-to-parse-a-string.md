@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: Analizar una cadena (C#)'
+title: Procedimiento para analizar una cadena (C#)
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: b6b955d2cc9a3ea0c6e17e68639ad7fc677c3fc7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c4d26f534c718d69c84a30b11de22249b241e084
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43744805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629792"
 ---
-# <a name="how-to-parse-a-string-c"></a>Cómo: Analizar una cadena (C#)
+# <a name="how-to-parse-a-string-c"></a>Procedimiento para analizar una cadena (C#)
 En este tema se muestra cómo analizar una cadena para crear un árbol XML en C#.  
   
 ## <a name="example"></a>Ejemplo  

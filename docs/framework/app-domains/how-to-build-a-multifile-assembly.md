@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Compilar un ensamblado de varios archivos'
+title: Procedimiento para compilar un ensamblado de varios archivos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3072be4e870b64edcea32bb7159db8c64c50d840
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5f7bbbb2a0c0344d1da1e26d2eb35a65a56a80d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183105"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534448"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Cómo: Compilar un ensamblado de varios archivos
+# <a name="how-to-build-a-multifile-assembly"></a>Procedimiento para compilar un ensamblado de varios archivos
 En este artículo se explica cómo crear un ensamblado de múltiples archivos e incluye código que muestra cada paso del procedimiento.  
   
 > [!NOTE]
@@ -96,8 +96,8 @@ En este artículo se explica cómo crear un ensamblado de múltiples archivos e 
   
      Se puede usar el [Desensamblador de MSIL (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar el contenido de un ensamblado o determinar si un archivo es un ensamblado o un módulo.  
   
-## <a name="see-also"></a>Vea también  
-- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)  
-- [Ver el contenido de un ensamblado](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
-- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>Vea también
+- [Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)
+- [Cómo: Ver el contenido de un ensamblado](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
+- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Ensamblados de múltiples archivos](../../../docs/framework/app-domains/multifile-assemblies.md)

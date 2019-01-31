@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Aplicar acciones de ida y vuelta a valores de fecha y hora'
+title: Procedimiento para valores de fecha y hora de ida y vuelta
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628193"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>Cómo: Aplicar acciones de ida y vuelta a valores de fecha y hora
+# <a name="how-to-round-trip-date-and-time-values"></a>Procedimiento para valores de fecha y hora de ida y vuelta
 En muchas aplicaciones, un valor de fecha y hora sirve para identificar inequívocamente un único punto en el tiempo. Este tema muestra cómo guardar y restaurar un valor <xref:System.DateTime>, un valor <xref:System.DateTimeOffset> y un valor de fecha y hora con información sobre la zona horaria, de manera que el valor restaurado identifique la misma hora que el valor guardado.  
   
 ### <a name="to-round-trip-a-datetime-value"></a>Para un valor DateTime de ida y vuelta  
@@ -101,6 +101,6 @@ En muchas aplicaciones, un valor de fecha y hora sirve para identificar inequív
   
 ## <a name="see-also"></a>Vea también
 
-- [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Elección entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)  
+- [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Elección entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)
 - [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

@@ -7,51 +7,51 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bed7c6c856c55662b46ff581f007f9df6b67149d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 500ed62c20036eb3cb78952504fbb0ff0f0c11dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636613"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Temas "Cómo..." sobre dominios de aplicación y ensamblados
 Las siguientes secciones contienen vínculos a todos los temas de procedimientos que se encuentran en la documentación conceptual para programación con dominios de aplicación y ensamblados.  
   
  **Dominios de aplicación**  
   
--   [Crear un dominio de aplicación](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+-   [Cómo: Crear un dominio de aplicación](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
   
--   [Descargar un dominio de aplicación](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+-   [Cómo: Descargar un dominio de aplicación](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
   
--   [Configurar un dominio de aplicación](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+-   [Cómo: Configurar un dominio de aplicación](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
   
 -   [Cómo: Cargar ensamblados en un dominio de aplicación](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
   
--   [Obtener información sobre tipos y miembros desde un ensamblado](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+-   [Cómo: Obtener información sobre tipos y miembros desde un ensamblado](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
   
  **Ensamblados**  
   
--   [Determinar el nombre completo de un ensamblado](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+-   [Cómo: Determinar el nombre completo de un ensamblado](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
   
--   [Compilar un ensamblado de un solo archivo](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
+-   [Cómo: Compilar un ensamblado de un solo archivo](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
   
--   [Compilar un ensamblado de varios archivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+-   [Cómo: Compilar un ensamblado de varios archivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
   
--   [Cómo: Crear un par de claves pública y privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+-   [Cómo: Creación de un par de claves privada y pública](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
   
--   [Cómo: Firmar un ensamblado con un nombre seguro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+-   [Cómo: Firma de un ensamblado con un nombre seguro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
   
--   [How to: Reference a Strong-Named Assembly](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md) (Cómo: Hacer referencia a un ensamblado con nombre seguro)  
+-   [Cómo: Hacer referencia a un ensamblado con nombre seguro](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)  
   
--   [Cómo: Deshabilitar la característica de omisión de nombres seguros](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
+-   [Cómo: Deshabilitar la característica de omisión de nombres seguros](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
   
--   [Instalar un ensamblado en la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+-   [Cómo: Instalar un ensamblado en la caché global de ensamblados](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
   
--   [Consultar el contenido de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+-   [Cómo: Consultar el contenido de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
   
--   [Quitar un ensamblado de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+-   [Cómo: Quitar un ensamblado de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
   
--   [Ver el contenido de un ensamblado](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+-   [Cómo: Ver el contenido de un ensamblado](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
 - [Dominios de aplicación y ensamblados](../../../docs/framework/app-domains/index.md)

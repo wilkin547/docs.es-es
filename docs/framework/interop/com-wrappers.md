@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d86743f59c12cf59376ad542c2cd58f6e8c4ad65
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 38031509b999662c86657f0f5cdc7202de65c194
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607204"
 ---
 # <a name="com-wrappers"></a>Contenedores COM
 COM se diferencia del modelo de objetos de .NET Framework en varios aspectos importantes:  
@@ -34,9 +34,9 @@ Información general sobre los contenedores COM
   
  En la mayoría de los casos, el contenedor estándar RCW o CCW generado por el tiempo de ejecución proporciona la serialización adecuada para las llamadas que traspasan los límites entre COM y .NET Framework. Mediante atributos personalizados, puede ajustar el modo en que el tiempo de ejecución representa el código administrado y no administrado.  
   
-## <a name="see-also"></a>Vea también  
- [Interoperabilidad COM avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- [Contenedor al que se puede llamar en tiempo de ejecución](runtime-callable-wrapper.md)  
- [Contenedor CCW (COM callable wrapper)](com-callable-wrapper.md)  
- [Personalización de contenedores estándar](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
- [Cómo: Personalizar contenedores RCW](https://msdn.microsoft.com/library/4a4bb3da-4d60-4517-99f2-78d46a681732(v=vs.100))
+## <a name="see-also"></a>Vea también
+- [Interoperabilidad COM avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Contenedor al que se puede llamar en tiempo de ejecución](runtime-callable-wrapper.md)
+- [Contenedor CCW (COM callable wrapper)](com-callable-wrapper.md)
+- [Personalización de contenedores estándar](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))
+- [Cómo: Personalizar contenedores RCW](https://msdn.microsoft.com/library/4a4bb3da-4d60-4517-99f2-78d46a681732(v=vs.100))

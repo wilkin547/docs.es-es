@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Prever condiciones de espacio insuficiente con almacenamiento aislado'
+title: Procedimiento para prever condiciones de espacio insuficiente con almacenamiento aislado
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: be3c38c1cf1e6fa6f2bfd5fed05ee8150309d7d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45649391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609686"
 ---
-# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Cómo: Prever condiciones de espacio insuficiente con almacenamiento aislado
+# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Procedimiento para prever condiciones de espacio insuficiente con almacenamiento aislado
 El código que usa el almacenamiento aislado está restringido por una [cuota](../../../docs/standard/io/isolated-storage.md#quotas) que especifica el tamaño máximo para el compartimiento de datos en que se encuentran los directorios y los archivos del almacenamiento aislado. La cuota se define mediante la directiva de seguridad y la pueden configurar los administradores. Si se supera el tamaño máximo permitido al intentar escribir datos, se genera la excepción <xref:System.IO.IsolatedStorage.IsolatedStorageException> y se produce un error en la operación. Esto ayuda a evitar los ataques de denegación de servicio malintencionados que pudieron provocar que la aplicación rechazara solicitudes porque se llenara el almacén de datos.  
   
  Para ayudarlo a determinar si un intento de escritura determinado puede presentar errores por este motivo, la clase <xref:System.IO.IsolatedStorage.IsolatedStorage> proporciona tres propiedades de solo lectura: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A> y <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. Puede utilizar estas propiedades para determinar si escribir en el almacén hará que se supere el tamaño máximo permitido del almacén. Tenga en cuenta que se puede acceder al almacenamiento aislado de forma simultánea; por tanto, al calcular la cantidad de almacenamiento restante, el tiempo durante el cual se intenta escribir en el almacén podría consumir el espacio de almacenamiento. Sin embargo, puede usar el tamaño máximo del almacén para ayudar a determinar si el límite superior del almacenamiento disponible está a punto de alcanzarse.  
@@ -47,6 +47,6 @@ El código que usa el almacenamiento aislado está restringido por una [cuota](.
   
 ## <a name="see-also"></a>Vea también
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- [Almacenamiento aislado](../../../docs/standard/io/isolated-storage.md)  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- [Almacenamiento aislado](../../../docs/standard/io/isolated-storage.md)
 - [Cómo: Obtener los almacenes de almacenamiento aislado](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
