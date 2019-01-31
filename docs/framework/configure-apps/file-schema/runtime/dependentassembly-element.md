@@ -1,5 +1,5 @@
 ---
-title: '&lt;dependentAssembly&gt; elemento'
+title: <dependentAssembly> (Elemento)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2cf4d9940873c04ee6f0ab2d378a3d1253be4ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b1ee9c3c19c0a3e86b6761f95ccab0292b5e15c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729205"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273954"
 ---
-# <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt; elemento
+# <a name="dependentassembly-element"></a>\<dependentAssembly > elemento
 Encapsula la directiva de enlace y la ubicación de cada ensamblado. Utilice uno `dependentAssembly` (elemento) para cada ensamblado.  
   
  \<configuration>  

@@ -3,10 +3,10 @@ title: Referencia de palabras clave
 description: Encuentre vínculos a información acerca de todos los F# palabras clave del lenguaje.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
+ms.lasthandoff: 01/31/2019
 ms.locfileid: "54857910"
 ---
 # <a name="keyword-reference"></a>Referencia de palabras clave
@@ -64,7 +64,7 @@ La tabla siguiente se muestran todos los F# palabras clave en orden alfabético,
 |`null`|[Valores NULL](values/null-values.md)<br /><br />[Restricciones](generics/constraints.md)|Indica la ausencia de un objeto.<br /><br />También se utiliza en las restricciones de parámetro genérico.|
 |`of`|[Uniones discriminadas](discriminated-unions.md)<br /><br />[Delegados](delegates.md)<br /><br />[Tipos de excepción](exception-handling/exception-types.md)|Usar uniones discriminadas para indicar el tipo de categorías de valores y, en las declaraciones de delegado y la excepción.|
 |`open`|[Declaraciones de importación: `open`Palabra clave](import-declarations-the-open-keyword.md)|Se usa para que el contenido de un espacio de nombres o módulo estén disponibles sin calificación.|
-|`or`|[Referencia de símbolos y operadores](symbol-and-operator-reference/index.md)<br /><br />[Restricciones](generics/constraints.md)|Usar con condiciones booleanas como un valor booleano `or` operador. Equivalente a '||`.<br /><br />También se utiliza en las restricciones de miembro.|
+|`or`|[Referencia de símbolos y operadores](symbol-and-operator-reference/index.md)<br /><br />[Restricciones](generics/constraints.md)|Usar con condiciones booleanas como un valor booleano `or` operador. Equivalente a `||`.<br /><br />También se utiliza en las restricciones de miembro.|
 |`override`|[Miembros](members/index.md)|Se usa para implementar una versión de un método abstracto o virtual que difiere de la versión base.|
 |`private`|[Control de acceso](access-control.md)|Restringe el acceso a un miembro al código en el mismo tipo o módulo.|
 |`public`|[Control de acceso](access-control.md)|Permite el acceso a un miembro desde fuera del tipo.|

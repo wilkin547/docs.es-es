@@ -1,16 +1,16 @@
 ---
-title: '&lt;estado&gt; de &lt;estados&gt;'
+title: <state> de <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ab483c7f-a091-4933-ba6b-708d96846d38
-ms.openlocfilehash: 1ddf7e0ed2849764f3b21e8cf1c31d98762c0d5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 657814eb120878cdc71cd7603d0499ff65ca50e8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696248"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271439"
 ---
-# <a name="ltstategt-of-ltstatesgt"></a>&lt;estado&gt; de &lt;estados&gt;
+# <a name="state-of-states"></a>\<estado > de \<Estados >
 Un elemento de configuración que contiene el estado de la actividad suscrita para la que se debería emitir un registro de seguimiento.  
   
  Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  

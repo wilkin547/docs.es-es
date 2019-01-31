@@ -9,15 +9,15 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7083c4b15e2693c0c76e6ca7c9a00e4c4dab56c
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513729"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480067"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Tutorial: Almacenamiento en caché datos de la aplicación en una aplicación WPF
-El almacenamiento en caché permite almacenar datos en memoria para un acceso rápido. Cuando se tiene acceso a los datos de nuevo, las aplicaciones pueden obtener los datos de la memoria caché en su lugar la recuperación de la fuente original. Esto puede mejorar el rendimiento y la escalabilidad. Además, el almacenamiento en caché permite que los datos estén disponibles cuando el origen de datos no está disponible temporalmente.
+El almacenamiento en caché permite almacenar datos en memoria para un acceso rápido. Cuando se vuelve a acceder a los datos, las aplicaciones pueden obtenerlos de la memoria caché en lugar de recuperarlos de la fuente original. Esto puede mejorar el rendimiento y la escalabilidad. Además, el almacenamiento en caché permite que los datos estén disponibles cuando el origen de datos no está disponible temporalmente.
 
  El [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proporciona clases que le permiten usar el almacenamiento en caché en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplicaciones. Estas clases se encuentran en el <xref:System.Runtime.Caching> espacio de nombres.
 
@@ -218,7 +218,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     Si se proporciona ninguna información de expulsión o expiración, el valor predeterminado es <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, lo que significa que las entradas de caché no expiren nunca basándose solo en un tiempo absoluto. En su lugar, las entradas de caché expiran solo cuando hay presión de memoria. Como práctica recomendada, debe proporcionar siempre explícitamente absoluta o una fecha de expiración de fachadas.
+     Si se proporciona ninguna información de expulsión o expiración, el valor predeterminado es <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, lo que significa que las entradas de caché no expiren nunca basándose solo en un tiempo absoluto. En su lugar, las entradas de caché expiran solo cuando hay presión de memoria. Como práctica recomendada, debe proporcionar siempre explícitamente absoluta o una expiración variable.
 
 7.  Dentro de la `if/then` bloquear y después del código que agregó en el paso anterior, agregue el código siguiente para crear una colección para las rutas de acceso de archivo que desea supervisar y para agregar la ruta de acceso del archivo de texto a la colección:
 
@@ -254,7 +254,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
     ```
 
     ```csharp
-    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + + "\n" + DateTime.Now;
+    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now;
     ```
 
      Se agrega la marca de tiempo de fecha y hora para que puedan ver cuando expira la entrada de caché.
@@ -296,7 +296,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
      Se muestra el contenido almacenado en caché del archivo de texto en un cuadro de mensaje. Tenga en cuenta la marca de tiempo en el archivo.
 
-3.  Cierre el cuadro de mensaje y, a continuación, haga clic en **obtener caché** nuevo **.**
+3.  Cierre el cuadro de mensaje y, a continuación, haga clic en **obtener caché** nuevo.
 
      Se ha modificado la marca de tiempo. Esto indica que se muestra el contenido almacenado en caché.
 
@@ -306,7 +306,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
 5.  En un editor de texto, abra el archivo de texto que ha creado. No realice los cambios todavía.
 
-6.  Cierre el cuadro de mensaje y, a continuación, haga clic en **obtener caché** nuevo **.**
+6.  Cierre el cuadro de mensaje y, a continuación, haga clic en **obtener caché** nuevo.
 
      Observe nuevamente la marca de tiempo.
 

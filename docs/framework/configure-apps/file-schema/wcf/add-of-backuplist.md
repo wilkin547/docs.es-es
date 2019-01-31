@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; de &lt;backupList&gt;'
+title: <add> de <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 2cc7cce62082317bb86218d68bd2881b74649771
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e61ee275a7e98f13370504f5f15fdbe62a8221bd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670191"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285797"
 ---
-# <a name="ltaddgt-of-ltbackuplistgt"></a>&lt;add&gt; de &lt;backupList&gt;
+# <a name="add-of-backuplist"></a>\<Agregar > de \<backupList >
 Representa un elemento de configuración que define un elemento de extremo de reserva.  
   
  \<system.serviceModel>  

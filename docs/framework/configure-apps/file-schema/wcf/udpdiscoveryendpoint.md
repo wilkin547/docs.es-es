@@ -1,15 +1,15 @@
 ---
-title: '&lt;udpDiscoveryEndpoint&gt;'
+title: <udpDiscoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: b46da83a175c2a9cff38abc211d462f3d43c1b9e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af925a0f16e59cb6fec3ec246bd64a8f109d4d57
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569224"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270343"
 ---
-# <a name="ltudpdiscoveryendpointgt"></a>&lt;udpDiscoveryEndpoint&gt;
+# <a name="udpdiscoveryendpoint"></a>\<udpDiscoveryEndpoint>
 Este elemento de configuración define un punto de conexión estándar que está preconfigurado para las operaciones de detección sobre un enlace de multidifusión UDP. Este punto de conexión tiene un contrato fijo y admite dos versiones del protocolo WS-Discovery. Además, tiene un enlace de UDP fijo y una dirección predeterminada según se indica en las especificaciones de WS-Discovery (WS-Discovery April 2005 o WS-Discovery V1.1).  
   
  \<system.ServiceModel>  

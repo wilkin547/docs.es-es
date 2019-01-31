@@ -1,19 +1,19 @@
 ---
-title: Opción &lt;palabra clave&gt; (instrucción, Visual Basic)
+title: Opción <keyword> (instrucción, Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: 5c0323dac2f1f3faf5c6952d92014c4bfca35166
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29b2602664387ee233574686440691d2f4da830b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678231"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279167"
 ---
-# <a name="option-ltkeywordgt-statement"></a>Opción &lt;palabra clave&gt; instrucción
+# <a name="option-keyword-statement"></a>Opción \<palabra clave > instrucción
 Presenta una instrucción que especifica una opción del compilador que se aplica al archivo de código fuente.  
   
 ## <a name="remarks"></a>Comentarios  

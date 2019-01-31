@@ -1,5 +1,5 @@
 ---
-title: Tipo de valor opcional para el parámetro opcional &lt;parametername&gt; no es conforme a CLS
+title: El tipo de valor opcional para el parámetro opcional <parametername> no es compatible con CLS
 ms.date: 07/20/2015
 f1_keywords:
 - BC40042
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
-ms.openlocfilehash: dd77cd8cbd36f7681e2597d908dd8e55bf249392
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 39054fb6bf82a344cb38613164cb42968aa632f7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960354"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261430"
 ---
-# <a name="type-of-optional-value-for-optional-parameter-ltparameternamegt-is-not-cls-compliant"></a>Tipo de valor opcional para el parámetro opcional &lt;parametername&gt; no es conforme a CLS
+# <a name="type-of-optional-value-for-optional-parameter-parametername-is-not-cls-compliant"></a>Tipo de valor opcional para el parámetro opcional \<parametername > no es conforme a CLS
 Un procedimiento se marca como `<CLSCompliant(True)>`, pero declara un parámetro [opcional](../../../visual-basic/language-reference/modifiers/optional.md) con valor predeterminado de un tipo no conforme.  
   
  Para que un procedimiento sea conforme a la [Independencia del lenguaje y componentes independientes del lenguaje](../../../standard/language-independence-and-language-independent-components.md) (CLS), solo debe usar tipos conformes a CLS. Esto se aplica a los tipos de los parámetros, el tipo de valor devuelto y los tipos de todas sus variables locales. También se aplica a los valores predeterminados de parámetros opcionales.  
@@ -33,9 +33,9 @@ Un procedimiento se marca como `<CLSCompliant(True)>`, pero declara un parámetr
   
  Si no aplica <xref:System.CLSCompliantAttribute> a un elemento, se considera que no es conforme.  
   
- De forma predeterminada, este mensaje es una advertencia. Para obtener información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ De forma predeterminada, este mensaje es una advertencia. Para obtener más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Id. de error:** BC40042  
+ **Identificador de error:** BC40042  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   

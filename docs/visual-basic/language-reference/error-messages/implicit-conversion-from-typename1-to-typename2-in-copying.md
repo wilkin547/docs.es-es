@@ -1,5 +1,5 @@
 ---
-title: Conversión implícita de &#39; &lt;typename1&gt; &#39; a &#39; &lt;typename2&gt; &#39; copiar el valor de &#39;ByRef&#39; parámetro &#39; &lt; ParameterName&gt; &#39; en el argumento correspondiente.
+title: Conversión implícita de '<typename1>' a '<typename2>' al copiar de nuevo el valor del parámetro 'ByRef' '<parametername>' en el argumento correspondiente
 ms.date: 07/20/2015
 f1_keywords:
 - vbc41999
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 9f05a5fbcbef828b4ffa920d8cade475cedb64d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f875206b15ee048311e43624e197e78413de522e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537248"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279622"
 ---
-# <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a>Conversión implícita de &#39; &lt;typename1&gt; &#39; a &#39; &lt;typename2&gt; &#39; copiar el valor de &#39;ByRef&#39; parámetro &#39; &lt; ParameterName&gt; &#39; en el argumento correspondiente.
+# <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>Conversión implícita de '\<typename1 >' a '\<nombredetipo2 >' en copiar el valor del parámetro 'ByRef' '\<parametername >' en el argumento correspondiente.
 Se llama a un procedimiento con un [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) argumento de un tipo diferente del parámetro correspondiente.  
   
  Si se pasa un argumento `ByRef`, Visual Basic a veces copia el valor del argumento en una variable local en el procedimiento en lugar de pasar una referencia. En tal caso, cuando el procedimiento vuelve, Visual Basic debe, a continuación, copiar el valor de la variable local en el argumento en el código de llamada.  
