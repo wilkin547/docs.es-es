@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; de &lt;scopes&gt;'
+title: <add> de <scopes>
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: 961fb3e388e3ae756bd7511ea6c65df6dd2a1486
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2681d5e757a1c1efc33fb3ef8804e94f8b391757
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705578"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288683"
 ---
-# <a name="ltaddgt-of-ltscopesgt"></a>&lt;add&gt; de &lt;scopes&gt;
+# <a name="add-of-scopes"></a>\<Agregar > de \<ámbitos >
 Agrega un Uri de ámbito personalizado que se puede utilizar para filtrar los puntos de conexión de servicio durante la consulta.  
   
 \<system.ServiceModel>  

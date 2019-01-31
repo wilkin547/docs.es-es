@@ -1,17 +1,17 @@
 ---
-title: Puede&#39;t crear archivo temporal necesario
+title: No se puede crear el archivo temporal necesario
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID322
 ms.assetid: 53617b5b-eb06-4188-b4c2-8607cb9fbc79
-ms.openlocfilehash: c10444129f2a57bfef7f523a291e0f6d30e68d85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9118eeee68696bf79c889c2382eadd31eff17ea8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610375"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278309"
 ---
-# <a name="can39t-create-necessary-temporary-file"></a>Puede&#39;t crear archivo temporal necesario
+# <a name="cant-create-necessary-temporary-file"></a>No se puede crear el archivo temporal necesario
 Está llena o la unidad que contiene el directorio especificado por la variable de entorno TEMP, o la variable de entorno TEMP especifica un directorio o unidad no válida o de solo lectura.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  

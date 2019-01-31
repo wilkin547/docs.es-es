@@ -1,16 +1,16 @@
 ---
-title: '&lt;agregar&gt; &lt;participantes&gt;'
+title: <add> de <participants>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
-ms.openlocfilehash: bc32b9b55ef8767be44cc69b9277c81d62a1944d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65b8a34250a22da79e900f6bee894b501c5ad6ba
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575900"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284549"
 ---
-# <a name="ltaddgt-of-ltparticipantsgt"></a>&lt;agregar&gt; &lt;participantes&gt;
+# <a name="add-of-participants"></a>\<Agregar > de \<participantes >
 Configure un participante del seguimiento que escucha los registros de seguimiento que se emiten del tiempo de ejecución directamente y los procesa del modo en que cada uno esté configurado. Esto incluye la escritura en un resultado concreto (p. ej., un archivo, la consola o ETW), procesar o agregar los registros, o cualquier otra combinación que pueda resultar necesaria.  
   
  Para obtener más información de seguimiento de flujo de trabajo y los participantes de seguimiento, vea [seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) y [participantes de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).  

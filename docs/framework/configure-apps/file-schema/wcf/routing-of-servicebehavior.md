@@ -1,22 +1,22 @@
 ---
-title: '&lt;routing&gt; de &lt;serviceBehavior&gt;'
+title: <routing> de <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: 0a007eb33063f8f44098a8c63708255b884b5fdc
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 3f23cbb45aa72b1aae18c845e68b426a4214d499
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146854"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261781"
 ---
-# <a name="ltroutinggt-of-ltservicebehaviorgt"></a>&lt;routing&gt; de &lt;serviceBehavior&gt;
+# <a name="routing-of-servicebehavior"></a>\<enrutamiento > de \<serviceBehavior >
 Proporciona acceso en tiempo de ejecución al servicio de enrutamiento para permitir la modificación dinámica de la configuración del enrutamiento.  
   
  \<system.ServiceModel>  
 \<comportamientos >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<comportamiento >  
-\<enrutamiento >  
+\<routing>  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,7 +50,7 @@ Proporciona acceso en tiempo de ejecución al servicio de enrutamiento para perm
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<comportamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
   
 ## <a name="remarks"></a>Comentarios  
  Cuando se agrega a la configuración del comportamiento del servicio, este elemento de configuración habilita el enrutamiento para el servicio. Puede especificar la tabla de enrutamiento real que va a usar el servicio en este elemento.  

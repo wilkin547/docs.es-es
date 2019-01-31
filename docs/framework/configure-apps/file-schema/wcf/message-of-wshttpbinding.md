@@ -1,15 +1,15 @@
 ---
-title: Elemento &lt;message&gt; de &lt;wsHttpBinding&gt;
+title: <message> de <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
-ms.openlocfilehash: c114c75391e3c2e56be6b711ff04eaefb3fd05fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88149fd1df7679a51cc9cad449d020f29c1709eb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651024"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260858"
 ---
-# <a name="ltmessagegt-of-ltwshttpbindinggt"></a>Elemento &lt;message&gt; de &lt;wsHttpBinding&gt;
+# <a name="message-of-wshttpbinding"></a>\<mensaje > de \<wsHttpBinding >
 Define la configuración de seguridad de nivel de mensaje de la [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  \<system.ServiceModel>  
