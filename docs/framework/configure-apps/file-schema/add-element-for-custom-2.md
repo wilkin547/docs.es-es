@@ -1,5 +1,5 @@
 ---
-title: '&lt;agregar&gt; elemento para NameValueSectionHandler y DictionarySectionHandler'
+title: <add> elemento para NameValueSectionHandler y DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -9,47 +9,47 @@ helpviewer_keywords:
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 502f86e49d68e456d8e64e00e7632aa603cafbe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b421b4bab32c1aae7a6ba7d69b9f4aea2ab99a5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523914"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278283"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="ae991-102">\<Agregar > elemento para NameValueSectionHandler y DictionarySectionHandler</span><span class="sxs-lookup"><span data-stu-id="ae991-102">\<add> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="050c7-102">\<Agregar > elemento para NameValueSectionHandler y DictionarySectionHandler</span><span class="sxs-lookup"><span data-stu-id="050c7-102">\<add> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
 
-<span data-ttu-id="ae991-103">Agrega la configuración de aplicación personalizada.</span><span class="sxs-lookup"><span data-stu-id="ae991-103">Adds custom application settings.</span></span> <span data-ttu-id="ae991-104">Cada  **\<Agregar >** etiqueta contiene un par clave/valor.</span><span class="sxs-lookup"><span data-stu-id="ae991-104">Each **\<add>** tag contains a key/value pair.</span></span>
+<span data-ttu-id="050c7-103">Agrega la configuración de aplicación personalizada.</span><span class="sxs-lookup"><span data-stu-id="050c7-103">Adds custom application settings.</span></span> <span data-ttu-id="050c7-104">Cada  **\<Agregar >** etiqueta contiene un par clave/valor.</span><span class="sxs-lookup"><span data-stu-id="050c7-104">Each **\<add>** tag contains a key/value pair.</span></span>
 
-<span data-ttu-id="ae991-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="ae991-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="ae991-106">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span><span class="sxs-lookup"><span data-stu-id="ae991-106">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span></span>  
-<span data-ttu-id="ae991-107">&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span><span class="sxs-lookup"><span data-stu-id="ae991-107">&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>
+<span data-ttu-id="050c7-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="050c7-105">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="050c7-106">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span><span class="sxs-lookup"><span data-stu-id="050c7-106">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span></span>  
+<span data-ttu-id="050c7-107">&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span><span class="sxs-lookup"><span data-stu-id="050c7-107">&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="ae991-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ae991-108">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="050c7-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="050c7-108">Syntax</span></span>
 
 ```xml
 <add key="key" value="value" />
 ```
 
-## <a name="attributes"></a><span data-ttu-id="ae991-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="ae991-109">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="050c7-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="050c7-109">Attributes</span></span>
 
-| <span data-ttu-id="ae991-110">Atributo</span><span class="sxs-lookup"><span data-stu-id="ae991-110">Attribute</span></span> | <span data-ttu-id="ae991-111">Descripción</span><span class="sxs-lookup"><span data-stu-id="ae991-111">Description</span></span> |
+| <span data-ttu-id="050c7-110">Atributo</span><span class="sxs-lookup"><span data-stu-id="050c7-110">Attribute</span></span> | <span data-ttu-id="050c7-111">Descripción</span><span class="sxs-lookup"><span data-stu-id="050c7-111">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="ae991-112">**key**</span><span class="sxs-lookup"><span data-stu-id="ae991-112">**key**</span></span>   | <span data-ttu-id="ae991-113">Atributo necesario.</span><span class="sxs-lookup"><span data-stu-id="ae991-113">Required attribute.</span></span><br><br><span data-ttu-id="ae991-114">Especifica el nombre de la configuración.</span><span class="sxs-lookup"><span data-stu-id="ae991-114">Specifies the name of the setting.</span></span> |
-| <span data-ttu-id="ae991-115">**value**</span><span class="sxs-lookup"><span data-stu-id="ae991-115">**value**</span></span> | <span data-ttu-id="ae991-116">Atributo necesario.</span><span class="sxs-lookup"><span data-stu-id="ae991-116">Required attribute.</span></span><br><br><span data-ttu-id="ae991-117">Especifica el valor de la configuración.</span><span class="sxs-lookup"><span data-stu-id="ae991-117">Specifies the value of the setting.</span></span> |
+| <span data-ttu-id="050c7-112">**key**</span><span class="sxs-lookup"><span data-stu-id="050c7-112">**key**</span></span>   | <span data-ttu-id="050c7-113">Atributo necesario.</span><span class="sxs-lookup"><span data-stu-id="050c7-113">Required attribute.</span></span><br><br><span data-ttu-id="050c7-114">Especifica el nombre de la configuración.</span><span class="sxs-lookup"><span data-stu-id="050c7-114">Specifies the name of the setting.</span></span> |
+| <span data-ttu-id="050c7-115">**value**</span><span class="sxs-lookup"><span data-stu-id="050c7-115">**value**</span></span> | <span data-ttu-id="050c7-116">Atributo necesario.</span><span class="sxs-lookup"><span data-stu-id="050c7-116">Required attribute.</span></span><br><br><span data-ttu-id="050c7-117">Especifica el valor de la configuración.</span><span class="sxs-lookup"><span data-stu-id="050c7-117">Specifies the value of the setting.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="ae991-118">Elemento primario</span><span class="sxs-lookup"><span data-stu-id="ae991-118">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="050c7-118">Elemento primario</span><span class="sxs-lookup"><span data-stu-id="050c7-118">Parent element</span></span>
 
-| <span data-ttu-id="ae991-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="ae991-119">Element</span></span> | <span data-ttu-id="ae991-120">Descripción</span><span class="sxs-lookup"><span data-stu-id="ae991-120">Description</span></span> |
+| <span data-ttu-id="050c7-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="050c7-119">Element</span></span> | <span data-ttu-id="050c7-120">Descripción</span><span class="sxs-lookup"><span data-stu-id="050c7-120">Description</span></span> |
 | ------- | ------------|
-| [<span data-ttu-id="ae991-121">**\<sectionName >** elemento</span><span class="sxs-lookup"><span data-stu-id="ae991-121">**\<sectionName>** Element</span></span>](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | <span data-ttu-id="ae991-122">Define los valores de las secciones de configuración personalizada que utilicen el <xref:System.Configuration.NameValueSectionHandler> y <xref:System.Configuration.DictionarySectionHandler> clases.</span><span class="sxs-lookup"><span data-stu-id="ae991-122">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
+| [<span data-ttu-id="050c7-121">**\<sectionName >** elemento</span><span class="sxs-lookup"><span data-stu-id="050c7-121">**\<sectionName>** Element</span></span>](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | <span data-ttu-id="050c7-122">Define los valores de las secciones de configuración personalizada que utilicen el <xref:System.Configuration.NameValueSectionHandler> y <xref:System.Configuration.DictionarySectionHandler> clases.</span><span class="sxs-lookup"><span data-stu-id="050c7-122">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="ae991-123">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="ae991-123">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="050c7-123">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="050c7-123">Child elements</span></span>
 
-<span data-ttu-id="ae991-124">Ninguna</span><span class="sxs-lookup"><span data-stu-id="ae991-124">None</span></span>
+<span data-ttu-id="050c7-124">Ninguna</span><span class="sxs-lookup"><span data-stu-id="050c7-124">None</span></span>
 
-## <a name="example"></a><span data-ttu-id="ae991-125">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ae991-125">Example</span></span>
+## <a name="example"></a><span data-ttu-id="050c7-125">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="050c7-125">Example</span></span>
 
-<span data-ttu-id="ae991-126">El ejemplo siguiente muestra cómo definir una sección de configuración personalizado y usar el  **\<Agregar >** elemento para que la configuración en la sección:</span><span class="sxs-lookup"><span data-stu-id="ae991-126">The following example shows how to define a custom configuration section and use the **\<add>** element to put settings into the section:</span></span>
+<span data-ttu-id="050c7-126">El ejemplo siguiente muestra cómo definir una sección de configuración personalizado y usar el  **\<Agregar >** elemento para que la configuración en la sección:</span><span class="sxs-lookup"><span data-stu-id="050c7-126">The following example shows how to define a custom configuration section and use the **\<add>** element to put settings into the section:</span></span>
 
 ```xml
 <configuration>
@@ -62,10 +62,10 @@ ms.locfileid: "54523914"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="ae991-127">Archivo de configuración</span><span class="sxs-lookup"><span data-stu-id="ae991-127">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="050c7-127">Archivo de configuración</span><span class="sxs-lookup"><span data-stu-id="050c7-127">Configuration file</span></span>
 
-<span data-ttu-id="ae991-128">Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración del equipo (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="ae991-128">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="050c7-128">Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración del equipo (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="050c7-128">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ae991-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="ae991-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="050c7-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="050c7-129">See also</span></span>
 
-- [<span data-ttu-id="ae991-130">Esquema de archivo de configuración de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ae991-130">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="050c7-130">Esquema de archivo de configuración de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="050c7-130">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
