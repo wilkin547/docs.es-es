@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: ea20569b207100886ddd4b40c8d4c86c55d5ddf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be5e1b5fff1feb8ef4cc2ff7fcbca193aafcd781
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743548"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674885"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funciones de conversión de tipos (Visual Basic)
 Estas funciones están compilados en línea, lo que significa que el código de conversión forma parte del código que evalúa la expresión. En ocasiones, no hay ninguna llamada a un procedimiento para realizar la conversión, lo que mejora el rendimiento. Cada función convierte una expresión a un tipo de datos específico.  
@@ -128,7 +128,7 @@ CUShort(expression)
 |`CDbl`|[Double (tipos de datos)](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1, 79769313486231570E + 308 a - 4, 94065645841246544E-324 para valores negativos; 4, 94065645841246544E-324 a 1, 79769313486231570E + 308 para los valores positivos.|  
 |`CDec`|[Decimal (tipo de datos)](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+/-79.228.162.514.264.337.593.543.950.335 para números a partir de cero, es decir, los números sin posiciones decimales. Para números con 28 posiciones decimales, el intervalo es +/-7,9228162514264337593543950335. El menor número posible distinto de cero es 0,0000000000000000000000000001 (+/-1E-28).|  
 |`CInt`|[Integer (tipo de datos)](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2.147.483.648) a través de <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2.147.483.647); se redondean partes fraccionarias.<sup> 1</sup> <br/><br/>A partir de 15,8 Visual Basic, Visual Basic optimiza el rendimiento de punto flotante para la conversión de entero con el `CInt` función; vea la [comentarios](#remarks) sección para obtener más información. Consulte la [ejemplo CInt](#cint-example) sección para obtener un ejemplo. |  
-|`CLng`|[Long (tipo de datos)](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MaxValue?displayProperty=nameWithType> (-9.223.372.036.854.775.808) a través de <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9.223.372.036.854.775.807); se redondean partes fraccionarias.<sup> 1</sup><br/><br/>A partir de 15,8 Visual Basic, Visual Basic optimiza el rendimiento de punto flotante para la conversión de entero de 64 bits con el `CLng` función; vea la [comentarios](#remarks) sección para obtener más información. Consulte la [ejemplo CInt](#cint-example) sección para obtener un ejemplo.|  
+|`CLng`|[Long (tipo de datos)](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9.223.372.036.854.775.808) a través de <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9.223.372.036.854.775.807); se redondean partes fraccionarias.<sup> 1</sup><br/><br/>A partir de 15,8 Visual Basic, Visual Basic optimiza el rendimiento de punto flotante para la conversión de entero de 64 bits con el `CLng` función; vea la [comentarios](#remarks) sección para obtener más información. Consulte la [ejemplo CInt](#cint-example) sección para obtener un ejemplo.|  
 |`CObj`|[Tipo de objeto de datos](../../../visual-basic/language-reference/data-types/object-data-type.md)|Cualquier expresión válida.|  
 |`CSByte`|[SByte (tipo de datos)](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> -(128) a través de <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127); se redondean partes fraccionarias.<sup> 1</sup><br/><br/>A partir de 15,8 Visual Basic, Visual Basic optimiza el rendimiento de punto flotante para la conversión de bytes con signo con el `CSByte` función; vea la [comentarios](#remarks) sección para obtener más información. Consulte la [ejemplo CInt](#cint-example) sección para obtener un ejemplo.|  
 |`CShort`|[Short (tipo de datos)](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32.768) a través de <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32.767); se redondean partes fraccionarias.<sup> 1</sup><br/><br/>A partir de 15,8 Visual Basic, Visual Basic optimiza el rendimiento de punto flotante para la conversión de entero de 16 bits con el `CShort` función; vea la [comentarios](#remarks) sección para obtener más información. Consulte la [ejemplo CInt](#cint-example) sección para obtener un ejemplo.|  

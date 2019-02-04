@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 84e2d07275194683661a75e422847bbe0ebf1383
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198372"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674417"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Bibliotecas de clases y API adicionales
 
@@ -29,7 +29,7 @@ Además, algunas bibliotecas se orientan a plataformas o implementaciones espec�
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | Ofrece colecciones que son seguras para subprocesos en las que se garantiza que no cambiará nunca su contenido. |
 | <xref:System.Net.Http.WinHttpHandler> | Ofrece un controlador de mensajes para <xref:System.Net.Http.HttpClient> basados en la interfaz de WinHTTP de Windows. |
-| [System.Numerics.Vectors](https://msdn.microsoft.com/library/mt452176.aspx) | Ofrece una biblioteca de tipos de vector que puede beneficiarse de la aceleración basada en hardware de SIMD.| 
+| <xref:System.Numerics> | Ofrece una biblioteca de tipos de vector que puede beneficiarse de la aceleración basada en hardware de SIMD.| 
 | <xref:System.Threading.Tasks.Dataflow> | La biblioteca de flujos de datos TPL ofrece componentes de flujo de datos que ayudan a aumentar la solidez de las aplicaciones habilitadas para simultaneidad. |  
 
 ## <a name="platform-specific-libraries"></a>Bibliotecas específicas de plataforma

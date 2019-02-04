@@ -2,12 +2,12 @@
 title: <add> de <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: 63ff98d91db7c8c112b0b00e9bd37c3262bcad6d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e0ca00911577f9f210def9326df261f772f9c26d
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258632"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674430"
 ---
 # <a name="add-of-commonparameters"></a>\<Agregar > de \<commonParameters >
 Especifica un par de nombre y valor de parámetros que se utilizan globalmente en varios servicios. Normalmente este parámetro incluye la cadena de conexión a la base de datos que podría ser compartida por servicios duraderos.  
@@ -47,7 +47,7 @@ Especifica un par de nombre y valor de parámetros que se utilizan globalmente e
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<commonParameters>](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|Una colección de parámetros comunes usada por los servicios. Esta colección incluirá, normalmente, la cadena de conexión de la base de datos que podrían compartir los servicios duraderos.|  
+|[\<commonParameters>](commonparameters.md)|Una colección de parámetros comunes usada por los servicios. Esta colección incluirá, normalmente, la cadena de conexión de la base de datos que podrían compartir los servicios duraderos.|  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento `<commonParameters>` define cualquier parámetro que se usa globalmente en varios servicios, por ejemplo `ConnectionString` al usar <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
@@ -92,4 +92,4 @@ Especifica un par de nombre y valor de parámetros que se utilizan globalmente e
 - <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>
 - <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>
 - [Archivos de configuración de flujo de trabajo](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
-- [\<commonParameters>](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)
+- [\<commonParameters>](commonparameters.md)

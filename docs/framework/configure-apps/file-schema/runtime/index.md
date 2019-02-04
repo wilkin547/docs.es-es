@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4289f013123796badcaedac2f89e1560397a0aa4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6c0ead0715221354970ddee90e89bae7c583266
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659009"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675431"
 ---
 # <a name="runtime-settings-schema"></a>Esquema de la configuración de Common Language Runtime
 Common Language Runtime usa la configuración del motor en tiempo de ejecución para configurar las aplicaciones destinadas a .NET Framework.  
@@ -133,5 +133,5 @@ Common Language Runtime usa la configuración del motor en tiempo de ejecución 
   
 ## <a name="see-also"></a>Vea también
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Cómo: Deshabilitar la recolección de elementos no utilizados simultánea](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+- [Para deshabilitar la recopilación de elementos no utilizados simultánea](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [Redirigir versiones de ensamblado](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

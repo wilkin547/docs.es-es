@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebb32a74f5413f9c927a84ababf2d60d20e0b024
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7568129f30267b212737ec8aa688cf882e19bbff
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269697"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675314"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > elemento
 Especifica si los ensamblados cargados desde orígenes remotos se deben conceder plena confianza en .NET Framework 4 y versiones posteriores.
   
 > [!NOTE]
->  Si llega a este tema debido a un mensaje de error en la lista de errores del proyecto de Visual Studio o un error de compilación, véase [Cómo: Usar un ensamblado desde la Web en Visual Studio](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
+>  Si llega a este artículo debido a un mensaje de error en la lista de errores del proyecto de Visual Studio o un error de compilación, véase [Cómo: Usar un ensamblado desde la Web en Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
   
  \<configuration>  
 \<runtime>  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-ms.openlocfilehash: 37600331ac52add60a98c9fd573591dc34b94f5f
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 6ebb6487136bff567c57143e3000a20270c1f87e
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083969"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674911"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Esquema de los archivos de configuración de .NET Framework
 
@@ -75,10 +75,10 @@ Para obtener información sobre los tipos, el formato y la ubicación de los arc
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Remoting Settings Schema](https://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) (Esquema de configuración de la comunicación remota): describe los elementos que configuran las aplicaciones cliente y servidor que implementan la comunicación remota.
+[Remoting Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) (Esquema de configuración de la comunicación remota): describe los elementos que configuran las aplicaciones cliente y servidor que implementan la comunicación remota.
 
-[ASP.NET Settings Schema](https://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx) (Esquema de configuración de ASP.NET): describe los elementos que controlan el comportamiento de las aplicaciones web ASP.NET.
+[ASP.NET Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) (Esquema de configuración de ASP.NET): describe los elementos que controlan el comportamiento de las aplicaciones web ASP.NET.
 
-[Web Services Settings Schema](https://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e) (Esquema de configuración de los servicios Web): describe los elementos que controlan el comportamiento de los servicios web ASP.NET y sus clientes.
+[Web Services Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) (Esquema de configuración de los servicios Web): describe los elementos que controlan el comportamiento de los servicios web ASP.NET y sus clientes.
 
-[Configuring .NET Framework Apps](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) (Configurar aplicaciones de .NET Framework): describe cómo configurar la seguridad, el enlace del ensamblado y la comunicación remota de .NET Framework.
+[Configuring .NET Framework Apps](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100)) (Configurar aplicaciones de .NET Framework): describe cómo configurar la seguridad, el enlace del ensamblado y la comunicación remota de .NET Framework.

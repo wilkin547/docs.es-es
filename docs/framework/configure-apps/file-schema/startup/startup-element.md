@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: cc261097593150583072ab796df9de8edea5ca6e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5047cb0ab1c8206abd88dc795e50272d69f1fd3f
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280207"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674573"
 ---
 # <a name="startup-element"></a>\<Inicio > elemento
 
@@ -70,7 +70,7 @@ Especifica la información de inicio de common language runtime.
  Este atributo es útil si la aplicación usa rutas de acceso de activación heredada, como la [CorBindToRuntimeEx (función)](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), y desea que esas rutas de acceso para activar la versión 4 de CLR en lugar de una versión anterior, o si la aplicación con el [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] , pero tiene una dependencia en un ensamblado de modo mixto generado con una versión anterior de .NET Framework. En esos escenarios, establezca el atributo en `true`.
 
 > [!NOTE]
-> Establecer el atributo como `true` que CLR versión 1.1 o CLR versión 2.0 no se cargue en el mismo proceso, deshabilitando la característica en paralelo en proceso (consulte [ejecución en paralelo para interoperabilidad COM](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).
+> Establecer el atributo como `true` que CLR versión 1.1 o CLR versión 2.0 no se cargue en el mismo proceso, deshabilitando la característica en paralelo en proceso (consulte [ejecución en paralelo para interoperabilidad COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))).
 
 ## <a name="example"></a>Ejemplo
 
@@ -97,5 +97,5 @@ Especifica la información de inicio de common language runtime.
 - [Esquema de la configuración de inicio](index.md)
 - [Esquema de los archivos de configuración](../index.md)
 - [Cómo: Configuración de una aplicación para que admita .NET Framework 4 o versiones posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-- [Ejecución en paralelo para interoperabilidad COM](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)
+- [Ejecución en paralelo para interoperabilidad COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
 - [Ejecución en paralelo en proceso](../../../deployment/in-process-side-by-side-execution.md)
