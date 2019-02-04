@@ -3,13 +3,13 @@ title: Diferencias entre el patrón de puerta de enlace de API y la comunicació
 description: Obtenga más información sobre las diferencias y los usos del patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/20/2018
-ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 35bebd9429dabbe0e3ddc3549a504719321e47e1
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030547"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675457"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 
@@ -25,7 +25,7 @@ Un posible enfoque es usar una arquitectura de comunicación directa de cliente 
 
 En este enfoque, cada microservicio tiene un punto de conexión público, a veces con un puerto TCP distinto para cada microservicio. La siguiente dirección URL de Azure sería un ejemplo de URL de un servicio determinado:
 
-<http://eshoponcontainers.westus.cloudapp.azure.com:88/>
+`http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
 En un entorno de producción basado en un clúster, la dirección URL anterior estaría asignada al equilibrador de carga que se utiliza en el clúster, que a su vez distribuye las solicitudes entre los microservicios. En entornos de producción, se puede tener un controlador de entrega de aplicaciones (ADC) como [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) entre los microservicios e Internet. Este controlador actúa como una capa transparente que no solo realiza el equilibrio de carga, sino que también protege sus servicios, ya que ofrece terminación SSL. Esto mejora la carga de los hosts, puesto que Azure Application Gateway se descarga de la terminación SSL y de otras tareas de enrutamiento que consumen mucha CPU. En cualquier caso, un equilibrador de carga y el ADC son transparentes desde un punto de vista de la arquitectura de aplicación lógica.
 
@@ -134,7 +134,7 @@ Puede haber muchas más cuestiones transversales ofrecidas por los productos de 
 
 **Figura 4-14**. Uso de Azure API Management para la puerta de enlace de API
 
-En este caso, cuando se usa un producto como Azure API Management, el hecho de tener una sola puerta de enlace de API no es tan arriesgado porque estos tipos de puertas de enlace de API son "más estrechos", lo que significa que no implementan código C# personalizado que podría evolucionar hacia un componente monolítico. Estos productos actúan como un proxy inverso para la comunicación de entrada, donde también se pueden filtrar las API de los microservicios internos y aplicar la autorización a las API publicadas en este nivel único.
+En este caso, cuando se usa un producto como Azure API Management, el hecho de tener una sola puerta de enlace de API no es tan arriesgado porque estos tipos de puertas de enlace de API son "más estrechos", lo que significa que no implementan código C# personalizado que podría evolucionar hacia un componente monolítico. 
 
 Los productos de puerta de enlace de API suelen actuar más como un proxy inverso para la comunicación de entrada, en el que se pueden filtrar las API de los microservicios internos y también aplicar la autorización a las API publicadas en este nivel único.
 

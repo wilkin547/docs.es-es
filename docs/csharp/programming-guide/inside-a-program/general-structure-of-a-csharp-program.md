@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: 3a615bd1db3742787a5fb41ea5b309dd72746e43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53908a21e573b7ac7d8347ebfe7f11202612fae1
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492482"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675106"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Estructura general de un programa de C# (Guía de programación de C#)
 Los programas de C# pueden constar de uno o más archivos. Cada archivo puede contener cero o más espacios de nombres. Un espacio de nombres puede contener tipos como clases, structs, interfaces, enumeraciones y delegados, además de otros espacios de nombres. El siguiente es el esqueleto de un programa de C# que contiene todos estos elementos.  
@@ -39,4 +39,3 @@ Para obtener más información, consulte la sección [Conceptos básicos](~/_csh
 - [Guía de programación de C#](../../../csharp/programming-guide/index.md)
 - [Dentro de un programa de C#](../../../csharp/programming-guide/inside-a-program/index.md)
 - [Referencia de C#](../../../csharp/language-reference/index.md)
-- [Aplicaciones de ejemplo de C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)

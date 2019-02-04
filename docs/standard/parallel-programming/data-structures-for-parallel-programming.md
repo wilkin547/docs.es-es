@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b346da9174d77fbc6a861a8b12f2cc5035b6c291
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517622"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479703"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Estructuras de datos para la programación paralela
 .NET Framework 4 incorpora varios tipos nuevos que son útiles en la programación paralela, incluido un conjunto de clases de colecciones simultáneas, primitivos de sincronización ligera y tipos para la inicialización diferida. Puede usar estos tipos con cualquier código de aplicación multiproceso, como la biblioteca TPL y PLINQ.  
@@ -41,7 +41,7 @@ ms.locfileid: "54517622"
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Permite que varios subprocesos funcionen en un algoritmo en paralelo proporcionando un punto en el que cada tarea pueda señalizar su llegada y después bloquearse hasta que llegan algunas tareas o todas. Para más información, consulte [Barrier](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Simplifica los escenarios de bifurcación y combinación proporcionando un mecanismo sencillo de encuentro. Para más información, vea [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
-|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Un primitivo de sincronización similar a <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> es ligero, pero solo puede utilizarse para la comunicación dentro de un proceso. Para más información, vea [ManualResetEvent y ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md).|  
+|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Un primitivo de sincronización similar a <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> es ligero, pero solo puede utilizarse para la comunicación dentro de un proceso.|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Un primitivo de sincronización que limita el número de subprocesos que acceden simultáneamente a un recurso o a un conjunto de recursos. Para más información, vea [Semaphore y SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).|  
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Un primitivo de bloqueo de exclusión mutua genera el subproceso que trata de obtener un bloqueo para esperar en un bucle, o *girar*, durante un período de tiempo antes de producir su cuanto. En escenarios en los que se prevé que la espera del bloqueo sea corta, <xref:System.Threading.SpinLock> ofrece mayor rendimiento que otras formas de bloqueo. Para más información, vea [SpinLock](../../../docs/standard/threading/spinlock.md).|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Un tipo pequeño y ligero que girará durante un tiempo especificado y, finalmente, colocará el subproceso en un estado de espera si se supera el número de giros.  Para más información, vea [SpinWait](../../../docs/standard/threading/spinwait.md).|  

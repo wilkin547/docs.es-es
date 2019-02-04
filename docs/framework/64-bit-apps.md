@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 940bd8b7fe0be79ea6448b1eab69359bdb92fdc9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fc90bedeee2d04c28a3860713ca5952a4564d3bd
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198177"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674742"
 ---
 # <a name="64-bit-applications"></a>Aplicaciones de 64 bits
 Al compilar una aplicación, puede especificar que debe ejecutarse en un sistema operativo Windows de 64 bits como una aplicación nativa o bajo WOW64 (Windows de 32 bits en Windows de 64 bits). WOW64 es un entorno de compatibilidad que permite a una aplicación de 32 bits ejecutarse en un sistema de 64 bits. WOW64 se incluye en todas las versiones de 64 bits del sistema operativo Windows.  
@@ -38,7 +38,7 @@ Al compilar una aplicación, puede especificar que debe ejecutarse en un sistema
   
 -   Código que convierte `IntPtr` en `Int32`.  
   
- Para más información sobre cómo migrar una aplicación de 32 bits para que se ejecute en CLR de 64 bits, vea [Migrating 32-bit Managed Code to 64-bit (Migración de código administrado de 32 bits a 64 bits)](https://msdn.microsoft.com/library/ms973190.aspx).  
+ Para más información sobre cómo migrar una aplicación de 32 bits para que se ejecute en CLR de 64 bits, vea [Migrating 32-bit Managed Code to 64-bit (Migración de código administrado de 32 bits a 64 bits)](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10)).  
   
 ## <a name="general-64-bit-programming-information"></a>Información general de programación de 64 bits  
  Para obtener información general sobre la programación de 64 bits, vea los siguientes documentos:  

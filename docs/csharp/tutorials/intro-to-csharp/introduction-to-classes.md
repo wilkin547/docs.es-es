@@ -3,12 +3,12 @@ title: 'Clases y objetos: tutorial de introducción a C#'
 description: Creación del primer programa con C# y análisis de los conceptos orientados a objetos
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 6ce0c86a4b746b8ea2db82899a82734a68e46957
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 6b4c135b7adf96de3a234cde02485a1e84fc9fd3
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066078"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204787"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Exploración de la programación orientada a objetos con clases y objetos
 
@@ -156,14 +156,14 @@ El constructor debe obtener un cambio para que agregue una transacción inicial,
 ```csharp
 account.MakeWithdrawal(500, DateTime.Now, "Rent payment");
 Console.WriteLine(account.Balance);
-account.MakeDeposit(100, DateTime.Now, "friend paid me back");
+account.MakeDeposit(100, DateTime.Now, "Friend paid me back");
 Console.WriteLine(account.Balance);
 ```
 
 Después, compruebe si detecta las condiciones de error al tratar de crear una cuenta con un saldo negativo:
 
 ```csharp
-// Test that the initial balances must be positive:
+// Test that the initial balances must be positive.
 try
 {
     var invalidAccount = new BankAccount("invalid", -55);
@@ -178,7 +178,7 @@ catch (ArgumentOutOfRangeException e)
 Use las [instrucciones `try` y `catch`](../../language-reference/keywords/try-catch.md) para marcar un bloque de código que puede generar excepciones y para detectar los errores que se esperan. Puede usar la misma técnica para probar el código que genera una excepción para un saldo negativo:
 
 ```csharp
-// Test for a negative balance
+// Test for a negative balance:
 try
 {
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");

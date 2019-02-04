@@ -1,5 +1,5 @@
 ---
-title: Lo obsoleto en la biblioteca de clases .NET Framework
+title: Lo obsoleto en la biblioteca de clases de .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8af9d0f3c31e9178e815dc8fb00f192b8da3e5de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86928c734583cfc8cae0be53458a0d5c1769f292
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541266"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287825"
 ---
-# <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Lo obsoleto en la biblioteca de clases .NET Framework
+# <a name="whats-obsolete-in-the-net-framework-class-library"></a>Lo obsoleto en la biblioteca de clases de .NET Framework
 .NET Framework cambia con el tiempo. Cada nueva versión agrega nuevos tipos y miembros de tipos que proporcionan una nueva funcionalidad. Los tipos existentes y sus miembros también cambian con el tiempo. Por ejemplo, algunos tipos pierden importancia cuando la tecnología que admiten es reemplazada por una nueva y algunos métodos son sustituidos por métodos más nuevos que resultan más cómodos o están más completos.  
   
  .NET Framework y Common Language Runtime se esfuerzan por ser compatibles con versiones anteriores (permitir que aplicaciones que se desarrollaron con una versión de .NET Framework puedan ejecutarse en la versión siguiente de .NET Framework). Esto hace más difícil quitar simplemente un tipo o un miembro de tipo. En su lugar, .NET Framework indica que no se debería seguir utilizando un tipo o un miembro de tipo marcándolo como obsoleto o desusado. El desuso de un tipo o un miembro implica marcarlo para que los desarrolladores sean conscientes de que va a desaparecer y tengan tiempo para reaccionar antes de su eliminación. Sin embargo, el código existente que utiliza el tipo o el miembro continúa ejecutándose en la nueva versión de .NET Framework.  

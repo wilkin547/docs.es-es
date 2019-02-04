@@ -2,12 +2,12 @@
 title: Scripts de dotnet-install
 description: Aprenda sobre los scripts de dotnet-install para instalar las herramientas de la CLI de .NET Core y el entorno de tiempo de ejecución compartido.
 ms.date: 01/16/2019
-ms.openlocfilehash: f796ac494c0be5458b3ea192e809a4d875bcc6dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6404a8332a7196f0e6fdfe649c2c180970390775
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608802"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204800"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
@@ -36,7 +36,7 @@ Le recomendamos que use la versión estable que se hospeda en el [sitio web prin
 
 La utilidad principal de estos scripts está en los escenarios de automatización y las instalaciones sin derechos administrativos. Existen dos scripts: uno es un script de PowerShell que funciona en Windows y el otro es un script de Bash que funciona en Linux y macOS. Ambos scripts tienen el mismo comportamiento. El script de bash también lee modificadores de PowerShell, por lo que puede usar modificadores de PowerShell con el script en sistemas Linux y macOS.
 
-Los scripts de instalación descargan el archivo ZIP o tarball desde las entregas de compilación de la CLI y proceden a instalarlo en la ubicación predeterminada o en una ubicación especificada por `-InstallDir|--install-dir`. De forma predeterminada, los scripts de instalación descargan el SDK y lo instalan. Si desea obtener solo el tiempo de ejecución compartido, especifique el argumento `--shared-runtime`.
+Los scripts de instalación descargan el archivo ZIP o tarball desde las entregas de compilación de la CLI y proceden a instalarlo en la ubicación predeterminada o en una ubicación especificada por `-InstallDir|--install-dir`. De forma predeterminada, los scripts de instalación descargan el SDK y lo instalan. Si desea obtener solo el tiempo de ejecución compartido, especifique el argumento `--runtime`.
 
 De forma predeterminada, el script agrega la ubicación de instalación a $PATH para la sesión actual. Para invalidar este comportamiento, especifique el argumento `--no-path`.
 
@@ -168,13 +168,13 @@ Puede instalar una versión específica mediante el argumento `--version`. La ve
   Windows:
 
   ```powershell
-  ./dotnet-install.ps1 -SharedRuntime -Version 1.1.0
+  ./dotnet-install.ps1 -Runtime dotnet -Version 1.1.0
   ```
 
   macOS y Linux:
 
   ```bash
-  ./dotnet-install.sh --shared-runtime --version 1.1.0
+  ./dotnet-install.sh --runtime dotnet --version 1.1.0
   ```
 
 * Obtenga el script e instale la versión 2.1.2 detrás de un proxy corporativo (solo Windows):

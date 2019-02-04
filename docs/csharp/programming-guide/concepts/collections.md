@@ -2,12 +2,12 @@
 title: Colecciones (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 1f73081cacbc08fdaaca3cbc57dfe731eddab7ee
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ddbbc60c497b324bdeb2614149569d5de5f4c114
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084125"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675418"
 ---
 # <a name="collections-c"></a>Colecciones (C#)
 Para muchas aplicaciones, puede que desee crear y administrar grupos de objetos relacionados. Existen dos formas de agrupar objetos: mediante la creación de matrices de objetos y con la creación de colecciones de objetos.  
@@ -583,7 +583,6 @@ private static IEnumerable<int> EvenSequence(
 - [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [Colecciones y estructuras de datos](../../../standard/collections/index.md)
-- [Crear y manipular colecciones](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
 - [Seleccionar una clase de colección](../../../standard/collections/selecting-a-collection-class.md)
 - [Comparaciones y ordenaciones en colecciones](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [Cuándo utilizar colecciones genéricas](../../../standard/collections/when-to-use-generic-collections.md)
