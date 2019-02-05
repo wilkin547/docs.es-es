@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Llamar a una función de Windows que adopta tipos sin signo (Visual Basic)
+title: Filtrar Llamar a una función de Windows que adopta tipos sin signo (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: dbe73ed5574261f1aab6134a15a5aeb5fbb8596c
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: e31bc2f9a0b20ce168004fa3ea2210d39a23761e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065861"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738622"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Procedimiento Llamar a una función de Windows que adopta tipos sin signo (Visual Basic)
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Filtrar Llamar a una función de Windows que adopta tipos sin signo (Visual Basic)
 Si está utilizando una clase, módulo o estructura que tiene miembros de tipos enteros sin signo, puede tener acceso a estos miembros con Visual Basic.  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Para llamar a una función de Windows que toma un tipo sin signo  
@@ -75,7 +75,7 @@ Si está utilizando una clase, módulo o estructura que tiene miembros de tipos 
     >  Realizar una llamada a código no administrado, como la interfaz de programación de aplicaciones (API), Windows expone su código a posibles riesgos de seguridad.  
   
     > [!IMPORTANT]
-    >  Llamar a la API de Windows requiere el permiso de código no administrado, lo que podría afectar a su ejecución en situaciones de confianza parcial. Para obtener más información, consulte <xref:System.Security.Permissions.SecurityPermission> y [permisos de acceso del código](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
+    >  Llamar a la API de Windows requiere el permiso de código no administrado, lo que podría afectar a su ejecución en situaciones de confianza parcial. Para obtener más información, consulte <xref:System.Security.Permissions.SecurityPermission> y [permisos de acceso del código](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).  
   
 ## <a name="see-also"></a>Vea también
 - [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)

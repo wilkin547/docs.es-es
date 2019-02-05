@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Crear certificados temporales que puedan utilizarse durante las operaciones de desarrollo'
+title: Filtrar Crear certificados temporales para su uso durante el desarrollo
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 2d0301b040d0fd9865eaf5c3f96fe320ccfd8488
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698589"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738635"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Cómo: Crear certificados temporales que puedan utilizarse durante las operaciones de desarrollo
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Filtrar Crear certificados temporales para su uso durante el desarrollo
 
 Al desarrollar un servicio seguro o cliente mediante Windows Communication Foundation (WCF), a menudo es necesario proporcionar un certificado X.509 que se usará como una credencial. El certificado forma normalmente parte de una cadena de certificados con una entidad emisora raíz situada en el almacén de las Entidades emisoras de certificados raíz de confianza del equipo. Tener una cadena de certificados le permite establecer un conjunto de certificados donde normalmente la entidad emisora raíz pertenece a su organización o unidad del negocio. Para emularlo en el momento de desarrollo, puede crear dos certificados para satisfacer los requisitos de seguridad. El primero es un certificado con firma automática que se coloca en el almacén de las Entidades emisoras de certificados raíz de confianza y el segundo certificado se crea a partir del primero y se coloca en el almacén personal de la ubicación del equipo local o en el almacén personal de la ubicación del usuario actual. En este tema se describe los pasos para crear estos dos certificados mediante el Powershell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet.
 
@@ -21,7 +21,7 @@ Al desarrollar un servicio seguro o cliente mediante Windows Communication Found
 >
 > De forma predeterminada, el [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet crea certificados autofirmados y estos certificados no son seguros. Almacén de colocación de los certificados autofirmados en las entidades de certificación raíz de confianza permite crear un entorno de desarrollo que simula el entorno de implementación.
 
- Para obtener más información sobre la creación y uso de certificados, consulte [trabajar con certificados](working-with-certificates.md). Para obtener más información sobre el uso de un certificado como credencial, vea [proteger servicios y clientes](securing-services-and-clients.md). Para ver un tutorial sobre el uso de la tecnología Microsoft Authenticode, consulte [información general de Authenticode y tutoriales](https://go.microsoft.com/fwlink/?LinkId=88919).
+ Para obtener más información sobre la creación y uso de certificados, consulte [trabajar con certificados](working-with-certificates.md). Para obtener más información sobre el uso de un certificado como credencial, vea [proteger servicios y clientes](securing-services-and-clients.md). Para obtener un tutorial sobre el uso de la tecnología Microsoft Authenticode, consulte [Authenticode Overviews and Tutorials (Información general y tutoriales de Authenticode)](https://go.microsoft.com/fwlink/?LinkId=88919).
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Para crear un certificado de la entidad de certificación raíz firmado automáticamente y exportar la clave privada
 
@@ -70,7 +70,7 @@ Una vez creado un certificado firmado automáticamente, puede instalarlo en el a
 
 4. Haga clic con el botón secundario en la carpeta **Certificados** y haga clic en **Todas las tareas**, a continuación, haga clic en **Importar**.
 
-5. Siga las instrucciones del asistente en pantalla para importar TempCa.cer en el almacén.
+5. Siga el Asistente en pantalla para obtener instrucciones para importar el RootCA.pfx en el almacén.
 
 ## <a name="using-certificates-with-wcf"></a>Uso de certificados con WCF
 
@@ -106,7 +106,7 @@ En el archivo de configuración para un cliente, use el siguiente código XML pa
 </behaviors>
 ```
 
-Para obtener más información sobre el uso de certificados en WCF, vea [trabajar con certificados](working-with-certificates.md).
+Para obtener más información sobre el uso de certificados en WCF, consulte [Working with Certificates](working-with-certificates.md).
 
 ## <a name="net-framework-security"></a>seguridad en .NET Framework
 
@@ -115,5 +115,5 @@ Asegúrese de eliminar cualquier los certificados temporales de entidad emisora 
 ## <a name="see-also"></a>Vea también
 
 - [Trabajo con certificados](working-with-certificates.md)
-- [Visualización de certificados con el complemento MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Cómo: Ver certificados con el complemento de MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Protección de servicios y clientes](securing-services-and-clients.md)

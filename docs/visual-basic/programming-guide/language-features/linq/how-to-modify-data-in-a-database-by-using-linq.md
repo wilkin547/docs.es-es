@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Modificar datos en una base de datos usando LINQ (Visual Basic)
+title: Filtrar Modificar datos en una base de datos usando LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: bcc56e1f7a36c705aec6750b76a4ad5d99fe7101
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88597e5cfa1db46e147b829c8ffc634697cecc7e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658421"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739493"
 ---
-# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Procedimiento Modificar datos en una base de datos usando LINQ (Visual Basic)
+# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Filtrar Modificar datos en una base de datos usando LINQ (Visual Basic)
 Language Integrated Query de Query (LINQ) facilitan el acceso a la información de la base de datos y modificar los valores de la base de datos.  
   
  El ejemplo siguiente muestra cómo crear una nueva aplicación que recupera y actualiza la información en una base de datos de SQL Server.  
@@ -165,4 +165,4 @@ Language Integrated Query de Query (LINQ) facilitan el acceso a la información 
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [Métodos DataContext (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
-- [Cómo: Asignar procedimientos almacenados para realizar actualizaciones, inserciones y eliminaciones (Object Relational Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+- [Cómo: Asignar procedimientos almacenados para realizar actualizaciones, inserciones y eliminaciones (Object Relational Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)

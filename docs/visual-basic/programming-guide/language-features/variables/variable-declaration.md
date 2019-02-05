@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 1a43cabfd3ab22ad9035ecb30435b21b75040308
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a23d16d4ef4e90041e320c52381fa34b8b33d2d4
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718798"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738752"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Declaración de variable en Visual Basic
 Declare una variable para especificar su nombre y las características. La instrucción de declaración de variables es el [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Su ubicación y contenido determinan las características de la variable.  
@@ -61,7 +61,7 @@ Dim l, m As Long, x, y As Single
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- Para obtener más información sobre los tipos de datos, vea [tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Para obtener más información sobre los objetos, consulte [objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) y [programar con componentes](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
+ Para obtener más información sobre los tipos de datos, vea [tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Para obtener más información sobre los objetos, consulte [objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) y [programar con componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
 ## <a name="local-type-inference"></a>Inferencia de tipo de variable local  
  *Inferencia de tipo* se usa para determinar los tipos de datos de variables locales declaradas sin un `As` cláusula. El compilador deduce el tipo de la variable del tipo de la expresión de inicialización. Esto le permite declarar variables sin especificar explícitamente un tipo. En el ejemplo siguiente, ambos `num1` y `num2` están fuertemente tipados como enteros.  

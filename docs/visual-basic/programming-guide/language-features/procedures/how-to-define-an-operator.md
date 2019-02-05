@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Definir un operador (Visual Basic)
+title: Filtrar Definir un operador (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: fb150298562c1ec91f73f3c8075f4f8a4fc20b27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ced9e2ab71ccb00c9ce3495e38d895a7104fdde
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679531"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738661"
 ---
-# <a name="how-to-define-an-operator-visual-basic"></a>Procedimiento Definir un operador (Visual Basic)
+# <a name="how-to-define-an-operator-visual-basic"></a>Filtrar Definir un operador (Visual Basic)
 Si ha definido una clase o estructura, puede definir el comportamiento de un operador estándar (como `*`, `<>`, o `And`) cuando uno o ambos de los operandos es del tipo de la clase o estructura.  
   
  Definir el operador estándar como un procedimiento de operador dentro de la clase o estructura. Todos los procedimientos de operador deben ser `Public` `Shared`.  
@@ -36,7 +36,6 @@ Si ha definido una clase o estructura, puede definir el comportamiento de un ope
   
  [!code-vb[VbVbcnProcedures#26](./codesnippet/VisualBasic/how-to-define-an-operator_2.vb)]  
   
- Para obtener más información y ejemplos, vea [Operator Overloading in Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx) (Sobrecarga de operadores en Visual Basic 2005).  
   
 ## <a name="see-also"></a>Vea también
 - [Procedimientos de operadores](./operator-procedures.md)

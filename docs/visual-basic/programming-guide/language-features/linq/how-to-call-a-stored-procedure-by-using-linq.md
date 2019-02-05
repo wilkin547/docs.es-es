@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Llamar a un procedimiento almacenado usando LINQ (Visual Basic)
+title: Filtrar Llamar a un procedimiento almacenado usando LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], stored procedure calls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: bd1a3b0b163d3ab0fcc7eb9616e88c11381ff189
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0abc7c8c1c4f93f6b12edc94c678aef6e6b72608
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552052"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739441"
 ---
-# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Procedimiento Llamar a un procedimiento almacenado usando LINQ (Visual Basic)
+# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Filtrar Llamar a un procedimiento almacenado usando LINQ (Visual Basic)
 Language-Integrated Query (LINQ) facilita el acceso a la información de la base de datos, incluidos procedimientos almacenados, como los objetos de base de datos.  
   
  El ejemplo siguiente muestra cómo crear una aplicación que llama a un procedimiento almacenado en una base de datos de SQL Server. El ejemplo muestra cómo llamar a dos procedimientos almacenados diferentes en la base de datos. Cada procedimiento devuelve los resultados de una consulta. Un procedimiento toma parámetros de entrada y el otro procedimiento no toma parámetros.  
@@ -73,4 +73,4 @@ Language-Integrated Query (LINQ) facilita el acceso a la información de la base
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [Métodos DataContext (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
-- [Cómo: Asignar procedimientos almacenados para realizar actualizaciones, inserciones y eliminaciones (Object Relational Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+- [Cómo: Asignar procedimientos almacenados para realizar actualizaciones, inserciones y eliminaciones (Object Relational Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)

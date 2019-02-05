@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 8c16cf910546dcbe0a19efa13b552ffd4d9b6411
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66c576df7499c90ae29399ab9b0bd93f0fda6cb2
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580976"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738986"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Opciones del compilador de Visual Basic alfabético
 El compilador de línea de comandos de Visual Basic se proporciona como una alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de Visual Studio. La siguiente es una lista de las opciones del compilador de línea de comandos de Visual Basic ordenadas alfabéticamente.  
@@ -25,7 +25,7 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
 |`-analyzer`|Ejecuta los analizadores de este ensamblado (forma abreviada: -a).|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Especifica la dirección base de un archivo DLL.|  
 |[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|Crea un archivo que contiene información que permite notificar un error fácilmente.|  
-|`-checksumalgorithm:<alg>`|Especifique el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (predeterminado) o SHA256.|  
+|`-checksumalgorithm:<alg>`|Especifique el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (el predeterminado) o SHA256.|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Especifica la página de códigos que se va a usar para todos los archivos de código fuente de la compilación.|  
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Crea información de depuración.|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Define símbolos de compilación condicional.|  
@@ -39,7 +39,7 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Importa un espacio de nombres desde un ensamblado especificado.|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Especifica un nombre de contenedor de claves para un par de claves que asigna un nombre seguro al ensamblado.|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|Especifica un archivo que contiene una clave o un par de claves para asignar un nombre seguro al ensamblado.|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Especifique la versión de idioma: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Especifique la versión de lenguaje: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Especifica la ubicación de los ensamblados referenciados por la [-referencia](../../../visual-basic/reference/command-line-compiler/reference.md) opción.|  
 |[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|Crea un vínculo a un recurso administrado.|  
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Especifica la clase que contiene el `Sub Main` procedimiento para usar en el inicio.|  
@@ -82,6 +82,4 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
   
 ## <a name="see-also"></a>Vea también
 - [Opciones del compilador de Visual Basic, por categoría](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
-- [Introducción al Diseñador de proyectos](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)
-- [Opciones del compilador de C#, por orden alfabético](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
-- [Opciones del compilador de C#, por categoría](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+- [Administración de propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)

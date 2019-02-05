@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: fd1cfa8c3391861b87e8aec718b63287c1225263
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bb0e3ff0d021e9923f2e1bd8ced882c6a263d15
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733953"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738570"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Tutorial: Validar la complejidad de contraseñas (Visual Basic)
 Este método comprueba si hay algunas características de contraseña segura y actualiza un parámetro de cadena con información sobre las comprobaciones que la contraseña se produce un error.  
@@ -31,7 +31,7 @@ Este método comprueba si hay algunas características de contraseña segura y a
 -   Acceso a los miembros del espacio de nombres <xref:System.Text.RegularExpressions>. Agregue una instrucción `Imports` si no hay nombres de miembros completos en el código. Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Seguridad  
- Si va a mover la contraseña a través de una red, deberá usar un método seguro de transferencia de datos. Para obtener más información, consulte [ASP.NET Web Application Security](https://msdn.microsoft.com/library/330a99hc).  
+ Si te estás cambiando la contraseña a través de una red, deberá usar un método seguro de transferencia de datos. Para obtener más información, consulte [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
  Puede mejorar la precisión de la `ValidatePassword` función agregando comprobaciones de complejidad adicional:  
   
@@ -45,4 +45,4 @@ Este método comprueba si hay algunas características de contraseña segura y a
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Text.RegularExpressions.Regex>
-- [Seguridad de aplicaciones Web ASP.NET](https://msdn.microsoft.com/library/330a99hc)
+- [Seguridad de aplicaciones Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))

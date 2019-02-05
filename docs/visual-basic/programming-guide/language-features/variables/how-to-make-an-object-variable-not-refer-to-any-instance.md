@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Crea un objeto de Variable no hacen referencia a cualquier instancia (Visual Basic)
+title: Filtrar Crea un objeto de Variable no hacen referencia a cualquier instancia (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Nothing keyword [Visual Basic], variable assignment
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
-ms.openlocfilehash: 1199fa4e126c3d15e56a6c895aecf6afcae17f0b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ceee1b47fb66cfb8e24b6871af3be6475031504f
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678517"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738882"
 ---
-# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Procedimiento Crea un objeto de Variable no hacen referencia a cualquier instancia (Visual Basic)
+# <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Filtrar Crea un objeto de Variable no hacen referencia a cualquier instancia (Visual Basic)
 Puede desasociar una variable de objeto de cualquier instancia de objeto si se establece en [nada](../../../../visual-basic/language-reference/nothing.md).  
   
 ### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>Para desasociar una variable de objeto de cualquier instancia de objeto  
@@ -37,4 +37,3 @@ Puede desasociar una variable de objeto de cualquier instancia de objeto si se e
 - [Asignación de variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
 - [Try...Catch...Finally (instrucción)](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [Solucionar problemas de excepciones: System.NullReferenceException](https://msdn.microsoft.com/library/4822b0b4-8105-43fb-887a-3cc51ff02899)

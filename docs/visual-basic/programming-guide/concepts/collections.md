@@ -2,12 +2,12 @@
 title: Colecciones (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 55234e39fc692ec8f6cc10d05df6b29be5818927
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: d81af633222961dfd9db49722f25c46a549413f9
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674833"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739012"
 ---
 # <a name="collections-visual-basic"></a>Colecciones (Visual Basic)
 Para muchas aplicaciones, puede que desee crear y administrar grupos de objetos relacionados. Existen dos formas de agrupar objetos: mediante la creación de matrices de objetos y con la creación de colecciones de objetos.  
@@ -462,7 +462,7 @@ End Class
   
 <a name="BKMK_CustomCollection"></a> 
 ## <a name="defining-a-custom-collection"></a>Definición de una colección personalizada  
- Puede definir una colección implementando la interfaz <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.IEnumerable>. Para obtener más información, consulte [enumerar una colección](https://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f).  
+ Puede definir una colección implementando la interfaz <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.IEnumerable>. Para obtener más información, consulte [enumerar una colección](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
   
  Aunque puede definir una colección personalizada, es mejor usar las colecciones incluidas en .NET Framework. Estas colecciones se describen en la sección [Tipos de colecciones](#kinds-of-collections) de este tema.  
   

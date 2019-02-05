@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArray_TypeMismatch
 ms.assetid: d53cf41b-7a7a-466c-a29a-920d99698fa9
-ms.openlocfilehash: 97eedabd550be397f9cdffc5fd864d7a88c30c31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d20d0374cd5183b6216d1c6e5b138256cf0a4f17
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714209"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738960"
 ---
 # <a name="redim-can-only-change-the-right-most-dimension"></a>'ReDim' solo puede cambiar la dimensión situada más a la derecha
 Una instrucción `ReDim` intentó usar la palabra clave `Preserve` para cambiar una dimensión de una matriz que no es la última dimensión. Si usa `Preserve`, solo puede cambiar el tamaño de la última dimensión de la matriz. Para todas las demás dimensiones, debe especificar el mismo tamaño que la matriz existente.  
@@ -23,4 +23,3 @@ Una instrucción `ReDim` intentó usar la palabra clave `Preserve` para cambiar 
 - [Dimensiones de la matriz en Visual Basic](~/docs/visual-basic/programming-guide/language-features/arrays/array-dimensions.md)
 - [ReDim (instrucción)](../../visual-basic/language-reference/statements/redim-statement.md)
 - [Dim (instrucción)](../../visual-basic/language-reference/statements/dim-statement.md)
-- [Preserve - delete](https://msdn.microsoft.com/library/91badeab-b4e0-48b6-92c9-9f0c8f995d81)
