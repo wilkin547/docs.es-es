@@ -3,12 +3,12 @@ title: <remove>
 ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
-ms.openlocfilehash: a54957458311e2d5941d1aa1c2486a2f66994d9b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 17c4d4289cf90b66d52986c054d4807ecff2b3d8
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288137"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758422"
 ---
 # <a name="remove"></a>\<remove>
 Quita el controlador de token de seguridad especificado de la colección de controladores de token.  
@@ -38,7 +38,7 @@ Quita el controlador de token de seguridad especificado de la colección de cont
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|type|El nombre del tipo CLR del controlador de token que se va a quitar. Para obtener más información sobre cómo especificar el `type` atributo, vea [referencias de tipos personalizado](https://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Obligatorio.|  
+|type|El nombre del tipo CLR del controlador de token que se va a quitar. Para obtener más información sobre cómo especificar el `type` atributo, vea [referencias de tipos personalizado](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references). Obligatorio.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguna  

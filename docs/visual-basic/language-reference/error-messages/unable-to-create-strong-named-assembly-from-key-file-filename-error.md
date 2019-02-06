@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31026
 ms.assetid: 5dd09785-bc10-4ae7-ba24-b795057aca31
-ms.openlocfilehash: 8f8070dd05f9964546f03fc8227b8dbe8adccccd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 94c01709cda4279928815a3271749d71e247dff7
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269359"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759059"
 ---
 # <a name="unable-to-create-strong-named-assembly-from-key-file-filename-error"></a>No se puede crear el ensamblado con nombre seguro del archivo de clave '\<filename >': \<error >
 No se pudo crear un ensamblado con nombre seguro en el archivo de clave especificado.  
@@ -24,4 +24,4 @@ No se pudo crear un ensamblado con nombre seguro en el archivo de clave especifi
 1.  Compruebe que se ha especificado el archivo de clave correcto y que no está bloqueado por otra aplicación.  
   
 ## <a name="see-also"></a>Vea también
-- [Sn.exe (herramienta de nombre seguro)] [Sn.exe (herramienta de nombre seguro)](../../../framework/tools/sn-exe-strong-name-tool.md))
+- [Sn.exe (herramienta de nombre seguro)](../../../framework/tools/sn-exe-strong-name-tool.md))

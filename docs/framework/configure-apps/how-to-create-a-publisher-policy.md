@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear una directiva de publicador
+title: Filtrar Crear una directiva de publicador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 5b69d6add9a01b890cdcc1c6f3be1b1d35f3cd78
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: b98d3ef62fc9dda48920d32fed6f6acf797334d6
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083514"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758994"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Procedimiento Crear una directiva de publicador
+# <a name="how-to-create-a-publisher-policy"></a>Filtrar Crear una directiva de publicador
 Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar una versión más reciente de un ensamblado mediante la inclusión de un archivo de directiva de publicador con el ensamblado actualizado. El archivo de directiva de publicador especifica redirección de ensamblado y la configuración de base de código y usa el mismo formato que un archivo de configuración de la aplicación. El archivo de directiva de publicador se compila en un ensamblado y colocar en la caché global de ensamblados.  
   
  Hay tres pasos implicados en la creación de una directiva de publicador:  
@@ -103,8 +103,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
 ## <a name="see-also"></a>Vea también
 - [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Configurar aplicaciones](../../../docs/framework/configure-apps/index.md)
-- [Configurar aplicaciones de .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Configurar aplicaciones con archivos de configuración](../../../docs/framework/configure-apps/index.md)
 - [Esquema de la configuración de Common Language Runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Redirigir versiones de ensamblado](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
