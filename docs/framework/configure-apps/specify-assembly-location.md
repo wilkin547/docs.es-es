@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: b76537a347cdf30c65bfd6e56f274108e796a315
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 328fe08872a2b57d0bdf87ea9be9224795ca9ad9
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258999"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825412"
 ---
 # <a name="specifying-an-assemblys-location"></a>Especificar la ubicación de un ensamblado
 Hay dos maneras de especificar una ubicación de ensamblado:  
@@ -20,7 +20,7 @@ Hay dos maneras de especificar una ubicación de ensamblado:
   
 -   Mediante el [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento.  
   
- También puede usar el [herramienta de configuración de .NET Framework (Mscorcfg.msc)](https://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764) para especificar ubicaciones de ensamblados o especificar ubicaciones para common language runtime sondear ensamblados.  
+ También puede usar el [herramienta de configuración de .NET Framework (Mscorcfg.msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) para especificar ubicaciones de ensamblados o especificar ubicaciones para common language runtime sondear ensamblados.  
   
 ## <a name="using-the-codebase-element"></a>Mediante el \<codeBase > elemento  
  Puede usar el  **\<codeBase >** elemento sólo en configuración o publicador directiva archivos del equipo que también redirigir la versión del ensamblado. Cuando el tiempo de ejecución determina qué versión del ensamblado, se aplica el valor de la base de código del archivo que determina la versión. Si no se indica ningún código base, el tiempo de ejecución sondea el ensamblado de la manera normal. Para obtener más información, consulte [How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
@@ -69,4 +69,4 @@ Hay dos maneras de especificar una ubicación de ensamblado:
 - [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Configurar aplicaciones de .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Configurar aplicaciones con archivos de configuración](index.md)

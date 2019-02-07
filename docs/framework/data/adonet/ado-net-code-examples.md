@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 5d3bc2b4e5fbb8cc36cf4688bd4fa5e4c0851dcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa91646a46807f26053b3d0df28c412bcc5a2f21
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597637"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825906"
 ---
 # <a name="adonet-code-examples"></a>Ejemplos de código ADO.NET
 Los listados de código de este tema muestran cómo recuperar datos de una base de datos utilizando las tecnologías ADO.NET siguientes:
@@ -137,7 +137,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>ObjectQuery con establecimiento de tipos
-En el código de este ejemplo se utiliza <xref:System.Data.Objects.ObjectQuery%601> para devolver los datos como objetos Categories. Para obtener más información, consulte [las consultas de objeto](https://msdn.microsoft.com/0768033c-876f-471d-85d5-264884349276).
+En el código de este ejemplo se utiliza <xref:System.Data.Objects.ObjectQuery%601> para devolver los datos como objetos Categories. Para obtener más información, consulte [las consultas de objeto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)).
 
 ```csharp
 using System;
@@ -346,7 +346,7 @@ End Class
 ## <a name="see-also"></a>Vea también
 - [Información general sobre ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Crear aplicaciones de datos](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)
-- [Consultar un Entity Data Model (tareas de Entity Framework)](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)
-- [Cómo: Ejecutar una consulta que devuelve objetos de tipo anónimo](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)
+- [Crear aplicaciones de datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
+- [Consultar un Entity Data Model (tareas de Entity Framework)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
+- [Cómo: Ejecutar una consulta que devuelve objetos de tipo anónimo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

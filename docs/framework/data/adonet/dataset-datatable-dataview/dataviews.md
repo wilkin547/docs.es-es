@@ -2,12 +2,12 @@
 title: Objetos DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 4731b0c94f9ecd03dc3d1229f27cb8ede7e0e203
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcf370e30c50bf5d992279c7abe02bfc6262ea40
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592905"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825880"
 ---
 # <a name="dataviews"></a>Objetos DataView
 Una <xref:System.Data.DataView> le permite crear diferentes vistas de los datos almacenados en una <xref:System.Data.DataTable>, una capacidad que suele utilizarse en aplicaciones de enlace a datos. Mediante un **DataView**, puede exponer los datos en una tabla con distintos criterios de ordenación y puede filtrar los datos por estado de fila o basándose en una expresión de filtro.  
@@ -44,10 +44,10 @@ Una <xref:System.Data.DataView> le permite crear diferentes vistas de los datos 
  Describe cómo utilizar un **DataViewManager** para administrar **DataView** configuración para cada tabla en un **DataSet**.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Aplicaciones web de ASP.NET](https://msdn.microsoft.com/library/a812d7b7-049e-4234-a4c2-6acf690301f6)  
+ [Aplicaciones web de ASP.NET](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
  Proporciona información general y procedimientos detallados paso a paso sobre la creación de aplicaciones ASP.NET, Web Forms y servicios Web.  
   
- [Aplicaciones de Windows](https://msdn.microsoft.com/library/a6bb2180-09b1-4738-b9fd-7fb05fc92f23)  
+ [Aplicaciones de Windows](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
  Proporciona información detallada sobre el uso de Windows Forms y aplicaciones de consola.  
   
  [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  

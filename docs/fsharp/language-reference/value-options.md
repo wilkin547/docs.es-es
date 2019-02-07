@@ -1,13 +1,13 @@
 ---
 title: Opciones de valor
 description: Obtenga información sobre la F# tipo de opción de valor, que es una versión de la estructura del tipo de opción.
-ms.date: 06/16/2018
-ms.openlocfilehash: d5209e620d53e12e9344faea09321f640af21491
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/06/2019
+ms.openlocfilehash: e1036c83189c853b3704d94ca245e4818acc98c1
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613432"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828038"
 ---
 # <a name="value-options"></a>Opciones de valor
 
@@ -16,7 +16,7 @@ El tipo de opción de valor F# se utiliza cuando mantiene los siguientes dos cas
 1. Un escenario es adecuado para un [ F# opción](options.md).
 2. Uso de un struct mejora el rendimiento en su escenario.
 
-No todos los escenarios sensibles al rendimiento se "solucionar" mediante el uso de estructuras. Debe tener en cuenta el costo adicional de copia cuando se usan en lugar de tipos de referencia. Sin embargo, gran F# programas suele crear una instancia de muchos tipos opcionales que fluyen a través de las rutas de acceso frecuente, porque las estructuras a veces pueden producir un mejor rendimiento general durante la vigencia de un programa.
+No todos los escenarios sensibles al rendimiento se "solucionar" mediante el uso de estructuras. Debe tener en cuenta el costo adicional de copia cuando se usan en lugar de tipos de referencia. Sin embargo, gran F# programas suelen crear instancias de muchos tipos opcionales que fluyen a través de rutas de acceso activas y en estos casos, structs, es posible obtener un mejor rendimiento general durante la vigencia de un programa.
 
 ## <a name="definition"></a>de esquema JSON
 

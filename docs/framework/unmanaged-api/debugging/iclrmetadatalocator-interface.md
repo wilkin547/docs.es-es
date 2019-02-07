@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d1d767de88b239c96cb98130b6ff006e3f75b09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5dd77783c03d6a61d0b5831e44db97a731d8074
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495037"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825893"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator (Interfaz)
 Usa la capa de servicios de acceso a datos para buscar los metadatos de los ensamblados en un proceso de destino.  
@@ -42,7 +42,7 @@ Usa la capa de servicios de acceso a datos para buscar los metadatos de los ensa
   
  **Biblioteca:** CorGuids.lib  
   
- **.** **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 - [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
