@@ -1,6 +1,6 @@
 ---
-title: Procedimiento para abrir y anexar a un archivo de registro
-ms.date: 03/30/2017
+title: Filtrar Abrir y anexar a un archivo de registro
+ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -13,34 +13,36 @@ helpviewer_keywords:
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 351daa2a13c4a8c4b1551ce74d2eaa6d032f1f17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 921b13e057929d7d6b283b26014a4c1f195f39c9
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622742"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674846"
 ---
-# <a name="how-to-open-and-append-to-a-log-file"></a><span data-ttu-id="5995a-102">Procedimiento para abrir y anexar a un archivo de registro</span><span class="sxs-lookup"><span data-stu-id="5995a-102">How to: Open and Append to a Log File</span></span>
-<span data-ttu-id="5995a-103"><xref:System.IO.StreamWriter> y <xref:System.IO.StreamReader> escriben y leen caracteres de secuencias.</span><span class="sxs-lookup"><span data-stu-id="5995a-103"><xref:System.IO.StreamWriter> and <xref:System.IO.StreamReader> write characters to and read characters from streams.</span></span> <span data-ttu-id="5995a-104">En el siguiente ejemplo de código se abre el archivo `log.txt` para realizar entradas o se crea el archivo en caso de que no exista y se adjunta información al final del archivo.</span><span class="sxs-lookup"><span data-stu-id="5995a-104">The following code example opens the `log.txt` file for input, or creates the file if it does not already exist, and appends information to the end of the file.</span></span> <span data-ttu-id="5995a-105">El contenido del archivo, a continuación, se escribe en la salida estándar para su presentación.</span><span class="sxs-lookup"><span data-stu-id="5995a-105">The contents of the file are then written to standard output for display.</span></span> <span data-ttu-id="5995a-106">Como alternativa a este ejemplo, la información se puede almacenar como una sola cadena o como una matriz de cadenas, y el método <xref:System.IO.File.WriteAllText%2A> o <xref:System.IO.File.WriteAllLines%2A> podría utilizarse para lograr la misma funcionalidad.</span><span class="sxs-lookup"><span data-stu-id="5995a-106">As an alternative to this example, the information could be stored as a single string or string array, and the <xref:System.IO.File.WriteAllText%2A> or <xref:System.IO.File.WriteAllLines%2A> method could be used to achieve the same functionality.</span></span>  
+# <a name="how-to-open-and-append-to-a-log-file"></a><span data-ttu-id="0d3fd-102">Filtrar Abrir y anexar a un archivo de registro</span><span class="sxs-lookup"><span data-stu-id="0d3fd-102">How to: Open and append to a log file</span></span>
+<span data-ttu-id="0d3fd-103"><xref:System.IO.StreamWriter> y <xref:System.IO.StreamReader> escriben y leen caracteres de secuencias.</span><span class="sxs-lookup"><span data-stu-id="0d3fd-103"><xref:System.IO.StreamWriter> and <xref:System.IO.StreamReader> write characters to and read characters from streams.</span></span> <span data-ttu-id="0d3fd-104">En el siguiente ejemplo de código se abre el archivo *log.txt* para realizar entradas o se crea el archivo en caso de que no exista y se adjunta información de registro al final del archivo.</span><span class="sxs-lookup"><span data-stu-id="0d3fd-104">The following code example opens the *log.txt* file for input, or creates it if it doesn't exist, and appends log information to the end of the file.</span></span> <span data-ttu-id="0d3fd-105">El ejemplo, a continuación, escribe el contenido del archivo en la salida estándar para su presentación.</span><span class="sxs-lookup"><span data-stu-id="0d3fd-105">The example then writes the contents of the file to standard output for display.</span></span> 
+
+<span data-ttu-id="0d3fd-106">Como alternativa a este ejemplo, podría almacenar la información como una sola cadena o como una matriz de cadenas, y usar el método <xref:System.IO.File.WriteAllText%2A?displayProperty=nameWithType> o <xref:System.IO.File.WriteAllLines%2A?displayProperty=nameWithType> para lograr la misma funcionalidad.</span><span class="sxs-lookup"><span data-stu-id="0d3fd-106">As an alternative to this example, you could store the information as a single string or string array, and use the <xref:System.IO.File.WriteAllText%2A?displayProperty=nameWithType> or <xref:System.IO.File.WriteAllLines%2A?displayProperty=nameWithType> method to achieve the same functionality.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5995a-107">Los usuarios de Visual Basic tienen la opción de utilizar los métodos y las propiedades proporcionados por las clases <xref:Microsoft.VisualBasic.Logging.Log> o <xref:Microsoft.VisualBasic.FileIO.FileSystem> para crear archivos de registro o escribir en ellos.</span><span class="sxs-lookup"><span data-stu-id="5995a-107">Visual Basic users may choose to use the methods and properties provided by the <xref:Microsoft.VisualBasic.Logging.Log> class or <xref:Microsoft.VisualBasic.FileIO.FileSystem> class for creating or writing to log files.</span></span>  
+> <span data-ttu-id="0d3fd-107">Los usuarios de Visual Basic tienen la opción de utilizar los métodos y las propiedades proporcionados por las clases <xref:Microsoft.VisualBasic.Logging.Log> o <xref:Microsoft.VisualBasic.FileIO.FileSystem> para crear archivos de registro o escribir en ellos.</span><span class="sxs-lookup"><span data-stu-id="0d3fd-107">Visual Basic users may choose to use the methods and properties provided by the <xref:Microsoft.VisualBasic.Logging.Log> class or <xref:Microsoft.VisualBasic.FileIO.FileSystem> class for creating or writing to log files.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5995a-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5995a-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="0d3fd-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0d3fd-108">Example</span></span>  
  [!code-csharp[Conceptual.BasicIO.TextFiles#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source2.cs#2)]
  [!code-vb[Conceptual.BasicIO.TextFiles#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source2.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="5995a-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="5995a-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d3fd-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="0d3fd-109">See also</span></span>
 
-- <xref:System.IO.StreamWriter>
-- <xref:System.IO.StreamReader>
-- <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>
-- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>
-- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="5995a-110">Cómo: Enumerar directorios y archivos</span><span class="sxs-lookup"><span data-stu-id="5995a-110">How to: Enumerate Directories and Files</span></span>](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
-- [<span data-ttu-id="5995a-111">Cómo: Leer y escribir en un archivo de datos recién creado</span><span class="sxs-lookup"><span data-stu-id="5995a-111">How to: Read and Write to a Newly Created Data File</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
-- [<span data-ttu-id="5995a-112">Cómo: Leer texto de un archivo</span><span class="sxs-lookup"><span data-stu-id="5995a-112">How to: Read Text from a File</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)
-- [<span data-ttu-id="5995a-113">Cómo: Escribir texto en un archivo</span><span class="sxs-lookup"><span data-stu-id="5995a-113">How to: Write Text to a File</span></span>](../../../docs/standard/io/how-to-write-text-to-a-file.md)
-- [<span data-ttu-id="5995a-114">Cómo: Leer caracteres de una cadena</span><span class="sxs-lookup"><span data-stu-id="5995a-114">How to: Read Characters from a String</span></span>](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
-- [<span data-ttu-id="5995a-115">Cómo: Escribir caracteres en una cadena</span><span class="sxs-lookup"><span data-stu-id="5995a-115">How to: Write Characters to a String</span></span>](../../../docs/standard/io/how-to-write-characters-to-a-string.md)
-- [<span data-ttu-id="5995a-116">E/S de archivos y secuencias</span><span class="sxs-lookup"><span data-stu-id="5995a-116">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)
+- <xref:System.IO.StreamWriter>  
+- <xref:System.IO.StreamReader>  
+- <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>  
+- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
+- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
+- [<span data-ttu-id="0d3fd-110">Cómo: Enumerar directorios y archivos</span><span class="sxs-lookup"><span data-stu-id="0d3fd-110">How to: Enumerate directories and files</span></span>](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
+- [<span data-ttu-id="0d3fd-111">Cómo: Leer y escribir en un archivo de datos recién creado</span><span class="sxs-lookup"><span data-stu-id="0d3fd-111">How to: Read and write to a newly created data file</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
+- [<span data-ttu-id="0d3fd-112">Cómo: Leer texto de un archivo</span><span class="sxs-lookup"><span data-stu-id="0d3fd-112">How to: Read text from a file</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+- [<span data-ttu-id="0d3fd-113">Cómo: Escribir texto en un archivo</span><span class="sxs-lookup"><span data-stu-id="0d3fd-113">How to: Write text to a file</span></span>](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
+- [<span data-ttu-id="0d3fd-114">Cómo: Leer caracteres de una cadena</span><span class="sxs-lookup"><span data-stu-id="0d3fd-114">How to: Read characters from a string</span></span>](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
+- [<span data-ttu-id="0d3fd-115">Cómo: Escribir caracteres en una cadena</span><span class="sxs-lookup"><span data-stu-id="0d3fd-115">How to: Write characters to a string</span></span>](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- [<span data-ttu-id="0d3fd-116">E/S de archivos y secuencias</span><span class="sxs-lookup"><span data-stu-id="0d3fd-116">File and stream I/O</span></span>](../../../docs/standard/io/index.md)
