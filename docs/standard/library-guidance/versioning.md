@@ -4,12 +4,12 @@ description: Procedimientos recomendados para el control de versiones de las bib
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169604"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204748"
 ---
 # <a name="versioning"></a>Control de versiones
 
@@ -63,7 +63,7 @@ La asignación de nombres seguros junto con la versión de ensamblado permite la
 
 > AssemblyVersion se incluye en algunos mensajes informativos que se muestran al usuario, por ejemplo, el nombre del ensamblado y los nombres de tipo completos del ensamblado en los mensajes de excepción. Mantener una relación entre las versiones proporciona más información a los desarrolladores sobre qué versión están usando.
 
-**NO** tiene una AssemblyVersion fija.
+**❌ NO** tiene una AssemblyVersion fija.
 
 > Aunque una AssemblyVersion invariable evita la necesidad de redirecciones de enlace, significa que se puede instalar solo una única versión del ensamblado en la memoria caché de ensamblados global (GAC). Además, las aplicaciones que hacen referencia al ensamblado en la memoria caché de ensamblados global se interrumpirán si otra aplicación actualiza el ensamblado de dicha memoria con cambios importantes.
 
@@ -87,7 +87,7 @@ La versión del archivo de ensamblado se usa para mostrar una versión de archiv
 
 ### <a name="assembly-informational-version"></a>Versión informativa del ensamblado
 
-La versión informativa de ensamblado se usa para registrar información de versión adicional y no tiene ningún efecto sobre el comportamiento en tiempo de ejecución. La configuración de esta versión es opcional. Si usa SourceLink, esta versión se establecerá en la compilación con la versión del paquete NuGet más una versión de control de código fuente. Por ejemplo, `1.0.0-beta1+204ff0a` incluye el hash de confirmación del código fuente a partir del que se compiló el ensamblado. Para más información, vea [SourceLink](./sourcelink.md).
+La versión informativa de ensamblado se usa para registrar información de versión adicional y no tiene ningún efecto sobre el comportamiento en tiempo de ejecución. La configuración de esta versión es opcional. Si usa SourceLink, esta versión se establecerá en la compilación con la versión del paquete NuGet más una versión de control de código fuente. Por ejemplo, `1.0.0-beta1+204ff0a` incluye el hash de confirmación del código fuente a partir del que se compiló el ensamblado. Para obtener más información, consulte [SourceLink](./sourcelink.md).
 
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
@@ -96,7 +96,7 @@ La versión informativa de ensamblado se usa para registrar información de vers
 > [!NOTE]
 > Las versiones anteriores de Visual Studio generan una advertencia de compilación si esta versión no sigue el formato `Major.Minor.Build.Revision`. La advertencia se puede omitir sin ningún problema.
 
-**EVITE** establecer usted mismo la versión informativa del ensamblado.
+**❌ EVITE** establecer usted mismo la versión informativa del ensamblado.
 
 > Permita que SourceLink genere automáticamente la versión que contiene los metadatos de control de código fuente y NuGet.
 

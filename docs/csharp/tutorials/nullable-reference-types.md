@@ -3,12 +3,12 @@ title: Diseño con tipos de referencia que aceptan valores NULL
 description: En este tutorial avanzado se ofrece una introducción a los tipos de referencia que aceptan valores NULL. Sabrá expresar la intención de su diseño cuando los valores de referencia puedan ser NULL y hacer que el compilador aplique esas decisiones cuando no puedan ser NULL.
 ms.date: 12/03/2018
 ms.custom: mvc
-ms.openlocfilehash: 7e4cb423658287e5260770a680f189c227b9cd01
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eec0c54c041db98595202ab982494df6ae3f743c
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156693"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204774"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expresar la intención del diseño con mayor claridad con tipos de referencia que aceptan valores NULL y que no aceptan valores NULL
 
@@ -68,7 +68,7 @@ Esta aplicación de encuesta requiere la creación de una serie de clases:
 
 Estos tipos usarán ambas los tipos de referencia que aceptan valores NULL y los que no aceptan valores NULL para expresar qué miembros que son necesarios y cuáles opcionales. Los tipos de referencia que aceptan valores NULL comunican claramente esa intención de diseño:
 
-- Las preguntas que forman parte de la encuesta nunca pueden aceptar valores NULL: no tiene sentido formular una pregunta vacía.
+- Las preguntas que forman parte de la encuesta nunca pueden ser NULL: no tiene sentido formular una pregunta vacía.
 - Los encuestados nunca pueden aceptar valores NULL. Quiere realizar un seguimiento de las personas contactadas, incluso de los encuestados que han rechazado participar.
 - Cualquier respuesta a una pregunta puede tener valores NULL. Los encuestados pueden negarse a responder a algunas preguntas o a todas.
 
@@ -190,7 +190,7 @@ La responsabilidad principal de esta clase es generar las respuestas para que un
 1. Solicitar la participación en la encuesta. Si la persona no da su consentimiento, devolver una respuesta con valores ausentes (o NULL).
 1. Realizar cada pregunta y registrar la respuesta. Las respuestas también pueden tener valores ausentes (o NULL).
 
-Agregue el siguiente código a la clase `SurveyRespondent`:
+Agregue el siguiente código a la clase `SurveyResponse`:
 
 [!code-csharp[AnswerSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
@@ -212,7 +212,7 @@ El último paso es mostrar los resultados de la encuesta. Agregará código a mu
 
 [!code-csharp[ReportResponses](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#SurveyStatus)]
 
-Dado que `surveyResponses` es una referencia que no acepta valores NULL, no es necesario escribir ninguna comprobación antes de desreferenciarla. El método `Answer` devuelve una cadena que no acepta valores NULL, así que elija la sobrecarga de `GetValueOrDefault` que tome un segundo argumento para el valor predeterminado.
+Dado que `surveyResponses` es un tipo de referencia que no acepta valores NULL, no es necesario escribir ninguna comprobación antes de desreferenciarla. El método `Answer` devuelve una cadena que no acepta valores NULL, así que elija la sobrecarga de `GetValueOrDefault` que tome un segundo argumento para el valor predeterminado.
 
 A continuación, agregue estos tres miembros con forma de expresión a la clase `SurveyRun`:
 
@@ -228,7 +228,7 @@ No necesita ninguna comprobación `null` en este código porque ha diseñado las
 
 ## <a name="get-the-code"></a>Obtención del código
 
-Puede obtener el código del tutorial terminado en nuestro repositorio de [ejemplos](https://github.com/dotnet/samples) en la carpeta [csharp/IntroToNullables](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction).
+Puede obtener el código del tutorial terminado en nuestro repositorio de [ejemplos](https://github.com/dotnet/samples) en la carpeta [csharp/NullableIntroduction](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction).
 
 Experimente cambiando las declaraciones de tipos entre tipos de referencia que aceptan valores NULL y que no aceptan valores NULL. Vea cómo así se generan advertencias diferentes para garantizar que no se desreferencia accidentalmente un valor `null`.
 

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
-ms.openlocfilehash: 998c7a3f5ca405b3bd66b877d027126f6c76cc15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ecbaa3b2fb0e0fc85ed383385368617bf361f497
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494423"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289447"
 ---
-# <a name="troubleshooting-service-application-won39t-install"></a>Solución del problema: la aplicación de servicio no se instala
+# <a name="troubleshooting-service-application-wont-install"></a>Solución del problema: la aplicación de servicio no se instala
 Si la aplicación de servicio no se instala correctamente, compruebe que la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> para la clase de servicio está configurada con el mismo valor que se muestra en el instalador para ese servicio. El valor debe ser el mismo en ambos casos para que el servicio se instale correctamente.  
   
 > [!NOTE]

@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc71e661a5fd2de2a69da36df0fc60616b149802
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 84ab1a67aca30aa1967ef2fb11f930bf14ec45e3
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127854"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675483"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de dominio: diseño e implementación
 
@@ -31,7 +31,7 @@ En resumen, los eventos de dominio le ayudan a expresar explícitamente las regl
 
 Es importante asegurarse de que, al igual que en una transacción de base de datos, o todas las operaciones relacionadas con un evento de dominio finalizan correctamente o ninguna lo hace.
 
-Los eventos de dominio son similares a los eventos de estilo de mensajería, con una diferencia importante. Con la mensajería real, las colas de mensajes, los agentes de mensajes o un bus de servicio con AMPQ, un mensaje siempre se envía de forma asincrónica y se comunica entre procesos y equipos. Esto es útil para integrar varios contextos delimitados, microservicios o incluso otras aplicaciones. Pero con los eventos de dominio, le interesa generar un evento desde la operación de dominio que se está ejecutando actualmente, pero que los efectos secundarios se produzcan dentro del mismo dominio.
+Los eventos de dominio son similares a los eventos de estilo de mensajería, con una diferencia importante. Con la mensajería real, las colas de mensajes, los agentes de mensajes o un bus de servicio con AMQP, un mensaje siempre se envía de forma asincrónica y se comunica entre procesos y equipos. Esto es útil para integrar varios contextos delimitados, microservicios o incluso otras aplicaciones. Pero con los eventos de dominio, le interesa generar un evento desde la operación de dominio que se está ejecutando actualmente, pero que los efectos secundarios se produzcan dentro del mismo dominio.
 
 Los eventos de dominio y sus efectos secundarios (las acciones iniciadas después que se administren mediante controladores de eventos) se deben producir casi de inmediato, por lo general en el proceso y dentro del mismo dominio. Por tanto, los eventos de dominio pueden ser sincrónicos o asincrónicos. Pero los eventos de integración siempre deben ser asincrónicos.
 
@@ -132,7 +132,7 @@ Es importante destacar aquí que si los eventos de dominio tuvieran que administ
 
 La siguiente pregunta es cómo generar un evento de dominio para que llegue a sus controladores de eventos relacionados. Se pueden usar varios enfoques.
 
-Originalmente, Udi Dahan propuso el uso de una clase estática para administrar y generar los eventos (por ejemplo, en algunas publicaciones relacionadas, como [Domain Events – Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/) [Eventos de dominio: Toma 2]). Esto podría incluir una clase estática denominada DomainEvents que generaría los eventos de dominio inmediatamente cuando se llama, con una sintaxis similar a `DomainEvents.Raise(Event myEvent)`. Jimmy Bogard escribió una entrada de blog ([Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/) [Reforzar el dominio: eventos de dominio]) en la que recomienda un enfoque similar.
+Originalmente, Udi Dahan propuso el uso de una clase estática para administrar y generar los eventos (por ejemplo, en algunas publicaciones relacionadas, como [Domain Events – Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/) [Eventos de dominio: Toma 2]). Esto podría incluir una clase estática denominada DomainEvents que generaría los eventos de dominio inmediatamente cuando se llama, con una sintaxis similar a `DomainEvents.Raise(Event myEvent)`. Jimmy Bogard escribió una entrada de blog [[Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/) (Reforzar el dominio: eventos de dominio)] que recomienda un enfoque similar.
 
 Pero cuando la clase de eventos de dominio es estática, también lo envía a los controladores inmediatamente. Esto dificulta las pruebas y la depuración, dado que los controladores de eventos con la lógica de efectos secundarios se ejecutan inmediatamente después de que se genera el evento. Durante las pruebas y la depuración, le interesa centrarse únicamente en lo que sucede en las clases agregadas actuales; no le interesa que repentinamente se le redirija a otros controladores de eventos para los efectos secundarios relacionados con otros agregados o la lógica de la aplicación. Es el motivo de que otros métodos hayan evolucionado, como se explica en la sección siguiente.
 
@@ -355,10 +355,10 @@ Como se mencionó, los eventos de dominio se usan para implementar explícitamen
 - **Jimmy Bogard. A better domain events pattern** \ (Un mejor patrón de eventos de dominio)
   [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
-- **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together** \ (Diseño de agregados efectivo, parte II: Conseguir que los agregados funcionen juntos)
+- **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together** \ (Vaughn Vernon. Diseño eficaz de agregados - Parte II: hacer que los agregados funcionen de forma conjunta)
   [*https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard. Strengthening your domain: Domain Events** \ (Reforzar el dominio: eventos de dominio)
+- **Jimmy Bogard. Strengthening your domain: Domain Events** \ (Jimmy Bogard. Reforzar el dominio: eventos de dominio)
   [*https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/*](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
 
 - **Tony Truong. Domain Events Pattern Example** \ (Ejemplo de patrón de eventos de dominio)

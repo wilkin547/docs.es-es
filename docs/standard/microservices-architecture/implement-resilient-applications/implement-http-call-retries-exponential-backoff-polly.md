@@ -3,13 +3,13 @@ title: Implementación de reintentos de llamada HTTP con retroceso exponencial c
 description: Obtenga información sobre cómo controlar los errores HTTP con Polly y HttpClientFactory.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: d0c3042f2831e5f256f43e32e70645213054f247
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362761"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479651"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementación de reintentos de llamada HTTP con retroceso exponencial con HttpClientFactory y las directivas de Polly
 
@@ -21,9 +21,9 @@ Pero usar la biblioteca de Polly con código personalizado propio con HttpClient
 
 En los pasos siguientes se muestra cómo usar reintentos HTTP con Polly integrados en HttpClientFactory, que se explica en la sección anterior.
 
-**Hacer referencia a los paquetes de ASP.NET Core 2.1**
+**Hacer referencia a los paquetes de ASP.NET Core 2.2**
 
-En el proyecto se deben usar los paquetes de ASP.NET Core 2.1 de NuGet. Normalmente se necesita el metapaquete `AspNetCore` y el paquete de extensión `Microsoft.Extensions.Http.Polly`.
+`HttpClientFactory` está disponible desde .NET Core 2.1. Sin embargo, le recomendamos que use los últimos paquetes de ASP.NET Core 2.2 de NuGet en su proyecto. Normalmente se necesita el metapaquete `AspNetCore` y el paquete de extensión `Microsoft.Extensions.Http.Polly`.
 
 **Configurar un cliente con la directiva de reintentos de Polly, en Startup**
 

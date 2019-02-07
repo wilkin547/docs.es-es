@@ -3,13 +3,13 @@ title: Flujo de trabajo de desarrollo para aplicaciones de Docker
 description: Comprenda los detalles del flujo de trabajo para desarrollar aplicaciones basadas en Docker. Comience paso a paso, profundice en algunos detalles para optimizar Dockerfiles y termine con el flujo de trabajo simplificado disponible cuando se usa Visual Studio.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/27/2018
-ms.openlocfilehash: 52053f270067ba0cc3ab8535560ec8145eda0758
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.date: 01/07/2019
+ms.openlocfilehash: c5c8cc34c70771d3f362f967cc99e76013291faa
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084984"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480106"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo para aplicaciones de Docker
 
@@ -97,14 +97,14 @@ De forma similar, Visual Studio también puede agregar un archivo docker-compose
 
 Normalmente se compila una imagen personalizada para el contenedor además de una imagen base que se obtiene de un repositorio oficial como el registro [Docker Hub](https://hub.docker.com/). Eso es precisamente lo que sucede en segundo plano cuando se habilita la compatibilidad con Docker en Visual Studio. El Dockerfile usa una imagen `aspnetcore` existente.
 
-Anteriormente se ha explicado qué imágenes y repositorios de Docker se pueden usar según el marco de trabajo y el sistema operativo elegidos. Por ejemplo, si quiere usar ASP.NET Core (Linux o Windows), la imagen que se debe usar es `microsoft/dotnet:2.1-aspnetcore-runtime`. Por lo tanto, debe especificar qué imagen base de Docker va a usar para el contenedor. Se hace mediante la incorporación de `FROM microsoft/dotnet:2.1-aspnetcore-runtime` al Dockerfile. Visual Studio lo hace de forma automática, pero si va a actualizar la versión, actualice este valor.
+Anteriormente se ha explicado qué imágenes y repositorios de Docker se pueden usar según el marco de trabajo y el sistema operativo elegidos. Por ejemplo, si quiere usar ASP.NET Core (Linux o Windows), la imagen que se debe usar es `microsoft/dotnet:2.2-aspnetcore-runtime`. Por lo tanto, debe especificar qué imagen base de Docker va a usar para el contenedor. Se hace mediante la incorporación de `FROM microsoft/dotnet:2.2-aspnetcore-runtime` al Dockerfile. Visual Studio lo hace de forma automática, pero si va a actualizar la versión, actualice este valor.
 
 El uso de un repositorio de imágenes de .NET oficial de Docker Hub con un número de versión garantiza que haya las mismas características de lenguaje disponibles en todos los equipos (incluido el desarrollo, las pruebas y la producción).
 
 En el ejemplo siguiente se muestra un Dockerfile de ejemplo para un contenedor de ASP.NET Core.
 
 ```Dockerfile
-FROM microsoft/aspnetcore:2.0
+FROM microsoft/dotnet:2.2-aspnetcore-runtime
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,7 +112,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-En este caso, la imagen se basa en la versión 2.1 de la imagen de Docker de ASP.NET Core oficial (multiarquitectura para Linux y Windows). Es el valor `FROM microsoft/dotnet:2.1-aspnetcore-runtime`. (Para obtener más información sobre esta imagen base, vea las páginas [ASP.NET Core Docker Image](https://hub.docker.com/r/microsoft/aspnetcore/) (Imagen de Docker de ASP.NET Core) y [.NET Core Docker Image](https://hub.docker.com/r/microsoft/dotnet/) (Imagen de Docker de .NET Core)). En el Dockerfile, también debe indicar a Docker que escuche en el puerto TCP que se vaya a usar en tiempo de ejecución (en este caso, el puerto 80, como se ha configurado con el valor EXPOSE).
+En este caso, la imagen se basa en la versión 2.2 de la imagen de Docker de ASP.NET Core oficial (multiarquitectura para Linux y Windows). Es el valor `FROM microsoft/dotnet:2.2-aspnetcore-runtime`. [Para obtener más información sobre esta imagen base, consulte la página [.NET Core Docker Image](https://hub.docker.com/r/microsoft/dotnet/) (Imagen de Docker de .NET Core)]. En el Dockerfile, también debe indicar a Docker que escuche en el puerto TCP que se vaya a usar en tiempo de ejecución (en este caso, el puerto 80, como se ha configurado con el valor EXPOSE).
 
 Puede especificar otros valores de configuración en el Dockerfile, según el lenguaje y el marco que use. Por ejemplo, la línea ENTRYPOINT con `["dotnet", "MySingleContainerWebApp.dll"]` indica a Docker que ejecute una aplicación .NET Core. Si usa el SDK y la CLI de .NET Core (dotnet CLI) para compilar y ejecutar la aplicación .NET, este valor sería diferente. La conclusión es que la línea ENTRYPOINT y otros valores pueden variar según el lenguaje y la plataforma que se elijan para la aplicación.
 
@@ -132,20 +132,20 @@ Puede especificar otros valores de configuración en el Dockerfile, según el le
 
 ### <a name="using-multi-arch-image-repositories"></a>Uso de repositorios de imágenes multiarquitectura
 
-Un solo repositorio puede contener variantes de plataforma, como una imagen de Linux y una imagen de Windows. Esta característica permite a los proveedores como Microsoft (creadores de imágenes base) crear un único repositorio que cubra varias plataformas (es decir, Linux y Windows). Por ejemplo, el repositorio [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) disponible en el registro Docker Hub proporciona compatibilidad con Linux y Windows Nano Server mediante el mismo nombre de repositorio.
+Un solo repositorio puede contener variantes de plataforma, como una imagen de Linux y una imagen de Windows. Esta característica permite a los proveedores como Microsoft (creadores de imágenes base) crear un único repositorio que cubra varias plataformas (es decir, Linux y Windows). Por ejemplo, el repositorio [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) disponible en el registro Docker Hub proporciona compatibilidad con Linux y Windows Nano Server mediante el mismo nombre de repositorio.
 
 Si especifica una etiqueta, se toma como destino una plataforma explícita, como en los casos siguientes:
 
-- `microsoft/dotnet:2.1-aspnetcore-runtime-stretch-slim` \
-  Destinos: solo entorno de ejecución .NET Core 2.1 en Linux
+- `microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim` \
+  Destinos: solo entorno de ejecución .NET Core 2.2 en Linux
 
-- `microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1709` \
-  Destinos: solo entorno de ejecución .NET Core 2.1 en Windows Nano Server
+- `microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1809` \
+  Destinos: solo entorno de ejecución .NET Core 2.2 en Windows Nano Server
 
 Pero, si se especifica el mismo nombre de imagen, incluso con la misma etiqueta, las imágenes multiarquitectura (como la imagen `aspnetcore`) usan la versión de Linux o Windows según el sistema operativo del host de Docker que se vaya a implementar, como se muestra en el ejemplo siguiente:
 
-- `microsoft/dotnet:2.1-aspnetcore-runtime` \
-  Arquitectura múltiple: solo el entorno de ejecución .NET Core 2.1 en Linux y Windows Nano Server en función del sistema operativo del host de Docker
+- `microsoft/dotnet:2.2-aspnetcore-runtime` \
+  Arquitectura múltiple: solo el entorno de ejecución .NET Core 2.2 en Linux o Windows Nano Server en función del sistema operativo del host de Docker
 
 De esta forma, al extraer una imagen de un host de Windows, se extrae la variante de Windows, y al extraer el mismo nombre de imagen de un host de Linux, se extrae la variante de Linux.
 
@@ -174,11 +174,11 @@ Probablemente la mejor manera de comprender las fases es analizar un archivo Doc
 El Dockerfile inicial podría ser algo parecido a esto:
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+ 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.1-sdk AS build
+ 5  FROM microsoft/dotnet:2.2-sdk AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
@@ -266,11 +266,11 @@ Para la optimización final, resulta que la línea 20 es redundante, ya que la l
 El archivo resultante es entonces:
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+ 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.1-sdk AS publish
+ 5  FROM microsoft/dotnet:2.2-sdk AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj

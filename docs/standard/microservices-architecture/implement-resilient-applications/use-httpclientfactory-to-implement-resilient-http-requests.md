@@ -3,13 +3,13 @@ title: Uso de HttpClientFactory para implementar solicitudes HTTP resistentes
 description: Aprenda a utilizar HttpClientFactory, disponible desde .NET Core 2.1, para crear instancias de `HttpClient`, lo que le facilita su uso en sus aplicaciones.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 6af30ae3b5111e026be6ec89d266338b88cf22b2
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: 73faa847dae2f844784ae5d85ce905b7e1e64cd0
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362646"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479820"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Uso de HttpClientFactory para implementar solicitudes HTTP resistentes
 
@@ -157,7 +157,7 @@ Hasta el momento, el código que se ha mostrado solo realiza solicitudes HTTP co
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- **Uso de HttpClientFactory en .NET Core 2.1**\
+- **Uso de HttpClientFactory en .NET Core**\
   [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 - **Repositorio de HttpClientFactory en GitHub**\

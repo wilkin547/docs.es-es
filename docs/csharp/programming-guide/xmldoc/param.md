@@ -1,5 +1,5 @@
 ---
-title: '&lt;param&gt;: Guía de programación de C#'
+title: <param> - Guía de programación de C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: fb31e1d4c39888765fe3e55674d5b6d18b9d5b65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f1099da6a43ed7f48389a16e3be6a3b6b98a148
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641023"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271582"
 ---
-# <a name="ltparamgt-c-programming-guide"></a>&lt;param&gt; (Guía de programación de C#)
+# <a name="param-c-programming-guide"></a>\<param> (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  

@@ -3,10 +3,10 @@ title: F#instrucciones de diseño del componente
 description: Obtenga información sobre las directrices para escribir en él F# componentes pensados para su uso por otros llamadores.
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
+ms.lasthandoff: 02/07/2019
 ms.locfileid: "55066030"
 ---
 # <a name="f-component-design-guidelines"></a>F#instrucciones de diseño del componente
@@ -74,7 +74,7 @@ La siguiente tabla sigue las convenciones de mayúsculas y minúsculas y nomencl
 |-----------|------|------|----------|-------|
 | Tipos concretos | PascalCase | Sustantivo o adjetivo | Lista, Double, complejo | Tipos concretos son clases, structs, enumeraciones, delegados, registros y uniones. Aunque los nombres de tipo son tradicionalmente en minúsculas en OCaml, F# ha adoptado el esquema de nomenclatura .NET para los tipos.
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
-| Etiquetas de unión     | PascalCase | Sustantivo | Algunos, agregar, correcto | No use un prefijo en las API públicas. Utilizar opcionalmente un prefijo cuando interno, como `Escriba equipos = TAlpha | TBeta | TDelta.` |
+| Etiquetas de unión     | PascalCase | Sustantivo | Algunos, agregar, correcto | No use un prefijo en las API públicas. Utilizar opcionalmente un prefijo cuando interno, como `type Teams = TAlpha | TBeta | TDelta.` |
 | evento          | PascalCase | Verb | ValueChanged / ValueChanging |  |
 | Excepciones     | PascalCase |      | WebException | Nombre debe terminar con "Exception". |
 | Campo          | PascalCase | Sustantivo | CurrentName  | |

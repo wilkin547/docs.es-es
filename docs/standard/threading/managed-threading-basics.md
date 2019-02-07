@@ -10,14 +10,15 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fa91bb22de6492815f79bfd50e1fefc800c6047
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586518"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479573"
 ---
 # <a name="managed-threading-basics"></a>Principios básicos del subprocesamiento administrado
+
 Los cinco primeros temas de esta sección están diseñados para ayudarle a determinar cuándo se debe utilizar un subproceso administrado así como para explicar algunas características básicas. Para obtener información sobre las clases que proporcionan características adicionales, vea [Objetos y características de subprocesos](../../../docs/standard/threading/threading-objects-and-features.md) e [Información general sobre los primitivos de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
  En el resto de los temas de esta sección se tratan cuestiones más avanzadas, incluida la interacción del subproceso administrado con el sistema operativo Windows.  
@@ -25,7 +26,8 @@ Los cinco primeros temas de esta sección están diseñados para ayudarle a dete
 > [!NOTE]
 >  En [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], la biblioteca TPL y PLINQ proporcionan API para el paralelismo de tareas y datos en programas multiproceso. Para más información, consulte [Parallel Programming](../../../docs/standard/parallel-programming/index.md) (Programación en paralelo).  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>En esta sección
+
  [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)  
  Se explican las ventajas y desventajas de varios subprocesos y se describen los escenarios en los que puede crear subprocesos o utilizar subprocesos del grupo de subprocesos.  
   
@@ -34,9 +36,6 @@ Los cinco primeros temas de esta sección están diseñados para ayudarle a dete
   
  [Sincronizar datos para subprocesamiento múltiple](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
  Se describen las estrategias de sincronización de datos en las clases que se utilizarán con varios subprocesos.  
-  
- [Estados de subprocesos administrados](../../../docs/standard/threading/managed-thread-states.md)  
- Se describen los estados de subprocesos básicos y se explica cómo detectar si un subproceso está en ejecución.  
   
  [Subprocesos de primer y segundo plano](../../../docs/standard/threading/foreground-and-background-threads.md)  
  Se explican las diferencias entre los subprocesos en primer y segundo plano.  
@@ -47,20 +46,22 @@ Los cinco primeros temas de esta sección están diseñados para ayudarle a dete
  [Thread.Suspend, recolección de elementos no utilizados y puntos de seguridad](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
  Se describe la recolección de elementos no utilizados y la suspensión del subproceso.  
   
- [Almacenamiento local para el subproceso: Campos estáticos relacionados con subproceso y ranuras de datos](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
+ [Almacenamiento local para el subproceso: Campos estáticos relacionados con subprocesos y ranuras de datos](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  Se describen los mecanismos de almacenamiento relacionados con subprocesos.  
   
  [Cancelación en subprocesos administrados](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
  Se describe cómo se pueden cancelar las operaciones asincrónicas o las operaciones sincrónicas de larga ejecución con un token de cancelación.  
   
-## <a name="reference"></a>Referencia  
+## <a name="reference"></a>Referencia
+
  <xref:System.Threading.Thread>  
  Proporciona documentación de referencia para la clase **Thread**, que representa un subproceso administrado, independientemente de que provenga de código no administrado o que se creara en una aplicación administrada.  
   
  <xref:System.ComponentModel.BackgroundWorker>  
  Proporciona una manera segura de implementar multithreading junto con objetos de interfaz de usuario.  
   
-## <a name="related-sections"></a>Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas
+
  [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización)  
  Se describen las clases administradas utilizadas para sincronizar las actividades de varios subprocesos.  
   

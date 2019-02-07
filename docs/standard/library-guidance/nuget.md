@@ -4,12 +4,12 @@ description: Procedimientos recomendados para el empaquetado con NuGet para bibl
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 2ad8d2ed77610a3acead69b7c864785261ea5e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724312"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204618"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -71,7 +71,7 @@ Un paquete NuGet admite numerosas [propiedades de metadatos](/nuget/reference/nu
 
 **✔️ ES RECOMENDABLE** configurar [SourceLink](./sourcelink.md) para agregar metadatos de control de código fuente a los ensamblados y los paquetes NuGet.
 
-> SourceLink agrega automáticamente metadatos de `RepositoryUrl` y `RepositoryType` al paquete NuGet. SourceLink también agrega información sobre el código de origen exacto para el que se creó el paquete. Por ejemplo, en un paquete creado a partir de un repositorio de Git se agregará el hash de confirmación como metadatos.
+> SourceLink agrega automáticamente metadatos de `RepositoryUrl` y `RepositoryType` al paquete NuGet. SourceLink también agrega información sobre el código fuente exacto a partir del cual se creó el paquete. Por ejemplo, en un paquete creado a partir de un repositorio de Git se agregará el hash de confirmación como metadatos.
 
 ## <a name="pre-release-packages"></a>Paquetes de versión preliminar
 
