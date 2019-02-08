@@ -2,14 +2,14 @@
 title: Portabilidad del código de .NET Framework a .NET Core
 description: Comprenda el proceso de portabilidad y descubra herramientas que le pueden resultar útiles al realizar la portabilidad de un proyecto de .NET Framework a .NET Core.
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: e29750340cf272c2e05287482bcbeca703d8720a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266577"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903563"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Realice la portabilidad de su código de .NET Framework a .NET Core.
 
@@ -37,8 +37,6 @@ Este es el proceso que se recomienda al portar un proyecto a .NET Core. Cada pas
 
 5. Ejecute el plan de portabilidad.
 
-## <a name="tools-to-help"></a>Herramientas de ayuda
-
 En la lista siguiente se muestran las herramientas que puede resultarle útiles durante el proceso de portabilidad:
 
 * Api Portability Analyzer: [herramienta de línea de comandos](https://github.com/Microsoft/dotnet-apiport/releases) o [Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), una cadena de herramientas que puede generar un informe de lo portátil que es su código entre .NET Framework y .NET Core, con un desglose de problemas ensamblado por ensamblado. Para más información, consulte [Analizador de portabilidad de .NET](../../standard/analyzers/portability-analyzer.md).
@@ -51,4 +49,4 @@ Además, puede intentar portar soluciones más pequeñas o proyectos individuale
 > CsprojToVs2017 es una herramienta de terceros. No hay ninguna garantía de que funcione con todos los proyectos, y podría provocar cambios sutiles de comportamiento de los que dependa. CsprojToVs2017 debe usarse como _punto de partida_ que automatiza los elementos básicos que se pueden automatizar. No es una solución que se garantice para migrar formatos de archivo de proyecto.
 
 >[!div class="step-by-step"]
->[Siguiente](third-party-deps.md)
+>[Siguiente](net-framework-tech-unavailable.md)

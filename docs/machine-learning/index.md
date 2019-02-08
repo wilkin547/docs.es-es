@@ -3,12 +3,12 @@ title: Guía de contenido de ML.NET
 description: Obtenga información sobre cómo compilar soluciones de IA personalizadas e integrarlas en las aplicaciones .NET mediante ML.NET.
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550466"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826289"
 ---
 # <a name="mlnet-content-guide"></a>Guía de contenido de ML.NET
 
@@ -31,7 +31,7 @@ En [Análisis de opinión mediante un modelo de clasificación binario](tutorial
 
 En la [clasificación de problemas de GitHub mediante un modelo de clasificación multiclase](tutorials/github-issue-classification.md) se le muestra cómo compilar una aplicación que determina la etiqueta de área para un problema de GitHub.
 
-En [Predicción de las tarifas de taxi mediante un modelo de regresión](tutorials/taxi-fare.md) se muestra cómo compilar una aplicación predictiva que utiliza muchos factores de los datos históricos para determinar la respuesta.
+En [Tutorial: Predicción de las tarifas de taxi de Nueva York mediante un aprendiz de regresión con ML.NET](tutorials/taxi-fare.md) se muestra cómo compilar una aplicación predictiva que utiliza muchos factores de los datos históricos para determinar la respuesta.
 
 En [Clasificar flores de iris mediante características](tutorials/iris-clustering.md) se muestra cómo usar un modelo de agrupación en clústeres para analizar el conjunto de datos de iris. 
 
