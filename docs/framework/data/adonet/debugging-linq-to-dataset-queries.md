@@ -2,12 +2,12 @@
 title: Depurar consultas de LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 6c7b8c6cec39adfd5b7456d94cfae5622649e5a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 636d42566275f042f82f939e160c7fec5f180e96
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680512"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825516"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Depurar consultas de LINQ to DataSet
 
@@ -16,7 +16,7 @@ Visual Studio admite la depuración de [!INCLUDE[linq_dataset](../../../../inclu
 ## <a name="viewing-results"></a>Ver los resultados  
  Puede ver el resultado de una [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] instrucción mediante el uso de información sobre datos, la ventana Inspección y cuadro de diálogo Inspección rápida. Al usar una ventana de código fuente, puede pausar el puntero en una consulta en la ventana de código fuente para que aparezca una información sobre datos. Puede copiar una variable [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] y pegarla en la ventana Inspección o en el cuadro de diálogo Inspección rápida. En [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], una consulta no se evalúa cuando se crea o declara, pero únicamente cuando se ejecuta. Esto se denomina *ejecución aplazada*. Por consiguiente, la variable de consulta no tiene un valor hasta que se evalúe. Para obtener más información, consulte [consultas en LINQ to DataSet](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md).  
   
- Para mostrar el resultado de una consulta, el depurador debe evaluarla. Esta evaluación implícita se produce cuando se ve un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] resultado de la consulta en el depurador y tiene algunos efectos que debería considerar. Cada evaluación de la consulta lleva tiempo. Expandir el nodo de resultados lleva tiempo. Para algunas consultas, la evaluación repetida podría producir una reducción notable del rendimiento. Evaluar una consulta también puede producir efectos secundarios, que son cambios en el valor de los datos o en el estado del programa. No todas las consultas tienen los efectos secundarios. Para determinar si una consulta se puede evaluar sin ningún riesgo ni efectos secundarios, debe entender el código que implementa la consulta. Para obtener más información, consulte [efectos y expresiones](https://msdn.microsoft.com/library/e1f8a6ea-9e19-481d-b6bd-df120ad3bf4e).  
+ Para mostrar el resultado de una consulta, el depurador debe evaluarla. Esta evaluación implícita se produce cuando se ve un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] resultado de la consulta en el depurador y tiene algunos efectos que debería considerar. Cada evaluación de la consulta lleva tiempo. Expandir el nodo de resultados lleva tiempo. Para algunas consultas, la evaluación repetida podría producir una reducción notable del rendimiento. Evaluar una consulta también puede producir efectos secundarios, que son cambios en el valor de los datos o en el estado del programa. No todas las consultas tienen los efectos secundarios. Para determinar si una consulta se puede evaluar sin ningún riesgo ni efectos secundarios, debe entender el código que implementa la consulta. Para obtener más información, consulte [efectos y expresiones](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/a7a250bs(v=vs.120)).  
   
 ## <a name="edit-and-continue"></a>Editar y continuar  
  Editar y continuar no admite cambios en [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] las consultas. Si agregar, quitar o cambiar un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] instrucción durante una sesión de depuración, un cuadro de diálogo aparece indicando que editar y continuar no admite el cambio. En ese momento, puede deshacer los cambios o detener la sesión de depuración y reiniciar una nueva sesión con el código revisado.  

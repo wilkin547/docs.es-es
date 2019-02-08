@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Buscar ensamblados mediante DEVPATH
+title: Filtrar Buscar ensamblados mediante DEVPATH
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DEVPATH
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-ms.openlocfilehash: 0d238ceb4f96905031cb4a30f50727050381277e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 5c4041f42b0a9d1d1e4bc8438e662911534daa42
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084502"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826686"
 ---
-# <a name="how-to-locate-assemblies-by-using-devpath"></a>Procedimiento Buscar ensamblados mediante DEVPATH
+# <a name="how-to-locate-assemblies-by-using-devpath"></a>Filtrar Buscar ensamblados mediante DEVPATH
 Pueden que los desarrolladores desean asegurarse de que un ensamblado compartido que están creando funciona correctamente con varias aplicaciones. En lugar de poner constantemente el ensamblado en la caché global de ensamblados durante el ciclo de desarrollo, el desarrollador puede crear una variable de entorno DEVPATH que apunta al directorio de resultados de compilación para el ensamblado.  
   
  Por ejemplo, suponga que está creando un ensamblado compartido denominado MySharedAssembly y el directorio de salida es C:\MySharedAssembly\Debug. Puede poner C:\MySharedAssembly\Debug en la variable DEVPATH. A continuación, debe especificar el [ \<developmentMode >](../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md) elemento en el archivo de configuración del equipo. Este elemento indica a common language runtime que utilice DEVPATH para buscar ensamblados.  
@@ -44,4 +44,5 @@ Pueden que los desarrolladores desean asegurarse de que un ensamblado compartido
 >  Use esta opción solo en tiempo de desarrollo. El tiempo de ejecución no comprueba las versiones de ensamblados con nombre seguro que se encuentra en la variable DEVPATH. Simplemente usa el primer ensamblado que encuentra.  
   
 ## <a name="see-also"></a>Vea también
-- [Configurar aplicaciones de .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+
+- [Configurar aplicaciones con archivos de configuración](index.md)

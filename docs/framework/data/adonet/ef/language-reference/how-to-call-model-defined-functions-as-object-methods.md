@@ -1,23 +1,23 @@
 ---
-title: Procedimiento Llamar a funciones definidas por el modelo como métodos de objeto
+title: Filtrar Llamar a funciones definidas por el modelo como métodos de objeto
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 4e88143943c6418d11da55b8e7458a4c8f682934
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b145c3d2b262729fae9a03b7930b286f7641d36
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597507"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825724"
 ---
-# <a name="how-to-call-model-defined-functions-as-object-methods"></a>Procedimiento Llamar a funciones definidas por el modelo como métodos de objeto
+# <a name="how-to-call-model-defined-functions-as-object-methods"></a>Filtrar Llamar a funciones definidas por el modelo como métodos de objeto
 En este tema se describe cómo llamar a una función definida por el modelo como un método en un objeto <xref:System.Data.Objects.ObjectContext> o como un método estático en una clase personalizada. Un *función definida por modelo* es una función que se define en el modelo conceptual. Los procedimientos de este tema describen cómo llamar directamente a estas funciones en lugar de hacerlo desde consultas LINQ to Entities. Para obtener información sobre cómo llamar a funciones definidas por el modelo de LINQ a consultas de entidades, vea [Cómo: Llamar a funciones definidas por el modelo en consultas](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
   
  Tanto si se llama a una función definida por el modelo como un método <xref:System.Data.Objects.ObjectContext> o como un método estático en una clase personalizada, primero se deberá asignar el método a dicha función con un atributo <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Sin embargo, si se define un método en la clase <xref:System.Data.Objects.ObjectContext>, se debe usar la propiedad <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> para exponer el proveedor LINQ, mientras que si se define un método estático en una clase personalizada, se debe usar la propiedad <xref:System.Linq.IQueryable.Provider%2A> para exponer dicho proveedor. Para obtener más información, vea los ejemplos que aparecen a continuación de los procedimientos siguientes.  
   
- Los procedimientos siguientes proporcionan esquemas generales para llamar a una función definida por el modelo como un método en un objeto <xref:System.Data.Objects.ObjectContext> y como un método estático en una clase personalizada. Los ejemplos que los siguen proporcionan más detalles sobre los pasos de los procedimientos. Los procedimientos dan por hecho que se ha definido una función en el modelo conceptual. Para obtener más información, vea [Cómo: Definir funciones personalizadas en el modelo Conceptual](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).  
+ Los procedimientos siguientes proporcionan esquemas generales para llamar a una función definida por el modelo como un método en un objeto <xref:System.Data.Objects.ObjectContext> y como un método estático en una clase personalizada. Los ejemplos que los siguen proporcionan más detalles sobre los pasos de los procedimientos. Los procedimientos dan por hecho que se ha definido una función en el modelo conceptual. Para obtener más información, vea [Cómo: Definir funciones personalizadas en el modelo Conceptual](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).  
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>Para llamar a una función definida por el modelo como un método en un objeto ObjectContext  
   
@@ -46,9 +46,9 @@ En este tema se describe cómo llamar a una función definida por el modelo como
 ## <a name="example"></a>Ejemplo  
  **Llamar a una función definida por el modelo como un método en un objeto ObjectContext**  
   
- En el siguiente ejemplo se muestra cómo llamar a una función definida por el modelo como un método en un objeto <xref:System.Data.Objects.ObjectContext>. El ejemplo se usa el [modelo AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
+ En el siguiente ejemplo se muestra cómo llamar a una función definida por el modelo como un método en un objeto <xref:System.Data.Objects.ObjectContext>. El ejemplo se usa el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
- Observe la función de modelo conceptual siguiente que devuelve los ingresos obtenidos para un producto determinado. (Para obtener información acerca de cómo agregar la función al modelo conceptual, vea [Cómo: Definir funciones personalizadas en el modelo Conceptual](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).)  
+ Observe la función de modelo conceptual siguiente que devuelve los ingresos obtenidos para un producto determinado. (Para obtener información acerca de cómo agregar la función al modelo conceptual, vea [Cómo: Definir funciones personalizadas en el modelo Conceptual](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).)  
   
  [!code-xml[DP L2E Methods on ObjectContext#4](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#4)]  
 
@@ -84,12 +84,12 @@ En este tema se describe cómo llamar a una función definida por el modelo como
 ## <a name="example"></a>Ejemplo  
  **Llamar a una función definida por el modelo como un método estático en una clase personalizada**  
   
- En el ejemplo siguiente se muestra cómo llamar a una función definida por el modelo como un método estático en una clase personalizada. El ejemplo se usa el [modelo AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
+ En el ejemplo siguiente se muestra cómo llamar a una función definida por el modelo como un método estático en una clase personalizada. El ejemplo se usa el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
 > [!NOTE]
 >  Cuando se llama a una función definida por el modelo como un método estático en una clase personalizada, la función debe aceptar una colección y devolver una agregación de valores de la colección.  
   
- Considere la función de modelo conceptual siguiente que devuelve los ingresos de los productos para una colección SalesOrderDetail. (Para obtener información acerca de cómo agregar la función al modelo conceptual, vea [Cómo: Definir funciones personalizadas en el modelo Conceptual](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).).  
+ Considere la función de modelo conceptual siguiente que devuelve los ingresos de los productos para una colección SalesOrderDetail. (Para obtener información acerca de cómo agregar la función al modelo conceptual, vea [Cómo: Definir funciones personalizadas en el modelo Conceptual](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).).  
   
  [!code-xml[DP L2E Methods on ObjectContext#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#1)]
   
@@ -106,6 +106,6 @@ En este tema se describe cómo llamar a una función definida por el modelo como
  [!code-vb[DP L2E Methods on ObjectContext#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#6)]  
   
 ## <a name="see-also"></a>Vea también
-- [Introducción al archivo .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
+- [Introducción al archivo .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Consultas en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
 - [Llamada a funciones en consultas de LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

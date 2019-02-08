@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: fcba4ea556d1f5036c2bbd0beaeb5f349dec4e36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5712b0f7ef67e0a925207858e17d256dbf50cc60
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688111"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826284"
 ---
 # <a name="code-access-security-and-adonet"></a>Seguridad de acceso del código y ADO.NET
 .NET Framework ofrece seguridad basada en roles y seguridad de acceso del código (CAS); ambas se implementan utilizando una infraestructura común proporcionada por Common Language Runtime (CLR). En el mundo del código no administrado, la mayoría de las aplicaciones se ejecutan mediante los permisos del usuario o de la entidad de seguridad. Por consiguiente, los sistemas de equipos pueden resultar dañados y se pueden poner en peligro los datos privados si un usuario con un nivel elevado de privilegios ejecuta software malintencionado o que contenga errores.  
@@ -23,7 +23,7 @@ ms.locfileid: "54688111"
  CLR permite que el código realice únicamente las operaciones para las que tiene permiso. El código puede solicitar permisos y las peticiones se aceptan en función de la directiva de seguridad que haya establecido un administrador.  
   
 > [!NOTE]
->  El código que se ejecuta en el CLR no se puede conceder permisos a sí mismo. Por ejemplo, el código puede solicitar y que se le asignen menos permisos de los que concede una directiva de seguridad, pero no se le concederán más permisos. A la hora de conceder permisos, comience sin ningún permiso y agregue los mínimos permisos necesarios para la tarea concreta que se lleva a cabo. Si se comienza con todos los permisos y posteriormente se deniegan permisos de forma individual, se obtienen aplicaciones poco seguras que pueden contener vulnerabilidades de seguridad no intencionadas debido a la concesión de más permisos de los que son necesarios. Para obtener más información, consulte [NIB: Configuración de directiva de seguridad](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4) y [NIB: Administración de directivas de seguridad](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+>  El código que se ejecuta en el CLR no se puede conceder permisos a sí mismo. Por ejemplo, el código puede solicitar y que se le asignen menos permisos de los que concede una directiva de seguridad, pero no se le concederán más permisos. A la hora de conceder permisos, comience sin ningún permiso y agregue los mínimos permisos necesarios para la tarea concreta que se lleva a cabo. Si se comienza con todos los permisos y posteriormente se deniegan permisos de forma individual, se obtienen aplicaciones poco seguras que pueden contener vulnerabilidades de seguridad no intencionadas debido a la concesión de más permisos de los que son necesarios. Para obtener más información, consulte [configurar la directiva de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100)) y [administración de directivas de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
   
  Hay tres tipos de permisos de acceso a código:  
   
@@ -38,14 +38,14 @@ ms.locfileid: "54688111"
 ### <a name="requesting-permissions"></a>Solicitar permisos  
  La finalidad de solicitar permisos es informar al motor en tiempo de ejecución de los permisos que necesita la aplicación para ejecutarse y garantizar que solo recibe los permisos que realmente necesita. Por ejemplo, si la aplicación necesita acceso de escritura al disco local, requiere <xref:System.Security.Permissions.FileIOPermission>. Si este permiso no se ha concedido, se producirán errores en la aplicación al intentar escribir en el disco. Sin embargo, si la aplicación solicita `FileIOPermission` y el permiso no se concede, generará la excepción al comienzo y no se cargará.  
   
- En un escenario donde la aplicación solo necesita leer datos del disco, puede solicitar que nunca se le concedan permisos de escritura. En el caso de se produzca un error o un ataque malintencionado, el código no podrá dañar los datos con los que trabaja. Para obtener más información, consulte [NIB: Solicitar permisos](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
+ En un escenario donde la aplicación solo necesita leer datos del disco, puede solicitar que nunca se le concedan permisos de escritura. En el caso de se produzca un error o un ataque malintencionado, el código no podrá dañar los datos con los que trabaja. Para obtener más información, consulte [solicitar permisos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100)).  
   
 ## <a name="role-based-security-and-cas"></a>Seguridad basada en roles y CAS  
  La implementación de la seguridad basada en roles y de la seguridad de acceso del código (CAS) mejora la seguridad global de la aplicación. La seguridad basada en roles se puede basar en una cuenta de Windows o en una identidad personalizada, de forma que la información sobre la entidad de seguridad esté disponible en el subproceso actual. Además, a menudo se requiere a la aplicaciones que proporcionen acceso a datos o recursos basándose en credenciales proporcionadas por el usuario. Normalmente, dichas aplicaciones comprueban la función de un usuario y proporcionan acceso a los recursos basándose en dichos roles.  
   
  La seguridad basada en roles permite que un componente identifique los usuarios actuales y sus roles asociados en tiempo de ejecución. Esta información se asigna a continuación mediante una directiva CAS para determinar el conjunto de permisos que se conceden en tiempo de ejecución. En un dominio de aplicación especificado, el host puede cambiar la directiva de seguridad predeterminada basada en roles y establecer una entidad de seguridad que represente a un usuario y a los roles asociados al usuario.  
   
- CLR usa permisos para implementar su mecanismo a fin de aplicar restricciones en el código administrado. Los permisos de seguridad basada en roles proporcionan un mecanismo para descubrir si un usuario (o el agente que actúa en su nombre) tiene una identidad concreta o es miembro de una función especificada. Para obtener más información, consulte [permisos de seguridad](https://msdn.microsoft.com/library/b03757b4-e926-4196-b738-3733ced2bda0).  
+ CLR usa permisos para implementar su mecanismo a fin de aplicar restricciones en el código administrado. Los permisos de seguridad basada en roles proporcionan un mecanismo para descubrir si un usuario (o el agente que actúa en su nombre) tiene una identidad concreta o es miembro de una función especificada. Para obtener más información, consulte [permisos de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100)).  
   
  En función del tipo de aplicación que cree, deberá considerar también la posibilidad de implementar permisos basados en roles en la base de datos. Para obtener más información sobre la seguridad basada en roles en SQL Server, vea [seguridad de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
   
@@ -139,7 +139,7 @@ ms.locfileid: "54688111"
  Para habilitar el uso de permisos <xref:System.Data.SqlClient> para una zona determinada, un administrador del sistema debe crear un conjunto de permisos personalizados y establecerlo como el conjunto de permisos de dicha zona. Los conjuntos de permisos predeterminados, como `LocalIntranet`, no se pueden modificar. Por ejemplo, para incluir <xref:System.Data.SqlClient> permisos para el código que tiene un <xref:System.Security.Policy.Zone> de `LocalIntranet`, un administrador del sistema podría copiar el conjunto de permisos `LocalIntranet`, cámbiele el nombre a "CustomLocalIntranet", agregue el <xref:System.Data.SqlClient> permisos, importar lo permisos CustomLocalIntranet mediante el [Caspol.exe (herramienta de directiva de seguridad de acceso de código)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)y establezca el conjunto de permisos de `LocalIntranet_Zone` en CustomLocalIntranet.  
   
 ### <a name="sample-permission-set"></a>Conjunto de permisos de ejemplo  
- A continuación se muestra un ejemplo de un conjunto de permisos para el proveedor de datos .NET Framework para SQL Server en un escenario que no es de plena confianza. Para obtener información sobre la creación de conjuntos de permisos personalizados, vea [NIB: configuración de permisos establece mediante Caspol.exe](https://msdn.microsoft.com/library/94e2625e-21ad-4038-af36-6d1f9df40a57).  
+ A continuación se muestra un ejemplo de un conjunto de permisos para el proveedor de datos .NET Framework para SQL Server en un escenario que no es de plena confianza. Para obtener información sobre la creación de conjuntos de permisos personalizados, vea [configurar permisos establece mediante Caspol.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
   
 ```xml  
 <PermissionSet class="System.Security.NamedPermissionSet"  
@@ -160,7 +160,7 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>Comprobar el acceso a código de ADO.NET mediante permisos de seguridad  
- En las situaciones de confianza parcial, puede solicitar privilegios de seguridad de acceso del código para determinados métodos en el código mediante la especificación de <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Si la directiva de seguridad restringida no permite el privilegio, se inicia una excepción antes de ejecutarse el código. Para obtener más información sobre la directiva de seguridad, consulte [NIB: Administración de directivas de seguridad](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) y [NIB: Recomendaciones de directiva de seguridad](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
+ En las situaciones de confianza parcial, puede solicitar privilegios de seguridad de acceso del código para determinados métodos en el código mediante la especificación de <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Si la directiva de seguridad restringida no permite el privilegio, se inicia una excepción antes de ejecutarse el código. Para obtener más información sobre la directiva de seguridad, consulte [administración de directivas de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)) y [recomendaciones de directiva de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100)).  
   
 ### <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se muestra cómo escribir código que requiera una determinada cadena de conexión. Simula la denegación de permisos sin restricciones para <xref:System.Data.SqlClient>, que podría implementar un administrador del sistema en una situación real mediante una directiva de seguridad CAS.  
@@ -196,6 +196,6 @@ Failed, as expected: Request failed.
   
 ## <a name="see-also"></a>Vea también
 - [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [PAVE Seguridad del código nativo y del código de .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [Seguridad del código nativo y código de .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Seguridad basada en roles](../../../../docs/standard/security/role-based-security.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
