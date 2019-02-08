@@ -5,65 +5,65 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e40e314c-eb30-4f44-a054-41e511e35832
-ms.openlocfilehash: 8dc65af84a3cdb4a5fe9744eb1c134670b76260a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c8b7822d051ff905623a0c537f6523f151d312d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509323"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827115"
 ---
-# <a name="method-based-query-syntax-examples-filtering"></a><span data-ttu-id="228c8-102">Ejemplos de sintaxis de consulta basada en métodos: Filtrado</span><span class="sxs-lookup"><span data-stu-id="228c8-102">Method-Based Query Syntax Examples: Filtering</span></span>
-<span data-ttu-id="228c8-103">Los ejemplos de este tema muestran cómo usar el `Where` y `Where…Contains` métodos para consultar el [modelo AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) utilizando sintaxis de consulta basada en métodos.</span><span class="sxs-lookup"><span data-stu-id="228c8-103">The examples in this topic demonstrate how to use the `Where` and `Where…Contains` methods to query the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) using method-based query syntax.</span></span> <span data-ttu-id="228c8-104">Note, Where…`Contains`</span><span class="sxs-lookup"><span data-stu-id="228c8-104">Note, Where…`Contains`</span></span> <span data-ttu-id="228c8-105">no se puede usar como parte de un [consulta compilada](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).</span><span class="sxs-lookup"><span data-stu-id="228c8-105">cannot be used as a part of a [compiled query](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).</span></span>  
+# <a name="method-based-query-syntax-examples-filtering"></a><span data-ttu-id="5def0-102">Ejemplos de sintaxis de consulta basada en métodos: Filtrado</span><span class="sxs-lookup"><span data-stu-id="5def0-102">Method-Based Query Syntax Examples: Filtering</span></span>
+<span data-ttu-id="5def0-103">Los ejemplos de este tema muestran cómo usar el `Where` y `Where…Contains` métodos para consultar el [modelo AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) utilizando sintaxis de consulta basada en métodos.</span><span class="sxs-lookup"><span data-stu-id="5def0-103">The examples in this topic demonstrate how to use the `Where` and `Where…Contains` methods to query the [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) using method-based query syntax.</span></span> <span data-ttu-id="5def0-104">Note, Where…`Contains`</span><span class="sxs-lookup"><span data-stu-id="5def0-104">Note, Where…`Contains`</span></span> <span data-ttu-id="5def0-105">no se puede usar como parte de un [consulta compilada](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).</span><span class="sxs-lookup"><span data-stu-id="5def0-105">cannot be used as a part of a [compiled query](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).</span></span>  
   
- <span data-ttu-id="228c8-106">El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="228c8-106">The AdventureWorks Sales model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="5def0-106">El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="5def0-106">The AdventureWorks Sales model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="228c8-107">Los ejemplos de este tema usan los siguientes `using` / `Imports` instrucciones:</span><span class="sxs-lookup"><span data-stu-id="228c8-107">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="5def0-107">Los ejemplos de este tema usan los siguientes `using` / `Imports` instrucciones:</span><span class="sxs-lookup"><span data-stu-id="5def0-107">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="where"></a><span data-ttu-id="228c8-108">Where</span><span class="sxs-lookup"><span data-stu-id="228c8-108">Where</span></span>  
+## <a name="where"></a><span data-ttu-id="5def0-108">Where</span><span class="sxs-lookup"><span data-stu-id="5def0-108">Where</span></span>  
   
-### <a name="example"></a><span data-ttu-id="228c8-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="228c8-109">Example</span></span>  
- <span data-ttu-id="228c8-110">En el ejemplo siguiente se devuelven todos los pedidos en línea.</span><span class="sxs-lookup"><span data-stu-id="228c8-110">The following example returns all online orders.</span></span>  
+### <a name="example"></a><span data-ttu-id="5def0-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5def0-109">Example</span></span>  
+ <span data-ttu-id="5def0-110">En el ejemplo siguiente se devuelven todos los pedidos en línea.</span><span class="sxs-lookup"><span data-stu-id="5def0-110">The following example returns all online orders.</span></span>  
   
  [!code-csharp[DP L2E Examples#Where1_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#where1_mq)]
  [!code-vb[DP L2E Examples#Where1_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#where1_mq)]  
   
-### <a name="example"></a><span data-ttu-id="228c8-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="228c8-111">Example</span></span>  
- <span data-ttu-id="228c8-112">En el ejemplo siguiente se devuelven los pedidos en los que la cantidad de pedido es superior a 2 e inferior a 6.</span><span class="sxs-lookup"><span data-stu-id="228c8-112">The following example returns the orders where the order quantity is greater than 2 and less than 6.</span></span>  
+### <a name="example"></a><span data-ttu-id="5def0-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5def0-111">Example</span></span>  
+ <span data-ttu-id="5def0-112">En el ejemplo siguiente se devuelven los pedidos en los que la cantidad de pedido es superior a 2 e inferior a 6.</span><span class="sxs-lookup"><span data-stu-id="5def0-112">The following example returns the orders where the order quantity is greater than 2 and less than 6.</span></span>  
   
  [!code-csharp[DP L2E Examples#Where2_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#where2_mq)]
  [!code-vb[DP L2E Examples#Where2_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#where2_mq)]  
   
-### <a name="example"></a><span data-ttu-id="228c8-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="228c8-113">Example</span></span>  
- <span data-ttu-id="228c8-114">En el ejemplo siguiente se devuelven todos los productos de color rojo.</span><span class="sxs-lookup"><span data-stu-id="228c8-114">The following example returns all red colored products.</span></span>  
+### <a name="example"></a><span data-ttu-id="5def0-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5def0-113">Example</span></span>  
+ <span data-ttu-id="5def0-114">En el ejemplo siguiente se devuelven todos los productos de color rojo.</span><span class="sxs-lookup"><span data-stu-id="5def0-114">The following example returns all red colored products.</span></span>  
   
  [!code-csharp[DP L2E Examples#Where3_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#where3_mq)]
  [!code-vb[DP L2E Examples#Where3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#where3_mq)]  
   
-### <a name="example"></a><span data-ttu-id="228c8-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="228c8-115">Example</span></span>  
- <span data-ttu-id="228c8-116">En el ejemplo siguiente se utiliza el método `Where` para buscar los pedidos que se realizaron después del 1 de diciembre de 2003 y, a continuación, se utiliza la propiedad de navegación `order.SalesOrderDetail` para obtener los detalles de cada pedido.</span><span class="sxs-lookup"><span data-stu-id="228c8-116">The following example uses the `Where` method to find orders that were made after December 1, 2003 and then uses the `order.SalesOrderDetail` navigation property to get the details for each order.</span></span>  
+### <a name="example"></a><span data-ttu-id="5def0-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5def0-115">Example</span></span>  
+ <span data-ttu-id="5def0-116">En el ejemplo siguiente se utiliza el método `Where` para buscar los pedidos que se realizaron después del 1 de diciembre de 2003 y, a continuación, se utiliza la propiedad de navegación `order.SalesOrderDetail` para obtener los detalles de cada pedido.</span><span class="sxs-lookup"><span data-stu-id="5def0-116">The following example uses the `Where` method to find orders that were made after December 1, 2003 and then uses the `order.SalesOrderDetail` navigation property to get the details for each order.</span></span>  
   
  [!code-csharp[DP L2E Examples#WhereNavProperty_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#wherenavproperty_mq)]
  [!code-vb[DP L2E Examples#WhereNavProperty_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#wherenavproperty_mq)]  
   
-## <a name="wherecontains"></a><span data-ttu-id="228c8-117">Where…Contains</span><span class="sxs-lookup"><span data-stu-id="228c8-117">Where…Contains</span></span>  
+## <a name="wherecontains"></a><span data-ttu-id="5def0-117">Where…Contains</span><span class="sxs-lookup"><span data-stu-id="5def0-117">Where…Contains</span></span>  
   
-### <a name="example"></a><span data-ttu-id="228c8-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="228c8-118">Example</span></span>  
- <span data-ttu-id="228c8-119">En el ejemplo siguiente se usa una matriz como parte de una cláusula `Where…Contains` para encontrar todos los productos que tienen un `ProductModelID` que coincide con un valor de la matriz.</span><span class="sxs-lookup"><span data-stu-id="228c8-119">The following example uses an array as part of a `Where…Contains` clause to find all products that have a `ProductModelID` that matches a value in the array.</span></span>  
+### <a name="example"></a><span data-ttu-id="5def0-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5def0-118">Example</span></span>  
+ <span data-ttu-id="5def0-119">En el ejemplo siguiente se usa una matriz como parte de una cláusula `Where…Contains` para encontrar todos los productos que tienen un `ProductModelID` que coincide con un valor de la matriz.</span><span class="sxs-lookup"><span data-stu-id="5def0-119">The following example uses an array as part of a `Where…Contains` clause to find all products that have a `ProductModelID` that matches a value in the array.</span></span>  
   
  [!code-csharp[DP L2E ArraysAndListsInQueries#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e arraysandlistsinqueries/cs/program.cs#3)]
  [!code-vb[DP L2E ArraysAndListsInQueries#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e arraysandlistsinqueries/vb/module1.vb#3)]  
   
 > [!NOTE]
->  <span data-ttu-id="228c8-120">Como parte del predicado de una cláusula `Where…Contains`, puede utilizar <xref:System.Array>, <xref:System.Collections.Generic.List%601> o una colección de cualquier tipo que implemente la interfaz <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="228c8-120">As part of the predicate in a `Where…Contains` clause, you can use an <xref:System.Array>, a <xref:System.Collections.Generic.List%601>, or a collection of any type that implements the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="228c8-121">También puede declarar e inicializar una colección en una consulta LINQ to Entities.</span><span class="sxs-lookup"><span data-stu-id="228c8-121">You can also declare and initialize a collection within a LINQ to Entities query.</span></span> <span data-ttu-id="228c8-122">Para obtener más información, vea el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="228c8-122">See the next example for more information.</span></span>  
+>  <span data-ttu-id="5def0-120">Como parte del predicado de una cláusula `Where…Contains`, puede utilizar <xref:System.Array>, <xref:System.Collections.Generic.List%601> o una colección de cualquier tipo que implemente la interfaz <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="5def0-120">As part of the predicate in a `Where…Contains` clause, you can use an <xref:System.Array>, a <xref:System.Collections.Generic.List%601>, or a collection of any type that implements the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="5def0-121">También puede declarar e inicializar una colección en una consulta LINQ to Entities.</span><span class="sxs-lookup"><span data-stu-id="5def0-121">You can also declare and initialize a collection within a LINQ to Entities query.</span></span> <span data-ttu-id="5def0-122">Para obtener más información, vea el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="5def0-122">See the next example for more information.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="228c8-123">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="228c8-123">Example</span></span>  
- <span data-ttu-id="228c8-124">El ejemplo siguiente declara e inicializa las matrices en una cláusula `Where…Contains` para encontrar todos los productos que tienen un `ProductModelID` o `Size` que coincide con un valor de las matrices.</span><span class="sxs-lookup"><span data-stu-id="228c8-124">The following example declares and initializes arrays in a `Where…Contains` clause to find all products that have a `ProductModelID` or a `Size` that matches a value in the arrays.</span></span>  
+### <a name="example"></a><span data-ttu-id="5def0-123">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5def0-123">Example</span></span>  
+ <span data-ttu-id="5def0-124">El ejemplo siguiente declara e inicializa las matrices en una cláusula `Where…Contains` para encontrar todos los productos que tienen un `ProductModelID` o `Size` que coincide con un valor de las matrices.</span><span class="sxs-lookup"><span data-stu-id="5def0-124">The following example declares and initializes arrays in a `Where…Contains` clause to find all products that have a `ProductModelID` or a `Size` that matches a value in the arrays.</span></span>  
   
  [!code-csharp[DP L2E ArraysAndListsInQueries#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e arraysandlistsinqueries/cs/program.cs#4)]
  [!code-vb[DP L2E ArraysAndListsInQueries#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e arraysandlistsinqueries/vb/module1.vb#4)]  
   
-## <a name="see-also"></a><span data-ttu-id="228c8-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="228c8-125">See also</span></span>
-- [<span data-ttu-id="228c8-126">Consultas en LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="228c8-126">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a><span data-ttu-id="5def0-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="5def0-125">See also</span></span>
+- [<span data-ttu-id="5def0-126">Consultas en LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="5def0-126">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
