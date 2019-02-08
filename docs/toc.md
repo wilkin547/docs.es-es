@@ -1189,7 +1189,7 @@
 ## [Tutoriales](machine-learning/tutorials/index.md)
 ### [Análisis de sentimiento (clasificación binaria)](machine-learning/tutorials/sentiment-analysis.md)
 ### [Clasificación de problemas (clasificación multiclase)](machine-learning/tutorials/github-issue-classification.md)
-### [Predictor de tarifa de taxi (regresión)](machine-learning/tutorials/taxi-fare.md)
+### [Predicción de precios (regresión)](machine-learning/tutorials/taxi-fare.md)
 ### [Flores de iris (agrupación en clústeres)](machine-learning/tutorials/iris-clustering.md)
 ## [Guías de procedimientos](machine-learning/how-to-guides/index.md)
 ### Preparar los datos
@@ -1200,7 +1200,7 @@
 #### [Carga de datos de archivos de texto](machine-learning/how-to-guides/load-data-from-text-file-ml-net.MD)
 #### [Procesamiento previo de datos con normalizadores](machine-learning/how-to-guides/normalizers-preprocess-data-ml-net.md)
 ### Entrenamiento, evaluación y explicación del modelo
-#### [Entrenamiento de modelos con datos no en un archivo de texto](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
+#### [Entrenamiento del modelo con orígenes de datos en tiempo real](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
 #### [Entrenamiento de modelos mediante validación cruzada](machine-learning/how-to-guides/train-cross-validation-ml-net.md)
 #### [Inspección de valores de datos de canalización intermedios](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [Entrenamiento de modelos de regresión](machine-learning/how-to-guides/train-regression-model-ml-net.md)
