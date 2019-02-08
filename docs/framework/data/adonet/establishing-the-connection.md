@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 6e3a88f7b34c64480d69df1a06a113e392d8fe53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97cae018f8cdf19da390b9586334f7c8b7f1c239
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619388"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903816"
 ---
 # <a name="establishing-the-connection"></a>Establecer la conexión
 Para conectarse a Microsoft SQL Server, use el objeto <xref:System.Data.SqlClient.SqlConnection> del proveedor de datos .NET Framework para SQL Server. Para conectarse a un origen de datos OLE DB, use el objeto <xref:System.Data.OleDb.OleDbConnection> del proveedor de datos .NET Framework para OLE DB. Para conectarse a un origen de datos ODBC, utilice el objeto <xref:System.Data.Odbc.OdbcConnection> del proveedor de datos .NET Framework para ODBC. Para conectarse a un origen de datos Oracle, utilice el objeto <xref:System.Data.OracleClient.OracleConnection> del proveedor de datos .NET Framework para ODBC. Para almacenar de forma segura y recuperar cadenas de conexión, vea [proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
@@ -51,7 +51,7 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 ### <a name="integrated-security-and-aspnet"></a>Seguridad integrada y ASP.NET  
  La seguridad integrada de SQL Server (también conocida como conexiones de confianza) ayuda a proteger las conexiones a SQL Server dado que no expone el identificador y la contraseña de un usuario en la cadena de conexión y es el método recomendado para autenticar una conexión. La seguridad integrada utiliza la identidad de seguridad actual, o símbolo (token), del proceso en ejecución, que en aplicaciones de escritorio, es normalmente la identidad del usuario que actualmente ha iniciado la sesión.  
   
- La identidad de seguridad para aplicaciones ASP.NET se puede establecer en una de varias opciones diferentes. Para entender mejor la identidad de seguridad que una aplicación ASP.NET que se utiliza al conectarse a SQL Server, vea [suplantación de ASP.NET](https://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d), [autenticación ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1), y [Cómo: Seguridad integrada de acceso a SQL Server mediante Windows](https://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5).  
+ La identidad de seguridad para aplicaciones ASP.NET se puede establecer en una de varias opciones diferentes. Para entender mejor la identidad de seguridad que una aplicación ASP.NET que se utiliza al conectarse a SQL Server, vea [suplantación de ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)), [autenticación ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/eeyk640h(v=vs.100)), y [Cómo: Seguridad integrada de acceso a SQL Server mediante Windows](https://docs.microsoft.com/previous-versions/aspnet/bsz5788z(v=vs.100)).  
   
 ## <a name="connecting-to-an-ole-db-data-source"></a>Conexión a un origen de datos OLE DB  
  El proveedor de datos de .NET Framework para OLE DB proporciona conectividad a orígenes de datos expuestos mediante OLE DB (a través de SQLOLEDB, el proveedor OLE DB para SQL Server), mediante el **OleDbConnection** objeto.  

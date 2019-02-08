@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8614dd612fff2886c4e44a977d05a575fce74eec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e49c24a4b98a5287ec27b1667f45055d9a94d53
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648948"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903413"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping (Método)
 Obtiene una matriz de instancias de "COR_DEBUG_IL_TO_NATIVE_MAP" que representan las asignaciones de desplazamientos del lenguaje intermedio (MSIL) de Microsoft a los desplazamientos nativos.  
@@ -46,7 +46,7 @@ HRESULT GetILToNativeMapping (
  [out] Un puntero al número real de elementos devueltos en la `map` matriz.  
   
  `map`  
- [out] Una matriz de `COR_DEBUG_IL_TO_NATIVE_MAP` estructuras contenidas, cada uno de los cuales representa una asignación de un desplazamiento de MSIL a un desplazamiento nativo.  
+ [out] Una matriz de `COR_DEBUG_IL_TO_NATIVE_MAP` estructuras, cada uno de los cuales representa una asignación de un desplazamiento de MSIL a un desplazamiento nativo.  
   
  No hay ningún orden a la matriz de elementos devueltos.  
   

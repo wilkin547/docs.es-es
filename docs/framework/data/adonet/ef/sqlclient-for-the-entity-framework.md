@@ -2,12 +2,12 @@
 title: SqlClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: 1c38567f77d69a894376e23b6d4ff6c669edc806
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b47b035932062b859d470716903e826b2bb6f3d
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569107"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903839"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient para Entity Framework
 En esta sección se describe el Proveedor de datos de .NET Framework para SQL Server (SqlClient), el cual permite a Entity Framework trabajar sobre Microsoft SQL Server.  
@@ -18,7 +18,7 @@ En esta sección se describe el Proveedor de datos de .NET Framework para SQL Se
  Para utilizar SqlClient, asigne la cadena "System.Data.SqlClient" al atributo `Provider` del elemento `Schema`.  
   
 ## <a name="providermanifesttoken-schema-attribute"></a>Atributo ProviderManifestToken de Schema  
- `ProviderManifestToken` es un atributo necesario del elemento `Schema` en SSDL. Este token se utiliza para cargar el manifiesto del proveedor en escenarios sin conexión. Para obtener más información acerca de `ProviderManifestToken` atributo, vea [elemento de esquema de almacenamiento (SSDL)](https://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222).  
+ `ProviderManifestToken` es un atributo necesario del elemento `Schema` en SSDL. Este token se utiliza para cargar el manifiesto del proveedor en escenarios sin conexión. Para obtener más información acerca de `ProviderManifestToken` atributo, vea [elemento de esquema de almacenamiento (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl).  
   
  SqlClient se puede usar como un proveedor de datos para diferentes versiones de SQL Server. Estas versiones tienen capacidades distintas. Por ejemplo, [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] no admite los tipos `varchar(max)` y `nvarchar(max)` que se incluyeron con [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)].  
   
@@ -29,7 +29,7 @@ En esta sección se describe el Proveedor de datos de .NET Framework para SQL Se
 |2000|2005|2008|  
   
 > [!NOTE]
->  A partir de Visual Studio 2010, el [ADO.NET Entity Data Model Tools](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) no son compatibles con SQL Server 2000.  
+>  A partir de Visual Studio 2010, el [ADO.NET Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) no son compatibles con SQL Server 2000.  
   
 ## <a name="provider-namespace-name"></a>Nombre del espacio de nombres de proveedor  
  Todos los proveedores deben especificar un espacio de nombres. Esta propiedad indica a Entity Framework qué prefijo usa el proveedor para estructuras concretas, como los tipos y funciones. El espacio de nombres para los manifiestos del proveedor SqlClient es `SqlServer`. Para obtener más información acerca de los espacios de nombres, vea [espacios de nombres](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md).  

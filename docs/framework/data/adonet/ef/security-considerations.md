@@ -2,12 +2,12 @@
 title: Consideraciones de seguridad (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 114da13e9939131f4799dc8a3565167f516eb697
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612832"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904144"
 ---
 # <a name="security-considerations-entity-framework"></a>Consideraciones de seguridad (Entity Framework)
 En este tema se describen consideraciones de seguridad que son específicas del desarrollo, implementación y ejecución de aplicaciones de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. También debe seguir las recomendaciones para crear aplicaciones de [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] seguras. Para obtener más información, consulte [información general sobre seguridad](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -38,7 +38,7 @@ En este tema se describen consideraciones de seguridad que son específicas del 
   
 -   Cifre las secciones del archivo de configuración mediante una configuración protegida.  
   
-     ASP.NET incluye una característica denominada configuración protegida, que permite cifrar la información confidencial en un archivo de configuración. Si bien se ha diseñado principalmente para ASP.NET, la configuración protegida también puede usarse para cifrar secciones de los archivos de configuración en aplicaciones Windows. Para obtener una descripción detallada de las nuevas capacidades de configuración protegida, vea [cifrar configuración información utilizando configuración protegida](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
+     ASP.NET incluye una característica denominada configuración protegida, que permite cifrar la información confidencial en un archivo de configuración. Si bien se ha diseñado principalmente para ASP.NET, la configuración protegida también puede usarse para cifrar secciones de los archivos de configuración en aplicaciones Windows. Para obtener una descripción detallada de las nuevas capacidades de configuración protegida, vea [cifrar configuración información utilizando configuración protegida](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
 -   Almacene las cadenas de conexión en archivos de configuración protegidos.  
   
@@ -98,7 +98,7 @@ En este tema se describen consideraciones de seguridad que son específicas del 
   
      Los ataques de inyección de SQL se pueden realizar en [!INCLUDE[esql](../../../../../includes/esql-md.md)] proporcionando entradas malintencionadas a los valores que se utilizan en un predicado de consulta y en los nombres de los parámetros. Para evitar el riesgo de inyección de SQL, nunca debería combinar los datos proporcionados por el usuario con el texto de comandos de [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
-     Las consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)] aceptan parámetros siempre que se aceptan literales. Se deben usar consultas parametrizadas en lugar de insertar literales directamente en la consulta procedentes de un agente externo. También debe considerar el uso de métodos del generador de consultas para construir de forma segura [Entity SQL](https://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+     Las consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)] aceptan parámetros siempre que se aceptan literales. Se deben usar consultas parametrizadas en lugar de insertar literales directamente en la consulta procedentes de un agente externo. También debe considerar el uso [métodos del generador de consultas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) para construir de forma segura Entity SQL.  
   
 -   Ataques de inyección de [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]:  
   
@@ -132,7 +132,7 @@ En este tema se describen consideraciones de seguridad que son específicas del 
  Al generar y trabajar con tipos de entidad se aplican las consideraciones de seguridad siguientes.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>No comparta un ObjectContext a través de dominios de aplicación.  
- Al compartir un <xref:System.Data.Objects.ObjectContext> con más de un dominio de aplicación, se puede exponer información en la cadena de conexión. En su lugar, debería transferir objetos serializados o gráficos de objetos al otro dominio de aplicación y, a continuación, asociar esos objetos a <xref:System.Data.Objects.ObjectContext> en ese dominio de aplicación. Para obtener más información, consulte [serializar objetos](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ Al compartir un <xref:System.Data.Objects.ObjectContext> con más de un dominio de aplicación, se puede exponer información en la cadena de conexión. En su lugar, debería transferir objetos serializados o gráficos de objetos al otro dominio de aplicación y, a continuación, asociar esos objetos a <xref:System.Data.Objects.ObjectContext> en ese dominio de aplicación. Para obtener más información, consulte [serializar objetos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
 #### <a name="prevent-type-safety-violations"></a>Evite las infracciones de seguridad de los tipos.  
  Si se infringe la seguridad de los tipos, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] no puede garantizar la integridad de los datos de los objetos. Se podrían producir infracciones de seguridad de tipos si permite que las aplicaciones que no son de confianza se ejecuten con seguridad de acceso del código de plena confianza.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 25d7f49644996d87ddb5d191dc313916c0ca6fbb
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9ca3732de5e4cfa07fe08dec78edc9de23a1a036
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45748643"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904375"
 ---
 # <a name="working-with-data-definition-language"></a>Trabajar con lenguaje de definición de datos
 A partir de la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] versión 4, el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es compatible con el lenguaje de definición de datos (DDL). Esto le permite crear o eliminar una instancia de la base de datos basada en la cadena de conexión y los metadatos del modelo de almacenamiento (SSDL).  
@@ -40,11 +40,11 @@ A partir de la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)
   
 2.  Agregue un modelo existente a la aplicación.  
   
-    1.  Agregar un modelo vacío denominado `SchoolModel`. Para crear un modelo vacío, consulte el [Cómo: crear un nuevo archivo .edmx](https://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2) tema.  
+    1.  Agregar un modelo vacío denominado `SchoolModel`. Para crear un modelo vacío, consulte el [Cómo: Crear un nuevo archivo .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) tema.  
   
      El archivo SchoolModel.edmx se añade al proyecto.  
   
-    1.  Copie el conceptual, almacenamiento y la asignación de contenido para el modelo School desde el [modelo School](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) tema.  
+    1.  Copie el conceptual, almacenamiento y la asignación de contenido para el modelo School desde el [modelo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) tema.  
   
     2.  Abra el archivo SchoolModel.edmx y pegue el contenido dentro de las etiquetas `edmx:Runtime`.  
   

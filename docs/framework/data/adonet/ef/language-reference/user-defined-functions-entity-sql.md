@@ -2,15 +2,15 @@
 title: Funciones definidas por el usuario (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 3f9e6bbd-8e5a-43e1-809f-f8a61338e522
-ms.openlocfilehash: 7810f2b643ace0b8219855db80c6ed5466df1c1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86b7d26e7959be954b4ddd7404f3a3ad6c76c1c5
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694664"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904505"
 ---
 # <a name="user-defined-functions-entity-sql"></a>Funciones definidas por el usuario (Entity SQL)
-Entity SQL admite llamadas a funciones definidas por el usuario en una consulta. Puede definir estas funciones inline con la consulta (vea [Cómo: Llamar a una función definida por el usuario](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)) o como parte del modelo conceptual (vea [Cómo: Definir funciones personalizadas en el modelo Conceptual](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f)). Las funciones del modelo conceptual se definen como un comando de Entity SQL en el [DefiningExpression](https://msdn.microsoft.com/library/d3da8d8b-a048-47ee-8d81-0c2ea3acdd3e) elemento de un [función](https://msdn.microsoft.com/library/dc3beca7-55cf-4977-8db0-5064cdbab134) elemento en el modelo conceptual.  
+Entity SQL admite llamadas a funciones definidas por el usuario en una consulta. Puede definir estas funciones inline con la consulta (vea [Cómo: Llamar a una función definida por el usuario](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))) o como parte del modelo conceptual (vea [Cómo: Definir funciones personalizadas en el modelo Conceptual](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))). Las funciones del modelo conceptual se definen como un comando de Entity SQL en el [DefiningExpression](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#definingexpression-element-csdl) elemento de un [función](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#function-element-csdl) elemento en el modelo conceptual.  
   
  Entity SQL le permite definir las funciones en el propio comando de consulta. El [función](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) operador define las funciones inline. Puede definir varias funciones con el mismo nombre en un único comando, siempre que sus firmas sean únicas. Para obtener más información, consulta [Function Overload Resolution](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md).  
   

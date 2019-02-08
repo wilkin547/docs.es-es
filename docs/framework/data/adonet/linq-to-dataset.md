@@ -2,12 +2,12 @@
 title: LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 743e3755-3ecb-45a2-8d9b-9ed41f0dcf17
-ms.openlocfilehash: 5e23ff825c609d5e9fea3a1870775f85a626db4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9769e98d1046bbe795040782ca5d8164140b4b0d
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589287"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904858"
 ---
 # <a name="linq-to-dataset"></a>LINQ to DataSet
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] facilita y acelera las consultas en datos almacenados en caché en un objeto <xref:System.Data.DataSet>. En concreto, [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] simplifica la consulta permitiendo a los desarrolladores escribir consultas desde el lenguaje de programación mismo, en lugar de mediante un lenguaje de consulta independiente. Esto es especialmente útil para los desarrolladores de Visual Studio, que ahora pueden aprovechar las ventajas de la comprobación de sintaxis en tiempo de compilación, tipos estáticos y compatibilidad con IntelliSense proporcionado por Visual Studio en las consultas.  
@@ -31,6 +31,7 @@ ms.locfileid: "54589287"
  <xref:System.Data.DataRowComparer>  
   
 ## <a name="see-also"></a>Vea también
-- [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- [Language-Integrated Query (LINQ):C#](../../../csharp/programming-guide/concepts/linq/index.md)
+- [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ y ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)

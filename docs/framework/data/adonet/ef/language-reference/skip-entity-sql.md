@@ -2,12 +2,12 @@
 title: SKIP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
-ms.openlocfilehash: 467329f74304b64c7fc7ada2920751aba744f76e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b17f73f97d32f151ed4f51b025c0c5a7a97393bb
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637643"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904176"
 ---
 # <a name="skip-entity-sql"></a>SKIP (Entity SQL)
 Puede realizar la paginación física utilizando la subcláusula SKIP en la cláusula ORDER BY. SKIP no se puede utilizar por separado de la cláusula ORDER BY.  
@@ -33,10 +33,10 @@ Puede realizar la paginación física utilizando la subcláusula SKIP en la clá
 >   
 >  `SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L`  
   
- La consulta de  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] en [este](https://msdn.microsoft.com/library/bb738702\(v=vs.100\).aspx#_ESQL) ejemplo, usa el operador ORDER BY con SKIP para especificar el criterio de ordenación que se usa en los objetos devueltos en una instrucción SELECT.  
+ El [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consultar en [Cómo: Resultados de consulta a través de la página](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)) usa el operador ORDER BY con SKIP para especificar el criterio de ordenación utilizado en los objetos devueltos en una instrucción SELECT.  
   
 ## <a name="see-also"></a>Vea también
 - [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
-- [Cómo: Página de resultados de la consulta](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)
+- [Cómo: Página de resultados de la consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [Paginación](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)
 - [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
