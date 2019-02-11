@@ -8,12 +8,12 @@ metadata:
   ms.date: 12/11/2018
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: d782899c3b29851f020cd9fc07cde8f408bf2ac5
-  ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+  ms.openlocfilehash: c44d16e543f85852cee39106688fd3870dff7c4d
+  ms.sourcegitcommit: c3cf1ace8a1d403aeae76d8976d01995893d2536
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/23/2019
-  ms.locfileid: "54634264"
+  ms.lasthandoff: 02/07/2019
+  ms.locfileid: "55807051"
 items:
 - durationInMinutes: 1
   content: >
@@ -51,7 +51,7 @@ items:
     ```
 
 
-    Intente lo mismo con el método `Caps`. Esto supone una pequeña mejora, pero si se usa de forma sensata crea código mucho más legible, especialmente para objetos de transferencia de datos (DTO) y otros tipos con comportamiento mínimo.
+    Intente lo mismo con el método `AllCaps`. Esto supone una pequeña mejora, pero si se usa de forma sensata crea código mucho más legible, especialmente para objetos de transferencia de datos (DTO) y otros tipos con comportamiento mínimo.
 - title: Importación de una sola clase
   durationInMinutes: 2
   content: "Si usa los métodos estáticos de una clase de forma repetida por el código, la inclusión del nombre de clase cada vez oscurece el significado del código. La clase `Person` actualmente importa el espacio de nombres `System`, aunque solo se use <xref:System.Console?displayProperty=nameWithType>. Modifique la instrucción `using` como se indica:\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#UsingStatic)]  \n\nLa instrucción `static using` es más útil en programas más grandes que usan mucho una sola clase con muchos métodos estáticos, como la clase [`string`](xref:System.String) o la clase <xref:System.Math?displayProperty=nameWithType>.\n"
