@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 75d1dba6678be0bfa45be5f3e60e8e76f80a7e9e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ff1869ab17761645321d803f0f7db4bb39c992bc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083852"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093286"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Recuperar datos mediante DataReader
 Para recuperar datos mediante un **DataReader**, cree una instancia de la **comando** objeto y, a continuación, cree un **DataReader** mediante una llamada a **Command.ExecuteReader**  para recuperar filas de un origen de datos. El **DataReader** proporciona una secuencia sin almacenamiento en búfer de datos que permite la lógica de procedimientos procesar secuencialmente de forma eficaz los resultados de un origen de datos. El **DataReader** es una buena elección cuando se está recuperando grandes cantidades de datos porque no se almacena en caché los datos en memoria.
@@ -258,7 +258,6 @@ adapter.Fill(ds);
 >  Para evitar un **OverflowException**, se recomienda que controle también cualquier conversión de tipo NUMBER de Oracle a un tipo válido de .NET Framework antes de almacenar el valor en un <xref:System.Data.DataRow>. Puede usar el <xref:System.Data.Common.DataAdapter.FillError> evento para determinar si un **OverflowException** se ha producido. Para obtener más información sobre la <xref:System.Data.Common.DataAdapter.FillError> eventos, consulte [controlar eventos de DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Trabajar con DataReaders](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
 - [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Recuperación de información del esquema de la base de datos](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
