@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: db802e127cacec2243741310b8a885c7ffcd24e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff68a8bee17b55f7865d6f6c289ba514729be70d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736999"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093455"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Usar un servicio de datos en una aplicación cliente (Data Services de WCF)
 Puede tener acceso a un servicio que expone un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuente especificando un URI a un explorador Web. El URI proporciona la dirección de un recurso y los mensajes de solicitud se envían a estas direcciones para obtener acceso o cambiar los datos subyacentes que el recurso representa. El explorador emite un comando GET de HTTP y devuelve el recurso solicitado como una fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Para obtener más información, consulte [acceder al servicio desde un explorador Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -45,7 +45,7 @@ Puede tener acceso a un servicio que expone un [!INCLUDE[ssODataFull](../../../.
  El formato de mensaje de la carga se solicita en el encabezado del mensaje de la solicitud HTTP. Para obtener más información, consulte [OData: Las operaciones](https://go.microsoft.com/fwlink/?LinkID=185792).  
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>Acceso y modificación de datos mediante bibliotecas de cliente  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] incluye bibliotecas de cliente que permiten utilizar más fácilmente un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente de .NET Framework y las aplicaciones cliente basadas en Silverlight. Estas bibliotecas simplifican el envío y recepción de los mensajes HTTP. También traducen la carga del mensaje en objetos CLR que representan los datos de entidad. Las bibliotecas cliente representan las dos clases principales <xref:System.Data.Services.Client.DataServiceContext> y <xref:System.Data.Services.Client.DataServiceQuery%601>. Estas clases le permiten consultar un servicio de datos y, a continuación, trabajar con los datos de entidad devueltos como objetos CLR. Para obtener más información, consulte [biblioteca de cliente de WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) y [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] incluye bibliotecas de cliente que permiten utilizar más fácilmente un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente de .NET Framework y las aplicaciones cliente basadas en Silverlight. Estas bibliotecas simplifican el envío y recepción de los mensajes HTTP. También traducen la carga del mensaje en objetos CLR que representan los datos de entidad. Las bibliotecas cliente representan las dos clases principales <xref:System.Data.Services.Client.DataServiceContext> y <xref:System.Data.Services.Client.DataServiceQuery%601>. Estas clases le permiten consultar un servicio de datos y, a continuación, trabajar con los datos de entidad devueltos como objetos CLR. Para obtener más información, consulte [biblioteca de cliente de WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) y [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
   
  Puede usar el **Add Service Reference** cuadro de diálogo de Visual Studio para agregar una referencia a un servicio de datos. Esta herramienta solicita metadatos de servicio desde un servicio de datos al que se ha hecho referencia y genera el <xref:System.Data.Services.Client.DataServiceContext> que representa un servicio de datos, además de generar las clases de servicio de datos cliente que representan las entidades. Para obtener más información, consulte [generar la biblioteca de cliente de servicio de datos](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: 2d1b88d25c5c2e94d86c1fed53c472e2b0af493e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0cfb9273603850d2451245b81f1bb651f16d56
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643655"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094066"
 ---
 # <a name="retrieving-binary-data"></a>Recuperar datos binarios
 De forma predeterminada, el **DataReader** carga los datos entrantes como una fila tan pronto como una fila completa de datos está disponible. Sin embargo, los objetos binarios grandes (BLOB) se deben tratar de otra forma, ya que pueden llegar a contener grandes cantidades de datos (del orden de gigabytes) que no pueden almacenarse en una sola fila. El **Command.ExecuteReader** método tiene una sobrecarga que tomará un <xref:System.Data.CommandBehavior> argumento para modificar el comportamiento predeterminado de la **DataReader**. Puede pasar <xref:System.Data.CommandBehavior.SequentialAccess> a la **ExecuteReader** método para modificar el comportamiento predeterminado de la **DataReader** para que en lugar de cargar las filas de datos, los vaya cargando secuencialmente a medida que se recibe. Este sistema es idóneo para cargar BLOB y otras estructuras de datos grandes. Tenga en cuenta que este comportamiento puede depender del origen de datos. Por ejemplo, si se devuelve un BLOB desde Microsoft Access, el BLOB completo se cargará en memoria, en lugar de hacerlo secuencialmente a medida que se recibe.  
@@ -154,6 +154,5 @@ connection.Close();
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Trabajar con DataReaders](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
 - [Datos binarios y datos de valores grandes de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

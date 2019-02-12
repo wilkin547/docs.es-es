@@ -2,12 +2,12 @@
 title: Ejemplos de consultas
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211871"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093767"
 ---
 # <a name="query-examples"></a>Ejemplos de consultas
 En esta sección se proporciona ejemplos de Visual Basic y C# típicas [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consultas. Los desarrolladores que usan Visual Studio pueden encontrar muchos más ejemplos en una solución de ejemplo disponible en la sección de ejemplos. Para obtener más información, consulte [ejemplos](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
@@ -65,8 +65,11 @@ En esta sección se proporciona ejemplos de Visual Basic y C# típicas [!INCLUDE
  Proporciona ejemplos de cómo combinar `select` con otras características (por ejemplo, *tipos anónimos*) para formar proyecciones de consulta.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Información general sobre operadores de consulta estándar](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- Explica el concepto de operador de consulta estándar.  
+ [Standard Query Operators Overview (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))  
+ Explica el concepto de operadores de consulta estándar utilizando C#.  
+  
+ [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ Explica el concepto de operadores de consulta estándar utilizando Visual Basic.  
   
  [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  Explica cómo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utiliza conceptos que se aplican a las consultas.  

@@ -2,12 +2,12 @@
 title: Seguridad Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 24da83af6876e9bbb23c7978db6b9413ec00d8ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570491"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091804"
 ---
 # <a name="security-overview"></a>Información general sobre seguridad
 La protección de una aplicación es un proceso continuo. Es prácticamente imposible que se llegue a un momento en el que un programador pueda garantizar que una aplicación es invulnerable ante todo tipo de ataques, ya que no es posible predecir los tipos de ataques que surgirán en un futuro con las nuevas tecnologías. Al contrario, el hecho de que nadie haya detectado (o publicado) aún brechas de seguridad en un sistema, no quiere decir que éstas no existan o no puedan existir en un futuro. Por lo tanto, es necesario planificar la seguridad durante la fase de diseño del proyecto, así como la forma en que se mantendrá la seguridad durante el ciclo de vida de la aplicación.  
@@ -89,7 +89,7 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
 |Recurso|Descripción|  
 |--------------|-----------------|  
 |[Seguridad de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Proporciona una introducción general a la seguridad de SQL Server con escenarios de aplicación que orientan en la creación de aplicaciones ADO.NET seguras dirigidas a SQL Server.|  
-|[Recomendaciones de estrategias de acceso a datos](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Proporciona recomendaciones para obtener acceso a datos y realizar operaciones de base de datos.|  
+|[Recomendaciones de estrategias de acceso a datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Proporciona recomendaciones para obtener acceso a datos y realizar operaciones de base de datos.|  
   
 ## <a name="security-policy-and-administration"></a>Directiva de seguridad y administración  
  La administración inadecuada de la directiva de seguridad de acceso del código (CAS) puede crear puntos débiles en la seguridad. Cuando se utiliza una aplicación, deben seguirse las técnicas de supervisión de seguridad y deben evaluarse los riesgos a medida que surgen nuevas amenazas.  
@@ -98,11 +98,11 @@ La protección de una aplicación es un proceso continuo. Es prácticamente impo
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[NIB: Administración de directivas de seguridad](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Proporciona información sobre la creación y administración de la directiva de seguridad.|  
-|[NIB: Recomendaciones de directiva de seguridad](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Proporciona vínculos a temas que describen cómo administrar la directiva de seguridad.|  
+|[Administración de directivas de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Proporciona información sobre la creación y administración de la directiva de seguridad.|  
+|[Recomendaciones de directiva de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Proporciona vínculos a temas que describen cómo administrar la directiva de seguridad.|  
   
 ## <a name="see-also"></a>Vea también
 - [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [PAVE Seguridad del código nativo y del código de .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [Seguridad en .NET](../../../standard/security/index.md)
 - [Seguridad de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

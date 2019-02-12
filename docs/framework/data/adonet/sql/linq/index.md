@@ -2,12 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 6b3a951256d0804c214016de04457cc1869b595f
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 532813f68c0996337ce3bed8172a826425db1ec0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904292"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092233"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] es un componente de [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] versión 3.5 que proporciona una infraestructura en tiempo de ejecución para administrar los datos relacionales como objetos.  
@@ -47,11 +47,11 @@ ms.locfileid: "55904292"
  [LINQ y ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  Vínculos al portal de [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)].  
   
- [Tutoriales de LINQ to SQL](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)  
+ [Tutoriales de LINQ to SQL](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))  
  Enumera los tutoriales disponibles para [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
  Describe cómo descargar las bases de datos de ejemplo que se usan en la documentación.  
   
- [Información general sobre la tecnología de LinqDataSource](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
+ [Información general sobre el Control de servidor Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
  Describe cómo el control <xref:System.Web.UI.WebControls.LinqDataSource> expone [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] para los desarrolladores web a través de la arquitectura de control de código fuente de datos de [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)].

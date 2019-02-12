@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 11002ea61d53b16817714a4b03481383311b7c4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63dcfd80cca0db67dfad87c491d607506057a532
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733251"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092272"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Ordenar con DataView (LINQ to DataSet)
 La capacidad de ordenar datos basándose en criterios específicos y, a continuación, presentarlos a un cliente mediante un control de interfaz de usuario es un aspecto importante del enlace de datos. <xref:System.Data.DataView> proporciona varias maneras de ordenar datos y devolver filas de datos ordenados según criterios de ordenación específicos. Además de basada en cadena capacidades, de ordenación <xref:System.Data.DataView> también le permite usar [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] expresiones para los criterios de ordenación. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] las expresiones que se permiten para las operaciones de ordenación más complejas y eficaces que la ordenación basada en cadena. En este tema se describen ambos enfoques de ordenación utilizando <xref:System.Data.DataView>.  
@@ -84,4 +84,4 @@ La capacidad de ordenar datos basándose en criterios específicos y, a continua
 ## <a name="see-also"></a>Vea también
 - [Enlace de datos y LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
 - [Filtrado con DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
-- [Ordenación de datos](https://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)
+- [Ordenación de datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))

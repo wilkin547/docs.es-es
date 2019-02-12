@@ -2,12 +2,12 @@
 title: Roles de servidor y base de datos en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 57570d1879efa91dc98e41203eac9464c547af77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7fdac92c2d980669a3cc3bf67119bdbb42509a4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643083"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091817"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Roles de servidor y base de datos en SQL Server
 Todas las versiones de SQL Server usan la seguridad basada en roles, que permite asignar permisos a un rol, o grupo de usuarios, en lugar de asignarlos a usuarios individuales. Los roles fijos de servidor y base de datos cuentan con un conjunto fijo de permisos asignados.  
@@ -27,8 +27,8 @@ Todas las versiones de SQL Server usan la seguridad basada en roles, que permite
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[Roles de nivel de servidor](/sql/relational-databases/security/authentication-access/server-level-roles) y [permisos de los Roles fijos de servidor](https://msdn.microsoft.com/library/ms175892.aspx) en los libros en pantalla de SQL Server|Describe funciones fijas de servidor y los permisos asociados con ellos en SQL Server.|  
-|[Roles de nivel de base de datos](/sql/relational-databases/security/authentication-access/database-level-roles) y [permisos de los Roles fijos de base de datos](https://msdn.microsoft.com/library/ms189612.aspx) en los libros en pantalla de SQL Server|Describe los roles fijos de base de datos y los permisos asociados a ellas.|  
+|[Funciones de nivel de servidor](/sql/relational-databases/security/authentication-access/server-level-roles)|Describe funciones fijas de servidor y los permisos asociados con ellos en SQL Server.|  
+|[Roles de nivel de base de datos](/sql/relational-databases/security/authentication-access/database-level-roles)|Describe los roles fijos de base de datos y los permisos asociados a ellas.|  
   
 ## <a name="database-roles-and-users"></a>Roles y usuarios de base de datos  
  Para trabajar con objetos de base de datos, se deben asignar inicios de sesión a cuentas de usuario de base de datos. Estos usuarios de base de datos se podrán agregar entonces a roles de base de datos y heredarán los conjuntos de permisos asociados con estos roles. Se pueden conceder todos los permisos.  
@@ -58,8 +58,8 @@ Todas las versiones de SQL Server usan la seguridad basada en roles, que permite
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[Identidad y Access Control](https://msdn.microsoft.com/library/bb510418.aspx) en los libros en pantalla de SQL Server|Contiene vínculos a temas que describen las entidades de seguridad, los roles, las credenciales, los elementos que pueden protegerse y los permisos.|  
-|[Las entidades de seguridad](/sql/relational-databases/security/authentication-access/principals-database-engine) en los libros en pantalla de SQL Server|Describe las entidades de seguridad y contiene vínculos a temas que describen los roles de servidor y de base de datos.|  
+|[Introducción a los permisos del motor de base de datos](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Contiene vínculos a temas que describen las entidades de seguridad, los roles, las credenciales, los elementos que pueden protegerse y los permisos.|  
+|[Entidades de seguridad](/sql/relational-databases/security/authentication-access/principals-database-engine)|Describe las entidades de seguridad y contiene vínculos a temas que describen los roles de servidor y de base de datos.|  
   
 ## <a name="see-also"></a>Vea también
 - [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

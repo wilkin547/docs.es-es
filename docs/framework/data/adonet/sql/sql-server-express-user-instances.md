@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: d7ab6694ec467f957228bfde0a044c577bc2f923
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4546ce2a08fc2ac20717bbaa55d4688b43d34b47
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664088"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093819"
 ---
 # <a name="sql-server-express-user-instances"></a>Instancias de usuario de SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) incorpora una nueva característica de instancia de usuario, que solo está disponible cuando se usa el proveedor de datos .NET Framework para SQL Server (`SqlClient`). Una instancia de usuario es una instancia independiente del motor de base de datos de SQL Server Express que se genera mediante una instancia primaria. Las instancias de usuario permiten a los usuarios que no son administradores en sus equipos locales adjuntar y conectarse a bases de datos de SQL Server Express. Cada instancia se ejecuta en el contexto de seguridad del usuario individual, ya que solo se puede ejecutar una instancia por usuario.  
@@ -58,7 +58,7 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  También puede usar el <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> y <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> propiedades para generar una cadena de conexión en tiempo de ejecución.  
+>  También puede usar las propiedades <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> y <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> para compilar una cadena de conexión en tiempo de ejecución.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>Mediante el &#124;DataDirectory&#124; cadena de sustitución  
  `AttachDbFileName` se amplió en ADO.NET 2.0 con la incorporación de la cadena de sustitución `|DataDirectory|` (entre barras verticales). `DataDirectory` se usa junto con `AttachDbFileName` para indicar una ruta de acceso relativa a un archivo de datos, lo que permite a los desarrolladores crear cadenas de conexión basadas en una ruta relativa al origen de datos en lugar de tener que especificar la ruta completa.  
@@ -146,7 +146,7 @@ private static void OpenSqlConnection()
   
 -   Cualquier aplicación de un único usuario en la que no sea necesario compartir datos  
   
--   Implementación ClickOnce Si .NET Framework 2.0, o posterior, y SQL Server Express ya están instalados en el equipo de destino, los usuarios que no sean administradores pueden instalar y utilizar el paquete de instalación que se descargó como resultado de una acción ClickOnce. Un administrador debe instalar SQL Server Express si forma parte de la instalación. Para obtener más información, consulte [implementación de ClickOnce para aplicaciones de formularios Windows Forms](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df).  
+-   Implementación ClickOnce Si .NET Framework 2.0, o posterior, y SQL Server Express ya están instalados en el equipo de destino, los usuarios que no sean administradores pueden instalar y utilizar el paquete de instalación que se descargó como resultado de una acción ClickOnce. Un administrador debe instalar SQL Server Express si forma parte de la instalación. Para obtener más información, consulte [implementación de ClickOnce para formularios Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
   
 -   Hospedaje de ASP.NET dedicado con autenticación de Windows. Una sola instancia de SQL Express Server se puede hospedar en una intranet. La aplicación se conecta usando la cuenta de Windows ASPNET, sin que haya suplantación. No se debería utilizar instancias de usuario en escenarios de hospedaje compartido o de terceros en los que todas las aplicaciones compartirían la misma instancia de usuario y dejarían de permanecer aisladas las unas de las otras.  
   

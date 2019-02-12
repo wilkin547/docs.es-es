@@ -1,18 +1,18 @@
 ---
-title: Escenarios de aplicación (Data Services de WCF)
+title: Escenarios de aplicación (Servicios de datos de WCF)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 2efa46abf5a1fcedee4a4055331f7a59963be794
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380ebeaa4c6265cccfe0e264884f509292b31eab
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709161"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093299"
 ---
-# <a name="application-scenarios-wcf-data-services"></a>Escenarios de aplicación (Data Services de WCF)
+# <a name="application-scenarios-wcf-data-services"></a>Escenarios de aplicación (Servicios de datos de WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] admite un conjunto básico de escenarios para exponer y consumir datos como [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuentes de distribución. Este tema remite a los temas importantes en estos escenarios.  
   
  Exponga datos relacionales de una base de datos como un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuentes de distribución.  
@@ -37,11 +37,11 @@ ms.locfileid: "54709161"
 -   [Biblioteca cliente de Servicios de datos de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  Utilice una fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] en una aplicación cliente basada en Silverlight.  
- -   [Servicios de datos de WCF (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [Servicios de datos de WCF (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
   
 -   [Operaciones asincrónicas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Cómo: Enlazar datos de servicio de datos a controles (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [Cómo: Enlazar datos de servicio de datos a controles (cliente de Silverlight)](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))  
   
  Utilice una fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] en una aplicación cliente basada en AJAX.  
  -   [Uso de un servicio de datos en una aplicación cliente](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "54709161"
   
 -   [Operaciones asincrónicas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Servicios de datos de WCF (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [Servicios de datos de WCF (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
   
  Exponer y consumir un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente con un objeto binario grande en la que se accede y se cambia como una secuencia.  
  -   [Proveedor de streaming](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  

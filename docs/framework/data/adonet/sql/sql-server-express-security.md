@@ -2,12 +2,12 @@
 title: Seguridad de SQL Server Express
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: c14548f2ff8e93c4dbbc61b946b9ed01cb62ab8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a767f4c3f862b3b7442e1455bf086bdba7042062
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664075"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091622"
 ---
 # <a name="sql-server-express-security"></a>Seguridad de SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) se basa en Microsoft SQL Server y es compatible con la mayoría de las características del motor de base de datos. Está diseñado de manera que las características que no sean esenciales y la conectividad de red están desactivadas de manera predeterminada. Con ello se reduce la superficie expuesta a los ataques de usuarios malintencionados.  
@@ -31,10 +31,9 @@ Microsoft SQL Server Express Edition (SQL Server Express) se basa en Microsoft S
   
 |||  
 |-|-|  
-|[Libros en pantalla de SQL Server](https://msdn.microsoft.com/library/bb543165.aspx)|Contiene documentación sobre SQL Server Express.|  
 |[Conectarse a SQL Server Express](https://msdn.microsoft.com/library/ms165679.aspx) en los libros en pantalla de SQL Server|Describe cómo usar SQL Server Express Edition en una red.|  
-|[Libros en pantalla de Microsoft SQL Server 2005 Express Edition](https://msdn.microsoft.com/library/ms165706.aspx)|Documentación completa sobre SQL Server Express 2005 Express Edition.|  
-|[Las instancias de usuario para que no sean administradores](https://msdn.microsoft.com/library/ms143684.aspx) en los libros en pantalla de SQL Server|Describe cómo crear e implementar instancias de usuario.|  
+|[Libros en pantalla de Microsoft SQL Server 2005 Express Edition](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Documentación completa sobre SQL Server Express 2005 Express Edition.|  
+|[Las instancias de usuario para que no sean administradores](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) en los libros en pantalla de SQL Server|Describe cómo crear e implementar instancias de usuario.|  
 |[Instancias de usuario de SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Describe las capacidades de instancia de usuario en una aplicación de ADO.NET. Proporciona información sobre cómo habilitar una instancia de usuario, cómo conectar a una instancia de usuario utilizando <xref:System.Data.SqlClient.SqlConnection>, ciclo de vida y casos de instancia de usuario.|  
   
 ## <a name="see-also"></a>Vea también

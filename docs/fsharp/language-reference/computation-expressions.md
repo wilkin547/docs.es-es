@@ -2,12 +2,12 @@
 title: Expresiones de cálculo
 description: Obtenga información sobre cómo crear una sintaxis adecuada para escribir cálculos F# que puedan ser secuenciada y combinados utilizando controlar los enlaces y construcciones de flujo.
 ms.date: 07/27/2018
-ms.openlocfilehash: 79159146e24dc50f851c29e3cf7fffe892c6d196
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7524a42f8efb951be255ca6cc285740ef1fa12c3
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610702"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093520"
 ---
 # <a name="computation-expressions"></a>Expresiones de cálculo
 
@@ -218,6 +218,7 @@ En la tabla siguiente se describe los métodos que pueden usarse en una clase de
 |`Yield`|`'T -> M<'T>`|Llamado para `yield` expresiones en expresiones de cálculo.|
 |`YieldFrom`|`M<'T> -> M<'T>`|Llamado para `yield!` expresiones en expresiones de cálculo.|
 |`Zero`|`unit -> M<'T>`|Llamado para vacío `else` ramas de `if...then` expresiones en expresiones de cálculo.|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Indica que la expresión de cálculo se pasa a la `Run` miembro como una expresión. Traduce todas las instancias de un cálculo en una expresión.|
 
 Muchos de los métodos en una clase de generador usan y devuelven un `M<'T>` construcción, que normalmente es un tipo definido por separado que caracteriza el tipo de cálculos que se va a combinar, por ejemplo, `Async<'T>` para flujos de trabajo asincrónicos y `Seq<'T>` para los flujos de trabajo de secuencia. Las firmas de estos métodos que puedan combinarse y anidarse entre sí, para que el objeto de flujo de trabajo devuelto por una construcción puede pasarse a la siguiente. El compilador, cuando analiza una expresión de cálculo, convierte la expresión en una serie de llamadas de función anidada utilizando los métodos en la tabla anterior y el código de la expresión de cálculo.
 

@@ -1,13 +1,13 @@
 ---
 title: Referencia de símbolos y operadores
 description: Obtenga información sobre los símbolos y operadores que se usan en el F# lenguaje de programación.
-ms.date: 04/04/2018
-ms.openlocfilehash: 385ddbef2a3519d26dd7ad6abe90da1368f0a2a4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/11/2019
+ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613809"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092948"
 ---
 # <a name="symbol-and-operator-reference"></a>Referencia de símbolos y operadores
 
@@ -133,7 +133,7 @@ En la siguiente tabla se muestra, de menor a mayor, el orden de precedencia de o
 |`or`, <code>&#124;&#124;</code>|Izquierdo|
 |`&`, `&&`|Izquierdo|
 |`:>`, `:?>`|Derecho|
-|`!=`*OP*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&` *op* , `&`<br /><br />(incluyendo `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Izquierdo|
+|`<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(incluyendo `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Izquierdo|
 |`^`*op*<br /><br />(incluyendo `^^^`)|Derecho|
 |`::`|Derecho|
 |`:?`|No asociativo|

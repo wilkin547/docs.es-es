@@ -2,12 +2,12 @@
 title: Referencia
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: b474530cd9c45ef16d004bb2445c349fdd418394
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 467bc9f482fa24e679814de3be0fdb7d9363320c
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904712"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093364"
 ---
 # <a name="reference"></a>Referencia
 En esta sección se proporciona información de referencia para programadores de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -44,5 +44,5 @@ En esta sección se proporciona información de referencia para programadores de
  [Language-Integrated Query (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Proporciona los portales para [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] temas.  
   
- [Información general sobre la tecnología de LinqDataSource](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
+ [Información general sobre el Control de servidor Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
  Describe cómo el control <xref:System.Web.UI.WebControls.LinqDataSource> expone [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] para los desarrolladores web a través de la arquitectura de control de código fuente de datos de [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)].

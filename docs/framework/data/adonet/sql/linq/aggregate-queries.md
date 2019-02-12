@@ -2,12 +2,12 @@
 title: Consultas de agregado
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: 1c8f6191cfb832a71bd32c60db492eafb8ca22ca
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed8624c47ca8e68646f176ff91b63577d64b6d1f
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858697"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094131"
 ---
 # <a name="aggregate-queries"></a>Consultas de agregado
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite los operadores de agregado `Average`, `Count`, `Max`, `Min` y `Sum`. Tener en cuenta las características siguientes de los operadores de agregado en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
@@ -18,7 +18,7 @@ ms.locfileid: "43858697"
   
 -   Las consultas de funciones agregadas normalmente devuelven un número en lugar de una colección.  
   
-     Para obtener más información, consulte [operaciones de agregación](https://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4).  
+     Para obtener más información, consulte [operaciones de agregación](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120)).  
   
 -   No se puede llamar a funciones de agregado en tipos anónimos.  
   

@@ -1,13 +1,13 @@
 ---
 title: Extensiones de tipo
 description: Obtenga información sobre cómo F# las extensiones de tipo permiten agregar nuevos miembros a un tipo de objeto previamente definido.
-ms.date: 01/23/2019
-ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.date: 02/08/2019
+ms.openlocfilehash: 69fb3b771b5334c5771f2ac75341b38c1dad5b90
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066160"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092480"
 ---
 # <a name="type-extensions"></a>Extensiones de tipo
 
@@ -100,6 +100,8 @@ Ahora puede acceder a `RepeatElements` como si fuera un miembro de <xref:System.
 Las extensiones opcionales no aparecen en el tipo extendido cuando se examina mediante reflexión. Las extensiones opcionales deben estar en módulos y están solo en el ámbito cuando el módulo que contiene la extensión está abierto o si no está en el ámbito.
 
 Miembros de extensión opcionales se compilan en miembros estáticos para el que la instancia del objeto se pasa implícitamente como primer parámetro. Sin embargo, actúan como si fueran miembros de instancia o miembros estáticos según cómo se declaran.
+
+No también son visibles para los miembros de extensión opcional C# o los consumidores VB. Solo puede ser utilizados en otro F# código.
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Limitación genérico de las extensiones de tipo intrínseco y opcionales
 

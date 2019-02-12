@@ -2,12 +2,12 @@
 title: Proteger aplicaciones de ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 935d963ed19175518191006c2cc367f88d69e2aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7429393df980757e5fea326489d84cec8b6c131a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585372"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092246"
 ---
 # <a name="securing-adonet-applications"></a>Proteger aplicaciones de ADO.NET
 Para escribir una aplicación de ADO.NET segura es necesario algo más que evitar los errores de codificación más comunes, como no validar los datos proporcionados por el usuario. Una aplicación que tiene acceso a datos tiene muchos puntos débiles potenciales que un agresor puede aprovechar para obtener, manipular o destruir datos confidenciales. Por eso es importante comprender todos los aspectos de la seguridad, desde el proceso de modelo de amenazas durante la fase de diseño de su aplicación hasta la implementación y el posterior mantenimiento.  
@@ -42,10 +42,10 @@ Para escribir una aplicación de ADO.NET segura es necesario algo más que evita
  [Seguridad](../../../../docs/standard/security/index.md)  
  Contiene vínculos a temas en los que describen todos los aspectos de la seguridad en .NET.  
   
- [Herramientas de seguridad](https://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
+ [Herramientas de seguridad](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
  Herramientas de .NET Framework para proteger y administrar las directivas de seguridad.  
   
- [Recursos para crear aplicaciones seguras](https://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
+ [Recursos para crear aplicaciones seguras](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  Proporciona vínculos a temas para crear aplicaciones seguras.  
   
  [Bibliografía sobre seguridad](/visualstudio/ide/security-bibliography)  

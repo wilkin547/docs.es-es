@@ -1,20 +1,22 @@
 ---
-title: Procedimiento Crear un servicio de datos mediante un origen de datos de ADO.NET Entity Framework (WCF Data Services)
+title: Filtrar Crear un servicio de datos mediante un origen de datos de ADO.NET Entity Framework (WCF Data Services)
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 294c579c366c1abf0b9a328f7480d1b29e2cb8e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2adf4fe0d510f65db5bded715f084a4d7e016b6
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675606"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093104"
 ---
-# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Procedimiento Crear un servicio de datos mediante un origen de datos de ADO.NET Entity Framework (WCF Data Services)
+# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Filtrar Crear un servicio de datos mediante un origen de datos de ADO.NET Entity Framework (WCF Data Services)
 
-WCF Data Services expone los datos de entidad como un servicio de datos. Estos datos de entidad proporciona la [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] cuando el origen de datos es una base de datos relacional. Este tema muestra cómo crear un [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-modelo de datos en una aplicación Web de Visual Studio que se basa en una base de datos existente y usa este modelo de datos para crear un nuevo servicio de datos basado en.
+WCF Data Services expone los datos de entidad como un servicio de datos. 
+  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]
+  [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] proporciona estos datos de entidad cuando el origen de datos es una base de datos relacional. Este tema muestra cómo crear un [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-modelo de datos en una aplicación Web de Visual Studio que se basa en una base de datos existente y usa este modelo de datos para crear un nuevo servicio de datos basado en.
 
 El [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] también proporciona una herramienta de línea de comandos que puede generar un [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] modelo fuera de un proyecto de Visual Studio. Para obtener más información, vea [Cómo: Usar EdmGen.exe para generar los archivos de asignación y modelo](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
 
@@ -45,7 +47,8 @@ El [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] también proporci
 
 9. Haga clic en **finalizar** para completar el asistente.
 
-     Con esto se crea un modelo de datos predeterminado basado en una base de datos específica. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] permite personalizar el modelo de datos. Para obtener más información, consulte [Tareas](https://msdn.microsoft.com/library/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb).
+     Con esto se crea un modelo de datos predeterminado basado en una base de datos específica. 
+  [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] permite personalizar el modelo de datos. Para obtener más información, consulte [Entity Data Model Tools Tasks](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Para crear el servicio de datos usando el nuevo modelo de datos
 

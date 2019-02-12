@@ -2,15 +2,15 @@
 title: Ejemplos de expresiones de consultas (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
-ms.openlocfilehash: 98acbbc3b2271fac0d44728becdaffd09e5d28b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23804e3807708da8c58be650636cabae2349b449
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584719"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093923"
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Ejemplos de expresiones de consultas (LINQ to DataSet)
-Esta sección proporciona ejemplos de programación de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] en la sintaxis de expresión de consultas que usan los operadores de consulta estándar. El <xref:System.Data.DataSet> usado en estos ejemplos se rellena usando el `FillDataSet` método, que se especifica en [cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Para obtener más información, consulte [Standard Query Operators Overview](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+Esta sección proporciona LINQ a conjunto de datos ejemplos de programación en la sintaxis de expresión de consulta que usan los operadores de consulta estándar. El <xref:System.Data.DataSet> usado en estos ejemplos se rellena usando el `FillDataSet` método, que se especifica en [cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Para obtener más información, consulte [Standard Query Operators Overview (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) o [Standard Query Operators Overview (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Proyección](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  

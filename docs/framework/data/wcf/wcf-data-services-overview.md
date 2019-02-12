@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 3d5e02d092489e01975037c811fedb2727e2041f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb9adf5ff66a8b45bea79a9abaa139a46abb5b39
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566663"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094027"
 ---
 # <a name="wcf-data-services-overview"></a>Información general sobre Data Services de WCF
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite la creación y consumo de servicios de datos para la Web o una intranet mediante el uso de la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] permite exponer los datos como recursos direccionables mediante URI. Esto permite tener acceso a los datos y modificarlos usando la semántica de Representational State Transfer (REST), específicamente los verbos HTTP estándar GET, PUT, POST y DELETE. En este tema se proporciona información general sobre los modelos y los procedimientos definidos por [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], así como las funciones proporcionadas por [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para aprovechar las ventajas de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] en las aplicaciones basadas en .NET Framework.  
@@ -59,6 +59,6 @@ ms.locfileid: "54566663"
 - [Servicios de datos de WCF 4.5](../../../../docs/framework/data/wcf/index.md)
 - [Introducción](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
 - [Definir Servicios de datos de WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Obtener acceso a un servicio de datos (WCF Data Services)](https://msdn.microsoft.com/library/1e54a2b9-2ec6-4002-b8f8-c1d8df37c350)
+- [Acceso a recursos de servicio de datos (WCF Data Services)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
 - [Biblioteca cliente de Servicios de datos de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Transferencia de estado representacional (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)

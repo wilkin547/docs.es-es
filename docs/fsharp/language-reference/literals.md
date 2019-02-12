@@ -1,13 +1,13 @@
 ---
 title: Literales
 description: Obtenga información sobre los tipos literales en la F# lenguaje de programación.
-ms.date: 05/16/2016
-ms.openlocfilehash: dfc02f0ff8ac3ad8600be5f3b6c9359f02bd25be
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/08/2019
+ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612457"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092168"
 ---
 # <a name="literals"></a>Literales
 
@@ -32,7 +32,7 @@ La siguiente tabla muestra los tipos literales en F#. Caracteres que representan
 |int64|entero de 64 bits con signo|L|`86L`|
 |uint64|número natural de 64 bits sin signo|UL|`86UL`|
 |float32 único,|número de punto flotante de 32 bits|F o f|`4.14F` o `4.14f`|
-|||LF|`0x00000000lf`|
+|||lf|`0x00000000lf`|
 |float; Double|número de punto flotante de 64 bits|ninguna|`4.14` o `2.3E+32` o `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |bigint|entero no limitado a la representación de 64 bits|I|`9999999999999999999999999999I`|
@@ -51,16 +51,16 @@ Como de F# 3.1, puede usar el `+` iniciar sesión combinar literales de cadena. 
 
 ```fsharp
 [<Literal>]
-let literal1 = "a" + "b"
+let Literal1 = "a" + "b"
 
 [<Literal>]
-let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let literal2 = 1 ||| 64
+let Literal2 = 1 ||| 64
 
 [<Literal>]
-let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 No se permite el uso de otros operadores bit a bit.
@@ -76,8 +76,8 @@ En las expresiones de coincidencia de patrón, los identificadores que comienzan
 También pueden especificarse en notación hexadecimal, octal o binario utilizando enteros de 32 bits con signo un `0x`, `0o` o `0b` prefijo respectivamente.
 
 ```fsharp
-let Numbers = (0x9F, 0o77, 0b1010)
-// Result: Numbers : int * int * int = (159, 63, 10)
+let numbers = (0x9F, 0o77, 0b1010)
+// Result: numbers : int * int * int = (159, 63, 10)
 ```
 
 ## <a name="underscores-in-numeric-literals"></a>Caracteres de subrayado en literales numéricos

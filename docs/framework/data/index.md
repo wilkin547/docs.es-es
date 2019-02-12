@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: 0db71fd7e48515ad6be3641786fc180f62aacf33
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 86250d974a4f85e5ccbe2ac636dc252beff0d485
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198158"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091726"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>Datos y modelado en .NET Framework
 En esta sección se proporciona información sobre cómo tener acceso a los datos utilizando ADO.NET, Language Integrated Query (LINQ), Data Services de WCF y XML.  
@@ -20,8 +20,11 @@ En esta sección se proporciona información sobre cómo tener acceso a los dato
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  Describe la arquitectura de ADO.NET y la forma de utilizar las clases de ADO.NET para administrar datos de aplicaciones e interactuar con orígenes de datos, por ejemplo orígenes de datos de OLE DB, Microsoft SQL Server y XML.  
   
- [LINQ Portal](https://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
- Proporciona vínculos a la documentación pertinente para Language Integrated Query (LINQ).  
+ [Language-Integrated Query (LINQ)](../../csharp/programming-guide/concepts/linq/index.md)  
+ Proporciona vínculos a documentación pertinente para el uso de Language Integrated Query (LINQ) C#.  
+  
+ [Language-Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)  
+ Proporciona vínculos a documentación pertinente para Language Integrated Query (LINQ) mediante Visual Basic.  
   
  [Procesar transacciones](../../../docs/framework/data/transactions/index.md)  
  Explica la compatibilidad de .NET Framework con las transacciones.  

@@ -2,15 +2,15 @@
 title: Conceder permisos de nivel de fila en SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 28e552e005cdfa0b4c69ff95927b938fa3898193
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 092520f04ba828c9589a16b4ffd6574d04170249
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553782"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093000"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Conceder permisos de nivel de fila en SQL Server
-En algunos casos, existe un requisito para controlar el acceso a los datos a un nivel más detallado que el que se deriva simplemente de conceder, revocar o denegar permisos. Por ejemplo, una aplicación de bases de datos de hospital puede requerir que se restrinja el acceso a los médicos individuales solo a la información relacionada con sus pacientes. Requisitos similares se producen en muchos ámbitos, como en aplicaciones financieras, legales, gubernamentales y militares. Para ayudar a resolver estos escenarios, SQL Server 2016 ofrece una característica de [seguridad por filas](https://msdn.microsoft.com/library/dn765131.aspx) que simplifica y centraliza la lógica de acceso por filas en una directiva de seguridad. Para las versiones anteriores de SQL Server, se puede lograr una funcionalidad similar con vistas para aplicar el filtrado por filas.  
+En algunos casos, existe un requisito para controlar el acceso a los datos a un nivel más detallado que el que se deriva simplemente de conceder, revocar o denegar permisos. Por ejemplo, una aplicación de bases de datos de hospital puede requerir que se restrinja el acceso a los médicos individuales solo a la información relacionada con sus pacientes. Requisitos similares se producen en muchos ámbitos, como en aplicaciones financieras, legales, gubernamentales y militares. Para ayudar a resolver estos escenarios, SQL Server 2016 ofrece una característica de [seguridad por filas](/sql/relational-databases/security/row-level-security) que simplifica y centraliza la lógica de acceso por filas en una directiva de seguridad. Para las versiones anteriores de SQL Server, se puede lograr una funcionalidad similar con vistas para aplicar el filtrado por filas.  
   
 ## <a name="implementing-row-level-filtering"></a>Implementación de filtros por filas  
  El filtrado por filas se usa para la información de almacenamiento de aplicaciones en una tabla única como en el ejemplo anterior del hospital. Para implementar el filtrado por filas, cada fila tiene una columna que define un parámetro diferenciador, como un nombre de usuario, una etiqueta u otro identificador. Para crear una vista o una directiva de seguridad en la tabla, que filtre las filas a las que puede tener acceso el usuario. Después, cree procedimientos almacenados parametrizados, que controlan los tipos de consultas que el usuario puede ejecutar.  
@@ -60,7 +60,7 @@ En algunos casos, existe un requisito para controlar el acceso a los datos a un 
 -   Conceder permisos EXECUTE en los procedimientos almacenados a roles de bases de datos. Los usuarios sólo pueden obtener acceso a datos a través de los procedimientos almacenados proporcionados  
   
 ## <a name="see-also"></a>Vea también
-- [Seguridad de nivel de fila](https://msdn.microsoft.com/library/dn765131.aspx)
+- [Seguridad de nivel de fila](/sql/relational-databases/security/row-level-security)
 - [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Información general sobre la seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

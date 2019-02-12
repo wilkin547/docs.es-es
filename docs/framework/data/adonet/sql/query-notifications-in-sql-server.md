@@ -2,12 +2,12 @@
 title: Notificaciones de consulta en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 87335b5c9ad626e998fdb7bf0e71cae2542386f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 166471658ccd1ef48db2ac1647f74ea696f3263d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636695"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092298"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notificaciones de consulta en SQL Server
 Las notificaciones de consulta, que están basadas en la infraestructura Service Broker, permiten que se notifique a las aplicaciones cuando cambian los datos. Esta característica es especialmente útil en aplicaciones que proporcionan una caché de información desde una base de datos, por ejemplo, una aplicación web, y necesitan recibir notificación cuando cambian los datos de origen.  
@@ -26,17 +26,17 @@ Las notificaciones de consulta, que están basadas en la infraestructura Service
   
  Si está desarrollando una aplicación que necesite las notificaciones de subsegundo confiables cuando cambian los datos, revise las secciones **planear una estrategia eficaz de notificaciones de consulta** y **alternativas a la consulta Las notificaciones** en el [planear notificaciones](https://go.microsoft.com/fwlink/?LinkId=211984) tema en libros en pantalla de SQL Server. Para obtener más información acerca de las notificaciones de consulta y SQL Server Service Broker, vea los siguientes vínculos a temas de los Libros en pantalla de SQL Server.  
   
- **Libros en pantalla de SQL Server**  
+ **Documentación de SQL Server**  
   
--   [Usar notificaciones de consulta](https://msdn.microsoft.com/library/ms175110.aspx)  
+-   [Usar notificaciones de consulta](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
--   [Crear una consulta de notificación](https://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Crear una consulta de notificación](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Service Broker](https://msdn.microsoft.com/library/bb522889.aspx)  
+-   [Desarrollo (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
--   [InfoCenter para desarrolladores de Service Broker](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [InfoCenter para desarrolladores de Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Desarrollo (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Guía del desarrollador (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Habilitación de notificaciones de consulta](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  

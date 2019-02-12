@@ -2,12 +2,12 @@
 title: Comportamiento específico en proceso de SQL Server en ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 4f223948-ae8f-4c16-bdc2-4acc6debed3f
-ms.openlocfilehash: e177a7c510a0feae5fed162781a1d42984361c5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7752520902059f067bdcc8c353de6a3a7464b488
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545442"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091609"
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>Comportamiento específico en proceso de SQL Server en ADO.NET
 Existen cuatro extensiones funcionales principales para ADO.NET, situadas en el espacio de nombres <xref:Microsoft.SqlServer.Server>, que se utilizan específicamente en proceso: <xref:Microsoft.SqlServer.Server.SqlContext>, <xref:Microsoft.SqlServer.Server.SqlPipe>, <xref:Microsoft.SqlServer.Server.SqlTriggerContext> y <xref:Microsoft.SqlServer.Server.SqlDataRecord>.  
@@ -19,5 +19,4 @@ Existen cuatro extensiones funcionales principales para ADO.NET, situadas en el 
 1.  [Extensiones específicas en proceso SQL Server a ADO.NET](https://go.microsoft.com/fwlink/?LinkId=115403)  
   
 ## <a name="see-also"></a>Vea también
-- [Crear objetos de SQL Server 2005 en código administrado](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

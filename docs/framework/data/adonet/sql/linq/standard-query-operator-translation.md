@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588579"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093936"
 ---
 # <a name="standard-query-operator-translation"></a>Traslación del operador de consulta estándar
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] convierte los operadores de consulta estándar en comandos SQL. El procesador de consultas de la base de datos determina la semántica de ejecución de la traducción de SQL.  
   
- Operadores de consulta estándar se definen en *secuencias*. Es una secuencia *ordenados* y se basa en la identidad de referencia para cada elemento de la secuencia. Para obtener más información, consulte [Standard Query Operators Overview](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+ Operadores de consulta estándar se definen en *secuencias*. Es una secuencia *ordenados* y se basa en la identidad de referencia para cada elemento de la secuencia. Para obtener más información, consulte [Standard Query Operators Overview (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) o [Standard Query Operators Overview (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  SQL trata principalmente con *sin ordenar conjuntos de valores*. La ordenación es normalmente una operación de procesamiento posterior declarada de forma explícita que se aplica al resultado final de una consulta en lugar de a los resultados intermedios. La identidad se define con valores. Por este motivo, se entienden las consultas SQL tratan con conjuntos múltiples (*bolsas*) en lugar de *establece*.  
   
@@ -89,7 +89,8 @@ ORDER BY [t0].[CustomerID]
 ### <a name="aggregates"></a>Agregados  
  El método de agregado del operador de consulta estándar <xref:System.Linq.Enumerable.Sum%2A> se evalúa como cero para una secuencia vacía o para una secuencia que solo contiene valores nulos. En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], la semántica de SQL se mantiene sin cambios, y <xref:System.Linq.Enumerable.Sum%2A> se evalúa como `null` en lugar de cero para una secuencia vacía o para una secuencia que solo contiene valores nulos.  
   
- En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] se aplican las restricciones de SQL para los agregados en los resultados intermedios. <xref:System.Linq.Enumerable.Sum%2A> para cantidades enteras de 32 bits no se calcula utilizando los resultados de 64 bits. Puede producirse un desbordamiento en la conversión de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que realiza <xref:System.Linq.Enumerable.Sum%2A> aun cuando la implementación del operador de consulta estándar no produce un desbordamiento para la secuencia en memoria correspondiente.  
+ En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] se aplican las restricciones de SQL para los agregados en los resultados intermedios. 
+  <xref:System.Linq.Enumerable.Sum%2A> para cantidades enteras de 32 bits no se calcula utilizando los resultados de 64 bits. Puede producirse un desbordamiento en la conversión de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que realiza <xref:System.Linq.Enumerable.Sum%2A> aun cuando la implementación del operador de consulta estándar no produce un desbordamiento para la secuencia en memoria correspondiente.  
   
  De igual forma, la conversión que realiza [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de <xref:System.Linq.Enumerable.Average%2A> de valores enteros se calcula como `integer`, no como `double`.  
   
@@ -125,7 +126,7 @@ ORDER BY [t0].[CustomerID]
  [!code-vb[DLinqSQOTranslation#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]  
   
 ### <a name="visual-basic-function-translation"></a>Conversión de funciones de Visual Basic  
- Las siguientes funciones del asistente que utiliza el compilador de Visual Basic se convierten a las funciones y operadores de SQL correspondientes:  
+ Las siguientes funciones auxiliares que utiliza el compilador de Visual Basic se convierten a las funciones y operadores de SQL correspondientes:  
   
  `CompareString`  
   

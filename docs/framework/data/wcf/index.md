@@ -2,9 +2,15 @@
 title: WCF Data Services 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Astoria
-  - 'WCF Data Services, getting started'
+- Astoria
+- WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
+ms.openlocfilehash: 6fd81a6bd4449cc0ef11b68320f366368d5edb7e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092493"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
@@ -112,7 +118,7 @@ Sigo necesitando más información...
 
  Proporciona información general de las características y funciones disponibles en WCF Data Services.
 
- [Novedades de Servicios de datos de WCF](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)
+ [Novedades en WCF Data Services 5.0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 
  Describe la nueva funcionalidad en WCF Data Services y compatibilidad con nuevas características de OData.
 

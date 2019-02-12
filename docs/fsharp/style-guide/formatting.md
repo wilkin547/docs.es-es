@@ -1,13 +1,13 @@
 ---
 title: F#instrucciones de formato de código
 description: Obtenga información sobre las directrices para dar formato a F# código.
-ms.date: 11/26/2018
-ms.openlocfilehash: b80a66f582d9fb8a2ec940ab565823483e7e4eea
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 02/08/2019
+ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254835"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093624"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#instrucciones de formato de código
 
@@ -424,6 +424,42 @@ let foo a =
 
 Se aplican las mismas reglas para los elementos de lista y matriz.
 
+## <a name="formatting-copy-and-update-record-expressions"></a>Da formato a expresiones de registro de copia y actualización
+
+Una expresión de registro de copia y actualización sigue siendo un registro, por lo que se aplican las directrices similar.
+
+Expresiones cortas pueden caber en una sola línea:
+
+```fsharp
+let point2 = { point with X = 1; Y = 2 }
+```
+
+Expresiones más largas deben usar las nuevas líneas:
+
+```fsharp
+let rainbow2 =
+    { rainbow with
+        Boss = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"] }
+```
+
+Y como con las instrucciones de registro, es posible que desea dedicar líneas separadas para las llaves y aplicar sangría a un ámbito a la derecha con la expresión. Tenga en cuenta que en algunos casos especiales, como el ajuste de un valor con un elemento opcional sin paréntesis, es posible que deberá mantener una llave en una sola línea:
+
+```fsharp    
+type S = { F1: int; F2: string }
+type State = { F:  S option }
+
+let state = { F = Some { F1 = 1; F2 = "Hello" } }
+let newState = 
+    {
+        state with
+            F = Some {
+                    F1 = 0
+                    F2 = ""
+                }
+    }
+```
+
 ## <a name="formatting-lists-and-arrays"></a>Aplicar formato a las listas y matrices
 
 Escribir `x :: l` con espacios alrededor de la `::` operador (`::` es un operador infijo, por lo tanto, rodeado por espacios).
@@ -759,7 +795,7 @@ Cuando se aplica a un parámetro, deben estar en la misma línea y separadas por
 
 ## <a name="formatting-literals"></a>Formato de literales
 
-[F#literales](../language-reference/literals.md) utilizando el `Literal` atributo debería debe colocar el atributo en su propia línea y usar camelCase de nomenclatura:
+[F#literales](../language-reference/literals.md) utilizando el `Literal` atributo debe colocar el atributo en su propia línea y usar camelCase de nomenclatura:
 
 ```fsharp
 [<Literal>]
