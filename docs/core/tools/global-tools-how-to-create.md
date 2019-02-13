@@ -4,16 +4,16 @@ description: Se describe cómo crear una herramienta global. La herramienta glob
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: e544ab51920015e0f1ea48ad83ba9b637d98aa0c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144596"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826426"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Creación de una herramienta global de .NET Core mediante la CLI de .NET Core
 
-En este artículo se explica cómo crear y empaquetar una herramienta global en .NET Core. La CLI de .NET Core permite crear una aplicación de consola como una herramienta global, que otros usuarios pueden instalar y ejecutar fácilmente. Las herramientas globales de .NET Core son paquetes de NuGet que se instalan desde la CLI de .NET Core. Para más información sobre las herramientas globales, vea [Información general sobre las herramientas globales de .NET Core][global-tool-info].
+En este artículo se explica cómo crear y empaquetar una herramienta global en .NET Core. La CLI de .NET Core permite crear una aplicación de consola como una herramienta global, que otros usuarios pueden instalar y ejecutar fácilmente. Las herramientas globales de .NET Core son paquetes de NuGet que se instalan desde la CLI de .NET Core. Para más información sobre las herramientas globales, vea [Información general sobre las herramientas globales de .NET Core](global-tools.md).
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
@@ -170,7 +170,7 @@ Ahora que tiene un paquete, instale la herramienta desde ese paquete:
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
-El parámetro `--add-source` indica a la CLI de .NET Core que use temporalmente la carpeta `./nupkg` (nuestra carpeta `<PackageOutputPath>`) como una fuente de origen adicional para los paquetes NuGet. Para más información sobre la instalación de las herramientas globales, vea [Información general sobre las herramientas globales de .NET Core][global-tool-info].
+El parámetro `--add-source` indica a la CLI de .NET Core que use temporalmente la carpeta `./nupkg` (nuestra carpeta `<PackageOutputPath>`) como una fuente de origen adicional para los paquetes NuGet. Para más información sobre la instalación de las herramientas globales, vea [Información general sobre las herramientas globales de .NET Core](global-tools.md).
 
 Si la instalación es correcta, se muestra un mensaje similar al siguiente con el comando que se usa para llamar a la herramienta y la versión instalada:
 
@@ -191,5 +191,3 @@ Cuando haya terminado de experimentar con la herramienta, puede quitarla con el 
 ```console
 dotnet tool uninstall -g botsay
 ```
-
-[global-tool-info]: global-tools.md

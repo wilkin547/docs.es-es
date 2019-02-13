@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: dfb99681ba363f23d742ac83940f1ce3e5e78bb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cac6215afb34b5b2864284763eea59b33feb35fe
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504007"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826465"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publicación de aplicaciones .NET Core con la CLI
 
@@ -38,11 +38,11 @@ Para obtener información general sobre estos modos de publicación, vea [Implem
 
 ## <a name="publishing-basics"></a>Conceptos básicos de publicación
 
-El valor `<TargetFramework>` del archivo de proyecto especifica la plataforma de destino predeterminada al publicar la aplicación. Se puede cambiar la plataforma de destino a cualquier [moniker de la plataforma de destino (TFM)](../../standard/frameworks.md). Por ejemplo, si en el proyecto se usa `<TargetFramework>netcoreapp2.2</TargetFramework>`, se crea un archivo binario que tiene como destino .NET Core 2.2. El TFM especificado en esta configuración es el destino predeterminado que usa el comando [`dotnet publish`][dotnet-publish].
+El valor `<TargetFramework>` del archivo de proyecto especifica la plataforma de destino predeterminada al publicar la aplicación. Se puede cambiar la plataforma de destino a cualquier [moniker de la plataforma de destino (TFM)](../../standard/frameworks.md). Por ejemplo, si en el proyecto se usa `<TargetFramework>netcoreapp2.2</TargetFramework>`, se crea un archivo binario que tiene como destino .NET Core 2.2. El TFM especificado en esta configuración es el destino predeterminado que usa el comando [`dotnet publish`](../tools/dotnet-publish.md).
 
 Si quiere tener como destino más de una plataforma, puede establecer el valor `<TargetFrameworks>` en más de un valor de TFM separados por punto y coma. Puede publicar una de las plataformas con el comando `dotnet publish -f <TFM>`. Por ejemplo, si tiene `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` y ejecuta `dotnet publish -f netcoreapp2.1`, se crea un archivo binario que tiene como destino .NET Core 2.1.
 
-A menos que se establezca otro, el directorio de salida del comando [`dotnet publish`][dotnet-publish] es `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. El modo **BUILD-CONFIGURATION** predeterminado es **Depurar** a menos que se cambie con el parámetro `-c`. Por ejemplo, `dotnet publish -c Release -f netcoreapp2.1` publica en `myfolder/bin/Release/netcoreapp2.1/publish/`. 
+A menos que se establezca otro, el directorio de salida del comando [`dotnet publish`](../tools/dotnet-publish.md) es `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. El modo **BUILD-CONFIGURATION** predeterminado es **Depurar** a menos que se cambie con el parámetro `-c`. Por ejemplo, `dotnet publish -c Release -f netcoreapp2.1` publica en `myfolder/bin/Release/netcoreapp2.1/publish/`. 
 
 Si usa el SDK 3.0 de .NET Core, el modo de publicación predeterminado para las aplicaciones destinadas a las versiones 2.1, 2.2 y 3.0 de .NET Core es el ejecutable dependiente de la plataforma.
 
@@ -95,7 +95,7 @@ Module Program
 End Module
 ```
 
-Al ejecutar la aplicación ([`dotnet run`][dotnet-run]), se muestra el resultado siguiente:
+Al ejecutar la aplicación ([`dotnet run`](../tools/dotnet-run.md)), se muestra el resultado siguiente:
 
 ```terminal
   _   _      _ _         __        __         _     _ _
@@ -163,6 +163,3 @@ Debe usar los modificadores siguientes con el comando `dotnet publish` para publ
 
 - [Información general sobre la implementación de aplicaciones .NET Core](index.md)
 - [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)
-
-[dotnet-publish]: ../tools/dotnet-publish.md
-[dotnet-run]: ../tools/dotnet-run.md

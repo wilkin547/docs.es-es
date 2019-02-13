@@ -4,12 +4,12 @@ description: Aprenda cómo funcionan los atributos en C#.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 38d22e707dd8c9877183feb8446407c20a21b416
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 254c408e854bdf6e923d64a4e8cca42b7a3b11cc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029832"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826829"
 ---
 # <a name="using-attributes-in-c"></a>Uso de atributos en C# #
 
@@ -137,7 +137,7 @@ Estos son algunos atributos importantes integrados en las bibliotecas de clases 
 * `[Obsolete]`. Este se usó en los ejemplos anteriores, y se encuentra en el espacio de nombres `System`. Es útil proporcionar documentación declarativa sobre una base de código cambiante. Se puede proporcionar un mensaje en forma de cadena, y se puede usar otro parámetro booleano para escalarlo de una advertencia del compilador a un error del compilador.
 
 * `[Conditional]`. Este atributo está en el espacio de nombres `System.Diagnostics`. Este atributo se puede aplicar a métodos (o clases de atributos). Debe pasar una cadena al constructor.
-Si esa cadena coincide con una directiva `#define`, el compilador de C# quitará las llamadas a ese método (pero no el método propiamente dicho). Normalmente se usa con fines de depuración (diagnósticos).
+Si esa cadena no coincide con una directiva `#define`, el compilador de C# quitará las llamadas a ese método (pero no el método propiamente dicho). Normalmente se usa con fines de depuración (diagnósticos).
 
 * `[CallerMemberName]`. Este atributo se puede usar en parámetros, y reside en el espacio de nombres `System.Runtime.CompilerServices`. Es un atributo que se usa para inyectar el nombre del método que llama a otro método. Esto se usa normalmente como una manera de eliminar "cadenas mágicas" al implementar INotifyPropertyChanged en distintos marcos de interfaz de usuario. Por ejemplo:
 
