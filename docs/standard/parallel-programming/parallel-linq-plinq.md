@@ -7,51 +7,52 @@ helpviewer_keywords:
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d597bc3590441494478c46b832aeed57ba761ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c438170ec48f40e59f8710d4e3820d6e915bed5
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500842"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903832"
 ---
-# <a name="parallel-linq-plinq"></a><span data-ttu-id="759b2-102">Parallel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="759b2-102">Parallel LINQ (PLINQ)</span></span>
-<span data-ttu-id="759b2-103">Parallel LINQ (PLINQ) es una implementación en paralelo de LINQ to Objects.</span><span class="sxs-lookup"><span data-stu-id="759b2-103">Parallel LINQ (PLINQ) is a parallel implementation of LINQ to Objects.</span></span> <span data-ttu-id="759b2-104">PLINQ implementa el conjunto completo de operadores de consulta estándar de LINQ como métodos de extensión para el espacio de nombres <xref:System.Linq> y tiene operadores adicionales para las operaciones en paralelo.</span><span class="sxs-lookup"><span data-stu-id="759b2-104">PLINQ implements the full set of LINQ standard query operators as extension methods for the <xref:System.Linq> namespace and has additional operators for parallel operations.</span></span> <span data-ttu-id="759b2-105">PLINQ combina la simplicidad y legibilidad de la sintaxis de LINQ con la eficacia de la programación en paralelo.</span><span class="sxs-lookup"><span data-stu-id="759b2-105">PLINQ combines the simplicity and readability of LINQ syntax with the power of parallel programming.</span></span> <span data-ttu-id="759b2-106">Al igual que el código que tiene como destino la biblioteca TPL, PLINQ consulta la escala en el grado de simultaneidad según las funcionalidades del equipo host.</span><span class="sxs-lookup"><span data-stu-id="759b2-106">Just like code that targets the Task Parallel Library, PLINQ queries scale in the degree of concurrency based on the capabilities of the host computer.</span></span>  
+# <a name="parallel-linq-plinq"></a><span data-ttu-id="24418-102">Parallel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="24418-102">Parallel LINQ (PLINQ)</span></span>
+<span data-ttu-id="24418-103">Parallel LINQ (PLINQ) es una implementación en paralelo de LINQ to Objects.</span><span class="sxs-lookup"><span data-stu-id="24418-103">Parallel LINQ (PLINQ) is a parallel implementation of LINQ to Objects.</span></span> <span data-ttu-id="24418-104">PLINQ implementa el conjunto completo de operadores de consulta estándar de LINQ como métodos de extensión para el espacio de nombres <xref:System.Linq> y tiene operadores adicionales para las operaciones en paralelo.</span><span class="sxs-lookup"><span data-stu-id="24418-104">PLINQ implements the full set of LINQ standard query operators as extension methods for the <xref:System.Linq> namespace and has additional operators for parallel operations.</span></span> <span data-ttu-id="24418-105">PLINQ combina la simplicidad y legibilidad de la sintaxis de LINQ con la eficacia de la programación en paralelo.</span><span class="sxs-lookup"><span data-stu-id="24418-105">PLINQ combines the simplicity and readability of LINQ syntax with the power of parallel programming.</span></span> <span data-ttu-id="24418-106">Al igual que el código que tiene como destino la biblioteca TPL, PLINQ consulta la escala en el grado de simultaneidad según las funcionalidades del equipo host.</span><span class="sxs-lookup"><span data-stu-id="24418-106">Just like code that targets the Task Parallel Library, PLINQ queries scale in the degree of concurrency based on the capabilities of the host computer.</span></span>  
   
- <span data-ttu-id="759b2-107">En muchos escenarios, PLINQ puede aumentar considerablemente la velocidad de las consultas de LINQ to Objects usando de manera más eficiente todos los núcleos disponibles en el equipo host.</span><span class="sxs-lookup"><span data-stu-id="759b2-107">In many scenarios, PLINQ can significantly increase the speed of LINQ to Objects queries by using all available cores on the host computer more efficiently.</span></span> <span data-ttu-id="759b2-108">Este mayor rendimiento aporta capacidad de procesamiento de alto rendimiento al escritorio.</span><span class="sxs-lookup"><span data-stu-id="759b2-108">This increased performance brings high-performance computing power onto the desktop.</span></span>  
+ <span data-ttu-id="24418-107">En muchos escenarios, PLINQ puede aumentar considerablemente la velocidad de las consultas de LINQ to Objects usando de manera más eficiente todos los núcleos disponibles en el equipo host.</span><span class="sxs-lookup"><span data-stu-id="24418-107">In many scenarios, PLINQ can significantly increase the speed of LINQ to Objects queries by using all available cores on the host computer more efficiently.</span></span> <span data-ttu-id="24418-108">Este mayor rendimiento aporta capacidad de procesamiento de alto rendimiento al escritorio.</span><span class="sxs-lookup"><span data-stu-id="24418-108">This increased performance brings high-performance computing power onto the desktop.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="759b2-109">En esta sección</span><span class="sxs-lookup"><span data-stu-id="759b2-109">In This Section</span></span>  
- [<span data-ttu-id="759b2-110">Introducción a PLINQ</span><span class="sxs-lookup"><span data-stu-id="759b2-110">Introduction to PLINQ</span></span>](../../../docs/standard/parallel-programming/introduction-to-plinq.md)  
+## <a name="in-this-section"></a><span data-ttu-id="24418-109">En esta sección</span><span class="sxs-lookup"><span data-stu-id="24418-109">In This Section</span></span>  
+ [<span data-ttu-id="24418-110">Introducción a PLINQ</span><span class="sxs-lookup"><span data-stu-id="24418-110">Introduction to PLINQ</span></span>](../../../docs/standard/parallel-programming/introduction-to-plinq.md)  
   
- [<span data-ttu-id="759b2-111">Introducción a la velocidad en PLINQ</span><span class="sxs-lookup"><span data-stu-id="759b2-111">Understanding Speedup in PLINQ</span></span>](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)  
+ [<span data-ttu-id="24418-111">Introducción a la velocidad en PLINQ</span><span class="sxs-lookup"><span data-stu-id="24418-111">Understanding Speedup in PLINQ</span></span>](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)  
   
- [<span data-ttu-id="759b2-112">Conversación del orden en PLINQ</span><span class="sxs-lookup"><span data-stu-id="759b2-112">Order Preservation in PLINQ</span></span>](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md)  
+ [<span data-ttu-id="24418-112">Conversación del orden en PLINQ</span><span class="sxs-lookup"><span data-stu-id="24418-112">Order Preservation in PLINQ</span></span>](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md)  
   
- [<span data-ttu-id="759b2-113">Opciones de combinación en PLINQ</span><span class="sxs-lookup"><span data-stu-id="759b2-113">Merge Options in PLINQ</span></span>](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)  
+ [<span data-ttu-id="24418-113">Opciones de combinación en PLINQ</span><span class="sxs-lookup"><span data-stu-id="24418-113">Merge Options in PLINQ</span></span>](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)  
   
- [<span data-ttu-id="759b2-114">Cómo: Crear y ejecutar una consulta PLINQ simple</span><span class="sxs-lookup"><span data-stu-id="759b2-114">How to: Create and Execute a Simple PLINQ Query</span></span>](../../../docs/standard/parallel-programming/how-to-create-and-execute-a-simple-plinq-query.md)  
+ [<span data-ttu-id="24418-114">Cómo: Crear y ejecutar una consulta PLINQ simple</span><span class="sxs-lookup"><span data-stu-id="24418-114">How to: Create and Execute a Simple PLINQ Query</span></span>](../../../docs/standard/parallel-programming/how-to-create-and-execute-a-simple-plinq-query.md)  
   
- [<span data-ttu-id="759b2-115">Cómo: Controlar la ordenación en una consulta PLINQ</span><span class="sxs-lookup"><span data-stu-id="759b2-115">How to: Control Ordering in a PLINQ Query</span></span>](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md)  
+ [<span data-ttu-id="24418-115">Cómo: Controlar la ordenación en una consulta PLINQ</span><span class="sxs-lookup"><span data-stu-id="24418-115">How to: Control Ordering in a PLINQ Query</span></span>](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md)  
   
- [<span data-ttu-id="759b2-116">Cómo: Combinar consultas LINQ paralelas y secuenciales</span><span class="sxs-lookup"><span data-stu-id="759b2-116">How to: Combine Parallel and Sequential LINQ Queries</span></span>](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md)  
+ [<span data-ttu-id="24418-116">Cómo: Combinar consultas LINQ paralelas y secuenciales</span><span class="sxs-lookup"><span data-stu-id="24418-116">How to: Combine Parallel and Sequential LINQ Queries</span></span>](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md)  
   
- [<span data-ttu-id="759b2-117">Cómo: Controlar excepciones en una consulta PLINQ</span><span class="sxs-lookup"><span data-stu-id="759b2-117">How to: Handle Exceptions in a PLINQ Query</span></span>](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)  
+ [<span data-ttu-id="24418-117">Cómo: Controlar excepciones en una consulta PLINQ</span><span class="sxs-lookup"><span data-stu-id="24418-117">How to: Handle Exceptions in a PLINQ Query</span></span>](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)  
   
- [<span data-ttu-id="759b2-118">Cómo: Cancelar una consulta PLINQ</span><span class="sxs-lookup"><span data-stu-id="759b2-118">How to: Cancel a PLINQ Query</span></span>](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)  
+ [<span data-ttu-id="24418-118">Cómo: Cancelar una consulta PLINQ</span><span class="sxs-lookup"><span data-stu-id="24418-118">How to: Cancel a PLINQ Query</span></span>](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)  
   
- [<span data-ttu-id="759b2-119">Cómo: Escribir una función de agregado personalizada de PLINQ</span><span class="sxs-lookup"><span data-stu-id="759b2-119">How to: Write a Custom PLINQ Aggregate Function</span></span>](../../../docs/standard/parallel-programming/how-to-write-a-custom-plinq-aggregate-function.md)  
+ [<span data-ttu-id="24418-119">Cómo: Escribir una función de agregado personalizada de PLINQ</span><span class="sxs-lookup"><span data-stu-id="24418-119">How to: Write a Custom PLINQ Aggregate Function</span></span>](../../../docs/standard/parallel-programming/how-to-write-a-custom-plinq-aggregate-function.md)  
   
- [<span data-ttu-id="759b2-120">Cómo: Especificar el modo de ejecución en PLINQ</span><span class="sxs-lookup"><span data-stu-id="759b2-120">How to: Specify the Execution Mode in PLINQ</span></span>](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)  
+ [<span data-ttu-id="24418-120">Cómo: Especificar el modo de ejecución en PLINQ</span><span class="sxs-lookup"><span data-stu-id="24418-120">How to: Specify the Execution Mode in PLINQ</span></span>](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)  
   
- [<span data-ttu-id="759b2-121">Cómo: Especificar opciones de fusión mediante combinación en PLINQ</span><span class="sxs-lookup"><span data-stu-id="759b2-121">How to: Specify Merge Options in PLINQ</span></span>](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)  
+ [<span data-ttu-id="24418-121">Cómo: Especificar opciones de fusión mediante combinación en PLINQ</span><span class="sxs-lookup"><span data-stu-id="24418-121">How to: Specify Merge Options in PLINQ</span></span>](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)  
   
- [<span data-ttu-id="759b2-122">Cómo: Recorrer en iteración directorios con PLINQ</span><span class="sxs-lookup"><span data-stu-id="759b2-122">How to: Iterate File Directories with PLINQ</span></span>](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md)  
+ [<span data-ttu-id="24418-122">Cómo: Recorrer en iteración directorios con PLINQ</span><span class="sxs-lookup"><span data-stu-id="24418-122">How to: Iterate File Directories with PLINQ</span></span>](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md)  
   
- [<span data-ttu-id="759b2-123">Cómo: Medir el rendimiento de consultas PLINQ</span><span class="sxs-lookup"><span data-stu-id="759b2-123">How to: Measure PLINQ Query Performance</span></span>](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)  
+ [<span data-ttu-id="24418-123">Cómo: Medir el rendimiento de consultas PLINQ</span><span class="sxs-lookup"><span data-stu-id="24418-123">How to: Measure PLINQ Query Performance</span></span>](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)  
   
- [<span data-ttu-id="759b2-124">Ejemplo de datos de PLINQ</span><span class="sxs-lookup"><span data-stu-id="759b2-124">PLINQ Data Sample</span></span>](../../../docs/standard/parallel-programming/plinq-data-sample.md)  
+ [<span data-ttu-id="24418-124">Ejemplo de datos de PLINQ</span><span class="sxs-lookup"><span data-stu-id="24418-124">PLINQ Data Sample</span></span>](../../../docs/standard/parallel-programming/plinq-data-sample.md)  
   
-## <a name="see-also"></a><span data-ttu-id="759b2-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="759b2-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24418-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="24418-125">See also</span></span>
 
 - <xref:System.Linq.ParallelEnumerable>
-- [<span data-ttu-id="759b2-126">Programación en paralelo</span><span class="sxs-lookup"><span data-stu-id="759b2-126">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)
-- [<span data-ttu-id="759b2-127">LINQ (Language Integrated Query)</span><span class="sxs-lookup"><span data-stu-id="759b2-127">LINQ (Language-Integrated Query)</span></span>](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- [<span data-ttu-id="24418-126">Programación en paralelo</span><span class="sxs-lookup"><span data-stu-id="24418-126">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)
+- [<span data-ttu-id="24418-127">Language Integrated Query (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="24418-127">Language-Integrated Query (LINQ) - C#</span></span>](../../csharp/programming-guide/concepts/linq/index.md)  
+- [<span data-ttu-id="24418-128">Language Integrated Query (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="24418-128">Language-Integrated Query (LINQ) - Visual Basic</span></span>](../../visual-basic/programming-guide/concepts/linq/index.md)  
