@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Configuración de la comprobación de ContextMenuStrip los márgenes e imagen
+title: Filtrar Configuración de la comprobación de ContextMenuStrip los márgenes e imagen
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - ContextMenuStrips [Windows Forms], configuring check and image margins
 - margins [Windows Forms], setting check and image in Windows Forms ContextMenuStrips
 ms.assetid: 3391c4c2-0c9e-4aa4-9492-13ff7644bdf2
-ms.openlocfilehash: 100038cedaf74f9566f24b7b030531dda8f466af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9406a1dc0fca36a42674d5455e5529b703d87e3e
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609374"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220093"
 ---
-# <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a><span data-ttu-id="2631e-102">Procedimiento Configuración de la comprobación de ContextMenuStrip los márgenes e imagen</span><span class="sxs-lookup"><span data-stu-id="2631e-102">How to: Configure ContextMenuStrip Check Margins and Image Margins</span></span>
-<span data-ttu-id="2631e-103">Puede personalizar un <xref:System.Windows.Forms.ContextMenuStrip> estableciendo las propiedades <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> y <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> en diversas combinaciones.</span><span class="sxs-lookup"><span data-stu-id="2631e-103">You can customize a <xref:System.Windows.Forms.ContextMenuStrip> by setting the <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> and <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> properties in various combinations.</span></span>  
+# <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a><span data-ttu-id="83b6e-102">Filtrar Configuración de la comprobación de ContextMenuStrip los márgenes e imagen</span><span class="sxs-lookup"><span data-stu-id="83b6e-102">How to: Configure ContextMenuStrip Check Margins and Image Margins</span></span>
+<span data-ttu-id="83b6e-103">Puede personalizar un <xref:System.Windows.Forms.ContextMenuStrip> estableciendo las propiedades <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> y <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> en diversas combinaciones.</span><span class="sxs-lookup"><span data-stu-id="83b6e-103">You can customize a <xref:System.Windows.Forms.ContextMenuStrip> by setting the <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> and <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> properties in various combinations.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2631e-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2631e-104">Example</span></span>  
- <span data-ttu-id="2631e-105">En el ejemplo de código siguiente, se muestra cómo establecer y personalizar los márgenes de comprobación y de imagen <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="2631e-105">The following code example demonstrates how to set and customize the <xref:System.Windows.Forms.ContextMenuStrip> check and image margins.</span></span>  
+## <a name="example"></a><span data-ttu-id="83b6e-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="83b6e-104">Example</span></span>  
+ <span data-ttu-id="83b6e-105">En el ejemplo de código siguiente, se muestra cómo establecer y personalizar los márgenes de comprobación y de imagen <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="83b6e-105">The following code example demonstrates how to set and customize the <xref:System.Windows.Forms.ContextMenuStrip> check and image margins.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
 [!code-csharp[System.Windows.Forms.ToolStrip.Misc#60](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#60)]
 [!code-vb[System.Windows.Forms.ToolStrip.Misc#60](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#60)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="2631e-106">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="2631e-106">Compiling the Code</span></span>  
- <span data-ttu-id="2631e-107">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="2631e-107">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="83b6e-106">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="83b6e-106">Compiling the Code</span></span>  
+ <span data-ttu-id="83b6e-107">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="83b6e-107">This example requires:</span></span>  
   
--   <span data-ttu-id="2631e-108">Referencias a los ensamblados System.Design, System.Drawing y System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="2631e-108">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="83b6e-108">Referencias a los ensamblados System.Design, System.Drawing y System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="83b6e-108">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="2631e-109">Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="2631e-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="2631e-110">También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.</span><span class="sxs-lookup"><span data-stu-id="2631e-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="2631e-111">Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="2631e-111">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="83b6e-109">Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="83b6e-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="83b6e-110">También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.</span><span class="sxs-lookup"><span data-stu-id="83b6e-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2631e-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="2631e-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="83b6e-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="83b6e-111">See also</span></span>
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.ToolStripDropDown>
-- [<span data-ttu-id="2631e-113">Control ToolStrip</span><span class="sxs-lookup"><span data-stu-id="2631e-113">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
-- [<span data-ttu-id="2631e-114">Cómo: Habilitar los márgenes de comprobación y de imagen en los controles ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="2631e-114">How to: Enable Check Margins and Image Margins in ContextMenuStrip Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
+- [<span data-ttu-id="83b6e-112">Control ToolStrip</span><span class="sxs-lookup"><span data-stu-id="83b6e-112">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [<span data-ttu-id="83b6e-113">Cómo: Habilitar los márgenes de comprobación y de imagen en los controles ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="83b6e-113">How to: Enable Check Margins and Image Margins in ContextMenuStrip Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
