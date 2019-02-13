@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ae7149e1f104863825fdea128729dcc80847c19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d692f440354583e645606def4303f0c7c8f1e777
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679937"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093598"
 ---
 # <a name="handling-and-raising-events"></a>Controlar y provocar eventos
 Los eventos de .NET Framework se basan en un modelo de delegado. El modelo de delegado sigue el patrón de diseño del observador, que permite que un suscriptor se registre con un proveedor y reciba notificaciones de él. El emisor de un evento inserta una notificación de que se ha producido un evento, y un receptor de eventos recibe la notificación y define una respuesta a la misma. En este artículo se describen los componentes principales del modelo de delegado, cómo consumir eventos en las aplicaciones y cómo implementar eventos en el código.  
@@ -45,7 +45,7 @@ Los eventos de .NET Framework se basan en un modelo de delegado. El modelo de de
   
  Los delegados son de multidifusión, lo que significa que pueden guardar referencias a más de un método de control de eventos. Para obtener información detallada, vea la página de referencia de <xref:System.Delegate>. Los delegados permiten realizar un control de eventos más flexible y detallado. Un delegado actúa como remitente de eventos de la clase que genera el evento y mantiene una lista de los controladores registrados para el evento.  
   
- Para los escenarios en que no funcionan los delegados <xref:System.EventHandler> y <xref:System.EventHandler%601>, puede definir un delegado. Los escenarios para los es necesario definir un delegado son poco habituales, como cuando se debe ejecutar código que no reconoce genéricos. Los delegados se marcan con la palabra clave `delegate` en (C#) y `Delegate` (en Visual Basic) en la declaración. En el ejemplo siguiente se muestra cómo declarar un delegado denominado `ThresholdReachedEventHandler`.  
+ Para los escenarios en que no funcionan los delegados <xref:System.EventHandler> y <xref:System.EventHandler%601>, puede definir un delegado. Los escenarios para los es necesario definir un delegado son poco habituales, como cuando se debe ejecutar código que no reconoce genéricos. Los delegados se marcan con la palabra clave `delegate` (en C#) y `Delegate` (en Visual Basic) en la declaración. En el ejemplo siguiente se muestra cómo declarar un delegado denominado `ThresholdReachedEventHandler`.  
   
  [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
  [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
@@ -71,7 +71,7 @@ Los eventos de .NET Framework se basan en un modelo de delegado. El modelo de de
  [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Controladores de eventos estáticos y dinámicos  
- .NET Framework permite a los suscriptores registrarse para las notificaciones de eventos estática o dinámicamente. Los controladores de eventos estáticos son efectivos durante toda la vida de la clase cuyos eventos controlan. Los controladores de eventos dinámicos se activan y desactivan explícitamente durante la ejecución de un programa, normalmente en respuesta a alguna lógica condicional del programa. Por ejemplo, pueden utilizarse si las notificaciones de eventos solo son necesarias en condiciones específicas o si una aplicación proporciona varios controladores de eventos y las condiciones en tiempo de ejecución determinan cuál es el que debe utilizarse. En el ejemplo de la sección anterior se muestra cómo agregar dinámicamente un controlador de eventos. Para más información, consulte [Eventos](../../visual-basic/programming-guide/language-features/events/index.md) y [Eventos](../../csharp/programming-guide/events/index.md).  
+ .NET Framework permite a los suscriptores registrarse para las notificaciones de eventos estática o dinámicamente. Los controladores de eventos estáticos son efectivos durante toda la vida de la clase cuyos eventos controlan. Los controladores de eventos dinámicos se activan y desactivan explícitamente durante la ejecución de un programa, normalmente en respuesta a alguna lógica condicional del programa. Por ejemplo, pueden utilizarse si las notificaciones de eventos solo son necesarias en condiciones específicas o si una aplicación proporciona varios controladores de eventos y las condiciones en tiempo de ejecución determinan cuál es el que debe utilizarse. En el ejemplo de la sección anterior se muestra cómo agregar dinámicamente un controlador de eventos. Para obtener más información, vea [Eventos](../../visual-basic/programming-guide/language-features/events/index.md) (en Visual Basic) y [Eventos](../../csharp/programming-guide/events/index.md) (en C#).  
   
 ## <a name="raising-multiple-events"></a>Generar múltiples eventos  
  Si la clase genera varios eventos, el compilador genera un campo por cada instancia de delegado de eventos. Si el número de eventos es alto, es posible que el costo de almacenamiento de un campo por delegado no sea aceptable. Para estos casos, .NET Framework dispone de propiedades de evento que se pueden usar con otra estructura de datos (de elección propia) para almacenar los delegados de eventos.  

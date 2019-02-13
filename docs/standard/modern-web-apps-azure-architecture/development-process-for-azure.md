@@ -3,13 +3,13 @@ title: Proceso de desarrollo para Azure
 description: Aplicaciones web modernas con ASP.NET Core y Azure | Proceso de desarrollo para Azure
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 932d3869483b6c96f2394ec308d3aa014b8650d4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 72e6f468cc55ea344d53b4342fb7d9c776a1a16c
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152622"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827479"
 ---
 # <a name="development-process-for-azure"></a>Proceso de desarrollo para Azure
 
@@ -88,11 +88,11 @@ El desarrollo de la aplicación ASP.NET Core para su implementación en Azure no
 
 Cuando esté listo para compartir el código con el equipo, debe insertar los cambios desde el repositorio de origen local al repositorio de código fuente compartido del equipo. Si ha estado trabajando en una rama personalizada, este paso normalmente implica combinar el código en una rama compartida (posiblemente por medio de una [solicitud de incorporación de cambios](https://docs.microsoft.com/azure/devops/git/pull-requests)).
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Paso 3. Servidor de compilación: integración continua. Compilar, probar, empaquetar
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Paso 3. Servidor de compilación: Integración continua. Compilar, probar, empaquetar
 
 Siempre que se realiza una confirmación nueva en el repositorio de código de la aplicación compartido, se desencadena una compilación nueva en el servidor de compilación. Como parte del proceso de integración continua, esta compilación debe compilar totalmente la aplicación y ejecutar pruebas automatizadas para confirmar que todo funciona según lo previsto. El resultado final del proceso de CI debe ser una versión empaquetada de la aplicación web, lista para la implementación.
 
-#### <a name="step-4-build-server-continuous-delivery"></a>Paso 4. Servidor de compilación: entrega continua
+#### <a name="step-4-build-server-continuous-delivery"></a>Paso 4. Servidor de compilación: Entrega continua.
 
 Una vez realizada correctamente la compilación, el proceso de CD recogerá los artefactos de compilación generados. Esto incluirá un paquete de implementación web. El servidor de compilación implementará este paquete en Azure App Service, reemplazando cualquier servicio existente con el recién creado. Normalmente, este paso tiene como destino un entorno de ensayo, pero algunas aplicaciones se implementan directamente en producción a través de un proceso de CD.
 

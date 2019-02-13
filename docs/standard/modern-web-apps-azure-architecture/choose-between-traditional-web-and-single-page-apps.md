@@ -3,17 +3,17 @@ title: Elección entre aplicaciones web tradicionales y aplicaciones de página 
 description: Obtenga información sobre cómo elegir entre aplicaciones web tradicionales y aplicaciones de página única (SPA) al crear aplicaciones web.
 author: ardalis
 ms.author: wiwagn
-ms.date: 6/28/2018
-ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.date: 01/30/2019
+ms.openlocfilehash: 5b8569f2abd5160fa8a080c06441a963fb455f6b
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745308"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825750"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Elección entre aplicaciones web tradicionales y aplicaciones de página única (SPA)
 
-> "La ley de Atwood: cualquier aplicación que se pueda escribir en JavaScript, se acabará escribiendo en JavaScript".  
+> "Ley de Atwood: cualquier aplicación que se pueda escribir en JavaScript, se acabará escribiendo en JavaScript".  
 > _\- Jeff Atwood_
 
 En la actualidad hay dos enfoques generales para crear aplicaciones web: aplicaciones web tradicionales que ejecutan la mayor parte de la lógica de aplicación en el servidor y las aplicaciones de página única (SPA) que ejecutan la mayor parte de la lógica de la interfaz de usuario en un explorador web, y se comunican con el servidor web principalmente mediante las API web. También es posible un enfoque híbrido; el más sencillo es hospedar una o más subaplicaciones enriquecidas de tipo SPA dentro de una aplicación web tradicional más grande.
@@ -37,6 +37,10 @@ Una SPA se debería usar cuando:
 Además, los marcos de SPA requieren mayores conocimientos de arquitectura y seguridad. Experimentan una renovación mayor que las aplicaciones web tradicionales debido a las actualizaciones frecuentes y los marcos de trabajo nuevos. La configuración de procesos de compilación e implementación automatizados y el uso de opciones de implementación como contenedores son más difíciles con las SPA que con las aplicaciones web tradicionales.
 
 Las mejoras en la experiencia del usuario que posibilita el modelo de SPA deben ponderarse con estas consideraciones.
+
+## <a name="razor-components"></a>Componentes de Razor
+
+ASP.NET Core 3.0 presenta un nuevo modelo para crear interfaces de usuario detalladas, interactivas y que admiten composición, conocidas como componentes de Razor. Los componentes de Razor permiten a los desarrolladores crear interfaces de usuario con Razor en el servidor, además de que el código se entregue al navegador y se ejecute del lado cliente mediante una biblioteca de JavaScript llamada WebAssembly. ASP.NET Core 3.0 aún está en desarrollo, pero en la actualización 3.0 de este libro electrónico se incluirá más información sobre dicha tecnología. Para obtener más información sobre los componentes de Razor (con el nombre en clave Blazor), vea [Get started with Blazor](https://blazor.net/docs/get-started.html) (Introducción a Blazor).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Casos en los que elegir aplicaciones web tradicionales
 

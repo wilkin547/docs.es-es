@@ -3,13 +3,13 @@ title: Arquitecturas de aplicaciones web comunes
 description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Explorar las arquitecturas de aplicaciones web comunes
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 3b0b109b0910eb5763ecab228115b7bc932d4a10
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 05d696f5cbceaedb35e3e4e97f8c4e89124d43dc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129940"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826738"
 ---
 # <a name="common-web-application-architectures"></a>Arquitecturas de aplicaciones web comunes
 
@@ -87,7 +87,7 @@ Cuando aumenten las necesidades de la aplicación, se pueden necesitar solucione
 
 Internamente, la organización de este proyecto en varios en función de la responsabilidad mejora la facilidad de mantenimiento de la aplicación.
 
-Esta unidad se puede escalar vertical u horizontalmente para aprovechar la escalabilidad a petición basada en la nube. El escalado vertical significa agregar más CPU, memoria, espacio en disco u otros recursos al servidor en el que se hospeda la aplicación. El escalado horizontal significa agregar instancias adicionales de este tipo de servidores, con independencia de que sean servidores físicos o máquinas virtuales. Cuando la aplicación se hospeda en varias instancias, se usa un equilibrador de carga para asignar solicitudes a instancias individuales de la aplicación.
+Esta unidad se puede escalar vertical u horizontalmente para aprovechar la escalabilidad a petición basada en la nube. El escalado vertical significa agregar más CPU, memoria, espacio en disco u otros recursos al servidor en el que se hospeda la aplicación. El escalado horizontal significa agregar instancias adicionales de estos servidores, con independencia de que sean servidores físicos, máquinas virtuales o contenedores. Cuando la aplicación se hospeda en varias instancias, se usa un equilibrador de carga para asignar solicitudes a instancias individuales de la aplicación.
 
 El enfoque más sencillo para escalar una aplicación web en Azure consiste en configurar manualmente el escalado en el plan de App Service de la aplicación. En la figura 5-6 se muestra la pantalla de panel de Azure adecuada para configurar el número de instancias que prestan servicio a una aplicación.
 
@@ -212,9 +212,9 @@ Implementar las actualizaciones como imágenes de Docker es mucho más rápido y
 
 Como por diseño los contenedores son intrínsecamente inmutables, no tendrá que preocuparse de que las máquinas virtuales resulten dañadas, mientras que es posible que los scripts de actualización olviden tener en cuenta alguna configuración concreta o archivo que se conserve en disco.
 
-_Puede usar contenedores de Docker para la implementación monolítica de aplicaciones web más sencillas. Esto mejora la integración continua y las canalizaciones de implementación continua y ayuda a llevar a cabo correctamente el proceso desde la implementación hasta la producción. Ya no se volverá a preguntar: "Funciona en mi equipo, ¿por qué no funciona en producción?"_
+Puede usar contenedores de Docker para la implementación monolítica de aplicaciones web más sencillas. Esto mejora la integración continua y las canalizaciones de implementación continua y ayuda a llevar a cabo correctamente el proceso desde la implementación hasta la producción. Ya no se volverá a hacer esta pregunta: "Funciona en mi equipo, ¿por qué no funciona en producción?".
 
-Una arquitectura basada en microservicios tiene muchas ventajas, pero a costa de una mayor complejidad. En algunos casos, los costos superan a las ventajas, y una aplicación de implementación monolítica que se ejecute en un solo contenedor o en unos pocos contenedores es una opción mejor.
+Una arquitectura basada en microservicios tiene muchas ventajas, pero a costa de una mayor complejidad. En algunos casos, los costos superan las ventajas, por lo que es una opción mejor utilizar una aplicación de implementación monolítica que se ejecute en un solo contenedor o en unos pocos contenedores.
 
 Es posible que una aplicación monolítica no se pueda descomponer fácilmente en microservicios bien separados. Los microservicios deberían funcionar de manera independiente para proporcionar una aplicación más resistente. Si no puede proporcionar sectores de características independientes de la aplicación, el hecho de separarla solo conlleva más complejidad.
 
@@ -224,7 +224,7 @@ En las fases tempranas del desarrollo de una aplicación, es posible que no se t
 
 La separación de una aplicación en varios procesos diferenciados también introduce una sobrecarga. La separación de funciones en procesos diferentes conlleva una mayor complejidad. Los protocolos de comunicación se vuelven más complejos. En lugar de llamadas a métodos, debe usar comunicaciones asincrónicas entre servicios. Cuando cambie a una arquitectura de microservicios, deberá agregar muchos de los bloques de creación que se implementan en la versión de microservicios de la aplicación eShopOnContainers: control de bus de eventos, reintentos y resistencia de mensajes, coherencia eventual y mucho más.
 
-La [aplicación de referencia eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb), mucho más sencilla, admite el uso de un único contenedor monolítico. En la aplicación se incluyen dos aplicaciones web: una en la que se usa MVC tradicional y otra con Razor Pages. Las dos se pueden iniciar desde la raíz de la solución mediante los comandos `docker-compose build` y `docker-compose up`. Este comando configura contenedores independientes para cada instancia de servidor web, mediante el `Dockerfile` que se encuentra en la raíz de cada proyecto web, y ejecuta cada contenedor en un puerto diferente. Puede descargar de GitHub el código fuente para esta aplicación y ejecutarlo de forma local. Incluso esta aplicación monolítica se beneficia de la implementación en un entorno de contenedor.
+La [aplicación de referencia eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb), mucho más sencilla, admite el uso de un único contenedor monolítico. La aplicación incluye una aplicación web con vistas MVC tradicionales, API web y Razor Pages. Esta aplicación se puede iniciar desde la raíz de la solución mediante los comandos `docker-compose build` y `docker-compose up`. Este comando configura un contenedor para la instancia web mediante el elemento `Dockerfile` que se encuentra en la raíz de cada proyecto web y ejecuta el contenedor en un puerto específico. Puede descargar de GitHub el código fuente para esta aplicación y ejecutarlo de forma local. Incluso esta aplicación monolítica se beneficia de la implementación en un entorno de contenedor.
 
 Ante todo, la implementación en contenedor implica que cada instancia de la aplicación se ejecuta en el mismo entorno. Esto incluye el entorno de desarrollo donde tienen lugar las pruebas y el desarrollo iniciales. El equipo de desarrollo puede ejecutar la aplicación en un entorno en contenedor que coincida con el entorno de producción.
 
@@ -236,24 +236,14 @@ Por último, el hecho de incluir la aplicación en un contenedor fuerza la separ
 
 El proyecto `eShopOnWeb` se ejecuta en .NET Core. Por lo tanto, se puede ejecutar en contenedores basados en Linux o en Windows. Tenga en cuenta que, para la implementación de Docker, le interesa usar el mismo tipo de host para SQL Server. Los contenedores basados en Linux permiten una superficie menor y son preferibles.
 
-Puede usar Visual Studio 2017 para agregar compatibilidad con Docker a una aplicación existente si hace clic con el botón derecho en el **Explorador de soluciones** y selecciona **Agregar** > **Compatibilidad con Docker**. Esto agrega los archivos necesarios y modifica el proyecto para poder usarlos. En el ejemplo `eShopOnWeb` actual ya se incluyen estos archivos.
+Puede usar Visual Studio 2017 o versiones posteriores para agregar compatibilidad con Docker a una aplicación existente haciendo clic con el botón derecho en **Explorador de soluciones** y seleccionando **Agregar** > **Compatibilidad con Docker**. Esto agrega los archivos necesarios y modifica el proyecto para poder usarlos. En el ejemplo `eShopOnWeb` actual ya se incluyen estos archivos.
 
-El archivo `docker-compose.yml` de nivel de solución contiene información sobre qué imágenes se van a compilar y qué contenedores se van a iniciar. El archivo permite usar el comando `docker-compose` para iniciar las dos versiones de la aplicación web al mismo tiempo. También se puede usar para configurar las dependencias, como un contenedor de base de datos independiente.
+El archivo `docker-compose.yml` de nivel de solución contiene información sobre qué imágenes se van a compilar y qué contenedores se van a iniciar. El archivo le permite usar el comando `docker-compose` para iniciar varias aplicaciones al mismo tiempo. En este caso, solo está iniciando el proyecto web. También se puede usar para configurar las dependencias, como un contenedor de base de datos independiente.
 
 ```yml
 version: '3'
 
 services:
-  eshopwebrazor:
-    image: eshopwebrazor
-    build:
-      context: .
-      dockerfile: src/WebRazorPages/Dockerfile
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "5107:5107"
-
   eshopwebmvc:
     image: eshopwebmvc
     build:
@@ -270,28 +260,27 @@ networks:
       name: nat
 ```
 
-El archivo `docker-compose.yml` hace referencia al `Dockerfile` de los proyectos `Web` y `WebRazorPages`. El `Dockerfile` se usa para especificar qué contenedor base se va a utilizar y cómo se configurará la aplicación en él. El `Dockerfile` de `WebRazorPages`:
+El archivo `docker-compose.yml` hace referencia a `Dockerfile` en el proyecto `Web`. El `Dockerfile` se usa para especificar qué contenedor base se va a utilizar y cómo se configurará la aplicación en él. El `Dockerfile` de `Web`:
 
 ```
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /app
-EXPOSE 80
 
-FROM microsoft/aspnetcore-build:2.1.300-preview1 AS build
-RUN npm install -g bower@1.8.4
-WORKDIR /src
+COPY *.sln .
 COPY . .
-WORKDIR /src/src/WebRazorPages
-RUN dotnet restore -nowarn:msb3202,nu1503
-RUN dotnet build --no-restore -c Release -o /app
+WORKDIR /app/src/Web
+RUN dotnet restore
 
-FROM build AS publish
-RUN dotnet publish --no-restore -c Release -o /app
+RUN dotnet publish -c Release -o out
 
-FROM base AS final
+FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "Microsoft.eShopWeb.RazorPages.dll"]
+COPY --from=build /app/src/Web/out ./
+
+# Optional: Set this here if not setting it from docker-compose.yml
+# ENV ASPNETCORE_ENVIRONMENT Development
+
+ENTRYPOINT ["dotnet", "Web.dll"]
 ```
 
 ### <a name="troubleshooting-docker-problems"></a>Solución de problemas de Docker
@@ -300,10 +289,9 @@ Una vez que se ejecute la aplicación en contenedores, se sigue ejecutando hasta
 
 Tenga en cuenta que los contenedores de Docker en ejecución pueden estar enlazados a puertos que, en otros casos, es posible que intentara usar en el entorno de desarrollo. Si intenta ejecutar o depurar una aplicación con el mismo puerto que un contenedor de Docker en ejecución, obtendrá un error que indica que el servidor no se puede enlazar a ese puerto. Una vez más, detener el contenedor debería resolver el problema.
 
-Si quiere agregar compatibilidad con Docker a la aplicación mediante Visual Studio, asegúrese de que Docker está en ejecución cuando lo hace. Si Docker no está funcionando cuando se inicia el asistente, el asistente no se ejecutará correctamente. Además, el asistente examinará el contenedor que ha elegido actualmente para agregar la compatibilidad correcta con Docker. Si quiere agregar compatibilidad con contenedores de Windows, debe ejecutar el asistente mientras Docker se ejecuta con contenedores de Windows configurados. Si quiere agregar compatibilidad con contenedores de Linux, ejecute el asistente mientras Docker se ejecuta con contenedores de Linux configurados.
+Si quiere agregar compatibilidad con Docker a la aplicación mediante Visual Studio, asegúrese de que Docker Desktop se esté ejecutando. Si Docker Desktop no está funcionando cuando se inicia el asistente, el asistente no se ejecutará correctamente. Además, el asistente examinará el contenedor que ha elegido actualmente para agregar la compatibilidad correcta con Docker. Si quiere agregar compatibilidad con contenedores de Windows, debe ejecutar el asistente mientras Docker Desktop se ejecuta con contenedores de Windows configurados. Si quiere agregar compatibilidad con contenedores de Linux, ejecute el asistente mientras Docker se ejecuta con contenedores de Linux configurados.
 
-> ### <a name="references--common-web-architectures"></a>Referencias: arquitecturas web comunes
->
+### <a name="references--common-web-architectures"></a>Referencias: arquitecturas web comunes
 > - **The Clean Architecture** (La arquitectura limpia)  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **The Onion Architecture** (La arquitectura cebolla)  

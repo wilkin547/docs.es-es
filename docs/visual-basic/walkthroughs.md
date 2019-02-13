@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086769"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739467"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Tutoriales del lenguaje Visual Basic
 Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, lo que hace que un buen lugar para empezar a conocer el producto o una característica en particular.  
@@ -47,9 +47,6 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
  [Implementar la herencia mediante objetos COM](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Muestra cómo usar Visual Basic 6.0 para crear un objeto COM que contenga una clase y luego usarlo como clase base en Visual Basic.  
   
- [Multithreading](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
- Muestra cómo crear una aplicación multiproceso que busque las repeticiones de una palabra en un archivo de texto.  
-  
  [Determinar el lugar en el que My.Application.Log escribe la información](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
  Describe la configuración predeterminada de `My.Application.Log` y cómo determinar la configuración de la aplicación.  
   
@@ -80,5 +77,5 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
  [Conservar un objeto en Visual Basic](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Muestra cómo crear un objeto simple y conservar sus datos en un archivo.  
   
- [Compatibilidad del desarrollo de pruebas en primer lugar con la característica de generación a partir del uso](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [Tutorial: Compatibilidad del desarrollo de pruebas en primer lugar con la característica de generación a partir del uso](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
  Muestra cómo realizar el desarrollo de prueba previa, en donde primero se escriben las pruebas unitarias y luego se escribe el código fuente para que las pruebas se realicen correctamente.

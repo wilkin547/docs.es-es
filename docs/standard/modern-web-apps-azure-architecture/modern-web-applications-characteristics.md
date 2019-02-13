@@ -3,13 +3,13 @@ title: Características de las aplicaciones web modernas
 description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Características de las aplicaciones web modernas
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 6c416432f10bb93ff5012d716b2d92f13efdcd9b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: eacc66ff5d2c4bfb8d8645bc6bd319eab52437a3
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147341"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828129"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Características de las aplicaciones web modernas
 
@@ -39,25 +39,25 @@ ASP.NET Core se ha optimizado para la nube (pública, privada, cualquier nube) d
 
 ## <a name="cross-platform"></a>Multiplataforma
 
-ASP.NET Core es multiplataforma y se puede ejecutar en Linux, MacOS y Windows. Esto abre muchas opciones nuevas para el desarrollo y la implementación de aplicaciones compiladas con ASP.NET Core. Los contenedores de Docker, que en la actualidad normalmente se ejecutan en Linux, pueden hospedar aplicaciones ASP.NET Core, lo que les permite aprovechar las ventajas de los [contenedores y microservicios](../microservices-architecture/index.md).
+ASP.NET Core es multiplataforma y se puede ejecutar en Linux, macOS y Windows. Esto abre muchas opciones nuevas para el desarrollo y la implementación de aplicaciones compiladas con ASP.NET Core. Los contenedores de Docker, tanto en Linux como en Windows, pueden hospedar aplicaciones ASP.NET Core, lo que les permite aprovechar las ventajas que ofrecen los [contenedores y microservicios](../microservices-architecture/index.md).
 
 ## <a name="modular-and-loosely-coupled"></a>Modular y de acoplamiento flexible
 
 Los paquetes NuGet son objetos de primera clase en .NET Core y las aplicaciones ASP.NET Core se componen de muchas bibliotecas de NuGet. Esta granularidad de la funcionalidad ayuda a garantizar que las aplicaciones solo dependen e implementan la funcionalidad que realmente necesitan, lo que reduce su superficie y el área expuesta a vulnerabilidades de seguridad.
 
-ASP.NET Core también es totalmente compatible con la inserción de dependencias, tanto de forma interna como en el nivel de la aplicación. Las interfaces pueden tener varias implementaciones que se pueden intercambiar según sea necesario. La inserción de dependencias permite acoplar de forma flexible las aplicaciones a esas interfaces, lo que facilita su ampliación, mantenimiento y pruebas.
+ASP.NET Core también es totalmente compatible con la [inserción de dependencias](https://deviq.com/dependency-injection/), tanto de forma interna como en la aplicación. Las interfaces pueden tener varias implementaciones que se pueden intercambiar según sea necesario. La inserción de dependencias permite acoplar aplicaciones de forma flexible a esas interfaces en lugar de a implementaciones específicas, lo que facilita la ampliación, el mantenimiento y las pruebas correspondientes.
 
 ## <a name="easily-tested-with-automated-tests"></a>Pruebas sencillas con pruebas automatizadas
 
-Las aplicaciones ASP.NET Core admiten las pruebas unitarias y su acoplamiento flexible y la compatibilidad con la inserción de dependencias facilitan el intercambio de intereses de infraestructura con implementaciones falsas para fines de prueba. ASP.NET Core también incluye un TestServer que se puede usar para hospedar aplicaciones en memoria. Después, las pruebas funcionales pueden realizar solicitudes a este servidor en memoria, ejecutar la pila de aplicación completa (incluido el software intermedio, el enrutamiento, el enlace de modelos, los filtros, etc.) y recibir una respuesta en una fracción del tiempo que sería necesario para hospedar la aplicación en un servidor real y realizar solicitudes a través de la capa de red. Estas pruebas son especialmente fáciles de escribir y útiles para las API, que cada vez son más importantes en las aplicaciones web modernas.
+Las aplicaciones ASP.NET Core admiten las pruebas unitarias y, gracias a su acoplamiento flexible y su compatibilidad con la inserción de dependencias, se facilita el intercambio de intereses de infraestructura con implementaciones falsas para fines de prueba. ASP.NET Core también incluye un TestServer que se puede usar para hospedar aplicaciones en memoria. Después, las pruebas funcionales pueden realizar solicitudes a este servidor en memoria, ejecutar la pila de aplicación completa (incluido el software intermedio, el enrutamiento, el enlace de modelos, los filtros, etc.) y recibir una respuesta en una fracción del tiempo que sería necesario para hospedar la aplicación en un servidor real y realizar solicitudes a través de la capa de red. Estas pruebas son especialmente fáciles de escribir y útiles para las API, que cada vez son más importantes en las aplicaciones web modernas.
 
 ## <a name="traditional-and-spa-behaviors-supported"></a>Comportamientos tradicionales y de SPA admitidos
 
-Las aplicaciones web tradicionales apenas contaban con comportamiento del lado cliente, y en su lugar se basaban en el servidor para todas las operaciones de navegación, consultas y actualizaciones que la aplicación tuviera que realizar. Cada operación nueva realizada por el usuario se convertiría en una nueva solicitud web, con el resultado de una recarga de página completa en el explorador del usuario final. Los marcos de controlador de vista de modelos (MVC) clásicos normalmente siguen este enfoque, en el que cada solicitud nueva se corresponde a otra acción de controlador, lo que a su vez podría funcionar con un modelo y devolver una vista. Es posible que algunas operaciones individuales en una página determinada se mejoraran con funcionalidad de AJAX (JavaScript asincrónico y XML), pero la arquitectura global de la aplicación usaba muchas vistas MVC distintas y extremos de URL.
+Las aplicaciones web tradicionales apenas contaban con comportamiento del lado cliente, y en su lugar se basaban en el servidor para todas las operaciones de navegación, consultas y actualizaciones que la aplicación tuviera que realizar. Cada operación nueva realizada por el usuario se convertiría en una nueva solicitud web, con el resultado de una recarga de página completa en el explorador del usuario final. Los marcos de controlador de vista de modelos (MVC) clásicos normalmente siguen este enfoque, en el que cada solicitud nueva se corresponde a otra acción de controlador, lo que a su vez podría funcionar con un modelo y devolver una vista. Es posible que algunas operaciones individuales en una página determinada se mejoraran con funcionalidad de AJAX (JavaScript asincrónico y XML), pero la arquitectura global de la aplicación usaba muchas vistas MVC distintas y extremos de URL. Además, ASP.NET Core MVC también admite Razor Pages, una forma más sencilla de organizar las páginas de tipo MVC.
 
 Las aplicaciones de página única (SPA), por el contrario, implican muy pocas cargas de página generadas de forma dinámica en el lado de servidor (si existen). Muchas SPA se inicializan en un archivo HTML estático que carga las bibliotecas de JavaScript necesarias para iniciar y ejecutar la aplicación. Estas aplicaciones hacen un uso intensivo de las API web para sus necesidades de datos y pueden proporcionar experiencias de usuario mucho más enriquecidas.
 
-Muchas aplicaciones web implican una combinación del comportamiento de aplicación web tradicional (normalmente para el contenido) y SPA (para la interactividad). ASP.NET Core admite MVC (Vistas y/o Razor Pages) y las API web en la misma aplicación, con el mismo conjunto de herramientas y bibliotecas de marco subyacentes.
+Muchas aplicaciones web implican una combinación del comportamiento de aplicación web tradicional (normalmente para el contenido) y SPA (para la interactividad). ASP.NET Core admite MVC (basado en vistas o páginas) y las API web en la misma aplicación y usa el mismo conjunto de herramientas y bibliotecas de marco subyacentes.
 
 ## <a name="simple-development-and-deployment"></a>Implementación y desarrollo simples
 

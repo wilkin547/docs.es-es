@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4394bc77b499db1960d61bad5e828f77f1144c65
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696889"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759137"
 ---
 # <a name="net-api-analyzer"></a>Analizador de API en .NET
 
@@ -55,7 +55,7 @@ Las advertencias pueden suprimirse si se hace clic con el botón derecho del rat
 
 ### <a name="suppressing-warnings-locally"></a>Supresión local de advertencias
 
-Para suprimir advertencias localmente, haga clic con el botón derecho en el miembro del que desea suprimir las advertencias y luego seleccione **Acciones rápidas y refactorizaciones** > **Suprimir *Id. de diagnóstico*\<Id. de diagnóstico>** > **en origen**. La directiva del preprocesador de advertencias [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) se agrega al código fuente en el ámbito definido: !["Captura de pantalla encuadrada con la advertencia #pragma deshabilitada"](media/api-analyzer/suppress-in-source.jpg).
+Para suprimir advertencias localmente, haga clic con el botón derecho en el miembro del que desea suprimir las advertencias y luego seleccione **Acciones rápidas y refactorizaciones** > **Suprimir *Id. de diagnóstico*\<Id. de diagnóstico>** > **en origen**. La directiva del preprocesador de advertencias [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) se agrega al código fuente en el ámbito definido: !["Captura de pantalla encuadrada con la advertencia #pragma deshabilitada".](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>Supresión global de advertencias
 
@@ -112,5 +112,5 @@ El usuario decide cómo se deben tratar los diagnósticos: como advertencias, er
 
 ## <a name="see-also"></a>Vea también
 
-* Entrada de blog de [introducción al analizador de API](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/).
-* Vídeo de demostración del [analizador de API](https://youtu.be/eeBEahYXGd0) de YouTube.
+- Entrada de blog de [introducción al analizador de API](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/).
+- Vídeo de demostración del [analizador de API](https://youtu.be/eeBEahYXGd0) de YouTube.
