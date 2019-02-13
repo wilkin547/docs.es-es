@@ -1,15 +1,15 @@
 ---
 title: Aplicaciones monolíticas
-description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
+description: Comprender los conceptos básicos para incluir en un contenedor aplicaciones monolíticas.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.date: 11/23/2018
+ms.openlocfilehash: 056f4bd8abf5c482855f38e45435b67b487769fb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52743274"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221360"
 ---
 # <a name="monolithic-applications"></a>Aplicaciones monolíticas
 
@@ -21,7 +21,7 @@ Después de la entidad de seguridad que realiza una acción solo un contenedor y
 
 ![](./media/image1.png)
 
-Figura 4-1: un ejemplo de arquitectura de aplicaciones monolíticas
+Figura 4-1: Un ejemplo de arquitectura de aplicaciones monolíticas
 
 La desventaja de este enfoque aparece si o cuando la aplicación aumenta y debe escalarse. Si se escala toda la aplicación, realmente no es un problema. Sin embargo, en la mayoría de los casos, algunas partes de la aplicación son los puntos de obstrucción que requieren el ajuste de escala, mientras que otros componentes se usan menos.
 
@@ -35,13 +35,13 @@ Desde una perspectiva de infraestructura, cada servidor puede ejecutar muchas ap
 
 ![](./media/image2.png)
 
-Figura 4-2: un host que ejecuta varias aplicaciones o contenedores
+Figura 4-2: Un host que ejecuta varias aplicaciones o contenedores
 
 Puede implementar las aplicaciones monolíticas en Azure mediante el uso de máquinas virtuales dedicadas para cada instancia. Uso de [Azure VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), puede escalar fácilmente las máquinas virtuales. [Azure App Services](https://azure.microsoft.com/services/app-service/) puede ejecutar aplicaciones monolíticas y escalar fácilmente instancias sin necesidad de administrar las máquinas virtuales. Desde 2016, Azure App Services puede ejecutar instancias únicas de contenedores de Docker, así, lo que simplifica la implementación. Y uso de Docker, puede implementar una sola máquina virtual como un host de Docker y ejecutar varias instancias. Con el equilibrador de Azure, como se muestra en la figura 4-3, puede administrar el escalado.
 
 ![](./media/image3.png)
 
-Figura 4-3: varios hosts escalar horizontalmente una sola aplicación aplicaciones/contenedores de Docker
+Figura 4-3: Escalar horizontalmente una sola aplicación aplicaciones/contenedores de Docker de varios hosts
 
 Puede administrar la implementación en los distintos hosts a través de técnicas de implementación tradicionales. Puede administrar los hosts de Docker mediante el uso de comandos como `docker run` manualmente, mediante la automatización, como las canalizaciones de entrega continua (CD), que se explican más adelante en este libro electrónico.
 
@@ -65,7 +65,7 @@ Ahora, sin embargo, (que se anunció en Microsoft Connect 2016 en noviembre de 2
 
 ![](./media/image4.png)
 
-Figura 4-4: publicación de un contenedor en Azure App Service desde aplicaciones o contenedores de Visual Studio
+Figura 4-4: Publicación de un contenedor en Azure App Service desde aplicaciones o contenedores de Visual Studio
 
 Figura 4-4 también muestra que el flujo de publicación inserta una imagen a través de un registro de contenedor, que puede ser Azure Container Registry (un registro de cerca a las implementaciones en Azure y protege las cuentas y grupos de Azure Active Directory) o cualquier otro registro de Docker al igual que los registros de Docker Hub o en el entorno local.
 

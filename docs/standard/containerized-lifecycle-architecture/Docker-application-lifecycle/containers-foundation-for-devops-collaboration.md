@@ -1,15 +1,15 @@
 ---
 title: Contenedores como base para la colaboración de DevOps
-description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
+description: Comprender la función clave de contenedores para agilizar DevOps.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: ccc8ef765cadfec31a2f714767d8e6eb76508093
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: d0339199092304dd6c91707d8cf4da213f110b58
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126632"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219298"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Contenedores como base para la colaboración de DevOps
 

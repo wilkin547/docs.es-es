@@ -1,63 +1,55 @@
 ---
-title: Procedimiento Enlazar datos al Control DataGridView de formularios Windows Forms
-ms.date: 03/30/2017
+title: Filtrar Enlazar datos al control DataGridView de formularios Windows Forms
+ms.date: 02/08/2019
 dev_langs:
 - csharp
 - vb
-- cpp
 helpviewer_keywords:
 - data binding [Windows Forms], grids
 - data binding [Windows Forms], DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
-ms.openlocfilehash: eefc588ef8f637e91bfcad1bcc24d88bb0078fdc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 0d9b72766ce2e93472a07eebdf7bf59cc7b0328d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744393"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220580"
 ---
-# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Procedimiento Enlazar datos al Control DataGridView de formularios Windows Forms
-El control <xref:System.Windows.Forms.DataGridView> admite el modelo de enlace de datos de Windows Forms estándar, por lo que se enlazará a distintos orígenes de datos. Sin embargo, en la mayoría de los casos se enlazará a un componente <xref:System.Windows.Forms.BindingSource> que administrará los detalles de la interacción con el origen de datos. El componente <xref:System.Windows.Forms.BindingSource> puede representar cualquier origen de datos de Windows Forms y proporciona gran flexibilidad a la hora de elegir o modificar la ubicación de los datos. Para obtener más información acerca de los orígenes de datos admitidos por el <xref:System.Windows.Forms.DataGridView> control, vea [información general del Control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Filtrar Enlazar datos al control DataGridView de formularios Windows Forms
+
+El <xref:System.Windows.Forms.DataGridView> control admite el modelo de enlace de datos de Windows Forms estándar, por lo que se puede enlazar a una variedad de orígenes de datos. Por lo general, enlaza a un <xref:System.Windows.Forms.BindingSource> que administra la interacción con el origen de datos. El <xref:System.Windows.Forms.BindingSource> puede ser cualquier origen de datos de Windows Forms, que proporciona gran flexibilidad al elegir o modificar la ubicación de sus datos. Para obtener más información acerca de los orígenes de datos la <xref:System.Windows.Forms.DataGridView> control admite, vea la [información general del control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
+
+Visual Studio tiene una amplia compatibilidad para el enlace de datos para el control DataGridView de formularios. Para obtener más información, vea [Cómo: Enlazar datos al control DataGridView de formularios Windows Forms mediante el diseñador](https://msdn.microsoft.com/library/33w255ac\(v=vs.110\)).  
+
+Para conectar un control DataGridView a datos:
+
+1. Implementar un método para controlar los detalles de recuperación de los datos. El siguiente ejemplo de código implementa un `GetData` método que inicializa un <xref:System.Data.SqlClient.SqlDataAdapter>y lo usa para rellenar un <xref:System.Data.DataTable>. A continuación, enlaza la <xref:System.Data.DataTable> a la <xref:System.Windows.Forms.BindingSource>. 
+
+2. En el formulario <xref:System.Windows.Forms.Form.Load> controlador de eventos, enlace el <xref:System.Windows.Forms.DataGridView> el control a la <xref:System.Windows.Forms.BindingSource>y llamar a la `GetData` método para recuperar los datos.  
+
+## <a name="example"></a>Ejemplo
+
+En este ejemplo de código completo se recupera datos de una base de datos para rellenar un control DataGridView en un formulario de Windows. El formulario también tiene botones para volver a cargar datos y enviar cambios a la base de datos.  
+
+Para este ejemplo se necesita: 
+
+- Acceso a una base de datos de ejemplo Northwind de SQL Server. Para obtener más información acerca de cómo instalar la base de datos de ejemplo Northwind, vea [obtener las bases de datos de ejemplo para obtener ejemplos de código ADO.NET](../../data/adonet/sql/linq/downloading-sample-databases.md). 
+
+- Referencias a los ensamblados System, System.Windows.Forms, System.Data y System.Xml.  
+
+Para compilar y ejecutar este ejemplo, pegue el código en el *Form1* archivo de código en un nuevo proyecto de Windows Forms.  Para obtener más información, vea [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)). Para obtener información sobre la compilación desde el C# o línea de comandos de Visual Basic, vea [de línea de comandos para compilar con csc.exe](/csharp/language-reference/compiler-options/command-line-building-with-csc-exe) o [construido a partir de la línea de comandos](/visual-basic/reference/command-line-compiler/building-from-the-command-line).  
   
- Visual Studio es altamente compatible con esta tarea.  Consulte también [Cómo: Enlazar datos a la Windows Forms mediante el Diseñador de Control de DataGridView](https://msdn.microsoft.com/library/33w255ac\(v=vs.110\)).  
-  
-## <a name="procedure"></a>Procedimiento  
-  
-#### <a name="to-connect-a-datagridview-control-to-data"></a>Para conectar un control DataGridView a datos  
-  
-1.  Implemente un método que controle los detalles de recuperación de datos desde una base de datos. En el ejemplo de código siguiente se implementa un método `GetData` que inicializa un componente <xref:System.Data.SqlClient.SqlDataAdapter> y lo usa para rellenar una <xref:System.Data.DataTable>. Después, la <xref:System.Data.DataTable> se enlaza al componente <xref:System.Windows.Forms.BindingSource>. Asegúrese de establecer la variable `connectionString` en un valor que sea adecuado para la base de datos. Necesitará acceso a un servidor que tenga instalada la base de datos de ejemplo SQL Server Northwind.  
-  
-     [!code-cpp[System.Windows.Forms.DataGridViewBoundEditable#20](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/cpp/datagridviewboundeditable.cpp#20)]
-     [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs#20)]
-     [!code-vb[System.Windows.Forms.DataGridViewBoundEditable#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb#20)]  
-  
-2.  En el controlador de eventos <xref:System.Windows.Forms.Form.Load> del formulario, enlace el control <xref:System.Windows.Forms.DataGridView> al componente <xref:System.Windows.Forms.BindingSource> y llame al método `GetData` para recuperar los datos de la base de datos.  
-  
-     [!code-cpp[System.Windows.Forms.DataGridViewBoundEditable#10](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/cpp/datagridviewboundeditable.cpp#10)]
-     [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs#10)]
-     [!code-vb[System.Windows.Forms.DataGridViewBoundEditable#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb#10)]  
-  
-## <a name="example"></a>Ejemplo  
- El siguiente ejemplo de código completo proporciona botones para volver a cargar los datos de la base de datos y enviar los cambios a la base de datos.  
-  
- [!code-cpp[System.Windows.Forms.DataGridViewBoundEditable#00](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/cpp/datagridviewboundeditable.cpp#00)]
- [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs#00)]
- [!code-vb[System.Windows.Forms.DataGridViewBoundEditable#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb#00)]  
-  
-## <a name="compiling-the-code"></a>Compilar el código  
- Para este ejemplo se necesita:  
-  
--   Referencias a los ensamblados System, System.Windows.Forms, System.Data y System.XML.  
-  
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
-  
-## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- Almacenar información confidencial, como una contraseña, en la cadena de conexión puede afectar a la seguridad de la aplicación. El uso de la autenticación de Windows (también conocida como seguridad integrada) es un modo más seguro de controlar el acceso a una base de datos. Para más información, consulte [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+Rellenar el `connectionString` variable en el ejemplo con los valores para la conexión de base de datos de ejemplo Northwind de SQL Server. Autenticación de Windows, también denominada seguridad integrada, es una forma más segura para conectarse a la base de datos que el almacenamiento de una contraseña en la cadena de conexión. Para obtener más información acerca de la seguridad de conexión, consulte [proteger la información de conexión](../../data/adonet/protecting-connection-information.md).  
+
+[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
+[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.BindingSource>
-- [Mostrar datos en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Mostrar datos en el control DataGridView de formularios Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Proteger la información de conexión](../../data/adonet/protecting-connection-information.md)

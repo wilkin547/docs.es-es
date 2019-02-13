@@ -3,13 +3,13 @@ title: Ejecución, administración y supervisión de entornos de producción de 
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 2f29119e102bbb62e96da6b3c00f9c53c0a270a2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 9c24a87fd691723b8f91077288478d26e5123265
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130955"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219131"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Ejecución, administración y supervisión de entornos de producción de Docker
 
@@ -20,5 +20,5 @@ Este último pilar del ciclo de vida de las aplicaciones de Docker en contenedor
 La forma de ejecutar las aplicaciones en contenedor en entornos de producción (tecnologías de plataforma y arquitectura de la infraestructura) también está estrechamente relacionada con las plataformas de desarrollo y la arquitectura elegidas analizadas en el capítulo 1 de este libro electrónico y está totalmente basada en ellas. En este capítulo se analizan productos y tecnologías específicos de Microsoft y otros proveedores que puede usar para ejecutar con eficacia aplicaciones distribuidas escalables y de alta disponibilidad, así como para administrarlas y supervisarlas desde la perspectiva de TI.
 
 >[!div class="step-by-step"]
->[Anterior](../docker-devops-workflow/docker-application-outer-loop-devops-workflow.md)
+>[Anterior](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
 >[Siguiente](run-microservices-based-applications-in-production.md)

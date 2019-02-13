@@ -1,15 +1,15 @@
 ---
 title: Flujo de trabajo de DevOps para aplicaciones de Docker con herramientas de Microsoft
-description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma de Microsoft y flujo de trabajo de DevOps de aplicaciones con las herramientas de Microsoft
+description: En contenedores ciclo de vida de aplicaciones de Docker con el flujo de trabajo de Microsoft Platform y herramientas de DevOps con herramientas de Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: a78b6cbae88dcc39d7452a67a2bc5239135dedf9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: a2d88dda9f3560675fcb6826960c6e76fa7daf92
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128445"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219080"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Flujo de trabajo de DevOps para aplicaciones de Docker con herramientas de Microsoft
 
@@ -34,5 +34,5 @@ La complejidad del desarrollo de aplicaciones en contenedores aumenta de forma c
 -   Las organizaciones pueden aprovisionar fácilmente contenedores de Docker en imágenes privadas almacenadas en Azure Container Registry junto con cualquier dependencia de componentes de Azure (Data, PaaS, etc.) mediante el uso de plantillas de Azure Resource Manager con herramientas con las que se sienten cómodas para trabajar.
 
 >[!div class="step-by-step"]
->[Anterior](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
+>[Anterior](../design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md)
 >[Siguiente](docker-application-outer-loop-devops-workflow.md)

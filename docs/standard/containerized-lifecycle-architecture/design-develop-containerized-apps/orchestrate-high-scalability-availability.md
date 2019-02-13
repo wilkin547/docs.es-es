@@ -1,15 +1,15 @@
 ---
-title: Orquestación de microservicios y aplicaciones de varios contenedores de alta escalabilidad y disponibilidad
-description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
+title: Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
+description: Las aplicaciones de producción real se tienen que se implementan y administran con orquestadores que controlan el estado, la carga de trabajo y ciclos de vida de todos los contenedores.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/19/2017
-ms.openlocfilehash: fa64562808bba9c9dea5a5eedc367af7decf83b7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 749b613ac847c57eb993bff90b36f02a0b39477f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126905"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221165"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Orquestación de microservicios y aplicaciones de varios contenedores de alta escalabilidad y disponibilidad
 
@@ -31,7 +31,7 @@ Desde una arquitectura y desarrollo de punto de vista, si son creación grande, 
 
 -   **Clústeres y orquestadores** cuando necesite escalar-horizontal de aplicaciones en varios hosts de Docker, como con una aplicación grande basada en microservicios, es fundamental poder administrar todos los hosts como un solo clúster por abstracción de la complejidad de la plataforma subyacente. Eso es lo que proporcionan los clústeres de contenedor y los orquestadores. Ejemplos de orquestadores son Docker Swarm, Mesosphere DC/OS, Kubernetes (los tres primeros disponibles a través de Azure Container Service) y Azure Service Fabric.
 
--   **Los programadores** *programación* significa tener la capacidad para que un administrador inicie los contenedores en un clúster para que también proporcionan una interfaz de usuario. Un programador de clúster tiene varias responsabilidades: usar eficazmente los recursos del clúster, para establecer las restricciones definidas por el usuario a los contenedores de equilibrio de carga eficazmente entre los nodos o hosts y ser resistente a errores proporcionando alto disponibilidad.
+-   **Los programadores** *programación* significa tener la capacidad para que un administrador inicie los contenedores en un clúster para que también proporcionan una interfaz de usuario. Un programador de clúster tiene varias responsabilidades: usar eficazmente los recursos del clúster, establecer las restricciones definidas por el usuario, equilibrar eficazmente la carga de los contenedores entre los distintos nodos o hosts, ser resistente a los errores y proporcionar un alto grado de disponibilidad.
 
 Los conceptos de un clúster y un programador están estrechamente relacionados, por lo que los productos proporcionados por diferentes proveedores suelen ofrecer ambos conjuntos de funciones. Tabla 4-1 enumera las plataformas más importantes y opciones de software que tiene para clústeres y programadores. Por lo general, estos clústeres se ofrecen en nubes públicas como Azure.
 
@@ -147,7 +147,7 @@ Con respecto a los contenedores en Service Fabric, también puede implementar se
 
 Figura 4-11: Microservicio empresarial con varios servicios (contenedores) en Service Fabric
 
-Sin embargo, los contenedores llamados "asociados" (dos contenedores que deben implementarse conjuntamente como parte de un servicio lógico) también son posibles en Service Fabric. Lo importante es que un microservicio empresarial sea el límite lógico alrededor de varios elementos cohesivos. En muchos casos, podría ser un único servicio con un único modelo de datos, pero en otros casos, es posible que tenga varios servicios físicos, también.
+Pero los contenedores llamados "asociados" (dos contenedores que deben implementarse conjuntamente como parte de un servicio lógico) también son posibles en Service Fabric. Lo importante es que un microservicio empresarial sea el límite lógico alrededor de varios elementos cohesivos. En muchos casos, podría ser un único servicio con un único modelo de datos, pero en otros casos, es posible que tenga varios servicios físicos, también.
 
 A partir de redactar este artículo (abril de 2017), en Service Fabric no se puede implementar servicios con estado confiables de SF en contenedores, puede implementar solo contenedores de invitado, servicios sin estado o servicios de actor en contenedores. Pero tenga en cuenta que puede mezclar servicios en procesos y servicios en contenedores en la misma aplicación de Service Fabric, como se muestra en la figura 4-12.
 
@@ -181,4 +181,4 @@ Tenga en cuenta que los contenedores de Docker son sin estado. Si quiere impleme
 
 >[!div class="step-by-step"]
 >[Anterior](soa-applications.md)
->[Siguiente](docker-apps-development-environment.md)
+>[Siguiente](deploy-azure-kubernetes-service.md)

@@ -1,15 +1,15 @@
 ---
 title: Terminología de Docker
-description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
+description: Obtenga información sobre la terminología básica que se usa cada día cuando se trabaja con Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/21/2017
-ms.openlocfilehash: 1efb2fa567bd452f0a0a5ee5afb6f759511e4145
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 1514a2199efe52a411f61649fc21e906bba5b13c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151321"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218728"
 ---
 # <a name="docker-terminology"></a>Terminología de Docker
 

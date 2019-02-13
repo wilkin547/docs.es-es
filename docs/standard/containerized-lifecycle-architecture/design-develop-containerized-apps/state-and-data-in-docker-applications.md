@@ -1,15 +1,15 @@
 ---
 title: Estado y datos en aplicaciones de Docker
-description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
+description: Obtenga información sobre la opción disponible para guardar el estado en las aplicaciones en contenedores.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 7454b25cdb1bede87c6f0bd179fcabd489922263
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 9d924f0fffca73b57626910bc3c3ca95b4478300
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154182"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218754"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado y datos en aplicaciones de Docker
 

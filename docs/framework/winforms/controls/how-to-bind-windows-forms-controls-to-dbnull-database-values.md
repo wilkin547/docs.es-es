@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Enlazar controles de formularios Windows Forms a valores de la base de datos DBNull
+title: Filtrar Enlazar controles de formularios Windows Forms a valores de la base de datos DBNull
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingSource component
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
-ms.openlocfilehash: b2a5c7234d2815da734ee291fef223f20744b81e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 639ba51ee02f6ecbc82fae15abbd699d1168ae3e
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658135"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219118"
 ---
-# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Procedimiento Enlazar controles de formularios Windows Forms a valores de la base de datos DBNull
+# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Filtrar Enlazar controles de formularios Windows Forms a valores de la base de datos DBNull
 Cuando enlaza los controles de Windows Forms a un origen de datos y ese origen devuelve un valor <xref:System.DBNull>, puede sustituir un valor adecuado sin controlar, dar formato o analizar eventos. La propiedad <xref:System.Windows.Forms.Binding.NullValue%2A> convertirá <xref:System.DBNull> en un objeto especificado al dar formato o analizar los valores de origen de datos.  
   
 ## <a name="example"></a>Ejemplo  
@@ -32,7 +32,7 @@ Cuando enlaza los controles de Windows Forms a un origen de datos y ese origen d
   
 -   Referencias a los ensamblados System, System.Data, System.Drawing y System.Windows.Forms.  
   
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 - [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)

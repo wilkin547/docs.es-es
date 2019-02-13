@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Personalizar celdas y columnas en el Control DataGridView de Windows Forms ampliando su comportamiento y apariencia
+title: Filtrar Personalizar celdas y columnas en el Control DataGridView de Windows Forms ampliando su comportamiento y apariencia
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: 2be1e4be9f9cd3dc0d8f4f5c406c98932cb48238
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbeb161a9813b2d1b479b76360149ed08212459f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629766"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220711"
 ---
-# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Procedimiento Personalizar celdas y columnas en el Control DataGridView de Windows Forms ampliando su comportamiento y apariencia
+# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Filtrar Personalizar celdas y columnas en el Control DataGridView de Windows Forms ampliando su comportamiento y apariencia
 El control <xref:System.Windows.Forms.DataGridView> ofrece varias maneras de personalizar su apariencia y comportamiento mediante propiedades, eventos y clases complementarias. Ocasionalmente podría tener requisitos para sus celdas que van más allá de lo que pueden proporcionar estas características. Puede crear su propia clase <xref:System.Windows.Forms.DataGridViewCell> personalizado para proporcionar una funcionalidad ampliada.  
   
  Puede crear una clase <xref:System.Windows.Forms.DataGridViewCell> derivando de la clase base <xref:System.Windows.Forms.DataGridViewCell> o de una de sus clases derivadas. Aunque puede mostrar cualquier tipo de celda en cualquier tipo de columna, normalmente también creará una clase <xref:System.Windows.Forms.DataGridViewColumn> personalizado especializada para mostrar el tipo de celda. Las clases de columna derivan de <xref:System.Windows.Forms.DataGridViewColumn> o de uno de sus tipos derivados.  
@@ -68,7 +68,7 @@ El control <xref:System.Windows.Forms.DataGridView> ofrece varias maneras de per
   
 -   Referencias a los ensamblados System, System.Windows.Forms y System.Drawing.  
   
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.DataGridView>

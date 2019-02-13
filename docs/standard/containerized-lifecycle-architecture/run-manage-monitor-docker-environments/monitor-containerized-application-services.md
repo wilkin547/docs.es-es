@@ -1,15 +1,15 @@
 ---
 title: Supervisar los servicios de aplicación en contenedor
-description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
+description: Obtenga información sobre algunos aspectos clave de supervisión de las arquitecturas de contenedor
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 5630bfcc3173def670e2fa780d28024799b7c2a1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: e1be3c36f17fc5f85c9deacaa29031cee45226cc
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153931"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221191"
 ---
 # <a name="monitor-containerized-application-services"></a>Supervisar los servicios de aplicación en contenedor
 
@@ -88,7 +88,7 @@ Con la solución de contenedor de Operations Management Suite, puede hacer lo si
 
 Puede ver información sobre el rendimiento mediante la ejecución de consultas, como el tipo = Perf, tal como se muestra en la figura 6-3.
 
-![DockerPerfMetricsView](./media/image3.png){width = "5.78625 en" height = "3,25 en"}
+![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
 
 Figura 6-3: Métricas de rendimiento de hosts de Docker que se muestra por Operations Management Suite
 
