@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Mensajes de Exchange dentro de una sesión confiable
+title: Filtrar Mensajes de Exchange dentro de una sesión confiable
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 0b03845f9638a3646c72b1210de12dd94cf4cc9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 145224655d1ec76c9deb5afc3c1a8ec9a1975f4f
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720059"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260691"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Procedimiento Mensajes de Exchange dentro de una sesión confiable
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Filtrar Mensajes de Exchange dentro de una sesión confiable
 
 En este tema se describen los pasos necesarios para habilitar una sesión confiable utilizando uno de los enlaces proporcionados por el sistema que admiten este tipo de sesión, pero no de forma predeterminada. Habilitar una sesión confiable de manera imperativa mediante código o mediante declaración en el archivo de configuración. Este procedimiento utiliza los archivos de configuración de cliente y servicio para habilitar la sesión confiable y para estipular que los mensajes lleguen en el mismo orden en que se enviaron.
 
-La parte clave de este procedimiento es que el elemento de configuración de punto de conexión contienen un `bindingConfiguration` atributo que hace referencia a una configuración de enlace denominada `Binding1`. El [  **\<enlace >** ](../../../../docs/framework/misc/binding.md) elemento de configuración hace referencia a este nombre para habilitar sesiones confiables estableciendo el `enabled` atributo de la [  **\<reliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) elemento `true`. Especifica las garantías de entrega ordenada de la sesión confiable estableciendo el atributo `ordered` en `true`.
+La parte clave de este procedimiento es que el elemento de configuración de punto de conexión contienen un `bindingConfiguration` atributo que hace referencia a una configuración de enlace denominada `Binding1`. El [  **\<enlace >** ](../../../../docs/framework/misc/binding.md) elemento de configuración hace referencia a este nombre para habilitar sesiones confiables estableciendo el `enabled` atributo de la [  **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100)) elemento `true`. Especifica las garantías de entrega ordenada de la sesión confiable estableciendo el atributo `ordered` en `true`.
 
 Para la copia de origen de este ejemplo, vea [sesión confiable WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 

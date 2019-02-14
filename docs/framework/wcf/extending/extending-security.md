@@ -4,19 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-ms.openlocfilehash: 798a1d1cd21fd9a0bc21c6ccaa42c478379cc7a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 698d65d951ed7adad5aa32e874befb15a3b24d12
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511542"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261432"
 ---
 # <a name="extending-security"></a>Extensión de la seguridad
 Para dar cabida a nuevos tipos de notificaciones y tokens personalizados, puede ampliar la infraestructura de seguridad de Windows Communication Foundation (WCF). Los temas de esta sección le muestran cómo hacerlo.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Arquitectura de seguridad](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
- Describe la arquitectura del sistema de seguridad WCF.  
   
  [Credencial personalizada y validación de la credencial](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
  Explica cómo se utiliza el modelo de identidad al validar las credenciales personalizadas.  
@@ -31,7 +29,7 @@ Para dar cabida a nuevos tipos de notificaciones y tokens personalizados, puede 
  Describe cómo invalidar la identidad de un servicio para la autenticación.  
   
  [Cómo: Crear un comprobador de identidad de cliente personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
- Muestra cómo validar una identidad del punto de conexión personalizada.  
+ Muestra cómo validar una identidad del extremo personalizada.  
   
  [Cómo: Usar diferentes certificados X.509 para la firma y cifrado](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
  Los mensajes normalmente se firman y cifran con un certificado único. En este tema se explica cómo se pueden utilizar dos certificados, cuando se requiere.  

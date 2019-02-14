@@ -2,12 +2,12 @@
 title: Control de errores
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695561"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261159"
 ---
 # <a name="error-handling"></a>Control de errores
 ## <a name="error-handling-in-windows-communication-foundation"></a>Error de control en Windows Communication Foundation  
@@ -22,7 +22,7 @@ ms.locfileid: "54695561"
   
  Los bloques de aplicación tienen por objeto escribir prácticas recomendadas y proporcionar un enfoque común para el control de excepciones en la aplicación. Además, los controladores de errores personalizados y los contratos de error desarrollados por uno mismo pueden resultar muy útiles. Por ejemplo, controladores de errores personalizados proporcionan una oportunidad excelente para promover automáticamente todas las excepciones a FaultExceptions y también para agregar capacidades de registro a la aplicación.  
   
- Para obtener más información, consulte [Microsoft Enterprise Library](https://msdn.microsoft.com/library/ff632023.aspx).  
+ Para obtener más información, consulte [Microsoft Enterprise Library](https://docs.microsoft.com/previous-versions/msp-n-p/ff632023(v=pandp.10)).  
   
 ### <a name="dealing-with-expected-exceptions"></a>Tratar excepciones esperadas  
  El curso de acción adecuado consiste en detectar excepciones esperadas en cada operación o punto de extensibilidad relevante, decidir si se puede recuperar y devolver el error personalizado apropiado en un Faultexceptiont\<T >  

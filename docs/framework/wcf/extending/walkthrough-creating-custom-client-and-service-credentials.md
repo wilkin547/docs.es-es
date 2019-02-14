@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: a21c32547b1bd612196daf8be54cf85c373a7ff3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5688fbbe2c40e7cd30517fb53fe21ae3d0630f22
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681747"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261556"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Tutorial: Creación de cliente personalizada y las credenciales de servicio
 En este tema se muestra cómo implementar credenciales de cliente y servicio personalizadas y cómo utilizar las credenciales personalizadas desde el código de la aplicación.  
@@ -23,8 +23,6 @@ En este tema se muestra cómo implementar credenciales de cliente y servicio per
 -   Haga las funciones de un generador para las implementaciones de <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
  Las clases <xref:System.ServiceModel.Description.ClientCredentials> y <xref:System.ServiceModel.Description.ServiceCredentials> heredan de la clase <xref:System.ServiceModel.Security.SecurityCredentialsManager> abstracta que define el contrato para la devolución del <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
-  
- Para obtener más información acerca de las clases de credenciales y cómo encajan en la arquitectura de seguridad WCF, vea [arquitectura de seguridad](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
  Las implementaciones predeterminadas proporcionadas en WCF admiten los tipos de credenciales proporcionados por el sistema y creación Administrador de tokens que es capaz de controlar esos tipos de credenciales de seguridad.  
   
@@ -109,7 +107,7 @@ En este tema se muestra cómo implementar credenciales de cliente y servicio per
      [!code-csharp[c_CustomCredentials#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#7)]
      [!code-vb[c_CustomCredentials#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#7)]  
   
- Una vez que la clase de controlador de configuración, se puede integrar en el marco de trabajo de configuración de WCF. Eso permite que las credenciales de cliente personalizadas se usen en los elementos de comportamiento de punto de conexión de cliente, tal y como se muestra en el siguiente procedimiento.  
+ Una vez que la clase de controlador de configuración, se puede integrar en el marco de trabajo de configuración de WCF. Eso permite que las credenciales de cliente personalizadas se usen en los elementos de comportamiento de extremo de cliente, tal y como se muestra en el siguiente procedimiento.  
   
 #### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>Para registrar y usar un controlador de configuración de credenciales de cliente personalizadas en la configuración de la aplicación  
   
