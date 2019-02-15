@@ -258,6 +258,7 @@
 ##### [Introducción a las clases](csharp/tutorials/intro-to-csharp/introduction-to-classes.md)
 ### [Exploración de C# 6](csharp/tutorials/exploration/csharp-6.yml)
 ### [Uso de tipos de referencia que aceptan valores null](csharp/tutorials/nullable-reference-types.md)
+### [Generación y consumo de flujos asincrónicos](csharp/tutorials/generate-consume-asynchronous-stream.md)
 ### [Aplicación de consola](csharp/tutorials/console-teleprompter.md)
 ### [Cliente REST](csharp/tutorials/console-webapiclient.md)
 ### [Herencia en C# y .NET](csharp/tutorials/inheritance.md)
