@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 955efad34f816cd0445c4ebdf120d8b614f0d351
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bd84d84706a0d61f26b576b7300fae87fbe602e8
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508527"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303405"
 ---
 # <a name="unmanaged-api-reference"></a>Referencia de la API no administrada
 En esta sección se incluye información acerca de las API no administradas que se pueden utilizar en aplicaciones relacionadas con código administrado, como hosts en tiempo de ejecución, compiladores, desensambladores, ofuscadores, depuradores y generadores de perfiles.  
@@ -32,7 +32,7 @@ En esta sección se incluye información acerca de las API no administradas que 
  [Constantes](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  Describe las constantes que se definen en CorSym.idl.  
   
- [Atributos de interfaz personalizados](https://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [Atributos de interfaz personalizados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
  Describe los atributos de interfaz personalizados del Modelo de objetos componentes (COM).  
   
  [Depuración](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -59,10 +59,8 @@ En esta sección se incluye información acerca de las API no administradas que 
  [WMI y contadores de rendimiento](wmi/index.md)  
  Describe las API que encapsulan llamadas a bibliotecas de Instrumental de administración de Windows (WMI).
   
- [Funciones auxiliares Tlbexp](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- Describe las dos funciones auxiliares y la interfaz que usa el Exportador de la biblioteca de tipos (Tlbexp.exe) durante el proceso de conversión de ensamblado a biblioteca de tipos.  
+ [Funciones del asistente Tlbexp](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ Describe las dos funciones del asistente y la interfaz que usa el Exportador de la biblioteca de tipos (Tlbexp.exe) durante el proceso de conversión de ensamblado a biblioteca de tipos.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Guía de desarrollo](../../../docs/framework/development-guide.md)  
-  
- [Información avanzada para .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

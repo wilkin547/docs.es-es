@@ -2,12 +2,18 @@
 title: Nombres seguros (Referencia de la API no administrada)
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'strong naming [.NET Framework], using the unmanaged API'
-  - 'native API reference [.NET Framework], strong naming'
-  - 'unmanaged API reference [.NET Framework], strong naming'
+- strong naming [.NET Framework], using the unmanaged API
+- native API reference [.NET Framework], strong naming
+- unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 230a5e3e3231ad6675d214d370f74eb37405c89c
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305654"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Nombres seguros (Referencia de la API no administrada)
 La API de nombres seguros permite a los clientes administrar la firma de ensamblados con nombre seguro.  
@@ -15,8 +21,6 @@ La API de nombres seguros permite a los clientes administrar la firma de ensambl
  Al firmar un ensamblado con un nombre seguro, se agrega un cifrado mediante clave pública al archivo que contiene el manifiesto del ensamblado. La firma con nombre seguro ayuda a comprobar la unicidad del nombre, impide la suplantación de nombres y proporciona a los llamadores una identidad única cuando se resuelve una referencia. Sin embargo, no hay ningún nivel de confianza asociado a un nombre seguro.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Funciones estáticas globales para nombres seguros](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
- Describe las funciones estáticas globales no administradas que utiliza la API de nombres seguros.  
   
 > [!NOTE]
 >  Todas estas funciones han quedado en desuso a partir de la versión [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Para ver las alternativas sugeridas, consulte la interfaz [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md).  
@@ -98,9 +102,6 @@ La API de nombres seguros permite a los clientes administrar la firma de ensambl
   
  [StrongNameTokenFromPublicKey (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  Obtiene un token que representa una clave pública. Ha quedado en desuso a partir de la versión [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
-  
- [Estructuras de nombres seguros](https://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
- Describe la estructura no administrada que usa la API de nombres seguros para administrar la firma de ensamblados con nombre seguro.  
   
  [PublicKeyBlob (estructura)](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  Representa la clave pública de un par de claves pública y privada en formato binario.  

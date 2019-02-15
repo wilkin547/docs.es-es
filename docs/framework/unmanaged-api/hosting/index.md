@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ca2eb93fb2b75f043d33d376a5650092030cac
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 412b61e026b019f7516332c247b203ac85304146
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43797422"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305784"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>Hospedaje (Referencia de la API no administrada)
 La API de hospedaje permite a los hosts no administrados integrar Common Language Runtime (CLR) en sus aplicaciones.  
@@ -35,5 +35,5 @@ La API de hospedaje permite a los hosts no administrados integrar Common Languag
  Describe las estructuras no administradas que utiliza la API de hospedaje.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Hosts de runtime](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
+ [Hosts de runtime](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))  
  Describe los hosts en tiempo de ejecución incluidos con .NET Framework.
