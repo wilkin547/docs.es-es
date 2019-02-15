@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agrupar elementos en un Control ListView de formularios de Windows
+title: Filtrar Agrupar elementos en un Control ListView de formularios de Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-ms.openlocfilehash: 52030b78b95d88432a5cac9b089ab87ca6d4f534
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3899d06fce08eed5953181b9af232b6b2bb29e50
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500712"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305499"
 ---
-# <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>Procedimiento Agrupar elementos en un Control ListView de formularios de Windows
+# <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>Filtrar Agrupar elementos en un Control ListView de formularios de Windows
 Con la característica de agrupación de la <xref:System.Windows.Forms.ListView> control, puede mostrar conjuntos relacionados de elementos en grupos. Estos grupos se separan en la pantalla con los encabezados de grupo horizontal que contienen los títulos de grupo. Puede usar <xref:System.Windows.Forms.ListView> grupos para facilitar la navegación sea más fácil de listas grandes mediante la agrupación de elementos por orden alfabético, por fecha, o por cualquier otra agrupación lógica. La imagen siguiente muestra algunos elementos agrupados.  
   
  ![Grupos ListView](../../../../docs/framework/winforms/controls/media/listviewgroups.gif "ListViewGroups")  
@@ -62,5 +62,4 @@ Elementos de ListView agrupados
 - <xref:System.Windows.Forms.ListViewGroup>
 - [ListView (Control)](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
 - [Información general del control ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
-- [Características de Windows XP y controles de Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)
 - [Cómo: Agregar y quitar elementos con el Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

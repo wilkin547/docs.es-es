@@ -2,18 +2,18 @@
 title: Configuración simplificada
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: f6998b17747b5d250827066a41373d81c243773c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22595a3d428da9dbd3cb8b6e67ca8b40bf39d457
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498364"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305648"
 ---
 # <a name="simplified-configuration"></a>Configuración simplificada
 Configuración de servicios de Windows Communication Foundation (WCF) puede ser una tarea compleja. Existen muchas opciones diferentes y no siempre es fácil determinar qué configuración es necesaria. Aunque los archivos de configuración aumentan la flexibilidad de los servicios de WCF, también son el origen de muchos difícil encontrar problemas. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] aborda estos problemas y proporciona una forma de reducir el tamaño y la complejidad de la configuración del servicio.  
   
 ## <a name="simplified-configuration"></a>Configuración simplificada  
- En los archivos de configuración de servicio WCF, el <`system.serviceModel`> sección contiene un <`service`> (elemento) para cada servicio hospedado. El elemento `service` contiene una colección de elementos <`endpoint`> que especifican los puntos de conexión expuestos para cada servicio y, opcionalmente, un conjunto de comportamientos del servicio. Los elementos <`endpoint`> especifican la dirección, el enlace y el contrato expuestos por el extremo y, opcionalmente, la configuración de enlace y los comportamientos de los extremos. La sección <`system.serviceModel`> también contiene un elemento <`behaviors`> que le permite especificar los comportamientos de los servicios o los extremos. En el ejemplo siguiente, se muestra la sección <`system.serviceModel`> de un archivo de configuración.  
+ En los archivos de configuración de servicio WCF, el <`system.serviceModel`> sección contiene un <`service`> (elemento) para cada servicio hospedado. El elemento `service` contiene una recopilación de elementos <`endpoint`> que especifican los extremos expuestos para cada servicio y, opcionalmente, un conjunto de comportamientos del servicio. Los elementos <`endpoint`> especifican la dirección, el enlace y el contrato expuestos por el extremo y, opcionalmente, la configuración de enlace y los comportamientos de los extremos. La sección <`system.serviceModel`> también contiene un elemento <`behaviors`> que le permite especificar los comportamientos de los servicios o los extremos. En el ejemplo siguiente, se muestra la sección <`system.serviceModel`> de un archivo de configuración.  
   
 ```  
 <system.serviceModel>  
@@ -46,7 +46,7 @@ Configuración de servicios de Windows Communication Foundation (WCF) puede ser 
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] facilita la configuración de un servicio WCF que sea más fácil al eliminar el requisito para el <`service`> elemento. Si no agrega ninguna sección <`service`> ni ningún punto de conexión en una sección <`service`> y el servicio no define ningún punto de conexión mediante programación, entonces se agrega automáticamente al servicio un conjunto de puntos de conexión predeterminados, uno para cada dirección base del servicio y para cada contrato implementado por el servicio. En cada uno de estos extremos, la dirección del extremo corresponde a la dirección base, el esquema de la dirección base determina el enlace y el contrato es el implementado por el servicio. Si no necesita especificar ningún extremo o comportamientos del servicio, ni realizar ningún cambio de configuración de enlaces, no necesita especificar ningún archivo de configuración de servicio. Si un servicio implementa dos contratos y el host habilita transportes HTTP y TCP, el host de servicio crea cuatro extremos predeterminados, uno para cada contrato al usar cada transporte. Para crear extremos predeterminados, el host de servicio debe conocer qué enlaces hay que utilizar. Esta configuración se especifica en una sección <`protocolMappings`> dentro de la sección <`system.serviceModel`>. La sección <`protocolMappings`> contiene una lista de esquemas de protocolos de transporte asignada a los tipos de enlaces. El host de servicio usa las direcciones base que se le han transmitido para determinar qué enlace debe usar. El ejemplo siguiente usa el elemento <`protocolMappings`>.  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] facilita la configuración de un servicio WCF que sea más fácil al eliminar el requisito para el <`service`> elemento. Si no agrega ninguna sección <`service`> ni ningún extremo en una sección <`service`> y el servicio no define ningún extremo mediante programación, entonces se agrega automáticamente al servicio un conjunto de extremos predeterminados, uno para cada dirección base del servicio y para cada contrato implementado por el servicio. En cada uno de estos extremos, la dirección del extremo corresponde a la dirección base, el esquema de la dirección base determina el enlace y el contrato es el implementado por el servicio. Si no necesita especificar ningún extremo o comportamientos del servicio, ni realizar ningún cambio de configuración de enlaces, no necesita especificar ningún archivo de configuración de servicio. Si un servicio implementa dos contratos y el host habilita transportes HTTP y TCP, el host de servicio crea cuatro extremos predeterminados, uno para cada contrato al usar cada transporte. Para crear extremos predeterminados, el host de servicio debe conocer qué enlaces hay que utilizar. Esta configuración se especifica en una sección <`protocolMappings`> dentro de la sección <`system.serviceModel`>. La sección <`protocolMappings`> contiene una lista de esquemas de protocolos de transporte asignada a los tipos de enlaces. El host de servicio usa las direcciones base que se le han transmitido para determinar qué enlace debe usar. El ejemplo siguiente usa el elemento <`protocolMappings`>.  
   
 > [!WARNING]
 >  Al cambiar los elementos de la configuración predeterminada, como los enlaces o los comportamientos, puede afectar a los servicios definidos en los niveles inferiores de la jerarquía de configuración, dado que podrían usar dichos enlaces y comportamientos predeterminados. Por lo tanto, siempre que cambien los enlaces y comportamientos predeterminados, es necesario tener en cuenta de que estos cambios podrían afectar a otros servicios de la jerarquía.  
@@ -118,5 +118,5 @@ Configuración de servicios de Windows Communication Foundation (WCF) puede ser 
 - [Configuración de enlaces para los servicios](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
 - [Configuración de enlaces proporcionados por el sistema](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Configuración de servicios](../../../docs/framework/wcf/configuring-services.md)
-- [Configurar aplicaciones de Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [Configuración de servicios WCF](configuring-services.md)
 - [Configuración de servicios WCF en el código](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Utilizar múltiples Tokens de seguridad del mismo tipo
+title: Filtrar Utilizar múltiples Tokens de seguridad del mismo tipo
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-ms.openlocfilehash: 40fc95c905f8923b8aaf2c97fb9dc2b937dfb06f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a532d40d8c31894c63a382ecad0cbcf8b42e3a66
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691355"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303769"
 ---
-# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Procedimiento Utilizar múltiples Tokens de seguridad del mismo tipo
+# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Filtrar Utilizar múltiples Tokens de seguridad del mismo tipo
 -   En [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, un mensaje de cliente solo contenía un token de un tipo dado. Ahora, los mensajes de cliente pueden contener múltiples tokens de un tipo. En este tema se muestra cómo incluir múltiples tokens del mismo tipo en un mensaje de cliente.  
   
 -   Tenga en cuenta que no se puede configurar un servicio de esta manera: un servicio puede contener sólo un token auxiliar.  
@@ -48,6 +48,3 @@ ms.locfileid: "54691355"
  Lo siguiente es el método completo descrito por el procedimiento anterior.  
   
  [!code-csharp[C_CustomBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#7)]  
-  
-## <a name="see-also"></a>Vea también
-- [Arquitectura de seguridad](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

@@ -1,22 +1,22 @@
 ---
-title: Procedimiento Agregar un Control a una página de fichas mediante el diseñador
+title: Filtrar Agregar un Control a una página de fichas mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TabPage control
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: b27d00e16770bf7572b1ac1424a7632a3836cbf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 842ac13f154ef53a7e9ef852f747d4e765ac3888
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687562"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304458"
 ---
-# <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Procedimiento Agregar un Control a una página de fichas mediante el diseñador
+# <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Filtrar Agregar un Control a una página de fichas mediante el diseñador
 El uso de los formularios de Windows <xref:System.Windows.Forms.TabControl> consiste en mostrar otros controles de forma organizada. Puede usar estas instrucciones para mostrar una imagen en la parte principal de una página de ficha. Para obtener información sobre cómo agregar un icono a la parte de la etiqueta de una página de ficha, vea [Cómo: Cambiar la apariencia del control TabControl de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  
   
- El procedimiento siguiente requiere una **aplicación Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.TabControl> control. Para obtener información acerca de cómo configurar un proyecto de este tipo, vea [Cómo: Cree un proyecto de aplicación Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) y [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ El procedimiento siguiente requiere una **aplicación Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.TabControl> control. Para obtener información acerca de cómo configurar un proyecto de este tipo, vea [Cómo: Cree un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) y [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
 >  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  

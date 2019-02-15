@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 66aa257c0d7f0e66e69d83ddeba48c33ea7a5ff5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b28f9c0575d1031c2f542ffa0de4ac5b848d3da1
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664036"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305550"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Conceptos básicos de Windows Communication Foundation
 Este documento proporciona una visión general de la arquitectura de Windows Communication Foundation (WCF). Pretende explicar los conceptos clave y cómo encajan entre ellos. Para ver un tutorial sobre la creación de la versión más simple de un servicio WCF y un cliente, consulte [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md). Para obtener información sobre la programación de WCF, vea [programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -52,7 +52,7 @@ Este documento proporciona una visión general de la arquitectura de Windows Com
  Unidad autónoma de datos que puede constar de varias partes, incluyendo un cuerpo y encabezados.  
   
  service  
- Construcción que expone uno o más puntos de conexión, y en la que cada punto de conexión expone una o más operaciones de servicio.  
+ Construcción que expone uno o más extremos, y en la que cada extremo expone una o más operaciones de servicio.  
   
  punto de conexión  
  Construcción en la que se envían o reciben mensajes (o ambos). Consta de una ubicación (una dirección) que define dónde se pueden enviar mensajes, una especificación del mecanismo de comunicación (un enlace) que describe cómo se deben enviar los mensajes, y una definición de un conjunto de mensajes que puede enviar o recibir (o ambos) en el ubicación (un contrato de servicio) que describe qué mensajes se pueden enviar.  
@@ -60,22 +60,22 @@ Este documento proporciona una visión general de la arquitectura de Windows Com
  Un servicio de WCF se expone al mundo como una colección de extremos.  
   
  punto de conexión de la aplicación  
- Un punto de conexión expuesto por la aplicación y que corresponde a un contrato de servicios implementado por la aplicación.  
+ Un extremo expuesto por la aplicación y que corresponde a un contrato de servicios implementado por la aplicación.  
   
  extremo de infraestructura  
- Un extremo que expone la infraestructura para facilitar la funcionalidad necesaria o proporcionada por el servicio que no se relaciona con un contrato de servicios. Por ejemplo, un servicio podría tener un extremo de la infraestructura que proporciona información de metadatos.  
+ Un punto de conexión que expone la infraestructura para facilitar la funcionalidad necesaria o proporcionada por el servicio que no se relaciona con un contrato de servicios. Por ejemplo, un servicio podría tener un extremo de la infraestructura que proporciona información de metadatos.  
   
  dirección  
  Especifica la ubicación donde se reciben los mensajes. Se especifica como un identificador uniforme de recursos (URI). La parte del esquema URI nombra el mecanismo de transporte que se ha de utilizar para alcanzar la dirección, por ejemplo HTTP y TCP. La parte jerárquica del URI contiene una ubicación única cuyo formato depende del mecanismo de transporte.  
   
- La dirección del punto de conexión le permite crear direcciones únicas de puntos de conexión para cada punto de conexión de un servicio o, bajo ciertas condiciones, compartir una dirección en los puntos de conexión. El siguiente ejemplo muestra una dirección que utiliza el protocolo HTTPS con un puerto no predeterminado:  
+ La dirección del extremo le permite crear direcciones únicas de extremos para cada extremo de un servicio o, bajo ciertas condiciones, compartir una dirección en los extremos. El siguiente ejemplo muestra una dirección que utiliza el protocolo HTTPS con un puerto no predeterminado:  
   
 ```  
 HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService  
 ```  
   
  enlace  
- Define cómo se comunica un extremo con el mundo. Consta de un conjunto de componentes llamados elementos de enlace que se "apilan" uno sobre el otro para crear la infraestructura de comunicaciones. Como mínimo, un enlace define el transporte (como HTTP o TCP) y la codificación utilizada (por ejemplo, de texto o binaria). Un enlace puede contener elementos de enlace que especifican detalles, por ejemplo los mecanismos de seguridad utilizados para proteger los mensajes o el patrón de mensaje utilizado por un punto de conexión. Para obtener más información, consulte [configurar Services](../../../docs/framework/wcf/configuring-services.md).  
+ Define cómo se comunica un punto de conexión con el mundo. Consta de un conjunto de componentes llamados elementos de enlace que se "apilan" uno sobre el otro para crear la infraestructura de comunicaciones. Como mínimo, un enlace define el transporte (como HTTP o TCP) y la codificación utilizada (por ejemplo, de texto o binaria). Un enlace puede contener elementos de enlace que especifican detalles, por ejemplo los mecanismos de seguridad utilizados para proteger los mensajes o el patrón de mensaje utilizado por un extremo. Para obtener más información, consulte [configurar Services](../../../docs/framework/wcf/configuring-services.md).  
   
  elemento de enlace  
  Representa una parte determinada del enlace, por ejemplo un transporte, una codificación, una implementación de un protocolo del nivel de infraestructura (como WS-ReliableMessaging), o cualquier otro componente de la pila de comunicaciones.  
@@ -155,4 +155,3 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ## <a name="see-also"></a>Vea también
 - [¿Qué es Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)
 - [Arquitectura de Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)
-- [Arquitectura de seguridad](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

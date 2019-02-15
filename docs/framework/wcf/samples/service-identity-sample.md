@@ -2,12 +2,12 @@
 title: Ejemplo de identidad de servicio
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 1efa354f62e1b28ad6cec02d9879448205791e4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33d3344e6a74e2afa9ad36f9df2e36eb8e1cb17b
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707640"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303899"
 ---
 # <a name="service-identity-sample"></a>Ejemplo de identidad de servicio
 Este ejemplo de identidad de servicio muestra cómo establecer la identidad para un servicio. En el momento del diseño, un cliente puede recuperar la identidad mediante los metadatos del servicio y, en el tiempo de ejecución, el cliente puede autenticar la identidad del servicio. El concepto de identidad del servicio es permitir a un cliente autenticar un servicio antes de llamar a cualquiera de sus operaciones, protegiendo por lo tanto al cliente de llamadas no autenticadas. En una conexión segura, el servicio autentica también las credenciales de un cliente antes de permitirle acceso, pero éste no es el objetivo de este ejemplo. Consulte los ejemplos en [cliente](../../../../docs/framework/wcf/samples/client.md) que muestran la autenticación de servidor.
@@ -17,7 +17,7 @@ Este ejemplo de identidad de servicio muestra cómo establecer la identidad para
 
  Este ejemplo ilustra las siguientes características:
 
--   Cómo establecer los tipos diferentes de identidad en extremos diferentes para un servicio. Cada tipo de identidad tiene funciones diferentes. El tipo de identidad para utilizar depende del tipo de credenciales de seguridad utilizado en el enlace del punto de conexión.
+-   Cómo establecer los tipos diferentes de identidad en puntos de conexión diferentes para un servicio. Cada tipo de identidad tiene funciones diferentes. El tipo de identidad para utilizar depende del tipo de credenciales de seguridad utilizado en el enlace del extremo.
 
 -   La identidad se puede establecer mediante declaración en configuración o de forma imperativa en el código. Normalmente para el cliente y el servicio debería utilizar la configuración para establecer la identidad.
 
@@ -26,7 +26,7 @@ Este ejemplo de identidad de servicio muestra cómo establecer la identidad para
     > [!NOTE]
     >  Este ejemplo comprueba la identidad de un certificado concreto denominado identity.com y la clave RSA contenida dentro de este certificado. Al utilizar los tipos de identidad del certificado y RSA en la configuración en el cliente, una manera fácil de obtener estos valores es inspeccionar WSDL para el servicio donde se serializan estos valores.
 
- El código de ejemplo siguiente muestra cómo configurar la identidad de un extremo de servicio con el Servidor de nombres de dominio (DNS) de un certificado utilizando WSHttpBinding.
+ El código de ejemplo siguiente muestra cómo configurar la identidad de un punto de conexión de servicio con el Servidor de nombres de dominio (DNS) de un certificado utilizando WSHttpBinding.
 
 ```csharp
 //Create a service endpoint and set its identity to the certificate's DNS
@@ -126,11 +126,11 @@ class CustomIdentityVerifier : IdentityVerifier
   
 4.  Inicie Client.exe desde el directorio \client\bin o presionando F5 en Visual Studio para compilar y ejecutar. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-5.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
-1.  Antes de compilar la parte del cliente del ejemplo, asegúrese de cambiar el valor para la dirección de punto de conexión del servicio en el archivo Client.cs en el método `CallServiceCustomClientIdentity`. Después, compile el ejemplo.  
+1.  Antes de compilar la parte del cliente del ejemplo, asegúrese de cambiar el valor para la dirección de extremo del servicio en el archivo Client.cs en el método `CallServiceCustomClientIdentity`. Después, compile el ejemplo.  
   
 2.  Cree un directorio en el equipo del servicio.  
   
@@ -150,7 +150,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 10. En el equipo del servicio, inicie el archivo Service.exe desde el símbolo del sistema.  
   
-11. En el equipo cliente, inicie Client.exe desde un símbolo del sistema. Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+11. En el equipo cliente, inicie Client.exe desde un símbolo del sistema. Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   

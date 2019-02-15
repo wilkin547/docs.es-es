@@ -15,12 +15,12 @@ helpviewer_keywords:
 - layout [Windows Forms], margins and padding
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-ms.openlocfilehash: c92ea7b4cb2acbe84d9086698cdf8dfbf5f239bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e361b5af5c360869ef51650bb6926a24d1f560d
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738620"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304029"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Tutorial: Diseñar Windows controles Forms con relleno, márgenes y la propiedad AutoSize
 La posición precisa de los controles del formulario es de alta prioridad para muchas aplicaciones. El **Diseñador de Windows Forms** le ofrece muchas herramientas de diseño para realizar esta acción. Tres de las más importantes son la <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, y <xref:System.Windows.Forms.Control.AutoSize%2A> propiedades, que están presentes en todos los controles de Windows Forms.  
@@ -60,7 +60,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
   
 #### <a name="to-create-the-project"></a>Para crear el proyecto  
   
-1.  Crear un **aplicación Windows** proyecto denominado `LayoutExample`. Para obtener más información, vea [Cómo: Cree un proyecto de aplicación Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
+1.  Crear un **aplicación Windows** proyecto denominado `LayoutExample`. Para obtener más información, vea [Cómo: Cree un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) .  
   
 2.  Seleccione el formulario en el **Diseñador de Windows Forms**.  
   

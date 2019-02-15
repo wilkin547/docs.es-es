@@ -1,20 +1,21 @@
 ---
-title: Configuración de servicios
+title: Configuración de servicios WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 1246ce5056c17641e10bb96f79b60090d6f43b89
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2435d5c4592de60e07b60f1bf749f2421c798535
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525058"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303622"
 ---
-# <a name="configuring-services"></a>Configuración de servicios
+# <a name="configuring-wcf-services"></a>Configuración de servicios WCF
+
 Cuando haya diseñado e implementado su contrato de servicios, usted está listo para configurar su servicio. En este momento define y personaliza cómo se expone su servicio a los clientes, además de especificar la dirección donde se puede encontrar, el transporte y codificación de mensajes que utiliza para enviar y recibir mensajes y el tipo de seguridad que requiere.  
   
- La configuración tal y como se utiliza aquí incluye todas las maneras, imperativamente en código o utilizando un archivo de configuración, en el que puede definir y personalizar los diferentes aspectos de un servicio, como especificar sus direcciones de punto de conexión, los transportes utilizados y sus esquemas de seguridad. En la práctica, escribir la configuración es una gran parte de la programación de aplicaciones de WCF.  
+ La configuración tal y como se utiliza aquí incluye todas las maneras, imperativamente en código o utilizando un archivo de configuración, en el que puede definir y personalizar los diferentes aspectos de un servicio, como especificar sus direcciones de extremo, los transportes utilizados y sus esquemas de seguridad. En la práctica, escribir la configuración es una gran parte de la programación de aplicaciones de WCF.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md)  

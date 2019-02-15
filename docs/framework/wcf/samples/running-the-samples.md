@@ -2,12 +2,12 @@
 title: Ejecución de los ejemplos de Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 3ae982b49a0d54d59d889166375938560c0d0d1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec7d7f9ce0a6db5d20bce47ab313f4248e86c88
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535887"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304679"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Ejecución de los ejemplos de Windows Communication Foundation
 Los ejemplos de Windows Communication Foundation (WCF) se pueden ejecutar en una configuración de equipo único o varios equipos. Tal y como se proporcionan, los ejemplos están listos para ejecutarse en un equipo único. En una configuración de equipos cruzada, es necesario modificar la configuración del archivo de configuración de un ejemplo. Los procedimientos siguientes explican cómo ejecutar un ejemplo en mismo equipo y en configuraciones de equipos cruzadas. Observe que hay variaciones en los pasos para los servicios hospedados en Internet Information Services (IIS) y los ejemplos autohospedados. La mayoría de los ejemplos se hospedan en IIS; vea la información readme del ejemplo para determinar cómo se hospeda.  
@@ -19,13 +19,13 @@ Los ejemplos de Windows Communication Foundation (WCF) se pueden ejecutar en una
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Para ejecutar el ejemplo en el mismo equipo  
   
-1.  Si el servicio está hospedado por IIS, asegúrese de que solo puede acceder al servicio utilizando un explorador escribiendo la siguiente dirección: `http://localhost/servicemodelsamples/service.svc`. Como respuesta se debe mostrar una página de confirmación. Si no se muestra la página de confirmación, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+1.  Si el servicio está hospedado por IIS, asegúrese de que solo puede acceder al servicio utilizando un explorador escribiendo la siguiente dirección: `http://localhost/servicemodelsamples/service.svc`. Como respuesta se debe mostrar una página de confirmación. Si no se muestra la página de confirmación, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 2.  Si el servicio es autohospedado, ejecute Service.exe desde \service\bin, bajo la carpeta específica del lenguaje. La actividad del servicio se muestra en la ventana de la consola del servicio.  
   
 3.  Ejecute Client.exe desde \client\bin\\, desde la carpeta específica del lenguaje. La actividad del cliente se muestra en la ventana de consola del cliente.  
   
-4.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Para ejecutar el ejemplo en los equipos  
   
@@ -81,5 +81,4 @@ Los ejemplos de Windows Communication Foundation (WCF) se pueden ejecutar en una
   
 ## <a name="see-also"></a>Vea también
 - [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)
-- [Ejecución de los ejemplos en un grupo de trabajo y entre los equipos](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)
-- [Sugerencias para la solución de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+- [Sugerencias de solución de problemas para obtener ejemplos WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

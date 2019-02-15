@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 8d7de0ea18adf81d7bcd5b4142e1aa51d6d223ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1987d5af904f1e151617d0cea6c183c52b8386e2
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743847"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305485"
 ---
 # <a name="use-the-automationid-property"></a>Utilizar la propiedad AutomationID
 > [!NOTE]
@@ -47,7 +47,7 @@ ms.locfileid: "54743847"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Usar una ruta de acceso persistente para volver a un elemento AutomationElement previamente identificado  
   
--   Las aplicaciones cliente, desde los scripts de prueba simples a las utilidades robustas de registro y reproducción, pueden requerir acceso a elementos de los que actualmente no haya instancias, como un diálogo de apertura de archivo o un elemento de menú y, por tanto, no existen en el árbol de Automatización de la interfaz de usuario. Solo se pueden crear instancias de estos elementos mediante la reproducción de una secuencia concreta de acciones de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] mediante el uso de propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , como AutomationID, los patrones de control y los agentes de escucha de eventos. Consulte [Test Script Generator Sample](https://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) para ver un ejemplo que utiliza [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para generar scripts de prueba basados en la interacción del usuario con la [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+-   Las aplicaciones cliente, desde los scripts de prueba simples a las utilidades robustas de registro y reproducción, pueden requerir acceso a elementos de los que actualmente no haya instancias, como un diálogo de apertura de archivo o un elemento de menú y, por tanto, no existen en el árbol de Automatización de la interfaz de usuario. Estos elementos solo se pueden crear instancias mediante la reproducción, o "reproducir" una secuencia concreta de acciones de interfaz de usuario mediante el uso de las propiedades de automatización de interfaz de usuario, como AutomationID, patrones de control y los agentes de escucha de eventos.
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

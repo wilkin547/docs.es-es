@@ -2,12 +2,12 @@
 title: Proveedor de tokens
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: ba611b3701c5bcd3ef073f43567d847a6d6dab64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd27566886db62a6f06502749212ed4109c17a28
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569497"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304991"
 ---
 # <a name="token-provider"></a>Proveedor de tokens
 Este ejemplo muestra cómo implementar un proveedor de tokens personalizado. Un proveedor de tokens de Windows Communication Foundation (WCF) se usa para proporcionar las credenciales a la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF se suministra con el Administrador de credenciales de Token de proveedor predeterminado. WCF también incluye un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] proveedor de tokens. Los proveedores de tokens personalizados son útiles en los casos siguientes:
@@ -32,7 +32,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens personalizado. Un 
 
  Este ejemplo también muestra cómo la identidad del llamador es accesible después del proceso de autenticación del token personalizado.
 
- El servicio expone un punto de conexión único para comunicarse con el servicio, definido mediante el archivo de configuración App.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding` estándar, que usa la seguridad de mensaje de forma predeterminada. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario del cliente. El servicio también configura el certificado del servicio utilizando el comportamiento serviceCredentials. El comportamiento serviceCredentials le permite configurar un certificado de servicio. Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje. La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las siguientes instrucciones de configuración.
+ El servicio expone un extremo único para comunicarse con el servicio, definido mediante el archivo de configuración App.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding` estándar, que usa la seguridad de mensaje de forma predeterminada. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario del cliente. El servicio también configura el certificado del servicio utilizando el comportamiento serviceCredentials. El comportamiento serviceCredentials le permite configurar un certificado de servicio. Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje. La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las siguientes instrucciones de configuración.
 
 ```xml
 <system.serviceModel>
@@ -130,7 +130,8 @@ Este ejemplo muestra cómo implementar un proveedor de tokens personalizado. Un 
 
 2.  Escribir el administrador de tokens de seguridad personalizado.
 
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager> se utiliza para crear <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para el <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> concreto que se pasa en el método `CreateSecurityTokenProvider`. El administrador de tokens de seguridad también se utiliza para crear autenticadores de tokens y serializadores de tokens, aunque en este ejemplo no se explica. En este ejemplo, el administrador de tokens de seguridad personalizado hereda de la clase <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> e invalida el método `CreateSecurityTokenProvider` para devolver el proveedor de tokens de nombre de usuario personalizado cuando los requisitos de tokens pasados indican que se solicita un proveedor de nombre de usuario.
+     
+  <xref:System.IdentityModel.Selectors.SecurityTokenManager> se utiliza para crear <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para el <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> concreto que se pasa en el método `CreateSecurityTokenProvider`. El administrador de tokens de seguridad también se utiliza para crear autenticadores de tokens y serializadores de tokens, aunque en este ejemplo no se explica. En este ejemplo, el administrador de tokens de seguridad personalizado hereda de la clase <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> e invalida el método `CreateSecurityTokenProvider` para devolver el proveedor de tokens de nombre de usuario personalizado cuando los requisitos de tokens pasados indican que se solicita un proveedor de nombre de usuario.
 
     ```
     public class MyUserNameSecurityTokenManager : ClientCredentialsSecurityTokenManager
@@ -202,7 +203,8 @@ Este ejemplo muestra cómo implementar un proveedor de tokens personalizado. Un 
     }
     ```
 
- En el servicio, para mostrar la información del llamador, utilice como se muestra <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> en el ejemplo de código siguiente. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contiene información de las notificaciones sobre el llamador actual.
+ En el servicio, para mostrar la información del llamador, utilice como se muestra <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> en el ejemplo de código siguiente. 
+  <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contiene información de las notificaciones sobre el llamador actual.
 
 ```
 static void DisplayIdentityInformation()
@@ -265,7 +267,7 @@ static void DisplayIdentityInformation()
   
 5.  Cuando se pida la contraseña, utilice la misma cadena que escribió cuando se solicitó el nombre de usuario.  
   
-6.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+6.  Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
@@ -287,7 +289,7 @@ static void DisplayIdentityInformation()
   
 9. En el equipo cliente, inicie `Client.exe` desde una ventana de símbolo del sistema.  
   
-10. Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Animar un rectángulo
+title: Filtrar Animar un rectángulo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], rectangles
 - rectangles [WPF], animating
 ms.assetid: 572ffb95-790d-4ace-adbf-b2ea8a90e75b
-ms.openlocfilehash: d164a6ecc64c1a4e78be41304cace7515684b488
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbff015bdc5f9ce56d2c366e0d348429efb7f4b5
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530121"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305160"
 ---
-# <a name="how-to-animate-a-rectangle"></a>Procedimiento Animar un rectángulo
+# <a name="how-to-animate-a-rectangle"></a>Filtrar Animar un rectángulo
 En este ejemplo se muestra cómo animar los cambios de tamaño y posición de un rectángulo.  
   
 ## <a name="example"></a>Ejemplo  
@@ -30,6 +30,5 @@ En este ejemplo se muestra cómo animar los cambios de tamaño y posición de un
 - <xref:System.Windows.Media.RectangleGeometry>
 - [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
 - [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)
-- [Animación y temporización](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [Temas de procedimientos de gráficos](graphics-how-to-topics.md)
+- [Temas de procedimientos de temporización y animación](animation-and-timing-how-to-topics.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Establecer opciones de cuadrícula para todos los formularios de Windows
+title: Filtrar Establecer opciones de cuadrícula para todos los formularios de Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - snap to grid [Windows Forms], Windows Forms Designer
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 3fedf663a885ec0da8925ccb335dca7177a33fcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 70e6e53c4aaa348c6cae2e677121f92367f33349
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530741"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305264"
 ---
-# <a name="how-to-set-grid-options-for-all-windows-forms"></a>Procedimiento Establecer opciones de cuadrícula para todos los formularios de Windows
+# <a name="how-to-set-grid-options-for-all-windows-forms"></a>Filtrar Establecer opciones de cuadrícula para todos los formularios de Windows
 Como que se convierten en acostumbrado a trabajar en el entorno de desarrollo de Visual Studio, puede establecer preferencias para todos los formularios y trabajar con los proyectos en el Diseñador de Windows Forms.  
   
 > [!NOTE]
@@ -31,7 +31,7 @@ Como que se convierten en acostumbrado a trabajar en el entorno de desarrollo de
   
 ## <a name="see-also"></a>Vea también
 - [Tutorial: Organizar controles en formularios de Windows Forms mediante líneas de ajuste](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [General, Diseñador de formularios de Windows, cuadro de diálogo Opciones](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)
+- [General, Diseñador de formularios de Windows, cuadro de diálogo Opciones](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [Controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/index.md)
 - [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
 - [Organizar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
