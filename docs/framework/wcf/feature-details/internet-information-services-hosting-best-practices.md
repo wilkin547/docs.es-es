@@ -2,12 +2,12 @@
 title: Procedimientos recomendados de hospedaje de Internet Information Services
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 931ba4162ed34ab391bd0ba2de2cb5a0e16ede6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521873"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333422"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Procedimientos recomendados de hospedaje de Internet Information Services
 En este tema se describe algunos procedimientos recomendados para hospedar servicios Windows Communication Foundation (WCF).  
@@ -19,7 +19,7 @@ En este tema se describe algunos procedimientos recomendados para hospedar servi
  No utilice las API de autohospedaje imperativo para crear nuevos hosts de servicio que realicen escuchas en transportes de red no admitidos nativamente por el entorno de hospedaje de IIS (por ejemplo, [!INCLUDE[iis601](../../../../includes/iis601-md.md)] para hospedar servicios TCP, porque la comunicación TCP no se admite de manera nativa en [!INCLUDE[iis601](../../../../includes/iis601-md.md)]). Éste enfoque no se recomienda. Los hosts de servicio creados de manera imperativa no se conocen dentro del entorno de hospedaje de IIS. El punto crítico es que el procesamiento realizado por servicios creados imperativamente no se tiene en cuenta por parte de IIS cuando determina si el grupo de aplicaciones de hospedaje está inactivo. El resultado es que las aplicaciones que tienen hosts de servicio creados de esta manera imperativa tienen un entorno de hospedaje de IIS que elimina de manera agresiva los procesos de host de IIS.  
   
 ## <a name="uris-and-iis-hosted-endpoints"></a>URI y extremos hospedados en IIS  
- Los puntos de conexión para un servicio hospedado en IIS se deberían configurar utilizando Identificadores uniformes de recursos relativos (URI), no direcciones absolutas. Esto garantiza que la dirección de extremo cae dentro del conjunto de direcciones URI que pertenecen a la aplicación de hospedaje y asegura que la activación basada en mensaje ocurre tal y como se esperaba.  
+ Los puntos de conexión para un servicio hospedado en IIS se deberían configurar utilizando Identificadores uniformes de recursos relativos (URI), no direcciones absolutas. Esto garantiza que la dirección de punto de conexión cae dentro del conjunto de direcciones URI que pertenecen a la aplicación de hospedaje y asegura que la activación basada en mensaje ocurre tal y como se esperaba.  
   
 ## <a name="state-management-and-process-recycling"></a>Administración de estado y reciclaje de procesos  
  El entorno de hospedaje de IIS se optimiza para servicios que no mantienen el estado local en memoria. IIS recicla el proceso del host en respuesta a diversos eventos externos e internos, produciendo que se pierda cualquier estado volátil almacenado exclusivamente en memoria. Los servicios hospedados en IIS deberían almacenar su estado externo al proceso (por ejemplo, en una base de datos) o en una caché en memoria que se puede recrear con facilidad si tiene lugar un evento de reciclaje de aplicación.  
@@ -82,5 +82,6 @@ En este tema se describe algunos procedimientos recomendados para hospedar servi
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Ejemplos de hospedaje de servicio](https://msdn.microsoft.com/library/f703a3f6-0fba-418a-a92f-7ce75ccfa47e)
+
+- [Ejemplos de hospedaje de servicio](../samples/hosting.md)
 - [Características de hospedaje de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

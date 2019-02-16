@@ -1,15 +1,15 @@
 ---
-title: puntos de conexión de servicio y direccionamiento de la cola
+title: Extremos de servicio y direccionamiento de la cola
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: b513dbf5bfde812c551335826813967272bfd708
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b4eca1519eeb1ed6357b625a3253105ece2b8ad
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613927"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332525"
 ---
-# <a name="service-endpoints-and-queue-addressing"></a>puntos de conexión de servicio y direccionamiento de la cola
+# <a name="service-endpoints-and-queue-addressing"></a>Extremos de servicio y direccionamiento de la cola
 En este tema se aborda cómo los clientes direccionan servicios que leen de las colas y cómo los puntos de conexión de servicio se asignan a las colas. Como recordatorio, la siguiente ilustración muestra el clásico Windows Communication Foundation (WCF) en cola la implementación de la aplicación.  
   
  ![Diagrama de aplicaciones en la cola](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "figura cola distribuida")  
@@ -46,14 +46,14 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
  El agente de escucha usa la dirección de la cola como URI de escucha desde donde leer los mensajes. En otras palabras, la dirección de la cola es equivalente al puerto de escucha del socket TCP.  
   
- Un punto de conexión que lee de una cola debe especificar la dirección de la cola utilizando el mismo esquema especificada previamente al abrir ServiceHost. Para obtener ejemplos, vea [neto de enlace MSMQ](../../../../docs/framework/wcf/samples/net-msmq-binding.md) y [ejemplos de enlace de integración de puesta en cola de mensajes](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a).  
+ Un extremo que lee de una cola debe especificar la dirección de la cola utilizando el mismo esquema especificada previamente al abrir ServiceHost. Para obtener ejemplos, vea [neto de enlace MSMQ](../../../../docs/framework/wcf/samples/net-msmq-binding.md).  
   
 ### <a name="multiple-contracts-in-a-queue"></a>Varios contratos en una cola  
  Los mensajes en una cola pueden implementar diferentes contratos. En este caso, es esencial que una de las condiciones siguientes sea verdadera para leer correctamente y procesar todos los mensajes:  
   
--   Especifique un extremo para un servicio que implementa todos los contratos. Éste es el enfoque recomendado.  
+-   Especifique un punto de conexión para un servicio que implementa todos los contratos. Éste es el enfoque recomendado.  
   
--   Especifique varios extremos con contratos diferentes, pero asegúrese de que todos los extremos utilicen el mismo objeto `NetMsmqBinding`. La lógica de distribución en ServiceModel utiliza una bomba de mensaje que lee los mensajes del canal de transporte para su distribución, lo que eventualmente desmultiplexa mensajes basados en el contrato a extremos diferentes. Una bomba de mensaje se crea para un par de escucha URI/enlace. La dirección de la cola es utilizada como URI de escucha por el agente de escucha puesto en cola. Si todos los extremos utilizan el mismo objeto de enlace, ello garantiza que se utiliza una única bomba de mensaje para leer el mensaje y desmultiplexarlo a los extremos pertinentes basados en el contrato.  
+-   Especifique varios puntos de conexión con contratos diferentes, pero asegúrese de que todos los puntos de conexión utilicen el mismo objeto `NetMsmqBinding`. La lógica de distribución en ServiceModel utiliza una bomba de mensaje que lee los mensajes del canal de transporte para su distribución, lo que eventualmente desmultiplexa mensajes basados en el contrato a extremos diferentes. Una bomba de mensaje se crea para un par de escucha URI/enlace. La dirección de la cola es utilizada como URI de escucha por el agente de escucha puesto en cola. Si todos los extremos utilizan el mismo objeto de enlace, ello garantiza que se utiliza una única bomba de mensaje para leer el mensaje y desmultiplexarlo a los extremos pertinentes basados en el contrato.  
   
 ### <a name="srmp-messaging"></a>Mensajería SRMP  
  Como se ha abordado previamente, puede utilizar el protocolo SRMP para las transferencias de colas a colas. Ello se utiliza normalmente cuando un transporte http transmite mensajes entre la cola de transmisión y la cola de destino.  
@@ -92,7 +92,8 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
  Un servicio WCF comprueba que todos los mensajes que recibe se direccionaron a la cola específica que está escuchando. Si la cola de destino del mensaje no coincide con la cola donde se encuentra, el servicio no procesa el mensaje. Se trata de una cuestión que los servicios que escuchan a una cola de mensajes no enviados deben abordar porque cualquier mensaje en la cola de mensajes no enviados debía ser entregado a otra parte. Para leer los mensajes de una cola de mensajes no enviados o de una cola de mensajes dudosos, debe utilizarse `ServiceBehavior` con el parámetro <xref:System.ServiceModel.AddressFilterMode.Any>. Para obtener un ejemplo, vea [colas de mensajes no enviados](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding y direccionamiento del servicio  
- `MsmqIntegrationBinding` se utiliza para la comunicación con aplicaciones MSMQ tradicionales. Para facilitar la interoperación con una aplicación MSMQ existente, WCF es compatible con direccionamiento del nombre de formato único. Por consiguiente, los mensajes enviados utilizando este enlace deben cumplir el esquema del URI:  
+ 
+  `MsmqIntegrationBinding` se utiliza para la comunicación con aplicaciones MSMQ tradicionales. Para facilitar la interoperación con una aplicación MSMQ existente, WCF es compatible con direccionamiento del nombre de formato único. Por consiguiente, los mensajes enviados utilizando este enlace deben cumplir el esquema del URI:  
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   

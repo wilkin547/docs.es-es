@@ -2,12 +2,12 @@
 title: 'Transporte: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: e3e01634c496a3673b49ae7329e4221e0d568803
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 59bcfc376c2fada5f94f462cecbf3d5363def48d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485945"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332824"
 ---
 # <a name="transport-udp"></a>Transporte: UDP
 El ejemplo de transporte UDP muestra cómo implementar unidifusión UDP y multidifusión como un transporte personalizado de Windows Communication Foundation (WCF). El ejemplo describe el procedimiento recomendado para crear un transporte personalizado de WCF, mediante el marco del canal y procedimientos recomendados WCF. Los pasos para crear un transporte personalizado son los siguientes:  
@@ -22,7 +22,7 @@ El ejemplo de transporte UDP muestra cómo implementar unidifusión UDP y multid
   
 5.  Agregue una sección de extensión de elemento de enlace para exponer el nuevo elemento de enlace al sistema de configuración.  
   
-6.  Agregue las extensiones de metadatos para comunicar las funciones a otros extremos.  
+6.  Agregue las extensiones de metadatos para comunicar las funciones a otros puntos de conexión.  
   
 7.  Agregue un enlace que configura previamente una pila de elementos de enlace según un perfil bien determinado. Para obtener más información, consulte [agregar un enlace estándar](#AddingAStandardBinding).  
   
@@ -34,7 +34,7 @@ El ejemplo de transporte UDP muestra cómo implementar unidifusión UDP y multid
   
 -   Datagrama (IInputChannel/IOutputChannel)  
   
-     Al utilizar un MEP de datagrama, un cliente envía un mensaje mediante un intercambio de tipo desencadenar y omitir. Un intercambio de este tipo es uno que exige una confirmación fuera de banda de entrega correcta. El mensaje se podría perderse por el camino y no llegar nunca al servicio. Si la operación de envío se completa correctamente en la parte del cliente, no garantiza que el punto de conexión remoto haya recibido el mensaje. El datagrama es un bloque de creación fundamental para la mensajería, ya que puede crear sus propios protocolos encima de él, incluidos protocolos confiables y seguros. Los canales de datagrama del cliente implementan la interfaz <xref:System.ServiceModel.Channels.IOutputChannel> y los del servicio, la interfaz <xref:System.ServiceModel.Channels.IInputChannel>.  
+     Al utilizar un MEP de datagrama, un cliente envía un mensaje mediante un intercambio de tipo desencadenar y omitir. Un intercambio de este tipo es uno que exige una confirmación fuera de banda de entrega correcta. El mensaje se podría perderse por el camino y no llegar nunca al servicio. Si la operación de envío se completa correctamente en la parte del cliente, no garantiza que el extremo remoto haya recibido el mensaje. El datagrama es un bloque de creación fundamental para la mensajería, ya que puede crear sus propios protocolos encima de él, incluidos protocolos confiables y seguros. Los canales de datagrama del cliente implementan la interfaz <xref:System.ServiceModel.Channels.IOutputChannel> y los del servicio, la interfaz <xref:System.ServiceModel.Channels.IInputChannel>.  
   
 -   Solicitud-respuesta (IRequestChannel/IReplyChannel)  
   
@@ -52,17 +52,17 @@ El ejemplo de transporte UDP muestra cómo implementar unidifusión UDP y multid
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject y el ciclo de vida del objeto WCF  
  WCF tiene una máquina de Estados común que se utiliza para administrar el ciclo de vida de objetos como <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, y <xref:System.ServiceModel.Channels.IChannelListener> que se usan para la comunicación. Hay cinco estados donde estos objetos de comunicación pueden existir. La enumeración <xref:System.ServiceModel.CommunicationState> representa estos estados y son los siguientes:  
   
--   Creado: este es el estado de una interfaz <xref:System.ServiceModel.ICommunicationObject> la primera vez que se crean instancias de ella. No se produce ninguna entrada/salida (E/S) en este estado.  
+-   Creado: Este es el estado de un <xref:System.ServiceModel.ICommunicationObject> al se crea una instancia. No se produce ninguna entrada/salida (E/S) en este estado.  
   
--   Abriendo: transición de objetos a este estado cuando se llama al método <xref:System.ServiceModel.ICommunicationObject.Open%2A>. En este punto, las propiedades se convierten en inmutables y puede comenzar la entrada/salida. Esta transición solo es válida desde el estado Creado.  
+-   Abriendo: Los objetos pasan a este estado cuando <xref:System.ServiceModel.ICommunicationObject.Open%2A> se llama. En este punto, las propiedades se convierten en inmutables y puede comenzar la entrada/salida. Esta transición solo es válida desde el estado Creado.  
   
--   Abierto: los objetos pasan a este estado cuando el proceso de apertura se completa. Esta transición solo es válida desde el estado Abriendo. En este punto, se puede usar el objeto para la transferencia.  
+-   Abierta: Los objetos pasan a este estado cuando se complete el proceso de apertura. Esta transición solo es válida desde el estado Abriendo. En este punto, se puede usar el objeto para la transferencia.  
   
--   Cerrando: los objetos pasan a este estado cuando se llama al método <xref:System.ServiceModel.ICommunicationObject.Close%2A> para que el apagado sea correcto. Esta transición solo es válida desde el estado Abierto.  
+-   Cierre: Los objetos pasan a este estado cuando <xref:System.ServiceModel.ICommunicationObject.Close%2A> se llama para que el apagado. Esta transición solo es válida desde el estado Abierto.  
   
--   Cerrado: en este estado, no se pueden utilizar los objetos. En general, aún se puede acceder a la mayoría de la configuración para su inspección pero no se puede producir ninguna comunicación. Este estado es equivalente a eliminarse.  
+-   Cerrado: En este ya no son utilizables objetos de estado. En general, aún se puede acceder a la mayoría de la configuración para su inspección pero no se puede producir ninguna comunicación. Este estado es equivalente a eliminarse.  
   
--   Con error: en este estado, se puede tener acceso a los objetos para inspeccionarlos pero no se pueden usar. Cuando se produce un error no recuperable, el objeto pasa a este estado. La única transición válida desde este estado está en el `Closed` estado.  
+-   Error: En este estado, los objetos son accesibles a la inspección pero no se pueden usar. Cuando se produce un error no recuperable, el objeto pasa a este estado. La única transición válida desde este estado está en el `Closed` estado.  
   
  Hay eventos que se desencadenan para cada transición de estado. Se puede llamar al método <xref:System.ServiceModel.ICommunicationObject.Abort%2A> en cualquier momento, lo que provoca que el objeto pase inmediatamente de su estado actual al estado Cerrado. Al llamar <xref:System.ServiceModel.ICommunicationObject.Abort%2A>, se finaliza cualquier trabajo inacabado.  
   
@@ -156,7 +156,7 @@ if (context.WsdlPort != null)
 }  
 ```  
   
- La implementación `UdpTransportBindingElement` del método `ExportEndpoint` también exporta un URI de transporte cuando el extremo utiliza un enlace SOAP.  
+ La implementación `UdpTransportBindingElement` del método `ExportEndpoint` también exporta un URI de transporte cuando el punto de conexión utiliza un enlace SOAP.  
   
 ```csharp
 WsdlNS.SoapBinding soapBinding = GetSoapBinding(context, exporter);  
@@ -201,7 +201,7 @@ if (transportBindingElement is UdpTransportBindingElement)
 ```  
   
 ### <a name="adding-policy-support"></a>Agregación de compatibilidad de directiva  
- El elemento de enlace personalizado puede exportar aserciones de directiva en el enlace de WSDL para que un punto de conexión de servicio exprese las funciones de ese elemento de enlace.  
+ El elemento de enlace personalizado puede exportar aserciones de directiva en el enlace de WSDL para que un extremo de servicio exprese las funciones de ese elemento de enlace.  
   
 #### <a name="policy-export"></a>Exportación de directivas  
  El `UdpTransportBindingElement` escriba implementa `IPolicyExportExtension` para agregar compatibilidad para exportar la directiva. Como resultado, `System.ServiceModel.MetadataExporter` incluye `UdpTransportBindingElement` en la generación de directiva para cualquier enlace que la incluya.  
@@ -255,11 +255,12 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>Adición de un enlace estándar  
  Nuestro elemento de enlace se puede utilizar de las dos maneras siguientes:  
   
--   A través de un enlace personalizado: un enlace personalizado permite al usuario crear su propio enlace basado en un conjunto arbitrario de elementos de enlace.  
+-   A través de un enlace personalizado: Un enlace personalizado permite al usuario crear su propio enlace basado en un conjunto arbitrario de elementos de enlace.  
   
 -   Usando un enlace proporcionado por el sistema que incluye nuestro elemento de enlace. WCF proporciona una serie de estos enlaces definidos por el sistema, como `BasicHttpBinding`, `NetTcpBinding`, y `WsHttpBinding`. Cada uno de estos enlaces está asociado a un perfil bien definido.  
   
- El ejemplo implementa el enlace del perfil en `SampleProfileUdpBinding`, que deriva de <xref:System.ServiceModel.Channels.Binding>. `SampleProfileUdpBinding` contiene hasta cuatro elementos de enlace dentro de él: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` y `ReliableSessionBindingElement`.  
+ El ejemplo implementa el enlace del perfil en `SampleProfileUdpBinding`, que deriva de <xref:System.ServiceModel.Channels.Binding>. 
+  `SampleProfileUdpBinding` contiene hasta cuatro elementos de enlace dentro de él: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` y `ReliableSessionBindingElement`.  
   
 ```csharp
 public override BindingElementCollection CreateBindingElements()  
@@ -394,7 +395,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>Servicio de pruebas y cliente UDP  
- El código de prueba para usar este transporte de ejemplo está disponible en los directorios UdpTestService y UdpTestClient. El código de servicio está compuesto de dos pruebas: una configura los enlaces y puntos de conexión desde el código y la otra lo hace a través de la configuración. Ambas pruebas utilizan dos puntos de conexión. Un punto de conexión utiliza la `SampleUdpProfileBinding` con [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) establecido en `true`. El otro extremo utiliza un enlace personalizado con `UdpTransportBindingElement`. Esto equivale a usar `SampleUdpProfileBinding` con [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) establecido en `false`. Ambas pruebas crean un servicio, agregan un punto de conexión para cada enlace, abren el servicio y, a continuación, esperan a que el usuario presione ENTRAR antes de cerrar el servicio.  
+ El código de prueba para usar este transporte de ejemplo está disponible en los directorios UdpTestService y UdpTestClient. El código de servicio está compuesto de dos pruebas: una configura los enlaces y puntos de conexión desde el código y la otra lo hace a través de la configuración. Ambas pruebas utilizan dos extremos. Un punto de conexión utiliza la `SampleUdpProfileBinding` con [ \<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) establecido en `true`. El otro extremo utiliza un enlace personalizado con `UdpTransportBindingElement`. Esto equivale a usar `SampleUdpProfileBinding` con [ \<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) establecido en `false`. Ambas pruebas crean un servicio, agregan un extremo para cada enlace, abren el servicio y, a continuación, esperan a que el usuario presione ENTRAR antes de cerrar el servicio.  
   
  Al iniciar la aplicación de prueba del servicio, debería ver el resultado siguiente.  
   
@@ -404,7 +405,7 @@ Service is started from code...
 Press <ENTER> to terminate the service and start service from config...  
 ```  
   
- Puede ejecutar a continuación la aplicación cliente de prueba con los extremos publicados. La aplicación de prueba del cliente crea un cliente para cada punto de conexión y envía cinco mensajes a cada punto de conexión. El resultado siguiente se encuentra en el cliente.  
+ Puede ejecutar a continuación la aplicación cliente de prueba con los extremos publicados. La aplicación de prueba del cliente crea un cliente para cada extremo y envía cinco mensajes a cada extremo. El resultado siguiente se encuentra en el cliente.  
   
 ```console
 Testing Udp From Imported Files Generated By SvcUtil.  
@@ -433,7 +434,7 @@ Hello, world!
    adding 4 + 8  
 ```  
   
- Para ejecutar la aplicación cliente en los puntos de conexión publicados utilizando la configuración, presione ENTRAR en el servicio y después ejecute de nuevo el cliente de prueba. Debería ver el siguiente resultado en el servicio.  
+ Para ejecutar la aplicación cliente en los extremos publicados utilizando la configuración, presione ENTRAR en el servicio y después ejecute de nuevo el cliente de prueba. Debería ver el siguiente resultado en el servicio.  
   
 ```console
 Testing Udp From Config.  

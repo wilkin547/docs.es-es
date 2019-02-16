@@ -2,12 +2,12 @@
 title: Compatibilidad de característica de confianza parcial
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 404fe1a7fb14f28d264d4a97981eade8404141ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a09d4d1ce9f9ec328c74e7f2714f1c3f702670a
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564735"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333513"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilidad de característica de confianza parcial
 Windows Communication Foundation (WCF) admite un subconjunto limitado de funcionalidad cuando se ejecuta en un entorno de confianza parcial. Las características admitidas en confianza parcial están diseñadas alrededor de un conjunto concreto de escenarios, tal y como se describe en el tema [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -111,7 +111,7 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
  Registro de mensajes no funciona cuando WCF se ejecuta en un entorno de confianza parcial. Si está habilitado bajo confianza parcial, no produce un error en la activación del servicio, pero no se registra ningún mensaje.  
   
 ### <a name="tracing"></a>Traza  
- La funcionalidad de seguimiento restringido está disponible al ejecutarse en un entorno de confianza parcial. En el elemento <`listeners`> del archivo de configuración, los únicos tipos que puede agregar son <xref:System.Diagnostics.TextWriterTraceListener> y el nuevo <xref:System.Diagnostics.EventSchemaTraceListener>. El uso del <xref:System.Diagnostics.XmlWriterTraceListener> estándar puede producir registros incompletos o incorrectos.  
+ La funcionalidad de seguimiento restringido está disponible al ejecutarse en un entorno de confianza parcial. En el <`listeners`> elemento en el archivo de configuración, los únicos tipos que se pueden agregar son <xref:System.Diagnostics.TextWriterTraceListener> y el nuevo <xref:System.Diagnostics.EventSchemaTraceListener>. El uso del <xref:System.Diagnostics.XmlWriterTraceListener> estándar puede producir registros incompletos o incorrectos.  
   
  Los orígenes de seguimiento admitidos son:  
   
@@ -127,7 +127,7 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
   
 -   <xref:System.IO.Log>  
 
--   [System.ServiceModel.Internal.TransactionBridge](https://msdn.microsoft.com/library/system.servicemodel.internal.transactionbridge.aspx)]
+-   [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
  No se deben especificar los siguientes miembros de la enumeración <xref:System.Diagnostics.TraceOptions> :  
   

@@ -2,12 +2,12 @@
 title: Protección de mensajes utilizando la seguridad de transporte
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: 4a67cc8265254741a58c9b86bc45eff9c9366bcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 354b014825b3282e494cf75637fb2434acdb2dbe
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747952"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332355"
 ---
 # <a name="securing-messages-using-transport-security"></a>Protección de mensajes utilizando la seguridad de transporte
 En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ) que puede utilizar para proteger los mensajes enviados a una cola.  
@@ -45,7 +45,8 @@ En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ)
  Teniendo en cuenta estas cuestiones básicas, las secciones siguientes detallan propiedades de seguridad de transporte incluidas con <xref:System.ServiceModel.NetMsmqBinding> y <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  
   
 #### <a name="msmq-authentication-mode"></a>Modo de autenticación MSMQ  
- <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> dicta si utilizar la seguridad de dominio de Windows o una seguridad externa basada en certificado para proteger el mensaje. En ambos modos de autenticación, el canal de transporte en cola de WCF usa los `CertificateValidationMode` especificado en la configuración del servicio. El modo de validación de certificado especifica el mecanismo utilizado para comprobar la validez del certificado.  
+ 
+  <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> dicta si utilizar la seguridad de dominio de Windows o una seguridad externa basada en certificado para proteger el mensaje. En ambos modos de autenticación, el canal de transporte en cola de WCF usa los `CertificateValidationMode` especificado en la configuración del servicio. El modo de validación de certificado especifica el mecanismo utilizado para comprobar la validez del certificado.  
   
  Cuando la seguridad de transporte está activada, la configuración predeterminada es <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
   
@@ -97,6 +98,6 @@ En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ)
  Los algoritmos admitidos son `MD5`, `SHA1`, `SHA256` y `SHA512`. De manera predeterminada, es `SHA1`.  
   
 ## <a name="see-also"></a>Vea también
-- [Message Queue Server](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+- [Información general de colas](queues-overview.md)
 - [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -2,12 +2,12 @@
 title: Migración de .NET Remoting a WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 38ec11b529c7b0444d47971938fb711fe40bee3d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415980"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333071"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migración de .NET Remoting a WCF
 En este artículo se describe el procedimiento para migrar una aplicación que usa .NET Remoting para que use Windows Communication Foundation (WCF). Se comparan conceptos similares entre estos productos y se describe cómo llevar a cabo varios escenarios comunes de comunicación remota en WCF.  
@@ -207,11 +207,7 @@ public class WCFCustomer
   
  El atributo [DataContract] identifica este tipo como uno que se puede serializar y deserializar entre el cliente y el servidor. El atributo [DataMember] identifica las propiedades o los campos individuales para serializar.  
   
- Cuando WCF envía un objeto entre niveles, solo serializa los valores y crea una nueva instancia del objeto en el otro nivel. Cualquier interacción con los valores del objeto se produce solo localmente; no se comunican con el nivel del mismo modo que lo hacen los objetos por referencia de .NET Remoting. Para obtener más información, vea los temas siguientes:  
-  
--   [Serialización y deserialización](./feature-details/serialization-and-deserialization.md)  
-  
--   [Serialización en Windows Communication Foundation](https://msdn.microsoft.com/magazine/cc163569.aspx)  
+ Cuando WCF envía un objeto entre niveles, solo serializa los valores y crea una nueva instancia del objeto en el otro nivel. Cualquier interacción con los valores del objeto se produce solo localmente; no se comunican con el nivel del mismo modo que lo hacen los objetos por referencia de .NET Remoting. Para obtener más información, consulte [serialización y deserialización](./feature-details/serialization-and-deserialization.md).  
   
 ### <a name="exception-handling-capabilities"></a>Capacidades de control de excepciones  
   
@@ -421,7 +417,7 @@ public class RemotingServer : MarshalByRefObject
        customerServiceHost.Open();  
    ```  
   
-     Cuando se inicia este ServiceHost, usa el archivo web.config para establecer el contrato, el enlace y el punto de conexión adecuados. Para obtener más información acerca de los archivos de configuración, consulte [configurar servicios mediante archivos de configuración](./configuring-services-using-configuration-files.md). Este estilo de inicio del servidor se conoce como autohospedaje. Para obtener más información sobre otras opciones para hospedar servicios WCF, vea [servicios de hospedaje](./hosting-services.md).  
+     Cuando se inicia este ServiceHost, usa el archivo web.config para establecer el contrato, el enlace y el extremo adecuados. Para obtener más información acerca de los archivos de configuración, consulte [configurar servicios mediante archivos de configuración](./configuring-services-using-configuration-files.md). Este estilo de inicio del servidor se conoce como autohospedaje. Para obtener más información sobre otras opciones para hospedar servicios WCF, vea [servicios de hospedaje](./hosting-services.md).  
   
 6.  El archivo app.config del proyecto de cliente debe declarar la información de enlace coincidente para el punto de conexión del servicio. La manera más fácil de hacerlo en Visual Studio es usar **Add Service Reference**, que actualizará automáticamente el archivo app.config. Además, estos cambios se pueden agregar manualmente.  
   

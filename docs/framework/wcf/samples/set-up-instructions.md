@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: b5c57b7b7fa2fe72d0fbad6d7fcf5aa17f2abad8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fc68759e3057b6a1fd2a2ca4e0bffe81cea5f095
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529583"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333435"
 ---
 # <a name="set-up-instructions"></a>Instrucciones de instalación
 Este conjunto de temas describe cómo configurar los servicios que son necesarios para ejecutar un servicio de Windows Communication Foundation (WCF).  
@@ -37,11 +37,8 @@ Este conjunto de temas describe cómo configurar los servicios que son necesario
  [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
  Describe los pasos para ejecutar los ejemplos de WCF en el mismo equipo y todas las máquinas.  
   
- [Habilitar los servicios de punto a punto](https://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  
- Describe los pasos para instalar el componente Windows Peer-to-Peer, la resolución integrada para los servicios de la mensajería de punto a punto.  
-  
  [Instalación de Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  Describe los pasos para instalar Message Queuing.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Sugerencias para la solución de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+ [Sugerencias de solución de problemas para obtener ejemplos WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

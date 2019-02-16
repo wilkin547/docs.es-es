@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: ea3ff1e8ec4234e75b937cfef81b55bb8f71fa12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f909b987da31a0a4af605d603d1c7b7a35615f19
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683978"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333409"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Información de privacidad de Windows Communication Foundation
 Microsoft se compromete a proteger la privacidad de usuarios finales. Al compilar una aplicación mediante Windows Communication Foundation (WCF), versión 3.0, la aplicación puede afectar la privacidad de sus usuarios finales. Por ejemplo, su aplicación puede recoger explícitamente información de contacto del usuario o puede solicitar o enviar información a través de Internet a su sitio web. Si incrusta la tecnología de Microsoft en su aplicación, esa tecnología puede tener su propio comportamiento que podría afectar a la privacidad. WCF no envía ninguna información a Microsoft desde su aplicación a menos que usted o el usuario final elija enviarla.  
@@ -24,9 +24,9 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
 ## <a name="messaging"></a>Mensajería  
  Cada mensaje WCF tiene un encabezado de dirección que especifica el destino del mensaje y donde debería ir la respuesta.  
   
- El componente de dirección de una dirección de punto de conexión es un Identificador uniforme de recursos (URI) que identifica el punto de conexión. La dirección puede ser una dirección de red o una dirección lógica. La dirección puede incluir nombre del equipo (nombre del host, nombre de dominio completo) y una dirección IP. La dirección del extremo también puede contener un identificador único global (GUID) o una colección de GUID para el direccionamiento temporal utilizado para discernir cada dirección. Cada mensaje contiene un id. de mensaje que es un GUID. Esta característica sigue la regla de referencia WS-Addressing.  
+ El componente de dirección de una dirección de extremo es un Identificador uniforme de recursos (URI) que identifica el extremo. La dirección puede ser una dirección de red o una dirección lógica. La dirección puede incluir nombre del equipo (nombre del host, nombre de dominio completo) y una dirección IP. La dirección del extremo también puede contener un identificador único global (GUID) o una colección de GUID para el direccionamiento temporal utilizado para discernir cada dirección. Cada mensaje contiene un id. de mensaje que es un GUID. Esta característica sigue la regla de referencia WS-Addressing.  
   
- La capa de mensajería de WCF no escribe información personal en el equipo local. Sin embargo, podría propagar información personal en el nivel de la red si un programador del servicio ha creado un servicio que expone dicha información (por ejemplo, utilizando el nombre de una persona en un nombre de punto de conexión o incluso información personal en el Lenguaje de descripción de servicios Web (WSDL) del punto de conexión pero no requiero que los clientes utilicen http para tener acceso al WSDL). Además, si un programador ejecuta la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) herramienta contra un extremo que expone información personal, la salida podría contener esa información y el archivo de salida se escribe en el disco duro local.  
+ La capa de mensajería de WCF no escribe información personal en el equipo local. Sin embargo, podría propagar información personal en el nivel de la red si un programador del servicio ha creado un servicio que expone dicha información (por ejemplo, utilizando el nombre de una persona en un nombre de extremo o incluso información personal en el Lenguaje de descripción de servicios Web (WSDL) del extremo pero no requiero que los clientes utilicen http para tener acceso al WSDL). Además, si un programador ejecuta la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) herramienta contra un extremo que expone información personal, la salida podría contener esa información y el archivo de salida se escribe en el disco duro local.  
   
 ## <a name="hosting"></a>Hospedaje  
  La característica de hospedaje de WCF permite a las aplicaciones para iniciarse a petición o para habilitar el uso compartido de puertos entre varias aplicaciones. Una aplicación de WCF puede hospedarse en Internet Information Services (IIS), similar a [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
@@ -402,5 +402,5 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
  El Lenguaje de descripción de servicios Web (WSDL) contiene una definición del puerto. Cada puerto tiene una dirección del extremo y un enlace que representa los servicios utilizados por la aplicación. Exponer WSDL se puede desactivar utilizando la configuración. No se retiene información en el equipo.  
   
 ## <a name="see-also"></a>Vea también
-- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)
+- [Windows Communication Foundation](index.md)
 - [Seguridad](../../../docs/framework/wcf/feature-details/security.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: a96ff1b588bd86ee3c391ea37b7ca5724db5e650
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a07a41fece076731ec8bf53b26bc6a2c935169d2
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589988"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333357"
 ---
 # <a name="default-nettcpbinding"></a>NetTcpBinding predeterminado
 Este ejemplo muestra el uso del enlace <xref:System.ServiceModel.NetTcpBinding> . En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora. En este ejemplo, el servicio es hospedado por sí mismo. El cliente y el servicio son aplicaciones de consola.  
@@ -26,7 +26,7 @@ Este ejemplo muestra el uso del enlace <xref:System.ServiceModel.NetTcpBinding> 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en el `binding` atributo de la [ \<punto de conexión >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento tal como se muestra en el siguiente ejemplo de configuración.  
+ El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en el `binding` atributo de la [ \<punto de conexión >](../../configure-apps/file-schema/wcf/endpoint-element.md) elemento tal como se muestra en el siguiente ejemplo de configuración.  
   
 ```xml  
 <endpoint address=""  
@@ -34,7 +34,7 @@ Este ejemplo muestra el uso del enlace <xref:System.ServiceModel.NetTcpBinding> 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- El ejemplo anterior muestra cómo configurar un punto de conexión para utilizar el enlace `netTcpBinding` con la configuración predeterminada. Si desea configurar el enlace `netTcpBinding`y cambiar algunos de sus valores, es necesario definir una configuración de enlace. El extremo debe hacer referencia a la configuración de enlace por el nombre con un atributo `bindingConfiguration`. En este ejemplo, la configuración de enlace se denomina `Binding1` y se define como se muestra en el siguiente ejemplo de configuración.  
+ El ejemplo anterior muestra cómo configurar un extremo para utilizar el enlace `netTcpBinding` con la configuración predeterminada. Si desea configurar el enlace `netTcpBinding`y cambiar algunos de sus valores, es necesario definir una configuración de enlace. El extremo debe hacer referencia a la configuración de enlace por el nombre con un atributo `bindingConfiguration`. En este ejemplo, la configuración de enlace se denomina `Binding1` y se define como se muestra en el siguiente ejemplo de configuración.  
   
 ```xml  
 <services>  
