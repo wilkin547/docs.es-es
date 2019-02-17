@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo puede ampliar las herramientas de 
 author: blackdwarf
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3aedd1d507fde1cd7402ef97fa00d0c7f13005e3
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e93c9c85383d7c541b8ef55a74045307810cbb05
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170241"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093013"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modelo de extensibilidad de las herramientas de la CLI de .NET Core
 
@@ -79,7 +79,7 @@ Estas clases de herramientas tienen un gráfico de dependencias que es completam
 Puede encontrar más ejemplos y diferentes combinaciones de esto en el [repositorio de la CLI de .NET Core](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects).
 También puede ver las [herramientas de implementación usadas](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) en el mismo repositorio.
 
-### <a name="custom-targets"></a>Destinos personalizados
+## <a name="custom-targets"></a>Destinos personalizados
 NuGet tiene la capacidad de [empaquetar archivos de propiedades y destinos de MSBuild personalizados](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Con el paso de las herramientas de la CLI de .NET Core para usar MSBuild, el mismo mecanismo de extensibilidad se aplica ahora en proyectos de .NET Core. Este tipo de extensibilidad se usaría cuando quisiera extender el proceso de compilación o quisiera acceder a alguno de los artefactos de dicho proceso, como los archivos generados, o si quiere inspeccionar la configuración bajo la que se invoca la compilación, etc.
 
 En el ejemplo siguiente, puede ver el archivo del proyecto de destino con la sintaxis `csproj`. Esto indica al comando [`dotnet pack`](dotnet-pack.md) qué empaquetar, colocando los archivos de destinos así como los ensamblados en la carpeta *build* dentro del paquete. Observe el elemento `<ItemGroup>` que tiene la propiedad `Label` establecida en `dotnet pack instructions`, y el destino que se define por debajo.
@@ -137,7 +137,7 @@ El uso del destino personalizado depende exclusivamente de cómo se configure. C
 
 En cambio, si quiere proporcionar una mejor experiencia de usuario, puede combinar las herramientas por proyecto y los destinos personalizados. En este escenario, la herramienta por proyecto básicamente solo aceptaría todos los parámetros necesarios y lo traduciría en la invocación de [`dotnet msbuild`](dotnet-msbuild.md) necesaria que ejecutaría el destino. Puede ver una muestra de esta clase de sinergia en el [repositorio de ejemplos de MVP Summit 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) del proyecto [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer).
 
-### <a name="path-based-extensibility"></a>Extensibilidad basada en la RUTA DE ACCESO
+## <a name="path-based-extensibility"></a>Extensibilidad basada en la RUTA DE ACCESO
 La extensibilidad basada en la RUTA DE ACCESO se suele usar con equipos de desarrollo, donde necesita una herramienta que abarque conceptualmente más de un único proyecto. La principal desventaja de este mecanismo de extensión es que está vinculado a la máquina donde existe la herramienta. Si lo necesita en otro equipo, tendría que implementarlo.
 
 Este patrón de extensibilidad del conjunto de herramientas de la CLI es muy sencillo. Como se explica en la [información general de la CLI de .NET Core](index.md), el controlador `dotnet` puede ejecutar cualquier comando que se nombre según la convención `dotnet-<command>`. La lógica de resolución predeterminada sondea primero varias ubicaciones y finalmente vuelve a la RUTA DE ACCESO del sistema. Si el comando solicitado existe en la RUTA DE ACCESO del sistema y es un archivo binario que se puede invocar, el controlador `dotnet` lo invoca.
