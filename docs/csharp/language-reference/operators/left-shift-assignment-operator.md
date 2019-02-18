@@ -1,45 +1,51 @@
 ---
 title: 'Operador <<=: Referencia de C#'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/12/2019
 f1_keywords:
 - <<=_CSharpKeyword
 helpviewer_keywords:
 - <<= operator (left-shift assignment) [C#]
 - left shift assignment operator (<<=) [C#]
 ms.assetid: 3bc99c78-1edb-4827-86fc-bce6c3048871
-ms.openlocfilehash: 0a005efa19be24f9adbf9031f562a30f9c1b0e34
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d2105fbee4ddfe1b2cb3325d82b0f2f8c5559297
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258739"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219456"
 ---
 # <a name="-operator-c-reference"></a>Operador \<\<= (Referencia de C#)
 
 Operador de asignación de desplazamiento a la izquierda.
 
-## <a name="remarks"></a>Comentarios
-
-Una expresión con el formato
+Una expresión que usa el operador `<<=`, como
 
 ```csharp
 x <<= y
 ```
 
-se evalúa como
+es equivalente a
 
 ```csharp
 x = x << y
 ```
 
-salvo que `x` solo se evalúa una vez. El [operador <<](left-shift-operator.md) desplaza `x` hacia la izquierda el número de bits especificado por `y`.
+salvo que `x` solo se evalúa una vez.
 
-El operador `<<=` no se puede sobrecargar directamente, pero los tipos definidos por el usuario pueden sobrecargar el [operador <<](left-shift-operator.md) (vea [operator](../keywords/operator.md)).
+El [operador `<<`](left-shift-operator.md) desplaza su primer operando a la izquierda el número de bits definido por su segundo operando.
 
-## <a name="example"></a>Ejemplo
+En el siguiente ejemplo se muestra el uso del operador `<<=`:
 
-[!code-csharp[csRefOperators#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#12)]
+[!code-csharp-interactive[left shift assignment](~/samples/snippets/csharp/language-reference/operators/ShiftOperatorsExamples.cs#LeftShiftAssignment)]
+
+## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
+
+Si un tipo definido por el usuario [sobrecarga](../keywords/operator.md) el [operador `<<`](left-shift-operator.md), el operador de asignación de desplazamiento a la izquierda `<<=` se sobrecarga de forma implícita. Un tipo definido por el usuario no puede sobrecargar de forma explícita el operador de asignación de desplazamiento a la izquierda.
+
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
+
+Para obtener más información, vea la sección [Asignación compuesta](~/_csharplang/spec/expressions.md#compound-assignment) de la [Especificación del lenguaje C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Vea también
 

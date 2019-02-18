@@ -1,18 +1,20 @@
-| .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]      | [1.6]      | [2.0]      |
-|----------------------------|--------|--------|-------|-------|-------|------------|------------|------------|
-| Núcleo de .NET                  | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0        | 1.0        | 2.0        |
-| .NET Framework <sup>1</sup>| 4.5    | 4.5    | 4.5.1 | 4.6   | 4.6.1 | 4.6.1      | 4.6.1      | 4.6.1      |
-| Mono                       | 4.6    | 4.6    | 4.6   | 4.6   | 4.6   | 4.6        | 4.6        | 5.4        |
-| Xamarin.iOS                | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0       | 10.0       | 10.14      |
-| Xamarin.Mac                | 3.0    | 3.0    | 3.0   | 3.0   | 3.0   | 3.0        | 3.0        | 3.8        |
-| Xamarin.Android            | 7.0    | 7.0    | 7.0   | 7.0   | 7.0   | 7.0        | 7.0        | 8.0        |
-| Plataforma universal de Windows | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0.16299 | 10.0.16299 | 10.0.16299 |
-| Windows                    | 8.0    | 8.0    | 8.1   |       |       |            |            |            |
-| Windows Phone              | 8.1    | 8.1    | 8.1   |       |       |            |            |            |
-| Windows Phone Silverlight  | 8.0    |        |       |       |       |            |            |            |
-| Unity                      | 2018.1 | 2018.1 | 2018.1| 2018.1| 2018.1| 2018.1     |  2018.1    | 2018.1     |
+| .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               |
+|----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|
+| Núcleo de .NET                  | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0                | 1.0                | 2.0                 |
+| .NET Framework <sup>1</sup>| 4.5    | 4.5    | 4.5.1 | 4.6   | 4.6.1 | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup>  |
+| Mono                       | 4.6    | 4.6    | 4.6   | 4.6   | 4.6   | 4.6                | 4.6                | 5.4                 |
+| Xamarin.iOS                | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0               | 10.0               | 10.14               |
+| Xamarin.Mac                | 3.0    | 3.0    | 3.0   | 3.0   | 3.0   | 3.0                | 3.0                | 3.8                 |
+| Xamarin.Android            | 7.0    | 7.0    | 7.0   | 7.0   | 7.0   | 7.0                | 7.0                | 8.0                 |
+| Plataforma universal de Windows | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0.16299         | 10.0.16299         | 10.0.16299          |
+| Windows                    | 8.0    | 8.0    | 8.1   |       |       |                    |                    |                     |
+| Windows Phone              | 8.1    | 8.1    | 8.1   |       |       |                    |                    |                     |
+| Windows Phone Silverlight  | 8.0    |        |       |       |       |                    |                    |                     |
+| Unity                      | 2018.1 | 2018.1 | 2018.1| 2018.1| 2018.1| 2018.1             |  2018.1            | 2018.1              |
 
 <sup>1 Las versiones que se muestran de .NET Framework se aplican al SDK de .NET Core 2.0 y versiones posteriores de la herramienta. Las versiones anteriores usaban una asignación diferente para .NET Standard 1.5 y versiones posteriores. También puede [descargar herramientas para .NET Core para Visual Studio 2015](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) si no se puede actualizar a Visual Studio 2017.</sup>
+
+<sup>2 Las versiones siguientes representan las reglas que usa NuGet para determinar si una determinada biblioteca de .NET Standard es aplicable. Aunque NuGet considera a .NET Framework 4.6.1 compatible con .NET Standard (versiones 1.5 a 2.0) hay varios problemas con el consumo de bibliotecas de .NET Standard que se compilaron para esas versiones desde proyectos de .NET Framework 4.6.1. Para los proyectos de .NET Framework que tengan que usar estas bibliotecas, se recomienda actualizar el proyecto para destinarlo a .NET Framework 4.7.2 o una versión posterior.</sup>
 
 - Las columnas representan las versiones de .NET Standard. Cada celda de encabezado es un vínculo a un documento que muestra qué API se han agregado en esa versión de .NET Standard.
 - Las filas representan las diferentes implementaciones de .NET.

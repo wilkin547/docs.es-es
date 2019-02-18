@@ -1,7 +1,7 @@
 ---
 title: '! operador: Referencia de C#'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/14/2019
 f1_keywords:
 - '!_CSharpKeyword'
 helpviewer_keywords:
@@ -9,24 +9,26 @@ helpviewer_keywords:
 - logical negation operator (!) [C#]
 - NOT operator [C#]
 ms.assetid: f5ae133f-8f64-4560-b34f-cd9cd5eed4ad
-ms.openlocfilehash: 6b6d1796032f536aac0be49d4f101c1380b4e98f
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 464bd658c9bf430191d84d3d5ad8d57173ab87c5
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333231"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303717"
 ---
 # <a name="-operator-c-reference"></a>! operator (Referencia de C#)
 
-El operador lógico de negación (`!`) es un operador unario que niega su operando. Está definido para el tipo `bool` y devuelve `true` si, y solo si, su operando es `false`.
+El operador lógico de negación `!` es un operador unario que calcula la negación lógica de su operando [bool](../keywords/bool.md). Es decir, genera `true` si el operando es `false`, y `false` si el operando es `true`:
 
-## <a name="remarks"></a>Comentarios
+[!code-csharp-interactive[logical negation](~/samples/snippets/csharp/language-reference/operators/LogicalNegationExamples.cs#Example)]
 
-Los tipos definidos por el usuario pueden sobrecargar el operador `!` (vea [operator](../keywords/operator.md)).
+## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 
-## <a name="example"></a>Ejemplo
+Los tipos definidos por el usuario pueden [sobrecargar](../keywords/operator.md) el operador `!`.
 
-[!code-csharp[csRefOperators#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#7)]
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
+
+Para más información, vea la sección sobre el [operador de negación lógica](~/_csharplang/spec/expressions.md#logical-negation-operator) de la [Especificación del lenguaje C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Vea también
 

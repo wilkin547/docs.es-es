@@ -1,45 +1,51 @@
 ---
 title: '>>Operador =:Referencia de C#'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/12/2019
 f1_keywords:
 - '>>=_CSharpKeyword'
 helpviewer_keywords:
 - right shift assignment operator (>>=) [C#]
 - '>>= operator (right-shift assignment) [C#]'
 ms.assetid: b593778c-b9b4-440d-8b29-c1ac22cb81c0
-ms.openlocfilehash: 8cc341c14ee1b90fde2abb369c187e57b4ce5c00
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 51914bb5e9ebffd5d868528b5a8d3072a956cea6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278985"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220918"
 ---
 # <a name="-operator-c-reference"></a>Operador >>= (Referencia de C#)
 
 Operador de asignación de desplazamiento a la derecha.
 
-## <a name="remarks"></a>Comentarios
-
-Una expresión con el formato
+Una expresión que usa el operador `>>=`, como
 
 ```csharp
 x >>= y
 ```
 
-se evalúa como
+es equivalente a
 
 ```csharp
 x = x >> y
 ```
 
-salvo que `x` solo se evalúa una vez. El [operador >>](right-shift-operator.md) desplaza `x` hacia la derecha una cantidad especificada por `y`.
+salvo que `x` solo se evalúa una vez.
 
-El operador >>= no se puede sobrecargar directamente, pero los tipos definidos por el usuario pueden sobrecargar el [operador >>](right-shift-operator.md) (vea [operator](../keywords/operator.md)).
+El [operador `>>`](right-shift-operator.md) desplaza su primer operando a la derecha el número de bits definido por su segundo operando.
 
-## <a name="example"></a>Ejemplo
+En el siguiente ejemplo se muestra el uso del operador `>>=`:
 
-[!code-csharp[csRefOperators#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#11)]
+[!code-csharp-interactive[right shift assignment](~/samples/snippets/csharp/language-reference/operators/ShiftOperatorsExamples.cs#RightShiftAssignment)]
+
+## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
+
+Si un tipo definido por el usuario [sobrecarga](../keywords/operator.md) el [operador `>>`](right-shift-operator.md), el operador de asignación de desplazamiento a la derecha `>>=` se sobrecarga de forma implícita. Un tipo definido por el usuario no puede sobrecargar de forma explícita el operador de asignación de desplazamiento a la derecha.
+
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
+
+Para obtener más información, vea la sección [Asignación compuesta](~/_csharplang/spec/expressions.md#compound-assignment) de la [Especificación del lenguaje C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,41 +1,41 @@
 ---
-title: Securing .NET Microservices and Web Applications
-description: Security in .NET Microservices and Web Applications - Get to know the authentication options in ASP.NET Core web applications.
+title: Proteger microservicios y aplicaciones web de .NET
+description: 'Seguridad en microservicios y aplicaciones web .NET: familiarícese con las opciones de autenticación en las aplicaciones web ASP.NET Core.'
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 9a60f326035a6d04aa39a14c98fc1c711ffe494a
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: e53e6a50c1fdfaff6839a0a1e328047562a47824
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362306"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333511"
 ---
-# <a name="make-secure-net-microservices-and-web-applications"></a>Make secure .NET Microservices and Web Applications
+# <a name="make-secure-net-microservices-and-web-applications"></a>Protección de microservicios y aplicaciones web .NET
 
-There are so many aspects about security in microservices and web applications that the topic could easy take several books like this one so, in this section, we'll focus on authentication, authorization, and application secrets.
+Hay tantos aspectos sobre la seguridad en los microservicios y las aplicaciones web que fácilmente se podrían dedicar al tema varios libros como este por lo que, en esta sección, nos centraremos en la autenticación, la autorización y los secretos de aplicación.
 
-## <a name="implement-authentication-in-net-microservices-and-web-applications"></a>Implement authentication in .NET microservices and web applications
+## <a name="implement-authentication-in-net-microservices-and-web-applications"></a>Implementación de la autenticación en microservicios y aplicaciones web .NET
 
-It's often necessary for resources and APIs published by a service to be limited to certain trusted users or clients. The first step to making these sorts of API-level trust decisions is authentication. Authentication is the process of reliably verify a user’s identity.
+A menudo es necesario que los recursos y las API publicados por un servicio se limiten a determinados usuarios o clientes de confianza. El primer paso para tomar este tipo de decisiones de confianza en el nivel de API es la autenticación. La autenticación es el proceso de comprobar de forma fiable la identidad de un usuario.
 
-In microservice scenarios, authentication is typically handled centrally. If you're using an API Gateway, the gateway is a good place to authenticate, as shown in Figure 9-1. If you use this approach, make sure that the individual microservices cannot be reached directly (without the API Gateway) unless additional security is in place to authenticate messages whether they come from the gateway or not.
+En escenarios de microservicios, la autenticación suele controlarse de manera centralizada. Si usa una puerta de enlace de API, esa puerta es un buen lugar para realizar la autenticación, como se muestra en la figura 9-1. Si emplea este método, asegúrese de que no es posible ponerse en contacto directamente con los microservicios individuales (sin la puerta de enlace de API), a menos que haya aplicado seguridad adicional para autenticar si los mensajes provienen de la puerta de enlace.
 
-![When the API Gateway centralizes authentication, it adds user information when forwarding requests to the microservices.](./media/image1.png)
+![Cuando la puerta de enlace de API centraliza la autenticación, agrega información de usuario al reenviar las solicitudes a los microservicios.](./media/image1.png)
 
-**Figure 9-1**. Centralized authentication with an API Gateway
+**Figura 9-1**. Autenticación centralizada con una puerta de enlace de API.
 
-If services can be accessed directly, an authentication service like Azure Active Directory or a dedicated authentication microservice acting as a security token service (STS) can be used to authenticate users. Trust decisions are shared between services with security tokens or cookies. (These tokens can be shared between applications, if needed, in ASP.NET Core with [data protection services](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications).) This pattern is illustrated in Figure 9-2.
+Si se puede tener acceso directamente a los servicios, entonces para la autenticación de los usuarios se puede usar un servicio de autenticación como Azure Active Directory o un microservicio de autenticación dedicado que actúe como un servicio de token de seguridad (STS). Las decisiones de confianza se comparten entre los servicios con tokens de seguridad o cookies. (Si es necesario, estos tokens se pueden compartir entre aplicaciones en ASP.NET Core con [servicios de protección de datos](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)). Este patrón se ilustra en la figura 9-2.
 
-![When microservices are accessed directly, trust, that includes authentication and authorization, is handled by a security token issued by a dedicated microservice, shared between microservices.](./media/image2.png)
+![Cuando se accede directamente a los microservicios, la confianza (que incluye la autenticación y la autorización) se controla mediante un token de seguridad emitido por un microservicio dedicado, que se comparte entre los microservicios.](./media/image2.png)
 
-**Figure 9-2**. Authentication by identity microservice; trust is shared using an authorization token
+**Figura 9-2**. Autenticación realizada por un microservicio de identidad; la confianza se comparte mediante un token de autorización.
 
-### <a name="authenticate-with-aspnet-core-identity"></a>Authenticate with ASP.NET Core Identity
+### <a name="authenticate-with-aspnet-core-identity"></a>Autenticación con ASP.NET Core Identity
 
-The primary mechanism in ASP.NET Core for identifying an application’s users is the [ASP.NET Core Identity](/aspnet/core/security/authentication/identity) membership system. ASP.NET Core Identity stores user information (including sign-in information, roles, and claims) in a data store configured by the developer. Typically, the ASP.NET Core Identity data store is an Entity Framework store provided in the `Microsoft.AspNetCore.Identity.EntityFrameworkCore` package. However, custom stores or other third-party packages can be used to store identity information in Azure Table Storage, CosmosDB, or other locations.
+El principal mecanismo de ASP.NET Core para identificar a los usuarios de una aplicación es el sistema de pertenencia [ASP.NET Core Identity](/aspnet/core/security/authentication/identity). ASP.NET Core Identity almacena la información del usuario (incluida la información de inicio de sesión, los roles y las notificaciones) en un almacén de datos configurado por el desarrollador. Normalmente, el almacén de datos de ASP.NET Core Identity es un almacén de Entity Framework incluido en el paquete `Microsoft.AspNetCore.Identity.EntityFrameworkCore`. Pero se pueden usar almacenes personalizados u otros paquetes de terceros para almacenar información de identidad en Table Storage de Azure, Cosmos DB u otras ubicaciones.
 
-The following code is taken from the ASP.NET Core Web Application project template with individual user account authentication selected. It shows how to configure ASP.NET Core Identity using EntityFramework.Core in the Startup.ConfigureServices method.
+El código siguiente procede de la plantilla de proyecto de aplicación web de ASP.NET Core con la autenticación de cuentas de usuario individuales seleccionada. Muestra cómo configurar ASP.NET Core Identity mediante EntityFramework.Core en el método Startup.ConfigureServices.
 
 ```csharp
 services.AddDbContext<ApplicationDbContext>(options =>
@@ -45,38 +45,38 @@ services.AddDbContext<ApplicationDbContext>(options =>
         .AddDefaultTokenProviders();
 ```
 
-Once ASP.NET Core Identity is configured, you enable it by calling app.UseIdentity in the service’s `Startup.Configure` method.
+Una vez configurado ASP.NET Core Identity, para habilitarlo llame a app.UseIdentity en el método `Startup.Configure` del servicio.
 
-Using ASP.NET Core Identity enables several scenarios:
+El uso de ASP.NET Core Identity permite varios escenarios:
 
-- Create new user information using the UserManager type (userManager.CreateAsync).
+- Crear información de usuario con el tipo UserManager (userManager.CreateAsync).
 
-- Authenticate users using the SignInManager type. You can use `signInManager.SignInAsync` to sign in directly, or `signInManager.PasswordSignInAsync` to confirm the user’s password is correct and then sign them in.
+- Autenticar a los usuarios con el tipo SignInManager. Puede usar `signInManager.SignInAsync` para iniciar sesión directamente, o bien `signInManager.PasswordSignInAsync` para confirmar que la contraseña del usuario es correcta y, después, iniciar su sesión.
 
-- Identify a user based on information stored in a cookie (which is read by ASP.NET Core Identity middleware) so that subsequent requests from a browser will include a signed-in user’s identity and claims.
+- Identificar a un usuario en función de la información almacenada en una cookie (que se lee mediante el software intermedio de ASP.NET Core Identity), de modo que las solicitudes posteriores desde un explorador incluyan la identidad y las notificaciones del usuario que ha iniciado sesión.
 
-ASP.NET Core Identity also supports [two-factor authentication](/aspnet/core/security/authentication/2fa).
+ASP.NET Core Identity también es compatible con la [autenticación en dos fases](/aspnet/core/security/authentication/2fa).
 
-For authentication scenarios that make use of a local user data store and that persist identity between requests using cookies (as is typical for MVC web applications), ASP.NET Core Identity is a recommended solution.
+ASP.NET Core Identity es una solución recomendada para los escenarios de autenticación que usan un almacén de datos de usuario local y que conservan la identidad entre las solicitudes mediante el uso de cookies (como es habitual en las aplicaciones web MVC).
 
-### <a name="authenticate-with-external-providers"></a>Authenticate with external providers
+### <a name="authenticate-with-external-providers"></a>Autenticación con proveedores externos
 
-ASP.NET Core also supports using [external authentication providers](/aspnet/core/security/authentication/social/) to let users sign in via [OAuth 2.0](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) flows. This means that users can sign in using existing authentication processes from providers like Microsoft, Google, Facebook, or Twitter and associate those identities with an ASP.NET Core identity in your application.
+ASP.NET Core también admite el uso de [proveedores de autenticación externos](/aspnet/core/security/authentication/social/) para permitir que los usuarios inicien sesión a través de flujos [OAuth 2.0](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2). Esto significa que los usuarios pueden iniciar sesión mediante los procesos de autenticación existentes de proveedores como Microsoft, Google, Facebook o Twitter, y asociar esas identidades con una identidad de ASP.NET Core en la aplicación.
 
-To use external authentication, you include the appropriate authentication middleware in your application’s HTTP request processing pipeline. This middleware is responsible for handling requests to return URI routes from the authentication provider, capturing identity information, and making it available via the SignInManager.GetExternalLoginInfo method.
+Para usar la autenticación externa, incluya el software intermedio de autenticación adecuado en la canalización de procesamiento de solicitudes HTTP de la aplicación. Este software intermedio es responsable de controlar las solicitudes para devolver las rutas URI desde el proveedor de autenticación, capturar información de identidad y hacer que esté disponible mediante el método SignInManager.GetExternalLoginInfo.
 
-Popular external authentication providers and their associated NuGet packages are shown in the following table:
+En la tabla siguiente se muestran proveedores de autenticación externos populares y sus paquetes NuGet asociados:
 
-| **Provider**  | **Package**                                          |
+| **Proveedor**  | **Paquete**                                          |
 | ------------- | ---------------------------------------------------- |
 | **Microsoft** | **Microsoft.AspNetCore.Authentication.MicrosoftAccount** |
 | **Google**    | **Microsoft.AspNetCore.Authentication.Google**           |
 | **Facebook**  | **Microsoft.AspNetCore.Authentication.Facebook**         |
 | **Twitter**   | **Microsoft.AspNetCore.Authentication.Twitter**          |
 
-In all cases, the middleware is registered with a call to a registration method similar to `app.Use{ExternalProvider}Authentication` in `Startup.Configure`. These registration methods take an options object that contains an application ID and secret information (a password, for instance), as needed by the provider. External authentication providers require the application to be registered (as explained in [ASP.NET Core documentation](/aspnet/core/security/authentication/social/)) so that they can inform the user what application is requesting access to their identity.
+En todos los casos, el middleware se registra con una llamada a un método de registro similar a `app.Use{ExternalProvider}Authentication` en `Startup.Configure`. Estos métodos de registro toman un objeto de opciones que contiene un identificador de aplicación e información secreta (una contraseña, por ejemplo), según requiera el proveedor. Los proveedores de autenticación externos requieren que la aplicación se registre (como se explica en la [documentación de ASP.NET Core](/aspnet/core/security/authentication/social/)) para que puedan informar al usuario sobre qué aplicación solicita acceso a su identidad.
 
-Once the middleware is registered in `Startup.Configure`, you can prompt users to sign in from any controller action. To do this, you create an `AuthenticationProperties` object that includes the authentication provider’s name and a redirect URL. You then return a Challenge response that passes the `AuthenticationProperties` object. The following code shows an example of this.
+Una vez que se haya registrado el middleware en `Startup.Configure`, podrá pedirles a los usuarios que inicien sesión desde cualquier acción de controlador. Para ello, cree un objeto `AuthenticationProperties` que incluya el nombre del proveedor de autenticación y una dirección URL de redireccionamiento. Después, devuelva una respuesta Challenge que pase el objeto `AuthenticationProperties`. El código siguiente muestra un ejemplo de esto.
 
 ```csharp
 var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider,
@@ -84,7 +84,7 @@ var properties = _signInManager.ConfigureExternalAuthenticationProperties(provid
 return Challenge(properties, provider);
 ```
 
-The redirectUrl parameter includes the URL that the external provider should redirect to once the user has authenticated. The URL should represent an action that will sign the user in based on external identity information, as in the following simplified example:
+El parámetro redirectUrl incluye la dirección URL a la que el proveedor externo debe redirigir una vez que se ha autenticado el usuario. La dirección URL debe representar una acción que iniciará la sesión del usuario en función de información de identidad externa, como en el siguiente ejemplo simplificado:
 
 ```csharp
 // Sign in the user with this external login provider if the user
@@ -119,25 +119,25 @@ else
 }
 ```
 
-If you choose the **Individual User Account** authentication option when you create the ASP.NET Code web application project in Visual Studio, all the code necessary to sign in with an external provider is already in the project, as shown in Figure 9-3.
+Si elige la opción de autenticación **Cuenta de usuario individual** al crear el proyecto de aplicación web ASP.NET Core en Visual Studio, todo el código necesario para iniciar sesión con un proveedor externo ya está en el proyecto, como se muestra en la figura 9-3.
 
-![Dialog for the New ASP.NET Core Web Application, highlighting the button to change authentication.](./media/image3.png)
+![Cuadro de diálogo para la nueva aplicación web ASP.NET Core, con el botón para cambiar la autenticación resaltado.](./media/image3.png)
 
-**Figure 9-3**. Selecting an option for using external authentication when creating a web application project
+**Figura 9-3**. Proceso de selección de una opción para usar la autenticación externa al crear un proyecto de aplicación web.
 
-In addition to the external authentication providers listed previously, third-party packages are available that provide middleware for using many more external authentication providers. For a list, see the [AspNet.Security.OAuth.Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) repo on GitHub.
+Además de los proveedores de autenticación externa mencionados anteriormente, hay disponibles paquetes de terceros que proporcionan software intermedio para el uso de muchos otros proveedores de autenticación externos. Para obtener una lista, vea el repositorio [AspNet.Security.OAuth.Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) en GitHub.
 
-You can also create your own external authentication middleware to solve some special need.
+También puede crear middleware de autenticación externo propio para resolver alguna necesidad especial.
 
-### <a name="authenticate-with-bearer-tokens"></a>Authenticate with bearer tokens
+### <a name="authenticate-with-bearer-tokens"></a>Autenticación con tokens de portador
 
-Authenticating with ASP.NET Core Identity (or Identity plus external authentication providers) works well for many web application scenarios in which storing user information in a cookie is appropriate. In other scenarios, though, cookies are not a natural means of persisting and transmitting data.
+La autenticación con ASP.NET Core Identity (o con Identity y proveedores de autenticación externos) funciona bien en muchos escenarios de aplicación web en los que es adecuado almacenar información de usuario en una cookie. En cambio, en otros escenarios las cookies no son una manera natural de conservar y transmitir datos.
 
-For example, in an ASP.NET Core Web API that exposes RESTful endpoints that might be accessed by Single Page Applications (SPAs), by native clients, or even by other Web APIs, you typically want to use bearer token authentication instead. These types of applications do not work with cookies, but can easily retrieve a bearer token and include it in the authorization header of subsequent requests. To enable token authentication, ASP.NET Core supports several options for using [OAuth 2.0](https://oauth.net/2/) and [OpenID Connect](https://openid.net/connect/).
+Por ejemplo, en una Web API de ASP.NET Core que expone puntos de conexión RESTful a los que podrían tener acceso aplicaciones de una sola página (SPA), clientes nativos o incluso otras Web API, normalmente le interesa usar la autenticación mediante token de portador. Estos tipos de aplicaciones no funcionan con cookies, pero pueden recuperar fácilmente un token de portador e incluirlo en el encabezado de autorización de las solicitudes posteriores. Con objeto de habilitar la autenticación mediante token, ASP.NET Core admite varias opciones para el uso de [OAuth 2.0](https://oauth.net/2/) y [OpenID Connect](https://openid.net/connect/).
 
-### <a name="authenticate-with-an-openid-connect-or-oauth-20-identity-provider"></a>Authenticate with an OpenID Connect or OAuth 2.0 Identity provider
+### <a name="authenticate-with-an-openid-connect-or-oauth-20-identity-provider"></a>Autenticación con un proveedor de identidad OpenID Connect u OAuth 2.0
 
-If user information is stored in Azure Active Directory or another identity solution that supports OpenID Connect or OAuth 2.0, you can use the **Microsoft.AspNetCore.Authentication.OpenIdConnect** package to authenticate using the OpenID Connect workflow. For example, to authenticate to the Identity.Api microservice in eShopOnContainers, an ASP.NET Core web application can use middleware from that package as shown in the following simplified example in `Startup.cs`:
+Si la información de usuario se almacena en Azure Active Directory u otra solución de identidad compatible con OpenID Connect u OAuth 2.0, puede usar el paquete **Microsoft.AspNetCore.Authentication.OpenIdConnect** para autenticarse con el flujo de trabajo de OpenID Connect. Por ejemplo, para autenticarse en el microservicio Identity.Api de eShopOnContainers, una aplicación web ASP.NET Core puede usar el middleware de ese paquete como se muestra en el siguiente ejemplo simplificado de `Startup.cs`:
 
 ```csharp
 // Startup.cs
@@ -185,35 +185,35 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Note that when you use this workflow, the ASP.NET Core Identity middleware is not needed, because all user information storage and authentication is handled by the Identity service.
+Tenga en cuenta que, cuando se usa este flujo de trabajo, el software intermedio de ASP.NET Core Identity no es necesario, porque el servicio de identidad controla el almacenamiento y la autenticación de la información del usuario.
 
-### <a name="issue-security-tokens-from-an-aspnet-core-service"></a>Issue security tokens from an ASP.NET Core service
+### <a name="issue-security-tokens-from-an-aspnet-core-service"></a>Emisión de tokens de seguridad desde un servicio de ASP.NET Core
 
-If you prefer to issue security tokens for local ASP.NET Core Identity users rather than using an external identity provider, you can take advantage of some good third-party libraries.
+Si prefiere emitir tokens de seguridad para los usuarios locales de ASP.NET Core Identity en lugar de usar un proveedor de identidades externo, puede aprovechar algunas buenas bibliotecas de terceros.
 
-[IdentityServer4](https://github.com/IdentityServer/IdentityServer4) and [OpenIddict](https://github.com/openiddict/openiddict-core) are OpenID Connect providers that integrate easily with ASP.NET Core Identity to let you issue security tokens from an ASP.NET Core service. The [IdentityServer4 documentation](https://identityserver4.readthedocs.io/en/release/) has in-depth instructions for using the library. However, the basic steps to using IdentityServer4 to issue tokens are as follows.
+[IdentityServer4](https://github.com/IdentityServer/IdentityServer4) y [OpenIddict](https://github.com/openiddict/openiddict-core) son proveedores de OpenID Connect que se integran fácilmente con ASP.NET Core Identity y le permiten emitir tokens de seguridad desde un servicio de ASP.NET Core. En la [documentación de IdentityServer4](https://identityserver4.readthedocs.io/en/latest/) encontrará instrucciones detalladas para usar la biblioteca, pero los pasos básicos para emitir tokens con IdentityServer4 son los que se indican a continuación.
 
-1. You call app.UseIdentityServer in the Startup.Configure method to add IdentityServer4 to the application’s HTTP request processing pipeline. This lets the library serve requests to OpenID Connect and OAuth2 endpoints like /connect/token.
+1. Llame a app.UseIdentityServer en el método Startup.Configure para agregar IdentityServer4 a la canalización de procesamiento de solicitudes HTTP de la aplicación. Esto permite a la biblioteca atender las solicitudes a los puntos de conexión de OpenID Connect y OAuth2 como /connect/token.
 
-2. You configure IdentityServer4 in Startup.ConfigureServices by making a call to services.AddIdentityServer.
+2. Configure IdentityServer4 en Startup.ConfigureServices mediante una llamada a services.AddIdentityServer.
 
-3. You configure identity server by setting the following data:
+3. Para configurar el servidor de identidades, establezca los datos siguientes:
 
-   - The [credentials](https://identityserver4.readthedocs.io/en/release/topics/crypto.html) to use for signing.
+   - Las [credenciales](https://identityserver4.readthedocs.io/en/latest/topics/crypto.html) que se van a usar para la firma.
 
-   - The [Identity and API resources](https://identityserver4.readthedocs.io/en/release/topics/resources.html) that users might request access to:
+   - Los [recursos de identidad y de API](https://identityserver4.readthedocs.io/en/latest/topics/resources.html) a los que los usuarios podrían solicitar acceso:
 
-      - API resources represent protected data or functionality that a user can access with an access token. An example of an API resource would be a web API (or set of APIs) that requires authorization.
+      - Los recursos de API representan funciones o datos protegidos a los que los usuarios pueden tener acceso con un token de acceso. Un ejemplo de un recurso de API sería una API web (o un conjunto de API) que requiere autorización.
 
-      - Identity resources represent information (claims) that are given to a client to identify a user. The claims might include the user name, email address, and so on.
+      - Los recursos de identidad representan información (notificaciones) que se entregan a un cliente para identificar a un usuario. Las notificaciones pueden incluir el nombre de usuario, la dirección de correo electrónico, etc.
 
-   - The [clients](https://identityserver4.readthedocs.io/en/release/topics/clients.html) that will be connecting in order to request tokens.
+   - Los [clientes](https://identityserver4.readthedocs.io/en/latest/topics/clients.html) que se conectarán para solicitar tokens.
 
-   - The storage mechanism for user information, such as [ASP.NET Core Identity](https://identityserver4.readthedocs.io/en/release/quickstarts/6_aspnet_identity.html) or an alternative.
+   - El mecanismo de almacenamiento de la información de usuario, como [ASP.NET Core Identity](https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html) u otra alternativa.
 
-When you specify clients and resources for IdentityServer4 to use, you can pass an <xref:System.Collections.Generic.IEnumerable%601> collection of the appropriate type to methods that take in-memory client or resource stores. Or for more complex scenarios, you can provide client or resource provider types via Dependency Injection.
+Al especificar los clientes y los recursos que se van a usar en IdentityServer4, puede pasar una colección <xref:System.Collections.Generic.IEnumerable%601> del tipo adecuado a los métodos que toman almacenes de recursos o clientes en memoria. En escenarios más complejos, puede proporcionar tipos de proveedor de recursos o cliente mediante la inserción de dependencias.
 
-A sample configuration for IdentityServer4 to use in-memory resources and clients provided by a custom IClientStore type might look like the following example:
+En el ejemplo siguiente se muestra el aspecto que podría tener una configuración para que IdentityServer4 use clientes y recursos en memoria proporcionados por un tipo IClientStore personalizado:
 
 ```csharp
 // Add IdentityServer services
@@ -224,11 +224,11 @@ services.AddIdentityServer()
     .AddAspNetIdentity<ApplicationUser>();
 ```
 
-### <a name="consume-security-tokens"></a>Consume security tokens
+### <a name="consume-security-tokens"></a>Consumo de tokens de seguridad
 
-Authenticating against an OpenID Connect endpoint or issuing your own security tokens covers some scenarios. But what about a service that simply needs to limit access to those users who have valid security tokens that were provided by a different service?
+La autenticación con un punto de conexión de OpenID Connect o mediante la emisión de tokens de seguridad propios se aplica a diversos escenarios. Pero ¿qué sucede si un servicio solo necesita limitar el acceso a los usuarios que tienen tokens de seguridad válidos proporcionados por otro servicio?
 
-For that scenario, authentication middleware that handles JWT tokens is available in the **Microsoft.AspNetCore.Authentication.JwtBearer** package. JWT stands for "[JSON Web Token](https://tools.ietf.org/html/rfc7519)" and is a common security token format (defined by RFC 7519) for communicating security claims. A simplified example of how to use middleware to consume such tokens might look like this code fragment, taken from the Ordering.Api microservice of eShopOnContainers.
+Para este escenario, el middleware de autenticación que controla los tokens JWT está disponible en el paquete **Microsoft.AspNetCore.Authentication.JwtBearer**. JWT es el acrónimo de "[JSON Web Token](https://tools.ietf.org/html/rfc7519)" y es un formato común de token de seguridad (definido en RFC 7519) para la comunicación de notificaciones de seguridad. Un ejemplo simplificado de cómo usar el middleware para consumir esos tokens podría ser similar a este fragmento de código, tomado del microservicio Ordering.Api de eShopOnContainers.
 
 ```csharp
 // Startup.cs
@@ -264,44 +264,44 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-The parameters in this usage are:
+Los parámetros de este uso son los siguientes:
 
-- `Audience` represents the receiver of the incoming token or the resource that the token grants access to. If the value specified in this parameter does not match the parameter in the token, the token will be rejected.
+- `Audience` representa el receptor del token entrante o el recurso al que el token concede acceso. Si el valor especificado en este parámetro no coincide con el parámetro del token, se rechazará el token.
 
-- `Authority` is the address of the token-issuing authentication server. The JWT bearer authentication middleware uses this URI to get the public key that can be used to validate the token's signature. The middleware also confirms that the `iss` parameter in the token matches this URI.
+- `Authority` es la dirección del servidor de autenticación de emisión de tokens. El software intermedio de autenticación del portador de JWT usa este URI para obtener la clave pública que puede usarse para validar la firma del token. El middleware también confirma que el parámetro `iss` del token coincide con este URI.
 
-Another parameter, `RequireHttpsMetadata`, is useful for testing purposes; you set this parameter to false so you can test in environments where you don't have certificates. In real-world deployments, JWT bearer tokens should always be passed only over HTTPS.
+Otro parámetro, `RequireHttpsMetadata`, resulta útil para la realización de pruebas; establézcalo en false para poder realizarlas en los entornos en los que no tiene certificados. En implementaciones reales, los tokens de portador de JWT siempre se deben pasar a través de HTTPS exclusivamente.
 
-With this middleware in place, JWT tokens are automatically extracted from authorization headers. They are then deserialized, validated (using the values in the `Audience` and `Authority` parameters), and stored as user information to be referenced later by MVC actions or authorization filters.
+Con este software intermedio, los tokens JWT se extraen automáticamente de los encabezados de autorización. Después, se deserializan, se validan (mediante los valores de los parámetros `Audience` y `Authority`) y se almacenan como información del usuario a la que se hará referencia más adelante a través de acciones de MVC o filtros de autorización.
 
-The JWT bearer authentication middleware can also support more advanced scenarios, such as using a local certificate to validate a token if the authority is not available. For this scenario, you can specify a `TokenValidationParameters` object in the `JwtBearerOptions` object.
+El software intermedio de autenticación del portador de JWT también puede admitir escenarios más avanzados, como el uso de un certificado local para validar un token si la entidad no está disponible. En este escenario, puede especificar un objeto `TokenValidationParameters` en el objeto `JwtBearerOptions`.
 
-## <a name="additional-resources"></a>Additional resources
+## <a name="additional-resources"></a>Recursos adicionales
 
-- **Sharing cookies between applications** \
+- **Uso compartido de cookies entre aplicaciones** \
   [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
 
-- **Introduction to Identity** \
+- **Introducción a Identity** \
   [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](/aspnet/core/security/authentication/identity)
 
-- **Rick Anderson. Two-factor authentication with SMS** \
+- **Rick Anderson. Autenticación en dos fases con SMS** \
   [*https://docs.microsoft.com/aspnet/core/security/authentication/2fa*](/aspnet/core/security/authentication/2fa)
 
-- **Enabling authentication using Facebook, Google and other external providers** \
+- **Habilitación de la autenticación con Facebook, Google y otros proveedores externos** \
   [*https://docs.microsoft.com/aspnet/core/security/authentication/social/*](/aspnet/core/security/authentication/social/)
 
-- **Michell Anicas. An Introduction to OAuth 2** \
+- **Michell Anicas. An Introduction to OAuth 2** \ (Una introducción a OAuth 2)
   [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
-- **AspNet.Security.OAuth.Providers** (GitHub repo for ASP.NET OAuth providers. \
+- **AspNet.Security.OAuth.Providers** (repositorio de GitHub para proveedores de OAuth de ASP.NET). \
   [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
-- **Danny Strockis. Integrating Azure AD into an ASP.NET Core web app** \
+- **Danny Strockis. Integrating Azure AD into an ASP.NET Core web app** \ (Integración de Azure AD en una aplicación web ASP.NET Core)
   [*https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/*](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)
 
-- **IdentityServer4. Official documentation** \
-  [*https://identityserver4.readthedocs.io/en/release/*](https://identityserver4.readthedocs.io/en/release/)
+- **IdentityServer4. Documentación oficial** \
+  *<https://identityserver4.readthedocs.io/en/latest/>*
 
 >[!div class="step-by-step"]
->[Previous](../implement-resilient-applications/monitor-app-health.md)
->[Next](authorization-net-microservices-web-applications.md)
+>[Anterior](../implement-resilient-applications/monitor-app-health.md)
+>[Siguiente](authorization-net-microservices-web-applications.md)
