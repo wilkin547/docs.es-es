@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 453ace4af7ce07c8d81b6d7ece71140e04bfa9bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d51fcbdeeaa1fe30bbdeff5eb85a1c15fa9b4847
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531517"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221087"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Empaquetar un ensamblado para COM
 Los programadores de COM pueden beneficiarse de la siguiente información sobre los tipos administrados que piensan incluir en su aplicación:  
@@ -60,7 +60,7 @@ Los programadores de COM pueden beneficiarse de la siguiente información sobre 
   
      Independientemente del mecanismo que elija, en la biblioteca de tipos generada solo se incluyen los tipos públicos definidos en el ensamblado que se proporciona.  
   
-     Puede empaquetar una biblioteca de tipos como un archivo independiente o insertarlo como archivo de recursos de Win32 en una aplicación basada en .NET. Microsoft Visual Basic 6.0 realiza esta tarea automáticamente; pero al usar [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], debe insertar la biblioteca de tipos manualmente. Para obtener instrucciones, vea [Cómo: Insertar bibliotecas de tipos como recursos de Win32 en aplicaciones basadas en .NET](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100)).  
+     Puede empaquetar una biblioteca de tipos como un archivo independiente o insertarlo como archivo de recursos de Win32 en una aplicación basada en .NET. Microsoft Visual Basic 6.0 realiza esta tarea automáticamente; pero al usar [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], debe insertar la biblioteca de tipos manualmente. Para obtener instrucciones, vea [Cómo: Insertar bibliotecas de tipos como recursos de Win32 en aplicaciones basadas en .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>Exportador de la biblioteca de tipos  
@@ -89,4 +89,4 @@ Los programadores de COM pueden beneficiarse de la siguiente información sobre 
 - [Consideraciones de seguridad sobre ensamblados](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (Exportador de la biblioteca de tipos)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Registrar ensamblados con COM](registering-assemblies-with-com.md)
-- [Cómo: Insertar bibliotecas de tipos como recursos de Win32 en aplicaciones](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))
+- [Cómo: Insertar bibliotecas de tipos como recursos de Win32 en aplicaciones](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

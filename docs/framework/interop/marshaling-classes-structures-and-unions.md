@@ -1,5 +1,5 @@
 ---
-title: Serialización de clases, estructuras y uniones
+title: Calcular las referencias de clases, estructuras y uniones
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ba1651583f4cd962f5038fbe0e3f55a5d8b42ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a4461d14299264a35f36133480cb11709c346ce
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589680"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221282"
 ---
-# <a name="marshaling-classes-structures-and-unions"></a>Serialización de clases, estructuras y uniones
+# <a name="marshaling-classes-structures-and-unions"></a>Calcular las referencias de clases, estructuras y uniones
 Las clases y las estructuras son similares en .NET Framework. Ambas pueden tener campos, propiedades y eventos, además de métodos estáticos y no estáticos. Una diferencia importante entre ellas es que las estructuras son tipos de valor y las clases son tipos de referencia.  
   
  En la tabla siguiente se enumeran las opciones de serialización para clases, estructuras y uniones, se describe su uso y se proporciona un vínculo al ejemplo de invocación de la plataforma correspondiente.  
@@ -129,7 +129,7 @@ typedef struct _MYARRAYSTRUCT
  [!code-vb[Conceptual.Interop.Marshaling#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/structures.vb#24)]  
   
 ## <a name="findfile-sample"></a>FindFile (ejemplo)  
- En este ejemplo se muestra cómo pasar una estructura que contiene una segunda estructura insertada a una función no administrada. También se muestra cómo usar el atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> para declarar una matriz de longitud fija dentro de la estructura. En este ejemplo, los elementos de la estructura insertada se agregan a la estructura primaria. Para obtener un ejemplo de una estructura insertada que no esté simplificada, vea [Ejemplo Structs](https://msdn.microsoft.com/library/96a62265-dcf9-4608-bc0a-1f762ab9f48e(v=vs.100)).  
+ En este ejemplo se muestra cómo pasar una estructura que contiene una segunda estructura insertada a una función no administrada. También se muestra cómo usar el atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> para declarar una matriz de longitud fija dentro de la estructura. En este ejemplo, los elementos de la estructura insertada se agregan a la estructura primaria. Para obtener un ejemplo de una estructura insertada que no esté simplificada, vea [Ejemplo Structs](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100)).  
   
  En el ejemplo FindFile se usa la siguiente función no administrada, que se muestra con su declaración de función original:  
   
@@ -242,7 +242,7 @@ typedef struct _SYSTEMTIME {
   
  En este ejemplo, la clase `SystemTime` contiene los elementos de la estructura original representados como miembros de clase. El atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> se establece para garantizar que los miembros se organizan secuencialmente en la memoria, en el orden en que aparecen.  
   
- La clase `LibWrap` contiene un prototipo administrado del método `GetSystemTime`, que pasa la clase `SystemTime` como un parámetro In/Out de forma predeterminada. El parámetro se debe declarar con los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> porque las clases, que son tipos de referencia, se pasan como parámetros In de forma predeterminada. Para que el autor de la llamada reciba los resultados, deben aplicarse explícitamente estos [atributos direccionales](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100)). La clase `App` crea una nueva instancia de la clase `SystemTime` y tiene acceso a sus campos de datos.  
+ La clase `LibWrap` contiene un prototipo administrado del método `GetSystemTime`, que pasa la clase `SystemTime` como un parámetro In/Out de forma predeterminada. El parámetro se debe declarar con los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> porque las clases, que son tipos de referencia, se pasan como parámetros In de forma predeterminada. Para que el autor de la llamada reciba los resultados, deben aplicarse explícitamente estos [atributos direccionales](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)). La clase `App` crea una nueva instancia de la clase `SystemTime` y tiene acceso a sus campos de datos.  
   
 ### <a name="code-samples"></a>Ejemplos de código  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -290,6 +290,5 @@ typedef struct _MYSTRSTRUCT2
   
 ## <a name="see-also"></a>Vea también
 - [Serialización de datos con invocación de plataforma](marshaling-data-with-platform-invoke.md)
-- [Tipos de datos de invocación de plataforma](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
 - [Serialización de cadenas](marshaling-strings.md)
-- [Serialización de matrices de tipos](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))
+- [Serialización de tipos diferentes de matrices](marshaling-different-types-of-arrays.md)

@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 01/11/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: ab888a2cd9469d5ce0131ba2b17f7c134cf2855c
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: 60506a6a8640a4f37e9f181bc88ae4f757502cb9
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249078"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093611"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Tutorial: Agrupación de flores de iris mediante un aprendiz de agrupación en clústeres con ML.NET
 
@@ -129,7 +129,7 @@ Agregue el código siguiente al método `Main` para configurar la manera de carg
 
 Observe que los nombres de columna y los índices coinciden con el esquema definido por la clase `IrisData`. El valor <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> especifica el tipo `float`.
 
-Use una instancia de <xref:Microsoft.ML.Data.TextLoader> para crear una instancia de <xref:Microsoft.ML.Data.IDataView>, que representa el origen de datos para el conjunto de datos de entrenamiento:
+Use una instancia de <xref:Microsoft.ML.Data.TextLoader> para crear una instancia de <xref:Microsoft.Data.DataView.IDataView>, que representa el origen de datos para el conjunto de datos de entrenamiento:
 
 [!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 

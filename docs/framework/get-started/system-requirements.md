@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2655cf5d5fb211149bdbe09179707ec53c737d3
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 7cbc639c9fed90b25c034964b5a504e880876b54
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204566"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091843"
 ---
 # <a name="net-framework-system-requirements"></a>Requisitos de sistema de .NET Framework
 
@@ -98,7 +98,7 @@ Necesita tener privilegios de administrador para poder instalar .NET Framework. 
 
 - [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] incluye [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], por lo que no tendrá que instalarlo por separado. Del mismo modo, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] incluye [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
 
-- .NET Framework. tiene compatibilidad limitada con el rol Server Core con Windows Server 2008 R2 SP1 o versiones posteriores. Vea [Server Core .NET Functionality](https://msdn.microsoft.com/library/ee391632.aspx) (Funcionalidad de .NET en Server Core) para obtener una lista de las API no compatibles.
+- .NET Framework. tiene compatibilidad limitada con el rol Server Core con Windows Server 2008 R2 SP1 o versiones posteriores. Vea [Server Core .NET Functionality](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)) (Funcionalidad de .NET en Server Core) para obtener una lista de las API no compatibles.
 
 - .NET Framework no se admite en Windows Server 2008 R2 for Itanium-Based Systems.
 

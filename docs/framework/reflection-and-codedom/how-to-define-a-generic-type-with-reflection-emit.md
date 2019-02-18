@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para definir un tipo genérico con emisión de reflexión
+title: Filtrar para definir un tipo genérico con emisión de reflexión
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8109bfd590e5cb08e0031dcfcab5090160b2932b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74ddda813d756fb5cb54cb600e3cbf1cf68b3f38
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645080"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221152"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procedimiento para definir un tipo genérico con emisión de reflexión
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Filtrar para definir un tipo genérico con emisión de reflexión
 En este tema se muestra cómo crear un tipo genérico simple con dos parámetros de tipo, cómo aplicar restricciones de clase, restricciones de interfaz y restricciones especiales a los parámetros de tipo, y cómo crear miembros que usen los parámetros de tipo de la clase como tipos de parámetro y tipos de valor devuelto.  
   
 > [!IMPORTANT]
@@ -137,5 +137,5 @@ En este tema se muestra cómo crear un tipo genérico simple con dos parámetros
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
-- [Using Reflection Emit (Uso de la emisión de la reflexión)](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)
-- [Reflection Emit Dynamic Assembly Scenarios (Escenarios de ensamblado dinámico de emisión de la reflexión)](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+- [Using Reflection Emit (Uso de la emisión de la reflexión)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
+- [Reflection Emit Dynamic Assembly Scenarios (Escenarios de ensamblado dinámico de emisión de la reflexión)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

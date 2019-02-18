@@ -1,14 +1,14 @@
 ---
 title: 'Entrenamiento de un modelo de Machine Learning con datos que no están en un archivo de texto: ML.NET'
 description: Descubra cómo usar ML.NET para cargar datos de entrenamiento que no sean archivos para el entrenamiento de modelos de Machine Learning como parte de la canalización de predicción.
-ms.date: 11/07/2018
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 971c5c62acc9dd7bf29aa11ce898c2b76822c3d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4ffbc69629aa9dc6cea5d33c704bc9c57a4a612c
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125407"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092025"
 ---
 # <a name="train-a-machine-learning-model-with-data-thats-not-in-a-text-file---mlnet"></a>Entrenamiento de un modelo de Machine Learning con datos que no están en un archivo de texto: ML.NET
 
@@ -54,7 +54,7 @@ IEnumerable<CustomerChurnInfo> churnData = GetChurnInfo();
 // Turn the data into the ML.NET data view.
 // We can use CreateDataView or CreateStreamingDataView, depending on whether 'churnData' is an IList,
 // or merely an IEnumerable.
-var trainData = mlContext.CreateStreamingDataView(churnData);
+var trainData = mlContext.Data.ReadFromEnumerable(churnData);
 
 // Build the learning pipeline.
 // In our case, we will one-hot encode the demographic category, and concatenate that with the number of visits.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84a3ea24120a9548c9d1cd2b7b83997a2c849cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c226960373783c45594e4a41dfaff353bf0b9db4
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528031"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219612"
 ---
 # <a name="default-marshaling-for-objects"></a>Serialización predeterminada para objetos
 Los parámetros y campos de tipo <xref:System.Object?displayProperty=nameWithType> pueden exponerse a código no administrado como uno de los siguientes tipos:  
@@ -325,13 +325,13 @@ Variantes pasadas por valor y por referencia
 |----------|--------|-----------------------------|  
 |**Variante**  *v*|**Objeto**  *o*|Nunca|  
 |**Objeto**  *o*|**Variante**  *v*|Nunca|  
-|**Variante**   ***\****  *pv*|**Objeto de ref**  *o*|Always|  
-|**Objeto de ref**  *o*|**Variante**   ***\****  *pv*|Always|  
+|**Variante**   ***\****  *pv*|**Objeto de ref**  *o*|Siempre|  
+|**Objeto de ref**  *o*|**Variante**   ***\****  *pv*|Siempre|  
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Objeto**  *o*|Nunca|  
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Objeto de ref**  *o*|Solo si el tipo no ha cambiado.|  
   
 ## <a name="see-also"></a>Vea también
 - [Comportamiento predeterminado del cálculo de referencias](default-marshaling-behavior.md)
 - [Tipos que pueden o que no pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md)
-- [Atributos direccionales](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [Atributos direccionales](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Copiar y fijar](copying-and-pinning.md)

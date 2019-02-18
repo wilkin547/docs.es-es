@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0832489d74abc3aec78218f87d2bce72e6e68f75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3abce6ef7cb1d3287d9c8b7ceb9333f209e75ad
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632795"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219533"
 ---
 # <a name="runtime-callable-wrapper"></a>Contenedor al que se puede llamar en tiempo de ejecución
 Common Language Runtime expone objetos COM mediante un proxy denominado el contenedor RCW (Runtime Callable Wrapper). Aunque el contenedor RCW aparece como un objeto corriente para los clientes .NET, su función principal es calcular referencias de llamadas entre un cliente .NET y un objeto COM.  
@@ -27,7 +27,7 @@ Acceso a objetos COM mediante el contenedor RCW
   
  Usando los metadatos derivados de una biblioteca de tipos, CLR crea el objeto COM al que se está llamando y un contenedor para dicho objeto. Cada contenedor RCW mantiene una memoria caché de punteros de interfaz en el objeto COM que contiene y libera su referencia en el objeto COM cuando el contenedor RCW ya no es necesario. CLR realiza la recolección de elementos no utilizados en el contenedor RCW.  
   
- Entre otras actividades, el contenedor RCW calcula referencias de datos entre el código administrado y no administrado, en nombre del objeto encapsulado. El contenedor RCW proporciona específicamente cálculo de referencias para argumentos de métodos y valores devueltos de métodos cada vez que el cliente y el servidor tienen representaciones diferentes de los datos que se pasan entre ellos.  
+ Entre otras actividades, el contenedor RCW calcula referencias de datos entre el código administrado y no administrado, en nombre del objeto encapsulado. El contenedor RCW proporciona específicamente serialización para argumentos de métodos y valores devueltos de métodos cada vez que el cliente y el servidor tienen representaciones diferentes de los datos que se pasan entre ellos.  
   
  El contenedor estándar impone las reglas de cálculo de referencias integradas. Por ejemplo, cuando un cliente .NET pasa un tipo String como parte de un argumento a un objeto no administrado, el contenedor convierte la cadena en un tipo BSTR. Si el objeto COM devuelve una cadena BSTR a su llamador administrado, el llamador recibe una cadena. Tanto el cliente como el servidor envían y reciben datos que les resultan familiares. Otros tipos no requieren conversión. Por ejemplo, un contenedor estándar pasará siempre un entero de 4 bytes entre el código administrado y no administrado sin convertir el tipo.  
   
@@ -58,7 +58,6 @@ Interfaces COM y el contenedor RCW
   
 ## <a name="see-also"></a>Vea también
 - [Contenedores COM](com-wrappers.md)
-- [Serialización de interfaces seleccionadas](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))
 - [Contenedor CCW (COM callable wrapper)](com-callable-wrapper.md)
-- [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md)

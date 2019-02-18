@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
+title: Filtrar para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6ef2e11efe858c03d1cf4e7167ae856ec4d690a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1136dd3220b189d60b4972410ce0ce6657d07cd
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596142"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218988"
 ---
-# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Procedimiento para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
+# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Filtrar para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
 Hay dos maneras de generar un ensamblado de interoperabilidad primario:  
   
 -   Mediante el [importador de la biblioteca de tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) proporcionado por [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
@@ -46,7 +46,7 @@ Hay dos maneras de generar un ensamblado de interoperabilidad primario:
   
  Si un ensamblado de interoperabilidad primario dependiente tiene un número de versión distinto del de la biblioteca de tipos original, no se reconoce cuando se instala en el directorio actual. Debe registrar el ensamblado de interoperabilidad primario dependiente en el Registro de Windows o usar la opción **/reference** para asegurarse de que Tlbimp.exe encuentre el archivo DLL dependiente.  
   
- También puede encapsular varias versiones de una biblioteca de tipos. Para obtener instrucciones, vea [Cómo: Incluir varias versiones de bibliotecas de tipos](https://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f(v=vs.100)).  
+ También puede encapsular varias versiones de una biblioteca de tipos. Para obtener instrucciones, vea [Cómo: Incluir varias versiones de bibliotecas de tipos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100)).  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se importa la biblioteca de tipos COM `LibUtil.tlb` y se firma el ensamblado `LibUtil.dll` con un nombre seguro usando el archivo de clave `CompanyA.snk`. Si se omite un nombre de espacio de nombres específico, este ejemplo genera el espacio de nombres predeterminado `LibUtil`.  

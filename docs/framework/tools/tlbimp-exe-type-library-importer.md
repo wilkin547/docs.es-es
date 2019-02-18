@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f39f793d3d0a2cf815028ccdb49253c46dac2ec4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 286399a7049f47640ccef07e834ee47a0761b963
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631313"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219028"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>TlbImp.exe (Importador de la biblioteca de tipos)
 El Importador de la biblioteca de tipos convierte las definiciones de tipos encontradas en una biblioteca de tipos COM en las definiciones equivalentes en un ensamblado de Common Language Runtime. El resultado de Tlbimp.exe es un archivo binario (un ensamblado) que contiene los metadatos en tiempo de ejecución para los tipos definidos en la biblioteca de tipos original. Este archivo se puede examinar con herramientas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  
@@ -52,7 +52,7 @@ tlbimp tlbFile [options]
 |**/noclassmembers**|Evita que Tlbimp.exe agregue miembros a las clases. Esto evita una posible excepción <xref:System.TypeLoadException>.|  
 |**/nologo**|Suprime la presentación de la portada de inicio de Microsoft.|  
 |**/out:** *nombreArchivo*|Especifica el nombre del archivo de salida, el ensamblado y el espacio de nombres en el que se escriben las definiciones de los metadatos. La opción **/out** no afecta al espacio de nombres del ensamblado si la biblioteca de tipos especifica el atributo personalizado de lenguaje de definición de interfaz (IDL) que controla explícitamente el espacio de nombres del ensamblado. Si no se especifica esta opción, Tlbimp.exe escribe los metadatos en un archivo con el mismo nombre que la biblioteca de tipos real definida en el archivo de entrada y le asigna una extensión .dll. Si el archivo de salida tiene el mismo nombre que el archivo de entrada, la herramienta genera un error para evitar que se sobrescriba la biblioteca de tipos.|  
-|**/primary**|Genera un ensamblado de interoperabilidad primario para la biblioteca de tipos especificada. La información se agrega al ensamblado indicando que se ha generado con el editor de la biblioteca de tipos. Al especificar un ensamblado de interoperabilidad primario, es posible diferenciar el ensamblado de un editor de otros ensamblados creados desde la biblioteca de tipos mediante Tlbimp.exe. Solo debería utilizar la opción **/primary** si es el editor de la biblioteca de tipos que va a importar con Tlbimp.exe. Tenga en cuenta que debe firmar un ensamblado de interoperabilidad primario con un [nombre seguro](../app-domains/strong-named-assemblies.md). Para obtener más información, vea [Ensamblados de interoperabilidad primarios](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).|  
+|**/primary**|Genera un ensamblado de interoperabilidad primario para la biblioteca de tipos especificada. La información se agrega al ensamblado indicando que se ha generado con el editor de la biblioteca de tipos. Al especificar un ensamblado de interoperabilidad primario, es posible diferenciar el ensamblado de un editor de otros ensamblados creados desde la biblioteca de tipos mediante Tlbimp.exe. Solo debería utilizar la opción **/primary** si es el editor de la biblioteca de tipos que va a importar con Tlbimp.exe. Tenga en cuenta que debe firmar un ensamblado de interoperabilidad primario con un [nombre seguro](../app-domains/strong-named-assemblies.md). Para obtener más información, vea [Ensamblados de interoperabilidad primarios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).|  
 |**/product:** `productinformation`|Agrega información del producto al ensamblado de salida. Esta información se puede ver en el cuadro de diálogo **Propiedades del archivo** del ensamblado.|  
 |**/productversion:** `productversioninformation`|Agrega información de la versión al ensamblado de salida. No hay restricciones de formato. Esta información se puede ver en el cuadro de diálogo **Propiedades del archivo** del ensamblado.|  
 |**/publickey:** *nombreArchivo*|Especifica el archivo que contiene la clave pública que se va a utilizar para firmar el ensamblado resultante. Si se especifica las opciones **/keyfile:** o **/keycontainer:** en lugar de **/publickey:**, Tlbimp.exe genera la clave pública a partir del par de claves pública y privada suministrado por **/keyfile:** o **/keycontainer:**. La opción **/publickey:** admite los escenarios de clave de prueba y de firma retardada. El archivo tiene el formato generado por Sn.exe. Para obtener más información, vea la opción **-p** de Sn.exe en la [herramienta Nombre seguro (Sn.exe)](sn-exe-strong-name-tool.md).|  
@@ -129,9 +129,9 @@ void SomeMethod(out bool x);
 - [Herramientas](index.md)
 - [Tlbexp.exe (Exportador de la biblioteca de tipos)](tlbexp-exe-type-library-exporter.md)
 - [Importar una biblioteca de tipos como un ensamblado](../interop/importing-a-type-library-as-an-assembly.md)
-- [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Ildasm.exe (Desensamblador de IL)](ildasm-exe-il-disassembler.md)
 - [Sn.exe (Herramienta de nombre seguro)](sn-exe-strong-name-tool.md)
 - [Ensamblados con nombre seguro](../app-domains/strong-named-assemblies.md)
-- [Atributos para importar bibliotecas de tipos en ensamblados de interoperabilidad](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))
+- [Atributos para importar bibliotecas de tipos en ensamblados de interoperabilidad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
 - [Símbolos del sistema](developer-command-prompt-for-vs.md)

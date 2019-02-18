@@ -1,14 +1,14 @@
 ---
 title: 'Aplicación de ingeniería de características para el entrenamiento del modelo en datos textuales: ML.NET'
 description: Obtenga información sobre cómo aplicar ingeniería de características para el entrenamiento de modelos en datos textuales con ML.NET
-ms.date: 02/01/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9c3e131a46ad02c60178aa60c45dcc95472e32c7
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 4206bfe1e840c420c90e62957036a629ecf34445
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758396"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092220"
 ---
 # <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a>Aplicación de ingeniería de características para el entrenamiento del modelo de Machine Learning en datos textuales con ML.NET
 
@@ -35,7 +35,7 @@ Sentiment   SentimentText
 
 ```csharp
 // Define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(new[] 
+var reader = mlContext.Data.CreateTextLoader(new[] 
     {
         new TextLoader.Column("IsToxic", DataKind.BL, 0),
         new TextLoader.Column("Message", DataKind.TX, 1),
