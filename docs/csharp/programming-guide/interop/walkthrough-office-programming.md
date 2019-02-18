@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: f76fb1d52754999c16021f2417aebb8825e46340
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b20b45ee18c22ed864972dc20cd72247ed3db2c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700018"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219378"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Tutorial: Programación de Office (C# y Visual Basic)
 Visual Studio presenta características en C# y Visual Basic que mejoran la programación de Microsoft Office. Las características útiles de C# incluyen argumentos opcionales y con nombre, y devuelven valores de tipo `dynamic`. En la programación COM, puede omitir la palabra clave `ref` y obtener acceso a las propiedades indexadas. Las nuevas características de Visual Basic incluyen propiedades implementadas automáticamente, instrucciones de expresiones lambda e inicializadores de colección.
@@ -205,7 +205,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
 - [Expresiones lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Expresiones lambda (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Cómo: Utilizar propiedades indizadas en la programación de interoperabilidad COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
-- [Tutorial: Inserción de información de tipos de los ensamblados de Microsoft Office](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+- [Tutorial: Insertar información de tipos de los ensamblados de Microsoft Office en Visual Studio (C#)](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
 - [Tutorial: Inserción de tipos de ensamblados administrados](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [Tutorial: Creación del primer complemento VSTO para Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)

@@ -3,12 +3,12 @@ title: Diseño con tipos de referencia que aceptan valores NULL
 description: En este tutorial avanzado se ofrece una introducción a los tipos de referencia que aceptan valores NULL. Sabrá expresar la intención de su diseño cuando los valores de referencia puedan ser NULL y hacer que el compilador aplique esas decisiones cuando no puedan ser NULL.
 ms.date: 12/03/2018
 ms.custom: mvc
-ms.openlocfilehash: eec0c54c041db98595202ab982494df6ae3f743c
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 535efcdc303c17a55f6a4054ea3f5e5ed87e5f28
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204774"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092207"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expresar la intención del diseño con mayor claridad con tipos de referencia que aceptan valores NULL y que no aceptan valores NULL
 
@@ -55,7 +55,7 @@ Puede agregar la directiva pragma anterior en cualquier lugar de un archivo de o
 También puede activar los**tipos de referencia que aceptan valores NULL** para todo un proyecto si agrega el elemento siguiente al archivo .csproj, por ejemplo, inmediatamente después del elemento `LangVersion` que habilitó C# 8.0:
 
 ```xml
-<NullableReferenceTypes>true</NullableReferenceTypes>
+<NullableContextOptions>enable</NullableContextOptions>
 ```
 
 ### <a name="design-the-types-for-the-application"></a>Diseño de los tipos para la aplicación

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 7031fe21e53b38f686d229b350b8dfef7dd93bdc
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: f02e2de2ce8e2d4d6c8032e826764fd0383b3b3d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204826"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092649"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Tutorial: Crear y utilizar objetos dinámicos (C# y Visual Basic)
 
@@ -33,7 +33,8 @@ Los objetos dinámicos exponen miembros como propiedades y métodos en tiempo de
 -   Crear un proyecto que usa una biblioteca `IronPython`.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
-Necesita [IronPython](http://ironpython.net/) para .NET para poder seguir este tutorial. Vaya a su [página de descarga](http://ironpython.net/download/) para obtener la versión más reciente.
+
+Necesita [IronPython](https://ironpython.net/) para .NET para poder seguir este tutorial. Vaya a su [página de descarga](https://ironpython.net/download/) para obtener la versión más reciente.
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
