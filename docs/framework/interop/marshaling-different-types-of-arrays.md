@@ -10,83 +10,83 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3e56faad9e65cff6037f11b332d7b0df52a79fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 147c22758c68bd3b48ab1c5cf8e26ed0afdbce09
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589550"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219469"
 ---
-# <a name="marshaling-different-types-of-arrays"></a><span data-ttu-id="38eec-102">Serialización de tipos diferentes de matrices</span><span class="sxs-lookup"><span data-stu-id="38eec-102">Marshaling Different Types of Arrays</span></span>
-<span data-ttu-id="38eec-103">Una matriz es un tipo de referencia en código administrado que contiene uno o varios elementos del mismo tipo.</span><span class="sxs-lookup"><span data-stu-id="38eec-103">An array is a reference type in managed code that contains one or more elements of the same type.</span></span> <span data-ttu-id="38eec-104">Aunque las matrices son tipos de referencia, se pasan como parámetros In a funciones no administradas.</span><span class="sxs-lookup"><span data-stu-id="38eec-104">Although arrays are reference types, they are passed as In parameters to unmanaged functions.</span></span> <span data-ttu-id="38eec-105">Este comportamiento no se corresponde con la manera en que se pasan las matrices administradas a los objetos administrados, que es como parámetros In/Out.</span><span class="sxs-lookup"><span data-stu-id="38eec-105">This behavior is inconsistent with way managed arrays are passed to managed objects, which is as In/Out parameters.</span></span> <span data-ttu-id="38eec-106">Para obtener más información, consulte [Copiar y fijar](copying-and-pinning.md).</span><span class="sxs-lookup"><span data-stu-id="38eec-106">For additional details, see [Copying and Pinning](copying-and-pinning.md).</span></span>  
+# <a name="marshaling-different-types-of-arrays"></a><span data-ttu-id="da974-102">Cálculo de referencias de tipos diferentes de matrices</span><span class="sxs-lookup"><span data-stu-id="da974-102">Marshaling Different Types of Arrays</span></span>
+<span data-ttu-id="da974-103">Una matriz es un tipo de referencia en código administrado que contiene uno o varios elementos del mismo tipo.</span><span class="sxs-lookup"><span data-stu-id="da974-103">An array is a reference type in managed code that contains one or more elements of the same type.</span></span> <span data-ttu-id="da974-104">Aunque las matrices son tipos de referencia, se pasan como parámetros In a funciones no administradas.</span><span class="sxs-lookup"><span data-stu-id="da974-104">Although arrays are reference types, they are passed as In parameters to unmanaged functions.</span></span> <span data-ttu-id="da974-105">Este comportamiento no se corresponde con la manera en que se pasan las matrices administradas a los objetos administrados, que es como parámetros In/Out.</span><span class="sxs-lookup"><span data-stu-id="da974-105">This behavior is inconsistent with way managed arrays are passed to managed objects, which is as In/Out parameters.</span></span> <span data-ttu-id="da974-106">Para obtener más información, consulte [Copiar y fijar](copying-and-pinning.md).</span><span class="sxs-lookup"><span data-stu-id="da974-106">For additional details, see [Copying and Pinning](copying-and-pinning.md).</span></span>  
   
- <span data-ttu-id="38eec-107">En la tabla siguiente se muestran las opciones de cálculo de referencias de matrices y se describe su uso.</span><span class="sxs-lookup"><span data-stu-id="38eec-107">The following table lists marshaling options for arrays and describes their usage.</span></span>  
+ <span data-ttu-id="da974-107">En la tabla siguiente se muestran las opciones de cálculo de referencias de matrices y se describe su uso.</span><span class="sxs-lookup"><span data-stu-id="da974-107">The following table lists marshaling options for arrays and describes their usage.</span></span>  
   
-|<span data-ttu-id="38eec-108">Matriz</span><span class="sxs-lookup"><span data-stu-id="38eec-108">Array</span></span>|<span data-ttu-id="38eec-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="38eec-109">Description</span></span>|  
+|<span data-ttu-id="da974-108">Matriz</span><span class="sxs-lookup"><span data-stu-id="da974-108">Array</span></span>|<span data-ttu-id="da974-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="da974-109">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="38eec-110">De enteros por valor.</span><span class="sxs-lookup"><span data-stu-id="38eec-110">Of integers by value.</span></span>|<span data-ttu-id="38eec-111">Pasa una matriz de enteros como un parámetro In.</span><span class="sxs-lookup"><span data-stu-id="38eec-111">Passes an array of integers as an In parameter.</span></span>|  
-|<span data-ttu-id="38eec-112">De enteros por referencia.</span><span class="sxs-lookup"><span data-stu-id="38eec-112">Of integers by reference.</span></span>|<span data-ttu-id="38eec-113">Pasa una matriz de enteros como un parámetro In/Out.</span><span class="sxs-lookup"><span data-stu-id="38eec-113">Passes an array of integers as an In/Out parameter.</span></span>|  
-|<span data-ttu-id="38eec-114">De enteros por valor (bidimensional).</span><span class="sxs-lookup"><span data-stu-id="38eec-114">Of integers by value (two-dimensional).</span></span>|<span data-ttu-id="38eec-115">Pasa una matriz multidimensional de enteros como un parámetro In.</span><span class="sxs-lookup"><span data-stu-id="38eec-115">Passes a matrix of integers as an In parameter.</span></span>|  
-|<span data-ttu-id="38eec-116">De cadenas por valor.</span><span class="sxs-lookup"><span data-stu-id="38eec-116">Of strings by value.</span></span>|<span data-ttu-id="38eec-117">Pasa una matriz de cadenas como un parámetro In.</span><span class="sxs-lookup"><span data-stu-id="38eec-117">Passes an array of strings as an In parameter.</span></span>|  
-|<span data-ttu-id="38eec-118">De estructuras con enteros.</span><span class="sxs-lookup"><span data-stu-id="38eec-118">Of structures with integers.</span></span>|<span data-ttu-id="38eec-119">Pasa una matriz de estructuras que contienen enteros como un parámetro In.</span><span class="sxs-lookup"><span data-stu-id="38eec-119">Passes an array of structures that contain integers as an In parameter.</span></span>|  
-|<span data-ttu-id="38eec-120">De estructuras con cadenas.</span><span class="sxs-lookup"><span data-stu-id="38eec-120">Of structures with strings.</span></span>|<span data-ttu-id="38eec-121">Pasa una matriz de estructuras que solo contienen enteros como un parámetro In/Out.</span><span class="sxs-lookup"><span data-stu-id="38eec-121">Passes an array of structures that contain only integers as an In/Out parameter.</span></span> <span data-ttu-id="38eec-122">Los miembros de la matriz se pueden cambiar.</span><span class="sxs-lookup"><span data-stu-id="38eec-122">Members of the array can be changed.</span></span>|  
+|<span data-ttu-id="da974-110">De enteros por valor.</span><span class="sxs-lookup"><span data-stu-id="da974-110">Of integers by value.</span></span>|<span data-ttu-id="da974-111">Pasa una matriz de enteros como un parámetro In.</span><span class="sxs-lookup"><span data-stu-id="da974-111">Passes an array of integers as an In parameter.</span></span>|  
+|<span data-ttu-id="da974-112">De enteros por referencia.</span><span class="sxs-lookup"><span data-stu-id="da974-112">Of integers by reference.</span></span>|<span data-ttu-id="da974-113">Pasa una matriz de enteros como un parámetro In/Out.</span><span class="sxs-lookup"><span data-stu-id="da974-113">Passes an array of integers as an In/Out parameter.</span></span>|  
+|<span data-ttu-id="da974-114">De enteros por valor (bidimensional).</span><span class="sxs-lookup"><span data-stu-id="da974-114">Of integers by value (two-dimensional).</span></span>|<span data-ttu-id="da974-115">Pasa una matriz multidimensional de enteros como un parámetro In.</span><span class="sxs-lookup"><span data-stu-id="da974-115">Passes a matrix of integers as an In parameter.</span></span>|  
+|<span data-ttu-id="da974-116">De cadenas por valor.</span><span class="sxs-lookup"><span data-stu-id="da974-116">Of strings by value.</span></span>|<span data-ttu-id="da974-117">Pasa una matriz de cadenas como un parámetro In.</span><span class="sxs-lookup"><span data-stu-id="da974-117">Passes an array of strings as an In parameter.</span></span>|  
+|<span data-ttu-id="da974-118">De estructuras con enteros.</span><span class="sxs-lookup"><span data-stu-id="da974-118">Of structures with integers.</span></span>|<span data-ttu-id="da974-119">Pasa una matriz de estructuras que contienen enteros como un parámetro In.</span><span class="sxs-lookup"><span data-stu-id="da974-119">Passes an array of structures that contain integers as an In parameter.</span></span>|  
+|<span data-ttu-id="da974-120">De estructuras con cadenas.</span><span class="sxs-lookup"><span data-stu-id="da974-120">Of structures with strings.</span></span>|<span data-ttu-id="da974-121">Pasa una matriz de estructuras que solo contienen enteros como un parámetro In/Out.</span><span class="sxs-lookup"><span data-stu-id="da974-121">Passes an array of structures that contain only integers as an In/Out parameter.</span></span> <span data-ttu-id="da974-122">Los miembros de la matriz se pueden cambiar.</span><span class="sxs-lookup"><span data-stu-id="da974-122">Members of the array can be changed.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="38eec-123">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="38eec-123">Example</span></span>  
- <span data-ttu-id="38eec-124">En este ejemplo se muestra cómo pasar los siguientes tipos de matrices:</span><span class="sxs-lookup"><span data-stu-id="38eec-124">This sample demonstrates how to pass the following types of arrays:</span></span>  
+## <a name="example"></a><span data-ttu-id="da974-123">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="da974-123">Example</span></span>  
+ <span data-ttu-id="da974-124">En este ejemplo se muestra cómo pasar los siguientes tipos de matrices:</span><span class="sxs-lookup"><span data-stu-id="da974-124">This sample demonstrates how to pass the following types of arrays:</span></span>  
   
--   <span data-ttu-id="38eec-125">Matriz de enteros por valor.</span><span class="sxs-lookup"><span data-stu-id="38eec-125">Array of integers by value.</span></span>  
+-   <span data-ttu-id="da974-125">Matriz de enteros por valor.</span><span class="sxs-lookup"><span data-stu-id="da974-125">Array of integers by value.</span></span>  
   
--   <span data-ttu-id="38eec-126">Matriz de enteros por referencia, que se puede cambiar de tamaño.</span><span class="sxs-lookup"><span data-stu-id="38eec-126">Array of integers by reference, which can be resized.</span></span>  
+-   <span data-ttu-id="da974-126">Matriz de enteros por referencia, que se puede cambiar de tamaño.</span><span class="sxs-lookup"><span data-stu-id="da974-126">Array of integers by reference, which can be resized.</span></span>  
   
--   <span data-ttu-id="38eec-127">Matriz multidimensional de enteros por valor.</span><span class="sxs-lookup"><span data-stu-id="38eec-127">Multidimensional array (matrix) of integers by value.</span></span>  
+-   <span data-ttu-id="da974-127">Matriz multidimensional de enteros por valor.</span><span class="sxs-lookup"><span data-stu-id="da974-127">Multidimensional array (matrix) of integers by value.</span></span>  
   
--   <span data-ttu-id="38eec-128">Matriz de cadenas por valor.</span><span class="sxs-lookup"><span data-stu-id="38eec-128">Array of strings by value.</span></span>  
+-   <span data-ttu-id="da974-128">Matriz de cadenas por valor.</span><span class="sxs-lookup"><span data-stu-id="da974-128">Array of strings by value.</span></span>  
   
--   <span data-ttu-id="38eec-129">Matriz de estructuras con enteros.</span><span class="sxs-lookup"><span data-stu-id="38eec-129">Array of structures with integers.</span></span>  
+-   <span data-ttu-id="da974-129">Matriz de estructuras con enteros.</span><span class="sxs-lookup"><span data-stu-id="da974-129">Array of structures with integers.</span></span>  
   
--   <span data-ttu-id="38eec-130">Matriz de estructuras con cadenas.</span><span class="sxs-lookup"><span data-stu-id="38eec-130">Array of structures with strings.</span></span>  
+-   <span data-ttu-id="da974-130">Matriz de estructuras con cadenas.</span><span class="sxs-lookup"><span data-stu-id="da974-130">Array of structures with strings.</span></span>  
   
- <span data-ttu-id="38eec-131">A menos que una matriz se calcule explícitamente por referencia, el comportamiento predeterminado calcula las referencias de la matriz como un parámetro In.</span><span class="sxs-lookup"><span data-stu-id="38eec-131">Unless an array is explicitly marshaled by reference, the default behavior marshals the array as an In parameter.</span></span> <span data-ttu-id="38eec-132">Puede cambiar este comportamiento aplicando explícitamente los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> .</span><span class="sxs-lookup"><span data-stu-id="38eec-132">You can change this behavior by applying the <xref:System.Runtime.InteropServices.InAttribute> and <xref:System.Runtime.InteropServices.OutAttribute> attributes explicitly.</span></span>  
+ <span data-ttu-id="da974-131">A menos que una matriz se calcule explícitamente por referencia, el comportamiento predeterminado calcula las referencias de la matriz como un parámetro In.</span><span class="sxs-lookup"><span data-stu-id="da974-131">Unless an array is explicitly marshaled by reference, the default behavior marshals the array as an In parameter.</span></span> <span data-ttu-id="da974-132">Puede cambiar este comportamiento aplicando explícitamente los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> .</span><span class="sxs-lookup"><span data-stu-id="da974-132">You can change this behavior by applying the <xref:System.Runtime.InteropServices.InAttribute> and <xref:System.Runtime.InteropServices.OutAttribute> attributes explicitly.</span></span>  
   
- <span data-ttu-id="38eec-133">En el ejemplo Arrays se usan las siguientes funciones no administradas, que se muestran con su declaración de función original:</span><span class="sxs-lookup"><span data-stu-id="38eec-133">The Arrays sample uses the following unmanaged functions, shown with their original function declaration:</span></span>  
+ <span data-ttu-id="da974-133">En el ejemplo Arrays se usan las siguientes funciones no administradas, que se muestran con su declaración de función original:</span><span class="sxs-lookup"><span data-stu-id="da974-133">The Arrays sample uses the following unmanaged functions, shown with their original function declaration:</span></span>  
   
--   <span data-ttu-id="38eec-134">**TestArrayOfInts** exportada desde PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="38eec-134">**TestArrayOfInts** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="da974-134">**TestArrayOfInts** exportada desde PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="da974-134">**TestArrayOfInts** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   <span data-ttu-id="38eec-135">**TestRefArrayOfInts** exportada desde PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="38eec-135">**TestRefArrayOfInts** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="da974-135">**TestRefArrayOfInts** exportada desde PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="da974-135">**TestRefArrayOfInts** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   <span data-ttu-id="38eec-136">**TestMatrixOfInts** exportada desde PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="38eec-136">**TestMatrixOfInts** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="da974-136">**TestMatrixOfInts** exportada desde PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="da974-136">**TestMatrixOfInts** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   <span data-ttu-id="38eec-137">**TestArrayOfStrings** exportada desde PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="38eec-137">**TestArrayOfStrings** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="da974-137">**TestArrayOfStrings** exportada desde PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="da974-137">**TestArrayOfStrings** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   <span data-ttu-id="38eec-138">**TestArrayOfStructs** exportada desde PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="38eec-138">**TestArrayOfStructs** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="da974-138">**TestArrayOfStructs** exportada desde PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="da974-138">**TestArrayOfStructs** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   <span data-ttu-id="38eec-139">**TestArrayOfStructs2** exportada desde PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="38eec-139">**TestArrayOfStructs2** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="da974-139">**TestArrayOfStructs2** exportada desde PinvokeLib.dll.</span><span class="sxs-lookup"><span data-stu-id="da974-139">**TestArrayOfStructs2** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- <span data-ttu-id="38eec-140">[PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) es una biblioteca personalizada no administrada que contiene implementaciones de las funciones enumeradas anteriormente y dos variables de estructura: **MYSTRSTRUCT** y **MYSTRSTRUCT2**.</span><span class="sxs-lookup"><span data-stu-id="38eec-140">[PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) is a custom unmanaged library that contains implementations for the previously listed functions and two structure variables, **MYPOINT** and **MYPERSON**.</span></span> <span data-ttu-id="38eec-141">Estas estructuras contienen los siguientes elementos:</span><span class="sxs-lookup"><span data-stu-id="38eec-141">The structures contain the following elements:</span></span>  
+ <span data-ttu-id="da974-140">[PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) es una biblioteca personalizada no administrada que contiene implementaciones de las funciones enumeradas anteriormente y dos variables de estructura: **MYSTRSTRUCT** y **MYSTRSTRUCT2**.</span><span class="sxs-lookup"><span data-stu-id="da974-140">[PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) is a custom unmanaged library that contains implementations for the previously listed functions and two structure variables, **MYPOINT** and **MYPERSON**.</span></span> <span data-ttu-id="da974-141">Estas estructuras contienen los siguientes elementos:</span><span class="sxs-lookup"><span data-stu-id="da974-141">The structures contain the following elements:</span></span>  
   
 ```  
 typedef struct _MYPOINT  
@@ -102,19 +102,18 @@ typedef struct _MYPERSON
 } MYPERSON;  
 ```  
   
- <span data-ttu-id="38eec-142">En este ejemplo, las estructuras `MyPoint` y `MyPerson` contienen tipos insertados.</span><span class="sxs-lookup"><span data-stu-id="38eec-142">In this sample, the `MyPoint` and `MyPerson` structures contain embedded types.</span></span> <span data-ttu-id="38eec-143">El atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> se establece para garantizar que los miembros se organizan secuencialmente en la memoria, en el orden en que aparecen.</span><span class="sxs-lookup"><span data-stu-id="38eec-143">The <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute is set to ensure that the members are arranged in memory sequentially, in the order in which they appear.</span></span>  
+ <span data-ttu-id="da974-142">En este ejemplo, las estructuras `MyPoint` y `MyPerson` contienen tipos insertados.</span><span class="sxs-lookup"><span data-stu-id="da974-142">In this sample, the `MyPoint` and `MyPerson` structures contain embedded types.</span></span> <span data-ttu-id="da974-143">El atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> se establece para garantizar que los miembros se organizan secuencialmente en la memoria, en el orden en que aparecen.</span><span class="sxs-lookup"><span data-stu-id="da974-143">The <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute is set to ensure that the members are arranged in memory sequentially, in the order in which they appear.</span></span>  
   
- <span data-ttu-id="38eec-144">La clase `LibWrap` contiene un conjunto de métodos llamados por la clase `App` .</span><span class="sxs-lookup"><span data-stu-id="38eec-144">The `LibWrap` class contains a set of methods called by the `App` class.</span></span> <span data-ttu-id="38eec-145">Para obtener detalles específicos sobre cómo pasar matrices, consulte los comentarios del ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="38eec-145">For specific details about passing arrays, see the comments in the following sample.</span></span> <span data-ttu-id="38eec-146">Una matriz, que es un tipo de referencia, se pasa como un parámetro In de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="38eec-146">An array, which is a reference type, is passed as an In parameter by default.</span></span> <span data-ttu-id="38eec-147">Para que el llamador reciba los resultados, se deben aplicar **InAttribute** y **OutAttribute** de manera explícita al argumento que contiene la matriz.</span><span class="sxs-lookup"><span data-stu-id="38eec-147">For the caller to receive the results, **InAttribute** and **OutAttribute** must be applied explicitly to the argument containing the array.</span></span>  
+ <span data-ttu-id="da974-144">La clase `LibWrap` contiene un conjunto de métodos llamados por la clase `App` .</span><span class="sxs-lookup"><span data-stu-id="da974-144">The `LibWrap` class contains a set of methods called by the `App` class.</span></span> <span data-ttu-id="da974-145">Para obtener detalles específicos sobre cómo pasar matrices, consulte los comentarios del ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="da974-145">For specific details about passing arrays, see the comments in the following sample.</span></span> <span data-ttu-id="da974-146">Una matriz, que es un tipo de referencia, se pasa como un parámetro In de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="da974-146">An array, which is a reference type, is passed as an In parameter by default.</span></span> <span data-ttu-id="da974-147">Para que el llamador reciba los resultados, se deben aplicar **InAttribute** y **OutAttribute** de manera explícita al argumento que contiene la matriz.</span><span class="sxs-lookup"><span data-stu-id="da974-147">For the caller to receive the results, **InAttribute** and **OutAttribute** must be applied explicitly to the argument containing the array.</span></span>  
   
-### <a name="declaring-prototypes"></a><span data-ttu-id="38eec-148">Declaración de prototipos</span><span class="sxs-lookup"><span data-stu-id="38eec-148">Declaring Prototypes</span></span>  
+### <a name="declaring-prototypes"></a><span data-ttu-id="da974-148">Declaración de prototipos</span><span class="sxs-lookup"><span data-stu-id="da974-148">Declaring Prototypes</span></span>  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
  [!code-vb[Conceptual.Interop.Marshaling#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#31)]  
   
-### <a name="calling-functions"></a><span data-ttu-id="38eec-149">Llamadas a funciones</span><span class="sxs-lookup"><span data-stu-id="38eec-149">Calling Functions</span></span>  
+### <a name="calling-functions"></a><span data-ttu-id="da974-149">Llamadas a funciones</span><span class="sxs-lookup"><span data-stu-id="da974-149">Calling Functions</span></span>  
  [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
-## <a name="see-also"></a><span data-ttu-id="38eec-150">Vea también</span><span class="sxs-lookup"><span data-stu-id="38eec-150">See also</span></span>
-- <span data-ttu-id="38eec-151">[Serialización de matrices de tipos](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="38eec-151">[Marshaling Arrays of Types](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))</span></span>
-- <span data-ttu-id="38eec-152">[Tipos de datos de invocación de plataforma](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="38eec-152">[Platform Invoke Data Types](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))</span></span>
-- [<span data-ttu-id="38eec-153">Crear prototipos en código administrado</span><span class="sxs-lookup"><span data-stu-id="38eec-153">Creating Prototypes in Managed Code</span></span>](creating-prototypes-in-managed-code.md)
+## <a name="see-also"></a><span data-ttu-id="da974-150">Vea también</span><span class="sxs-lookup"><span data-stu-id="da974-150">See also</span></span>
+- [<span data-ttu-id="da974-151">Tipos de datos de invocación de plataforma</span><span class="sxs-lookup"><span data-stu-id="da974-151">Platform invoke data types</span></span>](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
+- [<span data-ttu-id="da974-152">Crear prototipos en código administrado</span><span class="sxs-lookup"><span data-stu-id="da974-152">Creating Prototypes in Managed Code</span></span>](creating-prototypes-in-managed-code.md)
