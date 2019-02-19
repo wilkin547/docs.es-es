@@ -1,5 +1,5 @@
 ---
-title: Serialización predeterminada para cadenas
+title: Cálculo de referencias predeterminado para cadenas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a91fd9d06e93813d440d6243ad42ea6dd70e739
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df65f54a9a7408a22f8b558f99ab42d6c37ae55b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523095"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221074"
 ---
-# <a name="default-marshaling-for-strings"></a>Serialización predeterminada para cadenas
+# <a name="default-marshaling-for-strings"></a>Cálculo de referencias predeterminado para cadenas
 Las clases <xref:System.String?displayProperty=nameWithType> y <xref:System.Text.StringBuilder?displayProperty=nameWithType> tienen un comportamiento de serialización similar.  
   
  Las referencias de las cadenas se calculan como un tipo `BSTR` de estilo COM o como una cadena terminada en NULL (una matriz de caracteres que termina con un carácter NULL). Las referencias de los caracteres dentro de la cadena se pueden calcular como ANSI o Unicode (el valor predeterminado en los sistemas Windows).  
   
- En este tema se proporciona la siguiente información sobre la serialización de tipos de cadena:  
+ En este tema se proporciona la siguiente información sobre el cálculo de referencias de tipos de cadena:  
   
 -   [Cadenas usadas en interfaces](#cpcondefaultmarshalingforstringsanchor1)  
   
@@ -37,9 +37,10 @@ Las clases <xref:System.String?displayProperty=nameWithType> y <xref:System.Text
 ## <a name="strings-used-in-interfaces"></a>Cadenas usadas en interfaces  
  En la siguiente tabla se muestran las opciones de cálculo de referencias para el tipo de datos de cadena cuando las referencias se calculan como un argumento de método a código no administrado. El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> proporciona varios valores de enumeración <xref:System.Runtime.InteropServices.UnmanagedType> para calcular referencias de cadenas a interfaces COM.  
   
-|Tipo de enumeración|Descripción del formato no administrado|  
+|Tipo de enumeración|Descripción de formato no administrado|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr` (valor predeterminado)|`BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
+|`UnmanagedType.BStr` (valor predeterminado)|
+  `BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
 |`UnmanagedType.LPStr`|Puntero a una matriz de caracteres Unicode terminada en NULL.|  
 |`UnmanagedType.LPWStr`|Puntero a una matriz de caracteres Unicode terminada en null.|  
   
@@ -85,12 +86,15 @@ HRESULT PassStringRef4([in, out] LPWStr *s);
   
 |Tipo de enumeración|Descripción de formato no administrado|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.AnsiBStr`|`BSTR` de estilo COM con una longitud fija y caracteres ANSI.|  
-|`UnmanagedType.BStr`|`BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
+|`UnmanagedType.AnsiBStr`|
+  `BSTR` de estilo COM con una longitud fija y caracteres ANSI.|  
+|`UnmanagedType.BStr`|
+  `BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
 |`UnmanagedType.LPStr`|Puntero a una matriz de caracteres Unicode terminada en NULL.|  
 |`UnmanagedType.LPTStr`|Un puntero a una matriz terminada en NULL de caracteres dependientes de la plataforma.|  
 |`UnmanagedType.LPWStr`|Puntero a una matriz de caracteres Unicode terminada en null.|  
-|`UnmanagedType.TBStr`|`BSTR` de estilo COM con una longitud fija y caracteres dependientes de la plataforma.|  
+|`UnmanagedType.TBStr`|
+  `BSTR` de estilo COM con una longitud fija y caracteres dependientes de la plataforma.|  
 |`VBByRefStr`|Un valor que permite a Visual Basic .NET cambiar una cadena del código no administrado y reflejar los resultados en el código administrado. Este valor solo se admite con la invocación de plataforma. Este es el valor predeterminado en Visual Basic para las cadenas `ByVal`.|  
   
  Esta tabla se aplica a cadenas. Sin embargo, para <xref:System.Text.StringBuilder>, las únicas opciones permitidas son `LPStr`, `LPTStr` y `LPWStr`.  
@@ -143,7 +147,8 @@ String s);
   
 |Tipo de enumeración|Descripción de formato no administrado|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr`|`BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
+|`UnmanagedType.BStr`|
+  `BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
 |`UnmanagedType.LPStr`|Puntero a una matriz de caracteres Unicode terminada en NULL.|  
 |`UnmanagedType.LPTStr`|Un puntero a una matriz terminada en NULL de caracteres dependientes de la plataforma.|  
 |`UnmanagedType.LPWStr`|Puntero a una matriz de caracteres Unicode terminada en null.|  
@@ -266,5 +271,5 @@ public class Window {
 ## <a name="see-also"></a>Vea también
 - [Comportamiento predeterminado del cálculo de referencias](default-marshaling-behavior.md)
 - [Tipos que pueden o que no pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md)
-- [Atributos direccionales](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [Atributos direccionales](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Copiar y fijar](copying-and-pinning.md)

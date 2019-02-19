@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24112edc3ac28124953974463233800c51da5cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ab4a31195a202929c8485349cbf43235faea8e2d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453088"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221243"
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflexión en .NET Framework
-Las clases del espacio de nombres <xref:System.Reflection>, junto con <xref:System.Type?displayProperty=nameWithType>, permiten obtener información sobre los [ensamblados](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) cargados y los tipos definidos dentro de ellos, como [clases](../../../docs/standard/base-types/common-type-system.md#classes), [interfaces](../../../docs/standard/base-types/common-type-system.md#interfaces) y [tipos de valor](https://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). También puede usar la reflexión para crear instancias de tipos en tiempo de ejecución, para llamarlas y para acceder a ellas. Para consultar temas sobre aspectos específicos de la reflexión, vea los [Temas relacionados](#related_topics) al final de esta introducción.  
+Las clases del espacio de nombres <xref:System.Reflection>, junto con <xref:System.Type?displayProperty=nameWithType>, permiten obtener información sobre los [ensamblados](../app-domains/assemblies-in-the-common-language-runtime.md) cargados y los tipos definidos dentro de ellos, como [clases](../../standard/base-types/common-type-system.md#classes), [interfaces](../../standard/base-types/common-type-system.md#interfaces) y [tipos de valor](../../csharp/language-reference/keywords/value-types.md). También puede usar la reflexión para crear instancias de tipos en tiempo de ejecución, para llamarlas y para acceder a ellas. Para consultar temas sobre aspectos específicos de la reflexión, vea los [Temas relacionados](#related_topics) al final de esta introducción.
   
  El cargador de [Common Language Runtime](../../../docs/standard/clr.md) administra [dominios de aplicación](../../../docs/framework/app-domains/application-domains.md), que constituyen los límites definidos alrededor de los objetos que tienen el mismo ámbito de aplicación. Esta administración incluye la carga de cada ensamblado en el dominio de aplicación apropiado y el control del diseño de memoria de la jerarquía de tipos de cada ensamblado.  
   
@@ -77,7 +77,7 @@ Las clases del espacio de nombres <xref:System.Reflection>, junto con <xref:Syst
 |[Reflection and Generic Types](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) (Reflexión y tipos genéricos)|Explica cómo la reflexión controla los parámetros de tipo y los argumentos de tipo de tipos genéricos y métodos genéricos.|  
 |[Consideraciones de seguridad sobre la reflexión](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)|Describe las reglas que determinan hasta qué punto se puede usar la reflexión para detectar la información sobre tipos y acceder a los tipos.|  
 |[Cargar y usar tipos dinámicamente](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)|Describe la interfaz de enlace personalizado de reflexión que admite enlace de tiempo de ejecución.|  
-|[Cargar ensamblados en el contexto de solo reflexión](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Describe el contexto de carga de solo reflexión. Muestra cómo cargar un ensamblado, cómo probar el contexto y cómo examinar los atributos aplicados a un ensamblado en el contexto de solo reflexión.|  
+|[Cómo: Cargar ensamblados en el contexto de solo reflexión](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Describe el contexto de carga de solo reflexión. Muestra cómo cargar un ensamblado, cómo probar el contexto y cómo examinar los atributos aplicados a un ensamblado en el contexto de solo reflexión.|  
 |[Acceso a atributos personalizados](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)|Muestra cómo usar la reflexión para consultar la existencia de atributos y sus valores.|  
 |[Especificar nombres de tipo completos](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)|Describe el formato de nombres de tipo completos en términos del formulario Backus-Naur (BNF) así como la sintaxis necesaria para especificar caracteres especiales, nombres de ensamblados, punteros, referencias y matrices.|  
 |[Cómo: Enlazar un delegado mediante la reflexión](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|Explica cómo crear un delegado para un método y enlazar el delegado a un evento. Explica cómo crear un método de control de eventos en tiempo de ejecución mediante <xref:System.Reflection.Emit.DynamicMethod>.|  

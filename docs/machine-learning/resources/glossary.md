@@ -3,12 +3,12 @@ title: 'Glosario de aprendizaje automático: ML.NET'
 description: Un glosario de los términos importantes sobre aprendizaje automático que resultan de utilidad al crear los modelos personalizados en ML.NET.
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 3dfa17e9264bf913465adb63ce0a90a9d196e617
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415382"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092441"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glosario sobre aprendizaje automático de términos importantes
 
@@ -16,7 +16,7 @@ La lista siguiente es una compilación de los términos importantes sobre aprend
 
 ## <a name="accuracy"></a>Exactitud
 
-En [clasificación](#classification), la exactitud es el número de elementos correctamente clasificados dividido entre el número total de elementos en el conjunto de pruebas. Va desde 0 (el menos preciso) a 1 (el más preciso). La exactitud es una de las métricas de evaluación del rendimiento de su modelo. Trátela junto con el valor de [precisión](#precision), el de [recuperación](#recall) y la [puntuación F](#f-score).
+En [clasificación](#classification), la exactitud es el número de elementos correctamente clasificados dividido entre el número total de elementos en el conjunto de pruebas. Va desde 0 (el menos preciso) a 1 (el más preciso). La exactitud es una de las métricas de evaluación del rendimiento del modelo. Trátela junto con el valor de [precisión](#precision), el de [recuperación](#recall) y la [puntuación F](#f-score).
 
 ## <a name="area-under-the-curve-auc"></a>Área bajo la curva (AUC)
 

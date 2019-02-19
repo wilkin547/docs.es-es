@@ -52,8 +52,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
  IIS puede especificar varios enlaces para cada sitio, que resulta en varias direcciones base para cada esquema. Anteriores a [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF no admitía varias direcciones para un esquema y, si se especificaron produjo una <xref:System.ArgumentException> durante la activación.  
   
- 
-  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] permite a los proveedores de acceso a Internet hospedar varias aplicaciones con direcciones base diferentes para el mismo esquema en el mismo sitio.  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] permite a los proveedores de acceso a Internet hospedar varias aplicaciones con direcciones base diferentes para el mismo esquema en el mismo sitio.  
   
  Por ejemplo, un sitio podría contener las direcciones base siguientes:  
   
@@ -78,8 +77,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
   
  En el ejemplo anterior, `net.tcp://payroll.myorg.com:8000` y `http://shipping.myorg.com:8000` son las únicas direcciones base, para sus respectivos esquemas, que se pasan a través.  
   
- 
-  `baseAddressPrefixFilter` no admite los caracteres comodín.  
+ `baseAddressPrefixFilter` no admite los caracteres comodín.  
   
  Las direcciones base proporcionadas por IIS pueden tener direcciones enlazadas a otros esquemas no presentes en la lista `baseAddressPrefixFilters`. Estas direcciones no se filtran.  
   
@@ -135,8 +133,7 @@ Cada punto de conexión tiene una dirección asociada a él, que se utiliza para
 -   En configuración, especifique una dirección de escuchas personalizada con el `ListenUri` atributo del servicio [ \<punto de conexión >](../../configure-apps/file-schema/wcf/endpoint-element.md) elemento.  
   
 ### <a name="custom-soap-address-filter"></a>Filtro de direcciones SOAP personalizado  
- 
-  <xref:System.ServiceModel.EndpointAddress.Uri%2A> se utiliza junto con cualquier propiedad <xref:System.ServiceModel.EndpointAddress.Headers%2A> para definir el filtro de direcciones SOAP de un extremo (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). De forma predeterminada, este filtro comprueba que un mensaje entrante tenga un encabezado de mensaje `To` que coincida con el URI del punto de conexión y que todos los encabezados de punto de conexión necesarios se encuentren en el mensaje.  
+ <xref:System.ServiceModel.EndpointAddress.Uri%2A> se utiliza junto con cualquier propiedad <xref:System.ServiceModel.EndpointAddress.Headers%2A> para definir el filtro de direcciones SOAP de un extremo (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). De forma predeterminada, este filtro comprueba que un mensaje entrante tenga un encabezado de mensaje `To` que coincida con el URI del punto de conexión y que todos los encabezados de punto de conexión necesarios se encuentren en el mensaje.  
   
  En algunos escenarios, un extremo recibe todos los mensajes que llegan en el transporte subyacente y no solo aquéllos con el encabezado `To` adecuado. Para habilitar esto, el usuario puede utilizar la clase <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>.  
   

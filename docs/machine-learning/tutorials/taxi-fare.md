@@ -3,15 +3,15 @@ title: Predicción de precios mediante un aprendiz de regresión con ML.NET
 description: Prediga precios mediante un aprendiz de regresión con ML.NET.
 author: aditidugar
 ms.author: johalex
-ms.date: 01/15/2019
+ms.date: 02/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 10e0fa2cedff3e31575ad2b9c8bc2d9ecc81f3e8
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828402"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092545"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Tutorial: Predicción de precios mediante un aprendiz de regresión con ML.NET
 
@@ -122,9 +122,9 @@ Cree una variable denominada `mlContext` e inicialícela con una nueva instancia
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
 
-A continuación, para realizar la configuración para la carga de datos, inicialice la variable global `_textLoader` con el fin de volver a usarla.  Tenga en cuenta que se está usando `TextReader`. Cuando crea `TextLoader` mediante `TextReader`, se pasa en el contexto necesario y la clase <xref:Microsoft.ML.Data.TextLoader.Arguments> que habilita la personalización. Especifique el esquema de datos, pasando una matriz de objetos <xref:Microsoft.ML.Data.TextLoader.Column> a `TextReader` que contiene todos los nombres de columna y sus tipos. Definimos el esquema de datos anteriormente al crear nuestra clase `TaxiTrip`.
+A continuación, para realizar la configuración para la carga de datos, inicialice la variable global `_textLoader` con el fin de volver a usarla. Cuando se crea `TextLoader`, se pasa el contexto necesario y la clase <xref:Microsoft.ML.Data.TextLoader.Arguments> que habilita la personalización. Especifique el esquema de datos, pasando una matriz de objetos <xref:Microsoft.ML.Data.TextLoader.Column> a `TextLoader` que contiene todos los nombres de columna y sus tipos. Definimos el esquema de datos anteriormente al crear nuestra clase `TaxiTrip`.
 
-La clase `TextReader` devuelve la variable <xref:Microsoft.ML.Data.TextLoader> totalmente inicializada.  
+La clase `TextLoader` devuelve la variable <xref:Microsoft.ML.Data.TextLoader> totalmente inicializada.  
 
 Para inicializar la variable global `_textLoader` con el fin de volver a usarla para los conjuntos de datos necesarios, agregue el código siguiente después de la inicialización de `mlContext`:
 
@@ -155,7 +155,7 @@ Pasamos dos parámetros al método `Train`; `MLContext` para el contexto (`mlCon
 
 ## <a name="load-and-transform-data"></a>Cargar y transformar datos
 
-Cargaremos los datos mediante la variable global `_textLoader` con el parámetro `dataPath`. Devuelve <xref:Microsoft.ML.Data.IDataView>. Como la entrada y salida de Transforms,`DataView` es el tipo de canalización de datos fundamentales, comparable con `IEnumerable` para `LINQ`.
+Cargaremos los datos mediante la variable global `_textLoader` con el parámetro `dataPath`. Devuelve <xref:Microsoft.Data.DataView.IDataView>. Como la entrada y salida de las transformaciones, un elemento `IDataView` es el tipo de canalización de datos fundamentales, comparable con `IEnumerable` para `LINQ`.
 
 En ML.NET, los datos son similares a una vista SQL. Se evalúan lentamente, se esquematizan y son heterogéneos. El objeto es la primera parte de la canalización y carga los datos. Para este tutorial, carga un conjunto de datos con información sobre los viajes en taxi que resulta útil para predecir las tarifas. Esto se usa para crear el modelo y entrenarlo.
 

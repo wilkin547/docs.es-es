@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ce1c944257a1a11287b751d9a0f9eb5a88d744f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 726e82e3ce5f8d8924617ac7c7d38468ae279e71
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596896"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093039"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Tipos que pueden o que no pueden transferirse en bloque de bits
 La mayoría de los tipos de datos tienen una representación común en la memoria administrada y no administrada, y no requieren un tratamiento especial por parte del serializador de interoperabilidad. Estos tipos se denominan *tipos que pueden transferirse en bloque de bits* porque no requieren conversión cuando se pasan entre código administrado y código no administrado.  
@@ -49,7 +49,7 @@ La mayoría de los tipos de datos tienen una representación común en la memori
   
 -   Las matrices unidimensionales de tipos que pueden transferirse en bloque de bits, como una matriz de enteros. Pero un tipo que contiene una matriz variable de tipos que pueden transferirse en bloque de bits no se puede transferir en bloque de bits.  
   
--   Los tipos de valor con formato que solo contienen tipos que pueden transferirse en bloque de bits (y clases si se serializan como tipos con formato). Para más información sobre los tipos de valor con formato, vea [Serialización predeterminada para tipos de valor](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100)).  
+-   Los tipos de valor con formato que solo contienen tipos que pueden transferirse en bloque de bits (y clases si se serializan como tipos con formato). Para obtener más información sobre los tipos de valor con formato, vea [Serialización predeterminada para tipos de valor](default-marshaling-behavior.md#default-marshaling-for-value-types).  
   
  Las referencias a objetos no pueden transferirse en bloque de bits. Esto incluye una matriz de referencias a objetos que pueden transferirse en bloque de bits por sí mismos. Por ejemplo, se puede definir una estructura que puede transferirse en bloque de bits, pero no se puede definir un tipo que puede transferirse en bloque de bits que contiene una matriz de referencias a esas estructuras.  
   
@@ -57,7 +57,7 @@ La mayoría de los tipos de datos tienen una representación común en la memori
   
  Algunos tipos de datos administrados requieren una representación diferente en un entorno sin administrar. Estos tipos de datos que no pueden transferirse en bloque de bits se deben convertir a un formato que se pueda serializar. Por ejemplo, las cadenas administradas son tipos que no pueden transferirse en bloque de bits porque se deben convertir en objetos de cadena antes de que se puedan serializar.  
   
- En la tabla siguiente se enumeran los tipos del espacio de nombres <xref:System> que no pueden transferirse en bloque de bits. [Delegados](https://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2(v=vs.100)), que son estructuras de datos que hacen referencia a un método estático o a una instancia de clase, y que tampoco pueden transferirse en bloque de bits.  
+ En la tabla siguiente se enumeran los tipos del espacio de nombres <xref:System> que no pueden transferirse en bloque de bits. [Delegados](default-marshaling-behavior.md#default-marshaling-for-delegates), que son estructuras de datos que hacen referencia a un método estático o a una instancia de clase, y que tampoco pueden transferirse en bloque de bits.  
   
 |Tipo que no puede transferirse en bloque de bits|Descripción|  
 |-------------------------|-----------------|  

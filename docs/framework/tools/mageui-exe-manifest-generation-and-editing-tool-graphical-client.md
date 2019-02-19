@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 33ad1f4e260d90125d260e2ada0898be7f820b7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0135e4fc655b0efc3140e388f75ac8f45193cf
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572973"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219768"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)
 
@@ -128,7 +128,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
   
 |Elemento de la interfaz de usuario|Descripción|  
 |----------------|-----------------|  
-|**Tipo de conjunto de permisos**|El conjunto de permisos mínimo requerido por la aplicación para ejecutarse en el cliente. Para obtener una descripción de estos conjuntos de permisos y qué permisos se exigen, vea [NIB: Conjuntos de permisos con nombre](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
+|**Tipo de conjunto de permisos**|El conjunto de permisos mínimo requerido por la aplicación para ejecutarse en el cliente. Para obtener una descripción de estos conjuntos de permisos y ver qué permisos se exigen, vea [Conjuntos de permisos con nombre](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).|  
 |**Detalles**|Es el XML creado para el manifiesto de aplicación para representar el conjunto de permisos. A menos que tenga amplios conocimientos del formato XML del manifiesto de aplicación, no debe modificar manualmente este XML. Para más información, consulte [Manifiesto de aplicación ClickOnce](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Pestaña Manifiesto de implementación  

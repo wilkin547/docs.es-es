@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a70548231454991060098908ce954bf699eff838
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453260"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221256"
 ---
 # <a name="interop-marshaling"></a>Serialización de interoperabilidad
 <a name="top"></a> La serialización de interoperabilidad rige cómo se pasan los datos en argumentos de método y valores devueltos entre la memoria administrada y la no administrada durante las llamadas. La serialización de interoperabilidad es una actividad en tiempo de ejecución realizada por el servicio de serialización de Common Language Runtime.  
@@ -149,11 +149,11 @@ Llamadas remotas a través de firewalls que usan SOAP o la clase TcpChannel
 |[Serialización de datos con invocación de plataforma](marshaling-data-with-platform-invoke.md)|Describe cómo se declaran parámetros de método y se pasan argumentos a funciones exportadas por bibliotecas no administradas.|  
 |[Serialización de datos con la interoperabilidad COM](marshaling-data-with-com-interop.md)|Describe cómo se personalizan los contenedores COM para alterar el comportamiento de la serialización.|  
 |[Cómo: Migrar código administrado DCOM a WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Describe cómo se migra de DCOM a WCF.|  
-|[Asignar resultados HRESULT y excepciones](how-to-map-hresults-and-exceptions.md)|Describe cómo se asignan excepciones personalizadas a valores HRESULT y proporciona la asignación completa de cada HRESULT a su clase de excepción comparable en .NET Framework.|  
-|[Interoperar mediante tipos genéricos](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|Describe qué acciones se admiten al usar tipos genéricos para la interoperabilidad COM.|  
+|[Cómo: Asignar resultados HRESULT y excepciones](how-to-map-hresults-and-exceptions.md)|Describe cómo se asignan excepciones personalizadas a valores HRESULT y proporciona la asignación completa de cada HRESULT a su clase de excepción comparable en .NET Framework.|  
+|[Interoperar mediante tipos genéricos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Describe qué acciones se admiten al usar tipos genéricos para la interoperabilidad COM.|  
 |[Interoperating with Unmanaged Code](index.md) (Interoperar con código no administrado)|Describe los servicios de interoperabilidad proporcionados por Common Language Runtime.|  
 |[Interoperabilidad COM avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Proporciona vínculos a más información sobre la incorporación de componentes COM en una aplicación de .NET Framework.|  
-|[Consideraciones de diseño para interoperaciones](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|Proporciona sugerencias para escribir componentes COM integrados.|  
+|[Consideraciones de diseño para interoperaciones](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Proporciona sugerencias para escribir componentes COM integrados.|  
   
  [Volver al principio](#top)  
   
