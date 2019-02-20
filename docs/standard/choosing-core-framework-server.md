@@ -25,10 +25,10 @@ Use .NET Core para la aplicación de servidor cuando:
 
 Use .NET Framework para su aplicación de servidor cuando:
 
-* La aplicación use actualmente .NET Framework (la recomendación es extender en lugar de migrar).
-* La aplicación use bibliotecas .NET de terceros o paquetes de NuGet que no están disponibles para .NET Core.
-* La aplicación use tecnologías de .NET que no están disponibles para .NET Core.
-* La aplicación use una plataforma que no es compatible con .NET Core.
+* La aplicación usa actualmente .NET Framework (la recomendación es extender en lugar de migrar).
+* La aplicación usa bibliotecas .NET de terceros o paquetes de NuGet que no están disponibles para .NET Core.
+* La aplicación usa tecnologías de .NET que no están disponibles para .NET Core.
+* La aplicación usa una plataforma que no es compatible con .NET Core.
 
 ## <a name="when-to-choose-net-core"></a>Cuándo elegir .NET Core
 
