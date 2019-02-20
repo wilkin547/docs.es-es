@@ -2,12 +2,12 @@
 title: Rendimiento de Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: ba6120284b3ab189b0f34e2d3ef25f6967f04e5d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 29fc675e0eee37bac7cd6a9e309fa68b29bf28c8
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202294"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442885"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Rendimiento de Windows Workflow Foundation
 Dustin Metzgar
@@ -25,7 +25,7 @@ Dustin Metzgar
 
  Windows Communication Foundation (WCF) es el modelo de programación unificado de Microsoft para crear aplicaciones orientadas a servicios. Se introdujo por primera vez como parte de .NET 3.0 junto con WF3 y ahora es uno de los componentes clave de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].
 
- Windows Server AppFabric es un conjunto de tecnologías integradas que permiten compilar, escalar y administrar más fácilmente aplicaciones web y aplicaciones compuestas que se ejecutan en IIS. Proporciona herramientas para supervisar y administrar servicios y flujos de trabajo. Para obtener más información, consulte [Windows Server AppFabric](https://msdn.microsoft.com/windowsserver/ee695849.aspx)
+ Windows Server AppFabric es un conjunto de tecnologías integradas que permiten compilar, escalar y administrar más fácilmente aplicaciones web y aplicaciones compuestas que se ejecutan en IIS. Proporciona herramientas para supervisar y administrar servicios y flujos de trabajo. Para obtener más información, consulte [Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
 
 ## <a name="goals"></a>Objetivos
  El objetivo de este tema es mostrar las características de rendimiento de WF4 con datos medidos para diferentes escenarios. También se proporcionan en él comparaciones detalladas entre WF4 y WF3, y asimismo se muestran las grandes mejoras realizadas en esta nueva revisión. Los escenarios y los datos presentados en este artículo cuantifican el costo subyacente de distintos aspectos de WF4 y WF3. Estos datos son útiles para entender las características de rendimiento de WF4 y pueden ser útiles para planear migraciones de WF3 a WF4 o utilizar WF4 en el desarrollo de aplicaciones. Sin embargo, se debe ser cauto al considerar las conclusiones extraídas de los datos presentados en este artículo. El rendimiento de una aplicación de flujo de trabajo compuesta depende en gran medida de cómo se implementa el flujo de trabajo y cómo se integran los distintos componentes. Se debe medir cada aplicación para determinar las características de rendimiento de la misma.
@@ -67,7 +67,7 @@ Dustin Metzgar
  La compatibilidad de la programación totalmente declarativa con WF4 impone explícitamente requisitos más exigentes para el rendimiento en tiempo de diseño de grandes flujos de trabajo. El diseñador de flujos de trabajo en WF4 tiene mejor escalabilidad para grandes flujos de trabajo que el de WF3. Con la compatibilidad de virtualización de interfaz de usuario, el diseñador puede cargar fácilmente un flujo de trabajo grande de 1000 actividades en unos segundos, mientras que es muy difícil cargar un flujo de trabajo de unos pocos cientos de actividades con el diseñador de WF3.
 
 ## <a name="component-level-performance-comparisons"></a>Comparaciones de rendimiento en el nivel de componente
- Esta sección contiene datos sobre comparaciones directas entre actividades individuales en flujos de trabajo de WF3 y WF4.  Áreas clave como la persistencia tienen un impacto más profundo en el rendimiento que los componentes de actividades individuales.  Las mejoras de rendimiento en componentes individuales de WF4 son importantes porque los componentes son ahora bastante rápidos en comparación con la lógica de orquestación codificada manualmente.  Un ejemplo de los cuales se trata en la sección siguiente: "Escenario de composición de servicio".
+ Esta sección contiene datos sobre comparaciones directas entre actividades individuales en flujos de trabajo de WF3 y WF4.  Áreas clave como la persistencia tienen un impacto más profundo en el rendimiento que los componentes de actividades individuales.  Las mejoras de rendimiento en componentes individuales de WF4 son importantes porque los componentes son ahora bastante rápidos en comparación con la lógica de orquestación codificada manualmente.  Un ejemplo de los cuales se explica en la sección siguiente: "Escenario de composición de servicio".
 
 ### <a name="environment-setup"></a>Configuración de entorno
  ![Entorno de prueba de rendimiento de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")
@@ -193,7 +193,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 ### <a name="performance"></a>Rendimiento
  ![Gráfico de rendimiento del servicio Online Store](../../../docs/framework/windows-workflow-foundation/media/onlinestoreperfgraph.gif "OnlineStorePerfGraph")
 
- La conexión de los servicios TCP back-end sin agrupación de canales hace que el servicio de [!INCLUDE[wf1](../../../includes/wf1-md.md)] tenga un impacto del 17,2% en el rendimiento.  Con la agrupación de canales, la reducción es de aproximadamente el 23,8%.  Para HTTP, el impacto es mucho menor: el 4,3% sin agrupación y el 8,1% con agrupación.  También es importante tener en cuenta que la agrupación de canales proporciona muy pocas ventajas cuando se utiliza HTTP.
+ La conexión de los servicios TCP back-end sin agrupación de canales hace que el servicio de [!INCLUDE[wf1](../../../includes/wf1-md.md)] tenga un impacto del 17,2% en el rendimiento.  Con la agrupación de canales, la reducción es de aproximadamente el 23,8%.  Para HTTP, el impacto es mucho menor: 4,3% sin agrupación y el 8,1% con la agrupación.  También es importante tener en cuenta que la agrupación de canales proporciona muy pocas ventajas cuando se utiliza HTTP.
 
  Aunque hay una sobrecarga en el runtime de WF4 en comparación con un servicio WCF codificadas en esta prueba, podría considerarse un escenario pesimista.  Los dos servicios back-end de esta prueba realizan muy poco trabajo.  En un escenario real de extremo a extremo, estos servicios realizarían operaciones más costosas, como llamadas de base de datos, con lo que el impacto en el rendimiento de la capa de transporte sería menos importante.  Esto, más las ventajas de las características disponibles en WF4, hace de Workflow Foundation una opción viable para crear servicios de orquestación.
 
@@ -269,7 +269,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  El número de actividades en la definición de flujo de trabajo aumenta claramente con cada nivel de profundidad.  Pero solo una ruta por punto de decisión se ejecuta en una instancia de flujo de trabajo dada, por lo que solo se ejecuta un pequeño subconjunto de las actividades reales.
 
- ![Flujo de trabajo complejo](../../../docs/framework/windows-workflow-foundation/media/complexworkflowthroughputworkflow.gif "ComplexWorkflowThroughputWorkflow")
+ ![Complex Workflow](../../../docs/framework/windows-workflow-foundation/media/complexworkflowthroughputworkflow.gif "ComplexWorkflowThroughputWorkflow")
 
  Se creó un flujo de trabajo equivalente para WF3. El diseñador de WF3 muestra el flujo de trabajo completo en el área de diseño en lugar de anidarlo; por consiguiente, es demasiado extenso para mostrarlo en este tema. A continuación se muestra un fragmento de código del flujo de trabajo.
 
@@ -303,7 +303,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Una de las tendencias claras que se observan en este gráfico es que el anidamiento tiene un impacto relativamente mínimo en el uso de memoria tanto en WF3 como en WF4.  El impacto en la memoria más significativo procede del número de actividades en un flujo de trabajo determinado.  Dados los datos de las variaciones de la secuencia 1000, la secuencia 5 de profundidad compleja 5 y la secuencia 1 de profundidad  compleja 7, es evidente que, a partir de la cifra de mil actividades, el aumento del uso de memoria se hace más apreciable.  En el caso extremo (secuencia 1 de profundidad 7) donde hay 29.000 actividades aproximadamente, WF4 utiliza casi un 79% menos de memoria que WF3.
 
 ### <a name="multiple-workflow-definitions-test"></a>Prueba de varias definiciones de flujo de trabajo
- La medición de memoria por cada definición de flujo de trabajo se divide en dos pruebas diferentes debido a las opciones disponibles para hospedar flujos de trabajo en WF3 y WF4.  La ejecución de estas pruebas se diferencia de la ejecución de la prueba de complejidad de flujo de trabajo en que se crean instancias de un flujo de trabajo determinado y se ejecutan solo una vez por definición.  Esto se debe a que la definición de flujo de trabajo y su host permanecen en memoria durante la vigencia de AppDomain.  La memoria utilizada en la ejecución de una instancia de flujo de trabajo determinada se debe limpiar durante la recolección de elementos no utilizados.  La guía de migración de WF4 contiene información más detallada acerca de las opciones de hospedaje. Para obtener más información, consulte [guía básica de migración de WF: hospedaje del flujo de trabajo](https://go.microsoft.com/fwlink/?LinkID=153313).
+ La medición de memoria por cada definición de flujo de trabajo se divide en dos pruebas diferentes debido a las opciones disponibles para hospedar flujos de trabajo en WF3 y WF4.  La ejecución de estas pruebas se diferencia de la ejecución de la prueba de complejidad de flujo de trabajo en que se crean instancias de un flujo de trabajo determinado y se ejecutan solo una vez por definición.  Esto se debe a que la definición de flujo de trabajo y su host permanecen en memoria durante la vigencia de AppDomain.  La memoria utilizada en la ejecución de una instancia de flujo de trabajo determinada se debe limpiar durante la recolección de elementos no utilizados.  La guía de migración de WF4 contiene información más detallada acerca de las opciones de hospedaje. Para obtener más información, consulte [guía básica de migración de WF: Hospedaje de flujo de trabajo](https://go.microsoft.com/fwlink/?LinkID=153313).
 
  La creación de muchas definiciones de flujo de trabajo para una prueba de definición de flujo de trabajo se puede realizar de varias maneras.  Por ejemplo, se puede utilizar generación de código para crear un conjunto de 1000 flujos de trabajo idénticos excepto en el nombre y guardar cada uno de ellos en archivos independientes.  Se adoptó este enfoque para la prueba hospedada en consola.  En WF3, se utilizó la clase <xref:System.Workflow.Runtime.WorkflowRuntime> para ejecutar las definiciones de flujo de trabajo.  WF4 puede usar <xref:System.Activities.WorkflowApplication> para crear una única instancia de flujo de trabajo o usar directamente <xref:System.Activities.WorkflowInvoker> para ejecutar la actividad como si fuera una llamada al método.  <xref:System.Activities.WorkflowApplication> es un host de una única instancia de flujo de trabajo y tiene una paridad de características más cercana a <xref:System.Workflow.Runtime.WorkflowRuntime> de modo que se usa en esta prueba.
 
@@ -424,7 +424,7 @@ public class Workflow1 : Activity
 
  WF4 no tiene un proveedor de seguimiento de SQL, pero AppFabric sí lo tiene.  El enfoque de seguimiento de SQL de AppFabric es la suscripción a eventos ETW con un servicio de Windows que procesa por lotes los eventos y los escribe en una tabla SQL diseñada para inserciones rápidas.  Un trabajo independiente descarga los datos de esta tabla y los reforma en tablas de informes que se pueden ver en el panel de AppFabric.  Esto significa que un lote de eventos de seguimiento se controla con independencia del flujo de trabajo del que procede y, por consiguiente, no tiene que esperar un punto de persistencia antes de su grabación.
 
- Los eventos ETW se pueden grabar con herramientas como logman o xperf.  El archivo ETL compacto puede verse con una herramienta como xperfview o convertirse a un formato más legible, como XML, con tracerpt.  En WF3, la única opción para obtener los eventos de seguimiento sin una base de datos SQL es crear un servicio de seguimiento personalizado. Para obtener más información sobre ETW, vea [servicios WCF y seguimiento de eventos para Windows](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) y [seguimiento de eventos para Windows](https://msdn.microsoft.com/library/ff190903.aspx).
+ Los eventos ETW se pueden grabar con herramientas como logman o xperf.  El archivo ETL compacto puede verse con una herramienta como xperfview o convertirse a un formato más legible, como XML, con tracerpt.  En WF3, la única opción para obtener los eventos de seguimiento sin una base de datos SQL es crear un servicio de seguimiento personalizado. Para obtener más información sobre ETW, vea [servicios WCF y seguimiento de eventos para Windows](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) y [Event Tracing - aplicaciones de Windows](/windows/desktop/etw/event-tracing-portal).
 
  La habilitación del seguimiento de flujo de trabajo influirá en el rendimiento de diversas maneras.  El banco de pruebas que figura más abajo utiliza la herramienta logman para usar los eventos de seguimiento de ETW y grabarlos en un archivo ETL.  El costo del seguimiento de SQL en AppFabric no pertenece al ámbito de este artículo.  El perfil de seguimiento básico, que también se utiliza en AppFabric, se muestra en este banco de pruebas.  También se incluye el costo de realizar solamente el seguimiento de los eventos de supervisión de estado.  Estos eventos son útiles para la solución de problemas y la determinación del rendimiento medio del sistema.
 

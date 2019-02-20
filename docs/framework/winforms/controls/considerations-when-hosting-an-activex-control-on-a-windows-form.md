@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: a5e8e023da0eeebf5185f57eb51aa796f6f03a1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1b015fbd35c07611816195c4498a74fb232383f
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639346"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441988"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Consideraciones al alojar un control ActiveX en Windows Forms
 Aunque Windows Forms se han optimizado para hospedar controles de Windows Forms, todavía puede utilizar los controles ActiveX. Tenga en cuenta las consideraciones siguientes al planear una aplicación que utiliza controles ActiveX:  
@@ -31,6 +31,6 @@ Aunque Windows Forms se han optimizado para hospedar controles de Windows Forms,
 ## <a name="see-also"></a>Vea también
 - [Cómo: Agregar controles ActiveX a formularios de Windows](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
 - [Seguridad de acceso del código](../../../../docs/framework/misc/code-access-security.md)
-- [Comparación de los controles y objetos programables de distintos lenguajes y bibliotecas](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)
+- [Comparación de los controles y objetos programables de distintos lenguajes y bibliotecas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
 - [Insertar controles en Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
 - [Controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/index.md)

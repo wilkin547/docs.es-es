@@ -6,12 +6,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Clipboard [Windows Forms], Windows Forms
 ms.assetid: 7cce79b6-5835-46fd-b690-73f12ad368b2
-ms.openlocfilehash: c2bb3c24298ffe5308af03c5af5bae697a22c33b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 281d102ecd02623e7e18ebf4fc569538ebbdaf7f
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528619"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442014"
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a>Compatibilidad con las operaciones de arrastrar y colocar y con el Portapapeles
 Puede habilitar las operaciones de arrastrar y colocar del usuario en una aplicación basada en Windows controlando una serie de eventos, sobre todo los eventos <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave> y <xref:System.Windows.Forms.Control.DragDrop>.  
@@ -19,16 +19,16 @@ Puede habilitar las operaciones de arrastrar y colocar del usuario en una aplica
  También puede implementar la compatibilidad de cortar, copiar y pegar del usuario, y la transferencia de datos del usuario en el Portapapeles en las aplicaciones basadas en Windows mediante llamadas a métodos simples.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Tutorial: Llevar a cabo una operación de arrastrar y colocar en Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)  
+ [Tutorial: Realizar una operación de arrastrar y colocar en Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)  
  Explica cómo iniciar una operación de arrastrar y colocar.  
   
- [Llevar a cabo operaciones de arrastrar y colocar entre aplicaciones](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
+ [Cómo: Realizar operaciones de arrastrar y colocar entre aplicaciones](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
  Ilustra cómo realizar operaciones de arrastrar y colocar entre aplicaciones.  
   
- [Agregar datos al Portapapeles](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
+ [Cómo: Agregar datos al Portapapeles](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
  Describe una manera de insertar información en el Portapapeles mediante programación.  
   
- [Recuperar datos del Portapapeles](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
+ [Cómo: Recuperar datos del Portapapeles](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
  Describe cómo acceder a los datos almacenados en el Portapapeles.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
@@ -42,4 +42,4 @@ Puede habilitar las operaciones de arrastrar y colocar del usuario en una aplica
  Describe los detalles del método que resulta esencial para iniciar una operación de arrastre.  
   
  <xref:System.Windows.Forms.Clipboard>  
- Consulte también [Cómo: enviar datos al formulario secundario MDI activo](https://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).
+ Consulte también [Cómo: Enviar datos al formulario secundario MDI activo](how-to-send-data-to-the-active-mdi-child.md).

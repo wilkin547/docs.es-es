@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Anexar un elemento MenuStrip a una ventana primaria MDI (formularios Windows Forms)'
+title: Procedimiento Anexar un elemento MenuStrip a una ventana primaria MDI (formularios Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: bfce2e5c787bd18321d1203286e98d8f75cbf173
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9c39b80c06cae91c43c7a79390cef71ae781489e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500643"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442755"
 ---
-# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Cómo: Anexar un elemento MenuStrip a una ventana primaria MDI (formularios Windows Forms)
+# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Procedimiento Anexar un elemento MenuStrip a una ventana primaria MDI (formularios Windows Forms)
 En algunas aplicaciones, el tipo de ventana secundaria de una interfaz de múltiples documentos (MDI) puede ser diferente de la ventana primaria MDI. Por ejemplo, el elemento primario MDI podría ser una hoja de cálculo y el elemento secundario MDI podría ser un gráfico. En ese caso, querrá actualizar el contenido del menú del elemento primario MDI con el contenido del menú del elemento secundario MDI cuando se activan ventanas secundarias MDI de diferentes tipos.  
   
  El siguiente procedimiento usa las propiedades <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction> y <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> para anexar el menú secundario MDI al menú primario MDI. Al cerrar la ventana secundaria MDI se quita el menú anexado del elemento primario MDI.  
   
- Consulte también [aplicaciones de interfaz de múltiples documentos (MDI)](https://msdn.microsoft.com/library/xyhh2e7e\(v=vs.110\)).  
+ Consulte también [aplicaciones de interfaz de múltiples documentos (MDI)](../advanced/multiple-document-interface-mdi-applications.md).  
   
 ### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>Para anexar un elemento de menú a un elemento primario MDI  
   

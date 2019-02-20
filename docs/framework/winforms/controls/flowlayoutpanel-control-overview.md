@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, dynamic layout
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
-ms.openlocfilehash: 7c07f94ce25c972b73532f79ce5ba3da424a0f7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b08566f4b13ed54bfc0bb83c39777410251dafa
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610362"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441790"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>Información general sobre el control FlowLayoutPanel
 El control <xref:System.Windows.Forms.FlowLayoutPanel> organiza su contenido en una dirección de flujo horizontal o vertical. Puede ajustar el contenido del control de una fila a la siguiente, o de una columna a la siguiente. También puede recortar el contenido en lugar de ajustarlo.  
@@ -25,7 +25,7 @@ El control <xref:System.Windows.Forms.FlowLayoutPanel> organiza su contenido en 
   
  Cualquier control de Windows Forms puede ser un control secundario del control <xref:System.Windows.Forms.FlowLayoutPanel>, incluidas otras instancias de <xref:System.Windows.Forms.FlowLayoutPanel>. Con esta funcionalidad, puede construir diseños sofisticados que se adapten a las dimensiones del formulario en tiempo de ejecución.  
   
- Consulte también [Tutorial: Organizar controles en formularios de Windows Forms mediante FlowLayoutPanel](https://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\)).  
+ Consulte también [Tutorial: Organizar controles en formularios de Windows Forms mediante FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>

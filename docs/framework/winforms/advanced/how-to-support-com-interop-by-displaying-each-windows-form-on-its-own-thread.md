@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso
+title: Filtrar Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: 5df3b4868a514fb520a66aa89ae7795d68eaffd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91c0b6384d8c39848cfd199950034d2f62e716df
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672076"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441773"
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Procedimiento Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso
 Puede resolver problemas de interoperabilidad COM mostrando el formulario en un bucle de mensajes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , que puede crear con el método <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> .  
@@ -28,7 +28,7 @@ Puede resolver problemas de interoperabilidad COM mostrando el formulario en un 
   
  Hay una amplia compatibilidad para esta característica en Visual Studio.  
   
- Consulte también [Tutorial: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](https://msdn.microsoft.com/library/ms233639\(v=vs.110\)).  
+ Consulte también [Tutorial: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100)).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se ilustra cómo mostrar el formulario en un subproceso independiente y cómo llamar al método <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> para iniciar un bombeo de mensajes de Windows Forms en ese subproceso. Para usar este enfoque, debe calcular las referencias de las llamadas al formulario desde la aplicación no administrada usando el método <xref:System.Windows.Forms.Control.Invoke%2A> .  

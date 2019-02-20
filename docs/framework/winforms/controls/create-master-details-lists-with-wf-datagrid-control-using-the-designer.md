@@ -1,17 +1,17 @@
 ---
-title: Procedimiento Crear listas principal-detalle con el Control DataGrid de Windows Forms mediante el diseñador
+title: Filtrar Crear listas principal-detalle con el Control DataGrid de Windows Forms mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - master-details lists
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 5773c52a1cedfe373d25d42ff78720368ecb7a5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c8b1e6240f35032e7c8714138591293b8498dfc
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632782"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442339"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Procedimiento Crear listas principal-detalle con el Control DataGrid de Windows Forms mediante el diseñador
 
@@ -27,10 +27,10 @@ ms.locfileid: "54632782"
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>Para crear una lista de detalles principales en el diseñador  
   
-1.  Agregue dos <xref:System.Windows.Forms.DataGrid> controles al formulario. Para obtener más información, vea [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). En Visual Studio 2005, el <xref:System.Windows.Forms.DataGrid> control no está en el **cuadro de herramientas** de forma predeterminada. Para obtener más información, vea [Cómo: Agregar elementos al cuadro de herramientas](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
+1.  Agregue dos <xref:System.Windows.Forms.DataGrid> controles al formulario. Para obtener más información, vea [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). En Visual Studio 2005, el <xref:System.Windows.Forms.DataGrid> control no está en el **cuadro de herramientas** de forma predeterminada. Para obtener más información, vea [Cómo: Agregar elementos al cuadro de herramientas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
   
     > [!NOTE]
-    >  Los pasos siguientes no son aplicables a Visual Studio 2005, que usa el **orígenes de datos** ventana para el enlace de datos en tiempo de diseño. Para obtener más información, consulte [enlazar controles a datos en Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) y [Cómo: Mostrar relacionados con datos en un Windows Forms Application](https://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).  
+    >  Los pasos siguientes no son aplicables a Visual Studio 2005, que usa el **orígenes de datos** ventana para el enlace de datos en tiempo de diseño. Para obtener más información, consulte [enlazar controles a datos en Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) y [Cómo: Mostrar relacionados con datos en un Windows Forms Application](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120)).  
   
 2.  Arrastre dos o más tablas de **Explorador de servidores** al formulario.  
   

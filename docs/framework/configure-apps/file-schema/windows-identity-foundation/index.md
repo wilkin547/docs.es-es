@@ -3,12 +3,6 @@ title: Esquema de configuración de Windows Identity Foundation
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
-ms.openlocfilehash: 7d6a3b1d0a67eb349fc6c9828e74a50ed621294e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146595"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Esquema de configuración de Windows Identity Foundation
 En los temas de esta sección se proporciona información sobre el esquema de configuración de Windows Identity Foundation (WIF). También puede configurar una aplicación para usar WIF a través de las clases expuestas por el marco de trabajo. Estas clases se indican en las secciones que tratan sobre los elementos correspondientes del esquema. A continuación se muestra la estructura básica de etiquetas XML expuesta por el esquema de configuración de WIF. Los atributos se omiten. Los comentarios resaltados indican los componentes principales del esquema.  
@@ -109,7 +103,4 @@ En los temas de esta sección se proporciona información sobre el esquema de co
 ## <a name="in-this-section"></a>En esta sección  
  En [\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) se proporciona la configuración necesaria para habilitar opciones de WIF en las aplicaciones.  
   
- En [\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) se proporciona la configuración necesaria para la federación pasiva mediante WIF. Configura el módulo de autenticación de sesión (SAM) y el módulo de autenticación federada (WSFAM).  
-  
-## <a name="related-sections"></a>Secciones relacionadas  
- En [Configuration, Administration, And Management](https://msdn.microsoft.com/library/1e03c389-de2c-4096-aaff-86b087e1bea0) (Configuración, administración y dirección) se describe cómo configurar y administrar aplicaciones y servicios de WIF.
+ En [\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) se proporciona la configuración necesaria para la federación pasiva mediante WIF. Configura el módulo de autenticación de sesión (SAM) y el módulo de autenticación federada (WSFAM).

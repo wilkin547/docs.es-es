@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 5031538c49da34d0fc89442c1170e30ff56a6eff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d835b055eba6ca66b64555b44cbde64134e743f
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505697"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442300"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Inicio rápido de solución de problemas de WCF
 En este tema se enumeran muchos problemas conocidos que los clientes han detectado al desarrollar clientes y servicios de WCF. Si el problema que tiene no aparece en esta lista, se recomienda que configure la traza del servicio. De esta forma, se genera un archivo de seguimiento que puede ver con el visor de archivos de seguimiento y obtiene información detallada sobre las excepciones que se pueden producir en el servicio. Para obtener más información sobre la configuración de seguimiento, vea: [Configuración del seguimiento](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Para obtener más información sobre el Visor del archivo de seguimiento, vea: [Herramienta de Visor de seguimiento (SvcTraceViewer.exe) del servicio](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -102,7 +102,7 @@ public class MyServiceHost : ServiceHost
   
 -   Puede que necesite abrir el puerto a la aplicación. Para obtener más información, consulte [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) en los ejemplos de SDK.  
   
--   Para otros posibles problemas, consulte el tema de los ejemplos [Running the Samples in a Workgroup and Across Machines](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113).  
+-   Para otros posibles problemas, vea el tema de los ejemplos [ejecutando los ejemplos de Windows Communication Foundation](./samples/running-the-samples.md).  
   
 -   Si su cliente está utilizando las credenciales de Windows y la excepción es <xref:System.ServiceModel.Security.SecurityNegotiationException>, configure Kerberos tal y como se muestra a continuación.  
   

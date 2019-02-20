@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b04465d9141cdf595c4055ba64eb49083c1c514
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cc3b806043daea9247741b1816c9055378f45cf
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667903"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443041"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrar la aplicación de la Tienda Windows a .NET Native
 .NET native proporciona la compilación estática de las aplicaciones en el Store de Windows o en el equipo del desarrollador. Esto difiere de la compilación dinámica para las aplicaciones de la Tienda Windows realizada por el compilador Just-in-time (JIT) o el [generador de imágenes nativas (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) en el dispositivo. A pesar de las diferencias, .NET Native intenta mantener la compatibilidad con la [.NET para Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). En su mayor parte, lo que funciona en las aplicaciones de .NET para Windows Store también funciona con .NET Native.  Sin embargo, en algunos casos, puede encontrar cambios de comportamiento. Este documento describe las diferencias entre las aplicaciones estándar de .NET para Windows Store y .NET Native en las áreas siguientes:  
@@ -149,7 +149,7 @@ ms.locfileid: "54667903"
   
  **Otras API**  
   
--   La propiedad <xref:System.Reflection.TypeInfo.GUID%2A?displayProperty=nameWithType> produce una excepción <xref:System.PlatformNotSupportedException> si no se aplica al tipo un atributo <xref:System.Runtime.InteropServices.GuidAttribute> . El GUID se utiliza principalmente para la compatibilidad con COM.  
+-   El [TypeInfo.GUID](xref:System.Type.GUID) propiedad produce una <xref:System.PlatformNotSupportedException> excepción si un <xref:System.Runtime.InteropServices.GuidAttribute> atributo no se aplica al tipo. El GUID se utiliza principalmente para la compatibilidad con COM.  
   
 -   El <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> método analiza correctamente las cadenas que contienen fechas cortas en .NET Native. Sin embargo, no mantiene la compatibilidad con los cambios en el análisis de fecha y hora que se describen en los artículos [KB2803771](https://support.microsoft.com/kb/2803771) y [KB2803755](https://support.microsoft.com/kb/2803755)de Microsoft Knowledge Base.  
   

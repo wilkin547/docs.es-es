@@ -21,12 +21,12 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-ms.openlocfilehash: 2eb1afb1400b8770c4c1ddb0ec90bb44979e702f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0d24027f00c4ab4ba49f4948a9f5488a2eff3fd
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662808"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443028"
 ---
 # <a name="integer-data-type-visual-basic"></a>Tipo de datos entero (Visual Basic)
 Contiene enteros de 32 bits con signo (4 bytes) comprendidos en el intervalo entre -2.147.483.648 y 2.147.483.647.  
@@ -40,7 +40,7 @@ Contiene enteros de 32 bits con signo (4 bytes) comprendidos en el intervalo ent
 
 Puede declarar e inicializar un `Integer` variable mediante la asignación de un literal decimal, un literal hexadecimal, un literal octal, o (a partir de 2017 Visual Basic) un literal binario. Si el literal entero está fuera del intervalo de `Integer` (es decir, si es inferior a <xref:System.Int32.MinValue?displayProperty=nameWithType> o mayor que <xref:System.Int32.MaxValue?displayProperty=nameWithType>, se produce un error de compilación.
 
-En el ejemplo siguiente, los enteros que equivalen a 16 342 que se representan como literales binarios, hexadecimales y decimales se asignan a valores `Integer`.
+En el ejemplo siguiente, los enteros que equivalen a 90 946 que se representan como literales binarios, hexadecimales y decimales se asignan a valores `Integer`.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Int)]  
 

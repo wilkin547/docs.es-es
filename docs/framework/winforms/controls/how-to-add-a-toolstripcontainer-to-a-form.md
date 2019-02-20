@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar un ToolStripContainer a un formulario
+title: Filtrar Agregar un ToolStripContainer a un formulario
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], adding to Windows Forms
 ms.assetid: d0f55095-a833-453e-be5a-644906d75d54
-ms.openlocfilehash: 9aace854a9583268ef7aac6ac1f57534cfdfe1e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47279c5e8fa24accca36280f9a97200982a1451a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515526"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441806"
 ---
 # <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Procedimiento Agregar un ToolStripContainer a un formulario
 Puede agregar mediante programación un <xref:System.Windows.Forms.ToolStripContainer> a Windows Forms y rellenarlo con controles.  
@@ -30,7 +30,7 @@ Puede agregar mediante programación un <xref:System.Windows.Forms.ToolStripCont
   
 -   Referencias a los ensamblados System.Drawing, System.Text y System.Windows.Forms.  
   
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Vea también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)) o [cuadro de diálogo de tareas de ToolStripContainer](https://msdn.microsoft.com/library/ms233647\(v=vs.110\)).  
+ Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.ToolStripContainer>

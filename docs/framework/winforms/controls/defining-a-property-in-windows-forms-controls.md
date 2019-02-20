@@ -8,24 +8,24 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: b1e9fc0b0acdc3ba2cfab2b9ca705739c6c71516
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d040d4de566ea750b9a9d14531061a63524e668
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744835"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441897"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Definir una propiedad en los controles de formularios Windows Forms
-Para información general de propiedades, vea [Información general sobre propiedades](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52). Hay que hacer algunas consideraciones importantes al definir una propiedad:  
+Para información general de propiedades, vea [Información general sobre propiedades](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Hay que hacer algunas consideraciones importantes al definir una propiedad:  
   
--   Debe aplicar atributos a las propiedades que defina. Atributos especifican cómo debe mostrar una propiedad el diseñador. Para más información, consulte [Design-Time Attributes for Components](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3) (Atributos en tiempo de diseño para componentes).  
+-   Debe aplicar atributos a las propiedades que defina. Atributos especifican cómo debe mostrar una propiedad el diseñador. Para más información, consulte [Design-Time Attributes for Components](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)) (Atributos en tiempo de diseño para componentes).  
   
 -   Si cambia la propiedad afecta a la presentación visual del control, llame a la <xref:System.Windows.Forms.Control.Invalidate%2A> método (que el control hereda de <xref:System.Windows.Forms.Control>) desde el `set` descriptor de acceso. <xref:System.Windows.Forms.Control.Invalidate%2A> a su vez llama a la <xref:System.Windows.Forms.Control.OnPaint%2A> método, que vuelve a dibujar el control. Varias llamadas a <xref:System.Windows.Forms.Control.Invalidate%2A> dar lugar a una sola llamada a <xref:System.Windows.Forms.Control.OnPaint%2A> para mejorar la eficacia.  
   
 -   La biblioteca de clases de .NET Framework proporciona convertidores de tipos para tipos de datos comunes tales como enteros, números decimales, valores booleanos y otros. La finalidad de un convertidor de tipos suele ser facilitar conversiones de valor de cadena (de datos de cadena a otros tipos de datos). Los tipos de datos comunes se asocian a convertidores de tipos predeterminados que convierten los valores en cadenas y las cadenas en los tipos de datos adecuados. Si se define una propiedad que consiste en un tipo de datos personalizado (es decir, no estándar), tendrá que aplicar un atributo que especifique el convertidor de tipos que se va a asociar a esa propiedad. También puede usarse un atributo que asocie un editor de tipos de interfaz de usuario personalizado a una propiedad. Un editor de tipos de interfaz de usuario ofrece una interfaz de usuario para editar una propiedad o un tipo de datos. Un ejemplo de editor de tipos de interfaz de usuario es un selector de colores. Al final de este tema se dan ejemplos de atributos.  
   
     > [!NOTE]
-    >  Si no dispone de un convertidor de tipos o de un editor de tipos de interfaz de usuario para la propiedad personalizada, puede implementar una, tal y como se describe en [Ampliar compatibilidad en tiempo de diseño](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
+    >  Si no dispone de un convertidor de tipos o de un editor de tipos de interfaz de usuario para la propiedad personalizada, puede implementar una, tal y como se describe en [Ampliar compatibilidad en tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)).  
   
  En el fragmento de código siguiente se define una propiedad personalizada denominada `EndColor` para el control personalizado `FlashTrackBar`.  
   

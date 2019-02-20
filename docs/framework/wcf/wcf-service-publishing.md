@@ -2,12 +2,12 @@
 title: Publicación de servicio WCF
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: ca4a95b606f73800b11416627a27b8174e2bdda9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04912d94568cf144e874513395e6a6f31375fb7c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743011"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441442"
 ---
 # <a name="wcf-service-publishing"></a>Publicación de servicio WCF
 
@@ -21,7 +21,7 @@ Publicación de servicios de WCF admite la publicación de servicios WCF creado 
 
 -   Biblioteca de servicio de distribución.
 
-Puede encontrar estas plantillas de servicio, elija **archivo** > **nuevo proyecto** > [**Visual Basic** o **Visual C#** ] > **WCF**. Para otras plantillas WCF en esta ubicación (incluida la aplicación de servicio de flujo de trabajo de WCF y la aplicación de servicio WCF), puede publicar mediante [para aplicaciones web de publicación de un solo clic](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx).
+Puede encontrar estas plantillas de servicio, elija **archivo** > **nuevo proyecto** > [**Visual Basic** o **Visual C#** ] > **WCF**. Para otras plantillas WCF en esta ubicación (incluida la aplicación de servicio de flujo de trabajo de WCF y la aplicación de servicio WCF), puede publicar mediante [para aplicaciones web de publicación de un solo clic](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110)).
 
 El servicio se puede publicar en las ubicaciones de destino siguientes.
 

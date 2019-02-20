@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 0b3b92e29c5de7365cbf1196a387bc0c9c440755
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b30bb28e816f27cc8661d478758a05e52fb45037
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582112"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442131"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Implementación de ClickOnce para formularios Windows Forms
 Los temas siguientes describen [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], una tecnología que se usa para implementar fácilmente aplicaciones de Windows Forms en equipos cliente.  
@@ -66,6 +66,6 @@ Los temas siguientes describen [!INCLUDE[ndptecclick](../../../includes/ndpteccl
 - [Introducción a la configuración de la aplicación](../../../docs/framework/winforms/advanced/application-settings-overview.md)
 - [Publicar aplicaciones ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)
 - [Compilar aplicaciones ClickOnce desde la línea de comandos](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
-- [Depurar aplicaciones ClickOnce que usan System.Deployment.Application](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)
+- [Depurar aplicaciones ClickOnce que usan System.Deployment.Application](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)
 - [Implementar componentes COM con ClickOnce](/visualstudio/deployment/deploying-com-components-with-clickonce)
 - [Cómo: Publicación de una aplicación ClickOnce mediante el Asistente para publicación](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

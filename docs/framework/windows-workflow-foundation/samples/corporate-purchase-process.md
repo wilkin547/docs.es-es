@@ -2,12 +2,12 @@
 title: Proceso de compra corporativa
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837197"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442248"
 ---
 # <a name="corporate-purchase-process"></a>Proceso de compra corporativa
 En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básicas en función del proceso de compra con selección automática de la mejor propuesta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> y una actividad personalizada <xref:System.Activities.Statements.ForEach%601> para crear un flujo de trabajo que representa el proceso.
@@ -108,7 +108,7 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 |RequestForProposal|Una solicitud de propuestas (RFP) es una invitación para que los proveedores envíen propuestas para un artículo o un servicio concretos.|  
 |VendorProposal|Una propuesta enviada por un proveedor a una determinada solicitud de propuestas.|  
 |VendorRepository|El repositorio de los proveedores. Esta implementación contiene una colección ubicada en memoria de instancias de proveedor y métodos para exponer esas instancias.|  
-|RfpRepository|El repositorio de solicitudes de propuestas. Esta implementación contiene usos de Linq to XML para consultar el archivo XML de solicitudes de propuestas generado por la persistencia esquematizada. Esta clase implementa [System.Runtime.Persistence.IDataViewMapper](https://msdn.microsoft.com/library/system.runtime.persistence.idataviewmapper(v=vs.110).aspx).|  
+|RfpRepository|El repositorio de solicitudes de propuestas. Esta implementación contiene usos de Linq to XML para consultar el archivo XML de solicitudes de propuestas generado por la persistencia esquematizada. |  
 |IOHelper|Esta clase administra todos los problemas relacionados con E/S (carpetas, rutas de acceso, etc.).|  
   
 ### <a name="web-client"></a>Cliente web  
@@ -127,7 +127,7 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 |Form|Descripción|  
 |-|-|  
 |NewRfp|Crea y envía nuevas solicitudes de propuestas.|  
-|ShowProposals|Muestra todas las solicitudes de propuestas activas y finalizadas. **Nota:** que deba hacer clic el **actualizar** botón en la interfaz de usuario para ver los cambios en esa pantalla después de crear o modificar una solicitud de propuesta.|  
+|ShowProposals|Muestra todas las solicitudes de propuestas activas y finalizadas. **Nota:**  Es posible que deba haga clic en el **actualizar** botón en la interfaz de usuario para ver los cambios en esa pantalla después de crear o modificar una solicitud de propuesta.|  
 |SubmitProposal|Recibe una propuesta de un proveedor en una solicitud de propuestas concreta. Esta ventana solo la usan los proveedores.|  
 |ViewRfp|Muestra toda la información sobre una solicitud de propuestas (propuestas recibidas, fechas, valores y otra información). Esta ventana solo la usa el creador de la solicitud de propuestas.|  
   
@@ -155,20 +155,20 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
   
 ### <a name="web-client-options"></a>Opciones del cliente web  
   
--   **Crear un nuevo RFP**: crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo de proceso de compra.  
+-   **Crear un nuevo RFP**: Crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo de proceso de compra.  
   
--   **Actualizar**: actualiza la lista de activas y finalizadas en la ventana principal.  
+-   **Actualizar**: Actualiza la lista de activas y finalizadas en la ventana principal.  
   
--   **Vista**: muestra el contenido de una solicitud de propuestas existente. Los proveedores pueden enviar sus propuestas (si están invitados o la solicitud de propuestas no finaliza).  
+-   **Vista**: Muestra el contenido de una solicitud de propuestas existente. Los proveedores pueden enviar sus propuestas (si están invitados o la solicitud de propuestas no finaliza).  
   
 -   Ver como: El usuario puede tener acceso a la solicitud de propuestas utilizando diferentes identidades seleccionando el participante deseado en el **ver como** cuadro combinado en la cuadrícula de la solicitud de propuestas activa.  
   
 ### <a name="winforms-client-options"></a>Opciones del cliente de WinForms  
   
--   **Crear RFP**: crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo de proceso de compra.  
+-   **Crear RFP**: Crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo de proceso de compra.  
   
--   **Actualizar**: actualiza la lista de activas y finalizadas en la ventana principal.  
+-   **Actualizar**: Actualiza la lista de activas y finalizadas en la ventana principal.  
   
--   **Ver RFP**: muestra el contenido de una solicitud de propuestas existente. Los proveedores pueden enviar sus propuestas (si están invitados o la solicitud de propuestas no finaliza).  
+-   **Ver RFP**: Muestra el contenido de una solicitud de propuestas existente. Los proveedores pueden enviar sus propuestas (si están invitados o la solicitud de propuestas no finaliza).  
   
--   **Conectar como**: el usuario puede tener acceso a la solicitud de propuestas utilizando diferentes identidades seleccionando el participante deseado en el **ver como** cuadro combinado en la cuadrícula de la solicitud de propuestas activa.
+-   **Conectar como**: El usuario puede tener acceso a la solicitud de propuestas utilizando diferentes identidades seleccionando el participante deseado en el **ver como** cuadro combinado en la cuadrícula de la solicitud de propuestas activa.

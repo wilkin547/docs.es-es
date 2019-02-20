@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 6290fdac63bb22b878035c0cc27bba97300899de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a268f645810d84d9f6fb722e4728842b04ee14
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611363"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443177"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>Procedimiento Agregar controles a Windows Forms
+# <a name="how-to-add-controls-to-windows-forms"></a>Filtrar Agregar controles a Windows Forms
 Mayoría de los formularios está diseñada agregando controles a la superficie del formulario para definir una interfaz de usuario (UI). Un *control* es un componente en un formulario que se usa para mostrar información o Aceptar la entrada del usuario. Para obtener más información acerca de los controles, vea [controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/index.md).  
   
 > [!NOTE]
@@ -24,7 +24,7 @@ Mayoría de los formularios está diseñada agregando controles a la superficie 
   
 ### <a name="to-draw-a-control-on-a-form"></a>Para dibujar un control en un formulario  
   
-1.  Abra el formulario. Para obtener más información, vea [Cómo: Mostrar Windows Forms en el diseñador](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Abra el formulario. Para obtener más información, vea [Cómo: Mostrar Windows Forms en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
 2.  En el **cuadro de herramientas**, haga clic en el control que desea agregar al formulario.  
   
@@ -37,7 +37,7 @@ Mayoría de los formularios está diseñada agregando controles a la superficie 
   
 ### <a name="to-drag-a-control-to-a-form"></a>Para arrastrar un control a un formulario  
   
-1.  Abra el formulario. Para obtener más información, vea [Cómo: Mostrar Windows Forms en el diseñador](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Abra el formulario. Para obtener más información, vea [Cómo: Mostrar Windows Forms en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
 2.  En el **cuadro de herramientas**, haga clic en el control que desee y arrástrelo al formulario.  
   

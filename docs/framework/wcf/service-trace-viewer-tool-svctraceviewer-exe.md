@@ -2,12 +2,12 @@
 title: Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: f5401129601f84a5575a544490244f81b1e759ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510603"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442898"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ayuda a analizar seguimientos del diagnóstico generados por WCF. Service Trace Viewer proporciona una manera de combinar fácilmente, ver y filtrar los mensajes de seguimiento en el registro de modo que puede diagnosticar, reparar y comprobar los problemas de servicio WCF.  
@@ -62,7 +62,7 @@ Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ay
   
 -   Archivo de seguimiento carmesí  
   
- El visor de seguimiento de servicio le permite abrir cualquier archivo de seguimiento compatible, agregar e integrar archivos de seguimiento adicionales o abrir y combinar simultáneamente un grupo de archivos de seguimiento.  
+ El visor de seguimiento de servicio le permite abrir cualquier archivo de seguimiento compatible, agregar e integrar archivos de seguimiento adicionales o abrir y fusionar mediante combinación simultáneamente un grupo de archivos de seguimiento.  
   
 ##### <a name="to-open-a-trace-file"></a>Para abrir un archivo de seguimiento  
   
@@ -452,4 +452,4 @@ Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ay
 ## <a name="see-also"></a>Vea también
 - [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Configuración de la traza](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Seguimiento de la actividad y propagación para la correlación de seguimiento To-End](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)
+- [Traza de un extremo a otro](./diagnostics/tracing/end-to-end-tracing.md)
