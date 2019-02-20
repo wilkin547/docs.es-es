@@ -33,7 +33,7 @@ Microsoft desarrolla activamente y admite tres lenguajes .NET: C#, F# y Visual B
 
 * F# es un lenguaje de programación multiplataforma, principalmente funcional, que también admite la programación tradicional imperativa y orientada en objetos. Consulte la [Guía de F#](../fsharp/index.md) para más información sobre F#.
 
-* Visual Basic es un lenguaje fácil de aprender que se usa para crear una gran variedad de aplicaciones que se ejecutan en .NET. Entre los lenguajes .NET, la sintaxis de VB es la más cercana al idioma normal, lo que a menudo facilita el trabajo a las personas sin experiencia en desarrollo de software.
+* Visual Basic es un lenguaje fácil de aprender que se usa para crear una gran variedad de aplicaciones que se ejecutan en .NET. Entré  los lenguajes .NET, la sintaxis de VB es la más cercana al idioma normal, lo que a menudo facilita el trabajo a las personas sin experiencia en desarrollo de software.
 
 ## <a name="automatic-memory-management"></a>Administración de memoria automática
 
