@@ -13,7 +13,7 @@ ms.locfileid: "43863301"
 
 F# es un lenguaje de programación funcional que resulta muy fácil escribir código correcto y fácil de mantener.
 
-Programación en F# principalmente implica definir tipos y funciones que son de tipo deduce y generalizadas automáticamente. Esto permite que el enfoque a permanecer en el dominio del problema y manipular los datos, en lugar de los detalles de la programación.
+Programación en F# principalmente implica definir tipos y funciones que son de tipo inferido y generalizadas automáticamente. Esto permite que el enfoque a permanecer en el dominio del problema y manipular los datos, en lugar de los detalles de la programación.
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
