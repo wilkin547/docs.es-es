@@ -69,7 +69,7 @@ Para obtener más información, consulte los siguientes temas:
 
 ## <a name="type-safety"></a>Seguridad de tipos
 
-Un objeto es una instancia de un tipo específico. Las únicas operaciones permitidas para un objeto determinado son las de su tipo. Un tipo `Dog` puede tener métodos `Jump` y `WagTail`, pero no un método `SumTotal`. Un programa solo llama a los métodos que pertenecen a un tipo determinado. Todas las demás llamadas producirán un error en tiempo de compilación o una excepción en tiempo de ejecución (en el caso de usar características dinámicas o `object`).
+Un objeto es una instancia de un tipo específico. Las únicas operaciones permitidas para un objeto determinado son las de su tipo. Un tipo `Dog` puede tener métodos `Jump` y `WagTail`, pero no un método `SumTotal`. Un programa solo llama a los métodos que pertenecen a un tipo determinado. Todas las demás llamadas producirán un error en tiempo de compilación o una excepción en tiempo de ejecución (en el caso de usar características dinámicas u `object`).
 
 Los lenguajes .NET están orientados a objetos, con las jerarquías de clases base y derivadas. El entorno de ejecución .NET solo permite llamadas y conversiones de objetos que se alineen con la jerarquía de objetos. Recuerde que cada tipo definido en cualquier lenguaje .NET se deriva del tipo <xref:System.Object> base.
 
