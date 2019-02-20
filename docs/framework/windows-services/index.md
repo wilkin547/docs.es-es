@@ -2,21 +2,15 @@
 title: Desarrollar aplicaciones de servicios de Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
-- ServiceInstaller class, Windows Service applications
-- Service class, Windows Service applications
-- Windows Service applications
-- Windows NT services
-- ServiceProcessInstaller class, Windows Service applications
-- services
-- .NET applications, Windows applications
+  - 'ServiceInstaller class, Windows Service applications'
+  - 'Service class, Windows Service applications'
+  - Windows Service applications
+  - Windows NT services
+  - 'ServiceProcessInstaller class, Windows Service applications'
+  - services
+  - '.NET applications, Windows applications'
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 79de8adbc0f994653f308882b335da2ffa5f7455
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035927"
 ---
 # <a name="develop-windows-service-apps"></a>Desarrollar aplicaciones de servicios de Windows
 
@@ -39,7 +33,7 @@ Proporciona un ejemplo de cómo crear un servicio en Visual Basic y Visual C#.
 
 Explica los elementos del lenguaje utilizados en la programación de servicios.
 
-[Creación de servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+[Cómo: Creación de servicios de Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
 
 Describe el proceso de creación y configuración de servicios de Windows mediante la plantilla de proyecto de servicio de Windows.
 
@@ -51,4 +45,4 @@ Describe el proceso de creación y configuración de servicios de Windows median
 
 <xref:System.ServiceProcess.ServiceInstaller>: describe las características de la clase <xref:System.ServiceProcess.ServiceInstaller>, que se utiliza junto con la clase <xref:System.ServiceProcess.ServiceProcessInstaller> para instalar y desinstalar su servicio.
 
-[Crear proyectos a partir de plantillas](https://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2): describe los tipos de proyectos utilizados en este capítulo y cómo elegir entre ellos.
+[Crear proyectos a partir de plantillas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)): describe los tipos de proyectos utilizados en este capítulo y cómo elegir entre ellos.
