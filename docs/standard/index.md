@@ -1,4 +1,4 @@
-﻿---
+---
 title: Guía de .NET
 description: Más información sobre .NET.
 author: cartermp
@@ -6,12 +6,6 @@ ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 2db6d713d699a733f5c65d2170620eaccd8f0691
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415408"
 ---
 # <a name="net-guide"></a>Guía de .NET
 
