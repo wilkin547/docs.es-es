@@ -1,12 +1,6 @@
 ---
-title: Atributos (C#)
+title: 'Atributos (C#)'
 ms.date: 04/26/2018
-ms.openlocfilehash: f211e8af48bdfef0bb9bf4341c7a5911b5695101
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573353"
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 
@@ -57,7 +51,7 @@ El primer parámetro, el nombre del archivo DLL, es posicional y siempre va prim
 
 ### <a name="attribute-targets"></a>Destinos de atributo
 
-El *destino* de un atributo es la entidad a la que se aplica el atributo. Por ejemplo, puede aplicar un atributo a una clase, un método determinado o un ensamblado completo. De forma predeterminada, el atributo se aplica al elemento que lo precede. Pero puede identificar explícitamente, por ejemplo, si se aplica un atributo a un método, a su parámetro o a su valor devuelto.
+El *destino* de un atributo es la entidad a la que se aplica dicho atributo. Por ejemplo, puede aplicar un atributo a una clase, un método determinado o un ensamblado completo. De forma predeterminada, el atributo se aplica al elemento que lo precede. Pero puede identificar explícitamente, por ejemplo, si se aplica un atributo a un método, a su parámetro o a su valor devuelto.
 
 Para identificar un destino de atributo de forma explícita, use la sintaxis siguiente:
 

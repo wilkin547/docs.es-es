@@ -259,6 +259,7 @@
 ### [Exploración de C# 6](csharp/tutorials/exploration/csharp-6.yml)
 ### [Uso de tipos de referencia que aceptan valores null](csharp/tutorials/nullable-reference-types.md)
 ### [Generación y consumo de flujos asincrónicos](csharp/tutorials/generate-consume-asynchronous-stream.md)
+### [Actualización de aplicaciones a tipos de referencias que aceptan valores NULL](csharp/tutorials/upgrade-to-nullable-references.md)
 ### [Aplicación de consola](csharp/tutorials/console-teleprompter.md)
 ### [Cliente REST](csharp/tutorials/console-webapiclient.md)
 ### [Herencia en C# y .NET](csharp/tutorials/inheritance.md)
