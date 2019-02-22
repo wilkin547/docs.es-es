@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mouse input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
-ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b422de09b41d72a680146192fd773767fe64e257
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593796"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664567"
 ---
 # <a name="user-input-in-windows-forms"></a>Datos proporcionados por el usuario en formularios Windows Forms
 Windows Forms incluye un modelo de entrada de usuario basado en eventos que se producen al procesar mensajes de Windows relacionados. Los temas de esta sección proporcionan información sobre datos de mouse y teclado introducidos por el usuario, incluidos ejemplos de código que muestran cómo realizar tareas específicas.  
@@ -27,14 +27,14 @@ Windows Forms incluye un modelo de entrada de usuario basado en eventos que se p
  [Entradas mediante el mouse en una aplicación de Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
  Proporciona información sobre eventos del mouse y otras características relacionadas con el mouse, incluidos los cursores y la captura del mouse.  
   
- [Simular eventos del mouse y del teclado en el código](../../../docs/framework/winforms/how-to-simulate-mouse-and-keyboard-events-in-code.md)  
+ [Cómo: Simular eventos del Mouse y teclado en el código](../../../docs/framework/winforms/how-to-simulate-mouse-and-keyboard-events-in-code.md)  
  Muestra varias maneras diferentes de simular mediante programación la introducción de datos mediante mouse y teclado.  
   
- [Controlar eventos del usuario en controles de formularios Windows Forms](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)  
+ [Cómo: Controlar eventos de entrada de usuario en controles de formularios Windows Forms](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)  
  Presenta un ejemplo de código que controla la mayoría los eventos de datos introducidos por el usuario y ofrece información acerca de cada evento.  
   
  [Validación de los datos proporcionados por el usuario Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
  Describe los métodos para validar datos proporcionados por el usuario en aplicaciones de Windows Forms.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- Consulte también [crear controladores de eventos en Windows Forms](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\)).
+ Consulte también [crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md).

@@ -2,19 +2,13 @@
 title: Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Windows Forms
-- user interface
-- user interface [Windows Forms], forms
+  - Windows Forms
+  - user interface
+  - 'user interface [Windows Forms], forms'
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: bb785860ed3cccbd93273805e5f2bada2f5f9c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542254"
 ---
 # <a name="windows-forms"></a>Windows Forms
-Como los formularios son la unidad básica de la aplicación, es esencial realizar algunas consideraciones sobre su función y diseño. En última instancia, un formulario es una pizarra en blanco que usted, como desarrollador, mejora con controles para crear una interfaz de usuario y con código para manipular los datos. Para ello, Visual Studio proporciona un entorno de desarrollo integrado (IDE) que ayuda a escribir código, así como un completo conjunto de controles escrito con la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Complementando la funcionalidad de estos controles con el código, puede desarrollar las soluciones que necesita de forma fácil y rápida.  
+Como los formularios son la unidad básica de la aplicación, es esencial realizar algunas consideraciones sobre su función y diseño. En última instancia, un formulario es una pizarra en blanco que usted, como desarrollador, mejora con controles para crear una interfaz de usuario y con código para manipular los datos. Para ello, Visual Studio proporciona un entorno de desarrollo integrado (IDE) que ayuda a escribir código, así como un amplio conjunto de controles escrito con el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Complementando la funcionalidad de estos controles con el código, puede desarrollar las soluciones que necesita de forma fácil y rápida.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción a los formularios Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
@@ -45,7 +39,7 @@ Como los formularios son la unidad básica de la aplicación, es esencial realiz
  [Aplicaciones de Windows Forms](/visualstudio/debugger/debugging-preparation-windows-forms-applications)  
  Explica el proceso de depuración de aplicaciones creadas con la plantilla de proyecto de aplicación de Windows, y cómo cambiar las configuraciones de depuración y lanzamiento.  
   
- [Implementar aplicaciones, servicios y componentes](https://msdn.microsoft.com/library/wtzawcsz)  
+ [Primer vistazo a la implementación en Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components)  
  Describe el proceso mediante el cual se distribuye una aplicación o componente acabado para instalarse en otros equipos.  
   
  [Compilar aplicaciones de consola](../../../docs/standard/building-console-apps.md)  

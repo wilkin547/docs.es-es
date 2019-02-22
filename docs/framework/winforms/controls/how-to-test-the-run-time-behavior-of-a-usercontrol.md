@@ -8,14 +8,14 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: fece6fda33ddb86e0aff0584af97ba085dfa9e1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06f2320648bd8fee3465ea1672be886293667879
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506373"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664424"
 ---
-# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Procedimiento Probar el comportamiento de tiempo de ejecución de una clase UserControl
+# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Filtrar Probar el comportamiento de tiempo de ejecución de una clase UserControl
 Al desarrollar un <xref:System.Windows.Forms.UserControl>, debe probar su comportamiento en tiempo de ejecución. Puede crear un proyecto de aplicación basada en Windows independiente y colocar el control en un formulario de prueba, pero este procedimiento es un problema. Una forma más rápida y sencilla es usar el **UserControl Test Container** proporcionadas por Visual Studio. Este contenedor de prueba se inicia directamente desde un proyecto de biblioteca de control de Windows.  
   
 > [!IMPORTANT]
@@ -29,7 +29,7 @@ Al desarrollar un <xref:System.Windows.Forms.UserControl>, debe probar su compor
   
 ### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>Para probar el comportamiento de tiempo de ejecución de una clase UserControl  
   
-1.  Crear un proyecto de biblioteca de controles de Windows denominado **TestContainerExample**. Para obtener más información, consulte [plantilla Biblioteca de controles de Windows](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Crear un proyecto de biblioteca de controles de Windows denominado **TestContainerExample**. Para obtener más información, consulte [plantilla Biblioteca de controles de Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
 2.  En el **Diseñador de Windows Forms**, arrastre un <xref:System.Windows.Forms.Label> controlar desde la **cuadro de herramientas** hasta la superficie de diseño del control.  
   
@@ -41,7 +41,7 @@ Al desarrollar un <xref:System.Windows.Forms.UserControl>, debe probar su compor
   
 6.  Cierre el contenedor de prueba.  
   
-7.  Agregue otro control de usuario para el **TestContainerExample** proyecto. Para obtener más información, consulte [NIB: Cómo: Agregar elementos existentes a un proyecto](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+7.  Agregue otro control de usuario para el **TestContainerExample** proyecto. Para obtener más detalles, vea [Cómo: Agregar elementos existentes a un proyecto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100)).  
   
 8.  En el **Diseñador de Windows Forms**, arrastre un <xref:System.Windows.Forms.Button> controlar desde la **cuadro de herramientas** hasta la superficie de diseño del control.  
   
@@ -54,7 +54,7 @@ Al desarrollar un <xref:System.Windows.Forms.UserControl>, debe probar su compor
   
 #### <a name="to-test-user-controls-from-another-project"></a>Para probar los controles de usuario desde otro proyecto  
   
-1.  Crear un proyecto de biblioteca de controles de Windows denominado **TestContainerExample2**. Para obtener más información, consulte [plantilla Biblioteca de controles de Windows](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Crear un proyecto de biblioteca de controles de Windows denominado **TestContainerExample2**. Para obtener más información, consulte [plantilla Biblioteca de controles de Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
 2.  En el **Diseñador de Windows Forms**, arrastre un <xref:System.Windows.Forms.RadioButton> controlar desde la **cuadro de herramientas** hasta la superficie de diseño del control.  
   
@@ -71,4 +71,4 @@ Al desarrollar un <xref:System.Windows.Forms.UserControl>, debe probar su compor
 - [Cómo: Crear controles compuestos](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
 - [Tutorial: Crear un Control compuesto con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
 - [Tutorial: Crear un Control compuesto con VisualC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Diseñador de controles de usuario](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+- [Diseñador de controles de usuario](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))
