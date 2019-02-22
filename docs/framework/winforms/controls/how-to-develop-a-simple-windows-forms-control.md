@@ -9,14 +9,14 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 4afa4b9e2c92569df4c8023d7dbfdfb025bf94b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36891a5acbb2fe06b4ab61573e26612927587c01
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527632"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583841"
 ---
-# <a name="how-to-develop-a-simple-windows-forms-control"></a>Procedimiento Desarrollar un Control de formularios de Windows Simple
+# <a name="how-to-develop-a-simple-windows-forms-control"></a>Filtrar Desarrollar un Control de formularios de Windows Simple
 Esta sección le guiará a través de los pasos clave para crear un control de Windows Forms personalizado. El control sencillo desarrollado en este tutorial permite la alineación de su <xref:System.Windows.Forms.Control.Text%2A> propiedad que debe cambiarse. No genera ni controla eventos.  
   
 ### <a name="to-create-a-simple-custom-control"></a>Para crear un control personalizado simple  
@@ -34,7 +34,7 @@ Esta sección le guiará a través de los pasos clave para crear un control de W
     public class FirstControl:Control {}  
     ```  
   
-2.  Defina las propiedades. (No es necesario definir propiedades, ya que un control hereda muchas propiedades de la <xref:System.Windows.Forms.Control> clase, pero la mayoría de los controles personalizada suelen definir propiedades adicionales.) El fragmento de código siguiente define una propiedad denominada `TextAlignment` que `FirstControl` utiliza para dar formato a la presentación de la <xref:System.Windows.Forms.Control.Text%2A> hereda la propiedad <xref:System.Windows.Forms.Control>. Para información sobre la definición de propiedades, vea [Introducción a las propiedades](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).  
+2.  Defina las propiedades. (No es necesario definir propiedades, ya que un control hereda muchas propiedades de la <xref:System.Windows.Forms.Control> clase, pero la mayoría de los controles personalizada suelen definir propiedades adicionales.) El fragmento de código siguiente define una propiedad denominada `TextAlignment` que `FirstControl` utiliza para dar formato a la presentación de la <xref:System.Windows.Forms.Control.Text%2A> hereda la propiedad <xref:System.Windows.Forms.Control>. Para información sobre la definición de propiedades, vea [Introducción a las propiedades](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
@@ -46,7 +46,7 @@ Esta sección le guiará a través de los pasos clave para crear un control de W
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  Proporcione atributos para el control. Los atributos permiten que un diseñador visual muestre el control y sus propiedades y eventos de forma adecuada en el momento del diseño. El siguiente fragmento aplica los atributos a la propiedad `TextAlignment`. En un diseñador como Visual Studio, el <xref:System.ComponentModel.CategoryAttribute.Category%2A> atributo (que se muestra en el fragmento de código) hace que la propiedad que se mostrará en una categoría lógica. El <xref:System.ComponentModel.DescriptionAttribute.Description%2A> atributo hace que una cadena descriptiva que se mostrará en la parte inferior de la **propiedades** ventana cuando el `TextAlignment` propiedad está seleccionada. Para información sobre los atributos, vea [Atributos en tiempo de diseño para componentes](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
+4.  Proporcione atributos para el control. Los atributos permiten que un diseñador visual muestre el control y sus propiedades y eventos de forma adecuada en el momento del diseño. El siguiente fragmento aplica los atributos a la propiedad `TextAlignment`. En un diseñador como Visual Studio, el <xref:System.ComponentModel.CategoryAttribute.Category%2A> atributo (que se muestra en el fragmento de código) hace que la propiedad que se mostrará en una categoría lógica. El <xref:System.ComponentModel.DescriptionAttribute.Description%2A> atributo hace que una cadena descriptiva que se mostrará en la parte inferior de la **propiedades** ventana cuando el `TextAlignment` propiedad está seleccionada. Para información sobre los atributos, vea [Atributos en tiempo de diseño para componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  

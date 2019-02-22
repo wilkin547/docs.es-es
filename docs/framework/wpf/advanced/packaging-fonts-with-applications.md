@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 52ed421ee92eed29bf16815d22e3ec7a8b718a84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a822167ae5b2758a889c61eed5270e5abb01f961
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632353"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583425"
 ---
 # <a name="packaging-fonts-with-applications"></a>Empaquetar fuentes con aplicaciones
 Este tema proporciona información general sobre cómo empaquetar fuentes con su [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicación.  
@@ -31,7 +31,7 @@ Este tema proporciona información general sobre cómo empaquetar fuentes con su
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] y [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] fuentes contienen un indicador de tipo, fsType, que indica los derechos de licencia de incrustación de fuente para la fuente. Sin embargo, este tipo de marca solo hace referencia a fuentes incrustadas almacenadas en un documento: no hace referencia a fuentes incrustadas en una aplicación. Puede recuperar la fuente de incrustación de derechos para una fuente mediante la creación de un <xref:System.Windows.Media.GlyphTypeface> objeto y hacer referencia a su <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> propiedad. Consulte la sección "OS/2 y métricas de Windows" de la [especificación OpenType](https://www.microsoft.com/typography/otspec/os2.htm) para obtener más información sobre la marca fsType.  
   
- El [Microsoft Typography](https://www.microsoft.com/typography/links/) sitio Web incluye información de contacto que puede ayudarle a encontrar un proveedor de fuentes determinado o un proveedor de fuentes para trabajos personalizados.  
+ El [Microsoft Typography](https://docs.microsoft.com/typography/) sitio Web incluye información de contacto que puede ayudarle a encontrar un proveedor de fuentes determinado o un proveedor de fuentes para trabajos personalizados.  
   
 <a name="adding_fonts_as_content_items"></a>   
 ## <a name="adding-fonts-as-content-items"></a>Agregar fuentes como elementos de contenido  
@@ -175,7 +175,7 @@ Este tema proporciona información general sobre cómo empaquetar fuentes con su
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
-- [Tipografía de Microsoft: Vínculos, noticias y contactos](https://www.microsoft.com/typography/links/)
+- [Tipografía de Microsoft: Vínculos, noticias y contactos](https://docs.microsoft.com/typography/)
 - [Especificación OpenType](https://www.microsoft.com/typography/otspec/)
 - [Características de las fuentes OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
 - [Paquete de fuentes OpenType de ejemplo](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)

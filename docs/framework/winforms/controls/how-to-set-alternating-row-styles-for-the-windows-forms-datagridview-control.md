@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], row styles
 - rows [Windows Forms], data grids
 ms.assetid: 699ef759-458c-426d-ac87-7c7e71b018ae
-ms.openlocfilehash: ba5aaec9e66f1d3c66bb50709f6fbd4afde893ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eea77b7601b7dc81b92f7b08806f3f00b494aecd
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562731"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583893"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>Procedimiento Establecer estilos de fila alternos para el Control DataGridView de Windows Forms
 Los datos tabulares suelen presentarse a los usuarios en un formato de doble carta en el que las filas alternas tienen distintos colores de fondo. Este formato permite a los usuarios saber fácilmente qué celdas están en cada fila, especialmente con tablas anchas que tienen muchas columnas.  
   
  Con el control <xref:System.Windows.Forms.DataGridView>, puede especificar la información de estilo completa para las filas alternas. Esto permite usar características de estilo tales como el color de primer plano y la fuente, además del color de fondo, para diferenciar las filas alternas.  
   
- Visual Studio es compatible con esta tarea.  Consulte también [Cómo: Establecer estilos de fila alternos para los Windows Forms Control DataGridView de formularios mediante el diseñador](https://msdn.microsoft.com/library/3z9sk148\(v=vs.110\)).  
+ Visual Studio es compatible con esta tarea.  Consulte también [Cómo: Establecer estilos de fila alternos para los Windows Forms Control DataGridView de formularios mediante el diseñador](set-alternating-row-styles-for-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-set-alternating-row-styles-programmatically"></a>Para establecer estilos de fila alternos mediante programación  
   

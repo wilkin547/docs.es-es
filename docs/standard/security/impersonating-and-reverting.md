@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bec065e2a78551b85fe766f1b81590b18f4679d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6ce153d52f9142801a7cdc7bb2e6a1770ab0b69
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516829"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583698"
 ---
 # <a name="impersonating-and-reverting"></a>Suplantar y revertir
 En ocasiones es posible que deba obtener un token de cuenta de Windows para suplantar una cuenta de Windows. Por ejemplo, la aplicación basada en ASP.NET podría tener que actuar en nombre de varios usuarios en momentos distintos. La aplicación podría aceptar un token que represente un administrador de Internet Information Services (IIS), suplantar al usuario, realizar una operación y revertir a la identidad anterior. A continuación, podría aceptar un token de IIS que represente a un usuario con menos derechos, realizar alguna operación y revertir de nuevo.  
@@ -29,31 +29,31 @@ En ocasiones es posible que deba obtener un token de cuenta de Windows para supl
 2.  Cree una nueva instancia de la clase **WindowsIdentity**, pasando el token. En el siguiente código se muestra esta llamada, donde `hToken` representa un token de Windows.  
   
     ```csharp  
-    WindowsIdentity ImpersonatedIdentity = new WindowsIdentity(hToken);  
+    WindowsIdentity impersonatedIdentity = new WindowsIdentity(hToken);  
     ```  
   
     ```vb  
-    Dim ImpersonatedIdentity As New WindowsIdentity(hToken)  
+    Dim impersonatedIdentity As New WindowsIdentity(hToken)  
     ```  
   
 3.  Comience la suplantación con la creación de una nueva instancia de la clase <xref:System.Security.Principal.WindowsImpersonationContext> e inicialícela con el método <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> de la clase inicializada, como se muestra en el código siguiente.  
   
     ```csharp  
-    WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate();  
+    WindowsImpersonationContext myImpersonation = impersonatedIdentity.Impersonate();  
     ```  
   
     ```vb  
-    WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate()  
+    WindowsImpersonationContext myImpersonation = impersonatedIdentity.Impersonate()  
     ```  
   
 4.  Cuando ya no necesite suplantar, llame al método <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> para revertir la suplantación, como se muestra en el código siguiente.  
   
     ```csharp  
-    MyImpersonation.Undo();  
+    myImpersonation.Undo();  
     ```  
   
     ```vb  
-    MyImpersonation.Undo()  
+    myImpersonation.Undo()  
     ```  
   
  Si ya ha asociado el código de confianza un <xref:System.Security.Principal.WindowsPrincipal> objeto al subproceso, puede llamar al método de instancia **Impersonate**, que no toma un token de cuenta. Tenga en cuenta que esto solo es útil cuando el objeto **WindowsPrincipal** del subproceso representa a un usuario que no es en el que se está ejecutando el proceso. Por ejemplo, podría encontrarse con esta situación si usa ASP.NET con la autenticación de Windows activada y la suplantación desactivada. En este caso, el proceso se ejecuta en una cuenta configurada en Internet Information Services (IIS) mientras la entidad de seguridad actual representa al usuario de Windows que está accediendo a la página.  

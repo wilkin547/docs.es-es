@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Definir el orden Z de los controles ToolStrip acoplados
+title: Filtrar Definir el orden Z de los controles ToolStrip acoplados
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], specifying z-order
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
-ms.openlocfilehash: 170aca57a30ca89d8f7a50397ebf61cb1b0b60e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf2bd09f5eb29bc659e97cf7e390ceb78bf2bbd8
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629639"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583347"
 ---
-# <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Procedimiento Definir el orden Z de los controles ToolStrip acoplados
+# <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Filtrar Definir el orden Z de los controles ToolStrip acoplados
 Para colocar correctamente un control <xref:System.Windows.Forms.ToolStrip> con acoplamiento, debe colocar de forma adecuada el control en el orden z del formulario.  
   
 ## <a name="example"></a>Ejemplo  
@@ -40,7 +40,7 @@ Para colocar correctamente un control <xref:System.Windows.Forms.ToolStrip> con 
   
 -   Referencias a los ensamblados System.Design, System.Drawing y System.Windows.Forms.  
   
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  También se [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.MenuStrip>

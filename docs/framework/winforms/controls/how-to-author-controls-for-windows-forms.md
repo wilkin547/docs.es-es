@@ -6,18 +6,18 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: a6ea57dda8f034684e8590ce4c3b6d37ab01230e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbb14e30e3ed2bebdabcf9163291c647e05b1cc5
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579529"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584387"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>Procedimiento Crear controles de Windows Forms
+# <a name="how-to-author-controls-for-windows-forms"></a>Filtrar Crear controles de Windows Forms
 Un control representa un vínculo gráfico entre el usuario y el programa. Un control puede proporcionar o procesar datos, aceptar datos proporcionados por el usuario, responder a eventos o ejecutar cualquier otra función que conecte al usuario con la aplicación. Dado que los controles son básicamente componentes con una interfaz gráfica, pueden ejecutar las mismas funciones que realizan los componentes, así como proporcionar interacción con los usuarios. Los controles se crean con un propósito específico; la creación de controles no es más que una tarea de programación como otra cualquiera. Teniendo esto en cuenta, los pasos siguientes representan información general sobre el proceso de creación de controles. Los vínculos proporcionan información adicional sobre cada paso.  
   
 > [!NOTE]
->  Si desea crear un control personalizado para usarlo en formularios Web Forms, vea [Desarrollar controles de servidor ASP.NET personalizados](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+>  Si desea crear un control personalizado para usarlo en formularios Web Forms, vea [Desarrollar controles de servidor ASP.NET personalizados](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
 >   
 >  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -49,7 +49,7 @@ Un control representa un vínculo gráfico entre el usuario y el programa. Un co
   
 9. Repita este proceso para refinar el diseño.  
   
-10. Empaquete e implemente el control. Para información detallada, vea [Implementar aplicaciones, servicios y componentes](https://msdn.microsoft.com/library/wtzawcsz).  
+10. Empaquete e implemente el control. Para obtener más información, consulte [primer vistazo a la implementación en Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components).  
   
 ## <a name="see-also"></a>Vea también
 - [Tutorial: Crear un Control compuesto con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: b7a657af2d6caf2217aedf56422f135f0b2d667e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4e65f0fd329f624aa186748d298257b15617c17
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619427"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584270"
 ---
-# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Procedimiento Inmovilizar columnas en el Control DataGridView de formularios de Windows
+# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Filtrar Inmovilizar columnas en el Control DataGridView de formularios de Windows
 Cuando los usuarios ven los datos mostrados en un control <xref:System.Windows.Forms.DataGridView> de Windows Forms, a veces deben hacer referencia a una sola columna o a un conjunto de columnas con frecuencia. Por ejemplo, cuando se muestra una tabla de información de clientes que contiene muchas columnas, resulta útil mostrar el nombre del cliente y dejar que otras columnas puedan desplazarse fuera del área visible.  
   
  Para conseguir este comportamiento, puede inmovilizar las columnas en el control. Al inmovilizar una columna, también se inmovilizan todas las columnas situadas a su izquierda (o a su derecha en los scripts de idioma de derecha a izquierda). Las columnas inmovilizadas permanecen en su lugar mientras que todas las demás columnas se pueden desplazar.  
@@ -26,7 +26,7 @@ Cuando los usuarios ven los datos mostrados en un control <xref:System.Windows.F
   
  La propiedad <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> de una columna determina si la columna es visible siempre dentro de la cuadrícula.  
   
- Visual Studio es compatible con esta tarea.  Consulte también [Cómo: Inmovilizar columnas en el Windows Forms mediante el Diseñador de Control de DataGridView](https://msdn.microsoft.com/library/717ss6s6\(v=vs.110\)).  
+ Visual Studio es compatible con esta tarea.  Consulte también [Cómo: Inmovilizar columnas en el Windows Forms mediante el Diseñador de Control de DataGridView](freeze-columns-in-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-freeze-a-column-programmatically"></a>Para inmovilizar una columna mediante programación  
   

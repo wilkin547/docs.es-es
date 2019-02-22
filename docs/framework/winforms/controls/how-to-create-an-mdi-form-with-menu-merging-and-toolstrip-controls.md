@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear un formulario MDI con combinación de menús y controles ToolStrip
+title: Filtrar Crear un formulario MDI con combinación de menús y controles ToolStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 64992ed9-44af-4baf-b45f-863e6ab35711
-ms.openlocfilehash: 6cbab3c588aa74809a7aef80ae6ffc4c3772069f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a6b8669717e8f07d9c7acd624e77a5c35a4eb7e
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646021"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583464"
 ---
-# <a name="how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Procedimiento Crear un formulario MDI con combinación de menús y controles ToolStrip
+# <a name="how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Filtrar Crear un formulario MDI con combinación de menús y controles ToolStrip
 El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> es compatible con aplicaciones de interfaces de múltiples documentos (MDI) y el control <xref:System.Windows.Forms.MenuStrip> admite la combinación de menús. Los formularios MDI también pueden ser compatibles con los controles <xref:System.Windows.Forms.ToolStrip>.  
   
  Hay una amplia compatibilidad para esta característica en Visual Studio.  
@@ -35,7 +35,7 @@ El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> e
   
 -   Referencias a los ensamblados System.Drawing y System.Windows.Forms.  
   
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  Vea también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms con Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 - [Control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

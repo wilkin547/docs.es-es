@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear controles compuestos
+title: Filtrar Crear controles compuestos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], creating composite controls
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: f2dc0ca7c2514ad444904b707a2cea9d57849660
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2ccbfaf8305270116e3a85578e3e560ed0b4836
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549803"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584218"
 ---
 # <a name="how-to-author-composite-controls"></a>Procedimiento Crear controles compuestos
 Los controles compuestos pueden emplearse de muchas formas. Puede crearlos como parte de un proyecto de aplicación de escritorio de Windows y utilizarlos solo en formularios del proyecto. También podría crearlos en un proyecto de Biblioteca de controles de Windows, compilar el proyecto en un ensamblado y utilizar los controles en otros proyectos. Es posible incluso heredar de ellos y utilizar la herencia visual para personalizarlos rápidamente para fines especiales.  
   
 > [!NOTE]
->  Si desea crear un control compuesto para utilizarlo en los formularios Web Forms, vea [Desarrollar controles de servidor ASP.NET personalizados](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+>  Si desea crear un control compuesto para utilizarlo en los formularios Web Forms, vea [Desarrollar controles de servidor ASP.NET personalizados](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
 >   
 >  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   

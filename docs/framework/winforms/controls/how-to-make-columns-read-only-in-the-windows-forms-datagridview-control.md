@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Que las columnas de sólo lectura en el Control DataGridView de Windows Forms
+title: Filtrar Que las columnas de sólo lectura en el Control DataGridView de Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], read-only columns
 - DataGridView control [Windows Forms], read-only columns
 ms.assetid: 2bb73ebb-1a55-4362-9fda-e50574c087d5
-ms.openlocfilehash: e57f926208e67ce894b58bdfaf5d0c3e3815b2ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fbdf661983d39ad4793946f10deb3e224f2f711
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514886"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583633"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>Procedimiento Que las columnas de sólo lectura en el Control DataGridView de Windows Forms
 No todos los datos están diseñados para ser editados. En el control <xref:System.Windows.Forms.DataGridView>, el valor de propiedad <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> de la columna determina si los usuarios pueden editar las celdas de esa columna. Para obtener información acerca de cómo hacer que el control sea de sólo lectura, vea [Cómo: Impedir la adición de la fila y la eliminación en la Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md).  
   
- Visual Studio es compatible con esta tarea.  Consulte también [Cómo: Crear columnas de sólo lectura en la Windows Forms Control DataGridView de formularios mediante el diseñador](https://msdn.microsoft.com/library/xd4k3c7e\(v=vs.110\)).  
+ Visual Studio es compatible con esta tarea.  Consulte también [Cómo: Crear columnas de sólo lectura en la Windows Forms Control DataGridView de formularios mediante el diseñador](make-columns-read-only-in-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-make-a-column-read-only-programmatically"></a>Para que hacer que una columna sea de solo lectura mediante programación  
   

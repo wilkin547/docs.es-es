@@ -9,19 +9,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
 - data grids [Windows Forms], changing column order
 ms.assetid: 5e9ac3bc-b0f0-48cb-a3d5-b005af905395
-ms.openlocfilehash: 8e090bcafb66f2d6a997f9b54626d1bf23d7032e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8e18080e757ceb4818bb795926a1eb4c27cf067
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649523"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583360"
 ---
-# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>Procedimiento Cambiar el orden de columnas en el Control DataGridView de formularios de Windows
+# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>Filtrar Cambiar el orden de columnas en el Control DataGridView de formularios de Windows
 Cuando se usa un control <xref:System.Windows.Forms.DataGridView> para mostrar datos desde un origen de datos, a veces las columnas del esquema del origen de datos no aparecen en el orden que quiere que se muestren. Puede cambiar el orden de visualización de las columnas mediante la propiedad <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> de la clase <xref:System.Windows.Forms.DataGridViewColumn>.  
   
  En el ejemplo de código siguiente, se cambia de posición de algunas de las columnas generadas automáticamente cuando se enlaza a la tabla Customers de la base de datos de ejemplo Northwind. Para obtener más información sobre cómo enlazar la <xref:System.Windows.Forms.DataGridView> control a una tabla de base de datos, vea [Cómo: Enlazar datos a la Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
- Visual Studio es compatible con esta tarea.  Consulte también [Cómo: Cambiar el orden de columnas en el Control de DataGridView de Windows Forms mediante el diseñador](https://msdn.microsoft.com/library/hb1dk7ax\(v=vs.110\))  
+ Visual Studio es compatible con esta tarea.  Consulte también [Cómo: Cambiar el orden de columnas en el Control de DataGridView de Windows Forms mediante el diseñador](change-the-order-of-columns-in-the-datagrid-using-the-designer.md).  
   
 ## <a name="example"></a>Ejemplo  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#040](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#040)]

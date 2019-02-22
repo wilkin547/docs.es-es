@@ -1,5 +1,5 @@
 ---
-title: Filtrar Cambiar la apariencia de Windows Forms MonthCalendar del Control
+title: Procedimiento Cambiar la apariencia de Windows Forms MonthCalendar del Control
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: b7f321c1557bc7ea19213f2fc67767fe56328cf4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f182a65a74507411f2474aca294c479e3b2b9ca6
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258933"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584049"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Filtrar Cambiar la apariencia de Windows Forms MonthCalendar del Control
 Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control le permite personalizar la apariencia del calendario de muchas maneras. Por ejemplo, puede establecer la combinación de colores y elegir mostrar u ocultar los números de semana y la fecha actual.  
@@ -42,7 +42,7 @@ Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control le 
     ```  
   
     > [!NOTE]
-    >  A partir de Windows Vista y según el tema, establecer algunas propiedades podría no cambiar la apariencia del calendario. Por ejemplo, si Windows está configurado para usar el tema de Aero, al establecer el <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, o <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propiedades no tiene ningún efecto. Esto es debido a una versión actualizada del calendario se representa con un aspecto que se deriva en tiempo de ejecución del tema actual del sistema operativo. Si desea usar estas propiedades y habilitar la versión anterior del calendario, puede deshabilitar estilos visuales para su aplicación. Deshabilitar estilos visuales podría afectar a la apariencia y comportamiento de otros controles en la aplicación. Para deshabilitar estilos visuales en Visual Basic, abra el Diseñador de proyectos y desactive el **estilos visuales de XP habilitar** casilla de verificación. Para deshabilitar estilos visuales en C#, abra Program.cs y marque como comentario `Application.EnableVisualStyles();`. Para obtener más información sobre los estilos visuales, vea [Cómo: Habilitar estilos visuales de Windows XP](https://msdn.microsoft.com/library/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f).  
+    >  A partir de Windows Vista y según el tema, establecer algunas propiedades podría no cambiar la apariencia del calendario. Por ejemplo, si Windows está configurado para usar el tema de Aero, al establecer el <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, o <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propiedades no tiene ningún efecto. Esto es debido a una versión actualizada del calendario se representa con un aspecto que se deriva en tiempo de ejecución del tema actual del sistema operativo. Si desea usar estas propiedades y habilitar la versión anterior del calendario, puede deshabilitar estilos visuales para su aplicación. Deshabilitar estilos visuales podría afectar a la apariencia y comportamiento de otros controles en la aplicación. Para deshabilitar estilos visuales en Visual Basic, abra el Diseñador de proyectos y desactive el **estilos visuales de XP habilitar** casilla de verificación. Para deshabilitar estilos visuales en C#, abra Program.cs y marque como comentario `Application.EnableVisualStyles();`. Para obtener más información sobre los estilos visuales, vea [Enabling Visual Styles](/windows/desktop/controls/cookbook-overview).  
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Para mostrar la fecha actual en la parte inferior del control  
   
