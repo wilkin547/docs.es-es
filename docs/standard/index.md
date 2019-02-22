@@ -1,4 +1,4 @@
----
+﻿---
 title: Guía de .NET
 description: Más información sobre .NET.
 author: cartermp
@@ -10,6 +10,7 @@ ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 # <a name="net-guide"></a>Guía de .NET
 
 En esta guía de .NET encontrará mucha información sobre .NET.  Dependiendo de su familiaridad con .NET, es posible que quiera ver varias secciones de esta guía y otras también incluidas en la documentación de .NET.
+ 
 
 ## <a name="new-to-net"></a>Nuevo a .NET
 
