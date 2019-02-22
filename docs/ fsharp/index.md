@@ -16,7 +16,7 @@ La Guía de F# proporciona muchos recursos para obtener información sobre el le
 
 ## <a name="learning-f"></a>Aprender F# #
 
-[¿Qué es F#](what-is-fsharp.md) describe qué es el lenguaje F# y programación en él es like, con ejemplos de código breves. Esto se recomienda si está familiarizado con F#.
+En [¿Qué es F#?](what-is-fsharp.md) se describe qué es el lenguaje F# y cómo es la programación en él mediante ejemplos de código breves. Es recomendable si no está familiarizado con F#.
 
 [Paseo por F#](tour.md) ofrece una visión general de las características del lenguaje principal con una gran cantidad de ejemplos de código. Esto se recomienda si está interesado en ver las características principales de F# en acción.
 
