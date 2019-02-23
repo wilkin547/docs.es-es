@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: cfb4c59c76142420f479b0b16a6d80317e98d159
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b33ad9d78230588b9c1afd5d59fd0333e2cd18a6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486015"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747066"
 ---
 # <a name="windows-forms-data-binding"></a>Enlace de datos en Windows Forms
 El enlace de datos en Windows Forms proporciona los medios para mostrar y realizar cambios en la información de un origen de datos en los controles del formulario. Puede enlazar a orígenes de datos tradicionales y a casi cualquier estructura que contenga datos.  
@@ -27,31 +27,31 @@ El enlace de datos en Windows Forms proporciona los medios para mostrar y realiz
  [Interfaces relacionadas con el enlace de datos](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  
  Describe algunas de las interfaces usadas con el enlace de datos de Windows Forms.  
   
- [Desplazarse por datos en Windows Forms](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)  
+ [Cómo: Desplazarse por datos en Windows Forms](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)  
  Muestra cómo navegar por los elementos de un origen de datos.  
   
  [Notificación de cambios en el enlace de datos de Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
  Describe los diferentes tipos de notificación de cambios para el enlace de datos de Windows Forms.  
   
- [Implementar la interfaz INotifyPropertyChanged](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)  
+ [Cómo: Implementar la interfaz INotifyPropertyChanged](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)  
  Muestra cómo implementar la interfaz <xref:System.ComponentModel.INotifyPropertyChanged>. La interfaz comunica a un control enlazado los cambios de propiedad en un objeto comercial.  
   
- [Aplicar el modelo PropertyNameChanged](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
+ [Cómo: Aplicar el modelo PropertyNameChanged](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
  Se muestra cómo aplicar el *PropertyName*modelo Changed a las propiedades de un control de usuario de Windows Forms.  
   
- [Implementar la interfaz ITypedList](../../../docs/framework/winforms/how-to-implement-the-itypedlist-interface.md)  
+ [Cómo: Implementar la interfaz ITypedList](../../../docs/framework/winforms/how-to-implement-the-itypedlist-interface.md)  
  Muestra cómo habilitar la detección del esquema de una lista enlazable mediante la implementación de la interfaz <xref:System.ComponentModel.ITypedList>.  
   
- [Implementar la interfaz IListSource](../../../docs/framework/winforms/how-to-implement-the-ilistsource-interface.md)  
+ [Cómo: Implementar la interfaz IListSource](../../../docs/framework/winforms/how-to-implement-the-ilistsource-interface.md)  
  Muestra cómo la implementación de la interfaz <xref:System.ComponentModel.IListSource> para crear una clase enlazable no implementa <xref:System.Collections.IList>, sino que proporciona una lista de otra ubicación.  
   
- [Garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
+ [Cómo: Garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
  Muestra cómo controlar el evento <xref:System.Windows.Forms.BindingSource.BindingComplete> para asegurarse de que todos los controles enlazados a un origen de datos permanezcan sincronizados.  
   
- [Garantizar que la fila seleccionada de una tabla secundaria conserva la posición correcta](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
+ [Cómo: Asegúrese de que la fila seleccionada en una tabla secundaria permanece en la posición correcta](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
  Muestra cómo asegurarse de que no cambie la fila seleccionada de una tabla secundaria cuando se realice un cambio en un campo de la tabla primaria.  
   
- Consulte también [Interfaces relacionadas con enlace de datos](https://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [Cómo: navegar por los datos en Windows Forms](https://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [Cómo: crear un Control con enlace Simple en un formulario Windows Forms](https://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
+ Consulte también [Interfaces relacionadas con enlace de datos](interfaces-related-to-data-binding.md), [Cómo: Desplazarse por datos en Windows Forms](how-to-navigate-data-in-windows-forms.md), y [Cómo: Crear un Control con enlace Simple en un formulario Windows Forms](how-to-create-a-simple-bound-control-on-a-windows-form.md).  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  

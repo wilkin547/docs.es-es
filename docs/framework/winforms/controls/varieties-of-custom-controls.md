@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: cd78a0f2513d0e352efa1b1b866627586e6068bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 907355ca78b299b34b231b8b8d88353b0dde19c0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683929"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746609"
 ---
 # <a name="varieties-of-custom-controls"></a>Variedades de controles personalizados
 .NET Framework permite desarrollar e implementar nuevos controles. Puede extender la funcionalidad del control de usuario ya conocida, así como de los controles existentes, mediante la herencia. También puede escribir controles personalizados que realicen su propia representación.  
@@ -24,7 +24,7 @@ ms.locfileid: "54683929"
  Decidir qué tipo de control va a crear puede resultar confuso. En este tema se destacan las diferencias entre los distintos tipos de controles de los que puede heredar, y proporciona información sobre cómo elegir un tipo de control determinado para el proyecto.  
   
 > [!NOTE]
->  Para obtener información sobre cómo crear un control para usarlo en formularios Web Forms, consulte [Desarrollar controles de servidor de ASP.NET](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+>  Para obtener información sobre cómo crear un control para usarlo en formularios Web Forms, consulte [Desarrollar controles de servidor de ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
   
 ## <a name="base-control-class"></a>Clase base de Control  
  La <xref:System.Windows.Forms.Control> clase es la clase base para controles de formularios Windows Forms. Proporciona la infraestructura necesaria para la presentación visual en aplicaciones de Windows Forms.  
@@ -104,11 +104,11 @@ ms.locfileid: "54683929"
 ## <a name="custom-design-experience"></a>Experiencia de diseño personalizada  
  Si necesita implementar una experiencia personalizada en tiempo de diseño, puede crear su propio diseñador. Para los controles compuestos, derive la clase de diseñador personalizada de la <xref:System.Windows.Forms.Design.ParentControlDesigner> o <xref:System.Windows.Forms.Design.DocumentDesigner> clases. Para los controles ampliados y personalizados, derive la clase de diseñador personalizada de la <xref:System.Windows.Forms.Design.ControlDesigner> clase.  
   
- Use el <xref:System.ComponentModel.DesignerAttribute> para asociar el control a su diseñador. Para obtener más información, consulte [ampliar compatibilidad en tiempo de diseño](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2) y [Cómo: Crear un Control de Windows Forms que aproveche las características de tiempo de diseño de](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
+ Use el <xref:System.ComponentModel.DesignerAttribute> para asociar el control a su diseñador. Para obtener más información, consulte [ampliar compatibilidad en tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) y [Cómo: Crear un Control de Windows Forms que aproveche las características de tiempo de diseño de](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).  
   
 ## <a name="see-also"></a>Vea también
 - [Desarrollar controles personalizados de Windows Forms con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
 - [Cómo: Desarrollar un Control de formularios de Windows Simple](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
 - [Desarrollar un control de formularios Windows Forms compuesto](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)
-- [Ampliar compatibilidad en tiempo de diseño](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
-- [Cómo: Crear un Control de Windows Forms que aproveche las características en tiempo de diseño](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)
+- [Ampliar compatibilidad en tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [Cómo: Crear un Control de Windows Forms que aproveche las características en tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

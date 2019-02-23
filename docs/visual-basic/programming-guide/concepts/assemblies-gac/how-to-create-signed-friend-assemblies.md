@@ -2,14 +2,14 @@
 title: Filtrar Crear ensamblados de confianza firmados (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 699c3de3c246be0bafdcc66ca7fd82384dc66d92
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: f0c36d6b134e1c742905ca9081bf3d44e5fe369f
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758877"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748731"
 ---
-# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Filtrar Crear ensamblados de confianza firmados (Visual Basic)
+# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Procedimiento Crear ensamblados de confianza firmados (Visual Basic)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Ambos ensamblados deben tener nombres seguros. Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Para crear un ensamblado con signo y un ensamblado de confianza  
@@ -86,7 +86,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [Ensamblados y caché global de ensamblados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Ensamblados de .NET](../../../../standard/assembly/index.md)
 - [Ensamblados de confianza (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [Cómo: Crear ensamblados de confianza sin firmar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)

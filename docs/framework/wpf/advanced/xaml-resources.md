@@ -7,18 +7,18 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: 5898d3236f58cd40c5e1ccd446b756b94e3fb113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04d1a72d70d6fd0753677f2e9635a05a60d33fec
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718668"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748276"
 ---
 # <a name="xaml-resources"></a>Recursos XAML
 Un recurso es un objeto que se puede volver a usar en diferentes sitios de la aplicación. Pinceles y estilos son ejemplos de recursos. Esta introducción describe cómo usar los recursos de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. También puede crear y tener acceso a recursos mediante código o indistintamente entre código y [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Para obtener más información, consulte [recursos y código](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
   
 > [!NOTE]
->  Los archivos de recursos que se describe en este tema son diferentes de los archivos de recursos se describen en [WPF Application Resource, contenido y los archivos de datos](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md) y diferentes de los recursos incrustados o vinculados que se describe en [ Administración de recursos de la aplicación (. NET)](https://msdn.microsoft.com/library/f2582734-8ada-4baa-8a7c-e2ef943ddf7e).  
+>  Los archivos de recursos que se describe en este tema son diferentes de los archivos de recursos se describen en [WPF Application Resource, contenido y los archivos de datos](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md) y diferentes de los recursos incrustados o vinculados que se describe en [administrar Recursos de la aplicación (. NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
   
 <a name="usingresources"></a>   

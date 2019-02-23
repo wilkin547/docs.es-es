@@ -9,12 +9,12 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-ms.openlocfilehash: 75016e9e04cf47782add18c87f7c677931743a4e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1da8e2c6ed8091b5931e8b0a881b54329228e82a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865649"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746790"
 ---
 # <a name="windows-forms-security"></a>Seguridad en los formularios Windows Forms
 Windows Forms incluye un modelo de seguridad que está basado en código (niveles de seguridad se establecen para el código, independientemente del usuario que ejecuta el código). Esto es además de cualquier esquema de seguridad que pueda estar aplicada ya en el equipo. Estos pueden incluir en el explorador (por ejemplo, la seguridad basada en la zona de Internet Explorer) o el sistema operativo (por ejemplo, la seguridad basada en credenciales de Windows NT).  
@@ -33,10 +33,10 @@ Windows Forms incluye un modelo de seguridad que está basado en código (nivele
  Describe cómo manipular ventanas, usando el Portapapeles y realizar llamadas a código no administrado en un entorno de confianza parcial.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [NIB: Directiva de seguridad predeterminada](https://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ [Directiva de seguridad predeterminada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))  
  Enumera los permisos concedidos en los conjuntos de permisos de plena confianza, Intranet Local e Internet.  
   
- [NIB: Administración de directiva de seguridad General](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ [Administración general de directivas de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))  
  Proporciona información sobre la administración de la directiva de seguridad de .NET Framework y la concesión de permisos.  
   
  [Permisos peligrosos y administración de directivas](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
@@ -45,7 +45,7 @@ Windows Forms incluye un modelo de seguridad que está basado en código (nivele
  [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)  
  Vínculos a temas que explican los procedimientos recomendados para escribir código seguro para .NET Framework.  
   
- [NIB: Solicitud de permisos](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ [Solicitar permisos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))  
  Describe el uso de atributos para que el tiempo de ejecución sepa qué permisos necesita ejecutar su código.  
   
  [Conceptos clave de seguridad](../../../docs/standard/security/key-security-concepts.md)  
@@ -54,8 +54,8 @@ Windows Forms incluye un modelo de seguridad que está basado en código (nivele
  [Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md) (Conceptos básicos sobre la seguridad de acceso del código)  
  Explica los fundamentos de trabajar con la directiva de seguridad de tiempo de ejecución de .NET Framework.  
   
- [NIB: Determinar cuándo se debe modificar la directiva de seguridad](https://msdn.microsoft.com/library/af749b17-e461-409d-84b9-a3d44789db16)  
+ [Determinar cuándo se debe modificar la directiva de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xky659fc(v=vs.100))  
  Explica cómo determinar cuándo las aplicaciones necesitan desviarse de la directiva de seguridad predeterminada.  
   
- [NIB: Implementación de la directiva de seguridad](https://msdn.microsoft.com/library/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ [Implementación de la directiva de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/13wcxx6y(v=vs.100))  
  Describe la mejor manera de implementar cambios de directiva de seguridad.

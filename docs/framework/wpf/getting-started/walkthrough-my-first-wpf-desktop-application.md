@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6ea5997906c0bf34de67a6a125552d2b2c4e1a43
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bfbe1bb413e0d9f46fe587d7a412af5303685b7a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150750"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748380"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Tutorial: Mi primera aplicación de escritorio de WPF
 
@@ -66,7 +66,7 @@ El primer paso es crear la infraestructura de aplicación, que incluye una defin
       Visual Studio crea el proyecto y abre el Diseñador de la ventana de aplicación predeterminada denominado **MainWindow.xaml**.
 
    > [!NOTE]
-   > Este tutorial utiliza el <xref:System.Windows.Controls.DataGrid> control que está disponible en .NET Framework 4 y versiones posteriores. Estar seguro de que el proyecto tiene como destino .NET Framework 4 o posterior. Para obtener más información, vea [Cómo: Una versión de .NET Framework de destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+   > Este tutorial utiliza el <xref:System.Windows.Controls.DataGrid> control que está disponible en .NET Framework 4 y versiones posteriores. Estar seguro de que el proyecto tiene como destino .NET Framework 4 o posterior. Para obtener más información, vea [Cómo: usar una versión de .NET Framework como destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 2. Abra *Application.xaml* (Visual Basic) o *App.xaml* (C#).
 
@@ -327,7 +327,7 @@ La ilustración siguiente muestra los resultados de lo que acaba de agregar:
 
 1. Abra *`ExpenseItHome.xaml`*.
 
-2. Agregar un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> controlador de eventos para el <xref:System.Windows.Controls.Button> elemento. Para obtener más información, vea [Cómo: Crear un controlador de eventos simple](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
+2. Agregar un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> controlador de eventos para el <xref:System.Windows.Controls.Button> elemento. Para obtener más información, vea [Cómo: Crear un controlador de eventos simple](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -353,7 +353,7 @@ La ilustración siguiente muestra los resultados de lo que acaba de agregar:
 3. Compile y ejecute la aplicación.
 
     > [!NOTE]
-    > Si se produce un error que el <xref:System.Windows.Controls.DataGrid> no se encontró o no existe, asegúrese de que el proyecto tiene como destino .NET Framework 4 o posterior. Para obtener más información, vea [Cómo: Una versión de .NET Framework de destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+    > Si se produce un error que el <xref:System.Windows.Controls.DataGrid> no se encontró o no existe, asegúrese de que el proyecto tiene como destino .NET Framework 4 o posterior. Para obtener más información, vea [Cómo: usar una versión de .NET Framework como destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 4. Seleccione el **vista** botón.
 

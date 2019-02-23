@@ -2,12 +2,12 @@
 title: 'Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f14a3e41c00ae307086a6d3745d4ec76b772721c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245483"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747549"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (Visual Basic)
 Si inserta información de tipos de un ensamblado administrado con nombre seguro, puede acoplar tipos holgadamente en una aplicación para lograr independencia de versiones. Es decir, el programa puede escribirse de modo que use tipos de varias versiones de una biblioteca administrada sin tener que volver a compilarse para cada versión.  
@@ -222,8 +222,8 @@ End Function
   
 6.  En el Explorador de archivos, abra la carpeta de la ruta de acceso de salida (por ejemplo, C:\TypeEquivalenceSample). Haga doble clic en el archivo TypeEquivalenceClient.exe para ejecutar el programa. El programa reflejará la nueva versión del ensamblado TypeEquivalenceRuntime sin tener que volver a compilarse de nuevo.  
   
-## <a name="see-also"></a>Vea también  
- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)  
- [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)  
- [Programar con ensamblados](../../../../framework/app-domains/programming-with-assemblies.md)  
- [Ensamblados y caché global de ensamblados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>Vea también
+- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
+- [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Programar con ensamblados](../../../../framework/app-domains/programming-with-assemblies.md)
+- [Ensamblados de .NET](../../../../standard/assembly/index.md)

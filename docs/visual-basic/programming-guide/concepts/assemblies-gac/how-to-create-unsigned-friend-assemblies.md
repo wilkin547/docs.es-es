@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Crear ensamblados de confianza sin firmar (Visual Basic)
+title: Filtrar Crear ensamblados de confianza sin firmar (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: ed4a818921f26fd5eb70fc4ba52929522627c096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c1d5fb24d0032e88b951eefa1bd7a3a8c6ccb88
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698211"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748133"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Procedimiento Crear ensamblados de confianza sin firmar (Visual Basic)
+# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Filtrar Crear ensamblados de confianza sin firmar (Visual Basic)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados sin firmar.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Para crear un ensamblado y un ensamblado de confianza  
@@ -86,7 +86,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [Ensamblados y caché global de ensamblados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Ensamblados de .NET](../../../../standard/assembly/index.md)
 - [Ensamblados de confianza (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [Cómo: Crear ensamblados de confianza firmados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [Conceptos de la Guía de programación](../../../../visual-basic/programming-guide/concepts/index.md)

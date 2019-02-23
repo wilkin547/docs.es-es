@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 35519be6ddaed64b3e5e2129efb611e0a812ebc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f88a0001bb2ba55c0a3eac3ed208f14292d86734
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535183"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745669"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Especifica el nombre del ensamblado del que este módulo formará parte.  
@@ -43,12 +43,12 @@ Especifica el nombre del ensamblado del que este módulo formará parte.
 >  El `-moduleassemblyname` opción no está disponible en el entorno de desarrollo de Visual Studio; está disponible solo cuando se compila desde un símbolo del sistema.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Compilar un ensamblado de múltiples archivos](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Cómo: Compilar un ensamblado de varios archivos](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [-referencia (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
-- [Ensamblados y Caché global de ensamblados](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Ensamblados de .NET](../../../standard/assembly/index.md)
 - [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Ensamblados de confianza](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)

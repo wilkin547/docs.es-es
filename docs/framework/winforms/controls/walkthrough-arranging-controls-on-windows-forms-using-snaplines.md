@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 2a2fd47c3ea2e675292c040f08b981a394e8221b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543229"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748039"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Tutorial: Organizar controles en formularios de Windows Forms mediante líneas de ajuste
 La posición precisa de los controles del formulario es de alta prioridad para muchas aplicaciones. El Diseñador de Windows Forms ofrece muchas herramientas de diseño para realizar esta acción. Una de las más importantes es la <xref:System.Windows.Forms.Design.Behavior.SnapLine> característica.  
@@ -154,7 +154,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
   
 1.  Arrastre un control <xref:System.Windows.Forms.Button> del **cuadro de herramientas** al formulario.  
   
-2.  Cambiar el tamaño de la <xref:System.Windows.Forms.Button> control sujeto uno de la esquina, controladores de tamaño y arrastrar. Para obtener más información, vea [Cómo: Cambiar el tamaño de los controles de Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).  
+2.  Cambiar el tamaño de la <xref:System.Windows.Forms.Button> control sujeto uno de la esquina, controladores de tamaño y arrastrar. Para obtener más detalles, vea [Cómo: Cambiar el tamaño de los controles de Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).  
   
 3.  Arrastre el controlador de tamaño hasta que uno de los <xref:System.Windows.Forms.Button> bordes del control se alinea con otro control. Observe que aparece una línea de ajuste. Tenga en cuenta también que el controlador de tamaño se ajusta a la posición indicada por la Guía de alineación.  
   
@@ -222,7 +222,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
   
 #### <a name="to-disable-snaplines-in-the-design-environment"></a>Para deshabilitar las guías de alineación en el entorno de diseño  
   
-1.  Desde el **herramientas** menú abierto el **opciones** cuadro de diálogo. Abra el cuadro de diálogo del Diseñador de Windows Forms. Para obtener más información, consulte [General, el Diseñador de Windows Forms, el cuadro de diálogo Opciones](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834).  
+1.  Desde el **herramientas** menú abierto el **opciones** cuadro de diálogo. Abra el cuadro de diálogo del Diseñador de Windows Forms. Para obtener más información, consulte [General, el Diseñador de Windows Forms, el cuadro de diálogo Opciones](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)).  
   
 2.  Seleccione el **General** nodo. En el **el modo de diseño** sección, cambie la selección de **las guías de alineación** a **SnapToGrid**.  
   

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: daaafa4877e9fc5abd7e720c5a91aa61f24a686c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64ac6da99bf304639dfc0de5e24d6d6bdd3e9795
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686054"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746528"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Estructura de un programa de Visual Basic
 Un programa de Visual Basic se componen de bloques de creación estándar. Un *solución* consta de uno o varios proyectos. Un *proyecto* a su vez puede contener uno o más ensamblados. Cada *ensamblado* está compilada a partir de uno o varios archivos de origen. Un *archivo de código fuente* proporciona la definición e implementación de clases, estructuras, módulos e interfaces, que en última instancia contienen todo el código.  
   
- Para obtener más información acerca de estos bloques de creación de un programa de Visual Basic, vea [soluciones y proyectos](/visualstudio/ide/solutions-and-projects-in-visual-studio) y [ensamblados y caché Global de ensamblados](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
+ Para obtener más información acerca de estos bloques de creación de un programa de Visual Basic, vea [soluciones y proyectos](/visualstudio/ide/solutions-and-projects-in-visual-studio) y [ensamblados de .NET](../../../standard/assembly/index.md).  
   
 ## <a name="file-level-programming-elements"></a>Elementos de programación de nivel de archivo  
  Al iniciar un proyecto o archivo y abrir el editor de código, verá algo de código ya está en su lugar y en el orden correcto. Cualquier código que escriba debe seguir la secuencia siguiente:  

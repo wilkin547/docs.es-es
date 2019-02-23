@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662743"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746567"
 ---
 # <a name="wpf-add-ins-overview"></a>Información general sobre los complementos de WPF
 <a name="Introduction"></a> .NET Framework incluye un modelo de complemento que los desarrolladores pueden usar para crear aplicaciones que admiten la extensibilidad de complemento. Dicho modelo permite la creación de complementos que se integran con las aplicaciones y amplían su funcionalidad. En algunos escenarios, las aplicaciones también necesitan mostrar interfaces de usuario que se proporcionan los complementos. En este tema se muestra cómo WPF amplía el modelo de complemento de .NET Framework para habilitar estos escenarios, la arquitectura subyacente, sus ventajas y sus limitaciones.  
@@ -100,7 +100,7 @@ ms.locfileid: "54662743"
 -   Tiene la <xref:System.SerializableAttribute> atributo aplicado.  
   
 > [!NOTE]
->  Para obtener más información acerca de la creación de objetos de .NET Framework utilizable de forma remota, consulte [utilizable de forma remota los objetos que hace](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
+>  Para obtener más información acerca de la creación de objetos de .NET Framework utilizable de forma remota, consulte [utilizable de forma remota los objetos que hace](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100)).  
   
  Los tipos de UI de WPF no son utilizables de forma remota. Para solucionar el problema, WPF amplía el modelo de complemento de .NET Framework para habilitar la UI de WPF crea los complementos que se muestran desde las aplicaciones host. Esta compatibilidad se proporciona por WPF en dos tipos: el <xref:System.AddIn.Contract.INativeHandleContract> interfaz y dos métodos estáticos implementados por el <xref:System.AddIn.Pipeline.FrameworkElementAdapters> clase: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> y <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. A un nivel alto, estos tipos y métodos se utilizan como se indica a continuación:  
   
@@ -286,6 +286,6 @@ ms.locfileid: "54662743"
 - <xref:System.LoaderOptimizationAttribute>
 - [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Dominios de aplicación](../../../../docs/framework/app-domains/application-domains.md)
-- [Información general de .NET framework Remoting](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
-- [Hacer que los objetos sean remotos](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [Información general de .NET framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [Hacer que los objetos sean remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [Temas "Cómo..."](../../../../docs/framework/wpf/app-development/how-to-topics.md)

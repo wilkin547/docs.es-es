@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Usar un objeto ThicknessConverter
+title: Filtrar Usar un objeto ThicknessConverter
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - border thickness [WPF]
 - ThicknessConverter objects [WPF]
 ms.assetid: 52682194-d7fd-499c-8005-73fcc84e7b2c
-ms.openlocfilehash: 22215a155f4a204e3edeebc464413d5718290bb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 653137c0707c2b7ee51f6bdac6bb2501f1845e1a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577076"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747348"
 ---
-# <a name="how-to-use-a-thicknessconverter-object"></a>Procedimiento Usar un objeto ThicknessConverter
+# <a name="how-to-use-a-thicknessconverter-object"></a>Filtrar Usar un objeto ThicknessConverter
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo crear una instancia de <xref:System.Windows.ThicknessConverter> y usarlo para cambiar el grosor del borde.  
   
@@ -30,6 +30,6 @@ ms.locfileid: "54577076"
 - <xref:System.Windows.Thickness>
 - <xref:System.Windows.ThicknessConverter>
 - <xref:System.Windows.Controls.Border>
-- [Cómo: Cambiar la propiedad Margin](https://msdn.microsoft.com/library/8a313efd-5f99-4097-b4c1-8fa49d8379a2)
-- [Cómo: Convertir un elemento ListBoxItem en un nuevo tipo de datos](https://msdn.microsoft.com/library/7a080b88-184e-4b27-bb61-d42bafba9727)
+- [Cómo: Cambiar la propiedad Margin](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms750561(v=vs.90))
+- [Cómo: Convertir un elemento ListBoxItem en un nuevo tipo de datos](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749147(v=vs.90))
 - [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)

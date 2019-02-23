@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Cargar y descargar ensamblados (Visual Basic)
+title: Filtrar Cargar y descargar ensamblados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bbc84236-04b6-4c1b-9672-52773f65a5dc
-ms.openlocfilehash: adfe23c2c70b1f49e23fb7c3866c8dac5c9c09ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77dc773c9e32c293ab5155b15e45f5255e31ab9a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549709"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745216"
 ---
-# <a name="how-to-load-and-unload-assemblies-visual-basic"></a>Procedimiento Cargar y descargar ensamblados (Visual Basic)
+# <a name="how-to-load-and-unload-assemblies-visual-basic"></a>Filtrar Cargar y descargar ensamblados (Visual Basic)
 Los ensamblados a los que hace referencia el programa se cargarán automáticamente en tiempo de compilación, pero también es posible cargar ensamblados específicos en el dominio de aplicación actual en tiempo de ejecución. Para obtener más información, vea [Cómo: Cargar ensamblados en un dominio de aplicación](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
   
  No existe ninguna forma de descargar un ensamblado individual sin descargar todos los dominios de aplicación que lo contienen. Aunque el ensamblado esté fuera de ámbito, el archivo de ensamblado actual permanecerá cargado hasta que se descarguen todos los dominios de aplicación que lo contienen.  
@@ -26,5 +26,5 @@ Los ensamblados a los que hace referencia el programa se cargarán automáticame
   
 ## <a name="see-also"></a>Vea también
 - [Conceptos de programación](../../../../visual-basic/programming-guide/concepts/index.md)
-- [Ensamblados y caché global de ensamblados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Ensamblados de .NET](../../../../standard/assembly/index.md)
 - [Cómo: Cargar ensamblados en un dominio de aplicación](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

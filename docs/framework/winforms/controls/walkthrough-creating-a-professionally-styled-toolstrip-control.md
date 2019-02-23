@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 36f34fad49ed76293a83d3c018eea48fcdb2944a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1585f6e484923d16e1613b436588467b47daeecb
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714898"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746249"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Tutorial: Crear un Control ToolStrip de estilo profesional
 Puedes usar la aplicación <xref:System.Windows.Forms.ToolStrip> controla un aspecto y comportamiento profesional escribiendo su propia clase derivada de la <xref:System.Windows.Forms.ToolStripProfessionalRenderer> tipo.  
@@ -49,7 +49,7 @@ Puedes usar la aplicación <xref:System.Windows.Forms.ToolStrip> controla un asp
   
 2.  En **el Explorador de soluciones**, elimine el control predeterminado del proyecto eliminando el archivo de origen denominado "UserControl1.cs" o "UserControl1.vb", dependiendo del lenguaje que prefiera.  
   
-     Para obtener más información, consulte [NIB: Cómo: Quitar, eliminar y excluir elementos](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Para obtener más información, vea [Cómo: Quitar, eliminar y excluir elementos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
   
 3.  Agregue un nuevo <xref:System.Windows.Forms.UserControl> elemento a la **StackViewLibrary** proyecto. Dé el nuevo archivo de origen en un nombre de base de `StackView`.  
   
@@ -67,7 +67,7 @@ Puedes usar la aplicación <xref:System.Windows.Forms.ToolStrip> controla un asp
     |nombre|`stackStrip`|  
     |CanOverflow|`false`|  
     |Acoplar|<xref:System.Windows.Forms.DockStyle.Bottom>|  
-    |Tipo de letra|`Tahoma, 10pt, style=Bold`|  
+    |Fuente|`Tahoma, 10pt, style=Bold`|  
     |GripStyle|<xref:System.Windows.Forms.ToolStripGripStyle.Hidden>|  
     |LayoutStyle|<xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow>|  
     |Relleno|`0, 7, 0, 0`|  
@@ -86,7 +86,7 @@ Puedes usar la aplicación <xref:System.Windows.Forms.ToolStrip> controla un asp
     |ImageAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
     |ImageScaling|<xref:System.Windows.Forms.ToolStripItemImageScaling.None>|  
     |ImageTransparentColor|`238, 238, 238`|  
-    |Margin|`0, 0, 0, 0`|  
+    |Margen|`0, 0, 0, 0`|  
     |Relleno|`3, 3, 3, 3`|  
     |Texto|**Correo electrónico**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
@@ -121,7 +121,7 @@ Puedes usar la aplicación <xref:System.Windows.Forms.ToolStrip> controla un asp
   
 8.  Cambiar el nombre de la `mailStackButton_Click` controlador de eventos `stackButton_Click`.  
   
-     Para obtener más información, vea [Cómo: Cambiar el nombre de un identificador (Visual Basic)](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     Para obtener más información, consulte [cambiar el nombre de una refactorización de código símbolos](/visualstudio/ide/reference/rename).  
   
 9. Inserte el código siguiente en el `stackButton_Click` controlador de eventos.  
   
@@ -135,7 +135,7 @@ Puedes usar la aplicación <xref:System.Windows.Forms.ToolStrip> controla un asp
 12. Repita los pasos 10 y 11 para el `contactsStackButton` y `tasksStackButton` controles.  
   
 ## <a name="defining-icons"></a>Definición de iconos  
- Cada `StackView` botón tiene un icono asociado. Para mayor comodidad, cada icono se representa como una cadena codificada en Base64, que se deserializa antes un <xref:System.Drawing.Bitmap> se crea a partir de él. En un entorno de producción, se almacenan los datos de mapa de bits como un recurso y sus iconos aparecen en el Diseñador de Windows Forms. Para obtener más información, vea [Cómo: Agregar imágenes de fondo a formularios Windows](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
+ Cada `StackView` botón tiene un icono asociado. Para mayor comodidad, cada icono se representa como una cadena codificada en Base64, que se deserializa antes un <xref:System.Drawing.Bitmap> se crea a partir de él. En un entorno de producción, se almacenan los datos de mapa de bits como un recurso y sus iconos aparecen en el Diseñador de Windows Forms. Para obtener más información, vea [Cómo: Agregar imágenes de fondo a formularios Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dff9f95f(v=vs.100)).  
   
 #### <a name="to-define-icons"></a>Para definir los iconos  
   

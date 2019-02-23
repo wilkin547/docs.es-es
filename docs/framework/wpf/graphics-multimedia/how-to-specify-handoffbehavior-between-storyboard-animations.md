@@ -1,16 +1,16 @@
 ---
-title: Filtrar Especificar HandoffBehavior entre animaciones de guión gráfico
+title: Procedimiento Especificar HandoffBehavior entre animaciones de guión gráfico
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Storyboards [WPF], handoff behavior between animations
 - animation [WPF], handoff behavior between
 ms.assetid: 97bd6842-929b-49d9-813e-46553ae46472
-ms.openlocfilehash: 9a27c377e2993c1e67ada508071698a541cec660
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: a6da3f58fc6e999f5196cf5d8d3fd00f1098fc50
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305446"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745858"
 ---
 # <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>Filtrar Especificar HandoffBehavior entre animaciones de guión gráfico
 En este ejemplo se muestra cómo especificar el comportamiento de entrega entre animaciones de guión gráfico. El <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> propiedad de <xref:System.Windows.Media.Animation.BeginStoryboard> especifica cómo las animaciones nuevas interactúan con otras existentes que ya se han aplicado a una propiedad.  
@@ -24,5 +24,4 @@ En este ejemplo se muestra cómo especificar el comportamiento de entrega entre 
 - <xref:System.Windows.Media.Animation.BeginStoryboard>
 - <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>
 - [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Animación y temporización](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
 - [Temas de procedimientos de temporización y animación](animation-and-timing-how-to-topics.md)

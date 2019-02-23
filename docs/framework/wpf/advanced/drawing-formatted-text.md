@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: a476b62e62b812b01da8deeb0c605e35ae6624ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4337eeb3db940b0000301465a6f912ed3ed5805
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562783"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748471"
 ---
 # <a name="drawing-formatted-text"></a>Dibujar texto con formato
 Este tema proporciona información general de las características de la <xref:System.Windows.Media.FormattedText> objeto. Este objeto proporciona control de nivel bajo para dibujar texto en aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -85,7 +85,7 @@ Ejemplo de pincel de imagen aplicado al trazo y el resaltado
  ![Esfera que sigue la geometría de trayecto de texto](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 Esfera que sigue la geometría de trayecto de texto  
   
- Para obtener más información, vea [Cómo: Crear una animación PathGeometry para texto](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).  
+ Para obtener más información, vea [Cómo: Crear una animación PathGeometry para texto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100)).  
   
  Puede crear otros usos interesantes para el texto con formato una vez que se ha convertido en un <xref:System.Windows.Media.PathGeometry> objeto. Por ejemplo, puede recortar vídeo para que se muestre dentro de él.  
   
@@ -128,4 +128,4 @@ Vídeo mostrándose en la geometría de trayecto de texto
 - [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
 - [Tipografía en WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
 - [Crear texto con contorno](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)
-- [Cómo: Crear una animación PathGeometry para texto](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)
+- [Cómo: Crear una animación PathGeometry para texto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100))
