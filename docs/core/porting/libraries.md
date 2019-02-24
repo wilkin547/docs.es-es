@@ -2,14 +2,14 @@
 title: Traslado de bibliotecas a .NET Core
 description: Obtenga información sobre cómo portar proyectos de .NET Framework a .NET Core.
 author: cartermp
-ms.date: 12/7/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8190dcfd3ffed9051c7724752a19d88e7bef4f4d
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904700"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745565"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Traslado de bibliotecas de .NET Framework a .NET Core
 
@@ -26,7 +26,7 @@ En este artículo se asume lo siguiente:
 
 También debe estar familiarizado con el contenido de los temas siguientes:
 
-[Estándar .NET](~/docs/standard/net-standard.md)   
+[Estándar .NET](../../standard/net-standard.md)\
 En este tema se describe la especificación formal de las API de .NET que se prevé que estén disponibles en todas las implementaciones de .NET.
 
 [Paquetes, metapaquetes y marcos de trabajo](~/docs/core/packages.md)   
