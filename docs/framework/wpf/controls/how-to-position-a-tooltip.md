@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Situar una información sobre herramientas
+title: Filtrar Situar una información sobre herramientas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: 403b070e782a6f243fd5a420e569daa02044dbb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 985c9b7737d979937837d7184f9b96f226ec73c3
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727708"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746920"
 ---
 # <a name="how-to-position-a-tooltip"></a>Procedimiento Situar una información sobre herramientas
 En este ejemplo se muestra cómo especificar la posición de una información sobre herramientas en la pantalla.  
@@ -63,4 +63,3 @@ Colocación de ToolTip mediante las propiedades Placement, PlacementRectangle y 
 - <xref:System.Windows.Controls.ToolTipService>
 - [Temas "Cómo..."](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
 - [Información general de información sobre herramientas](../../../../docs/framework/wpf/controls/tooltip-overview.md)
-- [Use el ContextMenuService y ToolTipService](https://msdn.microsoft.com/library/809b0e9c-d612-4cda-b8af-1a698c68f4d1)
