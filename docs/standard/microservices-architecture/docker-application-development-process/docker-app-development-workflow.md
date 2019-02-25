@@ -4,12 +4,12 @@ description: Comprenda los detalles del flujo de trabajo para desarrollar aplica
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: c5c8cc34c70771d3f362f967cc99e76013291faa
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c34d49307408520afc6223a43d1c347dd6cffb97
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480106"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584309"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo para aplicaciones de Docker
 
@@ -489,7 +489,7 @@ Lo importante aquí es que, como se muestra en la figura 5-12, en Visual Studio 
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Nota sobre las pruebas y la implementación con orquestadores
 
-Los comandos docker-compose up y docker run (o la ejecución y depuración de los contenedores en Visual Studio) son adecuados para probar contenedores en el entorno de desarrollo. Sin embargo, no debe usar este enfoque para implementaciones de producción donde se deba tener como destino orquestadores como [Kubernetes](https://kubernetes.io/) o [Service Fabric](https://azure.microsoft.com/services/service-fabric/). Si usa Kubernetes, tiene que usar [pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/) para organizar los contenedores y los [servicios](https://kubernetes.io/docs/concepts/services-networking/service/) para conectarlos en red. También se usan [implementaciones](https://kubernetes.io/docs/tutorials/k8s201/#deployments) organizar la creación y la modificación de pods.
+Los comandos docker-compose up y docker run (o la ejecución y depuración de los contenedores en Visual Studio) son adecuados para probar contenedores en el entorno de desarrollo. Sin embargo, no debe usar este enfoque para implementaciones de producción donde se deba tener como destino orquestadores como [Kubernetes](https://kubernetes.io/) o [Service Fabric](https://azure.microsoft.com/services/service-fabric/). Si usa Kubernetes, tiene que usar [pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/) para organizar los contenedores y los [servicios](https://kubernetes.io/docs/concepts/services-networking/service/) para conectarlos en red. También se usan [implementaciones](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) organizar la creación y la modificación de pods.
 
 ![6. Probar la aplicación o los microservicios](./media/image17.png)
 
