@@ -65,7 +65,7 @@ Esta sección proporciona información detallada sobre las funcionalidades y car
 ## <a name="platform-sections"></a>Secciones de la plataforma  
  [Dominios de aplicación](../../framework/app-domains/application-domains.md)  
   
- [Ensamblados y Caché global de ensamblados](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [Ensamblados de .NET](../../standard/assembly/index.md)  
   
  [Atributos](../../csharp/programming-guide/concepts/attributes/index.md)  
   
