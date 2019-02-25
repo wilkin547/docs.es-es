@@ -1,5 +1,5 @@
 ---
-title: Lo sentimos, no queremos&#39;t tiene detalles sobre este error de C#
+title: Lo sentimos, no tenemos detalles sobre este error de C#
 ms.date: 07/20/2015
 f1_keywords:
 - CS1583
@@ -882,32 +882,33 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5e9c0aff2df5c46e707fa9f85506758327b58d80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5b6cf68ea2e08c63abd5c093d9ffc6ed24131cd9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314075"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "56800325"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Lo sentimos, no queremos&#39;t tiene detalles sobre este error de C#
-Lo sentimos, pero no tenemos información específica sobre este error. Puede buscar información en la web mediante el número y el texto del mensaje de error. O bien, puede pedir a otros desarrolladores a través de uno de estos foros:  
+# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>Lo sentimos, no tenemos detalles sobre este error de C#
+Lo sentimos, pero no tenemos información específica sobre este error. Puede buscar información en la web mediante el número y el texto del mensaje de error. O bien, puede pedir a otros desarrolladores mediante uno de estos foros:  
   
  [Lenguaje Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- Proporciona un foro para preguntas y debate en general de la sintaxis del lenguaje de Visual C# y el compilador.  
+ Proporciona un foro para preguntas y debate sobre del objeto Visual C# sintaxis del lenguaje y compilador.  
   
  [IDE de Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
  Proporciona un foro para preguntas sobre cómo trabajar en el entorno de Visual Studio.  
   
  [Información general de Visual C#](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- Ofrece un foro de preguntas y problemas con Visual C# que no se debaten en otros foros.  
+ Proporciona un foro para preguntas sobre y los problemas de Visual C# que no se debaten en otros foros.  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- Ofrece un foro de preguntas y problemas con Visual C#.  
+ [Desbordamiento de pila](https://stackoverflow.com/questions/tagged/c%23)  
+ Proporciona un foro para preguntas sobre y los problemas de Visual C#.  
   
  Vea también:  
  [Otros recursos para los programadores de Visual C#](../../csharp/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../csharp/programming-guide/index.md)  
- [Referencia de C#](../../csharp/language-reference/index.md)  
- [Hable con nosotros](/visualstudio/ide/talk-to-us)  
+## <a name="see-also"></a>Vea también
+
+- [Guía de programación de C#](../../csharp/programming-guide/index.md)
+- [Referencia de C#](../../csharp/language-reference/index.md)
+- [Hable con nosotros](/visualstudio/ide/talk-to-us)
