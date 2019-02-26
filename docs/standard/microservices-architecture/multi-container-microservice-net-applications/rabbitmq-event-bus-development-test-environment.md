@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 6d855b56a7fd00b316dde599683900ad2db758d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2bcd3491c58884653cd6c119753696019151bfed
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152245"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584374"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementación de un bus de eventos con RabbitMQ para el entorno de desarrollo o de prueba
 
@@ -30,13 +30,14 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 {
     // Implementation using RabbitMQ API
     //...
+}
 ```
 
 La implementación de RabbitMQ de un bus de eventos de desarrollo/pruebas de ejemplo es un código reutilizable. Tiene que controlar la conexión con el servidor RabbitMQ y proporcionar código para publicar un evento de mensaje a las colas. También debe implementar un diccionario de las colecciones de controladores de eventos de integración para cada tipo de evento; estos tipos de eventos pueden tener una instancia diferente y diferentes suscripciones para cada microservicio receptor, tal como se muestra en la figura 6-21.
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Implementar un método de publicación sencillo con RabbitMQ
 
-El siguiente código es parte de una implementación del bus de eventos simplificada para RabbitMQ, mejorado en el [código real](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) de eShopOnContainers. Normalmente, no es necesario escribir el código, salvo que esté realizando mejoras. El código obtiene una conexión y un canal para RabbitMQ, crea un mensaje y, después, publica el mensaje en la cola.
+El código siguiente es una versión ***simplificada*** de una implementación de bus de eventos de RabbitMQ con el objetivo de presentar todo el escenario. Lo cierto es que este no es el modo de controlar la conexión. Para ver la implementación completa, consulte el código real en el repositorio [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs). 
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable

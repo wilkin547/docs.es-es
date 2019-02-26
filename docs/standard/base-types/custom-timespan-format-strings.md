@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c75f9ffe17d04ad4b8e41a6e1402a3cf4be7e07f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0681ff9c59e77650654495ecd6e6d9f9ded82517
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722717"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665100"
 ---
 # <a name="custom-timespan-format-strings"></a>Cadenas de formato TimeSpan personalizado
 
@@ -47,16 +47,16 @@ Los métodos <xref:System.TimeSpan> y <xref:System.TimeSpan.ParseExact%2A?displa
 |----------------------|-----------------|-------------|
 |"d", "%d"|Número de días completos de un intervalo de tiempo.<br /><br /> Más información: [Especificador de formato personalizado "d"](#dSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --> "6.14:32"|
 |"dd"-"dddddddd"|Número de días completos de un intervalo de tiempo, que se completa con tantos ceros iniciales como sean necesarios.<br /><br /> Más información: [Especificadores de formato personalizado "dd"-"dddddddd"](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|
-|"h", "%h"|Número de horas completas de un intervalo de tiempo que no se cuentan como parte de los días. Las horas con un solo dígito no se escriben con un cero a la izquierda.<br /><br /> Más información: [Especificador de formato personalizado "h"](#hSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%h` --&gt; "14"<br /><br /> `hh\:mm` --> "14:32"|
-|"hh"|Número de horas completas de un intervalo de tiempo que no se cuentan como parte de los días. Las horas con un solo dígito se escriben con un cero a la izquierda.<br /><br /> Más información: [Especificador de formato personalizado "hh"](#hhSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `hh` --&gt; "14"<br /><br /> `new TimeSpan(6, 8, 32, 17, 685):`<br /><br /> `hh` --&gt; 08|
+|"h", "%h"|Número de horas completas de un intervalo de tiempo que no se cuentan como parte de los días. Las horas con un solo dígito no se escriben con un cero a la izquierda.<br /><br /> Más información: [Especificador de formato personalizado "h"](#hSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%h` --> "14"<br /><br /> `hh\:mm` --> "14:32"|
+|"hh"|Número de horas completas de un intervalo de tiempo que no se cuentan como parte de los días. Las horas con un solo dígito se escriben con un cero a la izquierda.<br /><br /> Más información: [Especificador de formato personalizado "hh"](#hhSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `hh` --> "14"<br /><br /> `new TimeSpan(6, 8, 32, 17, 685):`<br /><br /> `hh` --> 08|
 |"m", "%m"|Número de minutos completos de un intervalo de tiempo que no se incluyen como parte de las horas o los días. Los minutos con un solo dígito no se escriben con un cero a la izquierda.<br /><br /> Más información: [Especificador de formato personalizado "m"](#mSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `%m` --> "8"<br /><br /> `h\:m` --> "14:8"|
-|"mm"|Número de minutos completos de un intervalo de tiempo que no se incluyen como parte de las horas o los días. Los minutos con un solo dígito se escriben con un cero a la izquierda.<br /><br /> Más información: [Especificador de formato personalizado "mm"](#mmSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `mm` --&gt; "08"<br /><br /> `new TimeSpan(6, 8, 5, 17, 685):`<br /><br /> `d\.hh\:mm\:ss` --> 6.08:05:17|
+|"mm"|Número de minutos completos de un intervalo de tiempo que no se incluyen como parte de las horas o los días. Los minutos con un solo dígito se escriben con un cero a la izquierda.<br /><br /> Más información: [Especificador de formato personalizado "mm"](#mmSpecifier).|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `mm` --> "08"<br /><br /> `new TimeSpan(6, 8, 5, 17, 685):`<br /><br /> `d\.hh\:mm\:ss` --> 6.08:05:17|
 |"s", "%s"|Número de segundos completos de un intervalo de tiempo que no se incluyen como parte de las horas, los días o los minutos. Los segundos con un solo dígito no se escriben con un cero a la izquierda.<br /><br /> Más información: [Especificador de formato personalizado "s"](#sSpecifier).|`TimeSpan.FromSeconds(12.965)`:<br /><br /> `%s` --> 12<br /><br /> `s\.fff` --> 12.965|
 |"ss"|Número de segundos completos de un intervalo de tiempo que no se incluyen como parte de las horas, los días o los minutos.  Los segundos con un solo dígito se escriben con un cero a la izquierda.<br /><br /> Más información: [Especificador de formato personalizado "ss"](#ssSpecifier).|`TimeSpan.FromSeconds(6.965)`:<br /><br /> `ss` --> 06<br /><br /> `ss\.fff` --> 06.965|
 |"f", "%f"|Décimas de segundo de un intervalo de tiempo.<br /><br /> Más información: [Especificador de formato personalizado "f"](#fSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `f` --> 8<br /><br /> `ss\.f` --> 06.8|
-|"ff"|Centésimas de segundo de un intervalo de tiempo.<br /><br /> Más información: [El especificador de formato personalizado "ff"](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|
+|"ff"|Centésimas de segundo de un intervalo de tiempo.<br /><br /> Más información: [Especificador de formato personalizado "ff"](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|
 |"fff"|Milisegundos de un intervalo de tiempo.<br /><br /> Más información: [Especificador de formato personalizado "fff"](#f3Specifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `fff` --> 895<br /><br /> `ss\.fff` --> 06.895|
-|"ffff"|Diezmilésimas de segundo de un intervalo de tiempo.<br /><br /> Más información: [Especificador de formato personalizado "ffff"](#f4Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffff` --&gt; 8954<br /><br /> `ss\.ffff` --> 06.8954|
+|"ffff"|Diezmilésimas de segundo de un intervalo de tiempo.<br /><br /> Más información: [Especificador de formato personalizado "ffff"](#f4Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffff` --> 8954<br /><br /> `ss\.ffff` --> 06.8954|
 |"fffff"|Cienmilésimas de segundo de un intervalo de tiempo.<br /><br /> Más información: [Especificador de formato personalizado "fffff"](#f5Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff` --> 89543<br /><br /> `ss\.fffff` --> 06.89543|
 |"ffffff"|Millonésimas de segundo de un intervalo de tiempo.<br /><br /> Más información: [Especificador de formato personalizado "ffffff"](#f6Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffffff` --> 895432<br /><br /> `ss\.ffffff` --> 06.895432|
 |"fffffff"|Diezmillonésimas de segundo (o fracciones de paso) de un intervalo de tiempo.<br /><br /> Más información: [Especificador de formato personalizado "fffffff"](#f7Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffffff` --> 8954321<br /><br /> `ss\.fffffff` --> 06.8954321|
@@ -67,9 +67,9 @@ Los métodos <xref:System.TimeSpan> y <xref:System.TimeSpan.ParseExact%2A?displa
 |"FFFFF"|Cienmilésimas de segundo de un intervalo de tiempo. No se incluyen los ceros finales fraccionarios.<br /><br /> Más información: [Especificador de formato personalizado "FFFFF"](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|
 |"FFFFFF"|Millonésimas de segundo de un intervalo de tiempo. No se muestran los ceros finales fraccionarios.<br /><br /> Más información: [Especificador de formato personalizado "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
 |"FFFFFFF"|Diezmillonésimas de segundo de un intervalo de tiempo. No se muestran los ceros finales fraccionarios ni los dígitos de siete ceros.<br /><br /> Más información: [Especificador de formato personalizado "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|
-|'*cadena*'|Delimitador de cadena literal.<br /><br /> Más información: [Otros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --&gt; "14:32:17"|
-|\\|El carácter de escape.<br /><br /> Más información: [Otros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --&gt; "14:32:17"|
-|Cualquier otro carácter|Cualquier otro carácter sin escape se interpreta como especificador de formato personalizado.<br /><br /> Más información: [Otros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --&gt; "14:32:17"|
+|'*cadena*'|Delimitador de cadena literal.<br /><br /> Más información: [Otros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|&#92;|El carácter de escape.<br /><br /> Más información: [Otros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
+|Cualquier otro carácter|Cualquier otro carácter sin escape se interpreta como especificador de formato personalizado.<br /><br /> Más información: [Otros caracteres](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
 <a name="dSpecifier"></a> 
 

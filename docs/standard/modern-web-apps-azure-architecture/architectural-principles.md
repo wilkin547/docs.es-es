@@ -3,13 +3,13 @@ title: Principios de la arquitectura
 description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Principios de la arquitectura
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: b7edfc8d0cb3460bb33fb4e54cc93dd18ce2f385
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.date: 02/16/2019
+ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828103"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442989"
 ---
 # <a name="architectural-principles"></a>Principios de la arquitectura
 
@@ -99,21 +99,10 @@ Los **contextos delimitados** son un patrón esencial en el diseño controlado p
 
 Como mínimo, las aplicaciones web individuales deberían intentar ser su propio contexto delimitado, con su propio almacén de persistencia para su modelo de negocios, en lugar de compartir una base de datos con otras aplicaciones. La comunicación entre los contextos delimitados se realiza a través de interfaces de programación, en lugar de una base de datos compartida, lo que permite que la lógica de negocios y los eventos se produzcan en respuesta a los cambios que tienen lugar. Los contextos delimitados se asignan estrechamente a los microservicios que, idealmente, también se implementan como sus propios contextos delimitados individuales.
 
-> ### <a name="references--modern-web-applications"></a>Referencias: aplicaciones web modernas
-> - **Separation of Concerns** (Separación de intereses)  
-> <https://deviq.com/separation-of-concerns/>
-> - **Encapsulación**  
-> <https://deviq.com/encapsulation/>
-> - **Dependency Inversion Principle** (Principio de inversión de dependencias)  
-> <https://deviq.com/dependency-inversion-principle/>
-> - **Principio de dependencias explícitas**  
-> <https://deviq.com/explicit-dependencies-principle/>
-> - **Don't Repeat Yourself** (Una vez y solo una)  
-> <https://deviq.com/don-t-repeat-yourself/>
-> - **Persistence Ignorance** (Omisión de persistencia)  
-> <https://deviq.com/persistence-ignorance/>
-> - **Bounded Context** (Contexto delimitado)  
-> <https://martinfowler.com/bliki/BoundedContext.html>
+## <a name="additional-resources"></a>Recursos adicionales
+
+* [Patrones de diseño de JAVA: principios](https://java-design-patterns.com/principles/)
+* [Bounded Context](https://martinfowler.com/bliki/BoundedContext.html) (Contexto delimitado)
 
 >[!div class="step-by-step"]
 >[Anterior](choose-between-traditional-web-and-single-page-apps.md)

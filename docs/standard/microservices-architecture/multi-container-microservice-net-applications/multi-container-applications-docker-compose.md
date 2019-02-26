@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b00b0021f71097f2c6cedcb1ddea7861f1936f84
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145259"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442235"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definir una aplicación de varios contenedores con docker-compose.yml 
 
@@ -448,17 +448,17 @@ En el modelo de microservicios y contenedores están iniciando contenedores cons
 
 El equipo de .NET ha estado trabajando mucho para convertir .NET Core y ASP.NET Core en un marco optimizado para contenedores. .NET Core no solo es un marco ligero con una superficie de memoria pequeña; el equipo se ha centrado en imágenes de Docker optimizadas para los tres escenarios principales y las han publicado en el registro de Docker Hub en <span class="underline">microsoft/dotnet</span>, empezando por la versión 2.1:
 
-1.  **Desarrollo**: donde la prioridad es la capacidad de iterar con rapidez, y los cambios de depuración y el tamaño son secundarios.
+1.  **Desarrollo**: La prioridad es la capacidad de iterar con rapidez, y los cambios de depuración y el tamaño son secundarios.
 
-2.  **Compilación**: la prioridad es compilar la aplicación e incluye los archivos binarios y otras dependencias para optimizar los archivos binarios.
+2.  **Compilación**: La prioridad es compilar la aplicación e incluye los archivos binarios y otras dependencias para optimizar los archivos binarios.
 
-3.  **Producción**: donde el foco es la implementación y el inicio rápido de los contenedores, por lo que estas imágenes se limitan a los archivos binarios y el contenido necesario para ejecutar la aplicación.
+3.  **Producción**: El foco es la implementación y el inicio rápido de los contenedores, por lo que estas imágenes se limitan a los archivos binarios y el contenido necesario para ejecutar la aplicación.
 
 Para lograrlo, el equipo de .NET proporciona tres variantes básicas en [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (en Docker Hub):
 
 1.  **sdk**: para los escenarios de desarrollo y compilación.
 2.  **runtime**: para el escenario de producción.
-3.  **runtime-deps**: para el escenario de producción de [aplicaciones autocontenidas](https://docs.microsoft.com/dotnet/core/deploying/index#self-contained-deployments-scd).
+3.  **runtime-deps**: para el escenario de producción de [aplicaciones autocontenidas](../../../core/deploying/index.md#self-contained-deployments-scd).
 
 Las imágenes de runtime también proporcionan la configuración automática de aspnetcore\_urls en el puerto 80 y la caché pre-ngend de los ensamblados, para que el inicio sea más rápido.
 
@@ -468,7 +468,7 @@ Las imágenes de runtime también proporcionan la configuración automática de 
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 -   **Creación de imágenes de Docker para aplicaciones de .NET Core** <br/>
-    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
+    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
 >[!div class="step-by-step"]
 >[Anterior](data-driven-crud-microservice.md)
