@@ -16,7 +16,7 @@ ms.author: ronpet
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalización y localización de aplicaciones .NET
 
-El desarrollo de una [aplicación de uso internacional](https://msdn.microsoft.com/goglobal/bb978433.aspx), incluida una aplicación que se pueda localizar en uno o varios idiomas, implica tres pasos: globalización, revisión de localizabilidad y localización.
+El desarrollo de una aplicación de uso internacional, incluida una aplicación que se pueda localizar en uno o varios idiomas, implica tres pasos: globalización, revisión de localizabilidad y localización.
 
 [Globalización](globalization.md)
 
