@@ -29,7 +29,7 @@ ms.locfileid: "55204891"
  Cada sección de esta referencia rápida enumera una categoría determinada de caracteres, operadores y construcciones que puede usar para definir expresiones regulares:  
   
  [Escapes de carácter](#character_escapes)  
- [Clases de carácter](#character_classes)  
+ [Clases de caracteres](#character_classes)  
  [Delimitadores](#anchors)  
  [Construcciones de agrupamiento](#grouping_constructs)  
  [Cuantificadores](#quantifiers)  
@@ -68,7 +68,7 @@ ms.locfileid: "55204891"
   
 <a name="character_classes"></a>   
 ## <a name="character-classes"></a>Clases de caracteres  
- Una clase de caracteres coincide con cualquiera de un juego de caracteres. Las clases de caracteres incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Clases de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
+ Una clase de caracteres coincide con cualquiera de un juego de caracteres. Las clases de caracteres incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para más información, consulte [Clases de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
 |Clase de carácter|Descripción|Modelo|Coincidencias|  
 |---------------------|-----------------|-------------|-------------|  
@@ -168,7 +168,7 @@ ms.locfileid: "55204891"
   
 <a name="substitutions"></a>   
 ## <a name="substitutions"></a>Sustituciones  
- Las sustituciones son elementos del lenguaje de expresiones regulares que se admiten en modelos de reemplazo. Para obtener más información, consulta [Sustituciones](substitutions-in-regular-expressions.md). Los metacaracteres enumerados en la tabla siguiente son aserciones atómicas de ancho cero.  
+ Las sustituciones son elementos del lenguaje de expresiones regulares que se admiten en modelos de reemplazo. Para obtener más información, consulta [Substituciones](substitutions-in-regular-expressions.md). Los metacaracteres enumerados en la tabla siguiente son aserciones atómicas de ancho cero.  
   
 |Carácter|Descripción|Modelo|Modelo de reemplazo|Cadena de entrada|Cadena de resultado|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
@@ -191,7 +191,7 @@ ms.locfileid: "55204891"
   
 -   Con la [construcción miscelánea](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, donde el signo menos (-) delante de una opción o un conjunto de opciones desactiva dichas opciones. Por ejemplo, `(?i-mn)` activa una coincidencia sin distinción entre mayúsculas y minúsculas (`i`), desactiva el modo multilínea (`m`) y desactiva las capturas de grupo sin nombre (`n`). La opción se aplica al patrón de expresión regular a partir del punto en el que esta se define y es efectiva hasta el final del patrón o hasta el punto en el que otro constructor invierte la opción.  
   
--   Con la [construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpresión*`)`, que define opciones solo para el grupo especificado.  
+-   Con la [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpresión*`)`, que define opciones solo para el grupo especificado.  
   
  El motor de expresiones regulares de .NET admite las siguientes opciones insertadas.  
   
