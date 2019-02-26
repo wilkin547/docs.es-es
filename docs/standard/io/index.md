@@ -3,21 +3,15 @@ title: E/S de archivos y secuencias - .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- IO namespace
-- files, I/O
-- System.IO namespace
-- I/O [.NET Framework]
-- streams, I/O
-- data streams, I/O
+  - IO namespace
+  - 'files, I/O'
+  - System.IO namespace
+  - 'I/O [.NET Framework]'
+  - 'streams, I/O'
+  - 'data streams, I/O'
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07ea22fcd76a9f52fd9fd0b00c58d6d3b9b906d9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279479"
 ---
 # <a name="file-and-stream-io"></a>E/S de archivos y secuencias
 
@@ -47,7 +41,7 @@ Siempre debe proporcionar un control de excepciones sólido al llamar a métodos
 
 Además de usar estas clases, los usuarios de Visual Basic pueden usar los métodos y propiedades proporcionados por la clase <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> para la E/S de archivos.
 
-Vea [Cómo: Copiar directorios](how-to-copy-directories.md), [Cómo: Crear una lista de directorios](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) y [Cómo: Enumerar directorios y archivos](how-to-enumerate-directories-and-files.md).
+Vea [Cómo: Copiar directorios](how-to-copy-directories.md), [Cómo: Crear una lista de directorios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100)) y [Cómo: Enumerar directorios y archivos](how-to-enumerate-directories-and-files.md).
 
 ## <a name="streams"></a>Secuencias
 
