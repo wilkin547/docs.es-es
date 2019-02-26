@@ -68,7 +68,7 @@ ms.locfileid: "55204891"
   
 <a name="character_classes"></a>   
 ## <a name="character-classes"></a>Clases de caracteres  
- Una clase de caracteres coincide con cualquiera de un juego de caracteres. Las clases de caracteres incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
+ Una clase de caracteres coincide con cualquiera de un juego de caracteres. Las clases de caracteres incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Clases de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
 |Clase de carácter|Descripción|Modelo|Coincidencias|  
 |---------------------|-----------------|-------------|-------------|  
@@ -105,15 +105,15 @@ ms.locfileid: "55204891"
   
 <a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>Construcciones de agrupamiento  
- Las construcciones de agrupamiento definen subexpresiones de una expresión regular y, normalmente, capturan subcadenas de una cadena de entrada. Las construcciones de agrupamiento incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
+ Las construcciones de agrupamiento definen subexpresiones de una expresión regular y, normalmente, capturan subcadenas de una cadena de entrada. Las construcciones de agrupamiento incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md).  
   
 |Construcción de agrupamiento|Descripción|Modelo|Coincidencias|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *subexpresión* `)`|Captura la subexpresión coincidente y le asigna un número ordinal basado en uno.|`(\w)\1`|"aa" en "aarón"|  
 |`(?<` *name* `>` *subexpresión* `)`|Captura la subexpresión coincidente en un grupo con nombre.|`(?<double>\w)\k<double>`|"aa" en "aarón"|  
-|`(?<` *nombre1* `-` *nombre2* `>` *subexpresión* `)`|Define una definición de grupo de equilibrio. Para obtener más información, consulte la sección "Definiciones de grupos de equilibrio" en [Grouping Constructs](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" en "3+2^((1-3)\*(3-1))"|  
+|`(?<` *nombre1* `-` *nombre2* `>` *subexpresión* `)`|Define una definición de grupo de equilibrio. Para obtener más información, consulte la sección "Definiciones de grupos de equilibrio" en [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" en "3+2^((1-3)\*(3-1))"|  
 |`(?:` *subexpresión* `)`|Define un grupo sin captura.|`Write(?:Line)?`|"WriteLine" en "Console.WriteLine()"<br /><br /> "Write" en "Console.Write(valor)"|  
-|`(?imnsx-imnsx:` *subexpresión* `)`|Aplica o deshabilita las opciones especificadas dentro de *subexpresión*. Para obtener más información, consulta [Regular Expression Options](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl", "A12XL" en "A12xl A12XL a12xl"|  
+|`(?imnsx-imnsx:` *subexpresión* `)`|Aplica o deshabilita las opciones especificadas dentro de *subexpresión*. Para obtener más información, consulta [Opciones de expresiones regulares](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl", "A12XL" en "A12xl A12XL a12xl"|  
 |`(?=` *subexpresión* `)`|Aserción de búsqueda anticipada positiva de ancho cero.|`\w+(?=\.)`|"es", "corría" y "hermoso" en "Él es. El perro corría. El sol está hermoso."|  
 |`(?!` *subexpresión* `)`|Aserción de búsqueda anticipada negativa de ancho cero.|`\b(?!un)\w+\b`|"seguro", "usado" en "aseguro seguro unidad usado"|  
 |`(?<=` *subexpresión* `)`|Aserción de búsqueda tardía positiva de ancho cero.|`(?<=19)\d{2}\b`|"99", "50", "05" en "1851 1999 1950 1905 2003"|  
@@ -124,7 +124,7 @@ ms.locfileid: "55204891"
   
 <a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>Cuantificadores  
- Un cuantificador especifica cuántas instancias del elemento anterior (que puede ser un carácter, un grupo o una clase de caracteres) debe haber en la cadena de entrada para que se encuentre una coincidencia. Los cuantificadores incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Quantifiers](quantifiers-in-regular-expressions.md).  
+ Un cuantificador especifica cuántas instancias del elemento anterior (que puede ser un carácter, un grupo o una clase de caracteres) debe haber en la cadena de entrada para que se encuentre una coincidencia. Los cuantificadores incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Cuantificadores](quantifiers-in-regular-expressions.md).  
   
 |Cuantificador|Descripción|Modelo|Coincidencias|  
 |----------------|-----------------|-------------|-------------|  
@@ -145,7 +145,7 @@ ms.locfileid: "55204891"
   
 <a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>Construcciones de referencia inversa  
- Una referencia inversa permite identificar una subexpresión coincidente previamente más adelante en la misma expresión regular. En la tabla siguiente se enumeran las construcciones de referencia inversa admitidas en las expresiones regulares de .NET. Para obtener más información, consulta [Backreference Constructs](backreference-constructs-in-regular-expressions.md).  
+ Una referencia inversa permite identificar una subexpresión coincidente previamente más adelante en la misma expresión regular. En la tabla siguiente se enumeran las construcciones de referencia inversa admitidas en las expresiones regulares de .NET. Para obtener más información, consulta [Construcciones de referencia inversa](backreference-constructs-in-regular-expressions.md).  
   
 |Construcción de referencias inversas|Descripción|Modelo|Coincidencias|  
 |-----------------------------|-----------------|-------------|-------------|  
@@ -156,7 +156,7 @@ ms.locfileid: "55204891"
   
 <a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>Construcciones de alternancia  
- Las estructuras de alternancia modifican una expresión regular para habilitar o no la coincidencia. Estas construcciones incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Alternation Constructs](alternation-constructs-in-regular-expressions.md).  
+ Las estructuras de alternancia modifican una expresión regular para habilitar o no la coincidencia. Estas construcciones incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Construcciones de alternancia](alternation-constructs-in-regular-expressions.md).  
   
 |Construcciones de alternancia|Descripción|Modelo|Coincidencias|  
 |---------------------------|-----------------|-------------|-------------|  
@@ -168,7 +168,7 @@ ms.locfileid: "55204891"
   
 <a name="substitutions"></a>   
 ## <a name="substitutions"></a>Sustituciones  
- Las sustituciones son elementos del lenguaje de expresiones regulares que se admiten en modelos de reemplazo. Para obtener más información, consulta [Substitutions](substitutions-in-regular-expressions.md). Los metacaracteres enumerados en la tabla siguiente son aserciones atómicas de ancho cero.  
+ Las sustituciones son elementos del lenguaje de expresiones regulares que se admiten en modelos de reemplazo. Para obtener más información, consulta [Sustituciones](substitutions-in-regular-expressions.md). Los metacaracteres enumerados en la tabla siguiente son aserciones atómicas de ancho cero.  
   
 |Carácter|Descripción|Modelo|Modelo de reemplazo|Cadena de entrada|Cadena de resultado|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
@@ -185,29 +185,29 @@ ms.locfileid: "55204891"
   
 <a name="options"></a>   
 ## <a name="regular-expression-options"></a>Opciones de expresiones regulares  
- Puede especificar opciones que controlen cómo debe interpretar el motor de expresiones regulares un patrón de expresión regular. Muchas de estas opciones pueden especificarse alineadas (en el patrón de expresión regular) o como una o más constantes de <xref:System.Text.RegularExpressions.RegexOptions> . Esta referencia rápida solo muestra las opciones alineadas. Para obtener más información sobre las opciones alineadas y <xref:System.Text.RegularExpressions.RegexOptions> , consulte el artículo [Regular Expression Options](regular-expression-options.md).  
+ Puede especificar opciones que controlen cómo debe interpretar el motor de expresiones regulares un patrón de expresión regular. Muchas de estas opciones pueden especificarse alineadas (en el patrón de expresión regular) o como una o más constantes de <xref:System.Text.RegularExpressions.RegexOptions> . Esta referencia rápida solo muestra las opciones alineadas. Para obtener más información sobre las opciones alineadas y <xref:System.Text.RegularExpressions.RegexOptions> , consulte el artículo [Opciones de expresiones regulares](regular-expression-options.md).  
   
  Puede especificar una opción alineada de dos formas:  
   
 -   Con la [construcción miscelánea](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, donde el signo menos (-) delante de una opción o un conjunto de opciones desactiva dichas opciones. Por ejemplo, `(?i-mn)` activa una coincidencia sin distinción entre mayúsculas y minúsculas (`i`), desactiva el modo multilínea (`m`) y desactiva las capturas de grupo sin nombre (`n`). La opción se aplica al patrón de expresión regular a partir del punto en el que esta se define y es efectiva hasta el final del patrón o hasta el punto en el que otro constructor invierte la opción.  
   
--   Con la [grouping construct](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpresión*`)`, que define opciones solo para el grupo especificado.  
+-   Con la [construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpresión*`)`, que define opciones solo para el grupo especificado.  
   
  El motor de expresiones regulares de .NET admite las siguientes opciones insertadas.  
   
 |Opción|Descripción|Modelo|Coincidencias|  
 |------------|-----------------|-------------|-------------|  
 |`i`|Usa la coincidencia sin distinción entre mayúsculas y minúsculas.|`\b(?i)a(?-i)a\w+\b`|"aardvark", "aaaAuto" en "aardvark AAAuto aaaAuto Adam breakfast"|  
-|`m`|Usa el modo multilínea. `^` y `$` coinciden con el principio y el final de una línea, en lugar del principio y el final de una cadena.|Para obtener un ejemplo, consulte la sección "Modo multilínea" en [Regular Expression Options](regular-expression-options.md).||  
-|`n`|No se capturan grupos sin nombre.|Para obtener un ejemplo, consulte la sección "Solo capturas explícitas" en [Regular Expression Options](regular-expression-options.md).||  
-|`s`|Usa el modo de una sola línea.|Para obtener un ejemplo, consulte la sección "Modo de una sola línea" en [Regular Expression Options](regular-expression-options.md).||  
+|`m`|Usa el modo multilínea. `^` y `$` coinciden con el principio y el final de una línea, en lugar del principio y el final de una cadena.|Para obtener un ejemplo, consulte la sección "Modo multilínea" en [Opciones de expresiones regulares](regular-expression-options.md).||  
+|`n`|No se capturan grupos sin nombre.|Para obtener un ejemplo, consulte la sección "Solo capturas explícitas" en [Opciones de expresiones regulares](regular-expression-options.md).||  
+|`s`|Usa el modo de una sola línea.|Para obtener un ejemplo, consulte la sección "Modo de una sola línea" en [Opciones de expresiones regulares](regular-expression-options.md).||  
 |`x`|Se omite el espacio en blanco sin escape en el patrón de expresión regular.|`\b(?x) \d+ \s \w+`|"1 aardvark", "2 cats" en "1 aardvark 2 cats IV centurions"|  
   
  [Volver al principio](#top)  
   
 <a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>Construcciones misceláneas  
- Las estructuras misceláneas modifican un modelo de expresión regular o proporcionan información sobre él. En la tabla siguiente se enumeran las construcciones misceláneas admitidas por .NET. Para obtener más información, consulta [Miscellaneous Constructs](miscellaneous-constructs-in-regular-expressions.md).  
+ Las estructuras misceláneas modifican un modelo de expresión regular o proporcionan información sobre él. En la tabla siguiente se enumeran las construcciones misceláneas admitidas por .NET. Para obtener más información, consulta [Construcciones misceláneas](miscellaneous-constructs-in-regular-expressions.md).  
   
 |Construcción|de esquema JSON|Ejemplo|  
 |---------------|----------------|-------------|  
