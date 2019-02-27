@@ -3,13 +3,13 @@ title: Pasos del flujo de trabajo de DevOps de bucle externo para una aplicació
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 7a98c34bfdbbdc9b34a04c891ca031f454ac4396
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 2cd769ce9013a8521c53f36b44ea260ceccd48b7
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221522"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834971"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Creación de canalizaciones de CI/CD en servicios de Azure DevOps para una aplicación .NET Core 2.0 en contenedores e implementar en un clúster de Kubernetes
 
@@ -23,20 +23,20 @@ Es importante destacar que los dos canalizaciones y compilación, CI/CD de la ve
 
 Como se muestra en la figura 5-13, la primera fase es la canalización de compilación o CI. En los servicios de DevOps de Azure puede crear canalizaciones de compilación/CD que se compile el código, crear las imágenes de Docker y los inserta en un registro de Docker como Docker Hub o Azure Container Registry.
 
-![](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
+![Vista del explorador de Azure DevOps, definición de tarea de proceso de compilación.](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 
 **Figura 5-13**. Canalización de compilación/integración continua en Azure DevOps compilar imágenes de Docker e inserción de imágenes en un registro de Docker
 
 La segunda fase consiste en crear una canalización de implementación y lanzamiento. En los servicios de Azure DevOps, puede crear fácilmente una canalización de implementación destinadas a un clúster de Kubernetes mediante el uso de las tareas de Kubernetes para los servicios de Azure DevOps, como se muestra en la figura 5-14.
 
-![Implementación de MVC](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
+![Vista del explorador de Azure DevOps, implemente en la definición de tarea de Kubernetes.](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
 
 **Figura 5-14**. Canalización de versión/CD en la implementación de servicios de Azure DevOps a un clúster de Kubernetes
 
 > [! Tutorial] implementación eShopModernized en Kubernetes:
 >
 > Para obtener un tutorial detallado de las canalizaciones de Azure DevOps CI/CD de implementación en Kubernetes, consulte esta publicación: \
->[https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+><https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 >[!div class="step-by-step"]
 >[Anterior](docker-application-outer-loop-devops-workflow.md)

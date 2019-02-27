@@ -45,5 +45,4 @@ Esta sección proporciona directrices para diseñar bibliotecas que extenderán 
 ## <a name="see-also"></a>Vea también
 
 - [Información general](../../../docs/framework/get-started/overview.md)
-- [Guía básica de .NET Framework](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)
 - [Guía de desarrollo](../../../docs/framework/development-guide.md)

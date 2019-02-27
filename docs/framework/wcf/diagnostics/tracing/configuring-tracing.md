@@ -172,7 +172,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 > [!NOTE]
 >  Al usar ciertas características de extensibilidad de WCF, podría obtener un <xref:System.NullReferenceException> cuando está habilitado el seguimiento de la actividad. Para solucionar este problema, compruebe el archivo de configuración de la aplicación y asegúrese de que el atributo `switchValue` para el origen de seguimiento de traza no está establecido en `activityTracing`.  
   
- El atributo `propagateActivity` indica si la actividad se debería propagar a otros extremos que participan en el intercambio de mensajes. Estableciendo este valor en `true`, puede coger archivos de seguimiento generados por dos puntos de conexión cualesquiera y observar cómo un conjunto de trazas en un punto de conexión fluyó a un conjunto de rastros de otro punto de conexión.  
+ El atributo `propagateActivity` indica si la actividad se debería propagar a otros extremos que participan en el intercambio de mensajes. Estableciendo este valor en `true`, puede tomar archivos de seguimiento generados por dos puntos de conexión cualesquiera y observar cómo un conjunto de trazas en un punto de conexión fluyó a un conjunto de rastros de otro punto de conexión.  
   
  Para obtener más información acerca del seguimiento de actividad y propagación, vea [propagación](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
