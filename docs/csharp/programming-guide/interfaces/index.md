@@ -15,7 +15,7 @@ Mediante las interfaces puede incluir, por ejemplo, un comportamiento de varios 
   
 Defina una interfaz mediante la palabra clave [interface](../../language-reference/keywords/interface.md), como se muestra en el ejemplo siguiente.  
   
-[!code-csharp[csProgGuideInheritance#47](../classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
 El nombre de la estructura debe ser un [nombre de identificador](../inside-a-program/identifier-names.md) de C# válido. Por convención, los nombres de interfaz comienzan con una letra `I` mayúscula.
 

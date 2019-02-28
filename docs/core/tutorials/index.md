@@ -1,16 +1,10 @@
 ---
 title: Tutoriales de .NET Core
-description: Siga los tutoriales para aprender a compilar aplicaciones y bibliotecas de .NET Core en Mac, Linux y Windows.
+description: 'Siga los tutoriales para aprender a compilar aplicaciones y bibliotecas de .NET Core en Mac, Linux y Windows.'
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: d7d4685295c17fb4029ee077f5985f2b4152bbb4
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168754"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Para información sobre las herramientas de .NET Core y el SDK de .NET Core, explore estos tutoriales:
 
@@ -25,7 +19,6 @@ Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
 - [Creación de una biblioteca de clases con Visual Basic](vb-library-with-visual-studio.md)
 - [Prueba de una biblioteca de clases](testing-library-with-visual-studio.md)
 - [Uso de una biblioteca de clases](consuming-library-with-visual-studio.md)
-- [Creación de una solución completa de C# de .NET Core en Windows](using-on-windows-full-solution.md)
 - [Azure Cosmos DB: Introducción a la API de SQL y .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Creación de aplicaciones con Visual Studio Code
@@ -48,7 +41,6 @@ Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
 - [Pruebas unitarias de .NET Core mediante pruebas de dotnet](../testing/unit-testing-with-dotnet-test.md)
 - [Pruebas unitarias con MSTest y .NET Core](../testing/unit-testing-with-mstest.md)
 - [Desarrollo de bibliotecas con herramientas multiplataforma](libraries.md)
-- [Cómo administrar las versiones de dependencias de paquete para .NET Core 1.0](managing-package-dependency-versions.md)
 - [Hospedaje de .NET Core desde código nativo](netcore-hosting.md)
 - [Creación de una plantilla personalizada para dotnet new](create-custom-template.md)
 
