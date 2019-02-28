@@ -6,54 +6,54 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: 355267331eda73ab4c32ec27dbba1d82d729420f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1e636da1d277f80f58268b24b69802006eb8315
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638787"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966286"
 ---
-# <a name="-main"></a><span data-ttu-id="9625b-102">-main</span><span class="sxs-lookup"><span data-stu-id="9625b-102">-main</span></span>
-<span data-ttu-id="9625b-103">Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.</span><span class="sxs-lookup"><span data-stu-id="9625b-103">Specifies the class or module that contains the `Sub Main` procedure.</span></span>  
+# <a name="-main"></a><span data-ttu-id="067bb-102">-main</span><span class="sxs-lookup"><span data-stu-id="067bb-102">-main</span></span>
+<span data-ttu-id="067bb-103">Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.</span><span class="sxs-lookup"><span data-stu-id="067bb-103">Specifies the class or module that contains the `Sub Main` procedure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9625b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9625b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="067bb-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="067bb-104">Syntax</span></span>  
   
 ```  
 -main:location  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="9625b-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="9625b-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="067bb-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="067bb-105">Arguments</span></span>  
  `location`  
- <span data-ttu-id="9625b-106">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="9625b-106">Required.</span></span> <span data-ttu-id="9625b-107">El nombre de la clase o módulo que contiene el `Sub Main` procedimiento al que llamar cuando se inicia el programa.</span><span class="sxs-lookup"><span data-stu-id="9625b-107">The name of the class or module that contains the `Sub Main` procedure to be called when the program starts.</span></span> <span data-ttu-id="9625b-108">Esto puede ser en forma **-main: módulo** o **-main:namespace.module**.</span><span class="sxs-lookup"><span data-stu-id="9625b-108">This may be in the form **-main:module** or **-main:namespace.module**.</span></span>  
+ <span data-ttu-id="067bb-106">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="067bb-106">Required.</span></span> <span data-ttu-id="067bb-107">El nombre de la clase o módulo que contiene el `Sub Main` procedimiento al que llamar cuando se inicia el programa.</span><span class="sxs-lookup"><span data-stu-id="067bb-107">The name of the class or module that contains the `Sub Main` procedure to be called when the program starts.</span></span> <span data-ttu-id="067bb-108">Esto puede ser en forma **-main: módulo** o **-main:namespace.module**.</span><span class="sxs-lookup"><span data-stu-id="067bb-108">This may be in the form **-main:module** or **-main:namespace.module**.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9625b-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9625b-109">Remarks</span></span>  
- <span data-ttu-id="9625b-110">Use esta opción cuando se crea un archivo ejecutable o un programa ejecutable de Windows.</span><span class="sxs-lookup"><span data-stu-id="9625b-110">Use this option when you create an executable file or Windows executable program.</span></span> <span data-ttu-id="9625b-111">Si el **-principal** opción se omite, el compilador busca válido compartido `Sub Main` en todos los módulos y las clases públicas.</span><span class="sxs-lookup"><span data-stu-id="9625b-111">If the **-main** option is omitted, the compiler searches for a valid shared `Sub Main` in all public classes and modules.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="067bb-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="067bb-109">Remarks</span></span>  
+ <span data-ttu-id="067bb-110">Use esta opción cuando se crea un archivo ejecutable o un programa ejecutable de Windows.</span><span class="sxs-lookup"><span data-stu-id="067bb-110">Use this option when you create an executable file or Windows executable program.</span></span> <span data-ttu-id="067bb-111">Si el **-principal** opción se omite, el compilador busca válido compartido `Sub Main` en todos los módulos y las clases públicas.</span><span class="sxs-lookup"><span data-stu-id="067bb-111">If the **-main** option is omitted, the compiler searches for a valid shared `Sub Main` in all public classes and modules.</span></span>  
   
- <span data-ttu-id="9625b-112">Consulte [procedimiento Main en Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) para obtener una explicación de las distintas formas de la `Main` procedimiento.</span><span class="sxs-lookup"><span data-stu-id="9625b-112">See [Main Procedure in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) for a discussion of the various forms of the `Main` procedure.</span></span>  
+ <span data-ttu-id="067bb-112">Consulte [procedimiento Main en Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) para obtener una explicación de las distintas formas de la `Main` procedimiento.</span><span class="sxs-lookup"><span data-stu-id="067bb-112">See [Main Procedure in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) for a discussion of the various forms of the `Main` procedure.</span></span>  
   
- <span data-ttu-id="9625b-113">Cuando `location` es una clase que hereda de <xref:System.Windows.Forms.Form>, el compilador proporciona un valor predeterminado `Main` procedimiento que se inicia la aplicación si la clase no tiene ningún `Main` procedimiento.</span><span class="sxs-lookup"><span data-stu-id="9625b-113">When `location` is a class that inherits from <xref:System.Windows.Forms.Form>, the compiler provides a default `Main` procedure that starts the application if the class has no `Main` procedure.</span></span> <span data-ttu-id="9625b-114">Esto le permite compilar código en la línea de comandos que se creó en el entorno de desarrollo.</span><span class="sxs-lookup"><span data-stu-id="9625b-114">This lets you compile code at the command line that was created in the development environment.</span></span>  
+ <span data-ttu-id="067bb-113">Cuando `location` es una clase que hereda de <xref:System.Windows.Forms.Form>, el compilador proporciona un valor predeterminado `Main` procedimiento que se inicia la aplicación si la clase no tiene ningún `Main` procedimiento.</span><span class="sxs-lookup"><span data-stu-id="067bb-113">When `location` is a class that inherits from <xref:System.Windows.Forms.Form>, the compiler provides a default `Main` procedure that starts the application if the class has no `Main` procedure.</span></span> <span data-ttu-id="067bb-114">Esto le permite compilar código en la línea de comandos que se creó en el entorno de desarrollo.</span><span class="sxs-lookup"><span data-stu-id="067bb-114">This lets you compile code at the command line that was created in the development environment.</span></span>  
   
- [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/main_1.vb)]  
+ [!code-vb[VbVbalrCompiler#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#16)]  
   
-### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a><span data-ttu-id="9625b-115">Para establecer - main en el entorno de desarrollo integrado de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="9625b-115">To set -main in the Visual Studio integrated development environment</span></span>  
+### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a><span data-ttu-id="067bb-115">Para establecer - main en el entorno de desarrollo integrado de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="067bb-115">To set -main in the Visual Studio integrated development environment</span></span>  
   
-1.  <span data-ttu-id="9625b-116">Seleccione un proyecto en el **Explorador de soluciones**.</span><span class="sxs-lookup"><span data-stu-id="9625b-116">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="9625b-117">En el menú **Proyecto**, haga clic en **Propiedades**.</span><span class="sxs-lookup"><span data-stu-id="9625b-117">On the **Project** menu, click **Properties**.</span></span>  
+1.  <span data-ttu-id="067bb-116">Seleccione un proyecto en el **Explorador de soluciones**.</span><span class="sxs-lookup"><span data-stu-id="067bb-116">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="067bb-117">En el menú **Proyecto**, haga clic en **Propiedades**.</span><span class="sxs-lookup"><span data-stu-id="067bb-117">On the **Project** menu, click **Properties**.</span></span>  
   
-2.  <span data-ttu-id="9625b-118">Haga clic en la pestaña **Aplicación** .</span><span class="sxs-lookup"><span data-stu-id="9625b-118">Click the **Application** tab.</span></span>  
+2.  <span data-ttu-id="067bb-118">Haga clic en la pestaña **Aplicación** .</span><span class="sxs-lookup"><span data-stu-id="067bb-118">Click the **Application** tab.</span></span>  
   
-3.  <span data-ttu-id="9625b-119">Asegúrese de que el **Habilitar marco de trabajo de aplicación** no está activada la casilla de verificación.</span><span class="sxs-lookup"><span data-stu-id="9625b-119">Make sure the **Enable application framework** check box is not checked.</span></span>  
+3.  <span data-ttu-id="067bb-119">Asegúrese de que el **Habilitar marco de trabajo de aplicación** no está activada la casilla de verificación.</span><span class="sxs-lookup"><span data-stu-id="067bb-119">Make sure the **Enable application framework** check box is not checked.</span></span>  
   
-4.  <span data-ttu-id="9625b-120">Modifique el valor en el **objeto Startup** cuadro.</span><span class="sxs-lookup"><span data-stu-id="9625b-120">Modify the value in the **Startup object** box.</span></span>  
+4.  <span data-ttu-id="067bb-120">Modifique el valor en el **objeto Startup** cuadro.</span><span class="sxs-lookup"><span data-stu-id="067bb-120">Modify the value in the **Startup object** box.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9625b-121">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9625b-121">Example</span></span>  
- <span data-ttu-id="9625b-122">El siguiente código compila `T2.vb` y `T3.vb`, especificando que el `Sub Main` procedimiento se encuentra en la `Test2` clase.</span><span class="sxs-lookup"><span data-stu-id="9625b-122">The following code compiles `T2.vb` and `T3.vb`, specifying that the `Sub Main` procedure will be found in the `Test2` class.</span></span>  
+## <a name="example"></a><span data-ttu-id="067bb-121">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="067bb-121">Example</span></span>  
+ <span data-ttu-id="067bb-122">El siguiente código compila `T2.vb` y `T3.vb`, especificando que el `Sub Main` procedimiento se encuentra en la `Test2` clase.</span><span class="sxs-lookup"><span data-stu-id="067bb-122">The following code compiles `T2.vb` and `T3.vb`, specifying that the `Sub Main` procedure will be found in the `Test2` class.</span></span>  
   
 ```console
 vbc t2.vb t3.vb -main:Test2  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9625b-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="9625b-123">See also</span></span>
-- [<span data-ttu-id="9625b-124">Compilador de línea de comandos de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9625b-124">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="9625b-125">-target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9625b-125">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)
-- [<span data-ttu-id="9625b-126">Líneas de comandos de compilación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="9625b-126">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [<span data-ttu-id="9625b-127">Procedimiento Main en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9625b-127">Main Procedure in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+## <a name="see-also"></a><span data-ttu-id="067bb-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="067bb-123">See also</span></span>
+- [<span data-ttu-id="067bb-124">Compilador de línea de comandos de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="067bb-124">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="067bb-125">-target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="067bb-125">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)
+- [<span data-ttu-id="067bb-126">Líneas de comandos de compilación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="067bb-126">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="067bb-127">Procedimiento Main en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="067bb-127">Main Procedure in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
