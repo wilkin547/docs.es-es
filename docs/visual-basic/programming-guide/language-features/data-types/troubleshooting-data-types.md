@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: e67339beac42fe6dc32925c8733bec2889739733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e7190f3ba63b6af9f7f402fbc23b4268c329856
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728075"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974749"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Solucionar problemas de tipos de datos (Visual Basic)
 Esta página enumera algunos problemas comunes que pueden producirse al realizar operaciones en tipos de datos intrínsecos.  
@@ -40,7 +40,7 @@ Esta página enumera algunos problemas comunes que pueden producirse al realizar
   
  En el ejemplo siguiente se muestra una comparación correcta e incorrecta de las dos `Double` valores.  
   
- [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#10)]  
   
  El ejemplo anterior utiliza la <xref:System.Double.ToString%2A> método de la <xref:System.Double> estructura para que puede especificar la mayor precisión que el `CStr` usa la palabra clave. El valor predeterminado es 15 dígitos, pero el formato "G17" lo amplía a 17 dígitos.  
   
@@ -55,7 +55,7 @@ Esta página enumera algunos problemas comunes que pueden producirse al realizar
   
  El ejemplo siguiente muestra el potencial de imprecisión de operandos de punto flotante.  
   
- [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#11)]  
   
  El ejemplo anterior utiliza la <xref:System.Double.ToString%2A> método de la <xref:System.Double> estructura para que puede especificar la mayor precisión que el `CStr` usa la palabra clave. El valor predeterminado es 15 dígitos, pero el formato "G17" lo amplía a 17 dígitos.  
   
@@ -89,7 +89,7 @@ Esta página enumera algunos problemas comunes que pueden producirse al realizar
   
  El ejemplo siguiente muestra las asignaciones incorrectas y correcta de un literal a una `Char` variable.  
   
- [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#12)]  
   
  Siempre hay un riesgo para la sesión con las conversiones de restricción, porque puede producir un error en tiempo de ejecución. Por ejemplo, una conversión de `String` a `Char` puede producir un error si el `String` valor contiene más de un carácter. Por lo tanto, es mejor programación para utilizar el `C` carácter de tipo.  
   

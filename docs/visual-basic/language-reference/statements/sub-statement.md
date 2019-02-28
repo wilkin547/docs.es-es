@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: e7015474a0617b76ca537d2e84e8d7bfc72b6e12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6984e7e9f8695ff5bccdde01171733e740a5d6a7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737668"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965961"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub (Instrucción, Visual Basic)
 Declara el nombre, parámetros y código que definen un `Sub` procedimiento.  
@@ -217,14 +217,14 @@ End Sub
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `Sub` instrucción para definir el nombre, parámetros y código que forman el cuerpo de un `Sub` procedimiento.  
   
- [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#58)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, `DelayAsync` es un `Async` `Function` que tiene un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>. `DelayAsync` tiene una instrucción `Return` que devuelve un entero. Por lo tanto, la declaración de función de `DelayAsync` debe tener un tipo de valor devuelto de `Task(Of Integer)`. Dado que el tipo de valor devuelto es `Task(Of Integer)`, la evaluación de la `Await` expresión en `DoSomethingAsync` genera un entero, como se muestra en la siguiente instrucción: `Dim result As Integer = Await delayTask`.  
   
  El `startButton_Click` procedimiento es un ejemplo de un `Async Sub` procedimiento. Dado que `DoSomethingAsync` es un `Async` (función), la tarea de la llamada a `DoSomethingAsync` debe esperar, como se muestra en la siguiente instrucción: `Await DoSomethingAsync()`. El `startButton_Click` `Sub` procedimiento debe definirse con la `Async` modificador porque tiene un `Await` expresión.  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
+ [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
 - [Implements (instrucción)](implements-statement.md)

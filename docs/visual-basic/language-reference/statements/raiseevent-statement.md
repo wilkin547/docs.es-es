@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ccefe07c847c7a356e9ff8da301257bf6a90d1ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffe08dc8aeef9498d2e9f4c973c5ccbc31fec0b9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655015"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973306"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent (Instrucción)
 Desencadena un evento declarado en el nivel de módulo dentro de una clase, formulario o documento.  
@@ -38,7 +38,7 @@ RaiseEvent eventname[( argumentlist )]
   
  Si el evento no se ha declarado dentro del módulo en el que se produce, se produce un error. El siguiente fragmento de código muestra una declaración de evento y un procedimiento en el que se genera el evento.  
   
- [!code-vb[VbVbalrEvents#37](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#37)]  
   
  No puede usar `RaiseEvent` para generar eventos que no se declaran explícitamente en el módulo. Por ejemplo, todos los formularios heredan una <xref:System.Windows.Forms.Control.Click> evento desde <xref:System.Windows.Forms.Form?displayProperty=nameWithType>, no se puede incrementar con `RaiseEvent` en un formulario derivado. Si declara un `Click` eventos en el módulo del formulario, oculta o prevalece sobre el propio formulario <xref:System.Windows.Forms.Control.Click> eventos. Puede seguir invocando el formulario <xref:System.Windows.Forms.Control.Click> eventos mediante una llamada a la <xref:System.Windows.Forms.Control.OnClick%2A> método.  
   
@@ -63,12 +63,12 @@ RaiseEvent eventname[( argumentlist )]
   
  Agregar un `WithEvents` a la sección de declaraciones de variable la `Form1` clase.  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_2.vb)]  
+ [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Ejemplo  
  Agregue el código siguiente al código de `Form1`. Sustituya los procedimientos duplicados que existan, como `Form_Load`, o `Button_Click`.  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_3.vb)]  
+ [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
  Presione F5 para ejecutar el ejemplo anterior y haga clic en el botón rotulado **iniciar**. El primer cuadro de texto empieza la cuenta atrás de los segundos. Cuando transcurre el tiempo (10 segundos), el primer cuadro de texto muestra "Done".  
   

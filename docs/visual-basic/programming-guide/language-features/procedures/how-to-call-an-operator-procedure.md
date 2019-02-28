@@ -11,14 +11,14 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: fc658dd7ef001c8d3ef7761bd2a7889f70e9e4a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab9dd9e3f9abdd8379a59ed458c47d5ec8b4f2ad
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667588"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978974"
 ---
-# <a name="how-to-call-an-operator-procedure-visual-basic"></a>Procedimiento Llamar a un procedimiento de operador (Visual Basic)
+# <a name="how-to-call-an-operator-procedure-visual-basic"></a>Filtrar Llamar a un procedimiento de operador (Visual Basic)
 Llame a un procedimiento de operador mediante el símbolo de operador en una expresión. En el caso de un operador de conversión, llame a la [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) para convertir un valor de un tipo de datos a otro.  
   
  No llame explícitamente procedimientos de operador. Utilizaremos el operador, o el `CType` función en una instrucción de asignación o una expresión, la misma manera que se usa habitualmente un operador. Visual Basic realiza la llamada al procedimiento de operador.  
@@ -44,7 +44,7 @@ Llame a un procedimiento de operador mediante el símbolo de operador en una exp
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crean dos <xref:System.TimeSpan> estructuras, agrega juntos y almacena el resultado en una tercera <xref:System.TimeSpan> estructura. El <xref:System.TimeSpan> estructura define procedimientos de operador para sobrecargar varios operadores estándar.  
   
- [!code-vb[VbVbcnProcedures#29](./codesnippet/VisualBasic/how-to-call-an-operator-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#29)]  
   
  Dado que <xref:System.TimeSpan> sobrecargas estándar `+` operador, en el ejemplo anterior, se llama a un procedimiento de operador cuando calcula el valor de `combinedSpan`.  
   

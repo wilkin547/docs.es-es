@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: c3639070ddbb3c0eb41707d5cc5fbc7a46555a65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c1087f1ea260b61a51126f42703a32075884e54
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666584"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971291"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Tutorial: Escribir consultas en Visual Basic
 Este tutorial muestra cómo puede utilizar las características del lenguaje Visual Basic para escribir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] las expresiones de consulta. El tutorial muestra cómo crear consultas en una lista de objetos Student, cómo ejecutar las consultas y cómo modificarlos. Las consultas incorporan varias características que incluyen tipos anónimos, inferencia de tipos local y los inicializadores de objeto.  
@@ -56,11 +56,11 @@ Este tutorial muestra cómo puede utilizar las características del lenguaje Vis
   
 1.  Busque el lugar en el `Main` método del proyecto que está marcado como sigue:  
   
-     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
+     [!code-vb[VbLINQWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#1)]  
   
      Copie el código siguiente y péguelo en.  
   
-     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
+     [!code-vb[VbLINQWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#2)]  
   
 2.  Sitúe el puntero del mouse sobre `studentQuery` en el código para comprobar que el tipo asignado por el compilador es `IEnumerable(Of Student)`.  
   
@@ -71,7 +71,7 @@ Este tutorial muestra cómo puede utilizar las características del lenguaje Vis
   
 1.  Agregue las siguientes `For Each` bucle debajo de la consulta en el proyecto.  
   
-     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
+     [!code-vb[VbLINQWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#3)]  
   
 2.  Sitúe el puntero del mouse sobre la variable de control de bucle `studentRecord` para ver su tipo de datos. El tipo de `studentRecord` se infiere para ser `Student`, porque `studentQuery` devuelve una colección de `Student` instancias.  
   
@@ -102,7 +102,7 @@ Este tutorial muestra cómo puede utilizar las características del lenguaje Vis
   
 1.  Agregue el código de esta sección para incluir un identificador local en la expresión de consulta. El identificador local contendrá un resultado intermedio. En el ejemplo siguiente, `name` es un identificador que contiene una concatenación del alumno de primera y los apellidos. Se puede usar un identificador local para su comodidad, o puede mejorar el rendimiento almacenando los resultados de una expresión que de lo contrario se calcularía varias veces.  
   
-     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
+     [!code-vb[VbLINQWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#4)]  
   
 2.  Compile y ejecute la aplicación presionando CTRL + F5. Tenga en cuenta los resultados en la ventana de consola.  
   
@@ -110,7 +110,7 @@ Este tutorial muestra cómo puede utilizar las características del lenguaje Vis
   
 1.  Agregue la consulta y `For Each` bucle de esta sección para crear una consulta que genera una secuencia cuyos elementos difieren de los elementos en el origen. En el ejemplo siguiente, el origen es una colección de `Student` objetos, pero sólo un miembro de cada objeto se devuelve: el nombre de los alumnos cuyo apellido es García. Dado que `currentStudent.First` es una cadena, el tipo de datos de la secuencia devuelta por `studentQuery3` es `IEnumerable(Of String)`, una secuencia de cadenas. Como se muestra en ejemplos anteriores, la asignación de datos de un tipo para `studentQuery3` se deja para que el compilador determinar mediante el uso de la inferencia de tipo local.  
   
-     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
+     [!code-vb[VbLINQWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#5)]  
   
 2.  Sitúe el puntero del mouse sobre `studentQuery3` en el código para comprobar que el tipo asignado es `IEnumerable(Of String)`.  
   
@@ -122,14 +122,14 @@ Este tutorial muestra cómo puede utilizar las características del lenguaje Vis
   
      El ejemplo siguiente crea una consulta que devuelve el nombre y el rango de ancianos cuyo grado académico esté entre 1 y 10, en orden de grado académico. En este ejemplo, el tipo de `studentQuery4` debe deducir, porque el `Select` cláusula devuelve una instancia de un tipo anónimo, y un tipo anónimo no tiene ningún nombre utilizable.  
   
-     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
+     [!code-vb[VbLINQWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#6)]  
   
 2.  Compile y ejecute la aplicación presionando CTRL + F5. Tenga en cuenta los resultados en la ventana de consola.  
   
 ## <a name="additional-examples"></a>Ejemplos adicionales  
  Ahora que comprende los conceptos básicos, la siguiente es una lista de ejemplos adicionales para ilustrar la flexibilidad y eficacia de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] las consultas. Cada ejemplo está precedido por una breve descripción de lo que hace. Sitúe el puntero del mouse sobre la variable de resultado de consulta para cada consulta ver el tipo deducido. Use un `For Each` bucle para generar los resultados.  
   
- [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
+ [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]  
   
 ## <a name="additional-information"></a>Información adicional  
  Cuando se haya familiarizado con los conceptos básicos del uso de consultas, está listo para leer la documentación y ejemplos para el tipo específico de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] proveedor que está interesado en:  

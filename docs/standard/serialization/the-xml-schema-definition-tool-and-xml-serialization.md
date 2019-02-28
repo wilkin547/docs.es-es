@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML Schema Definition tool
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
-ms.openlocfilehash: abd96b7fab18b0fac18a2da791e5da8015d481c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c950d84cc95c20c2ae85340a2987ea51bed9570
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623812"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979325"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>Herramienta de definición de esquema XML y serialización XML
 La herramienta de definición de esquema XML ([XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) se instala junto con las herramientas de .NET Framework como parte del kit de desarrollo de software (SDK) de Windows®. La herramienta está diseñada para cumplir principalmente dos propósitos:  
@@ -32,4 +32,4 @@ La herramienta de definición de esquema XML ([XML Schema Definition Tool (Xsd.e
 - [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 - [Cómo: Utilice la herramienta de definición de esquemas XML para generar clases y documentos de esquema XML](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)
-- [Compatibilidad con enlaces del esquema XML en .NET Framework](https://msdn.microsoft.com/library/8f0619dd-f1fc-4895-ae21-6d45d0382cc1)
+- [Compatibilidad con enlaces del esquema XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sh1e66zd(v=vs.100))

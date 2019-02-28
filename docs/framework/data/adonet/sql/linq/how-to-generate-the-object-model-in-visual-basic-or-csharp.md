@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Generar el modelo de objetos en Visual Basic oC#
+title: Filtrar Generar el modelo de objetos en Visual Basic oC#
 ms.date: 03/30/2017
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
-ms.openlocfilehash: 79b2656ec72e2b93592742ddd39e7bfe4dcd7c43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e60905cc7bf30421a48288378b136bad5f7ee83
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510577"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974607"
 ---
-# <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Procedimiento Generar el modelo de objetos en Visual Basic oC# #
+# <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Filtrar Generar el modelo de objetos en Visual Basic o C\#
 En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], un modelo de objetos en un lenguaje de programación se asigna a una base de datos relacional. Existen dos herramientas para generar automáticamente un Visual Basic o C# modelos de los metadatos de una base de datos existente.  
   
 -   Si utiliza Visual Studio, puede usar el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para generar un modelo de objetos. El [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] proporciona una interfaz de usuario enriquecida para ayudarle a generar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelo de objetos. Para obtener más información, vea [Linq to SQL Tools en Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).

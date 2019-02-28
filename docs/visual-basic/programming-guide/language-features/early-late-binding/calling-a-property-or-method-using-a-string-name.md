@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 865270cfc8089d0bf229d9de7a7775dd2a3361d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb9d214d7bb226a4e14cb42e78bffd940049838d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731531"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967534"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Llamar a una propiedad o método mediante un nombre de cadena (Visual Basic)
 En la mayoría de los casos, puede detectar las propiedades y métodos de un objeto en tiempo de diseño y escribir código para controlarlos. Sin embargo, en algunos casos es posible que no sabe acerca de los métodos y propiedades de un objeto de antemano, o simplemente desea la flexibilidad de la habilitación de un usuario final especificar las propiedades o ejecutar métodos en tiempo de ejecución.  
@@ -35,11 +35,11 @@ En la mayoría de los casos, puede detectar las propiedades y métodos de un obj
   
  Supongamos que se agrega una referencia a un ensamblado que contiene una clase denominada `MathClass`, que tiene una función nueva denominada `SquareRoot`, tal y como se muestra en el código siguiente:  
   
- [!code-vb[VbVbalrOOP#53](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_1.vb)]  
+ [!code-vb[VbVbalrOOP#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#53)]  
   
  La aplicación podría utilizar controles de cuadro de texto al control de qué método se llamará y sus argumentos. Por ejemplo, si `TextBox1` contiene la expresión que se va a evaluar, y `TextBox2` es usa para escribir el nombre de la función, puede utilizar el siguiente código para invocar la `SquareRoot` función en la expresión de `TextBox1`:  
   
- [!code-vb[VbVbalrOOP#54](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_2.vb)]  
+ [!code-vb[VbVbalrOOP#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#54)]  
   
  Si escribe "64" en `TextBox1`, "SquareRoot" en `TextBox2`y, a continuación, llame a la `CallMath` procedimiento, la raíz cuadrada del número de `TextBox1` se evalúa. El código en el ejemplo se invoca el `SquareRoot` función (que toma una cadena que contiene la expresión que se evalúa como un argumento necesario) y devuelve "8" en `TextBox1` (la raíz cuadrada de 64). Por supuesto, si el usuario escribe una cadena no válida en `TextBox2`si la cadena contiene el nombre de una propiedad en lugar de un método, o si el método tiene un argumento necesario adicional, se produce un error de tiempo de ejecución. Tiene que agregar código de control de errores sólido cuando usas `CallByName` para anticipar estos u otros errores.  
   

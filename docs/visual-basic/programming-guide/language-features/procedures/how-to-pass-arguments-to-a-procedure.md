@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Pasar argumentos a un procedimiento (Visual Basic)
+title: Filtrar Pasar argumentos a un procedimiento (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 6d9daf47b8d9300e9de8add1423fa1824fc62d5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bc7c9d09922b7fbef534e6b58389ca343cc1e13
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691234"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974398"
 ---
-# <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Procedimiento Pasar argumentos a un procedimiento (Visual Basic)
+# <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Filtrar Pasar argumentos a un procedimiento (Visual Basic)
 Cuando se llama a un procedimiento, siga el nombre del procedimiento con una lista de argumentos entre paréntesis. Se proporciona un argumento correspondiente a cada parámetro necesario que se define el procedimiento y, opcionalmente, puede proporcionar argumentos a la `Optional` parámetros. Si no se suministra un `Optional` parámetro de la llamada, debe incluir una coma para marcar su lugar en la lista de argumentos si está proporcionando los argumentos subsiguientes.  
   
  Si va a pasar un argumento de tipo de datos diferente del parámetro correspondiente, como `Byte` a `String`, puede establecer el modificador de comprobación de tipos ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) a `Off`. Si `Option Strict` es `On`, se deben usar conversiones de ampliación o palabras clave de conversión explícita. Para obtener más información, consulte [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) y [Type Conversion Functions](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
@@ -39,7 +39,7 @@ Cuando se llama a un procedimiento, siga el nombre del procedimiento con una lis
   
      El ejemplo siguiente se llama a la de Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> función.  
   
-     [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#34)]  
   
      El ejemplo anterior proporciona el primer argumento necesario, que es la cadena de mensaje que se mostrará. Omite un argumento para el segundo parámetro opcional que especifica los botones que deben mostrarse en el cuadro de mensaje. Dado que la llamada no proporciona un valor, `MsgBox` utiliza el valor predeterminado, `MsgBoxStyle.OKOnly`, que muestra sólo un **Aceptar** botón.  
   

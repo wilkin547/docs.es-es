@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: a974a68010fe80a07e83ac31e109bbf1c2b955e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b35985aa67cea7b58ddf05611cf4e0813a2d442
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568782"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977466"
 ---
 # <a name="partial-methods-visual-basic"></a>Métodos parciales (Visual Basic)
 Los métodos parciales permiten a los desarrolladores insertar lógica personalizada en código. Normalmente, el código es parte de una clase generada por el diseñador. Los métodos parciales se definen en una clase parcial que se crea un generador de código y se suelen usar para proporcionar una notificación que algo ha cambiado. Le permiten al programador especificar un comportamiento personalizado en respuesta al cambio.  
@@ -56,15 +56,15 @@ End Sub
 ## <a name="example"></a>Ejemplo  
  En un archivo denominado Product.Designer.vb, defina un `Product` clase que tiene un `Quantity` propiedad.  
   
- [!code-vb[VbVbalrPartialMeths#4](./codesnippet/VisualBasic/partial-methods_1.vb)]  
+ [!code-vb[VbVbalrPartialMeths#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#4)]  
   
  En un archivo denominado Product.vb, proporcione una implementación para `QuantityChanged`.  
   
- [!code-vb[VbVbalrPartialMeths#5](./codesnippet/VisualBasic/partial-methods_2.vb)]  
+ [!code-vb[VbVbalrPartialMeths#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#5)]  
   
  Por último, en el método Main de un proyecto, declare un `Product` de instancia y proporcionar un valor inicial para su `Quantity` propiedad.  
   
- [!code-vb[VbVbalrPartialMeths#6](./codesnippet/VisualBasic/partial-methods_3.vb)]  
+ [!code-vb[VbVbalrPartialMeths#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#6)]  
   
  Debe aparecer un cuadro de mensaje que muestra este mensaje:  
   

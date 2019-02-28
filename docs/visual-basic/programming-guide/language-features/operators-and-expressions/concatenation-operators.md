@@ -9,12 +9,12 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-ms.openlocfilehash: 90072a3cadccd0c66b66f0ec5ff2dafd3d62eaeb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5151265235868c2a7991bee61b26a4a0da09f901
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490863"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978103"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Operadores de concatenación en Visual Basic
 Los operadores de concatenación unen varias cadenas en una sola. Existen dos operadores de concatenación: `+` y `&`. Ambos efectúan la operación de concatenación básica, como se aprecia en el siguiente ejemplo.  
@@ -27,7 +27,7 @@ Dim y As String = "Mic" + "ro" + "soft"
   
  Estos operadores también concatenan variables de `String`, como indica el siguiente ejemplo.  
   
- [!code-vb[VbVbalrOperators#76](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#76)]  
   
 ## <a name="differences-between-the-two-concatenation-operators"></a>Diferencias entre los dos operadores de concatenación  
  El [operador +](../../../../visual-basic/language-reference/operators/addition-operator.md) tiene el propósito principal de sumar dos números. aunque también puede concatenar operandos numéricos con operandos de cadena. El operador `+` posee un conjunto de reglas complejo que establecen si hay que sumar, concatenar, señalar un error de compilador o generar una excepción <xref:System.InvalidCastException> en tiempo de ejecución.  

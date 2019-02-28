@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-ms.openlocfilehash: af6589206232f01b572cd2b965ba1a0f36d462e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc3df1fdee5405445b4534a6982383c49b369b01
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527125"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980443"
 ---
 # <a name="xor-operator-visual-basic"></a>Xor (Operador, Visual Basic)
 Realiza una exclusión lógica en dos `Boolean` expresiones o una exclusión bit a bit en dos expresiones numéricas.  
@@ -78,14 +78,14 @@ result = expression1 Xor expression2
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `Xor` operador para realizar una exclusión lógica (disyunción lógica exclusiva) de dos expresiones. El resultado es un `Boolean` valor que indica si exactamente uno de las expresiones es `True`.  
   
- [!code-vb[VbVbalrOperators#40](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#40)]  
   
  El ejemplo anterior genera unos resultados de `False`, `True`, y `False`, respectivamente.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `Xor` operador para realizar una exclusión lógica (disyunción lógica exclusiva) en los bits individuales de dos expresiones numéricas. El bit en el modelo resultante se establece si exactamente uno de los bits correspondientes de los operandos se establece en 1.  
   
- [!code-vb[VbVbalrOperators#41](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#41)]  
   
  El ejemplo anterior genera unos resultados de 2, 12 y 14, respectivamente.  
   

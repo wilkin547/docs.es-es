@@ -1,16 +1,16 @@
 ---
-title: Introducción a Azure Queue storage mediante F#
+title: Introducción a Azure Queue storage medianteF#
 description: Las colas de Azure proporcionan mensajería confiable y asincrónica entre los componentes de la aplicación. En la nube permite mensajería los componentes de aplicación para escalar de forma independiente.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 14bbc657f965fc262d2a83b1fdf982fe5e75d55e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 58a46dfe905a32be77a13d11df8f0544546ea0ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33569423"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974281"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>Introducción a Azure Queue storage mediante F# #
+# <a name="get-started-with-azure-queue-storage-using-f"></a>Introducción a Azure Queue storage mediante F\#
 
 Azure Queue storage proporciona mensajería entre componentes de la aplicación en la nube. En el diseño de aplicaciones para escala, los componentes de aplicación suelen desacoplarse para que puedan escalarse de forma independiente. Almacenamiento en cola ofrece mensajería asincrónica para la comunicación entre componentes de la aplicación, independientemente de si se ejecutan en la nube, en el escritorio, en un servidor local o en un dispositivo móvil. Almacenamiento de colas también admite la administración de tareas asincrónicas y creación de flujos de trabajo de proceso.
 
@@ -25,9 +25,9 @@ Información general conceptual de queue storage, consulte [la Guía de .NET par
 Para usar esta guía, primero debe [crear una cuenta de almacenamiento de Azure](/azure/storage/storage-create-storage-account).
 También necesitará la clave de acceso de almacenamiento para esta cuenta.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Crear un Script de F# y el inicio de F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Crear un F# Script e iniciar F# interactivo
 
-Los ejemplos de este artículo pueden usarse en una aplicación de F# o un script de F#. Para crear un script de F#, cree un archivo con el `.fsx` extensión, por ejemplo `queues.fsx`, en el entorno de desarrollo de F#.
+Los ejemplos de este artículo pueden usarse en cualquiera un F# aplicación o un F# secuencia de comandos. Para crear un F# de script, cree un archivo con el `.fsx` extensión, por ejemplo `queues.fsx`, en su F# entorno de desarrollo.
 
 A continuación, use un [Administrador de paquetes](package-management.md) como [Paket](https://fsprojects.github.io/Paket/) o [NuGet](https://www.nuget.org/) para instalar el `WindowsAzure.Storage` paquete y referencia `WindowsAzure.Storage.dll` en el script mediante un `#r`directiva.
 

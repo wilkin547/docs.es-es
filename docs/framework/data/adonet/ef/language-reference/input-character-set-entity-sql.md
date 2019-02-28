@@ -2,12 +2,12 @@
 title: Juego de caracteres de entrada (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: dce967ea8853f81fedaa53ea706fab4839b9f474
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bed10f6e4a9fb01abe825e5eb798da2d866ca84
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641205"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976764"
 ---
 # <a name="input-character-set-entity-sql"></a>Juego de caracteres de entrada (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] acepta caracteres UNICODE codificados en UTF-16.  
@@ -24,9 +24,9 @@ ms.locfileid: "54641205"
   
  Las palabras clave, las expresiones y los signos de puntuación pueden ser cualquier carácter UTF-16 que se normalice a caracteres latinos. Por ejemplo, SELECT en una página de códigos japonesa es una palabra clave válida.  
   
- Las palabras clave, las expresiones y los signos de puntuación solo pueden ser caracteres latinos. `SELECT` en una página de códigos japonesa no es una palabra clave. +, -, *, /, =, (, ), ‘, [, ] y cualquier otra construcción del lenguaje distinta de las mencionadas aquí solo puede expresarse en caracteres latinos.  
+ Las palabras clave, las expresiones y los signos de puntuación solo pueden ser caracteres latinos. `SELECT` en una página de códigos japonesa no es una palabra clave. +,-, \*, /, =, (,), ', [,] y cualquier otra construcción de lenguaje no las mencionadas aquí solo puede ser caracteres latinos.  
   
- Los identificadores simples solo pueden ser caracteres latinos. Esto evita la ambigüedad durante la comparación, ya que se comparan valores originales. Por ejemplo, ABC es diferente en las páginas de códigos japonesa y latina.  
+ Los identificadores simples solo pueden ser caracteres latinos. Esto evita la ambigüedad durante la comparación, ya que se comparan valores originales. Por ejemplo, ABC sería diferente en las páginas de códigos japonesa y latina.  
   
 ## <a name="see-also"></a>Vea también
 - [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

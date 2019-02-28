@@ -1,12 +1,12 @@
 ---
-title: AssemblyAttributesGoHere
+title: Clase AssemblyAttributesGoHere (System.Runtime.CompilerServices)
 ms.date: 03/30/2017
 api_name:
-- AssemblyAttributesGoHere
+- System.Runtime.CompilerServices.AssemblyAttributesGoHere
 api_location:
-- alink.dll
+- mscorlib.dll
 api_type:
-- COM
+- Assembly
 f1_keywords:
 - AssemblyAttributesGoHere
 helpviewer_keywords:
@@ -17,33 +17,37 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cde96ed9089416fa5febe55e49b4109cfeb11f40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 571c2f6723e827a1b385f77724c33703ae970ae3
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722145"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968124"
 ---
-# <a name="assemblyattributesgohere"></a>AssemblyAttributesGoHere
-ALink lo utiliza como marcador de posición para almacenar información acerca de los atributos personalizados.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-AssemblyAttributesGoHere  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Las referencias a este tipo se pueden incrustar en archivos .netmodules cuyos orígenes contengan atributos personalizados de ensamblado. Cuando se genera un manifiesto de ensamblado de uno o más .netmodules que contienen referencias a estos tipos, ALink utiliza la información adjunta a estas referencias para emitir atributos personalizados reales. Como tal, nunca se crea una instancia de este tipo y las referencias a él se utilizan únicamente como parte del proceso de compilación, no sirven para ningún propósito en el ensamblado final.  
-  
- Las referencias a este tipo indican atributos personalizados que no están relacionados con la seguridad y que no tienen diversos usos.  
-  
- Estos tipos se marcan como "internos" en .NET Framework y se encuentran en <xref:System.Runtime.CompilerServices>.  
-  
-## <a name="requirements"></a>Requisitos  
- mscorlib.dll  
-  
+# <a name="assemblyattributesgohere-class"></a>Clase AssemblyAttributesGoHere
+
+ALink lo utiliza como marcador de posición para almacenar información acerca de los atributos personalizados.
+
+## <a name="syntax"></a>Sintaxis
+
+```csharp
+internal sealed class AssemblyAttributesGoHere
+```
+
+## <a name="remarks"></a>Comentarios
+
+Las referencias a este tipo se pueden incrustar en archivos .netmodules cuyos orígenes contengan atributos personalizados de ensamblado. Cuando se genera un manifiesto de ensamblado de uno o más .netmodules que contienen referencias a estos tipos, ALink utiliza la información adjunta a estas referencias para emitir atributos personalizados reales. Como tal, nunca se crea una instancia de este tipo y las referencias a él se utilizan únicamente como parte del proceso de compilación, no sirven para ningún propósito en el ensamblado final.
+
+Las referencias a este tipo indican atributos personalizados que no están relacionados con la seguridad y que no tienen diversos usos.
+
+Estos tipos se marcan como "internos" dentro de .NET Framework y se encuentran en el <xref:System.Runtime.CompilerServices> espacio de nombres.
+
+## <a name="requirements"></a>Requisitos
+
+mscorlib.dll
+
 ## <a name="see-also"></a>Vea también
-- [AssemblyAttributesGoHereM](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoherem.md)
-- [AssemblyAttributesGoHereS](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheres.md)
-- [AssemblyAttributesGoHereSM](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheresm.md)
+
+- [AssemblyAttributesGoHereM](assemblyattributesgoherem.md)
+- [AssemblyAttributesGoHereS](assemblyattributesgoheres.md)
+- [AssemblyAttributesGoHereSM](assemblyattributesgoheresm.md)

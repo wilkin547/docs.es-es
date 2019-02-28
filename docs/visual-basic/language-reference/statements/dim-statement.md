@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 487e2ff55f256bc06a463043dd2849a404eb82cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e2370c1b17bfdf103072ff33bf42c4c77706550
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567742"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975205"
 ---
 # <a name="dim-statement-visual-basic"></a>Instrucción Dim (Visual Basic)
 Declara y asigna espacio de almacenamiento para una o más variables.  
@@ -299,19 +299,19 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se declara las variables utilizando la `Dim` instrucción con distintas opciones.  
   
- [!code-vb[VbVbalrStatements#141](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#141](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#141)]  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente enumeran los números primos entre 1 y 30. El ámbito de las variables locales se describe en los comentarios de código.  
   
- [!code-vb[VbVbalrStatements#142](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#142](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#142)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, la `speedValue` variable se declara en el nivel de clase. El `Private` palabra clave se usa para declarar la variable. La variable puede tener acceso a un procedimiento en el `Car` clase.  
   
- [!code-vb[VbVbalrStatements#144](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#144](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#144)]  
   
- [!code-vb[VbVbalrStatements#145](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]  
   
 ## <a name="see-also"></a>Vea también
 - [Const (instrucción)](../../../visual-basic/language-reference/statements/const-statement.md)

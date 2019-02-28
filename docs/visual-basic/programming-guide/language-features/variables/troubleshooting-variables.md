@@ -5,12 +5,12 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: a8fdf11887d9ed7a52ac0d5f1abc81dcbb7932a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b03dcba7675793070c54bdadaf6ec418f8896b7d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618914"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965715"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Solucionar problemas de variables en Visual Basic
 Esta página enumera algunos problemas comunes que pueden producirse al trabajar con variables en Visual Basic.  
@@ -24,7 +24,7 @@ Esta página enumera algunos problemas comunes que pueden producirse al trabajar
   
  Si [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) establece la comprobación de tipos como `On`, una variable de objeto solo puede tener acceso a los métodos y propiedades de la clase con la que se ha declarado. Esto se ilustra en el siguiente ejemplo:  
 
- [!code-vb[VbVbalrVariables#2](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/troubleshooting-variables_1.vb)]  
+ [!code-vb[VbVbalrVariables#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#2)]  
   
  En este ejemplo, `p` puede usar solo los miembros de la propia clase <xref:System.Object> , que no incluyen la propiedad `Left` . Por otro lado, `q` se ha declarado con el tipo <xref:System.Windows.Forms.Label>, así que puede usar todos los métodos y propiedades de la clase <xref:System.Windows.Forms.Label> en el espacio de nombres <xref:System.Windows.Forms> .  
   

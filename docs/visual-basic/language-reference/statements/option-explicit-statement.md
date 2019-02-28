@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: a52900f36ee20e827518598a97c7b7f867bd0d43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfedda6dba7f21efa8e808e85869e6f96710e11b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586831"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965883"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit (Instrucción, Visual Basic)
 Fuerza la declaración explícita de todas las variables en un archivo o permite que las declaraciones implícitas de variables.  
@@ -62,9 +62,9 @@ Option Explicit { On | Off }
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `Option Explicit` instrucción para exigir la declaración explícita de todas las variables. Cualquier intento de usar una variable no declarada produce un error en tiempo de compilación.  
   
- [!code-vb[VbVbalrStatements#47](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#47)]  
   
- [!code-vb[VbVbalrStatements#48](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#48)]  
   
 ## <a name="see-also"></a>Vea también
 - [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)

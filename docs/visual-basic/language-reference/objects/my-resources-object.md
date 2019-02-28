@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: 2bd120c11e42648d1ca0304bbf9338f1cf569c48
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 758d3334fd9d3b01e088246cf2fe28c5b03576d6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065874"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973735"
 ---
 # <a name="myresources-object"></a>My.Resources (Objeto)
 Proporciona propiedades y clases para tener acceso a recursos de la aplicación.  
@@ -53,29 +53,29 @@ Proporciona propiedades y clases para tener acceso a recursos de la aplicación.
 ## <a name="example"></a>Ejemplo  
  Este ejemplo establece el título de un formulario en el recurso de cadena denominado `Form1Title` en el archivo de recursos de la aplicación. Para que funcione el ejemplo, la aplicación debe tener una cadena denominada `Form1Title` en su archivo de recursos.  
   
- [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
+ [!code-vb[VbVbalrMyResources#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#1)]  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo establece el icono del formulario en el icono denominado `Form1Icon` que se almacena en el archivo de recursos de la aplicación. Para que funcione el ejemplo, la aplicación debe tener un icono denominado `Form1Icon` en su archivo de recursos.  
   
- [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_2.vb)]  
+ [!code-vb[VbVbalrMyResources#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#2)]  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo establece la imagen de fondo de un formulario en el recurso de imagen denominado `Form1Background`, que se encuentra en el archivo de recursos de la aplicación. Para que funcione este ejemplo, la aplicación debe tener un recurso de imagen denominado `Form1Background` en su archivo de recursos.  
   
- [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_3.vb)]  
+ [!code-vb[VbVbalrMyResources#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo reproduce el sonido que se almacena como un recurso de sonido denominado `Form1Greeting` en el archivo de recursos de la aplicación. Para que funcione el ejemplo, la aplicación debe tener un recurso de sonido denominado `Form1Greeting` en su archivo de recursos. El `My.Computer.Audio.Play` método solo está disponible para las aplicaciones de Windows Forms.  
   
- [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_4.vb)]  
+ [!code-vb[VbVbalrMyResources#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#4)]  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo recupera la versión de la referencia cultural de francés de un recurso de cadena de la aplicación. El recurso se denomina `Message`. Para cambiar la referencia cultural que la `My.Resources` objeto, el ejemplo utiliza <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
   
  Para que funcione este ejemplo, la aplicación debe tener una cadena denominada `Message` en su recurso de archivo y la aplicación deben tener la versión de la referencia cultural de francés de ese archivo de recursos, Resources.fr-FR.resx. Si la aplicación no tiene la versión de la referencia cultural de francés del archivo de recursos, la `My.Resource` objeto recupera el recurso desde el archivo de recursos de la referencia cultural predeterminada.  
   
- [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
+ [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
   
 ## <a name="see-also"></a>Vea también
 - [Administrar los recursos de la aplicación (.NET)](/visualstudio/ide/managing-application-resources-dotnet)

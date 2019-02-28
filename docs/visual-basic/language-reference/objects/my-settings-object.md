@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 293e7cd6449b8a35b5e42b4823a4412e0d6a3f14
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d6d56e4a1eddcb687fe042568509ba489aa8bb3
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628167"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973475"
 ---
 # <a name="mysettings-object"></a>My.Settings (Objeto)
 Proporciona propiedades y métodos para acceder a la configuración de la aplicación.  
@@ -48,21 +48,21 @@ Proporciona propiedades y métodos para acceder a la configuración de la aplica
 |En|Vea|  
 |---|---|  
 |Leer la configuración de la aplicación|[Cómo: Leer la configuración de la aplicación en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
-|Cambiar una configuración de usuario|[Cómo: Cambiar la configuración de usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|Cambiar una configuración de usuario|[Cómo: Cambiar la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
 |Conservar la configuración del usuario|[Cómo: Conservar la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Crear una cuadrícula de propiedades de configuración de usuario|[Cómo: Crear cuadrículas de propiedades para la configuración de usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|Crear una cuadrícula de propiedades de configuración de usuario|[Cómo: Crear cuadrículas de propiedades para la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra el valor de la configuración `Nickname`.  
   
- [!code-vb[VbVbalrMyResources#14](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-settings-object_1.vb)]  
+ [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
   
  Para que este ejemplo funcione, la aplicación debe tener una configuración `Nickname` de tipo `String`.  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Configuration.ApplicationSettingsBase>
 - [Cómo: Leer la configuración de la aplicación en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
-- [Cómo: Cambiar la configuración de usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [Cómo: Cambiar la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
 - [Cómo: Conservar la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
-- [Cómo: Crear cuadrículas de propiedades para la configuración de usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [Cómo: Crear cuadrículas de propiedades para la configuración del usuario en Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
 - [Administrar la configuración de la aplicación (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

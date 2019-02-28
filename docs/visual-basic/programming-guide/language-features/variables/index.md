@@ -2,15 +2,9 @@
 title: Variables en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-- variables [Visual Basic]
-- values [Visual Basic], storing
+  - 'variables [Visual Basic]'
+  - 'values [Visual Basic], storing'
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
-ms.openlocfilehash: 50b82285d31d40adfce07a61cd7902cdb2809a52
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672232"
 ---
 # <a name="variables-in-visual-basic"></a>Variables en Visual Basic
 A menudo tendrá que almacenar valores al realizar cálculos con Visual Basic. Por ejemplo, tal vez le interese calcular varios valores, compararlos y realizar diversas operaciones con ellos, según el resultado de la comparación. Para poder compararlos, debe conservar los valores.  
@@ -23,7 +17,7 @@ A menudo tendrá que almacenar valores al realizar cálculos con Visual Basic. P
 ## <a name="assigning-values"></a>Asignar valores  
  Para realizar cálculos y asignar el resultado a una variable debe usar instrucciones de asignación, como se muestra en el ejemplo siguiente.  
   
- [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrVariables#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  El signo igual (`=`) de este ejemplo es un operador de asignación, no un operador de igualdad. El valor se asigna a la variable `applesSold`.  

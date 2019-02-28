@@ -1,17 +1,17 @@
 ---
-title: Procedimiento Crear literales XML (Visual Basic)
+title: Filtrar Crear literales XML (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: 0e74dccac0b3528fe73d091670a3368328baeaab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c79b607f9ce5c779539b7700feafb7d4e3d67d24
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560599"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974255"
 ---
-# <a name="how-to-create-xml-literals-visual-basic"></a>Procedimiento Crear literales XML (Visual Basic)
+# <a name="how-to-create-xml-literals-visual-basic"></a>Filtrar Crear literales XML (Visual Basic)
 Puede crear un documento, fragmento o elemento XML directamente en el código mediante el uso de un literal XML. Los ejemplos de este tema muestran cómo crear un elemento XML que tiene tres elementos secundarios y cómo crear un documento XML.  
   
  También puede usar el [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API para crear [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objetos. Para obtener más información, consulta <xref:System.Xml.Linq.XElement>.  
@@ -20,7 +20,7 @@ Puede crear un documento, fragmento o elemento XML directamente en el código me
   
 -   Crear el XML en línea mediante la sintaxis de literales XML, que es el mismo que la sintaxis XML.  
   
-     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
+     [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
      Ejecute el código. El resultado de este código es:  
   
@@ -38,7 +38,7 @@ Puede crear un documento, fragmento o elemento XML directamente en el código me
   
 -   Crear el documento XML en línea. El código siguiente crea un documento XML que tiene la sintaxis literal, una declaración XML, una instrucción de procesamiento, un comentario y un elemento que contiene otro elemento.  
   
-     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
+     [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
      Ejecute el código. El resultado de este código es:  
   

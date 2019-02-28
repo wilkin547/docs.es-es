@@ -1,17 +1,17 @@
 ---
-title: Procedimiento Determinar si dos objetos son idénticos (Visual Basic)
+title: Filtrar Determinar si dos objetos son idénticos (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - testing [Visual Basic], objects
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: 62d73b6c3d706d9990be7783f0f3461fc0783d9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1fdc5f69b8552ee10131c7408673457fffe16ae
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512975"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976855"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Procedimiento Determinar si dos objetos son idénticos (Visual Basic)
 En Visual Basic, dos referencias de variables se consideran idénticas si sus punteros son iguales, es decir, si ambas variables señalan a la misma instancia de clase en la memoria. Por ejemplo, en una aplicación Windows Forms, es posible que desee realizar una comparación para determinar si la instancia actual (`Me`) es el mismo que una instancia concreta, como `Form2`.  
@@ -42,7 +42,7 @@ En Visual Basic, dos referencias de variables se consideran idénticas si sus pu
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se prueba pares de `Object` variables para ver si señalan a la misma instancia de clase.  
   
- [!code-vb[VbVbalrKeywords#14](../../../../visual-basic/language-reference/codesnippet/VisualBasic/how-to-determine-whether-two-objects-are-identical_1.vb)]  
+ [!code-vb[VbVbalrKeywords#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#14)]  
   
  El ejemplo anterior muestra el siguiente resultado.  
   

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 5018aebb0401ce5a1c46ecf04a7c65ca676271e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 947507cb813437facc2b2343ff6f1a5d50f4dd98
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565909"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971642"
 ---
 # <a name="function-statement-visual-basic"></a>Function (Instrucción, Visual Basic)
 Declara el nombre, parámetros y código que definen un `Function` procedimiento.  
@@ -193,11 +193,11 @@ End Function
   
  El `Return` instrucción asigna el valor devuelto al mismo tiempo y sale de la función, como se muestra en el ejemplo siguiente.  
   
- [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]  
   
  En el ejemplo siguiente se asigna el valor devuelto para el nombre de función `myFunction` y, a continuación, usa el `Exit Function` instrucción para devolver.  
   
- [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]  
   
  El `Exit Function` y `Return` instrucciones provocan una inmediata salida desde un `Function` procedimiento. Cualquier número de `Exit Function` y `Return` instrucciones pueden aparecer en cualquier lugar en el procedimiento, y puede mezclar `Exit Function` y `Return` instrucciones.  
   
@@ -240,19 +240,19 @@ End Function
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `Function` instrucción para declarar el nombre, parámetros y código que forman el cuerpo de un `Function` procedimiento. El `ParamArray` modificador permite que la función que acepte un número variable de argumentos.  
   
- [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente invoca la función declarada en el ejemplo anterior.  
   
- [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, `DelayAsync` es un `Async` `Function` que tiene un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>. `DelayAsync` tiene una instrucción `Return` que devuelve un entero. Por lo tanto, la declaración de función de `DelayAsync` debe tener un tipo de valor devuelto de `Task(Of Integer)`. Dado que el tipo de valor devuelto es `Task(Of Integer)`, la evaluación de la `Await` expresión en `DoSomethingAsync` genera un entero. Esto se muestra en esta instrucción: `Dim result As Integer = Await delayTask`.  
   
  El `startButton_Click` procedimiento es un ejemplo de un `Async Sub` procedimiento. Dado que `DoSomethingAsync` es un `Async` (función), la tarea de la llamada a `DoSomethingAsync` debe esperar, como se muestra en la siguiente instrucción: `Await DoSomethingAsync()`. El `startButton_Click` `Sub` procedimiento debe definirse con la `Async` modificador porque tiene un `Await` expresión.  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
+ [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
 - [Sub (instrucción)](sub-statement.md)

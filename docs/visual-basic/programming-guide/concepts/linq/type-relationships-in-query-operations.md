@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 519b10cfa374290a2d924cce2bd3e39683ca080f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d72a55cadce287979fad25396327680e1f0e0aaf
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731132"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979104"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relaciones entre tipos en operaciones de consulta (Visual Basic)
 Las variables utilizadas en [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] consulta operaciones están fuertemente tipadas y deben ser compatibles entre sí. Establecimiento inflexible de tipos se usa en el origen de datos, en la propia consulta y en la ejecución de consultas. La ilustración siguiente identifica los términos usados para describir un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta. Para obtener más información acerca de los elementos de una consulta, vea [operaciones básicas de consulta (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -28,7 +28,7 @@ Partes de una consulta LINQ
   
  Visual Basic hace establecimiento inflexible de tipos adecuada implementando la inferencia de tipo local, también conocido como *tipos implícitos*. Que se usa la característica en el ejemplo anterior, y verá que se utiliza en el [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ejemplos y documentación. En Visual Basic, la inferencia de tipos local se logra simplemente mediante una `Dim` instrucción sin una `As` cláusula. En el ejemplo siguiente, `city` está fuertemente tipada como una cadena.  
   
- [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
+ [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  Inferencia de tipos local solo funciona cuando `Option Infer` está establecido en `On`. Para obtener más información, consulte [instrucción Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
@@ -37,16 +37,16 @@ Partes de una consulta LINQ
   
  Es posible que deba especificar un tipo explícito para una variable de rango que no coincide con el tipo devuelto desde el origen de datos. Puede especificar el tipo de la variable de rango mediante un `As` cláusula. Sin embargo, esto produce un error si la conversión es un [conversión de restricción](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) y `Option Strict` está establecido en `On`. Por lo tanto, se recomienda que realice la conversión en los valores recuperados del origen de datos. Puede convertir los valores del origen de datos para el tipo de variable de rango explícito mediante el <xref:System.Linq.Enumerable.Cast%2A> método. También puede convertir los valores seleccionados en el `Select` cláusula para un tipo explícito que sea diferente del tipo de la variable de rango. Estos puntos se ilustran en el código siguiente.  
   
- [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
+ [!code-vb[VbLINQTypeRels#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#4)]  
   
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Consultas que devuelven elementos completos de los datos de origen  
  El ejemplo siguiente se muestra un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operación que devuelve una secuencia de elementos seleccionados del origen de datos de consulta. El origen, `names`, contiene una matriz de cadenas, y el resultado de la consulta es una secuencia que contiene las cadenas que comienzan por la letra M.  
   
- [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
+ [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]  
   
  Esto es equivalente al código siguiente, pero es mucho más corto y más fáciles de escribir. Dependencia de inferencia de tipos local en las consultas es el estilo preferido en Visual Basic.  
   
- [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
+ [!code-vb[VbLINQTypeRels#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#3)]  
   
  Las siguientes relaciones existen en ambos ejemplos de código anteriores, si se determinan los tipos de forma implícita o explícita.  
   

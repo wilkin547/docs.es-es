@@ -9,12 +9,12 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: 069514b4beed7f6fbc1d53e0b2fa5d9c6af8b1af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a359f4bf44887e7c7bc5422d485988b24f45600
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665960"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976478"
 ---
 # <a name="-netcf"></a>-netcf
 Establece el compilador con destino en [!INCLUDE[Compact](~/includes/compact-md.md)].  
@@ -37,11 +37,11 @@ Establece el compilador con destino en [!INCLUDE[Compact](~/includes/compact-md.
   
 -   El [final \<palabra clave > instrucción](../../../visual-basic/language-reference/statements/end-keyword-statement.md) palabra clave, que finaliza la ejecución de un programa, está deshabilitado. El programa siguiente compila y se ejecuta sin `-netcf` pero se produce un error en tiempo de compilación con `-netcf`.  
   
-     [!code-vb[VbVbalrCompiler#34](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_1.vb)]  
+     [!code-vb[VbVbalrCompiler#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/netcf.vb#34)]  
   
 -   Enlace en tiempo de ejecución, en todos los formularios, está deshabilitado. Se generan errores en tiempo de compilación cuando se producen los escenarios de enlace reconocidos. El programa siguiente compila y se ejecuta sin `-netcf` pero se produce un error en tiempo de compilación con `-netcf`.  
   
-     [!code-vb[VbVbalrCompiler#35](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_2.vb)]  
+     [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]  
   
 -   El [automática](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), y [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) modificadores están deshabilitados. La sintaxis de la [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) también se modifica la instrucción en `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. El código siguiente muestra el efecto de `-netcf` en una compilación.  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 42f85ed98f399c96f89879129b085f25ab117096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731743"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972569"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Argumentos y parámetros de procedimiento (Visual Basic)
 En la mayoría de los casos, un procedimiento necesita cierta información sobre las circunstancias en que se ha llamado. Un procedimiento que realiza tareas repetitivas o compartidas utiliza información diferente para cada llamada. Esta información se compone de variables, constantes y expresiones que se pasan al procedimiento cuando se llama al método.  
@@ -44,7 +44,7 @@ Pasar un argumento a un parámetro
 ## <a name="parameter-data-type"></a>Tipo de datos de parámetro  
  Definir un tipo de datos para un parámetro mediante el `As` cláusula en su declaración. Por ejemplo, la función siguiente acepta una cadena y un entero.  
   
- [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
+ [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
   
  Si el modificador de comprobación de tipo ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) es `Off,` el `As` cláusula es opcional, salvo que si lo utiliza un parámetro, todos los parámetros deben usarla. Si la comprobación de tipos es `On`, el `As` cláusula es obligatoria para todos los parámetros de procedimiento.  
   

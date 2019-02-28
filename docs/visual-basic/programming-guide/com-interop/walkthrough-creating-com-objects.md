@@ -8,12 +8,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: caf0a071d65746f1027052e648ade538d62dc4bb
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 6b079db3ccc07494bdfdf7dba49c27fe14dca4e5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245693"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973943"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Tutorial: Crear objetos COM con Visual Basic
 Al crear nuevas aplicaciones o componentes, es mejor crear ensamblados de .NET Framework. Sin embargo, Visual Basic también resulta más fácil exponer un componente de .NET Framework a COM. Esto le permite proporcionar nuevos componentes para conjuntos de aplicaciones anteriores que requieren componentes COM. Este tutorial muestra cómo usar Visual Basic para exponer [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] objetos como objetos COM, con y sin la plantilla de clase COM.  
@@ -48,7 +48,7 @@ Al crear nuevas aplicaciones o componentes, es mejor crear ensamblados de .NET F
   
 2.  En el **nuevo proyecto** cuadro de diálogo en el **tipos de proyecto** campo, compruebe que Windows está seleccionada. Seleccione **biblioteca de clases** desde el **plantillas** lista y, a continuación, haga clic en **Aceptar**. Se muestra el nuevo proyecto.  
   
-3.  En **el Explorador de soluciones**, haga clic en el proyecto y, a continuación, haga clic en **propiedades**. El **Diseñador de proyectos** se muestra.  
+3.  En el **Explorador de soluciones**, haga clic con el botón derecho del mouse en su proyecto y después seleccione **Propiedades**. El **Diseñador de proyectos** se muestra.  
   
 4.  Haga clic en la pestaña **Compilar**.  
   
@@ -62,38 +62,38 @@ Al crear nuevas aplicaciones o componentes, es mejor crear ensamblados de .NET F
   
 3.  Agregue las siguientes constantes a `ComClass1`. Almacenará las constantes de identificador único global (GUID) que los objetos COM se deben tener.  
   
-     [!code-vb[VbVbalrInterop#2](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_1.vb)]  
+     [!code-vb[VbVbalrInterop#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#2)]  
   
 4.  En el menú **Herramientas**, haga clic en **Crear GUID**. En el cuadro de diálogo **Crear GUID**, haga clic en **Formato de Registro** y luego en **Copiar**. Haga clic en **Salir**.  
   
 5.  Reemplace la cadena vacía para el `ClassId` con el GUID, llaves quitando el interlineado iniciales y finales. Por ejemplo, si el GUID proporcionado por Guidgen es `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` , a continuación, el código debería aparecer como sigue.  
   
-     [!code-vb[VbVbalrInterop#3](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_2.vb)]  
+     [!code-vb[VbVbalrInterop#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#3)]  
   
 6.  Repita los pasos anteriores para el `InterfaceId` y `EventsId` constantes, como en el ejemplo siguiente.  
   
-     [!code-vb[VbVbalrInterop#4](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_3.vb)]  
+     [!code-vb[VbVbalrInterop#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#4)]  
   
     > [!NOTE]
     >  Asegúrese de que los GUID son nuevos y únicos; en caso contrario, el componente COM podría entrar en conflicto con otros componentes COM.  
   
 7.  Agregar el `ComClass` atributo `ComClass1`, especificando el GUID para el Id. de clase, el Id. de interfaz y el identificador de eventos en el ejemplo siguiente:  
   
-     [!code-vb[VbVbalrInterop#5](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_4.vb)]  
+     [!code-vb[VbVbalrInterop#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#5)]  
   
 8.  Clases COM deben tener una sin parámetros `Public Sub New()` constructor o la clase no se registrará correctamente. Agregue un constructor sin parámetros a la clase:  
   
-     [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_5.vb)]  
+     [!code-vb[VbVbalrInterop#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#6)]  
   
 9. Agregue propiedades, métodos y eventos a la clase, finalizando con un `End Class` instrucción. Seleccione **compilar solución** desde el **compilar** menú. Visual Basic compila el ensamblado y registra el objeto COM con el sistema operativo.  
   
     > [!NOTE]
     >  Los objetos COM que genere con Visual Basic no pueden usarse por otras aplicaciones de Visual Basic, porque no son objetos COM es true. Intenta agregar referencias a estos objetos COM, producirá un error. Para obtener más información, consulte [interoperabilidad COM en aplicaciones de .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.ComClassAttribute>  
- [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Tutorial: Implementación de la herencia mediante objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [#Region (directiva)](../../../visual-basic/language-reference/directives/region-directive.md)  
- [Interoperabilidad COM en aplicaciones .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- [Solución de problemas de interoperabilidad](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+## <a name="see-also"></a>Vea también
+- <xref:Microsoft.VisualBasic.ComClassAttribute>
+- [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Tutorial: Implementar la herencia mediante objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [#Region (directiva)](../../../visual-basic/language-reference/directives/region-directive.md)
+- [Interoperabilidad COM en aplicaciones .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
+- [Solución de problemas de interoperabilidad](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
