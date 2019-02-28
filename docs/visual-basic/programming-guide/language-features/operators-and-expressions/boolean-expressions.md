@@ -14,22 +14,22 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: a86df2734d315e5fed0784b0394bb305b15562a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562757"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965545"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Expresiones booleanas (Visual Basic)
 Un *expresión booleana* es una expresión que se evalúa como un valor de la [tipo de datos Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` o `False`. `Boolean` las expresiones pueden tener varias formas. La más simple es la comparación directa del valor de un `Boolean` variable a un `Boolean` literal, como se muestra en el ejemplo siguiente.  
   
- [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
+ [!code-vb[VbVbalrOperators#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#87)]  
   
 ## <a name="two-meanings-of-the--operator"></a>Dos significados de los = (operador)  
  Tenga en cuenta que la instrucción de asignación `newCustomer = True` tiene el mismo aspecto que la expresión en el ejemplo anterior, pero realiza una función diferente y se usa de forma diferente. En el ejemplo anterior, la expresión `newCustomer = True` representa un valor booleano y el `=` inicio de sesión se interpreta como un operador de comparación. En una instrucción independiente, el `=` se interpreta como un operador de asignación de inicio de sesión y asigna el valor de la derecha en la variable de la izquierda. Esto se ilustra en el siguiente ejemplo:  
   
- [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_2.vb)]  
+ [!code-vb[VbVbalrOperators#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#88)]  
   
  Para obtener más información, consulte [comparaciones de valores](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) y [instrucciones](../../../../visual-basic/language-reference/statements/index.md).  
   
@@ -50,7 +50,7 @@ Un *expresión booleana* es una expresión que se evalúa como un valor de la [t
 ## <a name="short-circuiting-operators"></a>Operadores de evaluación cortocircuitada  
  Los operadores lógicos `AndAlso` y `OrElse` exhiben un comportamiento conocido como *cortocircuitar*. Un operador de cortocircuito primero evalúa el operando izquierdo. Si el operando izquierdo determina el valor de la expresión completa, la ejecución del programa continúa sin evaluar la expresión derecha. Esto se ilustra en el siguiente ejemplo:  
   
- [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_3.vb)]  
+ [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   
  En el ejemplo anterior, el operador evalúa la expresión de la izquierda, `45 < 12`. Dado que la expresión izquierda se evalúa como `False`, toda la expresión lógica debe evaluarse como `False`. Ejecución del programa, por tanto, omite la ejecución del código dentro de la `If` bloque sin evaluar la expresión de la derecha, `testFunction(3)`. En este ejemplo no llama a `testFunction()` porque la expresión izquierda falsea toda la expresión.  
   
@@ -59,7 +59,7 @@ Un *expresión booleana* es una expresión que se evalúa como un valor de la [t
 ### <a name="comparison-with-non-short-circuiting-operators"></a>Comparación con los operadores no cortocircuitan  
  Por el contrario, se evalúan ambos lados del operador lógico cuando los operadores lógicos `And` y `Or` se usan. Esto se ilustra en el siguiente ejemplo:  
   
- [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_4.vb)]  
+ [!code-vb[VbVbalrOperators#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#90)]  
   
  El ejemplo anterior se llama `testFunction()` , aunque la expresión izquierda se evalúa como `False`.  
   

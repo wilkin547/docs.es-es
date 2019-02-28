@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: dd50435b7cbb5d3d25c0e30618e8733b4eddfe91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3939d05b74dc6b9d79cae8307f5c5c736a1917d5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655080"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968275"
 ---
 # <a name="type-list-visual-basic"></a>Lista de tipos (Visual Basic)
 Especifica el *parámetros de tipo* para un *genérico* elemento de programación. Varios parámetros están separados por comas. Siguiente es la sintaxis para un parámetro de tipo.  
@@ -80,17 +80,17 @@ Especifica el *parámetros de tipo* para un *genérico* elemento de programació
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra un esquema de definición de una clase de diccionario genérico, incluida una función de esqueleto para agregar una nueva entrada al diccionario.  
   
- [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Ejemplo  
  Dado que `dictionary` es genérico, el código que lo usa puede crear una variedad de objetos, cada uno tiene la misma funcionalidad pero que actúan en un tipo de datos diferente. El ejemplo siguiente muestra una línea de código que crea un `dictionary` objeto con `String` entradas y `Integer` claves.  
   
- [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
+ [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra la definición de esqueleto equivalente generada por el ejemplo anterior.  
   
- [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
+ [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Vea también
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)

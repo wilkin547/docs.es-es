@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 5de13fc4da371220f46a107ca9b620e1313e75d4
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 491819c52c5bb1e7767e41fce7e56d8f95d10286
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307531"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981574"
 ---
 # <a name="introducing-xml-serialization"></a>Introducir la serialización XML
 
@@ -28,7 +28,8 @@ La serialización es el proceso de convertir un objeto a un formulario que pueda
 > [!NOTE]
 > La serialización XML no convierte los métodos, indizadores, campos privados ni propiedades (excepto las colecciones de solo lectura). Para serializar todos los campos y propiedades, tanto públicos como privados, de un objeto, utilice el <xref:System.Runtime.Serialization.DataContractSerializer> en vez de la serialización XML.
 
- La clase central en serialización XML es la clase <xref:System.Xml.Serialization.XmlSerializer>, y los métodos más importantes de esta clase son **Serialize** y **Deserialize**. <xref:System.Xml.Serialization.XmlSerializer> crea los archivos C# y los compila en archivos .dll para realizar esta serialización. En .NET Framework 2.0, la [herramienta Generador de serializador XML (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) está diseñada para generar de antemano estos ensamblados de serialización para implementarlos con la aplicación y mejorar el rendimiento de inicio. La secuencia XML generada por el **XmlSerializer** es compatible con el World Wide Web Consortium (W3C) [lenguaje de definición de esquemas XML (XSD) 1.0 recomendación](https://www.w3.org/TR/xslt). Además, los tipos de datos generados son compatibles con el documento titulado "esquema XML parte 2: Tipos de datos."
+ La clase central en serialización XML es la clase <xref:System.Xml.Serialization.XmlSerializer>, y los métodos más importantes de esta clase son **Serialize** y **Deserialize**. 
+  <xref:System.Xml.Serialization.XmlSerializer> crea los archivos C# y los compila en archivos .dll para realizar esta serialización. En .NET Framework 2.0, la [herramienta Generador de serializador XML (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) está diseñada para generar de antemano estos ensamblados de serialización para implementarlos con la aplicación y mejorar el rendimiento de inicio. La secuencia XML generada por el **XmlSerializer** es compatible con el World Wide Web Consortium (W3C) [lenguaje de definición de esquemas XML (XSD) 1.0 recomendación](https://www.w3.org/TR/xslt). Además, los tipos de datos generados son compatibles con el documento titulado "esquema XML parte 2: Tipos de datos."
 
  Los datos de los objetos se describen mediante construcciones de lenguaje de programación, como clases, campos, propiedades, tipos primitivos, matrices e incluso XML insertado en forma de objetos **XmlElement** o **XmlAttribute**. Existe la opción de crear clases propias, anotadas con atributos, o de utilizar la herramienta de definición de esquema XML para generar las clases de acuerdo con un documento de esquema XML existente.
 
@@ -38,7 +39,7 @@ La serialización es el proceso de convertir un objeto a un formulario que pueda
 
  La clase **XmlSerializer** puede serializar adicionalmente un objeto y generar una secuencia XML SOAP codificada. El XML generado cumple las normas de la sección 5 del documento de World Wide Web Consortium con título "Protocolo simple de acceso a objetos (SOAP) 1.1" (SOAP). Para obtener más información sobre este proceso, consulte [Cómo: Serializar un objeto como un Stream XML codificados en SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md). Para consultar una tabla de los atributos que controlan el XML generado, vea [Attributes That Control Encoded SOAP Serialization](attributes-that-control-encoded-soap-serialization.md) (Atributos que controlan la serialización SOAP codificada).
 
- La clase **XmlSerializer** genera los mensajes SOAP creados por servicios Web XML y pasados a estos. Para controlar los mensajes SOAP, puede aplicar los atributos a las clases, los valores devueltos, parámetros y campos situados en un archivo de servicio Web XML (.asmx). Puede utilizar ambos, los atributos mostrados en "atributos que controlan la serialización XML" y los “atributos que controlan la serialización de SOAP codificada” porque un servicio Web XML puede utilizar o el estilo SOAP literal o codificado. Para obtener más información sobre cómo usar atributos para controlar el XML generado por un servicio Web XML, vea [XML Serialization with XML Web Services](xml-serialization-with-xml-web-services.md) (Serialización XML con servicios Web XML). Para obtener más información sobre SOAP y servicios Web XML vea [Customizing SOAP Messages](https://msdn.microsoft.com/subscriptions/index/dkwy2d72\(v=vs.71\).aspx) (Personalizar mensajes SOAP).
+ La clase **XmlSerializer** genera los mensajes SOAP creados por servicios Web XML y pasados a estos. Para controlar los mensajes SOAP, puede aplicar los atributos a las clases, los valores devueltos, parámetros y campos situados en un archivo de servicio Web XML (.asmx). Puede utilizar ambos, los atributos mostrados en "atributos que controlan la serialización XML" y los “atributos que controlan la serialización de SOAP codificada” porque un servicio Web XML puede utilizar o el estilo SOAP literal o codificado. Para obtener más información sobre cómo usar atributos para controlar el XML generado por un servicio Web XML, vea [XML Serialization with XML Web Services](xml-serialization-with-xml-web-services.md) (Serialización XML con servicios Web XML). Para obtener más información acerca de los servicios Web XML y SOAP, vea [personalizar el formato de mensaje SOAP](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)).
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>Consideraciones de seguridad para aplicaciones XmlSerializer
 

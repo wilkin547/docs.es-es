@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 9da2fc05824fa7e412c1c4802852fd00ba2709e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44b0a2513f504c8fecec74868130463581b597af
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658200"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981704"
 ---
 # <a name="operator-statement"></a>Operator Statement
 Declara el símbolo del operador, los operandos y el código que definen un procedimiento de operador en una clase o estructura.  
@@ -168,7 +168,7 @@ End Operator
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo de código utiliza el `Operator` instrucción para definir el esquema de una estructura que incluye procedimientos de operador para el `And`, `Or`, `IsFalse`, y `IsTrue` operadores. `And` y `Or` cada toman dos operandos de tipo `abc` y tipo de valor devuelto `abc`. `IsFalse` y `IsTrue` tomar un único operando de tipo `abc` y devolver `Boolean`. Estas definiciones de permitir que el código que realiza la llamada usar `And`, `AndAlso`, `Or`, y `OrElse` con operandos de tipo `abc`.  
   
- [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]  
   
 ## <a name="see-also"></a>Vea también
 - [IsFalse (operador)](../../../visual-basic/language-reference/operators/isfalse-operator.md)

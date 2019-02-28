@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: 0503292dca81ef7b249b391f54c0aba2bba2cb10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a30b037b5a918f9b760ff0ab5b704dceb280d33f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524187"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980222"
 ---
 # <a name="module-statement"></a>Module (Instrucción)
 Declara el nombre de un módulo e introduce la definición de las variables, propiedades, eventos y procedimientos que incluye el módulo.  
@@ -94,7 +94,7 @@ End Module
 -   **Calificación.** Puede tener varios módulos en un proyecto y puede declarar a miembros con el mismo nombre en dos o más módulos. Sin embargo, debe calificar cualquier referencia a este miembro con el nombre de módulo correspondiente si la referencia es de fuera de ese módulo. Para obtener más información, consulta [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="example"></a>Ejemplo  
- [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#69)]  
   
 ## <a name="see-also"></a>Vea también
 - [Class (instrucción)](../../../visual-basic/language-reference/statements/class-statement.md)

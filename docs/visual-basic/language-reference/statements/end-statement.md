@@ -14,12 +14,12 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: a2c211e5ebfd00a639644243312cbe25f71f4cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b189449044a48432a6cf05b75f39581be111495
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593711"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979541"
 ---
 # <a name="end-statement"></a>End (Instrucción)
 Finaliza la ejecución inmediatamente.  
@@ -50,7 +50,7 @@ End
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `End` instrucción para finalizar la ejecución de código si el usuario lo solicita.  
   
- [!code-vb[VbVersHelp60Controls#64](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/end-statement_1.vb)]  
+ [!code-vb[VbVersHelp60Controls#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVersHelp60Controls/VB/Form1.vb#64)]  
   
 ## <a name="smart-device-developer-notes"></a>Notas de desarrollador de dispositivos inteligentes  
  No se admite esta instrucción.  

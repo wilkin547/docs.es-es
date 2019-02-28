@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd85ac8b98d8613924a4acd73ac74a69f3d9b41d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e996a299de7b365a1513d5b1fb7ca0e758f6005b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535351"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966065"
 ---
 # <a name="get-function"></a>Get (función)
 Recupera el valor de propiedad especificado si existe.
@@ -64,8 +64,8 @@ HRESULT Get (
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | La propiedad es una propiedad estándar del sistema. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Para una clase: La propiedad se hereda de la clase primaria. </br> Para una instancia: La propiedad, mientras se hereda de la clase primaria, no se ha modificado por la instancia.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Para una clase: La propiedad pertenece a la clase derivada. </br> Para una instancia: Se modifica la propiedad por la instancia; es decir, se proporcionó un valor o un calificador se ha agregado o modificado. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Para una clase: La propiedad se hereda de la clase primaria. <br> Para una instancia: La propiedad, mientras se hereda de la clase primaria, no se ha modificado por la instancia.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Para una clase: La propiedad pertenece a la clase derivada. <br> Para una instancia: Se modifica la propiedad por la instancia; es decir, se proporcionó un valor o un calificador se ha agregado o modificado. |
 
 ## <a name="return-value"></a>Valor devuelto
 

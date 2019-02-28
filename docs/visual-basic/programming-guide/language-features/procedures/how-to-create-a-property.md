@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: cc1222feed338f88142c4a6a7d6520fa458b5c11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4afcd57a9133515cecc72da856f67e4e3d5ff717
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734044"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970966"
 ---
-# <a name="how-to-create-a-property-visual-basic"></a>Procedimiento Crear una propiedad (Visual Basic)
+# <a name="how-to-create-a-property-visual-basic"></a>Filtrar Crear una propiedad (Visual Basic)
 Incluya una definición de propiedad entre un `Property` instrucción y un `End Property` instrucción. Dentro de esta definición se define un `Get` procedimiento, una `Set` procedimiento, o ambos. Código de la de la propiedad se encuentra dentro de estos procedimientos.  
   
  El `Get` procedimiento recupera el valor de propiedad y el `Set` procedimiento almacena un valor. Si desea que la propiedad para tener acceso de lectura y escritura, debe definir ambos procedimientos. Para una propiedad de solo lectura, definir solo `Get`, y para una propiedad de solo escritura, puede definir solo `Set`.  
@@ -54,11 +54,11 @@ Incluya una definición de propiedad entre un `Property` instrucción y un `End 
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente crea una propiedad de lectura/escritura que almacena un nombre completo como dos nombres constitutivos, el nombre y el apellido. Cuando se lee el código de llamada `fullName`, el `Get` procedimiento combina los dos nombres constituyentes y devuelve el nombre completo. Cuando el código de llamada asigna un nuevo nombre completo, el `Set` procedimiento intenta dividir en dos nombres constitutivos. Si no encuentra un espacio, almacena como el nombre.  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
  El ejemplo siguiente muestra las llamadas típicas a los procedimientos de propiedad de `fullName`. La primera llamada establece el valor de propiedad y la segunda llamada lo recupera.  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Vea también
 - [Procedimientos](./index.md)

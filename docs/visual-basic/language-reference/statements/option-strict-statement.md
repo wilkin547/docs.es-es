@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: e686b3e371b24f14637476f9a7fd5455f1b2b86c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1fce65b70c663ca56427122abb604d16fcd029d7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580803"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981548"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Restringe las conversiones de tipos de datos implícitos a conversiones de ampliación únicamente, no permite el enlace en tiempo de ejecución y no permite tipos implícitos que da como resultado un `Object` tipo.  
@@ -137,19 +137,19 @@ Option Strict { On | Off }
 ## <a name="example"></a>Ejemplo  
  Los ejemplos siguientes muestran errores de tiempo de compilación causados por las conversiones implícitas que las conversiones de restricción. Esta categoría de errores que se corresponde con el **conversión implícita** condición en la **página compilación**.  
   
- [!code-vb[VbVbalrStatements#161](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#161](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#161)]  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra un error en tiempo de compilación causado por el enlace en tiempo de ejecución. Esta categoría de errores que se corresponde con el **Late binding; llamada podría generar un error en tiempo de ejecución** condición en la **página compilación**.  
   
- [!code-vb[VbVbalrStatements#162](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#162](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#162)]  
   
 ## <a name="example"></a>Ejemplo  
  Los ejemplos siguientes muestran los errores causados por las variables que se declaran con un tipo implícito de `Object`. Esta categoría de errores que se corresponde con el **tipo implícito; se supone el objeto** condición en la **página compilación**.  
   
- [!code-vb[VbVbalrStatements#163](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#163](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#163)]  
   
- [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#164](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#164)]  
   
 ## <a name="see-also"></a>Vea también
 

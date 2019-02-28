@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo detectar y mitigar las vulnerabili
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066186"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974294"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de control de tiempo con descifrado simétrico modo CBC mediante el relleno
 
@@ -92,7 +92,7 @@ Se recomienda que las aplicaciones que no se puede cambiar su formato de mensaje
   - Además, esto no impide recuperación de texto simple en situaciones donde el atacante puede forzar el mismo texto no cifrado para cifrar varias veces con un desplazamiento de mensaje diferente.
 - Puerta de la evaluación de una llamada de descifrado para desalentar la señal de control de tiempo:
   - El cálculo del tiempo de espera debe tener un mínimo que supere la cantidad máxima de tiempo que tardaría la operación de descifrado para cualquier segmento de datos que contiene el relleno.
-  - Se deben realizar los cálculos de tiempo según la orientación en [al adquirir las marcas de tiempo de alta resolución](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx), no mediante <xref:System.Environment.TickCount?displayProperty=nameWithType> (sujeto a roll-over/desbordamiento) o restar dos marcas de tiempo del sistema (de acuerdo con el ajuste de NTP errores).
+  - Se deben realizar los cálculos de tiempo según la orientación en [al adquirir las marcas de tiempo de alta resolución](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps), no mediante <xref:System.Environment.TickCount?displayProperty=nameWithType> (sujeto a roll-over/desbordamiento) o restar dos marcas de tiempo del sistema (de acuerdo con el ajuste de NTP errores).
   - Los cálculos de tiempo deben favorecer la operación de descifrado, incluidas todas las excepciones posibles en administrar o aplicaciones de C++, no solo se rellena al final.
   - Si se realizó correctamente o no se ha determinado, debe devolver un error cuando expira la puerta de control de tiempo.
 - Los servicios que están realizando el descifrado no autenticada deben tener supervisión para detectar que una avalancha de mensajes "no válidos" ha llegado a través.
@@ -103,7 +103,7 @@ Se recomienda que las aplicaciones que no se puede cambiar su formato de mensaje
 Para los programas que se compiló la criptografía de Windows: Biblioteca próxima generación (CNG):
 
 - La llamada de descifrado es [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), especificando el `BCRYPT_BLOCK_PADDING` marca.
-- El identificador de clave se ha inicializado mediante una llamada a [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) con [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) establecido en `BCRYPT_CHAIN_MODE_CBC`.
+- El identificador de clave se ha inicializado mediante una llamada a [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) con [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) establecido en `BCRYPT_CHAIN_MODE_CBC`.
   - Puesto que `BCRYPT_CHAIN_MODE_CBC` es el valor predeterminado, afectado código no ha asignado ningún valor para `BCRYPT_CHAINING_MODE`.
 
 Para los programas que se compiló la API criptográfica de Windows anteriores:

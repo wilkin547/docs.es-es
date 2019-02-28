@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: 7db5f8afdfe61709aba9569bcee8c0d3aa6ee44f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b55252e774e744b7318f480b264aa3f7fae9abfc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527047"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969653"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 Especifica que se puede omitir un argumento de procedimiento cuando se llama al procedimiento.  
@@ -64,7 +64,7 @@ End Function
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra cómo llamar a un procedimiento con los argumentos pasados por posición y con los argumentos pasados por nombre. El procedimiento tiene dos parámetros opcionales.  
   
- [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
+ [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]  
   
 ## <a name="see-also"></a>Vea también
 - [Lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md)

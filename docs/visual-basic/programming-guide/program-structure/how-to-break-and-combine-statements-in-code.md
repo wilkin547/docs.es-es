@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Interrumpir y combinar instrucciones en código (Visual Basic)
+title: Filtrar Interrumpir y combinar instrucciones en código (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb._
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: b19c36018a0938b9b6546e5baefbbc3de1e5dd30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a43d09be53eb5a04d154e482f9388e2ca480118a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619920"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967183"
 ---
-# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Procedimiento Interrumpir y combinar instrucciones en código (Visual Basic)
+# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Filtrar Interrumpir y combinar instrucciones en código (Visual Basic)
 Al escribir el código, a veces puede crear instrucciones largas que requieren un desplazamiento horizontal en el Editor de código. Aunque esto no afecta a la forma se ejecuta el código, resulta difícil para que usted u otra persona leer el código tal y como aparece en el monitor. En tales casos, considere la posibilidad de dividir la única instrucción larga en varias líneas.  
   
 ### <a name="to-break-a-single-statement-into-multiple-lines"></a>Para dividir una única instrucción en varias líneas  
@@ -40,7 +40,7 @@ Al escribir el código, a veces puede crear instrucciones largas que requieren u
   
      En el ejemplo siguiente, la instrucción se divide en cuatro líneas con caracteres de continuación de línea final de todas excepto la última línea.  
   
-     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_1.vb)]  
+     [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]  
   
      Con esta secuencia hace que el código más fácil de leer, tanto en línea como al imprimirlo.  
   
@@ -56,7 +56,7 @@ Al escribir el código, a veces puede crear instrucciones largas que requieren u
   
 -   Separe las instrucciones con un signo de dos puntos (`:`), como en el ejemplo siguiente.  
   
-     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_2.vb)]  
+     [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   
 ## <a name="see-also"></a>Vea también
 - [Convenciones de código y estructura de programas](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

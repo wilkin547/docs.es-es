@@ -2,12 +2,12 @@
 title: Expresiones de consulta
 description: Obtenga información sobre la compatibilidad con expresiones de consulta de LINQ en el F# lenguaje de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: e4a36305b607f573c29744f50a841be078c8061f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: e3ad2d4ebf09fff17aba80fcb3fc9853ec06af47
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611378"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977994"
 ---
 # <a name="query-expressions"></a>Expresiones de consulta
 
@@ -511,7 +511,7 @@ La tabla siguiente muestran algunas consultas de Transact-SQL comunes y sus equi
     <th>F#(Distingue mayúsculas de minúsculas) de la expresión de consulta</th>
   </tr>
 <tr><td>
-Seleccione todos los campos de tabla.</br>
+Seleccione todos los campos de tabla.<br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 </code></pre>

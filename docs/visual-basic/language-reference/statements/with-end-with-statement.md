@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: a3762e3bf0978feeb1155f8cc8249a77f0a497df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9d2ce983398f34747f09d4ffd2cc8fa9e6b2b53
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535274"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968262"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With (Instrucción, Visual Basic)
 Ejecuta una serie de instrucciones que hacen referencia repetidamente a un único objeto o estructura, por lo que las instrucciones pueden utilizar una sintaxis simplificada al acceder a los miembros del objeto o estructura.  Cuando use una estructura, sola podrá leer los valores de los miembros o invocar métodos, y recibirá un error si intenta asignar valores a los miembros de una estructura utilizada en una instrucción `With...End With`.  
@@ -54,7 +54,8 @@ End With
   
  El tipo de datos de `objectExpression` puede ser cualquier tipo de clase o estructura, o incluso un tipo elemental de Visual Basic, como `Integer`.  Si `objectExpression` produce un valor que no es un objeto, solo podrá leer los valores de sus miembros o invocar métodos, y recibirá un error si intenta asignar valores a los miembros de una estructura utilizada en una instrucción `With...End With`.  Este es el mismo error que obtendría si invocara un método que devolviera una estructura y accediera inmediatamente a un miembro del resultado de la función, como `GetAPoint().x = 1`, y le asignara un valor.  El problema en ambos casos es que la estructura solo existe en la pila de llamadas y no hay forma de que un miembro de la estructura modificada en estas situaciones pueda escribir en una ubicación de forma que cualquier otro código del programa pueda observar el cambio.  
   
- `objectExpression` se evalúa una vez, tras su entrada en el bloque. No se puede reasignar `objectExpression` desde el interior del bloque `With`.  
+ 
+  `objectExpression` se evalúa una vez, tras su entrada en el bloque. No se puede reasignar `objectExpression` desde el interior del bloque `With`.  
   
  En un bloque `With`, solo de puede acceder a los métodos y propiedades del objeto especificado sin calificarlos. Se pueden usar métodos y propiedades de otros objetos, pero es necesario calificarlos con los nombres de objeto.  
   
@@ -72,12 +73,12 @@ End With
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, cada bloque `With` ejecuta una serie de instrucciones en un único objeto.  
   
- [!code-vb[VbVbalrWithStatement#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_1.vb)]  
+ [!code-vb[VbVbalrWithStatement#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#2)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se anidan las instrucciones `With…End With`. En la instrucción `With` anidada, la sintaxis hace referencia al objeto interno.  
   
- [!code-vb[VbVbalrWithStatement#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_2.vb)]  
+ [!code-vb[VbVbalrWithStatement#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Collections.Generic.List%601>

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugArrayValue (Interfaz1)
+title: ICorDebugArrayValue (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugArrayValue
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b8e9e9c9f43b45bf4f5d65bf80394c0fcd71325
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73898bf5f4303d677787bae587a16f2f325dee9e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559285"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970849"
 ---
-# <a name="icordebugarrayvalue-interface1"></a>ICorDebugArrayValue (Interfaz1)
+# <a name="icordebugarrayvalue-interface"></a>ICorDebugArrayValue (Interfaz)
+
 Una subclase del ICorDebugHeapValue que representa una matriz unidimensional o multidimensional.  
   
 ## <a name="methods"></a>Métodos  

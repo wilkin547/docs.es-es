@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: 6b9912f5206633a45d5d5d2d9c8c25ffab94ed9b
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: fe08c855e4dd0adca68d48c3b32cb399033a9d46
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739571"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974931"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedimientos de operador (Visual Basic)
 Un procedimiento de operador es una serie de instrucciones de Visual Basic que definen el comportamiento de un operador estándar (como `*`, `<>`, o `And`) en una clase o estructura que ha definido. Esto también se denomina *sobrecarga de operadores*.  
@@ -73,11 +73,11 @@ Un procedimiento de operador es una serie de instrucciones de Visual Basic que d
 ### <a name="illustration-of-declaration-and-call"></a>Ilustración de la declaración y llamada  
  La siguiente estructura almacena un valor entero de 128 bits con signo como las partes constituyentes de orden superior y orden inferior. Define el `+` operador para agregar dos `veryLong` valores y generar una resultante `veryLong` valor.  
   
- [!code-vb[VbVbcnProcedures#23](./codesnippet/VisualBasic/operator-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#23)]  
   
  El ejemplo siguiente muestra una llamada típica para la `+` operador definido en `veryLong`.  
   
- [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
   
   
 ## <a name="see-also"></a>Vea también

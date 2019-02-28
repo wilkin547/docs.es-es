@@ -13,12 +13,12 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: e61cf907ac2c5c04aa86c03a73bda7fcfcb8122d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0a0003409f0abc277d92f4e68981d9ffd901a41
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710487"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971538"
 ---
 # <a name="property-procedures-visual-basic"></a>Procedimientos de propiedad (Visual Basic)
 Un procedimiento de propiedad es una serie de instrucciones de Visual Basic que manipulan una propiedad personalizada en un módulo, clase o estructura. Procedimientos de propiedad son también se denomina *descriptores de acceso de propiedad*.  
@@ -99,11 +99,11 @@ End Property
 ### <a name="illustration-of-declaration-and-call"></a>Ilustración de la declaración y llamada  
  La siguiente propiedad almacena un nombre completo como dos nombres constitutivos, el nombre y el apellido. Cuando se lee el código de llamada `fullName`, el `Get` procedimiento combina los dos nombres constituyentes y devuelve el nombre completo. Cuando el código de llamada asigna un nuevo nombre completo, el `Set` procedimiento intenta dividir en dos nombres constitutivos. Si no encuentra un espacio, almacena como el nombre.  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/property-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
  El ejemplo siguiente muestra las llamadas típicas a los procedimientos de propiedad de `fullName`.  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Vea también
 - [Procedimientos](./index.md)

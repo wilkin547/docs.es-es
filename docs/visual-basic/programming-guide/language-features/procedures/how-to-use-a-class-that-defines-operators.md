@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Usar una clase que define operadores (Visual Basic)
+title: Filtrar Usar una clase que define operadores (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 372d3f663109597fc2d25c5d75a9efa6b3648682
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 358e81904f48ad844351a20a448b615a0fef8f89
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640693"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972526"
 ---
-# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Procedimiento Usar una clase que define operadores (Visual Basic)
+# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Filtrar Usar una clase que define operadores (Visual Basic)
 Si utiliza una clase o estructura que define sus propios operadores, puede tener acceso a esos operadores desde Visual Basic.  
   
  Definir un operador en una clase o estructura también se denomina *sobrecarga* el operador.  
@@ -26,9 +26,9 @@ Si utiliza una clase o estructura que define sus propios operadores, puede tener
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente se obtiene acceso a la estructura SQL <xref:System.Data.SqlTypes.SqlString>, que define los operadores de conversión ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) en ambas direcciones entre una cadena SQL y una cadena de Visual Basic. Use `CType(` *expresión de cadena SQL*, `String)` para convertir una cadena SQL en una cadena de Visual Basic y `CType(` *expresión de cadena de Visual Basic*, <xref:System.Data.SqlTypes.SqlString> `)` para convertir en la otra dirección.  
   
- [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
+ [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
- [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
+ [!code-vb[VbVbcnProcedures#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#31)]  
   
  El <xref:System.Data.SqlTypes.SqlString> estructura define un operador de conversión ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) desde `String` a <xref:System.Data.SqlTypes.SqlString> y otro de <xref:System.Data.SqlTypes.SqlString> a `String`. La instrucción que asigna `title` a `jobTitle` usa el primer operador y el <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> llamada de función usa la segunda.  
   

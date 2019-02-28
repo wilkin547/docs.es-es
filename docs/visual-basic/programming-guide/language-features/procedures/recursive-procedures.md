@@ -10,19 +10,19 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: b5cbe0dfa8053a93cde9c92ffe87f0eae15d3efd
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 97cceb833da0ef6f9ee4e3dab5abb1f2ba73a94e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739298"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969328"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Procedimientos recursivos (Visual Basic)
 Un *recursiva* procedimiento es aquella que se llama a sí mismo. En general, esto no es la manera más eficaz para escribir código de Visual Basic.  
   
  El siguiente procedimiento usa la recursividad para calcular el factorial de su argumento original.  
   
- [!code-vb[VbVbcnProcedures#51](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
 ## <a name="considerations-with-recursive-procedures"></a>Consideraciones sobre procedimientos recursivos  
  **Condiciones de limitación**. Debe diseñar un procedimiento recursivo para probar al menos una condición que puede dificultar la recursión y también deben considerar el caso donde no se cumple ninguna condición de ese tipo dentro de un número razonable de las llamadas recursivas. Sin al menos una condición que se puede cumplir sin errores, el procedimiento ejecuta un alto riesgo de la ejecución en un bucle infinito.  

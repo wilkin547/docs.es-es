@@ -9,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: 8b67a6953e7788827ef1ec268f54bddf2f1392c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1e2c707b3caa8c7cc49a6f33840ebdfd0c89f4e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662262"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968652"
 ---
 # <a name="function-procedures-visual-basic"></a>Procedimientos de función (Visual Basic)
 Un `Function` procedimiento es una serie de instrucciones de Visual Basic está incluido en el `Function` y `End Function` instrucciones. El `Function` procedimiento realiza una tarea y, a continuación, devuelve el control al código de llamada. Cuando devuelve el control, también devuelve un valor al código de llamada.  
@@ -83,20 +83,20 @@ End Function
   
  La sintaxis para llamar a un `Function` es el procedimiento siguiente:  
   
- *valor l*`=`*functionname* `[(` *argumentlist*  `)]`  
+ *valor l*`=`*functionname* `[(` *argumentlist* `)]`  
   
- `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=` *expresión*  `) Then`  
+ `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=` *expresión* `) Then`  
   
  Cuando se llama a un `Function` procedimiento, no es necesario usar el valor devuelto. Si no lo hace, se realizan todas las acciones de la función, pero se omite el valor devuelto. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> a menudo se denomina de esta manera.  
   
 ### <a name="illustration-of-declaration-and-call"></a>Ilustración de la declaración y llamada  
  La siguiente `Function` procedimiento calcula el lado más largo, o la hipotenusa de un triángulo rectángulo, dado los valores para los dos lados.  
   
- [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/function-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
  El ejemplo siguiente muestra una llamada típica al `hypotenuse`.  
   
- [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/function-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>Vea también
 - [Procedimientos](./index.md)

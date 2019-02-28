@@ -18,12 +18,12 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: 8930e0e5c6bf9bd713b5601c91e6d1a5cbfd7a51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23e45d00e63c1f50ad2f6d3f08d16adbd13ae2b6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568236"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968830"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else (Directivas)
 Compila condicionalmente bloques seleccionados de código de Visual Basic.  
@@ -78,7 +78,7 @@ Las instrucciones dentro de un bloque de compilación condicional deben ser comp
 ## <a name="example"></a>Ejemplo
  Este ejemplo se usa el `#If...Then...#Else` construcción para determinar si se debe compilar ciertas instrucciones.  
   
- [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
 - [#Const (directiva)](../../../visual-basic/language-reference/directives/const-directive.md)

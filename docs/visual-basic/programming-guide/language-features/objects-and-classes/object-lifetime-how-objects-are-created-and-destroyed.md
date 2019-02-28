@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: dc05b3acda5183ddc9a7c0bdddf08a3934c298f6
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: e6274f470e042fa5d581a574d13bd67ae8e8d6e9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738921"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979468"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Duración del objeto: Cómo los objetos se crean y destruyen (Visual Basic)
 Mediante el uso de la palabra clave `New` se crea una instancia de una clase, un objeto. A menudo, las tareas de inicialización deben realizarse en los objetos nuevos antes de utilizarlos. Las tareas de inicialización comunes incluyen abrir archivos, conectarse a bases de datos y leer los valores de las claves del registro. Visual Basic controla la inicialización de objetos nuevos mediante procedimientos denominados *constructores* (métodos especiales que permiten controlar la inicialización).  
@@ -42,11 +42,11 @@ Mediante el uso de la palabra clave `New` se crea una instancia de una clase, un
   
  Para crear un constructor para una clase, cree un procedimiento denominado `Sub New` en cualquier parte de la definición de clase. Para crear un constructor parametrizado, especifique los nombres y los tipos de datos de los argumentos en `Sub New` tal y como haría al especificar argumentos en cualquier otro procedimiento, como en el código siguiente:  
   
- [!code-vb[VbVbalrOOP#42](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_1.vb)]  
+ [!code-vb[VbVbalrOOP#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#42)]  
   
  Los constructores suelen sobrecargarse con frecuencia, como en el código siguiente:  
   
- [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_2.vb)]  
+ [!code-vb[VbVbalrOOP#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#116)]  
   
  Cuando defina una clase que derive de otra clase, la primera línea de un constructor debe ser una llamada al constructor de la clase base, a menos que la clase base tenga un constructor accesible que no tome ningún parámetro. Una llamada a la clase base que contiene el constructor anterior sería, por ejemplo, `MyBase.New(s)`. En caso contrario, `MyBase.New` es opcional, y el tiempo de ejecución de Visual Basic llama implícitamente.  
   

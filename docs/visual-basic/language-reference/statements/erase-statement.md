@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Erase keyword [Visual Basic]
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-ms.openlocfilehash: cab3da4465b4671d203036c2d9bcd40662dc234a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5828e28b84ec62c7ed674757090806d73c61caea
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522445"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966741"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase (Instrucción, Visual Basic)
 Se utiliza para liberar variables de matriz y desasignar la memoria utilizada para sus elementos.  
@@ -35,7 +35,7 @@ Erase arraylist
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `Erase` instrucción borrar dos matrices y liberar su memoria (1000 y 100 elementos de almacenamiento, respectivamente). El `ReDim` instrucción, a continuación, asigna una nueva instancia de matriz a la matriz tridimensional.  
   
- [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/erase-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   
 ## <a name="see-also"></a>Vea también
 - [Nothing](../../../visual-basic/language-reference/nothing.md)

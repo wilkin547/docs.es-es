@@ -10,12 +10,12 @@ helpviewer_keywords:
 - multiplication operator [Visual Basic], syntax
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-ms.openlocfilehash: e723667b6397fe758ae2f33babe27c0e41887aab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a13461d7424415ef553dc9ba00de1bf775fda112
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641179"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965324"
 ---
 # <a name="-operator-visual-basic"></a>* (Operador, Visual Basic)
 Multiplica dos números.  
@@ -57,7 +57,7 @@ number1 * number2
 ## <a name="example"></a>Ejemplo  
  Este ejemplo se usa el `*` operador multiplicar dos números. El resultado es el producto de los dos operandos.  
   
- [!code-vb[VbVbalrOperators#4](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#4)]  
   
 ## <a name="see-also"></a>Vea también
 - [Operador *=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)

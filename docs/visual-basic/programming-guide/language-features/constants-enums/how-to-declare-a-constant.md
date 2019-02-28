@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Declare una constante (Visual Basic)
+title: Filtrar Declare una constante (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.constant
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: e45ca7eeca9ce178abf3ab5cab6d791f799f1d09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26a987543cdd80e7e3075dd4d0a04de69b51e465
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678842"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964940"
 ---
-# <a name="how-to-declare-a-constant-visual-basic"></a>Procedimiento Declare una constante (Visual Basic)
+# <a name="how-to-declare-a-constant-visual-basic"></a>Filtrar Declare una constante (Visual Basic)
 Usa el `Const` instrucción declare una constante y establezca su valor. Al declarar una constante, asigna un nombre descriptivo a un valor. Una vez que se declara una constante, no se puede modificar o asignar un nuevo valor.  
   
  Declare una constante dentro de un procedimiento o en la sección de declaraciones de un módulo, clase o estructura. Constantes de nivel de la estructura o clase son `Private` de forma predeterminada, pero también pueden declararse como `Public`, `Friend`, `Protected`, o `Protected Friend` para el nivel adecuado de acceso al código.  
@@ -43,7 +43,7 @@ Usa el `Const` instrucción declare una constante y establezca su valor. Al decl
   
 -   Escribir una declaración que incluye un especificador de acceso, el `Const` palabra clave y una expresión, como en los ejemplos siguientes:  
   
-     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
+     [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
      Cuando [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) es `Off` y [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) es `On`, debe declarar una constante de forma explícita mediante la especificación de un tipo de datos (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, o `String`).  
   
@@ -53,7 +53,7 @@ Usa el `Const` instrucción declare una constante y establezca su valor. Al decl
   
 -   Escribir una declaración que incluya la `As` palabra clave y un explícitas tipo de datos, como en los ejemplos siguientes:  
   
-     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
+     [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
      Puede declarar varias constantes en una sola línea, aunque el código es más legible si declara solamente una constante por línea. Si declara varias constantes en una sola línea, debe tener el mismo nivel de acceso (`Public`, `Private`, `Friend`, `Protected`, o `Protected Friend`).  
   

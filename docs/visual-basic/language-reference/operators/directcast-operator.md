@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
-ms.openlocfilehash: 4b8ffbe018872c3ae467fb9bf15e3b03595fd640
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03e632bad538f65d010dfaa12f7eb5da15c11091
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659779"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979832"
 ---
 # <a name="directcast-operator-visual-basic"></a>DirectCast (Operador) (Visual Basic)
 Introduce una operación de conversión de tipos en función de herencia o implementación.  
@@ -37,7 +37,7 @@ Introduce una operación de conversión de tipos en función de herencia o imple
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra dos usos de `DirectCast`, que se produce un error en tiempo de ejecución y otra que se realiza correctamente.  
   
- [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/VisualBasic/directcast-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#1)]  
   
  En el ejemplo anterior, tipo de tiempo de ejecución de `q` es `Double`. `CType` se realiza correctamente porque `Double` puede convertirse en `Integer`. Sin embargo, la primera `DirectCast` produce un error en tiempo de ejecución porque el tiempo de ejecución de tipos de `Double` no tiene ninguna relación de herencia con `Integer`, aunque existe una conversión. El segundo `DirectCast` se realiza correctamente porque convierte del tipo <xref:System.Windows.Forms.Form> escriba <xref:System.Windows.Forms.Control>, desde el que <xref:System.Windows.Forms.Form> hereda.  
   

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8193932deac3854b07085cba9faac76e68c4da8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ae6124db6103554e16b1f2d39a9a9c875d97d6c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592436"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980248"
 ---
 # <a name="cryptographic-services"></a>servicios criptográficos
 <a name="top"></a> Las redes públicas como Internet no proporcionan un medio de comunicación segura entre entidades. La comunicación en esas redes es susceptible de que terceras personas, sin autorización, tengan acceso a ella o la modifiquen. La criptografía ayuda a proteger los datos para que no puedan ser vistos, proporciona mecanismos para la detección de datos modificados y facilita un medio de comunicación seguro en canales que, de otra forma, no serían seguros. Por ejemplo, los datos pueden cifrarse con un algoritmo criptográfico y transmitirse en un estado cifrado a una tercera persona, que posteriormente los descifrará. Si un tercero intercepta los datos cifrados, le resultará difícil descifrarlos.  
@@ -68,13 +68,13 @@ ms.locfileid: "33592436"
   
  La criptografía se utiliza para lograr los objetivos siguientes:  
   
--   Confidencialidad: para ayudar a proteger la identidad de un usuario o evitar que se lean sus datos.  
+-   Confidencialidad: Para ayudar a proteger la identidad o datos de un usuario en que se va a leer.  
   
--   Integridad de los datos: para ayudar a evitar su alteración.  
+-   Integridad de los datos: Para ayudar a proteger los datos de la que se está cambiando.  
   
--   Autenticación: para garantizar que los datos provienen de una parte concreta.  
+-   Autenticación: Para garantizar que los datos procede de una entidad determinada.  
   
--   Sin rechazo: para evitar que una determinada parte niegue que envió un mensaje.  
+-   Sin rechazo: Para impedir que una determinada parte niegue que envió un mensaje.  
   
  Para alcanzar estos objetivos, se puede usar una combinación de algoritmos y prácticas conocidas como primitivas criptográficas para crear un esquema criptográfico. En la tabla siguiente se enumeran las primitivas criptográficas y su uso.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "33592436"
   
  La desventaja del cifrado de clave secreta es que presupone que dos partes acuerdan una clave y un vector de inicialización, y que se comunican sus valores. El vector de inicialización no se considera secreto y se transmite como texto simple con el mensaje. Sin embargo, la clave debe mantenerse en secreto a salvo de usuarios no autorizados. Debido a estos problemas, el cifrado de clave secreta a menudo se utiliza junto con el cifrado de clave pública para comunicar en privado los valores de la clave y el vector de inicialización.  
   
- Supongamos que Alicia y Roberto son dos personas que desean comunicarse a través de un canal que no es seguro. Ellos podrían utilizar el cifrado de clave secreta del modo siguiente: Alicia y Roberto están de acuerdo en utilizar un algoritmo determinado (AES, por ejemplo) con una clave y un vector de inicialización determinados. Alicia escribe un mensaje y crea una secuencia de red (quizás una con nombre canalización o red correo electrónico) en la que se va a enviar el mensaje. A continuación, cifra el texto utilizando la clave y el vector de inicialización y envía el mensaje cifrado y el vector de inicialización a Roberto a través de intranet. Roberto recibe el texto cifrado y lo descifra utilizando el vector de inicialización y la clave acordada anteriormente. Si se intercepta la transmisión, el interceptor no podrá recuperar el mensaje original porque no conoce la clave. En este caso, solo debe mantenerse en secreto la clave. En un ejemplo real, Alicia o Roberto genera una clave secreta y utiliza el cifrado (asimétrico) de clave pública para transferir la clave (simétrica) secreta a la otra parte. Para obtener más información sobre el cifrado de clave pública, vea la sección siguiente.  
+ Suponiendo que Alicia y Roberto es dos personas que desean comunicarse a través de un canal no seguro, es posible que usan cifrado de clave secreta como sigue: Alice y Bob acuerdan usar un algoritmo determinado (por ejemplo, AES) con una clave determinada y un IV. Alicia escribe un mensaje y crea una secuencia de red (quizás una con nombre canalización o red correo electrónico) en el que se va a enviar el mensaje. A continuación, cifra el texto utilizando la clave y el vector de inicialización y envía el mensaje cifrado y el vector de inicialización a Roberto a través de intranet. Roberto recibe el texto cifrado y lo descifra utilizando el vector de inicialización y la clave acordada anteriormente. Si se intercepta la transmisión, el interceptor no podrá recuperar el mensaje original porque no conoce la clave. En este caso, solo debe mantenerse en secreto la clave. En un ejemplo real, Alicia o Roberto genera una clave secreta y utiliza el cifrado (asimétrico) de clave pública para transferir la clave (simétrica) secreta a la otra parte. Para obtener más información sobre el cifrado de clave pública, vea la sección siguiente.  
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proporciona las siguientes clases que implementan algoritmos de cifrado de clave secreta:  
   
@@ -127,7 +127,7 @@ ms.locfileid: "33592436"
 ## <a name="public-key-encryption"></a>Cifrado de clave pública  
  El cifrado de clave pública utiliza una clave privada que debe mantenerse en secreto y a salvo de los usuarios no autorizados, así como una clave pública que puede comunicarse. La clave pública y la clave privada están vinculadas matemáticamente; los datos cifrados con la clave pública solo pueden descifrarse con la clave privada y los datos firmados con la clave privada solo pueden comprobarse con la clave pública. La clave pública está a disposición de cualquier persona y se utiliza para cifrar los datos que se envían a quien guarda la clave privada. Los algoritmos criptográficos de clave pública también se conocen como algoritmos asimétricos porque se necesita una clave para cifrar los datos y otra para descifrarlos. Una regla criptográfica básica prohíbe la reutilización de claves; además, las dos claves deben ser únicas en cada sesión de comunicación. Sin embargo, en la práctica, las claves asimétricas suelen durar bastante tiempo.  
   
- Dos personas (Alicia y Roberto) podrían utilizar el cifrado de clave pública del modo siguiente: en primer lugar, Alicia podría generar un par de claves pública y privada. Si Roberto desea enviar a Alicia un mensaje cifrado, le pide la clave pública. Alicia envía a Roberto su clave pública a través de una red que no es segura y Roberto utiliza esta clave para cifrar un mensaje. Roberto envía el mensaje cifrado a Alicia y ésta lo descifra utilizando su clave privada. Si Roberto recibiera la clave de Alicia a través de un canal que no es seguro, como una red pública, Roberto estaría expuesto a un ataque del tipo "Man in the middle". Por consiguiente, Roberto debe comprobar con Alicia que tiene una copia correcta de su clave pública.  
+ Dos partes (Alicia y Roberto) podrían utilizar el cifrado de clave pública como sigue: En primer lugar, Alicia podría generar un par de claves pública y privada. Si Roberto desea enviar a Alicia un mensaje cifrado, le pide la clave pública. Alicia envía a Roberto su clave pública a través de una red que no es segura y Roberto utiliza esta clave para cifrar un mensaje. Roberto envía el mensaje cifrado a Alicia y ésta lo descifra utilizando su clave privada. Si Roberto recibiera la clave de Alicia a través de un canal que no es seguro, como una red pública, Roberto estaría expuesto a un ataque del tipo "Man in the middle". Por consiguiente, Roberto debe comprobar con Alicia que tiene una copia correcta de su clave pública.  
   
  Durante la transmisión de la clave pública de Alicia, un agente no autorizado podría interceptarla. Además, el mismo agente podría interceptar el mensaje cifrado de Roberto. No obstante, el agente no puede descifrar el mensaje con la clave pública. El mensaje solo puede descifrarse con la clave privada de Alicia, que no se ha transmitido. Alicia no utiliza su clave privada para cifrar un mensaje de respuesta a Roberto, porque cualquiera que tenga la clave pública podría descifrarlo. Si Alicia desea enviar un mensaje a Roberto, le pide su clave pública y cifra su mensaje con ella. Seguidamente, Roberto descifra el mensaje utilizando su clave privada asociada.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "33592436"
   
 -   Alicia enviaría a Roberto el mensaje de texto simple y el mensaje al que aplicó el algoritmo hash (firma digital). Roberto recibiría el mensaje y le aplicaría el algoritmo hash. A continuación, compararía su valor hash con el valor hash que recibió de Alicia. Si los dos valores hash son idénticos, el mensaje no se ha modificado. Si los valores no son idénticos, el mensaje se modificó después de que Alicia lo escribiera.  
   
-     Desgraciadamente, este método no determina la autenticidad del remitente. Cualquiera puede suplantar a Alicia y enviar un mensaje a Roberto. Pueden utilizar el mismo algoritmo hash para firmar su mensaje, y todo lo que Roberto podría determinar es que el mensaje coincide con su firma. Esta es una forma de ataque de tipo "Man in the middle". Vea [NIB: ejemplo de comunicación segura de Cryptography Next Generation (CNG)](https://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) para obtener más información.  
+     Desgraciadamente, este método no determina la autenticidad del remitente. Cualquiera puede suplantar a Alicia y enviar un mensaje a Roberto. Pueden utilizar el mismo algoritmo hash para firmar su mensaje, y todo lo que Roberto podría determinar es que el mensaje coincide con su firma. Esta es una forma de ataque de tipo "Man in the middle". Para obtener más información, consulte [ejemplo de comunicación segura de Cryptography Next Generation (CNG)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).  
   
 -   Alicia envía el mensaje de texto simple a Roberto a través de un canal público que no es seguro. Envía a Roberto el mensaje al que aplicó el algoritmo hash a través de un canal privado seguro. Roberto recibe el mensaje de texto simple, le aplica un algoritmo hash y compara el valor hash con el valor hash que se intercambió de forma privada. Si los valores hash coinciden, Roberto sabe dos cosas:  
   
@@ -273,7 +273,7 @@ ms.locfileid: "33592436"
   
 <a name="suite_b"></a>   
 ## <a name="suite-b-support"></a>Compatibilidad con Suite B  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] admite el conjunto de algoritmos criptográficos Suite B publicado por la Agencia de Seguridad Nacional (NSA). Para obtener más información sobre Suite B, vea el [NSA Suite B Cryptography Fact Sheet](https://www.nsa.gov/what-we-do/information-assurance/).  
+ [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] admite el conjunto de algoritmos criptográficos Suite B publicado por la Agencia de Seguridad Nacional (NSA). Para obtener más información sobre Suite B, vea la [hoja informativa sobre la criptografía de Suite B de la NSA](https://www.nsa.gov/what-we-do/information-assurance/).  
   
  Se incluyen los siguientes algoritmos:  
   

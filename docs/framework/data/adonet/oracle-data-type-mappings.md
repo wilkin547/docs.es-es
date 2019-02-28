@@ -1,13 +1,13 @@
 ---
-title: Mappings1 de tipo de datos de Oracle
+title: Asignaciones de tipos de datos de Oracle
 ms.date: 03/30/2017
 ms.assetid: ec34ae21-bbbb-4adb-b672-83865e2a8451
-ms.openlocfilehash: 91e8dce0891489b8dbe127e2d327dd2e6f5e9935
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5e13b0ff4f9c3d5cc145abd4f0bcc3d8e717ca1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544320"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965780"
 ---
 # <a name="oracle-data-type-mappings"></a>Asignaciones de tipos de datos de Oracle
 En la siguiente tabla se enumeran los tipos de datos de Oracle y sus asignaciones al <xref:System.Data.OracleClient.OracleDataReader>.  

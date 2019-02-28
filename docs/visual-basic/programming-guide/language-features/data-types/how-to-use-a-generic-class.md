@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Usar una clase genérica (Visual Basic)
+title: Filtrar Usar una clase genérica (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type parameters [Visual Basic], defining
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: 4f60c0c07c0270b94dbb018b9423e210f16269d6
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: e7d35a900ef4309963ff9de0ea77a12fd4577f12
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065809"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969679"
 ---
-# <a name="how-to-use-a-generic-class-visual-basic"></a>Procedimiento Usar una clase genérica (Visual Basic)
+# <a name="how-to-use-a-generic-class-visual-basic"></a>Filtrar Usar una clase genérica (Visual Basic)
 Las clases que toman *parámetros de tipo* se denominan *clases genéricas*. Si usa una clase genérica, puede generar una *clase construida* a partir de ella proporcionando un *argumento de tipo* para cada uno de estos parámetros. Después, puede declarar una variable del tipo de clase construida, crear una instancia de la clase construida y asignarla a esa variable.  
   
  Además de clases, también puede definir y usar estructuras genéricas, interfaces, procedimientos y delegados.  
@@ -43,7 +43,7 @@ Las clases que toman *parámetros de tipo* se denominan *clases genéricas*. Si 
   
      En el ejemplo siguiente se usa la misma clase (<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>) para crear dos objetos queue que contienen elementos de distintos tipos de datos. Agrega elementos al final de cada cola y, después, quita y muestra los elementos de la parte delantera de cada cola.  
   
-     [!code-vb[VbVbalrDataTypes#9](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-use-a-generic-class_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Vea también
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 7bbce77034ce334b7c2b7f58a224fca38736385a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f65875caa16bfe00866cc3cd6fd0c0b22b034576
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532768"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970537"
 ---
 # <a name="interface-statement-visual-basic"></a>Instrucción Interface (Visual Basic)
 Declara el nombre de una interfaz e introduce las definiciones de los miembros que incluye la interfaz.  
@@ -61,7 +61,8 @@ End Interface
   
  Una clase o estructura implementa la interfaz proporcionando código para cada miembro definido por la interfaz. Por último, cuando la aplicación crea una instancia de esa clase o estructura, un objeto existe y se ejecuta en la memoria. Para obtener más información, consulte [objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) y [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- `Interface` solo se puede utilizar en un espacio de nombres o un nivel de módulo. Esto significa que el *contexto de declaración* para una interfaz debe ser un archivo de código fuente, espacio de nombres, clase, estructura, módulo o interfaz y no puede ser un procedimiento o bloque. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).  
+ 
+  `Interface` solo se puede utilizar en un espacio de nombres o un nivel de módulo. Esto significa que el *contexto de declaración* para una interfaz debe ser un archivo de código fuente, espacio de nombres, clase, estructura, módulo o interfaz y no puede ser un procedimiento o bloque. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).  
   
  De forma predeterminada para las interfaces [Friend](../../../visual-basic/language-reference/modifiers/friend.md) acceso. Los niveles de acceso se pueden ajustar con los modificadores de acceso. Para obtener más información, consulte [tener acceso a los niveles en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -95,7 +96,7 @@ End Interface
   
      Si asigna una instancia de clase a una variable, el nivel de acceso de sus miembros puede depender de si el tipo de datos de la variable es la interfaz subyacente o la clase de implementación. Esto se ilustra en el siguiente ejemplo:  
   
-     [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#39)]  
   
      Si tiene acceso a los miembros de clase a través de `varAsInterface`, tienen acceso público. Sin embargo, si tiene acceso a los miembros a través de `varAsClass`, `Sub` procedimiento `doSomething` tiene acceso privado.  
   
@@ -108,7 +109,7 @@ End Interface
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `Interface` instrucción para definir una interfaz denominada `thisInterface`, que debe implementarse con un `Property` instrucción y un `Function` instrucción.  
   
- [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
   
  Tenga en cuenta que el `Property` y `Function` instrucciones no crea nuevos bloques que terminan con `End Property` y `End Function` dentro de la interfaz. La interfaz define solo las firmas de sus miembros. El completo `Property` y `Function` bloques aparecen en una clase que implementa `thisInterface`.  
   

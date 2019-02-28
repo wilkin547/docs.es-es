@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: b3a486cb886e8f39081f30a2849e2d14573cf5e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b4e703cb3f723ea283f725d0f4ce4711dca3c9e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676346"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967820"
 ---
 # <a name="mywebservices-object"></a>My.WebServices (Objeto)
 Proporciona propiedades para crear y tener acceso a una sola instancia de cada servicio Web XML al que hace referencia el proyecto actual.  
@@ -42,7 +42,7 @@ Proporciona propiedades para crear y tener acceso a una sola instancia de cada s
 ## <a name="example"></a>Ejemplo  
  Este ejemplo llama a la `FahrenheitToCelsius` método de la `TemperatureConverter` servicio Web XML y devuelve el resultado.  
   
- [!code-vb[VbVbalrMyWebService#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-webservices-object_1.vb)]  
+ [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  
   
  Para que funcione este ejemplo, el proyecto debe hacer referencia a un servicio Web denominado `Converter`, y ese servicio Web debe exponer la `ConvertTemperature` método. Para obtener más información, consulte [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   

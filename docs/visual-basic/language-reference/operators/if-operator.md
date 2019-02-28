@@ -11,12 +11,12 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 82dc3e851f1f98ca689acc21f03cbbe68a4e974e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25b0d7e85fe1c1e0d0589b4b9a9db2d85ca71526
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686678"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965921"
 ---
 # <a name="if-operator-visual-basic"></a>If (Operador) (Visual Basic)
 Usa evaluación de cortocircuito para devolver condicionalmente uno de dos valores. El `If` operador se puede llamar con tres argumentos o con dos argumentos.  
@@ -40,11 +40,11 @@ If( [argument1,] argument2, argument3 )
   
  Un `If` operador que se llama con tres argumentos funciona como un `IIf` función salvo que usa la evaluación de cortocircuito. Un `IIf` función siempre evalúa las tres de los argumentos, mientras que un `If` operador que tiene tres argumentos evalúa sólo dos de ellos. La primera `If` argumento se evalúa y el resultado se convierte como un `Boolean` valor, `True` o `False`. Si el valor es `True`, `argument2` es evalúa y devuelve su valor, pero `argument3` no se evalúa. Si el valor de la `Boolean` expresión es `False`, `argument3` es evalúa y devuelve su valor, pero `argument2` no se evalúa. Los ejemplos siguientes ilustran el uso de `If` cuando se usan tres argumentos:  
   
- [!code-vb[VbVbalrOperators#100](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#100)]  
   
  El ejemplo siguiente muestra el valor de la evaluación de cortocircuito. El ejemplo muestra dos intentos para dividir la variable `number` variable `divisor` salvo cuando `divisor` es cero. En ese caso, se debe devolver un 0 y no se debe realizar ningún intento para realizar la división porque daría lugar a un error en tiempo de ejecución. Dado que el `If` usar expresiones de evaluación de cortocircuito, se evalúa como el segundo o tercer argumento, dependiendo del valor del primer argumento. Si el primer argumento es true, el divisor no es cero y es seguro evaluar el segundo argumento y realizar la división. Si el primer argumento es false, solo el tercer argumento se evalúa y se devuelve 0. Por lo tanto, si el divisor es 0, no se realiza ningún intento para realizar la división y se produce ningún error. Sin embargo, dado que `IIf` no utiliza la evaluación de cortocircuito, se evalúa el segundo argumento incluso cuando el primer argumento es false. Esto produce un error de división por cero de tiempo de ejecución.  
   
- [!code-vb[VbVbalrOperators#101](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#101)]  
   
 ## <a name="if-operator-called-with-two-arguments"></a>Si llama operador con dos argumentos  
  El primer argumento `If` puede omitirse. Esto permite al operador a llamarse con solo dos argumentos. En la lista siguiente se aplica solo cuando el `If` se denomina operador con dos argumentos.  
@@ -58,7 +58,7 @@ If( [argument1,] argument2, argument3 )
   
  Cuando el `Boolean` argumento se omite, el primer argumento debe ser una referencia o tipo que acepta valores NULL. Si el primer argumento se evalúa como `Nothing`, se devuelve el valor del segundo argumento. En todos los demás casos, se devuelve el valor del primer argumento. El siguiente ejemplo ilustra cómo funciona esta evaluación.  
   
- [!code-vb[VbVbalrOperators#102](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_3.vb)]  
+ [!code-vb[VbVbalrOperators#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#102)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:Microsoft.VisualBasic.Interaction.IIf%2A>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: 53fc47c7dd26142d2ead49178afefe2775a96580
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8441e619cdbd18545be72fd701c2cc9b1cf495d9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543151"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971242"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip (Cláusula, Visual Basic)
 Omite un número especificado de elementos de una colección y, a continuación, devuelve los elementos restantes.  
@@ -40,7 +40,7 @@ Skip count
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo de código utiliza el `Skip` cláusula junto con el `Take` cláusula para devolver datos de una consulta en las páginas. El `GetCustomers` función usa el `Skip` cláusula para omitir los clientes en la lista hasta que la proporcionada a partir de índice valor y se usa el `Take` cláusula para devolver una página de clientes a partir de ese valor de índice.  
   
- [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
 - [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
