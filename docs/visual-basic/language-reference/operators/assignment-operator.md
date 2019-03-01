@@ -8,52 +8,52 @@ helpviewer_keywords:
 - = operator [Visual Basic]
 - = assignment statements [Visual Basic]
 ms.assetid: 2dac2e49-86c8-42f8-80c1-458452fb5e29
-ms.openlocfilehash: 58dcdfd21fd8701c6ac391672e768819f696aab9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e6d34802f5f82373d0e8176f3b732a327c55d01
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643561"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964999"
 ---
-# <a name="-operator-visual-basic"></a><span data-ttu-id="c8bf4-102">= (Operador, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8bf4-102">= Operator (Visual Basic)</span></span>
-<span data-ttu-id="c8bf4-103">Asigna un valor a una variable o propiedad.</span><span class="sxs-lookup"><span data-stu-id="c8bf4-103">Assigns a value to a variable or property.</span></span>  
+# <a name="-operator-visual-basic"></a><span data-ttu-id="cbaa6-102">= (Operador, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cbaa6-102">= Operator (Visual Basic)</span></span>
+<span data-ttu-id="cbaa6-103">Asigna un valor a una variable o propiedad.</span><span class="sxs-lookup"><span data-stu-id="cbaa6-103">Assigns a value to a variable or property.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c8bf4-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c8bf4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cbaa6-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="cbaa6-104">Syntax</span></span>  
   
 ```  
 variableorproperty = value  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="c8bf4-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="c8bf4-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="cbaa6-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="cbaa6-105">Parts</span></span>  
  `variableorproperty`  
- <span data-ttu-id="c8bf4-106">Cualquier variable de lectura o de cualquier propiedad.</span><span class="sxs-lookup"><span data-stu-id="c8bf4-106">Any writable variable or any property.</span></span>  
+ <span data-ttu-id="cbaa6-106">Cualquier variable de lectura o de cualquier propiedad.</span><span class="sxs-lookup"><span data-stu-id="cbaa6-106">Any writable variable or any property.</span></span>  
   
  `value`  
- <span data-ttu-id="c8bf4-107">Cualquier literal, constante o expresión.</span><span class="sxs-lookup"><span data-stu-id="c8bf4-107">Any literal, constant, or expression.</span></span>  
+ <span data-ttu-id="cbaa6-107">Cualquier literal, constante o expresión.</span><span class="sxs-lookup"><span data-stu-id="cbaa6-107">Any literal, constant, or expression.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c8bf4-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c8bf4-108">Remarks</span></span>  
- <span data-ttu-id="c8bf4-109">El elemento en el lado izquierdo del signo igual (`=`) puede ser una variable escalar simple, una propiedad o un elemento de una matriz.</span><span class="sxs-lookup"><span data-stu-id="c8bf4-109">The element on the left side of the equal sign (`=`) can be a simple scalar variable, a property, or an element of an array.</span></span> <span data-ttu-id="c8bf4-110">La variable o propiedad no puede ser [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span><span class="sxs-lookup"><span data-stu-id="c8bf4-110">The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span></span> <span data-ttu-id="c8bf4-111">El `=` operador asigna el valor de su derecho de la variable o propiedad a su izquierda.</span><span class="sxs-lookup"><span data-stu-id="c8bf4-111">The `=` operator assigns the value on its right to the variable or property on its left.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cbaa6-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="cbaa6-108">Remarks</span></span>  
+ <span data-ttu-id="cbaa6-109">El elemento en el lado izquierdo del signo igual (`=`) puede ser una variable escalar simple, una propiedad o un elemento de una matriz.</span><span class="sxs-lookup"><span data-stu-id="cbaa6-109">The element on the left side of the equal sign (`=`) can be a simple scalar variable, a property, or an element of an array.</span></span> <span data-ttu-id="cbaa6-110">La variable o propiedad no puede ser [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span><span class="sxs-lookup"><span data-stu-id="cbaa6-110">The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span></span> <span data-ttu-id="cbaa6-111">El `=` operador asigna el valor de su derecho de la variable o propiedad a su izquierda.</span><span class="sxs-lookup"><span data-stu-id="cbaa6-111">The `=` operator assigns the value on its right to the variable or property on its left.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c8bf4-112">El `=` operador también se utiliza como un operador de comparación.</span><span class="sxs-lookup"><span data-stu-id="c8bf4-112">The `=` operator is also used as a comparison operator.</span></span> <span data-ttu-id="c8bf4-113">Para obtener más información, consulte [operadores de comparación](../../../visual-basic/language-reference/operators/comparison-operators.md).</span><span class="sxs-lookup"><span data-stu-id="c8bf4-113">For details, see [Comparison Operators](../../../visual-basic/language-reference/operators/comparison-operators.md).</span></span>  
+>  <span data-ttu-id="cbaa6-112">El `=` operador también se utiliza como un operador de comparación.</span><span class="sxs-lookup"><span data-stu-id="cbaa6-112">The `=` operator is also used as a comparison operator.</span></span> <span data-ttu-id="cbaa6-113">Para obtener más información, consulte [operadores de comparación](../../../visual-basic/language-reference/operators/comparison-operators.md).</span><span class="sxs-lookup"><span data-stu-id="cbaa6-113">For details, see [Comparison Operators](../../../visual-basic/language-reference/operators/comparison-operators.md).</span></span>  
   
-## <a name="overloading"></a><span data-ttu-id="c8bf4-114">Sobrecarga</span><span class="sxs-lookup"><span data-stu-id="c8bf4-114">Overloading</span></span>  
- <span data-ttu-id="c8bf4-115">El `=` operador se puede sobrecargar únicamente como un operador de comparación relacional, no como un operador de asignación.</span><span class="sxs-lookup"><span data-stu-id="c8bf4-115">The `=` operator can be overloaded only as a relational comparison operator, not as an assignment operator.</span></span> <span data-ttu-id="c8bf4-116">Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="c8bf4-116">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
+## <a name="overloading"></a><span data-ttu-id="cbaa6-114">Sobrecarga</span><span class="sxs-lookup"><span data-stu-id="cbaa6-114">Overloading</span></span>  
+ <span data-ttu-id="cbaa6-115">El `=` operador se puede sobrecargar únicamente como un operador de comparación relacional, no como un operador de asignación.</span><span class="sxs-lookup"><span data-stu-id="cbaa6-115">The `=` operator can be overloaded only as a relational comparison operator, not as an assignment operator.</span></span> <span data-ttu-id="cbaa6-116">Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="cbaa6-116">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c8bf4-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c8bf4-117">Example</span></span>  
- <span data-ttu-id="c8bf4-118">El ejemplo siguiente muestra el operador de asignación.</span><span class="sxs-lookup"><span data-stu-id="c8bf4-118">The following example demonstrates the assignment operator.</span></span> <span data-ttu-id="c8bf4-119">El valor de la derecha se asigna a la variable de la izquierda.</span><span class="sxs-lookup"><span data-stu-id="c8bf4-119">The value on the right is assigned to the variable on the left.</span></span>  
+## <a name="example"></a><span data-ttu-id="cbaa6-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="cbaa6-117">Example</span></span>  
+ <span data-ttu-id="cbaa6-118">El ejemplo siguiente muestra el operador de asignación.</span><span class="sxs-lookup"><span data-stu-id="cbaa6-118">The following example demonstrates the assignment operator.</span></span> <span data-ttu-id="cbaa6-119">El valor de la derecha se asigna a la variable de la izquierda.</span><span class="sxs-lookup"><span data-stu-id="cbaa6-119">The value on the right is assigned to the variable on the left.</span></span>  
   
- [!code-vb[VbVbalrOperators#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a><span data-ttu-id="c8bf4-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="c8bf4-120">See also</span></span>
-- [<span data-ttu-id="c8bf4-121">Operador &=</span><span class="sxs-lookup"><span data-stu-id="c8bf4-121">&= Operator</span></span>](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
-- [<span data-ttu-id="c8bf4-122">Operador \*=</span><span class="sxs-lookup"><span data-stu-id="c8bf4-122">\*= Operator</span></span>](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
-- [<span data-ttu-id="c8bf4-123">Operador +=</span><span class="sxs-lookup"><span data-stu-id="c8bf4-123">+= Operator</span></span>](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
-- [<span data-ttu-id="c8bf4-124">-= (Operador) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8bf4-124">-= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
-- [<span data-ttu-id="c8bf4-125">/ = (Operador) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8bf4-125">/= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
-- [<span data-ttu-id="c8bf4-126">\\= Operador</span><span class="sxs-lookup"><span data-stu-id="c8bf4-126">\\= Operator</span></span>](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
-- [<span data-ttu-id="c8bf4-127">Operador ^=</span><span class="sxs-lookup"><span data-stu-id="c8bf4-127">^= Operator</span></span>](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
-- [<span data-ttu-id="c8bf4-128">Instrucciones</span><span class="sxs-lookup"><span data-stu-id="c8bf4-128">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
-- [<span data-ttu-id="c8bf4-129">Operadores de comparación</span><span class="sxs-lookup"><span data-stu-id="c8bf4-129">Comparison Operators</span></span>](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [<span data-ttu-id="c8bf4-130">ReadOnly</span><span class="sxs-lookup"><span data-stu-id="c8bf4-130">ReadOnly</span></span>](../../../visual-basic/language-reference/modifiers/readonly.md)
-- [<span data-ttu-id="c8bf4-131">Inferencia de tipo de variable local</span><span class="sxs-lookup"><span data-stu-id="c8bf4-131">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+## <a name="see-also"></a><span data-ttu-id="cbaa6-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="cbaa6-120">See also</span></span>
+- [<span data-ttu-id="cbaa6-121">Operador &=</span><span class="sxs-lookup"><span data-stu-id="cbaa6-121">&= Operator</span></span>](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
+- [<span data-ttu-id="cbaa6-122">Operador \*=</span><span class="sxs-lookup"><span data-stu-id="cbaa6-122">\*= Operator</span></span>](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
+- [<span data-ttu-id="cbaa6-123">Operador +=</span><span class="sxs-lookup"><span data-stu-id="cbaa6-123">+= Operator</span></span>](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
+- [<span data-ttu-id="cbaa6-124">-= (Operador) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cbaa6-124">-= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [<span data-ttu-id="cbaa6-125">/ = (Operador) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cbaa6-125">/= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [<span data-ttu-id="cbaa6-126">\\= Operador</span><span class="sxs-lookup"><span data-stu-id="cbaa6-126">\\= Operator</span></span>](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [<span data-ttu-id="cbaa6-127">Operador ^=</span><span class="sxs-lookup"><span data-stu-id="cbaa6-127">^= Operator</span></span>](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
+- [<span data-ttu-id="cbaa6-128">Instrucciones</span><span class="sxs-lookup"><span data-stu-id="cbaa6-128">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
+- [<span data-ttu-id="cbaa6-129">Operadores de comparación</span><span class="sxs-lookup"><span data-stu-id="cbaa6-129">Comparison Operators</span></span>](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [<span data-ttu-id="cbaa6-130">ReadOnly</span><span class="sxs-lookup"><span data-stu-id="cbaa6-130">ReadOnly</span></span>](../../../visual-basic/language-reference/modifiers/readonly.md)
+- [<span data-ttu-id="cbaa6-131">Inferencia de tipo de variable local</span><span class="sxs-lookup"><span data-stu-id="cbaa6-131">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
