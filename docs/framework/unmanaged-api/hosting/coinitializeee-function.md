@@ -5,6 +5,7 @@ api_name:
 - CoInitializeEE
 api_location:
 - mscoree.dll
+- mscorsvr.dll
 api_type:
 - DLLExport
 f1_keywords:
@@ -16,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36a603bf1badebd2454601780179a8435f33bc70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca85a12191db51818da2a08910dc9524d1ac9498
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525188"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211824"
 ---
 # <a name="coinitializeee-function"></a>CoInitializeEE (Función)
 Garantiza que el motor de ejecución de common language runtime se carga en un proceso. Esta función está en desuso en el [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Use la [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) método en su lugar.  
