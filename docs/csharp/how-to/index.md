@@ -1,14 +1,9 @@
 ---
-title: Artículos de procedimientos (guía de C#)
+title: 'Artículos de procedimientos (guía de C#)'
 description: Colección de sugerencias rápidas y ejemplos de código breves y concisos.
 ms.date: 12/20/2017
-ms.openlocfilehash: 9326235341ee38e46f4204b7b3d7f67cae2774af
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260196"
 ---
+
 # <a name="how-to-c"></a>Procedimientos (C#)
 
 En la sección de procedimientos de la guía de C# encontrará respuestas rápidas a preguntas frecuentes. En algunos casos, los artículos pueden mostrarse en varias secciones. Hemos querido que sean fáciles de encontrar en diferentes rutas de búsqueda. 
