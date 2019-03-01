@@ -16,7 +16,7 @@ ms.locfileid: "55826738"
 > "Si cree que la buena arquitectura es cara, pruebe la mala".  
 > _- Brian Foote y Joseph Yoder_
 
-La mayoría de aplicaciones .NET tradicionales se implementan como unidades únicas que se corresponden a un archivo ejecutable o una sola aplicación web que se ejecuta dentro de un único dominio de aplicación de IIS. Este es el modelo de implementación más sencillo y sirve muy bien a muchas aplicaciones internas y públicas más pequeñas. Pero incluso con esta única unidad de implementación, la mayoría de las aplicaciones de negocio importantes se aprovechan de cierta separación lógica en varias capas.
+La mayoría de aplicaciones .NET tradicionales se implementan como unidades únicas que corresponden a un archivo ejecutable o una sola aplicación web que se ejecuta dentro de un único dominio de aplicación de IIS. Este es el modelo de implementación más sencillo y sirve muy bien a muchas aplicaciones internas y públicas más pequeñas. Pero incluso con esta única unidad de implementación, la mayoría de las aplicaciones de negocio importantes se aprovechan de cierta separación lógica en varias capas.
 
 ## <a name="what-is-a-monolithic-application"></a>¿Qué es una aplicación monolítica?
 
