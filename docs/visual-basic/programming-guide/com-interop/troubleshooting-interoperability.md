@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 413c9331611d3406c13df58f25db1ef0255339b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc5262d62d32ad3f79c4f4e2c4d9f862dbce3727
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517674"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976894"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Solucionar problemas de interoperabilidad (Visual Basic)
 Cuando se interoperar entre COM y el código administrado de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], puede encontrar uno o varios de los siguientes problemas comunes.  
@@ -57,11 +57,11 @@ Cuando se interoperar entre COM y el código administrado de la [!INCLUDE[dnprdn
 ##  <a name="vbconinteroperabilitymarshalinganchor6"></a> Creación de instancias de una clase de .NET Framework  
  Por lo general, se crea una instancia de un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] clase utilizando el `New` instrucción con un nombre de clase. Una clase COM representada por un ensamblado de interoperabilidad es el caso en que se puede utilizar el `New` instrucción con una interfaz. A menos que se utiliza la clase COM con un `Inherits` instrucción, puede usar la interfaz tal como lo haría en una clase. El código siguiente muestra cómo crear un `Command` objeto en un proyecto que tiene una referencia al objeto COM de la biblioteca de Microsoft ActiveX Data Objects 2.8:  
   
- [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_1.vb)]  
+ [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
  Sin embargo, si usas la clase COM como base para una clase derivada, debe usar la clase de interoperabilidad que representa la clase COM, como se muestra en el código siguiente:  
   
- [!code-vb[VbVbalrInterop#21](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_2.vb)]  
+ [!code-vb[VbVbalrInterop#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#21)]  
   
 > [!NOTE]
 >  Ensamblados de interoperabilidad implementan implícitamente interfaces que representan las clases COM. No debe intentar usar el `Implements` dará como resultado la instrucción para implementar estas interfaces o un error.  
@@ -81,19 +81,19 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  Visual Basic .NET requiere que siempre se creen instancias de objetos COM para poder usar sus métodos. Para usar estos métodos en Visual Basic, declare una variable de la clase deseada y usar la palabra clave new para asignar el objeto a la variable de objeto. El `Shared` palabra clave se puede usar cuando desee asegurarse de que solo una instancia de la clase se crea.  
   
- [!code-vb[VbVbalrInterop#23](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_3.vb)]  
+ [!code-vb[VbVbalrInterop#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#23)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor9"></a> Errores no controlados en los controladores de eventos  
  Un problema de interoperabilidad común implica errores en los controladores de eventos que controlan los eventos generados por objetos COM. Estos errores se omiten a menos que busque específicamente errores mediante `On Error` o `Try...Catch...Finally` instrucciones. Por ejemplo, el siguiente ejemplo es de un proyecto de Visual Basic .NET que tiene una referencia al objeto COM de la biblioteca de Microsoft ActiveX Data Objects 2.8.  
   
- [!code-vb[VbVbalrInterop#24](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_4.vb)]  
+ [!code-vb[VbVbalrInterop#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#24)]  
   
  En este ejemplo genera un error según lo previsto. Sin embargo, si intenta el mismo ejemplo sin el `Try...Catch...Finally` bloque, el error se omite como si ha usado el `OnError Resume Next` instrucción. Sin control de errores, la división por cero en modo silencioso se produce un error. Dado que tales errores nunca producen errores de excepción no controlada, es importante usar algún tipo de control de excepciones en los controladores de eventos que controlan los eventos de objetos COM.  
   
 ### <a name="understanding-com-interop-errors"></a>Descripción de los errores de interoperabilidad COM  
  Sin control de errores, las llamadas de interoperabilidad suelen generan errores que proporcionan poca información. Siempre que sea posible, utilice el control para proporcionar más información acerca de los problemas cuando surjan de errores estructurado. Esto puede resultar especialmente útil al depurar aplicaciones. Por ejemplo:  
   
- [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_5.vb)]  
+ [!code-vb[VbVbalrInterop#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#25)]  
   
  Puede encontrar información como la descripción del error, HRESULT y el origen de errores de COM examinando el contenido del objeto de excepción.  
   
@@ -113,11 +113,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  Si tiene acceso al procedimiento que se llama, puede evitar este error mediante el `ByVal` palabra clave para declarar los parámetros que aceptan `ReadOnly` propiedades. Por ejemplo:  
   
- [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_6.vb)]  
+ [!code-vb[VbVbalrInterop#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#26)]  
   
  Si no tiene acceso al código fuente para el procedimiento que se llama, puede forzar la propiedad que se pasará por valor mediante la adición de un conjunto adicional de los corchetes que encierran el procedimiento que realiza la llamada. Por ejemplo, en un proyecto que tiene una referencia al objeto COM de la biblioteca de Microsoft ActiveX Data Objects 2.8, puede usar:  
   
- [!code-vb[VbVbalrInterop#27](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_7.vb)]  
+ [!code-vb[VbVbalrInterop#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#27)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor12"></a> Implementar ensamblados que expongan interoperabilidad  
  Implementar ensamblados que expongan interfaces COM presenta algunos desafíos únicos. Por ejemplo, un posible problema se produce cuando las aplicaciones independientes hacen referencia al mismo ensamblado COM. Esta situación es común cuando se instala una nueva versión de un ensamblado y otra aplicación todavía está utilizando la versión anterior del ensamblado. Si desinstala un ensamblado que comparte un archivo DLL, puede involuntariamente hacerlo disponible para otros ensamblados.  
