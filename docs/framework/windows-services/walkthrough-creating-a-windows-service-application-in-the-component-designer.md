@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 79447ede354de104607117f657182023a2e57127
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 52c2f64bbb71e07dcab1fd7cd42662f9ed2c8445
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123675"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665035"
 ---
-# <a name="walkthrough-create-a-windows-service-app"></a>Tutorial: Creación de una aplicación de un servicio de Windows
+# <a name="walkthrough-create-a-windows-service-app"></a>Tutorial: Creación de una aplicación de servicio de Windows
 
 En este artículo se explica cómo crear una sencilla aplicación de servicio de Windows en Visual Studio que escribe mensajes en un registro de eventos.
 
@@ -86,7 +86,7 @@ En el Editor de código, busque el método <xref:System.ServiceProcess.ServiceBa
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-Una aplicación de servicio está diseñada para ejecutarse a largo plazo, por lo que suele sondear o supervisar algún elemento del sistema. La supervisión se puede establecer en el método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Sin embargo, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> no lleva a cabo la supervisión. El método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> debe volver al sistema operativo después de que haya comenzado el funcionamiento del servicio. No debe bloquearse ni ejecutar un bucle infinito. Para establecer un mecanismo de sondeo sencillo, puede usar el componente <xref:System.Timers.Timer?displayProperty=nameWithType> de la siguiente manera: en el método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> , establezca los parámetros en el componente y después establezca la propiedad <xref:System.Timers.Timer.Enabled%2A> en `true`. El temporizador activa eventos periódicamente en el código y, en esos instantes, el servicio podría realizar su control. Para ello puede usar el código siguiente:
+Una aplicación de servicio está diseñada para ejecutarse a largo plazo, por lo que suele sondear o supervisar algún elemento del sistema. La supervisión se puede establecer en el método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Sin embargo, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> no lleva a cabo la supervisión. El método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> debe volver al sistema operativo después de que haya comenzado el funcionamiento del servicio. No debe bloquearse ni ejecutar un bucle infinito. Para configurar un mecanismo de sondeo sencillo, puede usar el componente <xref:System.Timers.Timer?displayProperty=nameWithType> de la manera siguiente: En el método <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, establezca los parámetros del componente y, luego, establezca la propiedad <xref:System.Timers.Timer.Enabled%2A> en `true`. El temporizador activa eventos periódicamente en el código y, en esos instantes, el servicio podría realizar su control. Para ello puede usar el código siguiente:
 
 ```csharp
 // Set up a timer that triggers every minute.
@@ -294,9 +294,9 @@ Para poder ejecutar un servicio de Windows, antes debe instalarlo, lo que lo reg
 9. En el diseñador, elija **serviceProcessInstaller1** para un proyecto de Visual C# o **ServiceProcessInstaller1** para un proyecto de Visual Basic. Establezca la propiedad <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> en <xref:System.ServiceProcess.ServiceAccount.LocalSystem>. Esto hace que el servicio se instale y se ejecute con la cuenta de sistema local.
 
     > [!IMPORTANT]
-    > La cuenta <xref:System.ServiceProcess.ServiceAccount.LocalSystem> tiene amplios permisos, incluida la capacidad para escribir en el registro de eventos. Utilice esta cuenta con precaución porque podría aumentar el riesgo de ataques por parte de software malintencionado. Para otras tareas, considere la posibilidad de usar la cuenta <xref:System.ServiceProcess.ServiceAccount.LocalService>, que actúa como un usuario sin privilegios en el equipo local y presenta credenciales anónimas a cualquier servidor remoto. En este ejemplo se produce un error si intenta usar la cuenta <xref:System.ServiceProcess.ServiceAccount.LocalService> , ya que necesita permiso de escritura en el registro de eventos.
+    > La cuenta <xref:System.ServiceProcess.ServiceAccount.LocalSystem> tiene amplios permisos, incluida la capacidad para escribir en el registro de eventos. Utilice esta cuenta con precaución porque podría aumentar el riesgo de ataques por parte de software malintencionado. Para otras tareas, considere la posibilidad de usar la cuenta <xref:System.ServiceProcess.ServiceAccount.LocalService> , que actúa como un usuario sin privilegios en el equipo local y presenta credenciales anónimas a cualquier servidor remoto. En este ejemplo se produce un error si intenta usar la cuenta <xref:System.ServiceProcess.ServiceAccount.LocalService> , ya que necesita permiso de escritura en el registro de eventos.
 
-Para obtener más información sobre los instaladores, vea [Adición de instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
+Para más información sobre los instaladores, consulte [Procedimiento para agregar instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
 
 ## <a name="optional-set-startup-parameters"></a>(Opcional) Establecer parámetros de inicio
 
@@ -431,7 +431,7 @@ Ahora que ha compilado el servicio de Windows, puede instalarlo. Para instalar u
 
     Si el proceso **installutil.exe** informa de un error, compruebe el registro de instalación para averiguar por qué. De manera predeterminada, el registro está en la misma carpeta que el ejecutable del servicio. La instalación puede generar errores si la clase <xref:System.ComponentModel.RunInstallerAttribute> no está presente en la clase `ProjectInstaller`, si el atributo no está establecido en **true** o si la clase `ProjectInstaller` no está marcada como **pública**.
 
-Para obtener más información, consulta [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+Para obtener más información, vea [Cómo: Instalar y desinstalar servicios](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="start-and-run-the-service"></a>Inicio y ejecución del servicio
 
@@ -452,7 +452,7 @@ Para obtener más información, consulta [How to: Install and Uninstall Services
 1. Abra el **Visor de eventos**; para ello, empiece a escribir **Visor de eventos** en el cuadro de búsqueda de la barra de tareas de Windows y luego seleccione **Visor de eventos** en los resultados de la búsqueda.
 
    > [!TIP]
-   > En Visual Studio, puede acceder a los registros de eventos; para ello, abra el **Explorador de servidores** (en el teclado: **Ctrl**+**Alt**+**S**) y expanda el nodo **Registros de eventos** para el equipo local.
+   > En Visual Studio, para acceder a los registros de eventos, abra el **Explorador de servidores** (teclado: **Ctrl**+**Alt**+**S**) y expanda el nodo **Registros de eventos** para el equipo local.
 
 2. En **Visor de eventos**, expanda **Registros de aplicaciones y servicios**.
 
@@ -472,11 +472,11 @@ Para obtener más información, consulta [How to: Install and Uninstall Services
     installutil.exe /u MyNewService.exe
     ```
 
-   Si el servicio se desinstala correctamente, **installutil.exe** indica que el servicio se ha desinstalado correctamente. Para obtener más información, consulta [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+   Si el servicio se desinstala correctamente, **installutil.exe** indica que el servicio se ha desinstalado correctamente. Para obtener más información, vea [Cómo: Instalar y desinstalar servicios](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Ahora que ya ha creado el servicio, puede crear un programa de instalación independiente que otros usuarios pueden usar para instalar el servicio de Windows. ClickOnce no es compatible con los servicios de Windows, pero puede usar el [conjunto de herramientas de WiX](http://wixtoolset.org/) para crear un instalador para un servicio de Windows. Para otras ideas, vea [Crear un paquete de instalador](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client).
+Ahora que ya ha creado el servicio, puede crear un programa de instalación independiente que otros usuarios pueden usar para instalar el servicio de Windows. ClickOnce no es compatible con los servicios de Windows, pero puede usar el [conjunto de herramientas de WiX](http://wixtoolset.org/) para crear un instalador para un servicio de Windows. Para otras ideas, vea [Crear un paquete de instalador](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
 Podría probar también el uso de un componente <xref:System.ServiceProcess.ServiceController>, que permite enviar comandos al servicio instalado.
 
@@ -486,5 +486,5 @@ Puede usar un instalador para crear un registro de eventos al instalar la aplica
 
 - [Aplicaciones de servicios de Windows](../../../docs/framework/windows-services/index.md)
 - [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Depuración de aplicaciones de servicios de Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [Servicios (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+- [Cómo: Depurar aplicaciones de servicios de Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [Servicios (Windows)](/windows/desktop/Services/services)

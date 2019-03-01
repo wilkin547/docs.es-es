@@ -9,14 +9,14 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 02ea82bf224349e6ea7a5afbfb3c38ba50df46f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15b790f4a4d3348e2bef3e7e929d72c09da8690c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720371"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441884"
 ---
-# <a name="how-to-debug-windows-service-applications"></a>Procedimiento para depurar aplicaciones de servicios de Windows
+# <a name="how-to-debug-windows-service-applications"></a>Filtrar para depurar aplicaciones de servicios de Windows
 Un servicio se debe ejecutar desde el contexto del Administrador de control de servicios en lugar de desde Visual Studio. Por este motivo, la depuración de un servicio no es tan simple como depurar otros tipos de aplicaciones de Visual Studio. Para depurar un servicio, debe iniciar el servicio y, a continuación, asociar un depurador al proceso en el que se ejecuta. Entonces puede depurar la aplicación mediante el uso de todas las funciones de depuración estándar de Visual Studio.  
   
 > [!CAUTION]
@@ -32,7 +32,7 @@ Un servicio se debe ejecutar desde el contexto del Administrador de control de s
 >  Depurar el método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> puede ser difícil porque el Administrador de control de servicios impone un límite de 30 segundos en todos los intentos de iniciar un servicio. Para más información, vea [Solución de problemas: depuración de servicios de Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 > [!WARNING]
->  Para obtener información significativa para la depuración, el depurador de Visual Studio debe buscar archivos de símbolos para los archivos binarios que se están depurando. Si depura un servicio que compiló en Visual Studio, los archivos de símbolos (archivos .pdb) están en la misma carpeta que el archivo ejecutable o la biblioteca, y el depurador los carga automáticamente. Si depura un servicio que no compiló, primero debe encontrar los símbolos del servicio y asegurarse de que el depurador los pueda encontrar. Consulte [Especificar archivos de código fuente y símbolos (.pdb) en el depurador de Visual Studio](https://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Si depura un proceso del sistema o desea tener símbolos para las llamadas del sistema en los servicios, debe agregar los servidores de símbolos de Microsoft. Consulte [Símbolos de depuración](/windows/desktop/DxTechArts/debugging-with-symbols).  
+>  Para obtener información significativa para la depuración, el depurador de Visual Studio debe buscar archivos de símbolos para los archivos binarios que se están depurando. Si depura un servicio que compiló en Visual Studio, los archivos de símbolos (archivos .pdb) están en la misma carpeta que el archivo ejecutable o la biblioteca, y el depurador los carga automáticamente. Si depura un servicio que no compiló, primero debe encontrar los símbolos del servicio y asegurarse de que el depurador los pueda encontrar. Consulte [Especificar archivos de código fuente y símbolos (.pdb) en el depurador de Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger). Si depura un proceso del sistema o desea tener símbolos para las llamadas del sistema en los servicios, debe agregar los servidores de símbolos de Microsoft. Consulte [Símbolos de depuración](/windows/desktop/DxTechArts/debugging-with-symbols).  
   
 ### <a name="to-debug-a-service"></a>Para depurar un servicio  
   
@@ -75,7 +75,7 @@ Un servicio se debe ejecutar desde el contexto del Administrador de control de s
   
  Intente cambiar el programa a una aplicación de consola normal. Para ello, vuelva a escribir el método `Main` como se indica a continuación, de manera que se pueda ejecutar como un servicio de Windows y como una aplicación de consola, en función de cómo se inicie.  
   
-#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Procedimiento para ejecutar un servicio de Windows como una aplicación de consola  
+#### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Filtrar para ejecutar un servicio de Windows como una aplicación de consola  
   
 1.  Agregue un método al servicio que ejecute los métodos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> y <xref:System.ServiceProcess.ServiceBase.OnStop%2A>:  
   
@@ -111,7 +111,7 @@ Un servicio se debe ejecutar desde el contexto del Administrador de control de s
   
 5.  Para volver a ejecutar el programa como un servicio de Windows, instálelo e inícielo de la manera habitual para un servicio de Windows. No es necesario invertir estos cambios.  
   
- En algunos casos, como cuando desea depurar un problema que se produce solo al iniciar el sistema, debe usar el depurador de Windows. Instale las [Herramientas de depuración para Windows](https://msdn.microsoft.com/windows/hardware/hh852365) y consulte [cómo depurar los servicios de Windows](https://support.microsoft.com/kb/824344).  
+ En algunos casos, como cuando desea depurar un problema que se produce solo al iniciar el sistema, debe usar el depurador de Windows. [Descargue Windows Driver Kit (WDK)](/windows-hardware/drivers/download-the-wdk) y consulte [Cómo depurar los servicios de Windows](https://support.microsoft.com/kb/824344).  
   
 ## <a name="see-also"></a>Vea también
 - [Introducción a las aplicaciones de servicios de Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

@@ -1,13 +1,7 @@
 ---
-title: Programación asincrónica con Async y Await (C#)
+title: 'Programación asincrónica con Async y Await (C#)'
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 011ddf8e9769471f37f073b4440a909afc5e404f
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759514"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programación asincrónica con Async y Await (C#)
 Puede evitar cuellos de botella de rendimiento y mejorar la capacidad de respuesta total de la aplicación mediante la programación asincrónica. Sin embargo, las técnicas tradicionales para escribir aplicaciones asincrónicas pueden resultar complicadas, haciéndolas difícil de escribir, depurar y mantener.  
@@ -230,7 +224,7 @@ Las API asincrónicas en la programación de Windows Runtime tienen uno de los s
    
   
 ##  <a name="BKMK_NamingConvention"></a> Convención de nomenclatura  
- Por convención, se anexa "Async" a los nombres de métodos que tengan un modificador `async`.  
+Por convención, los nombres de los métodos que devuelven tipos que suelen admitir "await" (p. ej., `Task`, `Task<T>`, `ValueTask` y `ValueTask<T>`) deben terminar por "Async". Los nombres de los métodos que inician operaciones asincrónicas, pero que no devuelven un tipo que admite "await", no deben terminar por "Async". Sin embargo, pueden empezar por "Begin", "Start" u otro verbo que permita sugerir que este método no devuelve ni genera el resultado de la operación.
   
  Puede ignorar esta convención cuando un evento, clase base o contrato de interfaz sugieren un nombre diferente. Por ejemplo, no se debería cambiar el nombre de los controladores de eventos, tales como `Button1_Click`.  
   

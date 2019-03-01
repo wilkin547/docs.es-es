@@ -4,12 +4,12 @@ description: Vea una asignación entre los elementos project.json y csproj.
 author: natemcmaster
 ms.date: 03/13/2017
 ms.custom: seodec18
-ms.openlocfilehash: dc78a6fc43eeb2a9e556bc5a4d8e27db9067ce94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682857"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747416"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Una asignación entre propiedades project.json y csproj
 
@@ -39,7 +39,7 @@ El nuevo formato, \*.csproj, está basado en XML. En el ejemplo siguiente se mue
 }
 ```
 
-Ya no se admite. En csproj, esto viene determinado por el nombre de archivo del proyecto, que está definido por el nombre del directorio. Por ejemplo: `MyProjectName.csproj`.
+Ya no se admite. En csproj, viene determinado por el nombre de archivo del proyecto, que normalmente coincide con el nombre del directorio. Por ejemplo: `MyProjectName.csproj`.
 
 De forma predeterminada, el nombre de archivo del proyecto también especifica el valor de las propiedades `<AssemblyName>` y `<PackageId>`.
 

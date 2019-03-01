@@ -1,19 +1,13 @@
 ---
-title: Tutoriales de C#
-description: Explore estos tutoriales de C# para obtener información sobre cómo compilar programas de C# y conocer las características de este lenguaje.
+title: 'Tutoriales de C#'
+description: 'Explore estos tutoriales de C# para obtener información sobre cómo compilar programas de C# y conocer las características de este lenguaje.'
 ms.date: 10/25/2018
-ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084672"
 ---
 # <a name="c-tutorials"></a>Tutoriales de C#
 
 Le damos la bienvenida a los tutoriales de C#. Se empieza con lecciones interactivas que se pueden ejecutar en el explorador. Los tutoriales posteriores y los más avanzados le ayudan a trabajar con las herramientas de desarrollo de .NET para crear programas de C# en su máquina.
 
-## <a name="introduction-to-c-interactive-tutorials"></a>Tutoriales interactivos de introducción a C# #
+## <a name="introduction-to-c-interactive-tutorials"></a>Tutoriales interactivos de introducción a C#
 
 En las primeras lecciones se explican los conceptos de C# con la utilización de pequeños fragmentos de código. Aprenderá los datos básicos de la sintaxis de C# y cómo trabajar con tipos de datos como cadenas, números y booleanos. Se trata de material totalmente interactivo, que le permitirá empezar a escribir y ejecutar código en cuestión de minutos. En las primeras lecciones se asume que no dispone de conocimientos previos sobre programación o sobre el lenguaje C#.
 
@@ -47,7 +41,7 @@ En este tutorial se presupone que ha completado las lecciones que se muestran an
 
 Todos los tutoriales de introducción posteriores a la lección Hola mundo se encuentran disponibles en el entorno de desarrollo local. Al final de cada tutorial, decida si desea continuar con la siguiente lección en línea o en su propia máquina. Hay vínculos que le ayudarán a configurar el entorno y continuar con el siguiente tutorial en su máquina.
 
-## <a name="explore-new-features-in-c"></a>Explore las nuevas características en C# #
+## <a name="explore-new-features-in-c"></a>Explorar las nuevas características de C\#
 
 Pruebe las nuevas características en [C# 6](../whats-new/csharp-6.md) en esta [exploración interactiva](exploration/csharp-6.yml).
 

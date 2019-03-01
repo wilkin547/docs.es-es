@@ -1,16 +1,10 @@
 ---
 title: 'Introducción a C#: tutoriales interactivos'
-description: Aprenda a usar C# en el explorador y empiece a trabajar con su entorno de desarrollo
+description: 'Aprenda a usar C# en el explorador y empiece a trabajar con su entorno de desarrollo'
 ms.date: 01/30/2018
 ms.custom: mvc
-ms.openlocfilehash: bfd08c0885351cebb0b2d7a45e93de20fa1bc97f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186177"
 ---
-# <a name="introduction-to-c"></a>Introducción a C# #
+# <a name="introduction-to-c"></a>Introducción a C\#
 
 Le damos la bienvenida a los tutoriales de introducción a C#. Se empieza con lecciones interactivas que se pueden ejecutar en el explorador.
 

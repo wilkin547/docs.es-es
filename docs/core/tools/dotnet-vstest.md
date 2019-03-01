@@ -3,12 +3,12 @@ title: Comando dotnet vstest
 description: El comando dotnet vstest compila un proyecto y todas sus dependencias.
 author: guardrex
 ms.date: 05/30/2018
-ms.openlocfilehash: cafd862f6107be9173aad6d610cf6f8fd62e1489
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: d41e901f70b4a3d0647c693fdd8076f771466073
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169033"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747734"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -43,7 +43,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 ## <a name="description"></a>Descripción
 
-El comando `dotnet-vstest` ejecuta la aplicación de línea de comandos `VSTest.Console` para ejecutar pruebas de aplicaciones de interfaz de usuario codificadas y unitarias automatizadas.
+El comando `dotnet-vstest` ejecuta la aplicación de línea de comandos `VSTest.Console` para ejecutar pruebas unitarias automatizadas.
 
 ## <a name="arguments"></a>Argumentos
 
@@ -73,11 +73,11 @@ Identificar la arquitectura de la plataforma usada en la ejecución de pruebas. 
 
 `--Framework|/Framework:<Framework Version>`
 
-Identificar la versión de .NET Framework usada en la ejecución de pruebas. Ejemplos de valores válidos son `.NETFramework,Version=v4.6` o `.NETCoreApp,Version=v1.0`. Otros valores admitidos son `Framework35`, `Framework40`, `Framework45`, `FrameworkCore10` y `FrameworkUap10`.
+Identificar la versión de .NET Framework usada en la ejecución de pruebas. Ejemplos de valores válidos son `.NETFramework,Version=v4.6` o `.NETCoreApp,Version=v1.0`. Otros valores admitidos son `Framework40`, `Framework45`, `FrameworkCore10` y `FrameworkUap10`.
 
 `--Parallel|/Parallel`
 
-Ejecutar pruebas en paralelo. De forma predeterminada, todos los núcleos disponibles en el equipo están disponibles para su uso. Establecer un número explícito de núcleos con un archivo de configuración.
+Ejecutar pruebas en paralelo. De forma predeterminada, todos los núcleos disponibles en el equipo están disponibles para su uso. Especifique un número explícito de núcleos mediante la configuración de la propiedad MaxCpuCount en el nodo RunConfiguration del archivo runsettings.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -162,11 +162,11 @@ Identificar la arquitectura de la plataforma usada en la ejecución de pruebas. 
 
 `--Framework|/Framework:<Framework Version>`
 
-Identificar la versión de .NET Framework usada en la ejecución de pruebas. Ejemplos de valores válidos son `.NETFramework,Version=v4.6` o `.NETCoreApp,Version=v1.0`. Otros valores admitidos son `Framework35`, `Framework40`, `Framework45` y `FrameworkCore10`.
+Identificar la versión de .NET Framework usada en la ejecución de pruebas. Ejemplos de valores válidos son `.NETFramework,Version=v4.6` o `.NETCoreApp,Version=v1.0`. Otros valores admitidos son `Framework40`, `Framework45` y `FrameworkCore10`.
 
 `--Parallel|/Parallel`
 
-Ejecutar pruebas en paralelo. De forma predeterminada, todos los núcleos disponibles en el equipo están disponibles para su uso. Establecer un número explícito de núcleos con un archivo de configuración.
+Ejecutar pruebas en paralelo. De forma predeterminada, todos los núcleos disponibles en el equipo están disponibles para su uso. Especifique un número explícito de núcleos mediante la configuración de la propiedad MaxCpuCount en el nodo RunConfiguration del archivo runsettings.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -238,11 +238,11 @@ Identificar la arquitectura de la plataforma usada en la ejecución de pruebas. 
 
 `--Framework|/Framework:<Framework Version>`
 
-Identificar la versión de .NET Framework usada en la ejecución de pruebas. Ejemplos de valores válidos son `.NETFramework,Version=v4.6` o `.NETCoreApp,Version=v1.0`. Otros valores admitidos son `Framework35`, `Framework40`, `Framework45` y `FrameworkCore10`.
+Identificar la versión de .NET Framework usada en la ejecución de pruebas. Ejemplos de valores válidos son `.NETFramework,Version=v4.6` o `.NETCoreApp,Version=v1.0`. Otros valores admitidos son `Framework40`, `Framework45` y `FrameworkCore10`.
 
 `--Parallel|/Parallel`
 
-Ejecutar pruebas en paralelo. De forma predeterminada, todos los núcleos disponibles en el equipo están disponibles para su uso. Establecer un número explícito de núcleos con un archivo de configuración.
+Ejecutar pruebas en paralelo. De forma predeterminada, todos los núcleos disponibles en el equipo están disponibles para su uso. Especifique un número explícito de núcleos mediante la configuración de la propiedad MaxCpuCount en el nodo RunConfiguration del archivo runsettings.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 

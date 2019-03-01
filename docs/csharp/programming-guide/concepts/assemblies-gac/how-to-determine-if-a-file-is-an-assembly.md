@@ -1,15 +1,15 @@
 ---
-title: Procedimiento para determinar si un archivo es un ensamblado (C#)
+title: Filtrar para determinar si un archivo es un ensamblado (C#)
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: a147081d16a6b9f7252466a06ebd8fc204e47c2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 474cc4622e9444cab8e9d611dd9481d5358e10f0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681773"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745255"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Procedimiento para determinar si un archivo es un ensamblado (C#)
+# <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Filtrar para determinar si un archivo es un ensamblado (C#)
 Un archivo es un ensamblado únicamente si está administrado y contiene una entrada de ensamblado en sus metadatos. Para más información sobre ensamblados y metadatos, vea el tema [Manifiesto del ensamblado](../../../../../docs/framework/app-domains/assembly-manifest.md).  
   
 ### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Cómo determinar manualmente si un archivo es un ensamblado  
@@ -70,4 +70,4 @@ class TestAssembly
 
 - <xref:System.Reflection.AssemblyName>
 - [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
-- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])
+- [Ensamblados de .NET](../../../../standard/assembly/index.md)

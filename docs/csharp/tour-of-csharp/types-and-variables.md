@@ -3,12 +3,12 @@ title: 'Variables y tipos de C#: un paseo por el lenguaje C#'
 description: Obtenga información sobre cómo definir tipos y declarar variables de C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 34b724dff17feb699d797e9ed9aea25d85d8c5a9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 976cb507074d4bafe4c22e9482d8f272937baf36
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129524"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583958"
 ---
 # <a name="types-and-variables"></a>Tipos y variables
 
@@ -57,20 +57,20 @@ El procesamiento de caracteres y cadenas en C# utiliza la codificación Unicode.
 Resume los tipos numéricos de C#.
 
 * Entero con signo
-    - `sbyte`: 8 bits, de -128 a 127
+    - `sbyte`:  8 bits, de -128 a 127
     - `short`: 16 bits, de -32,768 a 32,767
-    - `int`: 32 bits, de -2,147,483,648 a 2,147,483,647
+    - `int` : 32 bits, de -2,147,483,648 a 2,147,483,647
     - `long`: 64 bits, de -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807
 * Entero sin signo
-    - `byte`: 8 bits, de 0 a 255
-    - `ushort`: 16 bits, de 0 a 65,535
-    - `uint`: 32 bits, de 0 a 4,294,967,295
-    - `ulong`: 64 bits, de 0 a 18,446,744,073,709,551,615
+    - `byte`:  8 bits, de 0 a 255
+    - `ushort`: 16 bits, de -0 a 65,535
+    - `uint`: 32 bits, de -0 a 4,294,967,295
+    - `ulong`: 64 bits, de -0 a 18,446,744,073,709,551,615
 * Punto flotante
-    - `float`: 32 bits, de 1.5 × 10<sup>−45</sup> a 3.4 × 10<sup>38</sup>, precisión de 7 dígitos
-    - `double`: 64 bits, de 5.0 × 10<sup>−324</sup> a 1.7 × 10<sup>308</sup>, precisión de 15 dígitos
+    - `float`: 32 bits, de 1.5 × 10<sup>-45</sup> a 3.4 × 10<sup>38</sup>, precisión de 7 dígitos
+    - `double`: 64 bits, de 5.0 × 10<sup>-324</sup> a 1.7 × 10<sup>308</sup>, precisión de 15 dígitos
 * Decimal
-    - `decimal`: 128 bits, al menos de –7.9 × 10<sup>−28</sup> a 7.9 × 10<sup>28</sup>, con una precisión mínima de 28 dígitos
+    - `decimal`: 128 bits, de al menos -7.9 × 10<sup>-28</sup> a 7.9 × 10<sup>28</sup>, con una precisión de al menos 28 dígitos
     
 Los programas de C# utilizan *declaraciones de tipos* para crear nuevos tipos. Una declaración de tipos especifica el nombre y los miembros del nuevo tipo. Cinco de las categorías de tipos de C# las define el usuario: tipos de clase, tipos de estructura, tipos de interfaz, tipos de enumeración y tipos delegados.
 

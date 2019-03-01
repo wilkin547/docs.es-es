@@ -1,14 +1,14 @@
 ---
 title: Diseño con tipos de referencia que aceptan valores NULL
 description: En este tutorial avanzado se ofrece una introducción a los tipos de referencia que aceptan valores NULL. Sabrá expresar la intención de su diseño cuando los valores de referencia puedan ser NULL y hacer que el compilador aplique esas decisiones cuando no puedan ser NULL.
-ms.date: 12/03/2018
+ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 535efcdc303c17a55f6a4054ea3f5e5ed87e5f28
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 1c0df9b129e9c434eb3b5e6e50144013c2c0462e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092207"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442105"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expresar la intención del diseño con mayor claridad con tipos de referencia que aceptan valores NULL y que no aceptan valores NULL
 
@@ -24,7 +24,7 @@ En este tutorial aprenderá lo siguiente:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador beta de C# 8.0. El compilador beta de C# 8 está disponible con [la versión preliminar 1 de Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/) o la [versión preliminar 1 de NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador beta de C# 8.0. El compilador beta de C# 8 está disponible con [la versión preliminar 2 de Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) o la [versión preliminar 2 de NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 En este tutorial se da por supuesto que está familiarizado con C# y. NET, incluidos Visual Studio o la CLI de .NET Core.
 
@@ -36,27 +36,16 @@ El código que escriba para este ejemplo expresa dicha intención y el compilado
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>Creación de la aplicación y habilitación de los tipos de referencia que aceptan valores NULL
 
-Cree una aplicación de consola en Visual Studio o desde la línea de comandos mediante `dotnet new console`. Asigne a la aplicación el nombre `NullableIntroduction`. Una vez que haya creado la aplicación, deberá habilitar las características beta de C# 8. Abra el archivo `csproj` y agregue un elemento `LangVersion` al elemento `PropertyGroup`:
+Cree una aplicación de consola en Visual Studio o desde la línea de comandos mediante `dotnet new console`. Asigne a la aplicación el nombre `NullableIntroduction`. Una vez que haya creado la aplicación, deberá habilitar las características beta de C# 8. Abra el archivo `csproj` y agregue un elemento `LangVersion` al elemento `PropertyGroup`. Debe optar por recibir la característica de **tipos de referencia que aceptan valores NULL**, incluso en proyectos de C# 8. El motivo es que, una vez que la característica está activada, las declaraciones de variables de referencia existentes se convierten en **tipos de referencia que no aceptan valores NULL**. Aunque esa decisión lo ayudará a detectar problemas donde el código existente puede no tener comprobaciones de valores NULL adecuadas, es posible que no se refleje con precisión la intención del diseño original. Para activar la característica, se establece el elemento `NullableContextOptions` en `enable`:
 
 ```xml
 <LangVersion>8.0</LangVersion>
-```
-
-También puede usar las propiedades del proyecto de Visual Studio para habilitar C# 8. En el Explorador de soluciones, haga clic con el botón derecho en el proyecto y seleccione **Propiedades**. A continuación, seleccione la pestaña **Compilar** y haga clic en **Opciones avanzadas**. En la lista desplegable de la versión de lenguaje, seleccione  **C# 8.0 (beta)**.
-
-Debe optar por recibir la característica de **tipos de referencia que aceptan valores NULL**, incluso en proyectos de C# 8. El motivo es que, una vez que la característica está activada, las declaraciones de variables de referencia existentes se convierten en **tipos de referencia que no aceptan valores NULL**. Aunque esa decisión lo ayudará a detectar problemas donde el código existente puede no tener comprobaciones de valores NULL adecuadas, es posible que no se refleje con precisión la intención del diseño original. Active la característica con una nueva directiva pragma:
-
-```csharp
-#nullable enable
-```
-
-Puede agregar la directiva pragma anterior en cualquier lugar de un archivo de origen, y la característica de tipos de referencia que aceptan valores NULL se activa desde ese punto. La directiva pragma también admite el argumento `disable` para desactivar la característica.
-
-También puede activar los**tipos de referencia que aceptan valores NULL** para todo un proyecto si agrega el elemento siguiente al archivo .csproj, por ejemplo, inmediatamente después del elemento `LangVersion` que habilitó C# 8.0:
-
-```xml
 <NullableContextOptions>enable</NullableContextOptions>
 ```
+
+> [!NOTE]
+> Cuando C# 8 se publique (no en modo de versión preliminar), el elemento `NullableContextOptions` se agregará mediante nuevas plantillas de proyecto. Hasta entonces, deberá agregarlo manualmente.
+
 
 ### <a name="design-the-types-for-the-application"></a>Diseño de los tipos para la aplicación
 
@@ -88,10 +77,9 @@ La aplicación que compilará realizará los pasos siguientes:
 
 ## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>Compilación de la encuesta con tipos que aceptan valores NULL y que no aceptan valores NULL
 
-El primer código que escriba crea la encuesta. Deberá escribir clases para modelar una pregunta de encuesta y una ejecución de encuesta. La encuesta tiene tres tipos de preguntas, que se distinguen por el formato de la respuesta: respuestas afirmativas/negativas, respuestas numéricas y respuestas de texto. Cree una clase `public` `SurveyQuestion`. Incluya la directiva pragma `#nullable enable` inmediatamente después de las instrucciones `using`:
+El primer código que escriba crea la encuesta. Deberá escribir clases para modelar una pregunta de encuesta y una ejecución de encuesta. La encuesta tiene tres tipos de preguntas, que se distinguen por el formato de la respuesta: respuestas afirmativas/negativas, respuestas numéricas y respuestas de texto. Cree una clase `public` `SurveyQuestion`.
 
 ```csharp
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyQuestion
@@ -100,10 +88,9 @@ namespace NullableIntroduction
 }
 ```
 
-Si agrega la directiva pragma `#nullable enable`, el compilador interpretará cada declaración de variable de tipos de referencia como un tipo de referencia **que no acepta valores NULL**. Puede ver la primera advertencia agregando propiedades para el texto de la pregunta y el tipo de pregunta, tal y como se muestra en el código siguiente:
+El compilador interpreta cada declaración de variable de tipo de referencia como un tipo de referencia **que no acepta valores NULL** para el código en un contexto habilitado para valores NULL. Puede ver la primera advertencia agregando propiedades para el texto de la pregunta y el tipo de pregunta, tal y como se muestra en el código siguiente:
 
 ```csharp
-#nullable enable
 namespace NullableIntroduction
 {
     public enum QuestionType
@@ -127,12 +114,11 @@ Dado que no ha inicializado `QuestionText`, el compilador emite una advertencia 
 
 Al agregar el constructor, se quita la advertencia. El argumento del constructor también es un tipo de referencia que no acepta valores NULL, por lo que el compilador no emite advertencias.
 
-A continuación, cree una clase `public` denominada "`SurveyRun`". Incluya la directiva pragma `#nullable enable` después de las instrucciones `using`. Esta clase contiene una lista de objetos `SurveyQuestion` y métodos para agregar preguntas a la encuesta, tal como se muestra en el código siguiente:
+A continuación, cree una clase `public` denominada "`SurveyRun`". Esta clase contiene una lista de objetos `SurveyQuestion` y métodos para agregar preguntas a la encuesta, tal como se muestra en el código siguiente:
 
 ```csharp
 using System.Collections.Generic;
 
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyRun
@@ -152,7 +138,7 @@ Cambie a `Program.cs` en el editor y reemplace el contenido de `Main` con las si
 
 [!code-csharp[AddQuestions](../../../samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
-Sin la directiva pragma `#nullable enable` en la parte superior del archivo, el compilador no emitirá ninguna advertencia cuando pase `null` como texto del argumento `AddQuestion`. Para solucionarlo, agregue `#nullable enable` después de la instrucción `using`. Pruébelo agregando la siguiente línea a `Main`:
+Dado que todo el proyecto está habilitado para un contexto que acepta valores NULL, al pasar `null` a cualquier método que espera un tipo de referencia que no acepta valores NULL, recibirá una advertencia Pruébelo agregando la siguiente línea a `Main`:
 
 ```csharp
 surveyRun.AddQuestion(QuestionType.Text, default);
@@ -160,7 +146,7 @@ surveyRun.AddQuestion(QuestionType.Text, default);
 
 ## <a name="create-respondents-and-get-answers-to-the-survey"></a>Creación de los encuestados y obtención de respuestas a la encuesta
 
-A continuación, escriba el código que genera respuestas a la encuesta. Esto implica realizar varias pequeñas tareas:
+A continuación, escriba el código que genera respuestas a la encuesta. Este proceso implica realizar varias pequeñas tareas:
 
 1. Crear un método que genere objetos de encuestados. Estos representan a las personas a las que se les ha pedido que completen la encuesta.
 1. Crear una lógica para simular la realización de preguntas a un encuestado y la recopilación de respuestas o de la ausencia de respuesta de un encuestado.
@@ -169,7 +155,6 @@ A continuación, escriba el código que genera respuestas a la encuesta. Esto im
 Necesitará una clase para representar una respuesta de encuesta, así que agréguela en este momento. Habilite la compatibilidad con la aceptación de valores NULL. Agregue una propiedad `Id` y un constructor que la inicialice, tal como se muestra en el código siguiente:
 
 ```csharp
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyResponse
@@ -195,6 +180,8 @@ Agregue el siguiente código a la clase `SurveyResponse`:
 [!code-csharp[AnswerSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
 El almacenamiento de las respuestas de la encuesta es una cadena `Dictionary<int, string>?`, que indica que puede aceptar valores NULL. Está usando la nueva característica de lenguaje para declarar la intención de diseño tanto para el compilador como para cualquiera que lea el código más adelante. Si alguna vez desreferencia `surveyResponses` sin comprobar el valor NULL en primer lugar, obtendrá una advertencia del compilador. No recibirá una advertencia en el método `AnswerSurvey` porque el compilador puede determinar que la variable `surveyResponses` se estableció en un valor distinto de NULL.
+
+Al usar `null` en las respuestas que faltan se resalta un punto clave para trabajar con tipos de referencia que aceptan valores NULL: el objetivo no es quitar todos los valores `null` del programa. En cambio, de lo que se trata es de garantizar que el código que escribe expresa la intención del diseño. Los valores que faltan son un concepto necesario para expresar en el código. El valor `null` es una forma clara de expresar los valores que faltan. El intento de quitar todos los valores `null` solo lleva a definir alguna otra forma de expresar esos valores que faltan sin `null`.
 
 A continuación, deberá escribir el método `PerformSurvey` en la clase `SurveyRun`. Agregue el código siguiente a la clase `SurveyRun`:
 
@@ -234,6 +221,6 @@ Experimente cambiando las declaraciones de tipos entre tipos de referencia que a
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Obtenga más información leyendo una introducción a los tipos de referencia que aceptan valores NULL.
+Más información sobre cómo migrar una aplicación existente para usar tipos de referencia que aceptan valores NULL:
 > [!div class="nextstepaction"]
-> [Introducción a los tipos de referencia que aceptan valores NULL](../nullable-references.md)
+> [Actualización de aplicaciones para usar tipos de referencia que aceptan valores NULL](upgrade-to-nullable-references.md)

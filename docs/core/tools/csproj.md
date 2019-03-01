@@ -3,12 +3,12 @@ title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: 74cde39a0bbba65d252d64bcedb91c3949dcf6f2
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: d715a3a30c48f1c3fa837b24ee21b49fa947011a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222069"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748015"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -97,26 +97,26 @@ El elemento raíz `<Project>` del archivo *.csproj* tiene un nuevo atributo deno
 Debe tener el conjunto de atributos `Sdk` establecido en uno de esos id. del elemento `<Project>` para poder usar las herramientas de .NET Core y generar el código. 
 
 ### <a name="packagereference"></a>PackageReference
-Elemento `<PackageReference>` que especifica una dependencia de NuGet en el proyecto. El atributo `Include` especifica el identificador del paquete. 
+Elemento `<PackageReference>` que especifica una [dependencia de NuGet en el proyecto](/nuget/consume-packages/package-references-in-project-files). El atributo `Include` especifica el identificador del paquete. 
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
 #### <a name="version"></a>Versión
-`Version` especifica la versión del paquete que se va a restaurar. El atributo respeta las reglas del esquema de [versiones de NuGet](/nuget/create-packages/dependency-versions#version-ranges). El comportamiento predeterminado es una coincidencia de versión exacta. Por ejemplo, si se especifica `Version="1.2.3"`, es equivalente a la notación de NuGet `[1.2.3]` para la versión exacta 1.2.3 del paquete.
+El atributo `Version` necesario especifica la versión del paquete que se va a restaurar. El atributo respeta las reglas del esquema de [versiones de NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards). El comportamiento predeterminado es una coincidencia de versión exacta. Por ejemplo, si se especifica `Version="1.2.3"`, es equivalente a la notación de NuGet `[1.2.3]` para la versión exacta 1.2.3 del paquete.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets y PrivateAssets
-El atributo `IncludeAssets` especifica qué recursos que pertenecen al paquete especificado por `<PackageReference>` se deben consumir. 
+El atributo `IncludeAssets` especifica qué recursos que pertenecen al paquete especificado por `<PackageReference>` se deben consumir. De forma predeterminada, se incluyen todos los recursos del paquete.
 
 El atributo `ExcludeAssets` especifica qué recursos que pertenecen al paquete especificado por `<PackageReference>` no se deben consumir.
 
-El atributo `PrivateAssets` especifica qué recursos que pertenecen al paquete especificado por `<PackageReference>` se deben consumir, pero no pasar al proyecto siguiente. 
+El atributo `PrivateAssets` especifica qué recursos que pertenecen al paquete especificado por `<PackageReference>` se deben consumir, pero no pasar al proyecto siguiente. Cuando este atributo no existe, los recursos `Analyzers`, `Build` y `ContentFiles` son privados de forma predeterminada.
 
 > [!NOTE]
 > `PrivateAssets` es equivalente al elemento *project.json*/*xproj* `SuppressParent`.
 
-Estos atributos pueden contener uno o varios de los siguientes elementos:
+Estos atributos pueden contener uno o varios de los siguientes elementos, separados por punto y coma `;` si aparece más de uno:
 
 * `Compile`: el contenido de la carpeta lib está disponible para compilación.
 * `Runtime`: el contenido de la carpeta runtime está distribuido.
@@ -206,12 +206,64 @@ Detalles de copyright del paquete.
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 Un valor booleano que especifica si el cliente debe pedir al consumidor que acepte la licencia del paquete antes de instalarlo. De manera predeterminada, es `false`.
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+Expresión de licencia SPDX o ruta de acceso a un archivo de licencia dentro del paquete, que con frecuencia también se muestra en la interfaz de usuario como nuget.org.
+
+Esta es la lista completa de [identificadores de licencia SPDX](https://spdx.org/licenses/). NuGet.org acepta solo licencias aprobadas de OSI o FSF cuando se usa la expresión de tipo de licencia.
+
+La sintaxis exacta de las expresiones de licencia se describe a continuación en [ABNF](https://tools.ietf.org/html/rfc5234).
+```cli
+license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
+
+license-exception-id  = <short form license exception identifier from https://spdx.org/spdx-specification-21-web-version#h.ruv3yl8g6czd>
+
+simple-expression = license-id / license-id”+”
+
+compound-expression =  1*1(simple-expression /
+                simple-expression "WITH" license-exception-id /
+                compound-expression "AND" compound-expression /
+                compound-expression "OR" compound-expression ) /                
+                "(" compound-expression ")" )
+
+license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
+```
+
+> [!NOTE]
+> Solo se puede especificar una de estos elementos cada vez: `PackageLicenseExpression`, `PackageLicenseFile` o `PackageLicenseUrl`.
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+Ruta de acceso a un archivo de licencia dentro del paquete si usa una licencia que no tiene asignado un identificador SPDX, o se trata de una licencia personalizada (en caso contrario, se prefiere `PackageLicenseExpression`)
+
+> [!NOTE]
+> Solo se puede especificar una de estos elementos cada vez: `PackageLicenseExpression`, `PackageLicenseFile` o `PackageLicenseUrl`.
+
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
-Una dirección URL a la licencia que se aplica al paquete.
 
-### <a name="packageprojecturl"></a>PackageProjectUrl
-Una dirección URL de la página principal del paquete, que a menudo se muestra en las visualizaciones de la interfaz de usuario, así como en nuget.org.
+Una dirección URL a la licencia que se aplica al paquete. (_en desuso desde Visual Studio 15.9.4, SDK de .NET 2.1.502 y 2.2.101_)
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+[Identificador de licencia SPDX](https://spdx.org/licenses/) o expresión, por ejemplo, `Apache-2.0`.
+
+Reemplaza a `PackageLicenseUrl`, no se puede combinar con `PackageLicenseFile` y requiere Visual Studio 15.9.4, SDK de .NET 2.1.502 o 2.2.101, o una versión posterior.
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+Ruta de acceso al archivo de licencia en el disco, relativa al archivo de proyecto, por ejemplo, `LICENSE.txt`.
+
+Reemplaza a `PackageLicenseUrl`, no se puede combinar con `PackageLicenseExpression` y requiere Visual Studio 15.9.4, SDK de .NET 2.1.502 o 2.2.101, o una versión posterior.
+
+Deberá asegurarse de que el archivo de licencia está empaquetado; para ello, agréguelo explícitamente al proyecto. Ejemplo de uso:
+```xml
+<PropertyGroup>
+  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+</PropertyGroup>
+<ItemGroup>
+  <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+</ItemGroup>
+```
 ### <a name="packageiconurl"></a>PackageIconUrl
 Una dirección URL para una imagen de 64 x 64 con fondo transparente para usarla como icono para el paquete en la visualización de la interfaz de usuario.
 

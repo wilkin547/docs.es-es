@@ -2,14 +2,14 @@
 title: Procedimiento para cargar y descargar ensamblados (C#)
 ms.date: 07/20/2015
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: eadab1d0e5ddd22fb5c0e92f45162548c9bfd76c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ff3c494b40650da1e30e111b2e7f916e249d78a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509355"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748757"
 ---
-# <a name="how-to-load-and-unload-assemblies-c"></a>Procedimiento para cargar y descargar ensamblados (C#)
+# <a name="how-to-load-and-unload-assemblies-c"></a>Filtrar para cargar y descargar ensamblados (C#)
 Los ensamblados a los que hace referencia el programa se cargarán automáticamente en tiempo de compilación, pero también es posible cargar ensamblados específicos en el dominio de aplicación actual en tiempo de ejecución. Para obtener más información, vea [Cómo: Cargar ensamblados en un dominio de aplicación](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
   
  No existe ninguna forma de descargar un ensamblado individual sin descargar todos los dominios de aplicación que lo contienen. Aunque el ensamblado esté fuera de ámbito, el archivo de ensamblado actual permanecerá cargado hasta que se descarguen todos los dominios de aplicación que lo contienen.  
@@ -27,5 +27,5 @@ Los ensamblados a los que hace referencia el programa se cargarán automáticame
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
-- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])
+- [Ensamblados de .NET](../../../../standard/assembly/index.md)
 - [Cómo: Cargar ensamblados en un dominio de aplicación](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

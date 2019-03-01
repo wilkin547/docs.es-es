@@ -1,6 +1,6 @@
 ---
 title: Especificar nombres de tipo completos
-ms.date: 03/14/2018
+ms.date: 02/21/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
 - reflection, fully qualified type names
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9281906f5500d954f3a0c7abface4ee43adcb64d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d73cad94e0e4343c5dd09a3b12131afeabef873
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628544"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747254"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Especificar nombres de tipo completos
 Debe especificar nombres de tipo para tener entradas válidas en varias operaciones de reflexión. Un nombre de tipo completo consiste en una especificación de nombre de ensamblado, una especificación de espacio de nombres y un nombre de tipo. Las especificaciones de nombre de tipo las usan métodos como <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> y <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
@@ -41,9 +41,12 @@ ReferenceTypeSpec
 
 SimpleTypeSpec
     : PointerTypeSpec
-    | ArrayTypeSpec
+    | GenericTypeSpec
     | TypeName
     ;
+
+GenericTypeSpec
+   : SimpleTypeSpec ` NUMBER
 
 PointerTypeSpec
     : SimpleTypeSpec '*'
@@ -107,7 +110,7 @@ AssemblyProperty
     ;
 ```
 
-## <a name="specifying-special-characters"></a>Especificar caracteres especiales  
+## <a name="specifying-special-characters"></a>Especificación de caracteres especiales  
  En un nombre de tipo, IDENTIFIER es cualquier nombre válido determinado por las reglas de un lenguaje.  
   
  Use la barra diagonal inversa (\\) como carácter de escape para separar los tokens siguientes cuando se usan como parte de IDENTIFIER.  
@@ -131,7 +134,7 @@ AssemblyProperty
   
  Si el espacio de nombres fuera `Ozzy.Out+Back`, el signo más debería ir precedido de una barra diagonal inversa. De lo contrario, el analizador lo interpretaría como un separador de anidamiento. La reflexión emite esta cadena como `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly`.  
   
-## <a name="specifying-assembly-names"></a>Especificar nombres de ensamblado  
+## <a name="specifying-assembly-names"></a>Especificación de nombres de ensamblado  
  La información mínima necesaria en una especificación de nombre de ensamblado es el nombre textual (IDENTIFIER) del ensamblado. Puede seguir el IDENTIFIER mediante una lista separada por comas de pares de propiedad-valor, como se describe en la tabla siguiente. La nomenclatura de IDENTIFIER debe seguir las reglas de la nomenclatura de archivos. IDENTIFIER no distingue mayúsculas de minúsculas.  
   
 |Nombre de la propiedad|Descripción|Valores permitidos|  
@@ -177,14 +180,17 @@ com.microsoft.crypto, Culture="", PublicKeyToken=a5d015c7d5a0b012
 com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,  
     Version=1.0.0.0  
 ```  
-  
-## <a name="specifying-pointers"></a>Especificar punteros  
+## <a name="specifying-generic-types"></a>Especificación de tipos genéricos
+
+SimpleTypeSpec\`NUMBER representa un tipo genérico abierto de 1 a *n* parámetros de tipo genérico. Por ejemplo, para obtener la referencia al tipo genérico abierto List\<T> o el tipo genérico cerrado List\<String>, use ``Type.GetType("System.Collections.Generic.List`1")``; para obtener una referencia al tipo genérico Dictionary\<TKey, TValue>, use ``Type.GetType("System.Collections.Generic.Dictionary`2")``. 
+
+## <a name="specifying-pointers"></a>Especificación de punteros  
  SimpleTypeSpec* representa un puntero no administrado. Por ejemplo, para obtener un puntero al tipo MyType, use `Type.GetType("MyType*")`. Para obtener un puntero a un puntero al tipo MyType, use `Type.GetType("MyType**")`.  
   
-## <a name="specifying-references"></a>Especificar referencias  
+## <a name="specifying-references"></a>Especificación de referencias  
  SimpleTypeSpec & representa un puntero administrado o referencia. Por ejemplo, para obtener una referencia al tipo MyType, use `Type.GetType("MyType &")`. Tenga en cuenta que, a diferencia de los punteros, las referencias están limitadas a un nivel.  
   
-## <a name="specifying-arrays"></a>Especificar matrices  
+## <a name="specifying-arrays"></a>Especificación de matrices  
  En la gramática de BNF, ReflectionEmitDimension solo se aplica a las definiciones de tipo incompletas recuperadas mediante <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>. Las definiciones de tipo incompletas son objetos <xref:System.Reflection.Emit.TypeBuilder> construidos mediante <xref:System.Reflection.Emit?displayProperty=nameWithType>, pero en los que no se ha llamado a <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType>. Se puede usar ReflectionDimension para recuperar cualquier definición de tipo que se haya completado, es decir, un tipo que se haya cargado.  
   
  Para obtener acceso a las matrices en la reflexión, se debe especificar el rango de la matriz:  
@@ -192,7 +198,6 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 -   `Type.GetType("MyArray[]")` obtiene una matriz unidimensional con límite inferior 0.  
   
 -   `Type.GetType("MyArray[*]")` obtiene una matriz unidimensional con límite inferior desconocido.  
-  
 -   `Type.GetType("MyArray[][]")` obtiene una matriz de la matriz bidimensional.  
   
 -   `Type.GetType("MyArray[*,*]")` y `Type.GetType("MyArray[,]")` obtienen una matriz bidimensional rectangular con límites inferiores desconocidos.  

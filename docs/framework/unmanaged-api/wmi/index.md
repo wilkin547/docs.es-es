@@ -4,12 +4,6 @@ description: Resume la API no administrada de .NET Framework para WMI y la infor
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
-ms.openlocfilehash: 6e105bc28b6011c3177216aba996eb85c0766ac8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069516"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Instrumental de administración de Windows (WMI) y contadores de rendimiento (referencia de API no administrada)
 
@@ -73,5 +67,6 @@ La API incluye estas funciones:
 | [Función VerifyClient](verifyclientkey.md) | Garantiza que la clave de cliente cuenta con la seguridad adecuada. |
 | [Función WritePropertyValue](writepropertyvalue.md) | Escribe un número específico de bytes en una propiedad identificada por un controlador de propiedad. |
 
- ## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Vea también
+
 [Referencia de API no administrada](../index.md) 

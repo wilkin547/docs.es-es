@@ -2,12 +2,12 @@
 title: Procedimiento Crear ensamblados de confianza sin firmar (C#)
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 4281aa4d507b2150f65d7d7ff05dd2a2fa8aacd3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bf9a8bd18a1b98ae5e128ca67ca185baa7d599d
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703229"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745268"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>Procedimiento Crear ensamblados de confianza sin firmar (C#)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados sin firmar.  
@@ -93,7 +93,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md) (Ensamblados y caché global de ensamblados [C#])
+- [Ensamblados de .NET](../../../../standard/assembly/index.md)
 - [Ensamblados de confianza (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [Cómo: Crear ensamblados de confianza firmados (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [Guía de programación de C#](../../../../csharp/programming-guide/index.md)

@@ -7,12 +7,12 @@ ms.date: 08/30/2017
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: dacf820e8e49a337792fa927838fe4b262712e41
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1765c16cb55857b83a8206ae97327d0fd2809019
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240091"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747497"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Bibliotecas de F# de prueba unitaria en .NET Core con pruebas de dotnet y MSTest
 
@@ -30,7 +30,7 @@ En el directorio de la solución, cree un directorio *MathService*. Esta es la e
     /MathService
 ```
 
-Make *MathService* the current directory and run [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) to create the source project.  Para usar el desarrollo controlado por pruebas (TDD), tendrá que crear una implementación de errores del servicio de matemáticas:
+Make *MathService* the current directory and run [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) to create the source project.  Creará una implementación de errores del servicio de matemáticas:
 
 ```fsharp
 module MyMath =
@@ -87,7 +87,7 @@ Ejecute [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools
 
 ## <a name="creating-the-first-test"></a>Crear la primera prueba
 
-El enfoque de TDD requiere la escritura de una prueba con errores, después la valida y finalmente repite el proceso. Abra *Tests.fs* y agregue el código siguiente:
+Escribirá una prueba de errores, la aprobará y, luego, repetirá el proceso. Abra *Tests.fs* y agregue el código siguiente:
 
 ```fsharp
 namespace MathService.Tests

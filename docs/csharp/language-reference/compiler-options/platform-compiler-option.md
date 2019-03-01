@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 1573e28f2a6f9dec7825d364debcdf1085ef7ff2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4918407c68c7164db023b19cb170aef12fd203
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635672"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663904"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (Opciones del compilador de C#)
 Especifica qué versión de Common Language Runtime (CLR) puede ejecutar el ensamblado.  
@@ -36,6 +36,8 @@ Especifica qué versión de Common Language Runtime (CLR) puede ejecutar el ensa
   
 -   **ARM** compila el ensamblado de forma que pueda ejecutarse en un equipo que tenga un procesador Advanced RISC Machine (ARM).  
   
+-   **ARM64** compila el ensamblado que se va a ejecutar mediante el CLR de 64 bits en un equipo que tiene un procesador Advanced RISC Machine (ARM) que admite el conjunto de instrucciones A64.  
+
 -   **x64** compila el ensamblado de forma que el CLR de 64 bits pueda ejecutarlo en equipos compatibles con el conjunto de instrucciones AMD64 o EM64T.  
   
 -   **x86** compila el ensamblado de forma que el CLR de 32 bits compatible con x86 pueda ejecutarlo.  
