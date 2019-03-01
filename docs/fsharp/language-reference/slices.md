@@ -2,12 +2,12 @@
 title: Los segmentos (F#)
 description: Obtenga información sobre cómo utilizar los segmentos existentes F# tipos de datos y cómo definir sus propios segmentos para otros tipos de datos.
 ms.date: 01/22/2019
-ms.openlocfilehash: c204c6cbb195b33998b92dd940313a132ecc321d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b57d4eea40bb26dc43d8255dd933b63ac6303c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746716"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970119"
 ---
 # <a name="slices"></a>Segmentos
 
@@ -95,7 +95,7 @@ El F# biblioteca principal no define `GetSlice`para matrices 3D. Si desea segmen
 
 El F# biblioteca principal define los segmentos para un conjunto limitado de tipos. Si desea definir segmentos más tipos de datos, puede hacerlo en la propia definición de tipo o en una extensión de tipo.
 
-Por ejemplo, aquí es cómo podría definir segmentos de la <xref:System.ArraySegment`1> clase para permitir la manipulación de datos adecuada:
+Por ejemplo, aquí es cómo podría definir segmentos de la <xref:System.ArraySegment%601> clase para permitir la manipulación de datos adecuada:
 
 ```fsharp
 open System
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Uso de inclusión para evitar la conversión boxing si es necesario
 
-Si va a definir segmentos de un tipo que es realmente un struct, se recomienda `inline` el `GetSlice` miembro. El F# compilador optimiza los argumentos opcionales, evitando las asignaciones del montón como resultado de la segmentación. Esto es muy importante para la segmentación de construcciones como <xref:System.Span`1> que no se asignará en el montón.
+Si va a definir segmentos de un tipo que es realmente un struct, se recomienda `inline` el `GetSlice` miembro. El F# compilador optimiza los argumentos opcionales, evitando las asignaciones del montón como resultado de la segmentación. Esto es muy importante para la segmentación de construcciones como <xref:System.Span%601> que no se puede asignar en el montón.
 
 ```fsharp
 open System

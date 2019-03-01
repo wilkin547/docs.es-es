@@ -1,5 +1,5 @@
 ---
-title: AddFile (método1)
+title: AddFile (Método)
 ms.date: 03/30/2017
 api_name:
 - IALink.AddFile
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84b68638ed0f7a86156cf7e5fcc98d3c02cba18a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04bc008d0279601e90d13e6a57c52a458fca1d7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662613"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967885"
 ---
-# <a name="addfile-method1"></a>AddFile (método1)
+# <a name="addfile-method"></a>AddFile (Método)
 Agrega archivos al ensamblado. También puede utilizarse para crear módulos no enlazados.  
   
 ## <a name="syntax"></a>Sintaxis  

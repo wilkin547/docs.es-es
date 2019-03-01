@@ -12,12 +12,12 @@ helpviewer_keywords:
 - program termination
 - execution [Visual Basic], stopping
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
-ms.openlocfilehash: 63bcc5d5205681917ba30bdb73bc496307a6322a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e08d436686876a0a3d63f15167d35383e32221e7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672518"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967807"
 ---
 # <a name="exit-statement-visual-basic"></a>Exit (Instrucción, Visual Basic)
 Se cierra un procedimiento o bloque y transfiere el control inmediatamente a la instrucción siguiente a la llamada al procedimiento o la definición del bloque.  
@@ -67,17 +67,17 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, la condición del bucle detiene el bucle cuando la `index` variable es mayor que 100. El `If` instrucción del bucle, sin embargo, hace que el `Exit Do` instrucción para detener el bucle cuando la variable de índice es mayor que 10.  
   
- [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se asigna el valor devuelto para el nombre de función `myFunction`y, a continuación, usa `Exit Function` para devolver de la función.  
   
- [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el [instrucción Return](../../../visual-basic/language-reference/statements/return-statement.md) para asignar el valor devuelto y salir de la función.  
   
- [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]  
   
 ## <a name="see-also"></a>Vea también
 - [Continue (instrucción)](../../../visual-basic/language-reference/statements/continue-statement.md)

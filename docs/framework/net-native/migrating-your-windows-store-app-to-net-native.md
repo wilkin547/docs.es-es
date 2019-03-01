@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cc3b806043daea9247741b1816c9055378f45cf
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 92e4f416e26e5af9124593f2bef8d8042fcfc953
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443041"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966793"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrar la aplicación de la Tienda Windows a .NET Native
 .NET native proporciona la compilación estática de las aplicaciones en el Store de Windows o en el equipo del desarrollador. Esto difiere de la compilación dinámica para las aplicaciones de la Tienda Windows realizada por el compilador Just-in-time (JIT) o el [generador de imágenes nativas (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) en el dispositivo. A pesar de las diferencias, .NET Native intenta mantener la compatibilidad con la [.NET para Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). En su mayor parte, lo que funciona en las aplicaciones de .NET para Windows Store también funciona con .NET Native.  Sin embargo, en algunos casos, puede encontrar cambios de comportamiento. Este documento describe las diferencias entre las aplicaciones estándar de .NET para Windows Store y .NET Native en las áreas siguientes:  
@@ -622,10 +622,8 @@ Otras características de interoperabilidad no compatibles son:
   
 -   <xref:System.Xml.Serialization.XmlSerializer> no aceptan la interfaz de serialización personalizada <xref:System.Xml.Serialization.IXmlSerializable> . Si tiene una clase que implementa esta interfaz, <xref:System.Xml.Serialization.XmlSerializer> considera el tipo como un tipo de objeto CLR estándar (POCO) y solo serializa sus propiedades públicas.  
   
--   Serializar un objeto <xref:System.Exception> simple, como el siguiente, no funciona bien con <xref:System.Runtime.Serialization.DataContractSerializer> ni con <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:  
-  
-  
-  
+-   Serializar un simple <xref:System.Exception> objeto no funciona bien con <xref:System.Runtime.Serialization.DataContractSerializer> y <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.
+
 <a name="VS"></a>   
 ## <a name="visual-studio-differences"></a>Diferencias de Visual Studio  
  **Excepciones y depuración**  

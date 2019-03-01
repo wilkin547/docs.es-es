@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: a23d16d4ef4e90041e320c52381fa34b8b33d2d4
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: fc531bb619ed54cf35d2e89b8e6df3ec7175f3f9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738752"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973553"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Declaración de variable en Visual Basic
 Declare una variable para especificar su nombre y las características. La instrucción de declaración de variables es el [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Su ubicación y contenido determinan las características de la variable.  
@@ -66,7 +66,7 @@ Dim l, m As Long, x, y As Single
 ## <a name="local-type-inference"></a>Inferencia de tipo de variable local  
  *Inferencia de tipo* se usa para determinar los tipos de datos de variables locales declaradas sin un `As` cláusula. El compilador deduce el tipo de la variable del tipo de la expresión de inicialización. Esto le permite declarar variables sin especificar explícitamente un tipo. En el ejemplo siguiente, ambos `num1` y `num2` están fuertemente tipados como enteros.  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/variable-declaration_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]  
   
  Si desea usar la inferencia de tipo local, `Option Infer` debe establecerse en `On`. Para obtener más información, vea [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) (Inferencia de tipo de variable local) y [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) (Instrucción Option Infer).  
   

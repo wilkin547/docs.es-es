@@ -1,5 +1,5 @@
 ---
-title: ICorDebugClass2 (Interfaz1)
+title: ICorDebugClass2 (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugClass2
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb70016560f453caf7a7a3eed3e1aa6b5fc9f0ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46358a66d79030aeea42c75827f05cf07fa925ea
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557375"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967755"
 ---
-# <a name="icordebugclass2-interface1"></a>ICorDebugClass2 (Interfaz1)
+# <a name="icordebugclass2-interface"></a>ICorDebugClass2 (Interfaz)
+
 Representa una clase genérica o una clase con un parámetro de método de tipo <xref:System.Type>. Esta interfaz extiende [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).  
   
 ## <a name="methods"></a>Métodos  
@@ -48,5 +49,5 @@ Representa una clase genérica o una clase con un parámetro de método de tipo 
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICorDebugClass (interfaz1)](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
+- [ICorDebugClass (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
 - [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

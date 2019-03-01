@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f2288e02c01a40877abbd6a5ce5b2696c0944ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8268aca920c0b9fc8ea3390d80b9164c22c1ad9c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719981"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977861"
 ---
 # <a name="putinstancewmi-function"></a>Función PutInstanceWmi
 Crea o actualiza una instancia de una clase existente. La instancia se escribe en el repositorio de la WMI. 
@@ -49,7 +49,7 @@ HRESULT PutInstanceWmi (
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si se establece, WMI no almacena los calificadores con el **modificado** flavor. </br> Si no es el conjunto, se supone que este objeto no está localizado y todos los calificadores son storedwith esta instancia. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si se establece, WMI no almacena los calificadores con el **modificado** flavor. <br> Si no es el conjunto, se supone que este objeto no está localizado y todos los calificadores son storedwith esta instancia. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Cree la instancia si no existe, o sobrescribirlo si ya existe. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Actualice la instancia. Debe existir la instancia de la llamada se realice correctamente. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Cree la instancia. Se produce un error en la llamada si la instancia ya existe. |

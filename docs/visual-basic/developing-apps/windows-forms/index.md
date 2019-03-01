@@ -40,7 +40,7 @@ Una parte importante de Visual Basic es la capacidad para crear aplicaciones de 
   
 |En|Vea|  
 |--------|---------|  
-|Cree una nueva aplicación de Windows Forms con Visual Studio|[Tutorial: Creación de un formulario de Windows Simple](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Cree una nueva aplicación de Windows Forms con Visual Studio|[Tutorial 1: Crear un visor de imágenes](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
 |Usar controles en formularios|[Cómo: Agregar controles a Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Crear gráficos con <xref:System.Drawing>|[Introducción a la programación de gráficos](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Crear controles personalizados|[Cómo: Heredar de la clase UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  

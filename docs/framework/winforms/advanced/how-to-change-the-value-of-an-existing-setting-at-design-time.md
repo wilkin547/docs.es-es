@@ -5,17 +5,17 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
-ms.openlocfilehash: 0ec90e326a3ac615ee140ebb61081bdd5c5c0a8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f40b6b6e38785b1e8dcc9061f8cf0b459f4ed8b5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541110"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965285"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Cómo Cambie el valor de una configuración existente en tiempo de diseño
 Puede usar Visual Studio para editar los valores de configuración existente en el proyecto.  
   
-### <a name="to-change-the-value-of-an-existing-setting-at-design-time-in-c"></a>Para cambiar el valor de una configuración existente en tiempo de diseñoC#  
+### <a name="to-change-the-value-of-an-existing-setting-at-design-time-in-c"></a>Para cambiar el valor de una configuración existente en tiempo de diseño en C\#
   
 1.  En **el Explorador de soluciones**, expanda el **propiedades** nodo del proyecto.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: 86dc813c264f45e4f9c2cdf8d2dc7e7e6603c4d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2c778afea90a90b2b5f83300c2d174db39f3c15
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725368"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978480"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Pasar argumentos por valor y por referencia (Visual Basic)
 En Visual Basic, puede pasar un argumento a un procedimiento *por valor* o *por referencia*. Esto se conoce como el *mecanismo para pasar*, y determina si el procedimiento puede modificar el elemento de programación subyacente del argumento en el código de llamada. La declaración de procedimiento determina el mecanismo de paso para cada parámetro especificando el [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) palabra clave.  
@@ -66,7 +66,7 @@ En Visual Basic, puede pasar un argumento a un procedimiento *por valor* o *por 
  El ejemplo siguiente muestra cuándo se debe pasar argumentos por valor y cuándo se debe pasar por referencia. Procedimiento `Calculate` tiene tanto un `ByVal` y un `ByRef` parámetro. Dada una tasa de interés, `rate`y una cantidad de dinero, `debt`, la tarea del procedimiento consiste en calcular un nuevo valor para `debt` que es el resultado de aplicar la tasa de interés para el valor original de `debt`. Dado que `debt` es un `ByRef` parámetro, el nuevo total se refleja en el valor del argumento en el código de llamada que se corresponde con `debt`. Parámetro `rate` es un `ByVal` parámetro porque `Calculate` no debe cambiar su valor.  
   
 ### <a name="code"></a>Código  
- [!code-vb[VbVbcnProcedures#74](./codesnippet/VisualBasic/passing-arguments-by-value-and-by-reference_1.vb)]  
+ [!code-vb[VbVbcnProcedures#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class2.vb#74)]  
   
 ## <a name="see-also"></a>Vea también
 - [Procedimientos](./index.md)

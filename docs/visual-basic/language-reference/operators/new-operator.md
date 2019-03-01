@@ -11,12 +11,12 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 0e8ec5877cba5f5cf97e1677460da06fd87cce1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dda23ef3ff49bd32474f39f5ae1807e57bdc2a62
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587559"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980469"
 ---
 # <a name="new-operator-visual-basic"></a>New (Operador, Visual Basic)
 Presenta un `New` cláusula para crear una nueva instancia de objeto, especifica una restricción de constructor en un parámetro de tipo, o identifica una `Sub` procedimiento como un constructor de clase.  
@@ -26,11 +26,11 @@ Presenta un `New` cláusula para crear una nueva instancia de objeto, especifica
   
  Puede usar un `New` cláusula en una instrucción de declaración o en una instrucción de asignación. Cuando se ejecuta la instrucción, llama al constructor apropiado de la clase especificada, pasando los argumentos que hayan proporcionado. El ejemplo siguiente muestra mediante la creación de instancias de un `Customer` clase que tiene dos constructores, uno que no toma ningún parámetro y otro que toma un parámetro de cadena.  
   
- [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]  
   
  Dado que las matrices son clases, `New` puede crear una nueva instancia de matriz, como se muestra en los ejemplos siguientes.  
   
- [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
+ [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]  
   
  Common language runtime (CLR) produce una <xref:System.OutOfMemoryException> error si no hay memoria suficiente para crear la nueva instancia.  
   

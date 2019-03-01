@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 846dc49f15f48e5f7f68171e0f937678751c796b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bc2d6a6b3e01cd7efa00763d3b9bf3a0026be6f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648669"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975880"
 ---
 # <a name="class-statement-visual-basic"></a>Instrucción Class (Visual Basic)
 Declara el nombre de una clase e introduce la definición de las variables, propiedades, eventos y procedimientos que incluye la clase.  
@@ -57,7 +57,8 @@ End Class
 ## <a name="remarks"></a>Comentarios  
  Un `Class` instrucción define un nuevo tipo de datos. Un *clase* es un bloque de creación fundamental de la programación orientada a objetos (OOP). Para obtener más información, consulte [objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
- `Class` solo se puede utilizar en un espacio de nombres o un nivel de módulo. Esto significa que el *contexto de declaración* para una clase debe ser un archivo de código fuente, espacio de nombres, clase, estructura, módulo o interfaz y no puede ser un procedimiento o bloque. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).  
+ 
+  `Class` solo se puede utilizar en un espacio de nombres o un nivel de módulo. Esto significa que el *contexto de declaración* para una clase debe ser un archivo de código fuente, espacio de nombres, clase, estructura, módulo o interfaz y no puede ser un procedimiento o bloque. Para obtener más información, vea [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).  
   
  Cada instancia de una clase tiene un período de duración independiente de todas las demás instancias. Este período de duración comienza cuando se crea un [nuevo operador](../../../visual-basic/language-reference/operators/new-operator.md) cláusula o una función como <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>. Finaliza cuando se han establecido todas las variables que apunte a la instancia [nada](../../../visual-basic/language-reference/nothing.md) o a las instancias de otras clases.  
   
@@ -105,7 +106,7 @@ End Class
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa un `Class` instrucción para definir una clase y varios miembros.  
   
- [!code-vb[VbVbalrStatements#62](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/class-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#62)]  
   
 ## <a name="see-also"></a>Vea también
 - [Objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

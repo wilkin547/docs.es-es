@@ -5,12 +5,12 @@ helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: fba33bc177641f3fc9f67b1a82919a44d28a11cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ecb6a5d684badba68f4c224d5359ea428cfbbf2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681789"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968717"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Procedimiento Incrustar expresiones en literales XML (Visual Basic)
 Literales XML se pueden combinar con expresiones incrustadas para crear un documento XML, fragmento o elemento que contiene el contenido creado en tiempo de ejecución. Los ejemplos siguientes muestran cómo utilizar expresiones incrustadas para rellenar los nombres de elementos, atributos y contenido del elemento en tiempo de ejecución.  
@@ -25,7 +25,7 @@ Literales XML se pueden combinar con expresiones incrustadas para crear un docum
   
 -   El ejemplo siguiente muestra cómo insertar el texto que se encuentra en la `contactName` variable entre los elementos de nombre de apertura y cierre.  
   
-     [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_1.vb)]  
+     [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
      Este ejemplo produce el siguiente resultado:  
   
@@ -39,7 +39,7 @@ Literales XML se pueden combinar con expresiones incrustadas para crear un docum
   
 -   El ejemplo siguiente muestra cómo insertar el texto que se encuentra en la `phoneType` variable como el valor de la `type` atributo.  
   
-     [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_2.vb)]  
+     [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
      Este ejemplo produce el siguiente resultado:  
   
@@ -55,7 +55,7 @@ Literales XML se pueden combinar con expresiones incrustadas para crear un docum
   
      Al crear elementos mediante esta técnica, debe cerrarlos con la \</ > etiqueta.  
   
-     [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_3.vb)]  
+     [!code-vb[VbXMLSamples#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#41)]  
   
      Este ejemplo produce el siguiente resultado:  
   

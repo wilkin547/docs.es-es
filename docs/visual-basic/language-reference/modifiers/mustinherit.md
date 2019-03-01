@@ -10,12 +10,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-ms.openlocfilehash: 7a246e2565ec6d96e828654fef74500c4cf896b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 124262695f9333ce31c4097662688e0fe30f300d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627673"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969536"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 Especifica que una clase puede usarse únicamente como clase base y que no se puede crear un objeto directamente a partir de él.  
@@ -36,7 +36,7 @@ Especifica que una clase puede usarse únicamente como clase base y que no se pu
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra la herencia forzada y reemplazo forzado. La clase base `shape` define una variable `acrossLine`. Las clases `circle` y `square` derivan `shape`. Heredan la definición de `acrossLine`, pero debe definir la función `area` porque ese cálculo es diferente para cada tipo de forma.  
   
- [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/VisualBasic/mustinherit_1.vb)]  
+ [!code-vb[VbVbalrKeywords#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#2)]  
   
  Puede declarar `shape1` y `shape2` a ser de tipo `shape`. Sin embargo, no se puede crear un objeto de `shape` porque carece de la funcionalidad de la función `area` y se marca como `MustInherit`.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 806675c35c0463047646c70a54f80a69d57dffa4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47db8c9dc0562f8eb527eda65bb56404dc1ea8c8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574851"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971330"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By (Cláusula, Visual Basic)
 Agrupa los elementos de los resultados de una consulta. También se puede usar para aplicar funciones de agregado a cada grupo. La operación de agrupación se basa en una o varias claves.  
@@ -67,7 +67,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se agrupa una lista de clientes según su ubicación (país) y se proporciona un recuento de los clientes de cada grupo. Los resultados se ordenan por nombre de país. Los resultados agrupados se ordenan por nombre de ciudad.  
   
- [!code-vb[VbSimpleQuerySamples#11](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-by-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#11)]  
   
 ## <a name="see-also"></a>Vea también
 - [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

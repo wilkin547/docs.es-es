@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: b49475bf7aea8d28ce057c7d4376cf7ad8285a0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 362d241d1da01ea935ab3bb3dcdfcba30cb8c67e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506256"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975152"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Escribir la primera consulta con LINQ (Visual Basic)
 Una *consulta* es una expresión que recupera datos de un origen de datos. Las consultas se expresan en un lenguaje de consulta dedicado. Con el tiempo, distintos idiomas se han desarrollado para diferentes tipos de orígenes de datos, por ejemplo, SQL para bases de datos relacionales y XQuery para XML. Esto hace que sea necesario para el desarrollador de aplicaciones obtener información sobre un nuevo lenguaje de consulta para cada tipo de origen de datos o formato de datos que se admite.  
@@ -34,7 +34,7 @@ Una *consulta* es una expresión que recupera datos de un origen de datos. Las c
 > [!NOTE]
 >  En el [página compilación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), asegúrese de que **Option infer** está establecido en **en**.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
  Resultado:  
   
@@ -47,7 +47,7 @@ Una *consulta* es una expresión que recupera datos de un origen de datos. Las c
   
  Si los datos de origen ya no implementan <xref:System.Collections.Generic.IEnumerable%601>, un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] proveedor es necesario para implementar la funcionalidad de la *operadores de consulta estándar* para ese origen de datos. Por ejemplo, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] controla el trabajo de cargar un documento XML en un consultable <xref:System.Xml.Linq.XElement> escribe, tal como se muestra en el ejemplo siguiente. Para obtener más información acerca de los operadores de consulta estándar, consulte [Standard Query Operators Overview (Visual Basic)](standard-query-operators-overview.md).  
   
- [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
+ [!code-vb[VbLINQFirstQuery#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#2)]  
   
  Con [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], primero se crea una asignación relacional de objetos en tiempo de diseño, ya sea manualmente o mediante el [LINQ to SQL Tools en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) en Visual Studio. Después, se escriben las consultas en los objetos y, en tiempo de ejecución, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] controla la comunicación con la base de datos. En el ejemplo siguiente, `customers` representa una tabla específica en la base de datos y <xref:System.Data.Linq.Table%601> admite genérico <xref:System.Linq.IQueryable%601>.  
   
@@ -67,7 +67,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  Cuando se ejecuta la consulta en el ejemplo siguiente devuelve todos los números de una matriz de enteros, `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
  La expresión de consulta contiene tres cláusulas: `From`, `Where`, y `Select`. La función específica y el propósito de cada cláusula de expresión de consulta se analiza en [operaciones básicas de consulta (Visual Basic)](basic-query-operations.md). Para obtener más información, consulte [consultas](../../../../visual-basic/language-reference/queries/index.md). Tenga en cuenta que en [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], una definición de consulta a menudo se almacena en una variable y ejecutará más adelante. La consulta variable, como `evensQuery` en el ejemplo anterior, debe ser un tipo consultable. El tipo de `evensQuery` es `IEnumerable(Of Integer)`, asignado por el compilador utiliza la inferencia de tipo local.  
   
@@ -79,13 +79,13 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
 ### <a name="deferred-execution"></a>Ejecución aplazada  
  Una típica [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta es similar a la mostrada en el ejemplo anterior, en el que `evensQuery` está definido. Crea la consulta pero no la ejecuta inmediatamente. En su lugar, la definición de consulta se almacena en la variable de consulta `evensQuery`. Ejecutar la consulta más adelante, normalmente mediante un `For Each` bucle, que devuelve una secuencia de valores, o bien aplicando un operador de consulta estándar, tales como `Count` o `Max`. Este proceso se conoce como *ejecución aplazada*.  
   
- [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
+ [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
   
  Para una secuencia de valores, tener acceso a los datos recuperados mediante el uso de la variable de iteración en la `For Each` bucle (`number` en el ejemplo anterior). Dado que la variable de consulta, `evensQuery`, contiene la definición de consulta en lugar de los resultados de consulta, puede ejecutar una consulta con tanta frecuencia como desee con la variable de consulta más de una vez. Por ejemplo, podría tener una base de datos en la aplicación que se está actualizando continuamente por una aplicación independiente. Después de haber creado una consulta que recupera datos de esa base de datos, puede usar un `For Each` bucle para ejecutar la consulta de forma repetida, recuperar los datos más recientes cada vez.  
   
  En el ejemplo siguiente se muestra cómo la ejecución aplazada funciona. Después de `evensQuery2` se definen y se ejecuta con un `For Each` bucle, como se muestra en los ejemplos anteriores, algunos elementos del origen de datos `numbers` se cambian. A continuación, un segundo `For Each` se ejecuta un bucle `evensQuery2` nuevo. Los resultados son diferentes la segunda vez, porque el `For Each` bucle ejecuta la consulta de nuevo, con los nuevos valores en `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
+ [!code-vb[VbLINQFirstQuery#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#3)]  
   
  Resultado:  
   
@@ -102,15 +102,15 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  La consulta siguiente devuelve un recuento de los números pares en una matriz de enteros. No se guarda la definición de consulta, y `numEvens` es una sencilla `Integer`.  
   
- [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
+ [!code-vb[VbLINQFirstQuery#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#4)]  
   
  Puede lograr el mismo resultado utilizando la `Aggregate` método.  
   
- [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
+ [!code-vb[VbLINQFirstQuery#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#5)]  
   
  También puede forzar la ejecución de una consulta mediante una llamada a la `ToList` o `ToArray` método en una consulta (inmediato) o una variable de consulta (diferida), tal como se muestra en el código siguiente.  
   
- [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
+ [!code-vb[VbLINQFirstQuery#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#6)]  
   
  En los ejemplos anteriores, `evensQuery3` es una consulta de variable, pero `evensList` es una lista y `evensArray` es una matriz.  
   

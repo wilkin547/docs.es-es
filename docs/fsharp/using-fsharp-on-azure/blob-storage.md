@@ -3,14 +3,14 @@ title: Introducción a Azure Blob storage medianteF#
 description: Store datos no estructurados en la nube con Azure Blob storage.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664996"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981912"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>Introducción a Azure Blob storage medianteF# #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>Introducción a Azure Blob storage mediante F\#
 
 Azure Blob Storage es un servicio que almacena datos no estructurados en la nube como objetos o blobs. El almacenamiento de blobs puede almacenar cualquier tipo de texto o datos binarios, como un documento, un archivo multimedia o un instalador de aplicación. El Almacenamiento de blobs también se conoce como "almacenamiento de objetos".
 

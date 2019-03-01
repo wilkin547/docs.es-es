@@ -9,27 +9,27 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: fdf5b8bcc53a49b31fa0fb2b71dc2702a4900503
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ea9bac1326ebab7ef44fb5541c05be8bc855e7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495467"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967209"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Propiedades implementadas automáticamente (Visual Basic)
 *Propiedades autoimplementadas* le permiten especificar rápidamente una propiedad de una clase sin tener que escribir código para `Get` y `Set` la propiedad. Al escribir código para una propiedad implementada automáticamente, el compilador de Visual Basic crea de manera automática un campo privado para almacenar la variable de propiedad, además de crear los procedimientos `Get` y `Set` asociados.  
   
  Con las propiedades implementadas automáticamente, una propiedad (incluido un valor predeterminado) puede declararse en una sola línea. En el ejemplo siguiente se muestran tres declaraciones de propiedad.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#1](./codesnippet/VisualBasic/auto-implemented-properties_1.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#1)]  
   
  Una propiedad implementada automáticamente equivale a una propiedad cuyo valor se almacena en un campo privado. En el siguiente ejemplo de código se muestra una propiedad implementada automáticamente.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#5](./codesnippet/VisualBasic/auto-implemented-properties_2.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#5)]  
   
  En el ejemplo de código siguiente se muestra el código equivalente al del ejemplo anterior de propiedad implementada automáticamente.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#2](./codesnippet/VisualBasic/auto-implemented-properties_3.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#2)]  
   
  En el código siguiente se muestran las propiedades de solo lectura implementadoras:  
   
@@ -63,7 +63,7 @@ End Class
 ## <a name="initializing-an-auto-implemented-property"></a>Inicializar una propiedad implementada automáticamente  
  Cualquier expresión que se pueda usar para inicializar un campo es válida para inicializar una propiedad implementada automáticamente. Al inicializar una propiedad implementada automáticamente, la expresión se evalúa y se pasa al procedimiento `Set` para la propiedad. En los ejemplos de código siguientes se muestran algunas propiedades implementadas automáticamente que incluyen valores iniciales.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#3](./codesnippet/VisualBasic/auto-implemented-properties_4.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#3)]  
   
  No se puede inicializar una propiedad implementada automáticamente que sea miembro de una `Interface` o que esté marcada como `MustOverride`.  
   
@@ -71,7 +71,7 @@ End Class
   
  Al declarar una propiedad implementada automáticamente como matriz, no se pueden especificar límites de matriz explícitos. Sin embargo, se puede proporcionar un valor con un inicializador de matriz, como se muestra en los ejemplos siguientes.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#4](./codesnippet/VisualBasic/auto-implemented-properties_5.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#4)]  
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>Definiciones de propiedades que requieren sintaxis estándar  
  Las propiedades implementadas automáticamente son fáciles de usar y admiten muchos escenarios de programación. Sin embargo, hay situaciones en las que no se puede usar una propiedad implementada automáticamente y en su lugar se debe usar el estándar, o *expandido*, sintaxis de la propiedad.  

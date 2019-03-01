@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: 25a868afded83f28f5f56a9f19e050bbd32b24c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4aa8dd030d95e0404c037b2c8b674463bb51b267
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490835"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972566"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Propiedad de indizador de extensión (Visual Basic)
 Proporciona acceso a los elementos individuales de una recopilación.  
@@ -49,7 +49,7 @@ object(index)
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra cómo usar el indizador de extensión para tener acceso el segundo nodo secundario en una colección de <xref:System.Xml.Linq.XElement> objetos. Se tiene acceso a la colección mediante el uso de la propiedad de eje secundario, que obtiene todos los elementos secundarios denominados `phone` en el `contact` objeto.  
   
- [!code-vb[VbXMLSamples#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/extension-indexer-property_1.vb)]  
+ [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  
   
  Este código muestra el siguiente texto:  
   

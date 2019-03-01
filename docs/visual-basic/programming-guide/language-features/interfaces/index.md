@@ -2,17 +2,11 @@
 title: Interfaces (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Visual Basic code, interfaces
-- interfaces [Visual Basic], Visual Basic
-- interfaces
-- interfaces [Visual Basic]
+  - 'Visual Basic code, interfaces'
+  - 'interfaces [Visual Basic], Visual Basic'
+  - interfaces
+  - 'interfaces [Visual Basic]'
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 8380778398495fe9948e6a0eb19b535656a575f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654427"
 ---
 # <a name="interfaces-visual-basic"></a>Interfaces (Visual Basic)
 Las *interfaces* definen las propiedades, los métodos y los eventos que pueden implementar las clases. Las interfaces permiten definir características como grupos pequeños de propiedades, métodos y eventos estrechamente relacionados; esto reduce los problemas de compatibilidad porque se pueden desarrollar implementaciones mejoradas para las interfaces sin comprometer el código existente. En cualquier momento se pueden agregar nuevas características mediante el desarrollo de implementaciones e interfaces adicionales.  
@@ -37,7 +31,7 @@ Las *interfaces* definen las propiedades, los métodos y los eventos que pueden 
   
  Por ejemplo, el código siguiente define una interfaz con una función, una propiedad y un evento.  
   
- [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>Implementar interfaces  
  Palabra reservada de Visual Basic `Implements` se utiliza de dos maneras. La instrucción `Implements` significa que una clase o estructura implementa una interfaz. La palabra clave `Implements` significa que un miembro de clase o de estructura implementa un miembro de interfaz específico.  
@@ -50,7 +44,7 @@ Las *interfaces* definen las propiedades, los métodos y los eventos que pueden 
   
  Por ejemplo, el código siguiente muestra cómo declarar una subrutina denominada `Sub1` que implementa un método de una interfaz:  
   
- [!code-vb[VbVbalrOOP#69](../../../../visual-basic/misc/codesnippet/VisualBasic/index_2.vb)]  
+ [!code-vb[VbVbalrOOP#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#69)]  
   
  Los tipos de parámetro y los tipos devueltos del miembro implementador deben coincidir con la declaración de miembro o de propiedad de interfaz de la interfaz. La manera más habitual de implementar un elemento de una interfaz es mediante un miembro que tenga el mismo nombre que la interfaz, tal como se muestra en el ejemplo anterior.  
   
@@ -58,7 +52,7 @@ Las *interfaces* definen las propiedades, los métodos y los eventos que pueden 
   
  Con `Implements` también se puede escribir un único método que implemente varios métodos definidos en una interfaz, como en el ejemplo siguiente:  
   
- [!code-vb[VbVbalrOOP#70](../../../../visual-basic/misc/codesnippet/VisualBasic/index_3.vb)]  
+ [!code-vb[VbVbalrOOP#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#70)]  
   
  Se puede usar un miembro privado para implementar un miembro de interfaz. Cuando un miembro privado implementa un miembro de una interfaz, ese miembro pasa a estar disponible por medio de la interfaz incluso si no está disponible directamente en las variables de objeto de la clase.  
   
@@ -67,15 +61,15 @@ Las *interfaces* definen las propiedades, los métodos y los eventos que pueden 
   
  En el ejemplo siguiente se definen dos interfaces. La segunda interfaz, `Interface2`, hereda `Interface1` y define un método y una propiedad adicionales.  
   
- [!code-vb[VbVbalrOOP#39](../../../../visual-basic/misc/codesnippet/VisualBasic/index_4.vb)]  
+ [!code-vb[VbVbalrOOP#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#39)]  
   
  En el ejemplo siguiente se implementa `Interface1`, la interfaz definida en el ejemplo anterior:  
   
- [!code-vb[VbVbalrOOP#40](../../../../visual-basic/misc/codesnippet/VisualBasic/index_5.vb)]  
+ [!code-vb[VbVbalrOOP#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#40)]  
   
  En el ejemplo final se implementa `Interface2`, incluido un método heredado de `Interface1`:  
   
- [!code-vb[VbVbalrOOP#41](../../../../visual-basic/misc/codesnippet/VisualBasic/index_6.vb)]  
+ [!code-vb[VbVbalrOOP#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#41)]  
   
  Puede implementar una propiedad de solo lectura con una propiedad de lectura y escritura (es decir, no tiene que declararla de solo lectura en la clase implementadora).  Al implementar una interfaz, se implementarán al menos los miembros que declara la interfaz, pero se puede ofrecer más funcionalidad como, por ejemplo, permitir que se pueda escribir en la propiedad.  
   

@@ -8,14 +8,15 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18bf03fee1a95c898e8273fa839e41a86b2d1c32
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: f50db519410b9513725c3dc10637421ba8bb37ec
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828376"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965233"
 ---
 # <a name="debugging-structures"></a>Estructuras de depuración
+
 En esta sección se describen las estructuras no administradas que utiliza la API de depuración.
 
 ## <a name="in-this-section"></a>En esta sección
@@ -25,7 +26,7 @@ En esta sección se describen las estructuras no administradas que utiliza la AP
 
  [CLR_DEBUGGING_VERSION (estructura)](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md) define la versión del producto de common language runtime (CLR) con fines de depuración.
 
- [CodeChunkInfo Structure1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md) representa un único fragmento de código en la memoria.
+ [CodeChunkInfo (estructura)](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md) representa un único fragmento de código en la memoria.
 
  [COR_ACTIVE_FUNCTION](cor-active-function-structure.md) contiene información sobre las funciones que están actualmente activas en los marcos de un subproceso.
 
@@ -71,9 +72,8 @@ En esta sección se describen las estructuras no administradas que utiliza la AP
 
  [StackTrace_SimpleContext (estructura)](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) proporciona un contexto simple que puede usarse en lugar de un completo `CONTEXT` estructura.
 
-
-
 ## <a name="related-sections"></a>Secciones relacionadas
+
  [Coclases para la depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
 
  [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Definir un operador de conversión (Visual Basic)
+title: Filtrar Definir un operador de conversión (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-ms.openlocfilehash: 76d0769456e30766b830023c1f27381ceca59cbb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe5c314fe4e39c8a06803037da29b51148188e14
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521535"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974645"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>Procedimiento Definir un operador de conversión (Visual Basic)
 Si ha definido una clase o estructura, puede definir un operador de conversión de tipos entre el tipo de la clase o estructura y otro tipo de datos (como `Integer`, `Double`, o `String`).  
@@ -26,11 +26,11 @@ Si ha definido una clase o estructura, puede definir un operador de conversión 
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se define los operadores de conversión entre una estructura denominada `digit` y un `Byte`.  
   
- [!code-vb[VbVbcnProcedures#27](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_1.vb)]  
+ [!code-vb[VbVbcnProcedures#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#27)]  
   
  Puede probar la estructura `digit` con el código siguiente.  
   
- [!code-vb[VbVbcnProcedures#28](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_2.vb)]  
+ [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   
 ## <a name="see-also"></a>Vea también
 - [Procedimientos de operadores](./operator-procedures.md)

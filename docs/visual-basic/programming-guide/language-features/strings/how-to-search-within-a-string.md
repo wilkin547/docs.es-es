@@ -1,23 +1,23 @@
 ---
-title: Procedimiento Buscar en una cadena (Visual Basic)
+title: Filtrar Buscar en una cadena (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], finding
 - strings [Visual Basic], searching
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
-ms.openlocfilehash: 6ac75c99270deb14e23691d32e8ebf4e8b0a91b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c150299efe07809d0d33edf882771f552c3e5b63
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542556"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56982016"
 ---
-# <a name="how-to-search-within-a-string-visual-basic"></a>Procedimiento Buscar en una cadena (Visual Basic)
+# <a name="how-to-search-within-a-string-visual-basic"></a>Filtrar Buscar en una cadena (Visual Basic)
 Este ejemplo llama a la <xref:System.String.IndexOf%2A> método en un <xref:System.String> objeto para informar del índice de la primera aparición de una subcadena.  
   
 ## <a name="example"></a>Ejemplo  
- [!code-vb[VbVbalrStrings#71](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-search-within-a-string_1.vb)]  
+ [!code-vb[VbVbalrStrings#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#71)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: 8d9c7f3eadfa0095e0ed49b3a7a207fd3f7f8769
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10167075e903693df804cba044301e1f1bc6306e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525461"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974463"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Procedimiento Llamar a un procedimiento que devuelve un valor (Visual Basic)
 Un `Function` procedimiento devuelve un valor al código de llamada. Llamarlo mediante la inclusión de su nombre y argumentos en el lado derecho de una instrucción de asignación o en una expresión.  
@@ -42,7 +42,7 @@ Un `Function` procedimiento devuelve un valor al código de llamada. Llamarlo me
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente se llama a la de Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> para recuperar el valor de una variable de entorno del sistema operativo. Las llamadas de línea primera `Environ` dentro de una expresión y la segunda línea lo llama en una instrucción de asignación. `Environ` toma el nombre de variable como su único argumento. Devuelve el valor de la variable al código de llamada.  
   
- [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
 ## <a name="see-also"></a>Vea también
 - [Procedimientos de función](./function-procedures.md)

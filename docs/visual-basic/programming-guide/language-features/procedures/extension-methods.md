@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: c34108b9eb53da77a48afb5d270dce9a32289c99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0c1721027307243fbad587afe996cc5f07a6928
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731119"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970554"
 ---
 # <a name="extension-methods-visual-basic"></a>Métodos de extensión (Visual Basic)
 Métodos de extensión permiten a los desarrolladores agregar funcionalidad personalizada a los tipos de datos que ya están definidos sin crear un nuevo tipo derivado. Métodos de extensión permiten escribir un método que se pueda llamar como si fuera un método de instancia del tipo existente.  
@@ -27,17 +27,17 @@ Métodos de extensión permiten a los desarrolladores agregar funcionalidad pers
 ### <a name="description"></a>Descripción  
  En el ejemplo siguiente se define un `Print` extensión a la <xref:System.String> tipo de datos. Usa el método `Console.WriteLine` para mostrar una cadena. El parámetro de la `Print` método `aString`, Establece que el método extiende la <xref:System.String> clase.  
   
- [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]  
   
  Tenga en cuenta que la definición del método de extensión se marca con el atributo de extensión `<Extension()>`. Marcar el módulo en el que se define el método es opcional, pero se debe marcar cada método de extensión. <xref:System.Runtime.CompilerServices> debe importarse con el fin de obtener acceso al atributo de extensión.  
   
  Métodos de extensión se pueden declarar únicamente dentro de los módulos. Normalmente, el módulo en el que se define un método de extensión no es el mismo módulo que lo en el que se llama. En su lugar, se importa el módulo que contiene el método de extensión, si es necesario que, para volver a ponerlo en el ámbito. Después del módulo que contiene `Print` está en ámbito, se puede llamar al método como si fuera un método de instancia ordinario que no toma ningún argumento, como `ToUpper`:  
   
- [!code-vb[VbVbalrExtensionMethods#2](./codesnippet/VisualBasic/extension-methods_2.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class1.vb#2)]  
   
  El ejemplo siguiente, `PrintAndPunctuate`, también es una extensión <xref:System.String>, esta vez definida con dos parámetros. El primer parámetro, `aString`, Establece que el método de extensión extiende <xref:System.String>. El segundo parámetro, `punc`, está pensado para ser una cadena de signos de puntuación que se pasa como argumento cuando se llama al método. El método muestra la cadena seguida de los signos de puntuación.  
   
- [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class2.vb#3)]  
   
  Se llama al método enviando un argumento de cadena para `punc`: `example.PrintAndPunctuate(".")`  
   
@@ -111,7 +111,7 @@ End Module
   
  No se consideran los métodos de extensión de enlace más tarde. En el ejemplo siguiente, la instrucción `anObject.PrintMe()` provoca un <xref:System.MissingMemberException> excepción, la misma excepción que vería si el segundo `PrintMe` definición de método de extensión se eliminaron.  
   
- [!code-vb[VbVbalrExtensionMethods#9](./codesnippet/VisualBasic/extension-methods_4.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class6.vb#9)]  
   
 ## <a name="best-practices"></a>Procedimientos recomendados  
  Métodos de extensión proporcionan una manera eficaz y conveniente para extender un tipo existente. Sin embargo, para poder utilizarlos correctamente, hay algunos puntos a tener en cuenta. Estas consideraciones se aplican principalmente a los autores de bibliotecas de clases, pero podrían afectar a cualquier aplicación que use métodos de extensión.  
@@ -131,23 +131,23 @@ End Module
 ## <a name="extension-methods-instance-methods-and-properties"></a>Propiedades, métodos de instancia y métodos de extensión  
  Cuando un método de instancia en el ámbito tiene una firma que es compatible con los argumentos de una instrucción de llamada, se elige el método de instancia con preferencia a cualquier método de extensión. El método de instancia tiene prioridad incluso si el método de extensión es una coincidencia mejor. En el ejemplo siguiente, `ExampleClass` contiene un método de instancia denominado `ExampleMethod` que tiene un parámetro de tipo `Integer`. Método de extensión `ExampleMethod` extiende `ExampleClass`, y tiene un parámetro de tipo `Long`.  
   
- [!code-vb[VbVbalrExtensionMethods#4](./codesnippet/VisualBasic/extension-methods_5.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#4)]  
   
  La primera llamada a `ExampleMethod` en el código siguiente llama al método de extensión, porque `arg1` es `Long` y sólo es compatible con la `Long` parámetro del método de extensión. La segunda llamada a `ExampleMethod` tiene un `Integer` argumento, `arg2`, y llama al método de instancia.  
   
- [!code-vb[VbVbalrExtensionMethods#5](./codesnippet/VisualBasic/extension-methods_6.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#5)]  
   
  Ahora invierta los tipos de datos de los parámetros en los dos métodos:  
   
- [!code-vb[VbVbalrExtensionMethods#6](./codesnippet/VisualBasic/extension-methods_7.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#6)]  
   
  Esta vez el código en `Main` llama al método dos veces. Esto es porque ambos `arg1` y `arg2` tiene una conversión de ampliación a `Long`, y el método de instancia tiene prioridad sobre el método de extensión en ambos casos.  
   
- [!code-vb[VbVbalrExtensionMethods#7](./codesnippet/VisualBasic/extension-methods_8.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#7)]  
   
  Por lo tanto, un método de extensión no puede reemplazar un método de instancia existente. Sin embargo, cuando un método de extensión tiene el mismo nombre que un método de instancia pero las firmas no entran en conflicto, se pueden acceder ambos métodos. Por ejemplo, si clase `ExampleClass` contiene un método denominado `ExampleMethod` que toma ningún argumento, los métodos de extensión con el mismo nombre pero se permiten firmas diferentes, como se muestra en el código siguiente.  
   
- [!code-vb[VbVbalrExtensionMethods#8](./codesnippet/VisualBasic/extension-methods_9.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Module3.vb#8)]  
   
  La salida de este código es como sigue:  
   

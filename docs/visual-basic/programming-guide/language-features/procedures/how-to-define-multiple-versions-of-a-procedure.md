@@ -8,14 +8,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: a3f4657b22fe0a9186e339d00cd9341e55405244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528880"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980781"
 ---
-# <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Procedimiento Definir varias versiones de un procedimiento (Visual Basic)
+# <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Filtrar Definir varias versiones de un procedimiento (Visual Basic)
 Puede definir un procedimiento en varias versiones por *sobrecarga* que, con el mismo nombre pero con una lista de parámetros distinta para cada versión. El propósito de sobrecarga es definir varias versiones estrechamente relacionadas de un procedimiento sin tener que distinguirlas por su nombre.  
   
  Para obtener más información, consulta [Procedure Overloading](./procedure-overloading.md).  
@@ -33,7 +33,7 @@ Puede definir un procedimiento en varias versiones por *sobrecarga* que, con el 
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se define un `Sub` procedimiento para registrar una transacción en el saldo de un cliente. Usa el `Overloads` palabra clave para definir dos versiones del procedimiento, uno que acepta el cliente con nombre y la otra por número de cuenta.  
   
- [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/how-to-define-multiple-versions-of-a-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
  El código de llamada puede obtener la identificación del cliente como un `String` o `Integer`y, a continuación, usar la misma instrucción de llamada en cualquier caso.  
   

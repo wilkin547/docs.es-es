@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: 9ab55187fef11fba9c794ff0266656860bea3d1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb25ecad3b797a4993e7a780823a38a0f0ccbd1f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672115"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975633"
 ---
 # <a name="attribute-list-visual-basic"></a>Lista de atributos (Visual Basic)
 Especifica los atributos que se aplicará a un elemento de programación declarado. Los diversos atributos se separan con comas. Siguiente es la sintaxis para un atributo.  
@@ -49,7 +49,7 @@ Especifica los atributos que se aplicará a un elemento de programación declara
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente se aplica el <xref:System.Runtime.InteropServices.DllImportAttribute> atributo a un esquema de definición de un `Function` procedimiento.  
   
- [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]  
   
  <xref:System.Runtime.InteropServices.DllImportAttribute> indica que el procedimiento con atributos representa un punto de entrada en una biblioteca de vínculos dinámicos (DLL) no administrada. El atributo proporciona el nombre del archivo DLL como un argumento posicional y el resto de información como inicializadores de variables.  
   

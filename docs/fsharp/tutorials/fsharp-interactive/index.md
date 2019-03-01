@@ -1,15 +1,9 @@
 ---
-title: Referencia de F# Interactive (fsi.exe)
-description: Obtenga información sobre cómo F# Interactive (fsi.exe) se usa para ejecutar F# interactivamente en la consola o para ejecutar el código F# secuencias de comandos.
+title: 'Referencia de F# Interactive (fsi.exe)'
+description: 'Obtenga información sobre cómo F# Interactive (fsi.exe) se usa para ejecutar F# interactivamente en la consola o para ejecutar el código F# secuencias de comandos.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0fccc818f0a4b3d6d09a69e91da1f5c337c53a44
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611066"
 ---
-# <a name="interactive-programming-with-f"></a>Programación interactiva con F# #
+# <a name="interactive-programming-with-f"></a>Programación interactiva con F\#
 
 > [!NOTE]
 > En este artículo actualmente solo se describe la experiencia para Windows.  Se reescribirá.
@@ -44,7 +38,7 @@ Si tiene un proyecto abierto que hace referencia a algunas bibliotecas, puede ha
 Puede controlar los argumentos (opciones) de la línea de comandos de F# Interactive ajustando la configuración. En el menú **Herramientas**, seleccione **Opciones...** y, después, expanda **Herramientas de F#**. Las dos configuraciones que puede cambiar son las opciones de F# Interactive y la opción **F# Interactive de 64 bits**, que solo es relevante si ejecuta F# Interactive en un equipo de 64 bits. Este valor determina si desea ejecutar la versión de 64 bits dedicada de fsi.exe o de fsianycpu.exe, que usa la arquitectura del equipo para determinar si debe ejecutarse como un proceso de 32 o de 64 bits.
 
 
-## <a name="scripting-with-f"></a>Scripting con F# #
+## <a name="scripting-with-f"></a>Scripting con F\#
 Los scripts usan la extensión de archivo **.fsx** o **.fsscript**. En lugar de compilar el código fuente y después ejecutar el ensamblado compilado, se puede ejecutar simplemente **fsi.exe** y especificar el nombre de archivo del script de código fuente de F#. F# Interactive lee el código y lo ejecuta en tiempo real.
 
 

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 356230a0b5a2c575ee554ce7f2cdb4a2f741ecac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de5719527216411c7bd156f2cc0d369442eaee20
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543375"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964778"
 ---
-# <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Procedimiento Obtener un valor de una propiedad (Visual Basic)
+# <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Filtrar Obtener un valor de una propiedad (Visual Basic)
 Para recuperar un valor de propiedad, incluido el nombre de propiedad en una expresión.  
   
  La propiedad `Get` procedimiento recupera el valor, pero no llamar explícitamente a él por su nombre. Use la propiedad igual que usaría una variable. Visual Basic realiza las llamadas a procedimientos de la propiedad.  
@@ -30,7 +30,7 @@ Para recuperar un valor de propiedad, incluido el nombre de propiedad en una exp
   
      El ejemplo siguiente lee el valor de Visual Basic `Now` propiedad, se llama implícitamente a su `Get` procedimiento.  
   
-     [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
+     [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
 2.  Si la propiedad toma argumentos, siga el nombre de propiedad entre paréntesis para delimitar la lista de argumentos. Si no hay ningún argumento, opcionalmente, puede omitir los paréntesis.  
   

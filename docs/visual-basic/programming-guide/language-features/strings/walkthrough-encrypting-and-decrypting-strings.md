@@ -7,12 +7,12 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: ee3bcd1358536e6fd9bed5c4fec7845fdf441d86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe91e0062ac35859a3b85eb080d16fb88a6f9aaf
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723490"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972786"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Tutorial: Cifrar y descifrar cadenas en Visual Basic
 En este tutorial se muestra cómo usar el <xref:System.Security.Cryptography.DESCryptoServiceProvider> clase para cifrar y descifrar cadenas mediante la versión de servicios criptográficos (CSP) del proveedor de Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) algoritmo. El primer paso es crear una clase de contenedor simple que encapsula el algoritmo 3DES y almacena los datos cifrados como una cadena codificada en base 64. A continuación, ese contenedor se usa para almacenar de forma segura los datos privados del usuario en un archivo de texto accesible públicamente.  
@@ -28,33 +28,33 @@ En este tutorial se muestra cómo usar el <xref:System.Security.Cryptography.DES
   
 1.  Crear el `Simple3Des` clase para encapsular los métodos de cifrado y descifrado.  
   
-     [!code-vb[VbVbalrStrings#38](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_1.vb)]  
+     [!code-vb[VbVbalrStrings#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#38)]  
   
 2.  Agregue una importación del espacio de nombres de criptografía al principio del archivo que contiene el `Simple3Des` clase.  
   
-     [!code-vb[VbVbalrStrings#77](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_2.vb)]  
+     [!code-vb[VbVbalrStrings#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#77)]  
   
 3.  En el `Simple3Des` clase, agregue un campo privado para almacenar el proveedor de servicios de cifrado 3DES.  
   
-     [!code-vb[VbVbalrStrings#39](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_3.vb)]  
+     [!code-vb[VbVbalrStrings#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#39)]  
   
 4.  Agregue un método privado que crea una matriz de bytes de una longitud especificada del código hash de la clave especificada.  
   
-     [!code-vb[VbVbalrStrings#41](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_4.vb)]  
+     [!code-vb[VbVbalrStrings#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#41)]  
   
 5.  Agregue un constructor para inicializar el proveedor de servicios de cifrado 3DES.  
   
      El `key` parámetro controla el `EncryptData` y `DecryptData` métodos.  
   
-     [!code-vb[VbVbalrStrings#40](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_5.vb)]  
+     [!code-vb[VbVbalrStrings#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#40)]  
   
 6.  Agregue un método público que cifre una cadena.  
   
-     [!code-vb[VbVbalrStrings#42](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_6.vb)]  
+     [!code-vb[VbVbalrStrings#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#42)]  
   
 7.  Agregue un método público que descifra una cadena.  
   
-     [!code-vb[VbVbalrStrings#43](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_7.vb)]  
+     [!code-vb[VbVbalrStrings#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#43)]  
   
      Ahora se puede usar la clase contenedora para proteger los activos de usuario. En este ejemplo, sirve para almacenar de forma segura los datos privados del usuario en un archivo de texto accesible públicamente.  
   
@@ -62,11 +62,11 @@ En este tutorial se muestra cómo usar el <xref:System.Security.Cryptography.DES
   
 1.  En una clase independiente, agregue un método que utiliza el contenedor `EncryptData` método para cifrar una cadena y escribirla en el usuario de la carpeta Mis documentos.  
   
-     [!code-vb[VbVbalrStrings#78](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_8.vb)]  
+     [!code-vb[VbVbalrStrings#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#78)]  
   
 2.  Agregar un método que lee la cadena cifrada del usuario de la carpeta Mis documentos y descifra la cadena con el contenedor `DecryptData` método.  
   
-     [!code-vb[VbVbalrStrings#79](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_9.vb)]  
+     [!code-vb[VbVbalrStrings#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#79)]  
   
 3.  Agregar código de interfaz de usuario para llamar a la `TestEncoding` y `TestDecoding` métodos.  
   

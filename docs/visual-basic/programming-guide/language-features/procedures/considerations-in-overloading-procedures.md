@@ -25,12 +25,12 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: 234cd23c487f92cfa1e2761dd7a6caadf8820704
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dfee8a8678fb00fcded4b7da57c3b200ef64d69
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685807"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979546"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Consideraciones sobre la sobrecarga de procedimientos (Visual Basic)
 Cuando se sobrecarga un procedimiento, debe usar otro *firma* para cada versión sobrecargada. Normalmente esto significa que cada versión debe especificar una lista de parámetros distinta. Para obtener más información, vea "Firma diferente" en [sobrecarga de procedimientos](./procedure-overloading.md).  
@@ -85,11 +85,11 @@ Cuando se sobrecarga un procedimiento, debe usar otro *firma* para cada versión
 ## <a name="implicit-overloads-for-optional-parameters"></a>Sobrecargas implícitas para los parámetros opcionales  
  Un procedimiento con un [opcional](../../../../visual-basic/language-reference/modifiers/optional.md) parámetro es equivalente a dos procedimientos sobrecargados, uno con el parámetro opcional y otro sin él. No se puede sobrecargar un procedimiento con una lista de parámetros que se corresponda con cualquiera de estos. Las declaraciones siguientes ilustran esto.  
   
- [!code-vb[VbVbcnProcedures#58](./codesnippet/VisualBasic/considerations-in-overloading-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#58)]  
   
- [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/considerations-in-overloading-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#60)]  
   
- [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/considerations-in-overloading-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
  Para obtener un procedimiento con más de un parámetro opcional, hay un conjunto de sobrecargas implícitas, llegado por una lógica similar a la del ejemplo anterior.  
   
@@ -104,13 +104,13 @@ Cuando se sobrecarga un procedimiento, debe usar otro *firma* para cada versión
   
  Las declaraciones siguientes ilustran estas sobrecargas implícitas.  
   
- [!code-vb[VbVbcnProcedures#68](./codesnippet/VisualBasic/considerations-in-overloading-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#68)]  
   
- [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/considerations-in-overloading-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
  No se puede sobrecargar un procedimiento con una lista de parámetros que toma una matriz unidimensional de la matriz de parámetros. Sin embargo, puede usar las firmas de las otras sobrecargas implícitas. Las declaraciones siguientes ilustran esto.  
   
- [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/considerations-in-overloading-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
 ## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Programación sin tipos como alternativa a la sobrecarga  
  Si desea permitir que el código que realiza la llamada pasar distintos tipos de datos a un parámetro, un enfoque alternativo es programación sin tipos. Puede establecer el tipo de conmutador para la comprobación `Off` con cualquiera el [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) o [/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) opción del compilador. A continuación, no es necesario declarar el tipo de datos del parámetro. Sin embargo, este enfoque tiene las siguientes desventajas en comparación con la sobrecarga:  

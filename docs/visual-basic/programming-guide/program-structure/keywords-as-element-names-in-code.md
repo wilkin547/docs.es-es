@@ -7,17 +7,17 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: 0d52df42b00abfa364762d97c162eb143e511f06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 053149334118d69e5e85bdbd0f9a45e855e3d4dd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649497"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980105"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Palabras clave como nombres de elementos en código (Visual Basic)
 Cualquier elemento de programa, como una variable, clase o miembro, puede tener el mismo nombre que una palabra clave restringida. Por ejemplo, puede crear una variable denominada `Loop`. Sin embargo, para hacer referencia a la versión del mismo, que tiene el mismo nombre que restringido `Loop` palabra clave, debe precedidos por una cadena de calificación completa o encerrarlo entre corchetes (`[ ]`), tal y como se muestra en el ejemplo siguiente.  
   
- [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/keywords-as-element-names-in-code_1.vb)]  
+ [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
   
  Si no hace cualquiera de estos, a continuación, Visual Basic se da por supuesto el uso de la función intrínseca `Loop` palabra clave y se produce un error, como en el ejemplo siguiente:  
   

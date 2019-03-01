@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Declarar un objeto usando un inicializador de objeto (Visual Basic)
+title: Filtrar Declarar un objeto usando un inicializador de objeto (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring objects using object initializer
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: eeaf3b4a611944395269fcae045bab00d25f0167
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e0673c9faceb3bd9fc71123a2ae22abbc7061c04
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561078"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970212"
 ---
-# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Procedimiento Declarar un objeto usando un inicializador de objeto (Visual Basic)
+# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Filtrar Declarar un objeto usando un inicializador de objeto (Visual Basic)
 Los inicializadores de objeto permiten declarar y crear una instancia de una clase en una sola instrucción. Además, puede inicializar a uno o varios miembros de la instancia al mismo tiempo, sin invocar un constructor parametrizado.  
   
  Cuando se usa un inicializador de objeto para crear una instancia de un tipo con nombre, el constructor predeterminado para la clase se llama, seguido de la inicialización de los miembros designados en el orden que especifique.  
   
  El siguiente procedimiento muestra cómo crear una instancia de un `Student` clase de tres maneras diferentes. La clase tiene el nombre, apellido y propiedades de año de la clase, entre otros. Cada una de las tres declaraciones crea una nueva instancia de `Student`, con la propiedad `First` establecido en "Michael," propiedad `Last` establecida en "Tucker" y todos los demás miembros que se establezca en sus valores predeterminados. El resultado de cada declaración en el procedimiento es equivalente al ejemplo siguiente, que no usa a un inicializador de objeto.  
   
- [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_1.vb)]  
+ [!code-vb[VbVbalrObjectInit#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#20)]  
   
  Para obtener una implementación de la `Student` de clases, vea [Cómo: Crear una lista de elementos](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Puede copiar el código en ese tema para configurar la clase y crear una lista de `Student` para trabajar con los objetos.  
   
@@ -37,7 +37,7 @@ Los inicializadores de objeto permiten declarar y crear una instancia de una cla
   
 3.  En la lista de inicialización, incluya cada propiedad que desea inicializar y asignarle un valor inicial. El nombre de la propiedad está precedido por un punto.  
   
-     [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_2.vb)]  
+     [!code-vb[VbVbalrObjectInit#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#21)]  
   
      Puede inicializar a uno o varios miembros de la clase.  
   
@@ -51,11 +51,11 @@ Los inicializadores de objeto permiten declarar y crear una instancia de una cla
   
 6.  Tipo `With` y, a continuación, un inicializador de objeto para inicializar uno o varios miembros de la nueva instancia.  
   
-     [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_3.vb)]  
+     [!code-vb[VbVbalrObjectInit#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#22)]  
   
 7.  Puede simplificar la definición en el paso anterior omitiendo `As Student`. Si lo hace, el compilador determina que `student3` es una instancia de `Student` mediante el uso de la inferencia de tipo local.  
   
-     [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_4.vb)]  
+     [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
      Para obtener más información, consulte [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   

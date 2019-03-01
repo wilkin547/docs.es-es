@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: fd11d00ebfa42eda272db39965d25b905bd5c841
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67f395069c98d8b60eca8c3663fb180a8dd5a2be
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678790"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978168"
 ---
 # <a name="from-clause-visual-basic"></a>From (Cláusula, Visual Basic)
 Especifica uno o más variables de rango y una colección a la consulta.  
@@ -40,11 +40,11 @@ From element [ As type ] In collection [ _ ]
   
  Puede especificar varios `From` cláusulas en una consulta para identificar varias colecciones a unirse. Cuando se especifican varias colecciones, se iteran en forma independiente o combinarlas si están relacionadas. Puede combinar colecciones implícitamente mediante el uso de la `Select` cláusula, o explícitamente mediante la `Join` o `Group Join` cláusulas. Como alternativa, puede especificar varias variables de rango y colecciones en una sola `From` cláusula con cada variable de rango relacionado y la colección separados de los demás por una coma. El ejemplo de código siguiente muestra ambas opciones de sintaxis para el `From` cláusula.  
   
- [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
  El `From` cláusula define el ámbito de una consulta, que es similar al ámbito de un `For` bucle. Por lo tanto, cada uno de ellos `element` variable de rango en el ámbito de una consulta debe tener un nombre único. Dado que puede especificar varios `From` cláusulas para una consulta, posteriores `From` cláusulas pueden hacer referencia a las variables de rango en la `From` cláusula, o bien pueden hacer referencia a las variables de rango en una anterior `From` cláusula. Por ejemplo, en el ejemplo siguiente se muestra un anidada `From` cláusula donde la colección en la segunda cláusula se basa en una propiedad de la variable de rango en la primera cláusula.  
   
- [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
  Cada `From` cláusula puede ir seguida de cualquier combinación de cláusulas de consulta adicionales para refinar la consulta. Puede refinar la consulta de las maneras siguientes:  
   
@@ -67,7 +67,7 @@ From element [ As type ] In collection [ _ ]
 ## <a name="example"></a>Ejemplo  
  Consulta la siguiente expresión utiliza una `From` cláusula para declarar una variable de rango `cust` para cada `Customer` objeto en el `customers` colección. El `Where` cláusula usa la variable de rango para restringir los resultados a los clientes de la región especificada. El `For Each` bucle muestra el nombre de la empresa para cada cliente en el resultado de la consulta.  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="see-also"></a>Vea también
 - [Consultas](../../../visual-basic/language-reference/queries/index.md)

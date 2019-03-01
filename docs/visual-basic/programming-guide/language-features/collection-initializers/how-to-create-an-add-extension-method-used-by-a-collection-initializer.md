@@ -4,14 +4,14 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: f64b52c7-8b11-4410-93a6-cb3aeebcc772
-ms.openlocfilehash: 3a1db8ede8162b329d546c0e712ef1c2df7d7883
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 458421da70aca6728f3f03945c28b4c988e44ad7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661677"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978545"
 ---
-# <a name="how-to-create-an-add-extension-method-used-by-a-collection-initializer-visual-basic"></a>Procedimiento Crear una extensión método Add usado por un inicializador de colección (Visual Basic)
+# <a name="how-to-create-an-add-extension-method-used-by-a-collection-initializer-visual-basic"></a>Filtrar Crear una extensión método Add usado por un inicializador de colección (Visual Basic)
 Cuando se usa un inicializador de colección para crear una colección, el compilador de Visual Basic busca un `Add` método del tipo de colección para el que los parámetros para el `Add` método coinciden con los tipos de los valores del inicializador de colección. Esto `Add` método se usa para rellenar la colección con los valores del inicializador de colección.  
   
  Si no hay coincidencia `Add` método existe y no se puede modificar el código de la colección, puede agregar un método de extensión denominado `Add` que toma los parámetros requeridos por el inicializador de colección. Normalmente, esto es lo que necesita hacer al usar inicializadores de colección para las colecciones genéricas.  
@@ -19,11 +19,11 @@ Cuando se usa un inicializador de colección para crear una colección, el compi
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra cómo agregar un método de extensión para el tipo genérico <xref:System.Collections.Generic.List%601> escriba por lo que puede utilizarse un inicializador de colección para agregar objetos de tipo `Employee`. El método de extensión le permite usar la sintaxis de inicializador de colección abreviada.  
   
- [!code-vb[VbVbalrCollectionInitializersHowTo1#1](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-an-add-extension-method-used-by-a-collection-initializer_1.vb)]  
+ [!code-vb[VbVbalrCollectionInitializersHowTo1#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializersHowTo1/VB/Module1.vb#1)]  
   
- [!code-vb[VbVbalrCollectionInitializersHowTo1#2](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-an-add-extension-method-used-by-a-collection-initializer_2.vb)]  
+ [!code-vb[VbVbalrCollectionInitializersHowTo1#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializersHowTo1/VB/Module1.vb#2)]  
   
- [!code-vb[VbVbalrCollectionInitializersHowTo1#3](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-an-add-extension-method-used-by-a-collection-initializer_3.vb)]  
+ [!code-vb[VbVbalrCollectionInitializersHowTo1#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializersHowTo1/VB/Module1.vb#3)]  
   
 ## <a name="see-also"></a>Vea también
 - [Inicializadores de colección](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)

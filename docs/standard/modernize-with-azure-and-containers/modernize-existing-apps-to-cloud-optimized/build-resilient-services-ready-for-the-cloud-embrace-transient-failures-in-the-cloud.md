@@ -4,12 +4,12 @@ description: Modernizar aplicaciones .NET existentes con contenedores de Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 16228321cc788b381603513213130415eb73a95c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128861"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971837"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Crear servicios resistentes listos para la nube: Aceptación de errores transitorios en la nube
 
@@ -35,7 +35,7 @@ Una aplicación resistente como el que se muestra en la figura 4-9 debe implemen
 
 Puede utilizar estas técnicas en los recursos HTTP y en los recursos de base de datos. En la figura 4-9, la aplicación se basa en una arquitectura de 3 niveles, por lo que necesita estas técnicas en el nivel de servicios (HTTP) y en el nivel de datos (TCP). En una aplicación monolítica que se usa sólo un nivel de aplicación único además de la base de datos (sin servicios adicionales ni microservicios), control de errores transitorios en el nivel de conexión de base de datos podría ser suficiente. En ese caso, se requiere solo una configuración específica de la conexión de base de datos.
 
-Al implementar communications resistente que tienen acceso a la base de datos, según la versión de .NET que usa, puede ser sencillo (por ejemplo, [con Entity Framework 6 o posterior](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx), es simplemente una cuestión de configurar el conexión de base de datos). O bien, es posible que deba utilizar bibliotecas adicionales, como el [Transient Fault Handling Application Block](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx) (para versiones anteriores de. NET), o incluso implementar su propia biblioteca.
+Al implementar communications resistente que tienen acceso a la base de datos, según la versión de .NET que usa, puede ser sencillo (por ejemplo, [con Entity Framework 6 o posterior](/ef/ef6/fundamentals/connection-resiliency/retry-logic). (Es simplemente una cuestión de configurar la conexión de base de datos). O bien, es posible que deba utilizar bibliotecas adicionales, como el [Transient Fault Handling Application Block](https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)) (para versiones anteriores de. NET), o incluso implementar su propia biblioteca.
 
 Al implementar los reintentos de HTTP y los disyuntores, la recomendación para .NET es usar el [Polly](https://github.com/App-vNext/Polly) biblioteca, que tiene como destino .NET Framework 4.0, .NET Framework 4.5 y .NET Standard 1.1, que incluye compatibilidad con .NET Core.
 
@@ -49,11 +49,11 @@ Para obtener información sobre cómo implementar estrategias para tratar errore
 
 -   **Entity Framework reintento y resistencia lógica de conexión (versión 6 y versiones posterior)**
 
-    [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
+    [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
 -   **El bloque de aplicaciones de control de errores transitorios**
 
--   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
+-   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
 -   **Biblioteca de Polly para la comunicación HTTP resistente**
 

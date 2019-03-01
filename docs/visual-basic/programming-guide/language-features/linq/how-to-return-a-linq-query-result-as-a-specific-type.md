@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Devolver un resultado de consulta LINQ como un tipo específico (Visual Basic)
+title: Filtrar Devolver un resultado de consulta LINQ como un tipo específico (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], specific type returned
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 7d281de2005f1ee9227b3e3496125c8af9acba35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 784a848b02e75d2ae9a6c6530141e69a05a9041b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500621"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973501"
 ---
-# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Procedimiento Devolver un resultado de consulta LINQ como un tipo específico (Visual Basic)
+# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Filtrar Devolver un resultado de consulta LINQ como un tipo específico (Visual Basic)
 Language-Integrated Query (LINQ) facilita el acceso a la información de la base de datos y ejecutar consultas. De forma predeterminada, las consultas LINQ devuelven una lista de objetos como un tipo anónimo. También puede especificar que una consulta devuelva una lista de un tipo específico mediante el uso de la `Select` cláusula.  
   
  El ejemplo siguiente muestra cómo crear una nueva aplicación que realiza consultas en una base de datos de SQL Server y proyecta los resultados como un tipo con nombre específico. Para obtener más información, consulte [tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) y [cláusula Select](../../../../visual-basic/language-reference/queries/select-clause.md).  
@@ -63,7 +63,7 @@ Language-Integrated Query (LINQ) facilita el acceso a la información de la base
   
 3.  Después de la `End Class` instrucción de la clase Form1, agregue el código siguiente para crear un `CustomerInfo` tipo para almacenar los resultados de consulta para este ejemplo.  
   
-     [!code-vb[VbLINQToSQLHowTos#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#16)]  
   
 4.  Cuando agrega tablas a Object Relational Designer, el diseñador agrega un <xref:System.Data.Linq.DataContext> objeto a su proyecto. Este objeto contiene el código que debe tener acceso a esas tablas y para tener acceso a objetos individuales y colecciones para cada tabla. La <xref:System.Data.Linq.DataContext> objeto para el proyecto se denomina según el nombre del archivo dbml. Para este proyecto, el <xref:System.Data.Linq.DataContext> se denomina objeto `northwindDataContext`.  
   
@@ -71,7 +71,7 @@ Language-Integrated Query (LINQ) facilita el acceso a la información de la base
   
      En el `Load` eventos de la clase Form1, agregue el código siguiente para consultar las tablas que se exponen como propiedades de su contexto de datos. El `Select` creará una nueva cláusula de la consulta `CustomerInfo` tipo en lugar de un tipo anónimo para cada elemento de resultado de la consulta.  
   
-     [!code-vb[VbLINQToSQLHowTos#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_2.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#15)]  
   
 5.  Presione F5 para ejecutar el proyecto y ver los resultados.  
   

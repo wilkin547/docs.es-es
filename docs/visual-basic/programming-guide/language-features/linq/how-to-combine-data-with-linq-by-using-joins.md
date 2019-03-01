@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Combinar datos con LINQ usando cláusulas Join (Visual Basic)
+title: Filtrar Combinar datos con LINQ usando cláusulas Join (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], joins
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: fd1025d056dfb11d2253a39defb384c1d05efa32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66255a9bfa2a4f9acb33073bae755efbab61042e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553703"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977995"
 ---
-# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Procedimiento Combinar datos con LINQ usando cláusulas Join (Visual Basic)
+# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Filtrar Combinar datos con LINQ usando cláusulas Join (Visual Basic)
 Visual Basic proporciona el `Join` y `Group Join` cláusulas que le permite combinar el contenido de varias colecciones basadas en valores comunes entre las colecciones de consulta. Estos valores se conocen como *clave* valores. Reconocerán los desarrolladores familiarizados con conceptos de base de datos relacional el `Join` cláusula como INNER JOIN y `Group Join` cláusula as, de hecho, LEFT OUTER JOIN.  
   
  Los ejemplos de este tema muestran algunos ejemplos de cómo combinar datos mediante el uso de la `Join` y `Group Join` cláusulas de consulta.  
@@ -29,8 +29,8 @@ Visual Basic proporciona el `Join` y `Group Join` cláusulas que le permite comb
   
 2.  Los ejemplos de este tema usan el `Person` y `Pet` tipos y los datos de ejemplo de código siguiente. Copie este código en el valor predeterminado `Module1` módulo creado por Visual Basic.  
   
-     [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_1.vb)]  
-    [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_2.vb)]  
+     [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
+    [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
   
 ## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Realizar una combinación interna mediante la cláusula de combinación  
  INNER JOIN combina los datos de dos colecciones. Se incluyen los elementos que coinciden con los valores de clave especificados. Se excluyen los elementos de cualquier colección que no tiene un elemento coincidente en la otra colección.  
@@ -45,7 +45,7 @@ Visual Basic proporciona el `Join` y `Group Join` cláusulas que le permite comb
   
 1.  Agregue el código siguiente a la `Module1` módulo en el proyecto para ver ejemplos de ambos una implícita y explícita combinación interna.  
   
-     [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_3.vb)]  
+     [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
 ## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Realizar una combinación externa izquierda mediante la cláusula Group Join  
  Una combinación externa izquierda incluye todos los elementos de la colección del lado izquierdo de la combinación y sólo los valores de la colección del lado derecho de la combinación coincidentes. Los elementos de la colección del lado derecho de la combinación que no tiene un elemento coincidente en la colección del lado izquierdo se excluirán del resultado de la consulta.  
@@ -58,7 +58,7 @@ Visual Basic proporciona el `Join` y `Group Join` cláusulas que le permite comb
   
 1.  Agregue el código siguiente a la `Module1` módulo en el proyecto para ver ejemplos de una combinación externa izquierda agrupada y una combinación externa izquierda sin agrupar.  
   
-     [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_4.vb)]  
+     [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
 ## <a name="perform-a-join-by-using-a-composite-key"></a>Realizar una combinación con una clave compuesta  
  Puede usar el `And` palabra clave en un `Join` o `Group Join` cláusula para identificar varios campos de clave para usar al comparar los valores de las colecciones que se están combina. El `And` palabra clave especifica que todos especificado deben coincidir con los campos de clave para que los elementos que se unirán.  
@@ -67,7 +67,7 @@ Visual Basic proporciona el `Join` y `Group Join` cláusulas que le permite comb
   
 1.  Agregue el código siguiente a la `Module1` módulo en el proyecto para ver ejemplos de una combinación que utiliza una clave compuesta.  
   
-     [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_5.vb)]  
+     [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
 ## <a name="run-the-code"></a>Ejecute el código  
   
@@ -75,7 +75,7 @@ Visual Basic proporciona el `Join` y `Group Join` cláusulas que le permite comb
   
 1.  Reemplace el `Sub Main` en el `Module1` módulo en el proyecto con el código siguiente para ejecutar los ejemplos de este tema.  
   
-     [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_6.vb)]  
+     [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
 2.  Presione F5 para ejecutar los ejemplos.  
   

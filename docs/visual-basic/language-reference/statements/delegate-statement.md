@@ -7,12 +7,12 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 1ed2dc91d1a2ea9bade11902aac553e24c0607ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0fb524961cd04b73a8b83094880d5eaa206fe9c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583670"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965805"
 ---
 # <a name="delegate-statement"></a>Delegate (Instrucción)
 Se utiliza para declarar a un delegado. Un delegado es un tipo de referencia que hace referencia a un `Shared` método de un tipo o a un método de instancia de un objeto. Cualquier procedimiento con parámetros y tipos devueltos de coincidencia puede utilizarse para crear una instancia de esta clase de delegado. Se invoca el procedimiento por medio de la instancia del delegado.  
@@ -62,7 +62,7 @@ Se utiliza para declarar a un delegado. Un delegado es un tipo de referencia que
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `Delegate` instrucción para declarar un delegado para operar en dos números y devuelve un número. El `DelegateTest` método toma una instancia de un delegado de este tipo y lo usa para operar en los pares de números.  
   
- [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
+ [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>Vea también
 - [AddressOf (operador)](../../../visual-basic/language-reference/operators/addressof-operator.md)

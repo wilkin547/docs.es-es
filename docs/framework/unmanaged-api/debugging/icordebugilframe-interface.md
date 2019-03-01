@@ -1,5 +1,5 @@
 ---
-title: ICorDebugILFrame (Interfaz1)
+title: ICorDebugILFrame (Interfaz)
 ms.date: 03/30/2017
 api_name:
 - ICorDebugILFrame
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73cf7f26b228fa5aa458a6de312df3bf777e0206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a10c39d7df12c86b8fcf0fb40389c087f96e1ee
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580517"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965990"
 ---
-# <a name="icordebugilframe-interface1"></a>ICorDebugILFrame (Interfaz1)
+# <a name="icordebugilframe-interface"></a>ICorDebugILFrame (Interfaz)
+
 Representa un marco de pila del código de lenguaje intermedio (MSIL) de Microsoft. Esta interfaz es una subclase de ICorDebugFrame (interfaz).  
   
 ## <a name="methods"></a>Métodos  

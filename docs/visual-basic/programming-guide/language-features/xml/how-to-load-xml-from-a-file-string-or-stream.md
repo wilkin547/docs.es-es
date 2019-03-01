@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML [Visual Basic], loading
 - LINQ to XML [Visual Basic], loading XML from files
 ms.assetid: 2b02dcec-4cca-4575-b4ad-89ceb87b984c
-ms.openlocfilehash: b660900c1ac29e40eeed36b1e07326dfbcf69ec8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36a7f23eed7f47e8c33958f96e8e3694fb958d11
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492746"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977700"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Procedimiento Cargar XML desde un archivo, cadena o Stream (Visual Basic)
 Puede crear [literales XML](../../../../visual-basic/language-reference/xml-literals/index.md) y rellenarlas con el contenido de un origen externo, como un archivo, una cadena o una secuencia mediante varios métodos. Estos métodos se muestran en los ejemplos siguientes.  
@@ -23,7 +23,7 @@ Puede crear [literales XML](../../../../visual-basic/language-reference/xml-lite
   
      En el ejemplo de código siguiente se muestra el uso de la <xref:System.Xml.Linq.XDocument.Load%28System.String%29> método para rellenar un <xref:System.Xml.Linq.XDocument> objeto con XML desde un archivo de texto.  
   
-     [!code-vb[VbXMLSamples#43](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_1.vb)]  
+     [!code-vb[VbXMLSamples#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#43)]  
   
 ### <a name="to-load-xml-from-a-string"></a>Para cargar XML desde una cadena  
   
@@ -31,7 +31,7 @@ Puede crear [literales XML](../../../../visual-basic/language-reference/xml-lite
   
      En el ejemplo de código siguiente se muestra el uso de la <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType> método para rellenar un <xref:System.Xml.Linq.XDocument> objeto con XML de una cadena.  
   
-     [!code-vb[VbXMLSamples#47](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_2.vb)]  
+     [!code-vb[VbXMLSamples#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#47)]  
   
 ### <a name="to-load-xml-from-a-stream"></a>Para cargar XML desde una secuencia  
   
@@ -39,7 +39,7 @@ Puede crear [literales XML](../../../../visual-basic/language-reference/xml-lite
   
  En el ejemplo de código siguiente se muestra el uso de la <xref:System.Xml.Linq.XNode.ReadFrom%2A> método para rellenar un <xref:System.Xml.Linq.XDocument> objeto con XML a partir de una secuencia XML.  
   
- [!code-vb[VbXMLSamples#46](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_3.vb)]  
+ [!code-vb[VbXMLSamples#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#46)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>

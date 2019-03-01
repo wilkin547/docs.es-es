@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: 5ef0a485a0b114f465aac694970ec3350b26f35a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e29e4a3b216657b398407701530ad9bfe975dbf6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648552"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972006"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Solucionar problemas de procedimientos (Visual Basic)
 Esta página enumera algunos problemas comunes que pueden producirse al trabajar con procedimientos.  
@@ -41,7 +41,7 @@ Esta página enumera algunos problemas comunes que pueden producirse al trabajar
   
  **Enfoque correcto:** Para poder modificar los elementos de una matriz que se va a devolver, definir una matriz interna como una variable local. El ejemplo siguiente se compila sin errores.  
   
- [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]  
   
 ## <a name="argument-not-being-modified-by-procedure-call"></a>No se está modificando el argumento por llamada a procedimiento  
  Si piensa permitir que un procedimiento cambiar un elemento de programación subyacente a un argumento en el código de llamada, debe pasar por referencia. Pero un procedimiento puede tener acceso a los elementos de un argumento de tipo de referencia, incluso si se pasa por valor.  
@@ -52,13 +52,13 @@ Esta página enumera algunos problemas comunes que pueden producirse al trabajar
   
  El siguiente ejemplo define dos procedimientos que toman una variable de matriz por valor y operan en sus elementos. Procedimiento `increase` simplemente agrega uno a cada elemento. Procedimiento `replace` asigna una nueva matriz al parámetro `a()` y, a continuación, agrega uno a cada elemento. Sin embargo, la reasignación no afecta a la variable de matriz subyacente en el código de llamada porque `a()` se declara `ByVal`.  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
- [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]  
   
  El ejemplo siguiente realiza llamadas a `increase` y `replace`.  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
  La primera `MsgBox` llamada a muestra "después de Increase (n): 11, 21, 31, 41". Dado que `n` es un tipo de referencia, `increase` puede cambiar sus miembros, incluso si se pasa `ByVal`.  
   
@@ -66,7 +66,7 @@ Esta página enumera algunos problemas comunes que pueden producirse al trabajar
   
  **Enfoque correcto:** Para poder modificar un elemento de variable subyacente Sí, pasar por referencia. El ejemplo siguiente muestra el cambio en la declaración de `replace` que le permite reemplazar una matriz con otro en el código de llamada.  
   
- [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]  
   
 ## <a name="unable-to-define-an-overload"></a>No se puede definir una sobrecarga  
  Si desea definir una versión sobrecargada de un procedimiento, debe usar el mismo nombre pero una firma diferente. Si el compilador no puede diferenciar su declaración de una sobrecarga con la misma firma, genera un error.  
@@ -108,9 +108,9 @@ Esta página enumera algunos problemas comunes que pueden producirse al trabajar
   
  El ejemplo siguiente ilustra el proceso de resolución de sobrecarga.  
   
- [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
  En la primera llamada, el compilador elimina la primera sobrecarga porque el tipo del primer argumento (`Short`) se restringe al tipo del parámetro correspondiente (`Byte`). A continuación, elimina la tercera sobrecarga porque cada argumento de tipo en la segunda sobrecarga (`Short` y `Single`) se amplía al tipo correspondiente en la tercera sobrecarga (`Integer` y `Single`). La segunda sobrecarga requiere menos ampliación, por lo que el compilador lo usa para la llamada.  
   
@@ -118,7 +118,7 @@ Esta página enumera algunos problemas comunes que pueden producirse al trabajar
   
  **Enfoque correcto:** Para poder llamar a un procedimiento sobrecargado sin ambigüedades, utilice [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) para que coincida con los tipos de datos de argumento para los tipos de parámetro. El ejemplo siguiente muestra una llamada a `z` que fuerza la resolución a la segunda sobrecarga.  
   
- [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
+ [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]  
   
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Resolución de sobrecarga con opcional y ParamArray (argumentos)  
  Si las dos sobrecargas de un procedimiento tienen firmas idénticas, salvo que se declara el último parámetro [opcional](../../../../visual-basic/language-reference/modifiers/optional.md) en uno y [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) en el otro, el compilador resuelve una llamada a ese procedimiento. según la coincidencia más cercana. Para obtener más información, consulta [Overload Resolution](./overload-resolution.md).  

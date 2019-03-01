@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 54ad162a1a720a1645a3b413e6518d2ccfd37bbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71e6cf3e6169434ea0a28f8691cf82f6c8e8a030
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595921"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979939"
 ---
 # <a name="xml-element-literal-visual-basic"></a>Literal de elemento XML (Visual Basic)
 
@@ -119,7 +119,7 @@ Un valor literal que representa un <xref:System.Xml.Linq.XElement> objeto.
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra cómo crear un elemento XML simple que tiene dos elementos vacíos anidados.  
   
- [!code-vb[VbXMLSamples#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#20)]  
   
  En el ejemplo se muestra el texto siguiente. Tenga en cuenta que el literal conserva la estructura de los elementos vacíos.  
   
@@ -133,7 +133,7 @@ Un valor literal que representa un <xref:System.Xml.Linq.XElement> objeto.
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra cómo utilizar expresiones incrustadas para nombrar un elemento y crear atributos.  
   
- [!code-vb[VbXMLSamples#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_2.vb)]  
+ [!code-vb[VbXMLSamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#21)]  
   
  Este código muestra el siguiente texto:  
   
@@ -144,7 +144,7 @@ Un valor literal que representa un <xref:System.Xml.Linq.XElement> objeto.
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se declara `ns` como un prefijo de espacio de nombres XML. A continuación, se usa el prefijo del espacio de nombres para crear un literal XML y se muestra la forma final del elemento.  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_3.vb)]  
+ [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]  
   
  Este código muestra el siguiente texto:  
   

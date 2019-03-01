@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Forzar un argumento para pasar por valor (Visual Basic)
+title: Filtrar Forzar un argumento para pasar por valor (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 9c4d6397d9a9ab1b95c4708c1e98741c01e9302e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bd78772b35e3f336f49c1d39b5f56a3a2076c30
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706646"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970290"
 ---
-# <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Procedimiento Forzar un argumento para pasar por valor (Visual Basic)
+# <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Filtrar Forzar un argumento para pasar por valor (Visual Basic)
 La declaración de procedimiento determina el mecanismo de paso. Si se declara un parámetro [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), espera que Visual Basic pasar el argumento correspondiente por referencia. Esto permite que el procedimiento cambiar el valor del elemento de programación subyacente del argumento en el código de llamada. Si desea proteger el elemento subyacente frente a estos cambios, puede invalidar el `ByRef` llame al mecanismo de paso en el procedimiento, incluya entre paréntesis el nombre del argumento. Los paréntesis son además de los paréntesis para delimitar la lista de argumentos en la llamada.  
   
  El código de llamada no se puede invalidar un [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) mecanismo.  
@@ -35,9 +35,9 @@ La declaración de procedimiento determina el mecanismo de paso. Si se declara u
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se invalida un `ByRef` declaración de parámetro. En la llamada que obliga a `ByVal`, tenga en cuenta los dos niveles de paréntesis.  
   
- [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#39)]  
   
- [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
+ [!code-vb[VbVbcnProcedures#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#40)]  
   
  Cuando `str` se encierra entre paréntesis adicionales dentro de la lista de argumentos, el `setNewString` procedimiento no puede cambiar su valor en el código que realiza la llamada, y `MsgBox` muestra "No se puede reemplazar si pasa ByVal". Cuando `str` no está entre paréntesis adicionales, puede cambiar el procedimiento, y `MsgBox` muestra "Es un nuevo valor para el argumento inString".  
   

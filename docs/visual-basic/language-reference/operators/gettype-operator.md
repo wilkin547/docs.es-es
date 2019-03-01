@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: cfb54858286ed31d566b5aeb46faed9070f110bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3b4ee9a1bfcc2132d3e9e1239ff2c8f7158e513
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612845"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966771"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType (Operador, Visual Basic)
 Devuelve un <xref:System.Type> objeto para el tipo especificado. La <xref:System.Type> objeto proporciona información sobre el tipo como sus propiedades, métodos y eventos.  
@@ -55,7 +55,7 @@ GetType(typename)
 ## <a name="example"></a>Ejemplo  
  Los ejemplos siguientes muestran el `GetType` operador en uso.  
   
- [!code-vb[VbVbalrOperators#26](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/gettype-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  
   
 ## <a name="see-also"></a>Vea también
 - [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)

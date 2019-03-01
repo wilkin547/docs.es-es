@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Devolver un valor de un procedimiento (Visual Basic)
+title: Filtrar Devolver un valor de un procedimiento (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 38b0673f5725077eec9253021eec4216e66504a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45f175de647887a406f8ae87dae492a5fe58cca9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615262"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976738"
 ---
-# <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Procedimiento Devolver un valor de un procedimiento (Visual Basic)
+# <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Filtrar Devolver un valor de un procedimiento (Visual Basic)
 Un `Function` procedimiento devuelve un valor al código de llamada ya sea mediante la ejecución de un `Return` instrucción o encontrando una `Exit Function` o `End Function` instrucción.  
   
 ### <a name="to-return-a-value-using-the-return-statement"></a>Para devolver un valor mediante la instrucción Return  
@@ -26,11 +26,11 @@ Un `Function` procedimiento devuelve un valor al código de llamada ya sea media
   
      La siguiente `Function` procedimiento calcula el lado más largo o la hipotenusa de un triángulo rectángulo y lo devuelve al código de llamada.  
   
-     [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
      El ejemplo siguiente muestra una llamada típica al `hypotenuse`, que almacena el valor devuelto.  
   
-     [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_2.vb)]  
+     [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
 ### <a name="to-return-a-value-using-exit-function-or-end-function"></a>Para devolver un valor mediante Exit Function o End Function  
   

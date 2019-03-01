@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: b10f679d735d21ba0002c8a3f4e230836298d4e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2b1a80863fe29901554b4912acbbfbdfdab4122
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514262"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972591"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Procedimiento Declarar una propiedad con niveles de acceso mixtos (Visual Basic)
 Si desea que el `Get` y `Set` procedimientos en una propiedad para tener diferentes niveles de acceso, puede usar el nivel más permisivo en el `Property` instrucción y el nivel más restrictivo en uno el `Get` o `Set` instrucción. Usar niveles de acceso mixtos en una propiedad cuando desee que ciertas partes del código para poder obtener el valor de propiedad y otras partes del código para que pueda cambiar el valor.  
@@ -30,7 +30,7 @@ Si desea que el `Get` y `Set` procedimientos en una propiedad para tener diferen
   
 3.  No especifique un nivel de acceso en el otro procedimiento de propiedad. Se supone que el nivel de acceso declarado en el `Property` instrucción. Puede restringir el acceso solo en uno de los procedimientos de propiedad.  
   
-     [!code-vb[VbVbcnProcedures#10](./codesnippet/VisualBasic/how-to-declare-a-property-with-mixed-access-levels_1.vb)]  
+     [!code-vb[VbVbcnProcedures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#10)]  
   
      En el ejemplo anterior, el `Get` procedimiento tiene el mismo `Protected` acceso como la propiedad propiamente dicha, mientras que el `Set` procedimiento tiene `Private` acceso. Una clase derivada de `employee` puede leer el `salary` valor, pero solo el `employee` puede establecer la clase.  
   

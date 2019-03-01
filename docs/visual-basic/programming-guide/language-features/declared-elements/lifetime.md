@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 4c52d426fe5194a6eb61b232b8f17669b4477f16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667393"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976049"
 ---
 # <a name="lifetime-in-visual-basic"></a>Período de duración en Visual Basic
 El *duración* de un elemento declarado es el período de tiempo durante el cual está disponible para su uso. Las variables son los únicos elementos que tienen duración. Para este propósito, el compilador trata los parámetros de procedimiento y función que se devuelve como casos especiales de variables. La duración de una variable que representa el período de tiempo durante el cual puede contener un valor. Puede cambiar su valor a través de su duración, pero siempre contiene un valor.  
@@ -58,7 +58,7 @@ El *duración* de un elemento declarado es el período de tiempo durante el cual
  En el ejemplo siguiente se declara una variable con el [estático](../../../../visual-basic/language-reference/modifiers/static.md) palabra clave. (Tenga en cuenta que no es necesario el `Dim` palabra clave cuando el [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) usa un modificador, como `Static`.)  
   
 ### <a name="code"></a>Código  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
+ [!code-vb[VbVbalrKeywords#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#13)]  
   
 ### <a name="comments"></a>Comentarios  
  En el ejemplo anterior, la variable `applesSold` sigue existiendo después del procedimiento `runningTotal` devuelve al código de llamada. La próxima vez `runningTotal` se llama, `applesSold` mantiene su valor calculado anteriormente.  

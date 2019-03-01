@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: aa31f0f618990d4e57520a1098ec80b722e1cbe3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1cff4d72a294a4635df72dc91c46fa5da92aa388
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543675"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976205"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Procesar el archivo XML (Visual Basic)
 El compilador genera una cadena de identificador para cada construcción del código que se etiqueta para generar documentación. (Para obtener información sobre cómo etiquetar el código, vea [etiquetas de comentario XML](../../../visual-basic/language-reference/xmldoc/index.md).) La cadena de identificador identifica la construcción de forma exclusiva. Los programas que procesan el archivo XML pueden usar la cadena de identificador para identificar la correspondiente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] elemento reflexión o de metadatos.  
@@ -39,7 +39,7 @@ El compilador genera una cadena de identificador para cada construcción del có
 ## <a name="example"></a>Ejemplo  
  El código siguiente muestra cómo las cadenas de identificador para una clase y sus miembros se generan.  
   
- [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/processing-the-xml-file_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#10)]  
   
 ## <a name="see-also"></a>Vea también
 - [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)

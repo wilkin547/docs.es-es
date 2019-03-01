@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-ms.openlocfilehash: 77bff81efbd61a68c054519710bd671d90af1e7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f60edb2b5e2dba15526169ef10bc05c1f50a7f1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694781"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970017"
 ---
 # <a name="ctype-function-visual-basic"></a>CType (Función) (Visual Basic)
 Devuelve el resultado de convertir explícitamente una expresión en una estructura, clase, tipo de datos especificado, objeto o interfaz.  
@@ -57,7 +57,7 @@ CType(expression, typename)
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `CType` función para convertir una expresión a la `Single` tipo de datos.  
   
- [!code-vb[VbVbalrFunctions#24](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/ctype-function_1.vb)]  
+ [!code-vb[VbVbalrFunctions#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#24)]  
   
  Para obtener ejemplos adicionales, consulte [conversiones implícitas y explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).  
   

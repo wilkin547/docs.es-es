@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Sobrecargar un procedimiento que toma parámetros opcionales (Visual Basic)
+title: Filtrar Sobrecargar un procedimiento que toma parámetros opcionales (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 343ede485a0486567710a8bf34d85ea356c139fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52e31ba2f9d2f5cf87a5597a3c8d639816a75535
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694131"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972669"
 ---
-# <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Procedimiento Sobrecargar un procedimiento que toma parámetros opcionales (Visual Basic)
+# <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Filtrar Sobrecargar un procedimiento que toma parámetros opcionales (Visual Basic)
 Si un procedimiento tiene uno o varios [opcional](../../../../visual-basic/language-reference/modifiers/optional.md) parámetros, no se puede definir una versión sobrecargada que coincida con alguno de sus sobrecargas implícitas. Para obtener más información, vea "Implícita sobrecargas para parámetros opcionales" en [consideraciones en sobrecarga de procedimientos](./considerations-in-overloading-procedures.md).  
   
 ## <a name="one-optional-parameter"></a>Un parámetro opcional  
@@ -38,11 +38,11 @@ Si un procedimiento tiene uno o varios [opcional](../../../../visual-basic/langu
   
      El ejemplo siguiente muestra un procedimiento definido con un parámetro opcional, un conjunto equivalente de dos procedimientos sobrecargados y, finalmente, ejemplos de versiones sobrecargadas válidas y no válidos.  
   
-     [!code-vb[VbVbcnProcedures#59](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_1.vb)]  
+     [!code-vb[VbVbcnProcedures#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#59)]  
   
-     [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_2.vb)]  
+     [!code-vb[VbVbcnProcedures#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#60)]  
   
-     [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_3.vb)]  
+     [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
 ## <a name="multiple-optional-parameters"></a>Varios parámetros opcionales  
  Para obtener un procedimiento con más de un parámetro opcional, normalmente necesita más de dos versiones sobrecargadas. Por ejemplo, si hay dos parámetros opcionales, y el código de llamada puede proporcionar u omitir cada uno de ellos independientemente de la otra, necesitará cuatro versiones sobrecargadas, uno para cada combinación posible de los argumentos proporcionados.  

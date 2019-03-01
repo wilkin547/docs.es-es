@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Cambie el valor de un argumento de procedimiento (Visual Basic)
+title: Filtrar Cambie el valor de un argumento de procedimiento (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: 096bc6adfa7a8c95674d235f0112d23f7a45caf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea91e88f6833b9a3abbb349688c277be10312a6c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672297"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974918"
 ---
-# <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Procedimiento Cambie el valor de un argumento de procedimiento (Visual Basic)
+# <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Filtrar Cambie el valor de un argumento de procedimiento (Visual Basic)
 Cuando se llama a un procedimiento, cada argumento proporcionado se corresponde a uno de los parámetros definidos en el procedimiento. En algunos casos, el código del procedimiento puede cambiar el valor subyacente a un argumento en el código de llamada. En otros casos, el procedimiento puede cambiar sólo su copia local de un argumento.  
   
  Cuando se llama al procedimiento, Visual Basic hace una copia local de cada argumento que se pasa [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Para cada argumento pasado [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic proporciona el código del procedimiento una referencia directa al elemento de programación subyacente del argumento en el código de llamada.  
@@ -57,11 +57,11 @@ Cuando se llama a un procedimiento, cada argumento proporcionado se corresponde 
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra dos procedimientos que toman una variable de matriz y operan en sus elementos. El `increase` procedimiento simplemente agrega uno a cada elemento. El `replace` procedimiento asigna una nueva matriz al parámetro `a()` y, a continuación, agrega uno a cada elemento.  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_1.vb)]  
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
- [!code-vb[VbVbcnProcedures#36](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_2.vb)]  
+ [!code-vb[VbVbcnProcedures#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#36)]  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_3.vb)]  
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
  La primera `MsgBox` llamada a muestra "después de Increase (n): 11, 21, 31, 41". Dado que la matriz `n` es un tipo de referencia, `replace` puede cambiar sus miembros, aunque es el mecanismo de paso `ByVal`.  
   

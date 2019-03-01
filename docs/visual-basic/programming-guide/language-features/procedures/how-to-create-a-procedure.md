@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear un procedimiento (Visual Basic)
+title: Filtrar Crear un procedimiento (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - procedure declarations
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
-ms.openlocfilehash: 06fed04a0ebe7a0b3111a94308d15d01bcf47c1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f3b0a793b2751b0ec9bb2b7cd6fedc12ae19e18
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636539"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970810"
 ---
-# <a name="how-to-create-a-procedure-visual-basic"></a>Procedimiento Crear un procedimiento (Visual Basic)
+# <a name="how-to-create-a-procedure-visual-basic"></a>Filtrar Crear un procedimiento (Visual Basic)
 Incluya un procedimiento entre una instrucción de declaración inicial (`Sub` o `Function`) y una instrucción de declaración final (`End Sub` o `End Function`). Todo el código de procedimiento está comprendida entre estas instrucciones.  
   
  Un procedimiento no puede contener otro procedimiento, por lo que sus instrucciones inicial y finales deben ser fuera de cualquier otro procedimiento.  
@@ -51,7 +51,7 @@ Incluya un procedimiento entre una instrucción de declaración inicial (`Sub` o
 ## <a name="example"></a>Ejemplo  
  La siguiente `Function` procedimiento calcula el lado más largo, o la hipotenusa de un triángulo rectángulo, dado los valores para los dos lados.  
   
- [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
 

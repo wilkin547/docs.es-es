@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Atributos de acceso XML (Visual Basic)
+title: Filtrar Atributos de acceso XML (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - attribute axis property [Visual Basic]
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 66cd704f-990c-4f8d-9b49-2b6aa76ca8fd
-ms.openlocfilehash: ed4c79eed9d673402260fbb1823b9085f4d1f7b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d68596dd4f84cfcea37567bd4a43fe499848e5e9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685417"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969994"
 ---
-# <a name="how-to-access-xml-attributes-visual-basic"></a>Procedimiento Atributos de acceso XML (Visual Basic)
+# <a name="how-to-access-xml-attributes-visual-basic"></a>Filtrar Atributos de acceso XML (Visual Basic)
 En este ejemplo se muestra cómo usar una propiedad de eje de atributo para obtener acceso a atributos XML en un elemento XML por nombre. En concreto, usa el `type` propiedad de eje para obtener acceso al atributo con nombre de atributo `type` en el `phone` objeto.  
   
 ## <a name="example"></a>Ejemplo  
- [!code-vb[VbXMLSamples#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-attributes_1.vb)]  
+ [!code-vb[VbXMLSamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#11)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>

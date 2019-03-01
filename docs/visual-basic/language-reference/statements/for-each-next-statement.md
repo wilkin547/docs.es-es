@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: a44aff8407a29ef7f3712e116301cfce0aa984ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 269d905ad59a162af4e790e29d3753f090f511bd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700434"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975009"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Instrucción For Each...Next (Visual Basic)
 Repite un grupo de instrucciones para cada elemento de una colección.  
@@ -64,7 +64,7 @@ Next [ element ]
   
  En el ejemplo siguiente, la `For Each`...`Next` instrucción recorre en iteración todos los elementos de una colección de lista.  
   
- [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#121](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#121)]  
   
  Para obtener más ejemplos, vea [colecciones](../../../standard/collections/index.md) y [matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
@@ -73,7 +73,7 @@ Next [ element ]
   
  En el ejemplo siguiente se muestra anidada `For Each`...`Next` estructuras.  
   
- [!code-vb[VbVbalrStatements#122](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#122](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#122)]  
   
  Al anidar bucles, cada bucle debe tener un único `element` variable.  
   
@@ -86,7 +86,7 @@ Next [ element ]
   
  El ejemplo siguiente muestra cómo usar el `Continue For` y `Exit For` instrucciones.  
   
- [!code-vb[VbVbalrStatements#123](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#123](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#123)]  
   
  Puede colocar cualquier número de `Exit For` instrucciones en un `For Each` bucle. Cuando se usa dentro de anidar `For Each` bucles, `Exit For` provoca la ejecución al salir del bucle y transfiere el control más interno al siguiente nivel más alto de anidamiento.  
   
@@ -105,7 +105,7 @@ Next [ element ]
   
  El ejemplo siguiente usa una función de iterador. La función de iterador tiene una `Yield` instrucción que está dentro de un [para... Siguiente](../../../visual-basic/language-reference/statements/for-next-statement.md) bucle. En el `ListEvenNumbers` método, cada iteración de la `For Each` cuerpo de la instrucción crea una llamada a la función de iterador, que continúa con la siguiente `Yield` instrucción.  
   
- [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]  
   
  Para obtener más información, consulte [iteradores](../../programming-guide/concepts/iterators.md), [instrucción Yield](../../../visual-basic/language-reference/statements/yield-statement.md), y [iterador](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
@@ -133,7 +133,7 @@ Next [ element ]
   
  En el ejemplo siguiente, la asignación de `m` como valor inicial para `n` no se compila cuando `Option Strict` está activado porque la conversión de un `Long` a un `Integer` es una conversión de restricción. En el `For Each` instrucción, sin embargo, ningún error del compilador es notificado, aunque la asignación a `number` requiere la misma conversión desde `Long` a `Integer`. En el `For Each` instrucción que contiene un número grande, que se produce un error en tiempo de ejecución cuando <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> se aplica a la gran cantidad.  
   
- [!code-vb[VbVbalrStatements#89](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class3.vb#89)]  
   
 ### <a name="ienumerator-calls"></a>Llamadas de IEnumerator  
  Cuando la ejecución de un `For Each`... `Next` bucle inicia, Visual Basic comprueba que `group` hace referencia a un objeto de colección válido. Si no es así, produce una excepción. De lo contrario, llama el <xref:System.Collections.IEnumerator.MoveNext%2A> método y el <xref:System.Collections.IEnumerator.Current%2A> propiedad del objeto enumerador para devolver el primer elemento. Si `MoveNext` no indica que no existe ningún elemento siguiente, es decir, si la colección está vacía, el `For Each` bucle se detiene y el control pasa a la instrucción que sigue la `Next` instrucción. En caso contrario, Visual Basic establece `element` para el primer elemento y se ejecuta el bloque de instrucciones.  
@@ -161,7 +161,7 @@ End Sub
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se enumeran todas las carpetas en el directorio C:\ utilizando la <xref:System.IO.DirectoryInfo> clase.  
   
- [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#124](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#124)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra un procedimiento para ordenar una colección. El ejemplo ordena las instancias de un `Car` clase que se almacenan en un <xref:System.Collections.Generic.List%601>. La clase `Car` implementa la interfaz <xref:System.IComparable%601>, que requiere implementar el método <xref:System.IComparable%601.CompareTo%2A>.  
@@ -170,7 +170,7 @@ End Sub
   
  En el método `ListCars`, la instrucción `cars.Sort()` ordena la lista. Esta llamada al método <xref:System.Collections.Generic.List%601.Sort%2A> de <xref:System.Collections.Generic.List%601> hace que se llame automáticamente al método `CompareTo` para los objetos `Car` de `List`.  
   
- [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#125](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#125)]  
   
 ## <a name="see-also"></a>Vea también
 - [Colecciones](../../../standard/collections/index.md)
