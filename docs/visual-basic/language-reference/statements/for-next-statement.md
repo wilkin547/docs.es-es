@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 7b12a1b1b8d116cc906459407240fca4302460e4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5048d48cc22ebe405ef54dc207ac96b6c274078a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968730"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202631"
 ---
 # <a name="fornext-statement-visual-basic"></a>Instrucción For...Next (Visual Basic)
 Repite un grupo de instrucciones en un número especificado de veces.  
@@ -92,7 +92,7 @@ Next [ counter ]
   
  El ejemplo siguiente muestra el uso de la `Continue For` y `Exit For` instrucciones.  
   
- [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#115](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#115)]  
   
  Puede colocar cualquier número de `Exit For` instrucciones en un `For`...`Next` loop. Cuando se usa dentro de anidar `For`...`Next` bucles, `Exit For` sale del bucle más interno y transfiere el control al siguiente nivel más alto de anidamiento.  
   

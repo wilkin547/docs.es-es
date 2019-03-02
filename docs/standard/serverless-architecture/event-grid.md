@@ -4,12 +4,12 @@ description: Azure Event Grid es una solución sin servidor para la entrega de e
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4970130ede0c96c645129ee6c8c7d54cb1114042
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145904"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212188"
 ---
 # <a name="event-grid"></a>Cuadrícula de eventos
 
@@ -98,7 +98,7 @@ Una ventaja importante del uso de Event Grid es los mensajes automática generad
 |  | Microsoft.Resources.ResourceDeleteSuccess | Se genera cuando se realiza correctamente una operación de eliminación de recursos. |
 |  | Microsoft.Resources.ResourceDeleteFailure | Se genera cuando se produce un error en una operación de eliminación de recursos. |
 | | Microsoft.Resources.ResourceDeleteCancel | Se genera cuando se cancela una operación de eliminación de recursos. Este evento se produce cuando se cancela una implementación de plantilla. |
-| Almacenamiento de blobs | Microsoft.Storage.BlobCreated | Se genera cuando se crea un blob. |
+| Blob Storage | Microsoft.Storage.BlobCreated | Se genera cuando se crea un blob. |
 | | Microsoft.Storage.BlobDeleted | Se genera cuando se elimina un blob. |
 | Centros de eventos | Microsoft.EventHub.CaptureFileCreated | Se genera cuando se crea un archivo de captura.
 | Centro de IoT | Microsoft.Devices.DeviceCreated | Se publica cuando se registra un dispositivo a IoT hub. |
@@ -124,7 +124,7 @@ En este capítulo, aprendió sobre la plataforma Azure sin servidor que se compo
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Análisis de Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
 * [Azure: Traiga su aplicación a la nube con Azure Functions sin servidor](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Azure Event Grid](https://docs.microsoft.com/azure/azure-event-grid/overview)
+* [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
 * [Esquema de eventos de Azure Event Grid](https://docs.microsoft.com/azure/event-grid/event-schema)
 * [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
 * [Documentación de Azure Functions](https://docs.microsoft.com/azure/azure-functions)

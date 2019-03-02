@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: def49bc4264f2cae8e17d5f00ff12ad41674da2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540616"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212526"
 ---
 # <a name="service-identity-and-authentication"></a>Identidad del servicio y autenticación
-Un servicio *identidad de extremo*es un valor generado desde el servicio de lenguaje de descripción de servicios Web (WSDL). Este valor, propagado a cualquier cliente, se utiliza para autenticar el servicio. Después de que el cliente inicie una comunicación con un punto de conexión y el servicio se autentique a sí mismo ante el cliente, el cliente compara el valor de identidad del punto de conexión con el valor real devuelto por el proceso de autenticación del punto de conexión. Si coinciden, se asegura al cliente que se ha puesto en contacto con el punto de conexión de servicio esperado. Esto funciona como una protección frente a *"phishing"* al impedir que un cliente se redirige a un punto de conexión hospedado por un servicio malintencionado.  
+Un servicio *identidad de extremo* es un valor generado desde el servicio de lenguaje de descripción de servicios Web (WSDL). Este valor, propagado a cualquier cliente, se utiliza para autenticar el servicio. Después de que el cliente inicie una comunicación con un punto de conexión y el servicio se autentique a sí mismo ante el cliente, el cliente compara el valor de identidad del punto de conexión con el valor real devuelto por el proceso de autenticación del punto de conexión. Si coinciden, se asegura al cliente que se ha puesto en contacto con el punto de conexión de servicio esperado. Esto funciona como una protección frente a *"phishing"* al impedir que un cliente se redirige a un punto de conexión hospedado por un servicio malintencionado.  
   
  Para una aplicación de ejemplo que muestre la configuración de identidad, vea [ejemplo de identidad de servicio](../../../../docs/framework/wcf/samples/service-identity-sample.md). Para obtener más información acerca de los extremos y direcciones de extremo, vea [direcciones](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
   
@@ -26,7 +26,7 @@ Un servicio *identidad de extremo*es un valor generado desde el servicio de leng
   
  El procesamiento de la identidad consta de las siguientes fases:  
   
--   En la fase de diseño, el programador del cliente determina la identidad del servicio desde los metadatos del extremo (se expone a través de WSDL).  
+-   En la fase de diseño, el programador del cliente determina la identidad del servicio desde los metadatos del punto de conexión (se expone a través de WSDL).  
   
 -   En el tiempo de ejecución, la aplicación de cliente comprueba las notificaciones de las credenciales de seguridad del servicio antes de enviar ningún mensaje al servicio.  
   
@@ -35,7 +35,7 @@ Un servicio *identidad de extremo*es un valor generado desde el servicio de leng
  La propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A> de la clase <xref:System.ServiceModel.EndpointAddress> representa la identidad del servicio llamada por el cliente. El servicio publica la <xref:System.ServiceModel.EndpointAddress.Identity%2A> en sus metadatos. Cuando se ejecuta el programador del cliente la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) frente al extremo de servicio, la configuración generada contiene el valor del servicio <xref:System.ServiceModel.EndpointAddress.Identity%2A> propiedad. La infraestructura de WCF (si está configurado con seguridad) comprueba que el servicio posea la identidad especificada.  
   
 > [!IMPORTANT]
->  Los metadatos contienen la identidad esperada del servicio, por lo que se recomienda que exponga los metadatos del servicio a través de medios seguros, como, por ejemplo, creando un punto de conexión HTTPS para el servicio. Para obtener más información, vea [Cómo: Proteger los extremos de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+>  Los metadatos contienen la identidad esperada del servicio, por lo que se recomienda que exponga los metadatos del servicio a través de medios seguros, como, por ejemplo, creando un extremo HTTPS para el servicio. Para obtener más información, vea [Cómo: Proteger los extremos de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
 ## <a name="identity-types"></a>Tipos de identidad  
  Puede proporcionar un servicio seis tipos de identidades. Cada tipo de identidad corresponde a un elemento que se puede contener dentro del elemento `<identity>` mediante configuración. El tipo utilizado depende del escenario y de los requisitos de seguridad del servicio. La tabla siguiente describe cada tipo de identidad.  
@@ -68,19 +68,19 @@ Un servicio *identidad de extremo*es un valor generado desde el servicio de leng
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="specifying-identity-at-the-client"></a>Especificación de la identidad en el cliente  
- En tiempo de diseño, un programador del cliente se utiliza normalmente el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar la configuración de cliente. El archivo de configuración generado (pensado para que lo utilice el cliente) contiene la identidad del servidor. Por ejemplo, el código siguiente se genera a partir de un servicio que especifica una identidad de DNS, tal y como se muestra en el ejemplo anterior. Observe que el valor de identidad de punto de conexión del cliente coincide con el del servicio. En este caso, cuando el cliente recibe las credenciales de Windows (Kerberos) para el servicio, espera que el valor sea `contoso.com`.  
+ En tiempo de diseño, un programador del cliente se utiliza normalmente el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar la configuración de cliente. El archivo de configuración generado (pensado para que lo utilice el cliente) contiene la identidad del servidor. Por ejemplo, el código siguiente se genera a partir de un servicio que especifica una identidad de DNS, tal y como se muestra en el ejemplo anterior. Observe que el valor de identidad de extremo del cliente coincide con el del servicio. En este caso, cuando el cliente recibe las credenciales de Windows (Kerberos) para el servicio, espera que el valor sea `contoso.com`.  
   
   
   
  Si, en lugar de Windows, el servicio especifica un certificado como el tipo de credencial de cliente, se espera que la propiedad DNS del certificado sea el valor `contoso.com`. (O si la propiedad DNS es `null`, el nombre de sujeto del certificado debe ser `contoso.com`.)  
   
 #### <a name="using-a-specific-value-for-identity"></a>Uso de un valor específico de identidad  
- El siguiente archivo de configuración del cliente muestra cómo se espera que la identidad del servicio sea un valor concreto. En el ejemplo siguiente, el cliente puede comunicarse con dos extremos. El primero se identifica con una huella digital del certificado y el segundo con una clave RSA certificada. Es decir, un certificado que contiene solo un par de clave pública/clave privada, pero que no es emitido por una autoridad de confianza.  
+ El siguiente archivo de configuración del cliente muestra cómo se espera que la identidad del servicio sea un valor concreto. En el ejemplo siguiente, el cliente puede comunicarse con dos puntos de conexión. El primero se identifica con una huella digital del certificado y el segundo con una clave RSA certificada. Es decir, un certificado que contiene solo un par de clave pública/clave privada, pero que no es emitido por una autoridad de confianza.  
   
   
   
 ## <a name="identity-checking-at-run-time"></a>Comprobación de identidad en tiempo de ejecución  
- En la fase de diseño, un programador de cliente determina la identidad del servidor mediante sus metadatos. En tiempo de ejecución, la comprobación de identidad se realiza antes de llamar a ningún extremo del servicio.  
+ En la fase de diseño, un programador de cliente determina la identidad del servidor mediante sus metadatos. En tiempo de ejecución, la comprobación de identidad se realiza antes de llamar a ningún punto de conexión del servicio.  
   
  El valor de identidad está ligado al tipo de autenticación especificado mediante metadatos; en otras palabras, el tipo de credenciales utilizadas para el servicio.  
   
@@ -105,7 +105,7 @@ Un servicio *identidad de extremo*es un valor generado desde el servicio de leng
  Especificar la identidad mediante programación es opcional (utilizando la propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A>). Si no se especifica ninguna identidad, y el tipo de credencial de cliente es Windows, el valor predeterminado es SPN con el valor establecido en la parte del nombre del host de la dirección del punto de conexión de servicio prefijada con el literal "host/". Si no se especifica ninguna identidad y el tipo de credencial de cliente es un certificado, el valor predeterminado es `Certificate`. Esto se aplica a la seguridad de nivel de mensaje y transporte.  
   
 ## <a name="identity-and-custom-bindings"></a>Identidad y enlaces personalizados  
- Dado que la identidad de un servicio depende del tipo de enlace utilizado, asegúrese de que se expone una identidad adecuada al crear un enlace personalizado. Por ejemplo, en el siguiente ejemplo de código, la identidad expuesta no es compatible con el tipo de seguridad, porque la identidad del enlace de arranque de conversación segura no coincide con la identidad del enlace en el punto de conexión. El enlace de conversación segura establece la identidad DNS, mientras que <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> establece la identidad UPN o SPN.  
+ Dado que la identidad de un servicio depende del tipo de enlace utilizado, asegúrese de que se expone una identidad adecuada al crear un enlace personalizado. Por ejemplo, en el siguiente ejemplo de código, la identidad expuesta no es compatible con el tipo de seguridad, porque la identidad del enlace de arranque de conversación segura no coincide con la identidad del enlace en el extremo. El enlace de conversación segura establece la identidad DNS, mientras que <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> establece la identidad UPN o SPN.  
   
  [!code-csharp[C_Identity#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#8)]
  [!code-vb[C_Identity#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#8)]  

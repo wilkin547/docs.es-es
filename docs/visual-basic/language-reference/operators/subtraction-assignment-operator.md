@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator -=
 - compound assignment statements [Visual Basic]
 ms.assetid: 5ead0c37-ae50-48f7-8435-8e341d81cae1
-ms.openlocfilehash: 29a178ece41763dfdf9fe1ff042f419bc879dcd9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3495c4e45fe5e1d497578ee3ee6afe874e90eed
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675059"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203050"
 ---
 # <a name="--operator-visual-basic"></a>-= (Operador, Visual Basic)
 Resta el valor de una expresión del valor de una variable o propiedad y asigna el resultado a la variable o propiedad.  
@@ -44,7 +44,7 @@ variableorproperty -= expression
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `-=` operador restar uno `Integer` variable de otra y asignar el resultado a la última variable.  
   
- [!code-vb[VbVbalrOperators#11](codesnippet/VisualBasic/subtraction-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>Vea también
 - [-(Operador) (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)

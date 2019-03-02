@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 16a2ee7f16df92db8deb44ff979ec077eefc20aa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5dc432f8e62430d48954b2c049cab3ebae4d442e
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976491"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203748"
 ---
 # <a name="on-error-statement-visual-basic"></a>Instrucción On Error (Visual Basic)
 Habilita una rutina de control de errores y se especifica la ubicación de la rutina dentro de un procedimiento; También puede usarse para deshabilitar una rutina de control de errores.  
@@ -111,7 +111,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="example"></a>Ejemplo  
  Este ejemplo usa primero el `On Error GoTo` instrucción para especificar la ubicación de una rutina de control de errores dentro de un procedimiento. En el ejemplo, intenta dividir por cero genera el error número 6. El error se controla en la rutina de control de errores y, a continuación, se devuelve el control a la instrucción que produjo el error. El `On Error GoTo 0` instrucción desactiva la interceptación de errores. El `On Error Resume Next` instrucción se utiliza para aplazar la intercepción de errores para que se puede conocer el contexto para el error generado por la instrucción siguiente. Tenga en cuenta que `Err.Clear` se usa para borrar el `Err` las propiedades del objeto una vez controlado el error.  
   
- [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
+ [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]  
   
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres**: [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

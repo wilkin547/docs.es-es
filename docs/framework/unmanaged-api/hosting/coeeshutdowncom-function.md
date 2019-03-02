@@ -8,6 +8,7 @@ api_location:
 - clr.dll
 - mscorwks.dll
 - mscoreei.dll
+- mscorsvr.dll
 api_type:
 - DLLExport
 f1_keywords:
@@ -19,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 755ff827300dd9fef5944924f6373415f6d8fa6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d990d63a007240ab0bd0240f7b45fed52e2a2129
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568587"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212253"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM (Función)
 Obliga a common language runtime (CLR) para liberar todos los punteros de interfaz que tiene en los contenedores RCW (RCW). Esto tiene el efecto de liberar todas las cachés RCW. Esta función global está en desuso en el [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. En su lugar, use el punto de entrada para un tiempo de ejecución específico.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: df65749156543f72d07a464b50a7934908cd533a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704659"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203631"
 ---
 # <a name="access-levels-in-visual-basic"></a>Niveles de acceso en Visual Basic
 El *nivel de acceso* de un elemento declarado es la extensión de la capacidad de obtener acceso a él, es decir, qué código tiene permiso para leer o escribir en él. Esto se determina no solo por cómo se declara el propio elemento, sino también por el nivel de acceso del contenedor del elemento. Código que no se puede obtener acceso a un elemento contenedor no puede tener acceso a cualquiera de los elementos contenidos, aunque se hayan declarado como `Public`. Por ejemplo, un `Public` variable en un `Private` estructura se puede acceder desde dentro de la clase que contiene la estructura, pero no desde fuera de esa clase.  
@@ -101,8 +101,9 @@ Para usar el `Private Protected` modificador de acceso, debe agregar el elemento
 
 Para obtener más información, consulte [configuración de la versión de idioma de Visual Basic](../../../language-reference/configure-language-version.md).
 
- ## <a name="access-modifiers"></a>Modificadores de acceso  
- Las palabras clave que especifican el nivel de acceso se denominan *modificadores de acceso*. En la tabla siguiente compara los modificadores de acceso.  
+## <a name="access-modifiers"></a>Modificadores de acceso  
+
+Las palabras clave que especifican el nivel de acceso se denominan *modificadores de acceso*. En la tabla siguiente compara los modificadores de acceso.  
   
 |Modificador de acceso|Nivel de acceso concedido|Elementos que puede declarar con este nivel de acceso|Contexto de declaración dentro del cual se puede usar este modificador|  
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  

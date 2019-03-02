@@ -8,12 +8,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 5ff3b12e85b9ab7fb8341bb8665a057165e78816
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 824481c9c73d496998d5810c620b2317c1ec252a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968031"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203446"
 ---
 # <a name="anonymous-types-visual-basic"></a>Tipos anónimos (Visual Basic)
 Visual Basic admite los tipos anónimos, lo que le permite crear objetos sin escribir una definición de clase para el tipo de datos. En su lugar, el compilador genera una clase. La clase no tiene ningún nombre utilizable, hereda directamente de <xref:System.Object>y contiene las propiedades especificadas al declarar el objeto. Dado que no se especifica el nombre del tipo de datos, se conoce como un *tipo anónimo*.  
@@ -81,7 +81,7 @@ Visual Basic admite los tipos anónimos, lo que le permite crear objetos sin esc
 ### <a name="read-only-values"></a>Valores de solo lectura  
  No se puede cambiar los valores de las propiedades de clave. Por ejemplo, en `prod8` en el ejemplo anterior, el `Name` y `Price` campos son `read-only`, pero `OnHand` puede cambiarse.  
   
- [!code-vb[VbVbalrAnonymousTypes#8](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_8.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#8)]  
   
 ## <a name="anonymous-types-from-query-expressions"></a>Tipos anónimos desde las expresiones de consulta  
  Las expresiones de consulta no siempre requieren la creación de tipos anónimos. Cuando sea posible, usan un tipo existente para almacenar los datos de columna. Esto se produce cuando la consulta devuelve los registros completos desde el origen de datos o solo un campo de cada registro. En los siguientes ejemplos de código, `customers` es una colección de objetos de un `Customer` clase. La clase tiene muchas propiedades y puede incluir uno o varios de ellos en el resultado de consulta, en cualquier orden. En los dos primeros ejemplos, no hay tipos anónimos son necesarios porque las consultas seleccionan elementos de tipos con nombre:  
