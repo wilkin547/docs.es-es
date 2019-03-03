@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 79c8e216126353bdf5fca34baf432496aacb93ce
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 812b89ff163c9d39a658f817495ac12616c28f6f
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151532"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836258"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedimientos recomendados de pruebas unitarias con .NET Core y .NET Standard
 
@@ -18,7 +18,7 @@ La escritura de pruebas unitarias reporta muchos beneficios; las pruebas ayudan 
 
 En esta guía, aprenderá algunos procedimientos recomendados para escribir pruebas unitarias resistentes y fáciles de entender.
 
-De [John Reese](https://reesespieces.io), con agradecimientos especiales a [Roy Osherove](http://osherove.com/)
+De [John Reese](https://reese.dev), con agradecimientos especiales a [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>El porqué de las pruebas unitarias
 

@@ -107,7 +107,7 @@ El tema contendrá también vínculos al ejemplo. Se vincula directamente a la c
 
 Para más información, vea el archivo [Léame de samples](https://github.com/dotnet/samples/blob/master/README.md).
 
-## <a name="the-c-interactive-experience"></a>La experiencia interactiva de C# #
+## <a name="the-c-interactive-experience"></a>La experiencia interactiva de C#
 
 Los ejemplos de código corto en C# pueden usar la etiqueta de idioma `csharp-interactive` para especificar un ejemplo de C# que se ejecuta en el navegador. (Los ejemplos de código en línea usan la etiqueta `csharp-interactive`, para fragmentos de código incluidos en el origen, usan la etiqueta `code-csharp-interactive`). Estos ejemplos de código muestran una ventana de código y una ventana de salida en el artículo. La ventana de salida muestra el resultado de ejecutar el código interactivo cuando el usuario haya ejecutado el ejemplo. 
 

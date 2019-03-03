@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear bibliotecas de .NET Core con
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169370"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212071"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Desarrollo de bibliotecas con herramientas multiplataforma
 
@@ -58,9 +58,9 @@ En función de sus necesidades, tiene 3 opciones principales cuando el destino e
     ```
 
 2. Puede usar una versión anterior o posterior de .NET Standard modificando el valor en el nodo `TargetFramework` de su archivo del proyecto.
-    
+
     Las versiones del estándar .NET son compatibles con versiones anteriores. Eso significa que las bibliotecas `netstandard1.0` se pueden ejecutar en plataformas `netstandard1.1` y versiones superiores. Sin embargo, no existe compatibilidad con versiones posteriores: las plataformas del estándar .NET inferiores no pueden hacer referencia a las superiores. Esto significa que las bibliotecas `netstandard1.0` no pueden hacer referencia a las bibliotecas que tienen como destino `netstandard1.1` o una versión superior. Seleccione la versión estándar que tiene la combinación adecuada de compatibilidad con API y plataformas que necesita. Por ahora le recomendamos `netstandard1.4`.
-    
+
 3. Si desea tener como destino .NET Framework versión 4.0 o inferior, o bien desea usar una API disponible en .NET Framework pero no disponible en el estándar .NET (por ejemplo, `System.Drawing`), lea las secciones siguientes y sepa cómo tener compatibilidad con múltiples versiones.
 
 ## <a name="how-to-target-the-net-framework"></a>.NET Framework como destino
@@ -131,7 +131,7 @@ Su archivo del proyecto podría tener la siguiente apariencia:
 Observará tres cambios principales aquí:
 
 1. El nodo `TargetFramework` se ha reemplazado por `TargetFrameworks`, y se expresan tres TFM dentro.
-1. Existe un nodo `<ItemGroup>` para el destino `net40 ` que se dirige a una referencia de .NET Framework.
+1. Existe un nodo `<ItemGroup>` para el destino `net40` que se dirige a una referencia de .NET Framework.
 1. Existe un nodo `<ItemGroup>` para el destino `net45` que se dirige a dos referencias de .NET Framework.
 
 El sistema de compilación conoce los siguientes símbolos del preprocesador que se usan en las directivas `#if`:
@@ -256,7 +256,7 @@ Es importante poder probar las plataformas. Puede usar [xUnit](https://xunit.git
    [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. Compruebe que xUnit se ejecuta mediante la ejecución del comando `dotnet test`. Si decide usar MSTest, entonces debe ejecutarse en su lugar el ejecutor de la consola de MSTest.
-    
+
 Y listo. Ahora puede probar la biblioteca en todas las plataformas; para ello, use herramientas de línea de comandos. Para seguir con las pruebas ahora que ya está todo configurado, probar la biblioteca es un proceso muy simple:
 
 1. Haga los cambios en la biblioteca.
@@ -321,7 +321,7 @@ Esto agregará los tres proyectos anteriores y un archivo de solución que los v
 La mejor manera de hacer referencia a un proyecto es usar la CLI de .NET Core para agregar una referencia de proyecto. Desde los directorios del proyecto **AwesomeLibrary.CSharp** y **AwesomeLibrary.FSharp**, puede ejecutar el siguiente comando:
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 Los archivos del proyecto para **AwesomeLibrary.CSharp** y **AwesomeLibrary.FSharp** ahora harán referencia a **AwesomeLibrary.Core** como un destino `ProjectReference`.  Puede comprobar esto inspeccionando los archivos del proyecto y observando lo siguiente en ellos:
