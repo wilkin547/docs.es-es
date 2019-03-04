@@ -5,14 +5,14 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 74ad1c5ddae69864b85099535e8b83a4504275a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 642422a4cc077ffebb5ee6db9d7ffb937fc1e173
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183138"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212357"
 ---
-# <a name="lambda-expressions"></a>Expresiones lambda #
+# <a name="lambda-expressions"></a>Expresiones lambda
 
 Una *expresión lambda* es un bloque de código (una expresión o un bloque de instrucciones) que se trata como un objeto. Se puede pasar como argumento a los métodos y también la pueden devolver las llamadas al método. Las expresiones lambda se usan mayoritariamente para:
 
@@ -32,7 +32,7 @@ También puede pasarla directamente como un argumento de método:
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda2.cs#2)]
 
-## <a name="expression-lambdas"></a>Lambdas de expresión ##
+## <a name="expression-lambdas"></a>Lambdas de expresión
 
  Una expresión lambda con una expresión en el lado derecho del operador => se denomina *lambda de expresión*. Las lambdas de expresión se usan ampliamente en la construcción de [árboles de expresión](expression-trees.md). Una expresión lambda devuelve el resultado de evaluar la condición y tiene la siguiente forma:
 
@@ -54,7 +54,7 @@ Normalmente, el compilador usa la inferencia de tipos para determinar los tipos 
 
 Observe en el ejemplo anterior que el cuerpo de una lambda de expresión puede estar compuesto de una llamada a método. Pero, si va a crear árboles de expresión que se evaluarán fuera de .NET Framework, como en SQL Server o en Entity Framework (EF), debe evitar usar llamadas a métodos en las expresiones lambda, puesto que los métodos podrían no tener ningún significado fuera del contexto de la implementación de .NET. Si opta por usar las llamadas a métodos en este caso, asegúrese de probarlas exhaustivamente para garantizar que las llamadas a métodos se pueden resolver correctamente.
 
-## <a name="statement-lambdas"></a>Lambdas de instrucción ##
+## <a name="statement-lambdas"></a>Lambdas de instrucción
 
 Una lambda de instrucción es similar a un lambda de expresión, salvo que las instrucciones se encierran entre llaves:
 
@@ -68,7 +68,7 @@ El cuerpo de una lambda de instrucción puede estar compuesto de cualquier núme
 
 Las lambdas de instrucción, como los métodos anónimos, no se pueden utilizar para crear árboles de expresión.
 
-## <a name="async-lambdas"></a>Lambdas asincrónicas ##
+## <a name="async-lambdas"></a>Lambdas asincrónicas
 
 Puede crear fácilmente expresiones e instrucciones lambda que incorporen el procesamiento asincrónico mediante las palabras clave [async](language-reference/keywords/async.md) y [await](language-reference/keywords/await.md). Por ejemplo, en el ejemplo se llama a un método `ShowSquares` que se ejecuta de forma asincrónica.
 
@@ -76,7 +76,7 @@ Puede crear fácilmente expresiones e instrucciones lambda que incorporen el pro
 
 Para obtener más información sobre cómo crear y usar métodos asincrónicos, vea [Programación asincrónica con async y await](programming-guide/concepts/async/index.md).
 
-## <a name="lambda-expressions-and-tuples"></a>Expresiones lambda y tuplas ##
+## <a name="lambda-expressions-and-tuples"></a>Expresiones lambda y tuplas
 
 A partir de C# 7.0, el lenguaje C# proporciona compatibilidad integrada para las tuplas. Puede proporcionar una tupla como argumento a una expresión lambda, mientras que la expresión lambda también puede devolver una tupla. En algunos casos, el compilador de C# usa la inferencia de tipos para determinar los tipos de componentes de la tupla.
 
@@ -90,9 +90,9 @@ Normalmente, los campos de una tupla se denominan `Item1`, `Item2`, etc., aunque
 
 Para obtener más información sobre la compatibilidad de las tuplas en C#, vea [C# Tuple types](tuples.md) (Tipos de tupla de C#).
 
-## <a name="lambdas-with-the-standard-query-operators"></a>Lambdas con los operadores de consulta estándar ##
+## <a name="lambdas-with-the-standard-query-operators"></a>Lambdas con los operadores de consulta estándar
 
-LINQ to Objects, entre otras implementaciones, tiene un parámetro de entrada cuyo tipo es uno de la familia <xref:System.Func%601> de delegados genéricos. Estos delegados usan parámetros de tipo para definir el número y el tipo de los parámetros de entrada, así como el tipo de valor devuelto del delegado. Los delegados `Func` son muy útiles para encapsular expresiones definidas por el usuario que se aplican a cada elemento en un conjunto de datos de origen. Por ejemplo, imagínese que tiene el delegado <xref:System.Func%601>, cuya sintaxis es esta:
+LINQ to Objects, entre otras implementaciones, tiene un parámetro de entrada cuyo tipo es uno de la familia <xref:System.Func%601> de delegados genéricos. Estos delegados usan parámetros de tipo para definir el número y el tipo de los parámetros de entrada, así como el tipo de valor devuelto del delegado. Los delegados`Func` son muy útiles para encapsular expresiones definidas por el usuario que se aplican a cada elemento en un conjunto de datos de origen. Por ejemplo, imagínese que tiene el delegado <xref:System.Func%601>, cuya sintaxis es esta:
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#1)]
 
@@ -118,7 +118,7 @@ En el siguiente ejemplo se especifican varios parámetros de entrada encerrándo
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#6)]
 
-## <a name="type-inference-in-lambda-expressions"></a>Inferencia de tipos en expresiones lambda ##
+## <a name="type-inference-in-lambda-expressions"></a>Inferencia de tipos en expresiones lambda
 
 Al escribir lambdas, no tiene por qué especificar un tipo para los parámetros de entrada, ya que el compilador puede deducir el tipo según el cuerpo de lambda, los tipos de parámetros y otros factores, tal como se describe en la especificación del lenguaje C#. Para la mayoría de los operadores de consulta estándar, la primera entrada es el tipo de los elementos en la secuencia de origen. Si está realizando una consulta sobre `IEnumerable<Customer>`, se deducirá que la variable de entrada será un objeto `Customer`, lo cual significa que se podrá tener acceso a sus métodos y propiedades:
 
@@ -134,7 +134,7 @@ Las reglas generales para la inferencia de tipos de las lambdas son las siguient
 
 Observe que las expresiones lambda, en sí mismas, no tienen tipo, ya que el sistema de tipos comunes no tiene ningún concepto intrínseco de "expresión lambda". Sin embargo, a veces resulta práctico hablar coloquialmente del "tipo" de una expresión lambda. En estos casos, el tipo hace referencia al tipo del delegado o el tipo de <xref:System.Linq.Expressions.Expression> en el que se convierte la expresión lambda.
 
-## <a name="variable-scope-in-lambda-expressions"></a>Ámbito de las variables en las expresiones lambda ##
+## <a name="variable-scope-in-lambda-expressions"></a>Ámbito de las variables en las expresiones lambda
 
 Las lambdas pueden hacer referencia a las *variables externas* (vea [Métodos anónimos](programming-guide/statements-expressions-operators/anonymous-methods.md)) que están en el ámbito del método que define la función lambda o en el ámbito del tipo que contiene la expresión lambda. Las variables que se capturan de esta manera se almacenan para su uso en la expresión lambda, cuando de otro modo quedarían fuera de ámbito y serían eliminadas por la recolección de elementos no utilizados. Para poder utilizar una variable externa en una expresión lambda, debe estar previamente asignada. En el ejemplo siguiente se muestran estas reglas.
 
@@ -152,7 +152,7 @@ Las lambdas pueden hacer referencia a las *variables externas* (vea [Métodos an
 
 - Una expresión lambda no puede contener una instrucción `goto` , `break` o `continue` que esté dentro de la función lambda si el destino de la instrucción de salto está fuera del bloque. También es un error utilizar una instrucción de salto fuera del bloque de la función lambda si el destino está dentro del bloque.
 
-## <a name="see-also"></a>Vea también ##
+## <a name="see-also"></a>Vea también
 
 - [LINQ (Language Integrated Query)](../standard/using-linq.md)
 - [Métodos anónimos](programming-guide/statements-expressions-operators/anonymous-methods.md)

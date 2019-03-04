@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 02540db02d8e413ec254c0642d106ca41b263376
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe29bb14b85b74c249a5d9b7f8c2802ef991b13d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662522"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977817"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ y tipos genéricos (C#)
 Las consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se basan en tipos genéricos, introducidos en la versión 2.0 de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. No es necesario tener conocimientos avanzados de genéricos para poder empezar a escribir consultas, aunque debería entender dos conceptos básicos:  
@@ -25,14 +25,14 @@ Las consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se basan en tipo
 ## <a name="ienumerablet-variables-in-linq-queries"></a>Variables IEnumerable<T\> en las consultas LINQ  
  Las variables de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] tienen el tipo <xref:System.Collections.Generic.IEnumerable%601> o un tipo derivado como <xref:System.Linq.IQueryable%601>. Cuando vea una variable de consulta que tiene el tipo `IEnumerable<Customer>`, significa que, al ejecutarse, la consulta generará una secuencia de cero o más objetos `Customer`.  
   
- [!code-csharp[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#34)]  
   
  Para obtener más información, vea [Type Relationships in LINQ Query Operations](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md) (Relaciones entre tipos en las operaciones de consulta LINQ).  
   
 ## <a name="letting-the-compiler-handle-generic-type-declarations"></a>Permitir que el compilador controle las declaraciones de tipo genérico  
  Si lo prefiere, puede evitar la sintaxis genérica mediante la palabra clave [var](../../../../csharp/language-reference/keywords/var.md). La palabra clave `var` indica al compilador que infiera el tipo de una variable de consulta examinando el origen de datos especificado en la cláusula `from`. En el ejemplo siguiente se genera el mismo código compilado que en el ejemplo anterior:  
   
- [!code-csharp[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_2.cs)]  
+ [!code-csharp[csLINQGettingStarted#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#35)]  
   
  La palabra clave `var` es útil cuando el tipo de la variable es obvio o cuando no es tan importante especificar explícitamente los tipos genéricos anidados, como los que generan las consultas de grupo. Le recordamos que, si usa `var`, debe tener presente que puede dificultar la lectura del código a otros usuarios. Para más información, vea [Variables locales con asignación implícita de tipos](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

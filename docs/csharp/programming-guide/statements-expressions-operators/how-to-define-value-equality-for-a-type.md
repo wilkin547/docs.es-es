@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 456555a34347771c9918341d7d1a797e611f5577
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589326"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203115"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procedimiento Definir la igualdad de valores para un tipo (Guía de programación de C#)
 Cuando defina una clase o un struct, debe decidir si tiene sentido crear una definición personalizada de igualdad (o equivalencia) de valores para el tipo. Normalmente, la igualdad de valores se implementa cuando se espera agregar objetos del tipo a una colección de algún tipo, o cuando su objetivo principal es almacenar un conjunto de campos o propiedades. Puede basar la definición de la igualdad de valores en una comparación de todos los campos y propiedades del tipo, o bien puede basarla en un subconjunto. En cualquier caso, y tanto en las clases como en los structs, la implementación debe cumplir las cinco garantías de equivalencia:  
@@ -48,7 +48,7 @@ Cuando defina una clase o un struct, debe decidir si tiene sentido crear una def
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo implementar la igualdad de valores en una clase (tipo de referencia).  
   
- [!code-csharp[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
+ [!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]  
   
  En las clases (tipos de referencia), la implementación predeterminada de ambos métodos <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> realiza una comparación de igualdad de referencia, no una comprobación de igualdad de valores. Cuando un implementador invalida el método virtual, lo hace para asignarle semántica de igualdad de valores.  
   
@@ -57,7 +57,7 @@ Cuando defina una clase o un struct, debe decidir si tiene sentido crear una def
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo implementar la igualdad de valores en un struct (tipo de valor):  
   
- [!code-csharp[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
+ [!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]  
   
  Para los structs, la implementación predeterminada de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (que es la versión invalidada de <xref:System.ValueType?displayProperty=nameWithType>) realiza una comprobación de igualdad de valor con la reflexión para comparar valores de cada campo en el tipo. Cuando un implementador invalida el método `Equals` virtual en un struct, lo hace para proporcionar un medio más eficaz de llevar a cabo la comprobación de igualdad de valores y, opcionalmente, para basar la comparación en un subconjunto de propiedades o campos del struct.  
   

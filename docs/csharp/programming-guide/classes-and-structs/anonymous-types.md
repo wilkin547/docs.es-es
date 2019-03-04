@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 179e49f44b2dbf711dae2ce81a1ef14815b7d18a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 165793155aabac23245b352959be3188b0a5a6e5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729764"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971174"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Tipos anónimos (Guía de programación de C#)
 Los tipos anónimos son una manera cómoda de encapsular un conjunto de propiedades de solo lectura en un único objeto sin tener que definir primero un tipo explícitamente. El compilador genera el nombre del tipo y no está disponible en el nivel de código fuente. El compilador deduce el tipo de cada propiedad.  
@@ -36,7 +36,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  Si no especifica los nombres de miembro en el tipo anónimo, el compilador da a los miembros de tipo anónimo el mismo nombre que la propiedad que se usa para inicializarlos. Debe proporcionar un nombre para una propiedad que se está inicializando con una expresión, como se muestra en el ejemplo anterior. En el siguiente ejemplo, los nombres de las propiedades del tipo anónimo son `Color` y `Price`.  
   
- [!code-csharp[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
+ [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
  Normalmente, cuando se usa un tipo anónimo para inicializar una variable, la variable se declara como variable local con tipo implícito mediante [var](../../../csharp/language-reference/keywords/var.md). El nombre del tipo no se puede especificar en la declaración de la variable porque solo el compilador tiene acceso al nombre subyacente del tipo anónimo. Para obtener más información sobre `var`, vea [Variables locales con asignación implícita de tipos](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

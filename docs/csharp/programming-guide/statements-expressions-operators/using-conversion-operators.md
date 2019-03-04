@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit conversion operators [C#]
 - explicit conversion operators [C#]
 ms.assetid: caf36e89-c6c0-4b87-9f9e-85780a45c9a4
-ms.openlocfilehash: d6b271c0d716a9b5dfb49b825d843d4345471147
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 888339661ba1cb2e0b702f284d9f27b3217e74c1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578577"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973163"
 ---
 # <a name="using-conversion-operators-c-programming-guide"></a>Utilizar operadores de conversión (Guía de programación de C#)
 Puede usar los operadores de conversión `implicit`, que son más fáciles de usar, o los operadores de conversión `explicit`, que indican claramente a cualquiera que lea el código que está convirtiendo un tipo. En este tema se muestran ambos tipos de operadores de conversión.  
@@ -26,12 +26,12 @@ Puede usar los operadores de conversión `implicit`, que son más fáciles de us
 ## <a name="example"></a>Ejemplo  
  Este es un ejemplo de un operador de conversión explícita. Este operador convierte el tipo <xref:System.Byte> en un tipo de valor denominado `Digit`. Como no todos los bytes se pueden convertir en valores de tipo digit, la conversión es explícita, lo que significa que se debe usar una conversión, como se muestra en el método `Main`.  
   
- [!code-csharp[csProgGuideStatements#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-conversion-operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#11)]  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra un operador de conversión implícita mediante la definición de un operador de conversión que deshace lo que hizo el ejemplo anterior: convierte una clase de valor denominada `Digit` en el tipo entero <xref:System.Byte>. Dado que cualquier dígito se puede convertir en <xref:System.Byte>, no hay ninguna necesidad de obligar a los usuarios a que definan explícitamente la conversión.  
   
- [!code-csharp[csProgGuideStatements#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-conversion-operators_2.cs)]  
+ [!code-csharp[csProgGuideStatements#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#12)]  
   
 ## <a name="see-also"></a>Vea también
 

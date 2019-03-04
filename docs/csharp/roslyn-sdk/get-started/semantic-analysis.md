@@ -3,12 +3,12 @@ title: Introducción al análisis semántico
 description: En este tutorial, se proporciona una introducción sobre cómo trabajar con el análisis semántico mediante el SDK de .NET Compiler.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 4b021ed2a27da754e2ac5af01716868e41e72738
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 669f11377edfa707133f7ad8df72117942d504fa
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484623"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202579"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Introducción al análisis semántico
 
@@ -117,7 +117,7 @@ Para finalizar este tutorial, crearemos una consulta LINQ que crea una secuencia
 
 [!code-csharp[Access the sequence of members on the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
 
-Esa secuencia de origen contiene todos los miembros, incluidas las propiedades y los campos, de modo que tiene que filtrarlos con el método <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> para buscar los elementos que son objetos <xref:Microsoft.CodeAnalysis.IMethodSymbol?diplayProperty=nameWithType>:
+Esa secuencia de origen contiene todos los miembros, incluidas las propiedades y los campos, de modo que tiene que filtrarlos con el método <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> para buscar los elementos que son objetos <xref:Microsoft.CodeAnalysis.IMethodSymbol?displayProperty=nameWithType>:
 
 [!code-csharp[Filter the sequence to only methods](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
 

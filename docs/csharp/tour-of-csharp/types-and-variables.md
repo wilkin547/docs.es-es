@@ -3,12 +3,12 @@ title: 'Variables y tipos de C#: un paseo por el lenguaje C#'
 description: Obtenga información sobre cómo definir tipos y declarar variables de C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 976cb507074d4bafe4c22e9482d8f272937baf36
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 6880fa51ca30dadac901d2b86de189b59658d164
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583958"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212006"
 ---
 # <a name="types-and-variables"></a>Tipos y variables
 
@@ -71,7 +71,7 @@ Resume los tipos numéricos de C#.
     - `double`: 64 bits, de 5.0 × 10<sup>-324</sup> a 1.7 × 10<sup>308</sup>, precisión de 15 dígitos
 * Decimal
     - `decimal`: 128 bits, de al menos -7.9 × 10<sup>-28</sup> a 7.9 × 10<sup>28</sup>, con una precisión de al menos 28 dígitos
-    
+
 Los programas de C# utilizan *declaraciones de tipos* para crear nuevos tipos. Una declaración de tipos especifica el nombre y los miembros del nuevo tipo. Cinco de las categorías de tipos de C# las define el usuario: tipos de clase, tipos de estructura, tipos de interfaz, tipos de enumeración y tipos delegados.
 
 A tipo `class` define una estructura de datos que contiene miembros de datos (campos) y miembros de función (métodos, propiedades y otros). Los tipos de clase admiten herencia única y polimorfismo, mecanismos por los que las clases derivadas pueden extender y especializar clases base.
@@ -115,6 +115,6 @@ Hay varios tipos de *variables* en C#, entre otras, campos, elementos de matriz,
 * Tipo delegado
     - Una referencia `null` o una referencia a una instancia de un tipo delegado compatible
 
->[!div class="step-by-step"]
->[Anterior](program-structure.md)
->[Siguiente](expressions.md)
+> [!div class="step-by-step"]
+> [Anterior](program-structure.md)
+> [Siguiente](expressions.md)

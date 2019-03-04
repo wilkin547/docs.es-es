@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8856dfd1c6c8e35399c20b630c0d44493e42b6a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600497"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972201"
 ---
 # <a name="expressions-c-programming-guide"></a>Expresiones (Guía de programación de C#)
 Una *expresión* es una secuencia de uno o más operandos y cero o más operadores que se pueden evaluar como un valor, objeto, método o espacio de nombres único. Las expresiones pueden constar de un valor literal, una invocación de método, un operador y sus operandos o un *nombre simple*. Los nombres simples pueden ser el nombre de una variable, el miembro de un tipo, el parámetro de un método, un espacio de nombres o un tipo.  
@@ -40,13 +40,13 @@ System.Convert.ToInt32("35");
 ## <a name="literals-and-simple-names"></a>Literales y nombres simples  
  Los dos tipos de expresiones más simples son literales y nombres simples. Un literal es un valor constante que no tiene ningún nombre. Por ejemplo, en el código siguiente, `5` y `"Hello World"` son valores literales:  
   
- [!code-csharp[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
+ [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
  Para obtener más información sobre literales, vea [Tipos (Referencia de C#)](../../../csharp/language-reference/keywords/types.md).  
   
  En el ejemplo anterior, tanto `i` como `s` son nombres simples que identifican variables locales. Cuando estas variables se usan en una expresión, el nombre de variable se evalúa como el valor almacenado actualmente en la ubicación de la variable en memoria. Esto se muestra en el ejemplo siguiente:  
   
- [!code-csharp[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
+ [!code-csharp[csProgGuideStatements#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#3)]  
 ## <a name="invocation-expressions"></a>Expresiones de invocación  
  En el ejemplo de código siguiente, la llamada a `DoWork` es una expresión de invocación.  
   

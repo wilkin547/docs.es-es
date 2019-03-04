@@ -7,27 +7,27 @@ helpviewer_keywords:
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: ba80626a777f9f2d813694abf3deda0ef0c93606
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94e9f7133c9a78ece7df5bd10cfc27c79d0652c2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732527"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203018"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Métodos anónimos (Guía de programación de C#)
 En las versiones de C# anteriores a 2.0, la única manera de declarar un [delegado](../../../csharp/language-reference/keywords/delegate.md) era usar [métodos con nombre](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). C# 2.0 introdujo los métodos anónimos y en C# 3.0 y versiones posteriores, las expresiones lambda reemplazan a los métodos anónimos como la manera preferida de escribir código en línea. En cambio, la información sobre los métodos anónimos de este tema también se aplica a las expresiones lambda. Existe un caso en el que un método anónimo proporciona funciones que no se encuentran en las expresiones lambda. Los métodos anónimos le permiten omitir la lista de parámetros. Esto significa que un método anónimo puede convertirse en delegados con una variedad de firmas. Esto no es posible con las expresiones lambda. Para obtener más información específica sobre las expresiones lambda, vea [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
  Crear métodos anónimos es básicamente una manera de pasar un bloque de código como un parámetro de delegado. Dos ejemplos:  
   
- [!code-csharp[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_1.cs)]  
+ [!code-csharp[csProgGuideDelegates#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#6)]  
   
- [!code-csharp[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_2.cs)]  
+ [!code-csharp[csProgGuideDelegates#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#5)]  
   
  Mediante los métodos anónimos, reduce la sobrecarga de codificación al crear instancias de delegados porque no tiene que crear un método independiente.  
   
  Por ejemplo, especificar un bloque de código en lugar de un delegado puede ser útil en una situación en la que tener que crear un método puede parecer una sobrecarga innecesaria. Un buen ejemplo sería cuando inicia un nuevo subproceso. Esta clase crea un subproceso y también contiene el código que el subproceso ejecuta sin crear un método adicional para el delegado.  
   
- [!code-csharp[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_3.cs)]  
+ [!code-csharp[csProgGuideDelegates#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#7)]  
   
 ## <a name="remarks"></a>Comentarios  
  El ámbito de los parámetros de un método anónimo es el *bloque de método anónimo*.  
@@ -36,7 +36,7 @@ En las versiones de C# anteriores a 2.0, la única manera de declarar un [delega
   
  Las variables locales y los parámetros cuyo ámbito contiene una declaración de método anónimo se denominan variables *externas* del método anónimo. Por ejemplo, en el siguiente segmento de código, `n` es una variable externa:  
   
- [!code-csharp[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_4.cs)]  
+ [!code-csharp[csProgGuideDelegates#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#8)]  
   
  Una referencia a la variable externa `n` se dice que está *capturada* cuando se crea el delegado. A diferencia de las variables locales, la duración de una variable capturada se extiende hasta que los delegados que hacen referencia a los métodos anónimos son aptos para la recolección de elementos no utilizados.  
   
@@ -55,7 +55,7 @@ En las versiones de C# anteriores a 2.0, la única manera de declarar un [delega
   
  En cada caso, se muestra un mensaje cuando se invoca al delegado.  
   
- [!code-csharp[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_5.cs)]  
+ [!code-csharp[csProgGuideDelegates#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#4)]  
   
 ## <a name="see-also"></a>Vea también
 

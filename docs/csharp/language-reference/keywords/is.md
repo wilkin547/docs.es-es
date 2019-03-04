@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 2721048145253a441770a96f8383358bb1ceda01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710357"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977063"
 ---
-# <a name="is-c-reference"></a>is (Referencia de C#) #
+# <a name="is-c-reference"></a>is (Referencia de C#)
 
 Comprueba si un objeto es compatible con un tipo determinado o, a partir de C# 7.0, prueba una expresión en un patrón.
 
-## <a name="testing-for-type-compatibility"></a>Probar la compatibilidad de tipos ##
+## <a name="testing-for-type-compatibility"></a>Probar la compatibilidad de tipos
 
 La palabra clave `is` evalúa la compatibilidad de tipos en tiempo de ejecución. Determina si una instancia de objeto o el resultado de una expresión se puede convertir en un tipo especificado. Tiene la sintaxis
 
@@ -56,7 +56,7 @@ La palabra clave `is` genera una advertencia en tiempo de compilación si se sab
 
 A partir de C# 7.0, puede usar la coincidencia de patrones con el [patrón de tipo](#type) para escribir código más conciso que use la instrucción `is`.
 
-## <a name="pattern-matching-with-is"></a>Coincidencia de patrones con `is` ##
+## <a name="pattern-matching-with-is"></a>Coincidencia de patrones con `is`
 
 A partir de C# 7.0, las instrucciones `is` y [switch](../../../csharp/language-reference/keywords/switch.md) admiten la coincidencia de patrones. La palabra clave `is` admite los patrones siguientes:
 
@@ -104,7 +104,7 @@ El código equivalente sin coincidencia de patrones requiere una asignación ind
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Patrón de constante ###
+### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Patrón de constante
 
 Al realizar la coincidencia de patrones con el patrón constante, `is` comprueba si una expresión es igual a una constante especificada. En C# 6 y versiones anteriores, la instrucción [switch](switch.md) admite el patrón de constante. A partir de C# 7.0, la instrucción `is` también lo admite. Su sintaxis es:
 

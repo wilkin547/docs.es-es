@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], comparison
 ms.assetid: fcafd514-7405-4deb-8490-cc58efda5495
-ms.openlocfilehash: a2cbbabdad1d79c82bb5b3ec02a391727e552c98
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5185bd5e1686858452efcc7c89e2c1977e094386
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718642"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969211"
 ---
 # <a name="pointer-comparison-c-programming-guide"></a>Comparación de punteros (Guía de programación de C#)
 Puede aplicar los siguientes operadores para comparar los punteros de cualquier tipo:  
@@ -20,9 +20,9 @@ Puede aplicar los siguientes operadores para comparar los punteros de cualquier 
  Los operadores de comparación comparan las direcciones de los dos operandos, como si fueran enteros sin signo.  
   
 ## <a name="example"></a>Ejemplo  
- [!code-csharp[csProgGuidePointers#16](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_1.cs)]  
+ [!code-csharp[csProgGuidePointers#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers2.cs#16)]  
   
- [!code-csharp[csProgGuidePointers#17](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-comparison_2.cs)]  
+ [!code-csharp[csProgGuidePointers#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#17)]  
   
 ## <a name="sample-output"></a>Resultados del ejemplo  
  `True`  

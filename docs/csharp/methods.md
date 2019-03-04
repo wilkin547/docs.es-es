@@ -5,14 +5,14 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 97f30838d6bd61654daa800e891e3a79dd3f1297
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3eb19d151140f29e81376d64ecf9976e87459ce1
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617205"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202683"
 ---
-# <a name="methods"></a>Métodos #
+# <a name="methods"></a>Métodos
 
 Un método es un bloque de código que contiene una serie de instrucciones. Un programa hace que se ejecuten las instrucciones al llamar al método y especificando los argumentos de método necesarios. En C#, todas las instrucciones ejecutadas se realizan en el contexto de un método. El método `Main` es el punto de entrada para cada aplicación de C# y se llama mediante Common Language Runtime (CLR) cuando se inicia el programa.
 
@@ -36,7 +36,8 @@ Este tema contiene las siguientes secciones:
 - [Iteradores](#iterators)
 
 <a name="signatures"></a>
-## <a name="method-signatures"></a>Firmas de método ##
+
+## <a name="method-signatures"></a>Firmas de método
 
 Los métodos se declaran en una `class` o `struct` al especificar:
 
@@ -58,7 +59,8 @@ En el siguiente ejemplo se define una clase denominada `Motorcycle` que contiene
 Tenga en cuenta que la clase `Motorcycle` incluye un método sobrecargado, `Drive`. Dos métodos tienen el mismo nombre, pero se deben diferenciar en sus tipos de parámetros.
 
 <a name="invocation"></a>
-## <a name="method-invocation"></a>Invocación del método. ##
+
+## <a name="method-invocation"></a>Invocación del método.
 
 Los métodos pueden ser de *instancia* o *estáticos*. Para invocar un método de instancia es necesario crear una instancia de un objeto y llamar al método del objeto; el método de una instancia actúa en dicha instancia y sus datos. Si quiere invocar un método estático, haga referencia al nombre del tipo al que pertenece el método; los métodos estáticos no actúan en datos de instancia. Al intentar llamar a un método estático mediante una instancia de objeto se genera un error del compilador.
 
@@ -80,8 +82,9 @@ Un método se puede invocar con argumentos posicionales y argumentos con nombre.
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
- <a name="inherited"></a>
- ## <a name="inherited-and-overridden-methods"></a>Métodos heredados e invalidados ##
+<a name="inherited"></a>
+
+## <a name="inherited-and-overridden-methods"></a>Métodos heredados e invalidados
 
 Además de los miembros que se definen explícitamente en un tipo, un tipo hereda miembros definidos en sus clases base. Dado que todos los tipos en el sistema de tipo administrado heredan directa o indirectamente de la clase <xref:System.Object>, todos los tipos heredan sus miembros, como <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType> y <xref:System.Object.ToString>. En el ejemplo siguiente se define una clase `Person`, se crean instancias de dos objetos `Person` y se llama al método `Person.Equals` para determinar si los dos objetos son iguales. Pero el método `Equals` no está definido en la clase `Person`; se hereda de <xref:System.Object>.
 
@@ -92,12 +95,14 @@ Los tipos pueden invalidar miembros heredados usando la palabra clave `override`
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
 <a name="passing"></a>
-## <a name="passing-parameters"></a>Pasar parámetros ##
+
+## <a name="passing-parameters"></a>Pasar parámetros
 
 Todos los tipos de C# son *tipos de valor* o *tipos de referencia*. Para obtener una lista de tipos de valor integrados, vea [Types and variables](./tour-of-csharp/types-and-variables.md) (Tipos y variables). De forma predeterminada, los tipos de valor y los tipos de referencia se pasan a un método por valor.
 
 <a name="byval"></a>
-### <a name="passing-parameters-by-value"></a>Pasar parámetros por valor ###
+
+### <a name="passing-parameters-by-value"></a>Pasar parámetros por valor
 
 Cuando un tipo de valor se pasa a un método por valor, se pasa una copia del objeto y no el propio objeto. Por lo tanto, los cambios realizados en el objeto en el método llamado no tienen ningún efecto en el objeto original cuando el control vuelve al autor de la llamada.
 
@@ -112,7 +117,8 @@ En el ejemplo siguiente se define una clase (que es un tipo de referencia) denom
 [!code-csharp[csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]
 
 <a name="byref"></a>
-### <a name="passing-parameters-by-reference"></a>Pasar parámetros por referencia ###
+
+### <a name="passing-parameters-by-reference"></a>Pasar parámetros por referencia
 
 Pase un parámetro por referencia cuando quiera cambiar el valor de un argumento en un método y reflejar ese cambio cuando el control vuelva al método de llamada. Para pasar un parámetro por referencia, use la palabra clave [`ref`](language-reference/keywords/ref.md) o [`out`](language-reference/keywords/out-parameter-modifier.md). También puede pasar un valor por referencia para evitar la copia, pero impedir modificaciones igualmente usando la palabra clave [`in`](language-reference/keywords/in-parameter-modifier.md).
 
@@ -127,7 +133,8 @@ Un patrón común que se usa en parámetros ref implica intercambiar los valores
 Pasar un parámetro de tipo de referencia le permite cambiar el valor de la propia referencia, en lugar del valor de sus campos o elementos individuales.
 
 <a name="paramarray"></a>
-### <a name="parameter-arrays"></a>Matrices de parámetros ###
+
+### <a name="parameter-arrays"></a>Matrices de parámetros
 
 A veces, el requisito de especificar el número exacto de argumentos al método es restrictivo. El uso de la palabra clave `params` para indicar que un parámetro es una matriz de parámetros permite llamar al método con un número variable de argumentos. El parámetro etiquetado con la palabra clave `params` debe ser un tipo de matriz y ser el último parámetro en la lista de parámetros del método.
 
@@ -142,7 +149,8 @@ En el ejemplo siguiente se define un método denominado `DoStringOperation` que 
 [!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
 
 <a name="optional"></a>
-## <a name="optional-parameters-and-arguments"></a>Argumentos y parámetros opcionales ##
+
+## <a name="optional-parameters-and-arguments"></a>Argumentos y parámetros opcionales
 
 La definición de un método puede especificar que sus parámetros son necesarios o que son opcionales. Los parámetros son necesarios de forma predeterminada. Para especificar parámetros opcionales se incluye el valor predeterminado del parámetro en la definición del método. Cuando se llama al método, si no se proporciona ningún argumento para un parámetro opcional, se usa el valor predeterminado.
 
@@ -172,8 +180,9 @@ El uso de parámetros opcionales incide en la *resolución de sobrecarga* o en l
 - Si se encuentra más de un candidato, se aplican las reglas de resolución de sobrecarga de las conversiones preferidas a los argumentos que se especifican explícitamente. Los argumentos omitidos en parámetros opcionales se ignoran.
 - Si dos candidatos se consideran igualmente correctos, la preferencia pasa a un candidato que no tenga parámetros opcionales cuyos argumentos se hayan omitido en la llamada. Se trata de una consecuencia de una preferencia general en la resolución de sobrecarga para los candidatos con menos parámetros.
 
- <a name="return"></a>
- ## <a name="return-values"></a>Valores devueltos ##
+<a name="return"></a>
+
+## <a name="return-values"></a>Valores devueltos
 
 Los métodos pueden devolver un valor al autor de llamada. Si el tipo de valor devuelto (el tipo que aparece antes del nombre de método) no es `void`, el método puede devolver el valor mediante la palabra clave `return`. Una instrucción con la palabra clave `return` seguida de una variable, una constante o una expresión que coincide con el tipo de valor devuelto devolverá este valor al autor de la llamada al método. Los métodos con un tipo de valor devuelto no nulo son necesarios para usar la palabra clave `return` para devolver un valor. La palabra clave `return` también detiene la ejecución del método.
 
@@ -229,8 +238,9 @@ Si a un método se pasa una matriz como argumento y modifica el valor de element
 
 [!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]
 
- <a name="extension"></a>
- ## <a name="extension-methods"></a>Métodos de extensión ##
+<a name="extension"></a>
+
+## <a name="extension-methods"></a>Métodos de extensión
 
 Normalmente, hay dos maneras de agregar un método a un tipo existente:
 
@@ -242,7 +252,8 @@ Los métodos de extensión permiten agregar un método a un tipo existente sin m
 Para obtener más información, vea [Métodos de extensión](programming-guide/classes-and-structs/extension-methods.md).
 
 <a name="async"></a>
-## <a name="async-methods"></a>Métodos asincrónicos ##
+
+## <a name="async-methods"></a>Métodos asincrónicos
 
 Mediante la característica asincrónica, puede invocar métodos asincrónicos sin usar definiciones de llamada explícitas ni dividir manualmente el código en varios métodos o expresiones lambda.
 
@@ -262,7 +273,8 @@ Un método asincrónico no puede declarar ningún parámetro [in](language-refer
  Para obtener más información sobre los métodos asincrónicos, vea [Programación asincrónica con Async y Await](async.md), [Controlar el flujo en los programas asincrónicos](programming-guide/concepts/async/control-flow-in-async-programs.md) y [Tipos de valor devueltos asincrónicos](programming-guide/concepts/async/async-return-types.md).
 
 <a name="expr"></a>
-## <a name="expression-bodied-members"></a>Miembros con forma de expresión ##
+
+## <a name="expression-bodied-members"></a>Miembros con forma de expresión
 
 Es habitual tener definiciones de método que simplemente hacen las devoluciones de forma inmediata con el resultado de una expresión, o que tienen una sola instrucción como cuerpo del método.  Hay un acceso directo de sintaxis para definir este método mediante `=>`:
 
@@ -278,7 +290,8 @@ public Customer this[long id] => store.LookupCustomer(id);
 Si el método devuelve `void` o se trata de un método asincrónico, el cuerpo del método debe ser una expresión de instrucción (igual que con las expresiones lambda).  Para propiedades e indexadores, deben ser de solo lectura, y no se usa la palabra clave de descriptor de acceso `get`.
 
 <a name="iterators"></a>
-## <a name="iterators"></a>Iterators ##
+
+## <a name="iterators"></a>Iterators
 
 Un iterador realiza una iteración personalizada en una colección, como una lista o matriz. Un iterador usa la instrucción [yield return](language-reference/keywords/yield.md) para devolver los elementos de uno en uno. Cuando se llega a una instrucción `yield return`, se recuerda la ubicación actual para que el autor de la llamada pueda solicitar el siguiente elemento en la secuencia.
 
@@ -286,7 +299,7 @@ El tipo de valor devuelto de un iterador puede ser <xref:System.Collections.IEnu
 
 Para obtener más información, consulta [Iteradores](programming-guide/concepts/iterators.md).
 
-## <a name="see-also"></a>Vea también ##
+## <a name="see-also"></a>Vea también
 
 - [Modificadores de acceso](language-reference/keywords/access-modifiers.md)
 - [Clases estáticas y sus miembros](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
