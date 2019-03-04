@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1dbd2c991f4b4259caa180375283ecb6d957336
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b022c70f7ed1707e27de7cac6ce08c53ee0878d0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578134"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836570"
 ---
 # <a name="observer-design-pattern"></a>Modelo de diseño de observador
 El modelo de diseño de observador permite que un suscriptor se registre con un proveedor y reciba notificaciones de dicho proveedor. Este modelo es adecuado para cualquier escenario que requiera notificaciones push. El modelo define un *proveedor* (también conocido como un *tema* o una *observable*) y cero, uno o más *observadores*. Los observadores se registran con el proveedor y siempre que se produce una condición predefinida, un evento o un cambio de estado, el proveedor notifica automáticamente a todos los observadores mediante la llamada a uno de sus métodos. En esta llamada al método, el proveedor puede proporcionar también información sobre el estado actual a los observadores. En .NET Framework, el modelo de diseño de observador se aplica con la implementación de las interfaces genéricas <xref:System.IObservable%601?displayProperty=nameWithType> y <xref:System.IObserver%601?displayProperty=nameWithType>. El parámetro de tipo genérico representa el tipo que proporciona información de notificación.  
@@ -46,7 +46,7 @@ El modelo de diseño de observador permite que un suscriptor se registre con un 
 -   Un objeto que contiene los datos que el proveedor envía a sus observadores. El tipo de este objeto se corresponde con el parámetro de tipo genérico de las interfaces <xref:System.IObservable%601> y <xref:System.IObserver%601>. Aunque este objeto puede ser el mismo que la implementación de <xref:System.IObservable%601>, normalmente es un tipo diferente.  
   
 > [!NOTE]
->  Además de implementar el modelo de diseño de observador, es posible que le interese explorar las bibliotecas que se compilan con las interfaces <xref:System.IObservable%601> y <xref:System.IObserver%601>. Por ejemplo, las [extensiones reactivas para .NET (Rx)](https://msdn.microsoft.com/library/hh242985.aspx) constan de un conjunto de métodos de extensión y los operadores de secuencia estándar de LINQ para admitir la programación asincrónica.  
+>  Además de implementar el modelo de diseño de observador, es posible que le interese explorar las bibliotecas que se compilan con las interfaces <xref:System.IObservable%601> y <xref:System.IObserver%601>. Por ejemplo, las [extensiones reactivas para .NET (Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) constan de un conjunto de métodos de extensión y los operadores de secuencia estándar de LINQ para admitir la programación asincrónica.  
   
 ## <a name="implementing-the-pattern"></a>Implementación del modelo  
  En el ejemplo siguiente se usa el modelo de diseño de observador para implementar un sistema de información de recogida de equipaje en un aeropuerto. Una clase `BaggageInfo` proporciona información sobre la llegada de los vuelos y la cinta de recogida de equipaje correspondiente a cada vuelo. Esta implementación se muestra en el ejemplo siguiente.  
@@ -90,8 +90,8 @@ El modelo de diseño de observador permite que un suscriptor se registre con un 
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Procedimientos recomendados para modelos de diseño de observador](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Describe los procedimientos recomendados que deben adoptarse en el desarrollo de aplicaciones que implementan el modelo de diseño de observador.|  
-|[Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md)|Proporciona una implementación detallada de un proveedor para una aplicación de supervisión de temperatura.|  
-|[Implementar un observador](../../../docs/standard/events/how-to-implement-an-observer.md)|Proporciona una implementación detallada de un observador para una aplicación de supervisión de temperatura.|
+|[Cómo: Implementar un proveedor](../../../docs/standard/events/how-to-implement-a-provider.md)|Proporciona una implementación detallada de un proveedor para una aplicación de supervisión de temperatura.|  
+|[Cómo: Implementar un observador](../../../docs/standard/events/how-to-implement-an-observer.md)|Proporciona una implementación detallada de un observador para una aplicación de supervisión de temperatura.|

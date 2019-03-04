@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 844d4bd8ac18bc31b5abeff5882df1f9a4acaab5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cf1757531fc9eceee17f1faec66668945b9c2758
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147268"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967976"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementación de comunicación basada en eventos entre microservicios (eventos de integración)
 
@@ -78,7 +78,7 @@ En el [patrón de observador](https://en.wikipedia.org/wiki/Observer_pattern), s
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>Patrón de publicación/suscripción (Pub/Sus) 
 
-El propósito del [patrón de publicación/suscripción ](https://msdn.microsoft.com/library/ff649664.aspx) es el mismo que el del modelo de observador: informar a otros servicios de la realización de determinados eventos. Pero hay una diferencia importante entre los patrones Observador y Pub/Sus. En el patrón de observador, la difusión se realiza directamente desde el objeto observable a los observadores, por lo que "se reconocen" entre sí. Pero cuando se usa un patrón Pub/Sus, hay un tercer componente, denominado "agente", "mensaje de agente" o "bus de eventos", que tanto el publicador como el suscriptor conocen. Por lo tanto, al utilizar el patrón Pub/Sus, el publicador y los suscriptores se desvinculan precisamente gracias al bus de eventos o al mensaje de agente mencionados.
+El propósito del [patrón de publicación/suscripción ](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) es el mismo que el del modelo de observador: informar a otros servicios de la realización de determinados eventos. Pero hay una diferencia importante entre los patrones Observador y Pub/Sus. En el patrón de observador, la difusión se realiza directamente desde el objeto observable a los observadores, por lo que "se reconocen" entre sí. Pero cuando se usa un patrón Pub/Sus, hay un tercer componente, denominado "agente", "mensaje de agente" o "bus de eventos", que tanto el publicador como el suscriptor conocen. Por lo tanto, al utilizar el patrón Pub/Sus, el publicador y los suscriptores se desvinculan precisamente gracias al bus de eventos o al mensaje de agente mencionados.
 
 ### <a name="the-middleman-or-event-bus"></a>El intermediario o bus de eventos 
 

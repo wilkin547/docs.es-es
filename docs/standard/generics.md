@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo los genéricos actúan como planti
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 1d1899d482738bc6cc9f638b6a74eab8d4ca70c1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 991e3800e1302843db0dc1c57ed3a7e4becd298e
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121186"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835296"
 ---
 # <a name="generic-types-overview"></a>Información general de tipos genéricos
 
@@ -68,5 +68,4 @@ Otra ventaja adicional de que el tiempo de ejecución conozca el tipo de la clas
 
 ## <a name="see-also"></a>Vea también
 
-- [Introducción a los genéricos C#](https://msdn.microsoft.com/library/ms379564.aspx)
 - [Guía de programación de C#: genéricos](../../docs/csharp/programming-guide/generics/index.md)

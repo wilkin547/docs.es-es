@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 268ffe9c5cbbc9490ed91f2b4c28f8f876b8ff5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 87be8c94c3d356a81f447f7b9542315783eea10d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574548"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836284"
 ---
 # <a name="what-is-managed-code"></a>¿Qué es el "código administrado"?
 
@@ -39,6 +39,6 @@ De modo parecido, C# es un lenguaje que permite usar construcciones no administr
 
 ## <a name="more-resources"></a>Más recursos
 
-*   [Información general acerca de .NET Framework](https://msdn.microsoft.com/library/zw4w595w.aspx)
-*   [Código no seguro y punteros](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
-*   [Interoperabilidad (Guía de programación de C#)](https://msdn.microsoft.com/library/ms173184.aspx)
+* [Información general acerca de .NET Framework](../framework/get-started/overview.md)
+* [Código no seguro y punteros](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
+* [Interoperabilidad nativa](./native-interop/index.md)

@@ -4,19 +4,19 @@ description: Aplicaciones web modernas con ASP.NET Core y Azure | Proceso de des
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 72e6f468cc55ea344d53b4342fb7d9c776a1a16c
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b7a6ae343feae7c28fb7debdc8a6b617872d262f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827479"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202111"
 ---
 # <a name="development-process-for-azure"></a>Proceso de desarrollo para Azure
 
 > _"Con la nube, los particulares y las pequeñas empresas pueden configurar servicios de clase empresarial en un abrir y cerrar de ojos"._  
 > _- Roy Stephan_
 
- ## <a name="vision"></a>Visión
+## <a name="vision"></a>Visión
 
 > *Desarrolle aplicaciones ASP.NET Core bien diseñadas como quiera, con Visual Studio o la CLI de DotNet y código de Visual Studio, o bien con el editor que prefiera.*
 

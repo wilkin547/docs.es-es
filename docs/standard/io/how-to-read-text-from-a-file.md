@@ -1,5 +1,5 @@
 ---
-title: Filtrar Leer texto de un archivo
+title: Procedimiento Leer texto de un archivo
 ms.date: 01/03/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa6787e018b540dbf19b6da3473b699096cc4ae3
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 7330c209ce6514459d3ab1dd58dc1c80b1978a56
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674404"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834958"
 ---
-# <a name="how-to-read-text-from-a-file"></a>Filtrar Leer texto de un archivo
+# <a name="how-to-read-text-from-a-file"></a>Procedimiento Leer texto de un archivo
 En los ejemplos siguientes se muestra cómo leer texto desde un archivo de texto de forma sincrónica y asincrónica mediante .NET para aplicaciones de escritorio. En ambos ejemplos, cuando se crea la instancia de la clase <xref:System.IO.StreamReader>, se proporciona la ruta de acceso relativa o absoluta del archivo. 
   
 > [!NOTE]
@@ -51,7 +51,7 @@ En el siguiente ejemplo se muestra una operación de lectura sincrónica dentro 
 - <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
 - <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
 - [E/S de archivos asincrónica](../../../docs/standard/io/asynchronous-file-i-o.md)  
-- [Cómo: Crear una lista de directorios](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+- [Cómo: Crear una lista de directorios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
 - [Inicio rápido: lectura y escritura de archivos](https://docs.microsoft.com/previous-versions/windows/apps/hh758325%28v=win.10%29)  
 - [Cómo: Convertir flujos de .NET Framework en flujos de Windows Runtime y viceversa](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)  
 - [Cómo: Leer y escribir en un archivo de datos recién creado](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  

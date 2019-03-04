@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: b0d9e40f3f41eac5b16037a89a3cac45cbfc8c57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c86d175ca7a592b4ae329cf9a9eedb8a649712f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574453"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980430"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Tutorial: Cambiar el lugar en el que My.Application.Log escribe la informaci처n (Visual Basic)
 Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci처n sobre los eventos que se producen en su aplicaci처n. Este tutorial muestra c처mo reemplazar la configuraci처n predeterminada y hacer que el objeto `Log` escriba en otros agentes de escucha de registro.  
@@ -175,7 +175,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
 2.  Este ejemplo de c처digo muestra c처mo determinar el nombre de tipo con nombre seguro para un tipo completo (en este caso, "System.Diagnostics.FileLogTraceListener").  
   
-     [!code-vb[VbVbalrMyApplicationLog#15](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-changing-where-my-application-log-writes-information_1.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#15)]  
   
      Esta es la salida, que se puede usar para hacer referencia de manera exclusiva a un tipo con nombre seguro, como en el procedimiento "Para agregar agentes de escucha" anterior.  
   

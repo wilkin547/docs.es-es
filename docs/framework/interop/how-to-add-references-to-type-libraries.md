@@ -1,5 +1,5 @@
 ---
-title: Filtrar para agregar referencias a bibliotecas de tipos
+title: Procedimiento para agregar referencias a bibliotecas de tipos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71c2a6b183890aa9625dcffbef59d14c27ebe754
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c12096739e66a47fadd89eb27e30ba3de43c7da3
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219405"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836440"
 ---
-# <a name="how-to-add-references-to-type-libraries"></a>Filtrar para agregar referencias a bibliotecas de tipos
+# <a name="how-to-add-references-to-type-libraries"></a>Procedimiento para agregar referencias a bibliotecas de tipos
 Visual Studio genera un ensamblado de interoperabilidad que contiene metadatos cuando se agrega una referencia a una biblioteca de tipos. Si el ensamblado de interoperabilidad principal está disponible, Visual Studio usa el ensamblado existente antes de generar un nuevo ensamblado de interoperabilidad.  
   
 ### <a name="to-add-a-reference-to-a-type-library-in-visual-studio"></a>Para agregar una referencia a una biblioteca de tipos en Visual Studio  
@@ -47,8 +47,6 @@ Visual Studio genera un ensamblado de interoperabilidad que contiene metadatos c
 ## <a name="see-also"></a>Vea también
 - [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md)
 - [Exponer componentes COM en .NET Framework](exposing-com-components.md)
-- [Tutorial: Insertar información de tipos de los ensamblados de Microsoft Office en Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-- [Tutorial: Inserción de información de tipos de los ensamblados de Microsoft Office en Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
 - [Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 
 - [Tutorial: Inserción de tipos a partir de ensamblados administrados en Visual Studio (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [/link (Opciones del compilador de C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md)

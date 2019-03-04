@@ -4,12 +4,12 @@ description: Conozca varias estrategias para controlar errores parciales con ele
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: ad45e357c1656b9346b7bdb5f324bde5fa76eaba
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 2da0dfee97ac9c7c33ab4edeb670e0f813e6c463
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362774"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981327"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>Estrategias para controlar errores parciales
 
@@ -33,7 +33,7 @@ Las estrategias para tratar los errores parciales son las siguientes.
   [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](/azure/architecture/patterns/category/resiliency)
 
 - **Adding Resilience and Optimizing Performance (Agregar resistencia y optimizar el rendimiento)**\
-  [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
+  <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
 - **Bulkhead** (Mampara). Repositorio de GitHub. Implementación con la directiva de Polly. \
   [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)

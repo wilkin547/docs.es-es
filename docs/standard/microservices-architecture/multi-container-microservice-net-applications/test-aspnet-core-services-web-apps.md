@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 0f4b9a8461b4d14cd5b468a50af1783a340392e2
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 8461cd77661c96e59342fa5721c93f16ce515533
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362163"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976192"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Probar aplicaciones web y servicios ASP.NET Core
 
@@ -116,7 +116,7 @@ public class PrimeWebDefaultRequestShould
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
 -   **Unit Test Basics** (Conceptos básicos de prueba unitaria). <br/>
-    [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
+    [*https://docs.microsoft.com/visualstudio/test/unit-test-basics*](/visualstudio/test/unit-test-basics)
 
 -   **Moq**. Repositorio de GitHub. <br/>
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
