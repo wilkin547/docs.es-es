@@ -1042,6 +1042,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
 - El Diseñador de actividad de diagrama de flujo u otros diseñadores de actividad de flujo de trabajo pueden mostrar todos los objetos en sus ubicaciones predeterminadas en lugar de los valores de la propiedad adjunta.
 
+<a name="clickonce-1" />
 
 ### <a name="clickonce"></a>ClickOnce
 

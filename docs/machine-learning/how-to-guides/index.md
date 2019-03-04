@@ -2,21 +2,13 @@
 title: 'Guías de procedimientos de aprendizaje automático de .NET: ML.NET'
 description: Obtenga información sobre cómo realizar tareas específicas para ayudarle con la creación de soluciones de IA personalizadas y la integración de Machine Learning en sus aplicaciones .NET.
 ms.custom: seodec18
-ms.date: 12/04/2018
-ms.openlocfilehash: edff20b36d11dec169e1a4318a473533c8664842
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235194"
+ms.date: 03/01/2019
 ---
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>Guías de procedimientos de aprendizaje automático de .NET: ML.NET
 
 En la sección de procedimientos de la guía de ML.NET encontrará respuestas rápidas a preguntas frecuentes. En algunos casos, los artículos pueden mostrarse en varias secciones para que sean fáciles de encontrar.
 
-## <a name="prepare-data"></a>Preparar los datos
-
-### <a name="load-data"></a>Cargar los datos
+## <a name="load-the-data"></a>Carga de los datos
 
 * [Carga de datos con muchas columnas desde un archivo CSV para el procesamiento de aprendizaje automático](load-data-from-mult-column-csv-ml-net.md)
 
@@ -24,9 +16,11 @@ En la sección de procedimientos de la guía de ML.NET encontrará respuestas r�
 
 * [Carga de datos desde un archivo de texto para el procesamiento de aprendizaje automático](load-data-from-text-file-ml-net.md)
 
+### <a name="prepare-the-data"></a>Preparar los datos
+
 * [Preprocesamiento de datos de aprendizaje con normalizadores para su uso en el procesamiento de datos](normalizers-preprocess-data-ml-net.md)
 
-## <a name="train-model"></a>Entrenar el modelo
+## <a name="train-the-model"></a>Entrenar el modelo
 
 * [Entrenamiento de un modelo de aprendizaje automático con datos que no están en un archivo de texto](load-non-file-training-data-ml-net.md)
 
@@ -34,7 +28,7 @@ En la sección de procedimientos de la guía de ML.NET encontrará respuestas r�
 
 * [Entrenamiento de un modelo de regresión para predecir un valor mediante ML.NET](train-regression-model-ml-net.md)
 
-### <a name="evaluate-model-quality"></a>Evaluar la calidad del modelo
+### <a name="evaluate-the-model-quality"></a>Evaluación de la calidad del modelo
 
 * [Cálculo de métricas para evaluar la calidad del modelo](verify-model-quality-ml-net.md)
 

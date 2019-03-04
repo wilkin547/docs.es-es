@@ -2,13 +2,7 @@
 title: 'Recursos de aprendizaje automático: ML.NET'
 description: Explore estos recursos de ML.NET para ayudar con la creación de soluciones de IA personalizadas y su integración en las aplicaciones .NET.
 ms.custom: seodec18
-ms.date: 07/27/2018
-ms.openlocfilehash: 98c89e921e24a0007c165d0a77e2abc34a4c8518
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152224"
+ms.date: 03/01/2019
 ---
 # <a name="machine-learning-resources---mlnet"></a>Recursos de aprendizaje automático: ML.NET
 

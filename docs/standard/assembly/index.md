@@ -48,11 +48,12 @@ Los ensamblados componen la unidad fundamental de implementación, control de ve
 
 ## <a name="see-also"></a>Vea también
 
- - [Formato de archivo de ensamblado .NET](file-format.md)  
+ - [Formato de archivo de ensamblado .NET](file-format.md)
  - [Ensamblados en Common Language Runtime](../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  - [Ensamblados de confianza (C#)](../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  - [Ensamblados de confianza (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  - [Cómo: Cargar y descargar ensamblados (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [Cómo: Carga y descarga de ensamblados (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
+ - [Cómo: Usar y depurar la descargabilidad de ensamblado en .NET Core](unloadability-howto.md)
  - [Cómo: Determinar si un archivo es un ensamblado (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)  
  - [Cómo: Determinar si un archivo es un ensamblado (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)  
