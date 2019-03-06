@@ -5,12 +5,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], within styles
 - styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-ms.openlocfilehash: a455bbfb9defbcf83f7e490f60031917a3b41779
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5fb18a2d927746c3437ec01d2a19327be373cae3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079404"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373964"
 ---
 # <a name="how-to-animate-in-a-style"></a>Cómo animar en un estilo
 
@@ -20,8 +20,8 @@ En el ejemplo siguiente, se definen dentro de un estilo y se aplica a varias ani
 
 ## <a name="example"></a>Ejemplo
 
-[!code-xaml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
+[!code-xaml[timingbehaviors_snip#21](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
 
 Tenga en cuenta que al animar dentro de un estilo, es posible a los objetos de destino que no existen. Por ejemplo, suponga que usa el estilo de un <xref:System.Windows.Media.SolidColorBrush> se invalida establecer la propiedad de fondo de un botón, pero en algún momento el estilo y el fondo del botón se establece con un <xref:System.Windows.Media.LinearGradientBrush>.  Intentar animar el <xref:System.Windows.Media.SolidColorBrush> no arrojará una excepción; la animación simplemente se producirá un error en modo silencioso.
 
-Para obtener más información acerca de guión gráfico como destino la sintaxis, vea el [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md). Para obtener más información acerca de la animación, vea el [información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Para obtener más información sobre los estilos, vea el [aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md).
+Para obtener más información acerca de guión gráfico como destino la sintaxis, vea el [Storyboards Overview](storyboards-overview.md). Para obtener más información acerca de la animación, vea el [información general sobre animaciones](animation-overview.md). Para obtener más información sobre los estilos, vea el [aplicar estilos y plantillas](../controls/styling-and-templating.md).

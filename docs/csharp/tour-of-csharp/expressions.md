@@ -3,12 +3,12 @@ title: 'Expresiones de C#: un paseo por el lenguaje C#'
 description: Las expresiones, los operandos y los operadores son bloques de construcción del lenguaje C#.
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 28e1d6952975c6932dc9ae40af28c7201d61d778
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 682f98d51bf4eb3c1641297972afb86956e06d3e
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154939"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212097"
 ---
 # <a name="expressions"></a>Expresiones
 
@@ -28,69 +28,69 @@ La mayoría de los operadores se pueden *sobrecargar*. La sobrecarga de operador
 A continuación se resumen los operadores de C#, con las categorías de operador en orden de precedencia de mayor a menor. Los operadores de la misma categoría tienen la misma precedencia. En cada categoría, hay una lista de expresiones de esa categoría junto con la descripción de ese tipo de expresión.
 
 * Principal
-    - `x.m`: acceso a miembros.
-    - `x(...)`: invocación de método y delegado.
-    - `x[...]`: acceso a matriz e indexador.
-    - `x++`: postincremento.
-    - `x--`: postdecremento.
-    - `new T(...)`: creación de objetos y delegados.
-    - `new T(...){...}`: creación de objetos con inicializador.
-    - `new {...}`: inicializador de objetos anónimos.
-    - `new T[...]`: creación de matriz.
-    - `typeof(T)`: obtener el objeto <xref:System.Type> para `T`.
-    - `checked(x)`: evaluar expresión en contexto comprobado.
-    - `unchecked(x)`: evaluar expresión en contexto no comprobado.
-    - `default(T)`: obtener valor predeterminado de tipo `T`.
-    - `delegate {...}`: función anónima (método anónimo).
+    - `x.m`: Acceso a miembros
+    - `x(...)`: Invocación de método y delegado
+    - `x[...]`: Acceso a matriz e indizador
+    - `x++`: Postincremento
+    - `x--`: Postdecremento
+    - `new T(...)`: Creación de objetos y delegados
+    - `new T(...){...}`: creación de objetos con inicializador
+    - `new {...}`:  inicializador de objetos anónimos
+    - `new T[...]`: creación de matriz
+    - `typeof(T)`: obtener el objeto <xref:System.Type> para `T`
+    - `checked(x)`: Evaluar expresión en contexto comprobado
+    - `unchecked(x)`: Evaluar expresión en contexto no comprobado
+    - `default(T)`: obtener valor predeterminado de tipo `T`
+    - `delegate {...}`: Función anónima (método anónimo)
 * Unario
-    - `+x`: identidad.
-    - `-x`: negación.
-    - `!x`: negación lógica.
-    - `~x`: negación bit a bit.
-    - `++x`: preincremento.
-    - `--x`: predecremento.
-    - `(T)x`: convertir explícitamente `x` en el tipo `T`.
-    - `await x`: esperar asincrónicamente a que finalice `x`.
+    - `+x`: identidad
+    - `-x`: Negación
+    - `!x`: Negación lógica
+    - `~x`: Negación bit a bit
+    - `++x`: Preincremento
+    - `--x`: Predecremento
+    - `(T)x`: convertir explícitamente `x` en el tipo `T`
+    - `await x`: esperar asincrónicamente a que finalice `x`
 * Multiplicativo
-    - `x * y`: multiplicación.
-    - `x / y`: división.
-    - `x % y`: aviso.
+    - `x * y`: Multiplicación
+    - `x / y`: División
+    - `x % y`: Resto
 * Aditivo
-    - `x + y`: suma, concatenación de cadenas, combinación de delegados.
-    - `x – y`: resta, eliminación de delegados.
+    - `x + y`: Suma, concatenación de cadenas, combinación de delegados
+    - `x – y`: Resta, eliminación de delegados
 * Shift
-    - `x << y`: desplazamiento a la izquierda.
-    - `x >> y`: desplazamiento a la derecha.
+    - `x << y`: Desplazamiento a la izquierda
+    - `x >> y`: Desplazamiento a la derecha
 * Comprobación de tipos y relacional
-    - `x < y`: menor que.
-    - `x > y`: mayor que.
-    - `x <= y`: menor o igual que.
-    - `x >= y`: mayor o igual que.
-    - `x is T`: volver a ejecutar `true` si `x` es una `T`, de lo contrario `false`.
-    - `x as T`: volver a ejecutar `x` con tipo `T`, o `null` si `x` no es una `T`.
+    - `x < y`: Menor que
+    - `x > y`: Mayor que
+    - `x <= y`: Menor o igual que
+    - `x >= y`: Mayor o igual que
+    - `x is T`: volver a ejecutar `true` si `x` es una `T`, de lo contrario `false`
+    - `x as T`: volver a ejecutar `x` con tipo `T`, o `null` si `x` no es una `T`
 * Igualdad
-    - `x == y`: igual que.
-    - `x != y`: no igual que.
+    - `x == y`: Igual
+    - `x != y`: No igual
 * AND lógico
-    - `x & y`: AND bit a bit entero, AND lógico booleano.
+    - `x & y`: AND bit a bit entero, AND lógico booleano
 * XOR lógico
-    - `x ^ y`: XOR bit a bit entero, XOR lógico booleano.
+    - `x ^ y`: XOR bit a bit entero, XOR lógico booleano
 * OR lógico
-    - `x | y`: OR bit a bit entero, OR lógico booleano.
+    - `x | y`: OR bit a bit entero, OR lógico booleano
 * AND condicional
-    - `x && y`: evalúa `y` solo si `x` no es `false`.
+    - `x && y`: evalúa `y` solo si `x` no es `false`
 * OR condicional
-    - `x || y`: evalúa `y` solo si `x` no es `true`.
+    - `x || y`: evalúa `y` solo si `x` no es `true`
 * Uso combinado de NULL
-    - `x ?? y`: se evalúa como `y` si `x` es null, de lo contrario, como `x`.
+    - `x ?? y`: se evalúa como `y` si `x` es NULL, de lo contrario, como `x`
 * Condicional
-    - `x ? y : z`: se evalúa como `y` si `x` es `true` o `z` si `x` es `false`.
+    - `x ? y : z`: se evalúa como `y` si `x` es `true` o `z` si `x` es `false`
 * Asignación o función anónima
-    - `x = y`: asignación.
-    - `x op= y`: asignación compuesta; operadores admitidos son:
+    - `x = y`: Asignación
+    - `x op= y`: asignación compuesta; los operadores admitidos son
         - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-    - `(T x) => y`: función anónima (expresión lambda).
+    - `(T x) => y`: Función anónima (expresión lambda)
 
->[!div class="step-by-step"]
->[Anterior](types-and-variables.md)
->[Siguiente](statements.md)
+> [!div class="step-by-step"]
+> [Anterior](types-and-variables.md)
+> [Siguiente](statements.md)

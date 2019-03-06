@@ -7,28 +7,28 @@ helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
-ms.openlocfilehash: 6571ee16b54c7b22d65567c8d3347cfe4a7936fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ee0f8a6cd40e6293062b62b8bc81bd4c54903c0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510434"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361439"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>Temas "Cómo..." de animaciones de fotogramas clave
 Los temas de esta sección muestran cómo usar animaciones de fotogramas clave para animar a más de dos valores de propiedad y controlar la interpolación.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Animar un objeto mediante fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
- [Animar un objeto Boolean mediante fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
- [Animar un objeto Double mediante fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
- [Animar un objeto Matrix mediante fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
- [Animar un punto mediante fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
- [Animar la geometría de un rectángulo mediante fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [Animar un objeto String mediante fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
- [Animar un color mediante fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
- [Animar los cambios de tamaño mediante fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
- [Animar el grosor de un borde mediante fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [Controlar la temporización de animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
+ [Animar un objeto mediante fotogramas clave](how-to-animate-an-object-by-using-key-frames.md)  
+ [Animar un objeto Boolean mediante fotogramas clave](how-to-animate-a-boolean-by-using-key-frames.md)  
+ [Animar un objeto Double mediante fotogramas clave](how-to-animate-a-double-by-using-key-frames.md)  
+ [Animar un objeto Matrix mediante fotogramas clave](how-to-animate-a-matrix-by-using-key-frames.md)  
+ [Animar un punto mediante fotogramas clave](how-to-animate-a-point-by-using-key-frames.md)  
+ [Animar la geometría de un rectángulo mediante fotogramas clave](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [Animar un objeto String mediante fotogramas clave](how-to-animate-a-string-by-using-key-frames.md)  
+ [Animar un color mediante fotogramas clave](how-to-animate-color-by-using-key-frames.md)  
+ [Animar los cambios de tamaño mediante fotogramas clave](how-to-animate-size-changes-by-using-key-frames.md)  
+ [Animar el grosor de un borde mediante fotogramas clave](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [Controlar la temporización de animaciones de fotogramas clave](how-to-control-key-frame-animation-timing.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
@@ -38,6 +38,6 @@ Los temas de esta sección muestran cómo usar animaciones de fotogramas clave p
  <xref:System.Windows.Media.Animation.KeyTime>  
   
 ## <a name="see-also"></a>Vea también
-- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Gráficos y multimedia](index.md)
+- [Información general sobre animaciones](animation-overview.md)
+- [Información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md)

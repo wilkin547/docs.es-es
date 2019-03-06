@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 5273850c9fec731c5f11e101d218532d06632263
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 1e756aa633ddf87267baa1fc52343a0b7570f753
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748432"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379086"
 ---
 # <a name="commanding-overview"></a>Información general sobre comandos
 <a name="introduction"></a> Los comandos constituyen un mecanismo de entrada de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], que permite el control de entrada en un nivel más semántico que la entrada del dispositivo. Algunos ejemplos de comandos son las operaciones **Copiar**, **Cortar** y **Pegar** presentes en numerosas aplicaciones.  
@@ -51,10 +51,10 @@ ms.locfileid: "56748432"
   
  En el ejemplo siguiente se muestra cómo configurar un <xref:System.Windows.Controls.MenuItem> para que cuando se hace clic en él invoque el comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A> en <xref:System.Windows.Controls.TextBox>, suponiendo que <xref:System.Windows.Controls.TextBox> tenga el foco de teclado.  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
   
 <a name="Four_main_Concepts"></a>   
 ## <a name="four-main-concepts-in-wpf-commanding"></a>Cuatro conceptos básicos de los comandos de WPF  
@@ -74,7 +74,7 @@ ms.locfileid: "56748432"
 ### <a name="commands"></a>Comandos  
  Los comandos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se crean mediante la implementación de la interfaz <xref:System.Windows.Input.ICommand>.  <xref:System.Windows.Input.ICommand> expone dos métodos (<xref:System.Windows.Input.ICommand.Execute%2A> y <xref:System.Windows.Input.ICommand.CanExecute%2A>) y un evento (<xref:System.Windows.Input.ICommand.CanExecuteChanged>). <xref:System.Windows.Input.ICommand.Execute%2A> realiza las acciones que están asociadas con el comando. <xref:System.Windows.Input.ICommand.CanExecute%2A> determina si el comando se puede ejecutar en el destino del comando actual. <xref:System.Windows.Input.ICommand.CanExecuteChanged> se genera si el administrador de comandos que centraliza las operaciones de comandos detecta un cambio en el origen del comando que podría invalidar un comando que se ha generado, pero que el enlace del comando todavía no ha ejecutado.  La implementación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de <xref:System.Windows.Input.ICommand> es la clase <xref:System.Windows.Input.RoutedCommand> y es el foco de esta introducción.  
   
- Los orígenes principales de la entrada en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] son el mouse, el teclado, el lápiz y los comandos enrutados.  Las entradas más orientadas al dispositivo usan un <xref:System.Windows.RoutedEvent> para notificar a los objetos de una página de la aplicación que se produjo un evento de entrada.  Un <xref:System.Windows.Input.RoutedCommand> no es diferente.  Los métodos <xref:System.Windows.Input.RoutedCommand.Execute%2A> y <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> de un <xref:System.Windows.Input.RoutedCommand> no contienen la lógica de aplicación para el comando, sino que en su lugar generan eventos enrutados que se canalizan y propagan a través del árbol de elementos hasta que encuentran un objeto con un <xref:System.Windows.Input.CommandBinding>.  El <xref:System.Windows.Input.CommandBinding> contiene los controladores para estos eventos, que son los que ejecutan el comando.  Para obtener más información sobre el enrutamiento de eventos en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Los orígenes principales de la entrada en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] son el mouse, el teclado, el lápiz y los comandos enrutados.  Las entradas más orientadas al dispositivo usan un <xref:System.Windows.RoutedEvent> para notificar a los objetos de una página de la aplicación que se produjo un evento de entrada.  Un <xref:System.Windows.Input.RoutedCommand> no es diferente.  Los métodos <xref:System.Windows.Input.RoutedCommand.Execute%2A> y <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> de un <xref:System.Windows.Input.RoutedCommand> no contienen la lógica de aplicación para el comando, sino que en su lugar generan eventos enrutados que se canalizan y propagan a través del árbol de elementos hasta que encuentran un objeto con un <xref:System.Windows.Input.CommandBinding>.  El <xref:System.Windows.Input.CommandBinding> contiene los controladores para estos eventos, que son los que ejecutan el comando.  Para obtener más información sobre el enrutamiento de eventos en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Información general sobre eventos enrutados](routed-events-overview.md).  
   
  El método <xref:System.Windows.Input.RoutedCommand.Execute%2A> de un <xref:System.Windows.Input.RoutedCommand> genera los eventos <xref:System.Windows.Input.CommandManager.PreviewExecuted> y <xref:System.Windows.Input.CommandManager.Executed> en el destino del comando.  El método <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> de un <xref:System.Windows.Input.RoutedCommand> genera los eventos <xref:System.Windows.Input.CommandManager.CanExecute> y <xref:System.Windows.Input.CommandManager.PreviewCanExecute> en el destino del comando.  Estos eventos se tunelizan y propagan a través del árbol de elementos hasta que encuentran un objeto que tiene un <xref:System.Windows.Input.CommandBinding> para ese comando concreto.  
   
@@ -98,10 +98,10 @@ ms.locfileid: "56748432"
   
  En el ejemplo siguiente se muestra cómo usar un <xref:System.Windows.Controls.MenuItem> en un <xref:System.Windows.Controls.ContextMenu> como origen de comando para el comando <xref:System.Windows.Input.ApplicationCommands.Properties%2A>.  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewCmdSourceXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewcmdsourcexaml)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewCmdSourceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewcmdsourcexaml)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCmdSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcmdsource)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewCmdSource](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcmdsource)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCmdSource](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcmdsource)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewCmdSource](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcmdsource)]  
   
  Normalmente, un origen de comando escuchará el evento <xref:System.Windows.Input.RoutedCommand.CanExecuteChanged>.  Este evento informa al origen del comando de un posible cambio en la capacidad del comando para ejecutarse en el destino del comando actual.  El origen del comando puede consultar el estado actual de <xref:System.Windows.Input.RoutedCommand> mediante el método <xref:System.Windows.Input.RoutedCommand.CanExecute%2A>.  A continuación, el origen del comando puede deshabilitarse automáticamente si no se puede ejecutar el comando.  Un ejemplo de esto es un <xref:System.Windows.Controls.MenuItem> que se atenúa automáticamente cuando no se puede ejecutar un comando.  
   
@@ -111,17 +111,17 @@ ms.locfileid: "56748432"
   
  En el ejemplo siguiente se muestra cómo crear un <xref:System.Windows.Input.KeyBinding> entre un <xref:System.Windows.Input.KeyGesture> y un <xref:System.Windows.Input.RoutedCommand>.  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLKeyBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlkeybinding)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLKeyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlkeybinding)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeybinding)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeybinding)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeybinding)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeybinding)]  
   
  Otra manera de asociar un <xref:System.Windows.Input.InputGesture> a un <xref:System.Windows.Input.RoutedCommand> consiste en agregar el <xref:System.Windows.Input.InputGesture> a la <xref:System.Windows.Input.InputGestureCollection> en el <xref:System.Windows.Input.RoutedCommand>.  
   
  En el ejemplo siguiente se muestra cómo agregar un <xref:System.Windows.Input.KeyGesture> a la <xref:System.Windows.Input.InputGestureCollection> de un <xref:System.Windows.Input.RoutedCommand>.  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeygestureoncmd)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeygestureoncmd)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeygestureoncmd)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeygestureoncmd)]  
   
 <a name="Command_Binding"></a>   
 ### <a name="commandbinding"></a>CommandBinding  
@@ -133,18 +133,18 @@ ms.locfileid: "56748432"
   
  En el ejemplo siguiente se muestra cómo crear un <xref:System.Windows.Input.CommandBinding> en la <xref:System.Windows.Window> raíz de una aplicación.  El <xref:System.Windows.Input.CommandBinding> asocia el comando <xref:System.Windows.Input.ApplicationCommands.Open%2A> con los controladores <xref:System.Windows.Input.CommandManager.Executed> y <xref:System.Windows.Input.CommandBinding.CanExecute>.  
   
- [!code-xaml[commandwithhandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
+ [!code-xaml[commandwithhandler#CommandHandlerCommandBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
   
- [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
- [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
+ [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
+ [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
  Después, se crean <xref:System.Windows.Input.ExecutedRoutedEventHandler> y <xref:System.Windows.Input.CanExecuteRoutedEventHandler>.  <xref:System.Windows.Input.ExecutedRoutedEventHandler> abre un <xref:System.Windows.MessageBox> que muestra una cadena en la que se indica que se ha ejecutado el comando.  <xref:System.Windows.Input.CanExecuteRoutedEventHandler> establece la propiedad <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> en `true`.  
   
- [!code-csharp[commandwithhandler#CommandHandlerExecutedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerexecutedhandler)]
- [!code-vb[commandwithhandler#CommandHandlerExecutedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerexecutedhandler)]  
+ [!code-csharp[commandwithhandler#CommandHandlerExecutedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerexecutedhandler)]
+ [!code-vb[commandwithhandler#CommandHandlerExecutedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerexecutedhandler)]  
   
- [!code-csharp[commandwithhandler#CommandHandlerCanExecuteHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlercanexecutehandler)]
- [!code-vb[commandwithhandler#CommandHandlerCanExecuteHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlercanexecutehandler)]  
+ [!code-csharp[commandwithhandler#CommandHandlerCanExecuteHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlercanexecutehandler)]
+ [!code-vb[commandwithhandler#CommandHandlerCanExecuteHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlercanexecutehandler)]  
   
  A <xref:System.Windows.Input.CommandBinding> se adjunta a un objeto específico, como el elemento <xref:System.Windows.Window> raíz de la aplicación o un control.  El objeto al que se adjunta <xref:System.Windows.Input.CommandBinding> define el ámbito del enlace.  Por ejemplo, el evento <xref:System.Windows.Input.CommandBinding.Executed> puede alcanzar un <xref:System.Windows.Input.CommandBinding> conectado a un antecesor del destino de comando, pero un <xref:System.Windows.Input.CommandBinding> conectado a un descendiente del destino de comando no se puede alcanzar.  Esta es una consecuencia directa de la manera en que un evento <xref:System.Windows.RoutedEvent> se tuneliza y propaga desde el objeto que genera el evento.  
   
@@ -158,10 +158,10 @@ ms.locfileid: "56748432"
   
  En el ejemplo siguiente se muestra cómo establecer de forma explícita el destino del comando en el marcado y en el código subyacente.  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLCommandTarget](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlcommandtarget)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLCommandTarget](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlcommandtarget)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
   
 <a name="Command_Manager"></a>   
 ### <a name="the-commandmanager"></a>CommandManager  
@@ -188,8 +188,8 @@ ms.locfileid: "56748432"
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Input.InputBinding>
 - <xref:System.Windows.Input.CommandManager>
-- [Información general sobre acciones del usuario](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Implement ICommandSource (ejemplo)](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)
+- [Información general sobre acciones del usuario](input-overview.md)
+- [Información general sobre eventos enrutados](routed-events-overview.md)
+- [Implement ICommandSource (ejemplo)](how-to-implement-icommandsource.md)
 - [Cómo: Agregar un comando a un elemento de menú](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
 - [Crear un objeto RoutedCommand de muestra personalizado](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

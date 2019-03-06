@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 4317fb80-408c-47c7-9223-b29e4742c4ee
-ms.openlocfilehash: e01a0264b86e052d9def7f3657f96d238a67afb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93152861ff3a2ab1782b86b1de0951d89a8cc85d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555794"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370766"
 ---
 # <a name="menu"></a>Menú
-A <xref:System.Windows.Controls.Menu> es un control que permite organizar jerárquicamente los elementos asociados a comandos o controladores de eventos. Cada <xref:System.Windows.Controls.Menu> puede contener varios <xref:System.Windows.Controls.MenuItem> controles. Cada <xref:System.Windows.Controls.MenuItem> puede invocar un comando o invocar un `Click` controlador de eventos. A <xref:System.Windows.Controls.MenuItem> también se puede tener varias <xref:System.Windows.Controls.MenuItem> elementos como elementos secundarios, que constituyen un submenú.  
+Un <xref:System.Windows.Controls.Menu> es un control que permite organizar jerárquicamente los elementos asociados a comandos o controladores de eventos. Cada <xref:System.Windows.Controls.Menu> puede contener varios <xref:System.Windows.Controls.MenuItem> controles. Cada <xref:System.Windows.Controls.MenuItem> puede invocar un comando o invocar un `Click` controlador de eventos. Un <xref:System.Windows.Controls.MenuItem> también puede tener varios <xref:System.Windows.Controls.MenuItem> elementos como elementos secundarios, que constituyen un submenú.  
   
- En la siguiente ilustración muestra los tres estados diferentes de un control de menú. El estado predeterminado es cuando no hay ningún dispositivo como un puntero del mouse descansa sobre el <xref:System.Windows.Controls.Menu>. El estado del foco se produce cuando el puntero del mouse se mantiene sobre la <xref:System.Windows.Controls.Menu> y estado presionado se produce cuando se hace clic en un botón del mouse sobre el <xref:System.Windows.Controls.Menu>.  
+ La ilustración siguiente muestra los tres estados diferentes de un control de menú. El estado predeterminado es cuando no hay ningún dispositivo como un puntero del mouse se sitúe sobre el <xref:System.Windows.Controls.Menu>. El estado del foco se produce cuando el puntero del mouse se mantiene sobre el <xref:System.Windows.Controls.Menu> y el estado presionado se produce cuando se hace clic en un botón del mouse sobre el <xref:System.Windows.Controls.Menu>.  
   
- ![Estados de menús](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")  
+ ![Estados de menú](./media/ss-ctl-menu.gif "SS_CTL_menu")  
 Menús en diferentes Estados  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre menús](../../../../docs/framework/wpf/controls/menu-overview.md)  
+ [Información general sobre menús](menu-overview.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.Menu>  

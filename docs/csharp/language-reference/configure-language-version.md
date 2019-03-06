@@ -1,21 +1,23 @@
 ---
 title: Seleccionar la versión del lenguaje C# - Guía de C#
 description: Configurar el compilador para validar la sintaxis con una versión específica del compilador
-ms.date: 05/24/2018
-ms.openlocfilehash: 9b91e62168ced0f373e1a55def8b279dc64833d8
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.date: 02/28/2019
+ms.openlocfilehash: 6d31a757171bd2eecdcc1fbd3da765dcb3fe45c0
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208091"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212032"
 ---
 # <a name="select-the-c-language-version"></a>Seleccionar la versión del lenguaje C#
 
-El compilador de C# tiene como valor predeterminado la última versión principal del lenguaje que se haya publicado. Puede elegir compilar cualquier proyecto con una versión nueva del lenguaje. Elegir la versión más reciente del lenguaje permite que el proyecto use las últimas características de ese lenguaje. En otros escenarios, puede ser necesario validar que un proyecto se compile correctamente cuando se usa una versión anterior del lenguaje.
+El compilador de C# determina una versión de lenguaje predeterminada basada en los marcos o las plataformas de destino del proyecto. Cuando el proyecto tiene como destino un marco en versión preliminar que tenga una versión de lenguaje preliminar correspondiente, la versión de lenguaje que se usa es la que está en versión preliminar. Cuando el proyecto no tiene como destino un marco en versión preliminar, la versión de lenguaje que se usa es la secundaria más reciente.
 
-Esta capacidad hace que la decisión de instalar nuevas versiones del SDK y las herramientas en el entorno de desarrollo no esté vinculada a la decisión de incorporar nuevas características del lenguaje en un proyecto. Puede instalar el SDK y las herramientas más recientes en el equipo de compilación. Cada proyecto se puede configurar para que, durante su compilación, se use una versión de lenguaje específica.
+Por ejemplo, durante el período de versión preliminar de .NET Core 3.0, cualquier proyecto que tenga como destino `netcoreapp3.0` o `netstandard2.1` (en versión preliminar) usará el lenguaje C# 8.0 (también en versión preliminar). Los proyectos que tienen como destino cualquier versión de lanzamiento usarán C# 7.3 (la última versión publicada). Este comportamiento significa que cualquier proyecto que tenga como destino .NET Framework usará la versión más reciente (C# 7.3). 
 
-Hay varias maneras de establecer la versión de idioma:
+Esta capacidad hace que la decisión de instalar nuevas versiones del SDK y las herramientas en el entorno de desarrollo no esté vinculada a la decisión de incorporar nuevas características del lenguaje en un proyecto. Puede instalar el SDK y las herramientas más recientes en el equipo de compilación. Cada proyecto se puede configurar para que, durante su compilación, se use una versión de lenguaje específica. El comportamiento predeterminado significa que están habilitadas las características de lenguaje que se basan en nuevos tipos o un nuevo comportamiento de CLR habilitados solo cuando los proyectos tienen como destino esas plataformas de destino.
+
+Puede invalidar el comportamiento predeterminado especificando una versión de lenguaje. Hay varias maneras de establecer la versión de idioma:
 
 - Basarse en una [acción rápida de Visual Studio](#visual-studio-quick-action).
 - Establecer la versión del lenguaje en la [interfaz de usuario de Visual Studio](#set-the-language-version-in-visual-studio).
@@ -61,20 +63,20 @@ El valor `latest` usa la versión secundaria más reciente del lenguaje C#. Los 
 
 |Valor|Significado|
 |------------|-------------|
-|default|El compilador acepta toda la sintaxis de lenguaje válida de la última versión principal que puede admitir.|
-|ISO-1|El compilador acepta solo la sintaxis que se incluye en ISO/IEC 23270:2003 C# (1.0/1.2) |
-|ISO-2|El compilador acepta solo la sintaxis que se incluye en ISO/IEC 23270:2006 C# (2.0) |
-|3|El compilador acepta solo la sintaxis que se incluye en C# 3.0 o versiones anteriores.|
-|4|El compilador acepta solo la sintaxis que se incluye en C# 4.0 o versiones anteriores.|
-|5|El compilador acepta solo la sintaxis que se incluye en C# 5.0 o versiones anteriores.|
-|6|El compilador acepta solo la sintaxis que se incluye en C# 6.0 o versiones anteriores.|
-|7|El compilador acepta solo la sintaxis que se incluye en C# 7.0 o versiones anteriores.|
-|7.1|El compilador acepta solo la sintaxis que se incluye en C# 7.1 o versiones anteriores.|
-|7.2|El compilador acepta solo la sintaxis que se incluye en C# 7.2 o versiones anteriores.|
+|preview|El compilador acepta toda la sintaxis de lenguaje válida de la última versión preliminar.|
+|latest|El compilador acepta la sintaxis de la última versión del compilador (incluida las versión secundaria).|
+|latestMajor|El compilador acepta la sintaxis de la versión principal más reciente del compilador.|
+|8.0|El compilador acepta solo la sintaxis que se incluye en C# 8.0 o versiones anteriores.|
 |7.3|El compilador acepta solo la sintaxis que se incluye en C# 7.3 o versiones anteriores.|
-|latest|El compilador acepta toda la sintaxis de lenguaje válida que puede admitir.|
-
-Las cadenas especiales `default` y `latest` se resuelven en las versiones de lenguaje principal (C# 7.0) y secundaria (C# 7.3) respectivamente más recientes que haya instaladas en el equipo de compilación.
+|7.2|El compilador acepta solo la sintaxis que se incluye en C# 7.2 o versiones anteriores.|
+|7.1|El compilador acepta solo la sintaxis que se incluye en C# 7.1 o versiones anteriores.|
+|7|El compilador acepta solo la sintaxis que se incluye en C# 7.0 o versiones anteriores.|
+|6|El compilador acepta solo la sintaxis que se incluye en C# 6.0 o versiones anteriores.|
+|5|El compilador acepta solo la sintaxis que se incluye en C# 5.0 o versiones anteriores.|
+|4|El compilador acepta solo la sintaxis que se incluye en C# 4.0 o versiones anteriores.|
+|3|El compilador acepta solo la sintaxis que se incluye en C# 3.0 o versiones anteriores.|
+|ISO-2|El compilador acepta solo la sintaxis que se incluye en ISO/IEC 23270:2006 C# (2.0) |
+|ISO-1|El compilador acepta solo la sintaxis que se incluye en ISO/IEC 23270:2003 C# (1.0/1.2) |
 
 ## <a name="configure-multiple-projects"></a>Configurar varios proyectos
 

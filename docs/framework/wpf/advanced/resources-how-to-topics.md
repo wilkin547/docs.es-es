@@ -7,23 +7,23 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: e0dc707419e975fa57a47e6c51a40c295b8e62ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546170"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356251"
 ---
 # <a name="resources-how-to-topics"></a>Temas "Cómo..." de recursos
 Los temas de esta sección describen cómo usar los recursos de Windows Presentation Foundation (WPF).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Definir y hacer referencia a un recurso](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [Usar recursos de aplicaciones](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
- [Usar SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [Usar claves de fuentes del sistema](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [Usar SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [Usar claves de parámetros del sistema](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+ [Definir y hacer referencia a un recurso](how-to-define-and-reference-a-resource.md)  
+ [Usar recursos de aplicaciones](how-to-use-application-resources.md)  
+ [Usar SystemFonts](how-to-use-systemfonts.md)  
+ [Usar claves de fuentes del sistema](how-to-use-system-fonts-keys.md)  
+ [Usar SystemParameters](how-to-use-systemparameters.md)  
+ [Usar claves de parámetros del sistema](how-to-use-system-parameters-keys.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
@@ -35,4 +35,4 @@ Los temas de esta sección describen cómo usar los recursos de Windows Presenta
  <xref:System.Windows.SystemFonts>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+ [Recursos XAML](xaml-resources.md)

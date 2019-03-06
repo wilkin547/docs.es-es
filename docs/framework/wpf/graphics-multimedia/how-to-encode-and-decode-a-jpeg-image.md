@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Codificar y descodificar una imagen JPEG
+title: Filtrar Codificar y descodificar una imagen JPEG
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JPEG decoding [WPF]
 - JPEG encoding [WPF]
 ms.assetid: b8cfde37-9f68-4911-a05e-51d8d7bdec7b
-ms.openlocfilehash: db42411f71e2934f3e5f86a06f434da220f1882e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f64ef8537f22ea996cbcf274885de1f3968267a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603513"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373795"
 ---
 # <a name="how-to-encode-and-decode-a-jpeg-image"></a>Procedimiento Codificar y descodificar una imagen JPEG
 
@@ -42,4 +42,4 @@ En este ejemplo se muestra cómo codificar un <xref:System.Windows.Media.Imaging
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre imágenes](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Información general sobre imágenes](imaging-overview.md)

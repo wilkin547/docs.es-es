@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-ms.openlocfilehash: aab9759bcadd52c0af03034cc18512ced01046ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48e8310e003dcd3ebca579654b81363efaac9068
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508666"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364013"
 ---
 # <a name="maximize-wpf-3d-performance"></a>Maximizar el rendimiento de representación 3D en WPF
 Cuando utilice el [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] para crear controles 3D e incluir escenas 3D en sus aplicaciones, es importante tener en cuenta la optimización del rendimiento. En este tema se proporciona una lista de clases 3D y propiedades que tienen implicaciones de rendimiento para la aplicación, junto con recomendaciones para optimizar el rendimiento cuando se usan.  
   
- En este tema se da por supuesto un conocimiento avanzado de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] características 3D. Las sugerencias en este documento se aplican a "nivel de representación 2", más o menos se define como el hardware que admite la versión 2.0 del sombreador de píxeles y la versión 2.0 del sombreador de vértices. Para obtener más información, consulte [niveles de representación de gráficos](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ En este tema se da por supuesto un conocimiento avanzado de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] características 3D. Las sugerencias en este documento se aplican a "nivel de representación 2", más o menos se define como el hardware que admite la versión 2.0 del sombreador de píxeles y la versión 2.0 del sombreador de vértices. Para obtener más información, consulte [niveles de representación de gráficos](../advanced/graphics-rendering-tiers.md).  
   
 ## <a name="performance-impact-high"></a>Impacto de rendimiento: Alto  
   
@@ -60,4 +60,4 @@ Cuando utilice el [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Para minimizar el tiempo de construcción de colecciones grandes en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], por ejemplo, un MeshGeometry3D <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>, y <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>, ajustar previamente el tamaño de las colecciones antes de la población de valor. Si es posible, pasar estructuras de datos rellenada previamente de constructores de las colecciones como matrices o listas.|  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre gráficos 3D](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [Información general sobre gráficos 3D](3-d-graphics-overview.md)

@@ -1,14 +1,14 @@
 ---
 title: 'Tutorial: Conservar un objeto con C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 61e7496b39bcbc42b0ebb2642fcb1ad1d32696af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85b58e93d667d39800538bb2c29d4ba69146e7f3
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512455"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975828"
 ---
-# <a name="walkthrough-persisting-an-object-using-c"></a>Tutorial: Conservar un objeto con C# #
+# <a name="walkthrough-persisting-an-object-using-c"></a>Tutorial: Conservar un objeto con C\#
 
 Puede usar la serialización para conservar los datos de un objeto entre instancias, lo que le permite almacenar valores y recuperarlos la próxima vez que se cree una instancia del objeto.
 

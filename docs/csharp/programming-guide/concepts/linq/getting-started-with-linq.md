@@ -7,14 +7,14 @@ helpviewer_keywords:
 - LINQ, C#
 - queries [LINQ], LINQ in C#
 ms.assetid: b8700c1f-05c9-4380-b6eb-e34c4da38e54
-ms.openlocfilehash: 843126d86df36b2aeaa8f57248afb930b92a9ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 585bbd9a9fbc78029911dac8af4c1ad3eebe35b0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339324"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970706"
 ---
-# <a name="getting-started-with-linq-in-c"></a>Introducción a LINQ en C#
+# <a name="getting-started-with-linq-in-c"></a>Introducción a LINQ en C\#
 Esta sección contiene información básica general que le ayudará a comprender el resto de la documentación y los ejemplos de LINQ.  
   
 ## <a name="in-this-section"></a>En esta sección  
@@ -39,7 +39,7 @@ Esta sección contiene información básica general que le ayudará a comprender
  [Características de C# compatibles con LINQ](../../../../csharp/programming-guide/concepts/linq/features-that-support-linq.md)  
  Describe las construcciones de lenguaje agregadas en C# 3.0 que son compatibles con LINQ.  
   
- [Tutorial: Escribir consultas en C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [Tutorial: Creación de consultas en C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  Instrucciones paso a paso para crear un proyecto LINQ de C#, mediante la adición de un origen de datos simple y la realización de algunas operaciones básicas de consulta.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

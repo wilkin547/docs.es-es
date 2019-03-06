@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582845"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975971"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Ejemplo de expresiones regulares: Buscar etiquetas HREF
 En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los valores href="…" y sus ubicaciones en la cadena.  
@@ -44,7 +44,7 @@ En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los v
 |`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  
 |`=`|Coincide con el signo igual.|  
 |`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Coincide con uno de los siguientes sin asignar el resultado a un grupo capturado:<br /> <ul><li><p>Una comilla o un apóstrofo, seguido de cero o más apariciones de cualquier carácter que no sea una comilla o un apóstrofo, seguido por una comilla o un apóstrofo. El grupo con nombre `1` se incluye en este patrón.</p></li><li><p>Uno o varios caracteres que no son espacios en blanco. El grupo con nombre `1` se incluye en este patrón.</p></li></ul>|  
+|`(?:\["'\](?<1>\[^"'\]*)["']|(?<1>\S+))`|Coincide con uno de los siguientes sin asignar el resultado a un grupo capturado:<br /> <ul><li><p>Una comilla o un apóstrofo, seguido de cero o más apariciones de cualquier carácter que no sea una comilla o un apóstrofo, seguido por una comilla o un apóstrofo. El grupo con nombre `1` se incluye en este patrón.</p></li><li><p>Uno o varios caracteres que no son espacios en blanco. El grupo con nombre `1` se incluye en este patrón.</p></li></ul>|  
 |`(?<1>[^"']*)`|Asigna cero o más apariciones de cualquier carácter que no sea apóstrofo o comilla al grupo de captura con nombre `1`.|  
 |`(?<1>\S+)`|Asigna uno o varios caracteres que no sean un espacio en blanco al grupo de captura con nombre `1`.|  
   

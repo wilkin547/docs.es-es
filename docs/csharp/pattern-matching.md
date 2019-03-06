@@ -3,14 +3,14 @@ title: 'Coincidencia de patrones: Guía de C#'
 description: Información sobre las expresiones de coincidencia de patrones en C#
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eccc982c94a1f124d7250e1795a44d696e43a53c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522031"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969988"
 ---
-# <a name="pattern-matching"></a>Coincidencia de modelos #
+# <a name="pattern-matching"></a>Coincidencia de modelos
 
 Los patrones comprueban que un valor tenga una determinada *forma* y pueden *extraer* información del valor cuando tiene la forma coincidente. La coincidencia de patrones proporciona una sintaxis más concisa para los algoritmos que se usan actualmente. Ya se crean algoritmos de coincidencia de patrones mediante la sintaxis existente. Se escriben instrucciones `if` o `switch` que comprueban valores. Luego, si esas instrucciones coinciden, se extrae y se usa la información de ese valor. Los nuevos elementos de sintaxis son extensiones de instrucciones con las que ya está familiarizado: `is` y `switch`. Estas nuevas extensiones combinan la comprobación de un valor y la extracción de esa información.
 
@@ -36,7 +36,7 @@ Antes de C# 7.0, había que comprobar cada tipo en una serie de instrucciones `i
 
 [!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
-El código anterior es una expresión clásica de la *coincidencia de tipos*: se prueba una variable para determinar su tipo y se realiza una acción diferente basada en ese tipo.
+El código anterior es una expresión clásica del *patrón de tipo*: se prueba una variable para determinar su tipo y se realiza una acción diferente basada en ese tipo.
 
 Este código se simplifica con extensiones de la expresión `is` para asignar una variable si la prueba se realiza correctamente:
 
@@ -111,7 +111,7 @@ El comportamiento especial del patrón `null` es interesante porque la constante
 
 La introducción de `var` como una de las expresiones de coincidencia presenta nuevas reglas para la coincidencias de patrones.
 
-La primera regla es que la declaración `var` sigue las reglas de inferencia de tipos normales: el tipo se infiere para ser estático de la expresión switch. De esa regla, el tipo siempre coincide.
+La primera regla es que la declaración `var` sigue las reglas de inferencia de tipo normal: El tipo se infiere para que sea el tipo estático de la expresión switch. De esa regla, el tipo siempre coincide.
 
 La segunda regla es que una declaración `var` no tiene la comprobación de valores NULL que incluyen otras expresiones de patrón de tipo. Esto significa que la variable puede ser NULL y se necesita una comprobación de valores NULL en ese caso.
 

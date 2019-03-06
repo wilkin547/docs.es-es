@@ -16,42 +16,43 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec91a1f6fba70e3c9706541dc641ddd019d44841
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cdb9f748279e4e74c0dbd1ced1f48e3a24b9904d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642209"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358423"
 ---
 # <a name="getpropertyqualifierset-function"></a>Función GetPropertyQualifierSet
+
 Recupera el calificador establecido para una propiedad específica.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Sintaxis  
-  
-```  
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
 HRESULT GetPropertyQualifierSet (
-   [in] int                 vFunc, 
-   [in] IWbemClassObject*   ptr, 
+   [in] int                 vFunc,
+   [in] IWbemClassObject*   ptr,
    [in] LPCWSTR             wszProperty,
    [out] IWbemQualifierSet  **ppQualSet
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parámetros
 
-`vFunc`  
+`vFunc`\
 [in] Este parámetro se usa.
 
-`ptr`  
+`ptr`\
 [in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
 
-`wszMethod`  
-[in] El nombre de propiedad. `wszProperty` debe apuntar a una `LPCWSTR`. 
+`wszMethod`\
+[in] El nombre de propiedad. `wszProperty` debe apuntar a una `LPCWSTR`.
 
-`ppQualSet`  
-[out] Recibe el puntero de interfaz que permite el acceso a los calificadores de la propiedad. El valor de `ppQualSet` no puede ser `null`. Si se produce un error, no se devuelve un nuevo objeto y el puntero se establece para que apunte a `null`. 
+`ppQualSet`\
+[out] Recibe el puntero de interfaz que permite el acceso a los calificadores de la propiedad. El valor de `ppQualSet` no puede ser `null`. Si se produce un error, no se devuelve un nuevo objeto y el puntero se establece para que apunte a `null`.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -65,23 +66,25 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Es un parámetro `null`. |
 | `WBEM_E_SYSTEM_PROPERTY` | 0x80041030 | La función intenta obtener calificadores de una propiedad del sistema. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
-  
+
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) método. 
+Esta función contiene una llamada a la [IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) método.
 
-Una llamada a esta función solo se admite si el objeto actual es una definición de clase CIM. No está disponible para la manipulación de los métodos [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters que señalan a las instancias CIM.
+Una llamada a esta función solo se admite si el objeto actual es una definición de clase CIM. No está disponible para la manipulación de los métodos [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) punteros que señalan a las instancias CIM.
 
 Dado que cada método puede tener su propio calificadores, el [IWbemQualifierSet puntero](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) permite al llamador agregar, editar o eliminar estos calificadores.
 
 Dado que las propiedades del sistema no tengan ningún calificador, la función devuelve `WBEM_E_SYSTEM_PROPERTY` si se intenta obtener un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) puntero para una propiedad del sistema.
 
-## <a name="requirements"></a>Requisitos  
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Encabezado**: WMINet_Utils.idl  
-  
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisitos
+
+**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Encabezado**: WMINet_Utils.idl
+
+**Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Vea también
+
 - [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

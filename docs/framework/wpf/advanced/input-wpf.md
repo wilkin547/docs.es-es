@@ -7,24 +7,24 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: 9a7ccd30-095b-4f34-b284-8fb7e8f95a9b
-ms.openlocfilehash: 1510c037dcb3d5e386e1d4c4dd3a3fe002f13c59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c72aa41aeb4c2da5577f1581a8f65afbefb222c6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544237"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350753"
 ---
 # <a name="input-wpf"></a>Entrada (WPF)
-Windows Presentation Foundation (WPF) incluye compatibilidad con varios tipos de entrada. Esta entrada incluye texto, táctil, mouse, comandos, foco, entrada táctil, arrastrar y colocar y entrada de lápiz digital. Esta sección describe temas relacionados con la entrada en WPF.  
+Windows Presentation Foundation (WPF) incluye compatibilidad con varios tipos de entrada. Esta entrada incluye el texto, táctil, mouse, comandos, enfoque, táctil, arrastrar y colocar y entrada de lápiz digital. Esta sección describen los temas relacionados con la entrada en WPF.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre acciones del usuario](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Información general sobre comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Información general sobre el foco](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Aplicar estilo a los controles al recibir el foco y FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [Tutorial: Crear su primera aplicación táctil](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [Entrada de lápiz digital](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+ [Información general sobre acciones del usuario](input-overview.md)  
+ [Información general sobre comandos](commanding-overview.md)  
+ [Información general sobre el foco](focus-overview.md)  
+ [Aplicar estilo a los controles al recibir el foco y FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [Tutorial: Crear su primera aplicación táctil](walkthrough-creating-your-first-touch-application.md)  
+ [Temas "Cómo..."](input-and-commands-how-to-topics.md)  
+ [Entrada de lápiz digital](digital-ink.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.UIElement>  
@@ -42,5 +42,5 @@ Windows Presentation Foundation (WPF) incluye compatibilidad con varios tipos de
  <xref:System.Windows.Input.FocusManager>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles](../../../../docs/framework/wpf/controls/index.md)  
-  [Eventos](../../../../docs/framework/wpf/advanced/events-wpf.md)
+ [Controles](../controls/index.md)  
+  [Eventos](events-wpf.md)

@@ -1,27 +1,25 @@
 ---
 title: 'Operador *=: Referencia de C#'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/26/2019
 f1_keywords:
 - '*=_CSharpKeyword'
 helpviewer_keywords:
 - '*= operator [C#]'
 - binary multiplication assignment operator (*=) [C#]
 ms.assetid: 2e472155-59db-4dbf-bb94-bcccfa1a794d
-ms.openlocfilehash: 2038f3b55d46f3503496275b3d25b17663b8c1db
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 70461f79e714e44354fe4137e5360769fa048d3e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333439"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967391"
 ---
 # <a name="-operator-c-reference"></a>Operador \*= (Referencia de C#)
 
-El operador de asignación y multiplicación binaria.
+Operador de asignación de multiplicación.
 
-## <a name="remarks"></a>Comentarios
-
-Una expresión que use el operador de asignación `*=`, como
+Una expresión que usa el operador `*=`, como
 
 ```csharp
 x *= y
@@ -33,13 +31,21 @@ es equivalente a
 x = x * y
 ```
 
-salvo que `x` solo se evalúa una vez. El [operador \*](multiplication-operator.md) está predefinido en tipos numéricos para realizar la multiplicación.
+salvo que `x` solo se evalúa una vez.
 
-El operador `*=` no se puede sobrecargar directamente, pero los tipos definidos por el usuario pueden sobrecargar el [operador \*](multiplication-operator.md) (consulte [operator](../keywords/operator.md)).
+Para tipos numéricos, el [operador \*](multiplication-operator.md) calcula la suma de sus operandos.
 
-## <a name="example"></a>Ejemplo
+En el siguiente ejemplo se muestra el uso del operador `*=`:
 
-[!code-csharp[csRefOperators#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#13)]
+[!code-csharp-interactive[multiply and assign](~/samples/snippets/csharp/language-reference/operators/MultiplicationExamples.cs#MultiplyAndAssign)]
+
+## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
+
+Si un tipo definido por el usuario [sobrecarga](../keywords/operator.md) el [operador de multiplicación](multiplication-operator.md) `*`, el operador de asignación de multiplicación `*=` se sobrecarga implícitamente. Un tipo definido por el usuario no puede sobrecargar de forma implícita el operador de asignación de multiplicación.
+
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
+
+Para obtener más información, vea la sección [Asignación compuesta](~/_csharplang/spec/expressions.md#compound-assignment) de la [Especificación del lenguaje C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Vea también
 

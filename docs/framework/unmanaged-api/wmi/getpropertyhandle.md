@@ -1,6 +1,6 @@
 ---
 title: GetPropertyHandle (función) (referencia de API no administrada)
-description: GetPropertyHandle (función) devuelve un identificador único que una propiedad de identidades.
+description: GetPropertyHandle (función) devuelve un identificador único que identifica una propiedad.
 ms.date: 11/06/2017
 api_name:
 - GetPropertyHandle
@@ -16,45 +16,46 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 902414ca96d9b4bf888608bd9ad267777da92e32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92d48caf7de873850135c7410a5e4b5861131212
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742320"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366379"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle (función)
+
 Devuelve un controlador único que identifica una propiedad.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Sintaxis  
-  
-```  
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
 HRESULT GetPropertyHandle (
-   [in] int                  vFunc, 
-   [in] IWbemObjectAccess*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemObjectAccess*   ptr,
    [in] LPCWSTR              wszPropertyName,
    [out] CIMTYPE*            pType,
    [out] long*               pHandle
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parámetros
 
-`vFunc`  
+`vFunc`\
 [in] Este parámetro se usa.
 
-`ptr`  
+`ptr`\
 [in] Un puntero a un [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instancia.
 
-`wszPropertyName`  
-[in] Una cadena terminada en null de characaters codificados UTF16 que contiene el nombre de propiedad.   
+`wszPropertyName`\
+[in] Una-cadena terminada en null de caracteres codificados UTF16 que contiene el nombre de propiedad.
 
-`pType`  
+`pType`\
 [out] Un puntero a un [ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) miembro de enumeración que representa el tipo CIM de la propiedad.
 
-`pHandle`   
+`pHandle`\
 [out] Un puntero a un entero que contiene el identificador de propiedad.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -67,7 +68,7 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
 |`WBEM_E_NOT_SUPPORTED` | 0x8004100c | La propiedad solicitada es de tipo son `CIM_OBJECT` o `CIM_ARRAY`. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
-  
+
 ## <a name="remarks"></a>Comentarios
 
 Esta función contiene una llamada a la [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) método.
@@ -76,12 +77,14 @@ Puede usar este identificador para identificar las propiedades cuando se usa [IW
 
 Identificadores se pueden recuperar de las propiedades de todos los tipos de datos distinto `CIM_OBJECT` y `CIM_ARRAY`. Devuelve el trabajo de identificadores en todas las instancias de una clase.
 
-## <a name="requirements"></a>Requisitos  
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Encabezado**: WMINet_Utils.idl  
-  
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisitos
+
+**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Encabezado**: WMINet_Utils.idl
+
+**Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Vea también
+
 - [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
