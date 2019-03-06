@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: aa0c07c092b6a1e9e37d9c3695107b845055a981
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 8e65e89fb0406d9d2849e0a1be4b1aa764b935ab
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745578"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352612"
 ---
 # <a name="properties-wpf"></a>Propiedades (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un conjunto de servicios que puede usarse para ampliar la funcionalidad de una propiedad [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Colectivamente, se suele hacer referencia a estos servicios como el sistema de propiedades de WPF. Una propiedad respaldada por el sistema de propiedades de [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] se conoce como una propiedad de dependencia.  
   
 ## <a name="in-this-section"></a>En esta sección  
-- [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Información general sobre propiedades asociadas](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
-- [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Metadatos de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Devoluciones de llamada y validación de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
-- [Metadatos de las propiedades de marco de trabajo](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)
-- [Prioridad de los valores de propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
-- [Propiedades de dependencia de solo lectura](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
-- [Herencia de valores de propiedad](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
-- [Seguridad de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
-- [Modelos de constructores seguros para objetos DependencyObject](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
-- [Propiedades de dependencia de tipo de colección](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
-- [Carga de XAML y propiedades de dependencia](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+- [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)
+- [Información general sobre propiedades asociadas](attached-properties-overview.md)
+- [Propiedades de dependencia personalizadas](custom-dependency-properties.md)
+- [Metadatos de las propiedades de dependencia](dependency-property-metadata.md)
+- [Devoluciones de llamada y validación de las propiedades de dependencia](dependency-property-callbacks-and-validation.md)
+- [Metadatos de las propiedades de marco de trabajo](framework-property-metadata.md)
+- [Prioridad de los valores de propiedades de dependencia](dependency-property-value-precedence.md)
+- [Propiedades de dependencia de solo lectura](read-only-dependency-properties.md)
+- [Herencia de valores de propiedad](property-value-inheritance.md)
+- [Seguridad de las propiedades de dependencia](dependency-property-security.md)
+- [Modelos de constructores seguros para objetos DependencyObject](safe-constructor-patterns-for-dependencyobjects.md)
+- [Propiedades de dependencia de tipo de colección](collection-type-dependency-properties.md)
+- [Carga de XAML y propiedades de dependencia](xaml-loading-and-dependency-properties.md)
+- [Temas "Cómo..."](properties-how-to-topics.md)
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.DependencyProperty>  
@@ -45,12 +45,12 @@ ms.locfileid: "56745578"
  <xref:System.Windows.DependencyObject>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Arquitectura de WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [XAML en WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Elementos base](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Árbol de elementos y serialización](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Eventos](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [Entrada](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Recursos](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Modelo de contenido de WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [Modelo de subprocesos](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [Arquitectura de WPF](wpf-architecture.md)  
+  [XAML en WPF](xaml-in-wpf.md)  
+  [Elementos base](base-elements.md)  
+  [Árbol de elementos y serialización](element-tree-and-serialization.md)  
+  [Eventos](events-wpf.md)  
+  [Entrada](input-wpf.md)  
+  [Recursos](resources-wpf.md)  
+  [Modelo de contenido de WPF](../controls/wpf-content-model.md)  
+  [Modelo de subprocesos](threading-model.md)

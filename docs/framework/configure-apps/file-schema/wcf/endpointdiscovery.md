@@ -3,11 +3,11 @@ title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
 ms.openlocfilehash: effceee30abdaa1725b8c8718df22632961871e8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266421"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358579"
 ---
 # <a name="endpointdiscovery"></a>\<endpointDiscovery>
 Especifica las distintas configuraciones de detección para un punto de conexión, como su detectabilidad, ámbitos y cualquier extensión personalizada a sus metadatos.  
@@ -48,8 +48,8 @@ Especifica las distintas configuraciones de detección para un punto de conexió
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Colección de URI de ámbito para el punto de conexión. Se puede asociar más de un URI de ámbito a un único punto de conexión.|  
-|[\<Extensiones >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [de \<endpointDiscovery >]|Colección de elementos XML que le permite especificar metadatos personalizados que se van a publicar para un punto de conexión.|  
+|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Colección de URI de ámbito para el extremo. Se puede asociar más de un URI de ámbito a un único punto de conexión.|  
+|[\<Extensiones >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [de \<endpointDiscovery >]|Colección de elementos XML que le permite especificar metadatos personalizados que se van a publicar para un extremo.|  
 |\<types>|Una colección de interfaces para buscar.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  

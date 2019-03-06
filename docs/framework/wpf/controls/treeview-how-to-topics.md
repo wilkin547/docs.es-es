@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - TreeView control [WPF], how-to topics
 ms.assetid: b9e9790e-7bfd-45d1-8b7a-1e0d125182a8
-ms.openlocfilehash: 902478763a214b96c3d0565fe38f0e9cd4c2acc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa7ef39083eb192c6ea675568b955fc78608ba88
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555405"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357760"
 ---
 # <a name="treeview-how-to-topics"></a>Temas "Cómo..." sobre el control TreeView
-Los temas de esta sección describen cómo utilizar el <xref:System.Windows.Controls.TreeView> control para mostrar información en una estructura jerárquica.  
+Los temas de esta sección describen cómo usar el <xref:System.Windows.Controls.TreeView> control para mostrar información en una estructura jerárquica.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Crear controles TreeView simples o complejos](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
-  [Usar SelectedValue, SelectedValuePath y SelectedItem](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
-  [Enlazar un objeto TreeView a datos que tienen una profundidad indeterminable](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
-  [Mejorar el rendimiento de un control TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
-  [Buscar un TreeViewItem en un TreeView](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
+ [Crear controles TreeView simples o complejos](how-to-create-simple-or-complex-treeviews.md)  
+  [Usar SelectedValue, SelectedValuePath y SelectedItem](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+  [Enlazar un objeto TreeView a datos que tienen una profundidad indeterminable](how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
+  [Mejorar el rendimiento de un control TreeView](how-to-improve-the-performance-of-a-treeview.md)  
+  [Buscar un TreeViewItem en un TreeView](how-to-find-a-treeviewitem-in-a-treeview.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.TreeView>  

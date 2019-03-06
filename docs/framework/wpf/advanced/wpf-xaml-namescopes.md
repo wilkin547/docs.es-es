@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: 52fc542996f2fe691b62aeff5296e045643fcc7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5a49198d6f55c9a3aa3c7557a96ab791d54351b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498351"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366756"
 ---
 # <a name="wpf-xaml-namescopes"></a>Ámbitos de nombres XAML de WPF
 Los ámbitos de nombres XAML son un concepto que identifica objetos que se definen en XAML. Los nombres de un ámbito de nombres XAML se pueden usar para establecer relaciones entre los nombres de objetos definidos por XAML y sus equivalentes de instancia en un árbol de objetos. Normalmente, los ámbitos de nombres XAML del código administrado de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se crean al cargar las distintas raíces de página XAML de una aplicación XAML. Ámbitos de nombres XAML como objetos de programación se definen mediante la <xref:System.Windows.Markup.INameScope> interfaz y también se implementan mediante la clase práctica <xref:System.Windows.NameScope>.  
@@ -36,7 +36,7 @@ Los ámbitos de nombres XAML son un concepto que identifica objetos que se defin
 ### <a name="adding-objects-to-runtime-object-trees"></a>Agregar objetos a los árboles de objetos en tiempo de ejecución  
  El momento en que se analiza el XAML representa el momento en el que se crea y se define un ámbito de nombres XAML de WPF. Si agrega un objeto a un árbol de objetos después de haber analizado el XAML que generó el árbol, los valores `Name` o `x:Name` del objeto nuevo no actualizarán automáticamente la información de un ámbito de nombres XAML. Para agregar un nombre para un objeto en un ámbito de nombres de WPF XAML después de carga el XAML, debe llamar a la implementación adecuada de <xref:System.Windows.Markup.INameScope.RegisterName%2A> en el objeto que define el ámbito de nombres XAML, que normalmente es la raíz de la página XAML. Si el nombre no está registrado, se ha agregado no se hace referencia al objeto por su nombre a través de métodos como <xref:System.Windows.FrameworkElement.FindName%2A>, y no se puede usar ese nombre de animación.  
   
- El escenario más común para los desarrolladores de aplicaciones es que usarán <xref:System.Windows.FrameworkElement.RegisterName%2A> para registrar los nombres en el ámbito de nombres XAML en la raíz de la página actual. <xref:System.Windows.FrameworkElement.RegisterName%2A> forma parte de un escenario importante para guiones gráficos que los objetos de destino para las animaciones. Para obtener más información, consulte [Información general sobre objetos Storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ El escenario más común para los desarrolladores de aplicaciones es que usarán <xref:System.Windows.FrameworkElement.RegisterName%2A> para registrar los nombres en el ámbito de nombres XAML en la raíz de la página actual. <xref:System.Windows.FrameworkElement.RegisterName%2A> forma parte de un escenario importante para guiones gráficos que los objetos de destino para las animaciones. Para obtener más información, consulte [Información general sobre objetos Storyboard](../graphics-multimedia/storyboards-overview.md).  
   
  Si se llama a <xref:System.Windows.FrameworkElement.RegisterName%2A> en un objeto distinto del objeto que define el ámbito de nombres XAML, el nombre todavía está registrado en el ámbito de nombres XAML que se encuentra el objeto que realiza la llamada, como si se hubiera llamado <xref:System.Windows.FrameworkElement.RegisterName%2A> en el ámbito de nombres XAML que define el objeto.  
   
@@ -49,7 +49,7 @@ Los ámbitos de nombres XAML son un concepto que identifica objetos que se defin
   
  Si el objeto proporcionado como `dependencyObject` para <xref:System.Windows.NameScope.SetNameScope%2A> no es un <xref:System.Windows.Markup.INameScope> implementación, <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>, al llamar a <xref:System.Windows.FrameworkElement.RegisterName%2A> en todos los elementos no tendrán ningún efecto. Si no puede crear explícitamente el nuevo ámbito de nombres XAML, a continuación, llama a <xref:System.Windows.FrameworkElement.RegisterName%2A> , se producirá una excepción.  
   
- Para ver un ejemplo de cómo usar las API de ámbito de nombres XAML en el código, consulte [Definir un ámbito de nombres](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md).  
+ Para ver un ejemplo de cómo usar las API de ámbito de nombres XAML en el código, consulte [Definir un ámbito de nombres](../graphics-multimedia/how-to-define-a-name-scope.md).  
   
 <a name="Namescopes_in_Styles_and_Templates"></a>   
 ## <a name="xaml-namescopes-in-styles-and-templates"></a>Ámbitos de nombres XAML en estilos y plantillas  
@@ -57,7 +57,7 @@ Los ámbitos de nombres XAML son un concepto que identifica objetos que se defin
   
  Considere el ejemplo siguiente:  
   
- [!code-xaml[XamlOvwSupport#NameScopeTemplates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
+ [!code-xaml[XamlOvwSupport#NameScopeTemplates](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
   
  En este caso, se aplica la misma plantilla a dos botones diferentes. Si las plantillas no tuvieran ámbitos de nombres XAML discretos, el nombre `TheBorder` usado en la plantilla provocaría un conflicto de nombres en el ámbito de nombres XAML. Todas las instancias de la plantilla tienen su propio ámbito de nombres XAML, por lo que, en este ejemplo, el ámbito de nombres XAML de todas las plantillas de instancia contendrían exactamente un nombre.  
   
@@ -97,5 +97,5 @@ Los ámbitos de nombres XAML son un concepto que identifica objetos que se defin
 -   <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>Vea también
-- [Espacios de nombres y asignación de espacios de nombres XAML para WPF](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
-- [x:Name (Directiva)](../../../../docs/framework/xaml-services/x-name-directive.md)
+- [Espacios de nombres y asignación de espacios de nombres XAML para WPF](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
+- [x:Name (Directiva)](../../xaml-services/x-name-directive.md)

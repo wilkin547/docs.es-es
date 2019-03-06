@@ -7,19 +7,19 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: d0d6df69-daf9-4cf3-b7f9-ffee588037a3
-ms.openlocfilehash: 66b410c42214719ce688f8965e7a38143a115326
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f68eafba64f45a77687d09d2e1ab709a76c0e33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537478"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353132"
 ---
 # <a name="digital-ink"></a>Entrada manuscrita digital
-Esta sección describe el uso de entrada de lápiz digital en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Tradicionalmente solo se encuentran en el SDK de Tablet PC, entrada de lápiz digital ahora está disponible en el núcleo de Windows Presentation Foundation. Esto significa que ahora puede desarrollar aplicaciones completas de Tablet PC mediante el uso de la eficacia de Windows Presentation Foundation.  
+Esta sección describe el uso de entrada de lápiz digital en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Tradicionalmente se encuentra solo en el SDK de Tablet PC, entrada de lápiz digital ahora está disponible en el núcleo de Windows Presentation Foundation. Esto significa que ahora puede desarrollar aplicaciones completas de Tablet PC mediante el uso de la eficacia de Windows Presentation Foundation.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general](../../../../docs/framework/wpf/advanced/digital-ink-overviews.md)  
-  [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
+ [Información general](digital-ink-overviews.md)  
+  [Temas "Cómo..."](digital-ink-how-to-topics.md)  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md)
+ [Windows Presentation Foundation](../index.md)

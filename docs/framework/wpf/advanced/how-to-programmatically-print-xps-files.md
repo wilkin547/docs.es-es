@@ -8,14 +8,14 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 53cc58b3e30b91e8694a8090f3cc85cf0b3c0af6
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: c00a12000dd10ba32bd550186377547b3ef72d25
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442924"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372729"
 ---
-# <a name="how-to-programmatically-print-xps-files"></a>Filtrar Imprimir archivos XPS mediante programación
+# <a name="how-to-programmatically-print-xps-files"></a>Procedimiento Imprimir archivos XPS mediante programación
 Puede usar una sobrecarga de la <xref:System.Printing.PrintQueue.AddJob%2A> método imprimir [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] archivos sin tener que abrir una <xref:System.Windows.Controls.PrintDialog> o, en principio, cualquier [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] en absoluto.  
   
  También puede imprimir [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] archivos de los numerosos <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> y <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> métodos de la <xref:System.Windows.Xps.XpsDocumentWriter>. Para información sobre esto, vea [Imprimir un documento XPS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90)).  
@@ -43,8 +43,8 @@ Puede usar una sobrecarga de la <xref:System.Printing.PrintQueue.AddJob%2A> mét
   
  El grueso del ejemplo está en el método `static`**BatchXPSPrinter.PrintXPS**. Después de crear una cola y un servidor de impresión, el método solicita al usuario un directorio que contenga archivos [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. Después de comprobar la existencia del directorio y la presencia de \*los archivos .xps en él, el método agrega estos archivos a la cola de impresión. El ejemplo se supone que la impresora no es XPSDrv, por lo que estamos pasando `false` al último parámetro de <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> método. Por este motivo, el método validará la marcación [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] en el archivo antes de intentar convertirla en un lenguaje de descripción de la página de la impresora. Si se produce un error validación, se produce una excepción. El código de ejemplo detectará la excepción, la notificará al usuario y, a continuación, continuará con el proceso en el siguiente archivo [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
   
- [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
- [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
+ [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
+ [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
   
  Si está utilizando una impresora XPSDrv, puede establecer el parámetro final en `true`. En ese caso, puesto que [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] es el idioma de descripción de la página de la impresora, el método enviará el archivo a la impresora sin validarlo o convertirlo en otro idioma de descripción de página. Si no está seguro en tiempo de diseño si la aplicación usa una impresora XPSDrv, puede modificar la aplicación para que lea el <xref:System.Printing.PrintQueue.IsXpsDevice%2A> propiedad y rama de acuerdo con lo que encuentre.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - headers [WPF], customizing
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-ms.openlocfilehash: 7cc758760075746971dd0d397568c64e7baf8b67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e5cf8a8b280a539feb73a54defbb0cd8c2c0f79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590908"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366652"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>Información general sobre plantillas y estilos de encabezado de columna en modo GridView
 Esta introducción describe el orden de prioridad para las propiedades que usa para personalizar un encabezado de columna en la <xref:System.Windows.Controls.GridView> modo de vista de un <xref:System.Windows.Controls.ListView> control.  
@@ -36,6 +36,6 @@ Esta introducción describe el orden de prioridad para las propiedades que usa p
  <sup>1</sup>para **propiedades de la plantilla de encabezado**, si se establece la plantilla y las propiedades del selector de plantilla, la propiedad de plantilla tiene prioridad. Por ejemplo, si establece tanto la <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> y <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> propiedades, la <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> propiedad tiene prioridad.  
   
 ## <a name="see-also"></a>Vea también
-- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
-- [Información general sobre ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Información general sobre GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Temas "Cómo..."](listview-how-to-topics.md)
+- [Información general sobre ListView](listview-overview.md)
+- [Información general sobre GridView](gridview-overview.md)

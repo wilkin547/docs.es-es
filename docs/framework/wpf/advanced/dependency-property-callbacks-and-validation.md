@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: acc8fdeb495bf7a490752a91ec6943346efcb712
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576465"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363935"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Devoluciones de llamada y validación de las propiedades de dependencia
 En este tema se describe cómo crear propiedades de dependencia mediante implementaciones personalizadas alternativas de características relacionadas con las propiedades, como la determinación de la validación, las devoluciones de llamada que se invocan cuando cambia el valor efectivo de la propiedad y la invalidación de posibles influencias externas en la determinación del valor. En este tema también se describen los escenarios donde es apropiado expandir los comportamientos predeterminados del sistema de propiedades mediante estas técnicas.  
@@ -25,14 +25,14 @@ En este tema se describe cómo crear propiedades de dependencia mediante impleme
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
- En este tema se supone que entiende los escenarios básicos de la implementación de una propiedad de dependencia y cómo se aplican los metadatos a una propiedad de dependencia personalizada. Consulte [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) y [Metadatos de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md) para obtener contexto.  
+ En este tema se supone que entiende los escenarios básicos de la implementación de una propiedad de dependencia y cómo se aplican los metadatos a una propiedad de dependencia personalizada. Consulte [Propiedades de dependencia personalizadas](custom-dependency-properties.md) y [Metadatos de las propiedades de dependencia](dependency-property-metadata.md) para obtener contexto.  
   
 <a name="Validation_Callbacks"></a>   
 ## <a name="validation-callbacks"></a>Devoluciones de llamada de validación  
  Las devoluciones de llamada de validación pueden asignarse a una propiedad de dependencia cuando se registra por primera vez. La devolución de llamada de validación no forma parte de los metadatos de propiedad; es una entrada directa de la <xref:System.Windows.DependencyProperty.Register%2A> método. Por lo tanto, una vez creada una devolución de llamada de validación para una propiedad de dependencia, una nueva implementación no puede invalidarla.  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  Las devoluciones de llamada se implementan de forma que obtienen un valor de objeto. Devuelven `true` si el valor proporcionado es válido para la propiedad; en caso contrario, devuelven `false`. Se supone que la propiedad es del tipo correcto por el tipo registrado con el sistema de propiedades, por lo que la comprobación de tipo en las devoluciones de llamada no se suele llevar a cabo. El sistema de propiedades usa las devoluciones de llamada en distintas operaciones. Esto incluye la inicialización de tipos inicial por valor predeterminado, el cambio mediante programación invocando <xref:System.Windows.DependencyObject.SetValue%2A>, o intenta reemplazar los metadatos con el nuevo valor predeterminado proporcionado. Si cualquiera de estas operaciones invoca la devolución de llamada de validación y devuelve `false`, se generará una excepción. Los escritores de aplicaciones deben estar preparados para controlar estas excepciones. Un uso común de las devoluciones de llamada de validación es validar los valores de enumeración o restringir los valores de números enteros o dobles cuando la propiedad establece medidas que deben ser cero o un valor superior.  
   
@@ -40,8 +40,8 @@ En este tema se describe cómo crear propiedades de dependencia mediante impleme
   
  El siguiente es un código de ejemplo para un escenario de devolución de llamada de validación muy simple: validar que una propiedad que se escribe como el <xref:System.Double> primitivo no es <xref:System.Double.PositiveInfinity> o <xref:System.Double.NegativeInfinity>.  
   
- [!code-csharp[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
- [!code-vb[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
+ [!code-csharp[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
+ [!code-vb[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
 <a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
 ## <a name="coerce-value-callbacks-and-property-changed-events"></a>Devoluciones de llamada de valor de coerción y eventos de propiedad cambiada  
@@ -51,18 +51,18 @@ En este tema se describe cómo crear propiedades de dependencia mediante impleme
   
  El siguiente es un código de ejemplo muy breve para una sola de las tres propiedades de dependencia que ilustran esta relación. En el ejemplo se muestra cómo está registrada la propiedad `CurrentReading` de un conjunto Min/Max/Current de propiedades *Reading relacionadas. Usa la validación como se muestra en la sección anterior.  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  La devolución de llamada de la propiedad cambiada Current se usa para reenviar el cambio a otras propiedades dependientes, mediante la invocación explícita de las devoluciones de llamada del valor de coerción registradas para esas otras propiedades:  
   
- [!code-csharp[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
- [!code-vb[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
+ [!code-csharp[DPCallbackOverride#OnPCCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
+ [!code-vb[DPCallbackOverride#OnPCCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
  La devolución de llamada de valor de coerción comprueba los valores de propiedades de las que depende potencialmente la propiedad actual y fuerza el valor actual si es necesario:  
   
- [!code-csharp[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
- [!code-vb[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
+ [!code-csharp[DPCallbackOverride#CoerceCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
+ [!code-vb[DPCallbackOverride#CoerceCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
 >  Los valores predeterminados de las propiedades no se fuerzan. Un valor de propiedad igual al valor predeterminado podría producirse si un valor de propiedad sigue teniendo su valor predeterminado inicial, o si se borran otros valores con <xref:System.Windows.DependencyObject.ClearValue%2A>.  
@@ -81,6 +81,6 @@ En este tema se describe cómo crear propiedades de dependencia mediante impleme
  El sistema de propiedades tratará cualquier <xref:System.Windows.CoerceValueCallback> que devuelve el valor <xref:System.Windows.DependencyProperty.UnsetValue> como un caso especial. En este caso especial significa que el cambio de propiedad que dan como resultado la <xref:System.Windows.CoerceValueCallback> se debe rechazar que se llama por el sistema de propiedades, y que el sistema de propiedades en su lugar debe notificar el valor anterior que tenía la propiedad. Este mecanismo puede ser útil para comprobar que los cambios en una propiedad iniciados de manera asincrónica siguen siendo válidos para el estado actual del objeto y suprimirlos si no lo son. Otro escenario posible es la posibilidad de suprimir de manera selectiva un valor según el componente de determinación del valor propiedad que sea responsable del valor comunicado. Para ello, puede usar el <xref:System.Windows.DependencyProperty> pasa la devolución de llamada y el identificador de propiedad como entrada para <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>y, a continuación, procesar el <xref:System.Windows.ValueSource>.  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Metadatos de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)
+- [Metadatos de las propiedades de dependencia](dependency-property-metadata.md)
+- [Propiedades de dependencia personalizadas](custom-dependency-properties.md)

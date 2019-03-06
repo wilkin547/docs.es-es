@@ -6,19 +6,19 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: da8ffb77391129814e64613e17ea9f4d10cdca98
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b6afebbf6ac2dda0f8eb9932630da9a273f972e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746213"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376811"
 ---
 # <a name="opacity-masks-overview"></a>Información general sobre las máscaras de opacidad
 Las máscaras de opacidad permiten hacer que partes de un elemento o un objeto visual sea total o parcialmente transparentes. Para crear una máscara de opacidad, aplicar un <xref:System.Windows.Media.Brush> a la <xref:System.Windows.UIElement.OpacityMask%2A> propiedad de un elemento o <xref:System.Windows.Media.Visual>.  El pincel se asigna al elemento o al objeto visual, y el valor de opacidad de cada píxel del pincel se usa para determinar la opacidad resultante de cada píxel correspondiente del elemento o objeto visual.  
   
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
- En esta introducción se da por supuesto que está familiarizado con <xref:System.Windows.Media.Brush> objetos. Para una introducción sobre el uso de los pinceles, consulte [Información general sobre el dibujo con colores sólidos y degradados](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md). Para obtener información acerca de <xref:System.Windows.Media.ImageBrush> y <xref:System.Windows.Media.DrawingBrush>, consulte [pintar con imágenes, dibujos y elementos visuales](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ En esta introducción se da por supuesto que está familiarizado con <xref:System.Windows.Media.Brush> objetos. Para una introducción sobre el uso de los pinceles, consulte [Información general sobre el dibujo con colores sólidos y degradados](painting-with-solid-colors-and-gradients-overview.md). Para obtener información acerca de <xref:System.Windows.Media.ImageBrush> y <xref:System.Windows.Media.DrawingBrush>, consulte [pintar con imágenes, dibujos y elementos visuales](painting-with-images-drawings-and-visuals.md).  
   
 <a name="opacitymasks"></a>   
 ## <a name="creating-visual-effects-with-opacity-masks"></a>Creación de efectos visuales con máscaras de opacidad  
@@ -29,7 +29,7 @@ Las máscaras de opacidad permiten hacer que partes de un elemento o un objeto v
   
  Las máscaras de opacidad se usan para crear efectos visuales interesantes, como crear imágenes o botones que se desvanecen mediante un fundido, agregar texturas a los elementos o combinar degradados para generar superficies cristalinas. En la ilustración siguiente se muestra el uso de una máscara de opacidad. Se usa un fondo de cuadros para mostrar los elementos transparentes de la máscara.  
   
- ![Objeto con una máscara de opacidad LinearGradientBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-opacitymask-imageexample.png "wcpsdk_graphicsmm_opacitymask_imageexample")  
+ ![Objeto con una máscara de opacidad LinearGradientBrush](./media/wcpsdk-graphicsmm-opacitymask-imageexample.png "wcpsdk_graphicsmm_opacitymask_imageexample")  
 Ejemplo de máscara de opacidad  
   
 <a name="creatingopacitymasks"></a>   
@@ -40,30 +40,30 @@ Ejemplo de máscara de opacidad
   
      La siguiente imagen muestra un <xref:System.Windows.Media.LinearGradientBrush> usa como máscara de opacidad.  
   
-     ![Un objeto con máscara de opacidad LinearGradientBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
+     ![Un objeto con máscara de opacidad LinearGradientBrush](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 Ejemplo de máscara de opacidad LinearGradientBrush  
   
 -   <xref:System.Windows.Media.ImageBrush>: Se utiliza para crear textura y efectos de bordes suaves o rasgados.  
   
      La siguiente imagen muestra un <xref:System.Windows.Media.ImageBrush> usa como máscara de opacidad.  
   
-     ![Objeto que tiene una máscara de opacidad ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
+     ![Objeto que tiene una máscara de opacidad ImageBrush](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 Ejemplo de máscara de opacidad LinearGradientBrush  
   
 -   <xref:System.Windows.Media.DrawingBrush>: Se utiliza para crear máscaras de opacidad complejas a partir de patrones de formas, imágenes y degradados.  
   
      La siguiente imagen muestra un <xref:System.Windows.Media.DrawingBrush> usa como máscara de opacidad.  
   
-     ![Objeto con una máscara de opacidad DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask-single.jpg "wcpsdk_drawingbrushasopacitymask_single")  
+     ![Objeto con una máscara de opacidad DrawingBrush](./media/wcpsdk-drawingbrushasopacitymask-single.jpg "wcpsdk_drawingbrushasopacitymask_single")  
 Ejemplo de máscara de opacidad DrawingBrush  
   
  Los pinceles de degradado (<xref:System.Windows.Media.LinearGradientBrush> y <xref:System.Windows.Media.RadialGradientBrush>) son especialmente adecuados para su uso como una máscara de opacidad. Dado que un <xref:System.Windows.Media.SolidColorBrush> rellena un área con un color uniforme, hacen opacidad enmascara; con un <xref:System.Windows.Media.SolidColorBrush> es equivalente a establecer el elemento u objeto visual <xref:System.Windows.UIElement.OpacityMask%2A> propiedad.  
   
 <a name="creatingopacitymaskswithgradients"></a>   
 ## <a name="using-a-gradient-as-an-opacity-mask"></a>Uso de degradado como máscara de opacidad  
- Para crear un relleno de degradado, se especifican dos o más delimitadores de degradado. Cada delimitador de degradado contiene un color y una posición (consulte [Información general sobre el dibujo con colores sólidos y degradados](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md) para más información sobre cómo crear y usar degradados). El proceso es el mismo cuando se usa un degradado como máscara de opacidad, con la excepción de que, en lugar de combinar los colores, el degradado de la máscara de opacidad combina los valores del canal alfa. Por lo tanto, no importa el color real del contenido del degradado; solo importa el canal alfa, u opacidad, de cada color. A continuación se muestra un ejemplo.  
+ Para crear un relleno de degradado, se especifican dos o más delimitadores de degradado. Cada delimitador de degradado contiene un color y una posición (consulte [Información general sobre el dibujo con colores sólidos y degradados](painting-with-solid-colors-and-gradients-overview.md) para más información sobre cómo crear y usar degradados). El proceso es el mismo cuando se usa un degradado como máscara de opacidad, con la excepción de que, en lugar de combinar los colores, el degradado de la máscara de opacidad combina los valores del canal alfa. Por lo tanto, no importa el color real del contenido del degradado; solo importa el canal alfa, u opacidad, de cada color. A continuación se muestra un ejemplo.  
   
- [!code-xaml[OpacityMasksSnippet#LinearGradientOpacityMaskonImage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  
+ [!code-xaml[OpacityMasksSnippet#LinearGradientOpacityMaskonImage](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  
   
 <a name="specifyinggradientcolors"></a>   
 ## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>Especificación de delimitadores de degradado para una máscara de opacidad  
@@ -79,42 +79,42 @@ Ejemplo de máscara de opacidad DrawingBrush
   
  El valor *aa* de la línea anterior representa un valor hexadecimal de dos dígitos que se usa para especificar la opacidad del color. Cada uno de los valores *rr*, *gg* y *bb* representa un valor hexadecimal de dos dígitos que se usa para especificar la cantidad de rojo, verde y azul en el color. Cada dígito hexadecimal debe tener un valor entre 0 t 9 y entre A y F. 0 es el valor menor y F, el mayor. Un valor alfa de 00 especifica un color completamente transparente, mientras que un valor alfa de FF crea un color completamente opaco.  En el ejemplo siguiente, la notación hexadecimal [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] se usa para especificar dos colores. El primero es completamente opaco, mientras que el segundo, completamente transparente.  
   
- [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
+ [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
   
 <a name="usingimageasopacitymask"></a>   
 ## <a name="using-an-image-as-an-opacity-mask"></a>Uso de imagen como máscara de opacidad  
  También se pueden usar imágenes como máscara de opacidad. En la imagen siguiente se muestra un ejemplo. Se usa un fondo de cuadros para mostrar los elementos transparentes de la máscara.  
   
- ![Un objeto con máscara de opacidad ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-imageasopacitymask.png "wcpsdk_graphicsmm_imageasopacitymask")  
+ ![Un objeto con máscara de opacidad ImageBrush](./media/wcpsdk-graphicsmm-imageasopacitymask.png "wcpsdk_graphicsmm_imageasopacitymask")  
 Ejemplo de máscara de opacidad  
   
  Para usar una imagen como máscara de opacidad, use un <xref:System.Windows.Media.ImageBrush> para que contenga la imagen. Cuando cree una imagen que se usará como máscara de opacidad, guárdela en un formato que admita varios niveles de transparencia, como [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]. En el ejemplo siguiente se muestra el código que se usó para crear la ilustración anterior.  
   
- [!code-xaml[OpacityMasksSnippet#UIElementOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#uielementopacitymask)]  
+ [!code-xaml[OpacityMasksSnippet#UIElementOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#uielementopacitymask)]  
   
 <a name="tilingimageopacitymask"></a>   
 ### <a name="using-a-tiled-image-as-an-opacity-mask"></a>Uso de imagen en mosaico como máscara de opacidad  
  En el ejemplo siguiente, se utiliza la misma imagen con otro <xref:System.Windows.Media.ImageBrush>, pero las características de mosaico del pincel se usan para generar mosaicos del cuadrado imagen 50 píxeles.  
   
- [!code-xaml[OpacityMasksSnippet#TiledImageasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]  
+ [!code-xaml[OpacityMasksSnippet#TiledImageasOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]  
   
 <a name="drawingbrushasopacitymask"></a>   
 ## <a name="creating-an-opacity-mask-from-a-drawing"></a>Creación de una máscara de opacidad a partir de un dibujo  
  Se pueden usar dibujos como máscara de opacidad. Las formas contenidas en el dibujo se pueden rellenar con degradados, colores sólidos, imágenes e, incluso, otros dibujos. La imagen siguiente muestra un ejemplo de un dibujo que se usa como máscara de opacidad. Se usa un fondo de cuadros para mostrar los elementos transparentes de la máscara.  
   
- ![Un objeto con una máscara de opacidad DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask.png "wcpsdk_drawingbrushasopacitymask")  
+ ![Un objeto con una máscara de opacidad DrawingBrush](./media/wcpsdk-drawingbrushasopacitymask.png "wcpsdk_drawingbrushasopacitymask")  
 Ejemplo de máscara de opacidad DrawingBrush  
   
  Para usar un dibujo como máscara de opacidad, use un <xref:System.Windows.Media.DrawingBrush> para contener el dibujo. En el ejemplo siguiente se muestra el código que se usó para crear la ilustración anterior:  
   
- [!code-xaml[OpacityMasksSnippet#OpacityMaskfromDrawing](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  
+ [!code-xaml[OpacityMasksSnippet#OpacityMaskfromDrawing](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  
   
 <a name="tileddrawingbrush"></a>   
 ### <a name="using-a-tiled-drawing-as-an-opacity-mask"></a>Uso de dibujo en mosaico como máscara de opacidad  
  Al igual que el <xref:System.Windows.Media.ImageBrush>, el <xref:System.Windows.Media.DrawingBrush> pueden realizarse en el dibujo en mosaico. En el ejemplo siguiente, se usa un pincel con dibujo para crear una máscara de opacidad en mosaico.  
   
- [!code-xaml[OpacityMasksSnippet#TiledDrawingasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
+ [!code-xaml[OpacityMasksSnippet#TiledDrawingasOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
   
 ## <a name="see-also"></a>Vea también
-- [Pintar con imágenes, dibujos y elementos visuales](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
-- [Información general sobre el dibujo con colores sólidos y degradados](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Pintar con imágenes, dibujos y elementos visuales](painting-with-images-drawings-and-visuals.md)
+- [Información general sobre el dibujo con colores sólidos y degradados](painting-with-solid-colors-and-gradients-overview.md)

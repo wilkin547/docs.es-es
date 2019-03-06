@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 52b2fdaaefd16a49300641f44041b8352141385b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 6f204e2ed9cb1409d53432355467bb11946f8809
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828680"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372456"
 ---
 # <a name="ixclrdatamethodinstancegetrepresentativeentryaddress-method"></a>Método IXCLRDataMethodInstance::GetRepresentativeEntryAddress
 
@@ -36,9 +36,10 @@ HRESULT GetRepresentativeEntryAddress(
 );
 ```
 
-### <a name="parameters"></a>Parámetros
+## <a name="parameters"></a>Parámetros
 
-`addr` [out] La dirección del punto de entrada nativo más representativo del método.
+`addr`\
+[out] La dirección del punto de entrada nativo más representativo del método.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -53,5 +54,5 @@ El método proporcionado forma parte de la [ `IXCLRDataMethodInstance` interfaz]
 
 ## <a name="see-also"></a>Vea también
 
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfaz IXCLRDataMethodInstance](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [Depuración](index.md)
+- [Interfaz IXCLRDataMethodInstance](ixclrdatamethodinstance-interface.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 047ccd4ea4ba83c8d7427559f3ee76cc3547a430
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 1bb5def111aad850a5f74afaba352394ac2587e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747536"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377409"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Tutorial: Hospedar un Control de Win32 en WPF
 Windows Presentation Foundation (WPF) proporciona un entorno rico para crear aplicaciones. Sin embargo, cuando tiene una inversión sustancial en código Win32, puede ser más efectivo reutilizar al menos parte de ese código en la aplicación de WPF en lugar de volver a escribir por completo. WPF proporciona un mecanismo sencillo para hospedar una ventana de Win32 en una página WPF.  
@@ -23,7 +23,7 @@ Windows Presentation Foundation (WPF) proporciona un entorno rico para crear apl
   
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Requisitos  
- En este tema se da por supuesto un conocimiento básico de programación de WPF y Win32. Para obtener una introducción básica a la programación de WPF, vea [Introducción](../../../../docs/framework/wpf/getting-started/index.md). Para obtener una introducción a la programación de Win32, debe hacer referencia a cualquiera de los numerosos libros sobre el tema, en particular *Programming Windows* por Charles Petzold.  
+ En este tema se da por supuesto un conocimiento básico de programación de WPF y Win32. Para obtener una introducción básica a la programación de WPF, vea [Introducción](../getting-started/index.md). Para obtener una introducción a la programación de Win32, debe hacer referencia a cualquiera de los numerosos libros sobre el tema, en particular *Programming Windows* por Charles Petzold.  
   
  Dado que el ejemplo que acompaña a este tema se implementa en C#, hace uso de servicios de invocación de plataforma (PInvoke) para tener acceso a la API de Win32. Cierta familiaridad con PInvoke es útil, pero no esencial.  
   
@@ -64,19 +64,19 @@ Windows Presentation Foundation (WPF) proporciona un entorno rico para crear apl
   
  El código para implementar este diseño es bastante sencillo. El elemento raíz es un <xref:System.Windows.Controls.DockPanel> que tiene dos elementos secundarios. El primero es un <xref:System.Windows.Controls.Border> elemento que hospeda el ListBox Control. Ocupa un cuadrado de 200x200 en la esquina superior derecha de la página. El segundo es un <xref:System.Windows.Controls.StackPanel> elemento que contiene un conjunto de controles WPF que muestran información y permiten manipular el ListBox Control mediante el establecimiento de propiedades de interoperación expuestas. Para cada uno de los elementos que son elementos secundarios de la <xref:System.Windows.Controls.StackPanel>, consulte el material de referencia para los distintos elementos utilizados para obtener más información sobre estos elementos son y lo que hacen, estos se muestran en el ejemplo de código siguiente, pero no se explican aquí (básica modelo de interoperación no requiere ninguna de ellas, se proporcionan para agregar cierta interactividad al ejemplo).  
   
- [!code-xaml[WPFHostingWin32Control#WPFUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
+ [!code-xaml[WPFHostingWin32Control#WPFUI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   
 <a name="host_class"></a>   
 ## <a name="implement-a-class-to-host-the-microsoft-win32-control"></a>Implementar una clase para hospedar el control de Microsoft Win32  
  El núcleo de este ejemplo es la clase que realmente hospeda el control, ControlHost.cs. Hereda de <xref:System.Windows.Interop.HwndHost>. El constructor toma dos parámetros, alto y ancho, que se corresponde con el alto y ancho de la <xref:System.Windows.Controls.Border> elemento que hospeda el control ListBox. Estos valores se usan más adelante para asegurarse de que el tamaño del control coincide con el <xref:System.Windows.Controls.Border> elemento.  
   
- [!code-csharp[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostclass)]
- [!code-vb[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostclass)]  
+ [!code-csharp[WPFHostingWin32Control#ControlHostClass](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostclass)]
+ [!code-vb[WPFHostingWin32Control#ControlHostClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostclass)]  
   
  Hay también un conjunto de constantes. Estas constantes suelen tomarse de Winuser.h y permiten usar nombres convencionales al llamar a funciones de Win32.  
   
- [!code-csharp[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostconstants)]
- [!code-vb[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostconstants)]  
+ [!code-csharp[WPFHostingWin32Control#ControlHostConstants](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostconstants)]
+ [!code-vb[WPFHostingWin32Control#ControlHostConstants](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostconstants)]  
   
 <a name="buildwindowcore"></a>   
 ### <a name="override-buildwindowcore-to-create-the-microsoft-win32-window"></a>Invalidar BuildWindowCore para crear la ventana de Microsoft Win32  
@@ -90,26 +90,26 @@ Windows Presentation Foundation (WPF) proporciona un entorno rico para crear apl
   
  El HWND del control se expone a través de una propiedad de solo lectura, de modo que la página host pueda usarla para enviar mensajes al control.  
   
- [!code-csharp[WPFHostingWin32Control#IntPtrProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#intptrproperty)]
- [!code-vb[WPFHostingWin32Control#IntPtrProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#intptrproperty)]  
+ [!code-csharp[WPFHostingWin32Control#IntPtrProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#intptrproperty)]
+ [!code-vb[WPFHostingWin32Control#IntPtrProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#intptrproperty)]  
   
  El control ListBox se crea como un elemento secundario de la ventana host. El alto y el ancho de ambas ventanas se establecen en los valores pasados al constructor, como se ha descrito anteriormente. Esto garantiza que el tamaño de la ventana host y del control sea idéntico al área reservada en la página.  Una vez creadas las ventanas, el ejemplo devuelve un <xref:System.Runtime.InteropServices.HandleRef> objeto que contiene el HWND de la ventana host.  
   
- [!code-csharp[WPFHostingWin32Control#BuildWindowCore](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcore)]
- [!code-vb[WPFHostingWin32Control#BuildWindowCore](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcore)]  
+ [!code-csharp[WPFHostingWin32Control#BuildWindowCore](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcore)]
+ [!code-vb[WPFHostingWin32Control#BuildWindowCore](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcore)]  
   
- [!code-csharp[WPFHostingWin32Control#BuildWindowCoreHelper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcorehelper)]
- [!code-vb[WPFHostingWin32Control#BuildWindowCoreHelper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcorehelper)]  
+ [!code-csharp[WPFHostingWin32Control#BuildWindowCoreHelper](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcorehelper)]
+ [!code-vb[WPFHostingWin32Control#BuildWindowCoreHelper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcorehelper)]  
   
 <a name="destroywindow_wndproc"></a>   
 ### <a name="implement-destroywindow-and-wndproc"></a>Implementar DestroyWindow y WndProc  
  Además <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>, también debe invalidar el <xref:System.Windows.Interop.HwndHost.WndProc%2A> y <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> métodos de la <xref:System.Windows.Interop.HwndHost>. En este ejemplo, los mensajes para el control se controlan mediante el <xref:System.Windows.Interop.HwndHost.MessageHook> controlador, de modo que la implementación de <xref:System.Windows.Interop.HwndHost.WndProc%2A> y <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> es mínimo. En el caso de <xref:System.Windows.Interop.HwndHost.WndProc%2A>, establezca `handled` a `false` para indicar que no se ha controlado el mensaje y devolver 0. Para <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>, simplemente destruya la ventana.  
   
- [!code-csharp[WPFHostingWin32Control#WndProcDestroy](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroy)]
- [!code-vb[WPFHostingWin32Control#WndProcDestroy](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroy)]  
+ [!code-csharp[WPFHostingWin32Control#WndProcDestroy](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroy)]
+ [!code-vb[WPFHostingWin32Control#WndProcDestroy](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroy)]  
   
- [!code-csharp[WPFHostingWin32Control#WndProcDestroyHelper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroyhelper)]
- [!code-vb[WPFHostingWin32Control#WndProcDestroyHelper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroyhelper)]  
+ [!code-csharp[WPFHostingWin32Control#WndProcDestroyHelper](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroyhelper)]
+ [!code-vb[WPFHostingWin32Control#WndProcDestroyHelper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroyhelper)]  
   
 <a name="host_the_control"></a>   
 ## <a name="host-the-control-on-the-page"></a>Hospedar el control en la página  
@@ -120,11 +120,11 @@ Windows Presentation Foundation (WPF) proporciona un entorno rico para crear apl
 > [!NOTE]
 >  Observe que hay dos declaraciones de PInvoke para SendMessage. Esto es necesario porque una usa la `wParam` parámetro para pasar una cadena y la otra lo usa para pasar un entero. Necesita una declaración distinta para cada firma para asegurarse de que los datos se serializan correctamente.  
   
- [!code-csharp[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#hostwindowclass)]
- [!code-vb[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#hostwindowclass)]  
+ [!code-csharp[WPFHostingWin32Control#HostWindowClass](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#hostwindowclass)]
+ [!code-vb[WPFHostingWin32Control#HostWindowClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#hostwindowclass)]  
   
- [!code-csharp[WPFHostingWin32Control#ControlMsgFilterSendMessage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#controlmsgfiltersendmessage)]
- [!code-vb[WPFHostingWin32Control#ControlMsgFilterSendMessage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#controlmsgfiltersendmessage)]  
+ [!code-csharp[WPFHostingWin32Control#ControlMsgFilterSendMessage](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#controlmsgfiltersendmessage)]
+ [!code-vb[WPFHostingWin32Control#ControlMsgFilterSendMessage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#controlmsgfiltersendmessage)]  
   
 <a name="communication"></a>   
 ## <a name="implement-communication-between-the-control-and-the-page"></a>Implementar la comunicación entre el control y la página  
@@ -142,18 +142,18 @@ Windows Presentation Foundation (WPF) proporciona un entorno rico para crear apl
   
  Para anexar elementos, enviar el cuadro de lista un [ `LB_ADDSTRING` mensaje](/windows/desktop/Controls/lb-addstring). Para eliminar elementos, enviar [ `LB_GETCURSEL` ](/windows/desktop/Controls/lb-getcursel) para obtener el índice de la selección actual y, a continuación, [ `LB_DELETESTRING` ](/windows/desktop/Controls/lb-deletestring) para eliminar el elemento. El ejemplo también envía [ `LB_GETCOUNT` ](/windows/desktop/Controls/lb-getcount)y usa el valor devuelto para actualizar la pantalla que muestra el número de elementos. Ambas instancias de [ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage) utilizar una de las declaraciones de PInvoke descritas en la sección anterior.  
   
- [!code-csharp[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
- [!code-vb[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
+ [!code-csharp[WPFHostingWin32Control#AppendDeleteText](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
+ [!code-vb[WPFHostingWin32Control#AppendDeleteText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
   
  Cuando el usuario selecciona un elemento o cambia su selección, el control notifica a la ventana host mediante el envío de un [ `WM_COMMAND` mensaje](/windows/desktop/menurc/wm-command), que provoca el <xref:System.Windows.Interop.HwndHost.MessageHook> eventos de la página. El controlador recibe la misma información que el procedimiento de ventana principal de la ventana host. También pasa una referencia a un valor booleano, `handled`. Establece `handled` a `true` para indicar que ha controlado el mensaje y no es necesario ningún procesamiento adicional.  
   
  [`WM_COMMAND`](/windows/desktop/menurc/wm-command) se envía por una serie de motivos, por lo que debe examinar el identificador de notificación para determinar si se trata de un evento que desea controlar. El identificador se encuentra en la palabra alta de la `wParam` parámetro. El ejemplo usa los operadores bit a bit para extraer el identificador. Si el usuario ha realizado o cambiado su selección, el identificador será [ `LBN_SELCHANGE` ](/windows/desktop/Controls/lbn-selchange).  
   
- Cuando [ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx) es recibe, el ejemplo obtiene el índice del elemento seleccionado mediante el envío del control una [ `LB_GETCURSEL` mensaje](/windows/desktop/Controls/lb-getcursel). Para obtener el texto, cree primero un <xref:System.Text.StringBuilder>. A continuación, que se envíe al control un [ `LB_GETTEXT` mensaje](/windows/desktop/Controls/lb-gettext). Pase el vacío <xref:System.Text.StringBuilder> objeto como el `wParam` parámetro. Cuando [ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage) que devuelve el <xref:System.Text.StringBuilder> contendrá el texto del elemento seleccionado. Este uso de [ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage) requiere otra declaración PInvoke.  
+ Cuando [ `LBN_SELCHANGE` ](/windows/desktop/Controls/lbn-selchange) es recibe, el ejemplo obtiene el índice del elemento seleccionado mediante el envío del control una [ `LB_GETCURSEL` mensaje](/windows/desktop/Controls/lb-getcursel). Para obtener el texto, cree primero un <xref:System.Text.StringBuilder>. A continuación, que se envíe al control un [ `LB_GETTEXT` mensaje](/windows/desktop/Controls/lb-gettext). Pase el vacío <xref:System.Text.StringBuilder> objeto como el `wParam` parámetro. Cuando [ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage) que devuelve el <xref:System.Text.StringBuilder> contendrá el texto del elemento seleccionado. Este uso de [ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage) requiere otra declaración PInvoke.  
   
  Por último, establezca `handled` a `true` para indicar que se ha controlado el mensaje.  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Interop.HwndHost>
-- [Interoperabilidad de WPF y Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [Tutorial: Mi primera aplicación de escritorio WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Interoperabilidad de WPF y Win32](wpf-and-win32-interoperation.md)
+- [Tutorial: Mi primera aplicación de escritorio WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

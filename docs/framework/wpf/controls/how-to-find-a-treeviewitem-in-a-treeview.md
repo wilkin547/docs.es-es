@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TreeView control [WPF], finding a TreeViewItem
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
-ms.openlocfilehash: bce4f059e76b0ebea29b023eba2e9e2f59813035
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c90db5312d58cfba18910f299386e2884fb36ce6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636032"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360242"
 ---
-# <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Procedimiento Buscar un TreeViewItem en un TreeView
+# <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Filtrar Buscar un TreeViewItem en un TreeView
 El <xref:System.Windows.Controls.TreeView> control proporciona una manera cómoda de mostrar datos jerárquicos. Si su <xref:System.Windows.Controls.TreeView> está enlazado a un origen de datos, el <xref:System.Windows.Controls.TreeView.SelectedItem%2A> propiedad proporciona una manera cómoda para que pueda recuperar rápidamente el objeto de datos seleccionado. Normalmente es mejor trabajar con el objeto de datos subyacente, pero a veces es posible que deba manipular mediante programación los datos que contiene <xref:System.Windows.Controls.TreeViewItem>. Por ejemplo, es posible que deba expandir mediante programación el <xref:System.Windows.Controls.TreeViewItem>, o seleccione un elemento diferente en el <xref:System.Windows.Controls.TreeView>.  
   
  Para buscar un <xref:System.Windows.Controls.TreeViewItem> que contiene un objeto de datos específico, deberá recorrer cada nivel de la <xref:System.Windows.Controls.TreeView>. Los elementos de un <xref:System.Windows.Controls.TreeView> también se pueden virtualizar para mejorar el rendimiento. En el caso donde es posible que se puede virtualizar elementos, también debe tener en cuenta un <xref:System.Windows.Controls.TreeViewItem> para comprobar si contiene el objeto de datos.  
@@ -29,17 +29,17 @@ El <xref:System.Windows.Controls.TreeView> control proporciona una manera cómod
 >  El ejemplo siguiente funciona para cualquier <xref:System.Windows.Controls.TreeView>, independientemente del modelo de datos subyacente y las búsquedas de cada <xref:System.Windows.Controls.TreeViewItem> hasta que se encuentra el objeto. Otra técnica que tiene un mejor rendimiento consiste en Buscar en el modelo de datos para el objeto especificado, realizar un seguimiento de su ubicación dentro de la jerarquía de datos y, a continuación, busque el correspondiente <xref:System.Windows.Controls.TreeViewItem> en el <xref:System.Windows.Controls.TreeView>. Sin embargo, la técnica que tiene un mejor rendimiento requiere un conocimiento del modelo de datos y no se puede generalizar para cualquier <xref:System.Windows.Controls.TreeView>.  
   
 ## <a name="code"></a>Código  
- [!code-csharp[TreeViewFindTVI#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#1)]
- [!code-vb[TreeViewFindTVI#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#1)]  
+ [!code-csharp[TreeViewFindTVI#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#1)]
+ [!code-vb[TreeViewFindTVI#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#1)]  
   
  El código anterior se basa en un personalizado <xref:System.Windows.Controls.VirtualizingStackPanel> que expone un método denominado `BringIntoView`. El código siguiente define personalizado <xref:System.Windows.Controls.VirtualizingStackPanel>.  
   
- [!code-csharp[TreeViewFindTVI#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#2)]
- [!code-vb[TreeViewFindTVI#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#2)]  
+ [!code-csharp[TreeViewFindTVI#2](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#2)]
+ [!code-vb[TreeViewFindTVI#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#2)]  
   
  El XAML siguiente muestra cómo crear un <xref:System.Windows.Controls.TreeView> que usa personalizado <xref:System.Windows.Controls.VirtualizingStackPanel>.  
   
- [!code-xaml[TreeViewFindTVI#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
+ [!code-xaml[TreeViewFindTVI#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   
 ## <a name="see-also"></a>Vea también
-- [Mejorar el rendimiento de un control TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)
+- [Mejorar el rendimiento de un control TreeView](how-to-improve-the-performance-of-a-treeview.md)

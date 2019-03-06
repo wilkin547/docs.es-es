@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Agregar datos personalizados a datos de entrada manuscrita'
+title: Filtrar Agregar datos personalizados a datos de entrada manuscrita
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ink data [WPF], adding custom data
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
-ms.openlocfilehash: 40d883f3d3e1d504c8757c31325aa72a03da37e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c524e30943a21426e2e5e8fe6ae009999924fead
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544516"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361673"
 ---
-# <a name="how-to-add-custom-data-to-ink-data"></a>Cómo: Agregar datos personalizados a datos de entrada manuscrita
-Puede agregar datos personalizados a tinta que se guardará cuando la tinta se guarda como formato serializado de tinta (ISF).  Puede guardar los datos personalizados a la <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, o <xref:System.Windows.Ink.Stroke>.  Posibilidad de guardar los datos personalizados en tres objetos permite decidir el mejor lugar para guardar los datos.  Las tres clases usan métodos similares para almacenar y tener acceso a datos personalizados.  
+# <a name="how-to-add-custom-data-to-ink-data"></a>Procedimiento Agregar datos personalizados a datos de entrada manuscrita
+Puede agregar datos personalizados a la entrada de lápiz que se guardarán cuando se guarda la entrada de lápiz como formato serializado de tinta (ISF).  Puede guardar los datos personalizados a la <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, o el <xref:System.Windows.Ink.Stroke>.  Posibilidad de guardar los datos personalizados en los tres objetos le permite decidir el mejor lugar para guardar los datos.  Las tres clases usan métodos similares para almacenar y acceder a los datos personalizados.  
   
  Solo los tipos siguientes se pueden guardar como datos personalizados:  
   
@@ -74,10 +74,10 @@ Puede agregar datos personalizados a tinta que se guardará cuando la tinta se g
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo agregar y recuperar los datos personalizados de un <xref:System.Windows.Ink.StrokeCollection>.  
   
- [!code-csharp[HowToAddCustomDataToInk#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml.cs#1)]  
+ [!code-csharp[HowToAddCustomDataToInk#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml.cs#1)]  
   
- En el ejemplo siguiente se crea una aplicación que muestra un <xref:System.Windows.Controls.InkCanvas> y dos botones.  El botón, `switchAuthor`, permite que dos lápices que va a usar dos autores diferentes.  El botón `changePenColors` cambia el color de cada trazo en el <xref:System.Windows.Controls.InkCanvas> según el autor.  La aplicación define dos <xref:System.Windows.Ink.DrawingAttributes> objetos y agrega una propiedad personalizada a cada uno de ellos que indica qué autor dibujó el <xref:System.Windows.Ink.Stroke>.  Cuando el usuario hace clic en `changePenColors`, la aplicación cambia el aspecto del trazo según el valor de la propiedad personalizada.  
+ En el ejemplo siguiente se crea una aplicación que muestra un <xref:System.Windows.Controls.InkCanvas> y dos botones.  El botón, `switchAuthor`, permite que dos lápices que va a utilizar dos autores diferentes.  El botón `changePenColors` cambia el color de cada trazo en el <xref:System.Windows.Controls.InkCanvas> según el autor.  La aplicación define dos <xref:System.Windows.Ink.DrawingAttributes> objetos y agrega una propiedad personalizada a cada uno de ellos que indica que el autor ha dibujado el <xref:System.Windows.Ink.Stroke>.  Cuando el usuario hace clic en `changePenColors`, la aplicación cambia la apariencia del trazo según el valor de la propiedad personalizada.  
   
- [!code-xaml[HowToAddCustomDataToInk#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml#2)]  
+ [!code-xaml[HowToAddCustomDataToInk#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml#2)]  
   
- [!code-csharp[HowToAddCustomDataToInk#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml.cs#3)]
+ [!code-csharp[HowToAddCustomDataToInk#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml.cs#3)]

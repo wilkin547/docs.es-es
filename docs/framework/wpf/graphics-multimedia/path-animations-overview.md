@@ -8,21 +8,21 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: 610ef2721bef18e1cb1e87500a9dc9cf2729c867
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8e628e11debadb88c365ac95d355f1ee641bdbc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614261"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367861"
 ---
 # <a name="path-animations-overview"></a>Información general sobre animaciones en trazados
 <a name="introduction"></a> En este tema se presentan las animaciones de trazado, que permiten usar un trazado geométrico para generar valores de salida. Las animaciones de trazado son útiles para mover y girar objetos a lo largo de trazados complejos.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
- Para entender este tema, debe estar familiarizado con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las características de animaciones. Para obtener una introducción a las características de animación, vea el [información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Para entender este tema, debe estar familiarizado con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las características de animaciones. Para obtener una introducción a las características de animación, vea el [información general sobre animaciones](animation-overview.md).  
   
- Debido a que usa un <xref:System.Windows.Media.PathGeometry> objeto para definir una animación de trazado, también debe estar familiarizado con <xref:System.Windows.Media.PathGeometry> y los diferentes tipos de <xref:System.Windows.Media.PathSegment> objetos. Para obtener más información, consulte el [información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Debido a que usa un <xref:System.Windows.Media.PathGeometry> objeto para definir una animación de trazado, también debe estar familiarizado con <xref:System.Windows.Media.PathGeometry> y los diferentes tipos de <xref:System.Windows.Media.PathSegment> objetos. Para obtener más información, consulte el [información general sobre geometría](geometry-overview.md).  
   
 <a name="what_is_a_path_animation"></a>   
 ## <a name="what-is-a-path-animation"></a>¿Qué es una animación de trazado?  
@@ -30,14 +30,14 @@ ms.locfileid: "54614261"
   
  Las animaciones de trazado son muy útiles para animar un objeto a lo largo de un trazado complejo. Una manera de mover un objeto a lo largo de una ruta de acceso consiste en usar un <xref:System.Windows.Media.MatrixTransform> y un <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> para transformar un objeto a lo largo de un trazado complejo. En el ejemplo siguiente se muestra esta técnica mediante el uso de la <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> objeto que se va a animar el <xref:System.Windows.Media.MatrixTransform.Matrix%2A> propiedad de un <xref:System.Windows.Media.MatrixTransform>. El <xref:System.Windows.Media.MatrixTransform> se aplica a un botón y hace que se mueva a lo largo de un trazado curvo. Dado que el <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> propiedad está establecida en `true`, el rectángulo gira a lo largo de la tangente de la ruta de acceso.  
   
- [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathdoesrotatewithtangentexample.xaml#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
+ [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathdoesrotatewithtangentexample.xaml#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
- [!code-csharp[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/MatrixAnimationUsingPathDoesRotateWithTangentExample.cs#matrixanimationusingpathdoesrotatewithtangentwholepage)]
- [!code-vb[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/MatrixAnimationUsingPathDoesRotateWithTangentExample.vb#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
+ [!code-csharp[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/MatrixAnimationUsingPathDoesRotateWithTangentExample.cs#matrixanimationusingpathdoesrotatewithtangentwholepage)]
+ [!code-vb[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/MatrixAnimationUsingPathDoesRotateWithTangentExample.vb#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
- Para obtener más información sobre la sintaxis de ruta de acceso que se usa en el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ejemplo, consulte el [sintaxis de marcado de trazados](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) información general. Para obtener un ejemplo completo, vea [ejemplo de animación de trazado](https://go.microsoft.com/fwlink/?LinkID=160028).  
+ Para obtener más información sobre la sintaxis de ruta de acceso que se usa en el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ejemplo, consulte el [sintaxis de marcado de trazados](path-markup-syntax.md) información general. Para obtener un ejemplo completo, vea [ejemplo de animación de trazado](https://go.microsoft.com/fwlink/?LinkID=160028).  
   
- Puede aplicar una animación de trazado a una propiedad utilizando un <xref:System.Windows.Media.Animation.Storyboard> en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y el código o mediante el <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método en el código. También puede usar una animación de trazado para crear un <xref:System.Windows.Media.Animation.AnimationClock> y aplicarla a una o varias propiedades. Para obtener más información sobre los distintos métodos para aplicar animaciones, vea [técnicas de animación de información general sobre propiedades](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
+ Puede aplicar una animación de trazado a una propiedad utilizando un <xref:System.Windows.Media.Animation.Storyboard> en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y el código o mediante el <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método en el código. También puede usar una animación de trazado para crear un <xref:System.Windows.Media.Animation.AnimationClock> y aplicarla a una o varias propiedades. Para obtener más información sobre los distintos métodos para aplicar animaciones, vea [técnicas de animación de información general sobre propiedades](property-animation-techniques-overview.md).  
   
 <a name="animation_types"></a>   
 ## <a name="path-animation-types"></a>Tipos de animación de trazado  
@@ -53,9 +53,9 @@ ms.locfileid: "54614261"
   
 |Tipo de propiedad|Clase de animación de trazado correspondiente|Ejemplo|  
 |-------------------|----------------------------------------|-------------|  
-|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[Animación de un objeto a lo largo de un trazado (animación doble)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)|  
-|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[Animación de un objeto a lo largo de un trazado (animación de matriz)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)|  
-|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[Animación de un objeto a lo largo de un trazado (animación en punto)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)|  
+|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[Animación de un objeto a lo largo de un trazado (animación doble)](how-to-animate-an-object-along-a-path-double-animation.md)|  
+|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[Animación de un objeto a lo largo de un trazado (animación de matriz)](how-to-animate-an-object-along-a-path-matrix-animation.md)|  
+|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[Animación de un objeto a lo largo de un trazado (animación en punto)](how-to-animate-an-object-along-a-path-point-animation.md)|  
   
  Un <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> genera <xref:System.Windows.Media.Matrix> los valores de sus <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.PathGeometry%2A>. Cuando se usa con un <xref:System.Windows.Media.MatrixTransform>, un <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> puede mover un objeto a lo largo de una ruta de acceso. Si establece la <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> propiedad de la <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> a `true`, también gira el objeto a lo largo de las curvas de la ruta de acceso.  
   
@@ -83,15 +83,15 @@ ms.locfileid: "54614261"
   
  Los segmentos en una <xref:System.Windows.Media.PathFigure> se combinan en una sola forma geométrica, que usa el punto final de un segmento como el punto inicial del segmento siguiente. El <xref:System.Windows.Media.PathFigure.StartPoint%2A> propiedad de un <xref:System.Windows.Media.PathFigure> especifica el punto desde el que se dibuja el primer segmento. Cada segmento posterior comienza en el punto final del segmento anterior. Por ejemplo, una línea vertical desde `10,50` a `10,150` pueden definirse mediante el establecimiento la <xref:System.Windows.Media.PathFigure.StartPoint%2A> propiedad `10,50` y la creación de un <xref:System.Windows.Media.LineSegment> con un <xref:System.Windows.Media.LineSegment.Point%2A> configuración de la propiedad de `10,150`.  
   
- Para obtener más información acerca de <xref:System.Windows.Media.PathGeometry> objetos, vea el [información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Para obtener más información acerca de <xref:System.Windows.Media.PathGeometry> objetos, vea el [información general sobre geometría](geometry-overview.md).  
   
- En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], también puede usar una sintaxis abreviada especial para establecer el <xref:System.Windows.Media.PathGeometry.Figures%2A> propiedad de un <xref:System.Windows.Media.PathGeometry>. Para obtener más información, consulte [sintaxis de marcado de trazados](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) información general.  
+ En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], también puede usar una sintaxis abreviada especial para establecer el <xref:System.Windows.Media.PathGeometry.Figures%2A> propiedad de un <xref:System.Windows.Media.PathGeometry>. Para obtener más información, consulte [sintaxis de marcado de trazados](path-markup-syntax.md) información general.  
   
- Para obtener más información sobre la sintaxis de ruta de acceso que se usa en el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ejemplo, consulte el [sintaxis de marcado de trazados](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) información general.  
+ Para obtener más información sobre la sintaxis de ruta de acceso que se usa en el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ejemplo, consulte el [sintaxis de marcado de trazados](path-markup-syntax.md) información general.  
   
 ## <a name="see-also"></a>Vea también
 - [Ejemplo de animación de trazado](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [Sintaxis de marcado de trazados](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)
-- [Temas de procedimientos de animación de trazado](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
-- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Información general sobre técnicas de animación de propiedades](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Sintaxis de marcado de trazados](path-markup-syntax.md)
+- [Temas de procedimientos de animación de trazado](path-animation-how-to-topics.md)
+- [Información general sobre animaciones](animation-overview.md)
+- [Información general sobre técnicas de animación de propiedades](property-animation-techniques-overview.md)

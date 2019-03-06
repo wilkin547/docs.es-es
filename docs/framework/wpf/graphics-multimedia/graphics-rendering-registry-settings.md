@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 020570c66401661f55b82a0c7111b4ac53f9c884
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b02a5ef1fb28e83ecdfc257dd81d9a890b77121
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556160"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375355"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configuración del Registro en la representación de gráficos
 En este tema se ofrece información general sobre la configuración del Registro en la representación de gráficos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que afecta a las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -50,7 +50,7 @@ En este tema se ofrece información general sobre la configuración del Registro
   
  La **opción de deshabilitación de aceleración de hardware** le permite desactivar la aceleración de hardware a efectos de depuración y prueba. Cuando vea artefactos de representación en una aplicación, intente desactivar la aceleración de hardware. Si el artefacto desaparece, podría ser el problema con el controlador de vídeo.  
   
- La **opción de deshabilitación de aceleración de hardware** es un valor DWORD que se establece en 0 o 1. Un valor de 1 deshabilita la aceleración de hardware. Un valor de 0 habilita la aceleración de hardware, siempre que el sistema cumpla los requisitos de aceleración de hardware. Para más información, consulte [Niveles de representación de gráficos](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ La **opción de deshabilitación de aceleración de hardware** es un valor DWORD que se establece en 0 o 1. Un valor de 1 deshabilita la aceleración de hardware. Un valor de 0 habilita la aceleración de hardware, siempre que el sistema cumpla los requisitos de aceleración de hardware. Para más información, consulte [Niveles de representación de gráficos](../advanced/graphics-rendering-tiers.md).  
   
 <a name="maxmultisample"></a>   
 ## <a name="maximum-multisample-value"></a>Valor máximo de muestreo múltiple  
@@ -98,5 +98,5 @@ En este tema se ofrece información general sobre la configuración del Registro
  La **opción de uso del rasterizador de referencia** adopta un valor DWORD. Un valor de 0 indica que no se usa el rasterizador de referencia. Cualquier otro valor distinto de cero fuerza a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a usar el rasterizador de referencia.  
   
 ## <a name="see-also"></a>Vea también
-- [Niveles de representación de gráficos](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)
-- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Niveles de representación de gráficos](../advanced/graphics-rendering-tiers.md)
+- [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md)

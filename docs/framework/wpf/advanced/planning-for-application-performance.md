@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-ms.openlocfilehash: 3fadba2fe8036fc558e18f80bd7cb1ffc977b762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fda5330ff75c1744f3ed9d4394e51b5efb737071
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632119"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374432"
 ---
 # <a name="planning-for-application-performance"></a>Planear para mejorar el rendimiento de aplicaciones
 El éxito de alcanzar sus objetivos de rendimiento depende del grado de desarrollar la estrategia de rendimiento. El planeamiento es la primera fase de desarrollo de cualquier producto. En este tema se describe unas reglas muy sencillas para desarrollar una estrategia de buen rendimiento.  
@@ -33,12 +33,12 @@ El éxito de alcanzar sus objetivos de rendimiento depende del grado de desarrol
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] los controles son intrínsecamente extensibles por lo que permite la personalización generalizada de su aspecto, sin modificar su comportamiento de control. Aprovechando las ventajas de estilos, plantillas de datos y plantillas de control, puede crear y gradualmente una personalizables [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] que se adapta a sus requisitos de rendimiento.  
   
 ## <a name="see-also"></a>Vea también
-- [Optimizar WPF: Rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Aprovechar el hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Presentación y diseño](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Imágenes y gráficos 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamiento de objetos](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Recursos de la aplicación](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Enlace de datos](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Otras recomendaciones de rendimiento](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Optimizar WPF: Rendimiento de aplicaciones](optimizing-wpf-application-performance.md)
+- [Aprovechar el hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Presentación y diseño](optimizing-performance-layout-and-design.md)
+- [Imágenes y gráficos 2D](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamiento de objetos](optimizing-performance-object-behavior.md)
+- [Recursos de la aplicación](optimizing-performance-application-resources.md)
+- [Texto](optimizing-performance-text.md)
+- [Enlace de datos](optimizing-performance-data-binding.md)
+- [Otras recomendaciones de rendimiento](optimizing-performance-other-recommendations.md)

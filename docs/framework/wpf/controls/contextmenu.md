@@ -8,23 +8,23 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550129"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354640"
 ---
 # <a name="contextmenu"></a>ContextMenu
-El <xref:System.Windows.Controls.ContextMenu> permite un control para mostrar un <xref:System.Windows.Controls.Menu> que es específico para el contexto del control. Normalmente, el <xref:System.Windows.Controls.ContextMenu> se expone en el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mediante el botón secundario del mouse o mediante el botón de menú del teclado.  
+El <xref:System.Windows.Controls.ContextMenu> permite un control mostrar un <xref:System.Windows.Controls.Menu> que es específico para el contexto del control. Normalmente, el <xref:System.Windows.Controls.ContextMenu> se expone en el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mediante el botón secundario del mouse o a través del botón de menú del teclado.  
   
- La ilustración siguiente muestra un <xref:System.Windows.Controls.ContextMenu> en dos estados diferentes: el estado predeterminado y el estado abierto. En el estado de forma predeterminada, el control se contrae. Cuando se presiona el botón secundario del mouse sobre el elemento primario del menú, el control se expande y muestra los elementos de menú.  
+ La ilustración siguiente muestra un <xref:System.Windows.Controls.ContextMenu> en dos estados diferentes: el estado predeterminado y el estado abierto. En el estado de forma predeterminada, el control está contraído. Cuando se presiona el botón secundario del mouse sobre el elemento primario del menú, el control se expande y muestra los elementos de menú.  
   
- ![Estados de ContextMenu](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
+ ![Estados de ContextMenu](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
 ContextMenu en diferentes Estados  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [Información general sobre ContextMenu](contextmenu-overview.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.ContextMenu>  

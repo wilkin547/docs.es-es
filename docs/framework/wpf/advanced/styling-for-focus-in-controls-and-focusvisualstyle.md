@@ -6,12 +6,12 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: e1cbab51d1c59cb8402617fa3a17c5d18ff7ccb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 762abf9524b8dfc7903d5e33bdbe99f4d0eb7192
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562601"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377052"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Aplicar estilo a los controles al recibir el foco y FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona dos mecanismos paralelos para cambiar el aspecto visual de un control cuando recibe el foco de teclado. El primer mecanismo consiste en usar establecedores de propiedad para propiedades como <xref:System.Windows.UIElement.IsKeyboardFocused%2A> dentro del estilo o plantilla que se aplica al control. El segundo mecanismo consiste en proporcionar un estilo independiente como el valor de la <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propiedad; el "estilo visual de foco" crea un árbol visual independiente para un adorno que dibuja encima del control, en lugar de cambiar el árbol visual del control u otras interfaces de usuario elemento reemplazándola. En este tema se describen los escenarios en los que es apropiado cada uno de estos mecanismos.  
@@ -25,7 +25,7 @@ ms.locfileid: "54562601"
   
 <a name="Default"></a>   
 ## <a name="default-focus-visual-style-behavior"></a>Comportamiento predeterminado del estilo visual de foco  
- Los estilos visuales de foco solo actúan cuando la acción de foco se inicia desde el teclado. Los cambios de foco provocados por acciones del mouse o mediante programación deshabilitan el modo de estilos visuales de foco. Para más información sobre las distinciones entre los modos de foco, vea [Información general sobre el foco](../../../../docs/framework/wpf/advanced/focus-overview.md).  
+ Los estilos visuales de foco solo actúan cuando la acción de foco se inicia desde el teclado. Los cambios de foco provocados por acciones del mouse o mediante programación deshabilitan el modo de estilos visuales de foco. Para más información sobre las distinciones entre los modos de foco, vea [Información general sobre el foco](focus-overview.md).  
   
  Los temas para los controles incluyen un comportamiento de estilo visual de foco predeterminado que pasa a ser el estilo visual de foco para todos los controles del tema. Este estilo de tema se identifica mediante el valor de la clave estática <xref:System.Windows.SystemParameters.FocusVisualStyleKey%2A>. Al declarar su propio estilo visual de foco en el nivel de aplicación, se reemplaza este comportamiento de estilo predeterminado de los temas. Como alternativa, si define el tema completo, entonces deberá usar esta misma clave para definir el estilo correspondiente al comportamiento predeterminado para todo el tema.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "54562601"
 ## <a name="alternatives-to-using-a-focus-visual-style"></a>Alternativas al uso de un estilo visual de foco  
  En aquellas situaciones en que no sea apropiado usar un estilo visual de foco, ya sea porque el estilo se aplica a controles individuales o porque se quiere un mayor control sobre la plantilla de control, existen muchas otras propiedades y técnicas accesibles capaces de crear comportamiento visual en respuesta a los cambios de foco.  
   
- Los desencadenadores, establecedores y establecedores de eventos se describen con detalle en [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md). El control de eventos enrutados se describe en [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Los desencadenadores, establecedores y establecedores de eventos se describen con detalle en [Aplicar estilos y plantillas](../controls/styling-and-templating.md). El control de eventos enrutados se describe en [Información general sobre eventos enrutados](routed-events-overview.md).  
   
 ### <a name="iskeyboardfocused"></a>IsKeyboardFocused  
  Si está interesado en concreto en el foco de teclado, el <xref:System.Windows.UIElement.IsKeyboardFocused%2A> propiedad de dependencia puede utilizarse para una propiedad <xref:System.Windows.Trigger>. Un desencadenador de propiedad de un estilo o plantilla constituye una técnica más adecuada para definir el comportamiento de foco de teclado más específico para un único control y que no coincida visualmente con el comportamiento de foco de teclado de los demás controles.  
@@ -78,6 +78,6 @@ ms.locfileid: "54562601"
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
-- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Información general sobre el foco](../../../../docs/framework/wpf/advanced/focus-overview.md)
-- [Información general sobre acciones del usuario](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Aplicar estilos y plantillas](../controls/styling-and-templating.md)
+- [Información general sobre el foco](focus-overview.md)
+- [Información general sobre acciones del usuario](input-overview.md)

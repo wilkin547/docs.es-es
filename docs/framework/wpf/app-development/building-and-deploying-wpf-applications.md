@@ -8,33 +8,33 @@ helpviewer_keywords:
 - deploying applications [WPF]
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
-ms.openlocfilehash: 874a184939f95f155ddaee053c33fe66c4db15d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547146"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368056"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>Compilar e implementar aplicaciones WPF
-El modelo de compilación e implementación proporciona la capacidad de crear e implementar aplicaciones de forma local y remota, incluidas las siguientes:  
+El modelo de compilación e implementación proporciona la capacidad de crear e implementar aplicaciones locales y remotos, incluidos los siguientes:  
   
--   : El tipo .NET de compilación de MSBuild sistema que se encuentra en el espacio de nombres Microsoft.Build.Tasks.Windows.  
+-   MSBuild: .NET de compilación del sistema que se encuentra en el espacio de nombres Microsoft.Build.Tasks.Windows.  
   
--   Recursos: trabajar con los recursos de la interfaz de usuario.  
+-   Recursos: trabajar con recursos de la interfaz de usuario.  
   
 -   Implementación de ClickOnce: la publicación e implementación sistema .NET.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Compilar una aplicación de WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [Implementar una aplicación WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
+ [Compilar una aplicación de WPF](building-a-wpf-application-wpf.md)  
+ [Implementar una aplicación WPF](deploying-a-wpf-application-wpf.md)  
+ [Temas "Cómo..."](build-and-deploy-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  MSBuild  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Información general sobre la administración de aplicaciones](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [Windows en aplicaciones para WPF](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [Información general sobre navegación](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [Información general sobre las aplicaciones de explorador XAML de WPF](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
-  [Hospedar aplicaciones de WPF](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)
+ [Información general sobre la administración de aplicaciones](application-management-overview.md)  
+  [Windows en aplicaciones para WPF](windows-in-wpf-applications.md)  
+  [Información general sobre navegación](navigation-overview.md)  
+  [Información general sobre las aplicaciones de explorador XAML de WPF](wpf-xaml-browser-applications-overview.md)  
+  [Hospedar aplicaciones de WPF](hosting-wpf-applications.md)
