@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: b4a97c97-7f88-4a89-b1d1-cf2c0d087955
-ms.openlocfilehash: aefae32182a7bc808ac72f053c233305da32032e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2eb77d478292a5301c0782b860e46edd92ce8478
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543807"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356954"
 ---
-# <a name="fonts-how-to-topics"></a><span data-ttu-id="2ca91-102">Temas "Cómo..." sobre fuentes</span><span class="sxs-lookup"><span data-stu-id="2ca91-102">Fonts How-to Topics</span></span>
-<span data-ttu-id="2ca91-103">Los temas de esta sección muestran cómo usar las características de fuente incluidas con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2ca91-103">The topics in this section demonstrate how to use the font features included with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="fonts-how-to-topics"></a><span data-ttu-id="59bdc-102">Temas "Cómo..." sobre fuentes</span><span class="sxs-lookup"><span data-stu-id="59bdc-102">Fonts How-to Topics</span></span>
+<span data-ttu-id="59bdc-103">Los temas de esta sección muestran cómo usar las características de fuente incluidas con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59bdc-103">The topics in this section demonstrate how to use the font features included with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2ca91-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="2ca91-104">In This Section</span></span>  
- [<span data-ttu-id="2ca91-105">Enumerar fuentes del sistema</span><span class="sxs-lookup"><span data-stu-id="2ca91-105">Enumerate System Fonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-enumerate-system-fonts.md)  
- [<span data-ttu-id="2ca91-106">Utilizar la clase FontSizeConverter</span><span class="sxs-lookup"><span data-stu-id="2ca91-106">Use the FontSizeConverter Class</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-the-fontsizeconverter-class.md)  
+## <a name="in-this-section"></a><span data-ttu-id="59bdc-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="59bdc-104">In This Section</span></span>  
+ [<span data-ttu-id="59bdc-105">Enumerar fuentes del sistema</span><span class="sxs-lookup"><span data-stu-id="59bdc-105">Enumerate System Fonts</span></span>](how-to-enumerate-system-fonts.md)  
+ [<span data-ttu-id="59bdc-106">Utilizar la clase FontSizeConverter</span><span class="sxs-lookup"><span data-stu-id="59bdc-106">Use the FontSizeConverter Class</span></span>](how-to-use-the-fontsizeconverter-class.md)  
   
-## <a name="see-also"></a><span data-ttu-id="2ca91-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="2ca91-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="59bdc-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="59bdc-107">See also</span></span>
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [<span data-ttu-id="2ca91-108">Documentos en WPF</span><span class="sxs-lookup"><span data-stu-id="2ca91-108">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [<span data-ttu-id="2ca91-109">Tipografía en WPF</span><span class="sxs-lookup"><span data-stu-id="2ca91-109">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [<span data-ttu-id="59bdc-108">Documentos en WPF</span><span class="sxs-lookup"><span data-stu-id="59bdc-108">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="59bdc-109">Tipografía en WPF</span><span class="sxs-lookup"><span data-stu-id="59bdc-109">Typography in WPF</span></span>](typography-in-wpf.md)
