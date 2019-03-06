@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Filtrar datos en una vista
+title: Filtrar Filtrar datos en una vista
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,47 +9,47 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: 33af517c086f8f89cc06a1de7a2979c5b1624109
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51f95834556153448d416157460cf63da0d409e1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689330"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373951"
 ---
-# <a name="how-to-filter-data-in-a-view"></a><span data-ttu-id="becfe-102">Procedimiento Filtrar datos en una vista</span><span class="sxs-lookup"><span data-stu-id="becfe-102">How to: Filter Data in a View</span></span>
-<span data-ttu-id="becfe-103">En este ejemplo se muestra cómo filtrar datos en una vista.</span><span class="sxs-lookup"><span data-stu-id="becfe-103">This example shows how to filter data in a view.</span></span>  
+# <a name="how-to-filter-data-in-a-view"></a><span data-ttu-id="3ec1e-102">Procedimiento Filtrar datos en una vista</span><span class="sxs-lookup"><span data-stu-id="3ec1e-102">How to: Filter Data in a View</span></span>
+<span data-ttu-id="3ec1e-103">En este ejemplo se muestra cómo filtrar datos en una vista.</span><span class="sxs-lookup"><span data-stu-id="3ec1e-103">This example shows how to filter data in a view.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="becfe-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="becfe-104">Example</span></span>  
- <span data-ttu-id="becfe-105">Para crear un filtro, defina un método que proporciona la lógica de filtrado.</span><span class="sxs-lookup"><span data-stu-id="becfe-105">To create a filter, define a method that provides the filtering logic.</span></span> <span data-ttu-id="becfe-106">El método se utiliza como una devolución de llamada y acepta un parámetro de tipo `object`.</span><span class="sxs-lookup"><span data-stu-id="becfe-106">The method is used as a callback and accepts a parameter of type `object`.</span></span> <span data-ttu-id="becfe-107">El método siguiente devuelve todos los `Order` los objetos que tienen el `filled` propiedad establecida en "No", filtrando el resto de los objetos.</span><span class="sxs-lookup"><span data-stu-id="becfe-107">The following method returns all the `Order` objects with the `filled` property set to "No", filtering out the rest of the objects.</span></span>  
+## <a name="example"></a><span data-ttu-id="3ec1e-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3ec1e-104">Example</span></span>  
+ <span data-ttu-id="3ec1e-105">Para crear un filtro, defina un método que proporciona la lógica de filtrado.</span><span class="sxs-lookup"><span data-stu-id="3ec1e-105">To create a filter, define a method that provides the filtering logic.</span></span> <span data-ttu-id="3ec1e-106">El método se utiliza como una devolución de llamada y acepta un parámetro de tipo `object`.</span><span class="sxs-lookup"><span data-stu-id="3ec1e-106">The method is used as a callback and accepts a parameter of type `object`.</span></span> <span data-ttu-id="3ec1e-107">El método siguiente devuelve todos los `Order` los objetos que tienen el `filled` propiedad establecida en "No", filtrando el resto de los objetos.</span><span class="sxs-lookup"><span data-stu-id="3ec1e-107">The following method returns all the `Order` objects with the `filled` property set to "No", filtering out the rest of the objects.</span></span>  
   
- [!code-csharp[SortFilter#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#2)]
- [!code-vb[SortFilter#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#2)]  
+ [!code-csharp[SortFilter#2](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#2)]
+ [!code-vb[SortFilter#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#2)]  
   
- <span data-ttu-id="becfe-108">A continuación, puede aplicar el filtro, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="becfe-108">You can then apply the filter, as shown in the following example.</span></span> <span data-ttu-id="becfe-109">En este ejemplo, `myCollectionView` es un <xref:System.Windows.Data.ListCollectionView> objeto.</span><span class="sxs-lookup"><span data-stu-id="becfe-109">In this example, `myCollectionView` is a <xref:System.Windows.Data.ListCollectionView> object.</span></span>  
+ <span data-ttu-id="3ec1e-108">A continuación, puede aplicar el filtro, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="3ec1e-108">You can then apply the filter, as shown in the following example.</span></span> <span data-ttu-id="3ec1e-109">En este ejemplo, `myCollectionView` es un <xref:System.Windows.Data.ListCollectionView> objeto.</span><span class="sxs-lookup"><span data-stu-id="3ec1e-109">In this example, `myCollectionView` is a <xref:System.Windows.Data.ListCollectionView> object.</span></span>  
   
- [!code-csharp[SortFilter#Filter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#filter)]
- [!code-vb[SortFilter#Filter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#filter)]  
+ [!code-csharp[SortFilter#Filter](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#filter)]
+ [!code-vb[SortFilter#Filter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#filter)]  
   
- <span data-ttu-id="becfe-110">Para deshacer el filtrado, puede establecer el <xref:System.Windows.Data.CollectionView.Filter%2A> propiedad `null`:</span><span class="sxs-lookup"><span data-stu-id="becfe-110">To undo filtering, you can set the <xref:System.Windows.Data.CollectionView.Filter%2A> property to `null`:</span></span>  
+ <span data-ttu-id="3ec1e-110">Para deshacer el filtrado, puede establecer el <xref:System.Windows.Data.CollectionView.Filter%2A> propiedad `null`:</span><span class="sxs-lookup"><span data-stu-id="3ec1e-110">To undo filtering, you can set the <xref:System.Windows.Data.CollectionView.Filter%2A> property to `null`:</span></span>  
   
- [!code-csharp[SortFilter#Unfilter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#unfilter)]
- [!code-vb[SortFilter#Unfilter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#unfilter)]  
+ [!code-csharp[SortFilter#Unfilter](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#unfilter)]
+ [!code-vb[SortFilter#Unfilter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#unfilter)]  
   
- <span data-ttu-id="becfe-111">Para obtener información acerca de cómo crear u obtener una vista, consulte [obtener la vista predeterminada de una colección de datos](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md).</span><span class="sxs-lookup"><span data-stu-id="becfe-111">For information about how to create or obtain a view, see [Get the Default View of a Data Collection](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md).</span></span> <span data-ttu-id="becfe-112">Para obtener un ejemplo completo, vea [ordenar y filtrar elementos en un ejemplo de vista](https://go.microsoft.com/fwlink/?LinkID=160040).</span><span class="sxs-lookup"><span data-stu-id="becfe-112">For the complete example, see [Sorting and Filtering Items in a View Sample](https://go.microsoft.com/fwlink/?LinkID=160040).</span></span>  
+ <span data-ttu-id="3ec1e-111">Para obtener información acerca de cómo crear u obtener una vista, consulte [obtener la vista predeterminada de una colección de datos](how-to-get-the-default-view-of-a-data-collection.md).</span><span class="sxs-lookup"><span data-stu-id="3ec1e-111">For information about how to create or obtain a view, see [Get the Default View of a Data Collection](how-to-get-the-default-view-of-a-data-collection.md).</span></span> <span data-ttu-id="3ec1e-112">Para obtener un ejemplo completo, vea [ordenar y filtrar elementos en un ejemplo de vista](https://go.microsoft.com/fwlink/?LinkID=160040).</span><span class="sxs-lookup"><span data-stu-id="3ec1e-112">For the complete example, see [Sorting and Filtering Items in a View Sample](https://go.microsoft.com/fwlink/?LinkID=160040).</span></span>  
   
- <span data-ttu-id="becfe-113">Si el objeto de vista procede de un <xref:System.Windows.Data.CollectionViewSource> objeto, aplicar lógica de filtrado mediante el establecimiento de un controlador de eventos para el <xref:System.Windows.Data.CollectionViewSource.Filter> eventos.</span><span class="sxs-lookup"><span data-stu-id="becfe-113">If your view object comes from a <xref:System.Windows.Data.CollectionViewSource> object, you apply filtering logic by setting an event handler for the <xref:System.Windows.Data.CollectionViewSource.Filter> event.</span></span> <span data-ttu-id="becfe-114">En el ejemplo siguiente, `listingDataView` es una instancia de <xref:System.Windows.Data.CollectionViewSource>.</span><span class="sxs-lookup"><span data-stu-id="becfe-114">In the following example, `listingDataView` is an instance of <xref:System.Windows.Data.CollectionViewSource>.</span></span>  
+ <span data-ttu-id="3ec1e-113">Si el objeto de vista procede de un <xref:System.Windows.Data.CollectionViewSource> objeto, aplicar lógica de filtrado mediante el establecimiento de un controlador de eventos para el <xref:System.Windows.Data.CollectionViewSource.Filter> eventos.</span><span class="sxs-lookup"><span data-stu-id="3ec1e-113">If your view object comes from a <xref:System.Windows.Data.CollectionViewSource> object, you apply filtering logic by setting an event handler for the <xref:System.Windows.Data.CollectionViewSource.Filter> event.</span></span> <span data-ttu-id="3ec1e-114">En el ejemplo siguiente, `listingDataView` es una instancia de <xref:System.Windows.Data.CollectionViewSource>.</span><span class="sxs-lookup"><span data-stu-id="3ec1e-114">In the following example, `listingDataView` is an instance of <xref:System.Windows.Data.CollectionViewSource>.</span></span>  
   
- [!code-csharp[DataBindingLab#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
- [!code-vb[DataBindingLab#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
+ [!code-csharp[DataBindingLab#10](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
+ [!code-vb[DataBindingLab#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
   
- <span data-ttu-id="becfe-115">La siguiente muestra la implementación del ejemplo `ShowOnlyBargainsFilter` controlador de eventos de filtro.</span><span class="sxs-lookup"><span data-stu-id="becfe-115">The following shows the implementation of the example `ShowOnlyBargainsFilter` filter event handler.</span></span> <span data-ttu-id="becfe-116">Este controlador de eventos usa el <xref:System.Windows.Data.FilterEventArgs.Accepted%2A> propiedad para filtrar `AuctionItem` objetos que tienen un `CurrentPrice` de $25 o mayor.</span><span class="sxs-lookup"><span data-stu-id="becfe-116">This event handler uses the <xref:System.Windows.Data.FilterEventArgs.Accepted%2A> property to filter out `AuctionItem` objects that have a `CurrentPrice` of $25 or greater.</span></span>  
+ <span data-ttu-id="3ec1e-115">La siguiente muestra la implementación del ejemplo `ShowOnlyBargainsFilter` controlador de eventos de filtro.</span><span class="sxs-lookup"><span data-stu-id="3ec1e-115">The following shows the implementation of the example `ShowOnlyBargainsFilter` filter event handler.</span></span> <span data-ttu-id="3ec1e-116">Este controlador de eventos usa el <xref:System.Windows.Data.FilterEventArgs.Accepted%2A> propiedad para filtrar `AuctionItem` objetos que tienen un `CurrentPrice` de $25 o mayor.</span><span class="sxs-lookup"><span data-stu-id="3ec1e-116">This event handler uses the <xref:System.Windows.Data.FilterEventArgs.Accepted%2A> property to filter out `AuctionItem` objects that have a `CurrentPrice` of $25 or greater.</span></span>  
   
- [!code-csharp[DataBindingLab#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
- [!code-vb[DataBindingLab#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
+ [!code-csharp[DataBindingLab#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
+ [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
-## <a name="see-also"></a><span data-ttu-id="becfe-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="becfe-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3ec1e-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="3ec1e-117">See also</span></span>
 - <xref:System.Windows.Data.CollectionView.CanFilter%2A>
 - <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>
-- [<span data-ttu-id="becfe-118">Información general sobre el enlace de datos</span><span class="sxs-lookup"><span data-stu-id="becfe-118">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [<span data-ttu-id="becfe-119">Ordenar datos en una vista</span><span class="sxs-lookup"><span data-stu-id="becfe-119">Sort Data in a View</span></span>](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)
-- [<span data-ttu-id="becfe-120">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="becfe-120">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [<span data-ttu-id="3ec1e-118">Información general sobre el enlace de datos</span><span class="sxs-lookup"><span data-stu-id="3ec1e-118">Data Binding Overview</span></span>](data-binding-overview.md)
+- [<span data-ttu-id="3ec1e-119">Ordenar datos en una vista</span><span class="sxs-lookup"><span data-stu-id="3ec1e-119">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)
+- [<span data-ttu-id="3ec1e-120">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="3ec1e-120">How-to Topics</span></span>](data-binding-how-to-topics.md)
