@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: 5ddb23a6-7813-4058-b59d-29ff3341638c
-ms.openlocfilehash: 0793e1b500449b2da0442e306aba9deb8e719a60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57473d0a22bc7441e4c32506f57f402bab963c2d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536112"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355758"
 ---
-# <a name="digital-ink-overviews"></a><span data-ttu-id="09197-102">Introducción a las entradas manuscritas digitales</span><span class="sxs-lookup"><span data-stu-id="09197-102">Digital Ink Overviews</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="09197-103">En esta sección</span><span class="sxs-lookup"><span data-stu-id="09197-103">In This Section</span></span>  
- [<span data-ttu-id="09197-104">Introducción a las entradas de lápiz</span><span class="sxs-lookup"><span data-stu-id="09197-104">Getting Started with Ink</span></span>](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)  
-  [<span data-ttu-id="09197-105">Recopilación de entradas de lápiz</span><span class="sxs-lookup"><span data-stu-id="09197-105">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
-  [<span data-ttu-id="09197-106">Reconocimiento de escritura a mano</span><span class="sxs-lookup"><span data-stu-id="09197-106">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
-  [<span data-ttu-id="09197-107">Almacenamiento de entradas de lápiz</span><span class="sxs-lookup"><span data-stu-id="09197-107">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)  
-  [<span data-ttu-id="09197-108">Modelo de objetos de entrada de lápiz: COM y formularios Windows Forms frente a WPF</span><span class="sxs-lookup"><span data-stu-id="09197-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](../../../../docs/framework/wpf/advanced/the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
-  [<span data-ttu-id="09197-109">Control avanzado de entrada manuscrita</span><span class="sxs-lookup"><span data-stu-id="09197-109">Advanced Ink Handling</span></span>](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+# <a name="digital-ink-overviews"></a><span data-ttu-id="4ef38-102">Introducción a las entradas manuscritas digitales</span><span class="sxs-lookup"><span data-stu-id="4ef38-102">Digital Ink Overviews</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="4ef38-103">En esta sección</span><span class="sxs-lookup"><span data-stu-id="4ef38-103">In This Section</span></span>  
+ [<span data-ttu-id="4ef38-104">Introducción a las entradas de lápiz</span><span class="sxs-lookup"><span data-stu-id="4ef38-104">Getting Started with Ink</span></span>](getting-started-with-ink.md)  
+  [<span data-ttu-id="4ef38-105">Recopilación de entradas de lápiz</span><span class="sxs-lookup"><span data-stu-id="4ef38-105">Collecting Ink</span></span>](collecting-ink.md)  
+  [<span data-ttu-id="4ef38-106">Reconocimiento de escritura a mano</span><span class="sxs-lookup"><span data-stu-id="4ef38-106">Handwriting Recognition</span></span>](handwriting-recognition.md)  
+  [<span data-ttu-id="4ef38-107">Almacenamiento de entradas de lápiz</span><span class="sxs-lookup"><span data-stu-id="4ef38-107">Storing Ink</span></span>](storing-ink.md)  
+  [<span data-ttu-id="4ef38-108">El modelo de objetos de entrada de lápiz: COM frente a WPF y Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4ef38-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
+  [<span data-ttu-id="4ef38-109">Control avanzado de entrada manuscrita</span><span class="sxs-lookup"><span data-stu-id="4ef38-109">Advanced Ink Handling</span></span>](advanced-ink-handling.md)

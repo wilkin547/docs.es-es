@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Establecer el foco en un control TextBox
+title: Filtrar Establecer el foco en un control TextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,29 +8,29 @@ helpviewer_keywords:
 - focus [WPF], setting
 - TextBox control [WPF], setting focus
 ms.assetid: 24b61b45-dc2d-425e-9839-b017af7ab86f
-ms.openlocfilehash: 1ab7fa5f5ce895d163e3db3dd020fee3f29b7153
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c3b9881ada843d65db035835fc5f4c865a177e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590713"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368485"
 ---
-# <a name="how-to-set-focus-in-a-textbox-control"></a><span data-ttu-id="ddefc-102">Procedimiento Establecer el foco en un control TextBox</span><span class="sxs-lookup"><span data-stu-id="ddefc-102">How to: Set Focus in a TextBox Control</span></span>
-<span data-ttu-id="ddefc-103">En este ejemplo se muestra cómo usar el <xref:System.Windows.UIElement.Focus%2A> método para establecer el foco en un <xref:System.Windows.Controls.TextBox> control.</span><span class="sxs-lookup"><span data-stu-id="ddefc-103">This example shows how to use the <xref:System.Windows.UIElement.Focus%2A> method to set focus on a <xref:System.Windows.Controls.TextBox> control.</span></span>  
+# <a name="how-to-set-focus-in-a-textbox-control"></a><span data-ttu-id="7a35d-102">Filtrar Establecer el foco en un control TextBox</span><span class="sxs-lookup"><span data-stu-id="7a35d-102">How to: Set Focus in a TextBox Control</span></span>
+<span data-ttu-id="7a35d-103">En este ejemplo se muestra cómo usar el <xref:System.Windows.UIElement.Focus%2A> método para establecer el foco en un <xref:System.Windows.Controls.TextBox> control.</span><span class="sxs-lookup"><span data-stu-id="7a35d-103">This example shows how to use the <xref:System.Windows.UIElement.Focus%2A> method to set focus on a <xref:System.Windows.Controls.TextBox> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ddefc-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ddefc-104">Example</span></span>  
- <span data-ttu-id="ddefc-105">La siguiente [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] en el ejemplo se describe una sencilla <xref:System.Windows.Controls.TextBox> control denominado *tbFocusMe*</span><span class="sxs-lookup"><span data-stu-id="ddefc-105">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] example describes a simple <xref:System.Windows.Controls.TextBox> control named *tbFocusMe*</span></span>  
+## <a name="example"></a><span data-ttu-id="7a35d-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7a35d-104">Example</span></span>  
+ <span data-ttu-id="7a35d-105">La siguiente [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] en el ejemplo se describe una sencilla <xref:System.Windows.Controls.TextBox> control denominado *tbFocusMe*</span><span class="sxs-lookup"><span data-stu-id="7a35d-105">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] example describes a simple <xref:System.Windows.Controls.TextBox> control named *tbFocusMe*</span></span>  
   
- [!code-xaml[TextBox_MiscCode#_TextBoxFocusXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxfocusxaml)]  
+ [!code-xaml[TextBox_MiscCode#_TextBoxFocusXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxfocusxaml)]  
   
-## <a name="example"></a><span data-ttu-id="ddefc-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ddefc-106">Example</span></span>  
- <span data-ttu-id="ddefc-107">El ejemplo siguiente se llama el <xref:System.Windows.UIElement.Focus%2A> método para establecer el foco en el <xref:System.Windows.Controls.TextBox> control con el nombre *tbFocusMe*.</span><span class="sxs-lookup"><span data-stu-id="ddefc-107">The following example calls the <xref:System.Windows.UIElement.Focus%2A> method to set the focus on the <xref:System.Windows.Controls.TextBox> control with the Name *tbFocusMe*.</span></span>  
+## <a name="example"></a><span data-ttu-id="7a35d-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7a35d-106">Example</span></span>  
+ <span data-ttu-id="7a35d-107">El ejemplo siguiente se llama el <xref:System.Windows.UIElement.Focus%2A> método para establecer el foco en el <xref:System.Windows.Controls.TextBox> control con el nombre *tbFocusMe*.</span><span class="sxs-lookup"><span data-stu-id="7a35d-107">The following example calls the <xref:System.Windows.UIElement.Focus%2A> method to set the focus on the <xref:System.Windows.Controls.TextBox> control with the Name *tbFocusMe*.</span></span>  
   
- [!code-csharp[TextBox_MiscCode#_FocusTextBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_focustextbox)]
- [!code-vb[TextBox_MiscCode#_FocusTextBox](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_focustextbox)]  
+ [!code-csharp[TextBox_MiscCode#_FocusTextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_focustextbox)]
+ [!code-vb[TextBox_MiscCode#_FocusTextBox](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_focustextbox)]  
   
-## <a name="see-also"></a><span data-ttu-id="ddefc-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="ddefc-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7a35d-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="7a35d-108">See also</span></span>
 - <xref:System.Windows.UIElement.Focusable%2A>
 - <xref:System.Windows.UIElement.IsFocused%2A>
-- [<span data-ttu-id="ddefc-109">Información general sobre TextBox</span><span class="sxs-lookup"><span data-stu-id="ddefc-109">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)
-- <span data-ttu-id="ddefc-110">[RichTextBox Overview](../../../../docs/framework/wpf/controls/richtextbox-overview.md) (Introducción a RichTextBox)</span><span class="sxs-lookup"><span data-stu-id="ddefc-110">[RichTextBox Overview](../../../../docs/framework/wpf/controls/richtextbox-overview.md)</span></span>
+- [<span data-ttu-id="7a35d-109">Información general sobre TextBox</span><span class="sxs-lookup"><span data-stu-id="7a35d-109">TextBox Overview</span></span>](textbox-overview.md)
+- <span data-ttu-id="7a35d-110">[RichTextBox Overview](richtextbox-overview.md) (Introducción a RichTextBox)</span><span class="sxs-lookup"><span data-stu-id="7a35d-110">[RichTextBox Overview](richtextbox-overview.md)</span></span>

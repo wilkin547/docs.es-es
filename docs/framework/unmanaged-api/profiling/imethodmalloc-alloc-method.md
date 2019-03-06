@@ -17,41 +17,45 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54c38f9a9abc9a02ba4d84c9a41b2ef6b1f7cb69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a676989bdc6866f85fabe3e15b1e6b7b8b5a9a9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528568"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351260"
 ---
-# <a name="imethodmallocalloc-method"></a><span data-ttu-id="2e88a-102">IMethodMalloc::Alloc (Método)</span><span class="sxs-lookup"><span data-stu-id="2e88a-102">IMethodMalloc::Alloc Method</span></span>
-<span data-ttu-id="2e88a-103">Intenta asignar una cantidad de memoria especificada para un nuevo cuerpo de función de lenguaje intermedio (MSIL) de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="2e88a-103">Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="2e88a-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2e88a-104">Syntax</span></span>  
-  
-```  
-PVOID Alloc (  
-    [in] ULONG   cb  
-);  
-```  
-  
-#### <a name="parameters"></a><span data-ttu-id="2e88a-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="2e88a-105">Parameters</span></span>  
- `cb`  
- <span data-ttu-id="2e88a-106">[in] El número de bytes que se asignan para el cuerpo del método.</span><span class="sxs-lookup"><span data-stu-id="2e88a-106">[in] The number of bytes to allocate for the method body.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="2e88a-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2e88a-107">Remarks</span></span>  
- <span data-ttu-id="2e88a-108">Se iniciará la memoria asignada en una dirección mayor que la dirección base del módulo que está asociado con este asignador.</span><span class="sxs-lookup"><span data-stu-id="2e88a-108">The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator.</span></span> <span data-ttu-id="2e88a-109">En otras palabras, cada asignador se crea para un módulo determinado y se intentará asignar memoria en un desplazamiento positivo desde su dirección base.</span><span class="sxs-lookup"><span data-stu-id="2e88a-109">In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address.</span></span> <span data-ttu-id="2e88a-110">Si `Alloc` no puede asignar el número solicitado de bytes en una dirección mayor que la dirección base del módulo, devuelve E_OUTOFMEMORY, independientemente de la cantidad de espacio de memoria disponible.</span><span class="sxs-lookup"><span data-stu-id="2e88a-110">If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.</span></span>  
-  
- <span data-ttu-id="2e88a-111">El `Alloc` método debe usarse junto con el [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="2e88a-111">The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="2e88a-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2e88a-112">Requirements</span></span>  
- <span data-ttu-id="2e88a-113">**Plataformas:** WindSee [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2e88a-113">**Platforms:** WindSee [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="2e88a-114">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2e88a-114">**Header:** CorProf.idl, CorProf.h</span></span>  
-  
- <span data-ttu-id="2e88a-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2e88a-115">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="2e88a-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e88a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="2e88a-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="2e88a-117">See also</span></span>
-- [<span data-ttu-id="2e88a-118">IMethodMalloc (interfaz)</span><span class="sxs-lookup"><span data-stu-id="2e88a-118">IMethodMalloc Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)
+# <a name="imethodmallocalloc-method"></a><span data-ttu-id="e25ce-102">IMethodMalloc::Alloc (Método)</span><span class="sxs-lookup"><span data-stu-id="e25ce-102">IMethodMalloc::Alloc Method</span></span>
+
+<span data-ttu-id="e25ce-103">Intenta asignar una cantidad de memoria especificada para un nuevo cuerpo de función de lenguaje intermedio (MSIL) de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="e25ce-103">Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="e25ce-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e25ce-104">Syntax</span></span>
+
+```cpp
+PVOID Alloc (
+    [in] ULONG   cb
+);
+```
+
+## <a name="parameters"></a><span data-ttu-id="e25ce-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="e25ce-105">Parameters</span></span>
+
+`cb`\
+<span data-ttu-id="e25ce-106">[in] El número de bytes que se asignan para el cuerpo del método.</span><span class="sxs-lookup"><span data-stu-id="e25ce-106">[in] The number of bytes to allocate for the method body.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="e25ce-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e25ce-107">Remarks</span></span>
+
+ <span data-ttu-id="e25ce-108">Se iniciará la memoria asignada en una dirección mayor que la dirección base del módulo que está asociado con este asignador.</span><span class="sxs-lookup"><span data-stu-id="e25ce-108">The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator.</span></span> <span data-ttu-id="e25ce-109">En otras palabras, cada asignador se crea para un módulo determinado y se intentará asignar memoria en un desplazamiento positivo desde su dirección base.</span><span class="sxs-lookup"><span data-stu-id="e25ce-109">In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address.</span></span> <span data-ttu-id="e25ce-110">Si `Alloc` no puede asignar el número solicitado de bytes en una dirección mayor que la dirección base del módulo, devuelve E_OUTOFMEMORY, independientemente de la cantidad de espacio de memoria disponible.</span><span class="sxs-lookup"><span data-stu-id="e25ce-110">If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.</span></span>
+
+ <span data-ttu-id="e25ce-111">El `Alloc` método debe usarse junto con el [SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="e25ce-111">The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) method.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="e25ce-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e25ce-112">Requirements</span></span>
+ <span data-ttu-id="e25ce-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e25ce-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+ <span data-ttu-id="e25ce-114">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e25ce-114">**Header:** CorProf.idl, CorProf.h</span></span>
+
+ <span data-ttu-id="e25ce-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e25ce-115">**Library:** CorGuids.lib</span></span>
+
+ <span data-ttu-id="e25ce-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e25ce-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="e25ce-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="e25ce-117">See also</span></span>
+
+- [<span data-ttu-id="e25ce-118">IMethodMalloc (interfaz)</span><span class="sxs-lookup"><span data-stu-id="e25ce-118">IMethodMalloc Interface</span></span>](imethodmalloc-interface.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Frame control [WPF]
 - content [WPF], Frame control
 ms.assetid: 1588f9bf-9001-4437-a8fc-cc57ef50561c
-ms.openlocfilehash: b65fa2b011e1be04b1e6a16b41566c4a07ad33ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f530fa04e25bfa18095fc3b2a182d3d624789f54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552050"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371910"
 ---
-# <a name="frame"></a><span data-ttu-id="e5a26-102">Fotograma</span><span class="sxs-lookup"><span data-stu-id="e5a26-102">Frame</span></span>
-<span data-ttu-id="e5a26-103">El <xref:System.Windows.Controls.Frame> control admite la navegación de contenido en el contenido.</span><span class="sxs-lookup"><span data-stu-id="e5a26-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="e5a26-104"><xref:System.Windows.Controls.Frame> se puede hospedar en un elemento raíz como <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, o como una isla dentro de un árbol de contenido que pertenece a un elemento raíz.</span><span class="sxs-lookup"><span data-stu-id="e5a26-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
+# <a name="frame"></a><span data-ttu-id="963d9-102">Fotograma</span><span class="sxs-lookup"><span data-stu-id="963d9-102">Frame</span></span>
+<span data-ttu-id="963d9-103">El <xref:System.Windows.Controls.Frame> control admite la navegación de contenido dentro del contenido.</span><span class="sxs-lookup"><span data-stu-id="963d9-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="963d9-104"><xref:System.Windows.Controls.Frame> puede hospedarse en un elemento raíz como <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, o como una isla dentro de un árbol de contenido que pertenece a un elemento raíz.</span><span class="sxs-lookup"><span data-stu-id="963d9-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="e5a26-105">Referencia</span><span class="sxs-lookup"><span data-stu-id="e5a26-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="963d9-105">Referencia</span><span class="sxs-lookup"><span data-stu-id="963d9-105">Reference</span></span>  
  <xref:System.Windows.Controls.Frame>  
   
-## <a name="related-sections"></a><span data-ttu-id="e5a26-106">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="e5a26-106">Related Sections</span></span>  
- [<span data-ttu-id="e5a26-107">Información general sobre navegación</span><span class="sxs-lookup"><span data-stu-id="e5a26-107">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="963d9-106">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="963d9-106">Related Sections</span></span>  
+ [<span data-ttu-id="963d9-107">Información general sobre navegación</span><span class="sxs-lookup"><span data-stu-id="963d9-107">Navigation Overview</span></span>](../app-development/navigation-overview.md)

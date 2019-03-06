@@ -7,22 +7,22 @@ helpviewer_keywords:
 - StackPanel control [WPF], how-to topics
 - controls [WPF], StackPanel
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
-ms.openlocfilehash: c70fba3cd07d6ec88160783c3e922e2f1bafe934
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555125"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351273"
 ---
-# <a name="stackpanel-how-to-topics"></a><span data-ttu-id="c571e-102">Temas "Cómo..." del elemento StackPanel</span><span class="sxs-lookup"><span data-stu-id="c571e-102">StackPanel How-to Topics</span></span>
-<span data-ttu-id="c571e-103">Los temas de esta sección describen cómo utilizar el <xref:System.Windows.Controls.StackPanel> elemento apilar contenido horizontal o verticalmente.</span><span class="sxs-lookup"><span data-stu-id="c571e-103">The topics in this section describe how to use the <xref:System.Windows.Controls.StackPanel> element to stack content horizontally or vertically.</span></span>  
+# <a name="stackpanel-how-to-topics"></a><span data-ttu-id="21c98-102">Temas "Cómo..." del elemento StackPanel</span><span class="sxs-lookup"><span data-stu-id="21c98-102">StackPanel How-to Topics</span></span>
+<span data-ttu-id="21c98-103">Los temas de esta sección describen cómo usar el <xref:System.Windows.Controls.StackPanel> elemento apilar contenido horizontal o verticalmente.</span><span class="sxs-lookup"><span data-stu-id="21c98-103">The topics in this section describe how to use the <xref:System.Windows.Controls.StackPanel> element to stack content horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c571e-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="c571e-104">In This Section</span></span>  
- [<span data-ttu-id="c571e-105">Elegir entre StackPanel y DockPanel</span><span class="sxs-lookup"><span data-stu-id="c571e-105">Choose Between StackPanel and DockPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
- [<span data-ttu-id="c571e-106">Crear un StackPanel</span><span class="sxs-lookup"><span data-stu-id="c571e-106">Create a StackPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
- [<span data-ttu-id="c571e-107">Alinear horizontal o verticalmente el contenido de un elemento StackPanel</span><span class="sxs-lookup"><span data-stu-id="c571e-107">Horizontally or Vertically Align Content in a StackPanel</span></span>](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+## <a name="in-this-section"></a><span data-ttu-id="21c98-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="21c98-104">In This Section</span></span>  
+ [<span data-ttu-id="21c98-105">Elegir entre StackPanel y DockPanel</span><span class="sxs-lookup"><span data-stu-id="21c98-105">Choose Between StackPanel and DockPanel</span></span>](how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [<span data-ttu-id="21c98-106">Crear un StackPanel</span><span class="sxs-lookup"><span data-stu-id="21c98-106">Create a StackPanel</span></span>](how-to-create-a-stackpanel.md)  
+ [<span data-ttu-id="21c98-107">Alinear horizontal o verticalmente el contenido de un elemento StackPanel</span><span class="sxs-lookup"><span data-stu-id="21c98-107">Horizontally or Vertically Align Content in a StackPanel</span></span>](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
-## <a name="reference"></a><span data-ttu-id="c571e-108">Referencia</span><span class="sxs-lookup"><span data-stu-id="c571e-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="21c98-108">Referencia</span><span class="sxs-lookup"><span data-stu-id="21c98-108">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -37,9 +37,9 @@ ms.locfileid: "33555125"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="c571e-109">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="c571e-109">Related Sections</span></span>  
- [<span data-ttu-id="c571e-110">Diseño</span><span class="sxs-lookup"><span data-stu-id="c571e-110">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="21c98-109">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="21c98-109">Related Sections</span></span>  
+ [<span data-ttu-id="21c98-110">Diseño</span><span class="sxs-lookup"><span data-stu-id="21c98-110">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="c571e-111">Tutorial: Mi primera aplicación de escritorio WPF</span><span class="sxs-lookup"><span data-stu-id="c571e-111">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="21c98-111">Tutorial: Mi primera aplicación de escritorio WPF</span><span class="sxs-lookup"><span data-stu-id="21c98-111">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="c571e-112">Información general sobre ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="c571e-112">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="21c98-112">Información general sobre ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="21c98-112">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

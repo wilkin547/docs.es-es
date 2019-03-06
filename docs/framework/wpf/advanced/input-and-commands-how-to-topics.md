@@ -7,30 +7,30 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: a5c266b6-969c-4049-a471-ddca7b10fb89
-ms.openlocfilehash: 2fb3472456e709c0f9f395789fd42ed38a3d2ed7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3cd3bd0861ef2e2896d33e52594b0712e984149
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544293"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352391"
 ---
-# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="c5806-102">Temas "Cómo..." sobre acciones del usuario y comandos</span><span class="sxs-lookup"><span data-stu-id="c5806-102">Input and Commands How-to Topics</span></span>
-<span data-ttu-id="c5806-103">Los temas de esta sección describen cómo utilizar la infraestructura de entrada y comandos de Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="c5806-103">The topics in this section describe how to use the input and commanding infrastructure in Windows Presentation Foundation (WPF).</span></span>  
+# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="2ec4d-102">Temas "Cómo..." sobre acciones del usuario y comandos</span><span class="sxs-lookup"><span data-stu-id="2ec4d-102">Input and Commands How-to Topics</span></span>
+<span data-ttu-id="2ec4d-103">Los temas de esta sección describen cómo usar la infraestructura de entrada y comandos en Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="2ec4d-103">The topics in this section describe how to use the input and commanding infrastructure in Windows Presentation Foundation (WPF).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c5806-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="c5806-104">In This Section</span></span>  
- [<span data-ttu-id="c5806-105">Habilitar un comando</span><span class="sxs-lookup"><span data-stu-id="c5806-105">Enable a Command</span></span>](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [<span data-ttu-id="c5806-106">Cambiar el tipo de cursor</span><span class="sxs-lookup"><span data-stu-id="c5806-106">Change the Cursor Type</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
- [<span data-ttu-id="c5806-107">Cambiar el color de un elemento mediante eventos de foco</span><span class="sxs-lookup"><span data-stu-id="c5806-107">Change the Color of an Element Using Focus Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
- [<span data-ttu-id="c5806-108">Aplicar un FocusVisualStyle a un control</span><span class="sxs-lookup"><span data-stu-id="c5806-108">Apply a FocusVisualStyle to a Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [<span data-ttu-id="c5806-109">Detectar cuándo se presiona la tecla ENTRAR</span><span class="sxs-lookup"><span data-stu-id="c5806-109">Detect When the Enter Key is Pressed</span></span>](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
- [<span data-ttu-id="c5806-110">Crear un efecto de activación mediante eventos</span><span class="sxs-lookup"><span data-stu-id="c5806-110">Create a Rollover Effect Using Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
- [<span data-ttu-id="c5806-111">Crear un objeto que siga el puntero del mouse</span><span class="sxs-lookup"><span data-stu-id="c5806-111">Make an Object Follow the Mouse Pointer</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
- [<span data-ttu-id="c5806-112">Crear un comando RoutedCommand</span><span class="sxs-lookup"><span data-stu-id="c5806-112">Create a RoutedCommand</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
- [<span data-ttu-id="c5806-113">Implement ICommandSource (ejemplo)</span><span class="sxs-lookup"><span data-stu-id="c5806-113">Implement ICommandSource</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [<span data-ttu-id="c5806-114">Enlazar un comando a un control sin la compatibilidad de comandos</span><span class="sxs-lookup"><span data-stu-id="c5806-114">Hook Up a Command to a Control with No Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [<span data-ttu-id="c5806-115">Enlazar un comando a un control con la compatibilidad de comandos</span><span class="sxs-lookup"><span data-stu-id="c5806-115">Hook Up a Command to a Control with Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2ec4d-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="2ec4d-104">In This Section</span></span>  
+ [<span data-ttu-id="2ec4d-105">Habilitar un comando</span><span class="sxs-lookup"><span data-stu-id="2ec4d-105">Enable a Command</span></span>](how-to-enable-a-command.md)  
+ [<span data-ttu-id="2ec4d-106">Cambiar el tipo de cursor</span><span class="sxs-lookup"><span data-stu-id="2ec4d-106">Change the Cursor Type</span></span>](how-to-change-the-cursor-type.md)  
+ [<span data-ttu-id="2ec4d-107">Cambiar el color de un elemento mediante eventos de foco</span><span class="sxs-lookup"><span data-stu-id="2ec4d-107">Change the Color of an Element Using Focus Events</span></span>](how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [<span data-ttu-id="2ec4d-108">Aplicar un FocusVisualStyle a un control</span><span class="sxs-lookup"><span data-stu-id="2ec4d-108">Apply a FocusVisualStyle to a Control</span></span>](how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [<span data-ttu-id="2ec4d-109">Detectar cuándo se presiona la tecla ENTRAR</span><span class="sxs-lookup"><span data-stu-id="2ec4d-109">Detect When the Enter Key is Pressed</span></span>](how-to-detect-when-the-enter-key-pressed.md)  
+ [<span data-ttu-id="2ec4d-110">Crear un efecto de activación mediante eventos</span><span class="sxs-lookup"><span data-stu-id="2ec4d-110">Create a Rollover Effect Using Events</span></span>](how-to-create-a-rollover-effect-using-events.md)  
+ [<span data-ttu-id="2ec4d-111">Crear un objeto que siga el puntero del mouse</span><span class="sxs-lookup"><span data-stu-id="2ec4d-111">Make an Object Follow the Mouse Pointer</span></span>](how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [<span data-ttu-id="2ec4d-112">Crear un comando RoutedCommand</span><span class="sxs-lookup"><span data-stu-id="2ec4d-112">Create a RoutedCommand</span></span>](how-to-create-a-routedcommand.md)  
+ [<span data-ttu-id="2ec4d-113">Implement ICommandSource (ejemplo)</span><span class="sxs-lookup"><span data-stu-id="2ec4d-113">Implement ICommandSource</span></span>](how-to-implement-icommandsource.md)  
+ [<span data-ttu-id="2ec4d-114">Enlazar un comando a un control sin la compatibilidad de comandos</span><span class="sxs-lookup"><span data-stu-id="2ec4d-114">Hook Up a Command to a Control with No Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [<span data-ttu-id="2ec4d-115">Enlazar un comando a un control con la compatibilidad de comandos</span><span class="sxs-lookup"><span data-stu-id="2ec4d-115">Hook Up a Command to a Control with Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
-## <a name="reference"></a><span data-ttu-id="c5806-116">Referencia</span><span class="sxs-lookup"><span data-stu-id="c5806-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2ec4d-116">Referencia</span><span class="sxs-lookup"><span data-stu-id="2ec4d-116">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -45,4 +45,4 @@ ms.locfileid: "33544293"
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="c5806-117">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="c5806-117">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="2ec4d-117">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="2ec4d-117">Related Sections</span></span>

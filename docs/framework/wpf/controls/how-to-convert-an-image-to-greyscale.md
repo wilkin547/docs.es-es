@@ -9,23 +9,23 @@ helpviewer_keywords:
 - converting [WPF], images to grayscale
 - grayscale [WPF], converting images to
 ms.assetid: 77935ff0-4500-4307-9710-96999dcf579f
-ms.openlocfilehash: 4e4e6f18c54f63493eb96f478a18c23bde433678
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fcc758007bf0a7e3f6c9a3597d628fae506fda4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649562"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357539"
 ---
-# <a name="how-to-convert-an-image-to-greyscale"></a><span data-ttu-id="58d57-102">Procedimiento Convertir una imagen en escala de grises</span><span class="sxs-lookup"><span data-stu-id="58d57-102">How to: Convert an Image to Greyscale</span></span>
-<span data-ttu-id="58d57-103">En este ejemplo se muestra cómo convertir una imagen en escala de grises utilizando <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span><span class="sxs-lookup"><span data-stu-id="58d57-103">This example shows how to convert an image to grayscale using <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span></span>  
+# <a name="how-to-convert-an-image-to-greyscale"></a><span data-ttu-id="2ae3f-102">Procedimiento Convertir una imagen en escala de grises</span><span class="sxs-lookup"><span data-stu-id="2ae3f-102">How to: Convert an Image to Greyscale</span></span>
+<span data-ttu-id="2ae3f-103">En este ejemplo se muestra cómo convertir una imagen en escala de grises utilizando <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span><span class="sxs-lookup"><span data-stu-id="2ae3f-103">This example shows how to convert an image to grayscale using <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="58d57-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="58d57-104">Example</span></span>  
- [!code-xaml[ImagingSnippetGallery_snip#FormatConvertedBitmapXamlExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_snip/CS/FormatConvertedBitmapExample.xaml#formatconvertedbitmapxamlexamplewholepage)]  
+## <a name="example"></a><span data-ttu-id="2ae3f-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2ae3f-104">Example</span></span>  
+ [!code-xaml[ImagingSnippetGallery_snip#FormatConvertedBitmapXamlExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_snip/CS/FormatConvertedBitmapExample.xaml#formatconvertedbitmapxamlexamplewholepage)]  
   
- [!code-csharp[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/FormatConvertedBitmapExample.cs#formatconvertedbitmapcodeexamplewholepage)]
- [!code-vb[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/FormatConvertedBitmapExample.vb#formatconvertedbitmapcodeexamplewholepage)]  
+ [!code-csharp[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/FormatConvertedBitmapExample.cs#formatconvertedbitmapcodeexamplewholepage)]
+ [!code-vb[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/FormatConvertedBitmapExample.vb#formatconvertedbitmapcodeexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="58d57-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="58d57-105">See also</span></span>
-- [<span data-ttu-id="58d57-106">Usar el elemento de imagen</span><span class="sxs-lookup"><span data-stu-id="58d57-106">Use the Image Element</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)
-- [<span data-ttu-id="58d57-107">Recortar una imagen</span><span class="sxs-lookup"><span data-stu-id="58d57-107">Crop an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)
-- [<span data-ttu-id="58d57-108">Girar una imagen</span><span class="sxs-lookup"><span data-stu-id="58d57-108">Rotate an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)
+## <a name="see-also"></a><span data-ttu-id="2ae3f-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="2ae3f-105">See also</span></span>
+- [<span data-ttu-id="2ae3f-106">Usar el elemento de imagen</span><span class="sxs-lookup"><span data-stu-id="2ae3f-106">Use the Image Element</span></span>](how-to-use-the-image-element.md)
+- [<span data-ttu-id="2ae3f-107">Recortar una imagen</span><span class="sxs-lookup"><span data-stu-id="2ae3f-107">Crop an Image</span></span>](how-to-crop-an-image.md)
+- [<span data-ttu-id="2ae3f-108">Girar una imagen</span><span class="sxs-lookup"><span data-stu-id="2ae3f-108">Rotate an Image</span></span>](how-to-rotate-an-image.md)
