@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], DockPanel
 - DockPanel control [WPF]
 ms.assetid: 8d3d290b-d38c-47d0-918e-cee2baeb92ae
-ms.openlocfilehash: dd50045b7f0da350a75157d8e17e6c41cade78c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92dc0d9982e8ef92f4aa99e2bdd694a8585237cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550818"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361881"
 ---
-# <a name="dockpanel"></a><span data-ttu-id="32ea4-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="32ea4-102">DockPanel</span></span>
-<span data-ttu-id="32ea4-103">El <xref:System.Windows.Controls.DockPanel> elemento se utiliza para colocar el contenido secundario a lo largo del borde de un contenedor de diseño.</span><span class="sxs-lookup"><span data-stu-id="32ea4-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
+# <a name="dockpanel"></a><span data-ttu-id="5ba8d-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="5ba8d-102">DockPanel</span></span>
+<span data-ttu-id="5ba8d-103">El <xref:System.Windows.Controls.DockPanel> elemento se usa para colocar el contenido secundario a lo largo del borde de un contenedor de diseño.</span><span class="sxs-lookup"><span data-stu-id="5ba8d-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="32ea4-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="32ea4-104">In This Section</span></span>  
- [<span data-ttu-id="32ea4-105">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="32ea4-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/dockpanel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5ba8d-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="5ba8d-104">In This Section</span></span>  
+ [<span data-ttu-id="5ba8d-105">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="5ba8d-105">How-to Topics</span></span>](dockpanel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="32ea4-106">Referencia</span><span class="sxs-lookup"><span data-stu-id="32ea4-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5ba8d-106">Referencia</span><span class="sxs-lookup"><span data-stu-id="5ba8d-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -35,9 +35,9 @@ ms.locfileid: "33550818"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="32ea4-107">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="32ea4-107">Related Sections</span></span>  
- [<span data-ttu-id="32ea4-108">Diseño</span><span class="sxs-lookup"><span data-stu-id="32ea4-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="5ba8d-107">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="5ba8d-107">Related Sections</span></span>  
+ [<span data-ttu-id="5ba8d-108">Diseño</span><span class="sxs-lookup"><span data-stu-id="5ba8d-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="32ea4-109">Tutorial: Mi primera aplicación de escritorio WPF</span><span class="sxs-lookup"><span data-stu-id="32ea4-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="5ba8d-109">Tutorial: Mi primera aplicación de escritorio WPF</span><span class="sxs-lookup"><span data-stu-id="5ba8d-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="32ea4-110">Información general sobre ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="32ea4-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="5ba8d-110">Información general sobre ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="5ba8d-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

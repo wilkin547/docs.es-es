@@ -7,26 +7,26 @@ helpviewer_keywords:
 - Grid control [WPF], how-to topics
 - controls [WPF], Grid
 ms.assetid: 90e07c2d-237f-47b4-a632-771570b77fd0
-ms.openlocfilehash: ec9ee608b939c10db295c7b6c37442ef6085f194
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9ef840d98a6c7aa5db841dd0ff860e2fb1d044a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550370"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377682"
 ---
-# <a name="grid-how-to-topics"></a><span data-ttu-id="67eef-102">Temas "Cómo..." de cuadrícula</span><span class="sxs-lookup"><span data-stu-id="67eef-102">Grid How-to Topics</span></span>
-<span data-ttu-id="67eef-103">Los temas de esta sección describen cómo colocar elementos mediante el <xref:System.Windows.Controls.Grid> elemento.</span><span class="sxs-lookup"><span data-stu-id="67eef-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
+# <a name="grid-how-to-topics"></a><span data-ttu-id="1a2a2-102">Temas "Cómo..." de cuadrícula</span><span class="sxs-lookup"><span data-stu-id="1a2a2-102">Grid How-to Topics</span></span>
+<span data-ttu-id="1a2a2-103">Los temas de esta sección describen cómo posicionar elementos mediante el <xref:System.Windows.Controls.Grid> elemento.</span><span class="sxs-lookup"><span data-stu-id="1a2a2-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="67eef-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="67eef-104">In This Section</span></span>  
- [<span data-ttu-id="67eef-105">Crear un cuadro de diálogo estándar de interfaz de usuario mediante Grid</span><span class="sxs-lookup"><span data-stu-id="67eef-105">Build a Standard UI Dialog Box by Using Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [<span data-ttu-id="67eef-106">Crear un control Grid complejo</span><span class="sxs-lookup"><span data-stu-id="67eef-106">Create a Complex Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
- [<span data-ttu-id="67eef-107">Crear un elemento Grid</span><span class="sxs-lookup"><span data-stu-id="67eef-107">Create a Grid Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
- [<span data-ttu-id="67eef-108">Crear y utilizar un objeto GridLengthConverter</span><span class="sxs-lookup"><span data-stu-id="67eef-108">Create and Use a GridLengthConverter Object</span></span>](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
- [<span data-ttu-id="67eef-109">Manipular columnas y filas mediante ColumnDefinitionsCollections y RowDefinitionsCollections</span><span class="sxs-lookup"><span data-stu-id="67eef-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [<span data-ttu-id="67eef-110">Situar los elementos secundarios de un control Grid</span><span class="sxs-lookup"><span data-stu-id="67eef-110">Position the Child Elements of a Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
- [<span data-ttu-id="67eef-111">Compartir propiedades de ajuste de tamaño entre elementos Grid</span><span class="sxs-lookup"><span data-stu-id="67eef-111">Share Sizing Properties Between Grids</span></span>](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1a2a2-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="1a2a2-104">In This Section</span></span>  
+ [<span data-ttu-id="1a2a2-105">Crear un cuadro de diálogo estándar de interfaz de usuario mediante Grid</span><span class="sxs-lookup"><span data-stu-id="1a2a2-105">Build a Standard UI Dialog Box by Using Grid</span></span>](how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [<span data-ttu-id="1a2a2-106">Crear un control Grid complejo</span><span class="sxs-lookup"><span data-stu-id="1a2a2-106">Create a Complex Grid</span></span>](how-to-create-a-complex-grid.md)  
+ [<span data-ttu-id="1a2a2-107">Crear un elemento Grid</span><span class="sxs-lookup"><span data-stu-id="1a2a2-107">Create a Grid Element</span></span>](how-to-create-a-grid-element.md)  
+ [<span data-ttu-id="1a2a2-108">Crear y utilizar un objeto GridLengthConverter</span><span class="sxs-lookup"><span data-stu-id="1a2a2-108">Create and Use a GridLengthConverter Object</span></span>](how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [<span data-ttu-id="1a2a2-109">Manipular columnas y filas mediante ColumnDefinitionsCollections y RowDefinitionsCollections</span><span class="sxs-lookup"><span data-stu-id="1a2a2-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [<span data-ttu-id="1a2a2-110">Situar los elementos secundarios de un control Grid</span><span class="sxs-lookup"><span data-stu-id="1a2a2-110">Position the Child Elements of a Grid</span></span>](how-to-position-the-child-elements-of-a-grid.md)  
+ [<span data-ttu-id="1a2a2-111">Compartir propiedades de ajuste de tamaño entre elementos Grid</span><span class="sxs-lookup"><span data-stu-id="1a2a2-111">Share Sizing Properties Between Grids</span></span>](how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="reference"></a><span data-ttu-id="67eef-112">Referencia</span><span class="sxs-lookup"><span data-stu-id="67eef-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1a2a2-112">Referencia</span><span class="sxs-lookup"><span data-stu-id="1a2a2-112">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -41,9 +41,9 @@ ms.locfileid: "33550370"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="67eef-113">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="67eef-113">Related Sections</span></span>  
- [<span data-ttu-id="67eef-114">Diseño</span><span class="sxs-lookup"><span data-stu-id="67eef-114">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="1a2a2-113">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="1a2a2-113">Related Sections</span></span>  
+ [<span data-ttu-id="1a2a2-114">Diseño</span><span class="sxs-lookup"><span data-stu-id="1a2a2-114">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="67eef-115">Tutorial: Mi primera aplicación de escritorio WPF</span><span class="sxs-lookup"><span data-stu-id="67eef-115">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="1a2a2-115">Tutorial: Mi primera aplicación de escritorio WPF</span><span class="sxs-lookup"><span data-stu-id="1a2a2-115">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="67eef-116">Información general sobre ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="67eef-116">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="1a2a2-116">Información general sobre ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="1a2a2-116">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
