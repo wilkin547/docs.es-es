@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f03b8084b0160e5c61bfdc4dc6984fbd1cddde
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545035"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352989"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Instrucciones para el diseño de controles con estilos
 En este documento se resume un conjunto de procedimientos recomendados que se deben tener en cuenta al diseñar un control con el que pretende crear estilos y plantillas con facilidad. Este conjunto de procedimientos se obtiene de una gran serie de pruebas y errores al trabajar con estilos de control de temas para el conjunto de controles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] integrado. Se ha observado que una aplicación de estilos correcta es tanto una función de un modelo de objeto bien diseñado como del propio estilo. Este documento está destinado a los autores de controles, y no a los autores de estilos.  
@@ -27,7 +27,7 @@ En este documento se resume un conjunto de procedimientos recomendados que se de
   
 -   plantillas de datos.  
   
- Para obtener una introducción a los estilos y plantillas, vea [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Para obtener una introducción a los estilos y plantillas, vea [Aplicar estilos y plantillas](styling-and-templating.md).  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
 ## <a name="before-you-start-understanding-your-control"></a>Antes de empezar: Introducción al Control  
@@ -119,5 +119,5 @@ En este documento se resume un conjunto de procedimientos recomendados que se de
 -   **Los estilos de temas no necesitan tener una semántica de "diseño" coherente en todos los temas**. Por ejemplo, el estilo predeterminado no necesita garantizar que un control puede ocupar el mismo tamaño en todos los temas o garantizar que un control tendrá los mismos márgenes de contenido o espaciado interno en todos los temas.  
   
 ## <a name="see-also"></a>Vea también
-- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Información general sobre la creación de controles](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [Aplicar estilos y plantillas](styling-and-templating.md)
+- [Información general sobre la creación de controles](control-authoring-overview.md)

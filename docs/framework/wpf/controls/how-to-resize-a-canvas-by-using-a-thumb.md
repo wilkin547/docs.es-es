@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Cambiar el tamaño de un lienzo mediante un control Thumb
+title: Filtrar Cambiar el tamaño de un lienzo mediante un control Thumb
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Thumb control [WPF]
 - Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
-ms.openlocfilehash: d0873656e71df928ac3bd5a767b5e15d2f2c7836
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80b873e81acc243ff61257bc305c4f782b5bf867
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591463"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351834"
 ---
-# <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Procedimiento Cambiar el tamaño de un lienzo mediante un control Thumb
+# <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Filtrar Cambiar el tamaño de un lienzo mediante un control Thumb
 En este ejemplo se muestra cómo usar un <xref:System.Windows.Controls.Primitives.Thumb> control para cambiar el tamaño de un <xref:System.Windows.Controls.Canvas> control.  
   
 ## <a name="example"></a>Ejemplo  
@@ -28,21 +28,21 @@ En este ejemplo se muestra cómo usar un <xref:System.Windows.Controls.Primitive
   
  El ejemplo siguiente se muestra un <xref:System.Windows.Controls.Primitives.Thumb> control que es el elemento secundario de un <xref:System.Windows.Controls.Canvas> control. El controlador de eventos para su <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> evento proporciona la lógica para mover el <xref:System.Windows.Controls.Primitives.Thumb> y cambiar el tamaño de la <xref:System.Windows.Controls.Canvas>. Los controladores de eventos para el <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> y <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> evento cambiar el color de la <xref:System.Windows.Controls.Primitives.Thumb> durante una operación de arrastre. En el ejemplo siguiente se define la <xref:System.Windows.Controls.Primitives.Thumb>.  
   
- [!code-xaml[Thumb#thumb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml#thumb)]  
+ [!code-xaml[Thumb#thumb](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml#thumb)]  
   
  El ejemplo siguiente se muestra el <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> controlador de eventos que se mueve el <xref:System.Windows.Controls.Primitives.Thumb> y cambia el tamaño de la <xref:System.Windows.Controls.Canvas> en respuesta a un movimiento del mouse.  
   
- [!code-csharp[Thumb#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#2)]  
+ [!code-csharp[Thumb#2](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#2)]  
   
  El ejemplo siguiente se muestra el <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> controlador de eventos.  
   
- [!code-csharp[Thumb#DragStartedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragstartedhandler)]
- [!code-vb[Thumb#DragStartedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragstartedhandler)]  
+ [!code-csharp[Thumb#DragStartedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragstartedhandler)]
+ [!code-vb[Thumb#DragStartedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragstartedhandler)]  
   
  El ejemplo siguiente se muestra el <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> controlador de eventos.  
   
- [!code-csharp[Thumb#DragCompletedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragcompletedhandler)]
- [!code-vb[Thumb#DragCompletedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragcompletedhandler)]  
+ [!code-csharp[Thumb#DragCompletedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragcompletedhandler)]
+ [!code-vb[Thumb#DragCompletedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragcompletedhandler)]  
   
  Para obtener un ejemplo completo, vea [Thumb Drag Functionality Sample](https://go.microsoft.com/fwlink/?LinkID=160042).  
   

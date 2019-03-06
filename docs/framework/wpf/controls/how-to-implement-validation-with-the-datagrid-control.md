@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: 8921d9fd36e011fd33628e15f8a055d79c3959d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3be25fecc58ba41dbb5b2e904eddcb9c2b3c98a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674601"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371091"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Procedimiento Implementar la validación con el Control DataGrid
 El <xref:System.Windows.Controls.DataGrid> control le permite realizar la validación en el nivel de la celda y la fila. Con la validación de nivel de celda, validar propiedades individuales de un objeto de datos enlazados cuando un usuario actualiza un valor. Con la validación de nivel de fila, validar los objetos de datos completo cuando un usuario confirma los cambios realizados en una fila. También puede proporcionar comentarios visuales personalizados para los errores de validación, o usar los comentarios visuales predeterminados que el <xref:System.Windows.Controls.DataGrid> proporciona el control.  
@@ -22,11 +22,11 @@ El <xref:System.Windows.Controls.DataGrid> control le permite realizar la valida
   
 ### <a name="to-validate-individual-cell-values"></a>Para validar los valores de celda individual  
   
--   Especifique una o varias reglas de validación en el enlace utilizado con una columna. Esto es similar a la validación de datos en controles simples, como se describe en [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+-   Especifique una o varias reglas de validación en el enlace utilizado con una columna. Esto es similar a la validación de datos en controles simples, como se describe en [Data Binding Overview](../data/data-binding-overview.md).  
   
      El ejemplo siguiente se muestra un <xref:System.Windows.Controls.DataGrid> control con cuatro columnas enlazadas a distintas propiedades de un objeto de negocios. Tres de las columnas de especifican el <xref:System.Windows.Controls.ExceptionValidationRule> estableciendo el <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> propiedad `true`.  
   
-     [!code-xaml[DataGrid_Validation#BasicXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/window1.xaml#basicxaml)]  
+     [!code-xaml[DataGrid_Validation#BasicXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/window1.xaml#basicxaml)]  
   
      Cuando un usuario escribe un valor no válido (por ejemplo, un no entero en la columna de Id. de curso), aparece un borde rojo alrededor de la celda. Puede cambiar estos comentarios de validación predeterminado como se describe en el siguiente procedimiento.  
   
@@ -36,7 +36,7 @@ El <xref:System.Windows.Controls.DataGrid> control le permite realizar la valida
   
      El ejemplo siguiente actualiza en el ejemplo anterior mediante la adición de un estilo de error compartido por las tres columnas con reglas de validación. Cuando un usuario escribe un valor no válido, el estilo cambia el color de fondo de celda y agrega información sobre herramientas. Tenga en cuenta el uso de un desencadenador para determinar si hay un error de validación. Esto es necesario porque actualmente no hay ninguna plantilla de error dedicada para las celdas.  
   
-     [!code-xaml[DataGrid_Validation#CellValidationXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#cellvalidationxaml)]  
+     [!code-xaml[DataGrid_Validation#CellValidationXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#cellvalidationxaml)]  
   
      Puede implementar una personalización más extensa reemplazando el <xref:System.Windows.Controls.DataGridColumn.CellStyle%2A> usada por la columna.  
   
@@ -46,14 +46,14 @@ El <xref:System.Windows.Controls.DataGrid> control le permite realizar la valida
   
      En el ejemplo siguiente se muestra este proceso para validar si la `StartDate` valor de propiedad para un `Course` objeto es anterior a su `EndDate` valor de propiedad.  
   
-     [!code-csharp[DataGrid_Validation#CourseValidationRule](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
-     [!code-vb[DataGrid_Validation#CourseValidationRule](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
+     [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
+     [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
 2.  Agregar la regla de validación para el <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> colección. El <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> propiedad proporciona acceso directo a la <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> propiedad de un <xref:System.Windows.Data.BindingGroup> instancia que agrupa todos los enlaces utilizados por el control.  
   
      El ejemplo siguiente se establece la <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> propiedad en XAML. El <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> propiedad está establecida en <xref:System.Windows.Controls.ValidationStep.UpdatedValue> para que la validación se produce después de que el objeto de datos enlazado se actualiza.  
   
-     [!code-xaml[DataGrid_Validation#RowValidationRulesXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationrulesxaml)]  
+     [!code-xaml[DataGrid_Validation#RowValidationRulesXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationrulesxaml)]  
   
      Cuando un usuario especifica una fecha de finalización es anterior a la fecha de inicio, aparece una marca de exclamación rojo (!) en el encabezado de fila. Puede cambiar estos comentarios de validación predeterminado como se describe en el siguiente procedimiento.  
   
@@ -63,7 +63,7 @@ El <xref:System.Windows.Controls.DataGrid> control le permite realizar la valida
   
      El siguiente ejemplo reemplaza los comentarios de validación de fila predeterminados con un indicador más visible. Cuando un usuario escribe un valor no válido, aparece un círculo rojo con un signo de exclamación blanco en el encabezado de fila. Esto se produce para los errores de validación de fila y celda. El mensaje de error asociado se muestra en una información sobre herramientas.  
   
-     [!code-xaml[DataGrid_Validation#RowValidationFeedbackXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationfeedbackxaml)]  
+     [!code-xaml[DataGrid_Validation#RowValidationFeedbackXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationfeedbackxaml)]  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente proporciona una demostración completa para la validación de celdas y filas. El `Course` clase proporciona un objeto de datos de ejemplo que implementa <xref:System.ComponentModel.IEditableObject> para admitir transacciones. El <xref:System.Windows.Controls.DataGrid> control interactúa con <xref:System.ComponentModel.IEditableObject> para permitir que los usuarios revertir los cambios presionando la tecla ESC.  
@@ -85,14 +85,14 @@ El <xref:System.Windows.Controls.DataGrid> control le permite realizar la valida
   
 -   Cuando se produce un error de validación, mueva el puntero del mouse sobre el indicador en el encabezado de fila para ver el mensaje de error asociado.  
   
- [!code-csharp[DataGrid_Validation#FullCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#fullcode)]
- [!code-vb[DataGrid_Validation#FullCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#fullcode)]  
+ [!code-csharp[DataGrid_Validation#FullCode](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#fullcode)]
+ [!code-vb[DataGrid_Validation#FullCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#fullcode)]  
   
- [!code-xaml[DataGrid_Validation#FullXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
+ [!code-xaml[DataGrid_Validation#FullXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Controls.DataGrid>
-- [DataGrid](../../../../docs/framework/wpf/controls/datagrid.md)
-- [Enlace de datos](../../../../docs/framework/wpf/data/data-binding-wpf.md)
-- [Implementar la validación de enlaces](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)
-- [Implementar lógica de validación en objetos personalizados](../../../../docs/framework/wpf/data/how-to-implement-validation-logic-on-custom-objects.md)
+- [DataGrid](datagrid.md)
+- [Enlace de datos](../data/data-binding-wpf.md)
+- [Implementar la validación de enlaces](../data/how-to-implement-binding-validation.md)
+- [Implementar lógica de validación en objetos personalizados](../data/how-to-implement-validation-logic-on-custom-objects.md)

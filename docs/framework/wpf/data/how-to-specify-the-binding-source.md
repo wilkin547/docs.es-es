@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Especificar el origen de enlace
+title: Filtrar Especificar el origen de enlace
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: f2e3fa3352da85c7da394a582cfcd058fe3fadf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 105924fec2956f2f74a2a574ee62f71a37df9366
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577131"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356726"
 ---
-# <a name="how-to-specify-the-binding-source"></a>Procedimiento Especificar el origen de enlace
+# <a name="how-to-specify-the-binding-source"></a>Filtrar Especificar el origen de enlace
 En el enlace de datos, el objeto de origen de enlace hace referencia al objeto de que se obtienen los datos. Este tema describe las distintas maneras de especificar el origen de enlace.  
   
 ## <a name="example"></a>Ejemplo  
@@ -24,16 +24,16 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
   
  En el ejemplo siguiente, se establece el contexto de datos en el elemento raíz de la aplicación. Esto permite que todos los elementos secundarios hereden ese contexto de datos. Los datos para el enlace proceden de una clase de datos personalizada, `NetIncome`, al que hace referencia directamente a través de una asignación y una clave de recurso determinada de `incomeDataSource`.  
   
- [!code-xaml[DirectionalBinding#DataContext1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
-[!code-xaml[DirectionalBinding#DataContext2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
+ [!code-xaml[DirectionalBinding#DataContext1](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
+[!code-xaml[DirectionalBinding#DataContext2](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
   
  En el ejemplo siguiente se muestra la definición de la clase `NetIncome`.  
   
- [!code-csharp[DirectionalBinding#DataObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
- [!code-vb[DirectionalBinding#DataObject](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
+ [!code-csharp[DirectionalBinding#DataObject](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
+ [!code-vb[DirectionalBinding#DataObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
   
 > [!NOTE]
->  El ejemplo anterior crea una instancia del objeto en la marcación y lo usa como un recurso. Si desea enlazar con un objeto que ya ha creado una instancia en el código, debe establecer la propiedad `DataContext` mediante programación. Para obtener un ejemplo, vea [Hacer que los datos estén disponibles para el enlace en XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md).  
+>  El ejemplo anterior crea una instancia del objeto en la marcación y lo usa como un recurso. Si desea enlazar con un objeto que ya ha creado una instancia en el código, debe establecer la propiedad `DataContext` mediante programación. Para obtener un ejemplo, vea [Hacer que los datos estén disponibles para el enlace en XAML](how-to-make-data-available-for-binding-in-xaml.md).  
   
  Como alternativa, si desea especificar el origen en los enlaces individuales explícitamente, tiene las siguientes opciones. Estas tienen prioridad sobre el contexto de datos heredado.  
   
@@ -46,7 +46,7 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
-- [Herencia de valores de propiedad](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
-- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Información general sobre declaraciones de enlaces](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Herencia de valores de propiedad](../advanced/property-value-inheritance.md)
+- [Información general sobre el enlace de datos](data-binding-overview.md)
+- [Información general sobre declaraciones de enlaces](binding-declarations-overview.md)
+- [Temas "Cómo..."](data-binding-how-to-topics.md)

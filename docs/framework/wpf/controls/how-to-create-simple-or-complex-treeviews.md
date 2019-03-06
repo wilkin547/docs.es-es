@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Crear controles TreeView simples o complejos
+title: Filtrar Crear controles TreeView simples o complejos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], creating
 - Control class [WPF], TreeView [WPF], creating
 ms.assetid: 1defbb78-b8e7-4c0e-b650-576453ac828d
-ms.openlocfilehash: d6f9653304b67948d8a8995d1582cb10b012ee06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b19443c80818809122b0bbfc7c7dae7b4b40da5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609140"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368930"
 ---
-# <a name="how-to-create-simple-or-complex-treeviews"></a>Procedimiento Crear controles TreeView simples o complejos
+# <a name="how-to-create-simple-or-complex-treeviews"></a>Filtrar Crear controles TreeView simples o complejos
 En este ejemplo se muestra cómo crear simples o complejas <xref:System.Windows.Controls.TreeView> controles.  
   
  Un <xref:System.Windows.Controls.TreeView> consta de una jerarquía de <xref:System.Windows.Controls.TreeViewItem> controles, que pueden contener cadenas de texto simple y el contenido también más complejo, tales como <xref:System.Windows.Controls.Button> controles o <xref:System.Windows.Controls.StackPanel> con contenido incrustado. Puede definir explícitamente el <xref:System.Windows.Controls.TreeView> contenido o un origen de datos puede proporcionar el contenido. En este tema se proporciona ejemplos de estos conceptos.  
@@ -22,26 +22,26 @@ En este ejemplo se muestra cómo crear simples o complejas <xref:System.Windows.
   
  El ejemplo siguiente muestra cómo se definen explícitamente <xref:System.Windows.Controls.TreeViewItem> contenido estableciendo el <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> propiedad en una cadena de texto.  
   
- [!code-xaml[TreeViewSimple#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#1)]  
+ [!code-xaml[TreeViewSimple#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#1)]  
   
  El ejemplo siguiente se muestra cómo definir los elementos secundarios de un <xref:System.Windows.Controls.TreeViewItem> definiendo <xref:System.Windows.Controls.ItemsControl.Items%2A> que son <xref:System.Windows.Controls.Button> controles.  
   
- [!code-xaml[TreeViewSimple#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#3)]  
+ [!code-xaml[TreeViewSimple#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#3)]  
   
  El ejemplo siguiente muestra cómo crear un <xref:System.Windows.Controls.TreeView> donde un <xref:System.Windows.Data.XmlDataProvider> proporciona <xref:System.Windows.Controls.TreeViewItem> contenido y un <xref:System.Windows.HierarchicalDataTemplate> define la apariencia del contenido.  
   
- [!code-xaml[TreeViewSimple#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#6)]  
+ [!code-xaml[TreeViewSimple#6](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#6)]  
   
- [!code-xaml[TreeViewSimple#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#7)]  
+ [!code-xaml[TreeViewSimple#7](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#7)]  
   
- [!code-xaml[TreeViewSimple#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#5)]  
+ [!code-xaml[TreeViewSimple#5](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#5)]  
   
  El ejemplo siguiente muestra cómo crear un <xref:System.Windows.Controls.TreeView> donde el <xref:System.Windows.Controls.TreeViewItem> contiene contenido <xref:System.Windows.Controls.DockPanel> controles con contenido incrustado.  
   
- [!code-xaml[TreeViewSimple#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#9)]  
+ [!code-xaml[TreeViewSimple#9](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#9)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [Introducción a TreeView](../../../../docs/framework/wpf/controls/treeview-overview.md)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)
+- [Introducción a TreeView](treeview-overview.md)
+- [Temas "Cómo..."](treeview-how-to-topics.md)

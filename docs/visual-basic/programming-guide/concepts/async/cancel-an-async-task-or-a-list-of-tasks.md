@@ -2,12 +2,12 @@
 title: Cancelar una tarea asincrónica o una lista de tareas (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: e4e0fcb1d706fef09233543487aebdeb01cdfbcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81676324145bcf8f6d9a13e757865fa86e6d2e23
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695898"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374458"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Cancelar una tarea asincrónica o una lista de tareas (Visual Basic)
 Puede configurar un botón para cancelar una aplicación asincrónica si no quiere esperar a que termine. Mediante los ejemplos de este tema, puede agregar un botón de cancelación a una aplicación que descargue el contenido de un sitio web o una lista de sitios web.  
@@ -17,11 +17,11 @@ Puede configurar un botón para cancelar una aplicación asincrónica si no quie
 > [!NOTE]
 >  Para ejecutar los ejemplos, debe tener Visual Studio 2012 o posterior, y .NET Framework 4.5 o posterior, instalado en el equipo.  
   
-##  <a name="BKMK_CancelaTask"></a> Cancelar una tarea  
+## <a name="BKMK_CancelaTask"></a> Cancelar una tarea  
  En el primer ejemplo se asocia el botón **Cancelar** a una sola tarea de descarga. Si elige el botón mientras la aplicación descarga contenido, se cancela la descarga.  
   
 ### <a name="downloading-the-example"></a>Descargar el ejemplo  
- Puede descargar el proyecto de Windows Presentation Foundation (WPF) completo desde [ejemplo Async: Ajustar el ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) y, a continuación, siga estos pasos.  
+ Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) desde [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de Async: Ajuste de la aplicación) y después seguir estos pasos.  
   
 1.  Descomprima el archivo descargado y, a continuación, inicie Visual Studio.  
   
@@ -135,11 +135,11 @@ Puede configurar un botón para cancelar una aplicación asincrónica si no quie
     Download canceled.  
     ```  
   
-##  <a name="BKMK_CancelaListofTasks"></a> Cancelar una lista de tareas  
+## <a name="BKMK_CancelaListofTasks"></a> Cancelar una lista de tareas  
  Puede ampliar el ejemplo anterior para cancelar muchas tareas asociando la misma instancia de `CancellationTokenSource` a cada tarea. Si elige el botón **Cancelar**, cancela todas las tareas que aún no se han completado.  
   
 ### <a name="downloading-the-example"></a>Descargar el ejemplo  
- Puede descargar el proyecto de Windows Presentation Foundation (WPF) completo desde [ejemplo Async: Ajustar el ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) y, a continuación, siga estos pasos.  
+ Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) desde [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de Async: Ajuste de la aplicación) y después seguir estos pasos.  
   
 1.  Descomprima el archivo descargado y, a continuación, inicie Visual Studio.  
   
@@ -247,10 +247,10 @@ Puede configurar un botón para cancelar una aplicación asincrónica si no quie
     Downloads canceled.  
     ```  
   
-##  <a name="BKMK_CompleteExamples"></a> Ejemplos completos  
+## <a name="BKMK_CompleteExamples"></a> Ejemplos completos  
  Las secciones siguientes contienen el código para cada uno de los ejemplos anteriores. Observe que debe agregar una referencia para <xref:System.Net.Http>.  
   
- Puede descargar los proyectos de [ejemplo Async: Realizar ajustes en la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Puede descargar los proyectos de [ejemplo Async: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de async: Ajuste de la aplicación).  
   
 ### <a name="cancel-a-task-example"></a>Ejemplo de cancelación de una tarea  
  El código siguiente es el archivo de MainWindow.xaml.vb completo para el ejemplo que cancela una sola tarea.  

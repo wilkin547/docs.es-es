@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 82d2a055f6780c81c601665f8c3403d9d95c85df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67c332b4fd4d2937f3a455353f3a5353dde10ef5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492578"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356486"
 ---
 # <a name="drag-and-drop-overview"></a>Información general sobre la función de arrastrar y colocar
 Este tema proporciona información general sobre la compatibilidad con arrastrar y colocar en aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Arrastrar y colocar se refiere normalmente a un método de transferencia de datos que implica el uso de un mouse (o cualquier otro dispositivo señalador) para seleccionar uno o más objetos, arrastrar estos objetos sobre un destino deseado en la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] y soltarlos.  
@@ -50,7 +50,7 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
   
  En una operación de copiar y pegar, el Portapapeles del sistema se usa para almacenar temporalmente los datos transferidos; en una operación de arrastrar y colocar, se usa un <xref:System.Windows.DataObject> para almacenar los datos. Desde el punto de vista conceptual, un objeto de datos consta de uno o más pares de <xref:System.Object> que contienen los datos reales y un identificador de formato de datos correspondiente.  
   
- El origen de arrastre inicia una operación de arrastrar y colocar llamando al método estático <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> y transfiriéndole los datos transferidos. El método <xref:System.Windows.DragDrop.DoDragDrop%2A> ajustará automáticamente los datos en un <xref:System.Windows.DataObject>, si es necesario. Para un mayor control del formato de datos, puede ajustar los datos en un <xref:System.Windows.DataObject> antes de pasarlos al método <xref:System.Windows.DragDrop.DoDragDrop%2A>. El destino de colocación es responsable de extraer los datos del <xref:System.Windows.DataObject>. Para obtener más información sobre cómo trabajar con objetos de datos, consulte [Datos y objetos de datos](../../../../docs/framework/wpf/advanced/data-and-data-objects.md).  
+ El origen de arrastre inicia una operación de arrastrar y colocar llamando al método estático <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> y transfiriéndole los datos transferidos. El método <xref:System.Windows.DragDrop.DoDragDrop%2A> ajustará automáticamente los datos en un <xref:System.Windows.DataObject>, si es necesario. Para un mayor control del formato de datos, puede ajustar los datos en un <xref:System.Windows.DataObject> antes de pasarlos al método <xref:System.Windows.DragDrop.DoDragDrop%2A>. El destino de colocación es responsable de extraer los datos del <xref:System.Windows.DataObject>. Para obtener más información sobre cómo trabajar con objetos de datos, consulte [Datos y objetos de datos](data-and-data-objects.md).  
   
  El origen y el destino de una operación de arrastrar y colocar son elementos de la interfaz de usuario; sin embargo, los datos que se transfieren no suelen tener una representación visual. Puede escribir código para proporcionar una representación visual de los datos que se arrastran, como ocurre al arrastrar archivos en el Explorador de Windows. De forma predeterminada, se proporciona información al usuario cambiando el cursor para representar el efecto que la operación de arrastrar y colocar tendrá en los datos, por ejemplo si los datos se mueven o se copian.  
   
@@ -63,7 +63,7 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
   
 <a name="Drag_and_Drop_Events"></a>   
 ## <a name="drag-and-drop-events"></a>Eventos de arrastrar y colocar  
- Las operaciones de arrastrar y colocar admiten un modelo basado en eventos.  El origen de arrastre y el destino de colocación usan un conjunto estándar de eventos para controlar las operaciones de arrastrar y colocar.  Las tablas siguientes resumen los eventos estándar de arrastrar y colocar. Se trata de eventos adjuntos a la clase <xref:System.Windows.DragDrop>. Para obtener más información sobre los eventos adjuntos, consulte [Información general sobre eventos adjuntos](../../../../docs/framework/wpf/advanced/attached-events-overview.md).  
+ Las operaciones de arrastrar y colocar admiten un modelo basado en eventos.  El origen de arrastre y el destino de colocación usan un conjunto estándar de eventos para controlar las operaciones de arrastrar y colocar.  Las tablas siguientes resumen los eventos estándar de arrastrar y colocar. Se trata de eventos adjuntos a la clase <xref:System.Windows.DragDrop>. Para obtener más información sobre los eventos adjuntos, consulte [Información general sobre eventos adjuntos](attached-events-overview.md).  
   
 ### <a name="drag-source-events"></a>Eventos del origen de arrastre  
   
@@ -87,7 +87,7 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
 |<xref:System.Windows.DragDrop.PreviewDragOver>|Versión de tunelización de <xref:System.Windows.DragDrop.DragOver>.|  
 |<xref:System.Windows.DragDrop.PreviewDrop>|Versión de tunelización de <xref:System.Windows.DragDrop.Drop>.|  
   
- Para controlar los eventos de arrastrar y colocar para las instancias de un objeto, agregue controladores para los eventos enumerados en las tablas anteriores. Para controlar los eventos de arrastrar y colocar en el nivel de clase, invalide los métodos virtuales On*Event y On\*PreviewEvent correspondientes. Para obtener más información, consulte [Control de clases de eventos enrutados mediante clases base de control](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events).  
+ Para controlar los eventos de arrastrar y colocar para las instancias de un objeto, agregue controladores para los eventos enumerados en las tablas anteriores. Para controlar los eventos de arrastrar y colocar en el nivel de clase, invalide los métodos virtuales On*Event y On\*PreviewEvent correspondientes. Para obtener más información, consulte [Control de clases de eventos enrutados mediante clases base de control](marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events).  
   
 <a name="Implementing_Drag_And_Drop"></a>   
 ## <a name="implementing-drag-and-drop"></a>Implementación de arrastrar y colocar  
@@ -123,9 +123,9 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Ejemplo de arrastrar y colocar  
- En esta sección se describe cómo se implementa una operación de arrastrar y colocar para un elemento <xref:System.Windows.Shapes.Ellipse>. <xref:System.Windows.Shapes.Ellipse> es tanto un origen de arrastre como un destino de colocación. Los datos transferidos son la representación de cadena de la propiedad <xref:System.Windows.Shapes.Shape.Fill%2A> de la elipse. El siguiente XAML muestra el elemento <xref:System.Windows.Shapes.Ellipse> y los eventos relacionados de arrastrar y colocar que controla. Para conocer los pasos completos implementar arrastrar y colocar, vea [Tutorial: Lo que permite arrastrar y colocar en un Control de usuario](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
+ En esta sección se describe cómo se implementa una operación de arrastrar y colocar para un elemento <xref:System.Windows.Shapes.Ellipse>. <xref:System.Windows.Shapes.Ellipse> es tanto un origen de arrastre como un destino de colocación. Los datos transferidos son la representación de cadena de la propiedad <xref:System.Windows.Shapes.Shape.Fill%2A> de la elipse. El siguiente XAML muestra el elemento <xref:System.Windows.Shapes.Ellipse> y los eventos relacionados de arrastrar y colocar que controla. Para conocer los pasos completos implementar arrastrar y colocar, vea [Tutorial: Lo que permite arrastrar y colocar en un Control de usuario](walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
   
- [!code-xaml[DragDropSnippets#EllipseXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
+ [!code-xaml[DragDropSnippets#EllipseXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
 ### <a name="enabling-an-element-to-be-a-drag-source"></a>Habilitar un elemento para que sea un origen de arrastre  
  Un objeto que es un origen de arrastre es responsable de:  
@@ -142,8 +142,8 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
   
  Es responsabilidad de la aplicación determinar cuándo se produce un arrastre y, a continuación, iniciar la operación de arrastrar y colocar mediante una llamada al método <xref:System.Windows.DragDrop.DoDragDrop%2A>. Normalmente, es cuando se produce un evento <xref:System.Windows.UIElement.MouseMove> en el elemento que se va a arrastrar mientras se presiona un botón del mouse. En el ejemplo siguiente se muestra cómo iniciar una operación de arrastrar y colocar desde el controlador de eventos <xref:System.Windows.UIElement.MouseMove> de un elemento <xref:System.Windows.Shapes.Ellipse> para convertirlo en un origen de arrastre. Los datos transferidos son la representación de cadena de la propiedad <xref:System.Windows.Shapes.Shape.Fill%2A> de la elipse.  
   
- [!code-csharp[DragDropSnippets#DoDragDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
- [!code-vb[DragDropSnippets#DoDragDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
+ [!code-csharp[DragDropSnippets#DoDragDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
+ [!code-vb[DragDropSnippets#DoDragDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
   
  Dentro del controlador de eventos <xref:System.Windows.UIElement.MouseMove>, llame al método <xref:System.Windows.DragDrop.DoDragDrop%2A> para que inicie la operación de arrastrar y colocar. El método <xref:System.Windows.DragDrop.DoDragDrop%2A> toma tres parámetros:  
   
@@ -153,7 +153,7 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
   
 -   `allowedEffects` – Uno de los valores de enumeración <xref:System.Windows.DragDropEffects> que especifica los efectos permitidos de la operación de arrastrar y colocar.  
   
- Puede pasar cualquier objeto serializable en el parámetro `data`. Si los datos todavía no están ajustados en un <xref:System.Windows.DataObject>, se ajustarán automáticamente en un <xref:System.Windows.DataObject> nuevo. Para pasar varios elementos de datos, debe crear por su cuenta el <xref:System.Windows.DataObject> y pasarlo al método <xref:System.Windows.DragDrop.DoDragDrop%2A>. Para obtener más información, consulte [Datos y objetos de datos](../../../../docs/framework/wpf/advanced/data-and-data-objects.md).  
+ Puede pasar cualquier objeto serializable en el parámetro `data`. Si los datos todavía no están ajustados en un <xref:System.Windows.DataObject>, se ajustarán automáticamente en un <xref:System.Windows.DataObject> nuevo. Para pasar varios elementos de datos, debe crear por su cuenta el <xref:System.Windows.DataObject> y pasarlo al método <xref:System.Windows.DragDrop.DoDragDrop%2A>. Para obtener más información, consulte [Datos y objetos de datos](data-and-data-objects.md).  
   
  El parámetro `allowedEffects` se usa para especificar lo que el origen de arrastre permitirá que haga el destino de colocación con los datos transferidos. Los valores comunes para un origen de arrastre son <xref:System.Windows.DragDropEffects.Copy>, <xref:System.Windows.DragDropEffects.Move> y <xref:System.Windows.DragDropEffects.All>.  
   
@@ -192,32 +192,32 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
   
  El ejemplo siguiente muestra el controlador de eventos <xref:System.Windows.DragDrop.DragEnter> para un elemento <xref:System.Windows.Shapes.Ellipse>. Este código muestra una vista previa de los efectos de la operación de arrastrar y colocar guardando el pincel <xref:System.Windows.Shapes.Shape.Fill%2A> actual. A continuación, usa el método <xref:System.Windows.DataObject.GetDataPresent%2A> para comprobar si el <xref:System.Windows.DataObject> que se está arrastrando sobre la elipse contiene datos de cadena que se pueden convertir en un <xref:System.Windows.Media.Brush>. Si es así, los datos se extraen mediante el método <xref:System.Windows.DataObject.GetData%2A>. A continuación, se convierte en un <xref:System.Windows.Media.Brush> y se aplica a la elipse. El cambio se revierte en el controlador de eventos <xref:System.Windows.DragDrop.DragLeave>. Si los datos no se pueden convertir en un <xref:System.Windows.Media.Brush>, no se lleva a cabo ninguna acción.  
   
- [!code-csharp[DragDropSnippets#DragEnter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
- [!code-vb[DragDropSnippets#DragEnter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
+ [!code-csharp[DragDropSnippets#DragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
+ [!code-vb[DragDropSnippets#DragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
   
  El evento <xref:System.Windows.DragDrop.DragOver> se produce continuamente mientras se arrastran los datos sobre el destino de colocación. Este evento se empareja con el evento <xref:System.Windows.DragDrop.GiveFeedback> en el origen de arrastre. En el controlador de eventos <xref:System.Windows.DragDrop.DragOver>, suelen usarse los métodos <xref:System.Windows.DataObject.GetDataPresent%2A> y <xref:System.Windows.DataObject.GetData%2A> para comprobar si los datos transferidos están en un formato que el destino de colocación puede procesar. También se puede comprobar si está presionada alguna tecla modificadora, lo que normalmente indicará si el usuario pretende realizar una acción de mover o copiar. Una vez realizadas estas comprobaciones, se establece la propiedad <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> para que notifique al origen de arrastre qué efectos tendrá la colocación de los datos. El origen de arrastre recibe esta información en los argumentos del evento <xref:System.Windows.DragDrop.GiveFeedback> y puede establecer un cursor apropiado para proporcionar información al usuario.  
   
  El ejemplo siguiente muestra el controlador de eventos <xref:System.Windows.DragDrop.DragOver> para un elemento <xref:System.Windows.Shapes.Ellipse>. Este código comprueba si el <xref:System.Windows.DataObject> que se está arrastrando sobre la elipse contiene datos de cadena que se pueden convertir en un <xref:System.Windows.Media.Brush>. Si es así, establece la propiedad <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> en <xref:System.Windows.DragDropEffects.Copy>. Esto indica al origen de arrastre que los datos se pueden copiar a la elipse. Si los datos no se pueden convertir en un <xref:System.Windows.Media.Brush>, la propiedad <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> se establece en <xref:System.Windows.DragDropEffects.None>. Esto indica al origen de arrastre que la elipse no es un destino para colocar válido para los datos.  
   
- [!code-csharp[DragDropSnippets#DragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
- [!code-vb[DragDropSnippets#DragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
+ [!code-csharp[DragDropSnippets#DragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
+ [!code-vb[DragDropSnippets#DragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
   
  El evento <xref:System.Windows.DragDrop.DragLeave> se produce cuando los datos se arrastran fuera de los límites del destino sin colocarse. Este evento se controla para deshacer todo lo que se hizo en el controlador de eventos <xref:System.Windows.DragDrop.DragEnter>.  
   
  El ejemplo siguiente muestra el controlador de eventos <xref:System.Windows.DragDrop.DragLeave> para un elemento <xref:System.Windows.Shapes.Ellipse>. Este código deshace la vista previa que se realizó en el controlador de eventos <xref:System.Windows.DragDrop.DragEnter> aplicando el <xref:System.Windows.Media.Brush> guardado a la elipse.  
   
- [!code-csharp[DragDropSnippets#DragLeave](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
- [!code-vb[DragDropSnippets#DragLeave](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
+ [!code-csharp[DragDropSnippets#DragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
+ [!code-vb[DragDropSnippets#DragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
   
  El evento <xref:System.Windows.DragDrop.Drop> se produce cuando los datos se colocan sobre el destino de colocación; de forma predeterminada, esto ocurre cuando se suelta el botón del mouse. En el controlador de eventos <xref:System.Windows.DragDrop.Drop>, se usa el método <xref:System.Windows.DataObject.GetData%2A> para extraer los datos transferidos desde el <xref:System.Windows.DataObject> y para realizar cualquier procesamiento de datos que requiere la aplicación. El evento <xref:System.Windows.DragDrop.Drop> finaliza la operación de arrastrar y colocar.  
   
  El ejemplo siguiente muestra el controlador de eventos <xref:System.Windows.DragDrop.Drop> para un elemento <xref:System.Windows.Shapes.Ellipse>. Este código aplica los efectos de la operación de arrastrar y colocar y es similar al código del controlador de eventos <xref:System.Windows.DragDrop.DragEnter>. Comprueba si el <xref:System.Windows.DataObject> que se está arrastrando sobre la elipse contiene datos de cadena que se pueden convertir en un <xref:System.Windows.Media.Brush>. Si es así, el <xref:System.Windows.Media.Brush> se aplica a la elipse. Si los datos no se pueden convertir en un <xref:System.Windows.Media.Brush>, no se lleva a cabo ninguna acción.  
   
- [!code-csharp[DragDropSnippets#Drop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
- [!code-vb[DragDropSnippets#Drop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
+ [!code-csharp[DragDropSnippets#Drop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
+ [!code-vb[DragDropSnippets#Drop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Clipboard>
-- [Tutorial: Lo que permite arrastrar y colocar en un Control de usuario](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)
-- [Arrastrar y colocar](../../../../docs/framework/wpf/advanced/drag-and-drop.md)
+- [Tutorial: Lo que permite arrastrar y colocar en un Control de usuario](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Temas "Cómo..."](drag-and-drop-how-to-topics.md)
+- [Arrastrar y colocar](drag-and-drop.md)

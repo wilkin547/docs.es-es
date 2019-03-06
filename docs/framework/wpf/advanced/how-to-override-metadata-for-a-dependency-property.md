@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Invalidar metadatos en una propiedad de dependencia
+title: Filtrar Invalidar metadatos en una propiedad de dependencia
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - dependency properties [WPF], overriding metadata for
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-ms.openlocfilehash: ba2f98d262f5c43dbd0c07d356556cdc3ec4b8dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d2d692984bef34569b2c4bb80c3fb072e4c3f79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589758"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365885"
 ---
-# <a name="how-to-override-metadata-for-a-dependency-property"></a>Procedimiento Invalidar metadatos en una propiedad de dependencia
+# <a name="how-to-override-metadata-for-a-dependency-property"></a>Filtrar Invalidar metadatos en una propiedad de dependencia
 En este ejemplo se muestra cómo invalidar los metadatos de propiedad de dependencia predeterminados que procede de una clase heredada, mediante una llamada a la <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> método y proporcionar metadatos específicos del tipo.  
   
 ## <a name="example"></a>Ejemplo  
@@ -26,13 +26,13 @@ En este ejemplo se muestra cómo invalidar los metadatos de propiedad de depende
   
  En el ejemplo siguiente, la clase personalizada `MyAdvancedStateControl` invalida los metadatos proporcionados para `StateProperty` por `MyAdvancedStateControl` con nuevos metadatos de propiedad. Por ejemplo, el valor predeterminado de `StateProperty` es ahora `true` cuando se consulta la propiedad en una instancia `MyAdvancedStateControl` de construcción reciente.  
   
- [!code-csharp[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
- [!code-vb[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
-[!code-csharp[PropertySystemEsoterics#MyAdvancedStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#myadvancedstatecontrol)]
-[!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
+ [!code-csharp[PropertySystemEsoterics#MyStateControl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
+ [!code-vb[PropertySystemEsoterics#MyStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
+[!code-csharp[PropertySystemEsoterics#MyAdvancedStateControl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#myadvancedstatecontrol)]
+[!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.DependencyProperty>
-- [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+- [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)
+- [Propiedades de dependencia personalizadas](custom-dependency-properties.md)
+- [Temas "Cómo..."](properties-how-to-topics.md)

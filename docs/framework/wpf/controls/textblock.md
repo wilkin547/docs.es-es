@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], TextBlock
 - TextBlock control [WPF]
 ms.assetid: ea5f7826-7a92-4de9-9eee-10ef700ce7b6
-ms.openlocfilehash: f032476326ac96edbfb7532f30dedd72b78f76fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31ef66ba7e584b88a38185a4d3ad02ca413fad34
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555904"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358917"
 ---
 # <a name="textblock"></a>TextBlock
-El <xref:System.Windows.Controls.TextBlock> control proporciona compatibilidad con texto flexible [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones. El elemento se destina principalmente a los escenarios de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] básicos que no requieren más de un párrafo de texto.  
+El <xref:System.Windows.Controls.TextBlock> control proporciona compatibilidad con el texto para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones. El elemento se destina principalmente a los escenarios de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] básicos que no requieren más de un párrafo de texto.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre TextBlock](../../../../docs/framework/wpf/controls/textblock-overview.md)  
+ [Información general sobre TextBlock](textblock-overview.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.Label>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Documentos en WPF](../advanced/documents-in-wpf.md)  
   
- [Información general sobre documentos dinámicos](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [Información general sobre documentos dinámicos](../advanced/flow-document-overview.md)

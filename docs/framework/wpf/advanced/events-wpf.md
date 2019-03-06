@@ -8,26 +8,26 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: b5a3b71758fea9c98c04377b910ba07b49617696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542592"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361218"
 ---
 # <a name="events-wpf"></a>Eventos (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] presenta los eventos enrutados, que pueden invocar controladores que existen en varios agentes de escucha en el árbol de elementos de una aplicación.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Información general sobre eventos adjuntos](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
- [Eventos de duración de objetos](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [Marcar eventos enrutados como controlados y control de clases](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [Eventos de vista previa](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [Eventos de cambio de propiedades](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [Control de eventos en Visual Basic y WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [Modelos de evento débil](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [Información general sobre eventos enrutados](routed-events-overview.md)  
+ [Información general sobre eventos adjuntos](attached-events-overview.md)  
+ [Eventos de duración de objetos](object-lifetime-events.md)  
+ [Marcar eventos enrutados como controlados y control de clases](marking-routed-events-as-handled-and-class-handling.md)  
+ [Eventos de vista previa](preview-events.md)  
+ [Eventos de cambio de propiedades](property-change-events.md)  
+ [Control de eventos en Visual Basic y WPF](visual-basic-and-wpf-event-handling.md)  
+ [Modelos de evento débil](weak-event-patterns.md)  
+ [Temas "Cómo..."](events-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.RoutedEvent>  
@@ -37,13 +37,13 @@ ms.locfileid: "33542592"
  <xref:System.Windows.RoutingStrategy>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Arquitectura de WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [XAML en WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Elementos base](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Árbol de elementos y serialización](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Propiedades](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [Entrada](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Recursos](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [WPF Content Model](../../../../docs/framework/wpf/controls/wpf-content-model.md) (Modelo de contenido de WPF)  
-  [Modelo de subprocesos](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [Arquitectura de WPF](wpf-architecture.md)  
+  [XAML en WPF](xaml-in-wpf.md)  
+  [Elementos base](base-elements.md)  
+  [Árbol de elementos y serialización](element-tree-and-serialization.md)  
+  [Propiedades](properties-wpf.md)  
+  [Entrada](input-wpf.md)  
+  [Recursos](resources-wpf.md)  
+  [Aplicar estilos y plantillas](../controls/styling-and-templating.md)  
+  [WPF Content Model](../controls/wpf-content-model.md) (Modelo de contenido de WPF)  
+  [Modelo de subprocesos](threading-model.md)

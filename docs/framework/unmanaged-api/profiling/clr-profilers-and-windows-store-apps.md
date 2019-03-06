@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188825"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358553"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Los generadores de perfiles CLR y las aplicaciones de Windows Store
 
@@ -53,7 +53,7 @@ La siguiente terminología se utiliza a lo largo de este tema:
 
 Se trata de la aplicación que está analizando el generador de perfiles. Normalmente, el desarrollador de esta aplicación está utilizando el generador de perfiles para ayudar a diagnosticar problemas con la aplicación. Tradicionalmente, esta aplicación sería una aplicación de escritorio de Windows, pero en este tema, vamos a examinar las aplicaciones de Windows Store.
 
-**DLL de Profiler**
+**Profiler DLL**
 
 Éste es el componente que se carga en el espacio de proceso de la aplicación que se está analizando. Este componente, también conocido como el generador de perfiles "agente", se implementa el [ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback (interfaz)](icorprofilercallback-interface.md)(2,3, etc.) e interfaces consume el [ ICorProfilerInfo](icorprofilerinfo-interface.md)(2,3, etc.) interfaces para recopilar datos acerca de la aplicación analizada y posiblemente modificarán aspectos del comportamiento de la aplicación.
 
@@ -126,7 +126,7 @@ En primer lugar, querrá pedirle a su usuario de profiler qué aplicación de Wi
 
 Puede usar el <xref:Windows.Management.Deployment.PackageManager> clase para generar esta lista. `PackageManager` es una clase en tiempo de ejecución de Windows que está disponible para las aplicaciones de escritorio y de hecho es *sólo* disponibles para las aplicaciones de escritorio.
 
-El siguiente ejemplo de código desde una interfaz de usuario de Profiler hipotético escrito como una aplicación de escritorio en C# yses el `PackageManager` para generar una lista de aplicaciones de Windows:
+El siguiente ejemplo de código desde una interfaz de usuario de Profiler hipotético escrito como una aplicación de escritorio en C# usa el `PackageManager` para generar una lista de aplicaciones de Windows:
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -143,7 +143,7 @@ Tenga en cuenta el fragmento de código siguiente:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine, 
+pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
                                                                  (IntPtr)fixedEnvironmentPzz);
 ```
 
@@ -168,7 +168,7 @@ Hay un par de elementos, deberá realizar correctamente:
         // Parse command line here
         // …
 
-        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME, 
+        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME,
                                                                   FALSE /* bInheritHandle */, nThreadID);
         ResumeThread(hThread);
         CloseHandle(hThread);
@@ -235,7 +235,7 @@ Por lo que desea hacer algo como esto:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */, 
+pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */,
                                                                  IntPtr.Zero /* environment */);
 ```
 
@@ -384,7 +384,7 @@ Para entender las consecuencias de hacerlo, es importante comprender las diferen
 
 El punto relevante es que las llamadas realizadas en los subprocesos creados por el generador de perfiles siempre se consideran sincrónicas, incluso si esas llamadas se realizan desde fuera de una implementación de uno de los DLL de Profiler [ICorProfilerCallback](icorprofilercallback-interface.md) métodos. Al menos, que solía ser el caso. Ahora que el CLR ha desactivado el subproceso del generador de perfiles en un subproceso administrado debido a la llamada a [ForceGC (método)](icorprofilerinfo-forcegc-method.md), que subprocesos dejan de subproceso del generador de perfiles. Por lo tanto, el CLR aplica una definición más estricta de ¿qué se entiende como sincrónico para ese subproceso, es decir, que una llamada debe originarse a partir dentro de uno de los DLL de Profiler [ICorProfilerCallback](icorprofilercallback-interface.md) métodos para calificar como sincrónica.
 
-¿Qué significa esto en la práctica? La mayoría [ICorProfilerInfo](icorprofilerinfo-interface.md) métodos son sólo seguros para llamarse de forma sincrónica e inmediatamente producirá un error en caso contrario. Por tanto, si el archivo DLL de Profiler reutiliza la [ForceGC (método)](icorprofilerinfo-forcegc-method.md) subproceso para otras llamadas realizadas normalmente en los subprocesos creados por el generador de perfiles (por ejemplo, para [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md), o [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), va a tener problemas. Incluso una función asincrónica safe como [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) tiene reglas especiales cuando se llama desde los subprocesos administrados. (Consulte el blog [recorridos de pila de Profiler: conceptos básicos y mucho más](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) para obtener más información.)
+¿Qué significa esto en la práctica? La mayoría [ICorProfilerInfo](icorprofilerinfo-interface.md) métodos son sólo seguros para llamarse de forma sincrónica e inmediatamente producirá un error en caso contrario. Por tanto, si el archivo DLL de Profiler reutiliza la [ForceGC (método)](icorprofilerinfo-forcegc-method.md) subproceso para otras llamadas realizadas normalmente en los subprocesos creados por el generador de perfiles (por ejemplo, para [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md), o [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), va a tener problemas. Incluso una función asincrónica safe como [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) tiene reglas especiales cuando se llama desde los subprocesos administrados. (Consulte el blog [recorridos de pila de Profiler: Conceptos básicos y mucho más](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) para obtener más información.)
 
 Por lo tanto, se recomienda que cualquier subproceso que crea el archivo DLL de Profiler para llamar a [ForceGC (método)](icorprofilerinfo-forcegc-method.md) debe usarse *sólo* con el fin de desencadenar GC y, a continuación, responder a las devoluciones de llamada de GC. No debe llamar a la API de generación de perfiles para realizar otras tareas como la pila de muestreo o desasociar.
 

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 9fcaf10bbed23a6c8b8cdc8355a2575574d2207a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542866"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355810"
 ---
 # <a name="element-tree-and-serialization"></a>Árbol de elementos y serialización
 Los elementos de programación de WPF a menudo existen con alguna forma de relación recíproca en el árbol. Por ejemplo, la interfaz de usuario de una aplicación, creada en XAML, puede conceptualizarse como un árbol de objetos. El árbol de elementos puede dividirse aún más en dos árboles discretos, pero paralelos en ocasiones: el árbol lógico y el árbol visual. La serialización en WPF implica guardar el estado de estos dos árboles, así como el estado de la aplicación y escribirlo en un archivo, posiblemente en XAML.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Árboles en WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
- [Limitaciones en la serialización de XamlWriter.Save](../../../../docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md)  
- [Inicialización de elementos de objeto no incluidos en un árbol de objetos](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/element-tree-and-serialization-how-to-topics.md)  
+ [Árboles en WPF](trees-in-wpf.md)  
+ [Limitaciones en la serialización de XamlWriter.Save](serialization-limitations-of-xamlwriter-save.md)  
+ [Inicialización de elementos de objeto no incluidos en un árbol de objetos](initialization-for-object-elements-not-in-an-object-tree.md)  
+ [Temas "Cómo..."](element-tree-and-serialization-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Markup>  
@@ -32,12 +32,12 @@ Los elementos de programación de WPF a menudo existen con alguna forma de relac
  <xref:System.Windows.Media.VisualTreeHelper>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Arquitectura de WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [XAML en WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Elementos base](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Propiedades](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [Eventos](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [Entrada](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Recursos](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Modelo de subprocesos](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [Arquitectura de WPF](wpf-architecture.md)  
+  [XAML en WPF](xaml-in-wpf.md)  
+  [Elementos base](base-elements.md)  
+  [Propiedades](properties-wpf.md)  
+  [Eventos](events-wpf.md)  
+  [Entrada](input-wpf.md)  
+  [Recursos](resources-wpf.md)  
+  [Aplicar estilos y plantillas](../controls/styling-and-templating.md)  
+  [Modelo de subprocesos](threading-model.md)

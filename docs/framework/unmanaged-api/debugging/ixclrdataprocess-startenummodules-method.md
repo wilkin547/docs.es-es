@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 4a086157b27b7426cb6d5f17f13426c0f26d2b2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0de622e96b9138b86cfc77c51d1a215c1868accf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658226"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375927"
 ---
 # <a name="ixclrdataprocessstartenummodules-method"></a>Método IXCLRDataProcess::StartEnumModules
 
@@ -38,7 +38,8 @@ HRESULT StartEnumModules(
 
 ### <a name="parameters"></a>Parámetros
 
-`handle` [out] Un identificador para enumerar los módulos.
+`handle`\
+[out] Un identificador para enumerar los módulos.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -53,6 +54,6 @@ El método proporcionado forma parte de la `IXCLRDataProcess` interfaz y corresp
 
 ## <a name="see-also"></a>Vea también
 
-- [Enumeración CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfaz IXCLRDataProcess](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [Enumeración CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [Depuración](index.md)
+- [Interfaz IXCLRDataProcess](ixclrdataprocess-interface.md)

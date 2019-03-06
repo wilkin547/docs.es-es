@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Enlazar a una colección y mostrar información basada en la selección
+title: Filtrar Enlazar a una colección y mostrar información basada en la selección
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-ms.openlocfilehash: 549f4e7af1a9aa623c7f8ff12b528f771a8ff806
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ceda723ad982fc788e8d0b81e6cf92975790682
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504788"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360399"
 ---
-# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Procedimiento Enlazar a una colección y mostrar información basada en la selección
+# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Filtrar Enlazar a una colección y mostrar información basada en la selección
 En un escenario sencillo de maestro y detalles, tiene un enlace de datos <xref:System.Windows.Controls.ItemsControl> como un <xref:System.Windows.Controls.ListBox>. Según la selección del usuario, mostrar más información sobre el elemento seleccionado. En este ejemplo se muestra cómo implementar este escenario.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo, `People` es un <xref:System.Collections.ObjectModel.ObservableCollection%601> de `Person` clases. Esto `Person` clase contiene tres propiedades: `FirstName`, `LastName`, y `HomeTown`, todos del tipo `string`.  
   
- [!code-xaml[CollectionBinding#Source](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#source)]  
-[!code-xaml[CollectionBinding#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#ui)]  
+ [!code-xaml[CollectionBinding#Source](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#source)]  
+[!code-xaml[CollectionBinding#UI](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#ui)]  
   
  El <xref:System.Windows.Controls.ContentControl> usa las siguientes <xref:System.Windows.DataTemplate> que define cómo la información de un `Person` se presenta:  
   
- [!code-xaml[CollectionBinding#DetailTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#detailtemplate)]  
+ [!code-xaml[CollectionBinding#DetailTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#detailtemplate)]  
   
  La siguiente es una captura de pantalla de lo que genera el ejemplo. La <xref:System.Windows.Controls.ContentControl> muestra las demás propiedades de la persona seleccionada.  
   
- ![Enlazar a una colección](../../../../docs/framework/wpf/data/media/databinding-collectionbindingsample.png "DataBinding_CollectionBindingSample")  
+ ![Enlazar a una colección](./media/databinding-collectionbindingsample.png "DataBinding_CollectionBindingSample")  
   
  Las dos cosas a tener en cuenta en este ejemplo son:  
   
@@ -42,12 +42,12 @@ En un escenario sencillo de maestro y detalles, tiene un enlace de datos <xref:S
   
  Tenga en cuenta que el `Person` clase invalida el `ToString` método del siguiente modo. De forma predeterminada, el <xref:System.Windows.Controls.ListBox> llamadas `ToString` y muestra una representación de cadena de cada objeto en la colección enlazada. Por eso cada `Person` aparece como un nombre en el <xref:System.Windows.Controls.ListBox>.  
   
- [!code-csharp[CollectionBinding#ToString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Data.cs#tostring)]
- [!code-vb[CollectionBinding#ToString](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
+ [!code-csharp[CollectionBinding#ToString](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Data.cs#tostring)]
+ [!code-vb[CollectionBinding#ToString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
   
 ## <a name="see-also"></a>Vea también
-- [Usar el patrón principal-detalle con datos jerárquicos](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
-- [Usar el patrón principal-detalle con datos XML jerárquicos](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
-- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Información general sobre plantillas de datos](../../../../docs/framework/wpf/data/data-templating-overview.md)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Usar el patrón principal-detalle con datos jerárquicos](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
+- [Usar el patrón principal-detalle con datos XML jerárquicos](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
+- [Información general sobre el enlace de datos](data-binding-overview.md)
+- [Información general sobre plantillas de datos](data-templating-overview.md)
+- [Temas "Cómo..."](data-binding-how-to-topics.md)

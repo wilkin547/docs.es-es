@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Enlazar un comando a un control con la compatibilidad de comandos
+title: Filtrar Enlazar un comando a un control con la compatibilidad de comandos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-ms.openlocfilehash: 4eded4812d8894b58331f26ec75c592c15e95419
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bb3e00cad1a629a405fa75ef32a289c4006f324
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663211"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364442"
 ---
-# <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Procedimiento Enlazar un comando a un control con la compatibilidad de comandos
+# <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Filtrar Enlazar un comando a un control con la compatibilidad de comandos
 En el ejemplo siguiente se muestra cómo enlazar un <xref:System.Windows.Input.RoutedCommand> a un <xref:System.Windows.Controls.Control> que tiene compatibilidad integrada para el comando.  Para obtener un ejemplo completo que enlace comandos a varios orígenes, consulte el ejemplo [Crear un objeto RoutedCommand personalizado](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
   
 ## <a name="example"></a>Ejemplo  
@@ -31,11 +31,11 @@ En el ejemplo siguiente se muestra cómo enlazar un <xref:System.Windows.Input.R
   
  Se crea un <xref:System.Windows.Controls.MenuItem> y su propiedad <xref:System.Windows.Controls.MenuItem.Command%2A> se establece en el comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A>.  <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> no se establece de forma explícita en el objeto <xref:System.Windows.Controls.TextBox>.  Cuando no se establece <xref:System.Windows.Controls.MenuItem.CommandTarget%2A>, el destino para el comando es el elemento que tiene el foco de teclado.  Si el elemento que tiene el foco de teclado no admite el comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A> o no puede ejecutar actualmente el comando Pegar (por ejemplo, porque el Portapapeles está vacío), <xref:System.Windows.Controls.MenuItem> estará atenuado.  
   
- [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
+ [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
   
- [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
- [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
+ [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
+ [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre comandos](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [Enlazar un comando a un control sin la compatibilidad de comandos](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)
+- [Información general sobre comandos](commanding-overview.md)
+- [Enlazar un comando a un control sin la compatibilidad de comandos](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)

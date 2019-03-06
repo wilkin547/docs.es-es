@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WrapPanel control [WPF]
 - content [WPF], sequentially positioning
 ms.assetid: f0acb1b4-df71-4c5a-b4a4-98f189002537
-ms.openlocfilehash: a8072a90984e5b9b926ab28d7f0239a71b754b73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 530c41938ae4abb893fd91d64804c7aaa2d430b5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554033"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362154"
 ---
 # <a name="wrappanel"></a>WrapPanel
-El <xref:System.Windows.Controls.WrapPanel> elemento coloca los elementos secundarios secuencialmente de izquierda a derecha y traslada el contenido a la línea siguiente en el borde del cuadro contenedor.  
+El <xref:System.Windows.Controls.WrapPanel> elemento coloca los elementos secundarios en posición secuencial de izquierda a derecha y traslada el contenido a la línea siguiente en el borde del cuadro contenedor.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.Panel>  
@@ -34,8 +34,8 @@ El <xref:System.Windows.Controls.WrapPanel> elemento coloca los elementos secund
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Diseño](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Diseño](../advanced/layout.md)  
   
- [Tutorial: Mi primera aplicación de escritorio WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Tutorial: Mi primera aplicación de escritorio WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Información general sobre ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Información general sobre ScrollViewer](scrollviewer-overview.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: c5dd567fa9f5db69c52072a1cc67b5c574f8e1f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e62b439926465aa1a61abd39c7c942acf26732c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623877"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367952"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Optimizar el rendimiento: Presentación y diseño
 El diseño de su aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] puede afectar a su rendimiento si se crea una sobrecarga innecesaria al calcular el diseño y validar las referencias de objeto. La construcción de objetos, especialmente en tiempo de ejecución, puede afectar a las características de rendimiento de la aplicación.  
@@ -49,7 +49,7 @@ El diseño de su aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/
 ### <a name="use-the-most-efficient-panel-where-possible"></a>Usar el panel más eficaz cuando sea posible  
  La complejidad del proceso de diseño se basa directamente en el comportamiento de diseño de la <xref:System.Windows.Controls.Panel>-elementos usas derivados. Por ejemplo, un <xref:System.Windows.Controls.Grid> o <xref:System.Windows.Controls.StackPanel> control proporciona mucha más funcionalidad que un <xref:System.Windows.Controls.Canvas> control. El precio de este mayor aumento de funcionalidad es el mayor aumento de los costos de rendimiento. Sin embargo, si no necesita la funcionalidad que un <xref:System.Windows.Controls.Grid> proporciona control, debe usar alternativas menos costosas, como un <xref:System.Windows.Controls.Canvas> o un panel personalizado.  
   
- Para más información, consulte [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md).  
+ Para más información, consulte [Información general sobre elementos Panel](../controls/panels-overview.md).  
   
 ### <a name="update-rather-than-replace-a-rendertransform"></a>Actualizar en lugar de reemplazar una propiedad RenderTransform  
  Es posible que pueda actualizar una <xref:System.Windows.Media.Transform> en lugar de reemplazarla como el valor de un <xref:System.Windows.UIElement.RenderTransform%2A> propiedad. Esto es especialmente cierto en escenarios que implican animación. Si actualiza una existente <xref:System.Windows.Media.Transform>, evite iniciar un cálculo de diseño innecesarios.  
@@ -64,19 +64,19 @@ El diseño de su aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
  En el siguiente ejemplo de código se muestra cómo crear un árbol de arriba a abajo.  
   
- [!code-csharp[Performance#PerformanceSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
- [!code-vb[Performance#PerformanceSnippet1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
+ [!code-csharp[Performance#PerformanceSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
+ [!code-vb[Performance#PerformanceSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
   
- Para más información acerca del árbol lógico, consulte [Árboles en WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
+ Para más información acerca del árbol lógico, consulte [Árboles en WPF](trees-in-wpf.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Optimizar WPF: Rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Planear para mejorar el rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Aprovechar el hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Imágenes y gráficos 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamiento de objetos](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Recursos de la aplicación](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Enlace de datos](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Otras recomendaciones de rendimiento](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [Diseño](../../../../docs/framework/wpf/advanced/layout.md)
+- [Optimizar WPF: Rendimiento de aplicaciones](optimizing-wpf-application-performance.md)
+- [Planear para mejorar el rendimiento de aplicaciones](planning-for-application-performance.md)
+- [Aprovechar el hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Imágenes y gráficos 2D](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamiento de objetos](optimizing-performance-object-behavior.md)
+- [Recursos de la aplicación](optimizing-performance-application-resources.md)
+- [Texto](optimizing-performance-text.md)
+- [Enlace de datos](optimizing-performance-data-binding.md)
+- [Otras recomendaciones de rendimiento](optimizing-performance-other-recommendations.md)
+- [Diseño](layout.md)

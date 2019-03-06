@@ -10,43 +10,47 @@ api_type:
 f1_keywords:
 - ICorDebugProcess2::GetVersion
 helpviewer_keywords:
-- GetVersion method, ICorDebugProcess2 nterface [.NET Framework debugging]
+- GetVersion method, ICorDebugProcess2 interface [.NET Framework debugging]
 - ICorDebugProcess2::GetVersion method [.NET Framework debugging]
 ms.assetid: e11d5a75-61d9-4548-aedf-79c26079bd17
 topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1e1f850e85099a466c497a8fcc822bce9510f69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 07f3be81431201a4bb6011ea9b8f973061d3d101
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416385"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361244"
 ---
 # <a name="icordebugprocess2getversion-method"></a>ICorDebugProcess2::GetVersion (Método)
-Obtiene el número de versión de common language runtime (CLR) que se está ejecutando en este proceso.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-HRESULT GetVersion (  
-    [out] COR_VERSION     *version  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `version`  
- [out] Un puntero a un COR_VERSION (estructura) que almacena el número de versión del runtime.  
-  
-## <a name="remarks"></a>Comentarios  
- El `GetVersion` método devuelve un código de error si no se ha cargado ningún tiempo de ejecución en el proceso.  
-  
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Encabezado:** CorDebug.idl, CorDebug.h  
-  
- **Biblioteca:** CorGuids.lib  
-  
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+
+Obtiene el número de versión de common language runtime (CLR) que se está ejecutando en este proceso.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+HRESULT GetVersion (
+    [out] COR_VERSION     *version
+);
+```
+
+## <a name="parameters"></a>Parámetros
+
+`version`\
+[out] Un puntero a un COR_VERSION (estructura) que almacena el número de versión del tiempo de ejecución.
+
+## <a name="remarks"></a>Comentarios
+
+El `GetVersion` método devuelve un código de error si no se ha cargado ningún tiempo de ejecución en el proceso.
+
+## <a name="requirements"></a>Requisitos
+
+**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Encabezado**: CorDebug.idl, CorDebug.h
+
+**Biblioteca:** CorGuids.lib
+
+**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

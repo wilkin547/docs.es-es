@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: d460eac13b99a503244503bdc3bbcaccfe649205
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa7eca674bd2758358bec244f2a21a341526d4b8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600237"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377271"
 ---
 # <a name="sample-opentype-font-pack"></a>Paquete de fuentes OpenType de ejemplo
 En este tema se proporciona información general sobre las fuentes de ejemplo de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] distribuidas con [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Las fuentes de ejemplo admiten características de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] extendidas que se pueden usar en las aplicaciones de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -34,7 +34,7 @@ En este tema se proporciona información general sobre las fuentes de ejemplo de
   
  En la ilustración siguiente se muestra la apariencia de las fuentes de ejemplo de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
   
- ![Lista de nombres de fuentes en paquete de fuentes de ejemplo](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")  
+ ![Lista de nombres de fuentes en paquete de fuentes de ejemplo](./media/samplefontpack01.gif "samplefontpack01")  
 Fuentes del paquete de fuentes OpenType  
   
  Las fuentes de ejemplo se proporcionan bajo licencia de Ascender Corporation. Ascender es un proveedor de productos de fuentes avanzados. Para asignar licencias extendidas o versiones personalizadas de las fuentes de ejemplo, vea el [sitio web de Ascender Corporation](https://go.microsoft.com/fwlink/?LinkId=182627).  
@@ -46,14 +46,14 @@ Fuentes del paquete de fuentes OpenType
 ## <a name="installing-the-fonts"></a>Instalación de las fuentes  
  Tiene la opción de instalar las fuentes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] de ejemplo en el directorio de fuentes predeterminado de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], **\WINDOWS\Fonts**. Use el panel de control Fuentes para instalar las fuentes. Una vez instaladas estas fuentes en el equipo, son accesibles para todas las aplicaciones que hacen referencia a las fuentes predeterminadas de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Puede mostrar un conjunto de caracteres representativo en varios tamaños de fuente haciendo doble clic en el archivo de fuente. En la captura de pantalla siguiente se muestra el archivo de la fuente Lindsey, Linds.ttf.  
   
- ![Fuente Lindsey &#40;OpenType&#41;](../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")  
+ ![Fuente Lindsey &#40;OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 Mostrar la fuente Lindsey  
   
 <a name="using_the_fonts"></a>   
 ## <a name="using-the-fonts"></a>Uso de las fuentes  
- Hay dos maneras de usar fuentes en una aplicación. Se pueden agregar fuentes a la aplicación como elementos de contenido del proyecto que no están insertados como recursos dentro de un ensamblado. Como alternativa, se pueden agregar las fuentes a la aplicación como elementos de recursos del proyecto insertados dentro de los archivos de ensamblado de la aplicación. Para más información, vea [Empaquetar fuentes con aplicaciones](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md).  
+ Hay dos maneras de usar fuentes en una aplicación. Se pueden agregar fuentes a la aplicación como elementos de contenido del proyecto que no están insertados como recursos dentro de un ensamblado. Como alternativa, se pueden agregar las fuentes a la aplicación como elementos de recursos del proyecto insertados dentro de los archivos de ensamblado de la aplicación. Para más información, vea [Empaquetar fuentes con aplicaciones](packaging-fonts-with-applications.md).  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Documents.Typography>
-- [Características de las fuentes OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
-- [Empaquetar fuentes con aplicaciones](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+- [Características de las fuentes OpenType](opentype-font-features.md)
+- [Empaquetar fuentes con aplicaciones](packaging-fonts-with-applications.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 6ee440d91bf241949923074dfd5163a49cfd9979
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2de3c2eba534618f6bd6dee0b2c23758f9e15f3f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740975"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378224"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Compartir bucles de mensajes entre Win32 y WPF
 Este tema describe cómo implementar un bucle de mensajes para la interoperación con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], mediante el uso existente del mensaje exposición de bucle en <xref:System.Windows.Threading.Dispatcher> o mediante la creación de un bucle de mensajes independiente en el [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] en paralelo del código de interoperación.  
@@ -64,6 +64,6 @@ Este tema describe cómo implementar un bucle de mensajes para la interoperació
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
-- [Interoperabilidad de WPF y Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [Modelo de subprocesos](../../../../docs/framework/wpf/advanced/threading-model.md)
-- [Información general sobre acciones del usuario](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Interoperabilidad de WPF y Win32](wpf-and-win32-interoperation.md)
+- [Modelo de subprocesos](threading-model.md)
+- [Información general sobre acciones del usuario](input-overview.md)

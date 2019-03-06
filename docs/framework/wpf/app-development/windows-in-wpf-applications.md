@@ -7,20 +7,20 @@ helpviewer_keywords:
 - windows [WPF]
 - WPF application [WPF], windows
 ms.assetid: dc091d04-68cf-4592-9695-75fda037db76
-ms.openlocfilehash: 04622255ea70d3d8161dc18919cb2833fe706639
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 798f8def03cb396224b7ba61bd17974609a5ff54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550782"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353860"
 ---
 # <a name="windows-in-wpf-applications"></a>Windows en aplicaciones para WPF
-Los usuarios interactúan con las aplicaciones a través de windows. El objetivo fundamental de una ventana es hospedar y mostrar el contenido. El tipo de contenido que una ventana hospeda depende del tipo de datos que una aplicación funciona a través de, que puede incluir multimedia, páginas de lenguaje de marcado de aplicaciones Extensible (XAML), páginas Web, documentos, tablas de base de datos y registros e información del sistema.  
+Los usuarios interactúan con las aplicaciones a través de windows. El propósito fundamental de una ventana es hospedar y mostrar el contenido. El tipo de contenido que una ventana hospeda depende del tipo de datos que una aplicación funciona a través, que puede incluir medios, las páginas de lenguaje de marcado de aplicaciones Extensible (XAML), páginas Web, documentos, tablas de base de datos y registros e información del sistema.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre ventanas de WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [Información general sobre cuadros de diálogo](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+ [Información general sobre ventanas de WPF](wpf-windows-overview.md)  
+ [Información general sobre cuadros de diálogo](dialog-boxes-overview.md)  
+ [Temas "Cómo..."](window-management-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Window>  
@@ -28,7 +28,7 @@ Los usuarios interactúan con las aplicaciones a través de windows. El objetivo
  <xref:System.Windows.Navigation.NavigationWindow>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Información general sobre la administración de aplicaciones](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [Información general sobre navegación](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [Hospedar aplicaciones de WPF](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
-  [Compilar e implementar aplicaciones WPF](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [Información general sobre la administración de aplicaciones](application-management-overview.md)  
+  [Información general sobre navegación](navigation-overview.md)  
+  [Hospedar aplicaciones de WPF](hosting-wpf-applications.md)  
+  [Compilar e implementar aplicaciones WPF](building-and-deploying-wpf-applications.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f2f2bff0d86d3c3fed443628a5c437fe1ebdcc15
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219846"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358176"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escribir aplicaciones grandes de .NET Framework que respondan
 En este artículo se ofrecen varias sugerencias para mejorar el rendimiento de las aplicaciones .NET Framework de gran tamaño o de aquellas aplicaciones que procesan una gran cantidad de datos, como archivos o bases de datos. Estas sugerencias proceden de reescribir los compiladores de C# y Visual Basic en código administrado; además, el artículo incluye varios ejemplos reales del compilador de C#. 
@@ -467,7 +467,6 @@ class Compilation { /*...*/
 - [Guía básica para la generación de perfiles de rendimiento](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Rendimiento](../../../docs/framework/performance/index.md)
 - [Sugerencias de rendimiento de .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
-- [Herramienta de análisis de rendimiento de Windows Phone](https://msdn.microsoft.com/magazine/hh781024.aspx)
 - [PerfView tutoriales de Channel 9](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [El SDK de .NET Compiler Platform](../../csharp/roslyn-sdk/index.md)
 - [dotnet/roslyn repo on GitHub](https://github.com/dotnet/roslyn)

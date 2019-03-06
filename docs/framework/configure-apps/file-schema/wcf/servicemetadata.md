@@ -3,11 +3,11 @@ title: <serviceMetadata>
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
 ms.openlocfilehash: 04bc29e8e842f5bb0252685fc3088a86535f4668
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268540"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379502"
 ---
 # <a name="servicemetadata"></a>\<serviceMetadata>
 Especifica la publicación de metadatos e información asociada del servicio.  
@@ -81,7 +81,7 @@ Especifica la publicación de metadatos e información asociada del servicio.
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente configura un servicio para exponer los metadatos mediante el \<serviceMetadata > elemento. También configura un punto de conexión para exponer el contrato `IMetadataExchange` como una implementación de un protocolo WS-MetadataExchange (MEX). El ejemplo usa `mexHttpBinding`, que es un enlace estándar de conveniencia equivalente a `wsHttpBinding` con el modo de seguridad establecido en `None`. Se usa una dirección relativa de "mex" en el punto de conexión, que cuando se resuelve con los servicios de bases dirección da como resultado una dirección de punto de conexión de `http://localhost/servicemodelsamples/service.svc/mex`.  
+ El ejemplo siguiente configura un servicio para exponer los metadatos mediante el \<serviceMetadata > elemento. También configura un extremo para exponer el contrato `IMetadataExchange` como una implementación de un protocolo WS-MetadataExchange (MEX). El ejemplo usa `mexHttpBinding`, que es un enlace estándar de conveniencia equivalente a `wsHttpBinding` con el modo de seguridad establecido en `None`. Se usa una dirección relativa de "mex" en el punto de conexión, que cuando se resuelve con los servicios de bases dirección da como resultado una dirección de punto de conexión de `http://localhost/servicemodelsamples/service.svc/mex`.  
   
 ```xml  
 <configuration>

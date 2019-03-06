@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hosted pages in browser [WPF]
 - pages [WPF], hosted in browser
 ms.assetid: 737e0f26-8371-49b4-9579-70879e51e1aa
-ms.openlocfilehash: aa2aa36e4f887c4fa02314f7834e2a46268c8ff9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebc5612f059a6cf26f2568bbc08e705b4b3014c1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661300"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359996"
 ---
-# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Procedimiento Determinar si una página está hospedada de explorador
+# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Filtrar Determinar si una página está hospedada de explorador
 En este ejemplo se muestra cómo determinar si un <xref:System.Windows.Controls.Page> se hospeda en un explorador.  
   
 ## <a name="example"></a>Ejemplo  
@@ -23,8 +23,8 @@ En este ejemplo se muestra cómo determinar si un <xref:System.Windows.Controls.
   
  En el ejemplo siguiente se muestra cómo usar <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> para determinar si un <xref:System.Windows.Controls.Page> se hospeda en un explorador.  
   
- [!code-csharp[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/CSharp/Page1.xaml.cs#isbrowserhostedcode)]
- [!code-vb[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/visualbasic/page1.xaml.vb#isbrowserhostedcode)]  
+ [!code-csharp[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/CSharp/Page1.xaml.cs#isbrowserhostedcode)]
+ [!code-vb[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/visualbasic/page1.xaml.vb#isbrowserhostedcode)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Controls.Frame>

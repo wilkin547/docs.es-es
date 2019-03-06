@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: de09612ee978ee809ee07f0db2e37b14533760da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 02377b0765144064df8d51fa63768412ca4b606a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974814"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363489"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda (expresiones) (Visual Basic)
 Un *expresión lambda* es una función o subrutina sin un nombre que puede usarse siempre que un delegado es válido. Las expresiones lambda pueden ser funciones o subrutinas y pueden ser una línea o varias líneas. Puede pasar valores desde el ámbito actual a una expresión lambda.  
@@ -109,7 +109,7 @@ End Class
   
  Para obtener más información acerca de cómo crear y usar métodos asincrónicos, vea [programación asincrónica con Async y Await](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
-##  <a name="context"></a> Contexto  
+## <a name="context"></a> Contexto  
  Una expresión lambda comparte su contexto con el ámbito en el que se definió. Tiene los mismos derechos de acceso que cualquier código escrito en el ámbito contenedor. Esto incluye el acceso a las variables de miembro, funciones y subrutinas, `Me`, parámetros y variables locales en el ámbito contenedor.  
   
  Acceso a las variables locales y parámetros en el ámbito contenedor puede extender más allá de la duración de ese ámbito. Siempre que un delegado que hace referencia a una expresión lambda no está disponible para la recolección de elementos, se conserva el acceso a las variables del entorno original. En el ejemplo siguiente, la variable `target` es local para `makeTheGame`, el método en el que la expresión lambda `playTheGame` está definido. Tenga en cuenta que la expresión lambda devuelta, asignada a `takeAGuess` en `Main`, todavía tiene acceso a la variable local `target`.  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: d7a73c6590ca2df00c77a3a7255f2064a8676c42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3d05c3165e54735cfe739c3c0e227ec4b974c7b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677230"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378834"
 ---
-# <a name="how-to-clone-a-printer"></a>Procedimiento Clonar una impresora
+# <a name="how-to-clone-a-printer"></a>Filtrar Clonar una impresora
 En algún momento, la mayoría de las empresas comprará varias impresoras del mismo modelo. Normalmente, estas se instalan con valores de configuración prácticamente idénticos. Instalación de cada impresora puede llevar mucho tiempo y propensas a errores. El <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> espacio de nombres y el <xref:System.Printing.PrintServer.InstallPrintQueue%2A> clase que se exponen a través de Microsoft .NET Framework hace posible instalar al instante cualquier número de colas de impresión adicionales que se clonan desde una cola de impresión existente.  
   
 ## <a name="example"></a>Ejemplo  
@@ -52,8 +52,8 @@ En algún momento, la mayoría de las empresas comprará varias impresoras del m
   
  Es un ejemplo a continuación.  
   
- [!code-csharp[ClonePrinter#ClonePrinter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
- [!code-vb[ClonePrinter#ClonePrinter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
+ [!code-csharp[ClonePrinter#ClonePrinter](~/samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
+ [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Printing.IndexedProperties>
@@ -61,5 +61,5 @@ En algún momento, la mayoría de las empresas comprará varias impresoras del m
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Collections.DictionaryEntry>
-- [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Información general sobre impresión](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Documentos en WPF](documents-in-wpf.md)
+- [Información general sobre impresión](printing-overview.md)

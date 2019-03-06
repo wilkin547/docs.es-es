@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 9e2370c1b17bfdf103072ff33bf42c4c77706550
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7bee6bffcfe0660d1661cd2c8e2ddf0528e98620
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975205"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360269"
 ---
 # <a name="dim-statement-visual-basic"></a>Instrucción Dim (Visual Basic)
 Declara y asigna espacio de almacenamiento para una o más variables.  
@@ -246,7 +246,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  Para obtener más información sobre los literales de matriz, vea [matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-##  <a name="default"></a> Tipos de datos de forma predeterminada y valores  
+## <a name="default"></a> Tipos de datos de forma predeterminada y valores  
  En la tabla siguiente se describen los resultados de diversas combinaciones resultantes de especificar el tipo de datos y el inicializador en una instrucción `Dim`.  
   
 |¿Tipo de datos especificado?|¿Inicializador especificado?|Ejemplo|Resultado|  

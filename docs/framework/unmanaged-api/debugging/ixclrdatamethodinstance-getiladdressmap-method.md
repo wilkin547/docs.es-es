@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8442d1373ede241d262ab41928fd5d9924ec9c80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e6fde6e4e5bf006da00b62b035cee112efae1d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567196"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373496"
 ---
 # <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>Método IXCLRDataMethodInstance::GetILAddressMap
 
@@ -40,11 +40,14 @@ HRESULT GetILAddressMap(
 
 ### <a name="parameters"></a>Parámetros
 
-`mapLen` [in] La longitud de la matriz proporcionada de mapas.
+`mapLen`\
+[in] La longitud de la matriz proporcionada de mapas.
 
-`mapNeeded` [out] El número de entradas de mapa que necesita el método.
+`mapNeeded`\
+[out] El número de entradas de mapa que necesita el método.
 
-`maps` [out, size_is(mapLen)] La matriz para almacenar las entradas de mapa.
+`maps`\
+[out, size_is(mapLen)] La matriz para almacenar las entradas de mapa.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -59,5 +62,5 @@ El método proporcionado forma parte de la `IXCLRDataMethodInstance` interfaz y 
 
 ## <a name="see-also"></a>Vea también
 
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfaz IXCLRDataMethodInstance](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [Depuración](index.md)
+- [Interfaz IXCLRDataMethodInstance](ixclrdatamethodinstance-interface.md)

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - documents [WPF], flow content reference
 - flow content reference [WPF]
 ms.assetid: d32501af-0bac-4b80-8a20-61a6996753fe
-ms.openlocfilehash: c41270bc09dfefb282a3c0e0ee0308e22e1af446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47bdc48eb6f2fcb0ffd73f06a58bd01d716e56fc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542342"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373548"
 ---
 # <a name="flow-content"></a>Contenido dinámico
-Elementos de contenido dinámico proporcionan los bloques de creación para crear el contenido del flujo apropiado para su hospedaje en una <xref:System.Windows.Documents.FlowDocument>.  
+Elementos de contenido dinámico proporcionan los bloques de creación para crear contenido dinámico adecuado para el hospedaje en un <xref:System.Windows.Documents.FlowDocument>.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre documentos dinámicos](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Información general sobre el modelo de contenido de TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
- [Información general sobre tablas](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [Información general sobre documentos dinámicos](flow-document-overview.md)  
+ [Información general sobre el modelo de contenido de TextElement](textelement-content-model-overview.md)  
+ [Información general sobre tablas](table-overview.md)  
+ [Temas "Cómo..."](flow-content-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Documents.FlowDocument>  
@@ -39,4 +39,4 @@ Elementos de contenido dinámico proporcionan los bloques de creación para crea
   <xref:System.Windows.Documents.ListItem>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+ [Documentos en WPF](documents-in-wpf.md)

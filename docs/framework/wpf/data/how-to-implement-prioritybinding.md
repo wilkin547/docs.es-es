@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Implementar PriorityBinding
+title: Filtrar Implementar PriorityBinding
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: 0eb14b3f3859983ba4ba0436ab5a0fab9fda5006
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: cf21041a7f3d5b75803378cf05768ee6f1008fdd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745310"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354601"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Filtrar Implementar PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funciona mediante la especificación de una lista de enlaces. La lista de enlaces está ordenada de prioridad más alta a prioridad más baja. Si el enlace de máxima prioridad devuelve un valor correctamente cuando se procesa, a continuación, hay nunca una necesidad de procesar los otros enlaces en la lista. Podría ser el caso de que el enlace de máxima prioridad tarda mucho tiempo en evaluarse, se usará la siguiente prioridad más alta que devuelve un valor correctamente hasta que un enlace de una prioridad más alta devuelve un valor correctamente.  
@@ -29,12 +29,12 @@ ms.locfileid: "56745310"
 > [!NOTE]
 >  Este ejemplo solamente sirve de demostración. El [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] directrices recomiendan definir las propiedades que son órdenes de magnitud más lentas de un conjunto de campos. Para obtener más información, consulte [elegir entre propiedades y métodos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
   
- [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
- [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
+ [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
   
  El <xref:System.Windows.Controls.TextBlock.Text%2A> propiedad enlaza a la anterior `AsyncDS` mediante <xref:System.Windows.Data.PriorityBinding>:  
   
- [!code-xaml[PriorityBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
+ [!code-xaml[PriorityBinding#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
   
  Cuando se procesa el motor de enlace el <xref:System.Windows.Data.Binding> objetos, comienza con la primera <xref:System.Windows.Data.Binding>, que se enlaza a la `SlowestDP` propiedad. Cuando esto <xref:System.Windows.Data.Binding> está procesado, no devuelve un valor correctamente porque está inactivo durante 5 segundos, por lo que la próxima <xref:System.Windows.Data.Binding> se procesa el elemento. La próxima <xref:System.Windows.Data.Binding> no devuelve un valor correctamente porque está inactivo durante 3 segundos. El motor de enlace, a continuación, se mueve a la siguiente <xref:System.Windows.Data.Binding> elemento, que está enlazado a la `FastDP` propiedad. Esto <xref:System.Windows.Data.Binding> devuelve el valor "Fast Value". El <xref:System.Windows.Controls.TextBlock> ahora muestra el valor "Fast Value".  
   
@@ -46,5 +46,5 @@ ms.locfileid: "56745310"
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
-- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Información general sobre el enlace de datos](data-binding-overview.md)
+- [Temas "Cómo..."](data-binding-how-to-topics.md)

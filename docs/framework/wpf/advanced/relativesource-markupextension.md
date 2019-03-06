@@ -7,15 +7,15 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 43201be232a037b14d783ae61546ef0030f486ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d96a00afc08f2c5593dad5a3a47ab46045ff6b0f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559391"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365118"
 ---
 # <a name="relativesource-markupextension"></a>Extensión de marcado RelativeSource
-Especifica las propiedades de un <xref:System.Windows.Data.RelativeSource> origen de enlace, que se utiliza dentro de un [extensión de marcado de enlace](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), o al establecer el <xref:System.Windows.Data.Binding.RelativeSource%2A> propiedad de un <xref:System.Windows.Data.Binding> elemento establecido en XAML.  
+Especifica las propiedades de un <xref:System.Windows.Data.RelativeSource> origen de enlace, que se utiliza dentro de un [extensión de marcado de enlace](binding-markup-extension.md), o al establecer el <xref:System.Windows.Data.Binding.RelativeSource%2A> propiedad de un <xref:System.Windows.Data.Binding> elemento establecido en XAML.  
   
 ## <a name="xaml-attribute-usage"></a>Uso de atributos XAML  
   
@@ -61,11 +61,11 @@ O bien
 |`intLevel`|Opcional para el modo `FindAncestor`. Un nivel del antecesor (se evalúa en la dirección del elemento primario en el árbol lógico).|  
   
 ## <a name="remarks"></a>Comentarios  
- `{RelativeSource TemplatedParent}` usos de enlace son una técnica clave que aborda un concepto más amplio de la separación de la interfaz de usuario de un control y la lógica de un control. Esto permite enlazar desde dentro de la definición de plantilla al elemento primario con plantilla (instancia de objeto en tiempo de ejecución donde se aplica la plantilla). En este caso, el [extensión de marcado TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) es en realidad una forma abreviada de la siguiente expresión de enlace: `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding` o `{RelativeSource TemplatedParent}` usos son solo es relevante en el XAML que define una plantilla. Para obtener más información, consulte [extensión de marcado TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
+ `{RelativeSource TemplatedParent}` usos de enlace son una técnica clave que aborda un concepto más amplio de la separación de la interfaz de usuario de un control y la lógica de un control. Esto permite enlazar desde dentro de la definición de plantilla al elemento primario con plantilla (instancia de objeto en tiempo de ejecución donde se aplica la plantilla). En este caso, el [extensión de marcado TemplateBinding](templatebinding-markup-extension.md) es en realidad una forma abreviada de la siguiente expresión de enlace: `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding` o `{RelativeSource TemplatedParent}` usos son solo es relevante en el XAML que define una plantilla. Para obtener más información, consulte [extensión de marcado TemplateBinding](templatebinding-markup-extension.md)  
   
  `{RelativeSource FindAncestor}` se utiliza principalmente en las plantillas de control o predecibles composiciones de interfaz de usuario independientes, para los casos donde un control siempre debe estar en un árbol visual de un tipo de antecesor determinado. Por ejemplo, los elementos de un control de elementos pueden usar `FindAncestor` para enlazar a propiedades del antecesor del elemento primario del control de elementos. O bien los elementos que forman parte de la composición de controles en una plantilla pueden usar enlaces `FindAncestor` a los elementos primarios en esa misma estructura de composición.  
   
- En la sintaxis de elementos de objeto para el modo `FindAncestor` que se muestra en las secciones sobre sintaxis XAML, la segunda sintaxis de elementos de objeto se emplea específicamente para el modo `FindAncestor`. El modo `FindAncestor` necesita un valor de <xref:System.Windows.Data.RelativeSource.AncestorType%2A>. Debe establecer <xref:System.Windows.Data.RelativeSource.AncestorType%2A> como atributo utilizando una [x: Type Markup Extension](../../../../docs/framework/xaml-services/x-type-markup-extension.md) referencia al tipo de antecesor que se busca. Se utiliza el valor de <xref:System.Windows.Data.RelativeSource.AncestorType%2A> al procesar la solicitud de enlace en tiempo de ejecución.  
+ En la sintaxis de elementos de objeto para el modo `FindAncestor` que se muestra en las secciones sobre sintaxis XAML, la segunda sintaxis de elementos de objeto se emplea específicamente para el modo `FindAncestor`. El modo `FindAncestor` necesita un valor de <xref:System.Windows.Data.RelativeSource.AncestorType%2A>. Debe establecer <xref:System.Windows.Data.RelativeSource.AncestorType%2A> como atributo utilizando una [x: Type Markup Extension](../../xaml-services/x-type-markup-extension.md) referencia al tipo de antecesor que se busca. Se utiliza el valor de <xref:System.Windows.Data.RelativeSource.AncestorType%2A> al procesar la solicitud de enlace en tiempo de ejecución.  
   
  Para el modo `FindAncestor`, la propiedad <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> opcional puede ayudar a eliminar la ambigüedad en la búsqueda del antecesor en aquellos casos en que sea posible que exista más de un antecesor de ese tipo en el árbol de elementos.  
   
@@ -99,17 +99,17 @@ O bien
     </ListBox.ItemTemplate>  
 ```  
   
- Descripción del enlace de datos como un concepto no se incluye aquí, vea [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Descripción del enlace de datos como un concepto no se incluye aquí, vea [Data Binding Overview](../data/data-binding-overview.md).  
   
  En el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementación del procesador XAML, el control para esta extensión de marcado se define por la <xref:System.Windows.Data.RelativeSource> clase.  
   
- `RelativeSource` es una extensión de marcado. Las extensiones de marcado se suelen implementar cuando se necesita que los valores de los atributos de escape no sean valores literales o nombres de controladores, y este requisito es de índole más global que limitarse a colocar los convertidores de tipos en determinados tipos o propiedades. Todas las extensiones de marcado en el uso XAML el `{` y `}` caracteres en su sintaxis de atributo, que es la convención que un procesador XAML reconozca que una extensión de marcado debe procesar el atributo. Para más información, vea [Extensiones de marcado y XAML de WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ `RelativeSource` es una extensión de marcado. Las extensiones de marcado se suelen implementar cuando se necesita que los valores de los atributos de escape no sean valores literales o nombres de controladores, y este requisito es de índole más global que limitarse a colocar los convertidores de tipos en determinados tipos o propiedades. Todas las extensiones de marcado en el uso XAML el `{` y `}` caracteres en su sintaxis de atributo, que es la convención que un procesador XAML reconozca que una extensión de marcado debe procesar el atributo. Para más información, vea [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Data.Binding>
-- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Información general sobre XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Extensiones de marcado y XAML de WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Información general sobre declaraciones de enlaces](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
-- [x:Type (extensión de marcado)](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Aplicar estilos y plantillas](../controls/styling-and-templating.md)
+- [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
+- [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md)
+- [Información general sobre el enlace de datos](../data/data-binding-overview.md)
+- [Información general sobre declaraciones de enlaces](../data/binding-declarations-overview.md)
+- [x:Type (extensión de marcado)](../../xaml-services/x-type-markup-extension.md)

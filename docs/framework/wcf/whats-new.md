@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
 ms.openlocfilehash: 8d079613d1970d2a50ddb3449c2a3072010b2c55
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280012"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358325"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Novedades de Windows Communication Foundation 4.5
 
@@ -52,7 +52,7 @@ En este tema se describe las características nuevas a la versión 4.5 de Window
  Se agregó compatibilidad con el verdadero streaming asincrónico donde el lado de envío ahora no bloquea los subprocesos si el lado de recepción no está leyendo o lee despacio, lo que aumenta la escalabilidad. Se quitó la limitación de almacenamiento en búfer de mensaje cuando un cliente envía un mensaje transmitido por secuencias a un servicio WCF hospedado en IIS. Para obtener más información, consulte [características de simplificación de WCF](../../../docs/framework/wcf/wcf-simplification-features.md).
 
 ## <a name="simplifying-exposing-an-endpoint-over-https-with-iis"></a>Simplificar la exposición de un punto de conexión sobre HTTPS con IIS
- Se ha agregado una asignación de protocolo HTTPS para simplificar la exposición de un extremo sobre HTTPS. Para habilitar un extremo HTTPS, asegúrese de que el sitio web tenga un enlace HTTPS y un certificado SSL configurado y, a continuación, habilite simplemente HTTPS para el directorio virtual que hospeda el servicio. Si los metadatos están habilitados para el servicio, también se expondrán mediante HTTPS.
+ Se ha agregado una asignación de protocolo HTTPS para simplificar la exposición de un extremo sobre HTTPS. Para habilitar un punto de conexión HTTPS, asegúrese de que el sitio web tenga un enlace HTTPS y un certificado SSL configurado y, a continuación, habilite simplemente HTTPS para el directorio virtual que hospeda el servicio. Si los metadatos están habilitados para el servicio, también se expondrán mediante HTTPS.
 
 ## <a name="generating-a-single-wsdl-document"></a>Generar un único documento WSDL
  Algunas pilas de procesamiento WSDL de terceros no pueden procesar los documentos WSDL que tienen dependencias de otros documentos mediante xsd:import.  WCF permite especificar ahora que toda la información del WSDL se devuelva en un único documento. Para solicitar un solo documento WSDL, anexe "? singleWSDL" al identificador URI cuando solicite metadatos del servicio.
@@ -97,7 +97,7 @@ En este tema se describe las características nuevas a la versión 4.5 de Window
  Un transporte UDP que permite a los desarrolladores escribir servicios que usan "desencadenar y omitir" se ha agregado compatibilidad con mensajería. Un cliente envía un mensaje a un servicio y no espera ninguna respuesta de él.
 
 ## <a name="multiple-authentication-support"></a>Compatibilidad con autenticación múltiple
- Se ha agregado compatibilidad para admitir varios modos de autenticación, como compatibles con IIS, en un solo punto de conexión de WCF cuando se usa el transporte HTTP y la seguridad de transporte. IIS permite habilitar varios modos de autenticación en un directorio virtual; esta característica permite que un solo punto de conexión WCF admita los distintos modos de autenticación habilitados para el directorio virtual donde se hospeda el servicio WCF.
+ Se ha agregado compatibilidad para admitir varios modos de autenticación, como compatibles con IIS, en un solo extremo de WCF cuando se usa el transporte HTTP y la seguridad de transporte. IIS permite habilitar varios modos de autenticación en un directorio virtual; esta característica permite que un solo punto de conexión WCF admita los distintos modos de autenticación habilitados para el directorio virtual donde se hospeda el servicio WCF.
 
 ## <a name="idn-support"></a>Compatibilidad con IDN
  Se ha agregado compatibilidad para permitir servicios WCF con nombres de dominio internacionalizados. Para obtener más información, consulte [WCF y nombres de dominio internacionalizados](../../../docs/framework/wcf/feature-details/wcf-and-internationalized-domain-names.md).
@@ -115,7 +115,7 @@ En este tema se describe las características nuevas a la versión 4.5 de Window
  En un proyecto de WCF, los tipos de datos definidos en XML (como los expuestos en un servicio) se pueden pegar directamente en una página de códigos. El tipo XML se pegará como un tipo de CLR. Consulte [generar clases de tipos de datos desde XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md) para obtener más detalles.
 
 ## <a name="webservicehost-and-default-endpoints"></a>WebServiceHost y los puntos de conexión predeterminados
- En Visual Studio 2010, WebServiceHost creaba automáticamente un punto de conexión predeterminado sin importar si se había especificado explícitamente un punto de conexión o no. En Visual Studio 2012 y versiones posteriores, WebServiceHost solo crea un extremo predeterminado si no se agrega explícitamente ningún punto de conexión. Si el cliente espera el punto de conexión predeterminado, se puede agregar explícitamente un punto de conexión y dirigir el cliente a él. Como alternativa, puede pedirle a WCF que vuelva al comportamiento anterior; para ello, agregue la siguiente configuración al archivo de configuración de aplicaciones
+ En Visual Studio 2010, WebServiceHost creaba automáticamente un extremo predeterminado sin importar si se había especificado explícitamente un extremo o no. En Visual Studio 2012 y versiones posteriores, WebServiceHost solo crea un extremo predeterminado si no se agrega explícitamente ningún punto de conexión. Si el cliente espera el punto de conexión predeterminado, se puede agregar explícitamente un punto de conexión y dirigir el cliente a él. Como alternativa, puede pedirle a WCF que vuelva al comportamiento anterior; para ello, agregue la siguiente configuración al archivo de configuración de aplicaciones
 
 ```xml
 <appSettings>

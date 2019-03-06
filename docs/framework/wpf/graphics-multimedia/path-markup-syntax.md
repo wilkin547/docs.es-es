@@ -7,19 +7,19 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: 03f9c4f8156c5f14ff127dd47c7ade6f6ee22e5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65a86b82af9269d1af7198b8106ad478e88f3691
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671270"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379164"
 ---
 # <a name="path-markup-syntax"></a>Sintaxis de marcado de trazados
-Las rutas de acceso se tratan en [formas y dibujo básico en WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) y [información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), sin embargo, este tema describe en detalle el eficaz y complejo minilenguaje puede usar para especificar la ruta de acceso geometrías de manera más compacta con [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+Las rutas de acceso se tratan en [formas y dibujo básico en WPF Overview](shapes-and-basic-drawing-in-wpf-overview.md) y [información general sobre geometría](geometry-overview.md), sin embargo, este tema describe en detalle el eficaz y complejo minilenguaje puede usar para especificar la ruta de acceso geometrías de manera más compacta con [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
- Para entender este tema, debe estar familiarizado con las características básicas de <xref:System.Windows.Media.Geometry> objetos. Para obtener más información, consulte el [información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Para entender este tema, debe estar familiarizado con las características básicas de <xref:System.Windows.Media.Geometry> objetos. Para obtener más información, consulte el [información general sobre geometría](geometry-overview.md).  
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>Minilenguajes StreamGeometry y PathFigureCollection  
@@ -27,15 +27,15 @@ Las rutas de acceso se tratan en [formas y dibujo básico en WPF Overview](../..
   
 -   Usa el <xref:System.Windows.Media.StreamGeometry> minilenguaje al establecer una propiedad de tipo <xref:System.Windows.Media.Geometry>, como el <xref:System.Windows.UIElement.Clip%2A> propiedad de un <xref:System.Windows.UIElement> o el <xref:System.Windows.Shapes.Path.Data%2A> propiedad de un <xref:System.Windows.Shapes.Path> elemento. En el ejemplo siguiente se usa la sintaxis de atributo para crear un <xref:System.Windows.Media.StreamGeometry>.  
   
-     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
+     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
   
 -   Usa el <xref:System.Windows.Media.PathFigureCollection> minilenguaje al establecer el <xref:System.Windows.Media.PathGeometry.Figures%2A> propiedad de un <xref:System.Windows.Media.PathGeometry>. En el ejemplo siguiente se usa una sintaxis de atributo para crear un <xref:System.Windows.Media.PathFigureCollection> para un <xref:System.Windows.Media.PathGeometry>.  
   
-     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
+     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
   
  Como puede ver en los ejemplos anteriores, los dos minilenguajes son muy similares. ¿Siempre es posible usar un <xref:System.Windows.Media.PathGeometry> en cualquier situación donde podría usar un <xref:System.Windows.Media.StreamGeometry>; por lo que debe cuál usar? Usar un <xref:System.Windows.Media.StreamGeometry> cuando no es necesario modificar la ruta de acceso después de crearla; utilice un <xref:System.Windows.Media.PathGeometry> si tiene que modificar la ruta de acceso.  
   
- Para obtener más información sobre las diferencias entre <xref:System.Windows.Media.PathGeometry> y <xref:System.Windows.Media.StreamGeometry> objetos, vea el [información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Para obtener más información sobre las diferencias entre <xref:System.Windows.Media.PathGeometry> y <xref:System.Windows.Media.StreamGeometry> objetos, vea el [información general sobre geometría](geometry-overview.md).  
   
 ### <a name="a-note-about-white-space"></a>Nota sobre los espacios en blanco  
  Por razones de brevedad, se muestra un solo espacio en las secciones de sintaxis siguientes, pero también se aceptan varios espacios cada vez que se muestra uno solo.  
@@ -229,6 +229,6 @@ En mayúscula `V` indica que `y` es un valor absoluto; una minúscula `v` indica
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.PathFigureCollection>
-- [Información general sobre formas y dibujo básico en WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Información general sobre geometría](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+- [Información general sobre formas y dibujo básico en WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Información general sobre geometría](geometry-overview.md)
+- [Temas "Cómo..."](geometries-how-to-topics.md)

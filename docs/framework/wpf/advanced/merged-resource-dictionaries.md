@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merged resource dictionaries [WPF]
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
-ms.openlocfilehash: f8549dedc9c6f37fb8a06a376351ed96b808bfd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae6c8dc3669ed46165f3d78e78735187ebbc3776
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572930"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377065"
 ---
 # <a name="merged-resource-dictionaries"></a>Diccionarios de recursos combinados
 Los recursos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] admiten una característica de diccionario de recursos combinados. Esta característica proporciona una manera de definir la parte de recursos de una aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fuera de la aplicación [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilada. Los recursos se pueden compartir entre aplicaciones y también se aíslan de forma más conveniente para la localización.  
@@ -18,9 +18,9 @@ Los recursos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wincl
 ## <a name="introducing-a-merged-resource-dictionary"></a>Introducir un diccionario de recursos combinados  
  En la marcación, se usa la sintaxis siguiente para introducir un diccionario de recursos combinados en una página:  
   
- [!code-xaml[ResourceMergeDictionary#MergedXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
+ [!code-xaml[ResourceMergeDictionary#MergedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
   
- Tenga en cuenta que el <xref:System.Windows.ResourceDictionary> elemento no tiene un [Directiva x: Key](../../../../docs/framework/xaml-services/x-key-directive.md), que generalmente se necesita para todos los elementos de una colección de recursos. Pero otro <xref:System.Windows.ResourceDictionary> referencia dentro de la <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> colección es un caso especial, reservado para este escenario de diccionario de recursos combinados. El <xref:System.Windows.ResourceDictionary> que presenta un combinado diccionario de recursos no puede tener un [Directiva x: Key](../../../../docs/framework/xaml-services/x-key-directive.md). Normalmente, cada uno de ellos <xref:System.Windows.ResourceDictionary> dentro de la <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> colección especifica un <xref:System.Windows.ResourceDictionary.Source%2A> atributo. El valor de <xref:System.Windows.ResourceDictionary.Source%2A> debe ser un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] que se resuelve en la ubicación del archivo de recursos que se combinarán. El destino de ese [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] debe ser otro [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivo, con <xref:System.Windows.ResourceDictionary> como su elemento raíz.  
+ Tenga en cuenta que el <xref:System.Windows.ResourceDictionary> elemento no tiene un [Directiva x: Key](../../xaml-services/x-key-directive.md), que generalmente se necesita para todos los elementos de una colección de recursos. Pero otro <xref:System.Windows.ResourceDictionary> referencia dentro de la <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> colección es un caso especial, reservado para este escenario de diccionario de recursos combinados. El <xref:System.Windows.ResourceDictionary> que presenta un combinado diccionario de recursos no puede tener un [Directiva x: Key](../../xaml-services/x-key-directive.md). Normalmente, cada uno de ellos <xref:System.Windows.ResourceDictionary> dentro de la <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> colección especifica un <xref:System.Windows.ResourceDictionary.Source%2A> atributo. El valor de <xref:System.Windows.ResourceDictionary.Source%2A> debe ser un [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] que se resuelve en la ubicación del archivo de recursos que se combinarán. El destino de ese [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] debe ser otro [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivo, con <xref:System.Windows.ResourceDictionary> como su elemento raíz.  
   
 > [!NOTE]
 >  Es válido definir recursos dentro de un <xref:System.Windows.ResourceDictionary> que se especifica como un diccionario combinado, ya sea como una alternativa a especificar <xref:System.Windows.ResourceDictionary.Source%2A>, o además de cualquier recurso que se incluye en el origen especificado. Sin embargo, esto no es un escenario común: el escenario principal para los diccionarios combinados es combinar recursos desde ubicaciones de archivo externas. Si desea especificar los recursos dentro del marcado de una página, se deberá definirlos en la ventana principal <xref:System.Windows.ResourceDictionary> y no en los diccionarios combinados.  
@@ -39,7 +39,7 @@ Los recursos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wincl
 > [!NOTE]
 >  No use la acción de compilación de recurso incrustado. Se admite la acción de compilación propia para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones, pero la resolución de <xref:System.Windows.ResourceDictionary.Source%2A> no incorpora <xref:System.Resources.ResourceManager>y, por tanto, no se puede separar el recurso individual de la secuencia. Todavía podría usar los recursos incrustados para otros fines siempre y cuando también usa <xref:System.Resources.ResourceManager> para tener acceso a los recursos.  
   
- Una técnica relacionada es usar un Pack URI en un archivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y hacer referencia a él como origen. Pack URI habilita las referencias a componentes de ensamblados de referencia y otras técnicas. Para obtener más información sobre Pack URI, consulte [Archivos de recursos, contenido y datos de aplicaciones de WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
+ Una técnica relacionada es usar un Pack URI en un archivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y hacer referencia a él como origen. Pack URI habilita las referencias a componentes de ensamblados de referencia y otras técnicas. Para obtener más información sobre Pack URI, consulte [Archivos de recursos, contenido y datos de aplicaciones de WPF](../app-development/wpf-application-resource-content-and-data-files.md).  
   
  Para los recursos que no se compilan como parte del proyecto, el URI se evalúa en tiempo de ejecución. Puede usar un transporte URI común, como file: o http:, para hacer referencia al archivo de recursos. La desventaja de usar el enfoque de recursos no compilados es que el acceso file: requiere pasos de implementación adicionales y el acceso http: implica la zona de seguridad de Internet.  
   
@@ -49,10 +49,10 @@ Los recursos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wincl
  Escribir diccionarios combinados como archivos de aplicación locales o en almacenamiento compartido local es otro escenario posible de diccionario combinado o implementación de aplicación.  
   
 ### <a name="localization"></a>Localización  
- Si los recursos que deben localizarse están aislados en diccionarios que se combinan en diccionarios principales y se mantienen como [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] separados, estos archivos se pueden localizar por separado. Esta técnica es una alternativa ligera a la localización de los ensamblados de recursos satélite. Para obtener más información, consulte [Información general sobre la globalización y la localización de WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md).  
+ Si los recursos que deben localizarse están aislados en diccionarios que se combinan en diccionarios principales y se mantienen como [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] separados, estos archivos se pueden localizar por separado. Esta técnica es una alternativa ligera a la localización de los ensamblados de recursos satélite. Para obtener más información, consulte [Información general sobre la globalización y la localización de WPF](wpf-globalization-and-localization-overview.md).  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.ResourceDictionary>
-- [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [Recursos y código](../../../../docs/framework/wpf/advanced/resources-and-code.md)
-- [Archivos de recursos, contenido y datos de aplicaciones de WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [Recursos XAML](xaml-resources.md)
+- [Recursos y código](resources-and-code.md)
+- [Archivos de recursos, contenido y datos de aplicaciones de WPF](../app-development/wpf-application-resource-content-and-data-files.md)

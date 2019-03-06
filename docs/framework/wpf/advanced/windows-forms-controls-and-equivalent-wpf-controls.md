@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [WPF], WPF interoperation
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-ms.openlocfilehash: e98a850e6846c73c4df698e2a5414481611bb63d
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c3db56c9d1ff46e427f98433a3a29a671675c541
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748575"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363896"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Controles de Windows Forms y controles equivalentes de WPF
 Muchos [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles tienen equivalentes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controles, pero algunos [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles no tienen equivalentes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Este tema comparan los tipos de control proporcionados por las dos tecnologías.  
@@ -88,6 +88,6 @@ Muchos [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [WPF Designer para Windows Forms a los desarrolladores](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/cc165605(v=vs.100))
-- [Tutorial: Hospedar un Control de Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [Tutorial: Hospedar un Control compuesto de WPF en Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Migración e interoperabilidad](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Tutorial: Hospedar un Control de Windows Forms en WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Tutorial: Hospedar un Control compuesto de WPF en Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Migración e interoperabilidad](migration-and-interoperability.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear y utilizar un objeto GridLengthConverter
+title: Filtrar Crear y utilizar un objeto GridLengthConverter
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], creating [WPF], GridLengthConverter objects
 ms.assetid: 5ab75911-e36a-4825-80e4-081c57e8e182
-ms.openlocfilehash: b5ab15df4aaf5f6c4ba7bc7a4b36cc5e122b1320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0455d91eff820e5c087af20207ece1313f6f3a39
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562066"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352261"
 ---
 # <a name="how-to-create-and-use-a-gridlengthconverter-object"></a>Procedimiento Crear y utilizar un objeto GridLengthConverter
 ## <a name="example"></a>Ejemplo  
@@ -22,8 +22,8 @@ ms.locfileid: "54562066"
   
  Tenga en cuenta que otro [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivo define el contenido de un <xref:System.Windows.Controls.ListBoxItem>.  
   
- [!code-csharp[gridlengthConverterGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridlengthConverterGrid/CSharp/Window1.xaml.cs#1)]
- [!code-vb[gridlengthConverterGrid#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/gridlengthConverterGrid/VisualBasic/Window1.xaml.vb#1)]  
+ [!code-csharp[gridlengthConverterGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/gridlengthConverterGrid/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[gridlengthConverterGrid#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/gridlengthConverterGrid/VisualBasic/Window1.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.GridLengthConverter>

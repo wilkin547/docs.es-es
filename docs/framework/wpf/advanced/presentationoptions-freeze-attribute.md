@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: 9909a4170bdb217f91a1fc5713e89bb3a979a999
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ff4a3221392d6b247d0a486e4e1f0406f539362
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512182"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378874"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze (Atributo)
 Establece el <xref:System.Windows.Freezable.IsFrozen%2A> estado `true` en el que contiene <xref:System.Windows.Freezable> elemento. Comportamiento predeterminado de un <xref:System.Windows.Freezable> sin el `PresentationOptions:Freeze` atributo especificado que es <xref:System.Windows.Freezable.IsFrozen%2A> es `false` en tiempo de carga y depende del general <xref:System.Windows.Freezable> comportamiento en tiempo de ejecución.  
@@ -35,7 +35,7 @@ Establece el <xref:System.Windows.Freezable.IsFrozen%2A> estado `true` en el que
 |`freezableElement`|Un elemento que crea una instancia de cualquier clase derivada de <xref:System.Windows.Freezable>.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `Freeze` es el único atributo o de otro elemento de programación definidos en el `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` espacio de nombres XML. El `Freeze` atributo existe en este espacio de nombres especial específicamente para que pueden designarse como ignorable, mediante [mc: Ignorable (atributo)](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) como parte de las declaraciones del elemento raíz. La razón por la que `Freeze` debe ser capaz de se puede pasar por alto es porque no todos los [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] las implementaciones de procesadores pueden inmovilizar un <xref:System.Windows.Freezable> en tiempo de carga; esta funcionalidad no está forma parte de la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] especificación.  
+ El `Freeze` es el único atributo o de otro elemento de programación definidos en el `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` espacio de nombres XML. El `Freeze` atributo existe en este espacio de nombres especial específicamente para que pueden designarse como ignorable, mediante [mc: Ignorable (atributo)](mc-ignorable-attribute.md) como parte de las declaraciones del elemento raíz. La razón por la que `Freeze` debe ser capaz de se puede pasar por alto es porque no todos los [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] las implementaciones de procesadores pueden inmovilizar un <xref:System.Windows.Freezable> en tiempo de carga; esta funcionalidad no está forma parte de la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] especificación.  
   
  La capacidad para procesar el `Freeze` atributo específicamente integrado en el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesador que procesa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para aplicaciones compiladas. El atributo no es compatible con cualquier clase, y la sintaxis de atributo no es extensible o modificable. Si está implementando su propio [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesador puede elegir el comportamiento de bloqueo en paralelo el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesador al procesar el `Freeze` atributo <xref:System.Windows.Freezable> elementos en tiempo de carga.  
   
@@ -43,5 +43,5 @@ Establece el <xref:System.Windows.Freezable.IsFrozen%2A> estado `true` en el que
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Freezable>
-- [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
-- [mc:Ignorable (atributo)](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)
+- [Información general sobre objetos Freezable](freezable-objects-overview.md)
+- [mc:Ignorable (atributo)](mc-ignorable-attribute.md)

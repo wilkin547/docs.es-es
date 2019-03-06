@@ -2,12 +2,12 @@
 title: Atributos comunes (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c9e8ba886697b9306a89caed4944fd2752db835
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690909"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375407"
 ---
 # <a name="common-attributes-visual-basic"></a>Atributos comunes (Visual Basic)
 En este tema se describe los atributos que se usan normalmente en programas de Visual Basic.  
@@ -22,7 +22,7 @@ En este tema se describe los atributos que se usan normalmente en programas de V
   
 -   [Atributos de Visual Basic](#VB)  
   
-##  <a name="Global"></a> Atributos globales  
+## <a name="Global"></a> Atributos globales  
  La mayoría de los atributos se aplican a elementos específicos del lenguaje, como las clases o los métodos, aunque algunos atributos son globales (se aplican a todo un ensamblado o módulo). Por ejemplo, el atributo <xref:System.Reflection.AssemblyVersionAttribute> se puede usar para insertar información de versión en un ensamblado, como en este ejemplo:  
   
 ```vb  
@@ -74,7 +74,7 @@ En este tema se describe los atributos que se usan normalmente en programas de V
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Define un atributo personalizado que especifica una configuración de ensamblado (por ejemplo, comercial o depuración) para un manifiesto del ensamblado.|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Define un alias descriptivo predeterminado para un manifiesto del ensamblado.|  
   
-##  <a name="Obsolete"></a> Atributo Obsolete  
+## <a name="Obsolete"></a> Atributo Obsolete  
  El atributo `Obsolete` marca una entidad del programa como una entidad cuyo uso ya no se recomienda. Cada uso de una entidad marcada como obsoleta generará posteriormente una advertencia o un error, en función de la configuración del atributo. Por ejemplo:  
   
 ```vb  
@@ -116,7 +116,7 @@ b.NewMethod()
   
  El atributo `Obsolete` es un atributo de uso único y se puede aplicar a cualquier entidad que admita atributos. `Obsolete` es un alias de <xref:System.ObsoleteAttribute>.  
   
-##  <a name="Conditional"></a> Atributo Conditional  
+## <a name="Conditional"></a> Atributo Conditional  
  El atributo `Conditional` hace que la ejecución de un método dependa de un identificador de preprocesamiento. El atributo `Conditional` es un alias de <xref:System.Diagnostics.ConditionalAttribute> y se puede aplicar a un método o a una clase de atributo.  
   
  En este ejemplo, `Conditional` se aplica a un método para habilitar o deshabilitar la visualización de información de diagnóstico específica del programa:  
@@ -209,7 +209,7 @@ Class SampleClass
 End Class  
 ```  
   
-##  <a name="CallerInfo"></a> Atributos de información del llamador  
+## <a name="CallerInfo"></a> Atributos de información del llamador  
  Mediante los atributos de información del llamador, se puede obtener información sobre el llamador de un método. Puede obtener la ruta de acceso al código fuente, el número de línea del código fuente y el nombre del miembro del llamador.  
   
  Para obtener la información del llamador del miembro, use los atributos que se aplican a los parámetros opcionales. Cada parámetro opcional especifica un valor predeterminado. En la tabla siguiente se enumeran los atributos de información del llamador que se definen en el espacio de nombres <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
@@ -222,7 +222,7 @@ End Class
   
  Para obtener más información acerca de los atributos de información del llamador, vea [información del llamador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
-##  <a name="VB"></a> Atributos de Visual Basic  
+## <a name="VB"></a> Atributos de Visual Basic  
  En la tabla siguiente se enumera los atributos que son específicos de Visual Basic.  
   
 |Atributo|Propósito|  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 96107c287003cc5fca2eb0eaa86f0f1f32b7d65e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2587a3b4e38aed507688cc86f0e179b3acbb1672
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523706"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358332"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>Automatización de la interfaz de usuario de un control personalizado de WPF
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] proporciona una única interfaz generalizada que los clientes de automatización pueden utilizar para examinar o utilizar las interfaces de usuario de una variedad de plataformas y entornos. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] permite al código de control de calidad (prueba) y a las aplicaciones de accesibilidad, tales como lectores de pantalla, examinar los elementos de la interfaz de usuario y simular la interacción del usuario con ellos desde otro código. Para más información acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] en todas las plataformas, consulte Accesibilidad.  
@@ -54,8 +54,8 @@ ms.locfileid: "54523706"
 ### <a name="override-getpattern"></a>Invalidar GetPattern  
  Los elementos de automatización del mismo nivel simplifican algunos aspectos de la implementación de proveedores de [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] del lado servidor; sin embargo, los elementos de automatización del mismo nivel de un control personalizado deben controlar las interfaces de patrón. Al igual que los proveedores que no son de WPF, elementos del mismo nivel admiten patrones de control al proporcionar implementaciones de interfaces en el <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> espacio de nombres, como <xref:System.Windows.Automation.Provider.IInvokeProvider>. Las interfaces de patrón de control pueden implementarlas el propio elemento del mismo nivel u otro objeto. Implementación del mismo nivel de <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> devuelve el objeto que admite el patrón especificado. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] el código llama a la <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> método y especifica un <xref:System.Windows.Automation.Peers.PatternInterface> valor de enumeración. El reemplazo de <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> debe devolver el objeto que implementa el patrón especificado. Si el control no tiene una implementación personalizada de un patrón, puede llamar a implementación del tipo base <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> para recuperar su implementación o null si no se admite el patrón para este tipo de control. Por ejemplo, un control NumericUpDown personalizado puede establecerse en un valor dentro de un intervalo, por lo que su [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] punto implementaría el <xref:System.Windows.Automation.Provider.IRangeValueProvider> interfaz. El ejemplo siguiente se muestra cómo el interlocutor <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> método se invalida para responder a un <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> valor.  
   
- [!code-csharp[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
- [!code-vb[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  
+ [!code-csharp[CustomControlNumericUpDown#GetPattern](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
+ [!code-vb[CustomControlNumericUpDown#GetPattern](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  
   
  Un <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> método también puede especificar un subelemento como proveedor del patrón. El siguiente código muestra cómo <xref:System.Windows.Controls.ItemsControl> transfiere el control al mismo nivel de su texto interno del patrón de desplazamiento <xref:System.Windows.Controls.ScrollViewer> control.  
   
@@ -106,8 +106,8 @@ End Class
 ### <a name="override-core-methods"></a>Invalidar métodos "Core"  
  Para obtener información sobre el control, el código de automatización llama a métodos públicos de la clase del mismo nivel. Para proporcionar información sobre el control, invalide los métodos cuyo nombre termina con "Core" en caso de que la implementación del control sea diferente de la que proporciona la clase base de automatización del mismo nivel. Como mínimo, el control debe implementar la <xref:System.Windows.Automation.Peers.AutomationPeer.GetClassNameCore%2A> y <xref:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore%2A> métodos, como se muestra en el ejemplo siguiente.  
   
- [!code-csharp[CustomControlNumericUpDown#CoreOverrides](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#coreoverrides)]
- [!code-vb[CustomControlNumericUpDown#CoreOverrides](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#coreoverrides)]  
+ [!code-csharp[CustomControlNumericUpDown#CoreOverrides](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#coreoverrides)]
+ [!code-vb[CustomControlNumericUpDown#CoreOverrides](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#coreoverrides)]  
   
  La implementación de <xref:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore%2A> describe el control devolviendo un <xref:System.Windows.Automation.ControlType> valor. Aunque puede devolver <xref:System.Windows.Automation.ControlType.Custom?displayProperty=nameWithType>, debe devolver uno de los tipos de control más específicos si describe con precisión su control. Un valor devuelto de <xref:System.Windows.Automation.ControlType.Custom?displayProperty=nameWithType> requiere trabajo adicional para el proveedor implemente [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)], y [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] productos de cliente son no pueden prever la estructura de control, interacción con el teclado y patrones de control posibles.  
   
@@ -151,10 +151,10 @@ End Class
 ### <a name="raise-events"></a>Generar eventos  
  Los clientes de automatización pueden suscribirse a eventos de automatización. Controles personalizados deben notificar los cambios para controlar el estado mediante una llamada a la <xref:System.Windows.Automation.Peers.AutomationPeer.RaiseAutomationEvent%2A> método. De forma similar, cuando cambia un valor de propiedad, llame a la <xref:System.Windows.Automation.Peers.AutomationPeer.RaisePropertyChangedEvent%2A> método. El código siguiente muestra cómo obtener el objeto del mismo nivel desde el código del control, y cómo llamar a un método para generar un evento. Como optimización, el código determina si hay agentes de escucha para este tipo de evento. Generar el evento únicamente cuando hay agentes de escucha evita una sobrecarga innecesaria y ayuda a que el control siga respondiendo.  
   
- [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
- [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
+ [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
+ [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre la Automatización de la interfaz de usuario](../../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Información general sobre la Automatización de la interfaz de usuario](../../ui-automation/ui-automation-overview.md)
 - [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://go.microsoft.com/fwlink/?LinkID=160025)
-- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../ui-automation/server-side-ui-automation-provider-implementation.md)

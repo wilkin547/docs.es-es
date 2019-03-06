@@ -11,23 +11,23 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: b1931b17c0902eec590c3c998c52f6e9d84133dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543460"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375186"
 ---
 # <a name="globalization-and-localization"></a>Globalización y localización
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Proporciona una amplia compatibilidad para el desarrollo de aplicaciones de uso internacional.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Proporciona una amplia compatibilidad para el desarrollo de aplicaciones internacionalizadas.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre la globalización y la localización de WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
- [Globalización de WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Información general sobre el uso del diseño automático](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [Atributos y comentarios sobre localización](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
- [Información general sobre características bidireccionales en WPF](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
+ [Información general sobre la globalización y la localización de WPF](wpf-globalization-and-localization-overview.md)  
+ [Globalización de WPF](globalization-for-wpf.md)  
+ [Información general sobre el uso del diseño automático](use-automatic-layout-overview.md)  
+ [Atributos y comentarios sobre localización](localization-attributes-and-comments.md)  
+ [Información general sobre características bidireccionales en WPF](bidirectional-features-in-wpf-overview.md)  
+ [Temas "Cómo..."](globalization-and-localization-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Globalization>  
@@ -36,6 +36,6 @@ ms.locfileid: "33543460"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [Control de xml:lang en XAML](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [Control de xml:lang en XAML](../../xaml-services/xml-lang-handling-in-xaml.md)  
   
 ## <a name="related-sections"></a>Secciones relacionadas

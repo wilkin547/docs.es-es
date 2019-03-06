@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5ad12c9227f089f579ff204dec1ab7026e3d2bcd
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 4c4d3c2f323492cafaa2dc4d52ab994323eba69b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007371"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375329"
 ---
 # <a name="windows-forms-overview"></a>Información general sobre Windows Forms
 
@@ -46,9 +46,9 @@ Para obtener información detallada sobre cómo usar estas características, vea
 |Descripción|Tema de ayuda|
 |-----------------|----------------|
 |Usar controles en formularios|[Cómo: Agregar controles a Windows Forms](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|Usar el control <xref:System.Windows.Forms.ToolStrip>|[Cómo: Crear un control ToolStrip básico con elementos estándar mediante el Diseñador](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|Usar el control <xref:System.Windows.Forms.ToolStrip>|[Cómo: Crear un control ToolStrip básico con elementos estándar mediante el diseñador](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
 |Crear gráficos con <xref:System.Drawing>|[Introducción a la programación de gráficos](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|Crear controles personalizados|[cómo: Heredar de la clase UserControl](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|Crear controles personalizados|[Cómo: Heredar de la clase UserControl](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>Mostrar y manipular datos
  Muchas aplicaciones deben mostrar datos procedentes de una base de datos, archivo XML, servicio web XML u otro origen de datos. Windows Forms proporciona un control flexible denominado control <xref:System.Windows.Forms.DataGridView> para mostrar esa información tabulada en un formato tradicional de filas y columnas, de modo que cada dato ocupe su propia celda. Al usar <xref:System.Windows.Forms.DataGridView>, puede personalizar la apariencia de celdas individuales, bloquear en su posición filas y columnas arbitrarias y mostrar controles complejos dentro de las celdas, entre otras características.
@@ -65,10 +65,10 @@ Para obtener información detallada sobre cómo usar estas características, vea
 
 |Descripción|Tema de ayuda|
 |-----------------|----------------|
-|Usar el componente <xref:System.Windows.Forms.BindingSource>|[Cómo: Enlazar controles de Windows Forms con el componente BindingSource mediante el Diseñador](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|Trabajar con orígenes de datos [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]|[Cómo: Ordenar y filtrar datos ADO.NET con el componente BindingSource de formularios Windows Forms](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
-|Usar la ventana Orígenes de datos|[Tutorial: Mostrar datos en Windows Forms](https://msdn.microsoft.com/library/f6e08c2c-c792-43de-adf3-3e52c0100225)|
-|Usar la configuración de la aplicación|[Cómo: Crear la configuración de la aplicación](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
+|Usar el componente <xref:System.Windows.Forms.BindingSource>|[Cómo: Enlazar controles de Windows Forms con el componente BindingSource mediante el diseñador](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
+|Trabajar con orígenes de datos [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]|[Cómo: Ordenar y filtrar datos ADO.NET con el Windows Forms BindingSource (componente)](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Usar la ventana Orígenes de datos|[Enlazar controles de Windows Forms a datos en Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
+|Usar la configuración de la aplicación|[Cómo: Crear configuración de la aplicación](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>Implementar aplicaciones en los equipos cliente
 
@@ -84,9 +84,9 @@ Para obtener una introducción completa a [!INCLUDE[ndptecclick](../../../includ
 
 |Descripción|Tema de ayuda|
 |-----------------|----------------|
-|Implementar una aplicación mediante [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Cómo: Publicar una aplicación ClickOnce mediante el Asistente para publicación](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Tutorial: Implementar manualmente una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
-|Actualizar una implementación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Cómo: Administrar actualizaciones de aplicaciones ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
-|Administrar la seguridad con [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Cómo: Habilitar la configuración de seguridad de ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
+|Implementar una aplicación mediante [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Cómo: Publicación de una aplicación ClickOnce mediante el Asistente para publicación](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Tutorial: Implementación manual de una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|Actualizar una implementación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Cómo: Administración de actualizaciones de aplicaciones ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|Administrar la seguridad con [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Cómo: Habilitación de la configuración de seguridad ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
 ### <a name="other-controls-and-features"></a>Otros controles y características
 
@@ -98,7 +98,7 @@ Para obtener información detallada sobre cómo usar estas características, vea
 
 |Descripción|Tema de ayuda|
 |-----------------|----------------|
-|Imprimir el contenido de un formulario|[Cómo: Imprimir gráficos en Windows Forms](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Cómo: Imprimir un archivo de texto de varias páginas en formularios Windows Forms](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|Imprimir el contenido de un formulario|[Cómo: Imprimir gráficos en Windows Forms](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Cómo: Imprimir un archivo de texto de varias páginas en Windows Forms](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
 |Más información sobre la seguridad de Windows Forms|[Información general sobre la seguridad en Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|
 
 ## <a name="see-also"></a>Vea también

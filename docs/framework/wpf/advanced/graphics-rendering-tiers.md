@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: ea3c5d2c8d98f75bad164ff16c098401e41e4c5e
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f56a8435b1cdebe0e0af6531c37dccfbe6617a0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748588"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357526"
 ---
 # <a name="graphics-rendering-tiers"></a>Niveles de representación de gráficos
 Un nivel de representación define un nivel de funcionalidad y rendimiento de hardware gráfico para un dispositivo que ejecuta un aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -107,7 +107,7 @@ Un nivel de representación define un nivel de funcionalidad y rendimiento de ha
 |**Configuración obligatoria de fecha del controlador de vídeo**|Especifica si el sistema deshabilita la aceleración de hardware para los controladores publicados antes de noviembre de 2004.|  
 |**Opción de uso del rasterizador de referencia**|Especifica si [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] debe utilizar el rasterizador de referencia.|  
   
- Es posible acceder a estos parámetros mediante una utilidad de configuración externa que pueda hacer referencia a la configuración del Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Estos valores de configuración también pueden crearse o modificarse mediante el acceso a los valores directamente a través del Editor del Registro de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Para obtener más información, consulte [Configuración del Registro en la representación de gráficos](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md).  
+ Es posible acceder a estos parámetros mediante una utilidad de configuración externa que pueda hacer referencia a la configuración del Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Estos valores de configuración también pueden crearse o modificarse mediante el acceso a los valores directamente a través del Editor del Registro de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Para obtener más información, consulte [Configuración del Registro en la representación de gráficos](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>Herramientas de generación de perfiles de rendimiento para WPF  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ofrece un conjunto de herramientas de generación de perfiles de rendimiento que le permiten analizar el comportamiento en tiempo de ejecución de la aplicación y determinar los tipos de optimizaciones de rendimiento que puede aplicar. En la tabla siguiente se muestran las herramientas de generación de perfiles de rendimiento que se incluyen en la herramienta de [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)], WPF Performance Suite:  
@@ -126,13 +126,13 @@ Un nivel de representación define un nivel de funcionalidad y rendimiento de ha
   
  Al ejecutar la Herramienta de diagnóstico de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], la ventana principal contiene un conjunto de pestañas que permiten mostrar y diagnosticar información relacionada con [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. Por ejemplo, la pestaña **Sistema** proporciona información del sistema acerca del equipo y especifica la versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] que está instalada en el equipo.  
   
- ![Captura de pantalla: Herramienta de diagnóstico de DirectX](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Captura de pantalla: Herramienta de diagnóstico de DirectX](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Ventana principal de la Herramienta de diagnóstico de DirectX  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
-- [Optimizar WPF: Rendimiento de aplicaciones](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [Optimizar WPF: Rendimiento de aplicaciones](optimizing-wpf-application-performance.md)
 - [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
-- [Configuración del Registro en la representación de gráficos](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)
-- [Sugerencias y trucos para animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [Configuración del Registro en la representación de gráficos](../graphics-multimedia/graphics-rendering-registry-settings.md)
+- [Sugerencias y trucos para animaciones](../graphics-multimedia/animation-tips-and-tricks.md)

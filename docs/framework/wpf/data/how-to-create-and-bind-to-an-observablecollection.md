@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear y enlazar a una colección ObservableCollection
+title: Filtrar Crear y enlazar a una colección ObservableCollection
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: cf9f714878cd1b0b179dc1ced44e3dcfe7c2f9bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10cea133651739df8bb8e27c58221b34067782f5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517596"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376122"
 ---
-# <a name="how-to-create-and-bind-to-an-observablecollection"></a>Procedimiento Crear y enlazar a una colección ObservableCollection
+# <a name="how-to-create-and-bind-to-an-observablecollection"></a>Filtrar Crear y enlazar a una colección ObservableCollection
 En este ejemplo se muestra cómo crear y enlazar a una colección que se deriva el <xref:System.Collections.ObjectModel.ObservableCollection%601> (clase), que es una clase de colección que proporciona notificaciones cuando se agregan o quitan elementos.  
   
 ## <a name="example"></a>Ejemplo  
@@ -104,7 +104,7 @@ Public Class PersonName
 End Class  
 ```  
   
- Puede hacer que la colección esté disponible para el enlace de la misma forma que lo haría con otros objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], como se describe en [Hacer que los datos estén disponibles para el enlace en XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md). Por ejemplo, puede crear una instancia de la colección en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y especificar la colección como un recurso, como se muestra aquí:  
+ Puede hacer que la colección esté disponible para el enlace de la misma forma que lo haría con otros objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], como se describe en [Hacer que los datos estén disponibles para el enlace en XAML](how-to-make-data-available-for-binding-in-xaml.md). Por ejemplo, puede crear una instancia de la colección en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y especificar la colección como un recurso, como se muestra aquí:  
   
 ```xaml  
 <Window  
@@ -136,13 +136,13 @@ End Class
  La definición de `NameItemTemplate` no se muestra aquí.  
   
 > [!NOTE]
->  Los objetos de la colección deben cumplir los requisitos descritos en la [Información general sobre orígenes de enlaces](../../../../docs/framework/wpf/data/binding-sources-overview.md). En concreto, si utilizas <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> (por ejemplo, desea que su [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] actualizar cuando cambian dinámicamente las propiedades de origen), debe implementar un mecanismo de notificación de cambio de propiedad adecuado, como el <xref:System.ComponentModel.INotifyPropertyChanged>interfaz.  
+>  Los objetos de la colección deben cumplir los requisitos descritos en la [Información general sobre orígenes de enlaces](binding-sources-overview.md). En concreto, si utilizas <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> (por ejemplo, desea que su [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] actualizar cuando cambian dinámicamente las propiedades de origen), debe implementar un mecanismo de notificación de cambio de propiedad adecuado, como el <xref:System.ComponentModel.INotifyPropertyChanged>interfaz.  
   
- Para más información, consulte la sección Enlace a colecciones en [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Para más información, consulte la sección Enlace a colecciones en [Información general sobre el enlace de datos](data-binding-overview.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Ordenar datos en una vista](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)
-- [Filtrar datos en una vista](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)
-- [Ordenar y agrupar datos mediante una vista en XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Ordenar datos en una vista](how-to-sort-data-in-a-view.md)
+- [Filtrar datos en una vista](how-to-filter-data-in-a-view.md)
+- [Ordenar y agrupar datos mediante una vista en XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [Información general sobre el enlace de datos](data-binding-overview.md)
+- [Temas "Cómo..."](data-binding-how-to-topics.md)

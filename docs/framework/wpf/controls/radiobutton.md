@@ -7,20 +7,20 @@ helpviewer_keywords:
 - RadioButton control [WPF]
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
-ms.openlocfilehash: 936b2d72a73a6937bd0c0415cb86ead89062da7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553928"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365274"
 ---
 # <a name="radiobutton"></a>RadioButton
-<xref:System.Windows.Controls.RadioButton> controles suelen agruparse para ofrecer a los usuarios una sola opción entre varias opciones; se puede seleccionar solo un botón a la vez.  
+<xref:System.Windows.Controls.RadioButton> los controles normalmente se agrupan juntos para ofrecer a los usuarios una única opción entre varias opciones; se puede seleccionar sólo un botón a la vez.  
   
- En la siguiente ilustración muestra un ejemplo de un <xref:System.Windows.Controls.RadioButton> control.  
+ La siguiente ilustración muestra un ejemplo de un <xref:System.Windows.Controls.RadioButton> control.  
   
- ![Estados de botones de radio](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")  
-Control RadioButton típico  
+ ![Estados del botón de radio](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")  
+RadioButton típico  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.Primitives.ToggleButton>  

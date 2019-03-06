@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
-ms.openlocfilehash: 619f10b36aa55813824483c386b59778fd756118
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7de612992c7ccab57259146e8b8fa294e503b733
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551242"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376226"
 ---
 # <a name="listview"></a>ListView
-El <xref:System.Windows.Controls.ListView> control proporciona la infraestructura necesaria para mostrar un conjunto de elementos de datos en distintos diseños o vistas.  
+El <xref:System.Windows.Controls.ListView> control proporciona la infraestructura para mostrar un conjunto de elementos de datos en distintos diseños o vistas.  
   
  La siguiente ilustración muestra un <xref:System.Windows.Controls.ListView>.  
   
- ![ListView con salida de GridView](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
+ ![ListView con salida de GridView](./media/listviewgridview.JPG "ListViewGridView")  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general](../../../../docs/framework/wpf/controls/listview-overviews.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Información general](listview-overviews.md)  
+ [Temas "Cómo..."](listview-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.ListView>  
@@ -31,5 +31,5 @@ El <xref:System.Windows.Controls.ListView> control proporciona la infraestructur
   <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)  
-  [Información general sobre plantillas de datos](../../../../docs/framework/wpf/data/data-templating-overview.md)
+ [Información general sobre el enlace de datos](../data/data-binding-overview.md)  
+  [Información general sobre plantillas de datos](../data/data-templating-overview.md)

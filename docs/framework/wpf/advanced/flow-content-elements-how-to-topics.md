@@ -7,32 +7,32 @@ helpviewer_keywords:
 - flow content elements [WPF], how-to topics
 - documents [WPF], flow content reference
 ms.assetid: ef5175df-6ab9-4096-be0c-804003b44c64
-ms.openlocfilehash: e5be189ed6bf5cf2baf676825dffca49e57a3dec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 241f3736eef55fcca13d4cb9994bb04aaf4eda66
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546379"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354432"
 ---
 # <a name="flow-content-elements-how-to-topics"></a>Temas "Cómo..." de elementos de contenido dinámico
 Los temas de esta sección describen cómo realizar tareas comunes mediante diversos elementos de contenido dinámico y las características relacionadas.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Ajustar el espaciado entre párrafos](../../../../docs/framework/wpf/advanced/how-to-adjust-spacing-between-paragraphs.md)  
- [Compilar una tabla mediante programación](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
- [Cambiar la propiedad FlowDirection de contenido mediante programación](../../../../docs/framework/wpf/advanced/how-to-change-the-flowdirection-of-content-programmatically.md)  
- [Cambiar la propiedad TextWrapping mediante programación](../../../../docs/framework/wpf/advanced/how-to-change-the-textwrapping-property-programmatically.md)  
- [Definir una tabla con XAML](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
- [Modificar la tipografía de texto](../../../../docs/framework/wpf/advanced/how-to-alter-the-typography-of-text.md)  
- [Habilitar el recorte de texto](../../../../docs/framework/wpf/advanced/how-to-enable-text-trimming.md)  
- [Insertar un elemento en texto mediante programación](../../../../docs/framework/wpf/advanced/how-to-insert-an-element-into-text-programmatically.md)  
- [Manipular elementos de contenido dinámico mediante la propiedad Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
- [Manipular elementos de contenido dinámico mediante la propiedad Inlines](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
- [Manipular un objeto FlowDocument mediante la propiedad Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Manipular las columnas de una tabla mediante la propiedad Columns](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [Manipular grupos de filas de una tabla mediante la propiedad RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [Usar elementos de contenido dinámico](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)  
- [Usar atributos de separación de columnas de FlowDocument](../../../../docs/framework/wpf/advanced/how-to-use-flowdocument-column-separating-attributes.md)  
+ [Ajustar el espaciado entre párrafos](how-to-adjust-spacing-between-paragraphs.md)  
+ [Compilar una tabla mediante programación](how-to-build-a-table-programmatically.md)  
+ [Cambiar la propiedad FlowDirection de contenido mediante programación](how-to-change-the-flowdirection-of-content-programmatically.md)  
+ [Cambiar la propiedad TextWrapping mediante programación](how-to-change-the-textwrapping-property-programmatically.md)  
+ [Definir una tabla con XAML](how-to-define-a-table-with-xaml.md)  
+ [Modificar la tipografía de texto](how-to-alter-the-typography-of-text.md)  
+ [Habilitar el recorte de texto](how-to-enable-text-trimming.md)  
+ [Insertar un elemento en texto mediante programación](how-to-insert-an-element-into-text-programmatically.md)  
+ [Manipular elementos de contenido dinámico mediante la propiedad Blocks](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
+ [Manipular elementos de contenido dinámico mediante la propiedad Inlines](how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
+ [Manipular un objeto FlowDocument mediante la propiedad Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [Manipular las columnas de una tabla mediante la propiedad Columns](how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [Manipular grupos de filas de una tabla mediante la propiedad RowGroups](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [Usar elementos de contenido dinámico](how-to-use-flow-content-elements.md)  
+ [Usar atributos de separación de columnas de FlowDocument](how-to-use-flowdocument-column-separating-attributes.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Documents.FlowDocument>  
@@ -40,4 +40,4 @@ Los temas de esta sección describen cómo realizar tareas comunes mediante dive
   <xref:System.Windows.Documents.Inline>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+ [Documentos en WPF](documents-in-wpf.md)

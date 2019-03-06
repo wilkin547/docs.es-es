@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e9b8b6325900214865e31492b129e381de5c1c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 107de172e523758474bafb3b86a2960b926a010a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507374"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371377"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms Agregar elemento de configuración
 
@@ -39,7 +39,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ### <a name="key-attribute-names-and-associated-values"></a>`key` los nombres de atributos y valores asociados
 
-| Nombre `key` | Valores | Descripción |
+| `key` Nombre | Valores | Descripción |
 | ---------- | ------ | ----------- |
 | "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica si los controles delimitados se escalan en un único paso. "true" para deshabilitar solo pasa escalado; en caso contrario, false. Consulte la sección "Solo pasar escalado" en el [comentarios](#Remarks) para obtener más información. |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | Indica si una aplicación tiene reconocimiento de PPP. Establezca la clave para "PerMonitorV2" para admitir el reconocimiento de PPP; en caso contrario, establézcalo en "false". Reconocimiento de PPP es una característica opcional; para aprovechar las ventajas de la compatibilidad con PPP elevado de Windows Forms, debe establecer su valor a "PerMonitorV2". Consulte la [comentarios](#remarks) sección para obtener más información. |
@@ -63,9 +63,9 @@ Ninguno.
 
 ## <a name="a-nameremarks--remarks"></a><a name="remarks" /> Comentarios
 
-A partir de .NET Framework 4.7, el elemento `<System.Windows.Forms.ApplicationConfigurationSection>` permite configurar las aplicaciones de Windows Forms para aprovechar las características agregadas en versiones recientes de .NET Framework. 
+A partir de .NET Framework 4.7, el elemento `<System.Windows.Forms.ApplicationConfigurationSection>` permite configurar las aplicaciones de Windows Forms para aprovechar las características agregadas en versiones recientes de .NET Framework.
 
-El `<System.Windows.Forms.ApplicationConfigurationSection>` elemento le permite agregar uno o varios secundarios `<add>` elementos, cada uno de los cuales define un valor de configuración específico.  
+El `<System.Windows.Forms.ApplicationConfigurationSection>` elemento le permite agregar uno o varios secundarios `<add>` elementos, cada uno de los cuales define un valor de configuración específico.
 
 Para obtener información general de la compatibilidad con alta concentración de PPP de Windows Forms, consulte [alto PPP admite en Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md).
 
@@ -75,7 +75,7 @@ Las aplicaciones de Windows Forms que se ejecutan en versiones de Windows a part
 
 - Compatibilidad con escenarios de PPP dinámicos en el que el usuario cambia el factor de escala o PPP después de que se ha iniciado una aplicación de Windows Forms.
 
-- Controles de mejoras en la escala y el diseño de una serie de formularios de Windows, como el <xref:System.Windows.Forms.MonthCalendar> control y el <xref:System.Windows.Forms.CheckedListBox> control. 
+- Controles de mejoras en la escala y el diseño de una serie de formularios de Windows, como el <xref:System.Windows.Forms.MonthCalendar> control y el <xref:System.Windows.Forms.CheckedListBox> control.
 
 Reconocimiento de PPP alta es una característica opcional; de forma predeterminada, el valor de `DpiAwareness` es `false`. Puede optar a soporte técnico de Windows Forms para que el reconocimiento de PPP estableciendo el valor de esta clave para `PerMonitorV2` en el archivo de configuración de la aplicación. Si está habilitado el reconocimiento de PPP, también se activarán todas las características individuales de PPP. Se incluyen los siguientes:
 
@@ -83,11 +83,11 @@ Reconocimiento de PPP alta es una característica opcional; de forma predetermin
 
 - Soporte técnico de PPP dinámico, que está controlado por la `EnableWindowsFormsHighDpiAutoResizing` clave.
 
-- Sola pasada se escala el control, que se controla mediante el `Form.DisableSinglePassControlScaling` individuales <xref:System.Windows.Forms.Form> controla, por el `AnchorLayout.DisableSinglePassControlScaling` clave para los controles delimitados y por la `MonthCalendar.DisableSinglePassControlScaling` clave para el <xref:System.Windows.Forms.MonthCalendar> control 
+- Sola pasada se escala el control, que se controla mediante el `Form.DisableSinglePassControlScaling` individuales <xref:System.Windows.Forms.Form> controla, por el `AnchorLayout.DisableSinglePassControlScaling` clave para los controles delimitados y por la `MonthCalendar.DisableSinglePassControlScaling` clave para el <xref:System.Windows.Forms.MonthCalendar> control
 
-- Alto PPP adaptación y diseño mejoras, que está controlado por la `CheckListBox.DisableHighDpiImprovements` clave para el <xref:System.Windows.Forms.CheckedListBox> controlar, mediante el `DataGridView.DisableHighDpiImprovements` clave para el <xref:System.Windows.Forms.DataGridView> control y por la `Toolstrip.DisableHighDpiImprovements` clave para el <xref:System.Windows.Forms.ToolStrip> control.  
+- Alto PPP adaptación y diseño mejoras, que está controlado por la `CheckListBox.DisableHighDpiImprovements` clave para el <xref:System.Windows.Forms.CheckedListBox> controlar, mediante el `DataGridView.DisableHighDpiImprovements` clave para el <xref:System.Windows.Forms.DataGridView> control y por la `Toolstrip.DisableHighDpiImprovements` clave para el <xref:System.Windows.Forms.ToolStrip> control.
 
-El valor opt predeterminado único proporcionado estableciendo `DpiAwareness` a `PerMonitorV2` son más que suficientes para nuevas aplicaciones de Windows Forms. Sin embargo, puede, a continuación, rechazar las mejoras de PPP alta individuales mediante la adición de la clave correspondiente al archivo de configuración de la aplicación. Por ejemplo, para aprovechar las ventajas de todos los nuevos Features de PPP, excepto la compatibilidad con PPP dinámico, agregaría el siguiente al archivo de configuración de la aplicación:
+El valor opt predeterminado único proporcionado estableciendo `DpiAwareness` a `PerMonitorV2` son más que suficientes para nuevas aplicaciones de Windows Forms. Sin embargo, puede, a continuación, rechazar las mejoras de PPP alta individuales mediante la adición de la clave correspondiente al archivo de configuración de la aplicación. Por ejemplo, para aprovechar todas las nuevas características de PPP, excepto la compatibilidad con PPP dinámico, agregaría el siguiente al archivo de configuración de la aplicación:
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -99,14 +99,14 @@ El valor opt predeterminado único proporcionado estableciendo `DpiAwareness` a 
 Normalmente, rechazar una característica determinada porque ha elegido controlarlo mediante programación.
 
 Para obtener más información sobre el aprovechamiento de la compatibilidad con valores altos de PPP en aplicaciones de Windows Forms, consulte [alto PPP admite en Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md).
- 
+
 ### <a name="disabledpichangedmessagehandling"></a>DisableDpiChangedMessageHandling
 
-A partir de .NET Framework 4.7, controles de formularios Windows Forms plantear una serie de eventos relacionados con los cambios en la escala de PPP. Estos incluyen el <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, y <xref:System.Windows.Forms.Form.DpiChanged> eventos. El valor de la `DisableDpiChangedMessageHandling` clave determina si se generan estos eventos en una aplicación de Windows Forms. 
+A partir de .NET Framework 4.7, controles de formularios Windows Forms plantear una serie de eventos relacionados con los cambios en la escala de PPP. Estos incluyen el <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, y <xref:System.Windows.Forms.Form.DpiChanged> eventos. El valor de la `DisableDpiChangedMessageHandling` clave determina si se generan estos eventos en una aplicación de Windows Forms.
 
 ### <a name="single-pass-scaling"></a>Escalado de paso único
 
-Escalar único o varios pass influye en la capacidad de respuesta percibida de la interfaz de usuario y la apariencia visual de elementos de la interfaz de usuario ya que se escalan. A partir de .NET Framework 4.7, Windows Forms usa escalado paso único. En versiones anteriores de .NET Framework, el escalado se realizó a través de varias pasadas, lo que provocó algunos controles escalar más que era necesario. Escalado solo pase sólo debe deshabilitarse si depende de la aplicación en el comportamiento anterior.  
+Escalar único o varios pass influye en la capacidad de respuesta percibida de la interfaz de usuario y la apariencia visual de elementos de la interfaz de usuario ya que se escalan. A partir de .NET Framework 4.7, Windows Forms usa escalado paso único. En versiones anteriores de .NET Framework, el escalado se realizó a través de varias pasadas, lo que provocó algunos controles escalar más que era necesario. Escalado solo pase sólo debe deshabilitarse si depende de la aplicación en el comportamiento anterior.
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Crear un arco elíptico
+title: Filtrar Crear un arco elíptico
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], elliptical arcs
 - elliptical arcs [WPF], creating
 - arcs [WPF], elliptical
 ms.assetid: 3dcfe502-3485-45de-99fb-d53a1367c484
-ms.openlocfilehash: 4f4461f778e2c86adb3932edf8435ca75b3b5e98
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb4b4d99aab9daef70f446af176bb462b0661d54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679570"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354354"
 ---
-# <a name="how-to-create-an-elliptical-arc"></a>Procedimiento Crear un arco elíptico
+# <a name="how-to-create-an-elliptical-arc"></a>Filtrar Crear un arco elíptico
 En este ejemplo se muestra cómo dibujar un arco elíptico. Para crear un arco elíptico, utilice el <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, y <xref:System.Windows.Media.ArcSegment> clases.  
   
 ## <a name="example"></a>Ejemplo  
@@ -23,18 +23,18 @@ En este ejemplo se muestra cómo dibujar un arco elíptico. Para crear un arco e
   
  En [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], puede usar la sintaxis de atributo para describir una ruta de acceso.  
   
- [!code-xaml[GeometrySample#56](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/geometryattributesyntaxexample.xaml#56)]  
+ [!code-xaml[GeometrySample#56](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/geometryattributesyntaxexample.xaml#56)]  
   
  [xaml]  
   
- (Tenga en cuenta que esta sintaxis de atributo se crea en realidad un <xref:System.Windows.Media.StreamGeometry>, una versión ligera de un <xref:System.Windows.Media.PathGeometry>. Para más información, consulte la página [Sintaxis de marcado de trazados](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)).  
+ (Tenga en cuenta que esta sintaxis de atributo se crea en realidad un <xref:System.Windows.Media.StreamGeometry>, una versión ligera de un <xref:System.Windows.Media.PathGeometry>. Para más información, consulte la página [Sintaxis de marcado de trazados](path-markup-syntax.md)).  
   
  En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], también puede dibujar un arco elíptico explícitamente mediante etiquetas de objeto. La siguiente es equivalente al anterior [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcado.  
   
- [!code-xaml[GeometrySample#36](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#36)]  
+ [!code-xaml[GeometrySample#36](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#36)]  
   
  Este ejemplo forma parte de un ejemplo mayor. Para obtener un ejemplo completo, vea el [ejemplo de geometrías](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ## <a name="see-also"></a>Vea también
-- [Crear una curva Bézier cuadrática](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)
-- [Crear una curva Bézier cúbica](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)
+- [Crear una curva Bézier cuadrática](how-to-create-a-quadratic-bezier-curve.md)
+- [Crear una curva Bézier cúbica](how-to-create-a-cubic-bezier-curve.md)

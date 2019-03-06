@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-ms.openlocfilehash: e6bbf6aea1a98b7e1497101ea6a6121525f1c87f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6fe459ab00622860cd10e4e119e943e588f06b2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732029"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352959"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>Interoperabilidad entre Windows Forms y WPF
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] presentan dos arquitecturas diferentes para crear interfaces de aplicaciones. El <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> espacio de nombres proporciona clases que permiten escenarios de interoperación comunes. Las dos clases claves que implementan las capacidades de interoperación son <xref:System.Windows.Forms.Integration.WindowsFormsHost> y <xref:System.Windows.Forms.Integration.ElementHost>. En este tema se describen los escenarios de interoperación que son compatibles y los que no lo son.  
@@ -60,7 +60,7 @@ ms.locfileid: "54732029"
 ### <a name="ambient-properties"></a>Propiedades ambiente  
  Algunas de las propiedades ambiente de los controles de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tienen sus equivalentes en [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Estas propiedades ambientales se propagan a hospedado [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controla y se exponen como propiedades públicas en el <xref:System.Windows.Forms.Integration.WindowsFormsHost> control. El <xref:System.Windows.Forms.Integration.WindowsFormsHost> control convierte cada [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] propiedad de ambiente en su [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] equivalente.  
   
- Para más información, vea [Asignación de propiedades en formularios Windows Forms y WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Para más información, vea [Asignación de propiedades en formularios Windows Forms y WPF](windows-forms-and-wpf-property-mapping.md).  
   
 ### <a name="behavior"></a>Comportamiento  
  En la tabla siguiente se describe el comportamiento de interoperación.  
@@ -103,7 +103,7 @@ ms.locfileid: "54732029"
 ### <a name="ambient-properties"></a>Propiedades ambiente  
  Algunas de las propiedades ambiente de los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] tienen sus equivalentes en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Estas propiedades ambientales se propagan a hospedado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controla y se exponen como propiedades públicas en el <xref:System.Windows.Forms.Integration.ElementHost> control. El <xref:System.Windows.Forms.Integration.ElementHost> control convierte cada [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] propiedad de ambiente a su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] equivalente.  
   
- Para más información, vea [Asignación de propiedades en formularios Windows Forms y WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Para más información, vea [Asignación de propiedades en formularios Windows Forms y WPF](windows-forms-and-wpf-property-mapping.md).  
   
 ### <a name="behavior"></a>Comportamiento  
  En la tabla siguiente se describe el comportamiento de interoperación.  
@@ -120,7 +120,7 @@ ms.locfileid: "54732029"
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Tutorial: Hospedar un Control de Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [Tutorial: Hospedar un Control compuesto de Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Tutorial: Hospedar un Control compuesto de WPF en Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Asignación de propiedades en formularios Windows Forms y WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [Tutorial: Hospedar un Control de Windows Forms en WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Tutorial: Hospedar un Control compuesto de Windows Forms en WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Tutorial: Hospedar un Control compuesto de WPF en Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Asignación de propiedades en formularios Windows Forms y WPF](windows-forms-and-wpf-property-mapping.md)

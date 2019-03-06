@@ -2,12 +2,12 @@
 title: Extensibilidad de almacén
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 8cfbf96256d4b8416beb526875a1e9ac09c3bfbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f317e8e0864dd6c4595ac669611594c843b277c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517925"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375433"
 ---
 # <a name="store-extensibility"></a>Extensibilidad de almacén
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> permite a los usuarios promover propiedades personalizadas, específicas de la aplicación que se pueden utilizar para consultar instancias en la base de datos de persistencia. El acto de promover una propiedad hace que el valor esté disponible dentro de una vista especial en la base de datos. Estas propiedades promovidas (propiedades que se pueden usar en consultas de usuario) pueden ser de tipos simples como Int64, Guid, String y DateTime o de un tipo binario serializado (byte []).  
@@ -73,9 +73,9 @@ ms.locfileid: "33517925"
     ```  
   
     > [!NOTE]
-    >  Todas estas propiedades se pasan a **SqlWorkflowInstanceStore** mediante el marco de persistencia a través de la **SaveWorkflowCommand.InstanceData** colección.  
+    >  Todas estas propiedades se pasan a **SqlWorkflowInstanceStore** por el marco de persistencia a través de la **SaveWorkflowCommand.InstanceData** colección.  
   
-5.  La aplicación DP inicializa el almacén de instancias de flujo de trabajo de SQL e invoca el **promover** método para promover estos datos.  
+5.  La aplicación DP inicializa el Store de instancia de flujo de trabajo de SQL e invoca el **promover** método para promover estos datos.  
   
     ```  
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);  
@@ -91,7 +91,7 @@ ms.locfileid: "33517925"
     store.Promote("DocumentStatus", variantProperties, null);  
     ```  
   
-     En función de esta información de promociones, **SqlWorkflowInstanceStore** coloca las propiedades de datos en las columnas de la [InstancePromotedProperties](#InstancePromotedProperties) vista.
+     Según esta información de promoción, **SqlWorkflowInstanceStore** coloca las propiedades de datos en las columnas de la [InstancePromotedProperties](#InstancePromotedProperties) vista.
   
 6.  Para consultar un subconjunto de datos en la tabla de promoción, la aplicación DP agrega una vista personalizada encima de la vista de promoción.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "33517925"
     go  
     ```  
   
-##  <a name="InstancePromotedProperties"></a> Vista [System.Activities.DurableInstancing.InstancePromotedProperties]  
+## <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] view  
   
 |Nombre de columna|Tipo de columna|Descripción|  
 |-----------------|-----------------|-----------------|  

@@ -1,6 +1,6 @@
 ---
 title: Función Next (referencia de API no administrada)
-description: La siguiente función retireves la siguiente propiedad en una enumeración.
+description: La función siguiente recupera la siguiente propiedad en una enumeración.
 ms.date: 11/06/2017
 api_name:
 - Next
@@ -16,54 +16,54 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c6e39c1bc4c2860e400e2708e588416eb5769bd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 240544330fa352cbfdc01944e4be6bcad28dc96f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971889"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373206"
 ---
 # <a name="next-function"></a>Función Next
-Recupera la siguiente propiedad en una enumeración que comienza con una llamada a [BeginEnumeration](beginenumeration.md).  
+Recupera la siguiente propiedad en una enumeración que comienza con una llamada a [BeginEnumeration](beginenumeration.md).
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
 HRESULT Next (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LONG              lFlags,
    [out] BSTR*            pstrName,
    [out] VARIANT*         pVal,
    [out] CIMTYPE*         pvtType,
-   [out] LONG*            plFlavor     
-); 
-```  
+   [out] LONG*            plFlavor
+);
+```
 
 ## <a name="parameters"></a>Parámetros
 
-`vFunc`  
+`vFunc`\
 [in] Este parámetro se usa.
 
-`ptr`  
+`ptr`\
 [in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
 
-`lFlags`  
+`lFlags`\
 [in] Reservado. Este parámetro debe ser 0.
 
-`pstrName`  
+`pstrName`\
 [out] Un nuevo `BSTR` que contiene el nombre de propiedad. Puede establecer este parámetro en `null` si el nombre no es obligatorio.
 
-`pVal`  
-[out] Un `VARIANT` rellena con el valor de la propiedad. Puede establecer este parámetro en `null` si el valor no es obligatorio. Si la función devuelve un código de error, el `VARIANT` pasado a `pVal` es izquierda sin modificar. 
+`pVal`\
+[out] Un `VARIANT` rellena con el valor de la propiedad. Puede establecer este parámetro en `null` si el valor no es obligatorio. Si la función devuelve un código de error, el `VARIANT` pasado a `pVal` es izquierda sin modificar.
 
-`pvtType`  
-[out] Un puntero a un `CIMTYPE` variable (un `LONG` en que se coloca el tipo de la propiedad). El valor de esta propiedad puede ser un `VT_NULL_VARIANT`, en cuyo caso es necesario determinar el tipo real de la propiedad. Este parámetro también puede ser `null`. 
+`pvtType`\
+[out] Un puntero a un `CIMTYPE` variable (un `LONG` en que se coloca el tipo de la propiedad). El valor de esta propiedad puede ser un `VT_NULL_VARIANT`, en cuyo caso es necesario determinar el tipo real de la propiedad. Este parámetro también puede ser `null`.
 
-`plFlavor`  
-[out] `null`, o un valor que recibe información sobre el origen de la propiedad. Consulte la sección [Nota] los valores posibles. 
+`plFlavor`\
+[out] `null`, o un valor que recibe información sobre el origen de la propiedad. Consulte la sección [Nota] los valores posibles.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -75,10 +75,10 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
 | `WBEM_E_UNEXPECTED` | 0x8004101d | Se ha producido ninguna llamada a la [ `BeginEnumeration` ](beginenumeration.md) función. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para comenzar una nueva enumeración. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | El procedimiento remoto llamar comprendido entre el proceso actual y la administración de Windows no se pudo. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | La llamada a procedimiento remoto entre el proceso actual y la administración de Windows no se pudo. |
 | `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
 | `WBEM_S_NO_MORE_DATA` | 0x40005 | No hay ninguna propiedad más en la enumeración. |
-  
+
 ## <a name="remarks"></a>Comentarios
 
 Esta función contiene una llamada a la [IWbemClassObject::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-next) método.
@@ -95,12 +95,14 @@ Si `plFlavor` no `null`, el `LONG` valor recibe información acerca del origen d
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Para una clase: La propiedad se hereda de la clase primaria. <br> Para una instancia: La propiedad, mientras se hereda de la clase primaria, no se ha modificado por la instancia.  |
 | `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Para una clase: La propiedad pertenece a la clase derivada. <br> Para una instancia: Se modifica la propiedad por la instancia; es decir, se proporcionó un valor o un calificador se ha agregado o modificado. |
 
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Encabezado**: WMINet_Utils.idl  
-  
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisitos
+
+**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Encabezado**: WMINet_Utils.idl
+
+**Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Vea también
+
 - [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

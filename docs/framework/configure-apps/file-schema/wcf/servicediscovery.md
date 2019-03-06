@@ -3,14 +3,14 @@ title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
 ms.openlocfilehash: 564410fdc4085cc3ed14c394006551cddb028910
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267877"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373756"
 ---
 # <a name="servicediscovery"></a>\<serviceDiscovery>
-Especifica la detectabilidad de puntos de conexión de servicio.  
+Especifica la detectabilidad de extremos de servicio.  
   
  \<system.ServiceModel>  
 \<comportamientos >  
@@ -50,7 +50,7 @@ Especifica la detectabilidad de puntos de conexión de servicio.
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<announcementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|Colección de puntos de conexión de anuncio. Utilice esta sección para especificar los puntos de conexión que se van a usar para enviar mensajes de anuncio.|  
-|[\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|Colección de puntos de conexión de detección. Utilice esta sección para especificar los puntos de conexión en los que se van a escuchar mensajes de detección.|  
+|[\<discoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|Colección de extremos de detección. Utilice esta sección para especificar los puntos de conexión en los que se van a escuchar mensajes de detección.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   

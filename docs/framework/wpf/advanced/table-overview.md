@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: 0888bc213be6b8037d0574bb5f9ac76e7651491a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e202fe839de547145c36a5664b62c350f40bfce6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745368"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379021"
 ---
 # <a name="table-overview"></a>Información general sobre tablas
 <xref:System.Windows.Documents.Table> es un elemento de nivel de bloque que admite presentación basada en cuadrícula de contenido de documentos dinámicos. La flexibilidad de este elemento lo hace muy útil, pero también más complicado de entender y usar correctamente.  
@@ -44,7 +44,7 @@ ms.locfileid: "54745368"
   
 <a name="table_vs_Grid"></a>   
 ### <a name="how-is-table-different-then-grid"></a>¿En qué se diferencian las tablas de las cuadrículas?  
- <xref:System.Windows.Documents.Table> y <xref:System.Windows.Controls.Grid> comparten funcionalidades comunes, pero cada una es adecuada para escenarios diferentes. Un <xref:System.Windows.Documents.Table> está diseñado para su uso en contenido dinámico (consulte [Flow Document Overview](../../../../docs/framework/wpf/advanced/flow-document-overview.md) para obtener más información sobre el contenido dinámico). Las cuadrículas son más apropiadas para formularios (básicamente, en cualquier lugar excepto en el contenido dinámico). Dentro de un <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> admite el flujo de los comportamientos del contenido, como paginación, ajuste dinámico de columnas y selección de contenido mientras una <xref:System.Windows.Controls.Grid> no lo hace. Un <xref:System.Windows.Controls.Grid> por otro lado se utiliza fuera de un <xref:System.Windows.Documents.FlowDocument> por diversos motivos incluidos <xref:System.Windows.Controls.Grid> agrega elementos basándose en un índice de fila y columna, <xref:System.Windows.Documents.Table> no lo hace. El <xref:System.Windows.Controls.Grid> elemento permite la disposición en capas del contenido secundario, lo que permite más de un elemento dentro de una sola "celda". <xref:System.Windows.Documents.Table> no admite la disposición en capas. Los elementos secundarios de un <xref:System.Windows.Controls.Grid> puede colocar de manera absoluta en relación con el área de los límites "celda". <xref:System.Windows.Documents.Table> no se admite esta característica. Por último, un <xref:System.Windows.Controls.Grid> requiere menos recursos, a continuación, un <xref:System.Windows.Documents.Table> por lo que puede usar un <xref:System.Windows.Controls.Grid> para mejorar el rendimiento.  
+ <xref:System.Windows.Documents.Table> y <xref:System.Windows.Controls.Grid> comparten funcionalidades comunes, pero cada una es adecuada para escenarios diferentes. Un <xref:System.Windows.Documents.Table> está diseñado para su uso en contenido dinámico (consulte [Flow Document Overview](flow-document-overview.md) para obtener más información sobre el contenido dinámico). Las cuadrículas son más apropiadas para formularios (básicamente, en cualquier lugar excepto en el contenido dinámico). Dentro de un <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> admite el flujo de los comportamientos del contenido, como paginación, ajuste dinámico de columnas y selección de contenido mientras una <xref:System.Windows.Controls.Grid> no lo hace. Un <xref:System.Windows.Controls.Grid> por otro lado se utiliza fuera de un <xref:System.Windows.Documents.FlowDocument> por diversos motivos incluidos <xref:System.Windows.Controls.Grid> agrega elementos basándose en un índice de fila y columna, <xref:System.Windows.Documents.Table> no lo hace. El <xref:System.Windows.Controls.Grid> elemento permite la disposición en capas del contenido secundario, lo que permite más de un elemento dentro de una sola "celda". <xref:System.Windows.Documents.Table> no admite la disposición en capas. Los elementos secundarios de un <xref:System.Windows.Controls.Grid> puede colocar de manera absoluta en relación con el área de los límites "celda". <xref:System.Windows.Documents.Table> no se admite esta característica. Por último, un <xref:System.Windows.Controls.Grid> requiere menos recursos, a continuación, un <xref:System.Windows.Documents.Table> por lo que puede usar un <xref:System.Windows.Controls.Grid> para mejorar el rendimiento.  
   
 <a name="basic_table_structure"></a>   
 ### <a name="basic-table-structure"></a>Estructura básica de las tablas  
@@ -61,18 +61,18 @@ ms.locfileid: "54745368"
 -   <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.TableCell> los elementos no pueden hospedar directamente contenido de texto. Para obtener más información acerca de las reglas de contención para el flujo de elementos de contenido como <xref:System.Windows.Documents.TableCell>, consulte [Flow Document Overview](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
+>  <xref:System.Windows.Documents.TableCell> los elementos no pueden hospedar directamente contenido de texto. Para obtener más información acerca de las reglas de contención para el flujo de elementos de contenido como <xref:System.Windows.Documents.TableCell>, consulte [Flow Document Overview](flow-document-overview.md).  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.Table> es similar a la <xref:System.Windows.Controls.Grid> elemento, pero tiene más funciones y, por lo tanto, requiere mayor consumo de recursos.  
   
  En el ejemplo siguiente se define una tabla de 2 x 3 simple con [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
   
- [!code-xaml[TableSnippets2#_Table_BasicLayout](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_basiclayout)]  
+ [!code-xaml[TableSnippets2#_Table_BasicLayout](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_basiclayout)]  
   
  En la ilustración siguiente, se muestra cómo se representa este ejemplo.  
   
- ![Captura de pantalla: Representar una tabla básica](../../../../docs/framework/wpf/advanced/media/basictablerrender.png "BasicTablerRender")  
+ ![Captura de pantalla: Representar una tabla básica](./media/basictablerrender.png "BasicTablerRender")  
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>Contención de tablas  
@@ -98,11 +98,11 @@ ms.locfileid: "54745368"
   
  En el ejemplo siguiente se usa [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] para definir una tabla con filas de encabezado y pie de página con estilo.  
   
- [!code-xaml[TableSnippets2#_Table_RowGroups](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_rowgroups)]  
+ [!code-xaml[TableSnippets2#_Table_RowGroups](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_rowgroups)]  
   
  En la ilustración siguiente, se muestra cómo se representa este ejemplo.  
   
- ![Captura de pantalla: Grupos de filas de tabla](../../../../docs/framework/wpf/advanced/media/table-rowgroups.png "Table_RowGroups")  
+ ![Captura de pantalla: Grupos de filas de tabla](./media/table-rowgroups.png "Table_RowGroups")  
   
 <a name="rendering_precedence"></a>   
 ### <a name="background-rendering-precedence"></a>Prioridad de representación del fondo  
@@ -120,11 +120,11 @@ ms.locfileid: "54745368"
   
  Observe el ejemplo siguiente, en el que se definen los colores de fondo para cada uno de estos elementos dentro de una tabla.  
   
- [!code-xaml[TableSnippets2#_Table_ZOrder](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_zorder)]  
+ [!code-xaml[TableSnippets2#_Table_ZOrder](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_zorder)]  
   
  En la ilustración siguiente se muestra cómo se representa este ejemplo (mostrando únicamente los colores de fondo).  
   
- ![Captura de pantalla: Tabla z&#45;orden](../../../../docs/framework/wpf/advanced/media/table-zorder.png "Table_ZOrder")  
+ ![Captura de pantalla: Tabla z&#45;orden](./media/table-zorder.png "Table_ZOrder")  
   
 <a name="spanning_rows_or_columns"></a>   
 ### <a name="spanning-rows-or-columns"></a>Abarcar filas o columnas  
@@ -132,11 +132,11 @@ ms.locfileid: "54745368"
   
  Considere el ejemplo siguiente, en el que una celda abarca tres columnas.  
   
- [!code-xaml[TableSnippets2#_Table_ColumnSpan](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_columnspan)]  
+ [!code-xaml[TableSnippets2#_Table_ColumnSpan](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_columnspan)]  
   
  En la ilustración siguiente, se muestra cómo se representa este ejemplo.  
   
- ![Captura de pantalla: Celda que abarca las tres columnas](../../../../docs/framework/wpf/advanced/media/table-columnspan.png "Table_ColumnSpan")  
+ ![Captura de pantalla: Celda que abarca las tres columnas](./media/table-columnspan.png "Table_ColumnSpan")  
   
 <a name="building_a_table_with_code"></a>   
 ## <a name="building-a-table-with-code"></a>Creación de una tabla mediante código  
@@ -144,39 +144,39 @@ ms.locfileid: "54745368"
   
  En primer lugar, un <xref:System.Windows.Documents.FlowDocument> se crea al host la <xref:System.Windows.Documents.Table>y un nuevo <xref:System.Windows.Documents.Table> se crea y agrega al contenido de la <xref:System.Windows.Documents.FlowDocument>.  
   
- [!code-csharp[TableSnippets#_TableCreate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
- [!code-vb[TableSnippets#_TableCreate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
+ [!code-csharp[TableSnippets#_TableCreate](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
+ [!code-vb[TableSnippets#_TableCreate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
   
  A continuación, seis <xref:System.Windows.Documents.TableColumn> objetos se crean y se agregan a la tabla <xref:System.Windows.Documents.Table.Columns%2A> colección aplicarles formato.  
   
 > [!NOTE]
 >  Tenga en cuenta que la tabla <xref:System.Windows.Documents.Table.Columns%2A> colección utiliza la indización de base cero estándar.  
   
- [!code-csharp[TableSnippets#_TableCreateColumns](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
- [!code-vb[TableSnippets#_TableCreateColumns](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  
+ [!code-csharp[TableSnippets#_TableCreateColumns](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
+ [!code-vb[TableSnippets#_TableCreateColumns](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  
   
  Luego, se crea una fila de título y se agrega a la tabla tras aplicarle formato.  La fila de título contiene una sola celda que abarca las seis columnas de la tabla.  
   
- [!code-csharp[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddtitlerow)]
- [!code-vb[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddtitlerow)]  
+ [!code-csharp[TableSnippets#_TableAddTitleRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddtitlerow)]
+ [!code-vb[TableSnippets#_TableAddTitleRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddtitlerow)]  
   
  Después, se crea una fila de encabezado y se agrega a la tabla, y se crean y rellenan con contenido las celdas de la fila de encabezado.  
   
- [!code-csharp[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddheaderrow)]
- [!code-vb[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddheaderrow)]  
+ [!code-csharp[TableSnippets#_TableAddHeaderRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddheaderrow)]
+ [!code-vb[TableSnippets#_TableAddHeaderRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddheaderrow)]  
   
  Después, se crea una fila para datos y se agrega a la tabla, y se crean y rellenan con contenido las celdas de esta fila.  La creación de esta fila es similar a la creación de la fila de encabezado con un formato ligeramente diferente.  
   
- [!code-csharp[TableSnippets#_TableAddDataRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableadddatarow)]
- [!code-vb[TableSnippets#_TableAddDataRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableadddatarow)]  
+ [!code-csharp[TableSnippets#_TableAddDataRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableadddatarow)]
+ [!code-vb[TableSnippets#_TableAddDataRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableadddatarow)]  
   
  Por último, se crea una fila de pie de página, se agrega y se le da formato.  Al igual que la fila de título, el pie de página contiene una sola celda que abarca las seis columnas de la tabla.  
   
- [!code-csharp[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
- [!code-vb[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
+ [!code-csharp[TableSnippets#_TableAddFooterRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
+ [!code-vb[TableSnippets#_TableAddFooterRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre documentos dinámicos](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [Definir una tabla con XAML](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)
-- [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Usar elementos de contenido dinámico](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)
+- [Información general sobre documentos dinámicos](flow-document-overview.md)
+- [Definir una tabla con XAML](how-to-define-a-table-with-xaml.md)
+- [Documentos en WPF](documents-in-wpf.md)
+- [Usar elementos de contenido dinámico](how-to-use-flow-content-elements.md)

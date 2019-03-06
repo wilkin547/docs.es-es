@@ -14,21 +14,21 @@ helpviewer_keywords:
 - stretchable Shapes [WPF]
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
-ms.openlocfilehash: c39be1bdcc9c91f4822b7e168f16cb51c51d6c60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c4f76ee753ed6caa30d15a51c341a2edb64011d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580829"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350714"
 ---
 # <a name="shapes"></a>Formas
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona compatibilidad para dibujar formas básicas mediante el <xref:System.Windows.Shapes.Shape> clase. Los objetos de forma que se derivan de <xref:System.Windows.FrameworkElement> y por lo tanto, participar en el sistema de diseño y se pueden dibujar usando simplemente [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre formas y dibujo básico en WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
+ [Información general sobre formas y dibujo básico en WPF](shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Temas "Cómo..."](shapes-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Shapes.Shape>
-- [Imágenes y gráficos 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Imágenes y gráficos 2D](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Gráficos y multimedia](index.md)

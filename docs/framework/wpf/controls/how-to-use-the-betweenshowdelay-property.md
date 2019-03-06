@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Usar la propiedad BetweenShowDelay
+title: Filtrar Usar la propiedad BetweenShowDelay
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolTip control [WPF], BetweenShowDelay time property
 - BetweenShowDelay time property [WPF]
 ms.assetid: 984ea76d-f2a2-4326-a02e-f97ec3d036d6
-ms.openlocfilehash: ee9c532f8b2eeddb2c798df53e1864e8f543638b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e0653fbcb8eb052b12be7344ffe239431b67a951
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564069"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370987"
 ---
-# <a name="how-to-use-the-betweenshowdelay-property"></a>Procedimiento Usar la propiedad BetweenShowDelay
+# <a name="how-to-use-the-betweenshowdelay-property"></a>Filtrar Usar la propiedad BetweenShowDelay
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propiedad de tiempo para que la información sobre herramientas aparece rápidamente, con poco o ningún retraso, cuando el usuario mueve el puntero del mouse en una información sobre herramientas directamente a otro.  
   
 ## <a name="example"></a>Ejemplo  
@@ -24,11 +24,11 @@ En este ejemplo se muestra cómo usar el <xref:System.Windows.Controls.ToolTipSe
   
 -   Si la información sobre herramientas no está visible al principio del intervalo de tiempo para la primera elipse.  
   
- [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
-[!code-xaml[ToolTipService#NoToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
+ [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+[!code-xaml[ToolTipService#NoToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
-- [Información general de información sobre herramientas](../../../../docs/framework/wpf/controls/tooltip-overview.md)
+- [Temas "Cómo..."](tooltip-how-to-topics.md)
+- [Información general de información sobre herramientas](tooltip-overview.md)

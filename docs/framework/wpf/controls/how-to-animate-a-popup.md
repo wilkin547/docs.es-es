@@ -1,16 +1,16 @@
 ---
-title: Procedimiento Animar un control Popup
+title: Filtrar Animar un control Popup
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Popup control [WPF], animating
 - animation [WPF], Popup controls
 ms.assetid: acaa2a0a-6137-4efd-9cd1-75ece222e390
-ms.openlocfilehash: 47555e5468c731d274707f0367122beb26e80c30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed5edf298e59d6a9adddc03fc21de1900c7ee8e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590044"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372846"
 ---
 # <a name="how-to-animate-a-popup"></a>Procedimiento Animar un control Popup
 En este ejemplo se muestra dos maneras de animar una <xref:System.Windows.Controls.Primitives.Popup> control.  
@@ -22,11 +22,11 @@ En este ejemplo se muestra dos maneras de animar una <xref:System.Windows.Contro
   
  Para que la transformación funcione correctamente, debe establecer en el ejemplo el <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> propiedad `true`. Además, el <xref:System.Windows.FrameworkElement.Margin%2A> en el <xref:System.Windows.Controls.Canvas> contenido debe especificar el espacio suficiente para el <xref:System.Windows.Controls.Primitives.Popup> se va a girar.  
   
- [!code-xaml[AnimatedPopup#RotateTransform2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform2)]  
+ [!code-xaml[AnimatedPopup#RotateTransform2](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform2)]  
   
  El ejemplo siguiente se muestra cómo un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento, que se produce cuando un <xref:System.Windows.Controls.Button> se hace clic en, los desencadenadores del <xref:System.Windows.Media.Animation.Storyboard> que comienza la animación.  
   
- [!code-xaml[AnimatedPopup#RotateTransform1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform1)]  
+ [!code-xaml[AnimatedPopup#RotateTransform1](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform1)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.UIElement.RenderTransform%2A>
@@ -34,5 +34,5 @@ En este ejemplo se muestra dos maneras de animar una <xref:System.Windows.Contro
 - <xref:System.Windows.Media.RotateTransform>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - <xref:System.Windows.Controls.Primitives.Popup>
-- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
-- [Información general sobre el control Popup](../../../../docs/framework/wpf/controls/popup-overview.md)
+- [Temas "Cómo..."](popup-how-to-topics.md)
+- [Información general sobre el control Popup](popup-overview.md)

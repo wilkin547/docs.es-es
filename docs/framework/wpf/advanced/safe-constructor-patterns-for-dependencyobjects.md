@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 8e9e2f83e15e4e1703ed42dfb479efb8feed3bb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d963d9c8b7ddfba0c24fcb10ddf9cc45a2f4d0c5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661287"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363987"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Modelos de constructores seguros para objetos DependencyObject
 En general, los constructores de clase no deben llamar a devoluciones de llamada como métodos virtuales o delegados, porque se puede llamar a los constructores como inicialización base de constructores para una clase derivada. Es posible entrar en el método virtual en un estado de inicialización incompleto de cualquier objeto determinado. Pero el propio sistema de propiedades llama y expone internamente las devoluciones de llamada, como parte del sistema de propiedades de dependencia. Una operación tan sencilla como establecer un valor de propiedad de dependencia con <xref:System.Windows.DependencyObject.SetValue%2A> llamada potencialmente incluye una devolución de llamada en alguna parte de la determinación. Por esta razón, deben extremarse las precauciones al establecer los valores de propiedad de dependencia dentro del cuerpo de un constructor, algo que puede resultar problemático si el tipo se usa como una clase base. Hay un patrón concreto para implementar <xref:System.Windows.DependencyObject> constructores que evita los problemas concretos con los Estados de propiedad de dependencia y las devoluciones de llamada inherentes, que se documenta aquí.  
@@ -20,7 +20,7 @@ En general, los constructores de clase no deben llamar a devoluciones de llamada
   
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>Métodos virtuales del sistema de propiedades  
- Los siguientes métodos virtuales o devoluciones de llamada se denominan potencialmente durante los cálculos de la <xref:System.Windows.DependencyObject.SetValue%2A> llamada que establece un valor de propiedad de dependencia: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Cada uno de estos métodos virtuales o devoluciones de llamada sirve para una finalidad concreta dirigida a expandir la versatilidad del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] y las propiedades de dependencia. Para más información sobre cómo usar estos métodos virtuales para personalizar la determinación de valores de propiedad, vea [Devoluciones de llamada y validación de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+ Los siguientes métodos virtuales o devoluciones de llamada se denominan potencialmente durante los cálculos de la <xref:System.Windows.DependencyObject.SetValue%2A> llamada que establece un valor de propiedad de dependencia: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Cada uno de estos métodos virtuales o devoluciones de llamada sirve para una finalidad concreta dirigida a expandir la versatilidad del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] y las propiedades de dependencia. Para más información sobre cómo usar estos métodos virtuales para personalizar la determinación de valores de propiedad, vea [Devoluciones de llamada y validación de las propiedades de dependencia](dependency-property-callbacks-and-validation.md).  
   
 ### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>Aplicación de las reglas de FXCop con respecto  a los métodos virtuales del sistema de propiedades  
  Si usa la herramienta FXCop de Microsoft como parte del proceso de compilación, y deriva de algunas clases del marco de trabajo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] llamando al constructor base, o bien implementa sus propias propiedades de dependencia en clases derivadas, es posible que se produzca una infracción de una regla de FXCop concreta. La cadena de nombre de esta infracción es:  
@@ -115,6 +115,6 @@ public MyClass : SomeBaseClass {
  Estos mismos patrones se aplican si va a establecer una propiedad que no tiene un contenedor para facilitar el establecimiento de propiedades y establecer valores con <xref:System.Windows.DependencyObject.SetValue%2A>. Las llamadas a <xref:System.Windows.DependencyObject.SetValue%2A> que pasar a través de los parámetros del constructor también debe llamar al constructor predeterminado de la clase para la inicialización.  
   
 ## <a name="see-also"></a>Vea también
-- [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Seguridad de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+- [Propiedades de dependencia personalizadas](custom-dependency-properties.md)
+- [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)
+- [Seguridad de las propiedades de dependencia](dependency-property-security.md)

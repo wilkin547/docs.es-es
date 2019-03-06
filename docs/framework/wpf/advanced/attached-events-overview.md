@@ -12,12 +12,12 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: b82af44b1262f4eb2839efef85a4b35eba534524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682961"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371676"
 ---
 # <a name="attached-events-overview"></a>Información general sobre eventos adjuntos
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] define un componente de lenguaje y un tipo de evento denominado *evento adjunto*. El concepto de un evento adjunto permite agregar un controlador de un evento determinado a un elemento arbitrario, en lugar de agregarlo a un elemento que realmente define o hereda el evento. En este caso, ni el objeto que genera potencialmente el evento ni la instancia de control del destino definen ni "poseen" de otro modo el evento.  
@@ -26,7 +26,7 @@ ms.locfileid: "54682961"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
- En este tema se da por supuesto que ha leído [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md) e [Información general sobre XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ En este tema se da por supuesto que ha leído [Información general sobre eventos enrutados](routed-events-overview.md) e [Información general sobre XAML (WPF)](xaml-overview-wpf.md).  
   
 <a name="Syntax"></a>   
 ## <a name="attached-event-syntax"></a>Sintaxis de los eventos adjuntos  
@@ -36,7 +36,7 @@ ms.locfileid: "54682961"
   
  Por ejemplo, la siguiente es la sintaxis de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para adjuntar un controlador a un evento adjunto `NeedsCleaning` personalizado:  
   
- [!code-xaml[WPFAquariumSln#AE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
+ [!code-xaml[WPFAquariumSln#AE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
   
  Observe el prefijo `aqua:`, que, en este caso, es necesario porque el evento adjunto es un evento personalizado que procede de un atributo xmlns asignado personalizado.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "54682961"
   
  En general, un evento adjunto de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no es muy diferente de un evento enrutado de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Las diferencias se encuentran en cómo se origina el evento y en cómo lo expone una clase como un miembro (lo que también afecta a la sintaxis del controlador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]).  
   
- Sin embargo, como se indicó anteriormente, los eventos adjuntos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] existentes no están diseñados especialmente para el control en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Más a menudo, el propósito del evento es habilitar un elemento compuesto para notificar un estado a un elemento primario en la composición, en cuyo caso el evento se genera normalmente en el código y también se basa en el control de clases de la clase primaria pertinente. Por ejemplo, los elementos de un <xref:System.Windows.Controls.Primitives.Selector> se espera que genere el archivo adjunto <xref:System.Windows.Controls.Primitives.Selector.Selected> controlando el evento, que es, a continuación, la clase el <xref:System.Windows.Controls.Primitives.Selector> clase y, a continuación, convierte potencialmente por la <xref:System.Windows.Controls.Primitives.Selector> clase en un evento enrutado diferente, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Para obtener más información, consulte [Marcar eventos enrutados como controlados y control de clases](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Sin embargo, como se indicó anteriormente, los eventos adjuntos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] existentes no están diseñados especialmente para el control en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Más a menudo, el propósito del evento es habilitar un elemento compuesto para notificar un estado a un elemento primario en la composición, en cuyo caso el evento se genera normalmente en el código y también se basa en el control de clases de la clase primaria pertinente. Por ejemplo, los elementos de un <xref:System.Windows.Controls.Primitives.Selector> se espera que genere el archivo adjunto <xref:System.Windows.Controls.Primitives.Selector.Selected> controlando el evento, que es, a continuación, la clase el <xref:System.Windows.Controls.Primitives.Selector> clase y, a continuación, convierte potencialmente por la <xref:System.Windows.Controls.Primitives.Selector> clase en un evento enrutado diferente, <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Para obtener más información, consulte [Marcar eventos enrutados como controlados y control de clases](marking-routed-events-as-handled-and-class-handling.md).  
   
 <a name="Custom"></a>   
 ## <a name="defining-your-own-attached-events-as-routed-events"></a>Definición de eventos adjuntos propios como eventos enrutados  
@@ -80,10 +80,10 @@ ms.locfileid: "54682961"
   
  Por ejemplo, el código siguiente define el evento adjunto de `NeedsCleaning` en la clase propietaria `Aquarium`, mediante la estrategia de declarar un evento adjunto como un evento enrutado que ofrecen los eventos adjuntos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!code-csharp[WPFAquariumSln#AECode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
- [!code-vb[WPFAquariumSln#AECode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
+ [!code-csharp[WPFAquariumSln#AECode](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
+ [!code-vb[WPFAquariumSln#AECode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
   
- Tenga en cuenta que el método usado para establecer el campo de identificador de evento adjunto, <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, es realmente el mismo método que se usa para registrar un evento enrutado no adjunto. Todos los eventos adjuntos y eventos enrutados se registran en un almacén interno centralizado. Esta implementación del almacén de eventos permite la consideración conceptual de "eventos como una interfaz" que se describe en [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Tenga en cuenta que el método usado para establecer el campo de identificador de evento adjunto, <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, es realmente el mismo método que se usa para registrar un evento enrutado no adjunto. Todos los eventos adjuntos y eventos enrutados se registran en un almacén interno centralizado. Esta implementación del almacén de eventos permite la consideración conceptual de "eventos como una interfaz" que se describe en [Información general sobre eventos enrutados](routed-events-overview.md).  
   
 <a name="Raising"></a>   
 ## <a name="raising-a-wpf-attached-event"></a>Generación de un evento adjunto de WPF  
@@ -92,6 +92,6 @@ ms.locfileid: "54682961"
  Sin embargo, si va a definir un evento adjunto personalizado basado en la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelo de basar los eventos adjuntos en <xref:System.Windows.RoutedEvent>, puede usar <xref:System.Windows.UIElement.RaiseEvent%2A> para generar un evento adjunto desde cualquier <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement>. Generar un evento enrutado (adjunto o no) requiere que se declare un elemento determinado en el árbol de elementos como el origen del evento; se notifica ese origen como el <xref:System.Windows.UIElement.RaiseEvent%2A> llamador. Determinar qué elemento se notifica como el origen del árbol es responsabilidad del servicio.  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Detalles de la sintaxis XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
-- [Clases XAML y personalizadas para WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Información general sobre eventos enrutados](routed-events-overview.md)
+- [Detalles de la sintaxis XAML](xaml-syntax-in-detail.md)
+- [Clases XAML y personalizadas para WPF](xaml-and-custom-classes-for-wpf.md)

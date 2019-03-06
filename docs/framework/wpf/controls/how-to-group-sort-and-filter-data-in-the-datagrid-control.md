@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agrupar, ordenar y filtrar los datos en el control DataGrid
+title: Filtrar Agrupar, ordenar y filtrar los datos en el control DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], group
 - DataGrid [WPF], filter
 ms.assetid: 03345e85-89e3-4aec-9ed0-3b80759df770
-ms.openlocfilehash: f0f80afd982092248bc52590e072c92784dbcbce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81fdb0a6d5602f612c55d7e790ca9a0fe56c144e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650462"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365053"
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>Procedimiento Agrupar, ordenar y filtrar datos en el control DataGrid
 
@@ -24,7 +24,7 @@ El <xref:System.Windows.Data.CollectionView> clase proporciona agrupación y ord
 
 En este ejemplo, una colección de `Task` objetos está enlazado a un <xref:System.Windows.Data.CollectionViewSource>. El <xref:System.Windows.Data.CollectionViewSource> se utiliza como el <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> para el <xref:System.Windows.Controls.DataGrid>. Agrupación, ordenación y filtrado se realizan en el <xref:System.Windows.Data.CollectionViewSource> y se muestran en el <xref:System.Windows.Controls.DataGrid> la interfaz de usuario.
 
-![Datos agrupados en un control DataGrid](./media/wpf-datagridgroups.png "WPF_DataGridGroups") datos agrupados en un control DataGrid
+![Datos agrupados en un control DataGrid](././media/wpf-datagridgroups.png "WPF_DataGridGroups") datos agrupados en un control DataGrid
 
 ## <a name="using-a-collectionviewsource-as-an-itemssource"></a>Uso de CollectionViewSource como ItemsSource
 
@@ -42,9 +42,9 @@ Para agrupar, ordenar y filtrar datos en un <xref:System.Windows.Controls.DataGr
     [!code-csharp[DataGrid_GroupSortFilter#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#101)]
     [!code-vb[DataGrid_GroupSortFilter#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#101)]
 
-2. En XAML, cree una instancia de la clase de colección y establezca el [Directiva x: Key](../../../../docs/framework/xaml-services/x-key-directive.md).
+2. En XAML, cree una instancia de la clase de colección y establezca el [Directiva x: Key](../../xaml-services/x-key-directive.md).
 
-3. En XAML, cree una instancia de la <xref:System.Windows.Data.CollectionViewSource> clase, establezca el [Directiva x: Key](../../../../docs/framework/xaml-services/x-key-directive.md)y establece la instancia de la clase de colección como el <xref:System.Windows.Data.CollectionViewSource.Source%2A>.
+3. En XAML, cree una instancia de la <xref:System.Windows.Data.CollectionViewSource> clase, establezca el [Directiva x: Key](../../xaml-services/x-key-directive.md)y establece la instancia de la clase de colección como el <xref:System.Windows.Data.CollectionViewSource.Source%2A>.
 
     [!code-xaml[DataGrid_GroupSortFilter#201](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/WindowSnips1.xaml#201)]
 

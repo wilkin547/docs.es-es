@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-ms.openlocfilehash: 9e2cd55d0d5eb453ad5d29b707a14b9894d40089
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1274724e1cd93f5788840978b583e4bf05c06bb2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493708"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358566"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Asignación de propiedades en formularios Windows Forms y WPF
 El [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tecnologías, hay dos modelos de propiedades similares pero diferentes. *Asignación de propiedad* admite la interoperabilidad entre las dos arquitecturas y proporciona las siguientes capacidades:  
@@ -49,7 +49,7 @@ El [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]
   
  Las propiedades adjuntas en elementos de contenedor son totalmente compatibles con el <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento.  
   
- Para obtener más información, vea [Tutorial: Asignar propiedades mediante el uso del elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md).  
+ Para obtener más información, vea [Tutorial: Asignar propiedades mediante el uso del elemento WindowsFormsHost](walkthrough-mapping-properties-using-the-windowsformshost-element.md).  
   
 ## <a name="updates-to-parent-properties"></a>Actualizaciones de propiedades del miembro primario  
  Los cambios realizados en la mayoría de las propiedades de elemento primario, generarán notificaciones al control secundario hospedado. La lista siguiente describe las propiedades que no generan notificaciones cuando cambian sus valores.  
@@ -89,17 +89,17 @@ El [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]
   
 -   Habilitado  
   
--   Tipo de letra  
+-   Fuente  
   
 -   ForeColor  
   
 -   Ubicación  
   
--   Margin  
+-   Margen  
   
 -   Relleno  
   
--   Elemento primario  
+-   Primario  
   
 -   Región  
   
@@ -117,7 +117,7 @@ El [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]
   
  El <xref:System.Windows.Forms.Integration.ElementHost> control traduce predeterminada [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] propiedades a sus [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] equivalentes mediante el uso de la siguiente tabla de traducción.  
   
- Para obtener más información, vea [Tutorial: Asignar propiedades mediante el uso del Control ElementHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md).  
+ Para obtener más información, vea [Tutorial: Asignar propiedades mediante el uso del Control ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md).  
   
 |Hospedaje de formularios de Windows|Windows Presentation Foundation|Comportamiento de interoperación|  
 |---------------------------|-------------------------------------|-----------------------------|  
@@ -137,7 +137,7 @@ El [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Interoperabilidad de WPF y Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [Interoperabilidad entre Windows Forms y WPF](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)
-- [Tutorial: Asignar propiedades mediante el uso del elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [Tutorial: Asignar propiedades mediante el uso del Control ElementHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [Interoperabilidad de WPF y Win32](wpf-and-win32-interoperation.md)
+- [Interoperabilidad entre Windows Forms y WPF](wpf-and-windows-forms-interoperation.md)
+- [Tutorial: Asignar propiedades mediante el uso del elemento WindowsFormsHost](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [Tutorial: Asignar propiedades mediante el uso del Control ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear un control que tenga tecla de acceso y ajuste de texto
+title: Filtrar Crear un control que tenga tecla de acceso y ajuste de texto
 ms.date: 03/30/2017
 helpviewer_keywords:
 - access keys [WPF], control for
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], access keys
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-ms.openlocfilehash: bb8379776066802277886b54c60c502ad58768e0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: e410b92f90f775471ef5d89365549ccd5bb7f085
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748172"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361907"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Filtrar Crear un control que tenga tecla de acceso y ajuste de texto
 En este ejemplo se explica cómo crear un control que tenga una clave de acceso y que admita el ajuste de texto. El ejemplo se usa un <xref:System.Windows.Controls.Label> control para ilustrar estos conceptos.  
@@ -24,7 +24,7 @@ En este ejemplo se explica cómo crear un control que tenga una clave de acceso 
   
  El <xref:System.Windows.Controls.Label> control no admite el ajuste de texto. Si necesita una etiqueta que ajuste el texto en varias líneas, puede anidar otro elemento que sí admita el ajuste de texto y colocarlo dentro de la etiqueta. El ejemplo siguiente muestra cómo usar un <xref:System.Windows.Controls.TextBlock> para crear una etiqueta que contiene varias líneas de texto.  
   
- [!code-xaml[LabelSnippet#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
+ [!code-xaml[LabelSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
  **Agregar una tecla de acceso y el ajuste de texto a la etiqueta**  
   
@@ -34,7 +34,7 @@ En este ejemplo se explica cómo crear un control que tenga una clave de acceso 
   
  El ejemplo siguiente muestra cómo crear un <xref:System.Windows.Controls.Label> que tiene una clave de acceso y admite el ajuste de texto. Para habilitar el ajuste de texto, el ejemplo establece la <xref:System.Windows.Controls.AccessText.TextWrapping%2A> propiedad y se usa un carácter de subrayado de caracteres para especificar la clave de acceso. (El carácter que sigue inmediatamente al carácter de subrayado es la tecla de acceso).  
   
- [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
+ [!code-xaml[LabelSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
 ## <a name="see-also"></a>Vea también
 - [Cómo: Establezca la propiedad de destino de una etiqueta](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))

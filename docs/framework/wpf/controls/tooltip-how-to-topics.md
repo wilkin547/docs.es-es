@@ -7,17 +7,17 @@ helpviewer_keywords:
 - ToolTip control [WPF], how-to topics
 - controls [WPF], ToolTip
 ms.assetid: 2aa88347-c4cb-48d3-951d-a7072643283b
-ms.openlocfilehash: d00085d3aec5e7337162f9e9d073653b6356c625
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb2450d13b7a247e9eb0cc0b802b2d758482c466
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552862"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377786"
 ---
 # <a name="tooltip-how-to-topics"></a>Temas "Cómo..." de información sobre herramientas
 ## <a name="in-this-section"></a>En esta sección  
- [Situar una información sobre herramientas](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md)  
-  [Usar la propiedad BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)  
+ [Situar una información sobre herramientas](how-to-position-a-tooltip.md)  
+  [Usar la propiedad BetweenShowDelay](how-to-use-the-betweenshowdelay-property.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.ToolTip>  
@@ -27,6 +27,6 @@ ms.locfileid: "33552862"
  <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Información general sobre el control Popup](../../../../docs/framework/wpf/controls/popup-overview.md)  
+ [Información general sobre el control Popup](popup-overview.md)  
   
- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [Temas "Cómo..."](popup-how-to-topics.md)

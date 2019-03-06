@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Aplicar un estilo a una fila en un control ListView que implementa una clase GridView
+title: Filtrar Aplicar un estilo a una fila en un control ListView que implementa una clase GridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GridView controls [WPF], styling rows
 - styling rows in ListViews implementing GridViews [WPF]
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
-ms.openlocfilehash: 39801af88d3e64b92aa7e99ff794c3d7e7239df5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c8806c399959fdc1466e0839ba469881718092b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680236"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361634"
 ---
-# <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Procedimiento Aplicar un estilo a una fila en un control ListView que implementa una clase GridView
+# <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Filtrar Aplicar un estilo a una fila en un control ListView que implementa una clase GridView
 En este ejemplo se muestra cómo aplicar un estilo una fila en un <xref:System.Windows.Controls.ListView> control que implementa un <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView.View%2A> modo.  
   
 ## <a name="example"></a>Ejemplo  
@@ -23,19 +23,19 @@ En este ejemplo se muestra cómo aplicar un estilo una fila en un <xref:System.W
   
  El ejemplo siguiente muestra cómo definir <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> para el <xref:System.Windows.Controls.ListViewItem> objetos que representan las canciones de la colección de canciones. El <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> referencias <xref:System.Windows.Controls.ControlTemplate> objetos que especifican cómo mostrar una fila de información de la canción.  
   
- [!code-xaml[ListViewItemStyleSnippet#ItemContainerStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#itemcontainerstyle)]  
+ [!code-xaml[ListViewItemStyleSnippet#ItemContainerStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#itemcontainerstyle)]  
   
  El ejemplo siguiente se muestra un <xref:System.Windows.Controls.ControlTemplate> que agrega la cadena de texto `"Strongly Recommended"` a la fila. Esta plantilla se hace referencia en el <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> y se muestra cuando la clasificación de la canción tiene un valor de 5 (cinco). El <xref:System.Windows.Controls.ControlTemplate> incluye un <xref:System.Windows.Controls.GridViewRowPresenter> objeto que distribuye el contenido de la fila en columnas tal como se define por el <xref:System.Windows.Controls.GridView> modo de vista.  
   
- [!code-xaml[ListViewItemStyleSnippet#ControlTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#controltemplate)]  
+ [!code-xaml[ListViewItemStyleSnippet#ControlTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#controltemplate)]  
   
  En el ejemplo siguiente se define <xref:System.Windows.Controls.GridView>.  
   
- [!code-xaml[ListViewItemStyleSnippet#GridView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#gridview)]  
+ [!code-xaml[ListViewItemStyleSnippet#GridView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#gridview)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
-- [Información general sobre ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Temas "Cómo..."](listview-how-to-topics.md)
+- [Información general sobre ListView](listview-overview.md)
+- [Aplicar estilos y plantillas](styling-and-templating.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: ad0b30c9f628148f77761ff3af810b484c5ae583
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 039d25fb14ed2d29f21168267611d4f0d7f2d04f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632925"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367614"
 ---
 # <a name="weak-event-patterns"></a>Modelos de evento débil
 En las aplicaciones, es posible que los controladores que están conectados a orígenes de eventos no se destruirán en coordinación con el objeto de agente de escucha que adjuntó el controlador para el origen. Esta situación puede provocar pérdidas de memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] presenta un patrón de diseño que se puede usar para resolver este problema, que proporciona una clase de administrador dedicada para eventos concretos e implementando una interfaz en los agentes de escucha para ese evento. Este patrón de diseño se conoce como el *modelo de evento débil*.  
@@ -96,7 +96,7 @@ En las aplicaciones, es posible que los controladores que están conectados a or
   
      Esta clase hereda de la <xref:System.Windows.WeakEventManager> clase.  
   
-     [!code-csharp[WeakEvents#WeakEventManagerTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
+     [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
 2.  Reemplace el `SomeEventWeakEventManager` nombre con su propio nombre.  
   
@@ -133,5 +133,5 @@ En las aplicaciones, es posible que los controladores que están conectados a or
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.WeakEventManager>
 - <xref:System.Windows.IWeakEventListener>
-- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Información general sobre eventos enrutados](routed-events-overview.md)
+- [Información general sobre el enlace de datos](../data/data-binding-overview.md)

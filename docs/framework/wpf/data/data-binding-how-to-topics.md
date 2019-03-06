@@ -7,52 +7,52 @@ helpviewer_keywords:
 - data binding [WPF], how-to topics
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
-ms.openlocfilehash: ae69481a884610d6253ee9a45bc3139cabac7e0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49929dc5afaa9bc1e97589d244c2bdbbd14cdb00
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557698"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360581"
 ---
 # <a name="data-binding-how-to-topics"></a>Temas "Cómo..." sobre enlace de datos
-Los temas de esta sección describen cómo utilizar el enlace de datos para enlazar elementos a los datos desde una variedad de orígenes de datos en forma de objetos common language runtime (CLR) y XML.  
+Los temas de esta sección describen cómo utilizar el enlace de datos para enlazar los elementos a los datos desde una variedad de orígenes de datos en forma de objetos common language runtime (CLR) y XML.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Crear un enlace sencillo](../../../../docs/framework/wpf/data/how-to-create-a-simple-binding.md)  
- [Especificación del origen de enlace](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
- [Hacer que los datos estén disponibles para el enlace en XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  
- [Controlar cuándo el texto de TextBox actualiza el origen](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
- [Especificar la dirección del enlace](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md)  
- [Enlazar a una colección y mostrar información basada en la selección](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
- [Enlazar a una enumeración](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)  
- [Enlazar las propiedades de dos controles](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md)  
- [Implementar la validación de enlaces](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [Implementar lógica de validación en objetos personalizados](../../../../docs/framework/wpf/data/how-to-implement-validation-logic-on-custom-objects.md)  
- [Obtener el objeto de enlace a partir de una propiedad de destino enlazada](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
- [Implementar una CompositeCollection](../../../../docs/framework/wpf/data/how-to-implement-a-compositecollection.md)  
- [Convertir datos enlazados](../../../../docs/framework/wpf/data/how-to-convert-bound-data.md)  
- [Crear un enlace mediante código](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)  
- [Obtener la vista predeterminada de una colección de datos](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)  
- [Navegar por los objetos de una colección de datos mediante CollectionView](../../../../docs/framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
- [Filtrar datos en una vista](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [Ordenar datos en una vista](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [Ordenar y agrupar datos mediante una vista en XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [Usar el patrón principal-detalle con datos jerárquicos](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
- [Usar el patrón principal-detalle con datos XML jerárquicos](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
- [Generar un valor basado en una lista de elementos enlazados](../../../../docs/framework/wpf/data/how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
- [Implementar la notificación de cambio de propiedad](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)  
- [Crear y enlazar a una colección ObservableCollection](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
- [Implementar PriorityBinding](../../../../docs/framework/wpf/data/how-to-implement-prioritybinding.md)  
- [Enlazar a datos XML mediante XMLDataProvider y consultas XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
- [Enlazar a los resultados de una consulta LINQ to XML, XDocument o XElement](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
- [Usar espacios de nombres XML en el enlace de datos](../../../../docs/framework/wpf/data/how-to-use-xml-namespaces-in-data-binding.md)  
- [Bind to an ADO.NET Data Source](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md) (Enlace a un origen de datos de ADO.NET)  
- [Enlazar a un método](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)  
- [Configurar notificación de actualizaciones de enlaces](../../../../docs/framework/wpf/data/how-to-set-up-notification-of-binding-updates.md)  
- [Borrar enlaces](../../../../docs/framework/wpf/data/how-to-clear-bindings.md)  
- [Find DataTemplate-Generated Elements](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md) (Cómo buscar elementos generados por una clase DataTemplate)  
- [Enlazar a un servicio web](../../../../docs/framework/wpf/data/how-to-bind-to-a-web-service.md)  
- [Enlazar a los resultados de una consulta LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
+ [Crear un enlace sencillo](how-to-create-a-simple-binding.md)  
+ [Especificación del origen de enlace](how-to-specify-the-binding-source.md)  
+ [Hacer que los datos estén disponibles para el enlace en XAML](how-to-make-data-available-for-binding-in-xaml.md)  
+ [Controlar cuándo el texto de TextBox actualiza el origen](how-to-control-when-the-textbox-text-updates-the-source.md)  
+ [Especificar la dirección del enlace](how-to-specify-the-direction-of-the-binding.md)  
+ [Enlazar a una colección y mostrar información basada en la selección](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
+ [Enlazar a una enumeración](how-to-bind-to-an-enumeration.md)  
+ [Enlazar las propiedades de dos controles](how-to-bind-the-properties-of-two-controls.md)  
+ [Implementar la validación de enlaces](how-to-implement-binding-validation.md)  
+ [Implementar lógica de validación en objetos personalizados](how-to-implement-validation-logic-on-custom-objects.md)  
+ [Obtener el objeto de enlace a partir de una propiedad de destino enlazada](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+ [Implementar una CompositeCollection](how-to-implement-a-compositecollection.md)  
+ [Convertir datos enlazados](how-to-convert-bound-data.md)  
+ [Crear un enlace mediante código](how-to-create-a-binding-in-code.md)  
+ [Obtener la vista predeterminada de una colección de datos](how-to-get-the-default-view-of-a-data-collection.md)  
+ [Navegar por los objetos de una colección de datos mediante CollectionView](how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
+ [Filtrar datos en una vista](how-to-filter-data-in-a-view.md)  
+ [Ordenar datos en una vista](how-to-sort-data-in-a-view.md)  
+ [Ordenar y agrupar datos mediante una vista en XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)  
+ [Usar el patrón principal-detalle con datos jerárquicos](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
+ [Usar el patrón principal-detalle con datos XML jerárquicos](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [Generar un valor basado en una lista de elementos enlazados](how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
+ [Implementar la notificación de cambio de propiedad](how-to-implement-property-change-notification.md)  
+ [Crear y enlazar a una colección ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md)  
+ [Implementar PriorityBinding](how-to-implement-prioritybinding.md)  
+ [Enlazar a datos XML mediante XMLDataProvider y consultas XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [Enlazar a los resultados de una consulta LINQ to XML, XDocument o XElement](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
+ [Usar espacios de nombres XML en el enlace de datos](how-to-use-xml-namespaces-in-data-binding.md)  
+ [Bind to an ADO.NET Data Source](how-to-bind-to-an-ado-net-data-source.md) (Enlace a un origen de datos de ADO.NET)  
+ [Enlazar a un método](how-to-bind-to-a-method.md)  
+ [Configurar notificación de actualizaciones de enlaces](how-to-set-up-notification-of-binding-updates.md)  
+ [Borrar enlaces](how-to-clear-bindings.md)  
+ [Find DataTemplate-Generated Elements](how-to-find-datatemplate-generated-elements.md) (Cómo buscar elementos generados por una clase DataTemplate)  
+ [Enlazar a un servicio web](how-to-bind-to-a-web-service.md)  
+ [Enlazar a los resultados de una consulta LINQ](how-to-bind-to-the-results-of-a-linq-query.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Data>  
@@ -64,6 +64,6 @@ Los temas de esta sección describen cómo utilizar el enlace de datos para enla
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Enlace de datos](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
+ [Enlace de datos](data-binding-wpf.md)  
   
- [Enlace de datos](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+ [Enlace de datos](../advanced/optimizing-performance-data-binding.md)

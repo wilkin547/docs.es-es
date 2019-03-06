@@ -15,58 +15,58 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: 7737a2e01ddfe2a639426bbced643d8f78961207
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd86293c539bf58ac93894e0b879dddb984825e1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740555"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378956"
 ---
-# <a name="how-to-apply-transforms-to-text"></a>Procedimiento Aplicar transformaciones a texto
+# <a name="how-to-apply-transforms-to-text"></a>Filtrar Aplicar transformaciones a texto
 Las transformaciones pueden modificar la presentación del texto en la aplicación. Los ejemplos siguientes usan diferentes tipos de transformaciones de representación para influir en la presentación del texto en un <xref:System.Windows.Controls.TextBlock> control.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra el texto girado sobre un punto especificado en el plano x-y bidimensional.  
   
- ![Texto girado usando RotateTransform](../../../../docs/framework/wpf/advanced/media/transformedtext01.jpg "TransformedText01")  
+ ![Texto girado usando RotateTransform](./media/transformedtext01.jpg "TransformedText01")  
 Ejemplo de texto girado 90 grados  
   
  El siguiente ejemplo de código utiliza un <xref:System.Windows.Media.RotateTransform> para girar el texto. Un <xref:System.Windows.Media.RotateTransform.Angle%2A> valor de 90 gira el elemento 90 grados a la derecha.  
   
- [!code-xaml[TextTransformSample#TextTransformSample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample1)]  
+ [!code-xaml[TextTransformSample#TextTransformSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample1)]  
   
  En el ejemplo siguiente se muestra la segunda línea de texto escalada al 150 % a lo largo del eje X y la tercera línea de texto escalada al 150 % a lo largo del eje Y.  
   
- ![Texto escalado mediante ScaleTransform](../../../../docs/framework/wpf/advanced/media/transformedtext02.jpg "TransformedText02")  
+ ![Texto escalado mediante ScaleTransform](./media/transformedtext02.jpg "TransformedText02")  
 Ejemplo de texto escalado  
   
  El siguiente ejemplo de código utiliza un <xref:System.Windows.Media.ScaleTransform> para escalar el texto de su tamaño original.  
   
- [!code-xaml[TextTransformSample#TextTransformSample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample2)]  
+ [!code-xaml[TextTransformSample#TextTransformSample2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample2)]  
   
 > [!NOTE]
 >  Escalar texto no es lo mismo que aumentar el tamaño de la fuente de texto. Los tamaños de fuente se calculan de forma independiente para proporcionar la mejor resolución en diferentes tamaños. El texto escalado, por otro lado, conserva las proporciones del texto de tamaño original.  
   
  En el ejemplo siguiente se muestra el texto sesgado a lo largo del eje X.  
   
- ![Texto sesgado usando SkewTransform](../../../../docs/framework/wpf/advanced/media/transformedtext03.jpg "TransformedText03")  
+ ![Texto sesgado usando SkewTransform](./media/transformedtext03.jpg "TransformedText03")  
 Ejemplo de texto sesgado  
   
  El siguiente ejemplo de código utiliza un <xref:System.Windows.Media.SkewTransform> para sesgar el texto. Un sesgo, también conocido como distorsión, es una transformación que expande el espacio de coordenadas de una manera no uniforme. En este ejemplo, las dos cadenas de texto están sesgadas -30° y 30° a lo largo de la coordenada x.  
   
- [!code-xaml[TextTransformSample#TextTransformSample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample3)]  
+ [!code-xaml[TextTransformSample#TextTransformSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample3)]  
   
  En el ejemplo siguiente se muestra texto trasladado, o movido, a lo largo del eje x y el eje y.  
   
- ![Texto desplazado usando TranslateTransform](../../../../docs/framework/wpf/advanced/media/transformedtext04.jpg "TransformedText04")  
+ ![Texto desplazado usando TranslateTransform](./media/transformedtext04.jpg "TransformedText04")  
 Ejemplo de texto trasladado  
   
  El siguiente ejemplo de código utiliza un <xref:System.Windows.Media.TranslateTransform> para desplazar el texto. En este ejemplo, una copia ligeramente desplazada del texto bajo el texto primario crea un efecto de sombra.  
   
- [!code-xaml[TextTransformSample#TextTransformSample4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample4)]  
+ [!code-xaml[TextTransformSample#TextTransformSample4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample4)]  
   
 > [!NOTE]
->  El <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> proporciona un amplio conjunto de características para ofrecer efectos de sombra. Para obtener más información, consulte [crear texto con sombreado](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md).  
+>  El <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> proporciona un amplio conjunto de características para ofrecer efectos de sombra. Para obtener más información, consulte [crear texto con sombreado](how-to-create-text-with-a-shadow.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Aplicar animaciones a texto](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)
+- [Aplicar animaciones a texto](how-to-apply-animations-to-text.md)

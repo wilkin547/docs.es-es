@@ -2,15 +2,9 @@
 title: Referencia (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- language reference
-- Visual Basic code, language reference
+  - language reference
+  - 'Visual Basic code, language reference'
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: 615421afe522770bfcff38ffdb23917d7925150d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083913"
 ---
 # <a name="reference-visual-basic"></a>Referencia (Visual Basic)
 Esta sección proporciona vínculos a información de referencia sobre diversos aspectos de programación en Visual Basic.  
@@ -27,13 +21,6 @@ Esta sección proporciona vínculos a información de referencia sobre diversos 
   
  [Especificación del lenguaje de Visual Basic](../../visual-basic/reference/language-specification/index.md)  
  Proporciona vínculos a la especificación completa del lenguaje Visual Basic, que contiene información detallada sobre todos los aspectos del lenguaje.  
-  
-## <a name="reference"></a>Referencia  
- <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
- Este espacio de nombres contiene clases para los controles Power Packs de Visual Basic. Power Packs de Visual Basic son controles adicionales de Windows Forms.  
-  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=nameWithType>  
- Este espacio de nombres proporciona un componente que permite imprimir un facsímil tal y como aparece en pantalla.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Elementos generales de la interfaz de usuario (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  

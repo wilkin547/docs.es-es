@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: f88a0001bb2ba55c0a3eac3ed208f14292d86734
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a16dd616c8a38dea4bd1779e4feea779b3a18e2d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745669"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375303"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Especifica el nombre del ensamblado del que este módulo formará parte.  
@@ -37,7 +37,7 @@ Especifica el nombre del ensamblado del que este módulo formará parte.
   
 -   El ensamblado de referencia ha concedido acceso de ensamblado de confianza al ensamblado en el que se compilará el módulo.  
   
- Para obtener más información acerca de cómo crear un módulo, consulte [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Para obtener más información acerca de los ensamblados de confianza, consulte [ensamblados de confianza](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+ Para obtener más información acerca de cómo crear un módulo, consulte [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Para obtener más información acerca de los ensamblados de confianza, consulte [ensamblados de confianza](../../../standard/assembly/friend-assemblies.md).  
   
 > [!NOTE]
 >  El `-moduleassemblyname` opción no está disponible en el entorno de desarrollo de Visual Studio; está disponible solo cuando se compila desde un símbolo del sistema.  
@@ -51,4 +51,4 @@ Especifica el nombre del ensamblado del que este módulo formará parte.
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [Ensamblados de .NET](../../../standard/assembly/index.md)
 - [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Ensamblados de confianza](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Ensamblados de confianza](../../../standard/assembly/friend-assemblies.md)

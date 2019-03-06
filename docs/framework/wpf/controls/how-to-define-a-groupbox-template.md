@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF], creating templates
 ms.assetid: 85a4d1a7-4753-4f4a-b26d-14fa10c1ddb5
-ms.openlocfilehash: 6294a52d5914b52d191b564330f904e6a865c283
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 6b4ad4a588aab93f5445cda962af890bfcd41c14
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745203"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377669"
 ---
 # <a name="how-to-define-a-groupbox-template"></a>Filtrar Definir una plantilla de un control GroupBox
 En este ejemplo se muestra cómo crear una plantilla para un <xref:System.Windows.Controls.GroupBox> control.  
@@ -18,7 +18,7 @@ En este ejemplo se muestra cómo crear una plantilla para un <xref:System.Window
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se define un <xref:System.Windows.Controls.GroupBox> plantilla de control mediante el uso de un <xref:System.Windows.Controls.Grid> control para el diseño. La plantilla utiliza un <xref:System.Windows.Controls.BorderGapMaskConverter> para definir el borde de la <xref:System.Windows.Controls.GroupBox> para que el borde no oculte el <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> contenido.  
   
- [!code-xaml[GroupBoxSnippet#GroupBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#groupboxtemplate)]  
+ [!code-xaml[GroupBoxSnippet#GroupBoxTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#groupboxtemplate)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Controls.GroupBox>

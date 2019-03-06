@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ProgressBar
 - ProgressBar control [WPF]
 ms.assetid: 4545b358-b93c-47df-88e4-9946d7db9e3f
-ms.openlocfilehash: eb446cf47bcfc3d97a6435c00ef24ab3d112c8fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27a2f54edac2add67b938300dc342744475466cc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552901"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371338"
 ---
 # <a name="progressbar"></a>ProgressBar
 Un <xref:System.Windows.Controls.ProgressBar> indica el progreso de una operación. El <xref:System.Windows.Controls.ProgressBar> control consta de una ventana que se rellena con el color de resaltado del sistema a medida que progresa la operación.  
   
  La siguiente ilustración muestra una típica <xref:System.Windows.Controls.ProgressBar>.  
   
- ![Barra de progreso](../../../../docs/framework/wpf/controls/media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")  
+ ![Barra de progreso](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")  
   
 ## <a name="in-this-section"></a>En esta sección  
   
