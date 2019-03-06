@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], Border
 - Border control [WPF]
 ms.assetid: 51739f83-b5a2-489b-854b-30607e74a502
-ms.openlocfilehash: 0ee7ae6598feacee282cc283b82e20390418b4c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 922b4b90f3f8bc74d0465691386fa1a2422c6573
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551072"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368082"
 ---
-# <a name="border"></a><span data-ttu-id="36b63-102">Borde</span><span class="sxs-lookup"><span data-stu-id="36b63-102">Border</span></span>
-<span data-ttu-id="36b63-103">El siguiente ejemplo muestra cómo cambiar dinámicamente las propiedades de la <xref:System.Windows.Controls.Border> elemento.</span><span class="sxs-lookup"><span data-stu-id="36b63-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
+# <a name="border"></a><span data-ttu-id="32162-102">Borde</span><span class="sxs-lookup"><span data-stu-id="32162-102">Border</span></span>
+<span data-ttu-id="32162-103">El ejemplo siguiente muestra cómo cambiar dinámicamente las propiedades de la <xref:System.Windows.Controls.Border> elemento.</span><span class="sxs-lookup"><span data-stu-id="32162-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="36b63-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="36b63-104">In This Section</span></span>  
- [<span data-ttu-id="36b63-105">Animar el valor del grosor de un borde</span><span class="sxs-lookup"><span data-stu-id="36b63-105">Animate a BorderThickness Value</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
+## <a name="in-this-section"></a><span data-ttu-id="32162-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="32162-104">In This Section</span></span>  
+ [<span data-ttu-id="32162-105">Animar el valor del grosor de un borde</span><span class="sxs-lookup"><span data-stu-id="32162-105">Animate a BorderThickness Value</span></span>](how-to-animate-a-borderthickness-value.md)  
   
-## <a name="reference"></a><span data-ttu-id="36b63-106">Referencia</span><span class="sxs-lookup"><span data-stu-id="36b63-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="32162-106">Referencia</span><span class="sxs-lookup"><span data-stu-id="32162-106">Reference</span></span>  
  <xref:System.Windows.Controls.Decorator>  
   
  <xref:System.Windows.Controls.Border>  
   
-## <a name="related-sections"></a><span data-ttu-id="36b63-107">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="36b63-107">Related Sections</span></span>  
- [<span data-ttu-id="36b63-108">Información general sobre elementos Panel</span><span class="sxs-lookup"><span data-stu-id="36b63-108">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="32162-107">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="32162-107">Related Sections</span></span>  
+ [<span data-ttu-id="32162-108">Información general sobre elementos Panel</span><span class="sxs-lookup"><span data-stu-id="32162-108">Panels Overview</span></span>](panels-overview.md)  
   
- [<span data-ttu-id="36b63-109">Información general sobre alineación, márgenes y relleno</span><span class="sxs-lookup"><span data-stu-id="36b63-109">Alignment, Margins, and Padding Overview</span></span>](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+ [<span data-ttu-id="32162-109">Información general sobre alineación, márgenes y relleno</span><span class="sxs-lookup"><span data-stu-id="32162-109">Alignment, Margins, and Padding Overview</span></span>](../advanced/alignment-margins-and-padding-overview.md)

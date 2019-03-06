@@ -7,26 +7,26 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - TreeView control [WPF], how-to topics
 ms.assetid: b9e9790e-7bfd-45d1-8b7a-1e0d125182a8
-ms.openlocfilehash: 902478763a214b96c3d0565fe38f0e9cd4c2acc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa7ef39083eb192c6ea675568b955fc78608ba88
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555405"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357760"
 ---
-# <a name="treeview-how-to-topics"></a><span data-ttu-id="5a3e4-102">Temas "Cómo..." sobre el control TreeView</span><span class="sxs-lookup"><span data-stu-id="5a3e4-102">TreeView How-to Topics</span></span>
-<span data-ttu-id="5a3e4-103">Los temas de esta sección describen cómo utilizar el <xref:System.Windows.Controls.TreeView> control para mostrar información en una estructura jerárquica.</span><span class="sxs-lookup"><span data-stu-id="5a3e4-103">The topics in this section describe how to use the <xref:System.Windows.Controls.TreeView> control to display information in a hierarchical structure.</span></span>  
+# <a name="treeview-how-to-topics"></a><span data-ttu-id="b51dd-102">Temas "Cómo..." sobre el control TreeView</span><span class="sxs-lookup"><span data-stu-id="b51dd-102">TreeView How-to Topics</span></span>
+<span data-ttu-id="b51dd-103">Los temas de esta sección describen cómo usar el <xref:System.Windows.Controls.TreeView> control para mostrar información en una estructura jerárquica.</span><span class="sxs-lookup"><span data-stu-id="b51dd-103">The topics in this section describe how to use the <xref:System.Windows.Controls.TreeView> control to display information in a hierarchical structure.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5a3e4-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="5a3e4-104">In This Section</span></span>  
- [<span data-ttu-id="5a3e4-105">Crear controles TreeView simples o complejos</span><span class="sxs-lookup"><span data-stu-id="5a3e4-105">Create Simple or Complex TreeViews</span></span>](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
-  [<span data-ttu-id="5a3e4-106">Usar SelectedValue, SelectedValuePath y SelectedItem</span><span class="sxs-lookup"><span data-stu-id="5a3e4-106">Use SelectedValue, SelectedValuePath, and SelectedItem</span></span>](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
-  [<span data-ttu-id="5a3e4-107">Enlazar un objeto TreeView a datos que tienen una profundidad indeterminable</span><span class="sxs-lookup"><span data-stu-id="5a3e4-107">Bind a TreeView to Data That Has an Indeterminable Depth</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
-  [<span data-ttu-id="5a3e4-108">Mejorar el rendimiento de un control TreeView</span><span class="sxs-lookup"><span data-stu-id="5a3e4-108">Improve the Performance of a TreeView</span></span>](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
-  [<span data-ttu-id="5a3e4-109">Buscar un TreeViewItem en un TreeView</span><span class="sxs-lookup"><span data-stu-id="5a3e4-109">Find a TreeViewItem in a TreeView</span></span>](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b51dd-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="b51dd-104">In This Section</span></span>  
+ [<span data-ttu-id="b51dd-105">Crear controles TreeView simples o complejos</span><span class="sxs-lookup"><span data-stu-id="b51dd-105">Create Simple or Complex TreeViews</span></span>](how-to-create-simple-or-complex-treeviews.md)  
+  [<span data-ttu-id="b51dd-106">Usar SelectedValue, SelectedValuePath y SelectedItem</span><span class="sxs-lookup"><span data-stu-id="b51dd-106">Use SelectedValue, SelectedValuePath, and SelectedItem</span></span>](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+  [<span data-ttu-id="b51dd-107">Enlazar un objeto TreeView a datos que tienen una profundidad indeterminable</span><span class="sxs-lookup"><span data-stu-id="b51dd-107">Bind a TreeView to Data That Has an Indeterminable Depth</span></span>](how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
+  [<span data-ttu-id="b51dd-108">Mejorar el rendimiento de un control TreeView</span><span class="sxs-lookup"><span data-stu-id="b51dd-108">Improve the Performance of a TreeView</span></span>](how-to-improve-the-performance-of-a-treeview.md)  
+  [<span data-ttu-id="b51dd-109">Buscar un TreeViewItem en un TreeView</span><span class="sxs-lookup"><span data-stu-id="b51dd-109">Find a TreeViewItem in a TreeView</span></span>](how-to-find-a-treeviewitem-in-a-treeview.md)  
   
-## <a name="reference"></a><span data-ttu-id="5a3e4-110">Referencia</span><span class="sxs-lookup"><span data-stu-id="5a3e4-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b51dd-110">Referencia</span><span class="sxs-lookup"><span data-stu-id="b51dd-110">Reference</span></span>  
  <xref:System.Windows.Controls.TreeView>  
   
  <xref:System.Windows.Controls.TreeViewItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="5a3e4-111">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="5a3e4-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="b51dd-111">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="b51dd-111">Related Sections</span></span>
