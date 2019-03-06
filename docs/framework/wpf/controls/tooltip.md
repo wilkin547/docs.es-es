@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 50656f0d8ca1eafa62d65a2fe275398c9694cc69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556983"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367575"
 ---
 # <a name="tooltip"></a>Información sobre herramientas
-Una información sobre herramientas es una pequeña ventana emergente que aparece cuando un usuario pausa el puntero del mouse sobre un elemento, por ejemplo, como en un <xref:System.Windows.Controls.Button>.  
+Información sobre herramientas es una pequeña ventana emergente que aparece cuando un usuario detiene el puntero del mouse sobre un elemento, tal como sobreutilizado un <xref:System.Windows.Controls.Button>.  
   
- La ilustración siguiente muestra un puntero que señala a la **cerrar**<xref:System.Windows.Controls.Button>, lo que le muestra su identificación <xref:System.Windows.Controls.ToolTip>.  
+ La siguiente ilustración muestra el puntero del mouse que apunta a la **cerrar**<xref:System.Windows.Controls.Button>, que luego muestra su identificación <xref:System.Windows.Controls.ToolTip>.  
   
- Botón cerrar con su información sobre herramientas muestra  
+ Con la información sobre herramientas muestra el botón Cerrar  
   
- ![Captura de pantalla de información sobre herramientas](../../../../docs/framework/wpf/controls/media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
+ ![Captura de pantalla de información sobre herramientas](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general de información sobre herramientas](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
-  [Temas "Cómo..."](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
+ [Información general de información sobre herramientas](tooltip-overview.md)  
+  [Temas "Cómo..."](tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.ToolTip>  
@@ -34,5 +34,5 @@ Una información sobre herramientas es una pequeña ventana emergente que aparec
   <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Información general sobre el control Popup](../../../../docs/framework/wpf/controls/popup-overview.md)  
-  [Temas "Cómo..."](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [Información general sobre el control Popup](popup-overview.md)  
+  [Temas "Cómo..."](popup-how-to-topics.md)

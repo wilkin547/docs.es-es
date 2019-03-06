@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Ordenar una columna de GridView cuando se hace clic en un encabezado
+title: Filtrar Ordenar una columna de GridView cuando se hace clic en un encabezado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b636842b1d41e17b09f02b7b9a6f7aa47eb4cdd1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694092"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365417"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Procedimiento Ordenar una columna de GridView cuando se hace clic en un encabezado
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Filtrar Ordenar una columna de GridView cuando se hace clic en un encabezado
 En este ejemplo se muestra cómo crear un <xref:System.Windows.Controls.ListView> control que implementa un <xref:System.Windows.Controls.GridView> Ver modo y ordena los datos de contenido cuando un usuario hace clic en un encabezado de columna.  
   
 ## <a name="example"></a>Ejemplo  
@@ -226,6 +226,6 @@ End Sub
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Información general sobre ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Información general sobre GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [Información general sobre ListView](listview-overview.md)
+- [Información general sobre GridView](gridview-overview.md)
+- [Temas "Cómo..."](listview-how-to-topics.md)

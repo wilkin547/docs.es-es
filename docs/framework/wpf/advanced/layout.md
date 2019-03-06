@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738831"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369856"
 ---
 # <a name="layout"></a>Diseño
 En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Comprender cómo y cuándo se producen los cálculos de diseño es esencial para crear interfaces de usuario en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -41,22 +41,22 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
   
  En la siguiente ilustración se muestra un diseño sencillo.  
   
- ![Cuadrícula típica sin rectángulo de selección superpuesto.](../../../../docs/framework/wpf/advanced/media/boundingbox1.png "boundingbox1")  
+ ![Cuadrícula típica sin rectángulo de selección superpuesto.](./media/boundingbox1.png "boundingbox1")  
   
  Este diseño se puede lograr con el siguiente código [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- [!code-xaml[LayoutInformation#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
+ [!code-xaml[LayoutInformation#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
   
  Una sola <xref:System.Windows.Controls.TextBlock> elemento se hospeda dentro de un <xref:System.Windows.Controls.Grid>. Aunque el texto rellena solo en la esquina superior izquierda de la primera columna, el espacio asignado para el <xref:System.Windows.Controls.TextBlock> es mucho mayor. El cuadro de límite de cualquier <xref:System.Windows.FrameworkElement> se puede recuperar mediante el <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> método. La ilustración siguiente muestra el cuadro de límite para el <xref:System.Windows.Controls.TextBlock> elemento.  
   
- ![El rectángulo de selección de TextBlock está visible ahora.](../../../../docs/framework/wpf/advanced/media/boundingbox2.png "boundingbox2")  
+ ![El rectángulo de selección de TextBlock está visible ahora.](./media/boundingbox2.png "boundingbox2")  
   
  Como se muestra en el rectángulo amarillo, el espacio asignado para el <xref:System.Windows.Controls.TextBlock> elemento es mucho mayor de lo que parece. Cuando se agregan elementos adicionales a la <xref:System.Windows.Controls.Grid>, podría reducir o expandir, dependiendo del tipo y tamaño de los elementos que se agregan esta asignación.  
   
  La ranura de diseño de la <xref:System.Windows.Controls.TextBlock> se traduce en un <xref:System.Windows.Shapes.Path> utilizando el <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> método. Esta técnica puede ser útil para mostrar el rectángulo de selección de un elemento.  
   
- [!code-csharp[LayoutInformation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
- [!code-vb[LayoutInformation#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[LayoutInformation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[LayoutInformation#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="LayoutSystem_Overview"></a>   
 ## <a name="the-layout-system"></a>El sistema de diseño  
@@ -122,7 +122,7 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
   
 -   Tenga en cuenta qué cambios de valor de propiedad forzarán una actualización recursiva por parte del sistema de diseño.  
   
-     Las propiedades de dependencia cuyos valores pueden provocar la inicialización del sistema de diseño se marcan con marcas públicas. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> y <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> proporcionan pistas útiles en cuanto a la propiedad que cambia el valor de forzará una recursiva actualización el sistema de diseño. En general, cualquier propiedad que puede afectar al tamaño del rectángulo de selección de un elemento debe tener un <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> marca establecida en true. Para obtener más información sobre las propiedades de dependencia, vea [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+     Las propiedades de dependencia cuyos valores pueden provocar la inicialización del sistema de diseño se marcan con marcas públicas. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> y <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> proporcionan pistas útiles en cuanto a la propiedad que cambia el valor de forzará una recursiva actualización el sistema de diseño. En general, cualquier propiedad que puede afectar al tamaño del rectángulo de selección de un elemento debe tener un <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> marca establecida en true. Para obtener más información sobre las propiedades de dependencia, vea [Información general sobre las propiedades de dependencia](dependency-properties-overview.md).  
   
 -   Cuando sea posible, use un <xref:System.Windows.UIElement.RenderTransform%2A> en lugar de un <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
@@ -142,15 +142,15 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
   
  Sin embargo, esta independencia de [!INCLUDE[TLA2#tla_dpi](../../../../includes/tla2sharptla-dpi-md.md)] puede crear representaciones de bordes irregulares debido al suavizado de contorno. Estos artefactos, que suelen aparecer como bordes borrosos o semitransparentes, pueden mostrarse cuando un borde se encuentra en medio de un píxel de dispositivo, en lugar de entre píxeles de dispositivo. El sistema de diseño proporciona una manera de ajustarlo con el redondeo del diseño. El redondeo del diseño se produce cuando el sistema de diseño redondea los valores de píxel no enteros durante el cálculo de diseño.  
   
- De forma predeterminada, el redondeo de diseño está deshabilitado. Para habilitar el redondeo del diseño, establezca la <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> propiedad `true` en cualquier <xref:System.Windows.FrameworkElement>. Dado que es una propiedad de dependencia, el valor se propagará a todos los elementos secundarios del árbol visual. Para habilitar el redondeo del diseño para toda la interfaz de usuario, establezca <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> a `true` en el contenedor raíz. Para obtener un ejemplo, consulta <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A>.  
+ De forma predeterminada, el redondeo de diseño está deshabilitado. Para habilitar el redondeo del diseño, establezca la <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> propiedad `true` en cualquier <xref:System.Windows.FrameworkElement>. Dado que es una propiedad de dependencia, el valor se propagará a todos los elementos secundarios del árbol visual. Para habilitar el redondeo del diseño para toda la interfaz de usuario, establezca <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> a `true` en el contenedor raíz. Para obtener un ejemplo, consulte <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A>.  
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Pasos adicionales  
- Comprender cómo se miden y organizan los elementos es el primer paso para entender el diseño. Para obtener más información acerca de la disponible <xref:System.Windows.Controls.Panel> elementos, vea [información general sobre](../../../../docs/framework/wpf/controls/panels-overview.md). Para entender mejor las diversas propiedades de posición que pueden afectar al diseño, consulte [Información general sobre alineación, márgenes y relleno](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Para obtener un ejemplo de un personalizado <xref:System.Windows.Controls.Panel> elemento, vea [ejemplo de Panel Radial personalizado](https://go.microsoft.com/fwlink/?LinkID=159982). Cuando esté listo para poner todo junto en una aplicación ligera, consulte [Tutorial: Mi primera aplicación de escritorio de WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ Comprender cómo se miden y organizan los elementos es el primer paso para entender el diseño. Para obtener más información acerca de la disponible <xref:System.Windows.Controls.Panel> elementos, vea [información general sobre](../controls/panels-overview.md). Para entender mejor las diversas propiedades de posición que pueden afectar al diseño, consulte [Información general sobre alineación, márgenes y relleno](alignment-margins-and-padding-overview.md). Para obtener un ejemplo de un personalizado <xref:System.Windows.Controls.Panel> elemento, vea [ejemplo de Panel Radial personalizado](https://go.microsoft.com/fwlink/?LinkID=159982). Cuando esté listo para poner todo junto en una aplicación ligera, consulte [Tutorial: Mi primera aplicación de escritorio de WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
-- [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [Información general sobre alineación, márgenes y relleno](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
-- [Presentación y diseño](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [Información general sobre elementos Panel](../controls/panels-overview.md)
+- [Información general sobre alineación, márgenes y relleno](alignment-margins-and-padding-overview.md)
+- [Presentación y diseño](optimizing-performance-layout-and-design.md)

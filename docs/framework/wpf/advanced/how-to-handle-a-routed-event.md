@@ -8,14 +8,14 @@ helpviewer_keywords:
 - routed events [WPF], handling
 - bubbling events [WPF]
 ms.assetid: 157787b4-f469-4047-8777-5b034145f32e
-ms.openlocfilehash: 40cacbf6b36cf474f5267870531e5f4ac048dc56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42f5f247e775fbf0bd323fc693a74d6149c87bb3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561340"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368199"
 ---
-# <a name="how-to-handle-a-routed-event"></a>Procedimiento Controlar un evento enrutado
+# <a name="how-to-handle-a-routed-event"></a>Filtrar Controlar un evento enrutado
 En este ejemplo se muestra cómo funciona la propagación de eventos y cómo se escribe un controlador capaz de procesar los datos de eventos enrutados.  
   
 ## <a name="example"></a>Ejemplo  
@@ -27,16 +27,16 @@ En este ejemplo se muestra cómo funciona la propagación de eventos y cómo se 
   
  Tenga en cuenta que en el elemento primario <xref:System.Windows.Controls.StackPanel> elemento, el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> nombre de evento especificado como el atributo se califica parcialmente mediante nomenclatura el <xref:System.Windows.Controls.Button> clase. El <xref:System.Windows.Controls.Button> clase es un <xref:System.Windows.Controls.Primitives.ButtonBase> clase derivada que tiene el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos en su lista de miembros. Esta técnica de calificación parcial para adjuntar un controlador de eventos es necesaria si el evento que se controla no existe en la lista de miembros del elemento donde está adjunto el controlador de eventos enrutados.  
   
- [!code-xaml[RoutedEventHandle#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml#xaml)]  
+ [!code-xaml[RoutedEventHandle#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml#xaml)]  
   
  El ejemplo siguiente se controla el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  En el ejemplo se notifican el elemento que controla el evento y el elemento que lo genera. El controlador de eventos se ejecuta cuando el usuario hace clic en cualquiera de los botones.  
   
- [!code-csharp[RoutedEventHandle#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml.cs#handler)]
- [!code-vb[RoutedEventHandle#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
+ [!code-csharp[RoutedEventHandle#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml.cs#handler)]
+ [!code-vb[RoutedEventHandle#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.RoutedEvent>
-- [Información general sobre acciones del usuario](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
-- [Detalles de la sintaxis XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [Información general sobre acciones del usuario](input-overview.md)
+- [Información general sobre eventos enrutados](routed-events-overview.md)
+- [Temas "Cómo..."](events-how-to-topics.md)
+- [Detalles de la sintaxis XAML](xaml-syntax-in-detail.md)

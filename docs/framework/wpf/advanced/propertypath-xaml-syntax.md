@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 7c6f658558618e0812ea2537837577cbf011edd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25214a3c177975505713a444b69a7006c0fd523f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648772"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363519"
 ---
 # <a name="propertypath-xaml-syntax"></a>Sintaxis de PropertyPath de XAML
 El <xref:System.Windows.PropertyPath> objeto admite una insertada compleja [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sintaxis para establecer varias propiedades que toman el <xref:System.Windows.PropertyPath> tipo como su valor. Este tema se documenta el <xref:System.Windows.PropertyPath> sintaxis que se aplican a la sintaxis de enlace y animación.  
@@ -28,7 +28,7 @@ El <xref:System.Windows.PropertyPath> objeto admite una insertada compleja [!INC
 ## <a name="propertypath-for-objects-in-data-binding"></a>PropertyPath para objetos al enlazar datos  
  El enlace de datos es una característica de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que permite enlazar con el valor de destino de cualquier propiedad de dependencia. Sin embargo, el origen de este tipo de enlace de datos no necesita ser una propiedad de dependencia: puede ser cualquier tipo de propiedad que reconozca el proveedor de datos correspondiente. Las rutas de acceso de propiedad se usan especialmente para la <xref:System.Windows.Data.ObjectDataProvider>, que se usa para obtener los orígenes de enlace de [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objetos y sus propiedades.  
   
- Tenga en cuenta que el enlace de datos a [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] no usa <xref:System.Windows.PropertyPath>, ya que no utiliza <xref:System.Windows.Data.Binding.Path%2A> en el <xref:System.Windows.Data.Binding>. En su lugar, usa <xref:System.Windows.Data.Binding.XPath%2A> y especifique la sintaxis de XPath válida en el [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] de los datos. <xref:System.Windows.Data.Binding.XPath%2A> También se especifica como una cadena, pero no se documenta aquí: consulte [enlazar a datos XML mediante XMLDataProvider y consultas XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
+ Tenga en cuenta que el enlace de datos a [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] no usa <xref:System.Windows.PropertyPath>, ya que no utiliza <xref:System.Windows.Data.Binding.Path%2A> en el <xref:System.Windows.Data.Binding>. En su lugar, usa <xref:System.Windows.Data.Binding.XPath%2A> y especifique la sintaxis de XPath válida en el [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] de los datos. <xref:System.Windows.Data.Binding.XPath%2A> También se especifica como una cadena, pero no se documenta aquí: consulte [enlazar a datos XML mediante XMLDataProvider y consultas XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
   
  Una clave para entender las rutas de acceso de propiedad de enlace de datos es que puede tener como destino el enlace a un valor de propiedad individual o, en su lugar, puede enlazar a propiedades de destino que acepten listas o colecciones. Si va a enlazar colecciones, por ejemplo enlace un <xref:System.Windows.Controls.ListBox> que se expandirá en función de cuántos elementos de datos están en la colección y, después, la ruta de acceso de propiedad debe hacer referencia el objeto de colección, elementos de colección no individuales. El motor de enlace de datos coincidirá con la colección utilizada como origen de datos para el tipo del destino de enlace automáticamente, lo que resulta en un comportamiento como rellenar un <xref:System.Windows.Controls.ListBox> con una matriz de elementos.  
   
@@ -85,7 +85,7 @@ El <xref:System.Windows.PropertyPath> objeto admite una insertada compleja [!INC
 <object Path="propertyName/propertyNameX" .../>  
 ```  
   
- El carácter / de esta sintaxis se usa para navegar dentro de un objeto de origen de datos jerárquicos y se admiten varios pasos en la jerarquía con caracteres / sucesivos. El recorrido de origen representa la posición del puntero de registro actual, que se determina mediante la sincronización de los datos con la interfaz de usuario de su vista. Para obtener más información sobre el enlace con objetos de origen de datos jerárquicos y el concepto de puntero de registro actual en el enlace de datos, consulte [Usar el patrón principal-detalle con datos jerárquicos](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) o [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ El carácter / de esta sintaxis se usa para navegar dentro de un objeto de origen de datos jerárquicos y se admiten varios pasos en la jerarquía con caracteres / sucesivos. El recorrido de origen representa la posición del puntero de registro actual, que se determina mediante la sincronización de los datos con la interfaz de usuario de su vista. Para obtener más información sobre el enlace con objetos de origen de datos jerárquicos y el concepto de puntero de registro actual en el enlace de datos, consulte [Usar el patrón principal-detalle con datos jerárquicos](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) o [Información general sobre el enlace de datos](../data/data-binding-overview.md).  
   
 > [!NOTE]
 >  Esta sintaxis se parece ligeramente a [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]. Un verdadero [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] expresión para el enlace a un [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] origen de datos no se utiliza como un <xref:System.Windows.Data.Binding.Path%2A> de valor y en su lugar debe usarse para mutuamente excluyentes <xref:System.Windows.Data.Binding.XPath%2A> propiedad.  
@@ -142,7 +142,7 @@ or
   
 <a name="general"></a>   
 ### <a name="general-object-property-considerations-for-animations"></a>Consideraciones de las propiedades de objetos generales para animaciones  
- Para obtener más información sobre los conceptos de animación en general, consulte [Información general sobre objetos Storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md) e [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Para obtener más información sobre los conceptos de animación en general, consulte [Información general sobre objetos Storyboard](../graphics-multimedia/storyboards-overview.md) e [Información general sobre animaciones](../graphics-multimedia/animation-overview.md).  
   
  El tipo de valor o la propiedad que se anima debe ser un <xref:System.Windows.Freezable> o un tipo primitivo. La propiedad que inicia la ruta de acceso debe resolverse para ser el nombre de una propiedad de dependencia que existe en el objeto <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> tipo.  
   
@@ -168,7 +168,7 @@ or
   
  `propertyName2` debe ser el nombre de una propiedad de dependencia que exista en el objeto que es el valor de `propertyName`. En otras palabras, `propertyName2` debe existir como una propiedad de dependencia en el tipo que es el `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>.  
   
- El destino indirecto de animaciones es necesario debido a los estilos y las plantillas que se aplican. Para tener como destino una animación, necesita un <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> en un objeto de destino y de que el nombre se establece mediante la [x: Name](../../../../docs/framework/xaml-services/x-name-directive.md) o <xref:System.Windows.FrameworkElement.Name%2A>. Aunque los elementos de plantilla y estilo también pueden tener nombres, esos nombres solo son válidos en el ámbito de nombres de la plantilla y el estilo. (Si las plantillas y los estilos compartieran ámbitos de nombres con el marcado de la aplicación, los nombres no podrían ser únicos. Los estilos y las plantillas se comparten literalmente entre instancias y se perpetuarían los nombres duplicados). Por lo tanto, si las propiedades individuales de un elemento que quiere animar proceden de un estilo o una plantilla, debe comenzar con una instancia de elemento con nombre que no sea de una plantilla de estilo y, a continuación, dirigirse al árbol visual de estilos o plantillas para llegar a la propiedad que quiere animar.  
+ El destino indirecto de animaciones es necesario debido a los estilos y las plantillas que se aplican. Para tener como destino una animación, necesita un <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> en un objeto de destino y de que el nombre se establece mediante la [x: Name](../../xaml-services/x-name-directive.md) o <xref:System.Windows.FrameworkElement.Name%2A>. Aunque los elementos de plantilla y estilo también pueden tener nombres, esos nombres solo son válidos en el ámbito de nombres de la plantilla y el estilo. (Si las plantillas y los estilos compartieran ámbitos de nombres con el marcado de la aplicación, los nombres no podrían ser únicos. Los estilos y las plantillas se comparten literalmente entre instancias y se perpetuarían los nombres duplicados). Por lo tanto, si las propiedades individuales de un elemento que quiere animar proceden de un estilo o una plantilla, debe comenzar con una instancia de elemento con nombre que no sea de una plantilla de estilo y, a continuación, dirigirse al árbol visual de estilos o plantillas para llegar a la propiedad que quiere animar.  
   
  Por ejemplo, el <xref:System.Windows.Controls.Panel.Background%2A> propiedad de un <xref:System.Windows.Controls.Panel> es una completa <xref:System.Windows.Media.Brush> (realmente un <xref:System.Windows.Media.SolidColorBrush>) que proviene de una plantilla de tema. Para animar un <xref:System.Windows.Media.Brush> completamente, debería haber un tipo BrushAnimation (probablemente, uno por cada <xref:System.Windows.Media.Brush> tipo) y no hay ningún tipo de este tipo. Para animar un pincel, en su lugar, anima las propiedades de una determinada <xref:System.Windows.Media.Brush> tipo. Deberá obtener desde <xref:System.Windows.Media.SolidColorBrush> a su <xref:System.Windows.Media.SolidColorBrush.Color%2A> para aplicar un <xref:System.Windows.Media.Animation.ColorAnimation> no existe. La ruta de acceso de propiedad de este ejemplo sería `Background.Color`.  
   
@@ -198,5 +198,5 @@ or
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.PropertyPath>
-- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Información general sobre objetos Storyboard ](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Información general sobre el enlace de datos](../data/data-binding-overview.md)
+- [Información general sobre objetos Storyboard ](../graphics-multimedia/storyboards-overview.md)

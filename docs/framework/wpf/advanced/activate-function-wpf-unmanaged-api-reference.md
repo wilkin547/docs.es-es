@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 1400329c-b598-465f-80f2-e3dabf044811
-ms.openlocfilehash: 4e79b74dc8bb7d57125c27e17e8f52d607fffcf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6410b05a1b858a7b75c9bff3220d47505beabd7c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722032"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357279"
 ---
 # <a name="activate-function-wpf-unmanaged-api-reference"></a>Activate (función) (referencia de API no administrada de WPF)
 Esta API admite la infraestructura de Windows Presentation Foundation (WPF) y no está pensada para utilizarse directamente desde el código.  
@@ -37,7 +37,7 @@ void Activate(
  Un puntero a la dirección de un búfer único elemento que contiene un puntero a un <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument> objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [requisitos del sistema de .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [requisitos del sistema de .NET Framework](../../get-started/system-requirements.md).  
   
  **ARCHIVO DLL:**  
   
@@ -48,4 +48,4 @@ void Activate(
  **Versión de .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Referencia de API no administrada de WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [Referencia de API no administrada de WPF](wpf-unmanaged-api-reference.md)

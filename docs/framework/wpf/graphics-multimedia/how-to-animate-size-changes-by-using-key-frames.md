@@ -6,14 +6,14 @@ helpviewer_keywords:
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: 9efaaebdf08a6079bff7179e9ec035b4f38bb3ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 967537bb1828d323f1dcaa8d049604a1a6e30fa4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678452"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374197"
 ---
-# <a name="how-to-animate-size-changes-by-using-key-frames"></a>Procedimiento Animar los cambios de tamaño mediante fotogramas clave
+# <a name="how-to-animate-size-changes-by-using-key-frames"></a>Filtrar Animar los cambios de tamaño mediante fotogramas clave
 En este ejemplo se muestra cómo animar los cambios del tamaño mediante fotogramas clave.  
   
 ## <a name="example"></a>Ejemplo  
@@ -25,7 +25,7 @@ En este ejemplo se muestra cómo animar los cambios del tamaño mediante fotogra
   
 3.  A través de los dos últimos segundos, utiliza una instancia de la <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> clase para aumentar el tamaño del arco. Los fotogramas clave spline como <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> crean una transición variable entre los valores según los valores de la <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> propiedad. En este ejemplo, el tamaño del arco aumenta lentamente al principio y va aumentando exponencialmente hacia el final del segmento temporal.  
   
- [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
   
  Para consultar el ejemplo completo, vea [Ejemplo de animación mediante fotogramas clave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
@@ -36,5 +36,5 @@ En este ejemplo se muestra cómo animar los cambios del tamaño mediante fotogra
 - <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>
 - <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>
 - <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>
-- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Temas de procedimientos de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [Información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md)
+- [Temas de procedimientos de fotogramas clave](key-frame-animation-how-to-topics.md)

@@ -2,12 +2,12 @@
 title: Tipos de valor devueltos asincrónicos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 6fffd94a4b9ca531af58138b7613e0b3c5364c56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ddab62543fae5442a15fc5f200ef914ab8d859
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498416"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352586"
 ---
 # <a name="async-return-types-visual-basic"></a>Tipos de valor devueltos asincrónicos (Visual Basic)
 Los métodos asincrónicos tienen tres posibles tipos devueltos: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> y void. En Visual Basic, el tipo de valor devuelto void se escribe como un procedimiento [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Para obtener más información sobre los métodos asincrónicos, vea [programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -17,7 +17,7 @@ Los métodos asincrónicos tienen tres posibles tipos devueltos: <xref:System.Th
 > [!NOTE]
 >  Para ejecutar el ejemplo, debe tener instalado en el equipo Visual Studio 2012 o posterior, y .NET Framework 4.5 o posterior.  
   
-##  <a name="BKMK_TaskTReturnType"></a> Tipo de valor devuelto Task(T)  
+## <a name="BKMK_TaskTReturnType"></a> Tipo de valor devuelto Task(T)  
  El <xref:System.Threading.Tasks.Task%601> devolver el tipo se utiliza para un método asincrónico que contiene un [devolver](../../../../visual-basic/language-reference/statements/return-statement.md) en que el operando tiene el tipo de instrucción `TResult`.  
   
  En el ejemplo siguiente, el método asincrónico `TaskOfT_MethodAsync` contiene una instrucción return que devuelve un entero. Por tanto, la declaración del método debe tener un tipo de valor devuelto de `Task(Of Integer)`.  
@@ -79,7 +79,7 @@ textBox1.Text &= String.Format("Value of result2 variable:   {0}" & vbCrLf, resu
 textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, integerTask.Result)  
 ```  
   
-##  <a name="BKMK_TaskReturnType"></a> Tipo de valor devuelto Task  
+## <a name="BKMK_TaskReturnType"></a> Tipo de valor devuelto Task  
  Los métodos asincrónicos que no contienen una instrucción return o que contienen una instrucción return que no devuelve un operando tienen normalmente un tipo de valor devuelto de <xref:System.Threading.Tasks.Task>. Estos métodos deben ser [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedimientos si se escribieron para ejecutarse de forma sincrónica. Si se usa un tipo de valor devuelto `Task` para un método asincrónico, un método de llamada puede usar un operador `Await` para suspender la finalización del llamador hasta que finalice el método asincrónico llamado.  
   
  En el ejemplo siguiente, el método asincrónico `Task_MethodAsync` no contiene una instrucción return. Por tanto, se especifica un tipo de valor devuelto de `Task` para el método, lo que permite aplicar await a `Task_MethodAsync`. La definición del tipo `Task` no incluye una propiedad `Result` para almacenar un valor devuelto.  
@@ -121,7 +121,7 @@ textBox1.Text &= String.Format(vbCrLf & "Application can continue working while 
 Await simpleTask  
 ```  
   
-##  <a name="BKMK_VoidReturnType"></a> Tipo de valor devuelto Void  
+## <a name="BKMK_VoidReturnType"></a> Tipo de valor devuelto Void  
  El uso principal de `Sub` procedimientos está en controladores de eventos, donde no hay ningún tipo de valor devuelto (conocido como un tipo de valor devuelto void en otros lenguajes). Un valor devuelto void también se puede usar para invalidar métodos que devuelven void o para los métodos que realizan actividades que se pueden clasificar como "desencadenar y omitir" (dispare y olvídese). Pero se debe devolver `Task` siempre que sea posible, ya que no se puede esperar a un método asincrónico que devuelve void. Cualquier llamador de este método debe poder continuar hasta completarse sin esperar a que finalice el método asincrónico llamado y el llamador debe ser independiente de los valores o las excepciones que genera el método asincrónico.  
   
  El llamador de un método asincrónico que devuelve void no puede capturar las excepciones emitidas desde el método y dichas excepciones no controladas pueden provocar un error de la aplicación. Si se produce una excepción en un método asincrónico que devuelve <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>, la excepción se almacena en la tarea devuelta y se vuelve a emitir cuando se espera la tarea. Por tanto, asegúrese de que cualquier método asincrónico que puede producir una excepción tiene un tipo de valor devuelto de <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> y que se esperan llamadas al método.  
@@ -145,7 +145,7 @@ Async Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.
 End Sub  
 ```  
   
-##  <a name="BKMK_Example"></a> Ejemplo completo  
+## <a name="BKMK_Example"></a> Ejemplo completo  
  El siguiente proyecto de Windows Presentation Foundation (WPF) contiene los ejemplos de código de este tema.  
   
  Para ejecutar el proyecto, realice los pasos siguientes:  

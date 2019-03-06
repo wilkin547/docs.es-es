@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
-ms.openlocfilehash: 48f846329d8463f9519a2a7654f9a42f6bca5384
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd7bccdd28f433893a988f95c5e1d804f6e138de
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721977"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358813"
 ---
 # <a name="drag-and-drop-how-to-topics"></a>Temas "Cómo..." de arrastrar y colocar
 Los ejemplos siguientes muestran cómo realizar tareas comunes mediante el [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] marco de arrastrar y colocar.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Abrir un archivo colocado en un control RichTextBox](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
- [Crear un objeto de datos](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
- [Determinar si un formato de datos está presente en un objeto de datos](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [Mostrar los formatos de datos en un objeto de datos](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
- [Recuperar datos en un formato concreto](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
- [Almacenar varios formatos de datos en un objeto de datos](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
+ [Abrir un archivo colocado en un control RichTextBox](how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
+ [Crear un objeto de datos](how-to-create-a-data-object.md)  
+ [Determinar si un formato de datos está presente en un objeto de datos](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [Mostrar los formatos de datos en un objeto de datos](how-to-list-the-data-formats-in-a-data-object.md)  
+ [Recuperar datos en un formato concreto](how-to-retrieve-data-in-a-particular-data-format.md)  
+ [Almacenar varios formatos de datos en un objeto de datos](how-to-store-multiple-data-formats-in-a-data-object.md)  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre la función de arrastrar y colocar](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+- [Información general sobre la función de arrastrar y colocar](drag-and-drop-overview.md)

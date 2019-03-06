@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 3032a0ca19f919344a3f73ea8689a222896093f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 214d2cf369a62f5565ef4b89fd658f6bec4b2fdc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523727"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377105"
 ---
 # <a name="localization-attributes-and-comments"></a>Atributos y comentarios sobre localización
 Los comentarios de localización de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] son propiedades, en el código fuente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], que proporcionan los desarrolladores para ofrecer reglas y sugerencias para la localización. Los comentarios de localización de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contienen dos conjuntos de información: atributos de localizabilidad y comentarios de localización de forma libre. Los atributos de localización se usan en la API de localización de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para indicar qué recursos se van a localizar. Los comentarios de forma libre son cualquier información que el autor de la aplicación quiera incluir.  
@@ -100,7 +100,7 @@ Los comentarios de localización de [!INCLUDE[TLA#tla_winclient](../../../../inc
  Localization.Comments contiene cadenas con formato libre sobre el valor de destino. Los desarrolladores de aplicaciones pueden agregar información para proporcionar a los localizadores sugerencias sobre cómo se debe traducir el texto de las aplicaciones. El formato de los comentarios puede ser cualquier cadena entre "()". Use "\\" para crear caracteres de escape.  
   
 ## <a name="see-also"></a>Vea también
-- [Globalización de WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
-- [Usar el diseño automático para crear un botón](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
-- [Usar una cuadrícula para el diseño automático](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
-- [Localizar una aplicación](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+- [Globalización de WPF](globalization-for-wpf.md)
+- [Usar el diseño automático para crear un botón](how-to-use-automatic-layout-to-create-a-button.md)
+- [Usar una cuadrícula para el diseño automático](how-to-use-a-grid-for-automatic-layout.md)
+- [Localizar una aplicación](how-to-localize-an-application.md)
