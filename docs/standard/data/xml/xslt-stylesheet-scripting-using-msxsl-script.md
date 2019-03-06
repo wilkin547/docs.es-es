@@ -1,5 +1,5 @@
 ---
-title: Escribir scripts de hojas de estilos XSLT mediante <msxsl:script>
+title: Escritura de scripts de hojas de estilos XSLT mediante <msxsl:script>
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3abaa8115d2e52a98f0b42588860dece6361df5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267305"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835257"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Escritura de scripts de hojas de estilos XSLT mediante \<msxsl:script>
 Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediante el elemento `script`.  
@@ -31,7 +31,8 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
   
  donde `msxsl` es un prefijo enlazado al espacio de nombres `urn:schemas-microsoft-com:xslt`.  
   
- El atributo `language` no es obligatorio, pero si se especifica, su valor deberá ser uno de los siguientes: C#, VB, JScript, VisualBasic, o CSharp. Si no se especifica, el lenguaje predeterminado es JScript. `language-name` no distingue entre mayúsculas y minúsculas, entonces 'JavaScript' y 'javascript' son equivalentes.  
+ El atributo `language` no es obligatorio, pero si se especifica, su valor deberá ser uno de los siguientes: C#, VB, JScript, JavaScript, VisualBasic o CSharp. Si no se especifica, el lenguaje predeterminado es JScript. 
+  `language-name` no distingue entre mayúsculas y minúsculas, entonces 'JavaScript' y 'javascript' son equivalentes.  
   
  El atributo `implements-prefix` es obligatorio. Este atributo se utiliza para declarar un espacio de nombres y asociarlo con el bloque del script. El valor de este atributo es el prefijo que representa el espacio de nombres. Este espacio de nombres puede definirse en cualquier parte de la hoja de estilos.  
   
@@ -45,7 +46,7 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
   
  Para obtener la evidencia desde el ensamblado, utilice `this.GetType().Assembly.Evidence`. Para obtener evidencia de un identificador de recurso uniforme (URI), utilice `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Si utiliza métodos <xref:System.Xml.Xsl.XslTransform.Load%2A> que toman <xref:System.Xml.XmlResolver> pero no `Evidence`, la zona de seguridad del ensamblado toma como valor predeterminado Plena confianza. Para más información, vea <xref:System.Security.SecurityZone> y [Conjuntos de permisos con nombre](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ Si utiliza métodos <xref:System.Xml.Xsl.XslTransform.Load%2A> que toman <xref:System.Xml.XmlResolver> pero no `Evidence`, la zona de seguridad del ensamblado toma como valor predeterminado Plena confianza. Para más información, vea <xref:System.Security.SecurityZone> y [Conjuntos de permisos con nombre](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
  Las funciones se pueden declarar dentro del elemento `msxsl:script`. La tabla siguiente muestra los espacios de nombres que se admiten de forma predeterminada. Es posible utilizar clases fuera de los espacios de nombres enumerados. Sin embargo, el nombre de las clases debe estar completo.  
   
@@ -72,7 +73,7 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
 |Fragmento del árbol de resultados|System.Xml.XPath.XPathNavigator|XSLT|  
 |Conjunto de nodos|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Si la función de script utiliza uno de los siguientes tipos numéricos: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, o Decimal, se convierten obligatoriamente en Double, que se asigna a un número de tipo W3C XPath. El resto de los tipos se convierten obligatoriamente en tipos String con el método `ToString`.  
+ Si la función de script utiliza uno de los siguientes tipos numéricos: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single o Decimal, se convierten obligatoriamente en Double, que se asigna a un número de tipo W3C XPath. El resto de los tipos se convierten obligatoriamente en tipos String con el método `ToString`.  
   
  Si la función del script utiliza un tipo distinto a los mencionados anteriormente o si no se compila al cargar la hoja de estilos en el objeto <xref:System.Xml.Xsl.XslTransform>, se inicia una excepción.  
   
@@ -98,7 +99,7 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
 </msxsl:script>  
 ```  
   
- De esta forma se inicia una excepción debido a que no se establece una secuencia de escape para el carácter Y comercial (&). Este documento se carga como XML y no se aplica un tratamiento especial al texto que hay entre las etiquetas del elemento `msxsl:script`.  
+ De esta forma se inicia una excepción debido a que no se establece una secuencia de escape para el carácter Y comercial (&amp;). Este documento se carga como XML y no se aplica un tratamiento especial al texto que hay entre las etiquetas del elemento `msxsl:script`.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se utiliza un script incrustado para calcular la longitud de una circunferencia dado su radio.  

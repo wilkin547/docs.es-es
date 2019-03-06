@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 721a3129a00867279846bc44155b307f5e97ae39
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 638c9b9bae97b90b94c0ca9b421bc20cd3eb41ee
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479792"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967196"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementar tareas en segundo plano en microservicios con IHostedService y la clase BackgroundService
 
@@ -178,36 +178,32 @@ public class GracePeriodManagerService : BackgroundService
     public GracePeriodManagerService(IOptions<OrderingBackgroundSettings> settings,
                                      IEventBus eventBus,
                                      ILogger<GracePeriodManagerService> logger)
+    {
+        //Constructor’s parameters validations...       
+    }
+
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        _logger.LogDebug($"GracePeriodManagerService is starting.");
+
+        stoppingToken.Register(() => 
+            _logger.LogDebug($" GracePeriod background task is stopping."));
+
+        while (!stoppingToken.IsCancellationRequested)
         {
-            //Constructor’s parameters validations...       
+            _logger.LogDebug($"GracePeriod task doing background work.");
+
+            // This eShopOnContainers method is querying a database table 
+            // and publishing events into the Event Bus (RabbitMS / ServiceBus)
+            CheckConfirmedGracePeriodOrders();
+
+            await Task.Delay(_settings.CheckUpdateTime, stoppingToken);
         }
-
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
-        {
-            _logger.LogDebug($"GracePeriodManagerService is starting.");
-
-            stoppingToken.Register(() => 
-                    _logger.LogDebug($" GracePeriod background task is stopping."));
-
-            while (!stoppingToken.IsCancellationRequested)
-            {
-                _logger.LogDebug($"GracePeriod task doing background work.");
-
-                // This eShopOnContainers method is querying a database table 
-                // and publishing events into the Event Bus (RabbitMS / ServiceBus)
-                CheckConfirmedGracePeriodOrders();
-
-                await Task.Delay(_settings.CheckUpdateTime, stoppingToken);
-            }
             
-            _logger.LogDebug($"GracePeriod background task is stopping.");
+        _logger.LogDebug($"GracePeriod background task is stopping.");
+    }
 
-        }
-
-        protected override async Task StopAsync (CancellationToken stoppingToken)
-        {
-               // Run your graceful clean-up actions
-        }
+    .../...
 }
 ```
 
@@ -229,7 +225,7 @@ WebHost.CreateDefaultBuilder(args)
 
 En la siguiente ilustración se muestra un resumen visual de las clases y las interfaces implicadas al implementar IHostedServices.
  
-![Class diagram: IWebHost y IHost pueden hospedar muchos servicios, que heredan de BackgroundService, que implementa IHostedService.](./media/image27.png)
+![Diagrama de clases: IWebHost y IHost pueden hospedar muchos servicios, que heredan de BackgroundService, que implementa IHostedService.](./media/image27.png)
 
 **Figura 6-27**. Diagrama de clases que muestra las distintas clases e interfaces relacionadas con IHostedService
 

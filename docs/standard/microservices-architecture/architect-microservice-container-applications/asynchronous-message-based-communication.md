@@ -4,12 +4,12 @@ description: Arquitectura de Microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5346e5f3e780961e8353c9dec0860bebd4fc6657
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 10e2a05e8fa33ecbf2aec2432c0cf51204fc35c1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148904"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969367"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicación asincrónica basada en mensajes
 
@@ -77,7 +77,7 @@ Un desafío al implementar una arquitectura controlada por eventos entre varios 
 
 - Uso de la [minería del registro de transacciones](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
-- Uso del patrón de [orígenes de eventos](https://msdn.microsoft.com/library/dn589792.aspx) completo.
+- Uso del patrón de [orígenes de eventos](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) completo.
 
 - Uso del [patrón de bandeja de salida](http://gistlabs.com/2014/05/the-outbox/): una tabla de base de datos transaccional como una cola de mensajes que será la base para un componente de creador de eventos que creará el evento y lo publicará.
 

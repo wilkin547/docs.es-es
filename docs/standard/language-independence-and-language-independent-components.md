@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b25f3dbe655dd60c9284ae5ef5591e95fc1b84e5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842832"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836557"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 .NET Framework. es independiente del lenguaje. Esto significa que, como desarrollador, puede utilizar uno de los muchos lenguajes que tienen como destino .NET Framework; por ejemplo, C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL y Windows PowerShell. Puede acceder a los tipos y miembros de las bibliotecas de clases desarrolladas para .NET Framework sin necesidad de conocer el lenguaje en el que se escribieron originalmente y sin necesidad de seguir ninguna de las convenciones del lenguaje original. Si es un desarrollador de componentes, podrá acceder a su componente desde cualquier aplicación de .NET Framework, con independencia del lenguaje.  
@@ -28,7 +28,7 @@ ms.locfileid: "48842832"
 > [!NOTE]
 >  En la primera parte de este artículo, se explica cómo se crean componentes independientes del lenguaje, es decir, componentes que pueden utilizarse en aplicaciones escritas en cualquier lenguaje. También puede crear una aplicación o componente únicos de código fuente escrito en varios lenguajes; consulte [Interoperabilidad entre lenguajes](#CrossLang) en la segunda parte de este artículo.  
   
- Para que los objetos puedan tener una interacción total con otros objetos escritos en cualquier lenguaje, estos objetos solo deben exponer a los llamadores las características que son comunes a todos los lenguajes. Este conjunto común de características se define mediante Common Language Specification (CLS), que es un conjunto de reglas que se aplican a los ensamblados generados. Common Language Specification se define en el apartado I, cláusulas 7 a 11 del [Estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Para que los objetos puedan tener una interacción total con otros objetos escritos en cualquier lenguaje, estos objetos solo deben exponer a los llamadores las características que son comunes a todos los lenguajes. Este conjunto común de características se define mediante Common Language Specification (CLS), que es un conjunto de reglas que se aplican a los ensamblados generados. Common Language Specification se define en el apartado I, cláusulas 7 a 11 del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  Si el componente se ajusta a Common Language Specification, existe la garantía de que será conforme a CLS y que será accesible desde el código de un ensamblado escrito en cualquier lenguaje de programación que admita CLS. Para determinar si el componente se ajusta o no a Common Language Specification en tiempo de compilación, puede aplicar el atributo <xref:System.CLSCompliantAttribute> en el código fuente. Para más información, consulte [CLSCompliantAttribute (Atributo)](#CLSAttribute).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48842832"
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>Reglas de conformidad con CLS  
- En esta sección se explican las reglas para crear un componente conforme a CLS. Para obtener una lista completa de reglas, consulte el apartado I, cláusula 11 del [Estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ En esta sección se explican las reglas para crear un componente conforme a CLS. Para obtener una lista completa de las normas, vea el apartado I, cláusula 11 del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
 > [!NOTE]
 >  Common Language Specification describe en cada regla la conformidad con CLS en referencia a los consumidores (desarrolladores que acceden mediante programación a un componente que es conforme a CLS), los marcos (desarrolladores que usan un compilador de lenguaje para crear bibliotecas conformes a CLS) y los extensores (desarrolladores que crean una herramienta, como un compilador de lenguaje o un analizador de código, que crea componentes conformes a CLS). Este artículo se centra en las reglas que se aplican a los marcos. Sin embargo, observe que algunas de las reglas que se aplican a los extensores también se pueden aplicar a los ensamblados que se crean mediante Reflection.Emit.  
@@ -100,7 +100,7 @@ ms.locfileid: "48842832"
   
 -   Parámetros y tipos devueltos de los métodos públicos de las clases públicas y parámetros y tipos devueltos de los métodos accesibles por las clases derivadas.  
   
- Las reglas de conformidad con CLS se muestran en la tabla siguiente. Las reglas se han traducido a partir del texto literal del [Estándar ECMA-335 - Common Language Infrastructure (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm), con Copyright de 2012 de ECMA International. En las secciones siguientes encontrará información más detallada sobre estas reglas.  
+ Las reglas de conformidad con CLS se muestran en la tabla siguiente. El texto de las normas se toma literalmente del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), Copyright de 2012 de Ecma International. En las secciones siguientes encontrará información más detallada sobre estas reglas.  
   
 |Categoría|Vea|Regla|Número de regla|  
 |--------------|---------|----------|-----------------|  
@@ -305,7 +305,7 @@ ms.locfileid: "48842832"
   
      Debido a esta regla, no se necesitan tipos conformes a CLS para implementar miembros no conformes a CLS. Si un marco conforme a CLS expone una clase que implementa una interfaz no conforme a CLS, también debe proporcionar implementaciones concretas de todos los miembros no conformes a CLS.  
   
- Los compiladores de lenguaje conformes a CLS también deben permitir que una clase proporcione implementaciones independientes de miembros con el mismo nombre y la misma signatura en varias interfaces.  C# y Visual Basic admiten [implementaciones de interfaz explícitas](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md) para proporcionar diferentes implementaciones de métodos con el mismo nombre. Visual Basic también admite la palabra clave `Implements`, que permite designar explícitamente qué interfaz y miembro implementa un determinado miembro. En el ejemplo siguiente se muestra este escenario con la definición de una clase `Temperature` que implementa las interfaces `ICelsius` y `IFahrenheit` como implementaciones de interfaces explícitas.  
+ Los compiladores de lenguaje conformes a CLS también deben permitir que una clase proporcione implementaciones independientes de miembros con el mismo nombre y la misma signatura en varias interfaces.  C# y Visual Basic admiten [implementaciones de interfaz explícitas](../csharp/programming-guide/interfaces/explicit-interface-implementation.md) para proporcionar diferentes implementaciones de métodos con el mismo nombre. Visual Basic también admite la palabra clave `Implements`, que permite designar explícitamente qué interfaz y miembro implementa un determinado miembro. En el ejemplo siguiente se muestra este escenario con la definición de una clase `Temperature` que implementa las interfaces `ICelsius` y `IFahrenheit` como implementaciones de interfaces explícitas.  
   
  [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)]
  [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
@@ -548,23 +548,23 @@ ms.locfileid: "48842832"
   
  Para empaquetar las dos clases en un solo ensamblado, debe compilarlas en módulos. Para compilar el archivo de código fuente de Visual Basic en un módulo, use este comando:  
   
-```  
+```console  
 vbc /t:module StringUtil.vb   
 ```  
   
- Para más información sobre la sintaxis de la línea de comandos del compilador de Visual Basic, consulte [Compilación desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+ Para más información sobre la sintaxis de la línea de comandos del compilador de Visual Basic, consulte [Compilación desde la línea de comandos](../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
  Para compilar el archivo de código fuente de C# en un módulo, use este comando:  
   
-```  
+```console  
 csc /t:module NumberUtil.cs  
 ```  
   
- Para más información sobre la sintaxis de la línea de comandos del compilador de C#, consulte [Compilación de la línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
+ Para más información sobre la sintaxis de la línea de comandos del compilador de C#, consulte [Compilación de la línea de comandos con csc.exe](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
- A continuación, use la [herramienta de vinculación (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) para compilar los dos módulos en un ensamblado:  
+ Utilice luego las [opciones del enlazador](/cpp/build/reference/linker-options) para compilar los dos módulos en un ensamblado:  
   
-```  
+```console  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   
 ```  
   
@@ -575,13 +575,13 @@ link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
   
  Para compilar el código de Visual Basic, use este comando:  
   
-```  
+```console  
 vbc example.vb /r:UtilityLib.dll  
 ```  
   
  Para compilar con C#, cambie el nombre del compilador de **vbc** a **csc** y cambie la extensión de archivo .vb a .cs:  
   
-```  
+```console  
 csc example.cs /r:UtilityLib.dll  
 ```  
   

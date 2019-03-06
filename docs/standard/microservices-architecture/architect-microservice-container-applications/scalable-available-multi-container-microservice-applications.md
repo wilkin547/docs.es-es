@@ -4,12 +4,12 @@ description: Descubra las opciones para orquestar microservicios y aplicaciones 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 0a3ecbb8d186adf3fdc492654e23111ee4c508b1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307440"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980235"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 
@@ -137,9 +137,11 @@ Como se muestra en la figura 4-26, la característica distintiva de Azure Dev Sp
 
 Básicamente, puede configurar un espacio de desarrollo compartido en Azure. Así, cada programador se puede centrar exclusivamente en su parte de la aplicación y desarrollar de forma iterativa código previo a la confirmación en un espacio de desarrollo que ya contenga todos los demás servicios y recursos en la nube de los que sus escenarios dependen. Las dependencias siempre estarán actualizadas y los desarrolladores trabajarán de una manera que se asemeja bastante a un entorno de producción.
 
-En Azure Dev Spaces existe el concepto de espacio, que permite trabajar de manera aislada y sin riesgo de romper el código de los miembros del equipo. Esta característica se basa en prefijos de dirección URL, por lo que si usa cualquier prefijo de espacio de desarrollo en la dirección URL, por cada solicitud de contenedor se ejecutará una versión especial del contenedor que se implementa para ese espacio si existe. En caso contrario, se ejecutará la versión global o consolidada.
+En Azure Dev Spaces existe el concepto de espacio, que permite trabajar de manera relativamente aislada y sin riesgo de romper el trabajo del equipo. Cada espacio de desarrollo forma parte de una estructura jerárquica que le permite invalidar un microservicio (o muchos), desde el espacio de desarrollo maestro "top", con su propio microservicio en curso.
 
-Puede ver la [página wiki de eShopOnContainers en Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS) para obtener una vista práctica en un ejemplo concreto.
+Esta característica se basa en los prefijos de dirección URL, por lo que al utilizar cualquier prefijo de espacio de desarrollo en la dirección url, se sirve una solicitud desde el microservicio de destino si existe en el espacio de desarrollo, de lo contrario, se reenvía hasta la primera instancia del microservicio de destino que se encuentra en la jerarquía, que finalmente llega al espacio de desarrollo maestro en la parte superior.
+
+Puede ver la [página wiki de eShopOnContainers en Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Using-Azure-Dev-Spaces-and-AKS) para obtener una vista práctica en un ejemplo concreto.
 
 Para obtener más información, vea el artículo sobre [Desarrollo en equipo con Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore).
 

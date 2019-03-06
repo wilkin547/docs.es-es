@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ae6f76ba358d07101f56de321a9453b3eee1bf2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40dc7abd8adffef04535f6492be14bf6463ca30d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674042"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835816"
 ---
 # <a name="when-to-use-generic-collections"></a>Cuándo utilizar colecciones genéricas
 Generalmente se recomienda usar colecciones genéricas, ya que se obtiene la ventaja inmediata de la seguridad de tipos sin necesidad de derivar de un tipo de colección base ni de implementar miembros específicos de tipo. Los tipos de colección genéricos también suelen funcionan mejor que los correspondientes tipos de colección no genéricos (y mejor que los tipos que se derivan de los tipos de colección base no genéricos) cuando los elementos de la colección son tipos de valor; esto se debe a que con los genéricos no es necesario realizar una conversión boxing de los elementos.  
@@ -46,7 +46,7 @@ Generalmente se recomienda usar colecciones genéricas, ya que se obtiene la ven
 -   <xref:System.Collections.Concurrent.ConcurrentBag%601> proporciona una rápida inserción y eliminación de elementos no ordenados.  
   
 ## <a name="linq-to-objects"></a>LINQ to Objects  
- La característica LINQ to Objects permite usar consultas LINQ para obtener acceso a los objetos en memoria mientras el tipo de objeto implemente la interfaz <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> . Las consultas LINQ proporcionan un modelo común para el acceso a datos; suelen ser más concisas y legibles que los bucles `foreach` estándar, y proporcionan capacidades de filtrado, ordenación y agrupación. Las consultas LINQ también pueden mejorar el rendimiento. Para obtener más información, vea [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) y [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ La característica LINQ to Objects permite usar consultas LINQ para obtener acceso a los objetos en memoria mientras el tipo de objeto implemente la interfaz <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> . Las consultas LINQ proporcionan un modelo común para el acceso a datos; suelen ser más concisas y legibles que los bucles `foreach` estándar, y proporcionan capacidades de filtrado, ordenación y agrupación. Las consultas LINQ también pueden mejorar el rendimiento. Para más información, vea [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) y [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
 ## <a name="additional-functionality"></a>Funcionalidad adicional  
  Algunos de los tipos genéricos tienen funcionalidades que no se encuentran en los tipos de colección no genéricos. Por ejemplo, la clase <xref:System.Collections.Generic.List%601> , que se corresponde con la clase <xref:System.Collections.ArrayList> no genérica, tiene una serie de métodos que aceptan delegados genéricos, como el delegado <xref:System.Predicate%601> que permite especificar los métodos de búsqueda en la lista, el delegado <xref:System.Action%601> que representa los métodos que actúan en cada elemento de la lista y el delegado <xref:System.Converter%602> que permite definir conversiones entre tipos.  

@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 9ee6e9a06d590d9d8452dcdaea11219070e613c4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9e63b16106f69ec35b7713ffc1a28e2cfb19d2d9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188188"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203657"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 
@@ -21,7 +21,7 @@ ms.locfileid: "50188188"
 > [!NOTE]
 > La primera parte de este artículo describe la creación de componentes independientes del lenguaje; es decir, los componentes que pueden usarse en aplicaciones escritas en cualquier lenguaje. También puede crear una aplicación o componente únicos de código fuente escrito en varios lenguajes; consulte [Interoperabilidad entre lenguajes](#cross-language-interoperability) en la segunda parte de este artículo. 
 
-Para que los objetos puedan tener una interacción total con otros objetos escritos en cualquier lenguaje, estos objetos solo deben exponer a los llamadores las características que son comunes a todos los lenguajes. Este conjunto común de características se define mediante Common Language Specification (CLS), que es un conjunto de reglas que se aplican a los ensamblados generados. Common Language Specification se define en el apartado I, cláusulas 7 a 11 del [Estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm). 
+Para que los objetos puedan tener una interacción total con otros objetos escritos en cualquier lenguaje, estos objetos solo deben exponer a los llamadores las características que son comunes a todos los lenguajes. Este conjunto común de características se define mediante Common Language Specification (CLS), que es un conjunto de reglas que se aplican a los ensamblados generados. Common Language Specification se define en el apartado I, cláusulas 7 a 11 del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm). 
 
 Si el componente se ajusta a Common Language Specification, existe la garantía de que será conforme a CLS y que será accesible desde el código de un ensamblado escrito en cualquier lenguaje de programación que admita CLS. Para determinar si el componente se ajusta o no a Common Language Specification en tiempo de compilación, puede aplicar el atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) en el código fuente. Para obtener más información, consulte [CLSCompliantAttribute (Atributo)](#the-clscompliantattribute-attribute).
 
@@ -65,7 +65,7 @@ En este artículo:
 
 ## <a name="cls-compliance-rules"></a>Reglas de conformidad con CLS
 
-En esta sección se explican las reglas para crear un componente conforme a CLS. Para obtener una lista completa de reglas, consulte el apartado I, cláusula 11 del [Estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
+En esta sección se explican las reglas para crear un componente conforme a CLS. Para obtener una lista completa de las normas, vea el apartado I, cláusula 11 del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 > [!NOTE]
 > Common Language Specification describe en cada regla la conformidad con CLS en referencia a los consumidores (desarrolladores que acceden mediante programación a un componente que es conforme a CLS), los marcos (desarrolladores que usan un compilador de lenguaje para crear bibliotecas conformes a CLS) y los extensores (desarrolladores que crean una herramienta, como un compilador de lenguaje o un analizador de código, que crea componentes conformes a CLS). Este artículo se centra en las reglas que se aplican a los marcos. Pero observe que algunas de las reglas que se aplican a los extensores también se pueden aplicar a los ensamblados que se crean mediante [Reflection.Emit](xref:System.Reflection.Emit). 
@@ -150,7 +150,7 @@ Las interfaces públicas de una biblioteca se componen de los elementos siguient
 
 * Parámetros y tipos devueltos de los métodos públicos de las clases públicas y parámetros y tipos devueltos de los métodos accesibles por las clases derivadas. 
 
-Las reglas de conformidad con CLS se muestran en la tabla siguiente. Las reglas se han traducido a partir del texto literal del [Estándar ECMA-335 - Common Language Infrastructure (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm), con Copyright de 2012 de ECMA International. En las secciones siguientes encontrará información más detallada sobre estas reglas. 
+Las reglas de conformidad con CLS se muestran en la tabla siguiente. El texto de las normas se toma literalmente del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), Copyright de 2012 de Ecma International. En las secciones siguientes encontrará información más detallada sobre estas reglas. 
 
 Categoría | Vea | Regla | Número de regla
 -------- | --- | ---- | -----------
@@ -158,7 +158,7 @@ Accesibilidad | [Accesibilidad de miembros](#member-accessibility) | Cuando se r
 Accesibilidad | [Accesibilidad de miembros](#member-accessibility) | La visibilidad y accesibilidad de los tipos y miembros se establecerá de modo que los tipos de la signatura de cualquier miembro sean visibles y accesibles siempre que el propio miembro sea visible y accesible. Por ejemplo, un método público que sea visible fuera del ensamblado no debe tener ningún argumento cuyo tipo solamente sea visible en el interior del ensamblado. La visibilidad y la accesibilidad de los tipos que conforman un tipo genérico con instancias que se utilice en la signatura de cualquier miembro deben establecerse de forma que serán visibles y accesibles siempre que el propio miembro sea visible y accesible. Por ejemplo, un tipo genérico con instancias que esté presente en la signatura de un miembro que sea visible fuera del ensamblado no debe tener ningún argumento genérico cuyo tipo solamente sea visible en el interior del ensamblado. | 12
 Matrices | [Matrices](#arrays) | Las matrices deben tener elementos con un tipo conforme a CLS y los límites inferiores de todas las dimensiones de la matriz deben ser iguales a cero. Para distinguir entre sobrecargas, solo se tendrá en cuenta el hecho de que el elemento es una matriz y el tipo de elementos de la matriz. Cuando la sobrecarga se basa en dos o varios tipos de matrices, los tipos de elementos deben ser tipos con nombre. | 16
 Atributos | [Atributos](#attributes) | Los atributos deben ser del tipo [System.Attribute](xref:System.Attribute) o heredarse de este. | 41
-Atributos | [Atributos](#attributes) | CLS solo permite un subconjunto de codificaciones de atributos personalizados. Los únicos tipos que deben aparecer en estas codificaciones son (consulte el apartado IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) y cualquier tipo de enumeración basada en un tipo entero base compatible con CLS. | 34
+Atributos | [Atributos](#attributes) | CLS solo permite un subconjunto de codificaciones de atributos personalizados. Los únicos tipos que deben aparecer en estas codificaciones son (vea el apartado IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) y cualquier tipo de enumeración basada en un tipo entero base compatible con CLS. | 34
 Atributos | [Atributos](#attributes) | CLS no admite modificadores obligatorios que sean visibles públicamente (`modreq`, vea el Apartado II), pero sí admite modificadores opcionales (`modopt`, vea el apartado II) que no comprenda. | 35
 Constructores | [Constructores](#constructors) | Un constructor de objetos debe llamar a un constructor de instancias de su clase base antes de que tenga lugar cualquier acceso a los datos de instancia heredados. (Esto no se aplica a los tipos de valor, que no necesitan constructores.)  | 21
 Constructores | [Constructores](#constructors) | No debe llamarse a los constructores de objetos excepto durante la creación de un objeto y no podrá iniciarse dos veces un objeto. | 22
@@ -2058,7 +2058,7 @@ Los constructores de clases y estructuras conformes a CLS deben seguir estas reg
 
 Las propiedades de los tipos conformes a CLS deben seguir estas reglas:
 
-* Una propiedad debe tener un establecedor, un captador o ambos. En un ensamblado, estos elementos se implementan como métodos especiales, lo que significa que aparecerán como métodos independientes (el captador se llama `get`\_*propertyname* y el establecedor es `set*\_*propertyname*) marked as `SpecialName en los metadatos del ensamblado. El compiladores de C# aplica esta regla automáticamente sin necesidad de aplicar el atributo [CLSCompliantAttribute](xref:System.CLSCompliantAttribute). 
+* Una propiedad debe tener un establecedor, un captador o ambos. En un ensamblado, estos elementos se implementan como métodos especiales, lo que significa que aparecerán como métodos independientes (el captador se llama `get`\_*propertyname* y el establecedor es `set`\_*propertyname*) marcados como `SpecialName` en los metadatos del ensamblado. El compilador de C# aplica esta regla automáticamente sin necesidad de aplicar el atributo <xref:System.CLSCompliantAttribute>. 
 
 * El tipo de una propiedad es el tipo de valor devuelto del captador de la propiedad y el último argumento del establecedor. Estos tipos deben ser conformes a CLS y los argumentos no se pueden asignar a la propiedad por referencia (es decir, no pueden ser punteros administrados). 
 

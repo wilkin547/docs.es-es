@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Des
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a56b7ba047499842a9b76612df17d22c64491301
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827891"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978337"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollo de aplicaciones ASP.NET Core MVC
 
@@ -172,7 +172,7 @@ Otro enfoque para desacoplar la aplicación de los detalles de implementación c
 
 ### <a name="feature-organization"></a>Organización de las características
 
-De forma predeterminada, las aplicaciones ASP.NET Core organizan su estructura de carpetas para que incluir controladores y vistas, y con frecuencia ViewModels. El código del lado cliente para admitir estas estructuras del lado servidor normalmente se almacena por separado en la carpeta wwwroot. Pero es posible que esta organización genere problemas en aplicaciones grandes, puesto que trabajar con cualquier característica determinada a menudo requiere saltar entre estas carpetas. Esto se complica cada vez más a medida que aumenta el número de archivos y subcarpetas en cada carpeta, lo que da lugar a una gran cantidad de desplazamiento por el Explorador de soluciones. Una solución a este problema consiste en organizar el código de aplicación por _característica_ en lugar de por tipo de archivo. Este estilo profesional se conoce normalmente como carpetas de características o [sectores de características](https://msdn.microsoft.com/en-us/magazine/mt763233.aspx) (vea también: [Vertical Slice](https://deviq.com/vertical-slices/) (Sectores verticales).
+De forma predeterminada, las aplicaciones ASP.NET Core organizan su estructura de carpetas para que incluir controladores y vistas, y con frecuencia ViewModels. El código del lado cliente para admitir estas estructuras del lado servidor normalmente se almacena por separado en la carpeta wwwroot. Pero es posible que esta organización genere problemas en aplicaciones grandes, puesto que trabajar con cualquier característica determinada a menudo requiere saltar entre estas carpetas. Esto se complica cada vez más a medida que aumenta el número de archivos y subcarpetas en cada carpeta, lo que da lugar a una gran cantidad de desplazamiento por el Explorador de soluciones. Una solución a este problema consiste en organizar el código de aplicación por _característica_ en lugar de por tipo de archivo. Este estilo profesional se conoce normalmente como carpetas de características o [sectores de características](https://msdn.microsoft.com/magazine/mt763233.aspx) (vea también: [Vertical Slice](https://deviq.com/vertical-slices/) (Sectores verticales).
 
 ASP.NET Core MVC admite las áreas para este propósito. Con las áreas, se pueden crear conjuntos independientes de carpetas de controladores y vistas (así como los modelos asociados) en cada carpeta de área. En la figura 7-1 se muestra una estructura de carpetas de ejemplo, en la que se usan áreas.
 

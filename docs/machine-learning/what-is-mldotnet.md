@@ -4,13 +4,13 @@ description: Obtenga información sobre ML.NET, un marco de Machine Learning gra
 author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
-ms.date: 11/06/2018
-ms.openlocfilehash: fb0ece94d77c76fddc667070a8aaef154fd2053a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 03/01/2019
+ms.openlocfilehash: 08e5f31502555ed1a04a6a4afa70bc98e8fd015a
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55252424"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57250967"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>¿Qué es ML.NET y cómo puedo informarme sobre los aspectos básicos del aprendizaje automático?
 
@@ -29,7 +29,7 @@ Obtenga una breve introducción sobre los aspectos básicos de aprendizaje autom
 
 * Vídeo 1: [Las respuestas a las 5 preguntas de ciencia de datos](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers) *(5 min 14 s)*.
 
-* Vídeo 2: [¿Están los datos listos para la ciencia de datos?](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science) *(4 min 56 s)*
+* Vídeo 2: [¿Están los datos listos para la ciencia de datos?](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science) *(4 min 56 seg)*
 
 * Vídeo 3: [Formular una pregunta que puede responder con datos](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-ask-a-question-you-can-answer-with-data) *(17 min 17 s)*
 

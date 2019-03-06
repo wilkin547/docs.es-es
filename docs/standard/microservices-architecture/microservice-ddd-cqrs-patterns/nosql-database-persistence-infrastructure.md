@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: e0635d03e7d1b31642a6669aecefd2b0099e9c78
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 7a9c6c64f5aa482b6d21aab0c88fc204c6427a41
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066290"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974788"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Uso de bases de datos NoSQL como una infraestructura de persistencia
 
@@ -163,7 +163,7 @@ Básicamente, esto es simplemente una renuncia que indica que no debe usar siemp
 
 ### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>El código: uso de la API de MongoDB en aplicaciones .NET Core
 
-La API de MongoDB para .NET se basa en los paquetes NuGet que debe agregar a los proyectos, como en el proyecto Locations.API en la siguiente imagen.
+La API de MongoDB para .NET se basa en los paquetes NuGet que debe agregar a los proyectos, como en el proyecto Locations.API que se muestra en la siguiente imagen.
 
 ![En la vista Explorador de soluciones se muestran las dependencias en los paquetes NuGet de MongoDB.](./media/image21-bis.png)
 

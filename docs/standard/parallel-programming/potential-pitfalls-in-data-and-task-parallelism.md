@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5613128950d53946d55050ba3fd77cf1f0bb048a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c251bfc15ce588d426dd30f2ff1634a1f2a01336
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513430"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971954"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Problemas potenciales en el paralelismo de datos y tareas
 En muchos casos, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> pueden proporcionar importantes mejoras de rendimiento con respecto a los bucles secuenciales normales. Sin embargo, el trabajo de paralelizar el bucle aporta una complejidad que puede conducir a problemas que, en código secuencial, no son tan comunes o no se producen en ningún caso. En este tema se indican algunas prácticas que se deben evitar al escribir bucles paralelos.  
@@ -52,10 +52,10 @@ En muchos casos, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=na
 >  Puede comprobarlo si inserta algunas llamadas a <xref:System.Console.WriteLine%2A> en las consultas. Aunque este método se usa en los ejemplos de la documentación para fines de demostración, no debe usarlo en bucles paralelos a menos que sea necesario.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>Tener en cuenta los problemas de afinidad de los subprocesos  
- Algunas tecnologías, como la interoperabilidad COM para componentes de contenedor uniproceso (STA), Windows Forms y Windows Presentation Foundation (WPF), imponen restricciones de afinidad de subprocesos que exigen que el código se ejecute en un subproceso determinado. Por ejemplo, tanto en Windows Forms como en WPF, solo se puede tener acceso a un control en el subproceso donde se creó. Por ejemplo, esto significa que no puede actualizar un control de lista desde un bucle paralelo a menos que configure el programador del subproceso para que programe trabajo solo en el subproceso de la interfaz de usuario. Para obtener más información, vea [Cómo: Programar trabajo en el subproceso de la interfaz de usuario](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663).  
+ Algunas tecnologías, como la interoperabilidad COM para componentes de contenedor uniproceso (STA), Windows Forms y Windows Presentation Foundation (WPF), imponen restricciones de afinidad de subprocesos que exigen que el código se ejecute en un subproceso determinado. Por ejemplo, tanto en Windows Forms como en WPF, solo se puede tener acceso a un control en el subproceso donde se creó. Por ejemplo, esto significa que no puede actualizar un control de lista desde un bucle paralelo a menos que configure el programador del subproceso para que programe trabajo solo en el subproceso de la interfaz de usuario. Para obtener más información, vea cómo [especificar un contexto de sincronización](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context).  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Tener precaución cuando se espera en delegados a los que llama Parallel.Invoke  
- En determinadas circunstancias, la biblioteca TPL incluirá una tarea, lo que significa que se ejecuta en la tarea del subproceso que se está ejecutando actualmente. (Para más información, consulte [Clase TaskScheduler](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)). Esta optimización de rendimiento puede provocar un interbloqueo en ciertos casos. Por ejemplo, dos tareas podrían ejecutar el mismo código de delegado, que señala cuándo se genera un evento, y después esperar a que la otra tarea señale. Si la segunda tarea está alineada en el mismo subproceso que la primera y la primera entra en un estado de espera, la segunda tarea nunca podrá señalar su evento. Para evitar que esto suceda, puede especificar un tiempo de espera en la operación de espera o utilizar constructores de subproceso explícitos para ayudar a garantizar que una tarea no pueda bloquear a la otra.  
+ En determinadas circunstancias, la biblioteca TPL incluirá una tarea, lo que significa que se ejecuta en la tarea del subproceso que se está ejecutando actualmente. (Para más información, consulte [Clase TaskScheduler](xref:System.Threading.Tasks.TaskScheduler)). Esta optimización de rendimiento puede provocar un interbloqueo en ciertos casos. Por ejemplo, dos tareas podrían ejecutar el mismo código de delegado, que señala cuándo se genera un evento, y después esperar a que la otra tarea señale. Si la segunda tarea está alineada en el mismo subproceso que la primera y la primera entra en un estado de espera, la segunda tarea nunca podrá señalar su evento. Para evitar que esto suceda, puede especificar un tiempo de espera en la operación de espera o utilizar constructores de subproceso explícitos para ayudar a garantizar que una tarea no pueda bloquear a la otra.  
   
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>No suponer que las iteraciones de ForEach, For y ForAll siempre se ejecutan en paralelo  
  Es importante tener en cuenta que las iteraciones individuales de un bucle <xref:System.Threading.Tasks.Parallel.For%2A>, <xref:System.Threading.Tasks.Parallel.ForEach%2A> o <xref:System.Linq.ParallelEnumerable.ForAll%2A> pueden ejecutarse en paralelo, pero no tiene que ser así necesariamente. Por consiguiente, se debe evitar escribir código cuya exactitud dependa de la ejecución en paralelo de las iteraciones o de la ejecución de las iteraciones en algún orden concreto. Por ejemplo, es probable que este código lleve a un interbloqueo:  

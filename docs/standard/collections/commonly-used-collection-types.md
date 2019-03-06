@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e1fd970c0aab064fbc7da76d3c4f32f572aca21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77740f86265db86c998af25e6e9ed4c20a7014e6
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571256"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835751"
 ---
 # <a name="commonly-used-collection-types"></a>Tipos de colección utilizados normalmente
 Los tipos de colecciones son las variaciones comunes de las colecciones de datos, como tablas hash, colas, pilas, bolsas, diccionarios y listas.  
@@ -30,11 +30,11 @@ Los tipos de colecciones son las variaciones comunes de las colecciones de datos
   
  Las colecciones pueden variar en función de cómo se almacenan los elementos, cómo se ordenan, cómo se realizan las búsquedas y cómo se realizan las comparaciones. La clase <xref:System.Collections.Queue> y la clase genérica <xref:System.Collections.Generic.Queue%601> proporcionan listas de tipo “el primero en entrar es el primero en salir”, mientras que la clase <xref:System.Collections.Stack> y la clase genérica <xref:System.Collections.Generic.Stack%601> proporcionan listas de tipo “el último en entrar es el primero en salir”. La clase <xref:System.Collections.SortedList> y la clase genérica <xref:System.Collections.Generic.SortedList%602> proporcionan versiones ordenadas de la clase <xref:System.Collections.Hashtable> y de la clase genérica <xref:System.Collections.Generic.Dictionary%602>. El acceso a los elementos de <xref:System.Collections.Hashtable> o de <xref:System.Collections.Generic.Dictionary%602> solo es posible mediante la clave del elemento, pero el acceso a los elementos de <xref:System.Collections.SortedList> o de <xref:System.Collections.ObjectModel.KeyedCollection%602> es posible mediante la clave o mediante el índice del elemento. Los índices de todas las colecciones son de base cero, excepto <xref:System.Array>, que permite matrices que no son de base cero.  
   
- La característica LINQ to Objects permite usar consultas LINQ para obtener acceso a los objetos en memoria mientras el tipo de objeto implemente la interfaz <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>. Las consultas LINQ proporcionan un modelo común para el acceso a datos; suelen ser más concisas y legibles que los bucles `foreach` estándar, y proporcionan capacidades de filtrado, ordenación y agrupación. Las consultas LINQ también pueden mejorar el rendimiento. Para más información, consulte [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) y [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ La característica LINQ to Objects permite usar consultas LINQ para obtener acceso a los objetos en memoria mientras el tipo de objeto implemente la interfaz <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>. Las consultas LINQ proporcionan un modelo común para el acceso a datos; suelen ser más concisas y legibles que los bucles `foreach` estándar, y proporcionan capacidades de filtrado, ordenación y agrupación. Las consultas LINQ también pueden mejorar el rendimiento. Para más información, vea [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) y [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Colecciones y estructuras de datos](../../../docs/standard/collections/index.md)|Describe los diversos tipos de colecciones disponibles en [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], como pilas, colas, listas, matrices y diccionarios.|  
 |[Tipos de las colecciones Hashtable y Dictionary](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Describe las características de los tipos de diccionario basado en hash genéricos y no genéricos.|  

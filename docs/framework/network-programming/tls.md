@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 2d7555d39b3aa92ca49368ca5ad59750e3603606
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b08d119c0c7edb71ceab5c763c1359bf4c90cfec
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415902"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212539"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Procedimientos recomendados sobre la seguridad de la capa de transporte (TLS) con .NET Framework
 
@@ -237,7 +237,7 @@ Puede utilizar el registro para un control más preciso sobre los protocolos que
 
 Inicie con la clave del Registro `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`. Bajo esa clave, puede crear cualquier subclave en el conjunto `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1` y `TLS 1.2`. En cada una de esas subclaves, puede crear subclaves `Client` o `Server`. En `Client` y `Server`, puede crear valores DWORD `DisabledByDefault` (0 o 1) y `Enabled` (0 o 0xFFFFFFFF).
 
-## <a name="the-schusestrongcrypto-flag"></a>La marca SCH_USE_STRONG_CRYPTO
+## <a name="the-sch_use_strong_crypto-flag"></a>La marca SCH_USE_STRONG_CRYPTO
 
 Cuando está habilitada (de forma predeterminada, por un conmutador `AppContext` o por el Registro de Windows), .NET Framework usa la marca `SCH_USE_STRONG_CRYPTO` cuando la aplicación solicita un protocolo de seguridad TLS. La marca `SCH_USE_STRONG_CRYPTO` puede estar habilitada de forma predeterminada, con el conmutador `AppContext` o con el Registro. El sistema operativo pasa la marca a `Schannel` para indicarle que deshabilite algoritmos criptográficos que se sabe que no son robustos, conjuntos de cifrado y versiones de protocolo TLS/SSL que pueden habilitarse en caso contrario para mejorar la interoperabilidad. Para obtener más información, consulte:
 
@@ -270,10 +270,10 @@ Para habilitar o volver a habilitar TLS 1.2 o TLS 1.1 en un sistema que los admi
 
 | **SO** | **Compatibilidad con TLS 1.2** |
 | --- | --- |
-| Windows 10</br>Windows Server 2016 | Compatible, y habilitado de manera predeterminada. |
-| Windows 8.1</br>Windows Server 2012 R2 | Compatible, y habilitado de manera predeterminada. |
-| Windows 8.0</br>Windows Server 2012 | Compatible, y habilitado de manera predeterminada. |
-| Windows 7 SP1</br>Windows Server 2008 R2 SP1 | Compatible, pero no habilitado de manera predeterminada. Consulte la página web [Configuración del registro de seguridad de la capa (TLS) de transporte](/windows-server/security/tls/tls-registry-settings) para obtener más información sobre cómo habilitar TLS 1.2. |
+| Windows 10<br>Windows Server 2016 | Compatible, y habilitado de manera predeterminada. |
+| Windows 8.1<br>Windows Server 2012 R2 | Compatible, y habilitado de manera predeterminada. |
+| Windows 8.0<br>Windows Server 2012 | Compatible, y habilitado de manera predeterminada. |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | Compatible, pero no habilitado de manera predeterminada. Consulte la página web [Configuración del registro de seguridad de la capa (TLS) de transporte](/windows-server/security/tls/tls-registry-settings) para obtener más información sobre cómo habilitar TLS 1.2. |
 | Windows Server 2008 | La compatibilidad con TLS 1.2 y TLS 1.1 requiere una actualización. Vea [Actualización para agregar compatibilidad con TLS 1.1 y TLS 1.2 en Windows Server 2008 SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
 | Windows Vista | No se admite. |
 
@@ -285,10 +285,10 @@ En esta tabla se muestra la actualización del sistema operativo que necesitará
 
 | **SO** | **Actualización mínima necesaria para admitir TLS 1.2 con .NET Framework 3.5** |
 | --- | --- |
-| Windows 10</br>Windows Server 2016 | [Actualización acumulativa para Windows 10 versión 1511 y Windows Server 2016 Technical Preview 4: 10 de mayo de 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
-| Windows 8.1</br>Windows Server 2012 R2 | [Support for TLS System Default Versions included in .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) (Compatibilidad para las versiones predeterminadas del sistema TLS incluidas en .NET Framework 3.5 en Windows 8.1 y Windows Server 2012 R2) |
-| Windows 8.0</br>Windows Server 2012 | [Support for TLS System Default Versions included in .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) (Compatibilidad para las versiones predeterminadas del sistema TLS incluidas en .NET Framework 3.5 en Windows 8.1 y Windows Server 2012 R2) |
-| Windows 7 SP1</br>Windows Server 2008 R2 SP1 | [Support for TLS System Default Versions included in the .NET Framework 3.5.1 on Windows 7 SP1 and Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) (Compatibilidad para versiones predeterminadas del sistema TLS incluidas en .NET Framework 3.5.1 en Windows 7 SP1 y Server 2008 R2 SP1) |
+| Windows 10<br>Windows Server 2016 | [Actualización acumulativa para Windows 10 versión 1511 y Windows Server 2016 Technical Preview 4: 10 de mayo de 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
+| Windows 8.1<br>Windows Server 2012 R2 | [Support for TLS System Default Versions included in .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) (Compatibilidad para las versiones predeterminadas del sistema TLS incluidas en .NET Framework 3.5 en Windows 8.1 y Windows Server 2012 R2) |
+| Windows 8.0<br>Windows Server 2012 | [Support for TLS System Default Versions included in .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) (Compatibilidad para las versiones predeterminadas del sistema TLS incluidas en .NET Framework 3.5 en Windows 8.1 y Windows Server 2012 R2) |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | [Support for TLS System Default Versions included in the .NET Framework 3.5.1 on Windows 7 SP1 and Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) (Compatibilidad para versiones predeterminadas del sistema TLS incluidas en .NET Framework 3.5.1 en Windows 7 SP1 y Server 2008 R2 SP1) |
 | Windows Server 2008 | [Support for TLS System Default Versions included in the .NET Framework 2.0 SP2 on Windows Vista SP2 and Server 2008 SP2](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) (Compatibilidad para las versiones predeterminadas del sistema TLS incluidas en .NET Framework 2.0 SP2 en Windows Vista SP2 y Server 2008 SP2) |
 | Windows Vista | No compatibles |
 

@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 8b2372ab5d58898b7a5730e118cc710d09a9bf92
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 124bd402af7b721366af67b362747dfd71907f34
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130499"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981886"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Diseño de una aplicación orientada a microservicios
 
@@ -158,7 +158,7 @@ Los desarrolladores y arquitectos de software usan muchos modelos arquitectónic
 
 - CRUD simple, de un nivel y una capa.
 
-- [Tradicional de N capas](https://msdn.microsoft.com/library/ee658109.aspx#Layers).
+- [Tradicional de N capas](https://docs.microsoft.com/previous-versions/msp-n-p/ee658109(v=pandp.10)).
 
 - [Diseño controlado por dominios de N capas](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 

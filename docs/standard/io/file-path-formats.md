@@ -11,16 +11,16 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144863"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835829"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de ruta de acceso de archivo en los sistemas Windows
 
-Los miembros de muchos de los tipos del espacio de nombres <xref:System.IO> incluyen un parámetro `path` que permite especificar una ruta de acceso absoluta o relativa a un recurso de sistema de archivos. Después, esta ruta de acceso se pasa a las [API del sistema de archivos de Windows](https://msdn.microsoft.com/library/windows/desktop/aa364407(v=vs.85).aspx). En este tema se describen los formatos de las rutas de acceso de archivo que se pueden usar en los sistemas Windows.
+Los miembros de muchos de los tipos del espacio de nombres <xref:System.IO> incluyen un parámetro `path` que permite especificar una ruta de acceso absoluta o relativa a un recurso de sistema de archivos. Después, esta ruta de acceso se pasa a las [API del sistema de archivos de Windows](/windows/desktop/fileio/file-systems). En este tema se describen los formatos de las rutas de acceso de archivo que se pueden usar en los sistemas Windows.
 
 ## <a name="traditional-dos-paths"></a>Rutas de acceso DOS tradicionales
 
@@ -99,7 +99,7 @@ La ruta de acceso de dispositivo DOS consta de los componentes siguientes:
 
 Por definición, las rutas de acceso de dispositivo DOS son completas. No se permiten los segmentos de directorio relativos (`.` y `..`). Los directorios actuales nunca entran en uso.
 
-## <a name="example-ways-to-refer-to-the-same-file"></a>Ejemplo: formas de hacer referencia al mismo archivo
+## <a name="example-ways-to-refer-to-the-same-file"></a>Ejemplo: Formas de hacer referencia al mismo archivo
 
 En el ejemplo siguiente se muestran algunas formas de hacer referencia a un archivo cuando se usan las API del espacio de nombres <xref:System.IO>. En el ejemplo se crea una instancia de un objeto <xref:System.IO.FileInfo> y se usan sus propiedades <xref:System.IO.FileInfo.Name> y <xref:System.IO.FileInfo.Length> para mostrar el nombre y la longitud del archivo.
 
