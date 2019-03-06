@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Manipular elementos de contenido dinámico mediante la propiedad Inlines
+title: Filtrar Manipular elementos de contenido dinámico mediante la propiedad Inlines
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Inlines property [WPF], manipulating flow Content elements
 - properties [WPF], Inlines [WPF], manipulating flow Content elements
 ms.assetid: 510780d2-3da1-4360-8763-7054bda22ea3
-ms.openlocfilehash: a2bf11dc3b2e8bc3658edb12edea5bd890a7929e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2631d088d677c5edb1ae73a3cb40d15bf4beb71f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661274"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361816"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Procedimiento Manipular elementos de contenido dinámico mediante la propiedad Inlines
 Estos ejemplos muestran algunas de las operaciones más comunes que se pueden realizar en elementos de contenido dinámico insertado (y los contenedores de tales elementos, tales como <xref:System.Windows.Controls.TextBlock>) a través de la **Inlines** propiedad. Esta propiedad se utiliza para agregar y quitar elementos de <xref:System.Windows.Documents.InlineCollection>. Flujo de contenido de elementos de esa característica un **Inlines** propiedad incluyen:  
@@ -37,38 +37,38 @@ Estos ejemplos muestran algunas de las operaciones más comunes que se pueden re
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crea un nuevo <xref:System.Windows.Documents.Span> objeto y, a continuación, utiliza el **agregar** método para agregar texto dos series como elementos secundarios de contenido de la <xref:System.Windows.Documents.Span>.  
   
- [!code-csharp[SpanSnippets#_SpanInlinesAdd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesadd)]
- [!code-vb[SpanSnippets#_SpanInlinesAdd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesadd)]  
+ [!code-csharp[SpanSnippets#_SpanInlinesAdd](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesadd)]
+ [!code-vb[SpanSnippets#_SpanInlinesAdd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesadd)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crea un nuevo <xref:System.Windows.Documents.Run> elemento y lo inserta al principio de la <xref:System.Windows.Documents.Span>.  
   
- [!code-csharp[SpanSnippets#_SpanInlinesInsert](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesinsert)]
- [!code-vb[SpanSnippets#_SpanInlinesInsert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesinsert)]  
+ [!code-csharp[SpanSnippets#_SpanInlinesInsert](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesinsert)]
+ [!code-vb[SpanSnippets#_SpanInlinesInsert](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesinsert)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se obtiene el número de nivel superior <xref:System.Windows.Documents.Inline> elementos contenidos en el <xref:System.Windows.Documents.Span>.  
   
- [!code-csharp[SpanSnippets#_SpanInlinesCount](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinescount)]
- [!code-vb[SpanSnippets#_SpanInlinesCount](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinescount)]  
+ [!code-csharp[SpanSnippets#_SpanInlinesCount](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinescount)]
+ [!code-vb[SpanSnippets#_SpanInlinesCount](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinescount)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se elimina la última <xref:System.Windows.Documents.Inline> elemento en el <xref:System.Windows.Documents.Span>.  
   
- [!code-csharp[SpanSnippets#_SpanInlinesRemoveLast](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesremovelast)]
- [!code-vb[SpanSnippets#_SpanInlinesRemoveLast](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesremovelast)]  
+ [!code-csharp[SpanSnippets#_SpanInlinesRemoveLast](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesremovelast)]
+ [!code-vb[SpanSnippets#_SpanInlinesRemoveLast](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesremovelast)]  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo borra todo el contenido (<xref:System.Windows.Documents.Inline> elementos) desde el <xref:System.Windows.Documents.Span>.  
   
- [!code-csharp[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesclear)]
- [!code-vb[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesclear)]  
+ [!code-csharp[SpanSnippets#_SpanInlinesClear](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesclear)]
+ [!code-vb[SpanSnippets#_SpanInlinesClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesclear)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Documents.BlockCollection>
 - <xref:System.Windows.Documents.InlineCollection>
 - <xref:System.Windows.Documents.ListItemCollection>
-- [Información general sobre documentos dinámicos](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [Manipular un objeto FlowDocument mediante la propiedad Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
-- [Manipular las columnas de una tabla mediante la propiedad Columns](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)
-- [Manipular grupos de filas de una tabla mediante la propiedad RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [Información general sobre documentos dinámicos](flow-document-overview.md)
+- [Manipular un objeto FlowDocument mediante la propiedad Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
+- [Manipular las columnas de una tabla mediante la propiedad Columns](how-to-manipulate-table-columns-through-the-columns-property.md)
+- [Manipular grupos de filas de una tabla mediante la propiedad RowGroups](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

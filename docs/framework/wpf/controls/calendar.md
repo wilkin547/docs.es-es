@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Calendar
 - Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-ms.openlocfilehash: d8e2306a2a63e567b156449caa9741e1028f017f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2332f5d11e60a45e4da5d62ef7beed7aa14dfa7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545230"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359411"
 ---
 # <a name="calendar"></a>Calendario
 Un calendario permite al usuario seleccionar una fecha mediante un calendario visual.  
@@ -19,7 +19,7 @@ Un calendario permite al usuario seleccionar una fecha mediante un calendario vi
   
  La siguiente ilustración muestra dos <xref:System.Windows.Controls.Calendar> controla, uno con selecciones y fechas no disponibles y otro sin.  
   
- ![Los controles de calendario](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP_CalendarControls")  
+ ![Los controles de calendario](./media/ndp-calendarcontrols.png "NDP_CalendarControls")  
 Controles de calendario  
   
  En la tabla siguiente proporciona información acerca de las tareas que se suelen asociar el <xref:System.Windows.Controls.Calendar>.  
@@ -52,5 +52,5 @@ Controles de calendario
 |Barra espaciadora o ENTRAR|<xref:System.Windows.Controls.CalendarMode.Year> o <xref:System.Windows.Controls.CalendarMode.Decade>|Modificadores <xref:System.Windows.Controls.Calendar.DisplayMode%2A> a la <xref:System.Windows.Controls.CalendarMode.Month> o <xref:System.Windows.Controls.CalendarMode.Year> representado por el elemento con foco.|  
   
 ## <a name="see-also"></a>Vea también
-- [Controles](../../../../docs/framework/wpf/controls/index.md)
-- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Controles](index.md)
+- [Aplicar estilos y plantillas](styling-and-templating.md)

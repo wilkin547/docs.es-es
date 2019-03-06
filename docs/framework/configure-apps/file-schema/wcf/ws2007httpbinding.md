@@ -3,11 +3,11 @@ title: <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
 ms.openlocfilehash: 35e47d582a6b8534597945a626904d084fbeeade
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759774"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377006"
 ---
 # <a name="ws2007httpbinding"></a>\<ws2007HttpBinding>
 Define un enlace interoperable que proporciona compatibilidad para las versiones correctas de los elementos de enlace <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession>, y <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A>.  
@@ -85,7 +85,7 @@ Define un enlace interoperable que proporciona compatibilidad para las versiones
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>.|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Obtiene las restricciones de la complejidad de los mensajes SOAP que pueden procesar los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Obtiene las restricciones de la complejidad de los mensajes SOAP que pueden procesar los extremos configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Especifica si se establecen sesiones confiables entre los puntos de conexión del canal.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -95,7 +95,8 @@ Define un enlace interoperable que proporciona compatibilidad para las versiones
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- `WS2007HttpBinding` agrega el enlace proporcionado por un sistema similar a `WSHttpBinding` pero usa las versiones estándar de la Organización para el avance de estándares de información estructurada (OASIS, Organization for the Advancement of Structured Information Standards) de los protocolos ReliableSession, Security y TransactionFlow. Se requiere ningún cambio en el modelo de objetos o la configuración predeterminada cuando se utilice este enlace.  
+ 
+  `WS2007HttpBinding` agrega el enlace proporcionado por un sistema similar a `WSHttpBinding` pero usa las versiones estándar de la Organización para el avance de estándares de información estructurada (OASIS, Organization for the Advancement of Structured Information Standards) de los protocolos ReliableSession, Security y TransactionFlow. Se requiere ningún cambio en el modelo de objetos o la configuración predeterminada cuando se utilice este enlace.  
   
 ## <a name="example"></a>Ejemplo  
   

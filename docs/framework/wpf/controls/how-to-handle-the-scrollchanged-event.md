@@ -8,24 +8,24 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], raising ScrollChanged events
 - ScrollChanged events [WPF]
 ms.assetid: 42c695d8-ee28-49d4-80fd-fc71e9be7f29
-ms.openlocfilehash: b38effc9e32a5d13a0556b345bc0be25e81e0036
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34a3c97453df334e8c12da1a31cfb029294da687
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711751"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352531"
 ---
-# <a name="how-to-handle-the-scrollchanged-event"></a>Procedimiento Controlar el evento ScrollChanged
+# <a name="how-to-handle-the-scrollchanged-event"></a>Filtrar Controlar el evento ScrollChanged
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo controlar el <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> eventos de un <xref:System.Windows.Controls.ScrollViewer>.  
   
  Un <xref:System.Windows.Documents.FlowDocument> elemento con <xref:System.Windows.Documents.Paragraph> partes se definen en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Cuando el <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> evento tiene lugar debido a la interacción del usuario, se invoca un controlador y el texto se escribe en un <xref:System.Windows.Controls.TextBlock> que indica que se ha producido el evento.  
   
- [!code-xaml[scrollchangedeventargsLayout#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml#1)]  
-[!code-xaml[scrollchangedeventargsLayout#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml#2)]  
+ [!code-xaml[scrollchangedeventargsLayout#1](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml#1)]  
+[!code-xaml[scrollchangedeventargsLayout#2](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml#2)]  
   
- [!code-csharp[scrollchangedeventargsLayout#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
- [!code-vb[scrollchangedeventargsLayout#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
+ [!code-csharp[scrollchangedeventargsLayout#3](~/samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Controls.ScrollViewer>

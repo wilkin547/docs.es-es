@@ -13,20 +13,20 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 4da833256183f10eb62b43c3f665d76a6fc2ba80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d0796eae469f8a40e01e3de02c00149eb3f00c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711803"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374679"
 ---
 # <a name="collect-ink"></a>Recopilar entradas de lápiz
 
-La plataforma [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) recopila entradas de lápiz digitales como parte esencial de su funcionalidad. En este tema se describe métodos para la recopilación de tinta en Windows Presentation Foundation (WPF).
+La plataforma [Windows Presentation Foundation](../index.md) recopila entradas de lápiz digitales como parte esencial de su funcionalidad. En este tema se describe métodos para la recopilación de tinta en Windows Presentation Foundation (WPF).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para usar los ejemplos siguientes, debe instalar primero Visual Studio y el [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. También debe entender cómo escribir aplicaciones para WPF. Para obtener más información acerca de la introducción a WPF, vea [Tutorial: Mi primera aplicación de escritorio de WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Para usar los ejemplos siguientes, debe instalar primero Visual Studio y el [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. También debe entender cómo escribir aplicaciones para WPF. Para obtener más información acerca de la introducción a WPF, vea [Tutorial: Mi primera aplicación de escritorio de WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="use-the-inkcanvas-element"></a>Utilice el elemento InkCanvas
 
@@ -34,15 +34,15 @@ El <xref:System.Windows.Controls.InkCanvas?displayProperty=fullName> elemento pr
 
 Mediante el uso de XAML, puede configurar la recopilación de tinta tan fácilmente como agregar un **InkCanvas** elemento al árbol. En el ejemplo siguiente se agrega un <xref:System.Windows.Controls.InkCanvas> a un proyecto WPF predeterminado creado en Visual Studio:
 
-[!code-xaml[DigitalInkTopics#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]
+[!code-xaml[DigitalInkTopics#6](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]
 
 El **InkCanvas** elemento también puede contener elementos secundarios, lo que permite agregar funcionalidades de anotación de tinta a casi cualquier tipo de elemento XAML. Por ejemplo, para agregar capacidades de tinta a un elemento de texto, simplemente convertirlo en un elemento secundario de un <xref:System.Windows.Controls.InkCanvas>:
 
-[!code-xaml[DigitalInkTopics#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]
+[!code-xaml[DigitalInkTopics#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]
 
 Agregar compatibilidad para marcar una imagen con tinta es igual de fácil:
 
-[!code-xaml[DigitalInkTopics#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]
+[!code-xaml[DigitalInkTopics#7](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]
 
 ### <a name="inkcollection-modes"></a>Modos de InkCollection
 
@@ -58,8 +58,8 @@ Establecer el modo de selección es tan sencillo como la configuración de la <x
 
 El código siguiente establece el modo de edición en función del valor de un <xref:System.Windows.Forms.CheckBox>:
 
-[!code-csharp[DigitalInkTopics#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
-[!code-vb[DigitalInkTopics#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]
+[!code-csharp[DigitalInkTopics#8](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
+[!code-vb[DigitalInkTopics#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]
 
 #### <a name="drawingattributes"></a>DrawingAttributes
 
@@ -67,8 +67,8 @@ Use el <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propiedad para camb
 
 El ejemplo siguiente cambia el color de los trazos seleccionados a rojo:
 
-[!code-csharp[DigitalInkTopics#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
-[!code-vb[DigitalInkTopics#9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]
+[!code-csharp[DigitalInkTopics#9](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
+[!code-vb[DigitalInkTopics#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]
 
 ### <a name="defaultdrawingattributes"></a>DefaultDrawingAttributes
 
@@ -78,11 +78,11 @@ Además de modificar el <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAt
 
 En el ejemplo siguiente se muestra cómo establecer el <xref:System.Windows.Ink.DrawingAttributes.Color%2A> propiedad. Para usar este código, cree un nuevo proyecto WPF denominado "HelloInkCanvas" en Visual Studio. Reemplace el código en el *MainWindow.xaml* archivo con el código siguiente:
 
-[!code-xaml[HelloInkCanvas#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]
+[!code-xaml[HelloInkCanvas#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]
 
 A continuación, agregue los siguientes controladores de eventos de botón en el archivo de código subyacente, dentro de la clase MainWindow:
 
-[!code-csharp[HelloInkCanvas#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]
+[!code-csharp[HelloInkCanvas#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]
 
 Después de copiar este código, presione **F5** en Visual Studio para ejecutar el programa en el depurador.
 

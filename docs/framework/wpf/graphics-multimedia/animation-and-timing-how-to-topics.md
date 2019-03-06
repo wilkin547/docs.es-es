@@ -7,41 +7,41 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
-ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4936ba7bcd78c4867dae99df8bad11776cf655db
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994278"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358501"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>Temas "Cómo..." de animación y control de tiempo
 Los temas siguientes muestran cómo usar el [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sistema de animación y temporización en sus aplicaciones.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Aumentar o reducir la velocidad de una animación](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
- [Acumular valores de animaciones durante la repetición de ciclos](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [Agregar un valor de salida de animación a un valor inicial de animación](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
- [Animar una propiedad utilizando un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
- [Animar una propiedad sin utilizar un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
- [Animar en un ControlTemplate](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)  
- [Animar en un estilo](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)  
- [Animar la opacidad de un elemento o pincel](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)  
- [Cambiar la velocidad de un reloj sin cambiar la velocidad de su escala de tiempo](../../../../docs/framework/wpf/graphics-multimedia/change-the-speed-of-a-clock.md)  
- [Controlar un guión gráfico una vez iniciado usando métodos interactivos](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
- [Controlar una animación mediante From, To y By](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
- [Definir un ámbito de nombres](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
- [Recibir una notificación cuando cambia el estado de un reloj](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [Repetir una animación](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
- [Buscar un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
- [Buscar guiones gráficos de forma sincrónica](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  
- [Definir una duración para una animación](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-duration-for-an-animation.md)  
- [Establecer una propiedad después de animarla con un guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
- [Simplificar las animaciones mediante escalas de tiempo secundarias](../../../../docs/framework/wpf/graphics-multimedia/how-to-simplify-animations-by-using-child-timelines.md)  
- [Especificar HandoffBehavior entre animaciones de guión gráfico](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)  
- [Especificar el comportamiento de relleno de una escala de tiempo que ha llegado al final de su período de actividad](../../../../docs/framework/wpf/graphics-multimedia/specify-the-fillbehavior-for-a-timeline.md)  
- [Especificar si una escala de tiempo se invierte automáticamente](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [Activar una animación al cambiar el valor de una propiedad](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)  
- [Utilizar desencadenadores de eventos para controlar un guión gráfico después de su inicio](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
+ [Aumentar o reducir la velocidad de una animación](how-to-accelerate-or-decelerate-an-animation.md)  
+ [Acumular valores de animaciones durante la repetición de ciclos](how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [Agregar un valor de salida de animación a un valor inicial de animación](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
+ [Animar una propiedad utilizando un guión gráfico](how-to-animate-a-property-by-using-a-storyboard.md)  
+ [Animar una propiedad sin utilizar un guión gráfico](how-to-animate-a-property-without-using-a-storyboard.md)  
+ [Animar en un ControlTemplate](how-to-animate-in-a-controltemplate.md)  
+ [Animar en un estilo](how-to-animate-in-a-style.md)  
+ [Animar la opacidad de un elemento o pincel](how-to-animate-the-opacity-of-an-element-or-brush.md)  
+ [Cambiar la velocidad de un reloj sin cambiar la velocidad de su escala de tiempo](change-the-speed-of-a-clock.md)  
+ [Controlar un guión gráfico una vez iniciado usando métodos interactivos](how-to-control-a-storyboard-after-it-starts.md)  
+ [Controlar una animación mediante From, To y By](how-to-control-an-animation-using-from-to-and-by.md)  
+ [Definir un ámbito de nombres](how-to-define-a-name-scope.md)  
+ [Recibir una notificación cuando cambia el estado de un reloj](how-to-receive-notification-when-clock-state-changes.md)  
+ [Repetir una animación](how-to-repeat-an-animation.md)  
+ [Buscar un guión gráfico](how-to-seek-a-storyboard.md)  
+ [Buscar guiones gráficos de forma sincrónica](how-to-seek-a-storyboard-synchronously.md)  
+ [Definir una duración para una animación](how-to-set-a-duration-for-an-animation.md)  
+ [Establecer una propiedad después de animarla con un guión gráfico](how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
+ [Simplificar las animaciones mediante escalas de tiempo secundarias](how-to-simplify-animations-by-using-child-timelines.md)  
+ [Especificar HandoffBehavior entre animaciones de guión gráfico](how-to-specify-handoffbehavior-between-storyboard-animations.md)  
+ [Especificar el comportamiento de relleno de una escala de tiempo que ha llegado al final de su período de actividad](specify-the-fillbehavior-for-a-timeline.md)  
+ [Especificar si una escala de tiempo se invierte automáticamente](how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [Activar una animación al cambiar el valor de una propiedad](how-to-trigger-an-animation-when-a-property-value-changes.md)  
+ [Utilizar desencadenadores de eventos para controlar un guión gráfico después de su inicio](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Media.Animation.Timeline>  
@@ -55,4 +55,4 @@ Los temas siguientes muestran cómo usar el [!INCLUDE[TLA#tla_winclient](../../.
  <xref:System.Windows.Media.Animation>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Gráficos y multimedia](index.md)

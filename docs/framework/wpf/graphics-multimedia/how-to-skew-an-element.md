@@ -6,14 +6,14 @@ helpviewer_keywords:
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: 0ba5f3645156459a711d88b7330b221a5d083e7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fec3ec38a19b552e988d26ea57c6f9beed6ce06e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611337"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359381"
 ---
-# <a name="how-to-skew-an-element"></a>Procedimiento Sesgar un elemento
+# <a name="how-to-skew-an-element"></a>Filtrar Sesgar un elemento
 En este ejemplo se muestra cómo usar un <xref:System.Windows.Media.SkewTransform> para sesgar un elemento. Un sesgo, también conocido como distorsión, es una transformación que expande el espacio de coordenadas de una manera no uniforme. Un uso típico de un <xref:System.Windows.Media.SkewTransform> para simular [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] profundidad en [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] objetos.  
   
  Use la <xref:System.Windows.Media.SkewTransform.CenterX%2A> y <xref:System.Windows.Media.SkewTransform.CenterY%2A> propiedades para especificar el centro de punto de la <xref:System.Windows.Media.SkewTransform>.  
@@ -25,19 +25,19 @@ En este ejemplo se muestra cómo usar un <xref:System.Windows.Media.SkewTransfor
  El ejemplo siguiente aplica un sesgo horizontal de 45 grados a un <xref:System.Windows.Shapes.Rectangle> desde un punto central de (0,0).  
   
 ## <a name="example"></a>Ejemplo  
- [!code-xaml[transformsSample#41](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#41)]  
+ [!code-xaml[transformsSample#41](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#41)]  
   
  El ejemplo siguiente aplica un sesgo horizontal de 45 grados a un <xref:System.Windows.Shapes.Rectangle> desde un punto central de (25,25).  
   
- [!code-xaml[transformsSample#42](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#42)]  
+ [!code-xaml[transformsSample#42](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#42)]  
   
  El ejemplo siguiente aplica un sesgo vertical de 45 grados a un <xref:System.Windows.Shapes.Rectangle> desde un punto central de (25,25).  
   
- [!code-xaml[transformsSample#43](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#43)]  
+ [!code-xaml[transformsSample#43](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#43)]  
   
  La ilustración siguiente muestra los diferentes sesgos que se usan en este ejemplo.  
   
- ![Ejemplos de SkewTransform](../../../../docs/framework/wpf/graphics-multimedia/media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
+ ![Ejemplos de SkewTransform](./media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
 Los tres ejemplos de SkewTransform ilustrados  
   
  Para ver el ejemplo completo, consulte [Ejemplo de transformaciones 2D](https://go.microsoft.com/fwlink/?LinkID=158252).  
@@ -45,5 +45,5 @@ Los tres ejemplos de SkewTransform ilustrados
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.SkewTransform>
-- [Información general sobre transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [Información general sobre transformaciones](transforms-overview.md)
+- [Temas "Cómo..."](transformations-how-to-topics.md)

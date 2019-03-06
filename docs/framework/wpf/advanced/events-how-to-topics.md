@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - events [WPF], how-to topics
 ms.assetid: 00463181-36eb-4be0-bfa2-452854cce642
-ms.openlocfilehash: fea698dd137a0e5639e4777b85284beaf83ace1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54c69e57efb99f5008d5fa5a21f748cd8e535afe
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543532"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370983"
 ---
 # <a name="events-how-to-topics"></a>Temas "Cómo..." sobre eventos
-Los temas de esta sección describen cómo usar eventos de WPF.  
+Los temas de esta sección describen cómo utilizar los eventos de WPF.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Agregar un controlador de eventos mediante código](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
- [Controlar un evento enrutado](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [Crear un evento enrutado personalizado](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
- [Buscar el elemento de origen en un controlador de eventos](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
- [Agregar control de clases a un evento enrutado](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
+ [Agregar un controlador de eventos mediante código](how-to-add-an-event-handler-using-code.md)  
+ [Controlar un evento enrutado](how-to-handle-a-routed-event.md)  
+ [Crear un evento enrutado personalizado](how-to-create-a-custom-routed-event.md)  
+ [Buscar el elemento de origen en un controlador de eventos](how-to-find-the-source-element-in-an-event-handler.md)  
+ [Agregar control de clases a un evento enrutado](how-to-add-class-handling-for-a-routed-event.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.RoutedEvent>  

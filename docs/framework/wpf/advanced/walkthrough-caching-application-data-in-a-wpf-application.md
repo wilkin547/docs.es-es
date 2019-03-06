@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: e7083c4b15e2693c0c76e6ca7c9a00e4c4dab56c
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 886a436f845aa4ba9662e75cbc9e534e915a4cfa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480067"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361179"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Tutorial: Almacenamiento en caché datos de la aplicación en una aplicación WPF
 El almacenamiento en caché permite almacenar datos en memoria para un acceso rápido. Cuando se vuelve a acceder a los datos, las aplicaciones pueden obtenerlos de la memoria caché en lugar de recuperarlos de la fuente original. Esto puede mejorar el rendimiento y la escalabilidad. Además, el almacenamiento en caché permite que los datos estén disponibles cuando el origen de datos no está disponible temporalmente.
@@ -322,12 +322,12 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 ## <a name="code-example"></a>Ejemplo de código
  Después de completar este tutorial, el código para el proyecto creó tendrá un aspecto similar en el ejemplo siguiente.
 
- [!code-csharp[CachingWPFApplications#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
- [!code-vb[CachingWPFApplications#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
+ [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
+ [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching>
-- [Almacenamiento en caché en aplicaciones .NET Framework](../../../../docs/framework/performance/caching-in-net-framework-applications.md)
+- [Almacenamiento en caché en aplicaciones .NET Framework](../../performance/caching-in-net-framework-applications.md)

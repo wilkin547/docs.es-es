@@ -7,23 +7,23 @@ helpviewer_keywords:
 - ListBox control [WPF]
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
-ms.openlocfilehash: 5363cc3a6939b829a7cde0a87b096932556fc5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe458ea2ca4107b7d43b160ba90b57c10b88a7f6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551692"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362232"
 ---
 # <a name="listbox"></a>ListBox
 Un <xref:System.Windows.Controls.ListBox> control proporciona a los usuarios con una lista de elementos seleccionables.  
   
- La ilustración siguiente muestra un típico <xref:System.Windows.Controls.ListBox>.  
+ La ilustración siguiente muestra una típica <xref:System.Windows.Controls.ListBox>.  
   
- ![Captura de pantalla del cuadro de lista](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")  
+ ![Captura de pantalla de ListBox](./media/ss-ctl-listbox.gif "SS_CTL_listbox")  
 ListBox típico  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/listbox-how-to-topics.md)  
+ [Temas "Cómo..."](listbox-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.ListBox>  

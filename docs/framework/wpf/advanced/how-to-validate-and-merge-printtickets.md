@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Validar y combinar elementos PrintTicket
+title: Filtrar Validar y combinar elementos PrintTicket
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 0b9f7b101ea4f06c86f66f8e4e16d1ffeabaa9e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2be08f5d3c2cd82e50569a105e3fa15f12ad352c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671946"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355173"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Procedimiento Validar y combinar elementos PrintTicket
 El [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [esquema de impresión](https://go.microsoft.com/fwlink/?LinkId=186397) incluye flexible y extensible <xref:System.Printing.PrintCapabilities> y <xref:System.Printing.PrintTicket> elementos. El primero de ellos detalla las capacidades de un dispositivo de impresión y el segundo especifica cómo el dispositivo debe usar esas capacidades con respecto a una secuencia determinada de documentos, documentos individuales o una página individual.  
@@ -48,13 +48,13 @@ El [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [esquema 
   
 6.  Es el último paso significativo confirmar el cambio a la <xref:System.Printing.PrintQueue.UserPrintTicket%2A> propiedad de la <xref:System.Printing.PrintQueue> con el <xref:System.Printing.PrintQueue.Commit%2A> método.  
   
- [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
- [!code-vb[PrintTicketManagment#UsingMergeAndValidate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
+ [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
+ [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
   
  Por lo que puede probar rápidamente en este ejemplo, a continuación se presenta el resto de la misma. Crear un proyecto y un espacio de nombres y, a continuación, pegue ambas los fragmentos de código en este artículo en el bloque de espacio de nombres.  
   
- [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
- [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
+ [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
+ [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Printing.PrintCapabilities>
@@ -64,6 +64,6 @@ El [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [esquema 
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
-- [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Información general sobre impresión](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Documentos en WPF](documents-in-wpf.md)
+- [Información general sobre impresión](printing-overview.md)
 - [Esquema de impresión](https://go.microsoft.com/fwlink/?LinkId=186397)

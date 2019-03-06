@@ -8,29 +8,29 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: c6e81ee119e82c7b07c5c3b92d35f0e0c184685d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545823"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372209"
 ---
 # <a name="resources-wpf"></a>Recursos (WPF)
-Un recurso es un objeto que se puede volver a usar en diferentes sitios de la aplicación. WPF admite diferentes tipos de recursos. Estos recursos son principalmente dos tipos de recursos: XAML recursos y archivos de datos de recursos. Pinceles y estilos son ejemplos de recursos XAML. Archivos de datos de recursos son archivos de datos no ejecutables que necesita una aplicación.  
+Un recurso es un objeto que se puede volver a usar en diferentes sitios de la aplicación. WPF admite diferentes tipos de recursos. Estos recursos son principalmente dos tipos de recursos: Recursos XAML y archivos de datos de recursos. Pinceles y estilos son ejemplos de recursos XAML. Archivos de datos de recursos son archivos de datos no ejecutables que necesita la aplicación.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Archivos de recursos, contenido y datos de aplicaciones de WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [Identificadores URI de paquete en WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [Recursos XAML](xaml-resources.md)  
+ [Archivos de recursos, contenido y datos de aplicaciones de WPF](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [Identificadores URI de paquete en WPF](../app-development/pack-uris-in-wpf.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.ResourceDictionary>  
   
- [StaticResource (extensión de marcado)](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [StaticResource (extensión de marcado)](staticresource-markup-extension.md)  
   
- [DynamicResource (extensión de marcado)](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+ [DynamicResource (extensión de marcado)](dynamicresource-markup-extension.md)  
   
- [x:Key (Directiva)](../../../../docs/framework/xaml-services/x-key-directive.md)  
+ [x:Key (Directiva)](../../xaml-services/x-key-directive.md)  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [XAML en WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)
+ [XAML en WPF](xaml-in-wpf.md)

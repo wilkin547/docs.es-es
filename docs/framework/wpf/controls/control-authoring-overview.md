@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 503e9cb0ea0fcfb34b326e80930f5ac829c3b4db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2007ee7680707cd1cc9628cc3900ca1068db8678
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585203"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368732"
 ---
 # <a name="control-authoring-overview"></a>Información general sobre la creación de controles
 La extensibilidad del modelo de control [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] reduce enormemente la necesidad de crear un nuevo control. Sin embargo, en ciertos casos, puede que necesite crear un control personalizado. En este tema se describen las características que reducen la necesidad de crear un control personalizado y los diferentes modelos de creación de controles en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. En este tema también se muestra cómo crear un nuevo control.  
@@ -24,11 +24,11 @@ La extensibilidad del modelo de control [!INCLUDE[TLA#tla_winclient](../../../..
 ## <a name="alternatives-to-writing-a-new-control"></a>Alternativas a la escritura de un nuevo control  
  Históricamente, si quería obtener una experiencia personalizada con un control existente, estaba limitado a cambiar las propiedades estándar del control, como el color de fondo, el ancho del borde y el tamaño de la fuente. Si se deseara extender la apariencia o el comportamiento de un control más allá de estos parámetros predefinidos, necesitaría crear un nuevo control; para ello, lo que haría es heredarlo de un control existente e invalidar el método responsable de dibujar el control.  Aunque esto sigue siendo una opción, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite personalizar los controles existentes mediante su modelo de contenido enriquecido, sus estilos, plantillas y desencadenadores. En la lista siguiente se proporcionan ejemplos de cómo se pueden usar estas características para crear experiencias personalizadas y coherentes sin tener que crear un nuevo control.  
   
--   **Contenido enriquecido.** Muchos de los controles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estándar admiten contenido enriquecido. Por ejemplo, la propiedad de contenido de un <xref:System.Windows.Controls.Button> es de tipo <xref:System.Object>, por lo tanto, en teoría, nada se puede mostrar en un <xref:System.Windows.Controls.Button>.  Para que un botón Mostrar una imagen y texto, puede agregar una imagen y un <xref:System.Windows.Controls.TextBlock> a un <xref:System.Windows.Controls.StackPanel> y asignar la <xref:System.Windows.Controls.StackPanel> a la <xref:System.Windows.Controls.ContentControl.Content%2A> propiedad. Dado que los controles pueden mostrar elementos visuales [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y datos arbitrarios, no es tan necesario crear un nuevo control o modificar un control existente para admitir una visualización compleja. Para obtener más información sobre el modelo de contenido para <xref:System.Windows.Controls.Button> y otro contenido de los modelos en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [WPF Content Model](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
+-   **Contenido enriquecido.** Muchos de los controles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estándar admiten contenido enriquecido. Por ejemplo, la propiedad de contenido de un <xref:System.Windows.Controls.Button> es de tipo <xref:System.Object>, por lo tanto, en teoría, nada se puede mostrar en un <xref:System.Windows.Controls.Button>.  Para que un botón Mostrar una imagen y texto, puede agregar una imagen y un <xref:System.Windows.Controls.TextBlock> a un <xref:System.Windows.Controls.StackPanel> y asignar la <xref:System.Windows.Controls.StackPanel> a la <xref:System.Windows.Controls.ContentControl.Content%2A> propiedad. Dado que los controles pueden mostrar elementos visuales [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y datos arbitrarios, no es tan necesario crear un nuevo control o modificar un control existente para admitir una visualización compleja. Para obtener más información sobre el modelo de contenido para <xref:System.Windows.Controls.Button> y otro contenido de los modelos en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [WPF Content Model](wpf-content-model.md).  
   
 -   **Estilos.** Un <xref:System.Windows.Style> es una colección de valores que representan las propiedades de un control. Mediante el uso de estilos, puede crear una representación reutilizable de la apariencia y el comportamiento deseados de un control sin necesidad de escribir un nuevo control. Por ejemplo, supongamos que desea que todos los <xref:System.Windows.Controls.TextBlock> los controles tengan fuente Arial roja con un tamaño de fuente 14. Puede crear un estilo como un recurso y establecer las propiedades adecuadas según corresponda. A continuación, cada <xref:System.Windows.Controls.TextBlock> que agregue a la aplicación tendrá la misma apariencia.  
   
--   **Plantillas de datos.** Un <xref:System.Windows.DataTemplate> le permite personalizar cómo se muestran los datos en un control. Por ejemplo, un <xref:System.Windows.DataTemplate> puede utilizarse para especificar cómo se muestran los datos en un <xref:System.Windows.Controls.ListBox>.  Para ver un ejemplo de esto, consulte [Data Templating Overview](../../../../docs/framework/wpf/data/data-templating-overview.md) (Introducción a las plantillas de datos).  Además de personalizar la apariencia de los datos, un <xref:System.Windows.DataTemplate> puede incluir elementos de interfaz de usuario, que le ofrece mucha flexibilidad en las interfaces de usuario personalizadas.  Por ejemplo, mediante un <xref:System.Windows.DataTemplate>, puede crear un <xref:System.Windows.Controls.ComboBox> en que cada elemento contiene una casilla de verificación.  
+-   **Plantillas de datos.** Un <xref:System.Windows.DataTemplate> le permite personalizar cómo se muestran los datos en un control. Por ejemplo, un <xref:System.Windows.DataTemplate> puede utilizarse para especificar cómo se muestran los datos en un <xref:System.Windows.Controls.ListBox>.  Para ver un ejemplo de esto, consulte [Data Templating Overview](../data/data-templating-overview.md) (Introducción a las plantillas de datos).  Además de personalizar la apariencia de los datos, un <xref:System.Windows.DataTemplate> puede incluir elementos de interfaz de usuario, que le ofrece mucha flexibilidad en las interfaces de usuario personalizadas.  Por ejemplo, mediante un <xref:System.Windows.DataTemplate>, puede crear un <xref:System.Windows.Controls.ComboBox> en que cada elemento contiene una casilla de verificación.  
   
 -   **Plantillas de control.** Muchos controles de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilizar un <xref:System.Windows.Controls.ControlTemplate> para definir la estructura y la apariencia, que separa la apariencia de un control de la funcionalidad del control del control. Puede cambiar drásticamente la apariencia de un control si redefine su <xref:System.Windows.Controls.ControlTemplate>.  Por ejemplo, supongamos que desea un control que se parezca a un semáforo. Este control tiene una interfaz de usuario y una funcionalidad sencillas.  El control son tres círculos, y solo uno se puede iluminar cada vez. Después de reflexionar, habrá observado que un <xref:System.Windows.Controls.RadioButton> ofrece la funcionalidad de solo uno se selecciona en un momento, pero la apariencia predeterminada de la <xref:System.Windows.Controls.RadioButton> parece nada a las luces de un semáforo.  Dado que el <xref:System.Windows.Controls.RadioButton> usa una plantilla de control para definir su apariencia, resulta fácil redefinir el <xref:System.Windows.Controls.ControlTemplate> para ajustarla a los requisitos del control y use los botones de radio para crear el semáforo.  
   
@@ -37,7 +37,7 @@ La extensibilidad del modelo de control [!INCLUDE[TLA#tla_winclient](../../../..
   
 -   **Desencadenadores.** Un <xref:System.Windows.Trigger> le permite cambiar dinámicamente la apariencia y comportamiento de un control sin crear un nuevo control. Por ejemplo, suponga que tiene varios <xref:System.Windows.Controls.ListBox> controles de la aplicación y quiere que los elementos en cada <xref:System.Windows.Controls.ListBox> estén en negrita y rojo cuando se seleccionan. Su primer impulso podría ser crear una clase que hereda de <xref:System.Windows.Controls.ListBox> e invalidar la <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> método para cambiar la apariencia del elemento seleccionado, pero un mejor enfoque consiste en Agregar un desencadenador a un estilo de un <xref:System.Windows.Controls.ListBoxItem> que cambia la apariencia de el elemento seleccionado. Un desencadenador permite cambiar los valores de propiedad o realizar acciones según el valor de una propiedad. Un <xref:System.Windows.EventTrigger> permite realizar acciones cuando se produce un evento.  
   
- Para más información sobre los estilos, las plantillas y los desencadenadores, consulte [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Para más información sobre los estilos, las plantillas y los desencadenadores, consulte [Aplicar estilos y plantillas](styling-and-templating.md).  
   
  En general, si el control refleja la funcionalidad de un control existente, pero quiere que el control tenga un aspecto diferente, primero debe considerar si puede usar cualquiera de los métodos descritos en esta sección para cambiar la apariencia del control existente.  
   
@@ -72,7 +72,7 @@ La extensibilidad del modelo de control [!INCLUDE[TLA#tla_winclient](../../../..
 ### <a name="deriving-from-frameworkelement"></a>Derivación de FrameworkElement  
  Los controles que derivan de <xref:System.Windows.Controls.UserControl> o <xref:System.Windows.Controls.Control> dependen de la composición de elementos existentes. Para muchos escenarios, esto es una solución aceptable, porque cualquier objeto que hereda de <xref:System.Windows.FrameworkElement> puede estar en un <xref:System.Windows.Controls.ControlTemplate>. Sin embargo, en ocasiones la apariencia de un control requiere una funcionalidad que va más allá de la simple composición de elementos. Para estos escenarios, basar un componente en <xref:System.Windows.FrameworkElement> es la elección correcta.  
   
- Hay dos métodos estándar para la compilación <xref:System.Windows.FrameworkElement>-componentes basados en: dirigir la composición de elementos personalizada y representación. Dirigir el procesamiento implica invalidar el <xref:System.Windows.UIElement.OnRender%2A> método <xref:System.Windows.FrameworkElement> y proporcionar <xref:System.Windows.Media.DrawingContext> operaciones que definen explícitamente los objetos visuales de componente. Este es el método utilizado por <xref:System.Windows.Controls.Image> y <xref:System.Windows.Controls.Border>. Composición de elementos personalizada implica utilizar objetos de tipo <xref:System.Windows.Media.Visual> para crear la apariencia del componente. Para ver un ejemplo, consulte [Using DrawingVisual Objects](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md) (Uso de objetos DrawingVisual). <xref:System.Windows.Controls.Primitives.Track> es un ejemplo de un control en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que usa la composición de elementos personalizada. También es posible mezclar la representación directa y la composición de elementos personalizada en el mismo control.  
+ Hay dos métodos estándar para la compilación <xref:System.Windows.FrameworkElement>-componentes basados en: dirigir la composición de elementos personalizada y representación. Dirigir el procesamiento implica invalidar el <xref:System.Windows.UIElement.OnRender%2A> método <xref:System.Windows.FrameworkElement> y proporcionar <xref:System.Windows.Media.DrawingContext> operaciones que definen explícitamente los objetos visuales de componente. Este es el método utilizado por <xref:System.Windows.Controls.Image> y <xref:System.Windows.Controls.Border>. Composición de elementos personalizada implica utilizar objetos de tipo <xref:System.Windows.Media.Visual> para crear la apariencia del componente. Para ver un ejemplo, consulte [Using DrawingVisual Objects](../graphics-multimedia/using-drawingvisual-objects.md) (Uso de objetos DrawingVisual). <xref:System.Windows.Controls.Primitives.Track> es un ejemplo de un control en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que usa la composición de elementos personalizada. También es posible mezclar la representación directa y la composición de elementos personalizada en el mismo control.  
   
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>Ventajas de derivar de FrameworkElement  
  Considere la posibilidad de derivar de <xref:System.Windows.FrameworkElement> si cualquiera de las condiciones siguientes:  
@@ -112,16 +112,16 @@ La extensibilidad del modelo de control [!INCLUDE[TLA#tla_winclient](../../../..
   
     -   Los metadatos de la propiedad. Los metadatos contienen el valor predeterminado de la propiedad, un <xref:System.Windows.CoerceValueCallback> y un <xref:System.Windows.PropertyChangedCallback>.  
   
--   Defina una propiedad de contenedor de [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] llamada `Value`, que es el mismo nombre que se emplea para registrar la propiedad de dependencia, mediante la implementación de los descriptores de acceso `get` y `set`. Tenga en cuenta que el `get` y `set` descriptores de acceso de sólo llamar a <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A> respectivamente. Se recomienda que los descriptores de acceso de propiedades de dependencia no contengan lógica adicional, ya que los clientes y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] puede omitir los descriptores de acceso y llamada <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A> directamente. Por ejemplo, cuando una propiedad está enlazada a un origen de datos, no se llama al descriptor de acceso `set`.  En lugar de agregar lógica adicional para obtener y establecer los descriptores de acceso, use el <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, y <xref:System.Windows.PropertyChangedCallback> delegados para responder a o comprobar si el valor cambia.  Para más información sobre estas devoluciones de llamada, consulte [Devoluciones de llamada y validación de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+-   Defina una propiedad de contenedor de [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] llamada `Value`, que es el mismo nombre que se emplea para registrar la propiedad de dependencia, mediante la implementación de los descriptores de acceso `get` y `set`. Tenga en cuenta que el `get` y `set` descriptores de acceso de sólo llamar a <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A> respectivamente. Se recomienda que los descriptores de acceso de propiedades de dependencia no contengan lógica adicional, ya que los clientes y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] puede omitir los descriptores de acceso y llamada <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A> directamente. Por ejemplo, cuando una propiedad está enlazada a un origen de datos, no se llama al descriptor de acceso `set`.  En lugar de agregar lógica adicional para obtener y establecer los descriptores de acceso, use el <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, y <xref:System.Windows.PropertyChangedCallback> delegados para responder a o comprobar si el valor cambia.  Para más información sobre estas devoluciones de llamada, consulte [Devoluciones de llamada y validación de las propiedades de dependencia](../advanced/dependency-property-callbacks-and-validation.md).  
   
 -   Defina un método para el <xref:System.Windows.CoerceValueCallback> denominado `CoerceValue`. `CoerceValue` garantiza que `Value` es mayor o igual que `MinValue` y menor o igual que `MaxValue`.  
   
 -   Defina un método para el <xref:System.Windows.PropertyChangedCallback>, denominado `OnValueChanged`. `OnValueChanged` crea un <xref:System.Windows.RoutedPropertyChangedEventArgs%601> objeto y lo prepara para generar el `ValueChanged` evento enrutado. Los eventos enrutados se abordan en la sección siguiente.  
   
- [!code-csharp[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
- [!code-vb[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
+ [!code-csharp[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
+ [!code-vb[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
   
- Para más información, consulte [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
+ Para más información, consulte [Propiedades de dependencia personalizadas](../advanced/custom-dependency-properties.md).  
   
 ### <a name="use-routed-events"></a>Uso de eventos enrutados  
  Al igual que las propiedades de dependencia extienden la noción de propiedades [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] con funcionalidad adicional, los eventos enrutados extienden la noción de eventos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] estándar. Cuando se crea un nuevo control [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], también es conveniente implementar el evento como enrutado, porque un evento enrutado admite el comportamiento siguiente:  
@@ -130,7 +130,7 @@ La extensibilidad del modelo de control [!INCLUDE[TLA#tla_winclient](../../../..
   
 -   Los eventos enrutados se pueden utilizar en un <xref:System.Windows.EventSetter>, lo que permite a los desarrolladores de aplicaciones especificar el controlador de un evento dentro de un estilo.  
   
--   Los eventos enrutados se pueden utilizar en una <xref:System.Windows.EventTrigger>, lo que resulta útil para animar propiedades mediante el uso de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Para obtener más información, consulte [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+-   Los eventos enrutados se pueden utilizar en una <xref:System.Windows.EventTrigger>, lo que resulta útil para animar propiedades mediante el uso de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Para obtener más información, consulte [Información general sobre animaciones](../graphics-multimedia/animation-overview.md).  
   
  En el ejemplo siguiente se define un evento enrutado mediante este procedimiento:  
   
@@ -150,26 +150,26 @@ La extensibilidad del modelo de control [!INCLUDE[TLA#tla_winclient](../../../..
   
 -   Cree un método virtual protegido denominado `OnValueChanged` que genere el evento `ValueChanged`.  
   
- [!code-csharp[UserControlNumericUpDown#RoutedEvent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#routedevent)]
- [!code-vb[UserControlNumericUpDown#RoutedEvent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#routedevent)]  
+ [!code-csharp[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#routedevent)]
+ [!code-vb[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#routedevent)]  
   
- Para más información, consulte [Routed Events Overview](../../../../docs/framework/wpf/advanced/routed-events-overview.md) (Introducción a los eventos enrutados) y [Create a Custom Routed Event](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md) (Creación de un evento enrutado personalizado).  
+ Para más información, consulte [Routed Events Overview](../advanced/routed-events-overview.md) (Introducción a los eventos enrutados) y [Create a Custom Routed Event](../advanced/how-to-create-a-custom-routed-event.md) (Creación de un evento enrutado personalizado).  
   
 ### <a name="use-binding"></a>Uso del enlace  
  Para desacoplar la interfaz de usuario del control de su lógica, puede ser conveniente utilizar el enlace de datos. Esto es especialmente importante si se define la apariencia del control mediante el uso de un <xref:System.Windows.Controls.ControlTemplate>. Al utilizar el enlace de datos, puede que consiga eliminar la necesidad de hacer referencia a partes concretas de la interfaz de usuario desde el código. Es una buena idea evitar hacer referencia a elementos que se encuentran en el <xref:System.Windows.Controls.ControlTemplate> porque cuando el código hace referencia a elementos que se encuentran en el <xref:System.Windows.Controls.ControlTemplate> y <xref:System.Windows.Controls.ControlTemplate> se cambia, las necesidades de elemento que se hace referencia que se incluirán en el nuevo <xref:System.Windows.Controls.ControlTemplate>.  
   
  El siguiente ejemplo se actualiza el <xref:System.Windows.Controls.TextBlock> de la `NumericUpDown` control, asignarle un nombre y hacer referencia al cuadro de texto por su nombre en código.  
   
- [!code-xaml[UserControlNumericUpDownSimple#UIRefMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDownSimple/CSharp/NumericUpDown.xaml#uirefmarkup)]  
+ [!code-xaml[UserControlNumericUpDownSimple#UIRefMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDownSimple/CSharp/NumericUpDown.xaml#uirefmarkup)]  
   
- [!code-csharp[UserControlNumericUpDownSimple#UIRefCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDownSimple/CSharp/NumericUpDown.xaml.cs#uirefcode)]
- [!code-vb[UserControlNumericUpDownSimple#UIRefCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDownSimple/VisualBasic/NumericUpDown.xaml.vb#uirefcode)]  
+ [!code-csharp[UserControlNumericUpDownSimple#UIRefCode](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDownSimple/CSharp/NumericUpDown.xaml.cs#uirefcode)]
+ [!code-vb[UserControlNumericUpDownSimple#UIRefCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDownSimple/VisualBasic/NumericUpDown.xaml.vb#uirefcode)]  
   
  En el ejemplo siguiente se usa el enlace para lograr lo mismo.  
   
- [!code-xaml[UserControlNumericUpDown#Binding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml#binding)]  
+ [!code-xaml[UserControlNumericUpDown#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml#binding)]  
   
- Para más información sobre el enlace de datos, consulte [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Para más información sobre el enlace de datos, consulte [Información general sobre el enlace de datos](../data/data-binding-overview.md).  
   
 ### <a name="design-for-designers"></a>Diseño para diseñadores  
  Para recibir soporte técnico para controles WPF personalizados de [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] (por ejemplo, la edición de propiedades con la ventana Propiedades), siga estas instrucciones.  Para obtener más información sobre el desarrollo para la [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)], consulte [diseño XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).  
@@ -186,7 +186,7 @@ La extensibilidad del modelo de control [!INCLUDE[TLA#tla_winclient](../../../..
   
 -   `Set` *PropertyName* y `Get` *PropertyName* debe enrutar directamente a la <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A> objeto métodos en la dependencia de destino, respectivamente. Los diseñadores pueden tener acceso a la propiedad adjunta mediante una llamada a través del contenedor de método o una llamada directa al objeto de dependencia de destino.  
   
- Para más información sobre las propiedades adjuntas, consulte [Attached Properties Overview](../../../../docs/framework/wpf/advanced/attached-properties-overview.md) (Introducción a las propiedades adjuntas).  
+ Para más información sobre las propiedades adjuntas, consulte [Attached Properties Overview](../advanced/attached-properties-overview.md) (Introducción a las propiedades adjuntas).  
   
 ### <a name="define-and-use-shared-resources"></a>Definición y uso de recursos compartidos  
  Puede incluir el control en el mismo ensamblado que la aplicación o bien empaquetarlo en un ensamblado independiente que se pueda utilizar en varias aplicaciones. En general, la información analizada en este tema es aplicable independientemente del método que se utilice.  Sin embargo, hay una diferencia que vale la pena tener en cuenta.  Al incluir un control en el mismo ensamblado que una aplicación, puede agregar recursos globales al archivo App.xaml. Pero no tiene un ensamblado que solo contiene controles un <xref:System.Windows.Application> objeto asociado a él, por lo que no está disponible ningún archivo App.xaml.  
@@ -210,23 +210,23 @@ La extensibilidad del modelo de control [!INCLUDE[TLA#tla_winclient](../../../..
 #### <a name="defining-resources-at-the-element-level"></a>Definición de los recursos en el nivel de elemento  
  Puede definir los recursos compartidos en el nivel de elemento mediante la creación de un diccionario de recursos personalizado y combinarlo con el diccionario de recursos del control.  Cuando utiliza este método, puede nombrar el archivo de recursos que desee y este puede estar en la misma carpeta que los controles. Los recursos en el nivel de elemento también pueden utilizar cadenas simples como claves. En el ejemplo siguiente se crea un <xref:System.Windows.Media.LinearGradientBrush> archivo de recursos denominado Dictionary1.xaml.  
   
- [!code-xaml[SharedResources#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/Dictionary1.xaml#1)]  
+ [!code-xaml[SharedResources#1](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/Dictionary1.xaml#1)]  
   
  Una vez definido el diccionario, debe combinarlo con el diccionario de recursos del control.  Para ello, utilice [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] o código.  
   
  En el ejemplo siguiente se combina un diccionario de recursos mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- [!code-xaml[SharedResources#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml#2)]  
+ [!code-xaml[SharedResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml#2)]  
   
  El inconveniente de este enfoque es que un <xref:System.Windows.ResourceDictionary> objeto se crea cada vez que haga referencia a él.  Por ejemplo, si tiene 10 controles personalizados en la biblioteca y combinar los diccionarios de recursos compartidos para cada control mediante XAML, crea 10 idénticos <xref:System.Windows.ResourceDictionary> objetos.  Puede evitarlo mediante la creación de una clase estática que combine los recursos del código y devuelve el resultado <xref:System.Windows.ResourceDictionary>.  
   
  En el ejemplo siguiente se crea una clase que devuelve un compartido <xref:System.Windows.ResourceDictionary>.  
   
- [!code-csharp[SharedResources#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/SharedDictionaryManager.cs#3)]  
+ [!code-csharp[SharedResources#3](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/SharedDictionaryManager.cs#3)]  
   
  En el ejemplo siguiente se combina el recurso compartido con los recursos de un control personalizado en el constructor del control antes de llamar a `InitializeComponent`.  Dado que el `SharedDictionaryManager.SharedDictionary` es una propiedad estática, el <xref:System.Windows.ResourceDictionary> se crea una sola vez. Como el diccionario de recursos se combinó antes de llamar a `InitializeComponent`, los recursos están disponibles para el control en su archivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- [!code-csharp[SharedResources#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml.cs#4)]  
+ [!code-csharp[SharedResources#4](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml.cs#4)]  
   
 #### <a name="defining-resources-at-the-theme-level"></a>Definición de recursos en el nivel de tema  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le permite crear recursos para distintos temas de Windows.  Como autor del control, puede definir un recurso para un tema concreto con el fin de cambiar la apariencia del control en función del tema que se emplee. Por ejemplo, la apariencia de un <xref:System.Windows.Controls.Button> en el clásico de Windows (el tema predeterminado para Windows 2000) del tema difiere un <xref:System.Windows.Controls.Button> en el tema Luna de Windows (el tema predeterminado para Windows XP) porque el <xref:System.Windows.Controls.Button> usa otra <xref:System.Windows.Controls.ControlTemplate> para cada tema.  
@@ -248,27 +248,27 @@ La extensibilidad del modelo de control [!INCLUDE[TLA#tla_winclient](../../../..
   
  Cuando coloca un <xref:System.Windows.Controls.ControlTemplate> en cualquiera de los archivos de diccionario de recursos específicos del tema, debe crear un constructor estático para el control y la llamada la <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> método en el <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>, como se muestra en el ejemplo siguiente.  
   
- [!code-csharp[CustomControlNumericUpDownOneProject#StaticConstructor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/CSharp/NumericUpDown.cs#staticconstructor)]
- [!code-vb[CustomControlNumericUpDownOneProject#StaticConstructor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/visualbasic/numericupdown.vb#staticconstructor)]  
+ [!code-csharp[CustomControlNumericUpDownOneProject#StaticConstructor](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/CSharp/NumericUpDown.cs#staticconstructor)]
+ [!code-vb[CustomControlNumericUpDownOneProject#StaticConstructor](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/visualbasic/numericupdown.vb#staticconstructor)]  
   
 ##### <a name="defining-and-referencing-keys-for-theme-resources"></a>Definición de los recursos de tema y referencia a ellos  
  Al definir un recurso en el nivel de elemento, puede asignar una cadena como su clave y obtener acceso al recurso a través de la cadena. Al definir un recurso en el nivel de tema, debe usar un <xref:System.Windows.ComponentResourceKey> como clave.  En el ejemplo siguiente se define un recurso en generic.xaml.  
   
- [!code-xaml[ThemeResourcesControlLibrary#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThemeResourcesControlLibrary/CS/Themes/generic.xaml#5)]  
+ [!code-xaml[ThemeResourcesControlLibrary#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ThemeResourcesControlLibrary/CS/Themes/generic.xaml#5)]  
   
  El ejemplo siguiente se hace referencia al recurso mediante la especificación de la <xref:System.Windows.ComponentResourceKey> como clave.  
   
- [!code-xaml[ThemeResourcesControlLibrary#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThemeResourcesControlLibrary/CS/NumericUpDown.xaml#6)]  
+ [!code-xaml[ThemeResourcesControlLibrary#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ThemeResourcesControlLibrary/CS/NumericUpDown.xaml#6)]  
   
 ##### <a name="specifying-the-location-of-theme-resources"></a>Especificación de la ubicación de los recursos de tema  
  Para buscar los recursos de un control, la aplicación host debe saber que el ensamblado contiene recursos específicos del control. Puede hacerlo agregando la <xref:System.Windows.ThemeInfoAttribute> al ensamblado que contiene el control. El <xref:System.Windows.ThemeInfoAttribute> tiene un <xref:System.Windows.ThemeInfoAttribute.GenericDictionaryLocation%2A> propiedad que especifica la ubicación de los recursos genéricos, y un <xref:System.Windows.ThemeInfoAttribute.ThemeDictionaryLocation%2A> propiedad que especifica la ubicación de los recursos específicos del tema.  
   
  El ejemplo siguiente se establece la <xref:System.Windows.ThemeInfoAttribute.GenericDictionaryLocation%2A> y <xref:System.Windows.ThemeInfoAttribute.ThemeDictionaryLocation%2A> propiedades a <xref:System.Windows.ResourceDictionaryLocation.SourceAssembly>, para especificar que los recursos genéricos y específicos del tema se encuentran en el mismo ensamblado que el control.  
   
- [!code-csharp[CustomControlNumericUpDown#ThemesSection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/Properties/AssemblyInfo.cs#themessection)]
- [!code-vb[CustomControlNumericUpDown#ThemesSection](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]  
+ [!code-csharp[CustomControlNumericUpDown#ThemesSection](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/Properties/AssemblyInfo.cs#themessection)]
+ [!code-vb[CustomControlNumericUpDown#ThemesSection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]  
   
 ## <a name="see-also"></a>Vea también
 - [Diseño de XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Identificadores URI de paquete en WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
-- [Control Customization](../../../../docs/framework/wpf/controls/control-customization.md) (Personalización de controles)
+- [Identificadores URI de paquete en WPF](../app-development/pack-uris-in-wpf.md)
+- [Control Customization](control-customization.md) (Personalización de controles)

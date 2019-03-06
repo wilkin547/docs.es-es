@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: f31a13096d8bd3a788e530b480fece448bfe1e6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ef632ee1335d1ee0e94eaa1a7f25cbe34ed4e6f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704022"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363431"
 ---
 # <a name="binding-declarations-overview"></a>Información general sobre declaraciones de enlaces
 En este tema se describen las distintas formas de declarar un enlace.  
@@ -26,9 +26,9 @@ En este tema se describen las distintas formas de declarar un enlace.
   
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
- Antes de leer este tema, es importante que esté familiarizado con el concepto y el uso de las extensiones de marcado. Para más información sobre las extensiones de marcado, consulte [Extensiones de marcado y XAML de WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Antes de leer este tema, es importante que esté familiarizado con el concepto y el uso de las extensiones de marcado. Para más información sobre las extensiones de marcado, consulte [Extensiones de marcado y XAML de WPF](../advanced/markup-extensions-and-wpf-xaml.md).  
   
- En este tema no se tratan los conceptos de enlace de datos. Para obtener una explicación de los conceptos de enlace de datos, consulte [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ En este tema no se tratan los conceptos de enlace de datos. Para obtener una explicación de los conceptos de enlace de datos, consulte [Información general sobre el enlace de datos](data-binding-overview.md).  
   
 <a name="BindinginXAML"></a>   
 ## <a name="declaring-a-binding-in-xaml"></a>Declarar un enlace en XAML  
@@ -40,9 +40,9 @@ En este tema se describen las distintas formas de declarar un enlace.
   
  Al crear cadenas de declaración de enlace en el marcado, se adjuntará a la propiedad de dependencia concreta de un objeto de destino. El ejemplo siguiente muestra cómo enlazar la <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> propiedad mediante la extensión de enlace, especificando el <xref:System.Windows.Data.Binding.Source%2A> y <xref:System.Windows.Data.Binding.Path%2A> propiedades.  
   
- [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
+ [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
- Puede especificar la mayoría de las propiedades de la <xref:System.Windows.Data.Binding> esta forma de clase. Para obtener más información acerca de la extensión de enlace, así como una lista de <xref:System.Windows.Data.Binding> las propiedades que no se puede establecer mediante la extensión de enlace, consulte el [extensión de marcado de enlace](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) información general.  
+ Puede especificar la mayoría de las propiedades de la <xref:System.Windows.Data.Binding> esta forma de clase. Para obtener más información acerca de la extensión de enlace, así como una lista de <xref:System.Windows.Data.Binding> las propiedades que no se puede establecer mediante la extensión de enlace, consulte el [extensión de marcado de enlace](../advanced/binding-markup-extension.md) información general.  
   
 <a name="ObjectElementSyntax"></a>   
 ### <a name="object-element-syntax"></a>Sintaxis de elemento de objeto  
@@ -50,11 +50,11 @@ En este tema se describen las distintas formas de declarar un enlace.
   
  El siguiente es un ejemplo de la sintaxis de elemento de objeto y el uso de la extensión de marcado:  
   
- [!code-xaml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
+ [!code-xaml[BindConversionMarkup#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
   
  El ejemplo se enlaza el <xref:System.Windows.Controls.TextBlock.Foreground%2A> propiedad declarando un enlace mediante la sintaxis de extensión. La declaración de enlace para el <xref:System.Windows.Controls.TextBlock.Text%2A> propiedad utiliza la sintaxis de elemento de objeto.  
   
- Para más información sobre los distintos términos, consulte [Detalles de la sintaxis XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ Para más información sobre los distintos términos, consulte [Detalles de la sintaxis XAML](../advanced/xaml-syntax-in-detail.md).  
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding y PriorityBinding  
@@ -64,10 +64,10 @@ En este tema se describen las distintas formas de declarar un enlace.
 ## <a name="creating-a-binding-in-code"></a>Crear un enlace mediante código  
  Otra manera de especificar un enlace consiste en establecer las propiedades directamente en un <xref:System.Windows.Data.Binding> objeto en el código. El ejemplo siguiente muestra cómo crear un <xref:System.Windows.Data.Binding> de objetos y especificar las propiedades en el código.  En este ejemplo, `TheConverter` es un objeto que implementa el <xref:System.Windows.Data.IValueConverter> interfaz.  
   
- [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
- [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
+ [!code-csharp[BindConversion#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[BindConversion#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
   
- Si el objeto que se va a enlazar es un <xref:System.Windows.FrameworkElement> o un <xref:System.Windows.FrameworkContentElement> puede llamar a la `SetBinding` método en el objeto directamente en lugar de usar <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Para obtener un ejemplo, consulte [Crear un enlace mediante código](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
+ Si el objeto que se va a enlazar es un <xref:System.Windows.FrameworkElement> o un <xref:System.Windows.FrameworkContentElement> puede llamar a la `SetBinding` método en el objeto directamente en lugar de usar <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Para obtener un ejemplo, consulte [Crear un enlace mediante código](how-to-create-a-binding-in-code.md).  
   
 <a name="Path_Syntax"></a>   
 ## <a name="binding-path-syntax"></a>Sintaxis de la ruta de enlace  
@@ -119,14 +119,14 @@ En este tema se describen las distintas formas de declarar un enlace.
   
 -   Si no establece <xref:System.Windows.Data.Binding.ConverterCulture%2A>, el motor de enlace utiliza la `Language` propiedad del objeto de destino de enlace. En XAML, tiene como valor predeterminado "en-US" o hereda el valor de elemento raíz (o cualquier elemento) de la página, si se ha establecido explícitamente.  
   
--   Siempre y cuando el enlace ya tiene un contexto de datos (por ejemplo, el contexto de datos heredado procedente de un elemento primario) y cualquier elemento o colección devuelta por ese contexto es adecuado para el enlace sin necesidad de realizar más modificaciones de la ruta de acceso, un declaración de enlace no puede tener ninguna cláusulas en absoluto: `{Binding}` Esto suele ser la manera en que se especifica un enlace para aplicar estilos a datos, donde el enlace se actúa sobre una colección. Para más información, consulte la sección "Utilizar objetos completos como origen de enlace" en [Información general sobre orígenes de enlaces](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+-   Siempre y cuando el enlace ya tiene un contexto de datos (por ejemplo, el contexto de datos heredado procedente de un elemento primario) y cualquier elemento o colección devuelta por ese contexto es adecuado para el enlace sin necesidad de realizar más modificaciones de la ruta de acceso, un declaración de enlace no puede tener ninguna cláusulas en absoluto: `{Binding}` Esto suele ser la manera en que se especifica un enlace para aplicar estilos a datos, donde el enlace se actúa sobre una colección. Para más información, consulte la sección "Utilizar objetos completos como origen de enlace" en [Información general sobre orígenes de enlaces](binding-sources-overview.md).  
   
 -   El valor predeterminado <xref:System.Windows.Data.Binding.Mode%2A> varía entre unidireccional y bidireccional, según la propiedad de dependencia que se está enlazando. Siempre puede declarar explícitamente el modo de enlace para asegurarse de que el enlace tiene el comportamiento deseado. En las propiedades de control general, puede modificar el usuario, como <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> y <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, valor predeterminado enlaces bidireccionales, mientras que la mayoría de las propiedades valor predeterminado enlaces unidireccionales.  
   
 -   El valor predeterminado <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor varía entre <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> y <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> dependiendo de la propiedad de dependencia enlazada. El valor predeterminado de la mayoría de las propiedades de dependencia es <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, mientras que la propiedad <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> tiene un valor predeterminado de <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
-- [Enlace de datos](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Sintaxis de PropertyPath de XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)
+- [Información general sobre el enlace de datos](data-binding-overview.md)
+- [Temas "Cómo..."](data-binding-how-to-topics.md)
+- [Enlace de datos](../advanced/optimizing-performance-data-binding.md)
+- [Sintaxis de PropertyPath de XAML](../advanced/propertypath-xaml-syntax.md)

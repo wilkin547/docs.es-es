@@ -8,23 +8,23 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 63f268692924db94710d4aa21ff6f03b00989f67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688221"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358799"
 ---
 # <a name="graphics-how-to-topics"></a>Temas "Cómo..." de gráficos
 Los temas siguientes muestran cómo usar las capacidades gráficas de la [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Animar un rectángulo](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
- [Animar la posición de un objeto mediante PointAnimation](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [Transformar puntos y vectores](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
- [Ampliar el marco de vidrio en una aplicación de WPF](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [Cómo: Mejorar el rendimiento al almacenar en caché un elemento de la representación](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [Cómo: Usar un elemento almacenado en caché como pincel](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+ [Animar un rectángulo](how-to-animate-a-rectangle.md)  
+ [Animar la posición de un objeto mediante PointAnimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [Transformar puntos y vectores](how-to-transform-points-and-vectors.md)  
+ [Ampliar el marco de vidrio en una aplicación de WPF](extend-glass-frame-into-a-wpf-application.md)  
+ [Cómo: Mejorar el rendimiento al almacenar en caché un elemento de la representación](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [Cómo: Usar un elemento almacenado en caché como pincel](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Shapes.Shape>
@@ -34,5 +34,5 @@ Los temas siguientes muestran cómo usar las capacidades gráficas de la [!INCLU
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Gráficos y multimedia](index.md)
+- [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md)

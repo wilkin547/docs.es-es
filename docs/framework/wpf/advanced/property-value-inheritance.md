@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: e6b16bc3fc482e0f640f8b2d083392e6f94de618
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520592"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359892"
 ---
 # <a name="property-value-inheritance"></a>Herencia de valores de propiedad
 La herencia de valores de propiedad es una característica del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. La herencia de valores de propiedad permite que los elementos secundarios de un árbol de elementos obtengan el valor de una propiedad determinada de los elementos principales y que hereden ese valor tal como se estableció en cualquier otro lugar del elemento principal más cercano. Es posible que el elemento principal también haya obtenido su valor a través de la herencia de valores de propiedad, por lo que el sistema se repite potencialmente hasta la raíz de la página. La herencia de valores de propiedad no es el comportamiento del sistema de propiedades predeterminado: es necesario establecer una propiedad con un valor de metadatos concreto para que inicie la herencia de valores de propiedad en elementos secundarios.  
@@ -30,7 +30,7 @@ La herencia de valores de propiedad es una característica del sistema de propie
 ## <a name="making-a-custom-property-inheritable"></a>Hacer heredable una propiedad personalizada  
  Al cambiar los metadatos de una propiedad personalizada, también puede hacer que sus propias propiedades personalizadas sean heredables. Sin embargo, tenga en cuenta que designar una propiedad como heredable tiene algunas consideraciones de rendimiento. En casos donde esa propiedad no tiene ningún valor local establecido o ningún valor obtenido a través de estilos, plantillas o enlaces de datos, una propiedad heredable proporciona sus valores de propiedad asignados a todos los elementos secundarios del árbol lógico.  
   
- Para que una propiedad participe en la herencia de valores, cree una propiedad asociada personalizada, tal como se describe en [Registrar una propiedad asociada](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md). Registrar la propiedad con metadatos (<xref:System.Windows.FrameworkPropertyMetadata>) y especifique la opción "Inherits" en la configuración de opciones dentro de los metadatos. Asegúrese también de que la propiedad tenga un valor predeterminado establecido, porque ahora se heredará ese valor. Aunque registró la propiedad como asociada, es posible que también quiera crear una propiedad "wrapper" para obtener o establecer acceso al tipo de propietario, del mismo modo que para una propiedad de dependencia "nonattached". Una vez hecho esto, la propiedad heredable puede establecerse mediante el contenedor de propiedad directa en el tipo de propietario o los tipos derivados, o se puede establecer utilizando la sintaxis de la propiedad adjunta en cualquier <xref:System.Windows.DependencyObject>.  
+ Para que una propiedad participe en la herencia de valores, cree una propiedad asociada personalizada, tal como se describe en [Registrar una propiedad asociada](how-to-register-an-attached-property.md). Registrar la propiedad con metadatos (<xref:System.Windows.FrameworkPropertyMetadata>) y especifique la opción "Inherits" en la configuración de opciones dentro de los metadatos. Asegúrese también de que la propiedad tenga un valor predeterminado establecido, porque ahora se heredará ese valor. Aunque registró la propiedad como asociada, es posible que también quiera crear una propiedad "wrapper" para obtener o establecer acceso al tipo de propietario, del mismo modo que para una propiedad de dependencia "nonattached". Una vez hecho esto, la propiedad heredable puede establecerse mediante el contenedor de propiedad directa en el tipo de propietario o los tipos derivados, o se puede establecer utilizando la sintaxis de la propiedad adjunta en cualquier <xref:System.Windows.DependencyObject>.  
   
  Las propiedades asociadas son conceptualmente similares a las propiedades globales; puede comprobar el valor en cualquier <xref:System.Windows.DependencyObject> y obtener un resultado válido. El escenario típico para las propiedades asociadas consiste en establecer valores de propiedad en elementos secundarios, y ese escenario es más eficaz si la propiedad en cuestión es una propiedad adjunta que siempre está presente implícitamente como una propiedad adjunta en cada elemento (<xref:System.Windows.DependencyObject>) en el árbol.  
   
@@ -42,6 +42,6 @@ La herencia de valores de propiedad es una característica del sistema de propie
  La herencia de propiedades funciona al recorrer un árbol de elementos. Este árbol suele ser paralelo al árbol lógico. Sin embargo, cada vez que incluye un objeto de nivel de núcleo WPF en el marcado que define un árbol de elementos, como un <xref:System.Windows.Media.Brush>, ha creado un árbol lógico discontinuo. Un verdadero árbol lógico no se extiende conceptualmente a través de la <xref:System.Windows.Media.Brush>, ya que el árbol lógico es un concepto de nivel de marco WPF. Puede ver esto reflejado en los resultados al usar los métodos de <xref:System.Windows.LogicalTreeHelper>. Sin embargo, la herencia de valores de propiedad puede cerrar esta brecha en el árbol lógico y todavía se puede pasar valores heredados, siempre y cuando la propiedad heredable se registrara como una propiedad adjunta y ningún límite de bloqueo de herencia deliberado (como un <xref:System.Windows.Controls.Frame>) se encuentra.  
   
 ## <a name="see-also"></a>Vea también
-- [Metadatos de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Información general sobre propiedades asociadas](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
-- [Prioridad de los valores de propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+- [Metadatos de las propiedades de dependencia](dependency-property-metadata.md)
+- [Información general sobre propiedades asociadas](attached-properties-overview.md)
+- [Prioridad de los valores de propiedades de dependencia](dependency-property-value-precedence.md)

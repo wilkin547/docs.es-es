@@ -2,12 +2,12 @@
 title: Información del llamador (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 7b0776425b41c8fef975355f3547a64c33fd96b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3d7c999137b1e62de573470b8327bf070f2b1a9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619018"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375550"
 ---
 # <a name="caller-information-visual-basic"></a>Información del llamador (Visual Basic)
 Mediante los atributos de información del llamador, se puede obtener información sobre el llamador de un método. Puede obtener la ruta de acceso al código fuente, el número de línea en el código fuente y el nombre de miembro del llamador. Esta información resulta útil para el seguimiento y la depuración, así como para crear herramientas de diagnóstico.  
@@ -55,7 +55,7 @@ End Sub
   
  Puede proporcionar explícitamente los argumentos opcionales para controlar la información del llamador u ocultarla.  
   
-###  <a name="MEMBERNAMES"></a> Nombres de miembro  
+### <a name="MEMBERNAMES"></a> Nombres de miembro  
  Se puede utilizar el atributo `CallerMemberName` para evitar especificar el nombre de miembro como un argumento `String` para el método llamado. Mediante esta técnica, se evita el problema de que la **refactorización de cambio de nombre** no cambie los valores `String`. Esta ventaja es especialmente útil para las siguientes tareas:  
   
 -   Usar el seguimiento y las rutinas de diagnóstico.  

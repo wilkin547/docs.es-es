@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], CheckBox
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
-ms.openlocfilehash: a3f59ce8632a56f363f6ea029fc328655fece930
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550766"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377275"
 ---
 # <a name="checkbox"></a>CheckBox
-Puede usar un <xref:System.Windows.Controls.CheckBox> en el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] de la aplicación para representar opciones que un usuario puede activar o desactivar. Puede utilizar una casilla de verificación o puede agrupar dos o más casillas de verificación.  
+Puede usar un <xref:System.Windows.Controls.CheckBox> en el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] de la aplicación para representar las opciones que un usuario puede activar o desactivar. Puede utilizar una casilla de verificación o puede agrupar dos o más casillas de verificación.  
   
  El gráfico siguiente muestra los diferentes Estados de un <xref:System.Windows.Controls.CheckBox>.  
   
- ![Estados de CheckBox](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
+ ![Estados de CheckBox](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
 Controles de casilla de verificación en diferentes Estados  
   
 ## <a name="reference"></a>Referencia  

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2cc712e6560fc58af7526428ba40c424be388eee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 336e47d531fc880571165cd55f117825cd1a2abb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746666"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374874"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>Método IXCLRDataModule::Request
 
@@ -39,15 +39,20 @@ HRESULT Request([in] ULONG32 reqCode,
 
 ### <a name="parameters"></a>Parámetros
 
-`reqCode` [in] Tipo de solicitud en enviarse.
+`reqCode`\
+[in] Tipo de solicitud en enviarse.
 
-`inBufferSize` [in] tamaño del búfer de entrada que se pasarán en.
+`inBufferSize`\
+[in] tamaño del búfer de entrada que se pasarán en.
 
-`inBuffer` [in, size_is(inBufferSize)] Puntero de búfer para los datos sin procesar que se enviarán en la solicitud.
+`inBuffer`\
+[in, size_is(inBufferSize)] Puntero de búfer para los datos sin procesar que se enviarán en la solicitud.
 
-`outBufferSize` [in] Tamaño del búfer de salida.
+`outBufferSize`\
+[in] Tamaño del búfer de salida.
 
-`outBuffer` [out, size_is(outBufferSize)] Puntero de búfer que usará para almacenar la respuesta de solicitud.
+`outBuffer`\
+[out, size_is(outBufferSize)] Puntero de búfer que usará para almacenar la respuesta de solicitud.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -61,5 +66,5 @@ El método proporcionado forma parte de la `IXCLRDataModule` interfaz y correspo
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfaz IXCLRDataModule](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
+- [Depuración](index.md)
+- [Interfaz IXCLRDataModule](ixclrdatamodule-interface.md)

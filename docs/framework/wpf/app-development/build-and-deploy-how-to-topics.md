@@ -7,28 +7,28 @@ helpviewer_keywords:
 - WPF application [WPF], building
 - WPF application [WPF], deploying
 ms.assetid: 88952ad2-5b74-48ca-a4c5-3f4fbb53ce12
-ms.openlocfilehash: 75e1a92e683da5260718febf2a248e45496b64bf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 4aaeeed4ff6a130c6d3ddda696286222d7c9efaf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746946"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374796"
 ---
 # <a name="build-and-deploy-how-to-topics"></a>Temas "Cómo..." de compilar e implementar
 Los temas siguientes muestran cómo crear archivos de proyecto para los distintos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tipos de aplicación.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
- [Configurar Visual Studio para depurar una aplicación de explorador XAML y llamar a un servicio web](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [Determinar la versión actualmente instalada de WPF](../../../../docs/framework/wpf/app-development/how-to-determine-the-installed-version-of-wpf.md)  
- [Detectar si .NET Framework 3.0 está instalado](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
- [Detectar si .NET Framework 3.5 está instalado](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
- [Detectar si está instalado el complemento WPF para Firefox](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
+ [Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
+ [Configurar Visual Studio para depurar una aplicación de explorador XAML y llamar a un servicio web](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
+ [Determinar la versión actualmente instalada de WPF](how-to-determine-the-installed-version-of-wpf.md)  
+ [Detectar si .NET Framework 3.0 está instalado](how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
+ [Detectar si .NET Framework 3.5 está instalado](how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
+ [Detectar si está instalado el complemento WPF para Firefox](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Compilar una aplicación de WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+ [Compilar una aplicación de WPF](building-a-wpf-application-wpf.md)  
   
- [Implementar una aplicación WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
+ [Implementar una aplicación WPF](deploying-a-wpf-application-wpf.md)  
   
  [Tutorial: Mi primera aplicación de escritorio WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   

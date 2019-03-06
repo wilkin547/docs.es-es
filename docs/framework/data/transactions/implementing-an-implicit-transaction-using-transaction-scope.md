@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: ae0c729444b3ccb154481e65a094d29d68541793
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645852"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375251"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementar una transacción implícita mediante el ámbito de la transacción
 La clase <xref:System.Transactions.TransactionScope> proporciona una manera simple de marcar un bloque de código como participar en una transacción, sin exigirle que interactuara con la propia transacción. Un ámbito de la transacción puede seleccionar y administrar automáticamente la transacción ambiente. Debido a su facilidad de uso y eficacia, se recomienda que utilice la clase <xref:System.Transactions.TransactionScope> al desarrollar una aplicación de transacción.  
@@ -41,7 +41,7 @@ La clase <xref:System.Transactions.TransactionScope> proporciona una manera simp
 ## <a name="rolling-back-a-transaction"></a>Deshacer una transacción  
  Si desea revertir una transacción, no debería llamar al método <xref:System.Transactions.TransactionScope.Complete%2A> dentro del ámbito de la transacción. Por ejemplo, puede producir una excepción dentro del ámbito. Se deshará la transacción en la que participa.  
   
-##  <a name="ManageTxFlow"></a> Administración de flujo de transacciones con TransactionScopeOption  
+## <a name="ManageTxFlow"></a> Administración de flujo de transacciones con TransactionScopeOption  
  El ámbito de la transacción puede estar anidado al llamar a un método que utiliza desde dentro <xref:System.Transactions.TransactionScope> un método que utiliza su propio ámbito, como es el caso con el método `RootMethod` en el ejemplo siguiente,  
   
 ```csharp  

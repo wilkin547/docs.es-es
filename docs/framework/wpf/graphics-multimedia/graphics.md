@@ -7,26 +7,26 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 9a8dcc98b6d201825e4880edc2ad77f9e0406586
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20051b176be4372643855441ee5f6c3b62a27780
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662392"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361166"
 ---
 # <a name="graphics"></a>Gráficos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ofrece compatibilidad integrada para multimedia, gráficos vectoriales, animaciones y creación de contenido, lo que facilita a los desarrolladores crear interfaces de usuario y el contenido interesante.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Efectos de imagen](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
- [Pinceles](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
- [Dibujos](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [Geometrías](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [Imágenes](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
- [Formas](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [Transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [Configuración del Registro en la representación de gráficos](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [Efectos de imagen](bitmap-effects.md)  
+ [Pinceles](brushes.md)  
+ [Dibujos](drawings.md)  
+ [Geometrías](geometries.md)  
+ [Imágenes](images.md)  
+ [Formas](shapes.md)  
+ [Transformaciones](transformations.md)  
+ [Configuración del Registro en la representación de gráficos](graphics-rendering-registry-settings.md)  
+ [Temas "Cómo..."](graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Shapes.Shape>
@@ -36,6 +36,6 @@ ms.locfileid: "54662392"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [Imágenes y gráficos 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Imágenes y gráficos 2D](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Gráficos y multimedia](index.md)
+- [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md)

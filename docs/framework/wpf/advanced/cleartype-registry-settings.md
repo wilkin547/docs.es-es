@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: ffc21ca3eed979e9b7cd419f63729d8520a54a5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 471a94333260d30bc9c650f13e3a7489d9d5db7e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720293"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369726"
 ---
 # <a name="cleartype-registry-settings"></a>Configuración del Registro de ClearType
 En este tema proporciona información general sobre la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] configuración del registro que se usa por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones.  
@@ -18,7 +18,7 @@ En este tema proporciona información general sobre la [!INCLUDE[TLA2#tla_wincli
   
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Información general sobre la tecnología  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones que representan texto en una pantalla, usan [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] características para proporcionar una experiencia de lectura mejorada. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] es una tecnología de software desarrollada por [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] que mejora la legibilidad del texto en pantallas de cristal líquido (LCD) existentes, como las de portátiles, Pocket PC y monitores de pantalla plana. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funciona mediante el acceso a los elementos de franjas de color vertical individuales en cada píxel de una pantalla LCD. Para obtener más información sobre [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], consulte [información general sobre ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones que representan texto en una pantalla, usan [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] características para proporcionar una experiencia de lectura mejorada. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] es una tecnología de software desarrollada por [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] que mejora la legibilidad del texto en pantallas de cristal líquido (LCD) existentes, como las de portátiles, Pocket PC y monitores de pantalla plana. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funciona mediante el acceso a los elementos de franjas de color vertical individuales en cada píxel de una pantalla LCD. Para obtener más información sobre [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], consulte [información general sobre ClearType](cleartype-overview.md).  
   
  Texto que se representa con [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] pueden aparecer significativamente diferente en distintas pantallas. Por ejemplo, un pequeño número de monitores de implementa los elementos de franjas de color en el orden azul, verde y rojo, en lugar de la más común de rojo, verde, azul ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) orden.  
   
@@ -57,7 +57,7 @@ En este tema proporciona información general sobre la [!INCLUDE[TLA2#tla_wincli
   
  Para cada nombre de pantalla de un usuario, un `ClearTypeLevel` se define el valor DWORD. Captura de pantalla siguiente muestra la configuración del Editor del registro para el [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] nivel.  
   
- ![Configuración de ClearType en el Editor del Registro](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![Configuración de ClearType en el Editor del Registro](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones representan texto en uno de estos dos modos: con y sin [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Cuando el texto se representa sin [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], se conoce como representación en escala de grises.  
@@ -75,7 +75,7 @@ En este tema proporciona información general sobre la [!INCLUDE[TLA2#tla_wincli
   
  Para cada nombre de pantalla de un usuario, un `GammaLevel` se define el valor DWORD. La captura de pantalla siguiente muestra la configuración del Editor del Registro para el nivel de gamma.  
   
- ![Configuración de ClearType en el Editor del Registro](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![Configuración de ClearType en el Editor del Registro](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
   
 <a name="pixel_structure"></a>   
 ## <a name="pixel-structure"></a>Estructura de píxeles  
@@ -99,7 +99,7 @@ En este tema proporciona información general sobre la [!INCLUDE[TLA2#tla_wincli
   
  Para cada nombre de pantalla de un usuario, un `PixelStructure` se define el valor DWORD. La captura de pantalla siguiente muestra la configuración del Editor del Registro para la estructura de píxeles.  
   
- ![Configuración de ClearType en el Editor del Registro](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![Configuración de ClearType en el Editor del Registro](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
   
 <a name="text_contrast_level"></a>   
 ## <a name="text-contrast-level"></a>Nivel de contraste del texto  
@@ -112,8 +112,8 @@ En este tema proporciona información general sobre la [!INCLUDE[TLA2#tla_wincli
   
  Para cada nombre de pantalla de un usuario, un `TextContrastLevel` se define el valor DWORD. La captura de pantalla siguiente muestra la configuración del Editor del Registro para el nivel de contraste del texto.  
   
- ![Configuración de ClearType en el Editor del Registro](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![Configuración de ClearType en el Editor del Registro](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md)
+- [Información general sobre ClearType](cleartype-overview.md)
 - [Suavizado de contorno de ClearType](/windows/desktop/gdi/cleartype-antialiasing)

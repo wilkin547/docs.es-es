@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Label [WPF], styles and templates
 - states [WPF], Label
 ms.assetid: c1d5359a-8e4a-4925-ab3e-e92bf6694859
-ms.openlocfilehash: fb143bc44e8c7bad1c16507b03249e3c62e5b71f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e77c27546f4575fb6fae1081ec5a64e904721586
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694118"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377539"
 ---
 # <a name="label-styles-and-templates"></a>Estilos y plantillas de etiquetas
-En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.Label> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.Label> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="label-parts"></a>Elementos de etiqueta  
  El <xref:System.Windows.Controls.Label> control no tiene elementos con nombre.  
@@ -34,18 +34,18 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 ## <a name="label-controltemplate-example"></a>Ejemplo de ControlTemplate de etiqueta  
  El ejemplo siguiente muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.Label> control.  
   
- [!code-xaml[ControlTemplateExamples#Label](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/label.xaml#label)]  
+ [!code-xaml[ControlTemplateExamples#Label](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/label.xaml#label)]  
   
  El <xref:System.Windows.Controls.ControlTemplate> usa uno o varios de los siguientes recursos.  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Estilos y plantillas de controles](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [Control Customization](../../../../docs/framework/wpf/controls/control-customization.md) (Personalización de controles)
-- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [Estilos y plantillas de controles](control-styles-and-templates.md)
+- [Control Customization](control-customization.md) (Personalización de controles)
+- [Aplicar estilos y plantillas](styling-and-templating.md)
+- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

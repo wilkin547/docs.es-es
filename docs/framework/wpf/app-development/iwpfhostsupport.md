@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-ms.openlocfilehash: 57d9ef87a078655a89a5869a48a1bd16f21b000f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 074167111b78edc517dda019465260d0acd54737
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500931"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376018"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 Las aplicaciones que hospedan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contenido a través de PresentationHost.exe implementan esta interfaz para proporcionar un punto de integración entre el host y PresentationHost.exe.  
@@ -32,6 +32,6 @@ Las aplicaciones que hospedan [!INCLUDE[TLA#tla_winclient](../../../../includes/
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|[GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md)|Permite que PresentationHost.exe detecte los dispositivos de entrada sin formato (dispositivos de interfaz humana) en los que está interesada la aplicación host.|  
-|[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)|Lo llama PresentationHost.exe cada vez que se recibe un mensaje a menos que se devuelva E_NOTIMPL.|  
-|[GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)|De forma predeterminada, PresentationHost.exe proporciona su propio progreso de la implementación y el error de implementación de interfaces de usuario que se muestran cuando se implementa contenido de WPF.|
+|[GetRawInputDevices](getrawinputdevices.md)|Permite que PresentationHost.exe detecte los dispositivos de entrada sin formato (dispositivos de interfaz humana) en los que está interesada la aplicación host.|  
+|[FilterInputMessage](filterinputmessage.md)|Lo llama PresentationHost.exe cada vez que se recibe un mensaje a menos que se devuelva E_NOTIMPL.|  
+|[GetCustomUI](getcustomui.md)|De forma predeterminada, PresentationHost.exe proporciona su propio progreso de la implementación y el error de implementación de interfaces de usuario que se muestran cuando se implementa contenido de WPF.|

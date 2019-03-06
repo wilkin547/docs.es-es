@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: 4faf7a131b688fd245c0e207c8bac0f077b06ed5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e51dd73a65666ffee5958325079e8f06f13ac61b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709057"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363805"
 ---
-# <a name="how-to-hit-test-geometry-in-a-visual"></a>Procedimiento Geometría de una prueba de posicionamiento en un objeto Visual
+# <a name="how-to-hit-test-geometry-in-a-visual"></a>Filtrar Geometría de una prueba de posicionamiento en un objeto Visual
 En este ejemplo se muestra cómo realizar una prueba de posicionamiento en un objeto visual que se compone de uno o varios <xref:System.Windows.Media.Geometry> objetos.  
   
 ## <a name="example"></a>Ejemplo  
@@ -25,8 +25,8 @@ En este ejemplo se muestra cómo realizar una prueba de posicionamiento en un ob
 > [!NOTE]
 >  En la mayoría de los casos, se utilizaría el <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> método para determinar si un punto corta el contenido representado de un objeto visual.  
   
- [!code-csharp[VisualsOverview#VisualsOverviewSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#visualsoverviewsnippet4)]
- [!code-vb[VisualsOverview#VisualsOverviewSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#visualsoverviewsnippet4)]  
+ [!code-csharp[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#visualsoverviewsnippet4)]
+ [!code-vb[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#visualsoverviewsnippet4)]  
   
  El <xref:System.Windows.Media.Geometry.FillContains%2A> método es un método sobrecargado que permite realizar pruebas de posicionamiento mediante el uso de un determinado <xref:System.Windows.Point> o <xref:System.Windows.Media.Geometry>. Si se traza una geometría, el trazo puede extenderse fuera del límite del relleno. En este caso, es posible que desea llamar <xref:System.Windows.Media.Geometry.StrokeContains%2A> además <xref:System.Windows.Media.Geometry.FillContains%2A>.  
   
@@ -36,5 +36,5 @@ En este ejemplo se muestra cómo realizar una prueba de posicionamiento en un ob
 >  Esta muestra no tiene en cuenta ninguna transformación o recorte que pueda aplicarse a la geometría. Además, este ejemplo no funcionará con un control con estilo, puesto que no tiene los dibujos asociados a él.  
   
 ## <a name="see-also"></a>Vea también
-- [Realizar pruebas de posicionamiento en la capa visual](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
-- [Realizar una prueba de posicionamiento usando Geometry como parámetro](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)
+- [Realizar pruebas de posicionamiento en la capa visual](hit-testing-in-the-visual-layer.md)
+- [Realizar una prueba de posicionamiento usando Geometry como parámetro](how-to-hit-test-using-geometry-as-a-parameter.md)

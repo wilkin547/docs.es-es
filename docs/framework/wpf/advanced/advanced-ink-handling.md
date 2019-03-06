@@ -8,20 +8,20 @@ helpviewer_keywords:
 - InkCanvas control [WPF]
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
-ms.openlocfilehash: eb347f5477974851e91c6a00b423bd4acf1f0b3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539035"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367883"
 ---
 # <a name="advanced-ink-handling"></a>Control avanzado de entrada manuscrita
-El [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se suministra con la <xref:System.Windows.Controls.InkCanvas>, y es un elemento que se puede colocar en la aplicación para iniciar inmediatamente recopilar y mostrar tinta. Sin embargo, si la <xref:System.Windows.Controls.InkCanvas> control no proporciona un nivel suficiente de control, puede mantener el control en un nivel superior mediante la personalización de su propia colección de tinta y clases de representación de tinta mediante <xref:System.Windows.Input.StylusPlugIns>.  
+El [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se suministra con el <xref:System.Windows.Controls.InkCanvas>, y es un elemento que se puede colocar en la aplicación para empezar inmediatamente a recopilar y mostrar entradas de lápiz. Sin embargo, si la <xref:System.Windows.Controls.InkCanvas> control no proporciona un nivel suficiente de control, puede mantener el control en un nivel superior mediante la personalización de su propia recopilación de entrada manuscrita y mediante las clases de representación de tinta <xref:System.Windows.Input.StylusPlugIns>.  
   
- El <xref:System.Windows.Input.StylusPlugIns> clases proporcionan un mecanismo para implementar el control de bajo nivel sobre <xref:System.Windows.Input.Stylus> de entrada y representación dinámica de tinta. La <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> clase proporciona un mecanismo para implementar un comportamiento personalizado y aplicarlo a la secuencia de datos procedente del dispositivo de lápiz para un rendimiento óptimo. El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, especializada <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, le permite personalizar dinámicamente los datos de tinta de representación en tiempo real lo que significa que la <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> dibuja la entrada de lápiz digital inmediatamente como <xref:System.Windows.Input.StylusPoint> se generan datos, por lo que parece "fluir" del lápiz óptico dispositivo.  
+ El <xref:System.Windows.Input.StylusPlugIns> clases proporcionan un mecanismo para implementar el control de bajo nivel a través de <xref:System.Windows.Input.Stylus> entrada y la representación dinámica de tinta. La <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> clase proporciona un mecanismo para implementar un comportamiento personalizado y aplicarlo a la secuencia de datos procedente del dispositivo de lápiz para un rendimiento óptimo. El <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, especializada <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, le permite personalizar dinámicamente los datos de tinta de representación en tiempo real lo que significa que el <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> dibuja la entrada de lápiz digital inmediatamente como <xref:System.Windows.Input.StylusPoint> se generan datos, por lo que parece "fluir" del lápiz óptico dispositivo.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Personalizar la representación de la entrada de escritura a mano](../../../../docs/framework/wpf/advanced/custom-rendering-ink.md)  
-  [Interceptar entradas del lápiz óptico](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)  
-  [Creación de un control de entrada a mano](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)  
-  [Modelo de subprocesos de entrada de lápiz](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)
+ [Personalizar la representación de la entrada de escritura a mano](custom-rendering-ink.md)  
+  [Interceptar entradas del lápiz óptico](intercepting-input-from-the-stylus.md)  
+  [Creación de un control de entrada a mano](creating-an-ink-input-control.md)  
+  [Modelo de subprocesos de entrada de lápiz](the-ink-threading-model.md)

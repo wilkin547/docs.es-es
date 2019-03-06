@@ -7,35 +7,35 @@ helpviewer_keywords:
 - graphics [WPF], brushes
 - brushes [WPF]
 ms.assetid: 43e7f798-9558-4498-b5b6-4a4c6baf956b
-ms.openlocfilehash: b62830da6f48e07c60df731a8ba29998d6145217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bf49449cd51753e7dc59c169fe51f13dcc67a81
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557542"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373262"
 ---
 # <a name="brushes-how-to-topics"></a>Temas "Cómo..." de pinceles
-Los temas siguientes muestran cómo usar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pinceles para pintar contenido en la pantalla.  
+Los temas siguientes muestran cómo usar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pinceles para pintar el contenido en la pantalla.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Animar el color o la opacidad de un objeto SolidColorBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
- [Animar la posición o color de un delimitador de degradado](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
- [Crear una reflexión](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-reflection.md)  
- [Crear patrones de mosaico diferentes con un objeto TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)  
- [Definir una pluma](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-pen.md)  
- [Pintar un área con un dibujo](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-drawing.md)  
- [Pintar un área con una imagen](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-an-image.md)  
- [Pintar un área con un degradado lineal](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-linear-gradient.md)  
- [Pintar un área con un degradado radial](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-radial-gradient.md)  
- [Pintar un área con un color sólido](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)  
- [Pintar un área con un pincel del sistema](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
- [Pintar un área con un vídeo](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-video.md)  
- [Pintar un área con un objeto visual](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-visual.md)  
- [Conservar la relación de aspecto de una imagen utilizada como fondo](../../../../docs/framework/wpf/graphics-multimedia/how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
- [Establecer la alineación horizontal y vertical de TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
- [Establecer el tamaño del mosaico de un TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)  
- [Transformar un pincel](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-a-brush.md)  
- [Usar colores del sistema en un degradado](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
+ [Animar el color o la opacidad de un objeto SolidColorBrush](how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
+ [Animar la posición o color de un delimitador de degradado](how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
+ [Crear una reflexión](how-to-create-a-reflection.md)  
+ [Crear patrones de mosaico diferentes con un objeto TileBrush](how-to-create-different-tile-patterns-with-a-tilebrush.md)  
+ [Definir una pluma](how-to-define-a-pen.md)  
+ [Pintar un área con un dibujo](how-to-paint-an-area-with-a-drawing.md)  
+ [Pintar un área con una imagen](how-to-paint-an-area-with-an-image.md)  
+ [Pintar un área con un degradado lineal](how-to-paint-an-area-with-a-linear-gradient.md)  
+ [Pintar un área con un degradado radial](how-to-paint-an-area-with-a-radial-gradient.md)  
+ [Pintar un área con un color sólido](how-to-paint-an-area-with-a-solid-color.md)  
+ [Pintar un área con un pincel del sistema](how-to-paint-an-area-with-a-system-brush.md)  
+ [Pintar un área con un vídeo](how-to-paint-an-area-with-a-video.md)  
+ [Pintar un área con un objeto visual](how-to-paint-an-area-with-a-visual.md)  
+ [Conservar la relación de aspecto de una imagen utilizada como fondo](how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
+ [Establecer la alineación horizontal y vertical de TileBrush](how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
+ [Establecer el tamaño del mosaico de un TileBrush](how-to-set-the-tile-size-for-a-tilebrush.md)  
+ [Transformar un pincel](how-to-transform-a-brush.md)  
+ [Usar colores del sistema en un degradado](how-to-use-system-colors-in-a-gradient.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Media.Brush>  
@@ -51,6 +51,6 @@ Los temas siguientes muestran cómo usar [!INCLUDE[TLA#tla_winclient](../../../.
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Gráficos y multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Gráficos y multimedia](index.md)  
   
- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md)

@@ -2,12 +2,12 @@
 title: Colecciones (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: d81af633222961dfd9db49722f25c46a549413f9
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 7fdafce071a77f344eb58e17c4be9d4f204e118d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739012"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359359"
 ---
 # <a name="collections-visual-basic"></a>Colecciones (Visual Basic)
 Para muchas aplicaciones, puede que desee crear y administrar grupos de objetos relacionados. Existen dos formas de agrupar objetos: mediante la creación de matrices de objetos y con la creación de colecciones de objetos.  
@@ -227,7 +227,7 @@ End Class
  El espacio de nombres <xref:System.Collections.Specialized> proporciona clases de colección especializadas y fuertemente tipadas como, por ejemplo, colecciones de solo cadena y diccionarios híbridos y de lista vinculada.  
 
 <a name="BKMK_VisualBasic"></a> 
-###  <a name="visual-basic-collection-class"></a>Clase de colección de Visual Basic  
+### <a name="visual-basic-collection-class"></a>Clase de colección de Visual Basic  
  Puede usar la clase de Visual Basic <xref:Microsoft.VisualBasic.Collection> para tener acceso a un elemento de colección mediante un índice numérico o una clave `String`. Puede agregar elementos a un objeto de colección especificando o sin especificar clave. Si agrega un elemento sin clave, debe usar su índice numérico para tener acceso a dicho elemento.  
   
  La clase de Visual Basic `Collection` almacena todos sus elementos como de tipo `Object`, por lo que puede agregar un elemento de cualquier tipo de datos. No hay ningún método de protección contra los tipos de datos inadecuados agregados.  
@@ -337,7 +337,7 @@ End Sub
 ```  
   
 <a name="BKMK_LINQ"></a> 
-##  <a name="using-linq-to-access-a-collection"></a>Uso de LINQ para tener acceso a una colección  
+## <a name="using-linq-to-access-a-collection"></a>Uso de LINQ para tener acceso a una colección  
  LINQ (Language-Integrated Query) puede usar para tener acceso a las colecciones. Las consultas LINQ proporcionan capacidades de filtrado, ordenación y agrupación. Para obtener más información, consulte [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
   
  El ejemplo siguiente ejecuta una consulta LINQ en una `List` genérica. La consulta LINQ devuelve otra colección que contiene los resultados.  
@@ -539,7 +539,7 @@ End Class
 ```  
   
 <a name="BKMK_Iterators"></a>
-##  <a name="iterators"></a>Iterators  
+## <a name="iterators"></a>Iterators  
  Los *iteradores* se usan para efectuar una iteración personalizada en una colección. Un iterador puede ser un método o un descriptor de acceso `get`. Un iterador usa una [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) instrucción para devolver cada elemento de la colección a la vez.  
   
  Llame a un iterador mediante una [For Each... Siguiente](../../../visual-basic/language-reference/statements/for-each-next-statement.md) instrucción. Cada iteración del bucle `For Each` llama al iterador. Cuando se alcanza una instrucción `Yield` en el iterador, se devuelve una expresión y se conserva la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama al iterador.  

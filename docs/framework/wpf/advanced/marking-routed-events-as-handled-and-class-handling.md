@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 6e34347212a3dc9d8a64b48360af70366bab2083
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595115"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378853"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Marcar eventos enrutados como controlados y control de clases
 Los controladores de un evento enrutado pueden marcar el evento como controlado en los datos del evento. Controlar el evento acorta de forma efectiva la ruta. El control de clases es un concepto de programación que admiten los eventos enrutados. Un controlador de clases tiene la oportunidad de controlar un evento enrutado determinado en un nivel de clase con un controlador que se invoca antes que cualquier controlador de instancias de cualquier instancia de la clase.  
@@ -31,7 +31,7 @@ Los controladores de un evento enrutado pueden marcar el evento como controlado 
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
- En este tema se profundiza sobre los conceptos presentados en [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ En este tema se profundiza sobre los conceptos presentados en [Información general sobre eventos enrutados](routed-events-overview.md).  
   
 <a name="When_to_Mark_Events_as_Handled"></a>   
 ## <a name="when-to-mark-events-as-handled"></a>Cuándo se deben marcar los eventos como controlados  
@@ -47,7 +47,7 @@ Los controladores de un evento enrutado pueden marcar el evento como controlado 
   
  La conexión entre los eventos enrutados de tunelización y propagación se realiza mediante la implementación interna de cómo cualquier clase de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] determinada genera sus propios eventos enrutados declarados, y este es el caso de los eventos enrutados de entrada emparejados. Sin embargo, a menos que exista esta implementación de nivel de clase, no hay ninguna conexión entre un evento enrutado de tunelización y uno de propagación que comparten el esquema de nomenclatura: sin tal implementación, serían dos eventos enrutados completamente independientes y no se generarían en secuencia ni compartirían datos de evento.  
   
- Para obtener más información sobre cómo implementar pares de eventos enrutados de entrada de tunelización y propagación en una clase personalizada, consulte [Cómo: Crear un evento enrutado personalizado](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md).  
+ Para obtener más información sobre cómo implementar pares de eventos enrutados de entrada de tunelización y propagación en una clase personalizada, consulte [Cómo: Crear un evento enrutado personalizado](how-to-create-a-custom-routed-event.md).  
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>Controladores de clases y controladores de instancias  
@@ -100,6 +100,6 @@ Los controladores de un evento enrutado pueden marcar el evento como controlado 
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.EventManager>
-- [Eventos de vista previa](../../../../docs/framework/wpf/advanced/preview-events.md)
-- [Crear un evento enrutado personalizado](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)
-- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Eventos de vista previa](preview-events.md)
+- [Crear un evento enrutado personalizado](how-to-create-a-custom-routed-event.md)
+- [Información general sobre eventos enrutados](routed-events-overview.md)

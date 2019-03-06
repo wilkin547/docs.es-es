@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - adorners [WPF], how-to topics
 ms.assetid: e29d7516-d5e6-4500-bd4f-775e6f830984
-ms.openlocfilehash: ba81f8e2d603ee2e734e5afd14182e95804fe69e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 930d0834570529bd958006818cddb8f5692066d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550090"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359255"
 ---
 # <a name="adorners-how-to-topics"></a>Temas "Cómo..." de adornos
-Los ejemplos siguientes muestran cómo realizar tareas comunes mediante el [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework de adorno.  
+Los ejemplos siguientes muestran cómo realizar tareas comunes mediante el [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework del adorno.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Implementar un adorno](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  
- [Enlazar un adorno a un elemento](../../../../docs/framework/wpf/controls/how-to-bind-an-adorner-to-an-element.md)  
- [Agregar adornos a elementos secundarios de un panel](../../../../docs/framework/wpf/controls/how-to-adorn-the-children-of-a-panel.md)  
- [Quitar un adorno de un elemento](../../../../docs/framework/wpf/controls/how-to-remove-an-adorner-from-an-element.md)  
- [Quitar todos los adornos de un elemento](../../../../docs/framework/wpf/controls/how-to-remove-all-adorners-from-an-element.md)  
+ [Implementar un adorno](how-to-implement-an-adorner.md)  
+ [Enlazar un adorno a un elemento](how-to-bind-an-adorner-to-an-element.md)  
+ [Agregar adornos a elementos secundarios de un panel](how-to-adorn-the-children-of-a-panel.md)  
+ [Quitar un adorno de un elemento](how-to-remove-an-adorner-from-an-element.md)  
+ [Quitar todos los adornos de un elemento](how-to-remove-all-adorners-from-an-element.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  

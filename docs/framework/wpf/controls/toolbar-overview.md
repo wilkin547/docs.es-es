@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 913c7a9f1b5cf891f3e19c4f3126596bad49f79d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d591c85211492e4ad0b7e226cffba309e8d418b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695859"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379645"
 ---
 # <a name="toolbar-overview"></a>Información general sobre controles ToolBar
 <xref:System.Windows.Controls.ToolBar> los controles son contenedores para un grupo de comandos o controles que suelen estar relacionados en su función. Un <xref:System.Windows.Controls.ToolBar> suele contener botones que invocan comandos.  
@@ -24,25 +24,25 @@ ms.locfileid: "54695859"
 ## <a name="specifying-the-position-of-toolbars-in-a-toolbartray"></a>Especificar la posición de las barras de herramientas en un control ToolBarTray  
  Use la <xref:System.Windows.Controls.ToolBar.Band%2A> y <xref:System.Windows.Controls.ToolBar.BandIndex%2A> propiedades para colocar el <xref:System.Windows.Controls.ToolBar> en el <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.Band%2A> indica la posición en la que el <xref:System.Windows.Controls.ToolBar> se coloca dentro de su elemento primario <xref:System.Windows.Controls.ToolBarTray>. <xref:System.Windows.Controls.ToolBar.BandIndex%2A> indica el orden en que el <xref:System.Windows.Controls.ToolBar> se coloca dentro de su banda. El ejemplo siguiente se muestra cómo utiliza esta propiedad para colocar <xref:System.Windows.Controls.ToolBar> controla dentro de un <xref:System.Windows.Controls.ToolBarTray>.  
   
- [!code-xaml[ToolBarExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
+ [!code-xaml[ToolBarExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
   
 <a name="ToolBars_with_Overflow_Items"></a>   
 ## <a name="toolbars-with-overflow-items"></a>Controles ToolBar con elementos de desbordamiento  
  A menudo <xref:System.Windows.Controls.ToolBar> controles contienen más elementos que pueden caber en el tamaño de la barra de herramientas. Cuando esto sucede, el <xref:System.Windows.Controls.ToolBar> muestra un botón de desbordamiento. Para ver los elementos de desbordamiento, un usuario hace clic en el botón de desbordamiento y los elementos se muestran en una ventana emergente que aparece a continuación el <xref:System.Windows.Controls.ToolBar>. El gráfico siguiente muestra un <xref:System.Windows.Controls.ToolBar> con elementos de desbordamiento.  
   
- ![ToolBar con desbordamiento](../../../../docs/framework/wpf/controls/media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
+ ![ToolBar con desbordamiento](./media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
 ToolBar con elementos de desbordamiento  
   
  Puede especificar cuando se coloca un elemento en una barra de herramientas en el panel de desbordamiento estableciendo el <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType> propiedad adjunta <xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>, <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>, o <xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>. En el ejemplo siguiente se especifica que los cuatro últimos botones de la barra de herramientas siempre deben estar en el panel de desbordamiento.  
   
- [!code-xaml[ToolBarExample#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#3)]  
+ [!code-xaml[ToolBarExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#3)]  
   
  El <xref:System.Windows.Controls.ToolBar> usa un <xref:System.Windows.Controls.Primitives.ToolBarPanel> y un <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> en su <xref:System.Windows.Controls.ControlTemplate>.  El <xref:System.Windows.Controls.Primitives.ToolBarPanel> es responsable del diseño de los elementos en la barra de herramientas.  El <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> es responsable del diseño de los elementos que no caben en la <xref:System.Windows.Controls.ToolBar>. Para obtener un ejemplo de un <xref:System.Windows.Controls.ControlTemplate> para un <xref:System.Windows.Controls.ToolBar>, vea  
   
- [Estilos y plantillas de ToolBar](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md).  
+ [Estilos y plantillas de ToolBar](toolbar-styles-and-templates.md).  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Controls.Primitives.ToolBarPanel>
 - <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>
-- [Aplicar estilo a controles en un elemento toolbar](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)
+- [Aplicar estilo a controles en un elemento toolbar](how-to-style-controls-on-a-toolbar.md)
 - [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053) (Ejemplo de galería de controles de WPF)

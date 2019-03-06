@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Obtener propiedades de un objeto de sistema de impresión sin reflexión
+title: Filtrar Obtener propiedades de un objeto de sistema de impresión sin reflexión
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
-ms.openlocfilehash: b081586d201bed537c086447c4ddb116f179fbca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b03be30422a93980ecdbcdbd428600fd41abd824
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693258"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367588"
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a>Procedimiento Obtener propiedades de un objeto de sistema de impresión sin reflexión
 Usar la reflexión para detallar las propiedades (y los tipos de esas propiedades) en un objeto puede ralentizar el rendimiento de la aplicación. El <xref:System.Printing.IndexedProperties> espacio de nombres proporciona un medio para obtener esta información con el uso de reflexión.  
@@ -30,8 +30,8 @@ Usar la reflexión para detallar las propiedades (y los tipos de esas propiedade
   
 5.  Obtener el tipo de la <xref:System.Printing.IndexedProperties.PrintProperty.Value%2A> de cada uno de los <xref:System.Printing.IndexedProperties.PrintProperty> objeto.  
   
- [!code-csharp[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/CSharp/Program.cs#showpropertytypeswithoutreflection)]
- [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  
+ [!code-csharp[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/csharp/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/CSharp/Program.cs#showpropertytypeswithoutreflection)]
+ [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Printing.IndexedProperties.PrintProperty>
@@ -41,5 +41,5 @@ Usar la reflexión para detallar las propiedades (y los tipos de esas propiedade
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Collections.DictionaryEntry>
-- [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Información general sobre impresión](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Documentos en WPF](documents-in-wpf.md)
+- [Información general sobre impresión](printing-overview.md)

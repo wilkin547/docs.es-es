@@ -16,49 +16,50 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8268aca920c0b9fc8ea3390d80b9164c22c1ad9c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 19f657fd76f73c4016824511079e6f037bc3bc53
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977861"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359385"
 ---
 # <a name="putinstancewmi-function"></a>Función PutInstanceWmi
-Crea o actualiza una instancia de una clase existente. La instancia se escribe en el repositorio de la WMI. 
+
+Crea o actualiza una instancia de una clase existente. La instancia se escribe en el repositorio de la WMI.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
 HRESULT PutInstanceWmi (
    [in] IWbemClassObject*    pInst,
    [in] long                 lFlags,
    [in] IWbemContext*        pCtx,
    [out] IWbemCallResult**   ppCallResult
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parámetros
 
-`pInst`    
-[in] Un puntero a la instancia se escribe.
+`pInst`\
+[in] Un puntero a la instancia que se va a escribir.
 
-`lFlags`   
-[in] Una combinación de marcas que afectan al comportamiento de esta función. Los siguientes valores se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código: 
+`lFlags`\
+[in] Una combinación de marcas que afectan al comportamiento de esta función. Los siguientes valores se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si se establece, WMI no almacena los calificadores con el **modificado** flavor. <br> Si no es el conjunto, se supone que este objeto no está localizado y todos los calificadores son storedwith esta instancia. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si se establece, WMI no almacena los calificadores con el **modificado** flavor. <br> Si no es el conjunto, se supone que este objeto no está localizado, y se almacenan todos los calificadores con esta instancia. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Cree la instancia si no existe, o sobrescribirlo si ya existe. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Actualice la instancia. Debe existir la instancia de la llamada se realice correctamente. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Cree la instancia. Se produce un error en la llamada si la instancia ya existe. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | La marca provoca una llamada semisincrónica. |
 
-`pCtx`  
-[in] Normalmente, este valor es `null`. En caso contrario, es un puntero a un [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) instancia que se puede usar el proveedor que proporciona las clases solicitadas. 
+`pCtx`\
+[in] Normalmente, este valor es `null`. En caso contrario, es un puntero a un [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) instancia que se puede usar el proveedor que proporciona las clases solicitadas.
 
-`ppCallResult`  
+`ppCallResult`\
 [out] Si `null`, este parámetro se utiliza. Si `lFlags` contiene `WBEM_FLAG_RETURN_IMMEDIATELY`, la función devuelve inmediatamente con `WBEM_S_NO_ERROR`. El `ppCallResult` parámetro recibe un puntero a un nuevo [IWbemCallResult](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult) objeto.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -79,15 +80,15 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI era probablemente detenido y volver a iniciar. Llame a [ConnectServerWmi](connectserverwmi.md) nuevo. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Error en el vínculo de procedimiento remoto (RPC) de la llamada entre el proceso actual y WMI. |
 | `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta. |
-  
+
 ## <a name="remarks"></a>Comentarios
 
 Esta función contiene una llamada a la [IWbemServices::PutInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-putinstance) método.
 
-El `PutInstanceWmi` función admite la creación de instancias y actualizar las instancias de clases existentes solo.  En función de la `pCtx` parámetro se establece, se actualizan algunas o todas las propiedades de la instancia. 
+El `PutInstanceWmi` función admite la creación de instancias y actualizar las instancias de clases existentes solo.  En función de la `pCtx` parámetro se establece, se actualizan algunas o todas las propiedades de la instancia.
 
 Cuando la instancia apunta a `pInst` pertenece a una subclase, administración de Windows llama a todos los proveedores responsables de las clases de la que deriva la subclase. Todos estos proveedores deben realizarse para original `PutInstanceWmi` solicitud se realice correctamente. El proveedor que admite la clase de nivel superior de la jerarquía se llama primero. El orden de llamada continúa con la subclase de la clase de nivel superior y continúa de arriba a abajo hasta que el proveedor para la clase propietaria de la instancia apuntada llega a administración de Windows `pInst`.
-Administración de Windows no llama a los proveedores para cualquiera de las clases secundarias de una instancia. 
+Administración de Windows no llama a los proveedores para cualquiera de las clases secundarias de una instancia.
 
 Cuando una aplicación debe actualizar una instancia que pertenece a una jerarquía de clases, el `pInst` parámetro debe apuntar a la instancia que contiene las propiedades que se va a modificarse. Es decir, considere la posibilidad de una instancia de destino pertenece a **ClassB**. El **ClassB** instancia se deriva de **ClassA**, y **ClassA** define la propiedad **PropA**. Si una aplicación desea realizar un cambio en el valor de **PropA** en el **ClassB** instancia, debe establecer `pInst` a esa instancia en lugar de una instancia de **ClassA** .
 
@@ -95,12 +96,14 @@ Una llamada a `PutInstanceWmi` no se permite en una instancia de una clase abstr
 
 Si se produce un error en la llamada de función, puede obtener información de error adicional mediante una llamada a la [GetErrorInfo](geterrorinfo.md) función.
 
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Encabezado**: WMINet_Utils.idl  
-  
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Requisitos
+
+**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Encabezado**: WMINet_Utils.idl
+
+**Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Vea también
+
 - [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

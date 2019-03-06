@@ -9,15 +9,15 @@ helpviewer_keywords:
 - templates [WPF], Menu
 - parts [WPF], Menu
 ms.assetid: b89da183-9b87-42c6-ac53-731a42c7b09e
-ms.openlocfilehash: 8e04848e738d477d04f4409713f464f1f1cd54fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5b170bff841369e48d082f018577ee8f6f09f39
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507114"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355628"
 ---
 # <a name="menu-styles-and-templates"></a>Estilos y plantillas de menú
-En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.Menu> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.Menu> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="menu-parts"></a>Elementos de menú  
  El <xref:System.Windows.Controls.Menu> control no tiene elementos con nombre.  
@@ -54,26 +54,26 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 ## <a name="menu-and-menuitem-controltemplate-example"></a>Menú y ejemplo de ControlTemplate de MenuItem  
  El ejemplo siguiente muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.Menu> control.  
   
- [!code-xaml[ControlTemplateExamples#Menu](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#menu)]  
+ [!code-xaml[ControlTemplateExamples#Menu](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#menu)]  
   
  El ejemplo siguiente muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.MenuItem> control.  
   
- [!code-xaml[ControlTemplateExamples#MenuItem](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#menuitem)]  
+ [!code-xaml[ControlTemplateExamples#MenuItem](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#menuitem)]  
   
  En el ejemplo siguiente se define la `MenuScrollViewer`, que se usa en el ejemplo anterior.  
   
- [!code-xaml[ControlTemplateExamples#MenuScrollViewer](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#menuscrollviewer)]  
+ [!code-xaml[ControlTemplateExamples#MenuScrollViewer](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/menu.xaml#menuscrollviewer)]  
   
  El <xref:System.Windows.Controls.ControlTemplate> ejemplos usan uno o varios de los siguientes recursos.  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Estilos y plantillas de controles](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [Control Customization](../../../../docs/framework/wpf/controls/control-customization.md) (Personalización de controles)
-- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [Estilos y plantillas de controles](control-styles-and-templates.md)
+- [Control Customization](control-customization.md) (Personalización de controles)
+- [Aplicar estilos y plantillas](styling-and-templating.md)
+- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

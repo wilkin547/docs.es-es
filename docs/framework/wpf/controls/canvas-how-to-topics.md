@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
-ms.openlocfilehash: d853ecbe7722772b243fec13842388f158ad4ddd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550958"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359398"
 ---
 # <a name="canvas-how-to-topics"></a>Temas "Cómo..." de Canvas
-Los temas de esta sección describen cómo utilizar el <xref:System.Windows.Controls.Canvas> elemento a la posición absoluta de los elementos secundarios.  
+Los temas de esta sección describen cómo usar el <xref:System.Windows.Controls.Canvas> elemento a los elementos secundarios en posición absoluta.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Ajustar un borde en torno al contenido de un control Canvas](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [Obtener o establecer propiedades de situación de Canvas](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
- [Crear y utilizar un control Canvas](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  
- [Utilizar las propiedades asociadas de Canvas para situar elementos secundarios](../../../../docs/framework/wpf/controls/how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [Cambiar el tamaño de un lienzo mediante un control Thumb](../../../../docs/framework/wpf/controls/how-to-resize-a-canvas-by-using-a-thumb.md)  
+ [Ajustar un borde en torno al contenido de un control Canvas](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [Obtener o establecer propiedades de situación de Canvas](how-to-get-or-set-canvas-positioning-properties.md)  
+ [Crear y utilizar un control Canvas](how-to-create-and-use-a-canvas.md)  
+ [Utilizar las propiedades asociadas de Canvas para situar elementos secundarios](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [Cambiar el tamaño de un lienzo mediante un control Thumb](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.Panel>  
@@ -40,8 +40,8 @@ Los temas de esta sección describen cómo utilizar el <xref:System.Windows.Cont
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Diseño](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Diseño](../advanced/layout.md)  
   
- [Tutorial: Mi primera aplicación de escritorio WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Tutorial: Mi primera aplicación de escritorio WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Información general sobre ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Información general sobre ScrollViewer](scrollviewer-overview.md)

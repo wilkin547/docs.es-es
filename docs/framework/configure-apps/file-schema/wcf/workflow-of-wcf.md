@@ -3,11 +3,11 @@ title: <workflow> de WCF
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
 ms.openlocfilehash: 9920a9b75a033515584f4108503faa45687b7203
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255385"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362206"
 ---
 # <a name="workflow-of-wcf"></a>\<flujo de trabajo > de WCF
 Configure un participante del seguimiento que escucha los registros de seguimiento que se emiten del tiempo de ejecución directamente y los procesa del modo en que cada uno esté configurado. Esto incluye la escritura en un resultado concreto (p. ej., un archivo, la consola o ETW), procesar o agregar los registros, o cualquier otra combinación que pueda resultar necesaria.  

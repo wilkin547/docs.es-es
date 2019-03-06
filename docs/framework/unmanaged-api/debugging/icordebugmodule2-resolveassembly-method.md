@@ -17,40 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a6596807b98e6c8b8624b5df18f78dbf8d0711
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd899422287d34407778f67e5b4dfd2f33ffd00c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417783"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359697"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>ICorDebugModule2::ResolveAssembly (Método)
-Resuelve el ensamblado al que hace referencia el token de metadatos especificado.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-HRESULT ResolveAssembly (  
-    [in]  mdToken             tkAssemblyRef,  
-    [out] ICorDebugAssembly   **ppAssembly  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `tkAsemblyRef`  
- [in] Un `mdToken` valor que hace referencia al ensamblado.  
-  
- `ppAssembly`  
- [out] Un puntero a la dirección de un objeto ICorDebugAssembly que representa el ensamblado.  
-  
-## <a name="remarks"></a>Comentarios  
- Si el ensamblado aún no está cargado cuando `ResolveAssembly` se llama, un valor HRESULT se devuelve el valor CORDBG_E_CANNOT_RESOLVE_ASSEMBLY.  
-  
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Encabezado:** CorDebug.idl, CorDebug.h  
-  
- **Biblioteca:** CorGuids.lib  
-  
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+
+Resuelve el ensamblado al que hace referencia el token de metadatos especificado.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+HRESULT ResolveAssembly (
+    [in]  mdToken             tkAssemblyRef,
+    [out] ICorDebugAssembly   **ppAssembly
+);
+```
+
+## <a name="parameters"></a>Parámetros
+
+`tkAssemblyRef`\
+[in] Un `mdToken` valor al que hace referencia al ensamblado.
+
+`ppAssembly`\
+[out] Un puntero a la dirección de un objeto ICorDebugAssembly que representa el ensamblado.
+
+## <a name="remarks"></a>Comentarios
+
+Si el ensamblado no se ha cargado cuando `ResolveAssembly` se denomina un HRESULT se devuelve el valor CORDBG_E_CANNOT_RESOLVE_ASSEMBLY.
+
+## <a name="requirements"></a>Requisitos
+
+**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+
+**Encabezado**: CorDebug.idl, CorDebug.h
+
+**Biblioteca:** CorGuids.lib
+
+**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

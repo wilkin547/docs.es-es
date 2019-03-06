@@ -9,15 +9,15 @@ helpviewer_keywords:
 - ListView [WPF], styles and templates
 - templates [WPF], ListView
 ms.assetid: d2387356-2171-4785-822a-7247e024b4ee
-ms.openlocfilehash: 66e9f5d45a4c9b3a04291a8ebbf054ebc055b5a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1171140da352f0f5eb93832a3b6b3557e34d6904
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643642"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362882"
 ---
 # <a name="listview-styles-and-templates"></a>Estilos y plantillas de ListView
-En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.ListView> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.ListView> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="listview-parts"></a>Elementos de ListView  
  El <xref:System.Windows.Controls.ListView> control no tiene elementos con nombre.  
@@ -56,18 +56,18 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 ## <a name="listview-controltemplate-examples"></a>Ejemplos de ListView ControlTemplate  
  El ejemplo siguiente muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.ListView> control y sus tipos asociados.  
   
- [!code-xaml[ControlTemplateExamples#ListView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listview.xaml#listview)]  
+ [!code-xaml[ControlTemplateExamples#ListView](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listview.xaml#listview)]  
   
  El <xref:System.Windows.Controls.ControlTemplate> ejemplos usan uno o varios de los siguientes recursos.  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Estilos y plantillas de controles](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [Control Customization](../../../../docs/framework/wpf/controls/control-customization.md) (Personalización de controles)
-- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [Estilos y plantillas de controles](control-styles-and-templates.md)
+- [Control Customization](control-customization.md) (Personalización de controles)
+- [Aplicar estilos y plantillas](styling-and-templating.md)
+- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

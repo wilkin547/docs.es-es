@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 0ff63027777cd0637238512f01663fe0d81d47ed
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 131eb251493b77f13b5dc59a3a03504be8868e8a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746907"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376174"
 ---
 # <a name="label"></a>Etiqueta
 <xref:System.Windows.Controls.Label> los controles suelen proporcionan información en el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Históricamente, un <xref:System.Windows.Controls.Label> sólo contenía texto, sin embargo, dado el <xref:System.Windows.Controls.Label> que se incluye con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] es un <xref:System.Windows.Controls.ContentControl>, puede contener cualquier texto o un <xref:System.Windows.UIElement>.  
@@ -21,7 +21,7 @@ ms.locfileid: "56746907"
   
  La siguiente imagen muestra un <xref:System.Windows.Controls.Label> "Temas" que tiene como destino un <xref:System.Windows.Controls.ComboBox>.  Cuando el usuario presiona, el <xref:System.Windows.Controls.ComboBox> recibe el foco.  Para obtener más información, vea [Cómo: Establezca la propiedad de destino de una etiqueta](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90)).  
   
- ![Las propiedades de presentación muestra etiquetadas con el uso](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
+ ![Las propiedades de presentación muestra etiquetadas con el uso](./media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Cómo: Crear un Control que tenga tecla de acceso y ajuste de texto](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  

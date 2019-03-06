@@ -9,15 +9,15 @@ helpviewer_keywords:
 - templates [WPF], ToggleButton
 - parts [WPF], ToggleButton
 ms.assetid: 54f23f30-4bcb-4f09-8ce4-376a13a255a1
-ms.openlocfilehash: 76b6cb370829da7dd7a8ee6c2dc2fd07c3478080
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd8d1986bf5c9b5f42a4c8146a89682f4a96b75e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731236"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376187"
 ---
 # <a name="togglebutton-syles-and-templates"></a>Estilos y plantillas de ToggleButton
-En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.Primitives.ToggleButton> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.Primitives.ToggleButton> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="togglebutton-parts"></a>Partes de ToggleButton  
  El <xref:System.Windows.Controls.Primitives.ToggleButton> control no tiene elementos con nombre.  
@@ -46,18 +46,18 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
 ## <a name="togglebutton-controltemplate-example"></a>Ejemplo de ControlTemplate de ToggleButton  
  El ejemplo siguiente muestra cómo definir un <xref:System.Windows.Controls.ControlTemplate> para el <xref:System.Windows.Controls.Primitives.ToggleButton> control.  
   
- [!code-xaml[ControlTemplateExamples#ToggleButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#togglebutton)]  
+ [!code-xaml[ControlTemplateExamples#ToggleButton](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#togglebutton)]  
   
  En el ejemplo anterior se usa uno o varios de los recursos siguientes.  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Estilos y plantillas de controles](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [Control Customization](../../../../docs/framework/wpf/controls/control-customization.md) (Personalización de controles)
-- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [Estilos y plantillas de controles](control-styles-and-templates.md)
+- [Control Customization](control-customization.md) (Personalización de controles)
+- [Aplicar estilos y plantillas](styling-and-templating.md)
+- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

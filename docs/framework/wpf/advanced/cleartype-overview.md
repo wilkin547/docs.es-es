@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 08fb3b7a6d2af4ede27ebeb1454b040d2bd3eb43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5aee9eccad7075ca9f05e08a02ba008bab9a7e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719227"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355160"
 ---
 # <a name="cleartype-overview"></a>Información general sobre ClearType
 En este tema se proporciona información general sobre la tecnología [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] que se encuentra en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -28,12 +28,12 @@ En este tema se proporciona información general sobre la tecnología [!INCLUDE[
   
  En los dos ejemplos siguientes se muestra cómo pueden comenzar los glifos en cualquier límite de subpíxel cuando se usa el posicionamiento de subpíxeles. El ejemplo de la izquierda se representa mediante la versión anterior del representador de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], que no empleaba el posicionamiento de subpíxeles. El ejemplo de la derecha se representa mediante la nueva versión del representador de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] con el posicionamiento de subpíxeles. Observe que todas las **e** y **l** de la imagen de la derecha se representan de manera ligeramente diferente porque cada una de ellas se inicia en un subpíxel diferente. Al ver el texto con su tamaño normal en la pantalla, esta diferencia no es apreciable debido al alto contraste de la imagen de glifo. Esto solo es posible gracias al sofisticado filtrado de color incorporado en [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].  
   
- ![Texto mostrado con dos versiones de ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
+ ![Texto mostrado con dos versiones de ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
 Texto mostrado con versiones anteriores y posteriores de ClearType  
   
  En los dos ejemplos siguientes se compara la salida del representador de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] anterior con la nueva versión del representador de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. El posicionamiento de subpíxeles, que se muestra a la derecha, mejora enormemente el espaciado del tipo en la pantalla, especialmente con tamaños pequeños, donde la diferencia entre un subpíxel y un píxel completo representa una proporción considerable del ancho del glifo. Observe que el espaciado entre las letras es más uniforme en la segunda imagen. La ventaja acumulada del posicionamiento de subpíxeles para la apariencia general de una pantalla de texto aumenta considerablemente y representa una evolución significativa de la tecnología [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].  
   
- ![Texto mostrado con una versión anterior de ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
+ ![Texto mostrado con una versión anterior de ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
 Texto con versiones anteriores y posteriores de ClearType  
   
 <a name="y-direction_antialiasing"></a>   
@@ -42,14 +42,14 @@ Texto con versiones anteriores y posteriores de ClearType
   
  En el ejemplo siguiente se muestra el efecto de no tener ningún suavizado de contorno de la dirección del eje Y. En este caso, los bordes escalonados de las partes superior e inferior de la carta son evidentes.  
   
- ![Texto con bordes escalonados en curvas suaves](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
+ ![Texto con bordes escalonados en curvas suaves](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
 Texto con bordes escalonados en curvas suaves  
   
  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona suavizado de contorno en el nivel de la dirección del eje Y para suavizar los bordes escalonados. Esto es especialmente importante para mejorar la legibilidad de los idiomas del este asiático, cuyos ideogramas tienen una cantidad casi igual de curvas suaves horizontales y verticales.  
   
  En el ejemplo siguiente se muestra el efecto de suavizado de contorno de la dirección del eje Y. En este caso, las partes superior e inferior de la letra muestran una curva suave.  
   
- ![Texto con ClearType y&#45;dirección&#45;alias](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+ ![Texto con ClearType y&#45;dirección&#45;alias](./media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
 Texto con función de suavizado de contorno de ClearType en la dirección del eje Y  
   
 <a name="hardware_acceleration"></a>   
@@ -67,4 +67,4 @@ Texto con función de suavizado de contorno de ClearType en la dirección del ej
  [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>Vea también
-- [Configuración del Registro de ClearType](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)
+- [Configuración del Registro de ClearType](cleartype-registry-settings.md)

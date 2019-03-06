@@ -8,21 +8,21 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 20bf15040d22d334800d6a163937c22928499f3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ab553f6ac22813533710e8b2ed7a3be31f6914d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527645"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358527"
 ---
 # <a name="custom-animations-overview"></a>Información general sobre animaciones personalizadas
 En este tema se describe cómo y cuándo extender el sistema de animación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] creando fotogramas clave personalizados o clases de animación, o utilizando la devolución de llamada por fotograma para omitirlo.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
- Para entender este tema, debe estar familiarizado con los distintos tipos de animación proporcionados por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Para más información, consulte From/To/By Animations Overview (Información general sobre animaciones From/To/By), [Key-Frame Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md) (Información general sobre animaciones de fotogramas clave) e [Información general sobre animaciones en trazados](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).  
+ Para entender este tema, debe estar familiarizado con los distintos tipos de animación proporcionados por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Para más información, consulte From/To/By Animations Overview (Información general sobre animaciones From/To/By), [Key-Frame Animations Overview](key-frame-animations-overview.md) (Información general sobre animaciones de fotogramas clave) e [Información general sobre animaciones en trazados](path-animations-overview.md).  
   
- Dado que las clases de animación heredan de la <xref:System.Windows.Freezable> (clase), debe estar familiarizado con <xref:System.Windows.Freezable> objetos y cómo heredar de <xref:System.Windows.Freezable>. Para más información, consulte [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) (Información general sobre objetos Freezable).  
+ Dado que las clases de animación heredan de la <xref:System.Windows.Freezable> (clase), debe estar familiarizado con <xref:System.Windows.Freezable> objetos y cómo heredar de <xref:System.Windows.Freezable>. Para más información, consulte [Freezable Objects Overview](../advanced/freezable-objects-overview.md) (Información general sobre objetos Freezable).  
   
 <a name="extendingtheanimationsystem"></a>   
 ## <a name="extending-the-animation-system"></a>Extender el sistema de animación  
@@ -45,7 +45,7 @@ En este tema se describe cómo y cuándo extender el sistema de animación de [!
   
 <a name="createacustomkeyframe"></a>   
 ## <a name="create-a-custom-key-frame"></a>Crear un fotograma clave personalizado  
- Crear una clase de fotograma clave personalizado es la manera más simple de extender el sistema de animación. Utilice este enfoque cuando desee utilizar un método de interpolación diferente para una animación de fotograma clave.  Como se describe en [Key-Frame Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md) (Información general sobre animaciones de fotogramas clave ), una animación de fotograma clave usa objetos de fotograma clave para generar sus valores de salida. Cada objeto de fotograma clave realiza tres funciones:  
+ Crear una clase de fotograma clave personalizado es la manera más simple de extender el sistema de animación. Utilice este enfoque cuando desee utilizar un método de interpolación diferente para una animación de fotograma clave.  Como se describe en [Key-Frame Animations Overview](key-frame-animations-overview.md) (Información general sobre animaciones de fotogramas clave ), una animación de fotograma clave usa objetos de fotograma clave para generar sus valores de salida. Cada objeto de fotograma clave realiza tres funciones:  
   
 -   Especifica un valor de destino mediante su <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propiedad.  
   
@@ -57,7 +57,7 @@ En este tema se describe cómo y cuándo extender el sistema de animación de [!
   
  Derive de la clase abstracta *\<Tipo>* Keyframe e implemente el método InterpolateValueCore. El método InterpolateValueCore devuelve el valor actual del fotograma clave. Acepta dos parámetros: el valor del fotograma clave anterior y un valor de progreso que oscila de 0 a 1. Un progreso de 0 indica que el fotograma clave se acaba de iniciar, y un valor de 1 indica que el fotograma clave se acaba de completar y debe devolver el valor especificado por su <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propiedad.  
   
- Dado que el  *\<tipo >* heredan las clases de fotograma clave de la <xref:System.Windows.Freezable> (clase), también debe invalidar <xref:System.Windows.Freezable.CreateInstanceCore%2A> core para devolver una nueva instancia de la clase. Si la clase no utiliza propiedades de dependencia para almacenar sus datos o requiere que se inicialice otra vez después de haberse creado, es posible que tenga que invalidar otros métodos; consulte [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) (Información general sobre objetos Freezable).  
+ Dado que el  *\<tipo >* heredan las clases de fotograma clave de la <xref:System.Windows.Freezable> (clase), también debe invalidar <xref:System.Windows.Freezable.CreateInstanceCore%2A> core para devolver una nueva instancia de la clase. Si la clase no utiliza propiedades de dependencia para almacenar sus datos o requiere que se inicialice otra vez después de haberse creado, es posible que tenga que invalidar otros métodos; consulte [Freezable Objects Overview](../advanced/freezable-objects-overview.md) (Información general sobre objetos Freezable).  
   
  Después de haber creado la animación personalizada *\<Tipo>* Keyframe, puede usarla con la clase *\<Tipo>* AnimationUsingKeyFrames correspondiente a ese tipo.  
   
@@ -72,7 +72,7 @@ En este tema se describe cómo y cuándo extender el sistema de animación de [!
   
  Derive de una clase *\<Tipo>* Animación e implemente el método GetCurrentValueCore. El método GetCurrentValueCore devuelve el valor actual de la animación. Acepta tres parámetros: un valor inicial sugerido, un valor final sugerido y un <xref:System.Windows.Media.Animation.AnimationClock>, que usan para determinar el progreso de la animación.  
   
- Dado que el  *\<tipo >* clases AnimationBase heredan de la <xref:System.Windows.Freezable> (clase), también debe invalidar <xref:System.Windows.Freezable.CreateInstanceCore%2A> core para devolver una nueva instancia de la clase. Si la clase no utiliza propiedades de dependencia para almacenar sus datos o requiere que se inicialice otra vez después de haberse creado, es posible que tenga que invalidar otros métodos; consulte [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) (Información general sobre objetos Freezable).  
+ Dado que el  *\<tipo >* clases AnimationBase heredan de la <xref:System.Windows.Freezable> (clase), también debe invalidar <xref:System.Windows.Freezable.CreateInstanceCore%2A> core para devolver una nueva instancia de la clase. Si la clase no utiliza propiedades de dependencia para almacenar sus datos o requiere que se inicialice otra vez después de haberse creado, es posible que tenga que invalidar otros métodos; consulte [Freezable Objects Overview](../advanced/freezable-objects-overview.md) (Información general sobre objetos Freezable).  
   
  Para más información, consulte la documentación del método GetCurrentValueCore para la clase *\<Tipo>* AnimationBase para el tipo que desee animar. Para ver un ejemplo, consulte el [ejemplo de animación personalizada](https://go.microsoft.com/fwlink/?LinkID=159981)  
   
@@ -95,7 +95,7 @@ En este tema se describe cómo y cuándo extender el sistema de animación de [!
   
 -   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> : Invalide esta propiedad para indicar el <xref:System.Type> de salida produce la animación.  
   
- Si la clase no utiliza propiedades de dependencia para almacenar sus datos o requiere que se inicialice otra vez después de haberse creado, es posible que tenga que invalidar otros métodos; consulte [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) (Información general sobre objetos Freezable).  
+ Si la clase no utiliza propiedades de dependencia para almacenar sus datos o requiere que se inicialice otra vez después de haberse creado, es posible que tenga que invalidar otros métodos; consulte [Freezable Objects Overview](../advanced/freezable-objects-overview.md) (Información general sobre objetos Freezable).  
   
  El paradigma recomendado (utilizado por las animaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]) es usar dos niveles de herencia:  
   
@@ -126,10 +126,10 @@ En este tema se describe cómo y cuándo extender el sistema de animación de [!
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.IKeyFrame>
-- [Información general sobre técnicas de animación de propiedades](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
-- [Información general sobre objetos Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
-- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Información general sobre animaciones en trazados ](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
-- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Información general sobre sistemas de control de tiempo y animación ](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Información general sobre técnicas de animación de propiedades](property-animation-techniques-overview.md)
+- [Información general sobre objetos Freezable](../advanced/freezable-objects-overview.md)
+- [Información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md)
+- [Información general sobre animaciones en trazados ](path-animations-overview.md)
+- [Información general sobre animaciones](animation-overview.md)
+- [Información general sobre sistemas de control de tiempo y animación ](animation-and-timing-system-overview.md)
 - [Ejemplo de animación personalizada](https://go.microsoft.com/fwlink/?LinkID=159981)

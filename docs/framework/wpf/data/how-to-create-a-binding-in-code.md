@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un enlace mediante código
+title: Procedimiento Crear un enlace mediante código
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - binding data [WPF], creating
 - data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
-ms.openlocfilehash: 6af87f1d6b8c4ee781c65d5a75872e8a72a02390
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 666dbb4e2de0e8a7a83d6e0dfda50822cfdfd860
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747708"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371195"
 ---
 # <a name="how-to-create-a-binding-in-code"></a>Filtrar Crear un enlace mediante código
 En este ejemplo se muestra cómo crear y establecer un <xref:System.Windows.Data.Binding> en el código.  
@@ -23,21 +23,21 @@ En este ejemplo se muestra cómo crear y establecer un <xref:System.Windows.Data
   
  En el ejemplo siguiente se crea una clase denominada, `MyData`, que contiene una propiedad denominada `MyDataProperty`.  
   
- [!code-csharp[CodeOnlyBinding#DataObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/MyData.cs#dataobject)]
- [!code-vb[CodeOnlyBinding#DataObject](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/MyData.vb#dataobject)]  
+ [!code-csharp[CodeOnlyBinding#DataObject](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/MyData.cs#dataobject)]
+ [!code-vb[CodeOnlyBinding#DataObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/MyData.vb#dataobject)]  
   
  El ejemplo siguiente muestra cómo crear un objeto de enlace para establecer el origen del enlace.  El ejemplo se utiliza <xref:System.Windows.FrameworkElement.SetBinding%2A> para enlazar el <xref:System.Windows.Controls.TextBlock.Text%2A> propiedad de `myText`, que es un <xref:System.Windows.Controls.TextBlock> controlar, `MyDataProperty`.  
   
- [!code-csharp[CodeOnlyBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
- [!code-vb[CodeOnlyBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
+ [!code-csharp[CodeOnlyBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
+ [!code-vb[CodeOnlyBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
   
  El ejemplo de código completo, vea [solo código de ejemplo de enlace](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771500(v=vs.90)).  
   
  En lugar de llamar <xref:System.Windows.FrameworkElement.SetBinding%2A>, puede usar el <xref:System.Windows.Data.BindingOperations.SetBinding%2A> método estático de la <xref:System.Windows.Data.BindingOperations> clase. El siguiente ejemplo, las llamadas <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType> en lugar de <xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType> para enlazar `myText` a `myDataProperty`.  
   
- [!code-csharp[CodeOnlyBinding#BOSetBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#bosetbinding)]
- [!code-vb[CodeOnlyBinding#BOSetBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#bosetbinding)]  
+ [!code-csharp[CodeOnlyBinding#BOSetBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#bosetbinding)]
+ [!code-vb[CodeOnlyBinding#BOSetBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#bosetbinding)]  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Información general sobre el enlace de datos](data-binding-overview.md)
+- [Temas "Cómo..."](data-binding-how-to-topics.md)

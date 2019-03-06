@@ -7,27 +7,27 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: 8a95d759-c298-4291-aa7e-ecdeffaae6ab
-ms.openlocfilehash: a1216a4aa8c2872eef33eb29a74ec4c1913dc671
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5acb5d96a9c8a1ce2d2c0c842be0e57e62eb538f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555434"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361933"
 ---
 # <a name="toolbar"></a>ToolBar
 El <xref:System.Windows.Controls.ToolBar> control es un contenedor para un grupo de comandos o controles que suelen estar relacionados en su función.  
   
- Las ilustraciones siguientes muestran horizontal y vertical <xref:System.Windows.Controls.ToolBar> controles.  
+ Las ilustraciones siguientes muestran horizontales y verticales <xref:System.Windows.Controls.ToolBar> controles.  
   
- ![Barra de herramientas horizontal](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
+ ![Barra de herramientas horizontal](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
 Barra de herramientas horizontal  
   
- ![Barra de herramientas vertical](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
+ ![Barra de herramientas vertical](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
 Barra de herramientas vertical  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre controles ToolBar](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
-  [Aplicar estilo a controles en un elemento toolbar](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+ [Información general sobre controles ToolBar](toolbar-overview.md)  
+  [Aplicar estilo a controles en un elemento toolbar](how-to-style-controls-on-a-toolbar.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.ToolBar>  

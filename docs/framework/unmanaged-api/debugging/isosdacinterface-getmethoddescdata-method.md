@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4e32facc65162c4deb853cd507a00126e5f786e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825958"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352599"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>Método ISOSDacInterface::GetMethodDescData
 
@@ -41,19 +41,25 @@ HRESULT GetMethodDescData(
 );
 ```
 
-### <a name="parameters"></a>Parámetros
+## <a name="parameters"></a>Parámetros
 
-`methodDesc` [in] La dirección de la MethodDesc.
+`methodDesc`\
+[in] La dirección de la MethodDesc.
 
-`ip` [in] La dirección IP del método.
+`ip`\
+[in] La dirección IP del método.
 
-`data` [out] Los datos asociados con el MethodDesc devuelto desde las API internas.
+`data`\
+[out] Los datos asociados con el MethodDesc devuelto desde las API internas.
 
-`cRevertedRejitVersions` [out] El número de versiones de rejit revertida.
+`cRevertedRejitVersions`\
+[out] El número de versiones de rejit revertida.
 
-`rgRevertedRejitData` [out] Los datos asociados con las versiones de rejit revertida devuelto desde las API internas.
+`rgRevertedRejitData`\
+[out] Los datos asociados con las versiones de rejit revertida devuelto desde las API internas.
 
-`pcNeededRevertedRejitData` [out] El número de bytes necesarios para almacenar los datos asociados con las versiones de ReJit revertidas.
+`pcNeededRevertedRejitData`\
+[out] El número de bytes necesarios para almacenar los datos asociados con las versiones de ReJit revertidas.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -68,5 +74,5 @@ El método proporcionado forma parte de la `ISOSDacInterface` interfaz y corresp
 
 ## <a name="see-also"></a>Vea también
 
-- [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfaz ISOSDacInterface](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [Depuración](index.md)
+- [Interfaz ISOSDacInterface](isosdacinterface-interface.md)

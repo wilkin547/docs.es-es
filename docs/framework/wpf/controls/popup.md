@@ -9,24 +9,24 @@ helpviewer_keywords:
 - popups [WPF]
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
-ms.openlocfilehash: c7161439f5b4a0e0e224235b458945376215d273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a36af4730a494448387ad059ff75199a19a1a359
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551757"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370662"
 ---
 # <a name="popup"></a>Popup
 El <xref:System.Windows.Controls.Primitives.Popup> control muestra el contenido en una ventana independiente que flota sobre la ventana de la aplicación actual.  
   
  La siguiente ilustración muestra un <xref:System.Windows.Controls.Primitives.Popup> control que se coloca con respecto a un <xref:System.Windows.Controls.Button> que es su elemento primario.  
   
- ![Ilustración emergente](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")  
+ ![Ilustración emergente](./media/popuppicture.JPG "PopupPicture")  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre el control Popup](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [Posición de un control Popup](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)  
- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+ [Información general sobre el control Popup](popup-overview.md)  
+ [Posición de un control Popup](popup-placement-behavior.md)  
+ [Temas "Cómo..."](popup-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Controls.Primitives.Popup>  

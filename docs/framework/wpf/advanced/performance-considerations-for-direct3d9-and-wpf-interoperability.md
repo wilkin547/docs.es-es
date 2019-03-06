@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-ms.openlocfilehash: f595e75c90ebef480200e9210a57087eb4d20e87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3c99f22a1d097c82494ba6eff344820162ed87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608867"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356733"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Consideraciones de rendimiento para la interoperabilidad entre Direct3D9 y WPF
 Puede hospedar contenido Direct3D9 mediante la <xref:System.Windows.Interop.D3DImage> clase. Hospedar contenido Direct3D9 puede afectar al rendimiento de la aplicación. En este tema se describe los procedimientos recomendados para optimizar el rendimiento al hospedar contenido Direct3D9 en una aplicación de Windows Presentation Foundation (WPF). Estas recomendaciones incluyen cómo usar <xref:System.Windows.Interop.D3DImage> y procedimientos recomendados cuando usa Windows Vista, Windows XP, y se muestran varios monitores.  
   
 > [!NOTE]
->  Para obtener ejemplos de código que muestran estos procedimientos recomendados, consulte [interoperabilidad entre Direct3D9 y WPF](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
+>  Para obtener ejemplos de código que muestran estos procedimientos recomendados, consulte [interoperabilidad entre Direct3D9 y WPF](wpf-and-direct3d9-interoperation.md).  
   
 ## <a name="use-d3dimage-sparingly"></a>Utilice con moderación D3DImage  
  Contenido Direct3D9 hospedado en un <xref:System.Windows.Interop.D3DImage> instancia no se representará tan rápido como en una aplicación de Direct3D pura. Copiar en la superficie y vaciar el búfer de comandos pueden ser operaciones costosas. Como el número de <xref:System.Windows.Interop.D3DImage> aumenta las instancias, más el vaciado se produce y degrada el rendimiento. Por lo tanto, debe usar <xref:System.Windows.Interop.D3DImage> con moderación.  
@@ -47,7 +47,7 @@ Puede hospedar contenido Direct3D9 mediante la <xref:System.Windows.Interop.D3DI
 ## <a name="best-practices-for-multi-monitor-displays"></a>Procedimientos recomendados para las pantallas de varios monitores  
  Si usas un equipo que tiene varios monitores, debe seguir los procedimientos recomendados descritos anteriormente. También hay algunas consideraciones de rendimiento adicionales para una configuración de varios monitor.  
   
- Al crear el búfer de reserva, se crea en un dispositivo específico y el adaptador pero WPF puede mostrar el búfer frontal en ningún adaptador. Copiar en todos los adaptadores para actualizar el búfer frontal puede resultar muy caro. En Windows Vista que está configurado para utilizar el WDDM con varias tarjetas de vídeo y con un `IDirect3DDevice9Ex` dispositivo, si el búfer frontal es en un adaptador diferente pero la misma tarjeta de vídeo, no hay ninguna reducción del rendimiento. Sin embargo, en Windows XP y el XDDM con varias tarjetas de vídeo, hay una importante penalización del rendimiento cuando el búfer frontal se muestra en un adaptador distinto al búfer de reserva. Para obtener más información, consulte [interoperabilidad entre Direct3D9 y WPF](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
+ Al crear el búfer de reserva, se crea en un dispositivo específico y el adaptador pero WPF puede mostrar el búfer frontal en ningún adaptador. Copiar en todos los adaptadores para actualizar el búfer frontal puede resultar muy caro. En Windows Vista que está configurado para utilizar el WDDM con varias tarjetas de vídeo y con un `IDirect3DDevice9Ex` dispositivo, si el búfer frontal es en un adaptador diferente pero la misma tarjeta de vídeo, no hay ninguna reducción del rendimiento. Sin embargo, en Windows XP y el XDDM con varias tarjetas de vídeo, hay una importante penalización del rendimiento cuando el búfer frontal se muestra en un adaptador distinto al búfer de reserva. Para obtener más información, consulte [interoperabilidad entre Direct3D9 y WPF](wpf-and-direct3d9-interoperation.md).  
   
 ## <a name="performance-summary"></a>Resumen de rendimiento  
  En la tabla siguiente se muestra el rendimiento de la actualización de búfer frontal como una función de sistema operativo, el formato de píxel y posibilidad de bloqueo de superficie. El búfer frontal y el búfer de reserva se supone que en el mismo adaptador. Dependiendo de la configuración del adaptador, las actualizaciones de hardware son generalmente mucho más rápidas que las actualizaciones de software.  
@@ -61,6 +61,6 @@ Puede hospedar contenido Direct3D9 mediante la <xref:System.Windows.Interop.D3DI
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Interop.D3DImage>
-- [Interoperabilidad entre WPF y Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)
-- [Tutorial: Crear contenido Direct3D9 para hospedarlo en WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [Tutorial: Hospedar contenido Direct3D9 en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Interoperabilidad entre WPF y Direct3D9](wpf-and-direct3d9-interoperation.md)
+- [Tutorial: Crear contenido Direct3D9 para hospedarlo en WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Tutorial: Hospedar contenido Direct3D9 en WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

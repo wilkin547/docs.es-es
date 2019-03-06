@@ -8,12 +8,12 @@ helpviewer_keywords:
 - visual layer [WPF], DrawingVisual objects
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
-ms.openlocfilehash: 0d4ba3939a95b665684713f3b1775bacd3d028b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d15662958c6967d8bbb157c1af99b4666cebecc2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675079"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375056"
 ---
 # <a name="using-drawingvisual-objects"></a>Usar objetos DrawingVisual
 En este tema proporciona información general sobre cómo usar <xref:System.Windows.Media.DrawingVisual> objetos en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] capa visual.  
@@ -28,8 +28,8 @@ En este tema proporciona información general sobre cómo usar <xref:System.Wind
   
  Cuando se crea un objeto de contenedor host para objetos visuales, debe almacenar las referencias de objeto visual en un <xref:System.Windows.Media.VisualCollection>. Use el <xref:System.Windows.Media.VisualCollection.Add%2A> método para agregar un objeto visual en el contenedor del host. En el ejemplo siguiente, se crea un objeto contenedor host y se agregan tres objetos visuales a su <xref:System.Windows.Media.VisualCollection>.  
   
- [!code-csharp[DrawingVisualSample#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#100)]
- [!code-vb[DrawingVisualSample#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#100)]  
+ [!code-csharp[DrawingVisualSample#100](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#100)]
+ [!code-vb[DrawingVisualSample#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#100)]  
   
 > [!NOTE]
 >  Para obtener el código completo del que se ha extraído el ejemplo de código anterior, vea [Ejemplo Hit Test Using DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994).  
@@ -42,8 +42,8 @@ En este tema proporciona información general sobre cómo usar <xref:System.Wind
   
  En el ejemplo siguiente, un <xref:System.Windows.Media.DrawingVisual> objeto se crea y se dibuja un rectángulo en su <xref:System.Windows.Media.DrawingContext>.  
   
- [!code-csharp[DrawingVisualSample#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#101)]
- [!code-vb[DrawingVisualSample#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#101)]  
+ [!code-csharp[DrawingVisualSample#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#101)]
+ [!code-vb[DrawingVisualSample#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#101)]  
   
 <a name="creating_overrides"></a>   
 ## <a name="creating-overrides-for-frameworkelement-members"></a>Crear invalidaciones para los miembros FrameworkElement  
@@ -57,8 +57,8 @@ En este tema proporciona información general sobre cómo usar <xref:System.Wind
   
  En el ejemplo siguiente, invalidaciones para los dos <xref:System.Windows.FrameworkElement> miembros se implementan.  
   
- [!code-csharp[DrawingVisualSample#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#102)]
- [!code-vb[DrawingVisualSample#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#102)]  
+ [!code-csharp[DrawingVisualSample#102](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#102)]
+ [!code-vb[DrawingVisualSample#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#102)]  
   
 <a name="providing_hit_testing_support"></a>   
 ## <a name="providing-hit-testing-support"></a>Proporcionar compatibilidad con las pruebas de posicionamiento  
@@ -66,11 +66,11 @@ En este tema proporciona información general sobre cómo usar <xref:System.Wind
   
  En el ejemplo siguiente, se implementa la compatibilidad con las pruebas de posicionamiento para el objeto contenedor host y sus elementos secundarios.  
   
- [!code-csharp[DrawingVisualSample#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#103)]
- [!code-vb[DrawingVisualSample#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#103)]  
+ [!code-csharp[DrawingVisualSample#103](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#103)]
+ [!code-vb[DrawingVisualSample#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#103)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Media.DrawingVisual>
 - <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
-- [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Realizar pruebas de posicionamiento en la capa visual](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+- [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md)
+- [Realizar pruebas de posicionamiento en la capa visual](hit-testing-in-the-visual-layer.md)
