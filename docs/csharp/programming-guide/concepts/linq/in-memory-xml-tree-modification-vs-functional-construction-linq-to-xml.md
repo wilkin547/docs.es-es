@@ -69,7 +69,7 @@ Console.WriteLine(newTree);
   
  El ejemplo funcional de este caso no es más corto que el primer ejemplo y en realidad no es más sencillo. No obstante, si tiene muchos cambios que realizar a un árbol XML, el enfoque no funcional se hará más complejo y difícil de entender. Por el contrario, cuando se usa el enfoque funcional, se sigue formando el XML deseado, incrustando consultas y expresiones según convenga, para extraer el contenido deseado. El enfoque funcional produce código que es más fácil de mantener.  
   
- Tenga en cuenta que el enfoque funcional probablemente no tendrá un rendimiento tan bueno como la manipulación del árbol. El principal problema es que el enfoque funcional crea objetos de corta duración. No obstante, la contrapartida es eficacia si el uso del enfoque funcional permite una mayor productividad del programador.  
+ Tenga en cuenta que el enfoque funcional probablemente no tendrá un rendimiento tan bueno como la manipulación del árbol. El principal problema es que el enfoque funcional crea objetos de corta duración. No obstante, la compensación es efectiva si el uso del enfoque funcional permite una mayor productividad del programador.  
   
  Éste es un ejemplo muy sencillo, pero sirve para mostrar la diferencia de filosofía entre los dos enfoques. El enfoque funcional ofrece mayores ganancias de productividad para transformar documentos XML de gran tamaño.  
   
