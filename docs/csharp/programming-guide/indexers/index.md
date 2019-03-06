@@ -48,7 +48,7 @@ A partir de C# 7.0, los descriptores de acceso get y set se pueden implementar c
   
 -   Los indizadores pueden tener más de un parámetro formal, por ejemplo, al tener acceso a una matriz bidimensional.  
   
-##  <a name="BKMK_RelatedSections"></a> Secciones relacionadas  
+## <a name="BKMK_RelatedSections"></a> Secciones relacionadas  
   
 -   [Utilizar indizadores](../../../csharp/programming-guide/indexers/using-indexers.md)  
   

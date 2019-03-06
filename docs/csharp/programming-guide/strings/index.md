@@ -113,7 +113,7 @@ string s = String.Empty;
   
  En este ejemplo, se usa un objeto <xref:System.Text.StringBuilder> para crear una cadena a partir de un conjunto de tipos numéricos:  
   
- [!code-csharp[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
+ [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Cadenas, métodos de extensión y LINQ  
  Dado que el tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601>, puede usar los métodos de extensión definidos en la clase <xref:System.Linq.Enumerable> en cadenas. Para evitar el desorden visual, estos métodos se excluyen de IntelliSense para el tipo <xref:System.String>, pero aun así están disponibles. También puede utilizar expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] en cadenas. Para más información, consulte [LINQ and Strings](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md) (LINQ y cadenas).  

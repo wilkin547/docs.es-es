@@ -62,7 +62,7 @@ Una interfaz tiene las propiedades siguientes:
  [Cómo: Implementar explícitamente miembros de dos interfaces](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Proporciona un ejemplo de cómo implementar explícitamente miembros de interfaces con herencia.  
   
-##  <a name="BKMK_RelatedSections"></a> Secciones relacionadas
+## <a name="BKMK_RelatedSections"></a> Secciones relacionadas
 
 - [Propiedades de interfaz](../classes-and-structs/interface-properties.md)  
 - [Indizadores en Interfaces](../indexers/indexers-in-interfaces.md)  
