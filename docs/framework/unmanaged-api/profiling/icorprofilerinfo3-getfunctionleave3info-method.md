@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a035c295e9d1ef093fb9f4e426002cc4aef88223
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ee7dd280239217e4e16932667e86de67e738f2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520420"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471178"
 ---
 # <a name="icorprofilerinfo3getfunctionleave3info-method"></a>ICorProfilerInfo3::GetFunctionLeave3Info (Método)
 Proporciona el marco de pila y el valor devuelto de la función que se va a notificar al generador de perfiles la [FunctionLeave3WithInfo función](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) función. Solo se puede llamar a este método durante la devolución de llamada `FunctionLeave3WithInfo`.  
@@ -37,7 +37,7 @@ HRESULT GetFunctionLeave3Info(
             [out] COR_PRF_FUNCTION_ARGUMENT_RANGE *pRetvalRange);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `functionId`  
  [in] El `FunctionID` de la función que devuelve.  
   

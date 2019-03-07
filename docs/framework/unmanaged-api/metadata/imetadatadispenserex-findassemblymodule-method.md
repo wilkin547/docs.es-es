@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ae455aeba353cfa66a1253b580e15b280caec8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccb6331399ef3479e43bdb9dc4a72b5fd196672c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584105"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495347"
 ---
 # <a name="imetadatadispenserexfindassemblymodule-method"></a>IMetaDataDispenserEx::FindAssemblyModule (Método)
 Este método no se implementa. Si se llama, devuelve E_NOTIMPL.  
@@ -42,7 +42,7 @@ HRESULT FindAssemblyModule(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `szAppBase`  
  [in] No se utiliza.  
   

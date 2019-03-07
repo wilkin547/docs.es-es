@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50e9f3b8271cb5e518b75ee129fe6ea2a1b7720d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 300baeb4184bbb73704563671ab907fafbdb5284
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512936"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472634"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection (Método)
 Notifica al depurador que se ha creado una nueva conexión.  
@@ -37,7 +37,7 @@ HRESULT CreateConnection (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pProcess`  
  [in] Un puntero a un objeto "ICorDebugProcess" que representa el proceso en el que se creó la conexión  
   

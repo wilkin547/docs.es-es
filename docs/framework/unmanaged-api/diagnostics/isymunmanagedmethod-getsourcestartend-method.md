@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ecb726f275a694fded2c486448a60b28fadb168
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d9a02ea338dd2c1366256434eacda51327b7d5f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561873"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479472"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd (Método)
 Obtiene las posiciones de documento de inicio y finalización para el origen de este método. La primera posición de la matriz es el inicio y la segunda posición de la matriz es el final.  
@@ -37,7 +37,7 @@ HRESULT GetSourceStartEnd(
     [out] BOOL                   *pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `docs`  
  [in] Las iniciales y finales documentos de origen.  
   

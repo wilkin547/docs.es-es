@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3692471e0652a1a812b1d0cbed9e38cc32112ef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ed1db49be78d7d16648a9ef9735e79ef1b3ab98
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404315"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487335"
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent (Función)
-Crea o abre un identificador de evento al que señalará cualquier Common Language Runtime (CLR) que se cargue en el proceso de destino especificado.  
+Crea o abre un identificador de evento al que apuntará cualquier Common Language Runtime (CLR) que se cargue en el proceso de destino especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,7 +38,7 @@ HRESULT GetStartupNotificationEvent
     );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `debuggeePID`  
  [in] Identificador de proceso del proceso de destino desde el que se reciben las notificaciones de inicio del CLR.  
   
@@ -56,12 +56,12 @@ HRESULT GetStartupNotificationEvent
  No se puede obtener el identificador del evento de notificación de inicio.  
   
 ## <a name="remarks"></a>Comentarios  
- En el sistema operativo Windows, `debuggeePID` se asigna a un identificador de proceso del sistema operativo.  
+ En el sistema operativo Windows, `debuggeePID` se asigna a un identificador de procesos del sistema operativo.  
   
  El evento se señala antes de que el CLR que lo señaló ejecute ningún código administrado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado:** dbgshim.h  
   

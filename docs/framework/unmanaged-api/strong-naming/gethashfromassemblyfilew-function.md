@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bcbae7b5de54bd2134adbbdee1986c4e1dfae3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fda1964ab29287b2a3a108a15f42d1ea28a4feb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667016"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486921"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>GetHashFromAssemblyFileW (Función)
 Obtiene un hash del archivo de ensamblado especificado mediante un algoritmo hash concreto. La ruta de acceso al archivo de ensamblado debe especificarse como una cadena Unicode.  
@@ -40,7 +40,7 @@ HRESULT GetHashFromAssemblyFileW (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `wszFilePath`  
  [in] La ruta de acceso al archivo que se aplica un algoritmo hash. Este parámetro debe ser una cadena Unicode.  
   

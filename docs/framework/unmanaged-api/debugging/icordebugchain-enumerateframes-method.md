@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d408f317b546fb7e8314e904e6f5ad9e6296ae6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7568f8ca3b92ef465ab595348f68895f389d61e4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403271"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489714"
 ---
 # <a name="icordebugchainenumerateframes-method"></a>ICorDebugChain::EnumerateFrames (Método)
-Obtiene un enumerador que contiene todos los marcos de pila administrados de la cadena, comenzando por el marco más reciente.  
+Obtiene un enumerador que contiene todos los marcos de pila administrados de la cadena, empezando por el marco más reciente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,20 +35,20 @@ HRESULT EnumerateFrames (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `ppFrames`  
- [out] Un puntero a la dirección de un objeto ICorDebugFrameEnum que es el enumerador de los marcos de pila.  
+ [out] Un puntero a la dirección de un objeto ICorDebugFrameEnum que es el enumerador para los marcos de pila.  
   
 ## <a name="remarks"></a>Comentarios  
  La cadena representa la pila de llamadas física del subproceso.  
   
- El `EnumerateFrames` método debe llamarse solo para cadenas administrados. La API de depuración no proporciona métodos para obtener los marcos incluidos en cadenas no administradas. El depurador debe utilizar otros medios para obtener esta información.  
+ El `EnumerateFrames` método debe llamarse únicamente para las cadenas administradas. La API de depuración no proporciona métodos para obtener fotogramas incluidos en cadenas no administradas. El depurador debe usar otros medios para obtener esta información.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

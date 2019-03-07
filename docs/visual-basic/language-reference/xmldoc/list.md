@@ -13,12 +13,12 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 8964b34d94daf18e078e515b65588f5273c76199
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 61b0b018b3d06a2307aa280a748b7d07c5fa7915
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970197"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496071"
 ---
 # <a name="list-visual-basic"></a>\<lista > (Visual Basic)
 Define una lista o tabla.  
@@ -38,7 +38,7 @@ Define una lista o tabla.
 </list>  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `type`  
  El tipo de la lista. Debe ser un "bullet" para una lista con viñetas, "number" para una lista numerada o "table" para una tabla de dos columnas.  
   

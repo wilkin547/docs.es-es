@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60d1fafc1d5e718467b944276fc708ab34ddd782
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f4baa58159760af12afca5b84cb6b1b66e46093
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727838"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485543"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize (Método)
 Devuelve el tamaño acumulado de los parámetros de la pila en x86 los sistemas operativos.  
@@ -33,7 +33,7 @@ Devuelve el tamaño acumulado de los parámetros de la pila en x86 los sistemas 
 HRESULT GetStackParameterSize([out] ULONG32 * pSize)  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pSize`  
  [out] Un puntero al tamaño acumulado de los parámetros en la pila.  
   

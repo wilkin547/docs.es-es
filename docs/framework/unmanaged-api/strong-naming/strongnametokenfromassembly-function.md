@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe15b855044a7bf45ea172f42436c3557b562037
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46d8013d43dc14807804502e4a0820a2928f917e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687070"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499243"
 ---
 # <a name="strongnametokenfromassembly-function"></a>StrongNameTokenFromAssembly (Función)
 Crea un token de nombre seguro desde el archivo de ensamblado especificado.  
@@ -38,7 +38,7 @@ BOOLEAN StrongNameTokenFromAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `wszFilePath`  
  [in] La ruta de acceso al archivo ejecutable portable (PE) para el ensamblado.  
   

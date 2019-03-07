@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc0dde4f2455ed45ddf8ca1efefa7ab67ba04f6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1cab24f949ddae55d5e699e6ad82851007504dd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660780"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475702"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags (Método)
 Establece las marcas que se deben incrustar en una imagen precompilada para el tiempo de ejecución cargar esa imagen en el proceso actual.  
@@ -35,7 +35,7 @@ HRESULT SetDesiredNGENCompilerFlags (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pdwFlags`  
  [in] Un valor de la [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeración que especifica las marcas de compilador que se utiliza para seleccionar la imagen precompilada correcta.  
   

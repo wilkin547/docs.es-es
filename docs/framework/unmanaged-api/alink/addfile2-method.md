@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 078820649543479e65ec35daa6e1cc2876581ddc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c595f59905a369c206da2fa011038d0d95041fa4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693208"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500686"
 ---
 # <a name="addfile2-method"></a>AddFile2 (Método)
 Agrega archivos al ensamblado. También puede utilizarse para crear módulos no enlazados.  
@@ -39,7 +39,7 @@ HRESULT AddFile2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
  Id. del ensamblado al que se agrega el archivo.  
   

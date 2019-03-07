@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 483f59ee3e81861ec1b05a0fee9c5db797aab68f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43009a81298fa5414df94e0664306859f0c9b851
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491159"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478751"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet (Método)
 Crea un conjunto de permisos de seguridad que se va a adjuntar al objeto al que hace referencia el token especificado.  
@@ -38,7 +38,7 @@ HRESULT DefineSecurityAttributeSet (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `tkObj`  
  [in] El token al que se adjunta la información de seguridad.  
   

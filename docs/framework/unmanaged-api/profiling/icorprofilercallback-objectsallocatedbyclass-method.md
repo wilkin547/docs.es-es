@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1200ca14b91c101a8145a3aed8023002ddb9298b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e26e7ac9b89e005d9520ad860cf3acee7d3cc6cc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746640"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479758"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass (Método)
 Notifica al generador de perfiles sobre el número de instancias de cada clase especificada que se han creado desde la última recolección.  
@@ -36,7 +36,7 @@ HRESULT ObjectsAllocatedByClass(
     [in, size_is(cClassCount)] ULONG   cObjects[] );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `cClassCount`  
  [in] El tamaño de la `classIds` y `cObjects` matrices.  
   

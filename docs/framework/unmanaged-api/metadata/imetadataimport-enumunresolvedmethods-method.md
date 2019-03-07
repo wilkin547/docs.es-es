@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2009104d31723b9fed383b7bbb41146127d89bd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a91c8de67a095a2f89a69f43375c9ebdd4fc767c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611961"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491300"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods (Método)
 Enumera los tokens de MemberDef que representan los métodos no resueltos en el ámbito de metadatos actual.  
@@ -38,7 +38,7 @@ HRESULT EnumUnresolvedMethods (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `phEnum`  
  [in, out] Un puntero en el enumerador. Esto debe ser NULL para la primera llamada de este método.  
   

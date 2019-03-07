@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1013913b62c77714d3cc24eace83272834eecce7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea0484db53a94a3134b85f97b294c5eb7d1dc7e6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706273"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500569"
 ---
 # <a name="icorprofilerobjectenumclone-method"></a>ICorProfilerObjectEnum::Clone (Método)
 Obtiene un puntero de interfaz a una copia de este [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interfaz.  
@@ -34,7 +34,7 @@ HRESULT Clone (
     [out] ICorProfilerObjectEnum   **ppEnum);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `ppEnum`  
  [out] Un puntero al puntero de interfaz que a su vez señala a la copia de este `ICorProfilerObjectEnum` interfaz. La copia mantiene su propio estado de enumeración por separado de ésta. Sin embargo, posición inicial del cursor de la copia será igual que la posición del cursor actual de este enumerador.  
   

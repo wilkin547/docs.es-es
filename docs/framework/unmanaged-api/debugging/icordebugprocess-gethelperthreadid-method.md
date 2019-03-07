@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c3f879e04a710d65f812a5165c3edbfa31f8542
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd5e30d08e667dcd5a8be1f9502462f28290068e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419073"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494225"
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a>ICorDebugProcess::GetHelperThreadID (Método)
 Obtiene el identificador de subproceso del sistema operativo (SO) del subproceso auxiliar interno del depurador.  
@@ -35,22 +35,22 @@ HRESULT GetHelperThreadID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pThreadID`  
- [out] Id. de subproceso auxiliar interno del depurador de subproceso de un puntero para el sistema operativo.  
+ [out] Id. de subproceso auxiliar interno del depurador de subproceso de un puntero al sistema operativo.  
   
 ## <a name="remarks"></a>Comentarios  
- Durante la depuración administrada y no administrada, es responsabilidad del depurador para asegurarse de que el subproceso con el identificador especificado está en ejecución si se produce un punto de interrupción colocado por el depurador. Un depurador que también desee ocultar este subproceso del usuario. Si existe ningún subproceso auxiliar en el proceso, el `GetHelperThreadID` método devuelva cero en *`pThreadID`.  
+ Durante la depuración administrada y no administrados, es responsabilidad del depurador para asegurarse de que el subproceso con el identificador especificado sigue ejecutándose si se produce un punto de interrupción colocado por el depurador. Un depurador que también desee ocultar este subproceso del usuario. Si no hay ningún subproceso auxiliar existe en el proceso todavía, el `GetHelperThreadID` método devuelve cero en *`pThreadID`.  
   
- No se almacena en caché el identificador de subproceso del subproceso de aplicación auxiliar, ya que puede cambiar con el tiempo. Debe volver a consultar el identificador del subproceso en cada evento de detención.  
+ No se almacena en caché el identificador de subproceso del subproceso de aplicación auxiliar, ya que puede cambiar con el tiempo. Debe volver a consultar el identificador de subproceso en cada evento de detención.  
   
- El identificador de subproceso del subproceso de aplicación auxiliar del depurador será correcto en cada no administrado [ICorDebugManagedCallback:: CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) eventos, lo que permite a un depurador determinar el identificador del subproceso de un subproceso auxiliar y ocultar del usuario. Un subproceso que se identifica como un subproceso auxiliar durante no administrado `ICorDebugManagedCallback::CreateThread` evento nunca ejecutará el código de usuario administrado.  
+ El identificador de subproceso del subproceso auxiliar del depurador será correcto en cada no administrado [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) eventos, lo que permite a un depurador determinar el identificador de subproceso de su subproceso auxiliar y ocultarla del usuario. Un subproceso que se identifica como un subproceso auxiliar durante no administradas `ICorDebugManagedCallback::CreateThread` evento nunca ejecutará el código de usuario administrado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl. CorDebug.h  
+ **Encabezado**: CorDebug.idl. CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

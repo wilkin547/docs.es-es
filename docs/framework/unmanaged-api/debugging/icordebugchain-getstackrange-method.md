@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 226f8c431b90d53366aa5e504101e7de581ec570
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac40927ac9469e4a2fb74fb550287130b9bb9f83
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402475"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481565"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange (Método)
 Obtiene el intervalo de direcciones del segmento de pila para esta cadena.  
@@ -36,7 +36,7 @@ HRESULT GetStackRange (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pStart`  
  [out] Un puntero a un `CORDB_ADDRESS` valor que es la dirección inicial del segmento de pila.  
   
@@ -44,13 +44,13 @@ HRESULT GetStackRange (
  [out] Un puntero a un `CORDB_ADDRESS` valor que es la dirección final del segmento de pila.  
   
 ## <a name="remarks"></a>Comentarios  
- El intervalo numérico es significativo únicamente para la comparación de ubicaciones de marco de pila. No se puede hacer ninguna suposición sobre lo que realmente se almacena en la pila.  
+ El intervalo numérico es significativo únicamente para la comparación de las ubicaciones del marco de pila. No se puede hacer ninguna suposición sobre lo que realmente se almacena en la pila.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

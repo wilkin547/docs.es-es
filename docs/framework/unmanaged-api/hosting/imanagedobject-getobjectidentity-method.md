@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3fbc4abe55d59c3140c5c180d5844404e357e3a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d825a0c67f88e1f37023feb96a217b115653056
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586318"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496942"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>IManagedObject::GetObjectIdentity (Método)
 Obtiene la identidad de este objeto administrado.  
@@ -37,7 +37,7 @@ HRESULT GetObjectIdentity (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pBSTRGUID`  
  [out] Un puntero al GUID del proceso en el que reside el objeto.  
   

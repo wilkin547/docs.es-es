@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d73c158fa9d7b5574e4f875b8d51e932e30041b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1cdcfcaf29cc2b0ec6da1108e0ecd91710db36c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572245"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487320"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly (Método)
 Crea el ensamblado. Llame a este método después de que todos los demás archivos se cierran, excepto el archivo de ensamblado. No llame a este método cuando se producen los módulos no enlazados.  
@@ -35,7 +35,7 @@ HRESULT EmitAssembly(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
  Id. del ensamblado.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f050a3d9d37e43713c40896fb162bcf9932c6512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ed5a7657affde335acf79952d77bbdb7ac42c7a0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403375"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490468"
 ---
 # <a name="icordebugchaingetcallee-method"></a>ICorDebugChain::GetCallee (Método)
-Obtiene la cadena que se llama a esta cadena.  
+Obtiene la cadena que se llamó por esta cadena.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,18 +35,18 @@ HRESULT GetCallee (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `ppChain`  
- [out] Un puntero a la dirección de un objeto ICorDebugChain que representa la cadena de llamada. Si esta cadena se está ejecutando actualmente (es decir, si esta cadena no está esperando una cadena de llamada devolver), `ppChain` será null.  
+ [out] Un puntero a la dirección de un objeto ICorDebugChain que representa la cadena de llamada. Si esta cadena se está ejecutando (es decir, si esta cadena no está esperando devolver una cadena de llamada), `ppChain` será null.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta cadena esperará la cadena de llamada devolver antes de que reanuda la ejecución. La cadena de llamada puede estar en otro subproceso en el caso de llamadas de calcular las referencias entre subprocesos.  
+ Esta cadena esperará la cadena de llamada devolver antes de que reanuda la ejecución. La cadena de llamada puede estar en otro subproceso en el caso de las llamadas de cálculo de referencias entre subprocesos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

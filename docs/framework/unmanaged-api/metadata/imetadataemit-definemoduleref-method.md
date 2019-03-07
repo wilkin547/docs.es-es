@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f41eb1864ca2cc0640941abbbd8bc95801a0b31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a87d18b15f858b608d99a511ed9bdad73fd2b251
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539017"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493685"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>IMetaDataEmit::DefineModuleRef (Método)
 Crea la firma de metadatos para un módulo con el nombre especificado.  
@@ -36,7 +36,7 @@ HRESULT DefineModuleRef (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `szName`  
  [in] El nombre de otro archivo de metadatos, normalmente un archivo DLL. Esto es sólo el nombre de archivo. No use un nombre de ruta de acceso completa.  
   

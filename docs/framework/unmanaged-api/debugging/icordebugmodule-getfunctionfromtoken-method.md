@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acffd24ae9d5aad5f48058eec036f912ee016289
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c1af0f8f792c856c0b27b4d3d9ff557bcc5fce82
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415989"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500075"
 ---
 # <a name="icordebugmodulegetfunctionfromtoken-method"></a>ICorDebugModule::GetFunctionFromToken (Método)
 Obtiene la función especificada por el token de metadatos.  
@@ -36,21 +36,21 @@ HRESULT GetFunctionFromToken(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `methodDef`  
- [in] Un `mdMethodDef` símbolo (token) de metadatos que hace referencia a los metadatos de la función.  
+ [in] Un `mdMethodDef` token de metadatos que hace referencia a los metadatos de la función.  
   
  `ppFunction`  
- [out] Un puntero a la dirección de un objeto de interfaz de ICorDebugFunction que representa la función.  
+ [out] Un puntero a la dirección de un objeto de interfaz ICorDebugFunction que representa la función.  
   
 ## <a name="remarks"></a>Comentarios  
  El `GetFunctionFromToken` método devuelve un valor de HRESULT CORDBG_E_FUNCTION_NOT_IL si el valor pasado en `methodDef` no hace referencia a un método de lenguaje intermedio (MSIL) de Microsoft.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

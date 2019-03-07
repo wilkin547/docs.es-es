@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11c08e59813014bf9a474e92d06c6bd2576dd7d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18b65eb3e733fa7970e4c0e7de09755598eaf149
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404877"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474987"
 ---
 # <a name="icordebugbreakpointenumnext-method"></a>ICorDebugBreakpointEnum::Next (Método)
 Obtiene el número especificado de instancias de ICorDebugBreakpoint de la enumeración, comenzando en la posición actual.  
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `celt`  
  [in] El número de `ICorDebugBreakpoint` instancias va a recuperar.  
   
  `breakpoints`  
- [out] Una matriz de punteros, cada uno de los cuales señala a un `ICorDebugBreakpoint` objeto que representa un punto de interrupción.  
+ [out] Una matriz de punteros, cada uno de los cuales señala a una `ICorDebugBreakpoint` objeto que representa un punto de interrupción.  
   
  `pceltFetched`  
- [out] Un puntero al número de `ICorDebugBreakpoint` instancias realmente devueltos. Este valor puede ser null si `celt` es uno.  
+ [out] Un puntero al número de `ICorDebugBreakpoint` instancias devueltas realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

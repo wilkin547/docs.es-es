@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa9e168b36c8408583ca23dee070fc36b2cb076c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3a174953877d70a295e659220e71c337e45f392
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572999"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495239"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterMemoryValue (Método)
 Obtiene el valor de un argumento o una variable local, de los cuales la baja y menos significativos se almacenan en la ubicación de memoria y el registro especifican, respectivamente, para este marco nativo.  
@@ -39,7 +39,7 @@ HRESULT GetLocalRegisterMemoryValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `highWordReg`  
  [in] Un valor de la enumeración "CorDebugRegister" que especifica el registro que contiene los bytes más significativos del valor.  
   

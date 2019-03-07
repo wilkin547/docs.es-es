@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 64e6bd57c5f16b0e7d59f6cf760030aab4c6b9f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b42c558009c25adfd7d282da905e7182dfd3342
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568808"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467030"
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties (Método)
 Enumera los tokens de PropertyDef que representan las propiedades del tipo al que hace referencia el token de TypeDef especificado.  
@@ -39,7 +39,7 @@ HRESULT EnumProperties (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `phEnum`  
  [in, out] Un puntero en el enumerador. Esto debe ser NULL para la primera llamada de este método.  
   

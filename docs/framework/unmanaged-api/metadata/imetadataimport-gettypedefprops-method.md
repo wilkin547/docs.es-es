@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 12adffbfeb2ce6271774cf44c1a913d7a1414ba4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4994dedcaac26f06f605532cc4579c78f4e8366
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718616"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501349"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps (Método)
 Devuelve información de metadatos para el <xref:System.Type> representado por el token de TypeDef especificado.  
@@ -40,7 +40,7 @@ HRESULT GetTypeDefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `td`  
  [in] El token de TypeDef que representa el tipo para devolver los metadatos.  
   

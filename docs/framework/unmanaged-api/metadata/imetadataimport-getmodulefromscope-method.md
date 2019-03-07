@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 931b17858465d4ff380069fc2cf2bb37cb7a7ffc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1118c29acd926821e3b5db31694df9935bdefb9e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718187"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468811"
 ---
 # <a name="imetadataimportgetmodulefromscope-method"></a>IMetaDataImport::GetModuleFromScope (Método)
 Obtiene los metadatos de un token para el módulo hace referencia en el ámbito de metadatos actual.  
@@ -35,7 +35,7 @@ HRESULT GetModuleFromScope (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pmd`  
  [out] Un puntero al token que representa el módulo hace referencia en el ámbito de metadatos actual.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4326c6d8a3ee780cf63652badc8c527f55a075c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b374720bd7bdad48222da006b809702de6462a62
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420822"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472790"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint (Método)
-Establece un punto de interrupción no administrado en el desplazamiento de imagen nativa especificado.  
+Establece un punto de interrupción no administrado en el desplazamiento de la imagen nativa especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,9 +39,9 @@ HRESULT SetUnmanagedBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `address`  
- [in] Un `CORDB_ADDRESS` objeto que especifica el desplazamiento de imagen nativa.  
+ [in] Un `CORDB_ADDRESS` objeto que especifica el desplazamiento de imágenes nativas.  
   
  `bufsize`  
  [in] El tamaño, en bytes, de la `buffer` matriz.  
@@ -50,16 +50,16 @@ HRESULT SetUnmanagedBreakpoint (
  [out] Una matriz que contiene el código de operación que se ha reemplazado por el punto de interrupción.  
   
  `bufLen`  
- [out] Un puntero al número de bytes devueltos en el `buffer` matriz.  
+ [out] Un puntero al número de bytes devuelto en el `buffer` matriz.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el desplazamiento de imagen nativa está dentro de common language runtime (CLR), el punto de interrupción se omitirá. Esto permite que el CLR evitar enviar un punto de interrupción fuera de banda, cuando el punto de interrupción se establece mediante el depurador.  
+ Si el desplazamiento de la imagen nativa está dentro de common language runtime (CLR), el punto de interrupción se omitirá. Esto permite que el CLR evitar el envío de un punto de interrupción fuera de banda, cuando el punto de interrupción se establece mediante el depurador.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

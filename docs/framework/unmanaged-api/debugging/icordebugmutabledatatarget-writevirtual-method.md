@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c0f07e02ee92fda772a44fe235c3dcb414882bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11fc4bf6feb2a90c0b54c4410ed807c5b7e3eb5b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495975"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501739"
 ---
 # <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual (método)
 Escribe la memoria en el espacio de direcciones de procesos de destino.  
@@ -23,7 +23,7 @@ HRESULT WriteVirtual(
    [in] ULONG32 bytesRequested);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `address`  
  [in] Dirección a la que se va a escribir el contenido de `pBuffer`.  
   

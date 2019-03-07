@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f05c6df415a92151783d805799da5bf7dfb6c7a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ace278e0031d3e673418f50356f173c473a4832d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556108"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494329"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps (Método)
 Establece o actualiza el valor predeterminado para el campo al que hace referencia el token de campo especificado.  
@@ -39,7 +39,7 @@ HRESULT SetFieldProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `fd`  
  [in] El token para el campo de destino.  
   

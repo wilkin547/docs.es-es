@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 36589b13fc336b78ec87cccba0a2790d8242f5d6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373210"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488843"
 ---
 # <a name="control-styles-and-templates"></a>Estilos y plantillas de controles
 Los controles en Windows Presentation Foundation (WPF) tienen un <xref:System.Windows.Controls.ControlTemplate> que contiene el árbol visual de ese control. Puede cambiar la estructura y la apariencia de un control modificando el <xref:System.Windows.Controls.ControlTemplate> de ese control. No hay ninguna forma de reemplazar solo la parte del árbol visual de un control; Para cambiar el árbol visual de un control debe establecer el <xref:System.Windows.Controls.Control.Template%2A> propiedad del control a su nueva y completa <xref:System.Windows.Controls.ControlTemplate>.  
@@ -50,18 +50,18 @@ Los controles en Windows Presentation Foundation (WPF) tienen un <xref:System.Wi
  [ListView Styles and Templates](listview-styles-and-templates.md) (Estilos y plantillas de ListView)  
  [Menu Styles and Templates](menu-styles-and-templates.md) (Estilos y plantillas de Menu)  
  [NavigationWindow Styles and Templates](navigationwindow-styles-and-templates.md) (Estilos y plantillas de NavigationWindow)  
- [PasswordBox estilos y plantillas](passwordbox-syles-and-templates.md)  
+ [PasswordBox estilos y plantillas](passwordbox-styles-and-templates.md)  
  [ProgressBar Styles and Templates](progressbar-styles-and-templates.md) (Estilos y plantillas de ProgressBar)  
  [RadioButton Styles and Templates](radiobutton-styles-and-templates.md) (Estilos y plantillas de RadioButton)  
- [RepeatButton estilos y plantillas](repeatbutton-syles-and-templates.md)  
+ [RepeatButton estilos y plantillas](repeatbutton-styles-and-templates.md)  
  [ScrollBar Styles and Templates](scrollbar-styles-and-templates.md) (Estilos y plantillas de ScrollBar)  
  [ScrollViewer Styles and Templates](scrollviewer-styles-and-templates.md) (Estilos y plantillas de ScrollViewer)  
  [Slider Styles and Templates](slider-styles-and-templates.md) (Estilos y plantillas de Slider)  
  [StatusBar Styles and Templates](statusbar-styles-and-templates.md) (Estilos y plantillas de StatusBar)  
  [TabControl Styles and Templates](tabcontrol-styles-and-templates.md) (Estilos y plantillas de TabControl)  
  [TextBox Styles and Templates](textbox-styles-and-templates.md) (Estilos y plantillas de TextBox Styles)  
- [Plantillas y estilos de control de posición](thumb-syles-and-templates.md)  
- [ToggleButton estilos y plantillas](togglebutton-syles-and-templates.md)  
+ [Plantillas y estilos de control de posición](thumb-styles-and-templates.md)  
+ [ToggleButton estilos y plantillas](togglebutton-styles-and-templates.md)  
  [ToolBar Styles and Templates](toolbar-styles-and-templates.md) (Estilos y plantillas de ToolBar)  
  [ToolTip Styles and Templates](tooltip-styles-and-templates.md) (Estilos y plantillas de ToolTip)  
  [TreeView Styles and Templates](treeview-styles-and-templates.md) (Estilos y plantillas de TreeView)  

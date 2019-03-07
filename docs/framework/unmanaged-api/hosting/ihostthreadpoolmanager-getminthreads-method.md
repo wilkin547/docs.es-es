@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8010ac602c82c7da2af9d0678227a6ce1c91391a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec323daf7c0d612d84c86c950c0c7235c7f9ebe7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521470"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485257"
 ---
 # <a name="ihostthreadpoolmanagergetminthreads-method"></a>IHostThreadPoolManager::GetMinThreads (Método)
 Obtiene el número mínimo de subprocesos inactivos que mantiene el host en el grupo de subprocesos en previsión de solicitudes.  
@@ -35,7 +35,7 @@ HRESULT GetMinThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `MinThreads`  
  [out] Un puntero al número mínimo de subprocesos de trabajo inactivos que el host mantiene actualmente.  
   

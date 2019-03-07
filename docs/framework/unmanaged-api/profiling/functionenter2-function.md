@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f01117d52ba49012120546db5095ccad8baa6e73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fb9dd56cb19b62543d14ae02fe6f198c0164107
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531628"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468824"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 (Función)
 Notifica al generador de perfiles que el control se pasa a una función y proporciona información sobre la pila los argumentos de marco y la función. Esta función reemplaza la [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) función.  
@@ -37,7 +37,7 @@ void __stdcall FunctionEnter2 (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `funcId`  
  [in] El identificador de la función a la que se pasa el control.  
   

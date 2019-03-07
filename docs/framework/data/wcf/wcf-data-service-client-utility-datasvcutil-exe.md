@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: 3442142eb249d04dabba455a57f02f3cdc7f4b91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb279e6fa16b82bffbebc777f791ce7a6e06255d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731756"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492652"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Utilidad del cliente de Servicio de datos de WCF (DataSvcUtil.exe)
 
@@ -33,7 +33,7 @@ La herramienta DataSvcUtil.exe se instala en el directorio de [!INCLUDE[dnprdnsh
 datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/language:devlang] [/nologo] [/version:ver] [/help]
 ```
 
-### <a name="parameters"></a>Parámetros
+## <a name="parameters"></a>Parámetros
 
 |Opción|Descripción|
 |------------|-----------------|
