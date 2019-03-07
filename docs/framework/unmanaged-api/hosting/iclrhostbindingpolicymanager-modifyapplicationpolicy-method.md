@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45e0099ea60a338f0ea1ef414f4d2fa1c33c9d70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da21cda0872080272e6b2c2fda32bef2bf9f1f7d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726889"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494537"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy (Método)
 Modifica la directiva de enlace para el ensamblado especificado y crea una nueva versión de la directiva.  
@@ -41,7 +41,7 @@ HRESULT  ModifyApplicationPolicy (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pwzSourceAssemblyIdentity`  
  [in] La identidad del ensamblado que se va a modificar.  
   

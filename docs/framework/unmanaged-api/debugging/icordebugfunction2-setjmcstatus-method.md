@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15b102be5a792f982edeb320199576bdddbd859a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49ced1b4be888c7550c3927d1b319ab2f0bef086
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412365"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501011"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus (Método)
-Marca la función representada por esta instancia de ICorDebugFunction2 para solo mi código ejecución paso a paso.  
+Marca la función representada por este ICorDebugFunction2 solo mi código para la ejecución paso a paso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,7 +35,7 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `bIsJustMyCode`  
  [in] Establecido en `true` para marcar la función como código de usuario; de lo contrario, establézcalo en `false`.  
   
@@ -47,13 +47,13 @@ HRESULT SetJMCStatus (
 |`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|La función no se pudieron marcar como código de usuario porque no se pueden depurar.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un paso a paso desencadene solo mi código omitirá el código de no usuario. Código de usuario debe ser un subconjunto del código depurable.  
+ Un motor paso a paso solo mi código omitirá el código de no usuario. Código de usuario debe ser un subconjunto del código depurable.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

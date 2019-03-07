@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 552d2fa8a7c35066e32fb9f8e9455b3092b1e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8c639204fa207774b0e362f1ba8fe71937494ae2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413285"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487707"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray (Método)
-Asigna una nueva matriz del tipo de elemento especificado y dimensiones.  
+Asigna una nueva matriz del tipo de elemento especificado y las dimensiones.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,7 +38,7 @@ HRESULT NewParameterizedArray(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pElementType`  
  [in] Un puntero a un objeto ICorDebugType que representa el tipo de elemento almacenado en la matriz.  
   
@@ -49,16 +49,16 @@ HRESULT NewParameterizedArray(
  [in] El tamaño, en bytes, de cada dimensión de la matriz.  
   
  `lowBounds`  
- [in] Opcional. El límite inferior de cada dimensión de la matriz. Si este valor se omite, se supone que un límite inferior de cero para cada dimensión.  
+ [in] Opcional. El límite inferior de cada dimensión de la matriz. Si este valor se omite, se asume un límite inferior de cero para cada dimensión.  
   
 ## <a name="remarks"></a>Comentarios  
  Los elementos de la matriz pueden ser instancias de un tipo genérico. La matriz siempre se crea en el dominio de aplicación en el que se está ejecutando el subproceso. En .NET Framework 2.0, el valor de `rank` debe ser 1.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

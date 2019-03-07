@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5a1ae284b4f2474cb824ee9dbff2eb82c5a0ead
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f4d59b3857b9c23ccb61e22319ffd2b3129bd26a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568795"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474853"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>ICLRRuntimeHost::ExecuteInAppDomain (Método)
 Especifica el <xref:System.AppDomain> en el que se va a ejecutar el código administrado especificado.  
@@ -37,7 +37,7 @@ HRESULT ExecuteInAppDomain(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `AppDomainId`  
  [in] El identificador numérico de la <xref:System.AppDomain> en el que se va a ejecutar el método especificado.  
   

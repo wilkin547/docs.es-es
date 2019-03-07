@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6da4c282c7f969a406a657d1e30dd6120a32b4e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2e9d640fb1c9dae5bb195baa504e560ba8e45821
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420913"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497098"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory (Método)
 Escribe datos en un área de memoria en este proceso.  
@@ -37,29 +37,29 @@ HRESULT WriteMemory(
     [out] SIZE_T *written);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `address`  
- [in] Un `CORDB_ADDRESS` valor que es la dirección base del área de memoria para los datos que se escribe. Antes de que ocurra la transferencia de datos, el sistema comprueba que el área de memoria del tamaño especificado, empezando por la dirección base es accesible para escribir en él. Si no está accesible, se produce un error en el método.  
+ [in] Un `CORDB_ADDRESS` valor que es la dirección base del área de memoria para los datos que se escribe. Antes de que se produce la transferencia de datos, el sistema comprueba que el área de memoria del tamaño especificado, comenzando en la dirección base, es accesible para escribir en él. Si no es accesible, el método produce un error.  
   
  `size`  
- [in] El número de bytes que se escribirán en el área de memoria.  
+ [in] El número de bytes que se escriban en el área de memoria.  
   
  `buffer`  
- [in] Un búfer que contiene datos que se va a escribir.  
+ [in] Un búfer que contiene los datos se escriban.  
   
  `written`  
- [out] Un puntero a una variable que recibe el número de bytes escritos en el área de memoria en este proceso. Si `written` es NULL, este parámetro se ignora.  
+ [out] Un puntero a una variable que recibe el número de bytes escritos en el área de memoria en este proceso. Si `written` es NULL, se omite este parámetro.  
   
 ## <a name="remarks"></a>Comentarios  
- Datos se escriben automáticamente detrás de los puntos de interrupción. En la versión 2.0 de .NET Framework, los depuradores nativos no deben usar este método para insertar puntos de interrupción en la secuencia de instrucciones. Use [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) en su lugar.  
+ Automáticamente se escriben los datos detrás de cualquier punto de interrupción. En la versión 2.0 de .NET Framework, los depuradores nativos no deben usar este método para insertar puntos de interrupción en la secuencia de instrucciones. Use [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) en su lugar.  
   
- El `WriteMemory` método debe utilizarse solo fuera del código administrado. Este método puede dañar el tiempo de ejecución si se utiliza incorrectamente.  
+ El `WriteMemory` método se debe usar sólo fuera del código administrado. Este método puede dañar el tiempo de ejecución si se utiliza incorrectamente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e8d0c16000c78fab0371b68c3a350bd2018aa1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a35072b788321d22cec6de2f05a2863341417dc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664530"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474766"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryValue (Método)
 Obtiene el valor de un argumento o variable local que se almacena en la ubicación de memoria especificada para este marco nativo.  
@@ -38,7 +38,7 @@ HRESULT GetLocalMemoryValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `address`  
  [in] Un `CORDB_ADDRESS` valor que especifica la ubicación de memoria que contiene el valor.  
   

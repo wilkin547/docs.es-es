@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abc5f9350342af0439cb83f1df14979cfabcdb3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 295b150f6881a47b3816a93ac7a20382bc5c20c0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601550"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500582"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob (Método)
 Recupera el objeto binario de recursos Win32. Llame a este método después de establecer las opciones de ensamblado.  
@@ -39,7 +39,7 @@ HRESULT GetWin32ResBlob(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
  Id. del ensamblado.  
   

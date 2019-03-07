@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb0030a25dd48ab4236ec2b51891e0ac41aac902
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41a9ff2c94c98a5acc930d68e648b0ea577a82c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612624"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492314"
 ---
 # <a name="icordebugvaluegetsize-method"></a>ICorDebugValue::GetSize (Método)
 Obtiene el tamaño, en bytes, de este objeto "ICorDebugValue".  
@@ -35,7 +35,7 @@ HRESULT GetSize (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pSize`  
  [out] El tamaño, en bytes, de este objeto de valor.  
   

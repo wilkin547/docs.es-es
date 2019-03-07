@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 752dcf90f790d6403c37fcee377c35656b655b36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1002aa9e01fedaacf80622952bbba82caa7081c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491072"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498021"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>IMetaDataImport::GetNativeCallConvFromSig (Método)
 Obtiene la convención de llamada nativa del método representado por el puntero de firma especificado.  
@@ -37,7 +37,7 @@ HRESULT GetNativeCallConvFromSig (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pvSig`  
  [in] Un puntero a la firma de metadatos del método para devolver la convención de llamada.  
   

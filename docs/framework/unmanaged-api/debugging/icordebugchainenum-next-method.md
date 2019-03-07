@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4f27b958aa4b25c2662d8a5e9da6bcdc73d5d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 26df40297d080d1ccc9464f7b09e7731f135e270
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404461"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489831"
 ---
 # <a name="icordebugchainenumnext-method"></a>ICorDebugChainEnum::Next (Método)
 Obtiene el número especificado de instancias de ICorDebugChain de la enumeración, comenzando en la posición actual.  
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `celt`  
  [in] El número de `ICorDebugChain` instancias va a recuperar.  
   
  `chains`  
- [out] Una matriz de punteros, cada uno de los cuales señala a un `ICorDebugChain` objeto que representa una cadena.  
+ [out] Una matriz de punteros, cada uno de los cuales señala a una `ICorDebugChain` objeto que representa una cadena.  
   
  `pceltFetched`  
- [out] Un puntero al número de `ICorDebugChain` instancias realmente devueltos. Este valor puede ser null si `celt` es uno.  
+ [out] Un puntero al número de `ICorDebugChain` instancias devueltas realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

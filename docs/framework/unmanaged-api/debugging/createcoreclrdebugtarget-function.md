@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a957eb6907b55fe948d696a6a25076c3950f7381
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 48ce5381c745669b813f5b28d801add7daba7825
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402980"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470082"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget (Función)
-Crea una conexión a un proxy del depurador que se ejecuta en un equipo remoto y devuelve un [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) objeto que puede utilizarse para consultar procesos en ejecución y tiempos de ejecución cargados en el equipo remoto.  
+Crea una conexión a un proxy del depurador que se está ejecutando en un equipo remoto y devuelve un [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) objeto que puede usarse para consultar los procesos en ejecución y tiempos de ejecución cargados en el equipo remoto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,7 +37,7 @@ HRESULT CreateCoreClrDebugTarget (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `dwAddress`  
  [in] Dirección IPv4 de un equipo de destino remoto.  
   
@@ -55,10 +55,10 @@ HRESULT CreateCoreClrDebugTarget (
  Otros errores.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CoreClrRemoteDebuggingInterfaces.h  
+ **Encabezado**: CoreClrRemoteDebuggingInterfaces.h  
   
- **Biblioteca:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86.dll  
   
  **Versiones de .NET framework:** 3.5 SP1

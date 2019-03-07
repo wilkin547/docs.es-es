@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51cd834b92dd595b5b3e7f668ef252462f4287de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 514c429fd2ec2cda4576245e2656921f0f10f275
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695288"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486958"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo (Función)
 Obtiene información de versión y directorio sobre requerido por una aplicación de common language runtime (CLR).  
@@ -47,7 +47,7 @@ HRESULT GetRequestedRuntimeInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pExe`  
  [in] El nombre de la aplicación.  
   

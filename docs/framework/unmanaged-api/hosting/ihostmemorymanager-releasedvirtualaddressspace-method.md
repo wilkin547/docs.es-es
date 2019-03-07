@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b7bf2a3e359ca05a147553d89a1d2bb3d235209
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f337ece4e68c1685f7474df4b96074597e16271a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571054"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501426"
 ---
 # <a name="ihostmemorymanagerreleasedvirtualaddressspace-method"></a>IHostMemoryManager::ReleasedVirtualAddressSpace (Método)
 Notifica al host que common language runtime (CLR) ha terminado de utilizar la memoria especificada.  
@@ -35,7 +35,7 @@ HRESULT ReleasedVirtualAddressSpace(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `startAddress`  
  [in] Puntero a la dirección inicial de la memoria que se va a liberar.  
   

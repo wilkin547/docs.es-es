@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a0fd1981e7da5af19cf3a422c6008d373e9ac92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b436fa14322d444a6c8b515ba8e50698eecb95ba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416598"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487023"
 ---
 # <a name="icordebugreferencevaluedereference-method"></a>ICorDebugReferenceValue::Dereference (Método)
-Obtiene el objeto al que hace referencia.  
+Obtiene el objeto que se hace referencia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,18 +35,18 @@ HRESULT Dereference (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `ppValue`  
- [out] Un puntero a la dirección de ICorDebugValue que representa el objeto al que apunta este objeto ICorDebugReferenceValue.  
+ [out] Un puntero a la dirección de ICorDebugValue que representa el objeto al que señala este objeto ICorDebugReferenceValue.  
   
 ## <a name="remarks"></a>Comentarios  
  La `ICorDebugValue` objeto es válido solo mientras aún no se ha deshabilitado su referencia.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

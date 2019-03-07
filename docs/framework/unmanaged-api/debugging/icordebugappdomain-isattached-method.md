@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0412089fee27e556c2f9230e9b34de3391b9bd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fa9576f568ef1f6da3eef812abb9674aa0d81dfb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402566"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496383"
 ---
 # <a name="icordebugappdomainisattached-method"></a>ICorDebugAppDomain::IsAttached (Método)
-Obtiene un valor que indica si el depurador se adjunta al dominio de aplicación.  
+Obtiene un valor que indica si el depurador está asociado al dominio de aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,18 +35,18 @@ HRESULT IsAttached (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pbAttached`  
- [out] `true` si el depurador está conectado al dominio de aplicación; en caso contrario, `false`.  
+ [out] `true` si el depurador está asociado al dominio de aplicación; en caso contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- No se puede usar los métodos ICorDebugController hasta que el depurador se asocie al dominio de aplicación.  
+ No se puede usar los métodos ICorDebugController hasta que el depurador se asocia al dominio de aplicación.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

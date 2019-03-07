@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c6a8a9aedc5c2b09c6e6f6014142bce44f3a8297
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7cc7b83f7bf1657195778ea38944b2354b09c38
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668605"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471347"
 ---
 # <a name="getfiledef-method"></a>GetFileDef (Método)
 Recupera el token de FileDef real utilizado en los metadatos (a diferencia de lo token asignado por ALink).  
@@ -36,7 +36,7 @@ HRESULT GetFileDef(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
  Id. del ensamblado.  
   

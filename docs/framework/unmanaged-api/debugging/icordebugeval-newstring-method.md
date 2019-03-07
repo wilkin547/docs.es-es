@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5eb86bb80aea5fc65a7362467b78b16a59794d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db609bdee7975b6c067271f99529e2cf2240f720
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412235"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480187"
 ---
 # <a name="icordebugevalnewstring-method"></a>ICorDebugEval::NewString (Método)
-Asigna una nueva instancia de cadena con el contenido especificado.  
+Asigna una nueva instancia de la cadena con el contenido especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,7 +35,7 @@ HRESULT NewString (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `string`  
  [in] Puntero al contenido de la cadena.  
   
@@ -43,10 +43,10 @@ HRESULT NewString (
  La cadena siempre se crea en el dominio de aplicación en el que se está ejecutando el subproceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

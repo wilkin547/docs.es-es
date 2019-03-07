@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 495ce5f6-bb4d-4b30-807a-c3c35f1ca95c
-ms.openlocfilehash: c3997415c19483a69e66d8fe68c6ec9241f7ad0d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3a95e8e68361f060d843247f400043a79dc28889
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356247"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466874"
 ---
 # <a name="processunhandledexception-function-wpf-unmanaged-api-reference"></a>ProcessUnhandledException (función) (referencia de API no administrada de WPF)
 Esta API admite la infraestructura de Windows Presentation Foundation (WPF) y no está pensada para utilizarse directamente desde el código.  
@@ -28,7 +28,7 @@ void __stdcall ProcessUnhandledException(
 )  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  errorMsg  
  Mensaje de error.  
   

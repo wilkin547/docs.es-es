@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7248f4c78684f7211c7b7633095fdc3f3f2fb1f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed2c818ce9e11ff6eca26ac1c6f13b19668551b7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658629"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485335"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>IMetaDataEmit::SetPinvokeMap (Método)
 Establece o cambia las características de una firma de método PInvoke, tal como se define mediante una llamada anterior a [DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
@@ -38,7 +38,7 @@ HRESULT SetPinvokeMap (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `tk`  
  [in] El `mdToken` a que la asignación se aplica la información.  
   

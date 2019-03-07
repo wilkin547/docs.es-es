@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79e65d86eda2f01e1d6f2af46c5ee8e15ff03ccb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a82456c8bc53e7828e447de3bab79388aa102cd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730248"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493744"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>IMetaDataImport::EnumUserStrings (Método)
 Enumera los tokens de String que representan las cadenas codificadas de forma rígida en el ámbito de metadatos actual.  
@@ -38,7 +38,7 @@ HRESULT EnumUserStrings (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `phEnum`  
  [in, out] Un puntero en el enumerador. Esto debe ser NULL para la primera llamada de este método.  
   

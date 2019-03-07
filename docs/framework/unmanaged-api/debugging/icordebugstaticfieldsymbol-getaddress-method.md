@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5a6c9a5a-ec72-4c40-a9c3-cee7baa63687
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 331f335364542fd299a51d25e54d5b6606d19e59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78df94fdc4190a43c80b0a8e3457f164e38eb00
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731028"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498060"
 ---
 # <a name="icordebugstaticfieldsymbolgetaddress-method"></a>ICorDebugStaticFieldSymbol::GetAddress (método)
 Obtiene la dirección de un campo estático.  
@@ -22,7 +22,7 @@ HRESULT GetAddress(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  pRVA  
  [out] Puntero a la dirección virtual relativa (RVA) del campo estático.  
   

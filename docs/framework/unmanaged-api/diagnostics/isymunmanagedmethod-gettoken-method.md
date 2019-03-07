@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7e276e93bc1b05dd34e1111cc53c880f8836bf09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b0acee31017fd02ac3e51f9e585669b9c90ec48
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494891"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467026"
 ---
 # <a name="isymunmanagedmethodgettoken-method"></a>ISymUnmanagedMethod::GetToken (Método)
 Devuelve el token de metadatos para este método.  
@@ -34,7 +34,7 @@ HRESULT GetToken(
    [out, retval]  mdMethodDef  *pToken);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pToken`  
  [out] Un puntero a un `mdMethodDef` que recibe el tamaño, en caracteres, del búfer necesario para contener los metadatos.  
   

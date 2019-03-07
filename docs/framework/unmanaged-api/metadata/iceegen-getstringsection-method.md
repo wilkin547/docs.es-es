@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4ccbff4a4967e7525ee4e51650a4f53e5458666
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e306ccc824910226e522bc664f8f87f828a0d52
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605523"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477054"
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection (Método)
 Obtiene una representación de cadena de la sección de código al que hace referencia el identificador especificado.  
@@ -37,7 +37,7 @@ HRESULT GetStringSection (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `section`  
  [in, out] El identificador de la sección de código.  
   

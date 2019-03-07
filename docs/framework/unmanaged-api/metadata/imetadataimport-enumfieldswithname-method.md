@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58c6e6685cc5c268d9313457469369d9df25e13b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e7c10486bfa002172ab3e9683c83c8007abde6a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564151"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499784"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName (Método)
 Enumera los tokens de FieldDef del tipo especificado con el nombre especificado.  
@@ -40,7 +40,7 @@ HRESULT EnumFieldsWithName (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `phEnum`  
  [in, out] Un puntero en el enumerador.  
   

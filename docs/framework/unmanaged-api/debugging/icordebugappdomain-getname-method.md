@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84f895e749fc8f2520dbce3caf9e6c11fda78a7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7939f7b1c0c725bb4e8c642bc38121dd755da5e2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405774"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471061"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName (Método)
 Obtiene el nombre del dominio de aplicación.  
@@ -38,7 +38,7 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `cchName`  
  [in] Tamaño de la matriz `szName`. Establezca este valor en cero para poner este método en modo de consulta.  
   
@@ -49,13 +49,13 @@ HRESULT GetName (
  [out] Una matriz que almacena el nombre del dominio de aplicación.  
   
 ## <a name="remarks"></a>Comentarios  
- Llama a un depurador el `GetName` una vez al método para obtener el tamaño de un búfer necesario para el nombre. El depurador asigna el búfer y, a continuación, llama al método una segunda vez para llenar el búfer. La primera llamada, para obtener el tamaño del nombre, se conoce como *el modo de consulta*.  
+ Llama un depurador el `GetName` método una vez para obtener el tamaño de un búfer necesario para el nombre. El depurador asigna el búfer y, a continuación, llama al método una segunda vez para llenar el búfer. La primera llamada, para obtener el tamaño del nombre, se conoce como *el modo de consulta*.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

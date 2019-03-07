@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb91c5dfbe5c83e08d786043d7e4732fa19e53db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fa5807a52565a5444334b313dc8dfa315a15c13
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566793"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480564"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>IHostTaskManager::CallNeedsHostHook (Método)
 Permite especificar si common language runtime (CLR) puede alinear la llamada especificada a una función no administrada al host.  
@@ -36,7 +36,7 @@ HRESULT CallNeedsHostHook (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `target`  
  [in] La dirección dentro del archivo asignado portable ejecutable (PE) de la función no administrada que se va a llamar.  
   

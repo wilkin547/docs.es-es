@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9390fd62e001b02b6b6d758bb65a45ab847e89c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0d0982ab7249e88c48c7734c09043031a8d0d3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564099"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482423"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress (Método)
 Obtiene la dirección del campo estático de dirección virtual relativa (RVA) especificado.  
@@ -36,7 +36,7 @@ HRESULT GetRVAStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `classId`  
  [in] El identificador de la clase que contiene el campo estático de RVA solicitado.  
   

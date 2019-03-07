@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8d14deae1923e2904818fc01ffa3665fdf5ea6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0dffe95df75fafe293c225c513db7ff7896765fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710578"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501778"
 ---
 # <a name="icordebugcontrollersetallthreadsdebugstate-method"></a>ICorDebugController::SetAllThreadsDebugState (Método)
 Establece el estado de depuración de todos los subprocesos administrados en el proceso.  
@@ -36,7 +36,7 @@ HRESULT SetAllThreadsDebugState (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `state`  
  [in] Un valor de la enumeración "CorDebugThreadState" que especifica el estado del subproceso para la depuración.  
   

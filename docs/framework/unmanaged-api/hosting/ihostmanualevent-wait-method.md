@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 242c13a381445d5fe9551553cd1e3febc81cb2fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a70d5daf6626a26842d91ff6a35d0abf26d79ad1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638228"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492574"
 ---
 # <a name="ihostmanualeventwait-method"></a>IHostManualEvent::Wait (Método)
 Hace que el actual [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) instancia espere hasta que sea propiedad o un período de tiempo especificado.  
@@ -36,7 +36,7 @@ HRESULT Wait (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `dwMilliseconds`  
  [in] El número de milisegundos que transcurrirán antes de volver, si el actual `IHostManualEvent` no es propiedad de instancia.  
   

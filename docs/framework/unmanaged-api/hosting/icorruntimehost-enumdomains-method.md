@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e4db2330c6d46610bbb3da8b732b1c098659c97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27587c391b1d5cf5f5edb87cf5aa81d227869315
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729085"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57464677"
 ---
 # <a name="icorruntimehostenumdomains-method"></a>ICorRuntimeHost::EnumDomains (Método)
 Obtiene un enumerador para los dominios en el proceso actual.  
@@ -35,7 +35,7 @@ HRESULT EnumDomains (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `hEnum`  
  [out] Un enumerador para los dominios.  
   

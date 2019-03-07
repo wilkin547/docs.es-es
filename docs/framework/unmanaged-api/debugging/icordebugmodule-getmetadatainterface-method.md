@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a324dc07d450a7ca8992ab3a16f064233692581
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5d28118ea1cc26f80ecc67ccedd160447aa69a4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711634"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479043"
 ---
 # <a name="icordebugmodulegetmetadatainterface-method"></a>ICorDebugModule::GetMetaDataInterface (Método)
 Obtiene un objeto de interfaz de metadatos que puede usarse para examinar los metadatos para el módulo.  
@@ -36,7 +36,7 @@ HRESULT GetMetaDataInterface (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `riid`  
  [in] El identificador de referencia que especifica la interfaz de metadatos.  
   

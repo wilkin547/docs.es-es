@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 501c554f6e2e4ddd8abd21fe81b81d1898ea070b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b00fdaa6dacaf9a7eefa1a1ac1192f7c18fde95
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583630"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465912"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps (Método)
 Obtiene el nombre del módulo al que hace referencia el token de metadatos especificado.  
@@ -38,7 +38,7 @@ HRESULT GetModuleRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `mur`  
  [in] El token de metadatos de ModuleRef que hace referencia al módulo para obtener información de metadatos.  
   

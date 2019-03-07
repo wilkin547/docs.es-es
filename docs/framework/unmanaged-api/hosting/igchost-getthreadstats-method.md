@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c3d71c75527daa9a9c130d5aaa0d6838816c276
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92911469383e9e8a1484eff4dedfaf61117e5982
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559429"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496266"
 ---
 # <a name="igchostgetthreadstats-method"></a>IGCHost::GetThreadStats (Método)
 Obtiene las estadísticas por subproceso para la recolección.  
@@ -36,7 +36,7 @@ HRESULT GetThreadStats (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pFiberCookie`  
  [in] Un puntero a una cookie de fibra que especifica el subproceso que se va a recuperar las estadísticas.  
   

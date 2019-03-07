@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c65b0f2b91527d7cd2c1ef2eba607bbd477571e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4822a63bf2524582d2dc7677385d26b8914ca0a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699459"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489012"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost (Función)
 Permite a los hosts cargar una versión determinada de Common Language Runtime (CLR) en un proceso.  
@@ -43,7 +43,7 @@ HRESULT CorBindToRuntimeHost (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pwszVersion`  
  [in] Cadena que describe la versión de CLR que se desea cargar.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 580c7b4dcd63f83e113a5317c242b7e66cfb3f5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 76100116f2ca3a9b9a99477ca2352d5fa1335ab2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403421"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502259"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>ICorDebugArrayValue::GetElementAtPosition (Método)
-Obtiene el elemento en la posición determinada, tratando la matriz como una matriz unidimensional de base cero.  
+Obtiene el elemento en la posición dada, tratando la matriz como una matriz unidimensional de base cero.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,7 +36,7 @@ HRESULT GetElementAtPosition (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `nPosition`  
  [in] La posición del elemento que se va a recuperar.  
   
@@ -44,13 +44,13 @@ HRESULT GetElementAtPosition (
  [out] Un puntero a la dirección de un objeto ICorDebugValue que representa el valor del elemento.  
   
 ## <a name="remarks"></a>Comentarios  
- El diseño de una matriz multidimensional sigue el estilo de C++ de diseño de matriz.  
+ El diseño de una matriz multidimensional sigue el estilo de C++ del diseño de matriz.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

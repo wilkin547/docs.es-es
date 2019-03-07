@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b84b4b7ba96d39693abe238427983da086e62b1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b1414f01c942a02fe984bc39475bd1451171d79
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634849"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480694"
 ---
 # <a name="functionleave-function"></a>FunctionLeave (Función)
 Notifica al generador de perfiles que una función está a punto de devolver al llamador.  
@@ -37,7 +37,7 @@ void __stdcall FunctionLeave (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `funcID`  
  [in] El identificador de la función que devuelve.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 050bfb08dfd95e29b6534f69dbd35400d59e6099
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b80e0cc026ce80950c14436abb2e84548f9adb64
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419609"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499581"
 ---
 # <a name="icordebugthreadenumnext-method"></a>ICorDebugThreadEnum::Next (Método)
-Obtiene el número de instancias de ICorDebugThread especificadas de la enumeración, comenzando en la posición actual.  
+Obtiene el número de instancias ICorDebugThread especificadas de la enumeración, comenzando en la posición actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `celt`  
  [in] El número de `ICorDebugThread` instancias va a recuperar.  
   
  `threads`  
- [out] Una matriz de punteros, cada uno de los cuales señala a un `ICorDebugThread` objeto que representa un subproceso.  
+ [out] Una matriz de punteros, cada uno de los cuales señala a una `ICorDebugThread` objeto que representa un subproceso.  
   
  `pceltFetched`  
- [out] Puntero al número de `ICorDebugThread` instancias realmente devueltos. Este valor puede ser null si `celt` es uno.  
+ [out] Puntero al número de `ICorDebugThread` instancias devueltas realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

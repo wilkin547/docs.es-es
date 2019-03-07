@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ad52580fef538a6878efb0febe41dec7c9de1de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f44b7e073840d4d425cfc91c3156293cee07b4ab
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520638"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501479"
 ---
 # <a name="imetadataemitdeleteclasslayout-method"></a>IMetaDataEmit::DeleteClassLayout (Método)
 Destruye la firma de metadatos de diseño de clase para el tipo representado por el token especificado.  
@@ -35,7 +35,7 @@ HRESULT DeleteClassLayout (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `td`  
  [in] Un `mdTypeDef` token de metadatos que representa el tipo para el que se eliminará el diseño de clase.  
   

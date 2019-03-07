@@ -2,12 +2,12 @@
 title: Cliente de prueba de WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: edce9d2eb2d0bcd915beae0c75d3474d93d8fd51
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9b693aea362d5f16604fb68f4fabbc9bed3602b8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903999"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499295"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Cliente de prueba de WCF (WcfTestClient.exe)
 Cliente de Windows Communication Foundation (WCF) prueba (WcfTestClient.exe) es una herramienta de GUI que permite a los usuarios introducir parámetros de prueba, enviar esa entrada al servicio y ver la respuesta que devuelve el servicio. Proporciona un servicio sin problemas las pruebas cuando se combina con el Host de servicio WCF.  
@@ -106,7 +106,7 @@ Cliente de Windows Communication Foundation (WCF) prueba (WcfTestClient.exe) es 
 ### <a name="adding-removing-and-refreshing-services"></a>Adición, eliminación y actualización de servicios  
   
 #### <a name="add-service"></a>Agregar servicio  
- Haga clic en **archivo**->**Agregar servicio** para agregar un servicio al cliente de prueba WCF. Después, debe escribir el URI (dirección del punto de conexión) del servicio que se va a agregar. La dirección del servicio puede ser una dirección mex o WSDL.  
+ Haga clic en **archivo**->**Agregar servicio** para agregar un servicio al cliente de prueba WCF. Después, debe escribir el URI (dirección del extremo) del servicio que se va a agregar. La dirección del servicio puede ser una dirección mex o WSDL.  
   
  También puede encontrar una lista de extremos de 10 Servicios agregados recientemente en el **servicios recientes** submenú. Si selecciona uno de ellos, se agrega el servicio especificado al cliente de prueba de WCF.  
   
@@ -125,7 +125,7 @@ Cliente de Windows Communication Foundation (WCF) prueba (WcfTestClient.exe) es 
  Durante la generación de proxies, la compilación de binarios o la invocación de servicios, los elementos de menú que permiten actualizar un servicio están deshabilitados. La invocación de servicios también está deshabilitada.  
   
 ## <a name="location-of-files-generated-by-the-test-client"></a>Ubicación de los archivos generados por el cliente de prueba  
- De forma predeterminada, los almacenes de cliente de prueba WCF generan archivos de código y la configuración de cliente en la carpeta "%appdata%\Local\temp\Test Client Projects". Esta carpeta se elimina después de que salga del cliente de prueba WCF. Si se modifica un archivo de configuración de cliente de prueba WCF y la **siempre regenerar la configuración cuando se inicien servicios** opción está deshabilitada, el archivo modificado se copia en la carpeta "Cached Config" bajo "Mi Documents\Test Client Projects" con un archivo XML de asignación (metadatos-dirección-a-nombre de archivo) como un índice.  
+ De forma predeterminada, los almacenes de cliente de prueba WCF generan archivos de código y la configuración de cliente en la carpeta "%appdata%\Local\temp\Test Client Projects". Esta carpeta se elimina después de que salga del cliente de prueba WCF. Si se modifica un archivo de configuración de cliente de prueba WCF y la **siempre regenerar la configuración cuando se inicien servicios** opción está deshabilitada, el archivo modificado se copia en la carpeta "CachedConfig" bajo "Mi Documents\Test Client Projects" con un archivo XML de asignación (metadatos-dirección-a-nombre de archivo) como un índice.  
   
  También puede iniciar el cliente de prueba WCF en una línea de comandos, use el `/ProjectPath` cambiar para especificar una nueva ruta de acceso deseado para almacenar los archivos generados o usar la `/RestoreProjectPath` conmutador para restaurar la ubicación predeterminada. La sintaxis es la siguiente:  
   

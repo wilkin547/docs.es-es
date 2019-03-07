@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: edafb60e5b6f9b913e89f4785dc34a58bf390f2e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11ab9f8077a4b2a9e97c321c6edbe629dc0de19d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638774"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500738"
 ---
 # <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength (Método)
 Obtiene la longitud, en bytes, del código fuente incrustado.  
@@ -34,7 +34,7 @@ HRESULT GetSourceLength(
     [out, retval]  ULONG32*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pRetVal`  
  [out] Un puntero a una variable que indica la longitud, en bytes, del código fuente incrustado.  
   

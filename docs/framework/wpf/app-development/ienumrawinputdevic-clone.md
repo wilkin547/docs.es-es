@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Clone method [WPF]
 ms.assetid: 2a6a1900-aa55-45fa-9382-241d569a2dc4
-ms.openlocfilehash: a4c5e7db813089d1dd138416ac54dd4be467b87b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: abc8a6e4780c8fe50afcf1b04f7e14aeb6452704
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355027"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485413"
 ---
 # <a name="ienumrawinputdevicclone"></a>IEnumRAWINPUTDEVIC:Clone
 Crea otro enumerador de dispositivo de entrada sin formato con el mismo estado que el enumerador actual para crear una iteración por la misma lista.  
@@ -20,7 +20,7 @@ Crea otro enumerador de dispositivo de entrada sin formato con el mismo estado q
 HRESULT Clone( [out] IEnumRAWINPUTDEVICE **ppenum);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `ppenum`  
   
  [out] Dirección de variable de salida que recibe el [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) puntero de interfaz. Si el método se realiza correctamente, el valor de esta variable de salida es indefinido.  
