@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7758e61635bf6611cf83d2d66d0b62a28fac97d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74a54da0bc4257ccc50d2d99177a17b796380fb3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647691"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481435"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata (Método)
 Llamado por los servicios de acceso a datos de common language runtime (CLR) para recuperar los metadatos de una imagen.  
@@ -44,7 +44,7 @@ HRESULT GetMetadata(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `imagePath`  
  [in] Una cadena que especifica la ruta de acceso del archivo de imagen.  
   

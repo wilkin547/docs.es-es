@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7a3fcd34f8cab6fa3c2949a4ee3270189b3dc77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59ec4d9f39362f563312a9ed75bb1ab5cede799d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730040"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484035"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>ISymUnmanagedDocumentWriter::SetCheckSum (Método)
 Establece la información de suma de comprobación.  
@@ -36,7 +36,7 @@ HRESULT SetCheckSum(
     [in, size_is(checkSumSize)]  BYTE checkSum[]);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `algorithmId`  
  [in] El GUID que representa el identificador del algoritmo.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 763e698c7149de0fee61770e601032a4160b839f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bfe441831cef3f708792767163b9cf2138cd4335
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378579"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473867"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute (Método)
 Obtiene un atributo personalizado basándose en su nombre. A diferencia de los atributos personalizados de los metadatos, estos atributos personalizados se encuentran en el almacén de símbolos.  
@@ -39,7 +39,7 @@ HRESULT GetSymAttribute (
         length_is (*pcBuffer)] BYTE buffer[]);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `parent`  
  [in] El token de metadatos para el objeto que se solicita el atributo.  
   

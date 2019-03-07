@@ -5,12 +5,12 @@ helpviewer_keywords:
 - paramref XML tag
 - <paramref> XML tag
 ms.assetid: 8979d53b-beb1-41b7-b41e-6bbea1c17a03
-ms.openlocfilehash: 3e889f97565f7961ce975f41e9ec4c85a4d0d2c6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 49ed974dabe747c383fa1ffa85371afecc4d2f5d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965995"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484289"
 ---
 # <a name="paramref-visual-basic"></a>\<paramref > (Visual Basic)
 Da formato a una palabra como un parámetro.  
@@ -21,7 +21,7 @@ Da formato a una palabra como un parámetro.
 <paramref name="name"/>  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `name`  
  Nombre del parámetro al que se hace referencia. Ponga el nombre entre comillas dobles (" ").  
   

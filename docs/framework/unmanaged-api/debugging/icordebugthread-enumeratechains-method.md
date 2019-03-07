@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caeb60c33580f7171a6959c3046cf7312868851b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e01f94e9574ebc032bc45490fd88ff92e9104aa3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420559"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482865"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains (Método)
 Obtiene un puntero de interfaz a un enumerador ICorDebugChainEnum que contiene todas las cadenas de pila en este objeto ICorDebugThread.  
@@ -35,28 +35,28 @@ HRESULT EnumerateChains (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `ppChains`  
- [out] Un puntero a la dirección de un `ICorDebugChainEnum` vincula el objeto que permite la enumeración de todos los del pila en este subproceso, empezando por la cadena de activo (es decir, la más reciente).  
+ [out] Un puntero a la dirección de un `ICorDebugChainEnum` objeto que permite la enumeración de la pila de todos los encadena en este subproceso, empezando por la cadena activa (es decir, la más reciente).  
   
 ## <a name="remarks"></a>Comentarios  
  La cadena de pila representa la pila de llamadas física del subproceso. Las circunstancias siguientes crean un límite de la cadena de pila:  
   
--   Una transición a administrado o no administrado a administrado.  
+-   Una transición de administrado a no administrado o no administrado a administrado.  
   
 -   Un cambio de contexto.  
   
 -   Un secuestro de un subproceso de usuario del depurador.  
   
- En un caso simple para un subproceso que se ejecuta exclusivamente código administrado en un único contexto, existirá una correspondencia uno a uno entre los subprocesos y cadenas de la pila.  
+ En el caso de un subproceso que se ejecuta exclusivamente código administrado en un contexto único, una correspondencia uno a uno existirá entre los subprocesos y las cadenas de la pila.  
   
- Un depurador que desee reorganizar las pilas de llamadas física de todos los subprocesos en pilas de llamada lógico. Esto incluiría la ordenación de cadenas de todos los subprocesos por sus relaciones de llamador/destinatario y reagrupar ellos.  
+ Un depurador que desee reorganizar las pilas de llamadas física de todos los subprocesos en pilas de llamadas lógicas. Esto implicaría ordenar las cadenas de todos los subprocesos por sus relaciones de llamador y destinatario y reagrupar ellos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

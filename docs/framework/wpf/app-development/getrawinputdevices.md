@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - raw input [WPF]
 ms.assetid: c4d37ecd-065a-4d1c-9e6c-26804ae968ca
-ms.openlocfilehash: 86910434e572bc19595d1664347f35d7a39eb75b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 763767514f5f157c676f2e5c86ff9b1e4e64f233
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365110"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495252"
 ---
 # <a name="getrawinputdevices"></a>GetRawInputDevices
 Permite que PresentationHost.exe detecte los dispositivos de entrada sin formato (dispositivos de interfaz humana) en los que está interesada la aplicación host.  
@@ -20,7 +20,7 @@ Permite que PresentationHost.exe detecte los dispositivos de entrada sin formato
 HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `ppEnum`  
   
  [out] Un puntero a un [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) para enumerar los dispositivos de entrada sin formato.  

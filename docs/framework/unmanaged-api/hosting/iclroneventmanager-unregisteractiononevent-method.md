@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5ebe0ad045c2047ed0756c7efee5f4cfc919c7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fcc5a6c2f2aa6f22a243c53898cdeda807b6774
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559247"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471827"
 ---
 # <a name="iclroneventmanagerunregisteractiononevent-method"></a>ICLROnEventManager::UnregisterActionOnEvent (Método)
 Anula el registro de un puntero de devolución de llamada registrada anteriormente para el evento especificado.  
@@ -36,7 +36,7 @@ HRESULT UnregisterActionOnEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `event`  
  [in] Uno de los [EClrEvent](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md) valores, que indica el evento para el que se va a anular el puntero de devolución de llamada descrito por `pAction`.  
   

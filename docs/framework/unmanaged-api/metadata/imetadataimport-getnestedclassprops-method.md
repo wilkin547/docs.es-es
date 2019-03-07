@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e54b4c4b1b3184b6aa0d50f82a501312db6a8e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6462496a8804d9aa5304107a6c01122b745038fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655666"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500257"
 ---
 # <a name="imetadataimportgetnestedclassprops-method"></a>IMetaDataImport::GetNestedClassProps (Método)
 Obtiene la definición de tipo (token) para el elemento primario <xref:System.Type> del elemento especificado de tipo anidado.  
@@ -36,7 +36,7 @@ HRESULT GetNestedClassProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `tdNestedClass`  
  [in] Una definición de tipo token que representa el <xref:System.Type> para devolver la clase primaria símbolo (token).  
   

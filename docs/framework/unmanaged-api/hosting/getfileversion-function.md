@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 349604404487501a692b9a2472ed32878c62d879
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 214f16f970cfb2c319f3a26afc882e6102c1be71
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494813"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498268"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion (Función)
 Obtiene la información de versión de common language runtime (CLR) del archivo especificado, utilizando el búfer especificado.  
@@ -39,7 +39,7 @@ HRESULT GetFileVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `szFilename`  
  [in] La ruta de acceso del archivo se va a examinar.  
   

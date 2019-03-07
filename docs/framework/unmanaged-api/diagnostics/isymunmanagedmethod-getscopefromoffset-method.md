@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5422e781ab2f494e85f637219aa540bf4ac34cb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b036c5cff5300377580fe22dc254911fbdd79715
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629740"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503130"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset (Método)
 Obtiene el ámbito léxico más envolvente dentro de este método que contiene el desplazamiento especificado. Esto puede usarse para iniciar búsquedas de variables locales.  
@@ -35,7 +35,7 @@ HRESULT GetScopeFromOffset(
     [out, retval] ISymUnmanagedScope**  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `offset`  
  [in] Un `ULONG` que contiene el desplazamiento.  
   

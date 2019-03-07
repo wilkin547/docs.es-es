@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b77dcbb1acffe47524aee3cd7761e342175dcd34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e0cd68f5a15bbd8942f0dc889ecb74b7fde00d30
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733703"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502336"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError (Método)
 Notifica al generador de perfiles que el compilador de just-in-time (JIT) detectó un error en el proceso de recompilación.  
@@ -37,7 +37,7 @@ HRESULT ReJITError(
     [in] HRESULT     hrStatus);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `moduleID`  
  [in] El `ModuleID` en que se realizara el intento de volver a compilar con errores.  
   
