@@ -2,18 +2,18 @@
 title: Funciones canónicas de agregado
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: f65557703070a43f586a668903d049a374ef70d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708979"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372807"
 ---
 # <a name="aggregate-canonical-functions"></a>Funciones canónicas de agregado
 
 Los agregados son expresiones que reducen una serie de valores de entrada a un único valor, por ejemplo. Los agregados suelen usarse junto con la cláusula GROUP BY de la expresión SELECT y hay restricciones con respecto a dónde se pueden usar.
 
-## <a name="aggegate-entity-sql-canonical-functions"></a>Funciones canónicas Aggegate Entity SQL
+## <a name="aggregate-entity-sql-canonical-functions"></a>Funciones canónicas de agregado Entity SQL
 
 Las siguientes son las funciones canónicas de Entity SQL agregadas.
 
@@ -31,7 +31,7 @@ El tipo de `expression`, o `null` si todos los valores de entrada son `null` val
 
 **Ejemplo**
 
-[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] 
+[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)]
 [!code-sql[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]
 
 ### <a name="bigcountexpression"></a>BigCount(expresión)
@@ -48,10 +48,10 @@ Una clase `Int64`.
 
 **Ejemplo**
 
-[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] 
+[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)]
 [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]
 
-### <a name="countexpression"></a>Count(expresión) 
+### <a name="countexpression"></a>Count(expresión)
 
 Devuelve el tamaño del agregado, incluyendo los valores NULL y los duplicados.
 
@@ -74,7 +74,7 @@ Devuelve el máximo de los valores no NULL.
 
 **Argumentos**
 
-Valor de tipo `Int16``Byte``Int64`, `Int32``Single`, `Byte``Decimal`, `Double``DateTimeOffset`, `DateTime``String`, `Time`, `Binary`, , , , , .
+A `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
 
 **Valor devuelto**
 
@@ -91,7 +91,7 @@ Devuelve el mínimo de los valores no NULL.
 
 **Argumentos**
 
-Valor de tipo `Int16``Byte``Int64`, `Int32``Single`, `Byte``Decimal`, `Double``DateTimeOffset`, `DateTime``String`, `Time`, `Binary`, , , , , .
+A `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.
 
 **Valor devuelto**
 
@@ -185,7 +185,7 @@ Un `Double`, o `null` si todos los valores de entrada son `null` valores.
 **Ejemplo**
 
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
-[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] 
+[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
 La funcionalidad equivalente está disponible en el proveedor administrado de Microsoft SQL Client. Para obtener más información, consulte [SqlClient para las funciones de Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).
 
@@ -197,7 +197,7 @@ Los agregados basados en una colección (funciones de colección) operan en las 
 min(select value o.ShipDate from LOB.Orders as o)
 ```
 
-Las expresiones que se encuentran dentro de agregados basados en una colección se evalúan dentro del ámbito de resolución de nombres actual
+Las expresiones que se encuentran dentro de agregados basados en una colección se evalúan dentro del ámbito actual de la resolución de nombres.
 
 ## <a name="group-based-aggregates"></a>Agregados basados en grupo
 
@@ -206,7 +206,7 @@ Los agregados basados en un grupo se calculan sobre un grupo según define la cl
 En el ejemplo siguiente se calcula la cantidad promedio pedida de cada producto:
 
 ```sql
-select p, avg(ol.Quantity) from LOB.OrderLines as ol 
+select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
@@ -224,7 +224,7 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 Las expresiones que se encuentran dentro del agregado basado en un grupo se evalúan dentro del ámbito de resolución de nombres que sería visible para la expresión de la cláusula WHERE.
 
-Como en [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], los agregados basados en grupo también pueden especificar un ALL o modificador DISTINCT. Si se especifica el modificador DISTINCT, los duplicados se eliminan de la colección de entrada del agregado, antes de calcularlo. Si se especifica el modificador ALL o no se especifica ningún modificador, no se lleva a cabo la eliminación de los duplicados.  
+Como en [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], los agregados basados en grupo también pueden especificar un ALL o modificador DISTINCT. Si se especifica el modificador DISTINCT, los duplicados se eliminan de la colección de entrada del agregado, antes de calcularlo. Si se especifica el modificador ALL o no se especifica ningún modificador, no se lleva a cabo la eliminación de los duplicados.
 
 ## <a name="see-also"></a>Vea también
 
