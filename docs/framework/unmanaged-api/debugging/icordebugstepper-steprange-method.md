@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 838f2df06f8875037edbe39d2db0411f31abe01f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b18474aeaa79224de5371df3ff0cac5ed9bf4ff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421369"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475741"
 ---
-# <a name="icordebugsteppersteprange-method"></a><span data-ttu-id="bcd80-102">ICorDebugStepper::StepRange (Método)</span><span class="sxs-lookup"><span data-stu-id="bcd80-102">ICorDebugStepper::StepRange Method</span></span>
-<span data-ttu-id="bcd80-103">Hace que esta instancia de ICorDebugStepper paso a paso a través de un subproceso que lo contiene y que se devolverán cuando llegue al código situado más allá del último de los intervalos especificados.</span><span class="sxs-lookup"><span data-stu-id="bcd80-103">Causes this ICorDebugStepper to single-step through its containing thread, and to return when it reaches code beyond the last of the specified ranges.</span></span>  
+# <a name="icordebugsteppersteprange-method"></a><span data-ttu-id="57c0b-102">ICorDebugStepper::StepRange (Método)</span><span class="sxs-lookup"><span data-stu-id="57c0b-102">ICorDebugStepper::StepRange Method</span></span>
+<span data-ttu-id="57c0b-103">Hace que este ICorDebugStepper paso a paso a través del subproceso que la contiene y devolver cuando llegue al código más allá del último de los intervalos especificados.</span><span class="sxs-lookup"><span data-stu-id="57c0b-103">Causes this ICorDebugStepper to single-step through its containing thread, and to return when it reaches code beyond the last of the specified ranges.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bcd80-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="bcd80-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="57c0b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="57c0b-104">Syntax</span></span>  
   
 ```  
 HRESULT StepRange (  
@@ -37,28 +37,28 @@ HRESULT StepRange (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bcd80-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="bcd80-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="57c0b-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="57c0b-105">Parameters</span></span>  
  `bStepIn`  
- <span data-ttu-id="bcd80-106">[in] Establecido en `true` para ir a una función que se llama desde el subproceso.</span><span class="sxs-lookup"><span data-stu-id="bcd80-106">[in] Set to `true` to step into a function that is called within the thread.</span></span> <span data-ttu-id="bcd80-107">Establecido en `false` para pasar por alto la función.</span><span class="sxs-lookup"><span data-stu-id="bcd80-107">Set to `false` to step over the function.</span></span>  
+ <span data-ttu-id="57c0b-106">[in] Establecido en `true` para adentrarse en una función que se llama dentro del subproceso.</span><span class="sxs-lookup"><span data-stu-id="57c0b-106">[in] Set to `true` to step into a function that is called within the thread.</span></span> <span data-ttu-id="57c0b-107">Establecido en `false` al paso a través de la función.</span><span class="sxs-lookup"><span data-stu-id="57c0b-107">Set to `false` to step over the function.</span></span>  
   
  `ranges`  
- <span data-ttu-id="bcd80-108">[in] Una matriz de estructuras COR_DEBUG_STEP_RANGE, cada uno de los cuales especifica un intervalo.</span><span class="sxs-lookup"><span data-stu-id="bcd80-108">[in] An array of COR_DEBUG_STEP_RANGE structures, each of which specifies a range.</span></span>  
+ <span data-ttu-id="57c0b-108">[in] Una matriz de estructuras COR_DEBUG_STEP_RANGE, cada uno de los cuales especifica un intervalo.</span><span class="sxs-lookup"><span data-stu-id="57c0b-108">[in] An array of COR_DEBUG_STEP_RANGE structures, each of which specifies a range.</span></span>  
   
  `cRangeCount`  
- <span data-ttu-id="bcd80-109">[in] Tamaño de la matriz `ranges`.</span><span class="sxs-lookup"><span data-stu-id="bcd80-109">[in] The size of the `ranges` array.</span></span>  
+ <span data-ttu-id="57c0b-109">[in] Tamaño de la matriz `ranges`.</span><span class="sxs-lookup"><span data-stu-id="57c0b-109">[in] The size of the `ranges` array.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bcd80-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="bcd80-110">Remarks</span></span>  
- <span data-ttu-id="bcd80-111">El `StepRange` método funciona como el [ICorDebugStepper:: Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) método, salvo que no se completa hasta que el código fuera del intervalo especificado se ha alcanzado.</span><span class="sxs-lookup"><span data-stu-id="bcd80-111">The `StepRange` method works like the [ICorDebugStepper::Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) method, except that it does not complete until code outside the given range is reached.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="57c0b-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="57c0b-110">Remarks</span></span>  
+ <span data-ttu-id="57c0b-111">El `StepRange` método funciona igual que el [ICorDebugStepper](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) se alcanza el método, salvo que no se completa hasta que el código fuera del intervalo especificado.</span><span class="sxs-lookup"><span data-stu-id="57c0b-111">The `StepRange` method works like the [ICorDebugStepper::Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) method, except that it does not complete until code outside the given range is reached.</span></span>  
   
- <span data-ttu-id="bcd80-112">Esto puede ser más eficaz que la ejecución paso a paso una instrucción a la vez.</span><span class="sxs-lookup"><span data-stu-id="bcd80-112">This can be more efficient than stepping one instruction at a time.</span></span> <span data-ttu-id="bcd80-113">Los intervalos se especifican como una lista de pares de desplazamiento desde el inicio del marco del paso a paso de desencadene.</span><span class="sxs-lookup"><span data-stu-id="bcd80-113">Ranges are specified as a list of offset pairs from the start of the stepper's frame.</span></span>  
+ <span data-ttu-id="57c0b-112">Esto puede ser más eficaz que la ejecución paso a paso una instrucción a la vez.</span><span class="sxs-lookup"><span data-stu-id="57c0b-112">This can be more efficient than stepping one instruction at a time.</span></span> <span data-ttu-id="57c0b-113">Los intervalos se especifican como una lista de pares de desplazamiento desde el principio del marco del componente.</span><span class="sxs-lookup"><span data-stu-id="57c0b-113">Ranges are specified as a list of offset pairs from the start of the stepper's frame.</span></span>  
   
- <span data-ttu-id="bcd80-114">Los intervalos son relativos al código de lenguaje intermedio (MSIL) de Microsoft de un método.</span><span class="sxs-lookup"><span data-stu-id="bcd80-114">Ranges are relative to the Microsoft intermediate language (MSIL) code of a method.</span></span> <span data-ttu-id="bcd80-115">Llame a [ICorDebugStepper:: SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) con `false` para hacer que los intervalos relativos al código nativo de un método.</span><span class="sxs-lookup"><span data-stu-id="bcd80-115">Call [ICorDebugStepper::SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) with `false` to make the ranges relative to the native code of a method.</span></span>  
+ <span data-ttu-id="57c0b-114">Los intervalos son relativos al código de lenguaje intermedio (MSIL) de Microsoft de un método.</span><span class="sxs-lookup"><span data-stu-id="57c0b-114">Ranges are relative to the Microsoft intermediate language (MSIL) code of a method.</span></span> <span data-ttu-id="57c0b-115">Llame a [SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) con `false` para hacer que los intervalos en relación con el código nativo de un método.</span><span class="sxs-lookup"><span data-stu-id="57c0b-115">Call [ICorDebugStepper::SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) with `false` to make the ranges relative to the native code of a method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bcd80-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bcd80-116">Requirements</span></span>  
- <span data-ttu-id="bcd80-117">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bcd80-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="57c0b-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="57c0b-116">Requirements</span></span>  
+ <span data-ttu-id="57c0b-117">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="57c0b-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bcd80-118">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bcd80-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="57c0b-118">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="57c0b-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bcd80-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bcd80-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="57c0b-119">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="57c0b-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bcd80-120">**Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bcd80-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="57c0b-120">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="57c0b-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfc8800915009912716ec2ed9044a633a8ad0582
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c20eec52b0e4616af1b864bb58b6cbff44a720eb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401750"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490377"
 ---
-# <a name="icordebugboxvaluegetobject-method"></a><span data-ttu-id="8f8b9-102">ICorDebugBoxValue::GetObject (Método)</span><span class="sxs-lookup"><span data-stu-id="8f8b9-102">ICorDebugBoxValue::GetObject Method</span></span>
-<span data-ttu-id="8f8b9-103">Obtiene el valor de conversión boxing.</span><span class="sxs-lookup"><span data-stu-id="8f8b9-103">Gets the boxed value.</span></span>  
+# <a name="icordebugboxvaluegetobject-method"></a><span data-ttu-id="c4238-102">ICorDebugBoxValue::GetObject (Método)</span><span class="sxs-lookup"><span data-stu-id="c4238-102">ICorDebugBoxValue::GetObject Method</span></span>
+<span data-ttu-id="c4238-103">Obtiene el valor con conversión boxing.</span><span class="sxs-lookup"><span data-stu-id="c4238-103">Gets the boxed value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8f8b9-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8f8b9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c4238-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c4238-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObject (  
@@ -35,15 +35,15 @@ HRESULT GetObject (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8f8b9-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="8f8b9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c4238-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c4238-105">Parameters</span></span>  
  `ppObject`  
- <span data-ttu-id="8f8b9-106">[out] Un puntero a la dirección de un objeto ICorDebugObjectValue que representa el valor de conversión boxing.</span><span class="sxs-lookup"><span data-stu-id="8f8b9-106">[out] A pointer to the address of an ICorDebugObjectValue object that represents the boxed value.</span></span>  
+ <span data-ttu-id="c4238-106">[out] Un puntero a la dirección de un objeto ICorDebugObjectValue que representa el valor con conversión boxing.</span><span class="sxs-lookup"><span data-stu-id="c4238-106">[out] A pointer to the address of an ICorDebugObjectValue object that represents the boxed value.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8f8b9-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8f8b9-107">Requirements</span></span>  
- <span data-ttu-id="8f8b9-108">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8f8b9-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c4238-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c4238-107">Requirements</span></span>  
+ <span data-ttu-id="c4238-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c4238-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8f8b9-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8f8b9-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c4238-109">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c4238-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8f8b9-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8f8b9-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c4238-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c4238-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8f8b9-111">**Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f8b9-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="c4238-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4238-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc4e51ec60c7526f36bbe4909bec91a527e0862c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: da799b0d4f4e5e4b281445baa35d95f992ba0b63
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419915"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474961"
 ---
-# <a name="icordebugsteppersetunmappedstopmask-method"></a><span data-ttu-id="22599-102">ICorDebugStepper::SetUnmappedStopMask (Método)</span><span class="sxs-lookup"><span data-stu-id="22599-102">ICorDebugStepper::SetUnmappedStopMask Method</span></span>
-<span data-ttu-id="22599-103">Establece un valor que especifica el tipo de código no asignado en el que se detendrá la ejecución.</span><span class="sxs-lookup"><span data-stu-id="22599-103">Sets a value that specifies the type of unmapped code in which execution will halt.</span></span>  
+# <a name="icordebugsteppersetunmappedstopmask-method"></a><span data-ttu-id="f4802-102">ICorDebugStepper::SetUnmappedStopMask (Método)</span><span class="sxs-lookup"><span data-stu-id="f4802-102">ICorDebugStepper::SetUnmappedStopMask Method</span></span>
+<span data-ttu-id="f4802-103">Establece un valor que especifica el tipo de código no asignado en el que se detendrá la ejecución.</span><span class="sxs-lookup"><span data-stu-id="f4802-103">Sets a value that specifies the type of unmapped code in which execution will halt.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="22599-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="22599-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f4802-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f4802-104">Syntax</span></span>  
   
 ```  
 HRESULT SetUnmappedStopMask (  
@@ -35,22 +35,22 @@ HRESULT SetUnmappedStopMask (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="22599-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="22599-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f4802-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f4802-105">Parameters</span></span>  
  `mask`  
- <span data-ttu-id="22599-106">[in] Un valor de la enumeración CorDebugUnmappedStop que especifica el tipo de código no asignado en el que el depurador detendrá la ejecución.</span><span class="sxs-lookup"><span data-stu-id="22599-106">[in] A value of the CorDebugUnmappedStop enumeration that specifies the type of unmapped code in which the debugger will halt execution.</span></span>  
+ <span data-ttu-id="f4802-106">[in] Un valor de la enumeración CorDebugUnmappedStop que especifica el tipo de código no asignado en el que el depurador detendrá la ejecución.</span><span class="sxs-lookup"><span data-stu-id="f4802-106">[in] A value of the CorDebugUnmappedStop enumeration that specifies the type of unmapped code in which the debugger will halt execution.</span></span>  
   
- <span data-ttu-id="22599-107">El valor predeterminado es STOP_OTHER_UNMAPPED.</span><span class="sxs-lookup"><span data-stu-id="22599-107">The default value is STOP_OTHER_UNMAPPED.</span></span> <span data-ttu-id="22599-108">El valor STOP_UNMANAGED sólo es válido con la depuración de interoperabilidad.</span><span class="sxs-lookup"><span data-stu-id="22599-108">The value STOP_UNMANAGED is only valid with interop debugging.</span></span>  
+ <span data-ttu-id="f4802-107">El valor predeterminado es STOP_OTHER_UNMAPPED.</span><span class="sxs-lookup"><span data-stu-id="f4802-107">The default value is STOP_OTHER_UNMAPPED.</span></span> <span data-ttu-id="f4802-108">El valor STOP_UNMANAGED sólo es válido con la depuración de interoperabilidad.</span><span class="sxs-lookup"><span data-stu-id="f4802-108">The value STOP_UNMANAGED is only valid with interop debugging.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="22599-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="22599-109">Remarks</span></span>  
- <span data-ttu-id="22599-110">Cuando el depurador encuentra la compilación just-in-time (JIT) que no tiene ninguna asignación correspondiente al lenguaje intermedio de Microsoft (MSIL), detiene la ejecución si se ha establecido la marca de especificación de ese tipo de código no asignado; en caso contrario, avance de forma transparente continúa.</span><span class="sxs-lookup"><span data-stu-id="22599-110">When the debugger finds a just-in-time (JIT) compilation that has no corresponding mapping to Microsoft intermediate language (MSIL), it halts execution if the flag specifying that type of unmapped code has been set; otherwise, stepping transparently continues.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f4802-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="f4802-109">Remarks</span></span>  
+ <span data-ttu-id="f4802-110">Cuando el depurador encuentra la compilación just-in-time (JIT) que no tiene ninguna asignación correspondiente al lenguaje intermedio de Microsoft (MSIL), detiene la ejecución si se ha establecido la marca que especifica ese tipo de código no asignado; en caso contrario, ejecución paso a paso de forma transparente continúa.</span><span class="sxs-lookup"><span data-stu-id="f4802-110">When the debugger finds a just-in-time (JIT) compilation that has no corresponding mapping to Microsoft intermediate language (MSIL), it halts execution if the flag specifying that type of unmapped code has been set; otherwise, stepping transparently continues.</span></span>  
   
- <span data-ttu-id="22599-111">Si el depurador no usa un motor paso a paso para especificar un método, a continuación, no necesariamente recorrerá paso a través de código no asignado.</span><span class="sxs-lookup"><span data-stu-id="22599-111">If the debugger doesn't use a stepper to enter a method, then it won't necessarily step over unmapped code.</span></span>  
+ <span data-ttu-id="f4802-111">Si el depurador no usa un motor paso a paso para especificar un método, a continuación, no necesariamente recorrerá paso a través de código no asignado.</span><span class="sxs-lookup"><span data-stu-id="f4802-111">If the debugger doesn't use a stepper to enter a method, then it won't necessarily step over unmapped code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="22599-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="22599-112">Requirements</span></span>  
- <span data-ttu-id="22599-113">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="22599-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f4802-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f4802-112">Requirements</span></span>  
+ <span data-ttu-id="f4802-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f4802-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="22599-114">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="22599-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f4802-114">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f4802-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="22599-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="22599-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f4802-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f4802-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="22599-116">**Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="22599-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f4802-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f4802-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

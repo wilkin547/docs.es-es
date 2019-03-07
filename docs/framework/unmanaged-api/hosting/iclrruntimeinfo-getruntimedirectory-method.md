@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26bee605724fd69d972a7e07c6fe6be2fbcabfa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 159e9b3d81db5b416eb98e1b7587712ba14033c5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563865"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466987"
 ---
-# <a name="iclrruntimeinfogetruntimedirectory-method"></a><span data-ttu-id="40be2-102">ICLRRuntimeInfo::GetRuntimeDirectory (Método)</span><span class="sxs-lookup"><span data-stu-id="40be2-102">ICLRRuntimeInfo::GetRuntimeDirectory Method</span></span>
-<span data-ttu-id="40be2-103">Obtiene el directorio de instalación de common language runtime (CLR) asociado a esta interfaz.</span><span class="sxs-lookup"><span data-stu-id="40be2-103">Gets the installation directory of the common language runtime (CLR) associated with this interface.</span></span>  
+# <a name="iclrruntimeinfogetruntimedirectory-method"></a><span data-ttu-id="7183d-102">ICLRRuntimeInfo::GetRuntimeDirectory (Método)</span><span class="sxs-lookup"><span data-stu-id="7183d-102">ICLRRuntimeInfo::GetRuntimeDirectory Method</span></span>
+<span data-ttu-id="7183d-103">Obtiene el directorio de instalación de common language runtime (CLR) asociado a esta interfaz.</span><span class="sxs-lookup"><span data-stu-id="7183d-103">Gets the installation directory of the common language runtime (CLR) associated with this interface.</span></span>  
   
- <span data-ttu-id="40be2-104">Este método reemplaza el [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) función incluida en las versiones de .NET Framework 2.0, 3.0 y 3.5.</span><span class="sxs-lookup"><span data-stu-id="40be2-104">This method supersedes the [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) function provided in the .NET Framework versions 2.0, 3.0, and 3.5.</span></span>  
+ <span data-ttu-id="7183d-104">Este método reemplaza el [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) función incluida en las versiones de .NET Framework 2.0, 3.0 y 3.5.</span><span class="sxs-lookup"><span data-stu-id="7183d-104">This method supersedes the [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) function provided in the .NET Framework versions 2.0, 3.0, and 3.5.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="40be2-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="40be2-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7183d-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7183d-105">Syntax</span></span>  
   
 ```  
 HRESULT GetRuntimeDirectory(  
@@ -37,32 +37,32 @@ HRESULT GetRuntimeDirectory(
 [in, out]  DWORD *pcchBuffer);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="40be2-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="40be2-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7183d-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="7183d-106">Parameters</span></span>  
  `pwzBuffer`  
- <span data-ttu-id="40be2-107">[out] Devuelve el directorio de instalación de CLR.</span><span class="sxs-lookup"><span data-stu-id="40be2-107">[out] Returns the CLR installation directory.</span></span> <span data-ttu-id="40be2-108">La ruta de instalación está completa; Por ejemplo, "c:\windows\microsoft.net\framework\v1.0.3705\\".</span><span class="sxs-lookup"><span data-stu-id="40be2-108">The installation path is fully qualified; for example, "c:\windows\microsoft.net\framework\v1.0.3705\\".</span></span>  
+ <span data-ttu-id="7183d-107">[out] Devuelve el directorio de instalación de CLR.</span><span class="sxs-lookup"><span data-stu-id="7183d-107">[out] Returns the CLR installation directory.</span></span> <span data-ttu-id="7183d-108">La ruta de instalación está completa; Por ejemplo, "c:\windows\microsoft.net\framework\v1.0.3705\\".</span><span class="sxs-lookup"><span data-stu-id="7183d-108">The installation path is fully qualified; for example, "c:\windows\microsoft.net\framework\v1.0.3705\\".</span></span>  
   
  `pchBuffer`  
- <span data-ttu-id="40be2-109">[in, out] Especifica el tamaño de `pwzBuffer` para evitar saturaciones de búfer.</span><span class="sxs-lookup"><span data-stu-id="40be2-109">[in, out] Specifies the size of `pwzBuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="40be2-110">Si `pwzBuffer` es null, `pchBuffer` devuelve el tamaño necesario de `pwzBuffer`.</span><span class="sxs-lookup"><span data-stu-id="40be2-110">If `pwzBuffer` is null, `pchBuffer` returns the required size of `pwzBuffer`.</span></span>  
+ <span data-ttu-id="7183d-109">[in, out] Especifica el tamaño de `pwzBuffer` para evitar saturaciones de búfer.</span><span class="sxs-lookup"><span data-stu-id="7183d-109">[in, out] Specifies the size of `pwzBuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="7183d-110">Si `pwzBuffer` es null, `pchBuffer` devuelve el tamaño necesario de `pwzBuffer`.</span><span class="sxs-lookup"><span data-stu-id="7183d-110">If `pwzBuffer` is null, `pchBuffer` returns the required size of `pwzBuffer`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="40be2-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="40be2-111">Return Value</span></span>  
- <span data-ttu-id="40be2-112">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="40be2-112">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7183d-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="7183d-111">Return Value</span></span>  
+ <span data-ttu-id="7183d-112">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="7183d-112">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="40be2-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="40be2-113">HRESULT</span></span>|<span data-ttu-id="40be2-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="40be2-114">Description</span></span>|  
+|<span data-ttu-id="7183d-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7183d-113">HRESULT</span></span>|<span data-ttu-id="7183d-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="7183d-114">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="40be2-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="40be2-115">S_OK</span></span>|<span data-ttu-id="40be2-116">El método se completó correctamente.</span><span class="sxs-lookup"><span data-stu-id="40be2-116">The method completed successfully.</span></span>|  
-|<span data-ttu-id="40be2-117">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="40be2-117">E_POINTER</span></span>|<span data-ttu-id="40be2-118">`pwzBuffer` o `pchBuffer` es null.</span><span class="sxs-lookup"><span data-stu-id="40be2-118">`pwzBuffer` or `pchBuffer` is null.</span></span>|  
+|<span data-ttu-id="7183d-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="7183d-115">S_OK</span></span>|<span data-ttu-id="7183d-116">El método se completó correctamente.</span><span class="sxs-lookup"><span data-stu-id="7183d-116">The method completed successfully.</span></span>|  
+|<span data-ttu-id="7183d-117">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="7183d-117">E_POINTER</span></span>|<span data-ttu-id="7183d-118">`pwzBuffer` o `pchBuffer` es null.</span><span class="sxs-lookup"><span data-stu-id="7183d-118">`pwzBuffer` or `pchBuffer` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="40be2-119">Comentarios</span><span class="sxs-lookup"><span data-stu-id="40be2-119">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7183d-119">Comentarios</span><span class="sxs-lookup"><span data-stu-id="7183d-119">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="40be2-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="40be2-120">Requirements</span></span>  
- <span data-ttu-id="40be2-121">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="40be2-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7183d-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7183d-120">Requirements</span></span>  
+ <span data-ttu-id="7183d-121">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7183d-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="40be2-122">**Encabezado**: MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="40be2-122">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="7183d-122">**Encabezado**: MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="7183d-122">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="40be2-123">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="40be2-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7183d-123">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7183d-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="40be2-124">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40be2-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="7183d-124">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7183d-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="40be2-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="40be2-125">See also</span></span>
-- [<span data-ttu-id="40be2-126">ICLRRuntimeInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="40be2-126">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="40be2-127">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="40be2-127">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="7183d-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="7183d-125">See also</span></span>
+- [<span data-ttu-id="7183d-126">ICLRRuntimeInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="7183d-126">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="7183d-127">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="7183d-127">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb3f0ca6d930b22f30fe9bbc5b5a04bf1e034f34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 58a39771bd89fc9c4947f80a3c87b4d340b5461c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405830"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484243"
 ---
-# <a name="icordebugappdomain2getarrayorpointertype-method"></a><span data-ttu-id="9b4c1-102">ICorDebugAppDomain2::GetArrayOrPointerType (Método)</span><span class="sxs-lookup"><span data-stu-id="9b4c1-102">ICorDebugAppDomain2::GetArrayOrPointerType Method</span></span>
-<span data-ttu-id="9b4c1-103">Obtiene una matriz del tipo especificado, o un puntero o referencia al tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="9b4c1-103">Gets an array of the specified type, or a pointer or reference to the specified type.</span></span>  
+# <a name="icordebugappdomain2getarrayorpointertype-method"></a><span data-ttu-id="11063-102">ICorDebugAppDomain2::GetArrayOrPointerType (Método)</span><span class="sxs-lookup"><span data-stu-id="11063-102">ICorDebugAppDomain2::GetArrayOrPointerType Method</span></span>
+<span data-ttu-id="11063-103">Obtiene una matriz de tipo especificado, o un puntero o referencia al tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="11063-103">Gets an array of the specified type, or a pointer or reference to the specified type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9b4c1-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9b4c1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11063-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="11063-104">Syntax</span></span>  
   
 ```  
 HRESULT GetArrayOrPointerType (  
@@ -38,35 +38,35 @@ HRESULT GetArrayOrPointerType (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9b4c1-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9b4c1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="11063-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="11063-105">Parameters</span></span>  
  `elementType`  
- <span data-ttu-id="9b4c1-106">[in] Un valor de la enumeración CorElementType que especifica el tipo nativo subyacente (una matriz, puntero o referencia), que se va a crear.</span><span class="sxs-lookup"><span data-stu-id="9b4c1-106">[in] A value of the CorElementType enumeration that specifies the underlying native type (an array, pointer, or reference) to be created.</span></span>  
+ <span data-ttu-id="11063-106">[in] Un valor de la enumeración CorElementType que especifica el tipo nativo subyacente (una matriz, puntero o referencia), que se va a crear.</span><span class="sxs-lookup"><span data-stu-id="11063-106">[in] A value of the CorElementType enumeration that specifies the underlying native type (an array, pointer, or reference) to be created.</span></span>  
   
  `nRank`  
- <span data-ttu-id="9b4c1-107">[in] El rango (es decir, el número de dimensiones) de la matriz.</span><span class="sxs-lookup"><span data-stu-id="9b4c1-107">[in] The rank (that is, number of dimensions) of the array.</span></span> <span data-ttu-id="9b4c1-108">Este valor debe ser 0 si `elementType` especifica un tipo de puntero o referencia.</span><span class="sxs-lookup"><span data-stu-id="9b4c1-108">This value must be 0 if `elementType` specifies a pointer or reference type.</span></span>  
+ <span data-ttu-id="11063-107">[in] El rango (es decir, el número de dimensiones) de la matriz.</span><span class="sxs-lookup"><span data-stu-id="11063-107">[in] The rank (that is, number of dimensions) of the array.</span></span> <span data-ttu-id="11063-108">Este valor debe ser 0 si `elementType` especifica un tipo de puntero o referencia.</span><span class="sxs-lookup"><span data-stu-id="11063-108">This value must be 0 if `elementType` specifies a pointer or reference type.</span></span>  
   
  `pTypeArg`  
- <span data-ttu-id="9b4c1-109">[in] Un puntero a un objeto ICorDebugType que representa el tipo de matriz, puntero o referencia al crearse.</span><span class="sxs-lookup"><span data-stu-id="9b4c1-109">[in] A pointer to an ICorDebugType object that represents the type of array, pointer, or reference to be created.</span></span>  
+ <span data-ttu-id="11063-109">[in] Un puntero a un objeto ICorDebugType que representa el tipo de matriz, puntero o referencia al crearse.</span><span class="sxs-lookup"><span data-stu-id="11063-109">[in] A pointer to an ICorDebugType object that represents the type of array, pointer, or reference to be created.</span></span>  
   
  `ppType`  
- <span data-ttu-id="9b4c1-110">[out] Un puntero a la dirección de un `ICorDebugType` tipo de objeto que representa la matriz construida, tipo de puntero o referencia.</span><span class="sxs-lookup"><span data-stu-id="9b4c1-110">[out] A pointer to the address of an `ICorDebugType` object that represents the constructed array, pointer type, or reference type.</span></span>  
+ <span data-ttu-id="11063-110">[out] Un puntero a la dirección de un `ICorDebugType` tipo de objeto que representa la matriz construida, tipo de puntero o referencia.</span><span class="sxs-lookup"><span data-stu-id="11063-110">[out] A pointer to the address of an `ICorDebugType` object that represents the constructed array, pointer type, or reference type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9b4c1-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9b4c1-111">Remarks</span></span>  
- <span data-ttu-id="9b4c1-112">El valor de *elementType* debe ser uno de los siguientes:</span><span class="sxs-lookup"><span data-stu-id="9b4c1-112">The value of *elementType* must be one of the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="11063-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="11063-111">Remarks</span></span>  
+ <span data-ttu-id="11063-112">El valor de *elementType* debe ser uno de los siguientes:</span><span class="sxs-lookup"><span data-stu-id="11063-112">The value of *elementType* must be one of the following:</span></span>  
   
--   <span data-ttu-id="9b4c1-113">ELEMENT_TYPE_PTR</span><span class="sxs-lookup"><span data-stu-id="9b4c1-113">ELEMENT_TYPE_PTR</span></span>  
+-   <span data-ttu-id="11063-113">ELEMENT_TYPE_PTR</span><span class="sxs-lookup"><span data-stu-id="11063-113">ELEMENT_TYPE_PTR</span></span>  
   
--   <span data-ttu-id="9b4c1-114">ELEMENT_TYPE_BYREF</span><span class="sxs-lookup"><span data-stu-id="9b4c1-114">ELEMENT_TYPE_BYREF</span></span>  
+-   <span data-ttu-id="11063-114">ELEMENT_TYPE_BYREF</span><span class="sxs-lookup"><span data-stu-id="11063-114">ELEMENT_TYPE_BYREF</span></span>  
   
--   <span data-ttu-id="9b4c1-115">ELEMENT_TYPE_ARRAY o ELEMENT_TYPE_SZARRAY</span><span class="sxs-lookup"><span data-stu-id="9b4c1-115">ELEMENT_TYPE_ARRAY or ELEMENT_TYPE_SZARRAY</span></span>  
+-   <span data-ttu-id="11063-115">ELEMENT_TYPE_ARRAY o ELEMENT_TYPE_SZARRAY</span><span class="sxs-lookup"><span data-stu-id="11063-115">ELEMENT_TYPE_ARRAY or ELEMENT_TYPE_SZARRAY</span></span>  
   
- <span data-ttu-id="9b4c1-116">Si el valor de *elementType* es ELEMENT_TYPE_PTR o ELEMENT_TYPE_BYREF, *nRank* debe ser cero.</span><span class="sxs-lookup"><span data-stu-id="9b4c1-116">If the value of *elementType* is ELEMENT_TYPE_PTR or ELEMENT_TYPE_BYREF, *nRank* must be zero.</span></span>  
+ <span data-ttu-id="11063-116">Si el valor de *elementType* es ELEMENT_TYPE_PTR o ELEMENT_TYPE_BYREF, *nRank* debe ser cero.</span><span class="sxs-lookup"><span data-stu-id="11063-116">If the value of *elementType* is ELEMENT_TYPE_PTR or ELEMENT_TYPE_BYREF, *nRank* must be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9b4c1-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9b4c1-117">Requirements</span></span>  
- <span data-ttu-id="9b4c1-118">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9b4c1-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="11063-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="11063-117">Requirements</span></span>  
+ <span data-ttu-id="11063-118">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="11063-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9b4c1-119">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9b4c1-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="11063-119">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="11063-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9b4c1-120">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9b4c1-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="11063-120">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="11063-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9b4c1-121">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9b4c1-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="11063-121">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="11063-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f107847ddd48805f4779ff94c4e436a176688030
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd725f7468b26f9d8af3d7928b9df6fbefd93b6f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699030"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502506"
 ---
-# <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a><span data-ttu-id="36333-102">ICLRDomainManager::SetPropertiesForDefaultAppDomain (Método)</span><span class="sxs-lookup"><span data-stu-id="36333-102">ICLRDomainManager::SetPropertiesForDefaultAppDomain Method</span></span>
-<span data-ttu-id="36333-103">Establece las propiedades que se utilizará para inicializar el dominio de aplicación predeterminado.</span><span class="sxs-lookup"><span data-stu-id="36333-103">Sets properties that will be used to initialize the default application domain.</span></span>  
+# <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a><span data-ttu-id="25bf1-102">ICLRDomainManager::SetPropertiesForDefaultAppDomain (Método)</span><span class="sxs-lookup"><span data-stu-id="25bf1-102">ICLRDomainManager::SetPropertiesForDefaultAppDomain Method</span></span>
+<span data-ttu-id="25bf1-103">Establece las propiedades que se utilizará para inicializar el dominio de aplicación predeterminado.</span><span class="sxs-lookup"><span data-stu-id="25bf1-103">Sets properties that will be used to initialize the default application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="36333-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="36333-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="25bf1-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="25bf1-104">Syntax</span></span>  
   
 ```  
 HRESULT SetPropertiesForDefaultAppDomain(  
@@ -35,36 +35,36 @@ HRESULT SetPropertiesForDefaultAppDomain(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="36333-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="36333-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="25bf1-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="25bf1-105">Parameters</span></span>  
  `nProperties`  
- <span data-ttu-id="36333-106">[in] El número de entradas en `pwszPropertyNames` y `pwszPropertyValues`.</span><span class="sxs-lookup"><span data-stu-id="36333-106">[in] The number of entries in `pwszPropertyNames` and `pwszPropertyValues`.</span></span>  
+ <span data-ttu-id="25bf1-106">[in] El número de entradas en `pwszPropertyNames` y `pwszPropertyValues`.</span><span class="sxs-lookup"><span data-stu-id="25bf1-106">[in] The number of entries in `pwszPropertyNames` and `pwszPropertyValues`.</span></span>  
   
  `pwszPropertyNames`  
- <span data-ttu-id="36333-107">[in] Una matriz de nombres de propiedad, o null si no hay ninguna propiedad.</span><span class="sxs-lookup"><span data-stu-id="36333-107">[in] An array of property names, or null if there are no properties.</span></span> <span data-ttu-id="36333-108">Actualmente, el nombre de la única propiedad que es reconocido por este método es "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".</span><span class="sxs-lookup"><span data-stu-id="36333-108">Currently, the only property name that is recognized by this method is "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".</span></span>  
+ <span data-ttu-id="25bf1-107">[in] Una matriz de nombres de propiedad, o null si no hay ninguna propiedad.</span><span class="sxs-lookup"><span data-stu-id="25bf1-107">[in] An array of property names, or null if there are no properties.</span></span> <span data-ttu-id="25bf1-108">Actualmente, el nombre de la única propiedad que es reconocido por este método es "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".</span><span class="sxs-lookup"><span data-stu-id="25bf1-108">Currently, the only property name that is recognized by this method is "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".</span></span>  
   
  `pwszPropertyValues`  
- <span data-ttu-id="36333-109">[in] Una matriz de valores de propiedad, o null si no hay ninguna propiedad.</span><span class="sxs-lookup"><span data-stu-id="36333-109">[in] An array of property values, or null if there are no properties.</span></span>  
+ <span data-ttu-id="25bf1-109">[in] Una matriz de valores de propiedad, o null si no hay ninguna propiedad.</span><span class="sxs-lookup"><span data-stu-id="25bf1-109">[in] An array of property values, or null if there are no properties.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="36333-110">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="36333-110">Return Value</span></span>  
- <span data-ttu-id="36333-111">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="36333-111">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="25bf1-110">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="25bf1-110">Return Value</span></span>  
+ <span data-ttu-id="25bf1-111">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="25bf1-111">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="36333-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="36333-112">HRESULT</span></span>|<span data-ttu-id="36333-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="36333-113">Description</span></span>|  
+|<span data-ttu-id="25bf1-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="25bf1-112">HRESULT</span></span>|<span data-ttu-id="25bf1-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="25bf1-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="36333-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="36333-114">S_OK</span></span>|<span data-ttu-id="36333-115">El método se completó correctamente.</span><span class="sxs-lookup"><span data-stu-id="36333-115">The method completed successfully.</span></span>|  
-|<span data-ttu-id="36333-116">HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)</span><span class="sxs-lookup"><span data-stu-id="36333-116">HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)</span></span>|<span data-ttu-id="36333-117">`pwszPropertyNames` incluye un nombre de propiedad que no se reconoce este método.</span><span class="sxs-lookup"><span data-stu-id="36333-117">`pwszPropertyNames` includes a property name that is not recognized by this method.</span></span>|  
+|<span data-ttu-id="25bf1-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="25bf1-114">S_OK</span></span>|<span data-ttu-id="25bf1-115">El método se completó correctamente.</span><span class="sxs-lookup"><span data-stu-id="25bf1-115">The method completed successfully.</span></span>|  
+|<span data-ttu-id="25bf1-116">HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)</span><span class="sxs-lookup"><span data-stu-id="25bf1-116">HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)</span></span>|<span data-ttu-id="25bf1-117">`pwszPropertyNames` incluye un nombre de propiedad que no se reconoce este método.</span><span class="sxs-lookup"><span data-stu-id="25bf1-117">`pwszPropertyNames` includes a property name that is not recognized by this method.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="36333-118">Comentarios</span><span class="sxs-lookup"><span data-stu-id="36333-118">Remarks</span></span>  
- <span data-ttu-id="36333-119">El valor de propiedad de "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" es una lista de ensamblados que tienen el atributo conditional <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo (APTCA) con el <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> marca, que se van a estar visibles para los llamadores de confianza parcial en la aplicación predeterminada dominio.</span><span class="sxs-lookup"><span data-stu-id="36333-119">The property value for "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" is a list of assemblies that have the conditional <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) attribute with the <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> flag, which are to be made visible to partially trusted callers in the default application domain.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="25bf1-118">Comentarios</span><span class="sxs-lookup"><span data-stu-id="25bf1-118">Remarks</span></span>  
+ <span data-ttu-id="25bf1-119">El valor de propiedad de "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" es una lista de ensamblados que tienen el atributo conditional <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo (APTCA) con el <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> marca, que se van a estar visibles para los llamadores de confianza parcial en la aplicación predeterminada dominio.</span><span class="sxs-lookup"><span data-stu-id="25bf1-119">The property value for "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" is a list of assemblies that have the conditional <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) attribute with the <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> flag, which are to be made visible to partially trusted callers in the default application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="36333-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="36333-120">Requirements</span></span>  
- <span data-ttu-id="36333-121">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="36333-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="25bf1-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="25bf1-120">Requirements</span></span>  
+ <span data-ttu-id="25bf1-121">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="25bf1-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="36333-122">**Encabezado**: MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="36333-122">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="25bf1-122">**Encabezado**: MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="25bf1-122">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="36333-123">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="36333-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="25bf1-123">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="25bf1-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="36333-124">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="36333-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="25bf1-124">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25bf1-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="36333-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="36333-125">See also</span></span>
-- [<span data-ttu-id="36333-126">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="36333-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
-- [<span data-ttu-id="36333-127">ICLRDomainManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="36333-127">ICLRDomainManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="25bf1-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="25bf1-125">See also</span></span>
+- [<span data-ttu-id="25bf1-126">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="25bf1-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="25bf1-127">ICLRDomainManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="25bf1-127">ICLRDomainManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)

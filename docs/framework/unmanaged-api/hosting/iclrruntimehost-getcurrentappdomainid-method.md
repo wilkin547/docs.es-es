@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 192492c232970842270f031832d1eb46357ec07f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c82096f790befbab58a1d27978be553aae2190b5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527177"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496370"
 ---
-# <a name="iclrruntimehostgetcurrentappdomainid-method"></a><span data-ttu-id="e9986-102">ICLRRuntimeHost::GetCurrentAppDomainId (Método)</span><span class="sxs-lookup"><span data-stu-id="e9986-102">ICLRRuntimeHost::GetCurrentAppDomainId Method</span></span>
-<span data-ttu-id="e9986-103">Obtiene el identificador numérico de la <xref:System.AppDomain> que se está ejecutando actualmente.</span><span class="sxs-lookup"><span data-stu-id="e9986-103">Gets the numeric identifier of the <xref:System.AppDomain> that is currently executing.</span></span>  
+# <a name="iclrruntimehostgetcurrentappdomainid-method"></a><span data-ttu-id="a6ab5-102">ICLRRuntimeHost::GetCurrentAppDomainId (Método)</span><span class="sxs-lookup"><span data-stu-id="a6ab5-102">ICLRRuntimeHost::GetCurrentAppDomainId Method</span></span>
+<span data-ttu-id="a6ab5-103">Obtiene el identificador numérico de la <xref:System.AppDomain> que se está ejecutando actualmente.</span><span class="sxs-lookup"><span data-stu-id="a6ab5-103">Gets the numeric identifier of the <xref:System.AppDomain> that is currently executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9986-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e9986-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6ab5-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a6ab5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentAppDomainId(  
@@ -35,34 +35,34 @@ HRESULT GetCurrentAppDomainId(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e9986-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="e9986-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a6ab5-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a6ab5-105">Parameters</span></span>  
  `pdwAppDomainId`  
- <span data-ttu-id="e9986-106">[out] El identificador numérico de la <xref:System.AppDomain> que se está ejecutando actualmente.</span><span class="sxs-lookup"><span data-stu-id="e9986-106">[out] The numeric identifier of the <xref:System.AppDomain> that is currently executing.</span></span>  
+ <span data-ttu-id="a6ab5-106">[out] El identificador numérico de la <xref:System.AppDomain> que se está ejecutando actualmente.</span><span class="sxs-lookup"><span data-stu-id="a6ab5-106">[out] The numeric identifier of the <xref:System.AppDomain> that is currently executing.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e9986-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="e9986-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a6ab5-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="a6ab5-107">Return Value</span></span>  
   
-|<span data-ttu-id="e9986-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e9986-108">HRESULT</span></span>|<span data-ttu-id="e9986-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="e9986-109">Description</span></span>|  
+|<span data-ttu-id="a6ab5-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a6ab5-108">HRESULT</span></span>|<span data-ttu-id="a6ab5-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="a6ab5-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="e9986-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="e9986-110">S_OK</span></span>|<span data-ttu-id="e9986-111">`GetCurrentAppDomainId` se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="e9986-111">`GetCurrentAppDomainId` returned successfully.</span></span>|  
-|<span data-ttu-id="e9986-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="e9986-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="e9986-113">Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="e9986-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="e9986-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="e9986-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="e9986-115">La llamada ha agotado el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="e9986-115">The call timed out.</span></span>|  
-|<span data-ttu-id="e9986-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="e9986-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="e9986-117">El llamador no posee el bloqueo.</span><span class="sxs-lookup"><span data-stu-id="e9986-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="e9986-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="e9986-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="e9986-119">Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.</span><span class="sxs-lookup"><span data-stu-id="e9986-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="e9986-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="e9986-120">E_FAIL</span></span>|<span data-ttu-id="e9986-121">Se ha producido un error irrecuperable desconocido.</span><span class="sxs-lookup"><span data-stu-id="e9986-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="e9986-122">Si el método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso.</span><span class="sxs-lookup"><span data-stu-id="e9986-122">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="e9986-123">Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="e9986-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="a6ab5-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="a6ab5-110">S_OK</span></span>|<span data-ttu-id="a6ab5-111">`GetCurrentAppDomainId` se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="a6ab5-111">`GetCurrentAppDomainId` returned successfully.</span></span>|  
+|<span data-ttu-id="a6ab5-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a6ab5-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a6ab5-113">Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="a6ab5-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="a6ab5-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a6ab5-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a6ab5-115">La llamada ha agotado el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="a6ab5-115">The call timed out.</span></span>|  
+|<span data-ttu-id="a6ab5-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a6ab5-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a6ab5-117">El llamador no posee el bloqueo.</span><span class="sxs-lookup"><span data-stu-id="a6ab5-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="a6ab5-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a6ab5-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a6ab5-119">Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.</span><span class="sxs-lookup"><span data-stu-id="a6ab5-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="a6ab5-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a6ab5-120">E_FAIL</span></span>|<span data-ttu-id="a6ab5-121">Se ha producido un error irrecuperable desconocido.</span><span class="sxs-lookup"><span data-stu-id="a6ab5-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a6ab5-122">Si el método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso.</span><span class="sxs-lookup"><span data-stu-id="a6ab5-122">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a6ab5-123">Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="a6ab5-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e9986-124">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e9986-124">Remarks</span></span>  
- <span data-ttu-id="e9986-125">El `pdwAppDomainId` parámetro se establece en el valor de la <xref:System.AppDomain.Id%2A> propiedad de la <xref:System.AppDomain> en las que se está ejecutando el subproceso actual.</span><span class="sxs-lookup"><span data-stu-id="e9986-125">The `pdwAppDomainId` parameter is set to the value of the <xref:System.AppDomain.Id%2A> property of the <xref:System.AppDomain> in which the current thread is executing.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a6ab5-124">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a6ab5-124">Remarks</span></span>  
+ <span data-ttu-id="a6ab5-125">El `pdwAppDomainId` parámetro se establece en el valor de la <xref:System.AppDomain.Id%2A> propiedad de la <xref:System.AppDomain> en las que se está ejecutando el subproceso actual.</span><span class="sxs-lookup"><span data-stu-id="a6ab5-125">The `pdwAppDomainId` parameter is set to the value of the <xref:System.AppDomain.Id%2A> property of the <xref:System.AppDomain> in which the current thread is executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e9986-126">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e9986-126">Requirements</span></span>  
- <span data-ttu-id="e9986-127">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e9986-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a6ab5-126">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a6ab5-126">Requirements</span></span>  
+ <span data-ttu-id="a6ab5-127">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a6ab5-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e9986-128">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e9986-128">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a6ab5-128">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a6ab5-128">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e9986-129">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e9986-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a6ab5-129">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a6ab5-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e9986-130">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9986-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a6ab5-130">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a6ab5-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9986-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="e9986-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6ab5-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="a6ab5-131">See also</span></span>
 - <xref:System.AppDomain>
 - <xref:System.AppDomainManager>
-- [<span data-ttu-id="e9986-132">ICLRRuntimeHost (interfaz)</span><span class="sxs-lookup"><span data-stu-id="e9986-132">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [<span data-ttu-id="a6ab5-132">ICLRRuntimeHost (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a6ab5-132">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

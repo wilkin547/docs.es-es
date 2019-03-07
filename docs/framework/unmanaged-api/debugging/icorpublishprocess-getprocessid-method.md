@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39382b73a0fcd73282dbc69508b15dbfff240463
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61c67e074fc32098fa0d8326ea2f0ecfb1efa952
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669716"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471776"
 ---
-# <a name="icorpublishprocessgetprocessid-method"></a><span data-ttu-id="afa36-102">ICorPublishProcess::GetProcessID (Método)</span><span class="sxs-lookup"><span data-stu-id="afa36-102">ICorPublishProcess::GetProcessID Method</span></span>
-<span data-ttu-id="afa36-103">Obtiene el identificador de sistema operativo de este proceso.</span><span class="sxs-lookup"><span data-stu-id="afa36-103">Gets the operating system identifier for this process.</span></span>  
+# <a name="icorpublishprocessgetprocessid-method"></a><span data-ttu-id="9c4cd-102">ICorPublishProcess::GetProcessID (Método)</span><span class="sxs-lookup"><span data-stu-id="9c4cd-102">ICorPublishProcess::GetProcessID Method</span></span>
+<span data-ttu-id="9c4cd-103">Obtiene el identificador de sistema operativo de este proceso.</span><span class="sxs-lookup"><span data-stu-id="9c4cd-103">Gets the operating system identifier for this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="afa36-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="afa36-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9c4cd-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9c4cd-104">Syntax</span></span>  
   
 ```  
 HRESULT GetProcessID (  
@@ -35,18 +35,18 @@ HRESULT GetProcessID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="afa36-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="afa36-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9c4cd-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9c4cd-105">Parameters</span></span>  
  `pid`  
- <span data-ttu-id="afa36-106">[out] Un puntero al identificador del proceso representado por este [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="afa36-106">[out] A pointer to the identifier of the process represented by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) object.</span></span>  
+ <span data-ttu-id="9c4cd-106">[out] Un puntero al identificador del proceso representado por este [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="9c4cd-106">[out] A pointer to the identifier of the process represented by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="afa36-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="afa36-107">Requirements</span></span>  
- <span data-ttu-id="afa36-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="afa36-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9c4cd-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9c4cd-107">Requirements</span></span>  
+ <span data-ttu-id="9c4cd-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9c4cd-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="afa36-109">**Encabezado**: CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="afa36-109">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="9c4cd-109">**Encabezado**: CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="9c4cd-109">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="afa36-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="afa36-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9c4cd-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9c4cd-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="afa36-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="afa36-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9c4cd-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9c4cd-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="afa36-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="afa36-112">See also</span></span>
-- [<span data-ttu-id="afa36-113">ICorPublishProcess (interfaz)</span><span class="sxs-lookup"><span data-stu-id="afa36-113">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9c4cd-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="9c4cd-112">See also</span></span>
+- [<span data-ttu-id="9c4cd-113">ICorPublishProcess (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9c4cd-113">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)

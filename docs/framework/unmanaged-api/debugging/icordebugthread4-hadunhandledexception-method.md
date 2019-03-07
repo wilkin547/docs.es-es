@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7415e7b5ee03353e8e0e45cf46aa47c4266109af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ef4049ee8b1a4881128047b4d7e50fd0a28ea31
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704308"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499204"
 ---
-# <a name="icordebugthread4hadunhandledexception-method"></a><span data-ttu-id="c5e39-102">ICorDebugThread4::HadUnhandledException (Método)</span><span class="sxs-lookup"><span data-stu-id="c5e39-102">ICorDebugThread4::HadUnhandledException Method</span></span>
-<span data-ttu-id="c5e39-103">Indica si el subproceso ha tenido una excepción no controlada.</span><span class="sxs-lookup"><span data-stu-id="c5e39-103">Indicates whether the thread has ever had an unhandled exception.</span></span>  
+# <a name="icordebugthread4hadunhandledexception-method"></a><span data-ttu-id="08b3a-102">ICorDebugThread4::HadUnhandledException (Método)</span><span class="sxs-lookup"><span data-stu-id="08b3a-102">ICorDebugThread4::HadUnhandledException Method</span></span>
+<span data-ttu-id="08b3a-103">Indica si el subproceso ha tenido una excepción no controlada.</span><span class="sxs-lookup"><span data-stu-id="08b3a-103">Indicates whether the thread has ever had an unhandled exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c5e39-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c5e39-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="08b3a-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="08b3a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetBlockingObjects (  
@@ -35,31 +35,31 @@ HRESULT GetBlockingObjects (
     );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c5e39-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c5e39-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="08b3a-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="08b3a-105">Parameters</span></span>  
  `ppBlockingObjectEnum`  
- <span data-ttu-id="c5e39-106">[out] Un puntero a la dirección de una enumeración ordenada de [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) estructuras.</span><span class="sxs-lookup"><span data-stu-id="c5e39-106">[out] A pointer to the address of an ordered enumeration of [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structures.</span></span>  
+ <span data-ttu-id="08b3a-106">[out] Un puntero a la dirección de una enumeración ordenada de [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) estructuras.</span><span class="sxs-lookup"><span data-stu-id="08b3a-106">[out] A pointer to the address of an ordered enumeration of [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structures.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c5e39-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="c5e39-107">Return Value</span></span>  
- <span data-ttu-id="c5e39-108">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="c5e39-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="08b3a-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="08b3a-107">Return Value</span></span>  
+ <span data-ttu-id="08b3a-108">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="08b3a-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="c5e39-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c5e39-109">HRESULT</span></span>|<span data-ttu-id="c5e39-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="c5e39-110">Description</span></span>|  
+|<span data-ttu-id="08b3a-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="08b3a-109">HRESULT</span></span>|<span data-ttu-id="08b3a-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="08b3a-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c5e39-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="c5e39-111">S_OK</span></span>|<span data-ttu-id="c5e39-112">El subproceso ha tenido una excepción no controlada desde su creación.</span><span class="sxs-lookup"><span data-stu-id="c5e39-112">The thread has had an unhandled exception since its creation.</span></span>|  
-|<span data-ttu-id="c5e39-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="c5e39-113">S_FALSE</span></span>|<span data-ttu-id="c5e39-114">El subproceso nunca ha tenido una excepción no controlada.</span><span class="sxs-lookup"><span data-stu-id="c5e39-114">The thread has never had an unhandled exception.</span></span>|  
+|<span data-ttu-id="08b3a-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="08b3a-111">S_OK</span></span>|<span data-ttu-id="08b3a-112">El subproceso ha tenido una excepción no controlada desde su creación.</span><span class="sxs-lookup"><span data-stu-id="08b3a-112">The thread has had an unhandled exception since its creation.</span></span>|  
+|<span data-ttu-id="08b3a-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="08b3a-113">S_FALSE</span></span>|<span data-ttu-id="08b3a-114">El subproceso nunca ha tenido una excepción no controlada.</span><span class="sxs-lookup"><span data-stu-id="08b3a-114">The thread has never had an unhandled exception.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c5e39-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c5e39-115">Remarks</span></span>  
- <span data-ttu-id="c5e39-116">Este método indica si el subproceso ha tenido una excepción no controlada.</span><span class="sxs-lookup"><span data-stu-id="c5e39-116">This method indicates whether the thread has ever had an unhandled exception.</span></span> <span data-ttu-id="c5e39-117">Cuando se desencadena la devolución de llamada de excepción no controlada o adjuntar de JIT nativa se inicia, se garantiza que este método devuelve S_OK.</span><span class="sxs-lookup"><span data-stu-id="c5e39-117">By the time the unhandled exception callback is triggered or native JIT-attach is initiated, this method is guaranteed to return S_OK.</span></span> <span data-ttu-id="c5e39-118">No hay ninguna garantía de que el [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) método devolverá la excepción no controlada sin embargo, si el proceso no se ha continuado después de obtener la devolución de llamada de excepción no controlada o tras nativo de adjuntos JIT.</span><span class="sxs-lookup"><span data-stu-id="c5e39-118">There is no guarantee that the [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) method will return the unhandled exception; however, it will if the process has not yet been continued after getting the unhandled exception callback or upon native JIT-attach.</span></span> <span data-ttu-id="c5e39-119">Además, es posible (aunque improbable) tener más de un subproceso con una excepción no controlada al tiempo JIT-attach nativo se desencadena.</span><span class="sxs-lookup"><span data-stu-id="c5e39-119">Furthermore, it is possible (although unlikely) to have more than one thread with an unhandled exception at the time native JIT-attach is triggered.</span></span> <span data-ttu-id="c5e39-120">En tal caso, no hay ninguna manera de determinar qué excepción desencadenó el JIT-attach.</span><span class="sxs-lookup"><span data-stu-id="c5e39-120">In such a case there is no way to determine which exception triggered the JIT-attach.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="08b3a-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="08b3a-115">Remarks</span></span>  
+ <span data-ttu-id="08b3a-116">Este método indica si el subproceso ha tenido una excepción no controlada.</span><span class="sxs-lookup"><span data-stu-id="08b3a-116">This method indicates whether the thread has ever had an unhandled exception.</span></span> <span data-ttu-id="08b3a-117">Cuando se desencadena la devolución de llamada de excepción no controlada o adjuntar de JIT nativa se inicia, se garantiza que este método devuelve S_OK.</span><span class="sxs-lookup"><span data-stu-id="08b3a-117">By the time the unhandled exception callback is triggered or native JIT-attach is initiated, this method is guaranteed to return S_OK.</span></span> <span data-ttu-id="08b3a-118">No hay ninguna garantía de que el [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) método devolverá la excepción no controlada sin embargo, si el proceso no se ha continuado después de obtener la devolución de llamada de excepción no controlada o tras nativo de adjuntos JIT.</span><span class="sxs-lookup"><span data-stu-id="08b3a-118">There is no guarantee that the [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) method will return the unhandled exception; however, it will if the process has not yet been continued after getting the unhandled exception callback or upon native JIT-attach.</span></span> <span data-ttu-id="08b3a-119">Además, es posible (aunque improbable) tener más de un subproceso con una excepción no controlada al tiempo JIT-attach nativo se desencadena.</span><span class="sxs-lookup"><span data-stu-id="08b3a-119">Furthermore, it is possible (although unlikely) to have more than one thread with an unhandled exception at the time native JIT-attach is triggered.</span></span> <span data-ttu-id="08b3a-120">En tal caso, no hay ninguna manera de determinar qué excepción desencadenó el JIT-attach.</span><span class="sxs-lookup"><span data-stu-id="08b3a-120">In such a case there is no way to determine which exception triggered the JIT-attach.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c5e39-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c5e39-121">Requirements</span></span>  
- <span data-ttu-id="c5e39-122">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c5e39-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="08b3a-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="08b3a-121">Requirements</span></span>  
+ <span data-ttu-id="08b3a-122">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="08b3a-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c5e39-123">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c5e39-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="08b3a-123">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="08b3a-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c5e39-124">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c5e39-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="08b3a-124">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="08b3a-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c5e39-125">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5e39-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="08b3a-125">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="08b3a-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c5e39-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="c5e39-126">See also</span></span>
-- [<span data-ttu-id="c5e39-127">ICorDebugThread4 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c5e39-127">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [<span data-ttu-id="c5e39-128">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="c5e39-128">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="c5e39-129">Depuración</span><span class="sxs-lookup"><span data-stu-id="c5e39-129">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="08b3a-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="08b3a-126">See also</span></span>
+- [<span data-ttu-id="08b3a-127">ICorDebugThread4 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="08b3a-127">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [<span data-ttu-id="08b3a-128">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="08b3a-128">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="08b3a-129">Depuración</span><span class="sxs-lookup"><span data-stu-id="08b3a-129">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
