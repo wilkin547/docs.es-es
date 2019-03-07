@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6afe0f0d8780a93a7d98f24a11bb67ef65ebf63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 308207e100a9770474dd896ea4cba42d7db5d241
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604280"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485556"
 ---
-# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="a7c57-102">ISymUnmanagedMethod::GetRanges (Método)</span><span class="sxs-lookup"><span data-stu-id="a7c57-102">ISymUnmanagedMethod::GetRanges Method</span></span>
-<span data-ttu-id="a7c57-103">Dada una posición en un documento, devuelve una matriz de pares de desplazamiento inicial y final que corresponden a los intervalos de lenguaje intermedio de Microsoft (MSIL) que cubre la posición dentro de este método.</span><span class="sxs-lookup"><span data-stu-id="a7c57-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="a7c57-104">La matriz es una matriz de enteros y tiene el formato [inicio, fin, inicio, final].</span><span class="sxs-lookup"><span data-stu-id="a7c57-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="a7c57-105">El número de pares del intervalo es la longitud de la matriz dividida por 2.</span><span class="sxs-lookup"><span data-stu-id="a7c57-105">The number of range pairs is the length of the array divided by 2.</span></span>  
+# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="c85f1-102">ISymUnmanagedMethod::GetRanges (Método)</span><span class="sxs-lookup"><span data-stu-id="c85f1-102">ISymUnmanagedMethod::GetRanges Method</span></span>
+<span data-ttu-id="c85f1-103">Dada una posición en un documento, devuelve una matriz de pares de desplazamiento inicial y final que corresponden a los intervalos de lenguaje intermedio de Microsoft (MSIL) que cubre la posición dentro de este método.</span><span class="sxs-lookup"><span data-stu-id="c85f1-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="c85f1-104">La matriz es una matriz de enteros y tiene el formato [inicio, fin, inicio, final].</span><span class="sxs-lookup"><span data-stu-id="c85f1-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="c85f1-105">El número de pares del intervalo es la longitud de la matriz dividida por 2.</span><span class="sxs-lookup"><span data-stu-id="c85f1-105">The number of range pairs is the length of the array divided by 2.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a7c57-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a7c57-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c85f1-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c85f1-106">Syntax</span></span>  
   
 ```  
 HRESULT GetRanges(  
@@ -40,30 +40,30 @@ HRESULT GetRanges(
         length_is(*pcRanges)] ULONG32 ranges[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a7c57-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a7c57-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c85f1-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c85f1-107">Parameters</span></span>  
  `document`  
- <span data-ttu-id="a7c57-108">[in] El documento para el que se solicita el desplazamiento.</span><span class="sxs-lookup"><span data-stu-id="a7c57-108">[in] The document for which the offset is requested.</span></span>  
+ <span data-ttu-id="c85f1-108">[in] El documento para el que se solicita el desplazamiento.</span><span class="sxs-lookup"><span data-stu-id="c85f1-108">[in] The document for which the offset is requested.</span></span>  
   
  `line`  
- <span data-ttu-id="a7c57-109">[in] La línea del documento correspondiente a los intervalos.</span><span class="sxs-lookup"><span data-stu-id="a7c57-109">[in] The document line corresponding to the ranges.</span></span>  
+ <span data-ttu-id="c85f1-109">[in] La línea del documento correspondiente a los intervalos.</span><span class="sxs-lookup"><span data-stu-id="c85f1-109">[in] The document line corresponding to the ranges.</span></span>  
   
  `column`  
- <span data-ttu-id="a7c57-110">[in] Columna del documento correspondiente a los intervalos.</span><span class="sxs-lookup"><span data-stu-id="a7c57-110">[in] The document column corresponding to the ranges.</span></span>  
+ <span data-ttu-id="c85f1-110">[in] Columna del documento correspondiente a los intervalos.</span><span class="sxs-lookup"><span data-stu-id="c85f1-110">[in] The document column corresponding to the ranges.</span></span>  
   
  `cRanges`  
- <span data-ttu-id="a7c57-111">[in] Tamaño de la matriz `ranges`.</span><span class="sxs-lookup"><span data-stu-id="a7c57-111">[in] The size of the `ranges` array.</span></span>  
+ <span data-ttu-id="c85f1-111">[in] Tamaño de la matriz `ranges`.</span><span class="sxs-lookup"><span data-stu-id="c85f1-111">[in] The size of the `ranges` array.</span></span>  
   
  `pcRanges`  
- <span data-ttu-id="a7c57-112">[out] Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los intervalos.</span><span class="sxs-lookup"><span data-stu-id="a7c57-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
+ <span data-ttu-id="c85f1-112">[out] Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los intervalos.</span><span class="sxs-lookup"><span data-stu-id="c85f1-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
   
  `ranges`  
- <span data-ttu-id="a7c57-113">[out] Un puntero al búfer que recibe los intervalos.</span><span class="sxs-lookup"><span data-stu-id="a7c57-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
+ <span data-ttu-id="c85f1-113">[out] Un puntero al búfer que recibe los intervalos.</span><span class="sxs-lookup"><span data-stu-id="c85f1-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a7c57-114">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="a7c57-114">Return Value</span></span>  
- <span data-ttu-id="a7c57-115">S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="a7c57-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c85f1-114">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="c85f1-114">Return Value</span></span>  
+ <span data-ttu-id="c85f1-115">S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="c85f1-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a7c57-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a7c57-116">Requirements</span></span>  
- <span data-ttu-id="a7c57-117">**Encabezado**: CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a7c57-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c85f1-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c85f1-116">Requirements</span></span>  
+ <span data-ttu-id="c85f1-117">**Encabezado**: CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c85f1-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a7c57-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="a7c57-118">See also</span></span>
-- [<span data-ttu-id="a7c57-119">ISymUnmanagedMethod (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a7c57-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c85f1-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="c85f1-118">See also</span></span>
+- [<span data-ttu-id="c85f1-119">ISymUnmanagedMethod (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c85f1-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

@@ -17,51 +17,51 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60d1fafc1d5e718467b944276fc708ab34ddd782
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f4baa58159760af12afca5b84cb6b1b66e46093
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727838"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485543"
 ---
-# <a name="icordebugnativeframe2getstackparametersize-method"></a><span data-ttu-id="9091a-102">ICorDebugNativeFrame2::GetStackParameterSize (Método)</span><span class="sxs-lookup"><span data-stu-id="9091a-102">ICorDebugNativeFrame2::GetStackParameterSize Method</span></span>
-<span data-ttu-id="9091a-103">Devuelve el tamaño acumulado de los parámetros de la pila en x86 los sistemas operativos.</span><span class="sxs-lookup"><span data-stu-id="9091a-103">Returns the cumulative size of the parameters on the stack on x86 operating systems.</span></span>  
+# <a name="icordebugnativeframe2getstackparametersize-method"></a><span data-ttu-id="a4a68-102">ICorDebugNativeFrame2::GetStackParameterSize (Método)</span><span class="sxs-lookup"><span data-stu-id="a4a68-102">ICorDebugNativeFrame2::GetStackParameterSize Method</span></span>
+<span data-ttu-id="a4a68-103">Devuelve el tamaño acumulado de los parámetros de la pila en x86 los sistemas operativos.</span><span class="sxs-lookup"><span data-stu-id="a4a68-103">Returns the cumulative size of the parameters on the stack on x86 operating systems.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9091a-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9091a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a4a68-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a4a68-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStackParameterSize([out] ULONG32 * pSize)  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9091a-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9091a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a4a68-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a4a68-105">Parameters</span></span>  
  `pSize`  
- <span data-ttu-id="9091a-106">[out] Un puntero al tamaño acumulado de los parámetros en la pila.</span><span class="sxs-lookup"><span data-stu-id="9091a-106">[out] A pointer to the cumulative size of the parameters on the stack.</span></span>  
+ <span data-ttu-id="a4a68-106">[out] Un puntero al tamaño acumulado de los parámetros en la pila.</span><span class="sxs-lookup"><span data-stu-id="a4a68-106">[out] A pointer to the cumulative size of the parameters on the stack.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9091a-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="9091a-107">Return Value</span></span>  
- <span data-ttu-id="9091a-108">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="9091a-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a4a68-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="a4a68-107">Return Value</span></span>  
+ <span data-ttu-id="a4a68-108">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="a4a68-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="9091a-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9091a-109">HRESULT</span></span>|<span data-ttu-id="9091a-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="9091a-110">Description</span></span>|  
+|<span data-ttu-id="a4a68-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a4a68-109">HRESULT</span></span>|<span data-ttu-id="a4a68-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="a4a68-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="9091a-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="9091a-111">S_OK</span></span>|<span data-ttu-id="9091a-112">El tamaño de pila se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="9091a-112">The stack size was successfully returned.</span></span>|  
-|<span data-ttu-id="9091a-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="9091a-113">S_FALSE</span></span>|<span data-ttu-id="9091a-114">`GetStackParameterSize` se llamó en una plataforma que no sean x86.</span><span class="sxs-lookup"><span data-stu-id="9091a-114">`GetStackParameterSize` was called on a non-x86 platform.</span></span>|  
-|<span data-ttu-id="9091a-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="9091a-115">E_FAIL</span></span>|<span data-ttu-id="9091a-116">`The size of the parameters could not be returned`.</span><span class="sxs-lookup"><span data-stu-id="9091a-116">`The size of the parameters could not be returned`.</span></span>|  
-|<span data-ttu-id="9091a-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="9091a-117">E_INVALIDARG</span></span>|<span data-ttu-id="9091a-118">`pSize` es `null`.</span><span class="sxs-lookup"><span data-stu-id="9091a-118">`pSize` Is `null`.</span></span>|  
+|<span data-ttu-id="a4a68-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="a4a68-111">S_OK</span></span>|<span data-ttu-id="a4a68-112">El tamaño de pila se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="a4a68-112">The stack size was successfully returned.</span></span>|  
+|<span data-ttu-id="a4a68-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="a4a68-113">S_FALSE</span></span>|<span data-ttu-id="a4a68-114">`GetStackParameterSize` se llamó en una plataforma que no sean x86.</span><span class="sxs-lookup"><span data-stu-id="a4a68-114">`GetStackParameterSize` was called on a non-x86 platform.</span></span>|  
+|<span data-ttu-id="a4a68-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a4a68-115">E_FAIL</span></span>|<span data-ttu-id="a4a68-116">`The size of the parameters could not be returned`.</span><span class="sxs-lookup"><span data-stu-id="a4a68-116">`The size of the parameters could not be returned`.</span></span>|  
+|<span data-ttu-id="a4a68-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="a4a68-117">E_INVALIDARG</span></span>|<span data-ttu-id="a4a68-118">`pSize` es `null`.</span><span class="sxs-lookup"><span data-stu-id="a4a68-118">`pSize` Is `null`.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="9091a-119">Excepciones</span><span class="sxs-lookup"><span data-stu-id="9091a-119">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="a4a68-119">Excepciones</span><span class="sxs-lookup"><span data-stu-id="a4a68-119">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9091a-120">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9091a-120">Remarks</span></span>  
- <span data-ttu-id="9091a-121">El [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) métodos no ajustan el puntero de pila para los parámetros que se insertan en la pila.</span><span class="sxs-lookup"><span data-stu-id="9091a-121">The [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) methods do not adjust the stack pointer for parameters that are pushed on the stack.</span></span> <span data-ttu-id="9091a-122">En su lugar, puede usar el valor devuelto por `GetStackParameterSize` para ajustar el puntero de pila para inicializar un desenredador nativo, que ajusta los parámetros.</span><span class="sxs-lookup"><span data-stu-id="9091a-122">Instead, you can use the value returned by `GetStackParameterSize` to adjust the stack pointer to seed a native unwinder, which does adjust for the parameters.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a4a68-120">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a4a68-120">Remarks</span></span>  
+ <span data-ttu-id="a4a68-121">El [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) métodos no ajustan el puntero de pila para los parámetros que se insertan en la pila.</span><span class="sxs-lookup"><span data-stu-id="a4a68-121">The [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) methods do not adjust the stack pointer for parameters that are pushed on the stack.</span></span> <span data-ttu-id="a4a68-122">En su lugar, puede usar el valor devuelto por `GetStackParameterSize` para ajustar el puntero de pila para inicializar un desenredador nativo, que ajusta los parámetros.</span><span class="sxs-lookup"><span data-stu-id="a4a68-122">Instead, you can use the value returned by `GetStackParameterSize` to adjust the stack pointer to seed a native unwinder, which does adjust for the parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9091a-123">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9091a-123">Requirements</span></span>  
- <span data-ttu-id="9091a-124">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9091a-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a4a68-123">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a4a68-123">Requirements</span></span>  
+ <span data-ttu-id="a4a68-124">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a4a68-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9091a-125">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9091a-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a4a68-125">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a4a68-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9091a-126">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9091a-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a4a68-126">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a4a68-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9091a-127">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9091a-127">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="a4a68-127">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4a68-127">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9091a-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="9091a-128">See also</span></span>
-- [<span data-ttu-id="9091a-129">ICorDebugNativeFrame2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9091a-129">ICorDebugNativeFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [<span data-ttu-id="9091a-130">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="9091a-130">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="9091a-131">Depuración</span><span class="sxs-lookup"><span data-stu-id="9091a-131">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="a4a68-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="a4a68-128">See also</span></span>
+- [<span data-ttu-id="a4a68-129">ICorDebugNativeFrame2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a4a68-129">ICorDebugNativeFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
+- [<span data-ttu-id="a4a68-130">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="a4a68-130">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="a4a68-131">Depuración</span><span class="sxs-lookup"><span data-stu-id="a4a68-131">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

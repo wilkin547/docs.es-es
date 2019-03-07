@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad71e0f19d4019f8fc919008b9a5c46f6586f9f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7479e8d1eee0c44544b5923d4de66153cb2c3a19
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674510"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490338"
 ---
-# <a name="iassemblynamegetversion-method"></a><span data-ttu-id="826d7-102">IAssemblyName::GetVersion (Método)</span><span class="sxs-lookup"><span data-stu-id="826d7-102">IAssemblyName::GetVersion Method</span></span>
-<span data-ttu-id="826d7-103">Obtiene la información de versión del ensamblado que hace referencia esta [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="826d7-103">Gets the version information for the assembly referenced by this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
+# <a name="iassemblynamegetversion-method"></a><span data-ttu-id="8b28b-102">IAssemblyName::GetVersion (Método)</span><span class="sxs-lookup"><span data-stu-id="8b28b-102">IAssemblyName::GetVersion Method</span></span>
+<span data-ttu-id="8b28b-103">Obtiene la información de versión del ensamblado que hace referencia esta [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="8b28b-103">Gets the version information for the assembly referenced by this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="826d7-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="826d7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8b28b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8b28b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVersion (  
@@ -36,19 +36,19 @@ HRESULT GetVersion (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="826d7-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="826d7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8b28b-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="8b28b-105">Parameters</span></span>  
  `pdwVersionHi`  
- <span data-ttu-id="826d7-106">[out] 32 bits superiores de la versión.</span><span class="sxs-lookup"><span data-stu-id="826d7-106">[out] The high 32 bits of the version.</span></span>  
+ <span data-ttu-id="8b28b-106">[out] 32 bits superiores de la versión.</span><span class="sxs-lookup"><span data-stu-id="8b28b-106">[out] The high 32 bits of the version.</span></span>  
   
  `pdwVersionLow`  
- <span data-ttu-id="826d7-107">[out] 32 bits inferiores de la versión.</span><span class="sxs-lookup"><span data-stu-id="826d7-107">[out] The low 32 bits of the version.</span></span>  
+ <span data-ttu-id="8b28b-107">[out] 32 bits inferiores de la versión.</span><span class="sxs-lookup"><span data-stu-id="8b28b-107">[out] The low 32 bits of the version.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="826d7-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="826d7-108">Requirements</span></span>  
- <span data-ttu-id="826d7-109">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="826d7-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8b28b-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8b28b-108">Requirements</span></span>  
+ <span data-ttu-id="8b28b-109">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8b28b-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="826d7-110">**Encabezado**: Fusion.h</span><span class="sxs-lookup"><span data-stu-id="826d7-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="8b28b-110">**Encabezado**: Fusion.h</span><span class="sxs-lookup"><span data-stu-id="8b28b-110">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="826d7-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="826d7-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8b28b-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b28b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="826d7-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="826d7-112">See also</span></span>
-- [<span data-ttu-id="826d7-113">IAssemblyName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="826d7-113">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8b28b-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="8b28b-112">See also</span></span>
+- [<span data-ttu-id="8b28b-113">IAssemblyName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="8b28b-113">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
