@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c457d8a6b3ab187b7d02c9c9be800c4ef1f0f58c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c71efb9156c503ac88ba558ad7a9f757b608bf40
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537990"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466159"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString (Método)
 Obtiene la cadena en el índice especificado de la columna de tabla en el ámbito de referencia actual.  
@@ -36,7 +36,7 @@ HRESULT GetString (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `ixString`  
  [in] Índice en el que se va a empezar a buscar el valor siguiente.  
   

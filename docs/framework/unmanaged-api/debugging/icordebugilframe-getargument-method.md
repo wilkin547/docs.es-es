@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1653913ca7410728f0f90a546f613a9d8b88be7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46852ed8ac53c3a7720edff4833f3dc3cce42bbb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414058"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475793"
 ---
 # <a name="icordebugilframegetargument-method"></a>ICorDebugILFrame::GetArgument (Método)
-Obtiene el valor del argumento especificado en este marco de pila de lenguaje intermedio (MSIL) de Microsoft.  
+Obtiene el valor del argumento especificado en este marco de pila del lenguaje intermedio (MSIL) de Microsoft.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,7 +36,7 @@ HRESULT GetArgument (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `dwIndex`  
  [in] El índice del argumento en este marco de pila MSIL.  
   
@@ -44,13 +44,13 @@ HRESULT GetArgument (
  [out] Un puntero a la dirección de un objeto ICorDebugValue que representa el valor recuperado.  
   
 ## <a name="remarks"></a>Comentarios  
- El `GetArgument` método se puede utilizar en un marco de pila MSIL o en un marco compilado just-in-time (JIT).  
+ El `GetArgument` método puede utilizarse en un marco de pila MSIL o en un marco compilado just-in-time (JIT).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

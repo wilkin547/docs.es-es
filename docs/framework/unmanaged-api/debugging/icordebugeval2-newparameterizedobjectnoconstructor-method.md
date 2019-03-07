@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aad5a285fc2280dc062b0f4cbb69977a7e605e9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6feef7b1e1f09107cd2a57555df07bebec86effa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412774"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466991"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>ICorDebugEval2::NewParameterizedObjectNoConstructor (Método)
-Crea un nuevo objeto de tipo parametrizado de la clase especificada sin intentar llamar a un método de constructor.  
+Crea una instancia de un nuevo objeto de tipo parametrizado de la clase especificada sin intentar llamar a un método de constructor.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,9 +37,9 @@ HRESULT NewParameterizedObjectNoConstructor (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pClass`  
- [in] Un puntero a un objeto ICorDebugClass que representa la clase del objeto que se pueden crear instancias.  
+ [in] Un puntero a un objeto ICorDebugClass que representa la clase del objeto que se creará una instancia.  
   
  `nTypeArgs`  
  [in] El número de argumentos de tipo pasados.  
@@ -48,13 +48,13 @@ HRESULT NewParameterizedObjectNoConstructor (
  [in] Una matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugType que representa un argumento de tipo para el objeto que se crea una instancia.  
   
 ## <a name="remarks"></a>Comentarios  
- El `NewParameterizedObjectNoConstructor` método se producirá un error si un número incorrecto de argumentos de tipo o si se pasan los tipos de argumentos de tipo incorrectos.  
+ El `NewParameterizedObjectNoConstructor` método se producirá un error si un número incorrecto de argumentos de tipo o se pasan los tipos de argumentos de tipo incorrectos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

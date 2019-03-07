@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 531ed9a6d8805e22408f112c9e617705057468ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebf2fea9f987818c93a1e865f2ed2ce33142050c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624228"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468668"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>ISymUnmanagedReader::GetMethodByVersion (Método)
 Obtiene un método del lector de símbolos, dado un token de método y un número de versión de editar y copiar. Números de versión empiezan en 1 y se incrementan cada vez que cambia el método como resultado de una operación de copia y edición.  
@@ -36,7 +36,7 @@ HRESULT GetMethodByVersion (
     [out, retval] ISymUnmanagedMethod** pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `token`  
  [in] El token del método.  
   

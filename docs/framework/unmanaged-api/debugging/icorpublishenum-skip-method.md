@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e7d4e449624f295c4011a4ccdad46226e742a8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f56792bbdf11c099205efd0cb35e3bf02d67632
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681162"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466614"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip (Método)
 Mueve el cursor hacia delante en la enumeración por el número especificado de elementos.  
@@ -35,7 +35,7 @@ HRESULT Skip (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `celt`  
  [in] El número de elementos por el que se va a mover el cursor hacia delante.  
   

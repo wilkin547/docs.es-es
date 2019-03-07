@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cd5dbc27376f8cd391f9ecc006c04d9a3a1eea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c298107983f4835569cfee7503537537ad11a165
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419749"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493588"
 ---
 # <a name="icordebugprocessenumnext-method"></a>ICorDebugProcessEnum::Next (Método)
 Obtiene el número de instancias de ICorDebugProcess especificado de la enumeración, comenzando en la posición actual.  
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `celt`  
  [in] El número de `ICorDebugProcess` instancias va a recuperar.  
   
  `processess`  
- [out] Una matriz de punteros, cada uno de los cuales señala a un `ICorDebugProcess` objeto que representa un proceso.  
+ [out] Una matriz de punteros, cada uno de los cuales señala a una `ICorDebugProcess` objeto que representa un proceso.  
   
  `pceltFetched`  
- [out] Puntero al número de `ICorDebugProcess` instancias realmente devueltos. Este valor puede ser null si `celt` es uno.  
+ [out] Puntero al número de `ICorDebugProcess` instancias devueltas realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

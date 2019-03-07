@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7859beae572f05863fb24f0257aae8b0ec16bbcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe0b465d0e15fadde48c2278aa367632bda3f9ef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640880"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473841"
 ---
 # <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName (Método)
 Obtiene el nombre sencillo y sin cifrar del ensamblado que hace referencia esta [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) objeto.  
@@ -36,7 +36,7 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `lpcwBuffer`  
  [in, out] El tamaño de `pwzName` en caracteres anchos, incluido el carácter del terminador nulo.  
   

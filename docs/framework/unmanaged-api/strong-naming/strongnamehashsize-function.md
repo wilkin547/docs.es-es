@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ed8b6f047f26235e984fb514381a9b1d85543ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ad1f015f04b3829090417c26e8d58892ee15af4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675137"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487439"
 ---
 # <a name="strongnamehashsize-function"></a>StrongNameHashSize (Función)
 Obtiene el tamaño de búfer necesario para un hash mediante el algoritmo hash especificado.  
@@ -37,7 +37,7 @@ BOOLEAN StrongNameHashSize (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `ulHashAlg`  
  [in] El algoritmo hash utilizado para calcular el tamaño del búfer.  
   

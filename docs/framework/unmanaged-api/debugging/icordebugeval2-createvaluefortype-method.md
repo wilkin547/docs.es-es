@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 683457c249915708becadaeda9dec265666e2023
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b27e40618d6128c21e99745ca45e139a9c21c843
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412112"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475039"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>ICorDebugEval2::CreateValueForType (Método)
 Obtiene un puntero a un nuevo objeto ICorDebugValue del tipo especificado, con un valor inicial de cero o null.  
@@ -36,7 +36,7 @@ HRESULT CreateValueForType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pType`  
  [in] Puntero a un objeto ICorDebugType que representa el tipo.  
   
@@ -44,15 +44,15 @@ HRESULT CreateValueForType (
  [out] Puntero a la dirección de un `ICorDebugValue` objeto que representa el valor.  
   
 ## <a name="remarks"></a>Comentarios  
- `CreateValueForType` generaliza [ICorDebugEval:: CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) por lo que permite especificar un tipo de objeto arbitrario, incluidos construyen tipos como `List<int>`. El único propósito de este método consiste en generar un valor que puede pasarse a una evaluación de función.  
+ `CreateValueForType` generaliza [ICorDebugEval](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) , ya que permite especificar un tipo de objeto arbitrario, incluidos construyen tipos como `List<int>`. Es el único propósito de este método generar un valor que se puede pasar a una evaluación de función.  
   
- El tipo debe ser una clase o un tipo de valor. No se puede usar este método para crear valores de matriz o valores de cadena.  
+ El tipo debe ser una clase o un tipo de valor. No se puede usar este método para crear valores de la matriz o los valores de cadena.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

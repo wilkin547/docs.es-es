@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7da863df03a70ed21769620c033c4c2877e01a87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac5a4f0d1f28477ef259863c2b46b830865a82e2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682234"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467056"
 ---
 # <a name="iactiononclreventonevent-method"></a>IActionOnCLREvent::OnEvent (Método)
 Realiza las devoluciones de llamada en eventos que se han registrado mediante el uso de una llamada a la [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) método.  
@@ -36,7 +36,7 @@ HRESULT OnEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `event`  
  [in] Uno de los [EClrEvent](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md) valores, que indica el tipo de evento.  
   

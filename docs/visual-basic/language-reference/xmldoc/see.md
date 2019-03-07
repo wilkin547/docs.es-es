@@ -5,12 +5,12 @@ helpviewer_keywords:
 - see XML tag
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
-ms.openlocfilehash: c0f1293fa0161a9a11b4e80301f5c4c4ddffe7b1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c26e818276eb4654fec77230372a0ae090952961
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969302"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474857"
 ---
 # <a name="see-visual-basic"></a>\<Consulte > (Visual Basic)
 Especifica un vínculo a otro miembro.  
@@ -21,7 +21,7 @@ Especifica un vínculo a otro miembro.
 <see cref="member"/>  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `member`  
  Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y pasa `member` al nombre de elemento en el resultado XML. `member` debe aparecer entre comillas dobles (" ").  
   

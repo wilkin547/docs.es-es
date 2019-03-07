@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00b20134c0134aa30d2056b634c8525f66ed8cf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8db6912700b199c64d2ebf0f7bd2ccd8939af9b6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602461"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484711"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo (Método)
 Obtiene la clase primaria y los metadatos de token para la función especificada.  
@@ -37,7 +37,7 @@ HRESULT GetFunctionInfo(
     [out] mdToken    *pToken);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `functionId`  
  [in] El identificador de la función que se va a obtener el token de la clase primaria y los metadatos.  
   

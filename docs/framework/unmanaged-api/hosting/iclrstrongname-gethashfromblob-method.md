@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b85f8ffade19cee8f0703af823d91a6ea7bf50b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34e8bcdda30c890fc40bab206bc6757afc073177
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710240"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475208"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>ICLRStrongName::GetHashFromBlob (Método)
 Obtiene un hash del ensamblado en la dirección de memoria especificada mediante un algoritmo hash concreto.  
@@ -40,7 +40,7 @@ HRESULT GetHashFromBlob (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pbBlob`  
  [in] Un puntero a la dirección del bloque de memoria para un algoritmo hash.  
   

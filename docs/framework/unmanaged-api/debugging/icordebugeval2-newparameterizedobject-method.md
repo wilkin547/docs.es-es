@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20c24984aadd05139d1a427b75bc65438539ff1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c35baaee13782566c64dd8447c6a034f699b5cd0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412810"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479615"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject (Método)
-Crea un nuevo objeto de tipo parametrizado y llama al método del objeto constructor.  
+Crea una instancia de un nuevo objeto de tipo parametrizado y llama al método de constructor del objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,9 +39,9 @@ HRESULT NewParameterizedObject (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pConstructor`  
- [in] Un puntero a un objeto ICorDebugFunction que representa el constructor del objeto que se pueden crear instancias.  
+ [in] Un puntero a un objeto ICorDebugFunction que representa el constructor del objeto que se creará una instancia.  
   
  `nTypeArgs`  
  [in] El número de argumentos de tipo pasados.  
@@ -59,10 +59,10 @@ HRESULT NewParameterizedObject (
  El constructor del objeto puede tardar <xref:System.Type> parámetros.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

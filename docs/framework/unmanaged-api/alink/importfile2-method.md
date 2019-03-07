@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3c145bae61922894f4893d532923319ccf16f85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88006703ba4a491ae458868a1431be618d37252a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499017"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471204"
 ---
 # <a name="importfile2-method"></a>ImportFile2 (Método)
 Importa ensamblados y módulos no enlazados. Este método es similar a [ImportFile (método)](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), pero funciona incluso si no existe el archivo que se importa en el disco.  
@@ -40,7 +40,7 @@ HRESULT ImportFile2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pszFilename`  
  Nombre del archivo que desea importar.  
   

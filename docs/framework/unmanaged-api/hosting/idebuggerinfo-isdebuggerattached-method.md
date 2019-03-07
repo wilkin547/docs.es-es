@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d471ac13061cfb3a0320801445fb5c931718691
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aae7bc60abaedef8c3491a90eae01ebc02cff1ce
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562935"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469058"
 ---
 # <a name="idebuggerinfoisdebuggerattached-method"></a>IDebuggerInfo::IsDebuggerAttached (Método)
 Obtiene un valor que indica si un depurador administrado está asociado a este proceso.  
@@ -35,7 +35,7 @@ HRESULT IsDebuggerAttached (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pbAttached`  
  [out] Un puntero a un valor que es `true` si un depurador administrado está asociado al proceso; de lo contrario, `false`.  
   

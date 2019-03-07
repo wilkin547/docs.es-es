@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be2edd5b217466a58aa9c478dadc10004ebda721
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72c851858ab2f294601d2e7f97b43e21ca815857
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556147"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474831"
 ---
 # <a name="corimageunloading-function"></a>_CorImageUnloading (Función)
 Notifica al cargador cuándo se descargan las imágenes de módulo administrado.  
@@ -36,7 +36,7 @@ STDAPI (VOID) _CorImageUnloading(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `ImageBase`  
  [in] Un puntero a la ubicación inicial de la imagen para descargar.  
   

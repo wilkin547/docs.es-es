@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3424646337c3f90f15d991f3f669a296bf11d8ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ebd36f01297f24c050f84fb67e7673f8641fe206
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413012"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475247"
 ---
 # <a name="icordebugilframegetlocalvariable-method"></a>ICorDebugILFrame::GetLocalVariable (Método)
-Obtiene el valor de la variable local especificada en este marco de pila de lenguaje intermedio (MSIL) de Microsoft.  
+Obtiene el valor de la variable local especificada en este marco de pila del lenguaje intermedio (MSIL) de Microsoft.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,7 +36,7 @@ HRESULT GetLocalVariable (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `dwIndex`  
  [in] El índice de la variable local en este marco de pila MSIL.  
   
@@ -44,13 +44,13 @@ HRESULT GetLocalVariable (
  [out] Un puntero a la dirección de un objeto ICorDebugValue que representa el valor recuperado.  
   
 ## <a name="remarks"></a>Comentarios  
- El `GetLocalVariable` método se puede utilizar en un marco de pila MSIL o en un marco compilado just-in-time (JIT).  
+ El `GetLocalVariable` método puede utilizarse en un marco de pila MSIL o en un marco compilado just-in-time (JIT).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

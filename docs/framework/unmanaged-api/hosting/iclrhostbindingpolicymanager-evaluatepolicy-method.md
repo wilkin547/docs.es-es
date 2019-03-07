@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 970e57e3caee7631c8e85aef428df52ec293b9cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3310f584475a4d6a6f0e3e790db13875faf60cf2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648815"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466692"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>ICLRHostBindingPolicyManager::EvaluatePolicy (Método)
 Evalúa la directiva de enlace en nombre del host.  
@@ -40,7 +40,7 @@ HRESULT EvaluatePolicy (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pwzReferenceIdentity`  
  [in] Una referencia al ensamblado antes de la evaluación de directivas.  
   

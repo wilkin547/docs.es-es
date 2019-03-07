@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6591fb4a2b4944dc0d02f70f0f90ffd87e071c47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92dfc2bec33501a5cd9ca6b4ec4c3629b6d89946
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735012"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487959"
 ---
 # <a name="importtypes-method"></a>ImportTypes (Método)
 Inicia la importación de los tipos de cada ámbito importado a través de [ImportFile (método)](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
@@ -39,7 +39,7 @@ HRESULT ImportTypes(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
  Id. del ensamblado para importar a.  
   

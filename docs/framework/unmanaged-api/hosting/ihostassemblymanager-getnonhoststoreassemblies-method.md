@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b90ddefb082b9017246bf644b79aa63c5d7444b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85f74eb3c6f159cf2c8c8cbd186695dc97489504
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600185"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469201"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies (Método)
 Obtiene un puntero de interfaz a un [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) que representa la lista de ensamblados que el host espera common language runtime (CLR) para cargar.  
@@ -35,7 +35,7 @@ HRESULT GetNonHostStoreAssemblies (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `ppReferenceList`  
  [out] Un puntero a la dirección de un `ICLRAssemblyReferenceList` que contiene una lista de referencias a ensamblados que el host espera que CLR cargue.  
   

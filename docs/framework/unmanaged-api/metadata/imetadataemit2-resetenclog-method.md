@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d18a3b7e309eb71cf37e77818a3181e33bf5ab7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24ecc46d1ca3ef24abd6f9bc0308fc460256c6ad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493454"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475624"
 ---
 # <a name="imetadataemit2resetenclog-method"></a>IMetaDataEmit2::ResetENCLog (Método)
 Restablece el registro de editar y continuar e inicia una nueva sesión.  
@@ -33,7 +33,7 @@ Restablece el registro de editar y continuar e inicia una nueva sesión.
 HRESULT ResetENCLog ();  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `ResetENCLog` no toma ningún parámetro.  
   
 ## <a name="requirements"></a>Requisitos  

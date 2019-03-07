@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a46ea398672d44585706be093a080a4bedba7f1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ed527aadce68e82bee5809aab7c4229a95b5d3f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535572"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478876"
 ---
 # <a name="iclrassemblyreferencelistisstringassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsStringAssemblyReferenceInList (Método)
 Obtiene un valor que indica si el nombre proporcionado coincide con el nombre de un ensamblado en la lista.  
@@ -35,7 +35,7 @@ HRESULT IsStringAssemblyReferenceInList (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pwzAssemblyName`  
  [in] El nombre del ensamblado para el que se va a buscar.  
   

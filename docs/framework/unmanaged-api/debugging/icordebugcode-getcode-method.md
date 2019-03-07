@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d057032f2a46ef29a903ae21ab13af02f9d657f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b69970d50652da203ecf1ae6fe8d604ccee06cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728770"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483580"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode (Método)
 Obtiene todo el código para la función especificada, con formato de desensamblado. Este método está desusado en .NET Framework versión 2.0. Use [ICorDebugCode2:: GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) en su lugar.  
@@ -40,7 +40,7 @@ HRESULT GetCode (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `startOffset`  
  [in] El desplazamiento del principio de la función.  
   

@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2abb24a319d8d3aff940ddb7eabd16b3e238862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f2e481942586e1e5ea6364370ff1385db134dd3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611753"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475689"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap (Método)
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  
@@ -36,7 +36,7 @@ HRESULT GetInstrumentedILMap(
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  cMap  
  [in] Capacidad de almacenamiento de la matriz `map`. Vea la sección Comentarios para obtener más información.  
   

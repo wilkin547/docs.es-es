@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc182687b12f5941996c17f4c09da44c49ef815c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae3067e6941451d4debd8d18ca58a91708a48e56
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694911"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487262"
 ---
 # <a name="inotifysink2onsynccallreturn-method"></a>INotifySink2::OnSyncCallReturn (Método)
 Se invoca cuando se devuelve una llamada.  
@@ -38,7 +38,7 @@ HRESULT OnSyncCallReturn
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `in_CallID`  
  [in] Identificador de la llamada que se devuelven desde. Consulte [CALL_ID (estructura)](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   

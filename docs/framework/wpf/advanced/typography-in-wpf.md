@@ -4,17 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 086e02601e527229eed7dc3e2fab73df1f918a8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 16897413c31e39be5c1d45b43d6ef816d3f80aad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359554"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482696"
 ---
 # <a name="typography-in-wpf"></a>Tipografía en WPF
 En este tema se presentan las características tipográficas principales de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Estas características incluyen la mejora de la calidad y el rendimiento de la representación de texto, la compatibilidad con tipografía [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], el texto internacional mejorado, la compatibilidad mejorada con fuentes y nuevas interfaces de programación de aplicaciones (API) de texto.  
-  
-
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Mejora de la calidad y el rendimiento del texto  
@@ -36,13 +34,11 @@ Diagrama de la canalización de representación de texto
   
  La fuente [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Pericles contiene glifos adicionales que proporcionan alternativas estilísticas al conjunto estándar de glifos. En el texto siguiente se muestran glifos alternativos de estilo.  
   
- ![Texto que usa glifos alternativos de estilo OpenType](./media/opentypefont02.gif "opentypefont02")  
-Texto que usa glifos alternativos de estilo OpenType  
+ ![Texto que usa glifos alternativos de estilo OpenType](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "texto mediante glifos alternativos de estilo OpenType")  
   
  Los caracteres floreados son glifos decorativos que usan adornos elaborados que suelen asociarse a la caligrafía. El texto siguiente muestran glifos estándar y floreados para la fuente Pescadero.  
   
- ![Texto que usa glifos OpenType estándar y floreados](./media/opentypefont08.gif "opentypefont08")  
-Texto que usa glifos OpenType estándar y floreados  
+ ![Texto que usa glifos OpenType estándar y floreados](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "texto mediante glifos OpenType estándar y floreados")  
   
  Para obtener más detalles sobre las características de [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)], vea [Características de las fuentes OpenType](opentype-font-features.md).  
   
@@ -175,4 +171,4 @@ Interacción entre la aplicación y TextFormatter
 - [Dibujar texto con formato](drawing-formatted-text.md)
 - [Formato de texto avanzado](advanced-text-formatting.md)
 - [Texto](optimizing-performance-text.md)
-- [Tipografía de Microsoft](https://www.microsoft.com/typography/default.mspx)
+- [Tipografía de Microsoft](https://docs.microsoft.com/typography/)

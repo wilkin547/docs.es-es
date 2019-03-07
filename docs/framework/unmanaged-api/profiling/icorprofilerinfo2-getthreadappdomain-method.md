@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eeaf44f6fc34a1d14adf7fa8254ddb15cf6897b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b351c30c8eadd8c55543f664376cc4c7e5e73af
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532076"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481487"
 ---
 # <a name="icorprofilerinfo2getthreadappdomain-method"></a>ICorProfilerInfo2::GetThreadAppDomain (Método)
 Obtiene el identificador del dominio de aplicación en el que el subproceso especificado está ejecutando el código.  
@@ -35,7 +35,7 @@ HRESULT GetThreadAppDomain(
     [out] AppDomainID *pAppDomainId);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `threadId`  
  [in] Identificador que especifica el subproceso.  
   

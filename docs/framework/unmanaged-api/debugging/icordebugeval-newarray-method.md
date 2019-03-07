@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38b00d903fdd7301415a8df7642e12366178fd10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d1abe307e3b9fa607912f98e456a11176eb17c56
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413945"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471516"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray (Método)
-Asigna una nueva matriz del tipo de elemento especificado y dimensiones.  
+Asigna una nueva matriz del tipo de elemento especificado y las dimensiones.  
   
- Este método está obsoleto en la versión 2.0 de .NET Framework. Use [ICorDebugEval2:: NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) en su lugar.  
+ Este método está obsoleto en .NET Framework versión 2.0. Use [ICorDebugEval2:: NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ HRESULT NewArray (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `elementType`  
  [in] Un valor de la enumeración CorElementType que especifica el tipo de elemento de la matriz.  
   
@@ -49,21 +49,21 @@ HRESULT NewArray (
  [in] Un puntero a un objeto ICorDebugClass que especifica la clase del elemento. Este valor puede ser null si el tipo de elemento es un tipo primitivo.  
   
  `rank`  
- [in] El número de dimensiones de la matriz. En la versión 2.0 de .NET Framework, este valor debe ser 1.  
+ [in] El número de dimensiones de la matriz. En .NET Framework 2.0, este valor debe ser 1.  
   
  `dims`  
  [in] El tamaño, en bytes, de cada dimensión de la matriz.  
   
  `lowBounds`  
- [in] Opcional. El límite inferior de cada dimensión de la matriz. Si este valor se omite, se supone que un límite inferior de cero para cada dimensión.  
+ [in] Opcional. El límite inferior de cada dimensión de la matriz. Si este valor se omite, se asume un límite inferior de cero para cada dimensión.  
   
 ## <a name="remarks"></a>Comentarios  
  La matriz siempre se crea en el dominio de aplicación en el que se está ejecutando el subproceso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

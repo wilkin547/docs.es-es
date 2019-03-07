@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45caad20ef7d2dbe35e0381fb8cd697fc526398f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3aeae294d92a6dc9effc7f3baa51a35e4f2b544
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529809"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476638"
 ---
 # <a name="icordebugcodeenumnext-method"></a>ICorDebugCodeEnum::Next (Método)
 Obtiene el número especificado de instancias de "ICorDebugCode" de la enumeración, comenzando en la posición actual.  
@@ -38,7 +38,7 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `celt`  
  [in] El número de `ICorDebugCode` instancias va a recuperar.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ebdd76655124922008667898e38f873ad93598e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8590a40ca74296bab618d6c0ba95f1683cf33cd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555601"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466263"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach (Método)
 Lo llama Common Language Runtime (CLR) para dar al generador de perfiles una oportunidad de inicializar su estado después de una operación de adjuntar.  
@@ -36,7 +36,7 @@ HRESULT InitializeForAttach(
             [in] UINT cbClientData);  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pCorProfilerInfoUnk`  
  [in] Puntero de interfaz para la interfaz `ICorProfilerInfo*`.  
   

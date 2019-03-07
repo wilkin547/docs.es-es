@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95532d6721467b482b1d79d611f8055b606bb4a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e1edb1d25a62a9a689c397339740e563d986c8b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413513"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478770"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>ICorDebugHeapValue::IsValid (Método)
-Obtiene un valor que indica si el objeto representado por este ICorDebugHeapValue es válido.  
+Obtiene un valor que indica si el objeto representado por ICorDebugHeapValue es válido.  
   
- Este método está en desuso en la versión 2.0 de .NET Framework.  
+ Este método está desusado en .NET Framework versión 2.0.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,20 +37,20 @@ HRESULT IsValid (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pbValid`  
  [out] Un puntero a un valor booleano que indica si este valor en el montón es válido.  
   
 ## <a name="remarks"></a>Comentarios  
- El valor no es válido si se ha recuperado por el recolector de elementos no utilizados.  
+ El valor no es válido si ha sido reclamado por el recolector de elementos no utilizados.  
   
- Este método está en desuso. En la versión 2.0 de .NET Framework, todos los valores son válidos hasta [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) se llama, en cuyo momento se invalidan los los valores.  
+ Este método está en desuso. En .NET Framework 2.0, todos los valores son válidos hasta [ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) se denomina, en qué momento se invalidan los los valores.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

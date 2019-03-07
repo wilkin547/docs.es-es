@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3ef09c98f22b03a9c4473505605f1688d4bbf17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6e9bb51965b258093321a5dbb19447ec6d6474d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612234"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471833"
 ---
 # <a name="imetadataemitsavetomemory-method"></a>IMetaDataEmit::SaveToMemory (Método)
 Guarda todos los metadatos en el ámbito actual en el área de memoria especificada.  
@@ -36,7 +36,7 @@ HRESULT SaveToMemory (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `pbData`  
  [out] La dirección donde se comienzan a escribir metadatos.  
   

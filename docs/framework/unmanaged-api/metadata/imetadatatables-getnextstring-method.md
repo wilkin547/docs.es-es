@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 595bc20b51ef81d7dea61620040ceb50c9418f4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b057b0537bbeff7433b776e64456ccc810cee54
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589978"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473492"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a>IMetaDataTables::GetNextString (Método)
 Obtiene el índice de la cadena siguiente en la columna de tabla actual.  
@@ -36,7 +36,7 @@ HRESULT GetNextString (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `ixString`  
  [in] El valor de índice de una columna de tabla de cadenas.  
   

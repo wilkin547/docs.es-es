@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a406e945a67352bc7f126b40bd56f4a11dd693b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab0e28bd21b66f370a1a1e82359fe474574fd7bb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419548"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481588"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges (Método)
 Aplica los cambios en los metadatos y los cambios en el código de lenguaje intermedio (MSIL) de Microsoft a los procesos en ejecución.  
@@ -38,37 +38,37 @@ HRESULT ApplyChanges (
 );  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+## <a name="parameters"></a>Parámetros  
  `cbMetadata`  
  [in] Tamaño, en bytes, de los metadatos de delta.  
   
  `pbMetadata`  
  [in] Búfer que contiene los metadatos delta. La dirección del búfer se devuelve desde el [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md) método.  
   
- Las direcciones virtuales relativas (RVA) en los metadatos deben ser relativas al inicio del código MSIL.  
+ Las direcciones virtuales relativas (RVA) en los metadatos deben ser relativo al inicio del código MSIL.  
   
  `cbIL`  
- [in] Tamaño, en bytes, del código delta de MSIL.  
+ [in] Tamaño, en bytes, del código MSIL delta.  
   
  `pbIL`  
  [in] Búfer que contiene el código MSIL actualizado.  
   
 ## <a name="remarks"></a>Comentarios  
- El `pbMetadata` parámetro tiene un formato de metadatos delta especial (como salida por [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` toma los metadatos anteriores como base y describe los cambios individuales que se aplican a esa base.  
+ El `pbMetadata` parámetro está en un formato de metadatos delta especial (como salida por [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` toma los metadatos anteriores como base y se describen los cambios individuales que se aplican a esa base.  
   
- En cambio, la `pbIL[`] parámetro contiene el nuevo MSIL para el método actualizado y está destinada a reemplazar completamente el MSIL del método anterior  
+ En cambio, el `pbIL[`] parámetro contiene el nuevo MSIL para el método actualizado y está pensado para reemplazar completamente el MSIL del método anterior  
   
- Cuando la diferencia de MSIL y los metadatos se han creado en la memoria del depurador, el depurador llama `ApplyChanges` para enviar los cambios en common language runtime (CLR). El tiempo de ejecución actualiza las tablas de metadatos, coloca el nuevo MSIL en el proceso y configura una compilación de just-in-time (JIT) del nuevo MSIL. Si se han aplicado los cambios, el depurador debe llamar a [IMetaDataEmit2:: ResetENCLog](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md) para prepararse para la siguiente sesión de edición. El depurador, a continuación, puede continuar con el proceso.  
+ Cuando la diferencia de MSIL y los metadatos se han creado en la memoria del depurador, el depurador llama `ApplyChanges` para enviar los cambios en common language runtime (CLR). El tiempo de ejecución actualiza las tablas de metadatos, coloca el nuevo MSIL en el proceso y configura una compilación de just-in-time (JIT) del nuevo MSIL. Cuando se han aplicado los cambios, el depurador debe llamar a [Imetadataemit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md) para prepararse para la siguiente sesión de edición. El depurador, a continuación, puede seguir el proceso.  
   
- Cada vez que el depurador llama `ApplyChanges` en un módulo que contiene los metadatos de delta, también debe llamar [ApplyEditAndContinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md) con los mismos metadatos delta en todas las copias de los metadatos de ese módulo excepto la copia usado para emitir los cambios. Si una copia de los metadatos se convierte en algún modo fuera de sincronización con los metadatos reales, el depurador siempre puede deshacerse de esa copia y obtenga una nueva copia.  
+ Cada vez que el depurador llama `ApplyChanges` en un módulo que contiene los metadatos de delta, también debe llamar [ApplyEditAndContinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md) con los mismos metadatos delta en todas las copias de los metadatos de ese módulo excepto la copia se usa para emitir los cambios. Si una copia de los metadatos de algún modo deja fuera de sincronización con los metadatos reales, el depurador siempre puede deshacerse de esa copia y obtener una nueva copia.  
   
  Si el `ApplyChanges` método produce un error, la depuración sesión está en un estado no válido y debe reiniciarse.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorDebug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
