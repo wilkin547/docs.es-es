@@ -5,13 +5,8 @@ author: billwagner
 ms.author: billwagner
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 226482d1d385078811f2b1c5ee138e24287a785e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154338"
 ---
+
 # <a name="the-roslyn-based-analyzers"></a>Los analizadores basados en Roslyn
 
 Los analizadores basados en Roslyn usan el SDK de .NET Compiler (API de Roslyn) para analizar el código fuente de su proyecto a fin de detectar problemas y sugerir soluciones. Los diferentes analizadores buscan distintas clases de problemas, que van desde prácticas susceptibles de generar errores a inquietudes de seguridad relativas a la compatibilidad de la API.
@@ -27,12 +22,12 @@ Los analizadores basados en Roslyn notifican posibles problemas como errores, ad
 Puede instalar los analizadores basados en Roslyn como paquetes NuGet en su proyecto. Los analizadores configurados y la configuración de cada uno de ellos se restauran y se ejecutan en la máquina de ese proyecto de los desarrolladores.
 
 > [!NOTE]
-> La experiencia de usuario en el caso de los analizadores basados en Roslyn es distinta de la de bibliotecas de análisis de código como las versiones anteriores de FxCop y las herramientas de análisis de seguridad.  No es necesario que ejecute de forma explícita los analizadores basados en Roslyn. Tampoco hace falta usar los elementos de menú "Ejecutar análisis de código" en el menú "Analizar" de Visual Studio. Los analizadores basados en Roslyn se ejecutan de forma asincrónica mientras trabaja. 
+> La experiencia de usuario en el caso de los analizadores basados en Roslyn es distinta de la de bibliotecas de análisis de código como las versiones anteriores de FxCop y las herramientas de análisis de seguridad.  No es necesario que ejecute de forma explícita los analizadores basados en Roslyn. Tampoco hace falta usar los elementos de menú "Ejecutar análisis de código" en el menú "Analizar" de Visual Studio. Los analizadores basados en Roslyn se ejecutan de forma asincrónica mientras trabaja.
 
 ## <a name="more-information-on-specific-analyzers"></a>Más información sobre analizadores específicos
 
 Los siguientes analizadores se tratan en esta sección:
 
-* [Analizador de API](api-analyzer.md): este analizador examina su código en busca de posibles riesgos de compatibilidad o usos de API en desuso.    
+* [Analizador de API](api-analyzer.md): este analizador examina su código en busca de posibles riesgos de compatibilidad o usos de API en desuso.
 * [Analizador de marco](framework-analyzer.md): este analizador examina su código para garantizar que siga las instrucciones de las aplicaciones de .NET Framework. Estas reglas incluyen varias recomendaciones basadas en seguridad.
-* [Analizador de portabilidad de .NET](portability-analyzer.md): este analizador examina el código para ver cuánto trabajo es necesario para que la aplicación sea compatible con otras implementaciones y perfiles .NET, como .NET Core, .NET Standard, UWP y Xamarin para iOS, Android y Mac. 
+* [Analizador de portabilidad de .NET](portability-analyzer.md): este analizador examina el código para ver cuánto trabajo es necesario para que la aplicación sea compatible con otras implementaciones y perfiles .NET, como .NET Core, .NET Standard, UWP y Xamarin para iOS, Android y Mac.

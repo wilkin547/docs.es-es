@@ -1,12 +1,6 @@
 ---
-title: Serialización (C#)
+title: 'Serialización (C#)'
 ms.date: 04/26/2018
-ms.openlocfilehash: 7d72be92e5568037264438e3fde1e7565366c962
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858322"
 ---
 # <a name="serialization-c"></a>Serialización (C#)
 
@@ -68,12 +62,12 @@ Si desea que el objeto se deserialice también de forma personalizada, debe usar
 
 La serialización de diseñador es una forma especial de serialización que conlleva el tipo de persistencia de objeto asociado a las herramientas de desarrollo. La serialización de diseñador es un proceso que consiste en convertir un gráfico de objetos en un archivo de código fuente que puede utilizarse posteriormente para recuperar el gráfico de objetos. Un archivo de código fuente puede contener código, marcado o incluso información de la tabla SQL.
 
-##  <a name="BKMK_RelatedTopics"></a> Temas relacionados y ejemplos  
-[Walkthrough: Persisting an Object in Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md) (Tutorial: Conservar un objeto en Visual Studio [C#])  
+## <a name="BKMK_RelatedTopics"></a> Temas relacionados y ejemplos  
+[Tutorial: Conservar un objeto en Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
 Se explica cómo se puede usar la serialización para conservar los datos de un objeto entre instancias, lo que le permite almacenar valores y recuperarlos la próxima vez que se cree una instancia del objeto.
 
-[How to: Read Object Data from an XML File (C#)](how-to-read-object-data-from-an-xml-file.md) (Lectura de datos de objetos en un archivo XML [C#])  
+[Cómo: Leer datos de objetos en un archivo XML (C#)](how-to-read-object-data-from-an-xml-file.md)  
  Se muestra cómo leer los datos de objetos que se han escrito anteriormente en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.
 
-[How to: Write Object Data to an XML File (C#)](how-to-write-object-data-to-an-xml-file.md) (Escritura de datos de objeto en un archivo XML [C#])  
+[Cómo: Escribir datos de objeto en un archivo XML (C#)](how-to-write-object-data-to-an-xml-file.md)  
 Se muestra cómo escribir el objeto de una clase en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.
