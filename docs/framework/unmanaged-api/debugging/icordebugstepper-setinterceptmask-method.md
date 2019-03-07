@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7654a91180dd0b4148cfb85b35bf1ce730764f28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 25a9d287e6520f1fc7826d85dfbcd8e9a6da22f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422690"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481079"
 ---
-# <a name="icordebugsteppersetinterceptmask-method"></a><span data-ttu-id="9b698-102">ICorDebugStepper::SetInterceptMask (Método)</span><span class="sxs-lookup"><span data-stu-id="9b698-102">ICorDebugStepper::SetInterceptMask Method</span></span>
-<span data-ttu-id="9b698-103">Establece un valor que especifica los tipos de código que se recorren paso a paso.</span><span class="sxs-lookup"><span data-stu-id="9b698-103">Sets a value that specifies the types of code that are stepped into.</span></span>  
+# <a name="icordebugsteppersetinterceptmask-method"></a><span data-ttu-id="4625d-102">ICorDebugStepper::SetInterceptMask (Método)</span><span class="sxs-lookup"><span data-stu-id="4625d-102">ICorDebugStepper::SetInterceptMask Method</span></span>
+<span data-ttu-id="4625d-103">Establece un valor que especifica los tipos de código que se ejecutar paso a paso.</span><span class="sxs-lookup"><span data-stu-id="4625d-103">Sets a value that specifies the types of code that are stepped into.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9b698-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9b698-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4625d-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4625d-104">Syntax</span></span>  
   
 ```  
 HRESULT SetInterceptMask (  
@@ -35,20 +35,20 @@ HRESULT SetInterceptMask (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9b698-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9b698-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4625d-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="4625d-105">Parameters</span></span>  
  `mask`  
- <span data-ttu-id="9b698-106">[in] Una combinación de valores de la enumeración CorDebugIntercept que especifica los tipos de código.</span><span class="sxs-lookup"><span data-stu-id="9b698-106">[in] A combination of values of the CorDebugIntercept enumeration that specifies the types of code.</span></span>  
+ <span data-ttu-id="4625d-106">[in] Una combinación de valores de la enumeración CorDebugIntercept que especifica los tipos de código.</span><span class="sxs-lookup"><span data-stu-id="4625d-106">[in] A combination of values of the CorDebugIntercept enumeration that specifies the types of code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9b698-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9b698-107">Remarks</span></span>  
- <span data-ttu-id="9b698-108">Si se establece el bit de un interceptor, el paso a paso desencadene se completará cuando se encuentra el tipo dado de código de intercepción.</span><span class="sxs-lookup"><span data-stu-id="9b698-108">If the bit for an interceptor is set, the stepper will complete when the given type of intercepting code is encountered.</span></span> <span data-ttu-id="9b698-109">Si el bit está desactivado, se omitirá el código de intercepción.</span><span class="sxs-lookup"><span data-stu-id="9b698-109">If the bit is cleared, the intercepting code will be skipped.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4625d-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="4625d-107">Remarks</span></span>  
+ <span data-ttu-id="4625d-108">Si se establece el bit de un interceptor, el motor paso a paso se completará cuando se encuentra el tipo especificado de interceptar el código.</span><span class="sxs-lookup"><span data-stu-id="4625d-108">If the bit for an interceptor is set, the stepper will complete when the given type of intercepting code is encountered.</span></span> <span data-ttu-id="4625d-109">Si el bit está desactivado, se omitirá el código de intercepción.</span><span class="sxs-lookup"><span data-stu-id="4625d-109">If the bit is cleared, the intercepting code will be skipped.</span></span>  
   
- <span data-ttu-id="9b698-110">El `SetInterceptMask` el método podría tener interacciones imprevistas con [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (desde el punto de vista del usuario).</span><span class="sxs-lookup"><span data-stu-id="9b698-110">The `SetInterceptMask` method may have unforeseen interactions with [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (from the user's point of view).</span></span> <span data-ttu-id="9b698-111">Por ejemplo, si solo visible (es decir, no interna) parte del código de inicialización de clase carece de información de asignación y STOP_NO_MAPPING_INFO no está establecido (vea la [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) método y la CorDebugUnmappedStop (enumeración)), el paso a paso desencadene recorre paso a paso sobre la inicialización de la clase.</span><span class="sxs-lookup"><span data-stu-id="9b698-111">For example, if the only visible (that is, non-internal) portion of class initialization code lacks mapping information and STOP_NO_MAPPING_INFO isn't set (see the [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) method and the CorDebugUnmappedStop enumeration), the stepper will step over the class initialization.</span></span> <span data-ttu-id="9b698-112">De forma predeterminada, solo el valor INTERCEPT_NONE de la `CorDebugIntercept` se usará la enumeración.</span><span class="sxs-lookup"><span data-stu-id="9b698-112">By default, only the INTERCEPT_NONE value of the `CorDebugIntercept` enumeration will be used.</span></span>  
+ <span data-ttu-id="4625d-110">El `SetInterceptMask` método puede tener interacciones imprevistas con [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (desde el punto de vista del usuario).</span><span class="sxs-lookup"><span data-stu-id="4625d-110">The `SetInterceptMask` method may have unforeseen interactions with [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (from the user's point of view).</span></span> <span data-ttu-id="4625d-111">Por ejemplo, si solo está visible (es decir, no interna) parte del código de inicialización de clase carece de información de asignación y STOP_NO_MAPPING_INFO no está establecido (consulte la [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) método y el CorDebugUnmappedStop (enumeración)), el motor paso a paso le guiará a través de la inicialización de clase.</span><span class="sxs-lookup"><span data-stu-id="4625d-111">For example, if the only visible (that is, non-internal) portion of class initialization code lacks mapping information and STOP_NO_MAPPING_INFO isn't set (see the [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) method and the CorDebugUnmappedStop enumeration), the stepper will step over the class initialization.</span></span> <span data-ttu-id="4625d-112">De forma predeterminada, solo el valor INTERCEPT_NONE de la `CorDebugIntercept` se usará la enumeración.</span><span class="sxs-lookup"><span data-stu-id="4625d-112">By default, only the INTERCEPT_NONE value of the `CorDebugIntercept` enumeration will be used.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9b698-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9b698-113">Requirements</span></span>  
- <span data-ttu-id="9b698-114">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9b698-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4625d-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4625d-113">Requirements</span></span>  
+ <span data-ttu-id="4625d-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4625d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9b698-115">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9b698-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4625d-115">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4625d-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9b698-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9b698-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4625d-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4625d-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9b698-117">**Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9b698-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="4625d-117">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4625d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

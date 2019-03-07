@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b9d3224370dac0f8a52affef9201e5cbec43de0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e05bd4d6044654df0d0821762f219ab7720a3eef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547441"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494316"
 ---
-# <a name="icorprofilerthreadenumclone-method"></a><span data-ttu-id="9cc8b-102">ICorProfilerThreadEnum::Clone (Método)</span><span class="sxs-lookup"><span data-stu-id="9cc8b-102">ICorProfilerThreadEnum::Clone Method</span></span>
-<span data-ttu-id="9cc8b-103">Obtiene un puntero de interfaz a una copia de este [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interfaz.</span><span class="sxs-lookup"><span data-stu-id="9cc8b-103">Gets an interface pointer to a copy of this [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span>  
+# <a name="icorprofilerthreadenumclone-method"></a><span data-ttu-id="eac21-102">ICorProfilerThreadEnum::Clone (Método)</span><span class="sxs-lookup"><span data-stu-id="eac21-102">ICorProfilerThreadEnum::Clone Method</span></span>
+<span data-ttu-id="eac21-103">Obtiene un puntero de interfaz a una copia de este [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interfaz.</span><span class="sxs-lookup"><span data-stu-id="eac21-103">Gets an interface pointer to a copy of this [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9cc8b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9cc8b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eac21-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="eac21-104">Syntax</span></span>  
   
 ```  
 HRESULT Clone (    [out] ICorProfilerThreadEnum **ppEnum  
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9cc8b-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9cc8b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eac21-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="eac21-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="9cc8b-106">[out] Un puntero al puntero de interfaz, que, a su vez, señala a la copia de este [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interfaz.</span><span class="sxs-lookup"><span data-stu-id="9cc8b-106">[out] A pointer to the interface pointer, which, in turn, points to the copy of this [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span> <span data-ttu-id="9cc8b-107">La copia del enumerador mantiene su propio estado de enumeración por separado desde este enumerador.</span><span class="sxs-lookup"><span data-stu-id="9cc8b-107">The copy of the enumerator maintains its own enumeration state separately from this enumerator.</span></span> <span data-ttu-id="9cc8b-108">Sin embargo, la posición inicial del cursor de la copia es igual a esta posición actual del cursor del enumerador.</span><span class="sxs-lookup"><span data-stu-id="9cc8b-108">However, the initial cursor position of the copy is the same as this current cursor position of the enumerator.</span></span>  
+ <span data-ttu-id="eac21-106">[out] Un puntero al puntero de interfaz, que, a su vez, señala a la copia de este [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interfaz.</span><span class="sxs-lookup"><span data-stu-id="eac21-106">[out] A pointer to the interface pointer, which, in turn, points to the copy of this [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span> <span data-ttu-id="eac21-107">La copia del enumerador mantiene su propio estado de enumeración por separado desde este enumerador.</span><span class="sxs-lookup"><span data-stu-id="eac21-107">The copy of the enumerator maintains its own enumeration state separately from this enumerator.</span></span> <span data-ttu-id="eac21-108">Sin embargo, la posición inicial del cursor de la copia es igual a esta posición actual del cursor del enumerador.</span><span class="sxs-lookup"><span data-stu-id="eac21-108">However, the initial cursor position of the copy is the same as this current cursor position of the enumerator.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9cc8b-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9cc8b-109">Requirements</span></span>  
- <span data-ttu-id="9cc8b-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9cc8b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eac21-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="eac21-109">Requirements</span></span>  
+ <span data-ttu-id="eac21-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eac21-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9cc8b-111">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9cc8b-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="eac21-111">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="eac21-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="9cc8b-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9cc8b-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="eac21-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eac21-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9cc8b-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9cc8b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="eac21-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eac21-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9cc8b-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="9cc8b-114">See also</span></span>
-- [<span data-ttu-id="9cc8b-115">ICorProfilerThreadEnum</span><span class="sxs-lookup"><span data-stu-id="9cc8b-115">ICorProfilerThreadEnum</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [<span data-ttu-id="9cc8b-116">Interfaces para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="9cc8b-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="eac21-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="eac21-114">See also</span></span>
+- [<span data-ttu-id="eac21-115">ICorProfilerThreadEnum</span><span class="sxs-lookup"><span data-stu-id="eac21-115">ICorProfilerThreadEnum</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [<span data-ttu-id="eac21-116">Interfaces para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="eac21-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

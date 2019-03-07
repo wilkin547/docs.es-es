@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a0c23c066a6f704c4dfcfbe254e91ab3bc5817e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7454b551edc546fecbd9d091f7c821e0a07b16df
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416246"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497826"
 ---
-# <a name="icordebugilframe2enumeratetypeparameters-method"></a><span data-ttu-id="8b988-102">ICorDebugILFrame2::EnumerateTypeParameters (Método)</span><span class="sxs-lookup"><span data-stu-id="8b988-102">ICorDebugILFrame2::EnumerateTypeParameters Method</span></span>
-<span data-ttu-id="8b988-103">Obtiene un objeto ICorDebugTypeEnum que contiene el <xref:System.Type> parámetros de este marco.</span><span class="sxs-lookup"><span data-stu-id="8b988-103">Gets an ICorDebugTypeEnum object that contains the <xref:System.Type> parameters in this frame.</span></span>  
+# <a name="icordebugilframe2enumeratetypeparameters-method"></a><span data-ttu-id="29790-102">ICorDebugILFrame2::EnumerateTypeParameters (Método)</span><span class="sxs-lookup"><span data-stu-id="29790-102">ICorDebugILFrame2::EnumerateTypeParameters Method</span></span>
+<span data-ttu-id="29790-103">Obtiene un objeto ICorDebugTypeEnum que contiene el <xref:System.Type> parámetros de este marco.</span><span class="sxs-lookup"><span data-stu-id="29790-103">Gets an ICorDebugTypeEnum object that contains the <xref:System.Type> parameters in this frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8b988-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8b988-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="29790-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="29790-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateTypeParameters (  
@@ -35,22 +35,22 @@ HRESULT EnumerateTypeParameters (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8b988-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="8b988-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="29790-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="29790-105">Parameters</span></span>  
  `ppTyParEnum`  
- <span data-ttu-id="8b988-106">Un puntero a la dirección de un objeto de interfaz de ICorDebugTypeEnum que permite la enumeración de los parámetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="8b988-106">A pointer to the address of a ICorDebugTypeEnum interface object that allows enumeration of type parameters.</span></span>  
+ <span data-ttu-id="29790-106">Un puntero a la dirección de un objeto de interfaz ICorDebugTypeEnum que permite la enumeración de los parámetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="29790-106">A pointer to the address of a ICorDebugTypeEnum interface object that allows enumeration of type parameters.</span></span>  
   
- <span data-ttu-id="8b988-107">La lista de parámetros de tipo incluye los parámetros de tipo clase (si existe) seguidos de los parámetros de tipo de método (si existe).</span><span class="sxs-lookup"><span data-stu-id="8b988-107">The list of type parameters include the class type parameters (if any) followed by the method type parameters (if any).</span></span>  
+ <span data-ttu-id="29790-107">La lista de parámetros de tipo incluye los parámetros de tipo clase (si existe) seguidos de los parámetros de tipo de método (si existe).</span><span class="sxs-lookup"><span data-stu-id="29790-107">The list of type parameters include the class type parameters (if any) followed by the method type parameters (if any).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8b988-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="8b988-108">Remarks</span></span>  
- <span data-ttu-id="8b988-109">Use la [IMetaDataImport2:: EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) método para determinar cuántos parámetros de tipo de clase y método esta lista contiene de parámetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="8b988-109">Use the [IMetaDataImport2::EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) method to determine how many class type parameters and method type parameters this list contains.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="29790-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="29790-108">Remarks</span></span>  
+ <span data-ttu-id="29790-109">Use la [Imetadataimport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) método para determinar cuántos parámetros de tipo de clase y método esta lista contiene de parámetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="29790-109">Use the [IMetaDataImport2::EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) method to determine how many class type parameters and method type parameters this list contains.</span></span>  
   
- <span data-ttu-id="8b988-110">Los parámetros de tipo no están siempre disponibles.</span><span class="sxs-lookup"><span data-stu-id="8b988-110">The type parameters are not always available.</span></span>  
+ <span data-ttu-id="29790-110">Los parámetros de tipo no están siempre disponibles.</span><span class="sxs-lookup"><span data-stu-id="29790-110">The type parameters are not always available.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8b988-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8b988-111">Requirements</span></span>  
- <span data-ttu-id="8b988-112">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8b988-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="29790-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="29790-111">Requirements</span></span>  
+ <span data-ttu-id="29790-112">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="29790-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8b988-113">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8b988-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="29790-113">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="29790-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8b988-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8b988-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="29790-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="29790-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8b988-115">**Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b988-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="29790-115">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="29790-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
