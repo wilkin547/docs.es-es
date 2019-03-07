@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8d230d5396c5a088fa76a7ca145b4a22d1e1d07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfe06c1300a22757b363236454f4f494dab1978a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543362"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486802"
 ---
-# <a name="getresolutionscope-method"></a><span data-ttu-id="ea791-102">GetResolutionScope (Método)</span><span class="sxs-lookup"><span data-stu-id="ea791-102">GetResolutionScope Method</span></span>
-<span data-ttu-id="ea791-103">Recupera el ámbito de un tipo determinado.</span><span class="sxs-lookup"><span data-stu-id="ea791-103">Retrieves the scope of a given type.</span></span>  
+# <a name="getresolutionscope-method"></a><span data-ttu-id="1a101-102">GetResolutionScope (Método)</span><span class="sxs-lookup"><span data-stu-id="1a101-102">GetResolutionScope Method</span></span>
+<span data-ttu-id="1a101-103">Recupera el ámbito de un tipo determinado.</span><span class="sxs-lookup"><span data-stu-id="1a101-103">Retrieves the scope of a given type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea791-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ea791-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1a101-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1a101-104">Syntax</span></span>  
   
 ```  
 HRESULT GetResolutionScope(  
@@ -37,26 +37,26 @@ HRESULT GetResolutionScope(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ea791-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ea791-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1a101-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="1a101-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="ea791-106">Id. del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="ea791-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="1a101-106">Id. del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="1a101-106">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="ea791-107">Archivo que necesita una referencia.</span><span class="sxs-lookup"><span data-stu-id="ea791-107">File that is in need of a reference.</span></span>  
+ <span data-ttu-id="1a101-107">Archivo que necesita una referencia.</span><span class="sxs-lookup"><span data-stu-id="1a101-107">File that is in need of a reference.</span></span>  
   
  `TargetFile`  
- <span data-ttu-id="ea791-108">Token del archivo de ese tipo se define en la consulta, normalmente se recuperan con [ImportFile (método)](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).</span><span class="sxs-lookup"><span data-stu-id="ea791-108">Token of file that type is defined in, usually retrieved with [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).</span></span>  
+ <span data-ttu-id="1a101-108">Token del archivo de ese tipo se define en la consulta, normalmente se recuperan con [ImportFile (método)](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).</span><span class="sxs-lookup"><span data-stu-id="1a101-108">Token of file that type is defined in, usually retrieved with [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).</span></span>  
   
  `pScope`  
- <span data-ttu-id="ea791-109">Recibe el ensamblado o una referencia de módulo.</span><span class="sxs-lookup"><span data-stu-id="ea791-109">Receives the assembly or module reference.</span></span>  
+ <span data-ttu-id="1a101-109">Recibe el ensamblado o una referencia de módulo.</span><span class="sxs-lookup"><span data-stu-id="1a101-109">Receives the assembly or module reference.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ea791-110">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="ea791-110">Return Value</span></span>  
- <span data-ttu-id="ea791-111">Devuelve S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="ea791-111">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1a101-110">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="1a101-110">Return Value</span></span>  
+ <span data-ttu-id="1a101-111">Devuelve S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="1a101-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ea791-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ea791-112">Requirements</span></span>  
- <span data-ttu-id="ea791-113">Requiere alink.h.</span><span class="sxs-lookup"><span data-stu-id="ea791-113">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1a101-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1a101-112">Requirements</span></span>  
+ <span data-ttu-id="1a101-113">Requiere alink.h.</span><span class="sxs-lookup"><span data-stu-id="1a101-113">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea791-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="ea791-114">See also</span></span>
-- [<span data-ttu-id="ea791-115">IALink (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ea791-115">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="ea791-116">IALink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ea791-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="ea791-117">API de ALink</span><span class="sxs-lookup"><span data-stu-id="ea791-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="1a101-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="1a101-114">See also</span></span>
+- [<span data-ttu-id="1a101-115">IALink (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1a101-115">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="1a101-116">IALink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1a101-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="1a101-117">API de ALink</span><span class="sxs-lookup"><span data-stu-id="1a101-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

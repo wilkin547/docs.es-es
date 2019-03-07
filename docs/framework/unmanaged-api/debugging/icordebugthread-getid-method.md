@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52962ea7d2cf3dd1822b1a36cc6cfcb56bc427f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8eef616d51febd1b919e0a1936406551f441b98c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417198"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468980"
 ---
-# <a name="icordebugthreadgetid-method"></a><span data-ttu-id="2800c-102">ICorDebugThread::GetID (Método)</span><span class="sxs-lookup"><span data-stu-id="2800c-102">ICorDebugThread::GetID Method</span></span>
-<span data-ttu-id="2800c-103">Obtiene el identificador de sistema operativo actual de la parte activa de esta instancia de ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="2800c-103">Gets the current operating system identifier of the active part of this ICorDebugThread.</span></span>  
+# <a name="icordebugthreadgetid-method"></a><span data-ttu-id="2d651-102">ICorDebugThread::GetID (Método)</span><span class="sxs-lookup"><span data-stu-id="2d651-102">ICorDebugThread::GetID Method</span></span>
+<span data-ttu-id="2d651-103">Obtiene el identificador de sistema operativo actual de la parte activa del este ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="2d651-103">Gets the current operating system identifier of the active part of this ICorDebugThread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2800c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2800c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2d651-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2d651-104">Syntax</span></span>  
   
 ```  
 HRESULT GetID (  
@@ -35,18 +35,18 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2800c-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="2800c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2d651-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="2d651-105">Parameters</span></span>  
  `pdwThreadId`  
- <span data-ttu-id="2800c-106">[out] El identificador del subproceso.</span><span class="sxs-lookup"><span data-stu-id="2800c-106">[out] The identifier of the thread.</span></span>  
+ <span data-ttu-id="2d651-106">[out] El identificador del subproceso.</span><span class="sxs-lookup"><span data-stu-id="2d651-106">[out] The identifier of the thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2800c-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2800c-107">Remarks</span></span>  
- <span data-ttu-id="2800c-108">Identificador del sistema operativo puede cambiar durante la ejecución de un proceso y puede ser un valor diferente para las distintas partes del subproceso.</span><span class="sxs-lookup"><span data-stu-id="2800c-108">The operating system identifier can potentially change during execution of a process, and can be a different value for different parts of the thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2d651-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2d651-107">Remarks</span></span>  
+ <span data-ttu-id="2d651-108">Identificador del sistema operativo puede cambiar durante la ejecución de un proceso y puede ser un valor diferente para las distintas partes del subproceso.</span><span class="sxs-lookup"><span data-stu-id="2d651-108">The operating system identifier can potentially change during execution of a process, and can be a different value for different parts of the thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2800c-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2800c-109">Requirements</span></span>  
- <span data-ttu-id="2800c-110">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2800c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2d651-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2d651-109">Requirements</span></span>  
+ <span data-ttu-id="2d651-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2d651-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2800c-111">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2800c-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2d651-111">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2d651-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2800c-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2800c-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2d651-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2d651-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2800c-113">**Versiones de .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2800c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2d651-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2d651-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

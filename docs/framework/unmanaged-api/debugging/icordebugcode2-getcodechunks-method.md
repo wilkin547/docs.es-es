@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf8bc747f643819eb82448b4ad6b7fab696c9c91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84ab475ecb538dcf5bd24c750dfe9c993ea5a0ee
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572505"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470905"
 ---
-# <a name="icordebugcode2getcodechunks-method"></a><span data-ttu-id="864dc-102">ICorDebugCode2::GetCodeChunks (Método)</span><span class="sxs-lookup"><span data-stu-id="864dc-102">ICorDebugCode2::GetCodeChunks Method</span></span>
-<span data-ttu-id="864dc-103">Obtiene los fragmentos de código de los que está compuesto este objeto de código.</span><span class="sxs-lookup"><span data-stu-id="864dc-103">Gets the chunks of code that this code object is composed of.</span></span>  
+# <a name="icordebugcode2getcodechunks-method"></a><span data-ttu-id="41ef7-102">ICorDebugCode2::GetCodeChunks (Método)</span><span class="sxs-lookup"><span data-stu-id="41ef7-102">ICorDebugCode2::GetCodeChunks Method</span></span>
+<span data-ttu-id="41ef7-103">Obtiene los fragmentos de código de los que está compuesto este objeto de código.</span><span class="sxs-lookup"><span data-stu-id="41ef7-103">Gets the chunks of code that this code object is composed of.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="864dc-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="864dc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41ef7-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="41ef7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCodeChunks (  
@@ -38,27 +38,27 @@ HRESULT GetCodeChunks (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="864dc-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="864dc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="41ef7-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="41ef7-105">Parameters</span></span>  
  `cbufSize`  
- <span data-ttu-id="864dc-106">[in] Tamaño de la `chunks` matriz.</span><span class="sxs-lookup"><span data-stu-id="864dc-106">[in] Size of the `chunks` array.</span></span>  
+ <span data-ttu-id="41ef7-106">[in] Tamaño de la `chunks` matriz.</span><span class="sxs-lookup"><span data-stu-id="41ef7-106">[in] Size of the `chunks` array.</span></span>  
   
  `pcnumChunks`  
- <span data-ttu-id="864dc-107">[out] El número de fragmentos que se devuelven en el `chunks` matriz.</span><span class="sxs-lookup"><span data-stu-id="864dc-107">[out] The number of chunks returned in the `chunks` array.</span></span>  
+ <span data-ttu-id="41ef7-107">[out] El número de fragmentos que se devuelven en el `chunks` matriz.</span><span class="sxs-lookup"><span data-stu-id="41ef7-107">[out] The number of chunks returned in the `chunks` array.</span></span>  
   
  `chunks`  
- <span data-ttu-id="864dc-108">[out] Una matriz de estructuras "CodeChunkInfo", cada uno de los cuales representa un único fragmento de código.</span><span class="sxs-lookup"><span data-stu-id="864dc-108">[out] An array of "CodeChunkInfo" structures, each of which represents a single chunk of code.</span></span> <span data-ttu-id="864dc-109">Si el valor de `cbufSize` es 0, este parámetro puede ser null.</span><span class="sxs-lookup"><span data-stu-id="864dc-109">If the value of `cbufSize` is 0, this parameter can be null.</span></span>  
+ <span data-ttu-id="41ef7-108">[out] Una matriz de estructuras "CodeChunkInfo", cada uno de los cuales representa un único fragmento de código.</span><span class="sxs-lookup"><span data-stu-id="41ef7-108">[out] An array of "CodeChunkInfo" structures, each of which represents a single chunk of code.</span></span> <span data-ttu-id="41ef7-109">Si el valor de `cbufSize` es 0, este parámetro puede ser null.</span><span class="sxs-lookup"><span data-stu-id="41ef7-109">If the value of `cbufSize` is 0, this parameter can be null.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="864dc-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="864dc-110">Remarks</span></span>  
- <span data-ttu-id="864dc-111">Los fragmentos de código nunca se superpondrán y siguen el orden en que habría concatenados [ICorDebugCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md).</span><span class="sxs-lookup"><span data-stu-id="864dc-111">The code chunks will never overlap, and they will follow the order in which they would have been concatenated by [ICorDebugCode::GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md).</span></span> <span data-ttu-id="864dc-112">Un objeto de código de lenguaje intermedio (MSIL) de Microsoft en la versión 2.0 de .NET Framework, perderá un único fragmento de código.</span><span class="sxs-lookup"><span data-stu-id="864dc-112">A Microsoft intermediate language (MSIL) code object in the .NET Framework version 2.0 will comprise a single code chunk.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="41ef7-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="41ef7-110">Remarks</span></span>  
+ <span data-ttu-id="41ef7-111">Los fragmentos de código nunca se superpondrán y siguen el orden en que habría concatenados [ICorDebugCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md).</span><span class="sxs-lookup"><span data-stu-id="41ef7-111">The code chunks will never overlap, and they will follow the order in which they would have been concatenated by [ICorDebugCode::GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md).</span></span> <span data-ttu-id="41ef7-112">Un objeto de código de lenguaje intermedio (MSIL) de Microsoft en la versión 2.0 de .NET Framework, perderá un único fragmento de código.</span><span class="sxs-lookup"><span data-stu-id="41ef7-112">A Microsoft intermediate language (MSIL) code object in the .NET Framework version 2.0 will comprise a single code chunk.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="864dc-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="864dc-113">Requirements</span></span>  
- <span data-ttu-id="864dc-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="864dc-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="41ef7-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="41ef7-113">Requirements</span></span>  
+ <span data-ttu-id="41ef7-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="41ef7-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="864dc-115">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="864dc-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="41ef7-115">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="41ef7-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="864dc-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="864dc-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="41ef7-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="41ef7-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="864dc-117">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="864dc-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="41ef7-117">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="41ef7-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="864dc-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="864dc-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="41ef7-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="41ef7-118">See also</span></span>
 

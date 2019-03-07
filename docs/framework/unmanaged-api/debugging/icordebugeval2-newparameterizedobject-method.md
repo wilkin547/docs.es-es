@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20c24984aadd05139d1a427b75bc65438539ff1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c35baaee13782566c64dd8447c6a034f699b5cd0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412810"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479615"
 ---
-# <a name="icordebugeval2newparameterizedobject-method"></a><span data-ttu-id="0472f-102">ICorDebugEval2::NewParameterizedObject (Método)</span><span class="sxs-lookup"><span data-stu-id="0472f-102">ICorDebugEval2::NewParameterizedObject Method</span></span>
-<span data-ttu-id="0472f-103">Crea un nuevo objeto de tipo parametrizado y llama al método del objeto constructor.</span><span class="sxs-lookup"><span data-stu-id="0472f-103">Instantiates a new parameterized type object and calls the object's constructor method.</span></span>  
+# <a name="icordebugeval2newparameterizedobject-method"></a><span data-ttu-id="889c3-102">ICorDebugEval2::NewParameterizedObject (Método)</span><span class="sxs-lookup"><span data-stu-id="889c3-102">ICorDebugEval2::NewParameterizedObject Method</span></span>
+<span data-ttu-id="889c3-103">Crea una instancia de un nuevo objeto de tipo parametrizado y llama al método de constructor del objeto.</span><span class="sxs-lookup"><span data-stu-id="889c3-103">Instantiates a new parameterized type object and calls the object's constructor method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0472f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0472f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="889c3-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="889c3-104">Syntax</span></span>  
   
 ```  
 HRESULT NewParameterizedObject (  
@@ -39,30 +39,30 @@ HRESULT NewParameterizedObject (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0472f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="0472f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="889c3-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="889c3-105">Parameters</span></span>  
  `pConstructor`  
- <span data-ttu-id="0472f-106">[in] Un puntero a un objeto ICorDebugFunction que representa el constructor del objeto que se pueden crear instancias.</span><span class="sxs-lookup"><span data-stu-id="0472f-106">[in] A pointer to an ICorDebugFunction object that represents the constructor of the object to be instantiated.</span></span>  
+ <span data-ttu-id="889c3-106">[in] Un puntero a un objeto ICorDebugFunction que representa el constructor del objeto que se creará una instancia.</span><span class="sxs-lookup"><span data-stu-id="889c3-106">[in] A pointer to an ICorDebugFunction object that represents the constructor of the object to be instantiated.</span></span>  
   
  `nTypeArgs`  
- <span data-ttu-id="0472f-107">[in] El número de argumentos de tipo pasados.</span><span class="sxs-lookup"><span data-stu-id="0472f-107">[in] The number of type arguments passed.</span></span>  
+ <span data-ttu-id="889c3-107">[in] El número de argumentos de tipo pasados.</span><span class="sxs-lookup"><span data-stu-id="889c3-107">[in] The number of type arguments passed.</span></span>  
   
  `ppTypeArgs`  
- <span data-ttu-id="0472f-108">[in] Una matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugType que representa un argumento de tipo para el objeto que se crea una instancia.</span><span class="sxs-lookup"><span data-stu-id="0472f-108">[in] An array of pointers, each of which points to an ICorDebugType object that represents a type argument for the object that is being instantiated.</span></span>  
+ <span data-ttu-id="889c3-108">[in] Una matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugType que representa un argumento de tipo para el objeto que se crea una instancia.</span><span class="sxs-lookup"><span data-stu-id="889c3-108">[in] An array of pointers, each of which points to an ICorDebugType object that represents a type argument for the object that is being instantiated.</span></span>  
   
  `nArgs`  
- <span data-ttu-id="0472f-109">[in] El número de argumentos pasados al constructor.</span><span class="sxs-lookup"><span data-stu-id="0472f-109">[in] The number of arguments passed to the constructor.</span></span>  
+ <span data-ttu-id="889c3-109">[in] El número de argumentos pasados al constructor.</span><span class="sxs-lookup"><span data-stu-id="889c3-109">[in] The number of arguments passed to the constructor.</span></span>  
   
  `ppArgs`  
- <span data-ttu-id="0472f-110">[in] Una matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugValue que representa un valor de argumento que se pasa al constructor.</span><span class="sxs-lookup"><span data-stu-id="0472f-110">[in] An array of pointers, each of which points to an ICorDebugValue object that represents an argument value that is passed to the constructor.</span></span>  
+ <span data-ttu-id="889c3-110">[in] Una matriz de punteros, cada uno de los cuales señala a un objeto ICorDebugValue que representa un valor de argumento que se pasa al constructor.</span><span class="sxs-lookup"><span data-stu-id="889c3-110">[in] An array of pointers, each of which points to an ICorDebugValue object that represents an argument value that is passed to the constructor.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0472f-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="0472f-111">Remarks</span></span>  
- <span data-ttu-id="0472f-112">El constructor del objeto puede tardar <xref:System.Type> parámetros.</span><span class="sxs-lookup"><span data-stu-id="0472f-112">The object's constructor may take <xref:System.Type> parameters.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="889c3-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="889c3-111">Remarks</span></span>  
+ <span data-ttu-id="889c3-112">El constructor del objeto puede tardar <xref:System.Type> parámetros.</span><span class="sxs-lookup"><span data-stu-id="889c3-112">The object's constructor may take <xref:System.Type> parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0472f-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0472f-113">Requirements</span></span>  
- <span data-ttu-id="0472f-114">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0472f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="889c3-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="889c3-113">Requirements</span></span>  
+ <span data-ttu-id="889c3-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="889c3-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0472f-115">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0472f-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="889c3-115">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="889c3-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0472f-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0472f-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="889c3-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="889c3-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0472f-117">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0472f-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="889c3-117">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="889c3-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3882998d3155b49251fbe091b72ef11022ebfd2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41e10855a7254da4124ac0bf9aa247b90311632b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540213"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479091"
 ---
-# <a name="setassemblyfile2-method"></a><span data-ttu-id="db92a-102">SetAssemblyFile2 (Método)</span><span class="sxs-lookup"><span data-stu-id="db92a-102">SetAssemblyFile2 Method</span></span>
-<span data-ttu-id="db92a-103">Establece el nombre y las opciones para un nuevo ensamblado.</span><span class="sxs-lookup"><span data-stu-id="db92a-103">Sets the name of and options for a new assembly.</span></span> <span data-ttu-id="db92a-104">No llame a este método cuando se crean los módulos no enlazados.</span><span class="sxs-lookup"><span data-stu-id="db92a-104">Do not call this method when you produce unbound modules.</span></span>  
+# <a name="setassemblyfile2-method"></a><span data-ttu-id="a9bcb-102">SetAssemblyFile2 (Método)</span><span class="sxs-lookup"><span data-stu-id="a9bcb-102">SetAssemblyFile2 Method</span></span>
+<span data-ttu-id="a9bcb-103">Establece el nombre y las opciones para un nuevo ensamblado.</span><span class="sxs-lookup"><span data-stu-id="a9bcb-103">Sets the name of and options for a new assembly.</span></span> <span data-ttu-id="a9bcb-104">No llame a este método cuando se crean los módulos no enlazados.</span><span class="sxs-lookup"><span data-stu-id="a9bcb-104">Do not call this method when you produce unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db92a-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="db92a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9bcb-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a9bcb-105">Syntax</span></span>  
   
 ```  
 HRESULT SetAssemblyFile2(  
@@ -37,26 +37,26 @@ HRESULT SetAssemblyFile2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="db92a-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="db92a-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a9bcb-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a9bcb-106">Parameters</span></span>  
  `pszFilename`  
- <span data-ttu-id="db92a-107">Nombre del archivo de manifiesto.</span><span class="sxs-lookup"><span data-stu-id="db92a-107">Name of manifest file.</span></span>  
+ <span data-ttu-id="a9bcb-107">Nombre del archivo de manifiesto.</span><span class="sxs-lookup"><span data-stu-id="a9bcb-107">Name of manifest file.</span></span>  
   
  `pEmitter`  
- <span data-ttu-id="db92a-108">[IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interfaz para este archivo.</span><span class="sxs-lookup"><span data-stu-id="db92a-108">[IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interface for this file.</span></span>  
+ <span data-ttu-id="a9bcb-108">[IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interfaz para este archivo.</span><span class="sxs-lookup"><span data-stu-id="a9bcb-108">[IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interface for this file.</span></span>  
   
  `afFlags`  
- <span data-ttu-id="db92a-109">Opciones representados por [AssemblyFlags (enumeración)](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="db92a-109">Options represented by [AssemblyFlags Enumeration](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).</span></span>  
+ <span data-ttu-id="a9bcb-109">Opciones representados por [AssemblyFlags (enumeración)](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="a9bcb-109">Options represented by [AssemblyFlags Enumeration](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).</span></span>  
   
  `pAssemblyID`  
- <span data-ttu-id="db92a-110">Recibe el identificador único para el ensamblado que se está construyendo.</span><span class="sxs-lookup"><span data-stu-id="db92a-110">Receives unique ID for the assembly being constructed.</span></span>  
+ <span data-ttu-id="a9bcb-110">Recibe el identificador único para el ensamblado que se está construyendo.</span><span class="sxs-lookup"><span data-stu-id="a9bcb-110">Receives unique ID for the assembly being constructed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="db92a-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="db92a-111">Return Value</span></span>  
- <span data-ttu-id="db92a-112">Devuelve S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="db92a-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a9bcb-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="a9bcb-111">Return Value</span></span>  
+ <span data-ttu-id="a9bcb-112">Devuelve S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="a9bcb-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="db92a-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="db92a-113">Requirements</span></span>  
- <span data-ttu-id="db92a-114">Requiere alink.h.</span><span class="sxs-lookup"><span data-stu-id="db92a-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a9bcb-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a9bcb-113">Requirements</span></span>  
+ <span data-ttu-id="a9bcb-114">Requiere alink.h.</span><span class="sxs-lookup"><span data-stu-id="a9bcb-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db92a-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="db92a-115">See also</span></span>
-- [<span data-ttu-id="db92a-116">IALink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="db92a-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="db92a-117">IALink (interfaz)</span><span class="sxs-lookup"><span data-stu-id="db92a-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="db92a-118">API de ALink</span><span class="sxs-lookup"><span data-stu-id="db92a-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="a9bcb-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="a9bcb-115">See also</span></span>
+- [<span data-ttu-id="a9bcb-116">IALink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a9bcb-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="a9bcb-117">IALink (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a9bcb-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="a9bcb-118">API de ALink</span><span class="sxs-lookup"><span data-stu-id="a9bcb-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

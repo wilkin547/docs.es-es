@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 719c963d1627250da5f3705af9801dc287e1bb19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cf60d4e711d0c88b5fb8b4c213b19bdea564324
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507257"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477834"
 ---
-# <a name="ihostmallocfree-method"></a><span data-ttu-id="1cfe6-102">IHostMAlloc::Free (Método)</span><span class="sxs-lookup"><span data-stu-id="1cfe6-102">IHostMAlloc::Free Method</span></span>
-<span data-ttu-id="1cfe6-103">Libera la memoria que se asignó utilizando el [Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md) función.</span><span class="sxs-lookup"><span data-stu-id="1cfe6-103">Frees memory that was allocated by using the [Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md) function.</span></span>  
+# <a name="ihostmallocfree-method"></a><span data-ttu-id="b6caa-102">IHostMAlloc::Free (Método)</span><span class="sxs-lookup"><span data-stu-id="b6caa-102">IHostMAlloc::Free Method</span></span>
+<span data-ttu-id="b6caa-103">Libera la memoria que se asignó utilizando el [Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md) función.</span><span class="sxs-lookup"><span data-stu-id="b6caa-103">Frees memory that was allocated by using the [Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1cfe6-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1cfe6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b6caa-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b6caa-104">Syntax</span></span>  
   
 ```  
 HRESULT Free (  
@@ -35,34 +35,34 @@ HRESULT Free (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1cfe6-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="1cfe6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b6caa-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="b6caa-105">Parameters</span></span>  
  `pMem`  
- <span data-ttu-id="1cfe6-106">[in] Un puntero a la memoria que se va a liberar.</span><span class="sxs-lookup"><span data-stu-id="1cfe6-106">[in] A pointer to the memory to be freed.</span></span>  
+ <span data-ttu-id="b6caa-106">[in] Un puntero a la memoria que se va a liberar.</span><span class="sxs-lookup"><span data-stu-id="b6caa-106">[in] A pointer to the memory to be freed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1cfe6-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="1cfe6-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b6caa-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="b6caa-107">Return Value</span></span>  
   
-|<span data-ttu-id="1cfe6-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1cfe6-108">HRESULT</span></span>|<span data-ttu-id="1cfe6-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="1cfe6-109">Description</span></span>|  
+|<span data-ttu-id="b6caa-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b6caa-108">HRESULT</span></span>|<span data-ttu-id="b6caa-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="b6caa-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="1cfe6-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="1cfe6-110">S_OK</span></span>|<span data-ttu-id="1cfe6-111">`Free` se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="1cfe6-111">`Free` returned successfully.</span></span>|  
-|<span data-ttu-id="1cfe6-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="1cfe6-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="1cfe6-113">Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="1cfe6-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="1cfe6-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="1cfe6-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="1cfe6-115">La llamada ha agotado el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="1cfe6-115">The call timed out.</span></span>|  
-|<span data-ttu-id="1cfe6-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="1cfe6-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="1cfe6-117">El llamador no posee el bloqueo.</span><span class="sxs-lookup"><span data-stu-id="1cfe6-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="1cfe6-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="1cfe6-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="1cfe6-119">Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.</span><span class="sxs-lookup"><span data-stu-id="1cfe6-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="1cfe6-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="1cfe6-120">E_FAIL</span></span>|<span data-ttu-id="1cfe6-121">Se ha producido un error irrecuperable desconocido.</span><span class="sxs-lookup"><span data-stu-id="1cfe6-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="1cfe6-122">Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso.</span><span class="sxs-lookup"><span data-stu-id="1cfe6-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="1cfe6-123">Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="1cfe6-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="1cfe6-124">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="1cfe6-124">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="1cfe6-125">Se ha intentado para liberar memoria que no se ha asignado a través del host.</span><span class="sxs-lookup"><span data-stu-id="1cfe6-125">An attempt was made to free memory that was not allocated through the host.</span></span>|  
+|<span data-ttu-id="b6caa-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="b6caa-110">S_OK</span></span>|<span data-ttu-id="b6caa-111">`Free` se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="b6caa-111">`Free` returned successfully.</span></span>|  
+|<span data-ttu-id="b6caa-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="b6caa-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="b6caa-113">Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="b6caa-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="b6caa-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="b6caa-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="b6caa-115">La llamada ha agotado el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="b6caa-115">The call timed out.</span></span>|  
+|<span data-ttu-id="b6caa-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="b6caa-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="b6caa-117">El llamador no posee el bloqueo.</span><span class="sxs-lookup"><span data-stu-id="b6caa-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="b6caa-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="b6caa-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="b6caa-119">Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.</span><span class="sxs-lookup"><span data-stu-id="b6caa-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="b6caa-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="b6caa-120">E_FAIL</span></span>|<span data-ttu-id="b6caa-121">Se ha producido un error irrecuperable desconocido.</span><span class="sxs-lookup"><span data-stu-id="b6caa-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="b6caa-122">Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso.</span><span class="sxs-lookup"><span data-stu-id="b6caa-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="b6caa-123">Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="b6caa-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="b6caa-124">HOST_E_INVALIDOPERATION</span><span class="sxs-lookup"><span data-stu-id="b6caa-124">HOST_E_INVALIDOPERATION</span></span>|<span data-ttu-id="b6caa-125">Se ha intentado para liberar memoria que no se ha asignado a través del host.</span><span class="sxs-lookup"><span data-stu-id="b6caa-125">An attempt was made to free memory that was not allocated through the host.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1cfe6-126">Comentarios</span><span class="sxs-lookup"><span data-stu-id="1cfe6-126">Remarks</span></span>  
- <span data-ttu-id="1cfe6-127">Si el `pMem` parámetro hace referencia a una región de memoria que no se asignó mediante una llamada a `Alloc`, el host debe devolver HOST_E_INVALIDOPERATION.</span><span class="sxs-lookup"><span data-stu-id="1cfe6-127">If the `pMem` parameter refers to a region of memory that was not allocated by using a call to `Alloc`, the host should return HOST_E_INVALIDOPERATION.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b6caa-126">Comentarios</span><span class="sxs-lookup"><span data-stu-id="b6caa-126">Remarks</span></span>  
+ <span data-ttu-id="b6caa-127">Si el `pMem` parámetro hace referencia a una región de memoria que no se asignó mediante una llamada a `Alloc`, el host debe devolver HOST_E_INVALIDOPERATION.</span><span class="sxs-lookup"><span data-stu-id="b6caa-127">If the `pMem` parameter refers to a region of memory that was not allocated by using a call to `Alloc`, the host should return HOST_E_INVALIDOPERATION.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1cfe6-128">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1cfe6-128">Requirements</span></span>  
- <span data-ttu-id="1cfe6-129">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1cfe6-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b6caa-128">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b6caa-128">Requirements</span></span>  
+ <span data-ttu-id="b6caa-129">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b6caa-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1cfe6-130">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1cfe6-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b6caa-130">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b6caa-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1cfe6-131">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1cfe6-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b6caa-131">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b6caa-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1cfe6-132">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1cfe6-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b6caa-132">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6caa-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1cfe6-133">Vea también</span><span class="sxs-lookup"><span data-stu-id="1cfe6-133">See also</span></span>
-- [<span data-ttu-id="1cfe6-134">IHostMemoryManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1cfe6-134">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [<span data-ttu-id="1cfe6-135">IHostMalloc (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1cfe6-135">IHostMalloc Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b6caa-133">Vea también</span><span class="sxs-lookup"><span data-stu-id="b6caa-133">See also</span></span>
+- [<span data-ttu-id="b6caa-134">IHostMemoryManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="b6caa-134">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="b6caa-135">IHostMalloc (interfaz)</span><span class="sxs-lookup"><span data-stu-id="b6caa-135">IHostMalloc Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)

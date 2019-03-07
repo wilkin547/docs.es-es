@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69af794d5405894d24f0d7545613a0e85ca3ec6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68bca30e2079e6a41852aa953e43f8b2eba9487e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574019"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489090"
 ---
-# <a name="imetadataimport2getmethodspecprops-method"></a><span data-ttu-id="bab94-102">IMetaDataImport2::GetMethodSpecProps (Método)</span><span class="sxs-lookup"><span data-stu-id="bab94-102">IMetaDataImport2::GetMethodSpecProps Method</span></span>
-<span data-ttu-id="bab94-103">Obtiene la firma de metadatos del método al que hace referencia el MethodSpec especificado (token).</span><span class="sxs-lookup"><span data-stu-id="bab94-103">Gets the metadata signature of the method referenced by the specified MethodSpec token.</span></span>  
+# <a name="imetadataimport2getmethodspecprops-method"></a><span data-ttu-id="62941-102">IMetaDataImport2::GetMethodSpecProps (Método)</span><span class="sxs-lookup"><span data-stu-id="62941-102">IMetaDataImport2::GetMethodSpecProps Method</span></span>
+<span data-ttu-id="62941-103">Obtiene la firma de metadatos del método al que hace referencia el MethodSpec especificado (token).</span><span class="sxs-lookup"><span data-stu-id="62941-103">Gets the metadata signature of the method referenced by the specified MethodSpec token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bab94-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="bab94-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="62941-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="62941-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodSpecProps (  
@@ -38,28 +38,28 @@ HRESULT GetMethodSpecProps (
 );   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bab94-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="bab94-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="62941-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="62941-105">Parameters</span></span>  
  `mi`  
- <span data-ttu-id="bab94-106">[in] Un token MethodSpec que representa la instancia del método.</span><span class="sxs-lookup"><span data-stu-id="bab94-106">[in] A MethodSpec token that represents the instantiation of the method.</span></span>  
+ <span data-ttu-id="62941-106">[in] Un token MethodSpec que representa la instancia del método.</span><span class="sxs-lookup"><span data-stu-id="62941-106">[in] A MethodSpec token that represents the instantiation of the method.</span></span>  
   
  `tkParent`  
- <span data-ttu-id="bab94-107">[out] Un puntero al token MethodDef o MethodRef que representa la definición del método.</span><span class="sxs-lookup"><span data-stu-id="bab94-107">[out] A pointer to the MethodDef or MethodRef token that represents the method definition.</span></span>  
+ <span data-ttu-id="62941-107">[out] Un puntero al token MethodDef o MethodRef que representa la definición del método.</span><span class="sxs-lookup"><span data-stu-id="62941-107">[out] A pointer to the MethodDef or MethodRef token that represents the method definition.</span></span>  
   
  `ppvSigBlob`  
- <span data-ttu-id="bab94-108">[out] Un puntero a la firma de metadatos binaria del método.</span><span class="sxs-lookup"><span data-stu-id="bab94-108">[out] A pointer to the binary metadata signature of the method.</span></span>  
+ <span data-ttu-id="62941-108">[out] Un puntero a la firma de metadatos binaria del método.</span><span class="sxs-lookup"><span data-stu-id="62941-108">[out] A pointer to the binary metadata signature of the method.</span></span>  
   
  `pcbSigBlob`  
- <span data-ttu-id="bab94-109">[out] El tamaño, en bytes, de `ppvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="bab94-109">[out] The size, in bytes, of `ppvSigBlob`.</span></span>  
+ <span data-ttu-id="62941-109">[out] El tamaño, en bytes, de `ppvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="62941-109">[out] The size, in bytes, of `ppvSigBlob`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bab94-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="bab94-110">Requirements</span></span>  
- <span data-ttu-id="bab94-111">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bab94-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="62941-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="62941-110">Requirements</span></span>  
+ <span data-ttu-id="62941-111">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="62941-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bab94-112">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="bab94-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="62941-112">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="62941-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bab94-113">**Biblioteca:** Usar como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bab94-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="62941-113">**Biblioteca:** Usar como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="62941-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="bab94-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bab94-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="62941-114">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="62941-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bab94-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="bab94-115">See also</span></span>
-- [<span data-ttu-id="bab94-116">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="bab94-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="bab94-117">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="bab94-117">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="62941-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="62941-115">See also</span></span>
+- [<span data-ttu-id="62941-116">IMetaDataImport2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="62941-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="62941-117">IMetaDataImport (interfaz)</span><span class="sxs-lookup"><span data-stu-id="62941-117">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d77380e35d8f5eee1e50b1030493e0b17cbadfba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffee1550c64f1ce7c438580ce78a497aeeb99f3a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713293"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468772"
 ---
-# <a name="igcthreadcontrolsuspensionending-method"></a><span data-ttu-id="e9baf-102">IGCThreadControl::SuspensionEnding (Método)</span><span class="sxs-lookup"><span data-stu-id="e9baf-102">IGCThreadControl::SuspensionEnding Method</span></span>
-<span data-ttu-id="e9baf-103">Notifica al host que el tiempo de ejecución es reanudar subprocesos después de una recolección de elementos u otra suspensión.</span><span class="sxs-lookup"><span data-stu-id="e9baf-103">Notifies the host that the runtime is resuming threads after a garbage collection or other suspension.</span></span>  
+# <a name="igcthreadcontrolsuspensionending-method"></a><span data-ttu-id="db8c8-102">IGCThreadControl::SuspensionEnding (Método)</span><span class="sxs-lookup"><span data-stu-id="db8c8-102">IGCThreadControl::SuspensionEnding Method</span></span>
+<span data-ttu-id="db8c8-103">Notifica al host que el tiempo de ejecución es reanudar subprocesos después de una recolección de elementos u otra suspensión.</span><span class="sxs-lookup"><span data-stu-id="db8c8-103">Notifies the host that the runtime is resuming threads after a garbage collection or other suspension.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9baf-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e9baf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="db8c8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="db8c8-104">Syntax</span></span>  
   
 ```  
 HRESULT SuspensionEnding (  
@@ -35,21 +35,21 @@ HRESULT SuspensionEnding (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e9baf-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="e9baf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="db8c8-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="db8c8-105">Parameters</span></span>  
  `Generation`  
- <span data-ttu-id="e9baf-106">[in] La generación en el que se ha realizado una recolección de elementos.</span><span class="sxs-lookup"><span data-stu-id="e9baf-106">[in] The generation on which a garbage collection has been performed.</span></span>  
+ <span data-ttu-id="db8c8-106">[in] La generación en el que se ha realizado una recolección de elementos.</span><span class="sxs-lookup"><span data-stu-id="db8c8-106">[in] The generation on which a garbage collection has been performed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e9baf-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e9baf-107">Remarks</span></span>  
- <span data-ttu-id="e9baf-108">No volver a programar los subprocesos durante la `SuspensionEnding` devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="e9baf-108">Do not reschedule any threads during the `SuspensionEnding` callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="db8c8-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="db8c8-107">Remarks</span></span>  
+ <span data-ttu-id="db8c8-108">No volver a programar los subprocesos durante la `SuspensionEnding` devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="db8c8-108">Do not reschedule any threads during the `SuspensionEnding` callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e9baf-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e9baf-109">Requirements</span></span>  
- <span data-ttu-id="e9baf-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e9baf-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="db8c8-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="db8c8-109">Requirements</span></span>  
+ <span data-ttu-id="db8c8-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="db8c8-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e9baf-111">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e9baf-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="db8c8-111">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="db8c8-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e9baf-112">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e9baf-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="db8c8-112">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="db8c8-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e9baf-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9baf-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="db8c8-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db8c8-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9baf-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="e9baf-114">See also</span></span>
-- [<span data-ttu-id="e9baf-115">IGCThreadControl (interfaz)</span><span class="sxs-lookup"><span data-stu-id="e9baf-115">IGCThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="db8c8-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="db8c8-114">See also</span></span>
+- [<span data-ttu-id="db8c8-115">IGCThreadControl (interfaz)</span><span class="sxs-lookup"><span data-stu-id="db8c8-115">IGCThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)

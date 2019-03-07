@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f9f49219b810ac85b1f021c206bfab21d11a055
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72624eb1d1d43eecb5052ebceec38b1bc32750ff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746004"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474350"
 ---
-# <a name="imetadatatablesgetblobheapsize-method"></a><span data-ttu-id="5b871-102">IMetaDataTables::GetBlobHeapSize (Método)</span><span class="sxs-lookup"><span data-stu-id="5b871-102">IMetaDataTables::GetBlobHeapSize Method</span></span>
-<span data-ttu-id="5b871-103">Obtiene el tamaño, en bytes, del montón de objeto binario grande (BLOB).</span><span class="sxs-lookup"><span data-stu-id="5b871-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span></span>  
+# <a name="imetadatatablesgetblobheapsize-method"></a><span data-ttu-id="ff6a7-102">IMetaDataTables::GetBlobHeapSize (Método)</span><span class="sxs-lookup"><span data-stu-id="ff6a7-102">IMetaDataTables::GetBlobHeapSize Method</span></span>
+<span data-ttu-id="ff6a7-103">Obtiene el tamaño, en bytes, del montón de objeto binario grande (BLOB).</span><span class="sxs-lookup"><span data-stu-id="ff6a7-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5b871-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5b871-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ff6a7-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ff6a7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetBlobHeapSize (  
@@ -35,19 +35,19 @@ HRESULT GetBlobHeapSize (
 );   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5b871-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5b871-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ff6a7-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ff6a7-105">Parameters</span></span>  
  `pcbBlobs`  
- <span data-ttu-id="5b871-106">[out] Un puntero al tamaño, en bytes, del montón de objetos binarios.</span><span class="sxs-lookup"><span data-stu-id="5b871-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span></span>  
+ <span data-ttu-id="ff6a7-106">[out] Un puntero al tamaño, en bytes, del montón de objetos binarios.</span><span class="sxs-lookup"><span data-stu-id="ff6a7-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5b871-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5b871-107">Requirements</span></span>  
- <span data-ttu-id="5b871-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5b871-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ff6a7-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ff6a7-107">Requirements</span></span>  
+ <span data-ttu-id="ff6a7-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ff6a7-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5b871-109">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="5b871-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ff6a7-109">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="ff6a7-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5b871-110">**Biblioteca:** Usar como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5b871-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ff6a7-110">**Biblioteca:** Usar como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ff6a7-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5b871-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5b871-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ff6a7-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ff6a7-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b871-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="5b871-112">See also</span></span>
-- [<span data-ttu-id="5b871-113">IMetaDataTables (interfaz)</span><span class="sxs-lookup"><span data-stu-id="5b871-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="5b871-114">IMetaDataTables2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="5b871-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ff6a7-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="ff6a7-112">See also</span></span>
+- [<span data-ttu-id="ff6a7-113">IMetaDataTables (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ff6a7-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="ff6a7-114">IMetaDataTables2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ff6a7-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

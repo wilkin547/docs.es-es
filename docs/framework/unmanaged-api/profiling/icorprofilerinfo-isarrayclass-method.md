@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c131c5531d52f5ee81c70bddb67e8bc6071f39e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf8e74094b15163fe86e18c397f4637557df8329
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599674"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468239"
 ---
-# <a name="icorprofilerinfoisarrayclass-method"></a><span data-ttu-id="63d32-102">ICorProfilerInfo::IsArrayClass (Método)</span><span class="sxs-lookup"><span data-stu-id="63d32-102">ICorProfilerInfo::IsArrayClass Method</span></span>
-<span data-ttu-id="63d32-103">Determina si la clase especificada es una clase de matriz.</span><span class="sxs-lookup"><span data-stu-id="63d32-103">Determines whether the specified class is an array class.</span></span>  
+# <a name="icorprofilerinfoisarrayclass-method"></a><span data-ttu-id="1ab7f-102">ICorProfilerInfo::IsArrayClass (Método)</span><span class="sxs-lookup"><span data-stu-id="1ab7f-102">ICorProfilerInfo::IsArrayClass Method</span></span>
+<span data-ttu-id="1ab7f-103">Determina si la clase especificada es una clase de matriz.</span><span class="sxs-lookup"><span data-stu-id="1ab7f-103">Determines whether the specified class is an array class.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="63d32-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="63d32-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1ab7f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1ab7f-104">Syntax</span></span>  
   
 ```  
 HRESULT IsArrayClass(  
@@ -37,30 +37,30 @@ HRESULT IsArrayClass(
     [out] ULONG          *pcRank);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="63d32-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="63d32-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1ab7f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="1ab7f-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="63d32-106">[in] El identificador de la clase se va a examinar.</span><span class="sxs-lookup"><span data-stu-id="63d32-106">[in] The ID of the class to be examined.</span></span>  
+ <span data-ttu-id="1ab7f-106">[in] El identificador de la clase se va a examinar.</span><span class="sxs-lookup"><span data-stu-id="1ab7f-106">[in] The ID of the class to be examined.</span></span>  
   
  `pBaseElemType`  
- <span data-ttu-id="63d32-107">[out] Un puntero a un valor de la enumeración CorElementType que indica el tipo de los elementos de matriz.</span><span class="sxs-lookup"><span data-stu-id="63d32-107">[out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.</span></span>  
+ <span data-ttu-id="1ab7f-107">[out] Un puntero a un valor de la enumeración CorElementType que indica el tipo de los elementos de matriz.</span><span class="sxs-lookup"><span data-stu-id="1ab7f-107">[out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.</span></span>  
   
  `pBaseClassId`  
- <span data-ttu-id="63d32-108">[out] Un puntero al identificador de clase de los elementos de matriz, cuando esté disponible.</span><span class="sxs-lookup"><span data-stu-id="63d32-108">[out] A pointer to the class ID of the array elements, when available.</span></span>  
+ <span data-ttu-id="1ab7f-108">[out] Un puntero al identificador de clase de los elementos de matriz, cuando esté disponible.</span><span class="sxs-lookup"><span data-stu-id="1ab7f-108">[out] A pointer to the class ID of the array elements, when available.</span></span>  
   
  `pcRank`  
- <span data-ttu-id="63d32-109">[out] Un puntero a un entero que indica el rango (es decir, el número de dimensiones) de la matriz.</span><span class="sxs-lookup"><span data-stu-id="63d32-109">[out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.</span></span>  
+ <span data-ttu-id="1ab7f-109">[out] Un puntero a un entero que indica el rango (es decir, el número de dimensiones) de la matriz.</span><span class="sxs-lookup"><span data-stu-id="1ab7f-109">[out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="63d32-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="63d32-110">Remarks</span></span>  
- <span data-ttu-id="63d32-111">Si la clase especificada es una clase de matriz, el `IsArrayClass` método devuelve S_OK HRESULT y valores para cualquier parámetro de salida distinto de null.</span><span class="sxs-lookup"><span data-stu-id="63d32-111">If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters.</span></span> <span data-ttu-id="63d32-112">En caso contrario, devuelve S_FALSE.</span><span class="sxs-lookup"><span data-stu-id="63d32-112">Otherwise, it returns S_FALSE.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1ab7f-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="1ab7f-110">Remarks</span></span>  
+ <span data-ttu-id="1ab7f-111">Si la clase especificada es una clase de matriz, el `IsArrayClass` método devuelve S_OK HRESULT y valores para cualquier parámetro de salida distinto de null.</span><span class="sxs-lookup"><span data-stu-id="1ab7f-111">If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters.</span></span> <span data-ttu-id="1ab7f-112">En caso contrario, devuelve S_FALSE.</span><span class="sxs-lookup"><span data-stu-id="1ab7f-112">Otherwise, it returns S_FALSE.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="63d32-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="63d32-113">Requirements</span></span>  
- <span data-ttu-id="63d32-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="63d32-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1ab7f-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1ab7f-113">Requirements</span></span>  
+ <span data-ttu-id="1ab7f-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1ab7f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="63d32-115">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="63d32-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="1ab7f-115">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1ab7f-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="63d32-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="63d32-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1ab7f-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1ab7f-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="63d32-117">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="63d32-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1ab7f-117">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1ab7f-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="63d32-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="63d32-118">See also</span></span>
-- [<span data-ttu-id="63d32-119">ICorProfilerInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="63d32-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1ab7f-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="1ab7f-118">See also</span></span>
+- [<span data-ttu-id="1ab7f-119">ICorProfilerInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1ab7f-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

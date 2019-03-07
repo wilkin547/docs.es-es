@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e06dc35998a2874ed1d2f76725078874817e94d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18084cb69d2c620fc892cc05e5a561e8fda3bc1c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420100"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488193"
 ---
-# <a name="icordebugprocessistransitionstub-method"></a><span data-ttu-id="598d9-102">ICorDebugProcess::IsTransitionStub (Método)</span><span class="sxs-lookup"><span data-stu-id="598d9-102">ICorDebugProcess::IsTransitionStub Method</span></span>
-<span data-ttu-id="598d9-103">Obtiene un valor que indica si una dirección está dentro de un código auxiliar que provocará una transición a código administrado.</span><span class="sxs-lookup"><span data-stu-id="598d9-103">Gets a value that indicates whether an address is inside a stub that will cause a transition to managed code.</span></span>  
+# <a name="icordebugprocessistransitionstub-method"></a><span data-ttu-id="a3baa-102">ICorDebugProcess::IsTransitionStub (Método)</span><span class="sxs-lookup"><span data-stu-id="a3baa-102">ICorDebugProcess::IsTransitionStub Method</span></span>
+<span data-ttu-id="a3baa-103">Obtiene un valor que indica si es una dirección dentro de un código auxiliar que provocará una transición a código administrado.</span><span class="sxs-lookup"><span data-stu-id="a3baa-103">Gets a value that indicates whether an address is inside a stub that will cause a transition to managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="598d9-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="598d9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a3baa-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a3baa-104">Syntax</span></span>  
   
 ```  
 HRESULT IsTransitionStub(  
@@ -35,23 +35,23 @@ HRESULT IsTransitionStub(
     [out] BOOL *pbTransitionStub);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="598d9-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="598d9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a3baa-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a3baa-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="598d9-106">[in] Un `CORDB_ADDRESS` valor que especifica la dirección en cuestión.</span><span class="sxs-lookup"><span data-stu-id="598d9-106">[in] A `CORDB_ADDRESS` value that specifies the address in question.</span></span>  
+ <span data-ttu-id="a3baa-106">[in] Un `CORDB_ADDRESS` valor que especifica la dirección en cuestión.</span><span class="sxs-lookup"><span data-stu-id="a3baa-106">[in] A `CORDB_ADDRESS` value that specifies the address in question.</span></span>  
   
  `pbTransitionStub`  
- <span data-ttu-id="598d9-107">[out] Un puntero a un valor booleano que es `true` si la dirección especificada está dentro de un código auxiliar que provocará una transición a código administrado; en caso contrario \*`pbTransitionStub` es `false`.</span><span class="sxs-lookup"><span data-stu-id="598d9-107">[out] A pointer to a Boolean value that is `true` if the specified address is inside a stub that will cause a transition to managed code; otherwise \*`pbTransitionStub` is `false`.</span></span>  
+ <span data-ttu-id="a3baa-107">[out] Un puntero a un valor booleano que es `true` si la dirección especificada está dentro de un código auxiliar que provocará una transición a código administrado; en caso contrario \*`pbTransitionStub` es `false`.</span><span class="sxs-lookup"><span data-stu-id="a3baa-107">[out] A pointer to a Boolean value that is `true` if the specified address is inside a stub that will cause a transition to managed code; otherwise \*`pbTransitionStub` is `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="598d9-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="598d9-108">Remarks</span></span>  
- <span data-ttu-id="598d9-109">El `IsTransitionStub` método se puede utilizar código no administrado de ejecución paso a paso para decidir cuándo se debe devolver el control de ejecución paso a paso para el paso a paso desencadene administrado.</span><span class="sxs-lookup"><span data-stu-id="598d9-109">The `IsTransitionStub` method can be used by unmanaged stepping code to decide when to return stepping control to the managed stepper.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a3baa-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a3baa-108">Remarks</span></span>  
+ <span data-ttu-id="a3baa-109">El `IsTransitionStub` método puede utilizarse por código no administrado de ejecución paso a paso para decidir cuándo se debe devolver el control de ejecución paso a paso para el componente administrado.</span><span class="sxs-lookup"><span data-stu-id="a3baa-109">The `IsTransitionStub` method can be used by unmanaged stepping code to decide when to return stepping control to the managed stepper.</span></span>  
   
- <span data-ttu-id="598d9-110">También puede códigos auxiliares de transición de identidad examinando la información en el archivo ejecutable portable (PE).</span><span class="sxs-lookup"><span data-stu-id="598d9-110">You can also identity transition stubs by looking at information in the portable executable (PE) file.</span></span>  
+ <span data-ttu-id="a3baa-110">También puede códigos auxiliares de transición de identidad echando un vistazo a la información en el archivo portable ejecutable (PE).</span><span class="sxs-lookup"><span data-stu-id="a3baa-110">You can also identity transition stubs by looking at information in the portable executable (PE) file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="598d9-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="598d9-111">Requirements</span></span>  
- <span data-ttu-id="598d9-112">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="598d9-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a3baa-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a3baa-111">Requirements</span></span>  
+ <span data-ttu-id="a3baa-112">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a3baa-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="598d9-113">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="598d9-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a3baa-113">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a3baa-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="598d9-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="598d9-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a3baa-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a3baa-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="598d9-115">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="598d9-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="a3baa-115">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a3baa-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

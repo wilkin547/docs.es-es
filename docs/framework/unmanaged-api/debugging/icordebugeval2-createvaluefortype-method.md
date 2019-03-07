@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 683457c249915708becadaeda9dec265666e2023
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b27e40618d6128c21e99745ca45e139a9c21c843
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412112"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475039"
 ---
-# <a name="icordebugeval2createvaluefortype-method"></a><span data-ttu-id="c65c8-102">ICorDebugEval2::CreateValueForType (Método)</span><span class="sxs-lookup"><span data-stu-id="c65c8-102">ICorDebugEval2::CreateValueForType Method</span></span>
-<span data-ttu-id="c65c8-103">Obtiene un puntero a un nuevo objeto ICorDebugValue del tipo especificado, con un valor inicial de cero o null.</span><span class="sxs-lookup"><span data-stu-id="c65c8-103">Gets a pointer to a new ICorDebugValue of the specified type, with an initial value of zero or null.</span></span>  
+# <a name="icordebugeval2createvaluefortype-method"></a><span data-ttu-id="4bea6-102">ICorDebugEval2::CreateValueForType (Método)</span><span class="sxs-lookup"><span data-stu-id="4bea6-102">ICorDebugEval2::CreateValueForType Method</span></span>
+<span data-ttu-id="4bea6-103">Obtiene un puntero a un nuevo objeto ICorDebugValue del tipo especificado, con un valor inicial de cero o null.</span><span class="sxs-lookup"><span data-stu-id="4bea6-103">Gets a pointer to a new ICorDebugValue of the specified type, with an initial value of zero or null.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c65c8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c65c8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4bea6-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4bea6-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateValueForType (  
@@ -36,23 +36,23 @@ HRESULT CreateValueForType (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c65c8-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c65c8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4bea6-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="4bea6-105">Parameters</span></span>  
  `pType`  
- <span data-ttu-id="c65c8-106">[in] Puntero a un objeto ICorDebugType que representa el tipo.</span><span class="sxs-lookup"><span data-stu-id="c65c8-106">[in] Pointer to an ICorDebugType object that represents the type.</span></span>  
+ <span data-ttu-id="4bea6-106">[in] Puntero a un objeto ICorDebugType que representa el tipo.</span><span class="sxs-lookup"><span data-stu-id="4bea6-106">[in] Pointer to an ICorDebugType object that represents the type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="c65c8-107">[out] Puntero a la dirección de un `ICorDebugValue` objeto que representa el valor.</span><span class="sxs-lookup"><span data-stu-id="c65c8-107">[out] Pointer to the address of an `ICorDebugValue` object that represents the value.</span></span>  
+ <span data-ttu-id="4bea6-107">[out] Puntero a la dirección de un `ICorDebugValue` objeto que representa el valor.</span><span class="sxs-lookup"><span data-stu-id="4bea6-107">[out] Pointer to the address of an `ICorDebugValue` object that represents the value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c65c8-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c65c8-108">Remarks</span></span>  
- <span data-ttu-id="c65c8-109">`CreateValueForType` generaliza [ICorDebugEval:: CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) por lo que permite especificar un tipo de objeto arbitrario, incluidos construyen tipos como `List<int>`.</span><span class="sxs-lookup"><span data-stu-id="c65c8-109">`CreateValueForType` generalizes [ICorDebugEval::CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) by allowing you to specify an arbitrary object type, including constructed types such as `List<int>`.</span></span> <span data-ttu-id="c65c8-110">El único propósito de este método consiste en generar un valor que puede pasarse a una evaluación de función.</span><span class="sxs-lookup"><span data-stu-id="c65c8-110">The only purpose of this method is to generate a value that can be passed to a function evaluation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4bea6-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="4bea6-108">Remarks</span></span>  
+ <span data-ttu-id="4bea6-109">`CreateValueForType` generaliza [ICorDebugEval](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) , ya que permite especificar un tipo de objeto arbitrario, incluidos construyen tipos como `List<int>`.</span><span class="sxs-lookup"><span data-stu-id="4bea6-109">`CreateValueForType` generalizes [ICorDebugEval::CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) by allowing you to specify an arbitrary object type, including constructed types such as `List<int>`.</span></span> <span data-ttu-id="4bea6-110">Es el único propósito de este método generar un valor que se puede pasar a una evaluación de función.</span><span class="sxs-lookup"><span data-stu-id="4bea6-110">The only purpose of this method is to generate a value that can be passed to a function evaluation.</span></span>  
   
- <span data-ttu-id="c65c8-111">El tipo debe ser una clase o un tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="c65c8-111">The type must be a class or a value type.</span></span> <span data-ttu-id="c65c8-112">No se puede usar este método para crear valores de matriz o valores de cadena.</span><span class="sxs-lookup"><span data-stu-id="c65c8-112">You cannot use this method to create array values or string values.</span></span>  
+ <span data-ttu-id="4bea6-111">El tipo debe ser una clase o un tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="4bea6-111">The type must be a class or a value type.</span></span> <span data-ttu-id="4bea6-112">No se puede usar este método para crear valores de la matriz o los valores de cadena.</span><span class="sxs-lookup"><span data-stu-id="4bea6-112">You cannot use this method to create array values or string values.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c65c8-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c65c8-113">Requirements</span></span>  
- <span data-ttu-id="c65c8-114">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c65c8-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4bea6-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4bea6-113">Requirements</span></span>  
+ <span data-ttu-id="4bea6-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4bea6-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c65c8-115">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c65c8-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4bea6-115">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4bea6-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c65c8-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c65c8-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4bea6-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4bea6-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c65c8-117">**Versiones de .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c65c8-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="4bea6-117">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4bea6-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
