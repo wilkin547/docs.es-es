@@ -14,7 +14,7 @@ ms.locfileid: "54511593"
   
  A la hora de modificar un árbol, puede utilizar ciertos métodos, como por ejemplo, <xref:System.Xml.Linq.XContainer.Add%2A>.  
   
- No obstante, existe otro enfoque, el cual consiste en usar una construcción funcional para generar un árbol nuevo que tenga otro aspecto. En función de los tipos de cambios que necesite hacer en el árbol XML y del tamaño de este, es posible que este enfoque resulte más robusto y sencillo de desarrollar. El primer punto de esta sección compara ambos enfoques. 
+ No obstante, existe otro enfoque, el cual consiste en usar una construcción funcional para generar un árbol nuevo que tenga otro aspecto. En función de los tipos de cambios que necesite hacer en el árbol XML y del tamaño de este, es posible que este enfoque resulte más robusto y sencillo de desarrollar. El primer punto de esta sección compara ambos enfoques.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
