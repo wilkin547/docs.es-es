@@ -4,12 +4,12 @@ description: Obtenga información sobre la terminología básica que se usa cada
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a7f0106eed81c28634a079ce61f48d7d56f6ffd2
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 07371bee6881b1fa7edf64b9bb50d387dcbf9dde
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584205"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677192"
 ---
 # <a name="docker-terminology"></a>Terminología de Docker
 
@@ -23,7 +23,7 @@ En esta sección se enumeran los términos y las definiciones que debe conocer a
 
 **Contenedor**: una instancia de una imagen de Docker. Un contenedor representa la ejecución de una sola aplicación, proceso o servicio. Está formado por el contenido de una imagen de Docker, un entorno de ejecución y un conjunto estándar de instrucciones. Al escalar un servicio, crea varias instancias de un contenedor a partir de la misma imagen. O bien, un proceso por lotes puede crear varios contenedores a partir de la misma imagen y pasar parámetros diferentes a cada instancia.
 
-**Volúmenes**: ofrece un sistema de archivos grabable que el contenedor puede usar. Puesto que las imágenes son de solo lectura pero la mayoría de los programas necesitan escribir en el sistema de archivos, los volúmenes agregan una capa grabable, encima de la imagen de contenedor, por lo que los programas tienen acceso a un sistema de archivos grabable. El programa no sabe que está accediendo a un sistema de archivos por capas, que no es más que el sistema de archivos habitual. Los volúmenes residen en el sistema host y los administra Docker.
+**Volúmenes**: ofrece un sistema de archivos grabable que el contenedor puede usar. Puesto que las imágenes son de solo lectura pero la mayoría de los programas necesitan escribir en el sistema de archivos, los volúmenes agregan una capa grabable, encima de la imagen de contenedor, por lo que los programas tienen acceso a un sistema de archivos grabable. El programa no sabe que está obteniendo acceso a un sistema de archivos en capas, que es el sistema de archivos como de costumbre. Los volúmenes residen en el sistema host y los administra Docker.
 
 **Etiqueta**: una marca o una etiqueta que se puede aplicar a las imágenes para que se puedan identificar diferentes imágenes o versiones de la misma imagen (según el número de versión o el entorno de destino).
 
@@ -37,15 +37,15 @@ En esta sección se enumeran los términos y las definiciones que debe conocer a
 
 **Docker Hub**: registro público para cargar imágenes y trabajar con ellas. Docker Hub proporciona hospedaje de imágenes de Docker, registros públicos o privados, desencadenadores de compilación y enlaces web e integración con GitHub y Bitbucket.
 
-**Azure Container Registry**: recurso público para trabajar con imágenes de Docker y sus componentes en Azure. Esto proporciona un registro cercano a las implementaciones en Azure que le proporciona control sobre el acceso, lo que le permite usar los grupos y los permisos de Active Directory.
+**Azure Container Registry**: recurso público para trabajar con imágenes de Docker y sus componentes en Azure. Esto proporciona un registro que está cerca de las implementaciones en Azure y que le proporciona control sobre el acceso, lo que permite usar los grupos de Azure Active Directory y los permisos.
 
-**Docker Trusted Registry (DTR)**: servicio del registro de Docker (ofrecido por Docker) que se puede instalar de forma local, por lo que se encuentra en el centro de datos y la red de la organización. Es ideal para imágenes privadas que deben administrarse dentro de la empresa. Docker Trusted Registry se incluye como parte del producto Docker Datacenter. Para más información, vea [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
+**Docker Trusted Registry (DTR)**: servicio del registro de Docker (ofrecido por Docker) que se puede instalar de forma local, por lo que se encuentra en el centro de datos y la red de la organización. Es conveniente para imágenes privadas que deben administrarse dentro de la empresa. Docker Trusted Registry se incluye como parte del producto Docker Datacenter. Para más información, vea [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
 
 **Docker Community Edition (CE)**: herramientas de desarrollo para Windows y MacOS para compilar, ejecutar y probar contenedores localmente. Docker CE para Windows proporciona entornos de desarrollo para contenedores de Windows y Linux. El host de Docker de Linux en Windows se basa en una máquina virtual [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization). El host para los contenedores de Windows se basa directamente en Windows. Docker CE para Mac se basa en el marco del hipervisor de Apple y el [hipervisor xhyve](https://github.com/mist64/xhyve), lo que proporciona una máquina virtual de host de Docker de Linux en Mac OS X. Docker CE para Windows y para Mac sustituye a Docker Toolbox, que se basaba en Oracle VirtualBox.
 
 **Docker Enterprise Edition (EE)**: versión a escala empresarial de las herramientas de Docker para el desarrollo de Linux y Windows.
 
-**Compose**: herramienta de línea de comandos y formato de archivo YAML con metadatos para definir y ejecutar aplicaciones de varios contenedores. Primero se define una sola aplicación basada en varias imágenes con uno o más archivos .yml que pueden invalidar los valores según el entorno. Después de crear las definiciones, puede implementar toda la aplicación de varios contenedores con un solo comando (composición de docker) que crea un contenedor por imagen en el host de Docker.
+**Compose**: herramienta de línea de comandos y formato de archivo YAML con metadatos para definir y ejecutar aplicaciones de varios contenedores. Primero se define una sola aplicación basada en varias imágenes con uno o más archivos .yml que pueden invalidar los valores según el entorno. Después de crear las definiciones, puede implementar la aplicación de varios contenedor totalmente con un solo comando (docker-compose seguridad) que crea un contenedor por imagen en el host de Docker.
 
 **Clúster**: colección de hosts de Docker que se expone como si fuera un solo host de Docker virtual, de manera que la aplicación se puede escalar a varias instancias de los servicios repartidos entre varios hosts del clúster. Los clústeres de Docker se pueden crear con Kubernetes, Azure Service Fabric, Docker Swarm y Mesosphere DC/OS.
 

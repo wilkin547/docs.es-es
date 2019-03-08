@@ -4,16 +4,16 @@ description: Comprender los conceptos básicos para incluir en un contenedor apl
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: eff764472b4a9fc5b699545fc9629cc12d0186ca
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747267"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676842"
 ---
 # <a name="monolithic-applications"></a>Aplicaciones monolíticas
 
-En este escenario, se crear una aplicación web único y monolítico o un servicio e implementarla como un contenedor. Dentro de la aplicación, la estructura no puede ser monolítica; puede constar de varias bibliotecas, componentes o incluso capas (nivel de aplicación, capa de dominio, capa de acceso a datos, etcetera). Externamente, es un contenedor único, como un único proceso, aplicación web única o servicio único.
+En este escenario, está creando una aplicación web único y monolítico o servicio e implementarlo como un contenedor. Dentro de la aplicación, la estructura no puede ser monolítica; puede constar de varias bibliotecas, componentes o incluso capas (nivel de aplicación, capa de dominio, capa de acceso a datos, etcetera). Externamente, es un contenedor único, como un único proceso, aplicación web única o servicio único.
 
 Para administrar este modelo, debe implementar un único contenedor para representar la aplicación. Para ajustar la escala, solo tiene que agregar unas cuantas más copias con un equilibrador de carga delante. La simplicidad proviene de administrar una única implementación de un único contenedor o la máquina virtual (VM).
 

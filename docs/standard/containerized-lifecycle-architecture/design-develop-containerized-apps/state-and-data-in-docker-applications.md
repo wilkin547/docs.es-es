@@ -4,12 +4,12 @@ description: Obtenga información sobre la opción disponible para guardar el es
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1e30a545ba0003acb8b85dee9896d54934f0d737
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 30dde3ce44aa61fff3fad1841ae4a8b941573877
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746003"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678090"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado y datos en aplicaciones de Docker
 
@@ -19,7 +19,7 @@ Las soluciones siguientes se usan para administrar datos persistentes en aplicac
 
 Desde el host de Docker, como [volúmenes de Docker](https://docs.docker.com/engine/admin/volumes/):
 
-- **Volúmenes** se almacenan en un área del sistema de archivos de host administrado por Docker.
+- Los **volúmenes** se almacenan en un área del sistema de archivos de host administrado por Docker.
 
 - **Enlazar montajes** puede asignar a cualquier carpeta en el sistema de archivos de host, por lo que no se puede controlar desde un proceso de Docker de acceso y puede suponer un riesgo de seguridad como un contenedor podría tener acceso a carpetas confidenciales de sistema operativo.
 
@@ -47,7 +47,7 @@ Los volúmenes pueden tener nombre o ser anónimos (predeterminado). Los volúme
 
 **`tmpfs` monta** son carpetas virtuales que residen únicamente en memoria del host y nunca se escriben en el sistema de archivos. Son rápidos y seguros, pero usan memoria y solo están diseñados para datos no persistentes.
 
-Tal como se muestra en la figura 4-5, los volúmenes de Docker normales pueden almacenarse fuera de los propios contenedores, pero dentro de los límites físicos del servidor de host o de la máquina virtual. Sin embargo, los contenedores de Docker no pueden tener acceso a un volumen desde un servidor de host o máquina virtual a otro. En otras palabras, con estos volúmenes, no es posible administrar los datos compartidos entre contenedores que se ejecutan en diferentes hosts de Docker, aunque se podría obtenerse con un controlador de volumen que es compatible con los hosts remotos.
+Tal como se muestra en la figura 4-5, los volúmenes de Docker normales pueden almacenarse fuera de los propios contenedores, pero dentro de los límites físicos del servidor de host o de la máquina virtual. Sin embargo, los contenedores de Docker no pueden tener acceso a un volumen desde un servidor de host o máquina virtual a otro. En otras palabras, con estos volúmenes, no es posible administrar los datos que se comparten entre contenedores que se ejecutan en otros hosts de Docker, aunque se podría lograr con un controlador de volumen que sea compatible con los hosts remotos.
 
 ![Los volúmenes se pueden compartir entre contenedores, pero solo en el mismo host, a menos que use un controlador remoto compatible con hosts remotos. ](./media/image5.png)
 

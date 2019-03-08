@@ -4,12 +4,12 @@ description: Conozca los pasos para el "bucle exterior" del flujo de trabajo de 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 7043f34557651c3e8e79baf263bd0bcefd5a847a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 495e717787c346e451c2f79ef4200b478577aa9d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836414"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676205"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
 
@@ -144,7 +144,7 @@ Uso de las tareas de Docker, puede insertar un conjunto de imágenes de servicio
 
 La inmutabilidad de imágenes de Docker garantiza una implementación repetible, con lo que ha desarrollado, probado a través de los elementos de configuración y ejecución en producción. Una vez que las imágenes de Docker de la aplicación publicadas en el registro de Docker (privado o público), puede implementarlas en los entornos de varias que pueda haber (producción, control de calidad, almacenamiento provisional, etc.) desde la canalización de CD mediante los servicios de Azure DevOps las tareas de canalización o servicios de Release Management de Azure DevOps.
 
-Sin embargo, en este punto depende de qué tipo de aplicación de Docker está implementando. Implementar una aplicación sencilla (desde una implementación y la composición de punto de vista) como un monolítica implementada y de aplicaciones que incluyen algunos contenedores o servicios a unos servidores o máquinas virtuales es diferente de la implementación de una aplicación más compleja, como un aplicación orientada a microservicios con capacidades de hiperescala. Estos dos escenarios se explican en las secciones siguientes.
+Sin embargo, en este punto depende de qué tipo de aplicación de Docker va a implementar. Implementar una aplicación sencilla (desde una implementación y la composición de punto de vista) como un monolítica implementada y de aplicaciones que incluyen algunos contenedores o servicios a unos servidores o máquinas virtuales es diferente de la implementación de una aplicación más compleja, como un aplicación orientada a microservicios con capacidades de hiperescala. Estos dos escenarios se explican en las secciones siguientes.
 
 ### <a name="deploying-composed-docker-applications-to-multiple-docker-environments"></a>Implementación de aplicaciones de Docker en varios entornos de Docker compuestas
 
@@ -202,7 +202,7 @@ Figura 5-11 se muestra cómo puede modificar la tarea de implementación de Dock
 
 ## <a name="step-5-run-and-manage"></a>Paso 5: Ejecutar y administrar
 
-Porque está ejecutando y administración de aplicaciones en producción de la empresa nivel es un asunto principal de sí mismo y debido al tipo de operaciones y personas que trabajan en ese nivel (operaciones de TI), así como el ámbito de esta área de gran tamaño, nos hemos dedicado todo el contenido a continuación capítulo a explicarlo.
+Porque está ejecutando y administración de aplicaciones en producción de la empresa nivel es un asunto principal de sí mismo y debido al tipo de operaciones y personas que trabajan en ese nivel (operaciones de TI), así como el ámbito de esta área de gran tamaño, el próximo capítulo todo está dedicado a explicarlo.
 
 ## <a name="step-6-monitor-and-diagnose"></a>Paso 6: Supervisión y diagnóstico
 

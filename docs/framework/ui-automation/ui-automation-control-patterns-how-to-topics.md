@@ -7,18 +7,16 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 44f4befc03c886e51a19a44f45f7cbdc20f60fe3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: dc77d3798c9a79b5becf28e55c9f7e3be23eb352
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209923"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677830"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>Temas "Cómo..." sobre los patrones de control de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Esta sección contiene información detallada sobre la implementación de los patrones de control.  
   
@@ -27,4 +25,4 @@ ms.locfileid: "47209923"
  [Obtención de patrones de control compatibles de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
  [Obtención del estado de alternancia de una casilla mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
  [Invocación de un control mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [Movimiento de un elemento de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)
+ [Move a UI Automation Element](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)

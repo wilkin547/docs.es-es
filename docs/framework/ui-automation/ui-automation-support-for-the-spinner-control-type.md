@@ -1,21 +1,19 @@
 ---
-title: Compatibilidad de UI Automation para el tipo de control Spinner
+title: Compatibilidad de automatización de la IU para el tipo de control Spinner
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Spinner control type
 - Spinner control type
 - control types, Spinner
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: e476674e99f0951148dc7cfc95deeeaede3862ae
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 43e892f681669cd80c83b23dc4e16c81026f1d7e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066303"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676105"
 ---
-# <a name="ui-automation-support-for-the-spinner-control-type"></a>Compatibilidad de UI Automation para el tipo de control Spinner
+# <a name="ui-automation-support-for-the-spinner-control-type"></a>Compatibilidad de automatización de la IU para el tipo de control Spinner
 > [!NOTE]
 >  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   

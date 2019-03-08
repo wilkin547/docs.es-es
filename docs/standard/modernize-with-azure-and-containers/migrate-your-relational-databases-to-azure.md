@@ -4,12 +4,12 @@ description: Modernizar aplicaciones .NET existentes con contenedores de Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a2aedc9729c674a7b4958506b90c285e54d8d724
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cadfc99a4c3d32e24d4a44e8cf4ce17a2ba7a07
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153766"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677557"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrar bases de datos relacionales a azure
 
@@ -49,7 +49,7 @@ Instancia administrada de Azure SQL Database tiene las siguientes característic
 
   - El trasvase de registros y restauración y copia de seguridad nativa
 
-Con estas capacidades, al migrar las bases de datos de aplicación existente a Azure SQL Database, el modelo de instancia administrada ofrece casi el 100% de las ventajas de Paas de SQL Server. Instancia administrada es un entorno de SQL Server donde seguir usando capacidades de nivel de instancia sin cambiar el diseño de aplicaciones.
+Con estas capacidades, al migrar las bases de datos de aplicación existente a Azure SQL Database, el modelo de instancia administrada ofrece casi el 100% de las ventajas de PaaS de SQL Server. Instancia administrada es un entorno de SQL Server donde seguir usando capacidades de nivel de instancia sin cambiar el diseño de aplicaciones.
 
 Instancia administrada es probablemente la mejor opción para las empresas que actualmente está utilizando SQL Server, y que requieren flexibilidad en su seguridad de red en la nube. Es como tener una red privada virtual para las bases de datos SQL.
 
@@ -114,7 +114,7 @@ Para obtener información sobre cómo migrar las bases de datos mediante el uso 
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
-- **Migración de base de datos de SQL Server a SQL Database en la nube**
+- **Migración de una base de datos de SQL Server a una instancia de SQL Database en la nube**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
@@ -126,6 +126,6 @@ Para obtener información sobre cómo migrar las bases de datos mediante el uso 
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 
->[!div class="step-by-step"]
->[Anterior](lift-and-shift-existing-apps-azure-iaas.md)
->[Siguiente](modernize-existing-apps-to-cloud-optimized/index.md)
+> [!div class="step-by-step"]
+> [Anterior](lift-and-shift-existing-apps-azure-iaas.md)
+> [Siguiente](modernize-existing-apps-to-cloud-optimized/index.md)

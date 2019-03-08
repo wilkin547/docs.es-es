@@ -4,12 +4,12 @@ description: Obtenga información sobre el flujo de trabajo de "bucle interno" p
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1134ff439235609db840c85a1e67bc9fe4ccec84
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835686"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676673"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo de bucle interior para aplicaciones de Docker
 
@@ -43,7 +43,7 @@ Figura 4-22 muestra los pasos básicos que normalmente se necesitan para llevar 
 
 ### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>Paso 1: Empezar a programar en Visual Studio Code y crear la instantánea inicial de aplicación/servicio
 
-La manera de desarrollar la aplicación es similar a la manera de que hacerlo sin Docker. La diferencia es que al desarrollar, implementar y probar su aplicación o servicios que se ejecutan dentro de contenedores de Docker que se colocan en su entorno local (por ejemplo, una VM Linux o Windows).
+La manera de desarrollar la aplicación es similar a la manera de que hacerlo sin Docker. La diferencia es que durante el desarrollo, es implementar y probar su aplicación o servicios que se ejecutan dentro de contenedores de Docker que se colocan en su entorno local (por ejemplo, una VM Linux o Windows).
 
 **Configurar el entorno local**
 
@@ -91,13 +91,13 @@ Para instalar la extensión de Docker, presione Ctrl + Mayús + P, escriba `ext 
 
 ### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>Paso 2: Crear un DockerFile relacionado con una imagen existente (sin formato del sistema operativo o entornos de desarrollo como Ruby, Node.js y .NET Core)
 
-Necesitará un `DockerFile` por una imagen personalizada que se crea y por contenedor para implementarse. Si la aplicación se compone de un único servicio personalizado, necesita un único `DockerFile`. Pero si la aplicación se compone de varios servicios (como en una arquitectura de microservicios), necesitará una `Dockerfile` por servicio.
+Necesitará un `DockerFile` por una imagen personalizada que se crea y por contenedor para implementarse. Si la aplicación se compone de un único servicio personalizado, necesitará una sola `DockerFile`. Pero si la aplicación se compone de varios servicios (como en una arquitectura de microservicios), necesitará una `Dockerfile` por servicio.
 
 El `DockerFile` normalmente se coloca en la carpeta raíz de su aplicación o servicio y contiene los comandos necesarios para que Docker sepa cómo configurar y ejecutar esa aplicación o servicio. Puede crear su `DockerFile` y agréguelo al proyecto junto con el código (node.js, .NET Core, etc.), o bien si está familiarizado con el entorno, eche un vistazo a la siguiente sugerencia.
 
 > [!TIP]
 >
-> Puede usar la extensión Docker para guiar al usar el `Dockerfile` y `docker-compose.yml` los archivos relacionados con los contenedores de Docker. Finalmente, probablemente se va a escribir estos tipos de archivos sin esta herramienta, pero con la extensión de Docker es un buen punto de partida que acelerará la curva de aprendizaje.
+> Puede usar la extensión Docker para guiar al usar el `Dockerfile` y `docker-compose.yml` los archivos relacionados con los contenedores de Docker. Finalmente, probablemente deberá escribir estos tipos de archivos sin esta herramienta, pero con la extensión de Docker es un buen punto de partida que acelerará la curva de aprendizaje.
 
 En la figura 4-24, puede ver cómo docker-compose se agrega el archivo mediante la extensión Docker para VS Code.
 
@@ -105,7 +105,7 @@ En la figura 4-24, puede ver cómo docker-compose se agrega el archivo mediante 
 
 **Figura 4-24**. Archivos de docker que se agregan utilizando la **archivos de Docker de agregar al comando del área de trabajo**
 
-Cuando se agrega un DockerFile, especificar qué imagen de Docker básica que va a usar (como el uso de `FROM microsoft/aspnetcore`). Normalmente se compilará la imagen personalizada sobre una imagen base que se obtiene desde cualquier repositorio oficial en el [registro de Docker Hub](https://hub.docker.com/) (como un [imágenes para .NET Core](https://hub.docker.com/r/microsoft/dotnet/) o lo [para Node.js](https://hub.docker.com/_/node/)).
+Cuando se agrega un DockerFile, especificar qué imagen de Docker básica que va a usar (como el uso de `FROM microsoft/aspnetcore`). Normalmente, compilará la imagen personalizada sobre una imagen base que se obtiene desde cualquier repositorio oficial en el [registro de Docker Hub](https://hub.docker.com/) (como un [imágenes para .NET Core](https://hub.docker.com/r/microsoft/dotnet/) o la [para Node.js](https://hub.docker.com/_/node/)).
 
 ***Use una imagen de Docker oficial existente***
 

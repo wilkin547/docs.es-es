@@ -1,24 +1,24 @@
 ---
-title: Filtrar Habilitar la vista en mosaico en un Control de ListView de Windows Forms mediante el diseñador
+title: Procedimiento Habilitar la vista en mosaico en un Control de ListView de Windows Forms mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tile view feature
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 0acd235fe015b3f93364482b83008b388c1b86d9
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: b365ada2d38f8fca97b66bb3d46b2c8e93d7cb1d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303977"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676244"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Filtrar Habilitar la vista en mosaico en un Control de ListView de Windows Forms mediante el diseñador
 La característica de vista de mosaico de la <xref:System.Windows.Forms.ListView> control le permite proporcionar equilibrio visual entre la información gráfica y textual. La información de texto que se muestra para un elemento en la vista de mosaico es igual que la información de columna definida para la vista de detalles. Vista en mosaico funciona en combinación con la agrupación o la inserción marca las características de la <xref:System.Windows.Forms.ListView> control.  
   
  La vista de mosaico usa una imagen 32 x 32 y varias líneas de texto, como se muestra en la siguiente imagen.  
   
- ![Vista en mosaico en un Control ListView](../../../../docs/framework/winforms/controls/media/listviewtile.gif "ListViewTile")  
+ ![Vista en mosaico en un ListView Control](./media/enable-tile-view-in-a-wf-listview-control-using-the-designer/tile-view-in-listview-control.gif "icono Ver iconos y texto")  
   
  Icono Vista de propiedades y métodos permiten especificar qué campos de columna para mostrar para cada elemento y controlar colectivamente el tamaño y la apariencia de todos los elementos dentro de una ventana de vista de mosaico. Para mayor claridad, la primera línea del texto de un mosaico siempre es el nombre del elemento; no se puede cambiar.  
   

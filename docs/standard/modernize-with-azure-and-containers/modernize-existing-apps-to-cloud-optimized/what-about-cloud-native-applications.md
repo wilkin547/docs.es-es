@@ -4,12 +4,12 @@ description: Modernizar aplicaciones .NET existentes con contenedores de Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: b84eb50c0d425447e3f78f1473608c27254523a7
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 10f7761b7c0d2ddd8cb9247b1a02aa49cdc4e5d4
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746421"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679286"
 ---
 # <a name="what-about-cloud-native-applications"></a>¿Qué sucede con las aplicaciones nativas de la nube?
 
@@ -21,13 +21,13 @@ Figura 4-3 coloca las aplicaciones nativas de nube en los niveles de madurez de 
 
 > **Figura 4-3.** Colocación de aplicaciones nativas de nube
 
-Normalmente, el nivel de madurez de modernización nativas de la nube requiere nuevas inversiones de desarrollo. Pasar al nivel nativo en la nube generalmente está controlado por la necesidad empresarial para modernizar aplicaciones tanto como sea posibles mejorar drásticamente la escalabilidad en aplicaciones de gran tamaño mediante la creación de subsistemas autónomos (microservicios) que se pueden implementar y escalar por separado en otras áreas de la aplicación mientras reduce los costes en la agilidad de evolución largo plazo y aumento de partes de la aplicación de esos autónomos que proporcionan importantes compiten ventajas. 
+Normalmente, el nivel de madurez de modernización nativas de la nube requiere nuevas inversiones de desarrollo. Pasar al nivel nativo en la nube generalmente está controlado por la necesidad empresarial para modernizar aplicaciones tanto como sea posibles mejorar drásticamente la escalabilidad en aplicaciones de gran tamaño mediante la creación de subsistemas autónomos (microservicios) que se pueden implementar y escalar por separado en otras áreas de la aplicación mientras reduce los costes en la agilidad de evolución largo plazo y aumento de partes de la aplicación de esos autónomos que proporcionan importantes compiten ventajas.
 
 Los principales pilares de las aplicaciones nativas de la nube se basan en enfoques de arquitectura de microservicios, que pueden evolucionar con agilidad y escale a los límites que serían difíciles de lograr en una arquitectura monolítica, implementada en un entorno local o en la nube entorno.
 
-Figura 4-4 muestra las principales características del modelo nativas de la nube.  
+Figura 4-4 muestra las principales características del modelo nativas de la nube.
 
-> ![Las características nativas de la nube son los Microservicios, contenedores, en la nube resistentes, los orquestadores y serverles](./media/image4.png)
+> ![Las características nativas de la nube son los Microservicios, los orquestadores de contenedores, en la nube resistentes y sin servidor](./media/image4.png)
 >
 > **Figura 4-4.** Características nativas de la nube
 
@@ -47,7 +47,7 @@ Para obtener una definición de ejemplo y para obtener más información sobre l
 
 El factor más importante a tener en cuenta si migra una aplicación completa para el modelo de nube nativas es que debe rediseñar a una arquitectura basada en microservicios. Claramente, esto requiere una inversión importante en el desarrollo debido al proceso de refactorización grande implicado. Normalmente, se elige esta opción para aplicaciones críticas que necesitan nuevos niveles de escalabilidad y agilidad a largo plazo. Sin embargo, puede empezar la creciente nativas de la nube mediante la adición de microservicios para pocos escenarios nuevos y finalmente refactorizar la aplicación por completo como microservicios. Se trata de un enfoque incremental que es la mejor opción para algunos escenarios.
 
-## <a name="what-about-microservices"></a>¿Qué microservicios? 
+## <a name="what-about-microservices"></a>¿Qué microservicios?
 
 Es importante entender los microservicios y cómo funcionan, cuando se piensa en aplicaciones nativas de nube para su organización.
 
@@ -67,6 +67,6 @@ Como una nota final, incluso con el riesgo de ser repetitiva acerca este concept
 
 En cualquier caso, el resto de esta guía centra principalmente en "ninguna aplicación basada en microservicios" porque esta guía está destinada principalmente la modernización de las aplicaciones existentes que suelen tener arquitecturas de N niveles o monolíticas.
 
->[!div class="step-by-step"]
->[Anterior](microsoft-technologies-in-cloud-optimized-applications.md)
->[Siguiente](deploy-existing-net-apps-as-windows-containers.md)
+> [!div class="step-by-step"]
+> [Anterior](microsoft-technologies-in-cloud-optimized-applications.md)
+> [Siguiente](deploy-existing-net-apps-as-windows-containers.md)

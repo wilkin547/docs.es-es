@@ -6,16 +6,14 @@ helpviewer_keywords:
 - UI Automation, Thumb control type
 - Thumb control type
 ms.assetid: 13636338-e320-4355-b071-ede20a3fb1de
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: d0d123371c298fd02bf1a0a7e4152822cb16116d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e40cfd36f8dcbe75ab8b443f956b96db18be2ed
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556605"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675893"
 ---
-# <a name="ui-automation-support-for-the-thumb-control-type"></a>Compatibilidad de UI Automation para el tipo de control de posición
+# <a name="ui-automation-support-for-the-thumb-control-type"></a>Compatibilidad de automatización de la interfaz de usuario para el tipo de control de posición
 > [!NOTE]
 >  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
   

@@ -4,12 +4,12 @@ description: Modernizar aplicaciones .NET existentes con contenedores de Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: f5a9d0c7c1c45a6afca390e93384af4c8386fe09
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 15ea074693a75aa04b4f3a03e6e5e3d7f748cea1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150595"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674944"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Técnicas y tutoriales de introducción
 
@@ -35,7 +35,6 @@ Cada uno de los siguientes tutoriales usa la nueva eShopLegacy y eShopModernizin
 
 - **Implementar las aplicaciones de basadas en contenedores de Windows en Azure Service Fabric**
 
-
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Tutorial 1: Paseo por las aplicaciones heredadas de eShop
 
 ### <a name="technical-walkthrough-availability"></a>Disponibilidad de tutorial técnico
@@ -44,10 +43,10 @@ El tutorial técnico completo está disponible en el wiki de repositorio de GitH
 
 [tutoriales de wiki eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing/wiki)
 
-
 ### <a name="overview"></a>Información general
 
-En este tutorial, puede explorar la implementación inicial de tres aplicaciones heredadas de ejemplo. Las dos primeras aplicaciones web de ejemplo tienen una arquitectura monolítica y creadas utilizando ASP.NET clásico. Una aplicación se basa en ASP.NET 4.x MVC; la segunda aplicación se basa en los formularios Web Forms ASP.NET 4.x. El tercer trata de una aplicación de 3 niveles compuesta por una aplicación cliente de WinForms y un servidor [Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md) service.
+En este tutorial, puede explorar la implementación inicial de tres aplicaciones heredadas de ejemplo. Las dos primeras aplicaciones web de ejemplo tienen una arquitectura monolítica y creadas utilizando ASP.NET clásico. Una aplicación se basa en ASP.NET 4.x MVC; la segunda aplicación se basa en los formularios Web Forms ASP.NET 4.x.
+El tercer trata de una aplicación de 3 niveles compuesta por una aplicación cliente de WinForms y un servidor [Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md) service.
 
 Todas estas aplicaciones están disponibles en el [repositorio de GitHub eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing).
 
@@ -59,23 +58,21 @@ El objetivo principal de este tutorial es simplemente para familiarizarse con es
 
 La siguiente ilustración muestra el escenario sencillo de las aplicaciones de web ASP.NET heredadas originales.
 
-> ![Escenario de arquitectura simple de las aplicaciones de web ASP.NET heredadas originales](./media/image5-1.png)
->
+![Escenario de arquitectura simple de las aplicaciones de web ASP.NET heredadas originales](./media/image5-1.png)
 
-Desde una perspectiva de dominio empresarial, ambas aplicaciones ofrecen el mismo catálogo de las características de administración. Miembros del equipo de enterprise eShop usaría la aplicación para ver y editar el catálogo de productos. 
+Desde una perspectiva de dominio empresarial, ambas aplicaciones ofrecen el mismo catálogo de las características de administración. Miembros del equipo de enterprise eShop usaría la aplicación para ver y editar el catálogo de productos.
 
 En la ilustración siguiente se muestra las capturas de pantalla de la aplicación inicial.
 
 ![Aplicaciones de ASP.NET MVC y ASP.NET Web Forms (tecnologías existentes/heredadas)](./media/image5-2.png)
 
-Dependencias en ASP.NET 4.x o versiones anteriores (ya sea para MVC o Web Forms) significa que estas aplicaciones no se ejecutarán en .NET Core a menos que el código se vuelve a escribir por completo mediante el uso de ASP.NET Core MVC. 
+Dependencias en ASP.NET 4.x o versiones anteriores (ya sea para MVC o Web Forms) significa que estas aplicaciones no se ejecutarán en .NET Core a menos que el código se vuelve a escribir por completo mediante el uso de ASP.NET Core MVC.
 
 ### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Escenario 2: Servicio de WCF y la aplicación de cliente de WinForms (aplicación de capa 3)
 
 La siguiente ilustración muestra el escenario sencillo de la aplicación heredada de 3 niveles original.
 
-> ![Escenario de arquitectura simple de la aplicación heredada original de 3 niveles con un servicio WCF y una aplicación de cliente de WinForms](./media/image5-1.5.png)
->
+![Escenario de arquitectura simple de la aplicación heredada original de 3 niveles con un servicio WCF y una aplicación de cliente de WinForms](./media/image5-1.5.png)
 
 ### <a name="benefits"></a>Ventajas
 
@@ -85,9 +82,8 @@ Las ventajas de este tutorial son sencillas: Simplemente familiarizarse con el c
 
 Explore este contenido más detallada en el sitio wiki de GitHub:
 
-  - [La visita de la línea de base de ASP.NET MVC y aplicaciones de formularios Web Forms "heredadas"](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
-  - [Paseo por en el servicio WCF de línea de base y la aplicación de formularios Windows Forms (nivel 3) "heredado"](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
-
+- [La visita de la línea de base de ASP.NET MVC y aplicaciones de formularios Web Forms "heredadas"](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
+-   [Paseo por en el servicio WCF de línea de base y la aplicación de formularios Windows Forms (nivel 3) "heredado"](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Tutorial 2: Incluya las aplicaciones .NET existentes con contenedores de Windows
 
@@ -111,16 +107,13 @@ En este tutorial se centra en Visual Studio 2017 Tools para el enfoque de Docker
 
 La figura siguiente muestra el escenario para aplicaciones de las aplicaciones web heredadas eShop en contenedores.
 
-> ![Diagrama de arquitectura simplificada de en contenedores de aplicaciones de ASP.NET en un entorno de desarrollo](./media/image5-3.png)
->
-
+![Diagrama de arquitectura simplificada de en contenedores de aplicaciones de ASP.NET en un entorno de desarrollo](./media/image5-3.png)
 
 ### <a name="scenario-2-containerized-wcf-service"></a>Escenario 2: Servicio WCF en contenedor
 
-La figura siguiente muestra el escenario para una aplicación de 3 niveles con un servicio WCF en contenedores. 
+La figura siguiente muestra el escenario para una aplicación de 3 niveles con un servicio WCF en contenedores.
 
-> ![Diagrama de arquitectura de servicio WCF en contenedores en un entorno de desarrollo de simplificado](./media/image5-3.5.png)
->
+![Diagrama de arquitectura de servicio WCF en contenedores en un entorno de desarrollo de simplificado](./media/image5-3.5.png)
 
 ### <a name="benefits"></a>Ventajas
 
@@ -136,10 +129,8 @@ Inclusión en contenedores, en situaciones ideales, no requiere realizar cambios
 
 Explore este contenido más detallada en el sitio wiki de GitHub:
 
-  - [Inclusión de las aplicaciones web de .NET Framework con contenedores de Windows y Docker en contenedores](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
-  - [Agregar compatibilidad con Docker a un servicio WCF](https://github.com/dotnet-architecture/eShopModernizing/wiki/22.-Adding-Docker-Support)
-
-
+- [Inclusión de las aplicaciones web de .NET Framework con contenedores de Windows y Docker en contenedores](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+- [Agregar compatibilidad con Docker a un servicio WCF](https://github.com/dotnet-architecture/eShopModernizing/wiki/22.-Adding-Docker-Support)
 
 ## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>Tutorial 3: Implementar la aplicación basada en contenedores de Windows en máquinas virtuales de Azure
 
@@ -149,7 +140,7 @@ El tutorial técnico completo está disponible en el wiki de repositorio de GitH
 
 ### <a name="overview"></a>Información general
 
-Implementación en un host de Docker en un Windows Server 2016 Virtual Machine (máquina virtual) en Azure le permite configurar rápidamente los entornos de desarrollo, prueba y almacenamiento provisional. También ofrece un lugar común para los evaluadores o usuarios empresariales validar la aplicación. Las máquinas virtuales también pueden Compliance válido como un entorno de producción del servicio (IaaS).
+Implementación en un host de Docker en un Windows Server 2016 Virtual Machine (máquina virtual) en Azure le permite configurar rápidamente los entornos de desarrollo, prueba y almacenamiento provisional. También ofrece un lugar común para los evaluadores o usuarios empresariales validar la aplicación. Las máquinas virtuales también pueden infraestructura válido como un entorno de producción del servicio (IaaS).
 
 ### <a name="goals"></a>Objetivos
 
@@ -163,19 +154,19 @@ Varios escenarios se tratan en este tutorial.
 
 ![Implementar en una máquina virtual de Azure desde un equipo de desarrollo a través de una conexión con el motor de Docker](./media/image5-4.png)
 
-> **Figura 5-4.** Implementar en una máquina virtual de Azure desde un equipo de desarrollo a través de una conexión con el motor de Docker
+**Figura 5-4.** Implementar en una máquina virtual de Azure desde un equipo de desarrollo a través de una conexión con el motor de Docker
 
 #### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Escenario B: Implementar en una máquina virtual de Azure a través de un registro de Docker
 
 ![Implementar en una máquina virtual de Azure a través de un registro de Docker](./media/image5-5.png)
 
-> **Figura 5-5.** Implementar en una máquina virtual de Azure a través de un registro de Docker
+**Figura 5-5.** Implementar en una máquina virtual de Azure a través de un registro de Docker
 
 #### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Escenario de C: Implementar en una máquina virtual de Azure desde las canalizaciones de CI/CD en servicios de Azure DevOps
 
 ![Implementar en una máquina virtual de Azure desde las canalizaciones de CI/CD en servicios de Azure DevOps](./media/image5-6.png)
 
-> **Figura 5-6**. Implementar en una máquina virtual de Azure desde las canalizaciones de CI/CD en servicios de Azure DevOps
+**Figura 5-6**. Implementar en una máquina virtual de Azure desde las canalizaciones de CI/CD en servicios de Azure DevOps
 
 ### <a name="azure-vms-for-windows-containers"></a>Máquinas virtuales de Azure para contenedores de Windows
 
@@ -227,10 +218,9 @@ Como término principal, mediante Azure Container Instances es una opción muy a
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Explore este contenido más detallada en el sitio wiki de GitHub: 
+Explore este contenido más detallada en el sitio wiki de GitHub:
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
-
 
 ## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>Tutorial 5: Implementar las aplicaciones de Windows basada en contenedores en Kubernetes en Azure Container Service
 
@@ -248,9 +238,9 @@ Una aplicación que se basa en contenedores de Windows rápidamente deba usar la
 
 Es el objetivo de este tutorial aprender a implementar una aplicación basada en el contenedor de Windows en Kubernetes (también denominado *K8s*) en Azure Container Service. Implementación en Kubernetes desde cero es un proceso de dos pasos:
 
-1.  Implementar un clúster de Kubernetes en Azure Container Service.
+1. Implementar un clúster de Kubernetes en Azure Container Service.
 
-2.  Implementar la aplicación y los recursos relacionados en el clúster de Kubernetes.
+2. Implementar la aplicación y los recursos relacionados en el clúster de Kubernetes.
 
 ### <a name="scenarios"></a>Escenarios
 
@@ -258,13 +248,13 @@ Es el objetivo de este tutorial aprender a implementar una aplicación basada en
 
 ![Implementar directamente en un clúster de Kubernetes desde un entorno de desarrollo](./media/image5-7.png)
 
-> **Figura 5-7.** Implementar directamente en un clúster de Kubernetes desde un entorno de desarrollo
+**Figura 5-7.** Implementar directamente en un clúster de Kubernetes desde un entorno de desarrollo
 
 #### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Escenario B: Implementar en un clúster de Kubernetes desde las canalizaciones de CI/CD en servicios de Azure DevOps
 
 ![Implementar en un clúster de Kubernetes desde las canalizaciones de CI/CD en servicios de Azure DevOps](./media/image5-8.png)
 
-> **Figura 5-8.** Implementar en un clúster de Kubernetes desde las canalizaciones de CI/CD en servicios de Azure DevOps
+**Figura 5-8.** Implementar en un clúster de Kubernetes desde las canalizaciones de CI/CD en servicios de Azure DevOps
 
 ### <a name="benefits"></a>Ventajas
 
@@ -308,9 +298,9 @@ Una aplicación basada en contenedores de Windows rápidamente debe usar las pla
 
 Es el objetivo de este tutorial aprender a implementar una aplicación basada en el contenedor de Windows en un clúster de Service Fabric en Azure. Implementación en Service Fabric desde cero es un proceso de dos pasos:
 
-1.  Implementar un clúster de Service Fabric en Azure (o a un entorno diferente).
+1. Implementar un clúster de Service Fabric en Azure (o a un entorno diferente).
 
-2.  Implementar la aplicación y los recursos relacionados en el clúster de Service Fabric.
+2. Implementar la aplicación y los recursos relacionados en el clúster de Service Fabric.
 
 ### <a name="scenarios"></a>Escenarios
 
@@ -324,7 +314,7 @@ Es el objetivo de este tutorial aprender a implementar una aplicación basada en
 
 ![Implementar en un clúster de Service Fabric desde canalizaciones de CI/CD en servicios de Azure DevOps](./media/image5-10.png)
 
-> **Figura 5-10.** Implementar en un clúster de Service Fabric desde canalizaciones de CI/CD en servicios de Azure DevOps
+**Figura 5-10.** Implementar en un clúster de Service Fabric desde canalizaciones de CI/CD en servicios de Azure DevOps
 
 ## <a name="benefits"></a>Ventajas
 
@@ -366,6 +356,6 @@ Explore este contenido más detallada en el sitio wiki de GitHub:
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
->[!div class="step-by-step"]
->[Anterior](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
->[Siguiente](conclusions.md)
+> [!div class="step-by-step"]
+> [Anterior](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
+> [Siguiente](conclusions.md)

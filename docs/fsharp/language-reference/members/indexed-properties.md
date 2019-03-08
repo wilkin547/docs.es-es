@@ -2,12 +2,12 @@
 title: Propiedades indizadas
 description: Obtenga información sobre las propiedades indizadas en F#, que permiten obtener acceso a la forma de matriz a los datos ordenados.
 ms.date: 10/17/2018
-ms.openlocfilehash: a092da753acacf80807d145051a719df2d3e1520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc330641c451973ddefa0a34fe6e757a808f6cb7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550973"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678622"
 ---
 # <a name="indexed-properties"></a>Propiedades indizadas
 
@@ -67,7 +67,7 @@ El código siguiente muestra el uso de una propiedad indizada con varios valores
 ```fsharp
 open System.Collections.Generic
 
-/// Basic implementation of a sparse matrix basedon a dictionary
+/// Basic implementation of a sparse matrix based on a dictionary
 type SparseMatrix() =
     let table = new Dictionary<(int * int), float>()
     member __.Item

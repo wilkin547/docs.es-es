@@ -4,22 +4,22 @@ description: Comprender que Docker, contenedores y una arquitectura de Microserv
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: be7799fe0ac3c22d0ffda5bc4b7e5e42f956a15e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ac4ca2d4a24e2d26fd639eafd62968188dbeb483
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442430"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674437"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>Carretera para aplicaciones modernas basadas en contenedores
 
-Probablemente está leyendo este libro porque está planeando el desarrollo de aplicaciones nueva o se está evaluando el impacto del uso de Docker, contenedores y enfoques nuevos como los Microservicios en su empresa.
+Probablemente está leyendo este libro porque está planeando el desarrollo de aplicaciones nueva o va a evaluar el impacto del uso de Docker, contenedores y enfoques nuevos como los Microservicios en su empresa.
 
 La adopción de nuevos paradigmas de desarrollo debe tener con cuidado antes de iniciar un proyecto, para evaluar el impacto en sus equipos de desarrollo, su presupuesto o su infraestructura.
 
 Microsoft ha estado trabajando en una guía enriquecida, las aplicaciones de ejemplo y un conjunto de libros electrónicos, que pueden ayudarle a tomar una decisión informada y Guía de su equipo a través de un correcto desarrollo, implementación y operaciones de sus nuevas aplicaciones.
 
-Este libro pertenece a un conjunto de Microsoft de las guías que abarcan muchas de las necesidades y desafíos específicos que afrontará durante el proceso de desarrollo de aplicaciones modernas en función de los contenedores.
+Este libro pertenece a un conjunto de Microsoft de las guías que abarcan muchas de las necesidades y los desafíos que encontrará durante el proceso de desarrollo de aplicaciones modernas en función de los contenedores.
 
 Puede encontrar más libros electrónicos de Microsoft relacionados con los contenedores de Docker en la lista siguiente:
 

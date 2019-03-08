@@ -4,12 +4,12 @@ description: Comprender la función clave de contenedores para agilizar DevOps.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 752a678be7735f7ae962005e1d373993d1496753
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 4b40837bf2b74d801b9794c88e79eb03bcd72e95
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583737"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679104"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Contenedores como base para la colaboración de DevOps
 
@@ -33,7 +33,7 @@ Los dos equipos son colaborar a través de una plataforma fundamental (contenedo
 
 Hay muchas razones que aumentarán el número de aplicaciones en contenedores en los próximos años, y uno de estos motivos es que la creación de aplicaciones basadas en microservicios.
 
-Durante los últimos 15 años, el uso de servicios web ha sido la base de miles de aplicaciones y, probablemente, después de unos pocos años, encontraremos la misma situación con aplicaciones basadas en microservicios que se ejecutan en contenedores de Docker.
+Durante los últimos 15 años, el uso de servicios web ha sido la base de miles de aplicaciones, y probablemente, después de unos pocos años, buscaremos la misma situación con aplicaciones basadas en microservicios que se ejecutan en contenedores de Docker.
 
 También merece la pena mencionar que también puede usar contenedores de Docker para las aplicaciones monolíticas y todavía obtendrá la mayoría de las ventajas de Docker. Los contenedores no concentran en microservicios únicamente.
 
@@ -63,11 +63,11 @@ Figura 2-2 presenta un flujo de trabajo más detallada para un ciclo de vida de 
 
 **Figura 2-2.** Flujo de trabajo de alto nivel para el ciclo de vida de la aplicación en contenedores de Docker
 
-Todo comienza con el desarrollador, que comienza a escribir código en el flujo de trabajo de bucle interno. El escenario de bucle interno es donde los desarrolladores definen todo lo que ocurre antes de insertar código en el repositorio de código (por ejemplo, un sistema de control de código fuente como Git). Una vez confirmada, desencadena el repositorio de integración continua (CI) y el resto del flujo de trabajo.
+Todo comienza con el desarrollador, que comienza a escribir código en el flujo de trabajo de bucle interno. El escenario de bucle interno es donde los desarrolladores definen todo lo que ocurre antes de insertar código en el repositorio de código (por ejemplo, un sistema de control de código fuente como Git). Una vez confirmado, los desencadenadores de repositorio integración continua (CI) y el resto del flujo de trabajo.
 
 El bucle interno básicamente consta de los pasos típicos, como "código", "run", "test","y"Depurar", además de los pasos adicionales necesarios justo antes de ejecutar la aplicación localmente. Se trata de un proceso del desarrollador para ejecutar y probar la aplicación como un contenedor de Docker. El flujo de trabajo de bucle interno se explican en las secciones siguientes.
 
-Dar un paso atrás para observar el flujo de trabajo end-to-end, el flujo de trabajo de DevOps es más que una tecnología o un conjunto de herramientas: es una actitud que requiere la evolución de referencia cultural. Resulta que las personas, procesos y las herramientas adecuadas para realizar su ciclo de vida de aplicación más rápido y más predecible. Las empresas que adoptan un flujo de trabajo en contenedores normalmente reestructuración sus organizaciones para representar las personas y procesos que coinciden con el flujo de trabajo en contenedores.
+Dar un paso atrás para observar el flujo de trabajo end-to-end, el flujo de trabajo de DevOps es más que una tecnología o un conjunto de herramientas: es una actitud que requiere la evolución de referencia cultural. Su personas, procesos y las herramientas adecuadas para realizar su ciclo de vida de aplicación más rápido y más predecible. Las empresas que adoptan un flujo de trabajo en contenedores normalmente reestructuración sus organizaciones para representar las personas y procesos que coinciden con el flujo de trabajo en contenedores.
 
 Practicar DevOps puede ayudar a los equipos a responder con mayor rapidez conjuntamente presiones competitivas reemplazando los procesos manuales propensos a errores con la automatización, lo que resulta en rastreabilidad mejorada y flujos de trabajo repetibles. Las organizaciones también pueden administrar entornos de manera más eficaz y darse cuenta de ahorro de costos con una combinación de servidores locales y recursos en la nube, así como herramientas estrechamente integradas.
 

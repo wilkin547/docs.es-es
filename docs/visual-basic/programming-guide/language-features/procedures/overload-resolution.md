@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: c55b1c001ae1c74b0c34d716b9fa3f90dade3e28
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 435ba13b6d0b2a7d272c7f2bbea7ec410dd3d5e7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966234"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678829"
 ---
 # <a name="overload-resolution-visual-basic"></a>Resolución de sobrecarga (Visual Basic)
 Cuando el compilador de Visual Basic encuentra una llamada a un procedimiento que se define en varias versiones sobrecargadas, el compilador debe decidir cuál de las sobrecargas para llamar a. Para ello, siga estos pasos:  
@@ -36,8 +36,7 @@ Cuando el compilador de Visual Basic encuentra una llamada a un procedimiento qu
   
  La siguiente ilustración muestra el proceso que determina qué conjunto de versiones sobrecargadas para llamar a.  
   
- ![Diagrama de flujo del proceso de resolución de sobrecarga](./media/overloadres.gif "OverloadRes")  
-Resolver entre versiones sobrecargadas  
+ ![Diagrama de flujo del proceso de resolución de sobrecarga](./media/overload-resolution/determine-overloaded-version.gif "resolver entre versiones sobrecargadas")    
   
  El ejemplo siguiente ilustra este proceso de resolución de sobrecarga.  
   

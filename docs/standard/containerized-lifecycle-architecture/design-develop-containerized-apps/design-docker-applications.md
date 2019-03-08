@@ -4,12 +4,12 @@ description: Aquí encontrará una referencia a una guía exhaustiva para la arq
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 5238ef8d9025f1518d513bfa7ff83eb51c2b88df
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 858147883b3b4a5a5f487856028fdbfa84f6cca9
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748627"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675191"
 ---
 # <a name="design-docker-applications"></a>Diseñar aplicaciones de Docker
 
@@ -17,7 +17,7 @@ Capítulo 1 introdujo los conceptos fundamentales sobre los contenedores y Docke
 
 **Obtener más información** para obtener más información acerca de las aplicaciones empresariales y la arquitectura de microservicios en profundidad, lea la guía [NET Microservicios: Arquitectura de aplicaciones .NET en contenedor](https://docs.microsoft.com/dotnet/standard/microservices-architecture) que también puede descargar desde <https://aka.ms/MicroservicesEbook>.
 
-Sin embargo, antes de entrar en el ciclo de vida de aplicación y DevOps, es importante saber cómo va al diseño y construir la aplicación y cuáles son las opciones de diseño.
+Sin embargo, antes de entrar en el ciclo de vida de aplicación y DevOps, es importante saber cómo va a diseño y construir la aplicación y cuáles son las opciones de diseño.
 
 >[!div class="step-by-step"]
 >[Anterior](index.md)

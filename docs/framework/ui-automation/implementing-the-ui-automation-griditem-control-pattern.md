@@ -6,14 +6,12 @@ helpviewer_keywords:
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: adc018b2bf2b8922505083025135f1becf27f551
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff3f52d37a7d45b92981969983652f48f5071959
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519221"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675776"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>Implementar el patrón de control GridItem de UI Automation
 > [!NOTE]
@@ -33,7 +31,7 @@ ms.locfileid: "54519221"
   
 -   <xref:System.Windows.Automation.Provider.IGridItemProvider> no permite la manipulación activa de la cuadrícula, como la combinación o la división de celdas.  
   
--   Los controles que implementan <xref:System.Windows.Automation.Provider.IGridItemProvider> normalmente se pueden atravesar (es decir, un cliente de Automatización de la interfaz de usuario puede moverse a los controles adyacentes) con el teclado.  
+-   Los controles que implementan <xref:System.Windows.Automation.Provider.IGridItemProvider> normalmente se pueden atravesar (es decir, un cliente de UI Automation puede moverse a los controles adyacentes) con el teclado.  
   
 <a name="Required_Members_for_IGridItemProvider"></a>   
 ## <a name="required-members-for-igriditemprovider"></a>Miembros requeridos para IGridItemProvider  

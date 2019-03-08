@@ -2,12 +2,12 @@
 title: Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442898"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680391"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)
 Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ayuda a analizar seguimientos del diagnóstico generados por WCF. Service Trace Viewer proporciona una manera de combinar fácilmente, ver y filtrar los mensajes de seguimiento en el registro de modo que puede diagnosticar, reparar y comprobar los problemas de servicio WCF.  
@@ -50,7 +50,13 @@ Herramienta Service Trace Viewer de Windows Communication Foundation (WCF) le ay
 |ActivityTracing|Transmitir eventos entre actividades de procesamiento y componentes.<br /><br /> Este nivel permite a los administradores y programadores poner en correlación las aplicaciones en el mismo dominio de aplicación.<br /><br /> -Seguimientos de los límites de actividad: iniciar o detener.<br />-Seguimiento de las transferencias.|  
   
  Puede utilizar `add` para especificar el nombre y tipo de agente de escucha de seguimiento que desea utilizar. En la configuración del ejemplo, el agente de escucha se denomina `sdt` y se agrega como tipo el agente de escucha de traza de .NET Framework estándar (`System.Diagnostics.XmlWriterTraceListener`). Utilice `initializeData` para establecer el nombre del archivo de registro para ese agente de escucha. Además, puede sustituir un nombre de archivo simple por una ruta de acceso completa.  
-  
+
+A partir de .NET Framework 4.8, controles de cuadro combinado en algunos temas de contraste alto se muestran en el color correcto. Puede deshabilitar este cambio mediante la eliminación de la siguiente configuración de la *svcTraceViewer.exe.config* archivo:
+
+```xml
+<AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+```
+
 ## <a name="using-the-service-trace-viewer-tool"></a>Utilizar la herramienta de visor de seguimiento de servicio  
   
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Abrir y ver los archivos de seguimiento de WCF  

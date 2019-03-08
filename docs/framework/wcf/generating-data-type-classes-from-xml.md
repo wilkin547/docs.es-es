@@ -2,19 +2,19 @@
 title: Generar clases de tipos de datos a partir de XML
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: 6b38a0aea3101c70b3c3ec0c8feb4ee88018b64e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6666f1ba23dd563bd7a005d458cd7fe8253c3af
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498672"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679091"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>Generar clases de tipos de datos a partir de XML
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] incluye una nueva característica para generar clases de tipo de datos de XML. Este tema describe cómo generar automáticamente tipos de datos para la fuente RSS de Blog. NET.  
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] incluye una nueva característica para generar clases de tipo de datos de XML. Este tema describe cómo generar automáticamente los tipos de datos para la fuente RSS de blogs. NET.  
   
-### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>Obtener el XML de RSS del Blog de .NET de fuentes de distribución  
+### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>Obtener XML desde el RSS del Blog de .NET de fuente  
   
-1.  En Internet Explorer, vaya a la [fuente RSS del Blog de .NET](https://blogs.msdn.microsoft.com/dotnet/feed/).  
+1.  En Internet Explorer, vaya a la [fuente de RSS del Blog .NET](https://devblogs.microsoft.com/dotnet/feed/).  
   
 2.  Haga clic en la página y seleccione **ver código fuente**.  
   

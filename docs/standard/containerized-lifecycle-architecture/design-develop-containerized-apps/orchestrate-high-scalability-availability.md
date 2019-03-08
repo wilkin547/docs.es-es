@@ -4,16 +4,16 @@ description: Las aplicaciones de producción real se tienen que se implementan y
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e1ff3282c1fdf952177a1faa957398c33045a01c
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: b8c947ffc34b62204b6a370f1133111a3e2d3198
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836167"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679052"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 
-Con orquestadores para aplicaciones de entornos de producción es fundamental si la aplicación basada en microservicios o dividir entre varios contenedores. Como se mencionó anteriormente, en un enfoque basado en microservicios, cada microservicio posee su modelo y sus datos para que sea autónomo desde un punto de vista del desarrollo y la implementación. Pero incluso si tiene una aplicación más tradicional que se compone de varios servicios (por ejemplo, SOA), también tendrá varios contenedores o servicios que conforman una sola aplicación de negocio que deben implementarse como un sistema distribuido. Estos tipos de sistemas son difíciles de administrar y escalar horizontalmente; por lo tanto, un orquestador es indispensable si se quiere tener una aplicación de varios contenedores, escalable y lista para la producción.
+Con orquestadores para aplicaciones de entornos de producción es fundamental si la aplicación basada en microservicios o dividir entre varios contenedores. Como se mencionó anteriormente, en un enfoque basado en microservicios, cada microservicio posee su modelo y sus datos para que sea autónomo desde un punto de vista del desarrollo y la implementación. Pero incluso si tiene una aplicación más tradicional que se compone de varios servicios (por ejemplo, SOA), también tendrá varios contenedores o servicios que conforman una sola aplicación de negocio que deban implementarse como un sistema distribuido. Estos tipos de sistemas son difíciles de administrar y escalar horizontalmente; por lo tanto, un orquestador es indispensable si se quiere tener una aplicación de varios contenedores, escalable y lista para la producción.
 
 Figura 4-6 ilustra la implementación en un clúster de una aplicación formada por varios microservicios (contenedores).
 
@@ -27,7 +27,7 @@ La interfaz de línea de comandos (CLI) de Docker satisface las necesidades de a
 
 Para ir más allá de la administración de contenedores individuales o aplicaciones compuestas simple y avance hacia las aplicaciones empresariales más grandes con microservicios, debe desactivar la orquestación y agrupación en clústeres de plataformas.
 
-Desde una arquitectura y desarrollo de punto de vista, si son creación grande, enterprise, basada en microservicios, aplicaciones, es importante comprender las siguientes plataformas y productos que admiten escenarios avanzados:
+Desde una arquitectura y desarrollo de punto de vista, si le creación grande, enterprise, basada en microservicios, aplicaciones, es importante comprender las siguientes plataformas y productos que admiten escenarios avanzados:
 
 - **Clústeres y orquestadores**. Cuando necesite escalar horizontalmente las aplicaciones en varios hosts de Docker, como con una aplicación grande basada en microservicios, es fundamental poder administrar todos los hosts como un solo clúster mediante la abstracción de la complejidad de la plataforma subyacente. Eso es lo que proporcionan los clústeres de contenedor y los orquestadores. Azure Service Fabric y Kubernetes son ejemplos de orquestadores. Kubernetes está disponible en Azure a través de Azure Kubernetes Service.
 
@@ -56,7 +56,7 @@ AKS proporciona una manera de simplificar la creación, la configuración y la a
 
 Azure Kubernetes Service optimiza la configuración de tecnologías y herramientas populares de código abierto de agrupación en clústeres de Docker específicamente para Azure. Se trata de una solución abierta que ofrece la portabilidad de los contenedores y la configuración de la aplicación. Seleccione el tamaño, el número de hosts y las herramientas de orquestador, y AKS se encarga de todo lo demás.
 
-![Estructura de un clúster de Kubernetes: Hay un nodo maestro que controla el DNS, programador, proxy, etc. y varios nodos de trabajo, que hospedan los contenedores.](media/image36.png)
+![Estructura de un clúster de Kubernetes: hay un nodo maestro que controla el DNS, el programador, el proxy, etc., y varios nodos de trabajo, que hospedan los contenedores.](media/image36.png)
 
 **Figura 4-7**. Topología y estructura simplificada del clúster de Kubernetes
 
@@ -80,7 +80,7 @@ Para la implementación adicional según la información sobre la implementació
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Implementar con gráficos de Helm en clústeres de Kubernetes
 
-Al implementar una aplicación en un clúster de Kubernetes, puede utilizar el original `kubectl.exe` herramienta CLI mediante archivos de implementación basada en el formato nativo (`.yaml` archivos), como ya se mencionó en la sección anterior. Sin embargo, para aplicaciones de Kubernetes más complejas, como al implementar aplicaciones complejas basadas en microservicios, se recomienda usar [Helm](https://helm.sh/).
+Al implementar una aplicación en un clúster de Kubernetes, puede utilizar el original `kubectl.exe` herramienta CLI mediante archivos de implementación basada en el formato nativo (`.yaml` archivos), como ya se mencionó en la sección anterior. Pero, para aplicaciones de Kubernetes más complejas, como al implementar aplicaciones complejas basadas en microservicios, se recomienda usar [Helm](https://helm.sh/).
 
 Gráficos de helm le ayuda a definir, versión, la instalación, recurso compartido, actualización o reversión incluso la aplicación más compleja de Kubernetes.
 
@@ -149,7 +149,7 @@ Para más información actualizada sobre la compatibilidad con contenedores en A
 
 Service Fabric es un buen ejemplo de una plataforma donde podrá definir una arquitectura lógica diferente (microservicios empresariales o contextos delimitados) de la implementación física. Por ejemplo, si implementa [Reliable Services con estado](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) en [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview), que se describen en la sección siguiente, "[sin estado frente a microservicios con estado](#stateless-versus-stateful-microservices), "tiene un concepto de microservicio empresarial con varios servicios físicos.
 
-Como se muestra en la figura 4-10 y pensar desde una perspectiva de microservicio lógico/empresarial, al implementar un servicio de Service Fabric con estado confiable, normalmente deberá implementar dos niveles de servicios. El primero es el servicio de confianza con estado back-end, que administra varias particiones (cada partición es un servicio con estado). El segundo es el servicio front-end, o servicio de puerta de enlace, que se encarga del enrutamiento y de la agregación de datos en varias particiones o instancias de servicio con estado. Este servicio de puerta de enlace también controla la comunicación del lado cliente con los bucles de reintento que acceden al servicio back-end. Se llama a un servicio de puerta de enlace si implementa el servicio personalizado o como alternativa también puede usar el cuadro de Service Fabric [proxy inverso](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy).
+Como se muestra en la figura 4-10 y pensar desde una perspectiva de microservicio lógico/empresarial, al implementar un servicio de Service Fabric con estado confiable, normalmente deberá implementar dos niveles de servicios. El primero es el servicio de confianza con estado back-end, que administra varias particiones (cada partición es un servicio con estado). El segundo es el servicio front-end, o servicio de puerta de enlace, que se encarga del enrutamiento y de la agregación de datos en varias particiones o instancias de servicio con estado. Este servicio de puerta de enlace también controla la comunicación del lado cliente con los bucles de reintento que acceden al servicio back-end. Se denomina servicio de puerta de enlace si implementa el servicio personalizado, pero alternativamente también puede usar el [proxy inverso](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) estándar de Service Fabric.
 
 ![Service Fabric tiene la receta para admitir varios servicios confiables con estado en contenedores.](./media/service-fabric-stateful-business-microservice.png)
 

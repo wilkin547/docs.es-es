@@ -2,12 +2,12 @@
 title: Operaciones Set (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 3aaccd2b91e842bb433fe97e59314860c631341e
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 8ec7f2785617c354a1aa506ac0df9eef7d051b59
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200766"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679299"
 ---
 # <a name="set-operations-visual-basic"></a>Operaciones Set (Visual Basic)
 Las operaciones set de LINQ se refieren a operaciones de consulta que generan un conjunto de resultados en función de la presencia o ausencia de elementos equivalentes dentro de la misma colección o en distintas colecciones (o conjuntos).  
@@ -33,7 +33,7 @@ Las operaciones set de LINQ se refieren a operaciones de consulta que generan un
 ### <a name="except"></a>Except  
  En la siguiente ilustración se muestra el comportamiento de <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. La secuencia devuelta solo contiene los elementos de la primera secuencia de entrada que no están en la segunda secuencia de entrada.  
   
- ![Gráfico que muestra la acción de Except&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
+ ![Gráfico mostrando la acción de excepto&#40;&#41;. ](./media/set-operations/except-behavior-graphic.png "Muestra el comportamiento de excepción.")  
   
 ### <a name="intersect"></a>Formar intersección  
  En la siguiente ilustración se muestra el comportamiento de <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. La secuencia devuelta contiene los elementos que son comunes a las dos secuencias de entrada.  

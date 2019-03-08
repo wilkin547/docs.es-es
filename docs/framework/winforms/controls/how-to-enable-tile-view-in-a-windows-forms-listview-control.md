@@ -1,5 +1,5 @@
 ---
-title: Filtrar Habilitar la vista en mosaico en un Control ListView de formularios de Windows
+title: Procedimiento Habilitar la vista en mosaico en un Control ListView de formularios de Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: 34e7025ab29ec2e0d2035fa07f2a6d53c2b197c9
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 4bc5a9dfc17acc453030c6213b9c76572d21c474
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261718"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675815"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Filtrar Habilitar la vista en mosaico en un Control ListView de formularios de Windows
 Con la característica de vista de mosaico del control <xref:System.Windows.Forms.ListView>, puede proporcionar equilibrio visual entre la información gráfica y de texto. La información de texto que se muestra para un elemento en la vista de mosaico es igual que la información de columna definida para la vista de detalles. La vista de mosaico funciona en combinación con las características de marca de inserción o agrupación del control <xref:System.Windows.Forms.ListView>.  
   
  La vista de mosaico usa un icono de 32 x 32 píxeles y varias líneas de texto, tal y como se muestra en las siguientes imágenes.  
   
- ![Vista en mosaico en un Control ListView](../../../../docs/framework/winforms/controls/media/listviewtile.gif "ListViewTile")  
-Texto e iconos de la vista de mosaico  
+ ![Vista en mosaico en un ListView Control](./media/how-to-enable-tile-view-in-a-windows-forms-listview-control/tile-view-in-listview-control.gif "icono Ver iconos y texto")  
+  
   
  Para habilitar la vista de mosaico, establezca la propiedad <xref:System.Windows.Forms.ListView.View%2A> en <xref:System.Windows.Forms.View.Tile>. Puede ajustar el tamaño de los mosaicos estableciendo la propiedad <xref:System.Windows.Forms.ListView.TileSize%2A>, y el número de líneas de texto que se muestran en el mosaico ajustando la colección <xref:System.Windows.Forms.ListView.Columns%2A>.  
   
