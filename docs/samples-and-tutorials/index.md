@@ -1,24 +1,14 @@
 ---
-title: Ejemplos y tutoriales
-description: Información sobre ejemplos y tutoriales de .NET Core, ASP.NET Core y el lenguaje C# que lo ayuda a conocer más sobre .NET.
-keywords: .NET, .NET Core, ASP.NET, C#, ejemplo, tutorial
+title: Ejemplos y tutoriales de .NET
+description: 'Información sobre ejemplos y tutoriales de .NET Core, ASP.NET Core y el lenguaje C# que lo ayuda a conocer más sobre .NET.'
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: dotnet
-ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: f69aa704b05bffeaf932a093b991810f8678251c
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30957651"
 ---
-# <a name="samples-and-tutorials"></a>Ejemplos y tutoriales
 
-La documentación de .NET contiene una serie de ejemplos y tutoriales con información sobre .NET. En este tema se describe cómo buscar, ver y descargar los tutoriales y ejemplos de .NET Core, ASP.NET Core y C#. Puede encontrar recursos para obtener información sobre el lenguaje de programación F# en el [sitio de la Fundación F #](http://fsharp.org/learn.html). Si le interesa explorar C# utilizando un editor de código en línea, comience con [este tutorial interactivo](https://www.microsoft.com/net/learn/in-browser-tutorial/1) y continúe con las [guía de inicio rápido interactivas de C#](../csharp/quick-starts/index.md). Para obtener instrucciones sobre cómo ver y descargar código de ejemplo, vea la sección [Consulta y descarga de ejemplos](#viewing-and-downloading-samples).
+# <a name="net-samples-and-tutorials"></a>Ejemplos y tutoriales de .NET
+
+La documentación de .NET contiene una serie de ejemplos y tutoriales con información sobre .NET. En este tema se describe cómo buscar, ver y descargar los tutoriales y ejemplos de .NET Core, ASP.NET Core y C#. Puede encontrar recursos para obtener información sobre el lenguaje de programación F# en el [sitio de la Fundación F#](https://fsharp.org/learn.html). Si le interesa explorar C# usando un editor de código en línea, comience con [este tutorial interactivo](https://www.microsoft.com/net/learn/in-browser-tutorial/1) y continúe con el [tutorial interactivo de C#](../csharp/tutorials/intro-to-csharp/index.md). Para obtener instrucciones sobre cómo ver y descargar código de ejemplo, vea la sección [Consulta y descarga de ejemplos](#viewing-and-downloading-samples).
 
 ## <a name="net-core"></a>Núcleo de .NET
 
@@ -66,6 +56,10 @@ Este ejemplo muestra muchos de los problemas que pueden resolverse mediante el u
 
 Esta serie de ejemplos muestra muchas de las características de Language Integrated Query (LINQ). El [ejemplo completo](https://github.com/dotnet/samples/tree/master/core/linq/csharp) está disponible en el repositorio dotnet/samples de GitHub.
 
+**Ejemplo de los PIA de Microsoft Office**
+
+Con el ejemplo [ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo) se demuestra el consumo de las [PIA de Microsoft Office](/visualstudio/vsto/office-primary-interop-assemblies) en .NET Core.
+
 ### <a name="tutorials"></a>Tutoriales
 
 **[Aplicación de consola](../csharp/tutorials/console-teleprompter.md)**
@@ -80,10 +74,6 @@ En este tutorial se muestran las comunicaciones web, la serialización de JSON y
 
 Este tutorial muestra muchas de las características de LINQ y los elementos del lenguaje compatibles. El [ejemplo completo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) está disponible en el repositorio dotnet/samples de GitHub.
 
-**[Microservicios hospedados en Docker](../csharp/tutorials/microservices.md)**
-
-Este tutorial muestra la creación de un microservicio de ASP.NET Core y el hospedaje en Docker. El [ejemplo completo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice) está disponible en el repositorio dotnet/samples de GitHub.
-
 **[Introducción a .NET Core en macOS con Visual Studio para Mac ](../core/tutorials/using-on-mac-vs.md)**
 
 En este tutorial se muestra cómo crear una sencilla aplicación de consola de .NET Core con Visual Studio para Mac.
@@ -91,6 +81,10 @@ En este tutorial se muestra cómo crear una sencilla aplicación de consola de .
 **[Creación de una solución completa de .NET Core en macOS con Visual Studio para Mac](../core/tutorials/using-on-mac-vs-full-solution.md)**
 
 Este tutorial muestra cómo crear una solución completa de .NET Core que incluye una biblioteca reutilizable y pruebas unitarias.
+
+**[Creación de una aplicación de .NET Core con complementos](../core/tutorials/creating-app-with-plugin-support.md)**
+
+En este tutorial se le muestra cómo crear una aplicación sencilla en .NET Core que admita una arquitectura de complementos. El [ejemplo completo](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) está disponible en el repositorio dotnet/samples de GitHub.
 
 ## <a name="deploying-to-containers"></a>Implementación de contenedores
 
@@ -113,6 +107,6 @@ Muchos temas muestran el código fuente y los ejemplos que están disponibles pa
 1. Navegue por las carpetas del repositorio hasta la ubicación del ejemplo. La ruta de acceso relativa a la ubicación del ejemplo aparece en la barra de direcciones del explorador si sigue el vínculo al ejemplo.
 1. Para ejecutar un ejemplo, cuenta con varias opciones:
    * Use las [herramientas de la CLI de dotnet](../core/tools/index.md): en una ventana de consola, vaya hasta la carpeta del ejemplo y use los comandos de la CLI de dotnet.
-   * Use [Visual Studio](https://www.visualstudio.com/) o [Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/): abra el ejemplo; para ello, seleccione **Archivo > Abrir > Proyecto/Solución** en la barra de menús, vaya hasta la carpeta del proyecto de ejemplo y seleccione el archivo del proyecto (*.csproj* o *.fsproj*).
+   * Use [Visual Studio](https://visualstudio.microsoft.com/) o [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/): abra el ejemplo; para ello, seleccione **Archivo > Abrir > Proyecto/Solución** en la barra de menús, vaya hasta la carpeta del proyecto de ejemplo y seleccione el archivo del proyecto (*.csproj* o *.fsproj*).
    * Use [Visual Studio Code](https://code.visualstudio.com/): abra el ejemplo; para ello, seleccione **Archivo > Abrir carpeta** en la barra de menús y seleccione la carpeta del proyecto del ejemplo.
    * Use un IDE distinto que admita proyectos de .NET Core.
