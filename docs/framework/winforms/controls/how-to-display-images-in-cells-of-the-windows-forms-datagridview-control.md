@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Mostrar imágenes en celdas del Control DataGridView de formularios Windows Forms
+title: Filtrar Mostrar imágenes en celdas del Control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying images
 - data grids [Windows Forms], displaying images in cells
 ms.assetid: 53b13d31-1b56-476d-9ab4-18bfac138a22
-ms.openlocfilehash: 637cb2f51e8ad1161b0208a3ebd8337859261a11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 280f274a0957f098add7fbf2e3b919c33c4c5233
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523602"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704415"
 ---
 # <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>Procedimiento Mostrar imágenes en celdas del Control DataGridView de formularios Windows Forms
 Una imagen o gráfico es uno de los valores que se pueden mostrar en una fila de datos. Con frecuencia, estos gráficos adoptan la forma de fotografía de un empleado o un logotipo de empresa.  
@@ -24,11 +24,11 @@ Una imagen o gráfico es uno de los valores que se pueden mostrar en una fila de
   
  Si el <xref:System.Windows.Forms.DataGridView> origen de datos del control tiene una columna de imágenes, se mostrará de forma automática el <xref:System.Windows.Forms.DataGridView> control.  
   
- El ejemplo de código siguiente muestra cómo extraer un icono desde un recurso incrustado y convertirlo en un mapa de bits para mostrarla en todas las celdas de una columna de imagen. Para obtener otro ejemplo que reemplaza los valores de celda textual con las imágenes correspondientes, vea [Cómo: Personalizar el formato de datos en el Control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+ El ejemplo de código siguiente muestra cómo extraer un icono desde un recurso incrustado y convertirlo en un mapa de bits para mostrarla en todas las celdas de una columna de imagen. Para obtener otro ejemplo que reemplaza los valores de celda textual con las imágenes correspondientes, vea [Cómo: Personalizar el formato de datos en el Control DataGridView de Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="example"></a>Ejemplo  
- [!code-csharp[System.Windows.Forms.DataGridViewMisc#050](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#050)]
- [!code-vb[System.Windows.Forms.DataGridViewMisc#050](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#050)]  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#050)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#050)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -41,5 +41,5 @@ Una imagen o gráfico es uno de los valores que se pueden mostrar en una fila de
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.DataGridView>
-- [Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Cómo: Personalizar el formato de datos en el Control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Cómo: Personalizar el formato de datos en el Control DataGridView de Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

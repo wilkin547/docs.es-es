@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, accessibility properties of controls
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-ms.openlocfilehash: b731f277620925a333c8d9eba64c8900674327da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eee7499373809538355227633ab9a1a66aedb9ed
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552221"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716405"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Propiedades de los controles de formularios Windows Forms que admiten las directrices de accesibilidad
 Los controles en el cuadro de herramientas estándar de Windows Forms admiten muchas de las directrices de accesibilidad, incluida la exposición del foco del teclado y exponer los elementos de la pantalla.  
@@ -31,4 +31,4 @@ Los controles en el cuadro de herramientas estándar de Windows Forms admiten mu
 |BackgroundImage|Deje esta propiedad en blanco para que el texto sea más legible.|  
   
 ## <a name="see-also"></a>Vea también
-- [Tutorial: Crear una aplicación accesible basada en Windows](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)
+- [Tutorial: Crear una aplicación accesible basada en Windows](walkthrough-creating-an-accessible-windows-based-application.md)

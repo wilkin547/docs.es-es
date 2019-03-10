@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Probar el comportamiento de tiempo de ejecución de una clase UserControl
+title: Filtrar Probar el comportamiento de tiempo de ejecución de una clase UserControl
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 06f2320648bd8fee3465ea1672be886293667879
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 0b87034487ef0f2cabed786354682f394500cafc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664424"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707890"
 ---
-# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Filtrar Probar el comportamiento de tiempo de ejecución de una clase UserControl
+# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Procedimiento Probar el comportamiento de tiempo de ejecución de una clase UserControl
 Al desarrollar un <xref:System.Windows.Forms.UserControl>, debe probar su comportamiento en tiempo de ejecución. Puede crear un proyecto de aplicación basada en Windows independiente y colocar el control en un formulario de prueba, pero este procedimiento es un problema. Una forma más rápida y sencilla es usar el **UserControl Test Container** proporcionadas por Visual Studio. Este contenedor de prueba se inicia directamente desde un proyecto de biblioteca de control de Windows.  
   
 > [!IMPORTANT]
@@ -68,7 +68,7 @@ Al desarrollar un <xref:System.Windows.Forms.UserControl>, debe probar su compor
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.UserControl>
-- [Cómo: Crear controles compuestos](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
-- [Tutorial: Crear un Control compuesto con Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Tutorial: Crear un Control compuesto con VisualC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Cómo: Crear controles compuestos](how-to-author-composite-controls.md)
+- [Tutorial: Crear un Control compuesto con Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Tutorial: Crear un Control compuesto con VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [Diseñador de controles de usuario](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

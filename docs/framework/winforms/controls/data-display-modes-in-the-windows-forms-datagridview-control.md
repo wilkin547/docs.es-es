@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], display modes
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-ms.openlocfilehash: 6800294f2bd3a126f9606a7877455248ec76f758
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86eda82cad778978711520bc2951a7a35d133753
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688178"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703085"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Modos de presentación de datos en el control DataGridView de formularios Windows Forms
 El <xref:System.Windows.Forms.DataGridView> control puede mostrar datos en tres modos distintos: dependientes, independientes y virtual. Elija el modo más apropiado según sus requisitos.  
@@ -21,12 +21,12 @@ El <xref:System.Windows.Forms.DataGridView> control puede mostrar datos en tres 
   
  Modo independiente puede ser especialmente útil para datos estáticos de sólo lectura, o cuando desea proporcionar su propio código que interactúa con un almacén de datos externo. Cuando desee que los usuarios interactuar con un origen de datos externos, sin embargo, normalmente usará el modo de enlace.  
   
- Para obtener un ejemplo que usa solo lectura sin enlazar <xref:System.Windows.Forms.DataGridView>, vea [Cómo: Crear un Control DataGridView de formularios de Windows independiente](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).  
+ Para obtener un ejemplo que usa solo lectura sin enlazar <xref:System.Windows.Forms.DataGridView>, vea [Cómo: Crear un Control DataGridView de formularios de Windows independiente](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
   
 ## <a name="bound"></a>Enlazado  
- Modo de enlace es adecuado para la administración de datos mediante la interacción con el almacén de datos automática. Puede adjuntar el <xref:System.Windows.Forms.DataGridView> control directamente a su origen de datos estableciendo el <xref:System.Windows.Forms.DataGridView.DataSource%2A> propiedad. Cuando el control está enlazado a datos, las filas de datos se insertan y se extraen sin necesidad de una administración explícita por parte del usuario. Cuando el <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> propiedad es `true`, cada columna del origen de datos provocará una columna correspondiente que se creará en el control. Si prefiere crear sus propias columnas, puede establecer esta propiedad en `false` y usar el <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> propiedad para enlazar cada columna cuando se configura. Esto es útil cuando desea utilizar un tipo de columna distinto de los tipos que se generan de forma predeterminada. Para obtener más información, consulte [tipos de columna en el DataGridView Control de Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md).  
+ Modo de enlace es adecuado para la administración de datos mediante la interacción con el almacén de datos automática. Puede adjuntar el <xref:System.Windows.Forms.DataGridView> control directamente a su origen de datos estableciendo el <xref:System.Windows.Forms.DataGridView.DataSource%2A> propiedad. Cuando el control está enlazado a datos, las filas de datos se insertan y se extraen sin necesidad de una administración explícita por parte del usuario. Cuando el <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> propiedad es `true`, cada columna del origen de datos provocará una columna correspondiente que se creará en el control. Si prefiere crear sus propias columnas, puede establecer esta propiedad en `false` y usar el <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> propiedad para enlazar cada columna cuando se configura. Esto es útil cuando desea utilizar un tipo de columna distinto de los tipos que se generan de forma predeterminada. Para obtener más información, consulte [tipos de columna en el DataGridView Control de Windows Forms](column-types-in-the-windows-forms-datagridview-control.md).  
   
- Para obtener un ejemplo que usa un límite <xref:System.Windows.Forms.DataGridView> control, vea [Tutorial: Validar datos en el Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
+ Para obtener un ejemplo que usa un límite <xref:System.Windows.Forms.DataGridView> control, vea [Tutorial: Validar datos en el Windows Forms DataGridView Control](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
   
  También puede agregar columnas sin enlazar a un <xref:System.Windows.Forms.DataGridView> control en modo de enlace. Esto es útil cuando desea mostrar una columna de botones o vínculos que los usuarios puedan realizar acciones en filas específicas. También es útil mostrar las columnas con valores calculados de las columnas enlazadas. Puede rellenar los valores de celda para columnas calculadas en un controlador para el <xref:System.Windows.Forms.DataGridView.CellFormatting> eventos. Si usas un <xref:System.Data.DataSet> o <xref:System.Data.DataTable> como origen de datos, sin embargo, puede usar el <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType> propiedad para crear una columna calculada en su lugar. En este caso, el <xref:System.Windows.Forms.DataGridView> control tratará la columna calculada como cualquier otra columna del origen de datos.  
   
@@ -39,7 +39,7 @@ El <xref:System.Windows.Forms.DataGridView> control puede mostrar datos en tres 
   
  Al implementar el modo virtual, deberá realizar un seguimiento cuando se necesita una nueva fila en el modelo de datos y si hay que deshacer la adición de la nueva fila. La implementación exacta de esta funcionalidad depende de la implementación del modelo de datos y la semántica de transacción del modelo de datos; Si el ámbito de confirmación está en el nivel de celda o fila.  
   
- Para obtener más información sobre el modo virtual, consulte [el modo Virtual en el DataGridView Control de Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md). Para obtener un ejemplo que muestra cómo utilizar el modo virtual eventos, consulte [Tutorial: Implementar el modo Virtual en el Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+ Para obtener más información sobre el modo virtual, consulte [el modo Virtual en el DataGridView Control de Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md). Para obtener un ejemplo que muestra cómo utilizar el modo virtual eventos, consulte [Tutorial: Implementar el modo Virtual en el Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.DataGridView>
@@ -47,9 +47,9 @@ El <xref:System.Windows.Forms.DataGridView> control puede mostrar datos en tres 
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>
-- [Mostrar datos en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Tipos de columnas en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
-- [Tutorial: Crear una independiente de Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
-- [Cómo: Enlazar datos al Control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)
-- [Modo virtual del control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Tutorial: Implementar el modo Virtual en el Control DataGridView de formularios de Windows](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
+- [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Tipos de columnas en el control DataGridView de Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
+- [Tutorial: Crear una independiente de Windows Forms DataGridView Control](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [Cómo: Enlazar datos al Control DataGridView de formularios Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [Modo virtual del control DataGridView de Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Tutorial: Implementar el modo Virtual en el Control DataGridView de formularios de Windows](implementing-virtual-mode-wf-datagridview-control.md)

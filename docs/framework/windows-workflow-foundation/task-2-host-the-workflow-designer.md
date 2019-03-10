@@ -2,12 +2,12 @@
 title: 'Tarea 2: Hospedar el Diseñador de flujo de trabajo'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e8895e4b2c90f189c88ec3a803615e736dada455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572778"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708644"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tarea 2: Hospedar el Diseñador de flujo de trabajo
 Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] en una aplicación de Windows Presentation Foundation (WPF).  
@@ -16,7 +16,7 @@ Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[
   
 ### <a name="to-host-the-workflow-designer"></a>Para hospedar el diseñador de flujo de trabajo  
   
-1.  Abra el proyecto HostingApplication que creó en [tarea 1: Crear una nueva aplicación de Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
+1.  Abra el proyecto HostingApplication que creó en [tarea 1: Crear una nueva aplicación de Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).  
   
 2.  Ajuste el tamaño de la ventana para facilitar el uso de [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Para ello, seleccione **MainWindow** en el diseñador, presione F4 para mostrar la **propiedades** ventana y, en el **diseño** sección no existe, establezca el **deancho** en un valor de 600 y **alto** en un valor de 350.  
   
@@ -97,7 +97,7 @@ Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[
         }  
         ```  
   
-         Para obtener más información sobre el registro de los diseñadores de actividad, vea [Cómo: Crear un diseñador de actividad personalizado](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
+         Para obtener más información sobre el registro de los diseñadores de actividad, vea [Cómo: Crear un diseñador de actividad personalizado](how-to-create-a-custom-activity-designer.md).  
   
     5.  En el constructor de clases `MainWindow`, agregue llamadas a los métodos declarados previamente para registrar los metadatos a fin de ser compatibles con el diseñador y crear <xref:System.Activities.Presentation.WorkflowDesigner>.  
   
@@ -119,9 +119,9 @@ Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[
   
 9. Presione F5 para compilar y ejecutar la solución.  
   
-10. Consulte [tarea 3: Crear el cuadro de herramientas y PropertyGrid paneles](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) para obtener información sobre cómo agregar **cuadro de herramientas** y **PropertyGrid** soporte técnico para el Diseñador de flujo de trabajo rehospedado.  
+10. Consulte [tarea 3: Crear el cuadro de herramientas y PropertyGrid paneles](task-3-create-the-toolbox-and-propertygrid-panes.md) para obtener información sobre cómo agregar **cuadro de herramientas** y **PropertyGrid** soporte técnico para el Diseñador de flujo de trabajo rehospedado.  
   
 ## <a name="see-also"></a>Vea también
-- [Rehospedaje del Diseñador de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [Tarea 1: Crear una nueva aplicación de Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [Tarea 3: Crear el cuadro de herramientas y PropertyGrid paneles](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [Rehospedaje del Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md)
+- [Tarea 1: Crear una nueva aplicación de Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Tarea 3: Crear el cuadro de herramientas y PropertyGrid paneles](task-3-create-the-toolbox-and-propertygrid-panes.md)

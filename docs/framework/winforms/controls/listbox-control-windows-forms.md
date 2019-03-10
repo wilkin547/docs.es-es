@@ -9,18 +9,18 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: b0172473-c5f2-411e-aaa4-c8f17cb5eed4
-ms.openlocfilehash: 363fb4d79cf3fab1cdd814e6cf22d399a27864da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09b58bb0440f8ec187c4fa047e280d802747cd3c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534201"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708228"
 ---
 # <a name="listbox-control-windows-forms"></a>ListBox (Control, formularios Windows Forms)
 Un formulario Windows Forms `ListBox` control muestra una lista de elementos desde el que el usuario puede seleccionar uno o más.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre ListBox (Control)](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
+ [Información general sobre ListBox (Control)](listbox-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
 ## <a name="reference"></a>Referencia  
@@ -28,5 +28,5 @@ Un formulario Windows Forms `ListBox` control muestra una lista de elementos des
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles de formularios Windows Forms usados para mostrar opciones](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- Proporciona una lista de acciones que puede realizar con cuadros de lista, cuadros combinados y cuadros de lista activados.
+ [Controles de formularios Windows Forms usados para mostrar opciones](windows-forms-controls-used-to-list-options.md)  
+ Proporciona una lista de cosas que puede hacer con cuadros de lista, cuadros combinados y cuadros de lista activados.

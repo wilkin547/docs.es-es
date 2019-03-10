@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e28a6c82a8dd40885c04c56f2adfb3d38e674066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667562"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711283"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>Información general sobre el control PrintPreviewDialog (formularios Windows Forms)
-Los formularios de Windows <xref:System.Windows.Forms.PrintPreviewDialog> control es un cuadro de diálogo preconfigurado que utiliza para mostrar cómo un [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) aparecerá cuando se imprima. Usar dentro de la aplicación basada en Windows como una solución sencilla, en lugar de configurar su propio cuadro de diálogo. El control contiene botones para imprimir, acercar, mostrar una o varias páginas y cerrar el cuadro de diálogo.  
+Los formularios de Windows <xref:System.Windows.Forms.PrintPreviewDialog> control es un cuadro de diálogo preconfigurado que utiliza para mostrar cómo un [PrintDocument](printdocument-component-windows-forms.md) aparecerá cuando se imprima. Usar dentro de la aplicación basada en Windows como una solución sencilla, en lugar de configurar su propio cuadro de diálogo. El control contiene botones para imprimir, acercar, mostrar una o varias páginas y cerrar el cuadro de diálogo.  
   
 ## <a name="key-properties-and-methods"></a>Los métodos y propiedades de clave  
  Propiedad de clave del control es <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, que establece el documento para la vista preliminar. El documento debe ser un <xref:System.Drawing.Printing.PrintDocument> objeto. Con el fin de mostrar el cuadro de diálogo, debe llamar a su <xref:System.Windows.Forms.Form.ShowDialog%2A> método. Suavizado de contorno puede hacer que el texto aparezca más suave, pero también puede hacer que la pantalla sea más lenta; Para ello, establezca el <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> propiedad `true`.  
@@ -53,6 +53,6 @@ Si usas el <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> evento
 
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.PrintPreviewDialog>
-- [Información general sobre el control PrintPreviewControl](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)
-- [PrintPreviewDialog (control)](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [Controles y componentes de cuadros de diálogo](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
+- [Información general sobre el control PrintPreviewControl](printpreviewcontrol-control-overview-windows-forms.md)
+- [PrintPreviewDialog (control)](printpreviewdialog-control-windows-forms.md)
+- [Controles y componentes de cuadros de diálogo](dialog-box-controls-and-components-windows-forms.md)

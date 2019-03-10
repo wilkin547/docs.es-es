@@ -8,15 +8,15 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
-ms.openlocfilehash: 8d6c509d8e603063309dada6f536c43b8ada5f6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61a8d4baba35a7a8a8ae221b054029eb59107d0e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591739"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716262"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>Información general del componente ErrorProvider (Formularios Windows Forms)
-Los formularios de Windows [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md) componente se utiliza para validar la entrada del usuario en un formulario o control. Normalmente se utiliza junto con la validación de entrada del usuario en un formulario o mostrar errores dentro de un conjunto de datos. Un proveedor de errores es una alternativa mejor que mostrar un mensaje de error en un cuadro de mensaje, porque una vez que se cierra un cuadro de mensaje, el mensaje de error ya no está visible. El <xref:System.Windows.Forms.ErrorProvider> componente muestra un icono de error (![icono ErrorProvider](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "vbErrorProviderIcon")) junto al control correspondiente, por ejemplo, un cuadro de texto cuando el usuario coloca el puntero del mouse sobre el icono de error, que aparece una información sobre herramientas, que muestra la cadena de mensaje de error.  
+Los formularios de Windows [ErrorProvider](errorprovider-component-windows-forms.md) componente se utiliza para validar la entrada del usuario en un formulario o control. Normalmente se utiliza junto con la validación de entrada del usuario en un formulario o mostrar errores dentro de un conjunto de datos. Un proveedor de errores es una alternativa mejor que mostrar un mensaje de error en un cuadro de mensaje, porque una vez que se cierra un cuadro de mensaje, el mensaje de error ya no está visible. El <xref:System.Windows.Forms.ErrorProvider> componente muestra un icono de error (![icono ErrorProvider](./media/vberrorprovidericon.gif "vbErrorProviderIcon")) junto al control correspondiente, por ejemplo, un cuadro de texto cuando el usuario coloca el puntero del mouse sobre el icono de error, que aparece una información sobre herramientas, que muestra la cadena de mensaje de error.  
   
 ## <a name="key-properties"></a>Propiedades clave  
  El <xref:System.Windows.Forms.ErrorProvider> son propiedades clave del componente <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>, <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>, y <xref:System.Windows.Forms.ErrorProvider.Icon%2A>. Cuando se usa <xref:System.Windows.Forms.ErrorProvider> componente con los controles enlazados a datos, el <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> propiedad debe establecerse en el contenedor adecuado (normalmente el formulario de Windows) para el componente mostrar un icono de error en el formulario. Cuando se agrega el componente en el diseñador, el <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> propiedad está establecida en el formulario contenedor; si agrega el control de código, debe establecer usted mismo.  
@@ -28,5 +28,5 @@ Los formularios de Windows [ErrorProvider](../../../../docs/framework/winforms/c
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.ErrorProvider>
-- [Cómo: Ver errores de un conjunto de datos con el componente ErrorProvider de formularios Windows Forms](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)
-- [Cómo: Mostrar iconos de Error de validación de formularios con el componente ErrorProvider de formularios Windows Forms](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [Cómo: Ver errores de un conjunto de datos con el componente ErrorProvider de formularios Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [Cómo: Mostrar iconos de Error de validación de formularios con el componente ErrorProvider de formularios Windows Forms](display-error-icons-for-form-validation-with-wf-errorprovider.md)

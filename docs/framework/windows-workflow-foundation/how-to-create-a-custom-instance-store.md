@@ -1,17 +1,17 @@
 ---
-title: Filtrar Crear un Store de instancia personalizada
+title: Procedimiento Crear un Store de instancia personalizada
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-ms.openlocfilehash: de3602b928a861500e7984fe88bbb2176d58b840
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503195"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707774"
 ---
-# <a name="how-to-create-a-custom-instance-store"></a>Procedimiento Crear un Store de instancia personalizada
+# <a name="how-to-create-a-custom-instance-store"></a>Filtrar Crear un Store de instancia personalizada
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] contiene <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, un almacén de instancias que usa SQL Server para conservar datos del flujo de trabajo. Si la aplicación necesita conservar los datos del flujo de trabajo en otro medio, como una base de datos diferente o un sistema de archivos, puede implementar un almacén de instancias personalizado. Un almacén de instancias personalizado se crea extendiendo la clase <xref:System.Runtime.DurableInstancing.InstanceStore> abstracta e implementando los métodos necesarios para la implementación. Para una implementación completa de un almacén de instancias personalizado, consulte el [proceso de compra corporativa](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) ejemplo.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] contiene <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, un almacén de instancias que usa SQL Server para conservar datos del flujo de trabajo. Si la aplicación necesita conservar los datos del flujo de trabajo en otro medio, como una base de datos diferente o un sistema de archivos, puede implementar un almacén de instancias personalizado. Un almacén de instancias personalizado se crea extendiendo la clase <xref:System.Runtime.DurableInstancing.InstanceStore> abstracta e implementando los métodos necesarios para la implementación. Para una implementación completa de un almacén de instancias personalizado, consulte el [proceso de compra corporativa](./samples/corporate-purchase-process.md) ejemplo.
 
 ## <a name="implementing-the-begintrycommand-method"></a>Implementar el método BeginTryCommand
 
@@ -226,11 +226,11 @@ El motor de persistencia envía <xref:System.Runtime.DurableInstancing.InstanceS
 
 ## <a name="using-a-custom-instance-store"></a>Usar un almacén de instancias personalizado
 
-Para implementar un almacén de instancias personalizado, asigne una instancia del almacén de instancias a <xref:System.Activities.WorkflowApplication.InstanceStore%2A> e implemente el método de <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>. Consulte la [Cómo: Crear y ejecutar un flujo de trabajo de ejecución larga](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) tutorial para obtener información específica.
+Para implementar un almacén de instancias personalizado, asigne una instancia del almacén de instancias a <xref:System.Activities.WorkflowApplication.InstanceStore%2A> e implemente el método de <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>. Consulte la [Cómo: Crear y ejecutar un flujo de trabajo de ejecución larga](how-to-create-and-run-a-long-running-workflow.md) tutorial para obtener información específica.
 
 ## <a name="a-sample-instance-store"></a>Un almacén de instancias de ejemplo
 
-Ejemplo de código siguiente es una implementación de almacén de instancias completa, procedente del [proceso de compra corporativa](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) ejemplo. Este almacén de instancias conserva los datos del flujo de trabajo en un archivo mediante XML.
+Ejemplo de código siguiente es una implementación de almacén de instancias completa, procedente del [proceso de compra corporativa](./samples/corporate-purchase-process.md) ejemplo. Este almacén de instancias conserva los datos del flujo de trabajo en un archivo mediante XML.
 
 ```csharp
 using System;

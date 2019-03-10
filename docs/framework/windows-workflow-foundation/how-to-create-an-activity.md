@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Crear una actividad'
+title: Filtrar Crear una actividad
 ms.date: 09/14/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 8aa6900b26bbe9f77fe0802a7929febe5af61269
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 271f26888e8b140b64464f5c9c4eabb7170afe05
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872962"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709023"
 ---
-# <a name="how-to-create-an-activity"></a>Cómo: Crear una actividad
+# <a name="how-to-create-an-activity"></a>Filtrar Crear una actividad
 
 Las actividades son la unidad básica de comportamiento en [!INCLUDE[wf1](../../../includes/wf1-md.md)]. La lógica de ejecución de una actividad se puede implementar en un código administrado o mediante otras actividades. Este tema muestra cómo crear dos actividades. La primera actividad es una actividad simple que usa código para implementar la lógica de ejecución. La implementación de la segunda actividad se define mediante otras actividades. Estas actividades se usan en los siguientes pasos del tutorial.
 
@@ -42,8 +42,8 @@ Las actividades son la unidad básica de comportamiento en [!INCLUDE[wf1](../../
 
 4.  Reemplace la definición de `ReadInt` existente con la siguiente.
 
-     [!code-csharp[CFX_WF_GettingStarted#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
-     [!code-vb[CFX_WF_GettingStarted#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
+     [!code-csharp[CFX_WF_GettingStarted#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
+     [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
     > La actividad `ReadInt` se deriva de <xref:System.Activities.NativeActivity%601> en lugar de <xref:System.Activities.CodeActivity>, que es el valor predeterminado para la plantilla de actividades de código. <xref:System.Activities.CodeActivity%601> puede usarse si la actividad proporciona un único resultado, que se expone a través del argumento <xref:System.Activities.Activity%601.Result%2A>, pero <xref:System.Activities.CodeActivity%601> no admite el uso de marcadores, por lo que se usa <xref:System.Activities.NativeActivity%601>.
@@ -100,13 +100,13 @@ Las actividades son la unidad básica de comportamiento en [!INCLUDE[wf1](../../
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener instrucciones sobre cómo crear un flujo de trabajo mediante el uso de estas actividades, vea el paso siguiente en el tutorial, [Cómo: crear un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).
+Para obtener instrucciones sobre cómo crear un flujo de trabajo mediante el uso de estas actividades, vea el paso siguiente en el tutorial, [Cómo: crear un flujo de trabajo](how-to-create-a-workflow.md).
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
-- [Diseño e implementación de actividades personalizadas](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)
-- [Tutorial de introducción](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [Cómo crear un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
-- [Uso de ExpressionTextBox en un diseñador de actividad personalizado](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [Diseño e implementación de actividades personalizadas](designing-and-implementing-custom-activities.md)
+- [Tutorial de introducción](getting-started-tutorial.md)
+- [Cómo: Crear un flujo de trabajo](how-to-create-a-workflow.md)
+- [Uso de ExpressionTextBox en un diseñador de actividad personalizado](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

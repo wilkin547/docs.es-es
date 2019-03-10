@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: cc5e1acd26763e2dd4324497f5d9ecde216ea975
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ed48db399ba47f0e6be96f7bca33d3892b19e433
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441468"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707916"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Tutorial: Crear nuevo contenido WPF en Windows Forms en tiempo de diseño
 
@@ -102,16 +102,16 @@ El nuevo control WPF está listo para usarse en el formulario. Windows Forms uti
 
 Windows Forms y WPF son tecnologías diferentes, pero están diseñadas para interoperar estrechamente. Para proporcionar un aspecto y comportamiento en sus aplicaciones, pruebe lo siguiente:
 
-- Hospede un control de Windows Forms en una página WPF. Para obtener más información, vea [Tutorial: Control se hospeda en un Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
+- Hospede un control de Windows Forms en una página WPF. Para obtener más información, vea [Tutorial: Control se hospeda en un Windows Forms en WPF](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
 
-- Aplique estilos visuales de Windows Forms a su contenido de WPF. Para obtener más información, vea [Cómo: Habilitar estilos visuales en una aplicación híbrida](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
+- Aplique estilos visuales de Windows Forms a su contenido de WPF. Para obtener más información, vea [Cómo: Habilitar estilos visuales en una aplicación híbrida](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
 
-- Cambie el estilo de su contenido de WPF. Para obtener más información, vea [Tutorial: Aplicar estilos al contenido WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).
+- Cambie el estilo de su contenido de WPF. Para obtener más información, vea [Tutorial: Aplicar estilos al contenido WPF](walkthrough-styling-wpf-content.md).
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Migración e interoperabilidad](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [Utilizar controles WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [Migración e interoperabilidad](../../wpf/advanced/migration-and-interoperability.md)
+- [Utilizar controles WPF](using-wpf-controls.md)
 - [Diseño de XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

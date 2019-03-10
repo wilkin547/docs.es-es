@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: 96145a6205c3e80b23f3c69750f7faaec04aabba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526748"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714351"
 ---
 # <a name="application-settings-for-custom-controls"></a>Configuración de la aplicación para controles personalizados
 Debe finalizar determinadas tareas para proporcionar a los controles personalizados la capacidad de conservar la configuración de la aplicación cuando los controles se alojan en aplicaciones de terceros.  
@@ -26,7 +26,7 @@ Debe finalizar determinadas tareas para proporcionar a los controles personaliza
   
 2.  Creación de esta clase de configuración personalizada después de haber creado el control y colocado en un formulario, como en el formulario <xref:System.Windows.Forms.Form.Load> controlador de eventos.  
   
- Para obtener instrucciones sobre cómo crear una clase de configuración personalizada, vea [Cómo: Crear configuración de la aplicación](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Para obtener instrucciones sobre cómo crear una clase de configuración personalizada, vea [Cómo: Crear configuración de la aplicación](how-to-create-application-settings.md).  
   
 ## <a name="settings-keys-and-shared-settings"></a>Claves de configuración y la configuración compartida  
  Algunos controles pueden utilizarse varias veces dentro del mismo formulario. La mayoría de los casos, le interesará estos controles para conservar su propia configuración individual. Con el <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> propiedad <xref:System.Configuration.IPersistComponentSettings>, puede proporcionar una cadena única que actúa para eliminar la ambigüedad de varias versiones de un control en un formulario.  
@@ -48,4 +48,4 @@ Debe finalizar determinadas tareas para proporcionar a los controles personaliza
 ## <a name="see-also"></a>Vea también
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Arquitectura de configuración de la aplicación](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Arquitectura de configuración de la aplicación](application-settings-architecture.md)

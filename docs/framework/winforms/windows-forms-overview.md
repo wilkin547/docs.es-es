@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 4c4d3c2f323492cafaa2dc4d52ab994323eba69b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbc77c0074b35a95140b35d71e89c51ad8abac62
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375329"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705849"
 ---
 # <a name="windows-forms-overview"></a>Información general sobre Windows Forms
 
@@ -26,9 +26,9 @@ La información general siguiente explica las ventajas de las aplicaciones smart
 
  En Windows Forms, un *formulario* es una superficie visual en la que se muestra información al usuario. Normalmente, las aplicaciones de Windows Forms se compilan mediante la adición de controles a los formularios y el desarrollo de respuestas a las acciones del usuario, como clics del mouse o presiones de teclas. Un *control* es un elemento de interfaz de usuario (UI) discreto que muestra datos o acepta la entrada de datos.
 
- Cuando un usuario realiza una acción en un formulario o en uno de sus controles, la acción genera un evento. La aplicación reacciona a estos eventos mediante código y procesa los eventos cuando se producen. Para más información, consulte el artículo sobre [creación de controladores de eventos en Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md).
+ Cuando un usuario realiza una acción en un formulario o en uno de sus controles, la acción genera un evento. La aplicación reacciona a estos eventos mediante código y procesa los eventos cuando se producen. Para más información, consulte el artículo sobre [creación de controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md).
 
- Windows Forms contiene diversos controles que puede agregar a los formularios: controles que muestran cuadros de texto, botones, cuadros desplegables, botones de radio e incluso páginas web. Para obtener una lista de todos los controles que puede usar en un formulario, consulte el artículo sobre [controles que se utilizan en formularios Windows Forms](../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md). Si un control existente no satisface sus necesidades, Windows Forms también permite crear controles personalizados mediante la clase <xref:System.Windows.Forms.UserControl>.
+ Windows Forms contiene diversos controles que puede agregar a los formularios: controles que muestran cuadros de texto, botones, cuadros desplegables, botones de radio e incluso páginas web. Para obtener una lista de todos los controles que puede usar en un formulario, consulte el artículo sobre [controles que se utilizan en formularios Windows Forms](./controls/controls-to-use-on-windows-forms.md). Si un control existente no satisface sus necesidades, Windows Forms también permite crear controles personalizados mediante la clase <xref:System.Windows.Forms.UserControl>.
 
  Windows Forms tiene controles de interfaz de usuario enriquecidos que emulan las características de las aplicaciones de tecnología avanzada como Microsoft Office. Los controles <xref:System.Windows.Forms.ToolStrip> y <xref:System.Windows.Forms.MenuStrip> le permiten crear barras de herramientas y menús que contienen texto e imágenes, muestran submenús y hospedan otros controles como cuadros de texto y cuadros combinados.
 
@@ -45,10 +45,10 @@ Para obtener información detallada sobre cómo usar estas características, vea
 
 |Descripción|Tema de ayuda|
 |-----------------|----------------|
-|Usar controles en formularios|[Cómo: Agregar controles a Windows Forms](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|Usar el control <xref:System.Windows.Forms.ToolStrip>|[Cómo: Crear un control ToolStrip básico con elementos estándar mediante el diseñador](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
-|Crear gráficos con <xref:System.Drawing>|[Introducción a la programación de gráficos](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|Crear controles personalizados|[Cómo: Heredar de la clase UserControl](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|Usar controles en formularios|[Cómo: Agregar controles a Windows Forms](./controls/how-to-add-controls-to-windows-forms.md)|
+|Usar el control <xref:System.Windows.Forms.ToolStrip>|[Cómo: Crear un control ToolStrip básico con elementos estándar mediante el diseñador](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|Crear gráficos con <xref:System.Drawing>|[Introducción a la programación de gráficos](./advanced/getting-started-with-graphics-programming.md)|
+|Crear controles personalizados|[Cómo: Heredar de la clase UserControl](./controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>Mostrar y manipular datos
  Muchas aplicaciones deben mostrar datos procedentes de una base de datos, archivo XML, servicio web XML u otro origen de datos. Windows Forms proporciona un control flexible denominado control <xref:System.Windows.Forms.DataGridView> para mostrar esa información tabulada en un formato tradicional de filas y columnas, de modo que cada dato ocupe su propia celda. Al usar <xref:System.Windows.Forms.DataGridView>, puede personalizar la apariencia de celdas individuales, bloquear en su posición filas y columnas arbitrarias y mostrar controles complejos dentro de las celdas, entre otras características.
@@ -65,10 +65,10 @@ Para obtener información detallada sobre cómo usar estas características, vea
 
 |Descripción|Tema de ayuda|
 |-----------------|----------------|
-|Usar el componente <xref:System.Windows.Forms.BindingSource>|[Cómo: Enlazar controles de Windows Forms con el componente BindingSource mediante el diseñador](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|Trabajar con orígenes de datos [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]|[Cómo: Ordenar y filtrar datos ADO.NET con el Windows Forms BindingSource (componente)](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Usar el componente <xref:System.Windows.Forms.BindingSource>|[Cómo: Enlazar controles de Windows Forms con el componente BindingSource mediante el diseñador](./controls/bind-wf-controls-with-the-bindingsource.md)|
+|Trabajar con orígenes de datos [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]|[Cómo: Ordenar y filtrar datos ADO.NET con el Windows Forms BindingSource (componente)](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Usar la ventana Orígenes de datos|[Enlazar controles de Windows Forms a datos en Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
-|Usar la configuración de la aplicación|[Cómo: Crear configuración de la aplicación](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
+|Usar la configuración de la aplicación|[Cómo: Crear configuración de la aplicación](./advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>Implementar aplicaciones en los equipos cliente
 
@@ -98,15 +98,15 @@ Para obtener información detallada sobre cómo usar estas características, vea
 
 |Descripción|Tema de ayuda|
 |-----------------|----------------|
-|Imprimir el contenido de un formulario|[Cómo: Imprimir gráficos en Windows Forms](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Cómo: Imprimir un archivo de texto de varias páginas en Windows Forms](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
-|Más información sobre la seguridad de Windows Forms|[Información general sobre la seguridad en Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|
+|Imprimir el contenido de un formulario|[Cómo: Imprimir gráficos en Windows Forms](./advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Cómo: Imprimir un archivo de texto de varias páginas en Windows Forms](./advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|Más información sobre la seguridad de Windows Forms|[Información general sobre la seguridad en Windows Forms](security-in-windows-forms-overview.md)|
 
 ## <a name="see-also"></a>Vea también
 
-- [Introducción a los formularios Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
-- [Crear un nuevo formulario Windows Forms](../../../docs/framework/winforms/creating-a-new-windows-form.md)
-- [Información sobre el control ToolStrip](../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [Información general del control DataGridView](../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
-- [Información general sobre el componente BindingSource](../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
-- [Introducción a la configuración de la aplicación](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Introducción a los formularios Windows Forms](getting-started-with-windows-forms.md)
+- [Crear un nuevo formulario Windows Forms](creating-a-new-windows-form.md)
+- [Información sobre el control ToolStrip](./controls/toolstrip-control-overview-windows-forms.md)
+- [Información general del control DataGridView](./controls/datagridview-control-overview-windows-forms.md)
+- [Información general sobre el componente BindingSource](./controls/bindingsource-component-overview.md)
+- [Introducción a la configuración de la aplicación](./advanced/application-settings-overview.md)
 - [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)

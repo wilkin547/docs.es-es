@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: 2a9f6e8a1c96c2a9bf9e56c1c6acefc4181a18dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b55a6b66416aa79427035abdfbc19d1b0e21d94e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526995"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707799"
 ---
-# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Procedimiento Crear texto de tamaño Variable en un Control ComboBox
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Filtrar Crear texto de tamaño Variable en un Control ComboBox
 En este ejemplo muestra el dibujo personalizado de texto en un <xref:System.Windows.Forms.ComboBox> control. Cuando un elemento cumple determinados criterios, se dibuja en una fuente mayor y activa el rojo.  
   
 ## <a name="example"></a>Ejemplo  
@@ -71,6 +71,6 @@ End Sub
 - <xref:System.Windows.Forms.ComboBox.DrawItem>
 - <xref:System.Windows.Forms.DrawItemEventArgs>
 - <xref:System.Windows.Forms.ComboBox.MeasureItem>
-- [Controles compatibles con dibujos propietarios integrados](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)
-- [ListBox (control)](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)
-- [ComboBox (control)](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [Controles compatibles con dibujos propietarios integrados](controls-with-built-in-owner-drawing-support.md)
+- [ListBox (control)](listbox-control-windows-forms.md)
+- [ComboBox (control)](combobox-control-windows-forms.md)

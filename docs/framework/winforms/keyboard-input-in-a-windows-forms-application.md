@@ -6,28 +6,28 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 68f5bc70-14d5-45c9-b288-7d7b1493ee79
-ms.openlocfilehash: 90070ec6fb27e2f9892a3874cc326fe77af1a063
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eaeee45e2c7856012b4ff20eefea3fca53679467
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537078"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715834"
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Entradas mediante teclado en una aplicación de Windows Forms
-Windows Forms incluye eventos de teclado estándar que le permiten responder a las pulsaciones de teclas específicas y también proporcionan métodos interceptar, modificar y consumir presiones de teclas en la aplicación, el formulario y controlar el nivel.  
+Windows Forms incluye eventos de teclado estándar que le permiten dar respuesta a pulsaciones de teclas específicas y también proporcionan maneras de interceptar, modificar y utilizar presiones de tecla a la aplicación, el formulario, y controlar el nivel.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Funcionamiento de las entradas mediante teclado](../../../docs/framework/winforms/how-keyboard-input-works.md)  
- Describe cómo se procesan y se transforman en eventos de teclado mensajes del teclado.  
+ [Funcionamiento de las entradas mediante teclado](how-keyboard-input-works.md)  
+ Describe cómo se procesan los mensajes del teclado y se transforman en eventos de teclado.  
   
- [Utilizar eventos de teclado](../../../docs/framework/winforms/using-keyboard-events.md)  
- Proporciona información sobre los tipos de eventos de teclado y la información que se recibe por los controladores de eventos de teclado.  
+ [Utilizar eventos de teclado](using-keyboard-events.md)  
+ Proporciona información sobre los tipos de eventos de teclado y la información que se recibe en los controladores de eventos de teclado.  
   
- [Modificar las entradas mediante teclado en un control estándar](../../../docs/framework/winforms/how-to-modify-keyboard-input-to-a-standard-control.md)  
- Presenta un ejemplo de código que muestra cómo modificar los valores de clave antes de que lleguen a un control.  
+ [Cómo: Modificar las entradas de teclado en un Control estándar](how-to-modify-keyboard-input-to-a-standard-control.md)  
+ Presenta un ejemplo de código que se muestra cómo modificar los valores de clave antes de llegar a un control.  
   
- [Determinar qué tecla modificadora se presionó](../../../docs/framework/winforms/how-to-determine-which-modifier-key-was-pressed.md)  
+ [Cómo: Determinar qué tecla modificadora se presionó](how-to-determine-which-modifier-key-was-pressed.md)  
  Muestra cómo averiguar si se ha presionado MAYÚS, ALT o CTRL además de otra clave.  
   
- [Controlar los datos introducidos mediante el teclado en el formulario](../../../docs/framework/winforms/how-to-handle-keyboard-input-at-the-form-level.md)  
+ [Cómo: Controlar la entrada de teclado en el nivel de formulario](how-to-handle-keyboard-input-at-the-form-level.md)  
  Presenta un ejemplo de código que muestra cómo interceptar teclas antes de que lleguen a un control.
