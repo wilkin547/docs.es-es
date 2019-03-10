@@ -6,39 +6,39 @@ helpviewer_keywords:
 - Web pages [Windows Forms], hosting in applications
 - Web pages [Windows Forms], Windows Forms controls
 ms.assetid: 12667861-5b5b-46bc-8fb5-675e25264c9f
-ms.openlocfilehash: ca4e4beed068d47bef7a5cd4f7b05bde0a19de23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6607ec9754f708d2c1e5abfd61cd77013efec4e0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510799"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721000"
 ---
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser (Control, Windows Forms)
 Los formularios de Windows `WebBrowser` control aloja las páginas Web y proporciona funciones para la aplicación de exploración Web.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre el control WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
+ [Información general sobre el control WebBrowser](webbrowser-control-overview.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
- [Seguridad de WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-security.md)  
+ [Seguridad de WebBrowser](webbrowser-security.md)  
  Explica los problemas de seguridad relacionadas al control.  
   
- [Cómo: Navegue a una dirección URL con el Control WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [Cómo: Navegue a una dirección URL con el Control WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
  Muestra cómo usar el control para navegar a una dirección URL específica.  
   
- [Cómo: Imprimir con un Control WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)  
+ [Cómo: Imprimir con un Control WebBrowser](how-to-print-with-a-webbrowser-control.md)  
  Muestra cómo imprimir una página Web sin mostrarlo.  
   
- [Cómo: Agregar funciones de explorador Web a una aplicación de Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ [Cómo: Agregar funciones de explorador Web a una aplicación de Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
  Describe cómo inicializar el control para su uso como un explorador Web.  
   
- [Cómo: Crear un visor de documentos HTML en una aplicación de Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
+ [Cómo: Crear un visor de documentos HTML en una aplicación de Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
  Describe cómo inicializar el control para su uso como un visor HTML.  
   
- [Cómo: Implementar la comunicación bidireccional entre código DHTML y código de la aplicación cliente](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
+ [Cómo: Implementar la comunicación bidireccional entre código DHTML y código de la aplicación cliente](implement-two-way-com-between-dhtml-and-client.md)  
  Describe cómo establecer la comunicación bidireccional entre el código de la aplicación y DHTML en una página Web hospedada por el control.  
   
- [Utilizar el Modelo de objetos de documento HTML administrado](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)  
+ [Utilizar el Modelo de objetos de documento HTML administrado](using-the-managed-html-document-object-model.md)  
  Proporciona temas que describen cómo manipular o crear páginas HTML hospedadas por el <xref:System.Windows.Forms.WebBrowser> control.  
   
 ## <a name="reference"></a>Referencia  
@@ -79,4 +79,4 @@ Los formularios de Windows `WebBrowser` control aloja las páginas Web y proporc
  Describe esta enumeración y todos sus valores.  
   
 ## <a name="see-also"></a>Vea también
-- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
