@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: 8d040d4de566ea750b9a9d14531061a63524e668
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 84273d2fab36df287eaca70f5f32fd8024a9204d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441897"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712206"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Definir una propiedad en los controles de formularios Windows Forms
 Para información general de propiedades, vea [Información general sobre propiedades](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Hay que hacer algunas consideraciones importantes al definir una propiedad:  
@@ -121,7 +121,7 @@ public int Value {
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Propiedades de los controles de Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
-- [Definir valores predeterminados con los métodos ShouldSerialize y Reset](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)
-- [Eventos de cambio de propiedades](../../../../docs/framework/winforms/controls/property-changed-events.md)
-- [Atributos en controles de Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+- [Propiedades de los controles de Windows Forms](properties-in-windows-forms-controls.md)
+- [Definir valores predeterminados con los métodos ShouldSerialize y Reset](defining-default-values-with-the-shouldserialize-and-reset-methods.md)
+- [Eventos de cambio de propiedades](property-changed-events.md)
+- [Atributos en controles de Windows Forms](attributes-in-windows-forms-controls.md)

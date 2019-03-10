@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 37e46c48be41d0b527e73b15bfff1f069924fa20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f04203cd5c006f778d09ddc3fef3cfa1be4666e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682815"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717141"
 ---
-# <a name="how-to-add-data-to-the-clipboard"></a>Procedimiento Agregar datos al Portapapeles
+# <a name="how-to-add-data-to-the-clipboard"></a>Filtrar Agregar datos al Portapapeles
 La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede usar para interactuar con la función de Portapapeles del sistema operativo Windows. Muchas aplicaciones utilizan el Portapapeles como un repositorio temporal para los datos. Por ejemplo, procesadores de textos utilizan el Portapapeles durante las operaciones de cortar y pegar. El Portapapeles también es útil para transferir datos desde una aplicación a otra.  
   
  Al agregar datos en el Portapapeles, puede indicar el formato de datos para que otras aplicaciones pueden reconocer los datos si puede usar ese formato. También puede agregar datos al Portapapeles en varios formatos diferentes para aumentar el número de otras aplicaciones que pueden utilizar potencialmente los datos.  
@@ -37,8 +37,8 @@ La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede us
   
 1.  Use la <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, o <xref:System.Windows.Forms.Clipboard.SetText%2A> método. Estos métodos solo están disponibles en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
-     [!code-csharp[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
-     [!code-vb[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
+     [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>Para agregar datos al Portapapeles en un formato personalizado  
   
@@ -46,20 +46,20 @@ La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede us
   
      También puede usar nombres de formato predefinidos con el <xref:System.Windows.Forms.Clipboard.SetData%2A> método. Para obtener más información, consulta <xref:System.Windows.Forms.DataFormats>.  
   
-     [!code-csharp[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
-     [!code-vb[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
-    [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
-    [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
+     [!code-csharp[System.Windows.Forms.Clipboard#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
+     [!code-vb[System.Windows.Forms.Clipboard#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
+    [!code-csharp[System.Windows.Forms.Clipboard#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
+    [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>Para agregar datos al Portapapeles en varios formatos  
   
 1.  Use la <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> método y pase un <xref:System.Windows.Forms.DataObject> que contiene los datos. Debe usar este método para agregar datos al Portapapeles en versiones anteriores a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
   
-     [!code-csharp[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
-     [!code-vb[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
-    [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
-    [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
+     [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
+     [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
+    [!code-csharp[System.Windows.Forms.Clipboard#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
+    [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ## <a name="see-also"></a>Vea también
-- [Compatibilidad con las operaciones de arrastrar y colocar y con el Portapapeles](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)
-- [Cómo: Recuperar datos del Portapapeles](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
+- [Compatibilidad con las operaciones de arrastrar y colocar y con el Portapapeles](drag-and-drop-operations-and-clipboard-support.md)
+- [Cómo: Recuperar datos del Portapapeles](how-to-retrieve-data-from-the-clipboard.md)

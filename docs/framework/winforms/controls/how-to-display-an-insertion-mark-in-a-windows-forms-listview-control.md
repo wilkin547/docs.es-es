@@ -11,12 +11,12 @@ helpviewer_keywords:
 - drop and drag [Windows Forms], insertion marks
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
-ms.openlocfilehash: 199e0e232e2d391c2e7e0d70757f1f414cce5498
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 6c87a4cb68baa15b5f670a23fb4e8ef7ce16cf6f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261458"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710063"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Filtrar Mostrar una marca de inserción en un Control ListView de formularios de Windows
 La marca de inserción del control <xref:System.Windows.Forms.ListView> muestra a los usuarios el punto en el que se insertarán los elementos arrastrados. Cuando un usuario arrastra un elemento a un punto entre otros dos elementos, la marca de inserción muestra la nueva ubicación esperada del elemento.  
@@ -26,14 +26,14 @@ La marca de inserción del control <xref:System.Windows.Forms.ListView> muestra 
   
  La siguiente imagen muestra una marca de inserción:  
   
- ![Marca de inserción de ListView](../../../../docs/framework/winforms/controls/media/listviewinsertion.gif "ListViewInsertion")  
+ ![Marca de inserción de ListView](./media/listviewinsertion.gif "ListViewInsertion")  
   
  El ejemplo de código siguiente muestra cómo utilizar esta característica.  
   
 ## <a name="example"></a>Ejemplo  
- [!code-cpp[System.Windows.Forms.ListView.InsertionMark#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CPP/listviewinsertionmarkexample.cpp#1)]
- [!code-csharp[System.Windows.Forms.ListView.InsertionMark#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CS/listviewinsertionmarkexample.cs#1)]
- [!code-vb[System.Windows.Forms.ListView.InsertionMark#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/VB/listviewinsertionmarkexample.vb#1)]  
+ [!code-cpp[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CPP/listviewinsertionmarkexample.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CS/listviewinsertionmarkexample.cs#1)]
+ [!code-vb[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/VB/listviewinsertionmarkexample.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -46,6 +46,6 @@ La marca de inserción del control <xref:System.Windows.Forms.ListView> muestra 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.InsertionMark%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ListViewInsertionMark>
-- [ListView (Control)](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
-- [Información general del control ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
-- [Tutorial: Realizar una operación de arrastrar y colocar en Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+- [ListView (Control)](listview-control-windows-forms.md)
+- [Información general del control ListView](listview-control-overview-windows-forms.md)
+- [Tutorial: Realizar una operación de arrastrar y colocar en Windows Forms](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

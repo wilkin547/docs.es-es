@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Establecer el tamaño de los paneles de la barra de estado
+title: Filtrar Establecer el tamaño de los paneles de la barra de estado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - status bars [Windows Forms], setting panel size
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-ms.openlocfilehash: be1f216af61c1e7b77e84c584dc9d965a97c56b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b78463ca273f089f036166f5339977be435ccc9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539667"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711946"
 ---
-# <a name="how-to-set-the-size-of-status-bar-panels"></a>Procedimiento Establecer el tamaño de los paneles de la barra de estado
+# <a name="how-to-set-the-size-of-status-bar-panels"></a>Filtrar Establecer el tamaño de los paneles de la barra de estado
 > [!NOTE]
 >  El control <xref:System.Windows.Forms.ToolStripStatusLabel> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.StatusBar>; sin embargo, el control <xref:System.Windows.Forms.StatusBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.  
   
- Cada instancia de la <xref:System.Windows.Forms.StatusBarPanel> clase dentro de un [StatusBar Control](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) control tiene un número de propiedades dinámicas que determinan su ancho y cambiar el tamaño de comportamiento en tiempo de ejecución.  
+ Cada instancia de la <xref:System.Windows.Forms.StatusBarPanel> clase dentro de un [StatusBar Control](statusbar-control-windows-forms.md) control tiene un número de propiedades dinámicas que determinan su ancho y cambiar el tamaño de comportamiento en tiempo de ejecución.  
   
 ### <a name="to-set-the-size-of-a-panel"></a>Para establecer el tamaño de un panel  
   
@@ -68,6 +68,6 @@ ms.locfileid: "54539667"
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Tutorial: Actualizar la información de la barra de estado en tiempo de ejecución](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
-- [Cómo: Determinar qué Panel de Control StatusBar de formularios Windows Forms se hizo clic](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [Información general sobre StatusBar (Control)](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [Tutorial: Actualizar la información de la barra de estado en tiempo de ejecución](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Cómo: Determinar qué Panel de Control StatusBar de formularios Windows Forms se hizo clic](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Información general sobre StatusBar (Control)](statusbar-control-overview-windows-forms.md)

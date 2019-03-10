@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Mostrar vínculos de estilo Web con el Control RichTextBox de formularios de Windows
+title: Filtrar Mostrar vínculos de estilo Web con el Control RichTextBox de formularios de Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: e32dfc394f91ed44b702136d3177f6307f3991ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64a2c8d9a9f6b8a7271a659b80ca2a63c423b3bc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727591"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718533"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Procedimiento Mostrar vínculos de estilo Web con el Control RichTextBox de formularios de Windows
 Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control puede mostrar vínculos Web en color y subrayados. Puede escribir código que se abre una ventana del explorador que muestra el sitio Web especificado en el texto del vínculo cuando se hace clic en el vínculo.  
@@ -33,7 +33,7 @@ Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control puede
      En el ejemplo siguiente, la <xref:System.Windows.Forms.RichTextBox.LinkClicked> evento abre una instancia de Internet Explorer a la dirección URL especificada en el <xref:System.Windows.Forms.RichTextBox.Text%2A> propiedad de la <xref:System.Windows.Forms.RichTextBox> control. En este ejemplo se supone un formulario con un <xref:System.Windows.Forms.RichTextBox> control.  
   
     > [!IMPORTANT]
-    >  Que realiza la llamada la <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> método, se producirá un <xref:System.Security.SecurityException> excepción si está ejecutando el código en un contexto de confianza parcial por falta de privilegios. Para obtener más información, vea [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md) (Aspectos básicos de seguridad de acceso del código).  
+    >  Que realiza la llamada la <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> método, se producirá un <xref:System.Security.SecurityException> excepción si está ejecutando el código en un contexto de confianza parcial por falta de privilegios. Para obtener más información, vea [Code Access Security Basics](../../misc/code-access-security-basics.md) (Aspectos básicos de seguridad de acceso del código).  
   
     ```vb  
     Public p As New System.Diagnostics.Process  
@@ -120,5 +120,5 @@ Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control puede
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox (control)](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox (control)](richtextbox-control-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

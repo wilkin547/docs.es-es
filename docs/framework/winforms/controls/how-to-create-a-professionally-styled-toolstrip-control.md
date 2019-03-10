@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear un Control ToolStrip de estilo profesional
+title: Filtrar Crear un Control ToolStrip de estilo profesional
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - ToolStripRenderer class [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c208b2f6-8105-474b-9075-d582e1792870
-ms.openlocfilehash: 1e6455ebabfa5b27301f98b89861348b28d415af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 039bdd3907851d1f5e756652dd1b42765606c0c6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690207"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719291"
 ---
-# <a name="how-to-create-a-professionally-styled-toolstrip-control"></a>Procedimiento Crear un Control ToolStrip de estilo profesional
+# <a name="how-to-create-a-professionally-styled-toolstrip-control"></a>Filtrar Crear un Control ToolStrip de estilo profesional
 Puede dar a los controles <xref:System.Windows.Forms.ToolStrip> de la aplicación un aspecto y comportamiento profesional escribiendo su propia clase derivada del tipo <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.  
   
  Hay una amplia compatibilidad para esta característica en Visual Studio.  
   
- Vea [Tutorial: Crear un Control ToolStrip de estilo profesional](../../../../docs/framework/winforms/controls/walkthrough-creating-a-professionally-styled-toolstrip-control.md).  
+ Vea [Tutorial: Crear un Control ToolStrip de estilo profesional](walkthrough-creating-a-professionally-styled-toolstrip-control.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se muestra cómo usar <xref:System.Windows.Forms.ToolStrip> controles para crear un control compuesto que imite el **panel de navegación** proporcionado por Microsoft® Outlook®.  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.StackView#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#1)]
- [!code-vb[System.Windows.Forms.ToolStrip.StackView#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#1)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.StackView#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStrip.StackView#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -41,5 +41,5 @@ Puede dar a los controles <xref:System.Windows.Forms.ToolStrip> de la aplicació
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [Control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
-- [Cómo: Proporcionar elementos de menú estándar a un formulario](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)
+- [Cómo: Proporcionar elementos de menú estándar a un formulario](how-to-provide-standard-menu-items-to-a-form.md)

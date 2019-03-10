@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 9087045aaace5463d375af6850f822abefd45fb7
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 62cc25b705b382e1f4ef32ae6889df785a6a9173
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220931"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709918"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Filtrar Delimitar y acoplar controles secundarios en un Control FlowLayoutPanel
 El control <xref:System.Windows.Forms.FlowLayoutPanel> admite las propiedades <xref:System.Windows.Forms.Control.Anchor%2A> y <xref:System.Windows.Forms.Control.Dock%2A> en sus controles secundarios.  
@@ -42,16 +42,16 @@ El control <xref:System.Windows.Forms.FlowLayoutPanel> admite las propiedades <x
 ## <a name="example"></a>Ejemplo  
  La ilustración siguiente muestra cuatro botones que se delimitan y se acoplan con relación al botón azul en un <xref:System.Windows.Forms.FlowLayoutPanel>. El valor de <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> es <xref:System.Windows.Forms.FlowDirection.LeftToRight>.  
   
- ![Delimitación de FlowLayoutPanel](../../../../docs/framework/winforms/controls/media/net-flpanchorexp.gif "NET_FLPanchorExp")  
+ ![Delimitación de FlowLayoutPanel](./media/net-flpanchorexp.gif "NET_FLPanchorExp")  
   
  La ilustración siguiente muestra cuatro botones que se delimitan y se acoplan con relación al botón azul en un <xref:System.Windows.Forms.FlowLayoutPanel>. El valor de <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> es <xref:System.Windows.Forms.FlowDirection.TopDown>.  
   
- ![Delimitación de FlowLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-flpanchor2.gif "VS_FLPanchor2")  
+ ![Delimitación de FlowLayoutPanel](./media/vs-flpanchor2.gif "VS_FLPanchor2")  
   
  En el ejemplo de código siguiente se muestran varios valores de propiedad <xref:System.Windows.Forms.Control.Anchor%2A> para un control <xref:System.Windows.Forms.Button> en un control <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
- [!code-csharp[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/CS/FlpAnchorExampleForm.cs#1)]
- [!code-vb[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/VB/FlpAnchorExampleForm.vb#1)]  
+ [!code-csharp[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/CS/FlpAnchorExampleForm.cs#1)]
+ [!code-vb[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/VB/FlpAnchorExampleForm.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -62,4 +62,4 @@ El control <xref:System.Windows.Forms.FlowLayoutPanel> admite las propiedades <x
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.FlowLayoutPanel>
-- [Información general sobre el control FlowLayoutPanel](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-overview.md)
+- [Información general sobre el control FlowLayoutPanel](flowlayoutpanel-control-overview.md)

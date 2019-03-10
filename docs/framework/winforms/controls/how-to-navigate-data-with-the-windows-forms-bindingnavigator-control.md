@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data navigation
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb
-ms.openlocfilehash: ac4470e8570d82bfd35b8da5e5a087f591ccccad
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 5fd1caabbc876d5b71deae2d9b1b9cf232d17700
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261313"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723249"
 ---
 # <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Filtrar Explorar datos con el Control BindingNavigator de Windows Forms
 La incorporación del control <xref:System.Windows.Forms.BindingNavigator> de Windows Forms permite a los desarrolladores proporcionar a los usuarios finales una sencilla interfaz de usuario de navegación y manipulación de datos en los formularios que creen.  
@@ -30,21 +30,21 @@ La incorporación del control <xref:System.Windows.Forms.BindingNavigator> de Wi
   
 2.  Enlace `bindingSource1` a los datos y los controles de cuadro de texto a `bindingSource1`. Para ello, pegue el siguiente código en el formulario y llame a `LoadData` desde el constructor del formulario o al método de control de eventos <xref:System.Windows.Forms.Form.Load>.  
   
-     [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#2)]  
   
 3.  Agregue un control <xref:System.Windows.Forms.BindingNavigator> llamado `bindingNavigator1` al formulario.  
   
 4.  Establezca la propiedad <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> de `bindingNavigator1` en `bindingSource1`. Puede hacerlo con el diseñador o en el código.  
   
-     [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo de código siguiente es el ejemplo completo de los pasos enumerados anteriormente.  
   
- [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -55,5 +55,5 @@ La incorporación del control <xref:System.Windows.Forms.BindingNavigator> de Wi
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.BindingNavigator>
-- [BindingNavigator (control)](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [Control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [BindingNavigator (control)](bindingnavigator-control-windows-forms.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)

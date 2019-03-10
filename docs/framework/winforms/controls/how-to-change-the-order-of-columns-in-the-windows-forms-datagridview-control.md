@@ -9,23 +9,23 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
 - data grids [Windows Forms], changing column order
 ms.assetid: 5e9ac3bc-b0f0-48cb-a3d5-b005af905395
-ms.openlocfilehash: a8e18080e757ceb4818bb795926a1eb4c27cf067
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 0e49107193d546e590582ca6bab798149d7064a7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583360"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711270"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>Filtrar Cambiar el orden de columnas en el Control DataGridView de formularios de Windows
 Cuando se usa un control <xref:System.Windows.Forms.DataGridView> para mostrar datos desde un origen de datos, a veces las columnas del esquema del origen de datos no aparecen en el orden que quiere que se muestren. Puede cambiar el orden de visualización de las columnas mediante la propiedad <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> de la clase <xref:System.Windows.Forms.DataGridViewColumn>.  
   
- En el ejemplo de código siguiente, se cambia de posición de algunas de las columnas generadas automáticamente cuando se enlaza a la tabla Customers de la base de datos de ejemplo Northwind. Para obtener más información sobre cómo enlazar la <xref:System.Windows.Forms.DataGridView> control a una tabla de base de datos, vea [Cómo: Enlazar datos a la Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+ En el ejemplo de código siguiente, se cambia de posición de algunas de las columnas generadas automáticamente cuando se enlaza a la tabla Customers de la base de datos de ejemplo Northwind. Para obtener más información sobre cómo enlazar la <xref:System.Windows.Forms.DataGridView> control a una tabla de base de datos, vea [Cómo: Enlazar datos a la Windows Forms DataGridView Control](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
  Visual Studio es compatible con esta tarea.  Consulte también [Cómo: Cambiar el orden de columnas en el Control de DataGridView de Windows Forms mediante el diseñador](change-the-order-of-columns-in-the-datagrid-using-the-designer.md).  
   
 ## <a name="example"></a>Ejemplo  
- [!code-csharp[System.Windows.Forms.DataGridViewMisc#040](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#040)]
- [!code-vb[System.Windows.Forms.DataGridViewMisc#040](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#040)]  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc#040](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#040)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc#040](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#040)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -39,5 +39,5 @@ Cuando se usa un control <xref:System.Windows.Forms.DataGridView> para mostrar d
 - <xref:System.Windows.Forms.DataGridViewColumn>
 - <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>
-- [Mostrar datos en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Cómo: Enlazar datos al Control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Cómo: Enlazar datos al Control DataGridView de formularios Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)

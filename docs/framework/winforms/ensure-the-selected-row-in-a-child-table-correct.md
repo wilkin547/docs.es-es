@@ -16,12 +16,12 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 2ecac036bf081959b8ce2ba0afe8fdeed9ed9099
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 930d0dc28a4ab0e34a6229a4b74617084918a275
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664242"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713467"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Filtrar Asegúrese de que la fila seleccionada en una tabla secundaria permanece en la posición correcta
 A menudo, cuando se trabaja con enlace de datos en Windows Forms, los datos se muestran en lo que se denomina una vista primaria/secundaria o una vista maestra/detalles. Esto hace referencia a un escenario de enlace de datos donde los datos del mismo origen se muestran en dos controles. Al cambiar la selección en un control, los datos mostrados en el segundo control cambiarán. Por ejemplo, el primer control puede contener una lista de clientes y el segundo de una lista de pedidos relacionados con el cliente seleccionado en el primer control.  
@@ -32,20 +32,20 @@ A menudo, cuando se trabaja con enlace de datos en Windows Forms, los datos se m
   
 1.  Declare una variable entera para almacenar la posición de lista secundaria y una variable booleana para almacenar en caché la posición secundaria.  
   
-     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#4)]
-     [!code-vb[System.Windows.Forms.CurrencyManagerReset#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#4)]
+     [!code-vb[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#4)]  
   
 2.  Controle el evento <xref:System.Windows.Forms.CurrencyManager.ListChanged> del <xref:System.Windows.Forms.CurrencyManager> del enlace y busque un <xref:System.ComponentModel.ListChangedType> de <xref:System.ComponentModel.ListChangedType.Reset>.  
   
 3.  Compruebe la posición actual del <xref:System.Windows.Forms.CurrencyManager>. Si es mayor que la primera entrada de la lista (normalmente 0), guárdela en una variable.  
   
-     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.CurrencyManagerReset#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#2)]  
   
 4.  Controle el evento <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> de la lista primaria para el administrador de moneda principal. En el controlador, establezca el valor booleano para indicar que no es un escenario de almacenamiento en caché. Si se produce <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged>, el cambio en el elemento primario es un cambio de posición de lista y no un cambio de valor del elemento.  
   
-     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#5)]
-     [!code-vb[System.Windows.Forms.CurrencyManagerReset#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#5)]  
+     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#5)]
+     [!code-vb[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#5)]  
   
 ### <a name="to-reset-the-child-position"></a>Para restablecer la posición secundaria  
   
@@ -53,14 +53,14 @@ A menudo, cuando se trabaja con enlace de datos en Windows Forms, los datos se m
   
 2.  Restablezca la posición de la tabla secundaria a la posición almacenada en caché que se guardó en el procedimiento anterior.  
   
-     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.CurrencyManagerReset#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo guardar la posición actual en el <xref:System.Windows.Forms.CurrencyManager> para una tabla secundaria y cómo restablecer la posición de una vez completada una modificación en la tabla primaria. Este ejemplo contiene dos controles <xref:System.Windows.Forms.DataGridView> enlazados a dos tablas en un <xref:System.Data.DataSet> mediante el componente <xref:System.Windows.Forms.BindingSource>. Se establece una relación entre las dos tablas y la relación se agrega al <xref:System.Data.DataSet>. La posición en la tabla secundaria se establece inicialmente en la tercera fila para fines de demostración.  
   
- [!code-csharp[System.Windows.Forms.CurrencyManagerReset#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.CurrencyManagerReset#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.CurrencyManagerReset#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.CurrencyManagerReset#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#1)]  
   
  Para probar el ejemplo de código, realice los pasos siguientes:  
   
@@ -84,6 +84,6 @@ A menudo, cuando se trabaja con enlace de datos en Windows Forms, los datos se m
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [compilación de línea de comandos con csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)
-- [Componente BindingSource](../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [Enlace de datos y Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Cómo: Garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados](multiple-controls-bound-to-data-source-synchronized.md)
+- [Componente BindingSource](./controls/bindingsource-component.md)
+- [Enlace de datos y Windows Forms](data-binding-and-windows-forms.md)

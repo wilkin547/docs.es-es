@@ -1,5 +1,5 @@
 ---
-title: Filtrar Cambiar el tipo de una columna DataGridView de Windows Forms mediante el diseñador
+title: Procedimiento Cambiar el tipo de una columna DataGridView de Windows Forms mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, columns
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-ms.openlocfilehash: 189dd6d3e7eae7f4d9305bed97711da150198335
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 99728e473223f3393cc9d09f38728cf873a95c99
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333045"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718823"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Filtrar Cambiar el tipo de una columna DataGridView de Windows Forms mediante el diseñador
 A veces desea cambiar el tipo de una columna que ya se ha agregado a un formulario Windows Forms <xref:System.Windows.Forms.DataGridView> control. Por ejemplo, es posible que desee modificar los tipos de algunas de las columnas que se generan automáticamente al enlazar el control a un origen de datos. Esto es útil cuando la tabla que se muestra tiene las columnas que contienen claves externas a las filas de una tabla relacionada. En este caso, es posible que desee reemplazar las columnas del cuadro de texto que se muestran estas claves externas con columnas de cuadro combinado que se muestran los valores más significativos de la tabla relacionada.  
   
- El procedimiento siguiente requiere una **aplicación Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.DataGridView> control. Para obtener información acerca de cómo configurar un proyecto de este tipo, vea [Cómo: Cree un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) y [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ El procedimiento siguiente requiere una **aplicación Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.DataGridView> control. Para obtener información acerca de cómo configurar un proyecto de este tipo, vea [Cómo: Cree un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) y [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
 >  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-change-the-type-of-a-column-using-the-designer"></a>Para cambiar el tipo de una columna mediante el diseñador  
   
-1.  Haga clic en el glifo de etiqueta inteligente (![glifo de etiqueta inteligente](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) en la esquina superior derecha de la <xref:System.Windows.Forms.DataGridView> control y, a continuación, seleccione **Editar columnas**.  
+1.  Haga clic en el glifo de etiqueta inteligente (![glifo de etiqueta inteligente](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) en la esquina superior derecha de la <xref:System.Windows.Forms.DataGridView> control y, a continuación, seleccione **Editar columnas**.  
   
 2.  Seleccione una columna en la **columnas seleccionadas** lista.  
   
@@ -37,4 +37,4 @@ A veces desea cambiar el tipo de una columna que ya se ha agregado a un formular
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
 - [Cómo: Crear un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+- [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)

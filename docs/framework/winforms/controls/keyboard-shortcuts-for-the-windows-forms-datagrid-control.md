@@ -5,16 +5,16 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: cf79fb5594410fc479b0e2dd6f1663715e09af86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04340cf2d2c8e318ea7348c978ef943563c24da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509537"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711777"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Métodos abreviados de teclado para el control DataGrid de formularios Windows Forms
 > [!NOTE]
->  El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
+>  El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
  En la tabla siguiente se enumera los métodos abreviados de teclado que pueden usarse para la navegación dentro de los formularios de Windows <xref:System.Windows.Forms.DataGrid> control:  
   
@@ -51,5 +51,5 @@ ms.locfileid: "54509537"
 |Escriba un <xref:System.DBNull.Value?displayProperty=nameWithType> valor en una celda en modo de edición.|CTRL+0|  
   
 ## <a name="see-also"></a>Vea también
-- [Información general del control DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)
-- [DataGrid (control)](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [Información general del control DataGrid](datagrid-control-overview-windows-forms.md)
+- [DataGrid (control)](datagrid-control-windows-forms.md)

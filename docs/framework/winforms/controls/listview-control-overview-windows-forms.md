@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: 8ceed741e72dae46f7f791b7564b7f5c38f82bc2
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: d62c0081c128693861a9fd21360f09f65d485a79
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664632"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709812"
 ---
 # <a name="listview-control-overview-windows-forms"></a>Información general del control ListView (Formularios Windows Forms)
 El control <xref:System.Windows.Forms.ListView> de Windows Forms muestra una lista de elementos con iconos. Puede usar una vista de lista para crear una interfaz de usuario similar al panel derecho del Explorador de Windows. El control tiene cuatro modos de vista: LargeIcon, SmallIcon, lista y detalles.  
@@ -21,9 +21,9 @@ El control <xref:System.Windows.Forms.ListView> de Windows Forms muestra una lis
 ## <a name="what-you-can-do-with-the-listview-control"></a>¿Qué puede hacer con el Control ListView  
   
 > [!NOTE]
->  Un modo de vista adicionales, mosaico, sólo está disponible en Windows XP y el sistema operativo Windows Server 2003. Para obtener más información, vea [Cómo: Habilitar la vista de mosaico en un Windows Forms Control ListView](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md).  
+>  Un modo de vista adicionales, mosaico, sólo está disponible en Windows XP y el sistema operativo Windows Server 2003. Para obtener más información, vea [Cómo: Habilitar la vista de mosaico en un Windows Forms Control ListView](how-to-enable-tile-view-in-a-windows-forms-listview-control.md).  
   
- El modo LargeIcon muestra iconos grandes junto al texto del elemento; los elementos aparecen en varias columnas si el control es suficientemente grande. El modo SmallIcon es el mismo, salvo en que muestra iconos pequeños. El modo de lista muestra iconos pequeños, pero siempre está en una sola columna. El modo de detalles muestra los elementos en varias columnas. Para obtener más detalles, vea [Cómo: Agregar columnas a la Windows Forms Control ListView](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md). El modo de vista viene determinada por la <xref:System.Windows.Forms.ListView.View%2A> propiedad. Todos los modos de vista pueden mostrar imágenes desde listas de imágenes. Para obtener más detalles, vea [Cómo: Mostrar iconos de la Windows Forms Control ListView](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md).  
+ El modo LargeIcon muestra iconos grandes junto al texto del elemento; los elementos aparecen en varias columnas si el control es suficientemente grande. El modo SmallIcon es el mismo, salvo en que muestra iconos pequeños. El modo de lista muestra iconos pequeños, pero siempre está en una sola columna. El modo de detalles muestra los elementos en varias columnas. Para obtener más detalles, vea [Cómo: Agregar columnas a la Windows Forms Control ListView](how-to-add-columns-to-the-windows-forms-listview-control.md). El modo de vista viene determinada por la <xref:System.Windows.Forms.ListView.View%2A> propiedad. Todos los modos de vista pueden mostrar imágenes desde listas de imágenes. Para obtener más detalles, vea [Cómo: Mostrar iconos de la Windows Forms Control ListView](how-to-display-icons-for-the-windows-forms-listview-control.md).  
   
  En la tabla siguiente se enumera algunos de los <xref:System.Windows.Forms.ListView> miembros y las vistas que son válidos.  
   
@@ -49,14 +49,14 @@ El control <xref:System.Windows.Forms.ListView> de Windows Forms muestra una lis
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.ListView>
-- [ListView (Control)](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
-- [Cómo: Agregar y quitar elementos con el Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Cómo: Agregar columnas al Control de ListView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Cómo: Mostrar iconos para el Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [Cómo: Mostrar subelementos en columnas con el Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [Cómo: Seleccione un elemento en el Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)
-- [Cómo: Agrupar elementos en un Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)
-- [Cómo: Mostrar una marca de inserción en un Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
-- [Cómo: Agregar capacidades de búsqueda a un Control ListView](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)
-- [Cómo: Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [Cómo: Crear una interfaz de usuario de varios paneles con formularios de Windows](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [ListView (Control)](listview-control-windows-forms.md)
+- [Cómo: Agregar y quitar elementos con el Control ListView de formularios de Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Cómo: Agregar columnas al Control de ListView de Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Cómo: Mostrar iconos para el Control ListView de formularios de Windows](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Cómo: Mostrar subelementos en columnas con el Control ListView de formularios de Windows](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [Cómo: Seleccione un elemento en el Control ListView de formularios de Windows](how-to-select-an-item-in-the-windows-forms-listview-control.md)
+- [Cómo: Agrupar elementos en un Control ListView de formularios de Windows](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [Cómo: Mostrar una marca de inserción en un Control ListView de formularios de Windows](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
+- [Cómo: Agregar capacidades de búsqueda a un Control ListView](how-to-add-search-capabilities-to-a-listview-control.md)
+- [Cómo: Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Cómo: Crear una interfaz de usuario de varios paneles con formularios de Windows](how-to-create-a-multipane-user-interface-with-windows-forms.md)

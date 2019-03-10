@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Copiar y pegar un Control ElementHost en tiempo de diseño
+title: Filtrar Copiar y pegar un Control ElementHost en tiempo de diseño
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, content copying and pasting
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-ms.openlocfilehash: 6ff1ccc5e8f188bdec2e09048974fdc20a785920
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 203a01ef82554bf4104f3000c0821cceeafac9f7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572636"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710425"
 ---
-# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>Procedimiento Copiar y pegar un Control ElementHost en tiempo de diseño
+# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>Filtrar Copiar y pegar un Control ElementHost en tiempo de diseño
 Este procedimiento muestra cómo copiar un control de Windows Presentation Foundation (WPF) en un formulario de Windows.  
   
 > [!NOTE]
@@ -22,7 +22,7 @@ Este procedimiento muestra cómo copiar un control de Windows Presentation Found
   
 ### <a name="to-copy-and-paste-an-elementhost-control-at-design-time"></a>Para copiar y pegar un control ElementHost en tiempo de diseño  
   
-1.  Agregue un nuevo WPF <xref:System.Windows.Controls.UserControl> a su proyecto de Windows Forms. Use el nombre predeterminado del tipo de control, `UserControl1.xaml`. Para obtener más información, vea [Tutorial: Crear nuevo contenido WPF en Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Agregue un nuevo WPF <xref:System.Windows.Controls.UserControl> a su proyecto de Windows Forms. Use el nombre predeterminado del tipo de control, `UserControl1.xaml`. Para obtener más información, vea [Tutorial: Crear nuevo contenido WPF en Windows Forms en tiempo de diseño](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
 2.  En el **propiedades** ventana, establezca el valor de la <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> propiedades de `UserControl1` a `200`.  
   
@@ -46,6 +46,6 @@ Este procedimiento muestra cómo copiar un control de Windows Presentation Found
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Migración e interoperabilidad](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [Utilizar controles WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [Migración e interoperabilidad](../../wpf/advanced/migration-and-interoperability.md)
+- [Utilizar controles WPF](using-wpf-controls.md)
 - [Diseño de XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

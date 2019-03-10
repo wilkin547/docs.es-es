@@ -1,5 +1,5 @@
 ---
-title: Filtrar Implementar un formulario que utiliza una operación en segundo plano
+title: Procedimiento Implementar un formulario que utiliza una operación en segundo plano
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: 9ace37b1c79ff2e5cd06fce08557dc6cdf2fcc11
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 9fe514cce4d4aec386f9d61cb84f3a39273c35b0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261315"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723340"
 ---
 # <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Filtrar Implementar un formulario que utiliza una operación en segundo plano
 El programa de ejemplo siguiente crea un formulario que calcula los números de Fibonacci. El cálculo se ejecuta en un subproceso independiente del subproceso de interfaz de usuario, por lo que la interfaz de usuario sigue ejecutándose sin retrasos mientras se realiza el cálculo.  
@@ -31,9 +31,9 @@ El programa de ejemplo siguiente crea un formulario que calcula los números de 
  Consulte también [Tutorial: Implementar un formulario que utiliza una operación en segundo plano](walkthrough-implementing-a-form-that-uses-a-background-operation.md).  
   
 ## <a name="example"></a>Ejemplo  
- [!code-cpp[System.ComponentModel.BackgroundWorker#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#1)]
- [!code-csharp[System.ComponentModel.BackgroundWorker#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#1)]
- [!code-vb[System.ComponentModel.BackgroundWorker#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#1)]  
+ [!code-cpp[System.ComponentModel.BackgroundWorker#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#1)]
+ [!code-csharp[System.ComponentModel.BackgroundWorker#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#1)]
+ [!code-vb[System.ComponentModel.BackgroundWorker#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -45,10 +45,10 @@ El programa de ejemplo siguiente crea un formulario que calcula los números de 
 ## <a name="robust-programming"></a>Programación sólida  
   
 > [!CAUTION]
->  Cuando se usa multithreading de algún tipo, se expone a posibles errores muy graves y complejos. Vea [Procedimientos recomendados para el subprocesamiento administrado](../../../../docs/standard/threading/managed-threading-best-practices.md) antes de implementar cualquier solución que utilice multithreading.  
+>  Cuando se usa multithreading de algún tipo, se expone a posibles errores muy graves y complejos. Vea [Procedimientos recomendados para el subprocesamiento administrado](../../../standard/threading/managed-threading-best-practices.md) antes de implementar cualquier solución que utilice multithreading.  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [Información general sobre el modelo asincrónico basado en eventos](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Procedimientos recomendados para el subprocesamiento administrado](../../../../docs/standard/threading/managed-threading-best-practices.md)
+- [Información general sobre el modelo asincrónico basado en eventos](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Procedimientos recomendados para el subprocesamiento administrado](../../../standard/threading/managed-threading-best-practices.md)

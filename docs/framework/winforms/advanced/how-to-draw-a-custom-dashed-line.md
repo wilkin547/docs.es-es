@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Dibujar una línea discontinua personalizada
+title: Filtrar Dibujar una línea discontinua personalizada
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 77b4b959523c6d35dece2d759eeb71be04b53d93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 830fa45fc88c35b8aa5f047e065ae1efc161f581
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538627"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718953"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>Procedimiento Dibujar una línea discontinua personalizada
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona varios estilos de guión que aparecen en la <xref:System.Drawing.Drawing2D.DashStyle> enumeración. Si los estilos de guión estándar no satisface sus necesidades, puede crear un modelo de guión personalizado.  
@@ -24,13 +24,13 @@ ms.locfileid: "54538627"
   
  La siguiente ilustración muestra la línea discontinua resultante. Tenga en cuenta que el guión final debe ser menor que 25 unidades para que la línea puede terminar en (405, 5).  
   
- ![Lápices](../../../../docs/framework/winforms/advanced/media/pens6.gif "pens6")  
+ ![Lápices](./media/pens6.gif "pens6")  
   
- [!code-csharp[System.Drawing.UsingAPen#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#51)]
- [!code-vb[System.Drawing.UsingAPen#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#51)]  
+ [!code-csharp[System.Drawing.UsingAPen#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#51)]
+ [!code-vb[System.Drawing.UsingAPen#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Crear un formulario de Windows y controlar el formato <xref:System.Windows.Forms.Control.Paint> eventos. Pegue el código anterior en el <xref:System.Windows.Forms.Control.Paint> controlador de eventos.  
   
 ## <a name="see-also"></a>Vea también
-- [Utilizar lápiz para dibujar líneas y formas](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+- [Utilizar lápiz para dibujar líneas y formas](using-a-pen-to-draw-lines-and-shapes.md)

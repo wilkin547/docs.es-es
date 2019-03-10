@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-ms.openlocfilehash: 8162dfc898f7965d65de918d2a5b1f7afbfdf9b2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3f0a1b6a7f83753ccae1a129528ed320a2613122
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863288"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723052"
 ---
 # <a name="toolbar-control-windows-forms"></a>Barra de herramientas (Control, formularios Windows Forms)
 > [!NOTE]
@@ -22,27 +22,27 @@ ms.locfileid: "43863288"
 >  La propiedad <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> del control `ToolBar` propiedad toma una instancia de la clase <xref:System.Windows.Forms.ContextMenu> como referencia. Tenga en cuenta la referencia que pasa al implementar esta clase de botón en las barras de herramientas de su aplicación, porque la propiedad aceptará cualquier objeto que herede de la clase <xref:System.Windows.Forms.Menu>.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general del control ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
+ [Información general del control ToolBar](toolbar-control-overview-windows-forms.md)  
  Presenta los conceptos generales del control `ToolBar`, que permite diseñar barras de herramientas personalizadas con las que los usuarios pueden trabajar.  
   
- [Agregar botones a un control ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
+ [Cómo: Agregar botones a un Control de barra de herramientas](how-to-add-buttons-to-a-toolbar-control.md)  
  Describe cómo agregar botones a un control `ToolBar`.  
   
- [Definir un icono para un botón ToolBar](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
+ [Cómo: Definir un icono para un botón de barra de herramientas](how-to-define-an-icon-for-a-toolbar-button.md)  
  Describe cómo mostrar iconos dentro de los botones del control `ToolBar`.  
   
- [Cómo: Desencadenar eventos de menú para los botones de la barra de herramientas](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [Cómo: Desencadenar eventos de menú para los botones de barra de herramientas](how-to-trigger-menu-events-for-toolbar-buttons.md)  
  Proporciona instrucciones sobre cómo escribir código para interpretar en que botón hace clic el usuario en un control `ToolBar`.  
   
- Consulte también [Cómo: definir un icono para un botón de barra de herramientas mediante el diseñador](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), [Cómo: agregar botones a un Control ToolBar mediante el diseñador](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
+ Consulte también [Cómo: Definir un icono para un botón de barra de herramientas mediante el diseñador](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), [Cómo: Agregar botones a un Control ToolBar mediante el diseñador](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
   
 ## <a name="reference"></a>Referencia  
  Clase <xref:System.Windows.Forms.ToolBar>  
  Contiene información de referencia sobre la clase y sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se usan en Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Controles que se usan en Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  
   
- [Control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ [Control ToolStrip](toolstrip-control-windows-forms.md)  
  Describe las barras de herramientas que pueden hospedar menús, controles y controles de usuario en aplicaciones de Windows Forms.

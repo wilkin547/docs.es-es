@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Representar imágenes con GDI +
+title: Filtrar Representar imágenes con GDI +
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
-ms.openlocfilehash: a289aee211d5115d80e7ad0d9152b05a0eaf5487
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2c626f46862e5fdc7c51b509a6419a3d67c4102
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567817"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702833"
 ---
 # <a name="how-to-render-images-with-gdi"></a>Procedimiento Representar imágenes con GDI +
 Puede usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para representar imágenes que existan como archivos en las aplicaciones. Hacerlo mediante la creación de un nuevo objeto de un <xref:System.Drawing.Image> clase (como <xref:System.Drawing.Bitmap>), creando un <xref:System.Drawing.Graphics> objeto que hace referencia a la superficie de dibujo que desea usar y llamar a la <xref:System.Drawing.Graphics.DrawImage%2A> método de la <xref:System.Drawing.Graphics> objeto. La imagen se pintará sobre la superficie de dibujo representada por la clase graphics. Puede usar el Editor de imágenes para crear y editar archivos de imagen en tiempo de diseño y representarlos con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] en tiempo de ejecución. Para más información, consulte [Editor de imágenes para iconos](/cpp/windows/image-editor-for-icons).  
@@ -47,7 +47,7 @@ Puede usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] p
           (System::Environment::SpecialFolder::MyPictures));  
     ```  
   
-2.  Crear un <xref:System.Drawing.Graphics> objeto que representa la superficie de dibujo que desea usar. Para obtener más información, vea [Cómo: Crear objetos Graphics para dibujar](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
+2.  Crear un <xref:System.Drawing.Graphics> objeto que representa la superficie de dibujo que desea usar. Para obtener más información, vea [Cómo: Crear objetos Graphics para dibujar](how-to-create-graphics-objects-for-drawing.md).  
   
     ```vb  
     ' Creates a Graphics object that represents the drawing surface of   
@@ -82,10 +82,10 @@ Puede usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] p
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [Introducción a la programación de gráficos](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
-- [Cómo: Crear objetos Graphics para dibujar](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
-- [Lápices, líneas y rectángulos en GDI+](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)
-- [Cómo: Dibujar texto en un formulario de Windows](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)
-- [Gráficos y dibujos en Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Introducción a la programación de gráficos](getting-started-with-graphics-programming.md)
+- [Cómo: Crear objetos Graphics para dibujar](how-to-create-graphics-objects-for-drawing.md)
+- [Lápices, líneas y rectángulos en GDI+](pens-lines-and-rectangles-in-gdi.md)
+- [Cómo: Dibujar texto en un formulario de Windows](how-to-draw-text-on-a-windows-form.md)
+- [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Dibujar líneas o figuras cerradas](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
 - [Editor de imágenes para iconos](/cpp/windows/image-editor-for-icons)

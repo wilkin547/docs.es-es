@@ -9,14 +9,14 @@ helpviewer_keywords:
 - lines [Windows Forms], texture
 - drawing lines [Windows Forms], texture
 ms.assetid: dc9118cc-f3c2-42e5-8173-f46d41d18fd5
-ms.openlocfilehash: 65d830ca2d01c63288ef73b6b3a3a94f328fe32b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd7a2aa2f6d930b0de29d8b8cbd3feacdb7a81e3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676251"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718602"
 ---
-# <a name="how-to-draw-a-line-filled-with-a-texture"></a>Procedimiento Dibujar una línea rellenada con una textura
+# <a name="how-to-draw-a-line-filled-with-a-texture"></a>Filtrar Dibujar una línea rellenada con una textura
 En lugar de dibujar una línea con un color sólido, puede dibujar una línea con una textura. Para dibujar líneas y curvas con una textura, cree un <xref:System.Drawing.TextureBrush> de objetos y pasar ese <xref:System.Drawing.TextureBrush> objeto a un <xref:System.Drawing.Pen.%23ctor%2A> constructor. El mapa de bits asociado con el pincel de textura se usa para el plano de mosaico (de manera invisible) y, cuando el lápiz dibuja una línea o curva, el trazo del lápiz revela ciertas píxeles de la textura en mosaico.  
   
 ## <a name="example"></a>Ejemplo  
@@ -24,14 +24,14 @@ En lugar de dibujar una línea con un color sólido, puede dibujar una línea co
   
  La siguiente ilustración muestra el mapa de bits y la elipse.  
   
- ![Lápices](../../../../docs/framework/winforms/advanced/media/pens7.png "pens7")  
+ ![Lápices](./media/pens7.png "pens7")  
   
- [!code-csharp[System.Drawing.UsingAPen#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#61)]
- [!code-vb[System.Drawing.UsingAPen#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#61)]  
+ [!code-csharp[System.Drawing.UsingAPen#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#61)]
+ [!code-vb[System.Drawing.UsingAPen#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Crear un formulario de Windows y controlar el formato <xref:System.Windows.Forms.Control.Paint> eventos. Pegue el código anterior en el <xref:System.Windows.Forms.Control.Paint> controlador de eventos. Reemplace `Texture.jpg` con una imagen válida en su sistema.  
   
 ## <a name="see-also"></a>Vea también
-- [Utilizar lápiz para dibujar líneas y formas](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
-- [Gráficos y dibujos en Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Utilizar lápiz para dibujar líneas y formas](using-a-pen-to-draw-lines-and-shapes.md)
+- [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)

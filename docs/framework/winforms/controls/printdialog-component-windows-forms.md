@@ -8,21 +8,21 @@ helpviewer_keywords:
 - printing [Windows Forms], PrintDialog component (using designer)
 - printing [Windows Forms], print options
 ms.assetid: 09b54db1-d7c7-42fa-b98a-840e6b80a9ad
-ms.openlocfilehash: 70ad34c9b899fe2a24c82067610b018ca5282060
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35bc465b70d9e92f427a70590af45613555380cb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535472"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715209"
 ---
 # <a name="printdialog-component-windows-forms"></a>PrintDialog (Componente, formularios Windows Forms)
 El componente Windows Forms `PrintDialog` es un cuadro de diálogo preconfigurado que se utiliza para seleccionar una impresora, elegir las páginas que se quieren imprimir y determinar otra configuración relacionada con la impresión en aplicaciones basadas en Windows. Utilizar como una solución sencilla para la impresora y la selección de configuración relacionada con la impresión en lugar de configurar su propio cuadro de diálogo. Puede permitir que los usuarios impriman diversas partes de sus documentos: imprimir todo, imprimir un intervalo de páginas especificado o imprimir una selección. Al basarse en cuadros de diálogo estándar de Windows, crea aplicaciones cuya funcionalidad básica resultará de inmediato familiar a los usuarios.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general del componente PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-overview-windows-forms.md)  
+ [Información general del componente PrintDialog](printdialog-component-overview-windows-forms.md)  
  Presenta los conceptos generales del componente `PrintDialog`, que permite mostrar un cuadro de diálogo preconfigurado que los usuarios pueden utilizar para seleccionar una impresora, elegir las páginas que desean imprimir y determinar configuraciones relacionadas con la impresión.  
   
- [Mostrar el componente PrintDialog](../../../../docs/framework/winforms/controls/how-to-display-the-printdialog-component.md)  
+ [Cómo: Mostrar el componente PrintDialog](how-to-display-the-printdialog-component.md)  
  Explica cómo mostrar el cuadro de diálogo y dónde guarda las propiedades.  
   
 ## <a name="reference"></a>Referencia  
@@ -30,5 +30,5 @@ El componente Windows Forms `PrintDialog` es un cuadro de diálogo preconfigurad
  Contiene información de referencia sobre la clase y sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se usan en Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Controles que se usan en Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

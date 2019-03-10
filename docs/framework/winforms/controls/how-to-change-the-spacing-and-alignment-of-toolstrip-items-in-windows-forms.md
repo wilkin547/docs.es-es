@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Cambiar el espaciado y la alineación de los elementos ToolStrip en Windows Forms
+title: Filtrar Cambiar el espaciado y la alineación de los elementos ToolStrip en Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 2c9c60a3bfd78b7111b9cdff6a791d70c8e53c82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 954087fa893baf3aa623c912efb081491304d3fb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685068"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719447"
 ---
-# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Procedimiento Cambiar el espaciado y la alineación de los elementos ToolStrip en Windows Forms
+# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Filtrar Cambiar el espaciado y la alineación de los elementos ToolStrip en Windows Forms
 El <xref:System.Windows.Forms.ToolStrip> control es totalmente compatible con las características de diseño, como cambiar el tamaño, el espaciado de <xref:System.Windows.Forms.ToolStripItem> controles relacionados entre sí, la disposición de los controles en el <xref:System.Windows.Forms.ToolStrip>y el espaciado de los controles relativa a la <xref:System.Windows.Forms.ToolStrip>.  
   
  Dado que el valor predeterminado de la <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> propiedad es `true`, controles de tamaño se ajusta automáticamente a menos que establezca el <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> propiedad a `false`.  
@@ -87,6 +87,6 @@ El <xref:System.Windows.Forms.ToolStrip> control es totalmente compatible con la
 - <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>
 - <xref:System.Windows.Forms.ToolStripItem.Placement%2A>
 - <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>
-- [Información sobre el control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [Arquitectura del control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [Resumen de la tecnología ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [Información sobre el control ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Arquitectura del control ToolStrip](toolstrip-control-architecture.md)
+- [Resumen de la tecnología ToolStrip](toolstrip-technology-summary.md)

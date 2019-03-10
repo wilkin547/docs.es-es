@@ -1,21 +1,21 @@
 ---
-title: Datos introducidos por el usuario en una aplicación de Windows Forms
+title: Datos introducidos por el usuario en una aplicación de formularios Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
-ms.openlocfilehash: a47a35cffb99648737245031a558db884024c011
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 351c1e42bb775331cbe0e2005b6bea284716de75
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684085"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711933"
 ---
-# <a name="user-input-in-a-windows-forms-application"></a>Datos introducidos por el usuario en una aplicación de Windows Forms
+# <a name="user-input-in-a-windows-forms-application"></a>Datos introducidos por el usuario en una aplicación de formularios Windows Forms
 En Windows Forms, proporcionados por el usuario se envían a las aplicaciones en forma de mensajes de Windows. Una serie de métodos reemplazables procesan estos mensajes en la aplicación, el formulario y controlar el nivel. Cuando estos métodos reciben los mensajes del mouse y teclado, generan eventos que pueden administrarse para obtener información sobre el mouse o entrada del teclado. En muchos casos, las aplicaciones de Windows Forms será capaces de procesar todas las entradas de usuario controlando estos eventos. En otros casos, una aplicación puede necesitar reemplazar uno de los métodos que procesan mensajes para interceptar un mensaje concreto antes de ser recibido por la aplicación, formulario o control.  
   
 ## <a name="mouse-and-keyboard-events"></a>Eventos del mouse y teclado  
- Todos los controles de Windows Forms heredan un conjunto de eventos relacionados con el mouse y teclado. Por ejemplo, un control puede controlar el <xref:System.Windows.Forms.Control.KeyPress> puede controlar el evento para determinar el código de carácter de una clave que se presionó, o un control de la <xref:System.Windows.Forms.Control.MouseClick> evento para determinar la ubicación de un mouse, haga clic en. Para obtener más información sobre los eventos del mouse y teclado, consulte [mediante eventos de teclado](../../../docs/framework/winforms/using-keyboard-events.md) y [eventos del Mouse en Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).  
+ Todos los controles de Windows Forms heredan un conjunto de eventos relacionados con el mouse y teclado. Por ejemplo, un control puede controlar el <xref:System.Windows.Forms.Control.KeyPress> puede controlar el evento para determinar el código de carácter de una clave que se presionó, o un control de la <xref:System.Windows.Forms.Control.MouseClick> evento para determinar la ubicación de un mouse, haga clic en. Para obtener más información sobre los eventos del mouse y teclado, consulte [mediante eventos de teclado](using-keyboard-events.md) y [eventos del Mouse en Windows Forms](mouse-events-in-windows-forms.md).  
   
 ## <a name="methods-that-process-user-input-messages"></a>Métodos que procesan los mensajes de entrada de usuario  
  Formularios y controles tienen acceso a la <xref:System.Windows.Forms.IMessageFilter> interfaz y un conjunto de métodos reemplazables que procesan los mensajes de Windows en distintos puntos de la cola de mensajes. Estos métodos tienen un <xref:System.Windows.Forms.Message> parámetro, que encapsula los detalles de bajo nivel de mensajes de Windows. Puede implementar o invalidar estos métodos para examinar el mensaje y consumir el mensaje o la pasa al siguiente consumidor en la cola de mensajes. En la tabla siguiente presenta los métodos que procesan todos los mensajes de Windows en Windows Forms.  
@@ -28,9 +28,9 @@ En Windows Forms, proporcionados por el usuario se envían a las aplicaciones en
 |<xref:System.Windows.Forms.Control.DefWndProc%2A>|Este método realiza el procesamiento predeterminado de mensajes de Windows en el nivel de formulario y control. Esto proporciona la funcionalidad mínima de una ventana.|  
 |<xref:System.Windows.Forms.Control.OnNotifyMessage%2A>|Este método intercepta los mensajes en el nivel de formulario y control, una vez que se han procesado. El <xref:System.Windows.Forms.ControlStyles.EnableNotifyMessage> se debe establecer el bit de estilo para que se llama a este método.|  
   
- También se procesan los mensajes del teclado y mouse (ratón) por un conjunto adicional de métodos reemplazables que son específicos de esos tipos de mensajes. Para obtener más información, consulte [cómo funciona la entrada de teclado](../../../docs/framework/winforms/how-keyboard-input-works.md) y [cómo funciona de entrada de mouse (ratón) en Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  
+ También se procesan los mensajes del teclado y mouse (ratón) por un conjunto adicional de métodos reemplazables que son específicos de esos tipos de mensajes. Para obtener más información, consulte [cómo funciona la entrada de teclado](how-keyboard-input-works.md) y [cómo funciona de entrada de mouse (ratón) en Windows Forms](how-mouse-input-works-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Datos proporcionados por el usuario en Windows Forms](../../../docs/framework/winforms/user-input-in-windows-forms.md)
-- [Entradas mediante teclado en una aplicación de Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
-- [Entradas mediante el mouse en una aplicación de Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Datos proporcionados por el usuario en Windows Forms](user-input-in-windows-forms.md)
+- [Entradas mediante teclado en una aplicación de Windows Forms](keyboard-input-in-a-windows-forms-application.md)
+- [Entradas mediante el mouse en una aplicación de Windows Forms](mouse-input-in-a-windows-forms-application.md)

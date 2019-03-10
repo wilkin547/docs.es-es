@@ -12,14 +12,14 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 88a743cc6d0a1e90d2912c9ec610fae326ff5770
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec4e41f5a3bee6302996f21afa81f2b5eeb9568
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744913"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720896"
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Procedimiento Agregar o quitar de una colección de controles en tiempo de ejecución
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Filtrar Agregar o quitar de una colección de controles en tiempo de ejecución
 Tareas comunes de desarrollo de aplicaciones son agregar controles a y quitar controles de un control contenedor en los formularios (como el <xref:System.Windows.Forms.Panel> o <xref:System.Windows.Forms.GroupBox> control, o incluso el propio formulario). En tiempo de diseño, los controles se pueden arrastrar directamente al panel o grupo de cuadro. En tiempo de ejecución, estos controles mantienen una colección `Controls`, que realiza un seguimiento de los controles que se colocan en ellos.  
   
 > [!NOTE]
@@ -102,4 +102,4 @@ Tareas comunes de desarrollo de aplicaciones son agregar controles a y quitar co
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.Panel>
-- [Panel (control)](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
+- [Panel (control)](panel-control-windows-forms.md)

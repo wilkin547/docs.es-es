@@ -6,14 +6,14 @@ helpviewer_keywords:
 - custom controls [Windows Forms], transparent background
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
-ms.openlocfilehash: 20815518c2a683878e0d3adf6a4bdc9261b614d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a54b76eb92c7d3f518b9bf13e154e6faf58de63
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644618"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718173"
 ---
-# <a name="how-to-give-your-control-a-transparent-background"></a>Procedimiento Proporcionar un fondo transparente a un Control
+# <a name="how-to-give-your-control-a-transparent-background"></a>Filtrar Proporcionar un fondo transparente a un Control
 En versiones anteriores de .NET Framework, los controles no admitían la opción de establecer fondos transparentes sin establecer primero el método <xref:System.Windows.Forms.Control.SetStyle%2A> en el constructor de formularios. En la versión actual de .NET Framework, el color de fondo de la mayoría de los controles se puede establecer como <xref:System.Drawing.Color.Transparent%2A> en la ventana **Propiedades** durante el tiempo de diseño o como código en el constructor del formulario.  
   
 > [!NOTE]
@@ -28,6 +28,6 @@ En versiones anteriores de .NET Framework, los controles no admitían la opción
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Drawing.Color.FromArgb%2A>
-- [Desarrollar controles personalizados de Windows Forms con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Using Managed Graphics Classes](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md) (Usar clases gráficas administradas)
-- [Cómo: Dibujar líneas opacas y semitransparentes](../../../../docs/framework/winforms/advanced/how-to-draw-opaque-and-semitransparent-lines.md)
+- [Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)
+- [Using Managed Graphics Classes](../advanced/using-managed-graphics-classes.md) (Usar clases gráficas administradas)
+- [Cómo: Dibujar líneas opacas y semitransparentes](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)

@@ -2,21 +2,21 @@
 title: 'Tarea 3: Crear el cuadro de herramientas y PropertyGrid paneles'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 8e332c2caa43e1c9703272d7f2be16b545c44fd3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45819577c39185a5d95da81521cd541087a64efc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558428"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721231"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tarea 3: Crear el cuadro de herramientas y PropertyGrid paneles
 En esta tarea, creará el **cuadro de herramientas** y **PropertyGrid** paneles y agregarlos a rehospedado [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
- Como referencia, el código que debe estar en el archivo MainWindow.xaml.cs después de completar las tres tareas en el [Rehospedar el Diseñador de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) serie de temas se proporciona al final de este tema.  
+ Como referencia, el código que debe estar en el archivo MainWindow.xaml.cs después de completar las tres tareas en el [Rehospedar el Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md) serie de temas se proporciona al final de este tema.  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Para crear el Cuadro de herramientas y agregarlo a la cuadrícula  
   
-1.  Abra el proyecto HostingApplication que obtuvo siguiendo el procedimiento descrito en [tarea 2: Hospedar el Diseñador de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
+1.  Abra el proyecto HostingApplication que obtuvo siguiendo el procedimiento descrito en [tarea 2: Hospedar el Diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md).  
   
 2.  En el **el Explorador de soluciones** panel, haga clic en el archivo MainWindow.xaml y seleccione **ver código**.  
   
@@ -213,6 +213,6 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Rehospedaje del Diseñador de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [Tarea 1: Crear una nueva aplicación de Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [Tarea 2: Hospedar el Diseñador de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [Rehospedaje del Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md)
+- [Tarea 1: Crear una nueva aplicación de Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Tarea 2: Hospedar el Diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md)

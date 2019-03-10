@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Copiar píxeles para reducir el parpadeo en formularios de Windows
+title: Filtrar Copiar píxeles para reducir el parpadeo en formularios de Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: cdcb64588f91ece02f1e7f446d4020d68262c93d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d03a9b79dc2c0ec61bbafe2ff09b5aba7fffc57b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559455"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719252"
 ---
-# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Procedimiento Copiar píxeles para reducir el parpadeo en formularios de Windows
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Filtrar Copiar píxeles para reducir el parpadeo en formularios de Windows
 Al animar un gráfico sencillo, los usuarios a veces pueden encontrarse parpadeos u otros efectos visuales no deseados. Una forma de limitar este problema es usar un proceso "bitblt" en el gráfico. BitBlt es la "bloque de bits transferencia" de los datos de color de un rectángulo de píxeles de origen a un rectángulo de destino de píxeles.  
   
  Con Windows Forms, bitblt se realiza utilizando la <xref:System.Drawing.Graphics.CopyFromScreen%2A> método de la <xref:System.Drawing.Graphics> clase. En los parámetros del método, especifique el origen y destino (como puntos), el objeto graphics que se usa para dibujar la nueva forma y el tamaño del área que se va a copiar.  
@@ -66,5 +66,5 @@ private void Form1_Paint(System.Object sender,
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
-- [Gráficos y dibujos en Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Utilizar lápiz para dibujar líneas y formas](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+- [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Utilizar lápiz para dibujar líneas y formas](using-a-pen-to-draw-lines-and-shapes.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 9cc6cb747ea5ff80770f18c2e884e72883c9a82f
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 52928b11ce3577a1fb6d218b4a74b986f5fe8d1e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261042"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710269"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Filtrar Implementar la comunicación bidireccional entre código DHTML y código de la aplicación cliente
 Puede usar el control <xref:System.Windows.Forms.WebBrowser> para agregar código de aplicación web de HTML dinámico (DHTML) existente a sus aplicaciones de cliente de Windows Forms. Esto es útil cuando se ha invertido un tiempo de desarrollo importante para crear controles basados en DHTML y quiere aprovechar las funciones de la interfaz de usuario enriquecida de Windows Forms sin tener que volver a escribir el código existente.  
@@ -30,18 +30,18 @@ Puede usar el control <xref:System.Windows.Forms.WebBrowser> para agregar códig
   
 1.  Establezca la propiedad <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> del control <xref:System.Windows.Forms.WebBrowser> en `false` para evitar que el control <xref:System.Windows.Forms.WebBrowser> abra los archivos que se coloquen en él.  
   
-     [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#1)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#1)]  
+     [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#1)]
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#1)]  
   
 2.  Establezca la propiedad <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> del control en `false` para evitar que el control <xref:System.Windows.Forms.WebBrowser> muestre su menú contextual cuando el usuario haga clic en él con el botón secundario.  
   
-     [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#2)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#2)]
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#2)]  
   
 3.  Establezca la propiedad <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> del control en `false` para evitar que el control <xref:System.Windows.Forms.WebBrowser> responda a teclas de método abreviado.  
   
-     [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#3)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#3)]
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#3)]  
   
 4.  Establezca la propiedad <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> en el constructor del formulario o en un controlador de eventos <xref:System.Windows.Forms.Form.Load>.  
   
@@ -50,15 +50,15 @@ Puede usar el control <xref:System.Windows.Forms.WebBrowser> para agregar códig
     > [!NOTE]
     >  El modelo de objetos componentes (COM) debe poder tener acceso al objeto de scripting. Para que el formulario sea visible para COM, agregue el atributo <xref:System.Runtime.InteropServices.ComVisibleAttribute> a la clase de formulario.  
   
-     [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#4)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#4)]
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#4)]  
   
 5.  Implemente las propiedades o los métodos públicos en el código de la aplicación que el código de script usará.  
   
      Por ejemplo, si usa la clase de formulario para el objeto de scripting, agregue el código siguiente a la clase de formulario.  
   
-     [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#5)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#5)]  
+     [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#5)]
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#5)]  
   
 6.  Use el objeto `window.external` en el código de scripting para acceder a las propiedades y los métodos públicos del objeto especificado.  
   
@@ -86,19 +86,19 @@ Puede usar el control <xref:System.Windows.Forms.WebBrowser> para agregar códig
   
      Por ejemplo, agregue el código siguiente al controlador de eventos de un botón <xref:System.Windows.Forms.Control.Click>.  
   
-     [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#8](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#8)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#8](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#8)]  
+     [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#8](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#8)]
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#8](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#8)]  
   
 9. Cuando haya terminado la depuración del código DHTML, establezca la propiedad <xref:System.Windows.Forms.WebBrowser.ScriptErrorsSuppressed%2A> del control en `true` para evitar que el control <xref:System.Windows.Forms.WebBrowser> muestre mensajes de error para los problemas del código de script.  
   
-     [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#9](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#9)]
-     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#9](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#9)]  
+     [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#9](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#9)]
+     [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#9)]  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo de código completo proporciona una aplicación de demostración que puede usar para comprender esta característica. El código HTML se carga en el control <xref:System.Windows.Forms.WebBrowser> mediante la propiedad <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> en lugar de cargarse desde un archivo HTML independiente.  
   
- [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#0](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#0)]
- [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#0](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#0)]  
+ [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Este código requiere:  
@@ -111,4 +111,4 @@ Puede usar el control <xref:System.Windows.Forms.WebBrowser> para agregar códig
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A?displayProperty=nameWithType>
-- [WebBrowser (control)](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)
+- [WebBrowser (control)](webbrowser-control-windows-forms.md)

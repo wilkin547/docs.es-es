@@ -13,12 +13,12 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: ad5dd1cc3839fbe29d39f6ab38b0e865e7b0a335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2173769634ddc4b7b42c822c3f60212eb8d8886
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492432"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713038"
 ---
 # <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Procedimiento Establecer sangrías, sangrías francesas y párrafos con viñetas con el Control RichTextBox de formularios de Windows
 Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control tiene numerosas opciones para dar formato al texto que muestra. Puede dar formato a párrafos seleccionados como listas con viñetas estableciendo el <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> propiedad. También puede usar el <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, y <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propiedades para establecer la sangría de párrafos relativa a la izquierda y derecha bordes del control y el borde izquierdo de otras líneas de texto.  
@@ -70,5 +70,5 @@ Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control tiene
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox (control)](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox (control)](richtextbox-control-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

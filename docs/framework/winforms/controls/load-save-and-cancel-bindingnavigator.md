@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar una carga, guardar y cancelar botones a la Windows Forms Control BindingNavigator
+title: Filtrar Agregar una carga, guardar y cancelar botones a la Windows Forms Control BindingNavigator
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: dc91a4a91d26cd51a06b1c08dcb76f8966c52594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d86ded0b93d876eac4b97938678cafbb22c3ac8a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671114"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722443"
 ---
-# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Procedimiento Agregar una carga, guardar y cancelar botones a la Windows Forms Control BindingNavigator
+# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Filtrar Agregar una carga, guardar y cancelar botones a la Windows Forms Control BindingNavigator
 El <xref:System.Windows.Forms.BindingNavigator> control es un propósito especial <xref:System.Windows.Forms.ToolStrip> control que está pensado para explorar y manipular los controles de formulario que están enlazados a datos.  
   
  Porque es un <xref:System.Windows.Forms.ToolStrip> (control), el <xref:System.Windows.Forms.BindingNavigator> componente puede modificarse fácilmente para incluir comandos adicionales o alternativos para el usuario.  
@@ -34,7 +34,7 @@ El <xref:System.Windows.Forms.BindingNavigator> control es un propósito especia
   
 5.  Seleccione el control <xref:System.Windows.Forms.BindingNavigator>.  
   
-6.  Haga clic en el glifo de etiqueta inteligente (![glifo de etiqueta inteligente](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) por lo que la **BindingNavigator tareas** cuadro de diálogo aparece y seleccione **editar elementos**.  
+6.  Haga clic en el glifo de etiqueta inteligente (![glifo de etiqueta inteligente](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) por lo que la **BindingNavigator tareas** cuadro de diálogo aparece y seleccione **editar elementos**.  
   
      El **Editor de la colección de elementos** aparece.  
   
@@ -113,5 +113,5 @@ El <xref:System.Windows.Forms.BindingNavigator> control es un propósito especia
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.ToolStrip>
-- [BindingNavigator (control)](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [Información general sobre el componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+- [BindingNavigator (control)](bindingnavigator-control-windows-forms.md)
+- [Información general sobre el componente BindingSource](bindingsource-component-overview.md)

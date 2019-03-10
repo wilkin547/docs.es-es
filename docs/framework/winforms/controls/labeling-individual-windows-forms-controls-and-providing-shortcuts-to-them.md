@@ -7,31 +7,31 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: a5504095814cdfc04699bf24b9b96191e94b22c3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8d7ae8c807b8c5347a455b81c2c1a1b0897430c2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521009"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710607"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos
 Los controles que se agregan a Windows Forms tienen propiedades y métodos que permiten a los usuarios especificar en mayor medida la forma de utilizarlos. La personalización de la interfaz de usuario para que se ajuste a las necesidades del usuario es muy importante para el buen diseño de las aplicaciones para Windows.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Establecer el texto mostrado por un control de Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [Cómo: Establecer el texto mostrado por un Windows Forms Control](how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
  Describe cómo asignar una etiqueta de texto a un control.  
   
- [Establecer la imagen que muestra un control de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md)  
+ [Cómo: Establecer la imagen que muestra un Windows Forms Control](how-to-set-the-image-displayed-by-a-windows-forms-control.md)  
  Explica cómo configurar un control para mostrar imágenes.  
   
- [Crear teclas de acceso para controles de Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
+ [Cómo: Crear teclas de acceso para controles de formularios Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)  
  Proporciona información acerca de cómo crear métodos abreviados de teclado predefinidos.  
   
- [Proporcionar información de accesibilidad de controles en Windows Forms](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
+ [Proporcionar información de accesibilidad de controles en Windows Forms](providing-accessibility-information-for-controls-on-a-windows-form.md)  
  Proporciona información acerca de la habilitación de controles para trabajar con las ayudas de accesibilidad.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
+ [Controles de formularios Windows Forms](index.md)  
  Vínculos a otras tareas básicas que puede hacer con los controles.  
   
- Consulte también [Cómo: crear acceso a las claves para Windows Forms controles mediante el diseñador](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [Cómo: establecer el texto que se muestra mediante un Control de Windows Forms mediante el diseñador](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [Cómo: establecer la imagen Muestra un Windows Forms mediante el Diseñador de Control](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).
+ Consulte también [Cómo: Crear teclas de acceso para Windows Forms mediante el Diseñador de controles](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [Cómo: Establecer el texto mostrado por un Windows Forms mediante el Diseñador de Control](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [Cómo: Establecer la imagen que muestra un Windows Forms mediante el Diseñador de Control](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).

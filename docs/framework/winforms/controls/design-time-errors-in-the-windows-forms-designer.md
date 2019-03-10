@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: 70ca9c2c0bcaa258acaa7649adad32acdcd90dfb
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 64a0b8d0d0d9f0cc2bc2a841b999af58f29b4f75
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441650"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718056"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Errores en tiempo de diseño en el Diseñador de Windows Forms
 En este tema se explica el significado y el uso de la lista de errores en tiempo de diseño que aparece en Microsoft Visual Studio cuando no se puede cargar el Diseñador de Windows Forms. Si esta lista de errores aparece, no debe interpretarse como un error del diseñador, sino como una ayuda para corregir errores en el código.  
@@ -54,6 +54,6 @@ En este tema se explica el significado y el uso de la lista de errores en tiempo
   
 ## <a name="see-also"></a>Vea también
 - [Solución de problemas de desarrollo en tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
-- [Solución de problemas relacionados con la creación de controles y componentes](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)
-- [Desarrollar controles de Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [Solución de problemas relacionados con la creación de controles y componentes](troubleshooting-control-and-component-authoring.md)
+- [Desarrollar controles de Windows Forms en tiempo de diseño](developing-windows-forms-controls-at-design-time.md)
 - [Windows Forms Designer Error Messages](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100)) (Mensajes de error del Diseñador de Windows Forms)

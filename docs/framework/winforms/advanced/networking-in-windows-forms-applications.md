@@ -5,22 +5,22 @@ helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
 - Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
-ms.openlocfilehash: 23251116344af49509547055af824802c4878849
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2432fbd0a2c769efb126e4b9c1dc19e35fbe4c31
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523389"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712375"
 ---
 # <a name="networking-in-windows-forms-applications"></a>Funciones de red en las aplicaciones de Windows Forms
-.NET Framework proporciona clases para mostrar páginas Web, descargar contenido Web, interactuar con sitios de protocolo (FTP) de transferencia de archivos y consumir servicios Web, lo que facilita crear funcionalidad de red en la aplicación. Los siguientes recursos le ayudará a comprender las tecnologías de redes de .NET Framework y cómo se puede integrar en formularios Windows Forms.  
+.NET Framework proporciona clases para mostrar páginas Web, descarga de contenido Web, interactuar con sitios de protocolo (FTP) de transferencia de archivos y consumir servicios Web, lo que facilita a integrar la funcionalidad de red en la aplicación. Los siguientes recursos le ayudará a comprender las tecnologías de redes de .NET Framework y cómo se puede integrar en Windows Forms.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Net>  
  El espacio de nombres raíz para las clases de .NET Framework que identificador de la conectividad de red.  
   
  <xref:System.Net.WebClient>  
- Una clase cómoda para recuperar el contenido Web o basado en HTTP mediante programación.  
+ Una clase conveniente para recuperar el contenido Web o basadas en HTTP mediante programación.  
   
  <xref:System.Net.FtpWebRequest>  
  Una clase para recuperar y enviar archivos con FTP.  
@@ -29,8 +29,8 @@ ms.locfileid: "33523389"
  Una clase de contenedor administrado para el `WebBrowser` control que se incluye con Windows.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Programación para redes en .NET Framework](../../../../docs/framework/network-programming/index.md)  
+ [Programación para redes en .NET Framework](../../network-programming/index.md)  
  Introducción a las redes en .NET Framework.  
   
- [Enlace de datos en Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- Describe cómo mostrar el contenido de la base de datos en la aplicación, ya sea desde un almacén de datos local o una base de datos que se encuentra en una red.
+ [Enlace de datos en Windows Forms](../windows-forms-data-binding.md)  
+ Describe cómo mostrar el contenido de la base de datos en la aplicación, ya sea desde un almacén de datos local o una base de datos ubicado en una red.

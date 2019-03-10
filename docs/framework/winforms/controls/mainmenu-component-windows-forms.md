@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-ms.openlocfilehash: 03de5911baf2a26ff5fc0d3a4e7ed3f9400db8b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 245193498478e24b2f0be102ecbbd6f5051167c4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656770"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713012"
 ---
 # <a name="mainmenu-component-windows-forms"></a>MainMenu (Componente, formularios Windows Forms)
 > [!NOTE]
@@ -18,7 +18,7 @@ ms.locfileid: "54656770"
  Los formularios de Windows `MainMenu` componente muestra un menú en tiempo de ejecución.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre MainMenu](../../../../docs/framework/winforms/controls/mainmenu-component-overview-windows-forms.md)  
+ [Información general sobre MainMenu](mainmenu-component-overview-windows-forms.md)  
  Explica qué es este componente y sus características clave y propiedades.  
   
 ## <a name="reference"></a>Referencia  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 2c4aecb4c7c7a15a7a0aad668b697af3ca0b033f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 60a9ffa8061f5bc576aa919aa742f1c5e6b07124
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664931"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724550"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Acceso más seguro a archivos y datos en formularios Windows Forms
 
@@ -27,7 +27,7 @@ ms.locfileid: "56664931"
  Si se encuentra con una restricción de seguridad, tiene dos opciones: declarar el permiso (si se concedió a la aplicación) o utilizar una versión de la característica escrita para funcionar en confianza parcial. Las secciones siguientes describen cómo trabajar con el acceso a archivos, a bases de datos y al Registro desde las aplicaciones que se ejecutan en un entorno de confianza parcial.  
   
 > [!NOTE]
->  De forma predeterminada, las herramientas que generan implementaciones de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] hacen que estas implementaciones soliciten plena confianza en los equipos donde se ejecutan. Si decide que quiere obtener las ventajas de seguridad añadida de que se ejecutan en confianza parcial, debe cambiar este comportamiento predeterminado en Visual Studio o en uno de los [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] herramientas (Mage.exe o MageUI.exe). Para obtener más información acerca de la seguridad de Windows Forms y cómo determinar el nivel de confianza adecuado para su aplicación, consulte [seguridad en Windows Forms Overview](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
+>  De forma predeterminada, las herramientas que generan implementaciones de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] hacen que estas implementaciones soliciten plena confianza en los equipos donde se ejecutan. Si decide que quiere obtener las ventajas de seguridad añadida de que se ejecutan en confianza parcial, debe cambiar este comportamiento predeterminado en Visual Studio o en uno de los [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] herramientas (Mage.exe o MageUI.exe). Para obtener más información acerca de la seguridad de Windows Forms y cómo determinar el nivel de confianza adecuado para su aplicación, consulte [seguridad en Windows Forms Overview](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Acceso a archivos  
  La clase <xref:System.Security.Permissions.FileIOPermission> controla el acceso a archivos y carpetas en [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. De forma predeterminada, el sistema de seguridad no concede <xref:System.Security.Permissions.FileIOPermission> a los entornos de confianza parcial, como las zonas de Internet y de la intranet local. Sin embargo, una aplicación que requiera acceso a los archivos puede funcionar en estos entornos si usted modifica el diseño de la aplicación o utiliza otros métodos para acceder a los archivos. De forma predeterminada, a la zona de la intranet local se le concede el derecho a acceder a su sitio y a su directorio, para conectarse a su sitio de origen, y a leer desde su directorio de instalación. De forma predeterminada, a la zona de Internet solo se le concede el derecho a conectarse a su sitio de origen.  
@@ -137,7 +137,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 >  En Visual C#, asegúrese de agregar código para habilitar al controlador de eventos. Con el código del ejemplo anterior, el código siguiente muestra cómo habilitar el controlador de eventos.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Otros archivos  
- A veces, necesitará leer o escribir en archivos que no especifique el usuario, por ejemplo, para conservar la configuración de la aplicación. En las zonas de Internet y de la intranet local, la aplicación no tendrá permiso para almacenar datos en un archivo local. Sin embargo, la aplicación podrá almacenar datos en un almacenamiento aislado. El almacenamiento aislado es un compartimiento de datos abstracto (no una ubicación de almacenamiento concreta) que contiene uno o varios archivos de almacenamiento aislado, denominados “almacenes”, que contienen las ubicaciones reales de los directorios donde están almacenados los datos. No son necesarios los permisos de acceso de los archivos como <xref:System.Security.Permissions.FileIOPermission>, sino que la clase <xref:System.Security.Permissions.IsolatedStoragePermission> controla los permisos del almacenamiento aislado. De forma predeterminada, las aplicaciones que se ejecutan en las zonas de Internet y de la intranet local pueden almacenar datos con el almacenamiento aislado. Sin embargo, ciertas configuraciones, como la cuota de disco, pueden variar. Para obtener más información acerca del almacenamiento aislado, consulte [almacenamiento aislado](../../../docs/standard/io/isolated-storage.md).  
+ A veces, necesitará leer o escribir en archivos que no especifique el usuario, por ejemplo, para conservar la configuración de la aplicación. En las zonas de Internet y de la intranet local, la aplicación no tendrá permiso para almacenar datos en un archivo local. Sin embargo, la aplicación podrá almacenar datos en un almacenamiento aislado. El almacenamiento aislado es un compartimiento de datos abstracto (no una ubicación de almacenamiento concreta) que contiene uno o varios archivos de almacenamiento aislado, denominados “almacenes”, que contienen las ubicaciones reales de los directorios donde están almacenados los datos. No son necesarios los permisos de acceso de los archivos como <xref:System.Security.Permissions.FileIOPermission>, sino que la clase <xref:System.Security.Permissions.IsolatedStoragePermission> controla los permisos del almacenamiento aislado. De forma predeterminada, las aplicaciones que se ejecutan en las zonas de Internet y de la intranet local pueden almacenar datos con el almacenamiento aislado. Sin embargo, ciertas configuraciones, como la cuota de disco, pueden variar. Para obtener más información acerca del almacenamiento aislado, consulte [almacenamiento aislado](../../standard/io/isolated-storage.md).  
   
  En el ejemplo siguiente, se utiliza el almacenamiento aislado para escribir datos en un archivo que se encuentra en un almacén. El ejemplo requiere <xref:System.Security.Permissions.IsolatedStorageFilePermission> y el valor de enumeración <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>. El ejemplo muestra la lectura y la escritura de valores de determinadas propiedades del control <xref:System.Windows.Forms.Button> en un archivo situado en un almacenamiento aislado. Se llama a la función `Read` después de que se inicie la aplicación, y a la función `Write` antes de que finalice la aplicación. El ejemplo requiere que el `Read` y `Write` existen funciones como miembros de un <xref:System.Windows.Forms.Form> que contiene un <xref:System.Windows.Forms.Button> control denominado `MainButton`.  
   
@@ -350,7 +350,7 @@ public void Write()
 ```  
   
 ## <a name="database-access"></a>Acceso entre bases de datos  
- Los permisos necesarios para acceder a una base de datos varían según el proveedor de la base de datos. Sin embargo, solo las aplicaciones que se ejecutan con los permisos adecuados pueden acceder a una base de datos a través de una conexión de datos. Para obtener más información acerca de los permisos necesarios para tener acceso a una base de datos, vea [Code Access Security and ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
+ Los permisos necesarios para acceder a una base de datos varían según el proveedor de la base de datos. Sin embargo, solo las aplicaciones que se ejecutan con los permisos adecuados pueden acceder a una base de datos a través de una conexión de datos. Para obtener más información acerca de los permisos necesarios para tener acceso a una base de datos, vea [Code Access Security and ADO.NET](../data/adonet/code-access-security.md).  
   
  Si no puede acceder directamente a una base de datos porque quiere que la aplicación se ejecute en confianza parcial, puede utilizar un servicio Web como un medio alternativo para acceder a los datos. Un servicio Web es un componente de software al que se puede acceder mediante programación a través de una red. Con los servicios Web, las aplicaciones pueden compartir datos entre las zonas del grupo de código. De forma predeterminada, a las aplicaciones de las zonas de Internet y de la intranet local se les concede el derecho de acceso a sus sitios de origen, lo que les permite llamar a un servicio Web hospedado en el mismo servidor. Para obtener más información, consulte [servicios Web en AJAX de ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) o [Windows Communication Foundation](../wcf/index.md).  
   
@@ -360,9 +360,9 @@ public void Write()
  Dado que no puede acceder al Registro con confianza parcial, puede que tenga que dar con otros métodos para almacenar los datos. Al almacenar la configuración de la aplicación, utilice almacenamiento aislado en lugar del Registro. El almacenamiento aislado también puede utilizarse para almacenar otros archivos específicos de la aplicación. También puede almacenar información global de la aplicación sobre el servidor o el sitio de origen porque, de forma predeterminada, a las aplicaciones se les concede el derecho a acceder a su sitio de origen.  
   
 ## <a name="see-also"></a>Vea también
-- [Impresión más segura en Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
-- [Consideraciones de seguridad adicionales en Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)
-- [Información general sobre la seguridad en Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
-- [Windows Forms Security](../../../docs/framework/winforms/windows-forms-security.md)
-- [Mage.exe (Herramienta de generación y edición de manifiestos)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Impresión más segura en Windows Forms](more-secure-printing-in-windows-forms.md)
+- [Consideraciones de seguridad adicionales en Windows Forms](additional-security-considerations-in-windows-forms.md)
+- [Información general sobre la seguridad en Windows Forms](security-in-windows-forms-overview.md)
+- [Windows Forms Security](windows-forms-security.md)
+- [Mage.exe (Herramienta de generación y edición de manifiestos)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

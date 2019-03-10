@@ -10,12 +10,12 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: d9ceb10eb5990742271c8d952d9293807c21677a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e47707d040cd7bf67008fab33ac482706963ce39
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696303"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725251"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Procedimiento Crear un degradado lineal
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona degradados lineales horizontales, verticales y diagonales. De forma predeterminada, el color de un degradado lineal cambia de manera uniforme. Sin embargo, puede personalizar un degradado lineal por lo que cambia el color de manera no uniforme.  
@@ -28,14 +28,14 @@ ms.locfileid: "54696303"
   
  La siguiente ilustración muestra la línea, la elipse y el rectángulo. Tenga en cuenta que el degradado de color se repite a medida que aumenta la coordenada horizontal por encima de 200.  
   
- ![Degradado lineal](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")  
+ ![Degradado lineal](./media/cslineargradient1.png "cslineargradient1")  
   
 ### <a name="to-use-horizontal-linear-gradients"></a>Usar degradados lineales horizontales  
   
 -   Pase el azul opaco opaco y rojo como el tercer y cuarto argumentos, respectivamente.  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
   
  En el ejemplo anterior, los componentes de color linealmente cambian cuando alterna de una coordenada horizontal de 0 a una coordenada horizontal de 200. Por ejemplo, un punto cuya primera coordenada está comprendido entre 0 y 200 tendrá un componente azul que está comprendido entre 0 y 255.  
   
@@ -53,14 +53,14 @@ ms.locfileid: "54696303"
   
  La siguiente ilustración muestra la elipse resultante y el rectángulo.  
   
- ![Degradado lineal](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")  
+ ![Degradado lineal](./media/cslineargradient2.png "cslineargradient2")  
   
 ### <a name="to-customize-linear-gradients"></a>Para personalizar degradados lineales  
   
 -   Pase el rojo opaco opaco y negro como el tercer y cuarto argumentos, respectivamente.  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
   
  Los degradados en los ejemplos anteriores han sido horizontales; es decir, el color cambia gradualmente conforme se desplaza por cualquier línea horizontal. También puede definir degradados verticales y diagonales.  
   
@@ -68,15 +68,15 @@ ms.locfileid: "54696303"
   
  La siguiente ilustración muestra la línea y la elipse. Tenga en cuenta que el color de la elipse cambia gradualmente conforme se desplaza por cualquier línea es parecida a la línea que atraviesa (0, 0) y (200, 100).  
   
- ![Degradado lineal](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")  
+ ![Degradado lineal](./media/cslineargradient3.png "cslineargradient3")  
   
 ### <a name="to-create-diagonal-linear-gradients"></a>Para crear degradados lineales diagonales  
   
 -   Pase el verde opaco opaco y azul como el tercer y cuarto argumentos, respectivamente.  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
 ## <a name="see-also"></a>Vea también
-- [Utilizar un pincel degradado para rellenar formas](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
-- [Gráficos y dibujos en Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Utilizar un pincel degradado para rellenar formas](using-a-gradient-brush-to-fill-shapes.md)
+- [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)

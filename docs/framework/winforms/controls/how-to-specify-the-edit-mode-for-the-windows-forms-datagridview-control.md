@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Especificar el modo de edición para el Control DataGridView de Windows Forms
+title: Filtrar Especificar el modo de edición para el Control DataGridView de Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: fcb2014cc92a8a3e4afe7c3ed0365fd5947c70f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00c5bb85eb1b238371e58a631d90b69a41c49140
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628271"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725316"
 ---
-# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Procedimiento Especificar el modo de edición para el Control DataGridView de Windows Forms
+# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Filtrar Especificar el modo de edición para el Control DataGridView de Windows Forms
 De forma predeterminada, los usuarios pueden editar el contenido del elemento actual <xref:System.Windows.Forms.DataGridView> celda de cuadro de texto al escribir en él o presione F2. Esto coloca la celda en modo de edición si se cumplen todas las condiciones siguientes:  
   
 -   El origen de datos subyacente admite la edición.  
@@ -34,8 +34,8 @@ De forma predeterminada, los usuarios pueden editar el contenido del elemento ac
   
 -   Establecer el <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> propiedad correspondientes <xref:System.Windows.Forms.DataGridViewEditMode> enumeración.  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
-     [!code-vb[System.Windows.Forms.DataGridViewMisc#067](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
+     [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -47,4 +47,4 @@ De forma predeterminada, los usuarios pueden editar el contenido del elemento ac
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>
-- [Entrada de datos en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
+- [Entrada de datos en el control DataGridView de Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)

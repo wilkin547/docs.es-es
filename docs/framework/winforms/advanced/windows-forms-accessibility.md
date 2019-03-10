@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Windows Forms controls, accessibility
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 23a3f168-ebc0-4f23-9efc-799109aa4a2d
-ms.openlocfilehash: 813507fbb5fcffebfa2430f28245f37b82f3e3f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a01a0456dfef6e89f0cf1b3608a07cb359d4497
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524659"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702378"
 ---
 # <a name="windows-forms-accessibility"></a>Accesibilidad de formularios Windows Forms
 La funcionalidad de accesibilidad de formularios Windows Forms le permite hacer que su aplicación esté disponible para una amplia variedad de usuarios.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Tutorial: Crear una aplicación accesible basada en Windows](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)  
+ [Tutorial: Crear una aplicación accesible basada en Windows](walkthrough-creating-an-accessible-windows-based-application.md)  
  Describe todas las características que se deben admitir para aumentar la accesibilidad.  
   
 ## <a name="reference"></a>Referencia  
@@ -27,8 +27,8 @@ La funcionalidad de accesibilidad de formularios Windows Forms le permite hacer 
  Proporciona información que las aplicaciones de accesibilidad usan para adaptar la interfaz de usuario (UI) de una aplicación para usuarios discapacitados.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Proporcionar información de accesibilidad de controles en Windows Forms](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
+ [Proporcionar información de accesibilidad de controles en Windows Forms](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
  Describe cómo proporcionar información que los controles de formularios Windows Forms pueden usar para ayudar a los usuarios con discapacidades.  
   
- [Ajuste automático de escala en Windows Forms](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)  
+ [Ajuste automático de escala en Windows Forms](../automatic-scaling-in-windows-forms.md)  
  Describe cómo hacer que la aplicación de formularios Windows Forms reaccione ante los cambios en el tamaño de fuente del sistema.

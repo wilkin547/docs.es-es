@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 4e02fec0a131523059f88d4f12f62398d80fddf0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ebafd745290a40fa6f4f83910fb32d67cdcff75
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632055"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705273"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Procedimiento Crear controladores de eventos en tiempo de ejecución para Windows Forms
 Además de crear eventos mediante Diseñador de Windows Forms, también puede crear un controlador de eventos en tiempo de ejecución. Esta acción le permite conectar controladores de eventos basándose en las condiciones del código en tiempo de ejecución en lugar de conectarlos cuando se inicia el programa.  
@@ -73,6 +73,6 @@ Además de crear eventos mediante Diseñador de Windows Forms, también puede cr
      El <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> método mostrado en el código de Visual Basic anterior establece un controlador de eventos click del botón.  
   
 ## <a name="see-also"></a>Vea también
-- [Crear controladores de eventos en Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Información general sobre controladores de eventos](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md)
+- [Información general sobre controladores de eventos](event-handlers-overview-windows-forms.md)
 - [Solucionar problemas de controladores de eventos heredados en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

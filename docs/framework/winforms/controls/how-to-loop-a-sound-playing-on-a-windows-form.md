@@ -1,5 +1,5 @@
 ---
-title: Filtrar Repetir un sonido reproducido en un formulario de Windows
+title: Procedimiento Repetir un sonido reproducido en un formulario de Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 238d269f9c3d3b2612eab70341200221c5b43d3a
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 43fcc472960cc3f2432d3872160d9ace4c617836
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260925"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719278"
 ---
-# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Filtrar Repetir un sonido reproducido en un formulario de Windows
+# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Procedimiento Repetir un sonido reproducido en un formulario de Windows
 En el ejemplo de código siguiente, se reproduce repetidamente un sonido. Cuando se ejecuta el código en el controlador de eventos `stopPlayingButton_Click`, todos los sonidos que se estén reproduciendo se detienen. Si no se está reproduciendo ningún sonido, no ocurre nada.  
   
 ## <a name="example"></a>Ejemplo  
- [!code-csharp[System.Media.SoundPlayer.PlayLooping#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/CS/Form1.cs#1)]
- [!code-vb[System.Media.SoundPlayer.PlayLooping#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/VB/Form1.vb#1)]  
+ [!code-csharp[System.Media.SoundPlayer.PlayLooping#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/CS/Form1.cs#1)]
+ [!code-vb[System.Media.SoundPlayer.PlayLooping#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -55,5 +55,5 @@ En el ejemplo de código siguiente, se reproduce repetidamente un sonido. Cuando
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [Cómo: Reproducir un sonido desde Windows Forms](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
-- [Información general sobre la clase SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)
+- [Cómo: Reproducir un sonido desde Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
+- [Información general sobre la clase SoundPlayer](soundplayer-class-overview.md)

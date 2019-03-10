@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecd167b46a3d600852b5b12a7f18d0013502523d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: f494d3176d72563a82b50fd5e077917e46045b91
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442976"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712297"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Compatibilidad bidireccional en las aplicaciones de Windows Forms
 Puede usar Visual Studio para crear aplicaciones basadas en Windows que admiten bidireccionales (de derecha a izquierda) idiomas como el árabe y hebreo. Esto incluye formularios estándar, cuadros de diálogo, formularios MDI y todos los controles con los que puede trabajar en estos formularios, es decir, todos los objetos del espacio de nombres <xref:System.Windows.Forms.Control>.  
@@ -79,7 +79,7 @@ Puede usar Visual Studio para crear aplicaciones basadas en Windows que admiten 
 |<xref:System.Windows.Forms.VScrollBar>|Se muestra en el lado izquierdo, en lugar del derecho, de los controles desplazables|Ningún efecto|No|  
   
 ## <a name="encoding"></a>Codificación  
- Los formularios Windows Forms admiten Unicode, por lo que puede incluir cualquier juego de caracteres al crear aplicaciones bidireccionales. Sin embargo, no todos los controles de formularios Windows Forms admiten Unicode en todas las plataformas. Para más información, consulte [Codificación y globalización de Windows Forms](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md).  
+ Los formularios Windows Forms admiten Unicode, por lo que puede incluir cualquier juego de caracteres al crear aplicaciones bidireccionales. Sin embargo, no todos los controles de formularios Windows Forms admiten Unicode en todas las plataformas. Para más información, consulte [Codificación y globalización de Windows Forms](encoding-and-windows-forms-globalization.md).  
   
 ## <a name="gdi"></a>GDI+  
  Puede usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para dibujar texto con orden de lectura de derecha a izquierda. El método <xref:System.Drawing.Graphics.DrawString%2A>, que se utiliza para dibujar texto, admite un parámetro `StringFormat` que puede establecer como el miembro <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> de la enumeración <xref:System.Drawing.StringFormatFlags> con el fin de invertir el punto de origen del texto.  

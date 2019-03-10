@@ -6,15 +6,15 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 540388e316a761df3c32842cbe626e9e52f7e3f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645488"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718030"
 ---
 # <a name="how-keyboard-input-works"></a>Funcionamiento de las entradas mediante teclado
-Los Windows Forms procesan las entradas mediante teclado provocando eventos de teclado en respuesta a los mensajes de Windows. La mayoría de las aplicaciones de Windows Forms procesan exclusivamente las entradas mediante teclado controlando los eventos de teclado. No obstante, es necesario comprender cómo funcionan los mensajes del teclado de modo que pueda implementar escenarios de entrada mediante teclado más avanzados, como interceptar teclas antes de que lleguen a un control. En este tema se describen los tipos de datos de tecla que los Windows Forms reconocen y se proporciona información general de cómo se enrutan los mensajes del teclado. Para información sobre los eventos de teclado, vea [Utilizar eventos de teclado](../../../docs/framework/winforms/using-keyboard-events.md).  
+Los Windows Forms procesan las entradas mediante teclado provocando eventos de teclado en respuesta a los mensajes de Windows. La mayoría de las aplicaciones de Windows Forms procesan exclusivamente las entradas mediante teclado controlando los eventos de teclado. No obstante, es necesario comprender cómo funcionan los mensajes del teclado de modo que pueda implementar escenarios de entrada mediante teclado más avanzados, como interceptar teclas antes de que lleguen a un control. En este tema se describen los tipos de datos de tecla que los Windows Forms reconocen y se proporciona información general de cómo se enrutan los mensajes del teclado. Para información sobre los eventos de teclado, vea [Utilizar eventos de teclado](using-keyboard-events.md).  
   
 ## <a name="types-of-keys"></a>Tipos de teclas  
  Formularios de Windows identifica la entrada de teclado como códigos de teclas virtuales que están representados por el bit a bit <xref:System.Windows.Forms.Keys> enumeración. Con el <xref:System.Windows.Forms.Keys> enumeración, puede combinar una serie de teclas presionadas para producir un solo valor. Estos valores corresponden a los valores que acompañan a los mensajes de Windows WM_KEYDOWN y WM_SYSKEYDOWN. Puede detectar presiones de tecla físicas más controlando el <xref:System.Windows.Forms.Control.KeyDown> o <xref:System.Windows.Forms.Control.KeyUp> eventos. Teclas de caracteres son un subconjunto de los <xref:System.Windows.Forms.Keys> enumeración y se corresponden con los valores que acompañan a los mensajes WM_CHAR y WM_SYSCHAR Windows. Si la combinación de teclas presionadas produce un carácter, puede detectar el carácter controlando el <xref:System.Windows.Forms.Control.KeyPress> eventos. Como alternativa, puede usar <xref:Microsoft.VisualBasic.Devices.Keyboard>, expuesto por la interfaz de programación de Visual Basic, para descubrir qué teclas se han presionado y enviar las teclas. Para más información, consulte [Acceso al teclado](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
@@ -74,4 +74,4 @@ Los Windows Forms procesan las entradas mediante teclado provocando eventos de t
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
 - [My.Computer.Keyboard (objeto)](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
 - [Acceso al teclado](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
-- [Utilizar eventos de teclado](../../../docs/framework/winforms/using-keyboard-events.md)
+- [Utilizar eventos de teclado](using-keyboard-events.md)

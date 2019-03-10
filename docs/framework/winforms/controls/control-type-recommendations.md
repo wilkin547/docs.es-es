@@ -7,12 +7,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: b2193c862b0bfe0ffbdc55f5d7073409b03a040d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: b488997558d81c05307411d8b7fbf5b59100f9ea
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442950"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717714"
 ---
 # <a name="control-type-recommendations"></a>Recomendaciones sobre tipos de controles
 .NET Framework ofrece la posibilidad de desarrollar e implementar nuevos controles. Además de los controles de usuario conocidos, verá que ahora puede escribir controles personalizados que realizan su propia representación y que incluso pueden ampliar la funcionalidad de los controles existentes mediante herencia. Decidir qué tipo de control va a crear puede resultar confuso. En esta sección se indican las diferencias entre los distintos tipos de controles de los que puede heredar, y ofrece consideraciones sobre el tipo que deberá elegir para su proyecto.  
@@ -80,5 +80,5 @@ ms.locfileid: "56442950"
 -   [Cómo: Crear un Control de Windows Forms que aproveche las características en tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Desarrollar un Control de formularios de Windows Simple](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
-- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Cómo: Desarrollar un Control de formularios de Windows Simple](how-to-develop-a-simple-windows-forms-control.md)
+- [Variedades de controles personalizados](varieties-of-custom-controls.md)

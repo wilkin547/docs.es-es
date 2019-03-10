@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Una forma con una imagen de icono
+title: Filtrar Una forma con una imagen de icono
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: f2edde7e78f996d4a7bfbc636210f315c0718f6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d873ba717fa94852692ce395ef7da30c512aba59
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693219"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719694"
 ---
-# <a name="how-to-tile-a-shape-with-an-image"></a>Procedimiento Una forma con una imagen de icono
+# <a name="how-to-tile-a-shape-with-an-image"></a>Filtrar Una forma con una imagen de icono
 Igual que los iconos se pueden colocar juntos para cubrir un piso, se pueden colocar imágenes rectangulares junto a la otra para rellenar una forma (mosaico). El interior de una forma de mosaico, utilice un pincel de textura. Cuando se construye un <xref:System.Drawing.TextureBrush> de objetos, uno de los argumentos que pasa al constructor es un <xref:System.Drawing.Image> objeto. Cuando se usa el pincel de textura para pintar el interior de una forma, la forma se rellena con las copias repetidas de esta imagen.  
   
  La propiedad del modo de ajuste el <xref:System.Drawing.TextureBrush> objeto determina cómo se orienta la imagen cuando se repite en una cuadrícula rectangular. Puede realizar todos los iconos en la cuadrícula tienen la misma orientación o se puede voltear la imagen desde la posición de una cuadrícula a la siguiente. El volteo puede ser horizontal, vertical o ambos. Los ejemplos siguientes muestran la disposición en mosaico con distintos tipos de volteo.  
@@ -26,39 +26,39 @@ Igual que los iconos se pueden colocar juntos para cubrir un piso, se pueden col
   
 -   Este ejemplo utiliza la siguiente imagen de 75 × 75 para disponer en mosaico un rectángulo de 200 × 200.  
   
- ![Icono 1](../../../../docs/framework/winforms/advanced/media/tile1.gif "tile1")  
+ ![Icono 1](./media/tile1.gif "tile1")  
   
 -   La siguiente ilustración muestra cómo se coloca en mosaico el rectángulo con la imagen. Tenga en cuenta que todos los iconos tienen la misma orientación; No hay ningún giro.  
   
- ![Icono 2](../../../../docs/framework/winforms/advanced/media/tile2.gif "tile2")  
+ ![Icono 2](./media/tile2.gif "tile2")  
   
- [!code-csharp[System.Drawing.UsingABrush#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.UsingABrush#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.UsingABrush#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.UsingABrush#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#31)]  
   
 ### <a name="to-flip-an-image-horizontally-while-tiling"></a>Para voltear una imagen horizontalmente durante la disposición en mosaico  
   
 -   Este ejemplo utiliza la misma imagen de 75 × 75 para rellenar un rectángulo de 200 × 200. El modo de ajuste se establece en la imagen se voltea horizontalmente. La siguiente ilustración muestra cómo se coloca en mosaico el rectángulo con la imagen. Tenga en cuenta que, al desplazarse de un mosaico a la siguiente en una fila determinada, la imagen se voltea horizontalmente.  
   
- ![Icono 3](../../../../docs/framework/winforms/advanced/media/tile3.gif "tile3")  
+ ![Icono 3](./media/tile3.gif "tile3")  
   
- [!code-csharp[System.Drawing.UsingABrush#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#32)]
- [!code-vb[System.Drawing.UsingABrush#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#32)]  
+ [!code-csharp[System.Drawing.UsingABrush#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#32)]
+ [!code-vb[System.Drawing.UsingABrush#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#32)]  
   
 ### <a name="to-flip-an-image-vertically-while-tiling"></a>Para voltear una imagen verticalmente al mosaico  
   
 -   Este ejemplo utiliza la misma imagen de 75 × 75 para rellenar un rectángulo de 200 × 200. El modo de ajuste se establece en la imagen se voltea verticalmente.  
   
-     [!code-csharp[System.Drawing.UsingABrush#33](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#33)]
-     [!code-vb[System.Drawing.UsingABrush#33](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#33)]  
+     [!code-csharp[System.Drawing.UsingABrush#33](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#33)]
+     [!code-vb[System.Drawing.UsingABrush#33](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#33)]  
   
 ### <a name="to-flip-an-image-horizontally-and-vertically-while-tiling"></a>Para voltear una imagen horizontal y verticalmente durante la disposición en mosaico  
   
 -   Este ejemplo utiliza la misma imagen de 75 × 75 para disponer en mosaico un rectángulo de 200 × 200. Se establece el modo de ajuste se voltea la imagen horizontal y verticalmente. La siguiente ilustración muestra cómo el rectángulo se coloca en mosaico la imagen. Tenga en cuenta que, al desplazarse de un mosaico a la siguiente en una fila determinada, la imagen se voltea horizontalmente y al mover de un mosaico a la siguiente en una columna determinada, la imagen se voltea verticalmente.  
   
- ![Icono 5](../../../../docs/framework/winforms/advanced/media/tile5.gif "tile5")  
+ ![Icono 5](./media/tile5.gif "tile5")  
   
- [!code-csharp[System.Drawing.UsingABrush#34](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#34)]
- [!code-vb[System.Drawing.UsingABrush#34](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
+ [!code-csharp[System.Drawing.UsingABrush#34](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#34)]
+ [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>Vea también
-- [Utilizar un pincel para rellenar formas](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+- [Utilizar un pincel para rellenar formas](using-a-brush-to-fill-shapes.md)

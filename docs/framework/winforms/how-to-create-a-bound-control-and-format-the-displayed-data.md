@@ -6,14 +6,14 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 2e9dabe12e3f4eda590cec26a70c6becb0e2b7a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b1256c1389c6a55f405f0be0d137a8ad170dbec
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689736"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710503"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Procedimiento Crear un Control enlazado y dar formato a los datos mostrados
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Filtrar Crear un Control enlazado y dar formato a los datos mostrados
 Con el enlace de datos de Windows Forms, puede dar formato a los datos mostrados en un control enlazado a datos mediante el uso de la **formato y enlace avanzada** cuadro de diálogo.  
   
 > [!NOTE]
@@ -23,11 +23,11 @@ Con el enlace de datos de Windows Forms, puede dar formato a los datos mostrados
   
 1.  Conéctese a un origen de datos.  
   
-     Para obtener más información, consulte [conectarse a un origen de datos](../../../docs/framework/data/adonet/connecting-to-a-data-source.md).  
+     Para obtener más información, consulte [conectarse a un origen de datos](../data/adonet/connecting-to-a-data-source.md).  
   
 2.  En el formulario, seleccione el control y, después, abra la ventana Propiedades.  
   
-3.  Expanda el **(DataBindings)** propiedad y, a continuación, en el **(avanzado)** cuadro, haga clic en el botón de puntos suspensivos (![de pantalla de VisualStudioEllipsesButton](../../../docs/framework/winforms/media/vbellipsesbutton.png " vbEllipsesButton")) para mostrar el **formato y enlace de datos avanzado** cuadro de diálogo que muestra una lista completa de propiedades para ese control.  
+3.  Expanda el **(DataBindings)** propiedad y, a continuación, en el **(avanzado)** cuadro, haga clic en el botón de puntos suspensivos (![de pantalla de VisualStudioEllipsesButton](./media/vbellipsesbutton.png " vbEllipsesButton")) para mostrar el **formato y enlace de datos avanzado** cuadro de diálogo que muestra una lista completa de propiedades para ese control.  
   
 4.  Seleccione la propiedad que desea enlazar y, a continuación, haga clic en el **enlace** flecha.  
   
@@ -50,11 +50,11 @@ Con el enlace de datos de Windows Forms, puede dar formato a los datos mostrados
     |Moneda|Especifique el número de posiciones decimales mediante **decimales** control de flechas.|  
     |Fecha Hora|Seleccione cómo se deben mostrar la fecha y hora seleccionando uno de los elementos en el **tipo** cuadro de selección.|  
     |Científica|Especifique el número de posiciones decimales mediante **decimales** control de flechas.|  
-    |Personalizados|Especifique una cadena de formato personalizado using.<br /><br /> Para obtener más información, consulte [Aplicar formato a tipos](../../../docs/standard/base-types/formatting-types.md). **Nota:**  No se garantiza que las cadenas de formato personalizado realicen correctamente el recorrido de ida y vuelta entre el origen de datos y el control enlazado. En su lugar, controle el evento <xref:System.Windows.Forms.Binding.Parse> o <xref:System.Windows.Forms.Binding.Format> del enlace y aplique el formato personalizado en el código de control de eventos.|  
+    |Personalizados|Especifique una cadena de formato personalizado using.<br /><br /> Para obtener más información, consulte [Aplicar formato a tipos](../../standard/base-types/formatting-types.md). **Nota:**  No se garantiza que las cadenas de formato personalizado realicen correctamente el recorrido de ida y vuelta entre el origen de datos y el control enlazado. En su lugar, controle el evento <xref:System.Windows.Forms.Binding.Parse> o <xref:System.Windows.Forms.Binding.Format> del enlace y aplique el formato personalizado en el código de control de eventos.|  
   
 8.  Haga clic en **Aceptar** para cerrar el **formato y enlace de datos avanzado** cuadro de diálogo y volver a la ventana Propiedades.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Crear un Control con enlace Simple en un formulario de Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Validación de los datos proporcionados por el usuario Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)
-- [Enlace de datos en Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Cómo: Crear un Control con enlace Simple en un formulario de Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Validación de los datos proporcionados por el usuario Windows Forms](user-input-validation-in-windows-forms.md)
+- [Enlace de datos en Windows Forms](windows-forms-data-binding.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: 5e9e75876862a73be7ace08c09610923d007de4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540863"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717627"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Administrar el estado de un objeto Graphics
 El <xref:System.Drawing.Graphics> clase es la esencia de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Para dibujar algo, obtendrá un <xref:System.Drawing.Graphics> objeto, establecer sus propiedades y llamar a sus métodos <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>etc.).  
@@ -32,7 +32,7 @@ Pen pen = new Pen(Color.Blue);  // Opaque blue
 graphics.DrawRectangle(pen, 10, 10, 200, 100);  
 ```  
   
-## <a name="graphics-state"></a>Estado de los gráficos  
+## <a name="graphics-state"></a>Estado de gráficos  
  Un <xref:System.Drawing.Graphics> objeto más de proporcionar métodos de dibujo, como <xref:System.Drawing.Graphics.DrawLine%2A> y <xref:System.Drawing.Graphics.DrawRectangle%2A>. Un <xref:System.Drawing.Graphics> objeto también mantiene el estado de los gráficos, que puede dividirse en las siguientes categorías:  
   
 -   Configuración de calidad  
@@ -67,7 +67,7 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>Transformaciones  
- Un <xref:System.Drawing.Graphics> objeto mantiene dos transformaciones (universal y página) que se aplican a todos los elementos dibujados por el que <xref:System.Drawing.Graphics> objeto. Las transformaciones afines se pueden almacenar en la transformación universal. Transformaciones afines incluyen escalar, girar, reflejar, sesgar y traducir. La transformación de página puede utilizarse para escalar y cambiar las unidades (por ejemplo, píxeles y pulgadas). Para obtener más información, consulte [sistemas de coordenadas y transformaciones](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
+ Un <xref:System.Drawing.Graphics> objeto mantiene dos transformaciones (universal y página) que se aplican a todos los elementos dibujados por el que <xref:System.Drawing.Graphics> objeto. Las transformaciones afines se pueden almacenar en la transformación universal. Transformaciones afines incluyen escalar, girar, reflejar, sesgar y traducir. La transformación de página puede utilizarse para escalar y cambiar las unidades (por ejemplo, píxeles y pulgadas). Para obtener más información, consulte [sistemas de coordenadas y transformaciones](coordinate-systems-and-transformations.md).  
   
  El ejemplo siguiente establece las transformaciones universal y de página de un <xref:System.Drawing.Graphics> objeto. La transformación universal se establece en una rotación de 30 grados. La transformación de página se establece para que las coordenadas que se pasan a la segunda <xref:System.Drawing.Graphics.DrawEllipse%2A> se tratará como milímetros en lugar de píxeles. El código hace dos llamadas idénticas a la <xref:System.Drawing.Graphics.DrawEllipse%2A> método. La transformación universal se aplica a la primera <xref:System.Drawing.Graphics.DrawEllipse%2A> llamada y ambas transformaciones (universal y página) se aplican a la segunda <xref:System.Drawing.Graphics.DrawEllipse%2A> llamar.  
   
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  La siguiente ilustración muestra las dos elipses. Tenga en cuenta que la rotación de 30 grados sobre el origen del sistema de coordenadas (esquina superior izquierda del área de cliente), pero no los centros de los puntos suspensivos. Tenga en cuenta también que el ancho del lápiz de 1 significa 1 píxel de la primera elipse y 1 milímetro para la segunda.  
   
- ![Óvalos](../../../../docs/framework/winforms/advanced/media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![Óvalos](./media/csgraphicsascon1.png "csgraphicsascon1")  
   
 ### <a name="clipping-region"></a>Región de recorte  
  Un <xref:System.Drawing.Graphics> objeto mantiene una región de recorte que se aplica a todos los elementos dibujados por el que <xref:System.Drawing.Graphics> objeto. Puede establecer la región de recorte mediante una llamada a la <xref:System.Drawing.Graphics.SetClip%2A> método.  
@@ -148,8 +148,8 @@ graphics.DrawLine(pen, 40, 20, 190, 150);
   
  La ilustración siguiente muestra las líneas recortadas.  
   
- ![Limita la región de recorte](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")  
+ ![Limita la región de recorte](./media/graphicsascon2.png "graphicsascon2")  
   
 ## <a name="see-also"></a>Vea también
-- [Gráficos y dibujos en Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Utilizar contenedores de gráficos anidados](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)
+- [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Utilizar contenedores de gráficos anidados](using-nested-graphics-containers.md)

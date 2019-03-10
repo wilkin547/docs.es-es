@@ -1,5 +1,5 @@
 ---
-title: Filtrar Personalizar el formato de datos en el Control DataGridView de Windows Forms
+title: Procedimiento Personalizar el formato de datos en el Control DataGridView de Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,23 +16,23 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], substituting cell values for display
 - data grids [Windows Forms], formatting data
 ms.assetid: a6e72c70-ce18-425f-828d-d57be6f96ab6
-ms.openlocfilehash: 592fd224635fff2138feb131637c82f0eac5d702
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 4a7e74afa985d36281994078bd0ea464f084cfa9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261068"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714910"
 ---
-# <a name="how-to-customize-data-formatting-in-the-windows-forms-datagridview-control"></a>Filtrar Personalizar el formato de datos en el Control DataGridView de Windows Forms
+# <a name="how-to-customize-data-formatting-in-the-windows-forms-datagridview-control"></a>Procedimiento Personalizar el formato de datos en el Control DataGridView de Windows Forms
 En el ejemplo de código siguiente, se muestra cómo implementar un controlador para el evento <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> que cambia la manera en que se muestran las celdas según sus valores y columnas.  
   
- Las celdas de la columna `Balance` que contienen números negativos tienen un fondo rojo. También puede dar formato a estas celdas como moneda para que se muestren paréntesis alrededor de los valores negativos. Para obtener más información, vea [Cómo: Formato de datos en la Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md).  
+ Las celdas de la columna `Balance` que contienen números negativos tienen un fondo rojo. También puede dar formato a estas celdas como moneda para que se muestren paréntesis alrededor de los valores negativos. Para obtener más información, vea [Cómo: Formato de datos en la Windows Forms DataGridView Control](how-to-format-data-in-the-windows-forms-datagridview-control.md).  
   
  Las celdas de la columna `Priority` muestran imágenes en lugar de los valores de celda textual correspondientes. La propiedad <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> de <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> se utiliza para obtener el valor de celda textual y establecer el valor de presentación de imagen correspondiente.  
   
 ## <a name="example"></a>Ejemplo  
- [!code-csharp[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/cs/customFormatting.cs#00)]
- [!code-vb[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/vb/customFormatting.vb#00)]  
+ [!code-csharp[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/cs/customFormatting.cs#00)]
+ [!code-vb[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/vb/customFormatting.vb#00)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -49,7 +49,7 @@ En el ejemplo de código siguiente, se muestra cómo implementar un controlador 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Drawing.Bitmap>
-- [Mostrar datos en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Cómo: Formato de datos en la Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)
-- [Estilos de celda en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Formato de datos en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Cómo: Formato de datos en la Windows Forms DataGridView Control](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [Estilos de celda en el control DataGridView de Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Formato de datos en el control DataGridView de Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)

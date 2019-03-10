@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: 3083c075bfbbd21a26f7442f9bbccbe800d73cf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674773"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713220"
 ---
 # <a name="types-of-bitmaps"></a>Tipos de mapas de bits
 Un mapa de bits es una matriz de bits que especifica el color de cada píxel en una matriz rectangular de píxeles. El número de bits asignado a un píxel individual determina el número de colores que se pueden asignar a ese píxel. Por ejemplo, si cada píxel se representa mediante 4 bits, a continuación, un píxel determinado puede asignarse uno de los 16 colores distintos (2 ^ 4 = 16). En la tabla siguiente se muestra algunos ejemplos del número de colores que se pueden asignar a un píxel representado por un número determinado de bits.  
@@ -41,7 +41,7 @@ Un mapa de bits es una matriz de bits que especifica el color de cada píxel en 
   
  Archivos de disco que almacenan mapas de bits suele contengan uno o más bloques de información que almacenan información como el número de bits por píxel, el número de píxeles en cada fila y el número de filas de la matriz. Este archivo también puede contener una tabla de colores (a veces denominada una paleta de colores). Una tabla de colores asigna números en el mapa de bits de color específicos. La siguiente ilustración muestra una imagen ampliada junto con su tabla de mapa de bits y color. Cada píxel se representa mediante un número de 4 bits, por lo que hay 2 ^ 4 = 16 colores en la tabla de colores. Cada color en la tabla se representa mediante un número de 24 bits: 8 bits para el rojo, 8 bits para el verde y 8 bits para el azul. Los números se muestran en formato hexadecimal (base 16): A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
   
- ![Bitmap sample](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
+ ![Bitmap sample](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
  Examine el píxel en la fila 3, 5 de la columna de la imagen. El número correspondiente en el mapa de bits es 1. La tabla de colores nos indica que 1 representa el color rojo, por lo que el píxel es rojo. Todas las entradas de la fila superior del mapa de bits son 3. La tabla de colores indica que el 3 representa azul, por lo que todos los píxeles en la fila superior de la imagen son azules.  
   
@@ -50,7 +50,7 @@ Un mapa de bits es una matriz de bits que especifica el color de cada píxel en 
   
  Un mapa de bits que almacena los índices en una tabla de colores se denomina un mapa de bits de paleta indizada. Algunos mapas de bits no es necesario para una tabla de colores. Por ejemplo, si un mapa de bits utiliza 24 bits por píxel, ese mapa de bits puede almacenar los colores a sí mismos en lugar de índices en una tabla de colores. La siguiente ilustración muestra un mapa de bits que almacena colores directamente (24 bits por píxel) en lugar de usar una tabla de colores. La ilustración también muestra una vista ampliada de la imagen correspondiente. En el mapa de bits, FFFFFF representa al blanco, FF0000 representa el rojo, 00FF00 representa el verde y 0000FF representa el azul.  
   
- ![Ejemplo de mapa de bits](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
+ ![Ejemplo de mapa de bits](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Formatos de archivo de gráficos  
  Hay muchos formatos estándares para guardar los mapas de bits en los archivos de disco. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] es compatible con el archivo gráfico formatos descritos en los párrafos siguientes.  
@@ -66,11 +66,11 @@ Un mapa de bits es una matriz de bits que especifica el color de cada píxel en 
   
  El nivel de compresión de imágenes JPEG es configurable, pero los niveles más altos de compresión (archivos más pequeños) dar lugar a pérdida de información. A menudo, una razón de compresión de 20:1 genera una imagen que el ojo humano encuentra difícil distinguir de los originales. La siguiente ilustración muestra una imagen BMP y dos imágenes JPEG que se comprimieron desde esa imagen BMP. La primera imagen JPEG tiene una razón de compresión de 4:1 y la segunda imagen JPEG tiene una razón de compresión de aproximadamente 8:1.  
   
- ![Filetype samples](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
+ ![Filetype samples](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
   
  Compresión JPEG no funcionan bien para dibujos de líneas, bloques de color sólido y los límites definidos. La siguiente ilustración muestra un archivo BMP junto con dos archivos JPEG y un archivo GIF. Los archivos JPEG y el formato GIF se han comprimido a partir del BMP. La razón de compresión es de 4:1 para el archivo GIF, 4:1 para el archivo JPEG más pequeño y 8:3 para el archivo JPEG más grande. Tenga en cuenta que el formato GIF mantiene los límites nítidos a lo largo de las líneas, pero los archivos JPEG tienden a difuminar los límites.  
   
- ![Filetypes](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
+ ![Filetypes](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
   
  JPEG es un esquema de compresión, no es un formato de archivo. Formato de intercambio de archivos JPEG (JFIF) es un formato de archivo usado para almacenar y transferir las imágenes que se han comprimido conforme al esquema JPEG. Archivos JFIF que muestran los exploradores Web utilizan la extensión .jpg.  
   
@@ -89,5 +89,5 @@ Un mapa de bits es una matriz de bits que especifica el color de cada píxel en 
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>
-- [Imágenes, mapas de bits y metarchivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Trabajar con imágenes, mapas de bits, iconos y metarchivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Imágenes, mapas de bits y metarchivos](images-bitmaps-and-metafiles.md)
+- [Trabajar con imágenes, mapas de bits, iconos y metarchivos](working-with-images-bitmaps-icons-and-metafiles.md)

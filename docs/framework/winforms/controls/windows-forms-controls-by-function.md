@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-ms.openlocfilehash: 91da6409eb3a02709332d8d1a5a2d7fe54d3f401
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdfb2d5a3ce45deb471aaa465c35b82e738a128b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543073"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717926"
 ---
 # <a name="windows-forms-controls-by-function"></a>Controles de formularios Windows Forms por función
 Windows Forms ofrece controles y componentes que llevan a cabo una serie de funciones. En la tabla siguiente se enumera los controles de Windows Forms y componentes según la función general. Además, donde existen varios controles que tienen la misma función, se muestra el control recomendado con una nota relacionada con el control al que reemplaza. En una tabla independiente posteriores, se muestran los controles reemplazados con sus cambios recomendados.  
   
 > [!NOTE]
->  Las tablas siguientes no muestran cada control o componente que puede utilizar en formularios de Windows; Para obtener una lista más completa, consulte [controles que se utilizan en Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+>  Las tablas siguientes no muestran cada control o componente que puede utilizar en formularios de Windows; Para obtener una lista más completa, consulte [controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md)  
   
 ## <a name="recommended-controls-and-components-by-function"></a>Controles y componentes por función recomendados  
   
 |Función|Control|Descripción|  
 |--------------|-------------|-----------------|  
-|Presentación de datos|Control <xref:System.Windows.Forms.DataGridView>|El <xref:System.Windows.Forms.DataGridView> control proporciona una tabla personalizable para mostrar los datos. La <xref:System.Windows.Forms.DataGridView> clase habilita la personalización de las celdas, filas, columnas y bordes. **Nota:**  El <xref:System.Windows.Forms.DataGridView> control proporciona numerosas características básicas y avanzadas que faltan en el <xref:System.Windows.Forms.DataGrid> control. Para obtener más información, consulte [diferencias entre los Windows Forms controles DataGridView y DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
+|Presentación de datos|Control <xref:System.Windows.Forms.DataGridView>|El <xref:System.Windows.Forms.DataGridView> control proporciona una tabla personalizable para mostrar los datos. La <xref:System.Windows.Forms.DataGridView> clase habilita la personalización de las celdas, filas, columnas y bordes. **Nota:**  El <xref:System.Windows.Forms.DataGridView> control proporciona numerosas características básicas y avanzadas que faltan en el <xref:System.Windows.Forms.DataGrid> control. Para obtener más información, consulte [diferencias entre los Windows Forms controles DataGridView y DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
 |Navegación y el enlace de datos|<xref:System.Windows.Forms.BindingSource> Componente|Simplifica el enlace de controles en un formulario a los datos proporcionando gestión de divisas con notificación de cambio y otros servicios.|  
 ||Control <xref:System.Windows.Forms.BindingNavigator>|Proporciona una interfaz de tipo de la barra de herramientas para explorar y manipular datos en un formulario.|  
 |Edición de texto|Control <xref:System.Windows.Forms.TextBox>|Muestra texto escrito en tiempo de diseño que puede ser editado por los usuarios en tiempo de ejecución, o puede cambiar mediante programación.|  
@@ -85,5 +85,5 @@ Windows Forms ofrece controles y componentes que llevan a cabo una serie de func
 |Diseño de formulario|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
 ## <a name="see-also"></a>Vea también
-- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Desarrollar controles personalizados de Windows Forms con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
+- [Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)

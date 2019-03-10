@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643577"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708345"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procedimiento Crear un Control con enlace Simple en un formulario de Windows
 Con *enlace simple*, puede mostrar un elemento de datos único, como un valor de columna de una tabla de conjunto de datos en un control. Puede enlazar cualquier propiedad de un control de forma sencilla en un valor de datos.  
@@ -20,7 +20,7 @@ Con *enlace simple*, puede mostrar un elemento de datos único, como un valor de
   
 ### <a name="to-simple-bind-a-control"></a>Para enlazar un control simple  
   
-1.  Conéctese a un origen de datos. Para obtener más información, consulte [conectarse a un origen de datos](../../../docs/framework/data/adonet/connecting-to-a-data-source.md).  
+1.  Conéctese a un origen de datos. Para obtener más información, consulte [conectarse a un origen de datos](../data/adonet/connecting-to-a-data-source.md).  
   
 2.  En el formulario, seleccione el control y mostrar el **propiedades** ventana.  
   
@@ -28,7 +28,7 @@ Con *enlace simple*, puede mostrar un elemento de datos único, como un valor de
   
      Las propiedades enlazadas con más frecuencia se muestran bajo el **(DataBindings)** propiedad. Por ejemplo, en la mayoría de los controles, el **texto** propiedad está enlazada con más frecuencia.  
   
-4.  Si la propiedad que desea enlazar no es una de las propiedades enlazadas con frecuencia, haga clic en el **puntos suspensivos** botón (![de pantalla de VisualStudioEllipsesButton](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton") ) en el **(avanzado)** cuadro para mostrar el **formato y enlace de datos avanzado** cuadro de diálogo con una lista completa de propiedades para ese control.  
+4.  Si la propiedad que desea enlazar no es una de las propiedades enlazadas con frecuencia, haga clic en el **puntos suspensivos** botón (![de pantalla de VisualStudioEllipsesButton](./media/vbellipsesbutton.png "vbEllipsesButton") ) en el **(avanzado)** cuadro para mostrar el **formato y enlace de datos avanzado** cuadro de diálogo con una lista completa de propiedades para ese control.  
   
 5.  Seleccione la propiedad que desea enlazar y haga clic en la flecha desplegable situada debajo **enlace**.  
   
@@ -47,5 +47,5 @@ Con *enlace simple*, puede mostrar un elemento de datos único, como un valor de
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.Binding>
-- [Enlace de datos en Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [Enlace de datos y Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Enlace de datos en Windows Forms](windows-forms-data-binding.md)
+- [Enlace de datos y Windows Forms](data-binding-and-windows-forms.md)

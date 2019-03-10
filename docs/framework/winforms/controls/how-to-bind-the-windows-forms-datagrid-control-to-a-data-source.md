@@ -14,16 +14,16 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 5f8c0c2865d219eecb88ddd176d99f80521c9ab3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5da74abb107bc93bff496a35ecfc7a1233e5a76d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664218"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702963"
 ---
-# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Procedimiento Enlazar el Control DataGrid de Windows Forms a un origen de datos
+# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Filtrar Enlazar el Control DataGrid de Windows Forms a un origen de datos
 > [!NOTE]
->  El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
+>  El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
  Los formularios de Windows <xref:System.Windows.Forms.DataGrid> control está diseñado específicamente para mostrar información de un origen de datos. Enlazar el control en tiempo de ejecución mediante una llamada a la <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método. Aunque se pueden mostrar datos desde una variedad de orígenes de datos, los orígenes más habituales son las vistas de datos y conjuntos de datos.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "54664218"
 3.  (Opcional) Agregar los estilos de tabla adecuada y estilos de columna a la cuadrícula. Si no hay ningún estilo de tabla, verá la tabla, pero con un formato mínimo y con todas las columnas visibles.  
   
 ## <a name="see-also"></a>Vea también
-- [Información general del control DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)
-- [Cómo: Agregar tablas y columnas al Control DataGrid de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [DataGrid (control)](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
-- [Enlace de datos en Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Información general del control DataGrid](datagrid-control-overview-windows-forms.md)
+- [Cómo: Agregar tablas y columnas al Control DataGrid de formularios Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [DataGrid (control)](datagrid-control-windows-forms.md)
+- [Enlace de datos en Windows Forms](../windows-forms-data-binding.md)

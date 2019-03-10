@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: 6179837a072c9e4de8e0e8c71a2723942d010899
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0cac4433ec9fe54721752c63d2b3b37f9d874c19
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636974"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719317"
 ---
 # <a name="application-settings-for-windows-forms"></a>Configuración de la aplicación en formularios Windows Forms
 La característica Configuración de la aplicación de Windows Forms facilita la creación, el almacenamiento y el mantenimiento de preferencias de usuarios y aplicaciones personalizadas en el cliente. Con la Configuración de aplicación de Windows Forms, no solo se pueden almacenar datos de las aplicaciones (por ejemplo, cadenas de conexión a bases de datos), sino también datos específicos de los usuarios (por ejemplo, posiciones de la barra de herramientas y listas de archivos usados recientemente).  
@@ -38,7 +38,7 @@ La característica Configuración de la aplicación de Windows Forms facilita la
   
 ## <a name="related-topics"></a>Temas relacionados
 
-[Sección de configuración de Windows Forms](../../../../docs/framework/configure-apps/file-schema/winforms/index.md)    
+[Sección de configuración de Windows Forms](../../configure-apps/file-schema/winforms/index.md)    
 Los documentos que admiten la configuración para habilitar la alta concentración de PPP en la aplicación de Windows Forms a partir de .NET Framework 4.7.
 
 ## <a name="see-also"></a>Vea también

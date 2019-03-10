@@ -11,14 +11,14 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 02b0cb2952e11946f994819bb09a55167781137c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d8c723fc995e8b9987681e3db343c43d3bc2682
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607256"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714715"
 ---
-# <a name="how-to-play-a-sound-from-a-windows-form"></a>Procedimiento Reproducir un sonido desde Windows Forms
+# <a name="how-to-play-a-sound-from-a-windows-form"></a>Filtrar Reproducir un sonido desde Windows Forms
 En este ejemplo se reproduce un sonido en una ruta de acceso determinada en tiempo de ejecución.  
   
 ## <a name="example"></a>Ejemplo  
@@ -66,5 +66,5 @@ private void playSimpleSound()
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Media.SoundPlayer>
-- [Cómo: Cargar un sonido de forma asincrónica en un formulario de Windows](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)
+- [Cómo: Cargar un sonido de forma asincrónica en un formulario de Windows](how-to-load-a-sound-asynchronously-within-a-windows-form.md)
 

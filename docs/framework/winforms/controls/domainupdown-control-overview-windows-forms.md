@@ -7,12 +7,12 @@ helpviewer_keywords:
 - spin button control [Windows Forms], about spin button
 - DomainUpDown control [Windows Forms], about DomainUpDown control
 ms.assetid: 3f40f9c1-20ad-4331-b9b5-b0127eb36eb3
-ms.openlocfilehash: 1849e1bab440d779eaebfc7d2cd12e817c31bf79
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 851c02747a2414e34a5e9d35bdc7d1df916efce0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605424"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718901"
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>Información general sobre el control DomainUpDown (formularios Windows Forms)
 Los formularios de Windows <xref:System.Windows.Forms.DomainUpDown> control es básicamente una combinación de un cuadro de texto y un par de botones para desplazarse hacia arriba o hacia abajo a través de una lista. El control muestra y establece una cadena de texto de una lista de opciones. El usuario puede seleccionar la cadena, haga clic en botones para desplazarse por una lista de arriba y abajo, presionando las teclas de dirección arriba y abajo o escribiendo una cadena que coincide con un elemento en la lista. Es un uso posible para este control para seleccionar elementos de una lista ordenada alfabéticamente de los nombres.  
@@ -25,8 +25,8 @@ Los formularios de Windows <xref:System.Windows.Forms.DomainUpDown> control es b
 ## <a name="key-properties"></a>Propiedades clave  
  Las propiedades claves del control son <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, y <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>. El <xref:System.Windows.Forms.DomainUpDown.Items%2A> propiedad contiene la lista de objetos cuyos valores de texto se muestran en el control. Si <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> está establecido en `false`, el control completa automáticamente el texto que el usuario escribe y coincide con un valor de la lista. Si <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> está establecido en `true`, al desplazarse más allá del último elemento irá al primer elemento en la lista y viceversa. Los métodos clave del control son <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> y <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.  
   
- Este control muestra solo las cadenas de texto. Si desea un control que muestra los valores numéricos, utilice el <xref:System.Windows.Forms.NumericUpDown> control. Para obtener más información, consulte [información general del Control NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md).  
+ Este control muestra solo las cadenas de texto. Si desea un control que muestra los valores numéricos, utilice el <xref:System.Windows.Forms.NumericUpDown> control. Para obtener más información, consulte [información general del Control NumericUpDown](numericupdown-control-overview-windows-forms.md).  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.DomainUpDown>
-- [DomainUpDown (control)](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)
+- [DomainUpDown (control)](domainupdown-control-windows-forms.md)

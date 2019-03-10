@@ -8,26 +8,26 @@ helpviewer_keywords:
 - tool area [Windows Forms]
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
-ms.openlocfilehash: 86940b97ed373dc90f82520104b9b85019873cd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9982d7b1edde083d546681b37966358d2aac23bd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745264"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718498"
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel (Control)
 El control `ToolStripPanel` habilita el uso compartido de espacio horizontal o vertical dentro del área de herramientas cuando se acopla y la disposición de controles <xref:System.Windows.Forms.ToolStrip> cuando no necesita los cuatro paneles y el panel central de un control <xref:System.Windows.Forms.ToolStripContainer>.  
   
- En los temas de esta sección se describen los conceptos y técnicas que puede usar para crear características `ToolStripPanel` en sus aplicaciones.  
+ Los temas de esta sección describen los conceptos y técnicas que puede usar para crear características `ToolStripPanel` en sus aplicaciones.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general del control ToolStripPanel](../../../../docs/framework/winforms/controls/toolstrippanel-control-overview.md)  
+ [Información general del control ToolStripPanel](toolstrippanel-control-overview.md)  
  Proporciona temas que describen el propósito y los conceptos principales del control <xref:System.Windows.Forms.ToolStripContainer> de Windows Forms.  
   
- [Cómo: Unir ToolStripPanels](../../../../docs/framework/winforms/controls/how-to-join-toolstrippanels.md)  
+ [Cómo: Unir ToolStripPanels](how-to-join-toolstrippanels.md)  
  Muestra cómo agregar controles <xref:System.Windows.Forms.ToolStrip> a `ToolStripPanel`.  
   
- [Cómo: Utilizar controles ToolStripPanel para MDI](../../../../docs/framework/winforms/controls/how-to-use-toolstrippanels-for-mdi.md)  
+ [Cómo: Utilizar controles ToolStripPanel para MDI](how-to-use-toolstrippanels-for-mdi.md)  
  Muestra la flexibilidad proporcionada por los controles `ToolStripPanel` en una aplicación de interfaz de múltiples documentos.  
   
 ## <a name="reference"></a>Referencia  
@@ -35,4 +35,4 @@ El control `ToolStripPanel` habilita el uso compartido de espacio horizontal o v
  Proporciona documentación de referencia para el control <xref:System.Windows.Forms.ToolStripPanel>.  
   
 ## <a name="see-also"></a>Vea también
-- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

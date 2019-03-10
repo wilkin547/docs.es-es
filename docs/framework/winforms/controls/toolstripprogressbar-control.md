@@ -7,18 +7,18 @@ helpviewer_keywords:
 - toolbars [Windows Forms], progress bars
 - progress controls [Windows Forms]
 ms.assetid: cb3eb0a8-60b1-483e-a03f-93b0b1351dae
-ms.openlocfilehash: 4de580b515189fb8eac71158bffaa6239a2a9dfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b56d31cab84a43a488499748710355671980ad0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617023"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711891"
 ---
 # <a name="toolstripprogressbar-control"></a>ToolStripProgressBar (Control)
 El <xref:System.Windows.Forms.ToolStripProgressBar> combina <xref:System.Windows.Forms.ToolStrip> representar y compartir el espacio de características con su funcionalidad de seguimiento de procesos típico.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre ToolStripProgressBar (control)](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
+ [Información general sobre ToolStripProgressBar (control)](toolstripprogressbar-control-overview.md)  
  Proporciona temas que describen el propósito y los conceptos principales del control <xref:System.Windows.Forms.ToolStripProgressBar> de Windows Forms.  
   
 ## <a name="reference"></a>Referencia  
@@ -29,4 +29,4 @@ El <xref:System.Windows.Forms.ToolStripProgressBar> combina <xref:System.Windows
  Proporciona documentación de referencia para el control <xref:System.Windows.Forms.ToolStripProgressBar>.  
   
 ## <a name="see-also"></a>Vea también
-- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

@@ -1,17 +1,17 @@
 ---
-title: Procedimiento Copiar ToolStripMenuItems
+title: Filtrar Copiar ToolStripMenuItems
 ms.date: 03/30/2017
 helpviewer_keywords:
 - menu items [Windows Forms], copying and pasting
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
-ms.openlocfilehash: d3b1103cda6d4f61b55f6856cd426779a4f39f2e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18077f542b1b49f8e81e68fc1e7a5d3e1e417a21
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639450"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713883"
 ---
 # <a name="how-to-copy-toolstripmenuitems"></a>Procedimiento Copiar ToolStripMenuItems
 Durante el diseño, puede copiar menús de nivel superior completos y sus elementos de submenú en un lugar diferente en la <xref:System.Windows.Forms.MenuStrip>. También puede copiar elementos de menú individuales entre los menús de nivel superior o cambiar la posición de los elementos de menú dentro de un menú.  
@@ -45,4 +45,4 @@ Durante el diseño, puede copiar menús de nivel superior completos y sus elemen
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Información general sobre el control MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [Información general sobre el control MenuStrip](menustrip-control-overview-windows-forms.md)

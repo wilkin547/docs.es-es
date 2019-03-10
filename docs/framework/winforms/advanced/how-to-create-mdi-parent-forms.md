@@ -5,16 +5,16 @@ helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 1cc3d813b77ddf8220242f4a1dfc7fe39f9cb520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5da7f1a53412cf30a5898fec096aaa01e3aa65d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512572"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722989"
 ---
-# <a name="how-to-create-mdi-parent-forms"></a>Procedimiento Crear formularios principales MDI
+# <a name="how-to-create-mdi-parent-forms"></a>Filtrar Crear formularios principales MDI
 > [!IMPORTANT]
->  En este tema se usa el control <xref:System.Windows.Forms.MainMenu>, que se ha reemplazado por el control <xref:System.Windows.Forms.MenuStrip>. El control <xref:System.Windows.Forms.MainMenu> se conserva por razones de compatibilidad con versiones anteriores y uso en el futuro, si así lo decide.  Para obtener información acerca de cómo crear una MDI formulario primario mediante el uso de un <xref:System.Windows.Forms.MenuStrip>, vea [Cómo: Crear una lista de ventanas MDI con MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md).  
+>  En este tema se usa el control <xref:System.Windows.Forms.MainMenu>, que se ha reemplazado por el control <xref:System.Windows.Forms.MenuStrip>. El control <xref:System.Windows.Forms.MainMenu> se conserva por razones de compatibilidad con versiones anteriores y uso en el futuro, si así lo decide.  Para obtener información acerca de cómo crear una MDI formulario primario mediante el uso de un <xref:System.Windows.Forms.MenuStrip>, vea [Cómo: Crear una lista de ventanas MDI con MenuStrip](../controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md).  
   
  La base de una aplicación de interfaz de múltiples documentos (MDI) es el formulario primario MDI. Se trata del formulario que contiene las ventanas secundarias de MDI, que son las subventanas donde el usuario interactúa con la aplicación MDI. Crear un formulario primario MDI es fácil, tanto en el Diseñador de Windows Forms como mediante programación.  
   
@@ -33,11 +33,11 @@ ms.locfileid: "54512572"
   
      El primer menú creará y ocultará los elementos de menú en tiempo de ejecución, mientras que el segundo realizará un seguimiento de las ventanas secundarias de MDI abiertas. Llegado este punto, habrá creado una ventana primaria de MDI.  
   
-4.  Presione **F5** para ejecutar la aplicación. Para obtener información sobre cómo crear ventanas secundarias MDI que funcionen dentro del formulario primario MDI, consulte [Cómo: Crear formularios MDI secundarios](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md).  
+4.  Presione **F5** para ejecutar la aplicación. Para obtener información sobre cómo crear ventanas secundarias MDI que funcionen dentro del formulario primario MDI, consulte [Cómo: Crear formularios MDI secundarios](how-to-create-mdi-child-forms.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Aplicaciones de interfaz de múltiples documentos (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [Cómo: Crear formularios MDI secundarios](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [Cómo: Determinar el formulario secundario MDI activo](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
-- [Cómo: Enviar datos al formulario secundario MDI activo](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
-- [Cómo: Organizar formularios MDI secundarios](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [Aplicaciones de interfaz de múltiples documentos (MDI)](multiple-document-interface-mdi-applications.md)
+- [Cómo: Crear formularios MDI secundarios](how-to-create-mdi-child-forms.md)
+- [Cómo: Determinar el formulario secundario MDI activo](how-to-determine-the-active-mdi-child.md)
+- [Cómo: Enviar datos al formulario secundario MDI activo](how-to-send-data-to-the-active-mdi-child.md)
+- [Cómo: Organizar formularios MDI secundarios](how-to-arrange-mdi-child-forms.md)

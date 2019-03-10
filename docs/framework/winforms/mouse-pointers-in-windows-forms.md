@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: 02f93a85ecaa13f5f72cd0f31a1f5ffc24c59f68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491784"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712739"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Punteros del mouse (ratón) en formularios Windows Forms
 El mouse *puntero*, que a veces se conoce como el cursor, es un mapa de bits que especifica un punto de enfoque en la pantalla de entrada del usuario con el mouse. Este tema proporciona información general sobre el puntero del mouse en Windows Forms y describe algunas de las formas de modificar y controlar el puntero del mouse.  
@@ -32,5 +32,5 @@ El mouse *puntero*, que a veces se conoce como el cursor, es un mapa de bits que
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.Cursor>
-- [Entradas mediante el mouse en una aplicación de Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Funcionalidad de arrastrar y soltar en Windows Forms](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
+- [Entradas mediante el mouse en una aplicación de Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Funcionalidad de arrastrar y soltar en Windows Forms](drag-and-drop-functionality-in-windows-forms.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 4f4bcd06067775c6f43063ebe5682730deba1d4f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 84a9220e39c0d79dc53bee576735d1062c1c037c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498892"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710289"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Filtrar Habilitar la persistencia de SQL para flujos de trabajo y los servicios de flujo de trabajo
 
@@ -31,7 +31,7 @@ Antes de usar la característica Almacén de instancias de flujo de trabajo de S
 >
 > System.Data.SqlClient.SqlException: No se pudo encontrar el procedimiento almacenado 'System.Activities.DurableInstancing.CreateLockOwner'
 
-En las siguientes secciones se describe cómo habilitar la persistencia para flujos de trabajo y servicios de flujo de trabajo que usen el almacén de instancias de flujo de trabajo de SQL. Para obtener más información acerca de las propiedades de la Store de instancia de flujo de trabajo de SQL, consulte [propiedades de SQL flujo de trabajo instancia Store](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).
+En las siguientes secciones se describe cómo habilitar la persistencia para flujos de trabajo y servicios de flujo de trabajo que usen el almacén de instancias de flujo de trabajo de SQL. Para obtener más información acerca de las propiedades de la Store de instancia de flujo de trabajo de SQL, consulte [propiedades de SQL flujo de trabajo instancia Store](properties-of-sql-workflow-instance-store.md).
 
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Habilitar la persistencia para flujos de trabajo auto-hospedados que usan WorkflowApplication
 
@@ -72,7 +72,7 @@ Puede habilitar la persistencia para los flujos de trabajo auto-hospedados que u
    ```
 
 > [!NOTE]
-> Consulte la [Cómo: Crear y ejecutar un flujo de trabajo de ejecución larga](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) paso de la [Tutorial de introducción](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) para obtener instrucciones paso a paso.
+> Consulte la [Cómo: Crear y ejecutar un flujo de trabajo de ejecución larga](how-to-create-and-run-a-long-running-workflow.md) paso de la [Tutorial de introducción](getting-started-tutorial.md) para obtener instrucciones paso a paso.
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>Habilitar la persistencia para los servicios del flujo de trabajo auto-hospedados que usan WorkflowServiceHost
 
@@ -129,7 +129,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 Puede habilitar la persistencia para los servicios de flujo de trabajo auto-hospedados u hospedados por Windows Process Activation Service (WAS) usando un archivo de configuración. Un servicio de flujo de trabajo hospedado en WAS usa WorkflowServiceHost tal y como lo hacen los servicios de flujo de trabajo auto-hospedados.
 
-El `SqlWorkflowInstanceStoreBehavior`, un comportamiento del servicio que le permite cambiar fácilmente el [Store de instancia de flujo de trabajo de SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md) propiedades a través de configuración XML. En el caso de los servicios de flujo de trabajo hospedados por WAS, use el archivo Web.config. El siguiente ejemplo de configuración muestra cómo configurar el Almacén de instancias de flujo de trabajo de SQL mediante el elemento de comportamiento `sqlWorkflowInstanceStore` en un archivo de configuración.
+El `SqlWorkflowInstanceStoreBehavior`, un comportamiento del servicio que le permite cambiar fácilmente el [Store de instancia de flujo de trabajo de SQL](sql-workflow-instance-store.md) propiedades a través de configuración XML. En el caso de los servicios de flujo de trabajo hospedados por WAS, use el archivo Web.config. El siguiente ejemplo de configuración muestra cómo configurar el Almacén de instancias de flujo de trabajo de SQL mediante el elemento de comportamiento `sqlWorkflowInstanceStore` en un archivo de configuración.
 
 ```xml
 <serviceBehaviors>

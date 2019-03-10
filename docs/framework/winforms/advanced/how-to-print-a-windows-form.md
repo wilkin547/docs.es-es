@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Imprimir un formulario de Windows
+title: Filtrar Imprimir un formulario de Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: 5e672f40797a90111daefed0be74c941d4cc37b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80bf88ad048e55a381d034d2a796de6f77f8691c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628141"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714156"
 ---
-# <a name="how-to-print-a-windows-form"></a>Procedimiento Imprimir un formulario de Windows
+# <a name="how-to-print-a-windows-form"></a>Filtrar Imprimir un formulario de Windows
 Como parte del proceso de desarrollo, normalmente deseará imprimir una copia del formulario Windows Forms. El ejemplo de código siguiente muestra cómo imprimir una copia del formulario actual mediante el <xref:System.Drawing.Graphics.CopyFromScreen%2A> método.  
   
 ## <a name="example"></a>Ejemplo  
- [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
- [!code-vb[System.Drawing.Graphics.CopyFromScreen#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/VB/Form1.vb#1)]  
+ [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
+ [!code-vb[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Este es un ejemplo de código completo que contiene un `Main` método.  
@@ -39,5 +39,5 @@ Como parte del proceso de desarrollo, normalmente deseará imprimir una copia de
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Cómo: Representar imágenes con GDI +](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
-- [Cómo: Imprimir gráficos en Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)
+- [Cómo: Representar imágenes con GDI +](how-to-render-images-with-gdi.md)
+- [Cómo: Imprimir gráficos en Windows Forms](how-to-print-graphics-in-windows-forms.md)

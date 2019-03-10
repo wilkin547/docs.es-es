@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-ms.openlocfilehash: 5efda369b2059afd350fc947b706fb9f4c27ae14
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f188e14b304970840bfc35a592a445f68f9d7af7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664450"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713913"
 ---
-# <a name="how-to-change-the-borders-of-windows-forms"></a>Filtrar Cambiar los bordes de Windows Forms
+# <a name="how-to-change-the-borders-of-windows-forms"></a>Procedimiento Cambiar los bordes de Windows Forms
 Puede elegir varios estilos de borde para determinar la apariencia y el comportamiento de sus Windows Forms. Puede cambiar la propiedad <xref:System.Windows.Forms.Form.FormBorderStyle%2A> para controlar el comportamiento de cambio de tamaño del formulario. Además, establecer el <xref:System.Windows.Forms.Form.FormBorderStyle%2A> afecta a cómo se muestra la barra de título y qué botones pueden aparecer en ella. Para obtener más información, consulta <xref:System.Windows.Forms.FormBorderStyle>.  
   
  Visual Studio es altamente compatible con esta tarea.  
@@ -46,4 +46,4 @@ Puede elegir varios estilos de borde para determinar la apariencia y el comporta
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.FormBorderStyle>
 - <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>
-- [Introducción a los formularios Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+- [Introducción a los formularios Windows Forms](getting-started-with-windows-forms.md)

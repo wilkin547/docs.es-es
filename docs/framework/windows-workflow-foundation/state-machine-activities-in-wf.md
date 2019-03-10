@@ -2,12 +2,12 @@
 title: Actividades de equipo de estado en WF
 ms.date: 03/30/2017
 ms.assetid: 93312eaf-07e0-4a55-b4f7-4cdbbc4dee2d
-ms.openlocfilehash: 3086348d1c4f29e3f446e9525a12a9c207efb328
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eee507f873cde3aabce09c9b3fdb1620cd79fdab
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619005"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710321"
 ---
 # <a name="state-machine-activities-in-wf"></a>Actividades de equipo de estado en WF
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] proporciona varias actividades y diseñadores de actividad proporcionados por el sistema para crear flujos de trabajo de máquina de estados.  
@@ -20,4 +20,4 @@ ms.locfileid: "54619005"
 |<xref:System.Activities.Statements.Transition>|Representa la transición entre dos estados. No hay ningún **cuadro de herramientas** de elemento para <xref:System.Activities.Statements.Transition>; las transiciones se crean en el Diseñador de flujo de trabajo arrastrando y colocando una línea entre dos Estados, o colocando un estado en los triángulos que aparecen al mantener un estado frente a otro . Para obtener más información, consulte [Diseñador de actividad Transition](/visualstudio/workflow-designer/transition-activity-designer).|  
   
 ## <a name="see-also"></a>Vea también
-- [Tutorial de introducción](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
+- [Tutorial de introducción](getting-started-tutorial.md)

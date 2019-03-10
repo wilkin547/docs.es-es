@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 18c1e2a5-9834-40d3-9b2e-2b545e4e769e
-ms.openlocfilehash: c44d338bbe026726abe77d41812363b9b10851f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce67a06a5fe43602258d52548e8d933b99548f44
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526069"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720480"
 ---
 # <a name="bindingnavigator-control-windows-forms"></a>BindingNavigator (Control, formularios Windows Forms)
 El control `BindingNavigator` es la interfaz de usuario de navegación y manipulación para los controles de un formulario que están enlazados a datos. El control `BindingNavigator` permite a los usuarios recorrer y manipular los datos en Windows Forms.  
@@ -19,16 +19,16 @@ El control `BindingNavigator` es la interfaz de usuario de navegación y manipul
  Los temas de esta sección proporcionan una visión general del control `BindingNavigator` y ofrecen instrucciones paso a paso acerca de cómo usar el control para explorar datos y desplazarse por un <xref:System.Data.DataSet>.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre el control BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-overview-windows-forms.md)  
+ [Información general sobre el control BindingNavigator](bindingnavigator-control-overview-windows-forms.md)  
  Presenta los conceptos generales del control `BindingNavigator`, que permite a los usuarios desplazarse por los elementos de un origen de datos.  
   
- [Cómo: Explorar datos con el control BindingNavigator de Windows Forms](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
+ [Cómo: Explorar datos con el Control BindingNavigator de Windows Forms](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
  Proporciona los pasos para enlazar un control `BindingNavigator` a un origen de datos.  
   
- [Cómo: Desplazarse por un conjunto de datos con el control BindingNavigator de Windows Forms](../../../../docs/framework/winforms/controls/move-through-a-dataset-with-wf-bindingnavigator-control.md)  
+ [Cómo: Desplazarse por un conjunto de datos con el Control BindingNavigator de formularios de Windows](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
  Muestra cómo utilizar un control `BindingNavigator` para desplazarse por los registros de un <xref:System.Data.DataSet>.  
   
- Vea también [Cómo: Agregar los botones Cargar, Guardar y Cancelar al control BindingNavigator de Windows Forms](../../../../docs/framework/winforms/controls/load-save-and-cancel-bindingnavigator.md).  
+ Consulte también [Cómo: Agregar una carga, guardar y cancelar botones a la Windows Forms Control BindingNavigator](load-save-and-cancel-bindingnavigator.md).  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.BindingNavigator>  

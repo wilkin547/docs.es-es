@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], accessing bound objects
 - DataGridView control [Windows Forms], accessing objects bound to rows
 ms.assetid: 0e05748f-4403-4eb8-8b2f-b098108181b5
-ms.openlocfilehash: a36a0bb84b851945b530d7d323e13e034234051b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 5c66bc961d92a2ece1aea4986d0c23181c971b3e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220408"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720350"
 ---
 # <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>Filtrar Obtener acceso a objetos enlazados a Windows Forms filas DataGridView
 A veces resulta útil mostrar una tabla de información almacenada en una colección de objetos comerciales. Al enlazar un control <xref:System.Windows.Forms.DataGridView> a este tipo de colección, cada propiedad pública se muestra en su propia columna a menos que la propiedad se haya marcado como no examinable con un <xref:System.ComponentModel.BrowsableAttribute>. Por ejemplo, una colección de objetos `Customer` tendría columnas como **Nombre** y **Dirección**.  
@@ -25,14 +25,14 @@ A veces resulta útil mostrar una tabla de información almacenada en una colecc
   
 -   Utilice la propiedad <xref:System.Windows.Forms.DataGridViewRow.DataBoundItem%2A?displayProperty=nameWithType>.  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewObjectBinding#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewObjectBinding/CS/datagridviewobjectbinding.cs#10)]
-     [!code-vb[System.Windows.Forms.DataGridViewObjectBinding#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewObjectBinding/VB/datagridviewobjectbinding.vb#10)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewObjectBinding#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewObjectBinding/CS/datagridviewobjectbinding.cs#10)]
+     [!code-vb[System.Windows.Forms.DataGridViewObjectBinding#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewObjectBinding/VB/datagridviewobjectbinding.vb#10)]  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo de código completo incluye una implementación sencilla `Customer` y enlaza la <xref:System.Windows.Forms.DataGridView> a una <xref:System.Collections.ArrayList> que contiene algunos objetos `Customer`. El controlador de eventos <xref:System.Windows.Forms.Control.Click> del <xref:System.Windows.Forms.Button?displayProperty=nameWithType> debe acceder a los objetos `Customer` a través de las filas porque la colección del cliente no es accesible fuera del controlador de eventos <xref:System.Windows.Forms.Form.Load?displayProperty=nameWithType>.  
   
- [!code-csharp[System.Windows.Forms.DataGridViewObjectBinding#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewObjectBinding/CS/datagridviewobjectbinding.cs#00)]
- [!code-vb[System.Windows.Forms.DataGridViewObjectBinding#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewObjectBinding/VB/datagridviewobjectbinding.vb#00)]  
+ [!code-csharp[System.Windows.Forms.DataGridViewObjectBinding#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewObjectBinding/CS/datagridviewobjectbinding.cs#00)]
+ [!code-vb[System.Windows.Forms.DataGridViewObjectBinding#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewObjectBinding/VB/datagridviewobjectbinding.vb#00)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -45,5 +45,5 @@ A veces resulta útil mostrar una tabla de información almacenada en una colecc
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewRow.DataBoundItem%2A?displayProperty=nameWithType>
-- [Mostrar datos en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Cómo: Enlazar objetos a controles DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)
+- [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Cómo: Enlazar objetos a controles DataGridView de formularios Windows Forms](how-to-bind-objects-to-windows-forms-datagridview-controls.md)

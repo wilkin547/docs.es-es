@@ -11,14 +11,14 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 581fbb839d06aebc6487bb7b4933f0c1e39af3e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95958491d624052922df9af37b188b9515480397
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512559"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714336"
 ---
-# <a name="how-to-determine-the-active-mdi-child"></a>Procedimiento Determinar el formulario secundario MDI activo
+# <a name="how-to-determine-the-active-mdi-child"></a>Filtrar Determinar el formulario secundario MDI activo
 En ocasiones, desee proporcionar un comando que funciona en el control que tiene el foco en el formulario secundario activo actualmente. Por ejemplo, suponga que desea copiar el texto seleccionado del cuadro de texto del formulario secundario en el Portapapeles. Creación de un procedimiento que se copia el texto seleccionado en el Portapapeles usando el <xref:System.Windows.Forms.Control.Click> eventos del elemento de menú Copiar en el menú de edición estándar.  
   
  Dado que una aplicación MDI puede tener muchas instancias del mismo formulario secundario, debe saber qué formulario hay que usar el procedimiento. Para especificar el formato correcto, use el <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> propiedad, que devuelve el formulario secundario que tiene el foco o que estuvo activa más recientemente.  
@@ -30,7 +30,7 @@ En ocasiones, desee proporcionar un comando que funciona en el control que tiene
 1.  Dentro de un método, copie el texto del control activo del formulario secundario activo en el Portapapeles.  
   
     > [!NOTE]
-    >  En este ejemplo se da por supuesto que hay un formulario primario MDI (`Form1`) que tiene una o varias ventanas secundarias MDI que contiene un <xref:System.Windows.Forms.RichTextBox> control. Para obtener más información, consulte [crear los formularios MDI primario](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
+    >  En este ejemplo se da por supuesto que hay un formulario primario MDI (`Form1`) que tiene una o varias ventanas secundarias MDI que contiene un <xref:System.Windows.Forms.RichTextBox> control. Para obtener más información, consulte [crear los formularios MDI primario](how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -84,8 +84,8 @@ En ocasiones, desee proporcionar un comando que funciona en el control que tiene
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [Aplicaciones de interfaz de múltiples documentos (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [Cómo: Crear formularios principales MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Cómo: Crear formularios MDI secundarios](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [Cómo: Enviar datos al formulario secundario MDI activo](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
-- [Cómo: Organizar formularios MDI secundarios](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [Aplicaciones de interfaz de múltiples documentos (MDI)](multiple-document-interface-mdi-applications.md)
+- [Cómo: Crear formularios principales MDI](how-to-create-mdi-parent-forms.md)
+- [Cómo: Crear formularios MDI secundarios](how-to-create-mdi-child-forms.md)
+- [Cómo: Enviar datos al formulario secundario MDI activo](how-to-send-data-to-the-active-mdi-child.md)
+- [Cómo: Organizar formularios MDI secundarios](how-to-arrange-mdi-child-forms.md)

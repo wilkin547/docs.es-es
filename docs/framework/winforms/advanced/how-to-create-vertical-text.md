@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing vertical
 - vertical text [Windows Forms], drawing
 ms.assetid: 50c69046-4188-47d9-b949-cc2610ffd337
-ms.openlocfilehash: 513d59c61d5195665928f6bb28d1d091b425c103
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2c26ab220fc9b796c8f8ababdef144847d52698
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573155"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710412"
 ---
 # <a name="how-to-create-vertical-text"></a>Procedimiento Crear texto Vertical
 Puede usar un <xref:System.Drawing.StringFormat> objeto para especificar que se dibuja el texto verticalmente en lugar de horizontalmente.  
@@ -25,14 +25,14 @@ Puede usar un <xref:System.Drawing.StringFormat> objeto para especificar que se 
   
  La siguiente ilustración muestra el texto vertical.  
   
- ![Texto de las fuentes](../../../../docs/framework/winforms/advanced/media/csfontstext5.png "csfontstext5")  
+ ![Texto de las fuentes](./media/csfontstext5.png "csfontstext5")  
   
- [!code-csharp[System.Drawing.FontsAndText#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.FontsAndText#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.FontsAndText#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.FontsAndText#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
 -   El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e` , que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Dibujar texto con GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)
+- [Cómo: Dibujar texto con GDI](how-to-draw-text-with-gdi.md)

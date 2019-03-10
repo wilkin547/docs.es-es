@@ -1,16 +1,16 @@
 ---
-title: Procedimiento Crear un participante de seguimiento personalizados
+title: Filtrar Crear un participante de seguimiento personalizados
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 4afa3f46532e365760c0dd5a9e1880a82e5ae82b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c4c6a8d17180ee00942c1bfd9ddc7bfa04bb962f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150640"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720961"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Procedimiento Crear un participante de seguimiento personalizados
 El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejecución del flujo de trabajo. El runtime de flujo de trabajo emite registros de seguimiento que describen los eventos de ciclo de vida de flujo de trabajo, los eventos de ciclo de vida de actividad, los errores y la reanudación de marcadores. Los participantes de seguimiento usan estos registros de seguimiento. Windows Workflow Foundation (WF) incluye a un participante de seguimiento estándar que escribe registros de seguimiento como eventos de seguimiento de eventos para Windows (ETW). Si eso no cumple sus requisitos, también puede escribir un participante de seguimiento personalizado. Este paso del tutorial describe cómo crear un participante y un perfil de seguimiento personalizados que capturen la salida de las actividades `WriteLine` para poder mostrarla al usuario.  
@@ -328,7 +328,7 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
     ```
     
     > [!NOTE]
-    > Esta información es útil para determinar el intervalo del número aleatorio, pero no contiene información sobre qué intentos se han hecho anteriormente. Esta información está en el paso siguiente, [Cómo: Hospedar varias versiones de un flujo de trabajo Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+    > Esta información es útil para determinar el intervalo del número aleatorio, pero no contiene información sobre qué intentos se han hecho anteriormente. Esta información está en el paso siguiente, [Cómo: Hospedar varias versiones de un flujo de trabajo Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
     Anote el identificador de instancias de flujo de trabajo, y juegue hasta completar el juego.
   
@@ -342,4 +342,4 @@ El seguimiento de flujo de trabajo proporciona visibilidad del estado de la ejec
     Please enter a number between 1 and 10
     ```
 
-    Además de no contener los intentos del usuario, este dato de seguimiento no contiene información sobre el último intento del flujo de trabajo. Esto se debe a que la información de seguimiento solo consta del resultado de `WriteLine` del flujo de trabajo, y el mensaje final que se muestra se hace así desde el controlador de `Completed` una vez el flujo de trabajo se ha completado. En el siguiente paso del tutorial, [Cómo: Hospedar varias versiones de un flujo de trabajo Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), existente `WriteLine` se modifican las actividades para mostrar los intentos del usuario y más `WriteLine` se agrega la actividad que muestra los resultados finales. Después de que estos cambios se han integrado, [Cómo: Hospedar varias versiones de un flujo de trabajo Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) muestra cómo hospedar varias versiones de un flujo de trabajo al mismo tiempo.
+    Además de no contener los intentos del usuario, este dato de seguimiento no contiene información sobre el último intento del flujo de trabajo. Esto se debe a que la información de seguimiento solo consta del resultado de `WriteLine` del flujo de trabajo, y el mensaje final que se muestra se hace así desde el controlador de `Completed` una vez el flujo de trabajo se ha completado. En el siguiente paso del tutorial, [Cómo: Hospedar varias versiones de un flujo de trabajo Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md), existente `WriteLine` se modifican las actividades para mostrar los intentos del usuario y más `WriteLine` se agrega la actividad que muestra los resultados finales. Después de que estos cambios se han integrado, [Cómo: Hospedar varias versiones de un flujo de trabajo Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md) muestra cómo hospedar varias versiones de un flujo de trabajo al mismo tiempo.

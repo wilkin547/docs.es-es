@@ -2,12 +2,12 @@
 title: Variables y argumentos
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 7d4bcbb28ffac0ea0f2f6d4aa238523855570f7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e534a54802228d6d001838008fc9d8f36fc0827
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520112"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717822"
 ---
 # <a name="variables-and-arguments"></a>Variables y argumentos
 En Windows Workflow Foundation (WF), las variables representan el almacenamiento de datos y los argumentos representan el flujo de datos dentro y fuera de una actividad. Una actividad tiene un conjunto de argumentos y constituyen la firma de la actividad. Además, una actividad puede mantener una lista de variables a las que un desarrollador de software puede agregar o quitar variables durante el diseño de un flujo de trabajo. Los argumentos se enlazan mediante una expresión que devuelve un valor.  
@@ -67,7 +67,7 @@ Variable<string> var = new Variable<string>
   
 2.  Cuando se llama a <xref:System.Activities.InOutArgument%601.Set%2A>, el tiempo de ejecución establece el valor inmediatamente.  
   
-3.  Los argumentos pueden opcionalmente tener especificado su <xref:System.Activities.Argument.EvaluationOrder%2A>. <xref:System.Activities.Argument.EvaluationOrder%2A>es un valor basado en cero que especifica el orden en el que se evalúa el argumento. De forma predeterminada, el orden de evaluación del argumento no está especificado y es igual al valor de <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Para especificar un orden de evaluación para este argumento, establezca la propiedad <xref:System.Activities.Argument.EvaluationOrder%2A> con un valor mayor o igual que cero. Windows Workflow Foundation evalúa argumentos con un orden de evaluación especificado en orden ascendente. Tenga en cuenta que los argumentos que no tienen orden de evaluación especificada se evalúan antes que los que tienen especificado un orden de evaluación.  
+3.  Los argumentos pueden opcionalmente tener especificado su <xref:System.Activities.Argument.EvaluationOrder%2A>. <xref:System.Activities.Argument.EvaluationOrder%2A>es un valor basado en cero que especifica el orden en el que se evalúa el argumento. De forma predeterminada, el orden de evaluación del argumento no está especificado y es igual al valor de <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Para especificar un orden de evaluación para este argumento, establezca la propiedad <xref:System.Activities.Argument.EvaluationOrder%2A> con un valor mayor o igual que cero. Windows Workflow Foundation evalúa argumentos con un orden de evaluación especificada en orden ascendente. Tenga en cuenta que los argumentos que no tienen orden de evaluación especificada se evalúan antes que los que tienen especificado un orden de evaluación.  
   
  Un autor de actividad puede usar un mecanismo fuertemente tipado para exponer sus argumentos. Esto se logra declarando propiedades de tipo <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> y <xref:System.Activities.InOutArgument%601>. De esta forma se permite que un autor de actividad establezca un contrato concreto sobre la entrada y salida de datos de una actividad.  
   
@@ -141,4 +141,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- Para obtener más información sobre cómo trabajar con argumentos, variables y expresiones en el código, vea [creación de flujos de trabajo, actividades y expresiones mediante código imperativo](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) y [argumentos necesarios y grupos de sobrecarga](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).
+ Para obtener más información sobre cómo trabajar con argumentos, variables y expresiones en el código, consulte [creación de flujos de trabajo, actividades y expresiones mediante código imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md) y [argumentos necesarios y grupos de sobrecarga](required-arguments-and-overload-groups.md).

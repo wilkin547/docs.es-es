@@ -13,14 +13,14 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 925134e4a0317322d7a4f4cfdc9ac8e3780cf9e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04f6b98a2206371a2838b3a6952feeafcd788309
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650706"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714260"
 ---
-# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Procedimiento Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de formularios de Windows
+# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Filtrar Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de formularios de Windows
 Los formularios de Windows <xref:System.Windows.Forms.NotifyIcon> componente muestra un solo icono en el área de notificación de estado de la barra de tareas. Para mostrar varios iconos en el área de estado, debe tener varios <xref:System.Windows.Forms.NotifyIcon> componentes en el formulario. Para establecer el icono que aparece para un control, utilice el <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propiedad. También puede escribir código el <xref:System.Windows.Forms.NotifyIcon.DoubleClick> controlador de eventos, por lo que algo se produce cuando el usuario hace doble clic en el icono. Por ejemplo, podría hacer que un cuadro de diálogo aparecen para que el usuario configurar el proceso en segundo plano representado por el icono.  
   
 > [!NOTE]
@@ -28,7 +28,7 @@ Los formularios de Windows <xref:System.Windows.Forms.NotifyIcon> componente mue
   
 ### <a name="to-set-the-icon"></a>Para establecer el icono  
   
-1.  Asignar un valor a la <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propiedad. El valor debe ser de tipo `System.Drawing.Icon` y se puede cargar desde un archivo .ico. Puede especificar el archivo de icono en el código o haciendo clic en el botón de puntos suspensivos (![de pantalla de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) junto a la <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propiedad en el  **Propiedades** ventana y, a continuación, seleccione el archivo en el **abierto** cuadro de diálogo que aparece.  
+1.  Asignar un valor a la <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propiedad. El valor debe ser de tipo `System.Drawing.Icon` y se puede cargar desde un archivo .ico. Puede especificar el archivo de icono en el código o haciendo clic en el botón de puntos suspensivos (![de pantalla de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) junto a la <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propiedad en el  **Propiedades** ventana y, a continuación, seleccione el archivo en el **abierto** cuadro de diálogo que aparece.  
   
 2.  Establezca la propiedad <xref:System.Windows.Forms.NotifyIcon.Visible%2A> en `true`.  
   
@@ -74,6 +74,6 @@ Los formularios de Windows <xref:System.Windows.Forms.NotifyIcon> componente mue
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Cómo: Asociar un menú contextual con un componente NotifyIcon de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
-- [NotifyIcon (componente)](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)
-- [Información general sobre el componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)
+- [Cómo: Asociar un menú contextual con un componente NotifyIcon de formularios Windows Forms](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [NotifyIcon (componente)](notifyicon-component-windows-forms.md)
+- [Información general sobre el componente NotifyIcon](notifyicon-component-overview-windows-forms.md)

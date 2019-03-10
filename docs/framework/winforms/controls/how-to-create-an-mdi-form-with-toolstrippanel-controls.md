@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un formulario MDI con controles ToolStripPanel
+title: Procedimiento Crear un formulario MDI con controles ToolStripPanel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MDI forms [Windows Forms], creating
 ms.assetid: d198ef8e-f7c4-4b3f-a7f5-ce858cb90cec
-ms.openlocfilehash: 0877a88e018766287f47c9ce851973faf4bfa822
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 9b3297acabbb05c25ae195acbb6fb9274ad02651
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219398"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725394"
 ---
 # <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>Filtrar Crear un formulario MDI con controles ToolStripPanel
 Puede crear un formulario de interfaz de múltiples documentos (MDI) que tenga controles <xref:System.Windows.Forms.ToolStrip> que lo enmarquen por los cuatro lados.  
@@ -27,10 +27,10 @@ Puede crear un formulario de interfaz de múltiples documentos (MDI) que tenga c
   
  En el ejemplo, el método <xref:System.Windows.Forms.ToolStripPanel.Join%2A> asocia los controles <xref:System.Windows.Forms.ToolStrip> a los controles <xref:System.Windows.Forms.ToolStripPanel> correspondientes.  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
- [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
-[!code-csharp[System.Windows.Forms.ToolStrip.Misc#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#10)]
-[!code-vb[System.Windows.Forms.ToolStrip.Misc#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#10)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
+[!code-csharp[System.Windows.Forms.ToolStrip.Misc#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#10)]
+[!code-vb[System.Windows.Forms.ToolStrip.Misc#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#10)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -45,4 +45,4 @@ Puede crear un formulario de interfaz de múltiples documentos (MDI) que tenga c
 - <xref:System.Windows.Forms.ToolStripPanel.Join%2A>
 - <xref:System.Windows.Forms.ToolStripItem>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)

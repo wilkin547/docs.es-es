@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 0820450fb9ae257cba87b3055ea1dde91112b19e
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656003"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710542"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Deshabilitar el reconocimiento de PPP en Visual Studio
 
@@ -21,11 +21,11 @@ Visual Studio es un puntos por aplicación para pulgada (PPP), lo que significa 
 
 El **Diseñador de Windows Forms** en Visual Studio no tiene ajuste de escala de soporte técnico. Esto provoca problemas de visualización al abrir algunos formularios en el **Diseñador de Windows Forms** en muchos puntos por pulgada (HDPI) monitores. Para obtener ejemplos, los controles pueden parecer que se superponen tal como se muestra en la siguiente imagen:
 
-![Diseñador de Windows Forms en monitor HDPI](media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
+![Diseñador de Windows Forms en monitor HDPI](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
 En Visual Studio 2017 versión 15,8 y versiones posterior, cuando se abre un formulario en el **Diseñador de Windows Forms** en un monitor HDPI, Visual Studio muestra un informativo de la barra de selección amarillo en la parte superior del diseñador:
 
-![Barra informativa en Visual Studio se reinicie en modo no reconocen el PPP](media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
+![Barra informativa en Visual Studio se reinicie en modo no reconocen el PPP](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 Lee el mensaje **ajuste de escala en la pantalla principal está establecido en 200% (192 PPP). Esto podría provocar problemas de representación en la ventana del diseñador.**
 
@@ -75,7 +75,7 @@ Puede elegir no recibir una notificación de PPP escalar problemas en Visual Stu
 
 Para deshabilitar las notificaciones, elija **herramientas** > **opciones** para abrir el **opciones** cuadro de diálogo. A continuación, elija **Diseñador de Windows Forms** > **General**y establezca **notificaciones de ajuste de escala de PPP** a **False**.
 
-![Ajuste de PPP opción notificaciones en Visual Studio](media/disable-dpi-awareness-visual-studio/notifications-option.png)
+![Ajuste de PPP opción notificaciones en Visual Studio](./media/disable-dpi-awareness-visual-studio/notifications-option.png)
 
 Si desea volver a habilitar más adelante las notificaciones de escalado, establezca la propiedad en **True**.
 

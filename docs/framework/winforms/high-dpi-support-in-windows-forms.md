@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b5ad28fbfd668819b0bcab30c33892679b4bd8c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674924"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711809"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Compatibilidad con valores alto de PPP en Windows Forms
 
@@ -49,7 +49,7 @@ Además, para configurar la compatibilidad con PPP elevado en su aplicación de 
 
 - Habilitar el reconocimiento de PPP por monitor en el *app.config* archivo.
 
-  Windows Forms presenta un nuevo [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../../../docs/framework/configure-apps/file-schema/winforms/index.md) elemento para admitir las nuevas características y personalizaciones agregadas a partir de .NET Framework 4.7. Para aprovechar las ventajas de las nuevas características que admiten valores altos de PPP, agregue lo siguiente al archivo de configuración de la aplicación.   
+  Windows Forms presenta un nuevo [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) elemento para admitir las nuevas características y personalizaciones agregadas a partir de .NET Framework 4.7. Para aprovechar las ventajas de las nuevas características que admiten valores altos de PPP, agregue lo siguiente al archivo de configuración de la aplicación.   
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -84,7 +84,7 @@ Establecer el `DpiAwareness` valor `PerMonitorV2` habilita altos todas las carac
 </System.Windows.Forms.ApplicationConfigurationSection>    
 ```
 
-Para obtener una lista de las claves individuales y sus valores, vea [elemento de configuración agregar Windows Forms](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
+Para obtener una lista de las claves individuales y sus valores, vea [elemento de configuración agregar Windows Forms](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
 
 ## <a name="new-dpi-change-events"></a>Nuevos eventos de cambio de PPP
 
@@ -132,5 +132,5 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 
 ## <a name="see-also"></a>Vea también
 
-- [Windows Forms Agregar elemento de configuración](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
-- [Ajustar el tamaño y la escala de Windows Forms](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)
+- [Windows Forms Agregar elemento de configuración](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
+- [Ajustar el tamaño y la escala de Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)

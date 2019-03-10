@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Button control [Windows Forms], about Button control
 - buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
-ms.openlocfilehash: 042ff7cb868b62778691348cb6c1ba464b794993
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 505b75d362cea0eddec2b51dc398e2cd8c8d4db8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656445"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713401"
 ---
 # <a name="button-control-overview-windows-forms"></a>Información general sobre el control Button (formularios Windows Forms)
 El control <xref:System.Windows.Forms.Button> de Windows Forms permite al usuario hacer clic en él para llevar a cabo una acción. Al hacer clic en el botón, parece como si se hubiera presionado y soltado. Cada vez que el usuario hace clic en un botón, el <xref:System.Windows.Forms.Control.Click> se invoca el controlador de eventos. Colocar código en el <xref:System.Windows.Forms.Control.Click> controlador de eventos para realizar cualquier acción que elija.  
   
- El texto mostrado en el botón se encuentra en la <xref:System.Windows.Forms.Control.Text%2A> propiedad. Si el texto supera el ancho del botón, ajustará a la línea siguiente. Sin embargo, se recortará si el control no puede contener su altura total. Para obtener más información, vea [Cómo: Establecer el texto mostrado por un Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md). El <xref:System.Windows.Forms.Control.Text%2A> propiedad puede contener una clave de acceso, que permite que un usuario "haga clic en" el control presionando la tecla ALT y la clave de acceso. Para obtener más información, vea [Cómo: Crear teclas de acceso para controles de Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md). La apariencia del texto se controla mediante el <xref:System.Windows.Forms.Control.Font%2A> propiedad y el <xref:System.Windows.Forms.ButtonBase.TextAlign%2A> propiedad.  
+ El texto mostrado en el botón se encuentra en la <xref:System.Windows.Forms.Control.Text%2A> propiedad. Si el texto supera el ancho del botón, ajustará a la línea siguiente. Sin embargo, se recortará si el control no puede contener su altura total. Para obtener más información, vea [Cómo: Establecer el texto mostrado por un Windows Forms Control](how-to-set-the-text-displayed-by-a-windows-forms-control.md). El <xref:System.Windows.Forms.Control.Text%2A> propiedad puede contener una clave de acceso, que permite que un usuario "haga clic en" el control presionando la tecla ALT y la clave de acceso. Para obtener más detalles, vea [Cómo: Crear teclas de acceso para controles de Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md). La apariencia del texto se controla mediante el <xref:System.Windows.Forms.Control.Font%2A> propiedad y el <xref:System.Windows.Forms.ButtonBase.TextAlign%2A> propiedad.  
   
- El <xref:System.Windows.Forms.Button> control también puede mostrar imágenes usando la <xref:System.Windows.Forms.ButtonBase.Image%2A> y <xref:System.Windows.Forms.ButtonBase.ImageList%2A> propiedades. Para obtener más información, vea [Cómo: Establecer la imagen que muestra un Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
+ El <xref:System.Windows.Forms.Button> control también puede mostrar imágenes usando la <xref:System.Windows.Forms.ButtonBase.Image%2A> y <xref:System.Windows.Forms.ButtonBase.ImageList%2A> propiedades. Para obtener más información, vea [Cómo: Establecer la imagen que muestra un Windows Forms Control](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.Button>
-- [Cómo: Responder a clics de botón de Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
-- [Maneras de seleccionar un control Button de formularios Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)
-- [Cómo: Designar un botón de formularios Windows Forms como botón para aceptar mediante el diseñador](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)
-- [Cómo: Designar un botón de formularios Windows Forms como botón para cancelar mediante el diseñador](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
-- [Botón (control)](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+- [Cómo: Responder a clics de botón de Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Maneras de seleccionar un control Button de formularios Windows Forms](ways-to-select-a-windows-forms-button-control.md)
+- [Cómo: Designar un botón de formularios Windows Forms como botón para aceptar mediante el diseñador](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [Cómo: Designar un botón de formularios Windows Forms como botón para cancelar mediante el diseñador](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [Botón (control)](button-control-windows-forms.md)

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - battery states
 - power states
 ms.assetid: ad04a801-5682-4d88-92c5-26eb9cdb209a
-ms.openlocfilehash: 172472cf9a2e1bc7bb81448dc8793a4eaeb12da4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77d2096239ec70f98ebfc299f1eda75ad4490be9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546561"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712427"
 ---
 # <a name="power-management-in-windows-forms"></a>Administración de energía en formularios Windows Forms
 Las aplicaciones de Windows Forms pueden aprovechar las ventajas de las características de administración de energía en el sistema operativo de Windows. Las aplicaciones pueden supervisar el estado de alimentación de un equipo y actuar cuando se produce un cambio de estado. Por ejemplo, si la aplicación se ejecuta en un equipo portátil, es posible que desee deshabilitar determinadas características de la aplicación cuando la carga de batería del equipo cae por debajo de un nivel determinado.  
   
  El [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proporciona un <xref:Microsoft.Win32.SystemEvents.PowerModeChanged> evento que tiene lugar siempre que haya un cambio en el estado de energía, como cuando un usuario suspende o reanuda el sistema operativo, o cuando cambia el estado de alimentación de CA o el estado de la batería. El <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A> propiedad de la <xref:System.Windows.Forms.SystemInformation> puede ser la clase se usa para consultar el estado actual, tal como se muestra en el ejemplo de código siguiente.  
   
- [!code-csharp[PowerMode#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#1)]
- [!code-vb[PowerMode#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#1)]  
+ [!code-csharp[PowerMode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#1)]
+ [!code-vb[PowerMode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#1)]  
   
  Además el <xref:System.Windows.Forms.BatteryChargeStatus> enumeraciones, el <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A> propiedad también contiene enumeraciones para determinar la capacidad de la batería (<xref:System.Windows.Forms.PowerStatus.BatteryFullLifetime%2A>) y porcentaje de carga de batería (<xref:System.Windows.Forms.PowerStatus.BatteryLifePercent%2A>, <xref:System.Windows.Forms.PowerStatus.BatteryLifeRemaining%2A>).  
   
@@ -29,8 +29,8 @@ Las aplicaciones de Windows Forms pueden aprovechar las ventajas de las caracter
   
  El ejemplo de código siguiente muestra cómo poner un equipo en hibernación.  
   
- [!code-csharp[PowerMode#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#2)]
- [!code-vb[PowerMode#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#2)]  
+ [!code-csharp[PowerMode#2](~/samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#2)]
+ [!code-vb[PowerMode#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#2)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:Microsoft.Win32.SystemEvents.PowerModeChanged>

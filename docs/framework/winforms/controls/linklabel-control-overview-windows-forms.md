@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
-ms.openlocfilehash: b39c682ccb73a71da1752e6e9f3f79e5916d106c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81edab0d44ae0bb9dcabe77ad568f281e6f5fffb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503994"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722376"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>Información general sobre el control LinkLabel (formularios Windows Forms)
 Los formularios de Windows <xref:System.Windows.Forms.LinkLabel> control le permite agregar vínculos de estilo Web a aplicaciones de Windows Forms. Puede usar el <xref:System.Windows.Forms.LinkLabel> control para todo lo que puede usar el <xref:System.Windows.Forms.Label> de control para; también puede establecer parte del texto como un vínculo a un archivo, carpeta o página Web.  
@@ -25,6 +25,6 @@ Los formularios de Windows <xref:System.Windows.Forms.LinkLabel> control le perm
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.LinkLabel>
-- [Información general sobre el control Label](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)
-- [Cómo: Vincular a un objeto o página con el Control LinkLabel de formularios Windows Forms Web](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [Cómo: Cambiar la apariencia del Control LinkLabel de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [Información general sobre el control Label](label-control-overview-windows-forms.md)
+- [Cómo: Vincular a un objeto o página con el Control LinkLabel de formularios Windows Forms Web](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Cómo: Cambiar la apariencia del Control LinkLabel de formularios Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)

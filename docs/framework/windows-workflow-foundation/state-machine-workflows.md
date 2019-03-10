@@ -2,12 +2,12 @@
 title: Flujos de trabajo de máquina de estados
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 89819f6b37fdaf601cf4e8b99fd5156c8e40af99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78ce1124137e3b97978f3522a59ad1febd23135d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521301"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724965"
 ---
 # <a name="state-machine-workflows"></a>Flujos de trabajo de máquina de estados
 Una máquina de estados es un paradigma conocido para el desarrollo de programas. La actividad <xref:System.Activities.Statements.StateMachine> , junto con <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, y otras actividades se pueden usar para compilar programas de flujo de trabajo de máquina de estados. Este tema proporciona información general sobre cómo crear flujos de trabajo de máquina de estados.  
@@ -21,16 +21,16 @@ Una máquina de estados es un paradigma conocido para el desarrollo de programas
   
 -   <xref:System.Activities.Statements.Transition>  
   
- Para crear un flujo de trabajo de máquina de estados, los estados se agregan a una actividad <xref:System.Activities.Statements.StateMachine> y las transiciones se usan para controlar el flujo entre estados. La siguiente captura de pantalla de la [Tutorial de introducción](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) paso [Cómo: Crear un flujo de trabajo de máquina de estados](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md), se muestra un flujo de trabajo de equipo de estado con tres estados y transiciones de tres. **Inicializar destino** es el estado inicial y representa el primer estado del flujo de trabajo. Esto lo designa la línea que conduce a él desde el **iniciar** nodo. El estado final del flujo de trabajo se denomina **FinalState**y representa el momento en que se complete el flujo de trabajo.  
+ Para crear un flujo de trabajo de máquina de estados, los estados se agregan a una actividad <xref:System.Activities.Statements.StateMachine> y las transiciones se usan para controlar el flujo entre estados. La siguiente captura de pantalla de la [Tutorial de introducción](getting-started-tutorial.md) paso [Cómo: Crear un flujo de trabajo de máquina de estados](how-to-create-a-state-machine-workflow.md), se muestra un flujo de trabajo de equipo de estado con tres estados y transiciones de tres. **Inicializar destino** es el estado inicial y representa el primer estado del flujo de trabajo. Esto lo designa la línea que conduce a él desde el **iniciar** nodo. El estado final del flujo de trabajo se denomina **FinalState**y representa el momento en que se complete el flujo de trabajo.  
   
- ![Flujo de trabajo de máquina de Estados completado](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Flujo de trabajo de máquina de Estados completado](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
   
  Un flujo de trabajo de máquina de estados debe tener un único estado inicial y por lo menos un estado final. Cada estado que no es un estado final debe tener al menos una transición. Las secciones siguientes tratan sobre cómo crear y configurar estados y transiciones.  
   
 ## <a name="creating-and-configuring-states"></a>Crear y configurar estados  
  <xref:System.Activities.Statements.State> representa un estado en el que una máquina de estados puede estar. Para agregar un <xref:System.Activities.Statements.State> a un flujo de trabajo, arrastre el **estado** Diseñador de actividades desde el **máquina de estados** sección de la **cuadro de herramientas** y colóquela en un <xref:System.Activities.Statements.StateMachine> actividad en el [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] superficie.  
   
- ![WF4 Las actividades de la máquina de estado](../../../docs/framework/windows-workflow-foundation/media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ ![WF4 Las actividades de la máquina de estado](./media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
   
  Para configurar un estado como el **estado inicial del**, haga clic en el estado y seleccione **establecer como estado inicial**. Además, si no hay ningún estado inicial actual, el estado inicial puede designarse arrastrando una línea desde el **iniciar** nodo en la parte superior del flujo de trabajo al estado deseado. Cuando un <xref:System.Activities.Statements.StateMachine> actividad se coloca en el Diseñador de flujo de trabajo, está preconfigurada con un estado inicial denominado **State1**. Un flujo de trabajo de máquina de estados debe tener un único estado inicial.  
   
@@ -59,7 +59,7 @@ Una máquina de estados es un paradigma conocido para el desarrollo de programas
 > [!NOTE]
 >  Tenga en cuenta que si la condición <xref:System.Activities.Statements.Transition.Condition%2A> de una transición se evalúa en `False` (o todas las condiciones de una transición de desencadenador compartido se evalúan en `False`), la transición no se producirá y se reprogramarán todos los desencadenadores para todas las transiciones desde el estado.  
   
- Para obtener más información sobre la creación de flujos de trabajo de máquina de Estados, vea [Cómo: Crear un flujo de trabajo de máquina de estados](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md), [Diseñador de actividad StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer), [Diseñador de actividad de estado](/visualstudio/workflow-designer/state-activity-designer), [Diseñador de actividad FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)y [Diseñador de actividad de transición](/visualstudio/workflow-designer/transition-activity-designer).  
+ Para obtener más información sobre la creación de flujos de trabajo de máquina de Estados, vea [Cómo: Crear un flujo de trabajo de máquina de estados](how-to-create-a-state-machine-workflow.md), [Diseñador de actividad StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer), [Diseñador de actividad de estado](/visualstudio/workflow-designer/state-activity-designer), [Diseñador de actividad FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)y [Diseñador de actividad de transición](/visualstudio/workflow-designer/transition-activity-designer).  
   
 ## <a name="state-machine-terminology"></a>Terminología de la máquina de estados  
  Esta sección define el vocabulario de la máquina de estados usado en este tema.  
@@ -101,7 +101,7 @@ Una máquina de estados es un paradigma conocido para el desarrollo de programas
  Estado que representa la finalización de la máquina de estados.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Crear un flujo de trabajo de equipo de estado](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)
+- [Cómo: Crear un flujo de trabajo de equipo de estado](how-to-create-a-state-machine-workflow.md)
 - [Diseñador de actividad StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [Diseñador de actividad State](/visualstudio/workflow-designer/state-activity-designer)
 - [Diseñador de actividad FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)

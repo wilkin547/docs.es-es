@@ -9,24 +9,24 @@ helpviewer_keywords:
 - checked list items
 - check boxes
 ms.assetid: 0719d798-c307-40d3-9040-72a62679c227
-ms.openlocfilehash: a71fefd8d1c0edb23119cdd6b2604e274302935a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207f8f884e8382614bf7d6cbc4a628d98fb3542b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524916"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711303"
 ---
 # <a name="checkbox-control-windows-forms"></a>CheckBox (Control, formularios Windows Forms)
 El control de Windows Forms `CheckBox` indica si una condición determinada está activada o desactivada. Normalmente se utiliza para presentar una selección Sí/No o Verdadero/Falso al usuario. Puede utilizar de controles de casilla en grupos para mostrar múltiples opciones de entre las que el usuario puede seleccionar una o más. Es similar al control <xref:System.Windows.Forms.RadioButton>, pero se puede seleccionar cualquier número de controles `CheckBox` agrupados.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre el control CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
+ [Información general sobre el control CheckBox](checkbox-control-overview-windows-forms.md)  
  Explica qué es este control y sus propiedades y características clave.  
   
- [Responder a clics en casillas de Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  
+ [Cómo: Responder a Windows Forms clics en casillas](how-to-respond-to-windows-forms-checkbox-clicks.md)  
  Explica cómo utilizar una casilla de verificación para determinar las acciones de la aplicación.  
   
- [Establecer opciones con los controles CheckBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
+ [Cómo: Establecer opciones con controles CheckBox de formularios de Windows](how-to-set-options-with-windows-forms-checkbox-controls.md)  
  Describe cómo utilizar una casilla de verificación para establecer opciones como las propiedades de un objeto.  
   
 ## <a name="reference"></a>Referencia  
@@ -34,5 +34,5 @@ El control de Windows Forms `CheckBox` indica si una condición determinada est�
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Controles que se usan en Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Controles que se usan en Windows Forms](controls-to-use-on-windows-forms.md)  
  Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

@@ -5,23 +5,23 @@ helpviewer_keywords:
 - examples [Windows Forms], regions
 - regions [Windows Forms], using
 ms.assetid: 7809295b-870f-4107-a8b5-8386c298acd5
-ms.openlocfilehash: bb116cd22c87aab1402bd2989f4039acc4ba137c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec11b8c7d2eeb153eb4a8c8772fef24977310e13
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522615"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713753"
 ---
 # <a name="using-regions"></a>Utilizar regiones
-El [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> clase le permite definir una forma personalizada. La forma se puede componer de líneas, polígonos y curvas.  
+El [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> clase le permite definir una forma personalizada. La forma puede estar formada por líneas, polígonos y curvas.  
   
- Dos usos habituales de las regiones se alcanzan pruebas y el recorte. La prueba de posicionamiento es determinar si se hizo clic con el mouse en una región determinada de la pantalla. El recorte es restringir el dibujo a una región determinada.  
+ Dos usos habituales de las regiones se alcanzan las pruebas y el recorte. La prueba de posicionamiento es determinar si se hizo clic con el mouse en una región determinada de la pantalla. Recorte es restringir el dibujo para una región determinada.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Utilizar la comprobación de visitas en una región](../../../../docs/framework/winforms/advanced/how-to-use-hit-testing-with-a-region.md)  
- Muestra cómo utilizar un <xref:System.Drawing.Region> para realizar una prueba de posicionamiento.  
+ [Cómo: Usar con una región de la prueba de posicionamiento](how-to-use-hit-testing-with-a-region.md)  
+ Se muestra cómo usar un <xref:System.Drawing.Region> para realizar una prueba de posicionamiento.  
   
- [Utilizar el recorte en una región](../../../../docs/framework/winforms/advanced/how-to-use-clipping-with-a-region.md)  
+ [Cómo: Utilizar el recorte en una región](how-to-use-clipping-with-a-region.md)  
  Explica cómo establecer la región de recorte para un <xref:System.Drawing.Graphics> objeto.  
   
 ## <a name="reference"></a>Referencia  

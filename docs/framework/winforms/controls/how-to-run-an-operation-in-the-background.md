@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 5b56e2aa-dc05-444f-930c-2d7b23f9ad5b
-ms.openlocfilehash: 9702728631f794c0cc8f69a1117da69bc15a0836
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 83be9440eb566740566025c659c0a4909e634b73
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261770"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711179"
 ---
 # <a name="how-to-run-an-operation-in-the-background"></a>Filtrar Ejecutar una operación en segundo plano
 Si tiene una operación que tarda mucho tiempo en completarse y no desea causar retrasos en la interfaz de usuario, puede utilizar la clase <xref:System.ComponentModel.BackgroundWorker> para ejecutar la operación en otro subproceso.  
@@ -30,8 +30,8 @@ Si tiene una operación que tarda mucho tiempo en completarse y no desea causar 
  Consulte también [Tutorial: Ejecución de una operación en segundo plano](walkthrough-running-an-operation-in-the-background.md).  
   
 ## <a name="example"></a>Ejemplo  
- [!code-csharp[System.ComponentModel.BackgroundWorker.Example#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#1)]
- [!code-vb[System.ComponentModel.BackgroundWorker.Example#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#1)]  
+ [!code-csharp[System.ComponentModel.BackgroundWorker.Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#1)]
+ [!code-vb[System.ComponentModel.BackgroundWorker.Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -43,5 +43,5 @@ Si tiene una operación que tarda mucho tiempo en completarse y no desea causar 
 ## <a name="see-also"></a>Vea también
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [Cómo: Implementar un formulario que usa una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Componente BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+- [Cómo: Implementar un formulario que usa una operación en segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Componente BackgroundWorker](backgroundworker-component.md)

@@ -11,51 +11,51 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 207b5fcd8bb1242be180898a22ffacf6e5ac9ab1
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: a1689af75eab6a327c657b5c4da3e649056d56ca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664892"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717783"
 ---
 # <a name="listview-control-windows-forms"></a>ListView (Control, formularios Windows Forms)
 El control `ListView` de Windows Forms muestra una lista de elementos con iconos. Puede usar una vista de lista para crear una interfaz de usuario similar al panel derecho del Explorador de Windows.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general del control ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ [Información general del control ListView](listview-control-overview-windows-forms.md)  
  Describe este control y sus características clave y propiedades.  
   
- [Cómo: Agregar y quitar elementos con el Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
+ [Cómo: Agregar y quitar elementos con el Control ListView de formularios de Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
  Describe cómo agregar o quitar elementos de una vista de lista.  
   
- [Cómo: Agregar columnas al Control de ListView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)  
+ [Cómo: Agregar columnas al Control de ListView de Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)  
  Describe cómo crear columnas para mostrar información sobre cada elemento de lista.  
   
- [Cómo: Mostrar iconos para el Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)  
+ [Cómo: Mostrar iconos para el Control ListView de formularios de Windows](how-to-display-icons-for-the-windows-forms-listview-control.md)  
  Describe cómo asociar una vista de lista con una lista de imágenes apropiada para mostrar iconos grandes o pequeños.  
   
- [Cómo: Mostrar subelementos en columnas con el Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
+ [Cómo: Mostrar subelementos en columnas con el Control ListView de formularios de Windows](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
  Describe cómo mostrar información sobre cada elemento de lista en columnas.  
   
- [Cómo: Seleccione un elemento en el Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)  
+ [Cómo: Seleccione un elemento en el Control ListView de formularios de Windows](how-to-select-an-item-in-the-windows-forms-listview-control.md)  
  Describe cómo seleccionar un elemento mediante programación.  
   
- [Cómo: Agrupar elementos en un Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)  
+ [Cómo: Agrupar elementos en un Control ListView de formularios de Windows](how-to-group-items-in-a-windows-forms-listview-control.md)  
  Describe cómo crear grupos para la presentación por categorías y cómo asignar elementos a cada grupo.  
   
  Esta característica solo está disponible para [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].  
   
- [Cómo: Habilitar la vista en mosaico en un Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md)  
+ [Cómo: Habilitar la vista en mosaico en un Control ListView de formularios de Windows](how-to-enable-tile-view-in-a-windows-forms-listview-control.md)  
  Describe cómo mostrar elementos en mosaico, cada uno de los cuales consta de un icono grande y varias líneas de texto.  
   
  Esta característica solo está disponible para [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].  
   
- [Cómo: Mostrar una marca de inserción en un Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
+ [Cómo: Mostrar una marca de inserción en un Control ListView de formularios de Windows](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
  Describe cómo implementar los comentarios del usuario para las operaciones de arrastrar y colocar en las que una marca de inserción indica la ubicación de destino para cada posición del puntero del mouse.  
   
  Esta característica solo está disponible para [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].  
   
- [Cómo: Agregar capacidades de búsqueda a un Control ListView](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
+ [Cómo: Agregar capacidades de búsqueda a un Control ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
  Describe cómo buscar un elemento mediante programación usando coordenadas de pantalla o búsqueda de texto.  
   
 -   [Cómo: Habilitar la vista en mosaico en un Control de ListView de Windows Forms mediante el diseñador](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
@@ -73,14 +73,14 @@ El control `ListView` de Windows Forms muestra una lista de elementos con iconos
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Cómo: Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+ [Cómo: Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
  Describe cómo heredar de un elemento en una vista de lista o de un nodo en una vista de árbol para agregar los campos, métodos o constructores que necesite.  
   
- [ImageList (componente)](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
+ [ImageList (componente)](imagelist-component-windows-forms.md)  
  Explica qué es una lista de imágenes y sus características clave y propiedades.  
   
- [Cómo: Crear una interfaz de usuario de varios paneles con formularios de Windows](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [Cómo: Crear una interfaz de usuario de varios paneles con formularios de Windows](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Proporciona instrucciones para diseñar un Windows Form con varios paneles.  
   
 ## <a name="see-also"></a>Vea también
-- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: a8bbc59087b5d1d296c25b6aaf0836b31611a54a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 8e845df7eb83f01adb2086025cf47e7fdc896ba6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441247"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724406"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Atributos en controles de formularios Windows Forms
 .NET Framework proporciona una variedad de atributos que puede aplicar a los miembros de sus controles y componentes personalizados. Algunos de estos atributos afectan al comportamiento en tiempo de ejecución de una clase y otros afectan al comportamiento en tiempo de diseño.  
   
 ## <a name="attributes-for-control-and-component-properties"></a>Atributos para las propiedades de controles y componentes  
- En la tabla siguiente se muestran los atributos que se pueden aplicar a las propiedades o a otros miembros de los controles y componentes personalizados. Para obtener un ejemplo que utiliza muchos de estos atributos, vea [Cómo: Aplicar atributos en controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+ En la tabla siguiente se muestran los atributos que se pueden aplicar a las propiedades o a otros miembros de los controles y componentes personalizados. Para obtener un ejemplo que utiliza muchos de estos atributos, vea [Cómo: Aplicar atributos en controles de formularios Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md).  
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
@@ -62,6 +62,6 @@ ms.locfileid: "56441247"
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Attribute>
-- [Cómo: Aplicar atributos en controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)
+- [Cómo: Aplicar atributos en controles de formularios Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)
 - [Ampliar compatibilidad en tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [Desarrollar controles personalizados de Windows Forms con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)

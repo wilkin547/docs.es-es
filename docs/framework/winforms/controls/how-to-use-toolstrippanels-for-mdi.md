@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ToolStripPanel control [Windows Forms], using for MDI
 - toolbars [Windows Forms], using for MDI
 ms.assetid: d6b884fc-0846-465f-83c3-5dc0fe93b00f
-ms.openlocfilehash: dd9421bd0ca284f9adc837a6a7e4643f38e80d31
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: a543b9e292f29e54b45327ae77a81676c992f103
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260860"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722066"
 ---
 # <a name="how-to-use-toolstrippanels-for-mdi"></a>Filtrar Utilizar controles ToolStripPanel para MDI
 
@@ -23,8 +23,8 @@ ms.locfileid: "56260860"
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo de código muestra cómo utilizar los controles <xref:System.Windows.Forms.ToolStripPanel> para MDI.  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.Misc#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#10)]
- [!code-vb[System.Windows.Forms.ToolStrip.Misc#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#10)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#10)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#10)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -35,4 +35,4 @@ ms.locfileid: "56260860"
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.ToolStripPanel>
-- [Cómo: Unir ToolStripPanels](../../../../docs/framework/winforms/controls/how-to-join-toolstrippanels.md)
+- [Cómo: Unir ToolStripPanels](how-to-join-toolstrippanels.md)

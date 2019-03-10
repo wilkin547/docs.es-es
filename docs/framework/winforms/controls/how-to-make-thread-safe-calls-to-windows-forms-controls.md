@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Realizar llamadas seguras para subprocesos a controles de formularios Windows Forms
+title: Filtrar Realizar llamadas seguras para subprocesos a controles de formularios Windows Forms
 ms.date: 02/19/2019
 dev_langs:
 - csharp
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: ef7836721df6c090a4d09c38c176641331c3e8a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3211df1f0e585780039471b80b5b913613ad9bbd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362570"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714013"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Procedimiento Realizar llamadas seguras para subprocesos a controles de formularios Windows Forms
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Filtrar Realizar llamadas seguras para subprocesos a controles de formularios Windows Forms
 
-El multithreading puede mejorar el rendimiento de las aplicaciones de Windows Forms, pero el acceso a los controles de Windows Forms no es intrínsecamente seguro para subprocesos. El multithreading puede exponer el código de errores muy graves y complejos. Dos o más subprocesos para manipular un control pueden forzar el control a un estado incoherente y conducir a condiciones de carrera, interbloqueos y se inmoviliza o se bloquea. Si implementa multithreading en la aplicación, asegúrese de llamar a los controles entre subprocesos de forma segura para subprocesos. Para obtener más información, consulte [Managed threading best practices](../../../../docs/standard/threading/managed-threading-best-practices.md). 
+El multithreading puede mejorar el rendimiento de las aplicaciones de Windows Forms, pero el acceso a los controles de Windows Forms no es intrínsecamente seguro para subprocesos. El multithreading puede exponer el código de errores muy graves y complejos. Dos o más subprocesos para manipular un control pueden forzar el control a un estado incoherente y conducir a condiciones de carrera, interbloqueos y se inmoviliza o se bloquea. Si implementa multithreading en la aplicación, asegúrese de llamar a los controles entre subprocesos de forma segura para subprocesos. Para obtener más información, consulte [Managed threading best practices](../../../standard/threading/managed-threading-best-practices.md). 
 
 Hay dos maneras de llamar con seguridad a un control de Windows Forms desde un subproceso que no ha creado ese control. Puede usar el <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> método para llamar a un delegado que se crea en el subproceso principal, que a su vez llama al control. O bien, puede implementar un <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>, que utiliza un modelo orientado a eventos para separar el trabajo realizado en el subproceso en segundo plano de los informes en los resultados. 
 
@@ -75,8 +75,8 @@ El ejemplo siguiente muestra un patrón para garantizar las llamadas de subproce
 
 El `SafeCallDelegate` habilita la configuración de la <xref:System.Windows.Forms.TextBox> del control <xref:System.Windows.Forms.TextBox.Text%2A> propiedad. El `WriteTextSafe` consultas de método <xref:System.Windows.Forms.Control.InvokeRequired%2A>. Si <xref:System.Windows.Forms.Control.InvokeRequired%2A> devuelve `true`, `WriteTextSafe` pasa el `SafeCallDelegate` a la <xref:System.Windows.Forms.Control.Invoke%2A> método para realizar la llamada real al control. Si <xref:System.Windows.Forms.Control.InvokeRequired%2A> devuelve `false`, `WriteTextSafe` establece el <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> directamente. El `Button1_Click` controlador de eventos crea el nuevo subproceso y ejecuta el `WriteTextSafe` método. 
 
- [!code-csharp[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
 
 ## <a name="example-use-a-backgroundworker-event-handler"></a>Ejemplo: Usar un controlador de eventos de BackgroundWorker
 
@@ -86,12 +86,12 @@ Realizar una llamada segura para subprocesos mediante <xref:System.ComponentMode
 
 El ejemplo se usa el <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> controlador de eventos para establecer el <xref:System.Windows.Forms.TextBox> del control <xref:System.Windows.Forms.TextBox.Text%2A> propiedad. Para obtener un ejemplo que usa el <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> eventos, consulte <xref:System.ComponentModel.BackgroundWorker>. 
 
- [!code-csharp[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Cómo: Ejecutar una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Cómo: Implementar un formulario que utiliza una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Desarrollar controles personalizados de Windows Forms con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Cómo: Ejecutar una operación en segundo plano](how-to-run-an-operation-in-the-background.md)
+- [Cómo: Implementar un formulario que utiliza una operación en segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)

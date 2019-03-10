@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: d972e738305b14f44910acf755e0ffc1d7297e49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e0c5a426f05590523c178f4b56d07ee98b39d7e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547058"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719395"
 ---
 # <a name="toolstrip-control-architecture"></a>Arquitectura del control ToolStrip
 El <xref:System.Windows.Forms.ToolStrip> y <xref:System.Windows.Forms.ToolStripItem> clases proporcionan un sistema flexible y extensible para mostrar la barra de herramientas, estado y elementos de menú. Estas clases están incluidas en el <xref:System.Windows.Forms> espacio de nombres y normalmente se denominan con el prefijo "ToolStrip" (como <xref:System.Windows.Forms.ToolStripOverflow>) o con el sufijo "Quitar" (como <xref:System.Windows.Forms.MenuStrip>).  
@@ -19,7 +19,7 @@ El <xref:System.Windows.Forms.ToolStrip> y <xref:System.Windows.Forms.ToolStripI
   
  <xref:System.Windows.Forms.ToolStrip> es la clase base abstracta para <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip>, y <xref:System.Windows.Forms.ContextMenuStrip>. El siguiente objeto de modelo se muestra en el <xref:System.Windows.Forms.ToolStrip> jerarquía de herencia.  
   
- ![Modelo de objeto ToolStrip](../../../../docs/framework/winforms/controls/media/toolstripobjectmodel.gif "ToolStripObjectModel")  
+ ![Modelo de objeto ToolStrip](./media/toolstripobjectmodel.gif "ToolStripObjectModel")  
 Modelo de objetos de ToolStrip  
   
  Puede obtener acceso a todos los elementos de un <xref:System.Windows.Forms.ToolStrip> a través de la <xref:System.Windows.Forms.ToolStrip.Items%2A> colección. Puede obtener acceso a todos los elementos de un <xref:System.Windows.Forms.ToolStripDropDownItem> a través de la <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A> colección. En una clase derivada de <xref:System.Windows.Forms.ToolStrip>, también puede usar el <xref:System.Windows.Forms.ToolStrip.DisplayedItems%2A> propiedad para tener acceso a solo aquellos elementos que se muestran actualmente. Estos son los elementos que no están actualmente en un menú de desbordamiento.  
@@ -251,7 +251,7 @@ Modelo de objetos de ToolStrip
   
  <xref:System.Windows.Forms.ToolStripItem> es la clase base abstracta para todos los elementos que se incluyen en un <xref:System.Windows.Forms.ToolStrip>. El siguiente objeto de modelo se muestra en el <xref:System.Windows.Forms.ToolStripItem> jerarquía de herencia.  
   
- ![Modelo de objeto ToolStripItem](../../../../docs/framework/winforms/controls/media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
+ ![Modelo de objeto ToolStripItem](./media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
 Modelo de objeto ToolStripItem  
   
  <xref:System.Windows.Forms.ToolStripItem> las clases que heredan directamente de <xref:System.Windows.Forms.ToolStripItem>, o heredan indirectamente <xref:System.Windows.Forms.ToolStripItem> a través de <xref:System.Windows.Forms.ToolStripControlHost> o <xref:System.Windows.Forms.ToolStripDropDownItem>.  
@@ -379,10 +379,10 @@ Modelo de objeto ToolStripItem
 -   <xref:System.Windows.Forms.ToolStripPanel> Proporciona espacio para mover y organizar <xref:System.Windows.Forms.ToolStrip> controles. Si lo prefiere, puede usar sólo un panel y <xref:System.Windows.Forms.ToolStripPanel> funciona bien en escenarios MDI.  
   
 ## <a name="see-also"></a>Vea también
-- [Información sobre el control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [Resumen de la tecnología ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
-- [Control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
-- [Control MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
-- [StatusStrip (control)](../../../../docs/framework/winforms/controls/statusstrip-control.md)
-- [ContextMenuStrip (Control)](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)
-- [BindingNavigator (control)](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+- [Información sobre el control ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Resumen de la tecnología ToolStrip](toolstrip-technology-summary.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)
+- [Control MenuStrip](menustrip-control-windows-forms.md)
+- [StatusStrip (control)](statusstrip-control.md)
+- [ContextMenuStrip (Control)](contextmenustrip-control.md)
+- [BindingNavigator (control)](bindingnavigator-control-windows-forms.md)

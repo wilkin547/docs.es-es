@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 29a268f645810d84d9f6fb722e4728842b04ee14
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 31820775d4f7fb981599e806aa5e27655039e6ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443177"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720779"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Filtrar Agregar controles a Windows Forms
-Mayoría de los formularios está diseñada agregando controles a la superficie del formulario para definir una interfaz de usuario (UI). Un *control* es un componente en un formulario que se usa para mostrar información o Aceptar la entrada del usuario. Para obtener más información acerca de los controles, vea [controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/index.md).  
+Mayoría de los formularios está diseñada agregando controles a la superficie del formulario para definir una interfaz de usuario (UI). Un *control* es un componente en un formulario que se usa para mostrar información o Aceptar la entrada del usuario. Para obtener más información acerca de los controles, vea [controles de formularios Windows Forms](index.md).  
   
 > [!NOTE]
 >  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -90,8 +90,8 @@ Mayoría de los formularios está diseñada agregando controles a la superficie 
     >  Podría exponer el equipo local a un riesgo de seguridad a través de la red haciendo referencia a un malintencionado `UserControl`. Esto solo sería un problema en el caso de una persona malintencionada cree un control personalizado perjudicial, seguido por el que se agregara a su proyecto.  
   
 ## <a name="see-also"></a>Vea también
-- [Controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/index.md)
-- [Organizar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [Cómo: Cambiar el tamaño de los controles de Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)
-- [Cómo: Establecer el texto mostrado por un Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Controles de formularios Windows Forms](index.md)
+- [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
+- [Cómo: Cambiar el tamaño de los controles de Windows Forms](how-to-resize-controls-on-windows-forms.md)
+- [Cómo: Establecer el texto mostrado por un Windows Forms Control](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

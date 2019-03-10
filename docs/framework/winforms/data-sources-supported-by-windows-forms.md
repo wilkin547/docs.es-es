@@ -15,18 +15,18 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664749"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711309"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Orígenes de datos compatibles con formularios Windows Forms
 Tradicionalmente, el enlace de datos se han usado en las aplicaciones para aprovechar las ventajas de los datos almacenados en bases de datos. Con el enlace de datos de Windows Forms, se puede acceder a datos de las bases de datos, así como datos de otras estructuras, como matrices y colecciones, siempre y cuando se cumplen ciertos requisitos mínimos.  
   
 ## <a name="structures-to-bind-to"></a>Estructuras para enlazar a  
- En Windows Forms, puede enlazar a una amplia variedad de estructuras, desde simples objetos (enlace simple) a las listas complejas como tablas de datos ADO.NET (enlace complejo). Para el enlace sencillo, Windows Forms admite el enlace a las propiedades públicas del objeto simple. Enlace basado en lista de Windows Forms requiere normalmente que el objeto admite el <xref:System.Collections.IList> interfaz o <xref:System.ComponentModel.IListSource> interfaz. Además, si va a enlazar con a través de un <xref:System.Windows.Forms.BindingSource> componente, puede enlazar a un objeto que admite el <xref:System.Collections.IEnumerable> interfaz. Para obtener más información sobre las interfaces relacionadas con el enlace de datos, vea [Interfaces relacionadas con enlace de datos](../../../docs/framework/winforms/interfaces-related-to-data-binding.md).  
+ En Windows Forms, puede enlazar a una amplia variedad de estructuras, desde simples objetos (enlace simple) a las listas complejas como tablas de datos ADO.NET (enlace complejo). Para el enlace sencillo, Windows Forms admite el enlace a las propiedades públicas del objeto simple. Enlace basado en lista de Windows Forms requiere normalmente que el objeto admite el <xref:System.Collections.IList> interfaz o <xref:System.ComponentModel.IListSource> interfaz. Además, si va a enlazar con a través de un <xref:System.Windows.Forms.BindingSource> componente, puede enlazar a un objeto que admite el <xref:System.Collections.IEnumerable> interfaz. Para obtener más información sobre las interfaces relacionadas con el enlace de datos, vea [Interfaces relacionadas con enlace de datos](interfaces-related-to-data-binding.md).  
   
  La siguiente lista muestra las estructuras que pueden enlazar a en Windows Forms.  
   
@@ -58,6 +58,6 @@ Tradicionalmente, el enlace de datos se han usado en las aplicaciones para aprov
 -   <xref:System.Data.DataViewManager>. Un <xref:System.Data.DataViewManager> es una vista personalizada de todo el <xref:System.Data.DataSet>, análogo a un <xref:System.Data.DataView>, pero con las relaciones incluidas. Con un <xref:System.Data.DataViewManager.DataViewSettings%2A> colección, puede establecer filtros predeterminados y las opciones de ordenación para todas las vistas que el <xref:System.Data.DataViewManager> tiene para una tabla determinada.  
   
 ## <a name="see-also"></a>Vea también
-- [Notificación de cambios en el enlace de datos de Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Enlace de datos y Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Enlace de datos en Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Notificación de cambios en el enlace de datos de Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Enlace de datos y Windows Forms](data-binding-and-windows-forms.md)
+- [Enlace de datos en Windows Forms](windows-forms-data-binding.md)

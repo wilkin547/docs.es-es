@@ -2,12 +2,12 @@
 title: Seguridad
 ms.date: 03/30/2017
 ms.assetid: 737ec121-bfc5-4b75-a504-2d53c2c8af39
-ms.openlocfilehash: 6c4e64e928e3ada4210138878426fea9ffe5bdec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c27ac9cf41436332d560e11987e3ce4b68576895
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519254"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720636"
 ---
 # <a name="security"></a>Seguridad
 El almacén de instancias de flujo de trabajo de SQL usa los siguientes roles de seguridad de base de datos para garantizar el acceso a la información de estado de las instancias en la base de datos de persistencia.  
@@ -16,7 +16,7 @@ El almacén de instancias de flujo de trabajo de SQL usa los siguientes roles de
   
 -   **System.Activities.DurableInstancing.InstanceStoreObservers**. Este rol tiene acceso de solo lectura a las vistas públicas.  
   
--   **System.Activities.DurableInstancing.WorkflowActivationUsers**. Este rol posee derechos de ejecución a procedimientos almacenados que están involucrados en el proceso de activación de instancias. Para obtener más información acerca de la activación de instancias, consulte [activación de instancias](../../../docs/framework/windows-workflow-foundation/instance-activation.md). La cuenta de usuario con la que se ejecuta un host genérico (como el Servicio de administración de flujos de trabajo de [!INCLUDE[dublin](../../../includes/dublin-md.md)]) debe agregarse a este rol de la base de datos.  
+-   **System.Activities.DurableInstancing.WorkflowActivationUsers**. Este rol posee derechos de ejecución a procedimientos almacenados que están involucrados en el proceso de activación de instancias. Para obtener más información acerca de la activación de instancias, consulte [activación de instancias](instance-activation.md). La cuenta de usuario con la que se ejecuta un host genérico (como el Servicio de administración de flujos de trabajo de [!INCLUDE[dublin](../../../includes/dublin-md.md)]) debe agregarse a este rol de la base de datos.  
   
  Para obtener más información sobre la seguridad para almacenes de persistencia con Windows Server App Fabric, consulte [configuración de seguridad para almacenes de persistencia en App Fabric](https://go.microsoft.com/fwlink/?LinkId=201208)  
   

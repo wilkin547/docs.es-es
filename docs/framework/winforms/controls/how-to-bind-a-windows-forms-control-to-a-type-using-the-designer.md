@@ -1,17 +1,17 @@
 ---
-title: Procedimiento Enlazar un Control de Windows Forms a un tipo mediante el diseñador
+title: Filtrar Enlazar un Control de Windows Forms a un tipo mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding to a type
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: 6c307c913fc8deb62bc18ca2c01bb8621d9b0642
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a28052b149f565e47a2e0366ed6845b83234ba
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496445"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712102"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Procedimiento Enlazar un Control de Windows Forms a un tipo mediante el diseñador
 Al crear controles que interactúan con datos, a veces necesita enlazar un control a un tipo, en lugar de a un objeto. Normalmente necesita enlazar un control a un tipo en tiempo de diseño, cuando quizá no estén disponibles los datos, pero aún desea que los controles enlazados a datos muestren datos de una interfaz pública del tipo. Los procedimientos siguientes muestran cómo crear un nuevo <xref:System.Windows.Forms.BindingSource> decir enlazado a un tipo y, a continuación, cómo enlazar una de las propiedades del tipo para el <xref:System.Windows.Forms.TextBox.Text%2A> propiedad de un <xref:System.Windows.Forms.TextBox>.  
@@ -52,6 +52,6 @@ Al crear controles que interactúan con datos, a veces necesita enlazar un contr
 4.  En el **Editor de tipos de interfaz de usuario de origen de datos**, expanda el nodo de la <xref:System.Windows.Forms.BindingSource> agregado previamente y seleccione la propiedad del tipo enlazado que desea enlazar el <xref:System.Windows.Forms.TextBox.Text%2A> propiedad de la <xref:System.Windows.Forms.TextBox>.  
   
 ## <a name="see-also"></a>Vea también
-- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [Cómo: Enlazar un Control de Windows Forms a un tipo](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Componente BindingSource](bindingsource-component.md)
+- [Cómo: Enlazar un Control de Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
 - [Enlazar controles a los datos en Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

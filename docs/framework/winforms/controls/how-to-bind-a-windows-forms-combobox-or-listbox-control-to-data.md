@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Enlazar un Control de ListBox o ComboBox de formularios Windows Forms a datos
+title: Filtrar Enlazar un Control de ListBox o ComboBox de formularios Windows Forms a datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 4220e3e7d750e0d0caf0adbcbd2e1d96131e7c88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8eb224cbb8ec7ab271edaed8bb25f9cc7fb8ddc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698380"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709931"
 ---
-# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Procedimiento Enlazar un Control de ListBox o ComboBox de formularios Windows Forms a datos
+# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Filtrar Enlazar un Control de ListBox o ComboBox de formularios Windows Forms a datos
 Puede enlazar el <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.ListBox> a datos para realizar tareas como la exploración de datos en una base de datos, escribir nuevos datos o modificar datos existentes.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>Para enlazar un control ComboBox o ListBox  
   
-1.  Establecer el `DataSource` propiedad a un objeto de origen de datos. Posibles orígenes de datos incluyen un <xref:System.Windows.Forms.BindingSource> enlazado a datos, una tabla de datos, una vista de datos, un conjunto de datos, la vista de datos de un administrador, una matriz o cualquier clase que implementa el <xref:System.Collections.IList> interfaz. Para obtener más información, consulte [Data Sources Supported by Windows Forms](../../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md).  
+1.  Establecer el `DataSource` propiedad a un objeto de origen de datos. Posibles orígenes de datos incluyen un <xref:System.Windows.Forms.BindingSource> enlazado a datos, una tabla de datos, una vista de datos, un conjunto de datos, la vista de datos de un administrador, una matriz o cualquier clase que implementa el <xref:System.Collections.IList> interfaz. Para obtener más información, consulte [Data Sources Supported by Windows Forms](../data-sources-supported-by-windows-forms.md).  
   
 2.  Si va a enlazar a una tabla, establecer el `DisplayMember` propiedad en el nombre de una columna del origen de datos.  
   
@@ -56,6 +56,6 @@ Puede enlazar el <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.For
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Enlace de datos en Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [Enlace de datos y Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Controles de formularios Windows Forms usados para mostrar opciones](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [Enlace de datos en Windows Forms](../windows-forms-data-binding.md)
+- [Enlace de datos y Windows Forms](../data-binding-and-windows-forms.md)
+- [Controles de formularios Windows Forms usados para mostrar opciones](windows-forms-controls-used-to-list-options.md)

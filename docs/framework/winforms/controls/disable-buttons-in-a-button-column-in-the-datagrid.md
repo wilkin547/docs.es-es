@@ -9,12 +9,12 @@ helpviewer_keywords:
 - buttons [Windows Forms], disabling in button columns
 - DataGridView control [Windows Forms], disabling button cells
 ms.assetid: 5c344d01-013a-4a6b-8f8d-62ec9321d81e
-ms.openlocfilehash: b468e17213126162e13c1102a5bf261663899cb1
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 7ce363b74ee4551e3af00169c1d2edaffe3dbd52
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220132"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711374"
 ---
 # <a name="how-to-disable-buttons-in-a-button-column-in-the-windows-forms-datagridview-control"></a>Filtrar Deshabilitar botones en una columna de botones en el Control DataGridView de formularios de Windows
 El control <xref:System.Windows.Forms.DataGridView> incluye la clase <xref:System.Windows.Forms.DataGridViewButtonCell> para mostrar celdas con una interfaz de usuario (IU) como un botón. Sin embargo, <xref:System.Windows.Forms.DataGridViewButtonCell> no proporciona una manera de deshabilitar el aspecto del botón mostrado por la celda.  
@@ -25,8 +25,8 @@ El control <xref:System.Windows.Forms.DataGridView> incluye la clase <xref:Syste
 >  Al derivar de <xref:System.Windows.Forms.DataGridViewCell> o <xref:System.Windows.Forms.DataGridViewColumn> y agregar nuevas propiedades a la clase derivada, asegúrese de invalidar el método `Clone` para copiar las nuevas propiedades durante las operaciones de clonación. También debe llamar al método `Clone` de la clase base para copiar las propiedades de la clase base a la nueva celda o columna.  
   
 ## <a name="example"></a>Ejemplo  
- [!code-csharp[System.Windows.Forms.DataGridView.DisabledButtons#0](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DisabledButtons/CS/form1.cs#0)]
- [!code-vb[System.Windows.Forms.DataGridView.DisabledButtons#0](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DisabledButtons/VB/form1.vb#0)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.DisabledButtons#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DisabledButtons/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.DataGridView.DisabledButtons#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DisabledButtons/VB/form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -36,6 +36,6 @@ El control <xref:System.Windows.Forms.DataGridView> incluye la clase <xref:Syste
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
-- [Personalizar el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
-- [Arquitectura del control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)
-- [Tipos de columnas en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+- [Personalizar el control DataGridView de Windows Forms](customizing-the-windows-forms-datagridview-control.md)
+- [Arquitectura del control DataGridView](datagridview-control-architecture-windows-forms.md)
+- [Tipos de columnas en el control DataGridView de Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

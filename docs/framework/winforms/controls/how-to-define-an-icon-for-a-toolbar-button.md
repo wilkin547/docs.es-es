@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Definir un icono para un botón de barra de herramientas
+title: Filtrar Definir un icono para un botón de barra de herramientas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: fa622245155a1e7bdeb0184b0cd5ff07f651bfbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb4a492b081cd9f9e3ccc1d47a4120c705058dd0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644799"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712752"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Procedimiento Definir un icono para un botón de barra de herramientas
 > [!NOTE]
 >  El control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar>; sin embargo, el control <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.  
   
- <xref:System.Windows.Forms.ToolBar> los botones son capaz de mostrar iconos dentro de ellos para facilitar su identificación por los usuarios. Esto se logra mediante la adición de imágenes para la [componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) componente y, a continuación, asociar el <xref:System.Windows.Forms.ImageList> componente con el <xref:System.Windows.Forms.ToolBar> control.  
+ <xref:System.Windows.Forms.ToolBar> los botones son capaz de mostrar iconos dentro de ellos para facilitar su identificación por los usuarios. Esto se logra mediante la adición de imágenes para la [componente ImageList](imagelist-component-windows-forms.md) componente y, a continuación, asociar el <xref:System.Windows.Forms.ImageList> componente con el <xref:System.Windows.Forms.ToolBar> control.  
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Para establecer un icono para un botón de barra de herramientas mediante programación  
   
@@ -117,6 +117,6 @@ ms.locfileid: "54644799"
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.ToolBar>
-- [Cómo: Desencadenar eventos de menú para los botones de barra de herramientas](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [ToolBar (control)](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
-- [ImageList (componente)](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+- [Cómo: Desencadenar eventos de menú para los botones de barra de herramientas](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar (control)](toolbar-control-windows-forms.md)
+- [ImageList (componente)](imagelist-component-windows-forms.md)

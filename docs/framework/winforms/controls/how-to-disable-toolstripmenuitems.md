@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Deshabilitar ToolStripMenuItems
+title: Filtrar Deshabilitar ToolStripMenuItems
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - menu items [Windows Forms], enabling
 - menus [Windows Forms], disabling menu items
 ms.assetid: bcc1da84-50fd-41d2-8475-103b581d5654
-ms.openlocfilehash: 2516080708bba207c3a1d028f2e5a2411974ae5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c18935239a4355d5416a0a79d0fa9f5c504cc7e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705341"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720220"
 ---
-# <a name="how-to-disable-toolstripmenuitems"></a>Procedimiento Deshabilitar ToolStripMenuItems
+# <a name="how-to-disable-toolstripmenuitems"></a>Filtrar Deshabilitar ToolStripMenuItems
 Puede limitar o ampliar los comandos que un usuario puede realizar mediante la habilitación y deshabilitación de los elementos de menú en respuesta a las actividades del usuario. Los elementos de menú están habilitados de forma predeterminada cuando se crean, pero esto se puede ajustar mediante el <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> propiedad. Puede manipular esta propiedad en tiempo de diseño en el **propiedades** ventana o mediante programación si se establece en el código.  
   
 ### <a name="to-disable-a-menu-item-programmatically"></a>Para deshabilitar un elemento de menú mediante programación  
@@ -45,5 +45,5 @@ Puede limitar o ampliar los comandos que un usuario puede realizar mediante la h
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Cómo: Ocultar ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)
-- [Información general sobre el control MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [Cómo: Ocultar ToolStripMenuItems](how-to-hide-toolstripmenuitems.md)
+- [Información general sobre el control MenuStrip](menustrip-control-overview-windows-forms.md)

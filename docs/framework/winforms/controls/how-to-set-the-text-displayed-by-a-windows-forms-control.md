@@ -21,14 +21,14 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 30cf71aa2a87ff99ccb965844b620ef08a20b69c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ebb39e4e9337ede0dc8c7f5569ea27d8cfafd26
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636457"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716913"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Procedimiento Establecer el texto mostrado por un Windows Forms Control
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Filtrar Establecer el texto mostrado por un Windows Forms Control
 Normalmente, los controles de Windows Forms muestran algún texto relacionado con la función principal del control. Por ejemplo, un control <xref:System.Windows.Forms.Button> suele mostrar un título que indica qué acción se realizará al hacer clic en el botón. Para todos los controles, puede establecer o devolver el texto usando la propiedad <xref:System.Windows.Forms.Control.Text%2A>. Puede cambiar la fuente usando la propiedad <xref:System.Windows.Forms.Control.Font%2A>. También puede establecer el texto mediante el diseñador.  Consulte también [Cómo: Crear teclas de acceso para Windows Forms mediante el Diseñador de controles](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [Cómo: Establecer el texto mostrado por un Windows Forms mediante el Diseñador de Control](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [Cómo: Establecer la imagen que muestra un Windows Forms mediante el Diseñador de Control](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
   
 ### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>Para establecer mediante programación el texto que un control muestra  
@@ -73,5 +73,5 @@ Normalmente, los controles de Windows Forms muestran algún texto relacionado co
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [Cómo: Crear teclas de acceso para controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)
-- [Cómo: Responder a clics de botón de Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+- [Cómo: Crear teclas de acceso para controles de formularios Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Cómo: Responder a clics de botón de Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

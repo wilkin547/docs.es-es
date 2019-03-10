@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear una tabla de búsqueda con el componente BindingSource de formularios de Windows
+title: Filtrar Crear una tabla de búsqueda con el componente BindingSource de formularios de Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539901"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723925"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procedimiento Crear una tabla de búsqueda con el componente BindingSource de formularios de Windows
 Una tabla de búsqueda es una tabla de datos con una columna que muestra los datos de los registros de una tabla relacionada. En los procedimientos siguientes se usa un control <xref:System.Windows.Forms.ComboBox> para mostrar el campo con la relación de clave externa desde la tabla primaria a la tabla secundaria.  
@@ -35,7 +35,7 @@ Una tabla de búsqueda es una tabla de datos con una columna que muestra los dat
   
  En este escenario, una tabla, CustomersTable, almacena la información real que quiere mostrar y guardar. Pero, para ahorrar espacio, la tabla deja fuera los datos que aportan claridad. La otra tabla, OrdersTable, contienen solo la información relativa al aspecto sobre qué número de identificación de cliente equivale a qué fecha de pedido e identificador de pedido. No hay ninguna mención a los nombres de los clientes.  
   
- En el control [ComboBox Control](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md) se establecen cuatro propiedades importantes para crear la tabla de búsqueda.  
+ En el control [ComboBox Control](combobox-control-windows-forms.md) se establecen cuatro propiedades importantes para crear la tabla de búsqueda.  
   
 -   La propiedad <xref:System.Windows.Forms.ComboBox.DataSource%2A> contiene el nombre de la tabla.  
   
@@ -53,7 +53,7 @@ Una tabla de búsqueda es una tabla de datos con una columna que muestra los dat
   
      Este control mostrará la columna de la tabla primaria.  
   
-2.  Arrastre otros controles para mostrar detalles de la tabla secundaria. El formato de los datos en la tabla debe determinar qué controles elegirá. Para más información, consulte [Controles de Windows Forms por función](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
+2.  Arrastre otros controles para mostrar detalles de la tabla secundaria. El formato de los datos en la tabla debe determinar qué controles elegirá. Para más información, consulte [Controles de Windows Forms por función](windows-forms-controls-by-function.md).  
   
 3.  Arrastre un control <xref:System.Windows.Forms.BindingNavigator> al formulario; esto le permitirá navegar por los datos de la tabla secundaria.  
   
@@ -93,6 +93,6 @@ Una tabla de búsqueda es una tabla de datos con una columna que muestra los dat
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.BindingSource>
-- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [ComboBox (control)](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [Componente BindingSource](bindingsource-component.md)
+- [ComboBox (control)](combobox-control-windows-forms.md)
 - [Enlazar controles a los datos en Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

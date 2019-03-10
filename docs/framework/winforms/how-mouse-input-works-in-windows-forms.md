@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: ac6cdbdb690a1e5e6693f2e5d1c5d2236a643ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496012"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725333"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Funcionamiento de la entrada del mouse (ratón) en los formularios Windows Forms
-Recibir y controlar la entrada del mouse es una parte importante de cada aplicación de Windows. Puede controlar los eventos del mouse para llevar a cabo una acción en la aplicación, o usar la información de ubicación del mouse para realizar la prueba de posicionamiento u otras acciones. Además, puede cambiar la manera en que los controles en la aplicación controlan la entrada de mouse. En este tema se describe estos eventos del mouse en detalle y cómo obtener y cambiar la configuración del sistema para el mouse. Para obtener más información acerca de los datos proporcionados con el mouse se producen los eventos y el orden en que el mouse, haga clic en eventos, vea [eventos del Mouse en Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).  
+Recibir y controlar la entrada del mouse es una parte importante de cada aplicación de Windows. Puede controlar los eventos del mouse para llevar a cabo una acción en la aplicación, o usar la información de ubicación del mouse para realizar la prueba de posicionamiento u otras acciones. Además, puede cambiar la manera en que los controles en la aplicación controlan la entrada de mouse. En este tema se describe estos eventos del mouse en detalle y cómo obtener y cambiar la configuración del sistema para el mouse. Para obtener más información acerca de los datos proporcionados con el mouse se producen los eventos y el orden en que el mouse, haga clic en eventos, vea [eventos del Mouse en Windows Forms](mouse-events-in-windows-forms.md).  
   
 ## <a name="mouse-location-and-hit-testing"></a>Ubicación del mouse y la prueba de posicionamiento  
  Cuando el usuario mueve el mouse, el sistema operativo mueve el puntero del mouse. El puntero del mouse contiene un solo píxel, llama a la zona activa, que el sistema operativo se realiza un seguimiento y se reconoce como la posición del puntero. Cuando el usuario mueve el mouse o presiona un botón del mouse, el <xref:System.Windows.Forms.Control> que contiene el <xref:System.Windows.Forms.Cursor.HotSpot%2A> provoca el evento del mouse adecuado. Puede obtener la posición actual del mouse con el <xref:System.Windows.Forms.MouseEventArgs.Location%2A> propiedad de la <xref:System.Windows.Forms.MouseEventArgs> al controlar un evento del mouse o mediante el <xref:System.Windows.Forms.Cursor.Position%2A> propiedad de la <xref:System.Windows.Forms.Cursor> clase. Puede posteriormente, usar información de ubicación del mouse para realizar la prueba de posicionamiento y, a continuación, realizar una acción basada en la ubicación del puntero del mouse. Capacidad de prueba de posicionamiento se halla integrado en varios controles en formularios de Windows, como el <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.MonthCalendar> y <xref:System.Windows.Forms.DataGridView> controles. Puede usar con el evento del mouse adecuado, <xref:System.Windows.Forms.Control.MouseHover> por ejemplo, la prueba de posicionamiento es muy útil para determinar cuándo la aplicación debe realizar una acción específica.  
@@ -53,6 +53,6 @@ Recibir y controlar la entrada del mouse es una parte importante de cada aplicac
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Obtiene el número de líneas de desplazamiento al girar la rueda del mouse.|  
   
 ## <a name="see-also"></a>Vea también
-- [Entradas mediante el mouse en una aplicación de Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Captura del mouse en Windows Forms](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)
-- [Punteros del mouse en Windows Forms](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)
+- [Entradas mediante el mouse en una aplicación de Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Captura del mouse en Windows Forms](mouse-capture-in-windows-forms.md)
+- [Punteros del mouse en Windows Forms](mouse-pointers-in-windows-forms.md)

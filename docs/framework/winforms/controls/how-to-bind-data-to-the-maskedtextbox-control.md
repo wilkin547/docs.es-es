@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Enlazar datos al control MaskedTextBox
+title: Filtrar Enlazar datos al control MaskedTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: 1eccfb40cd256cb3ebea6f0dcf38d73d5d53e8bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b03eff45b8494253918ae4462c29f50568c81569
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735083"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717471"
 ---
-# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Procedimiento Enlazar datos al control MaskedTextBox
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Filtrar Enlazar datos al control MaskedTextBox
 Puede enlazar datos a un <xref:System.Windows.Forms.MaskedTextBox> controlar igual que lo haría para cualquier otro control de Windows Forms. Sin embargo, si el formato de los datos en la base de datos no coincide con el formato esperado por la definición de máscara, deberá volver a formatear los datos. El siguiente procedimiento muestra cómo hacer esto mediante la <xref:System.Windows.Forms.Binding.Format> y <xref:System.Windows.Forms.Binding.Parse> eventos de la <xref:System.Windows.Forms.Binding> clase para mostrar el número de teléfono distinto y campos de la base de datos de extensión de teléfono como un único campo editable.  
   
  El procedimiento siguiente requiere que tienen acceso a una base de datos de SQL Server con la base de datos de ejemplo Northwind instalada.  
@@ -233,9 +233,9 @@ Puede enlazar datos a un <xref:System.Windows.Forms.MaskedTextBox> controlar igu
 ## <a name="example"></a>Ejemplo  
  El ejemplo de código siguiente es la lista que resultan de completar el procedimiento anterior de código completo.  
   
- [!code-cpp[MaskedTextBoxData#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
- [!code-csharp[MaskedTextBoxData#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
- [!code-vb[MaskedTextBoxData#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/MaskedTextBoxData/VB/form1.vb#1)]  
+ [!code-cpp[MaskedTextBoxData#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
+ [!code-csharp[MaskedTextBoxData#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
+ [!code-vb[MaskedTextBoxData#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MaskedTextBoxData/VB/form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
@@ -250,4 +250,4 @@ Puede enlazar datos a un <xref:System.Windows.Forms.MaskedTextBox> controlar igu
 -   Compile la aplicación.  
   
 ## <a name="see-also"></a>Vea también
-- [Tutorial: Trabajar con el Control MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+- [Tutorial: Trabajar con el Control MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)

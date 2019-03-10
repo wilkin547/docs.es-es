@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 6272da52103e0249112dc4ba717057951d67442f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d02705422b088800d9f2e081d6a28924d9b84078
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543722"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710737"
 ---
 # <a name="events-overview-windows-forms"></a>Información general sobre eventos (Formularios Windows Forms)
 Un evento es una acción a la que puede responder o que puede "controlar" en el código. Los eventos se pueden generar por una acción del usuario, como hacer clic con el mouse o presionar una tecla, por código de programa o por el sistema.  
@@ -26,12 +26,12 @@ Un evento es una acción a la que puede responder o que puede "controlar" en el 
 > [!NOTE]
 >  Muchos eventos se producen junto con otros eventos. Por ejemplo, mientras se produce el evento <xref:System.Windows.Forms.Control.DoubleClick>, se producen los eventos <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseUp> y <xref:System.Windows.Forms.Control.Click>.  
   
- Para obtener información acerca de cómo generar y consumir un evento, vea [eventos](../../../docs/standard/events/index.md).  
+ Para obtener información acerca de cómo generar y consumir un evento, vea [eventos](../../standard/events/index.md).  
   
 ## <a name="delegates-and-their-role"></a>Delegados y sus roles  
  Los delegados son clases que se usan habitualmente dentro de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para compilar mecanismos de control de eventos. A grandes rasgos, los delegados son como punteros de función, que se usan habitualmente en [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] y en otros lenguajes orientados a objetos. Sin embargo, a diferencia de los punteros de función, los delegados están orientados a objetos, proporcionan seguridad de tipos y son seguros. Además, mientras que un puntero de función solo contiene una referencia a una función determinada, un delegado consta de una referencia a un objeto y de referencias a uno o varios métodos dentro del objeto.  
   
- Este modelo de eventos utiliza *delegados* para enlazar eventos a los métodos que se usan para controlarlos. El delegado permite especificar un método de controlador para registrar otras clases para la notificación de eventos. Cuando el evento se produce, el delegado llama al método enlazado. Para obtener más información sobre cómo definir delegados, vea [eventos](../../../docs/standard/events/index.md).  
+ Este modelo de eventos utiliza *delegados* para enlazar eventos a los métodos que se usan para controlarlos. El delegado permite especificar un método de controlador para registrar otras clases para la notificación de eventos. Cuando el evento se produce, el delegado llama al método enlazado. Para obtener más información sobre cómo definir delegados, vea [eventos](../../standard/events/index.md).  
   
  Los delegados se pueden enlazar a un único método o a varios métodos, lo que se conoce como multidifusión. Cuando se crea un delegado para un evento, usted (o el Diseñador de Windows Forms) crea un evento de multidifusión. Una excepción rara podría ser un evento que produce un procedimiento específico (tal como mostrar un cuadro de diálogo) que lógicamente no se repetiría varias veces por evento. Para obtener información sobre cómo crear un delegado de multidifusión, vea [Cómo: Combinar delegados (delegados de multidifusión)](~/docs/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).  
   
@@ -44,5 +44,5 @@ Un evento es una acción a la que puede responder o que puede "controlar" en el 
  El mecanismo de enlace que se usa con los delegados es dinámico: un delegado se puede enlazar en tiempo de ejecución a cualquier método cuya firma coincida con la del controlador de eventos. Con esta característica, puede configurar o cambiar el método de enlace según una condición, y asociar dinámicamente un controlador de evento a un control.  
   
 ## <a name="see-also"></a>Vea también
-- [Crear controladores de eventos en Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Información general sobre controladores de eventos](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md)
+- [Información general sobre controladores de eventos](event-handlers-overview-windows-forms.md)

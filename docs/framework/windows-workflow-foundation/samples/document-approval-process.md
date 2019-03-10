@@ -2,12 +2,12 @@
 title: Proceso de aprobación de un documento
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d1e37dcbc21239822937c57d9779a52357aac518
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582715"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717718"
 ---
 # <a name="document-approval-process"></a>Proceso de aprobación de un documento
 Este ejemplo muestra el uso de muchas características de Windows Workflow Foundation (WF) y Windows Communication Foundation (WCF) juntos. Juntas implementan un escenario de proceso de aprobación de un documento. Una aplicación cliente puede enviar documentos para su aprobación y aprobar documentos. Existe una aplicación de administrador de aprobaciones para facilitar las comunicaciones entre los clientes y aplicar las reglas del proceso de aprobación. El proceso de aprobación es un flujo de trabajo que puede ejecutar varios tipos de aprobación. Existen actividades para obtener una aprobación única, una aprobación de quórum (un porcentaje de un conjunto de aprobadores) y un proceso de aprobación compleja que consta de una aprobación de quórum y una aprobación única en una secuencia.
@@ -24,7 +24,7 @@ Este ejemplo muestra el uso de muchas características de Windows Workflow Found
 ## <a name="sample-details"></a>Detalles del ejemplo  
  El siguiente gráfico muestra el flujo de trabajo del proceso de aprobación de un documento.  
   
- ![Un flujo de trabajo de proceso de aprobación de documentos](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
+ ![Un flujo de trabajo de proceso de aprobación de documentos](./media/approvalprocess.jpg "ApprovalProcess")  
   
  Desde la perspectiva del cliente, el proceso de aprobación funciona del siguiente modo:  
   

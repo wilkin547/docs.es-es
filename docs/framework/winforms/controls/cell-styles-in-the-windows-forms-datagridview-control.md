@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: 3cb46ec5b203451cb2f9fd1c87457ad52552359c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a22fc29d2cab21977c0411a440b847b426fb5915
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674684"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712294"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Estilos de celda en el control DataGridView de formularios Windows Forms
 Cada celda de la <xref:System.Windows.Forms.DataGridView> control puede tener su propio estilo, como formato de texto, color de fondo, color de primer plano y fuente. Por lo general, sin embargo, varias celdas compartirán las características de estilo determinado.  
@@ -162,6 +162,6 @@ Cada celda de la <xref:System.Windows.Forms.DataGridView> control puede tener su
 - <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>
-- [Estilo y formato básicos del control DataGridView en formularios Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [Cómo: Establecer estilos de celda predeterminados para el Control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
-- [Formato de datos en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Estilo y formato básicos del control DataGridView en formularios Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Cómo: Establecer estilos de celda predeterminados para el Control DataGridView de Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Formato de datos en el control DataGridView de Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)

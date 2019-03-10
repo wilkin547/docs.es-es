@@ -1,5 +1,5 @@
 ---
-title: Filtrar Personalizar la apariencia de las filas en el Control DataGridView de formularios de Windows
+title: Procedimiento Personalizar la apariencia de las filas en el Control DataGridView de formularios de Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - rows [Windows Forms], customizing in DataGridView control
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: d40b53d2-7e7c-48c5-8570-6e79d15c3bbb
-ms.openlocfilehash: ba76f10bc3b33f268f28565f6174bc81ce8edcc5
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: a743cda36a8bf78fafeea94b0c6af8e30c7fe15a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220288"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711166"
 ---
-# <a name="how-to-customize-the-appearance-of-rows-in-the-windows-forms-datagridview-control"></a>Filtrar Personalizar la apariencia de las filas en el Control DataGridView de formularios de Windows
+# <a name="how-to-customize-the-appearance-of-rows-in-the-windows-forms-datagridview-control"></a>Procedimiento Personalizar la apariencia de las filas en el Control DataGridView de formularios de Windows
 Puede controlar la apariencia de las filas de <xref:System.Windows.Forms.DataGridView> controlando el evento <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> o <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>, o ambos. Estos eventos están diseñados para que pueda representar solo lo que se desea mientras permite que el control <xref:System.Windows.Forms.DataGridView> represente el resto. Por ejemplo, si quiere representar un fondo personalizado, puede controlar el evento <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> y dejar que las celdas individuales representen su propio contenido de primer plano. También tiene la opción de dejar que las celdas se representen a sí mismas y agregar contenido de primer plano personalizado en un controlador para el evento <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>. Además, puede deshabilitar la representación de las celdas y representar todo usted mismo en un controlador de eventos <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>.  
   
  En el ejemplo de código siguiente, se implementan controladores de ambos eventos para ofrecer un fondo de selección de degradado y algún contenido de primer plano personalizado que abarca varias columnas.  
   
 ## <a name="example"></a>Ejemplo  
- [!code-csharp[System.Windows.Forms.DataGridViewRowPainting#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/CS/datagridviewrowpainting.cs#00)]
- [!code-vb[System.Windows.Forms.DataGridViewRowPainting#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/VB/datagridviewrowpainting.vb#00)]  
+ [!code-csharp[System.Windows.Forms.DataGridViewRowPainting#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/CS/datagridviewrowpainting.cs#00)]
+ [!code-vb[System.Windows.Forms.DataGridViewRowPainting#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRowPainting/VB/datagridviewrowpainting.vb#00)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -36,5 +36,5 @@ Puede controlar la apariencia de las filas de <xref:System.Windows.Forms.DataGri
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>
-- [Personalizar el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
-- [Arquitectura del control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)
+- [Personalizar el control DataGridView de Windows Forms](customizing-the-windows-forms-datagridview-control.md)
+- [Arquitectura del control DataGridView](datagridview-control-architecture-windows-forms.md)

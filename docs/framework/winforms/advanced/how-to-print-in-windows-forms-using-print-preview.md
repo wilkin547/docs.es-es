@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: abdcd3a85f9e175aaea9aaaa6a25cc55ea20fb27
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 11f5583cc181904b17c378ac7ead4f35c539aeed
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304640"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711491"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>Filtrar Imprimir en Windows Forms a través de la vista previa de impresión
 Es muy habitual en la programación de Windows Forms ofrecer una vista previa de impresión además de los servicios de impresión. Una forma sencilla de agregar servicios de vista previa de impresión a la aplicación es usar un control <xref:System.Windows.Forms.PrintPreviewDialog> en combinación con la lógica de control de eventos de <xref:System.Drawing.Printing.PrintDocument.PrintPage> para imprimir un archivo.  
@@ -23,13 +23,13 @@ Es muy habitual en la programación de Windows Forms ofrecer una vista previa de
   
 1.  Agregue un <xref:System.Windows.Forms.PrintPreviewDialog>, <xref:System.Drawing.Printing.PrintDocument>, y dos cadenas al formulario.  
   
-     [!code-csharp[System.Drawing.Printing.PrintPreviewExample#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#1)]
-     [!code-vb[System.Drawing.Printing.PrintPreviewExample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#1)]  
+     [!code-csharp[System.Drawing.Printing.PrintPreviewExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#1)]
+     [!code-vb[System.Drawing.Printing.PrintPreviewExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#1)]  
   
 2.  Establezca la propiedad <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> en el documento que quiere imprimir y abra y lea el contenido del documento en la cadena que agregó previamente.  
   
-     [!code-csharp[System.Drawing.Printing.PrintPreviewExample#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#2)]
-     [!code-vb[System.Drawing.Printing.PrintPreviewExample#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#2)]  
+     [!code-csharp[System.Drawing.Printing.PrintPreviewExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#2)]
+     [!code-vb[System.Drawing.Printing.PrintPreviewExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#2)]  
   
 3.  Igual que haría para imprimir el documento, en el controlador de eventos <xref:System.Drawing.Printing.PrintDocument.PrintPage> , use la propiedad <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> de la clase <xref:System.Drawing.Printing.PrintPageEventArgs> y el contenido del archivo para calcular las líneas por página y representar el contenido del documento. Una vez dibujada cada página, compruebe si es la última página y establezca la propiedad <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> de <xref:System.Drawing.Printing.PrintPageEventArgs> como corresponda. El evento <xref:System.Drawing.Printing.PrintDocument.PrintPage> se produce hasta que <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> es `false`. Cuando el documento haya terminado de representarse, restablezca la cadena que se va a representar. Además, asegúrese de que el evento <xref:System.Drawing.Printing.PrintDocument.PrintPage> está asociado con su método de control de eventos.  
   
@@ -38,24 +38,24 @@ Es muy habitual en la programación de Windows Forms ofrecer una vista previa de
   
      En el ejemplo de código siguiente, se usa el controlador de eventos para imprimir el archivo "testPage.txt" con la misma fuente que se usa en el formulario.  
   
-     [!code-csharp[System.Drawing.Printing.PrintPreviewExample#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#3)]
-     [!code-vb[System.Drawing.Printing.PrintPreviewExample#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#3)]  
+     [!code-csharp[System.Drawing.Printing.PrintPreviewExample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#3)]
+     [!code-vb[System.Drawing.Printing.PrintPreviewExample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#3)]  
   
 4.  Establezca la propiedad <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A> del control <xref:System.Windows.Forms.PrintPreviewDialog> en el componente <xref:System.Drawing.Printing.PrintDocument> del formulario.  
   
-     [!code-csharp[System.Drawing.Printing.PrintPreviewExample#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#5)]
-     [!code-vb[System.Drawing.Printing.PrintPreviewExample#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#5)]  
+     [!code-csharp[System.Drawing.Printing.PrintPreviewExample#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#5)]
+     [!code-vb[System.Drawing.Printing.PrintPreviewExample#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#5)]  
   
 5.  Llame al método <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> en el control <xref:System.Windows.Forms.PrintPreviewDialog> . Normalmente se llamaría a <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> desde el método de control de eventos <xref:System.Windows.Forms.Control.Click> de un botón. Al llamar a <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> se genera el evento <xref:System.Drawing.Printing.PrintDocument.PrintPage> y la salida se representa en el control <xref:System.Windows.Forms.PrintPreviewDialog> . Cuando el usuario hace clic en el icono de impresión del cuadro de diálogo, se vuelve a generar el evento <xref:System.Drawing.Printing.PrintDocument.PrintPage> y la salida se envía a la impresora en lugar de al cuadro de diálogo de vista previa. Este es el motivo por el que la cadena se restablece al final del proceso de representación en el paso 3.  
   
      En el siguiente ejemplo de código se muestra el método de control de eventos <xref:System.Windows.Forms.Control.Click> para un botón del formulario. Este método de control de eventos llama a los métodos para leer el documento y mostrar el cuadro de diálogo de vista previa de impresión.  
   
-     [!code-csharp[System.Drawing.Printing.PrintPreviewExample#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#4)]
-     [!code-vb[System.Drawing.Printing.PrintPreviewExample#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#4)]  
+     [!code-csharp[System.Drawing.Printing.PrintPreviewExample#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#4)]
+     [!code-vb[System.Drawing.Printing.PrintPreviewExample#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#4)]  
   
 ## <a name="example"></a>Ejemplo  
- [!code-csharp[System.Drawing.Printing.PrintPreviewExample#0](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#0)]
- [!code-vb[System.Drawing.Printing.PrintPreviewExample#0](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#0)]  
+ [!code-csharp[System.Drawing.Printing.PrintPreviewExample#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#0)]
+ [!code-vb[System.Drawing.Printing.PrintPreviewExample#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
@@ -65,6 +65,6 @@ Es muy habitual en la programación de Windows Forms ofrecer una vista previa de
 -   Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Imprimir un archivo de texto de varias páginas en Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Windows Forms Print Support](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)
-- [Impresión más segura en Windows Forms](../../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
+- [Cómo: Imprimir un archivo de texto de varias páginas en Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Windows Forms Print Support](windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)
+- [Impresión más segura en Windows Forms](../more-secure-printing-in-windows-forms.md)

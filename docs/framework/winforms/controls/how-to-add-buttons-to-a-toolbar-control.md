@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar botones a un Control de barra de herramientas
+title: Filtrar Agregar botones a un Control de barra de herramientas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 134cda4aa0042323e39966d60a7d51fda54cb954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 347ca067a5ae5544351f29afe3ebcfe11d0b1e0f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711556"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713267"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>Procedimiento Agregar botones a un Control de barra de herramientas
 > [!NOTE]
@@ -150,7 +150,7 @@ ms.locfileid: "54711556"
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.ToolBar>
-- [Cómo: Definir un icono para un botón de barra de herramientas](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
-- [Cómo: Desencadenar eventos de menú para los botones de barra de herramientas](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [Información general del control ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)
-- [ToolBar (control)](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+- [Cómo: Definir un icono para un botón de barra de herramientas](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Cómo: Desencadenar eventos de menú para los botones de barra de herramientas](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Información general del control ToolBar](toolbar-control-overview-windows-forms.md)
+- [ToolBar (control)](toolbar-control-windows-forms.md)

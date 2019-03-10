@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: efa567e6f8a91b40d2710b4cef0d1a56d38650c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a1738e8be0471e24744a440fee10e5b1152ab10
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737837"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717640"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Resumen de tecnologías para el control DataGridView (formularios Windows Forms)
 En este tema se resume la información sobre el control `DataGridView` y las clases que admiten su uso.  
@@ -31,7 +31,7 @@ En este tema se resume la información sobre el control `DataGridView` y las cla
 ## <a name="background"></a>Fondo  
  Diseñadores de interfaz de usuario con frecuencia que sea necesario mostrar datos tabulares a los usuarios. El [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proporciona varias maneras de mostrar datos en una tabla o una cuadrícula. El `DataGridView` control representa la evolución más reciente de esta tecnología para aplicaciones de Windows Forms.  
   
- El `DataGridView` control puede mostrar las filas de datos desde un almacén de datos. Se admiten muchos tipos de almacenes de datos. El almacén de datos puede contener datos simples sin tipo, como una matriz unidimensional, o puede contener datos con tipo, como un <xref:System.Data.DataSet>. Para obtener más información, vea [Cómo: Enlazar datos a la Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+ El `DataGridView` control puede mostrar las filas de datos desde un almacén de datos. Se admiten muchos tipos de almacenes de datos. El almacén de datos puede contener datos simples sin tipo, como una matriz unidimensional, o puede contener datos con tipo, como un <xref:System.Data.DataSet>. Para obtener más información, vea [Cómo: Enlazar datos a la Windows Forms DataGridView Control](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
  El control `DataGridView` proporciona una forma eficaz y flexible de mostrar datos en formato de tabla. Puede utilizar el control para mostrar vistas de solo lectura o editables de pequeños a grandes conjuntos de datos.  
   
@@ -44,7 +44,7 @@ En este tema se resume la información sobre el control `DataGridView` y las cla
   
  Puede implementar la `IDataGridViewEditingCell` interfaz en la clase de celda derivada para crear un tipo de celda que tiene funciones de edición, pero no hospede un control en modo de edición. Para crear un control que puede hospedar en una celda en modo de edición, puede implementar la `IDataGridViewEditingControl` interfaz en una clase derivada de <xref:System.Windows.Forms.Control>.  
   
- Para obtener más información, vea [Cómo: Personalizar celdas y columnas en la Windows Forms DataGridView Control ampliando su comportamiento y apariencia](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) y [Cómo: Alojar controles en formularios de Windows las celdas de DataGridView](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+ Para obtener más información, vea [Cómo: Personalizar celdas y columnas en la Windows Forms DataGridView Control ampliando su comportamiento y apariencia](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) y [Cómo: Alojar controles en formularios de Windows las celdas de DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
 ## <a name="datagridview-classes-at-a-glance"></a>Un vistazo a las clases DataGridView  
  <xref:System.Windows.Forms>  
@@ -56,11 +56,11 @@ En este tema se resume la información sobre el control `DataGridView` y las cla
 |<xref:System.Windows.Forms.DataGridView> Extensibilidad|<xref:System.Windows.Forms.DataGridViewCell> y las clases derivadas<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> y las clases derivadas<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
 ## <a name="whats-new"></a>Novedades  
- El <xref:System.Windows.Forms.DataGridView> control está diseñado para ser una solución completa para mostrar datos tabulares con Windows Forms. Puede utilizar el <xref:System.Windows.Forms.DataGridView> de control antes de otras soluciones, como <xref:System.Windows.Forms.DataGrid>, al crear una nueva aplicación. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
+ El <xref:System.Windows.Forms.DataGridView> control está diseñado para ser una solución completa para mostrar datos tabulares con Windows Forms. Puede utilizar el <xref:System.Windows.Forms.DataGridView> de control antes de otras soluciones, como <xref:System.Windows.Forms.DataGrid>, al crear una nueva aplicación. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
  El <xref:System.Windows.Forms.DataGridView> control puede funcionar en estrecha junto con el <xref:System.Windows.Forms.BindingSource> componente. Este componente está diseñado para ser el origen de datos principal de un formulario. Puede administrar la interacción entre un <xref:System.Windows.Forms.DataGridView> control y su origen de datos, independientemente de los datos de tipo de origen.  
   
 ## <a name="see-also"></a>Vea también
-- [Información general del control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
-- [Arquitectura del control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)
-- [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Información general del control DataGridView](datagridview-control-overview-windows-forms.md)
+- [Arquitectura del control DataGridView](datagridview-control-architecture-windows-forms.md)
+- [Proteger la información de conexión](../../data/adonet/protecting-connection-information.md)

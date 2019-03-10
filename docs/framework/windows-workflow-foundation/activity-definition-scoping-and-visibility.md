@@ -2,12 +2,12 @@
 title: Ámbito y visibilidad de la definición de actividad
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: f3a8936c1bc3275468e1e4dbd23d0d001edad021
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518507"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723847"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Ámbito y visibilidad de la definición de actividad
 El ámbito y visibilidad de la definición de actividad,  como el ámbito y la visibilidad de un objeto, es la capacidad de otros objetos o actividades de obtener acceso a los miembros de la actividad. Las siguientes implementaciones realizan la definición de actividad:  
@@ -22,7 +22,7 @@ El ámbito y visibilidad de la definición de actividad,  como el ámbito y la v
  Además del ámbito de datos, la visibilidad del modelo de actividad puede restringir el acceso a otros aspectos de la actividad, como validación, depuración, seguimiento o traza. Las propiedades de ejecución utilizan la visibilidad y el ámbito para restringir las características de ejecución a un ámbito determinado de la definición. Las raíces secundarias utilizan la visibilidad y el ámbito para restringir el estado capturado por <xref:System.Activities.Statements.CompensableActivity> al ámbito de definición en la que se utilizan las actividades compensables.  
   
 ## <a name="definition-and-usage"></a>Definición y uso  
- Un flujo de trabajo se escribe mediante la creación de nuevas actividades mediante la herencia de clases de actividad base y utilizando las actividades de la [biblioteca de actividades integradas](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md). Para utilizar una actividad, el autor de actividad debe configurar la visibilidad de cada componente de su definición.  
+ Un flujo de trabajo se escribe creando nuevas actividades mediante la herencia de clases de actividad base y utilizando las actividades desde el [biblioteca de actividades integradas](net-framework-4-5-built-in-activity-library.md). Para utilizar una actividad, el autor de actividad debe configurar la visibilidad de cada componente de su definición.  
   
 ### <a name="activity-members"></a>Miembros de actividad  
  El modelo de actividad define los argumentos, variables, delegados y actividades secundarias que la actividad pone a disposición de los usuarios. Cada uno de estos miembros se puede declarar como `public` o `private`. El usuario de la actividad configura los miembros públicos, mientras que los miembros `private` utilizan una implementación corregida por el autor de actividad. Las reglas de visibilidad del ámbito de datos son las siguientes:  

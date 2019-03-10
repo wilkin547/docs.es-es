@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 428f558c125bb11e5cbd4f794713440c22c89d7e
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 8c90366111957f27a6bd86035013eba00426f46b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333370"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718511"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Filtrar Enlazar datos con el Control de DataGridView de Windows Forms mediante el diseñador
 Puede utilizar el diseñador para conectar un <xref:System.Windows.Forms.DataGridView> control a orígenes de datos de diferentes variedades, incluidas las bases de datos, objetos de negocio o servicios Web. Al enlazar el control a un origen de datos mediante el diseñador, el control se enlaza automáticamente a un <xref:System.Windows.Forms.BindingSource> componente que representa el origen de datos. Además, las columnas se generan automáticamente en el control para coincidir con la información del esquema proporcionada por el origen de datos.  
@@ -20,14 +20,14 @@ Puede utilizar el diseñador para conectar un <xref:System.Windows.Forms.DataGri
   
  También puede enlazar varios <xref:System.Windows.Forms.DataGridView> controles a las tablas relacionadas para crear relaciones principal/detalle. En esta configuración, un control muestra una tabla primaria y otro control muestra solo aquellas filas de una tabla secundaria que están relacionadas con la fila actual de la tabla primaria. Para obtener más información, vea [Cómo: Mostrar relacionados con datos en un Windows Forms Application](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120)).  
   
- El procedimiento siguiente requiere una **aplicación Windows** proyecto con un formulario que contiene un <xref:System.Windows.Forms.DataGridView> control o dos controles de una relación principal-detalle. Para obtener información acerca de cómo iniciar tal proyecto, vea [Cómo: Cree un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) y [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ El procedimiento siguiente requiere una **aplicación Windows** proyecto con un formulario que contiene un <xref:System.Windows.Forms.DataGridView> control o dos controles de una relación principal-detalle. Para obtener información acerca de cómo iniciar tal proyecto, vea [Cómo: Cree un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) y [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
 >  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-bind-the-control-to-a-data-source"></a>Para enlazar el control a un origen de datos  
   
-1.  Haga clic en el glifo de etiqueta inteligente (![glifo de etiqueta inteligente](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) en la esquina superior derecha de la <xref:System.Windows.Forms.DataGridView> control.  
+1.  Haga clic en el glifo de etiqueta inteligente (![glifo de etiqueta inteligente](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) en la esquina superior derecha de la <xref:System.Windows.Forms.DataGridView> control.  
   
 2.  Haga clic en la flecha de lista desplegable de la opción **Elegir origen de datos**.  
   
@@ -50,13 +50,13 @@ Puede utilizar el diseñador para conectar un <xref:System.Windows.Forms.DataGri
 - <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - [Cómo: Conectarse a datos en una base de datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
-- [Cómo: Agregar y quitar columnas en el Control de DataGridView de Windows Forms mediante el diseñador](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [Cómo: Cambiar el orden de columnas en el Control de DataGridView de Windows Forms mediante el diseñador](../../../../docs/framework/winforms/controls/change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
-- [Cómo: Cambiar el tipo de una columna DataGridView de Windows Forms mediante el diseñador](../../../../docs/framework/winforms/controls/change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
-- [Cómo: Inmovilizar columnas en el Control de DataGridView de Windows Forms mediante el diseñador](../../../../docs/framework/winforms/controls/freeze-columns-in-the-datagrid-using-the-designer.md)
-- [Cómo: Ocultar columnas en el Control de DataGridView de Windows Forms mediante el diseñador](../../../../docs/framework/winforms/controls/hide-columns-in-the-datagrid-using-the-designer.md)
-- [Cómo: Que las columnas de sólo lectura en el Control de DataGridView de Windows Forms mediante el diseñador](../../../../docs/framework/winforms/controls/make-columns-read-only-in-the-datagrid-using-the-designer.md)
+- [Cómo: Agregar y quitar columnas en el Control de DataGridView de Windows Forms mediante el diseñador](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [Cómo: Cambiar el orden de columnas en el Control de DataGridView de Windows Forms mediante el diseñador](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
+- [Cómo: Cambiar el tipo de una columna DataGridView de Windows Forms mediante el diseñador](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
+- [Cómo: Inmovilizar columnas en el Control de DataGridView de Windows Forms mediante el diseñador](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [Cómo: Ocultar columnas en el Control de DataGridView de Windows Forms mediante el diseñador](hide-columns-in-the-datagrid-using-the-designer.md)
+- [Cómo: Que las columnas de sólo lectura en el Control de DataGridView de Windows Forms mediante el diseñador](make-columns-read-only-in-the-datagrid-using-the-designer.md)
 - [Cómo: Crear un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+- [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [Ventana Orígenes de datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
 - [Cómo: Mostrar datos relacionados en una aplicación de Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))

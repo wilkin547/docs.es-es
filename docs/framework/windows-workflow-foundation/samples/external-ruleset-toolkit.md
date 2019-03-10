@@ -2,12 +2,12 @@
 title: Kit de herramientas de RuleSet externo
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: 7a331f139fd7d3127892e6a103b370ec50dc9c99
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 510b70f7ebeda784dce4731bb4a08896ac2e8361
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482371"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710048"
 ---
 # <a name="external-ruleset-toolkit"></a>Kit de herramientas de RuleSet externo
 
@@ -30,7 +30,7 @@ Los componentes de este ejemplo incluyen:
 
 La interacción de los componentes se muestra en la figura 1. Las secciones que siguen describen cada componente.
 
-![Información general Conceptual de ejemplo de RuleSet externo](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
+![Información general Conceptual de ejemplo de RuleSet externo](./media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
 
 Figura 1: Información general del ejemplo
 
@@ -47,7 +47,7 @@ Figura 1: Información general del ejemplo
 
 En la figura 2 se muestra una captura de pantalla de la herramienta RuleSet. Desde el **regla Store** menú, puede cargar los RuleSets disponibles desde la base de datos y guardar los RuleSets modificados en el almacén. Un archivo de configuración de la aplicación proporciona una cadena de conexión a bases de datos para la base de datos RuleSet. Al iniciar la herramienta, carga automáticamente los RuleSets de la base de datos configurada.
 
-![Resultado de ejemplo del Kit de herramientas de RuleSet externo](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetbrowser.gif "RuleSetBrowser")
+![Resultado de ejemplo del Kit de herramientas de RuleSet externo](./media/rulesetbrowser.gif "RuleSetBrowser")
 
 Figura 2: Explorador RuleSet
 
@@ -55,13 +55,13 @@ La herramienta RuleSet aplica números de versión principal y secundario a los 
 
 Al hacer clic en **editar reglas**, se inicia el editor RuleSet, como se muestra en la figura 3.
 
-![Salida de ejemplo del Kit de herramientas de RuleSet externo](../../../../docs/framework/windows-workflow-foundation/samples/media/ruleseteditor.gif "RuleSetEditor")
+![Salida de ejemplo del Kit de herramientas de RuleSet externo](./media/ruleseteditor.gif "RuleSetEditor")
 
 Figura 3: Editor de RuleSet
 
 Esto es un RE-alojamiento del diálogo del editor que forma parte del complemento Visual Studio en Windows Workflow Foundation. Proporciona la misma funcionalidad, incluyendo la compatibilidad del IntelliSense. Las reglas se crean con un tipo de destino (por ejemplo, un flujo de trabajo) que está asociado con el conjunto de reglas en la herramienta. al hacer clic en **examinar** en el cuadro de diálogo principal de la herramienta, el **Selector de flujo de trabajo/tipo** aparece el cuadro de diálogo, como se muestra en la figura 4.
 
-![Flujo de trabajo &#47;escriba selección](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")
+![Flujo de trabajo &#47;escriba selección](./media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")
 
 Figura 4: Flujo de trabajo o selector de tipo
 
@@ -71,7 +71,7 @@ La ruta de acceso en el archivo de ensamblado y el tipo `name are stored with th
 
 Al hacer clic en **Aceptar** en el **Selector de flujo de trabajo/tipo** cuadro de diálogo, valida el tipo seleccionado contra el RuleSet, para asegurarse de que el tipo de destino tiene todos los miembros referenciados por las reglas. Los errores se muestran en un **errores de validación** cuadro de diálogo (consulte la figura 5). Puede elegir continuar con el cambio a pesar de los errores, o haga clic en **cancelar**. Desde el **herramientas** menú en el cuadro de diálogo principal de la herramienta, puede hacer clic en **validar** para volver a validar la versión de RuleSet contra la actividad de destino.
 
-![Errores de validación de ejemplo de RuleSet externo](../../../../docs/framework/windows-workflow-foundation/samples/media/validationerrorsruleset.png "ValidationErrorsRuleSet")
+![Errores de validación de ejemplo de RuleSet externo](./media/validationerrorsruleset.png "ValidationErrorsRuleSet")
 
 Figura 5: Errores de validación
 
@@ -81,7 +81,7 @@ Después de seleccionar un archivo. Rules, un **Selector RuleSet** cuadro de di�
 
 Para cada RuleSet que importa, la herramienta intenta buscar el tipo asociado de la carpeta bin\Debug bajo la ubicación del archivo .rules (si existe), basándose en los miembros utilizados en el RuleSet. Si la herramienta encuentra varios tipos correspondientes, intenta elegir un tipo basado en una coincidencia entre el nombre de archivo de .rules y el nombre de tipo (por ejemplo, el tipo `Workflow1` corresponde a Workflow1.rules). Si existen varias coincidencias, se le pedirá que seleccione el tipo. Si se produce un error de este mecanismo de identificación automática buscar un ensamblado o tipo correspondiente, a continuación, después de importar puede hacer clic en **examinar** en el cuadro de diálogo principal de la herramienta para navegar al tipo asociado.
 
-![Selector de ruleSet](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetselector.gif "RuleSetSelector")
+![Selector de ruleSet](./media/rulesetselector.gif "RuleSetSelector")
 
 Figura 6: Selector de RuleSet
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: e62f2a9831a4a88a67c5fea1f24432c508c66eae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a849eae086c3507bbaf7050afd2e0496ab5a970e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517102"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716990"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Tutorial: Creación de una interfaz de tipo explorador con el ListView y los controles TreeView mediante el diseñador
 Una de las ventajas de Visual Studio es la capacidad para crear aplicaciones de Windows Forms con aspecto profesional en muy poco tiempo. Un escenario común es crear una interfaz de usuario (UI) con <xref:System.Windows.Forms.ListView> y <xref:System.Windows.Forms.TreeView> los controles que se parece a la característica Explorador de Windows de los sistemas operativos de Windows. El Explorador de Windows muestra una estructura jerárquica de los archivos y carpetas en el equipo del usuario.  
@@ -54,33 +54,33 @@ Una de las ventajas de Visual Studio es la capacidad para crear aplicaciones de 
   
     2.  Establezca la propiedad <xref:System.Windows.Forms.ListView.View%2A> en <xref:System.Windows.Forms.View.Details>.  
   
-    3.  Abra el Editor de la colección ColumnHeader haciendo clic en el botón de puntos suspensivos (![de pantalla de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) en el <xref:System.Windows.Forms.ListView.Columns%2A> propiedad **.** Agregue tres columnas y establezca sus <xref:System.Windows.Forms.ColumnHeader.Text%2A> propiedad `Name`, `Type`, y `Last Modified`, respectivamente. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
+    3.  Abra el Editor de la colección ColumnHeader haciendo clic en el botón de puntos suspensivos (![de pantalla de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) en el <xref:System.Windows.Forms.ListView.Columns%2A> propiedad **.** Agregue tres columnas y establezca sus <xref:System.Windows.Forms.ColumnHeader.Text%2A> propiedad `Name`, `Type`, y `Last Modified`, respectivamente. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
     4.  Establezca la propiedad <xref:System.Windows.Forms.ListView.SmallImageList%2A> en `imageList1.`.  
   
 8.  Implemente el código para rellenar el <xref:System.Windows.Forms.TreeView> con nodos y subnodos. Agregue este código a la clase `Form1`.  
   
-     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
-     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  
+     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
+     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  
   
 9. Puesto que el código anterior usa el espacio de nombres System.IO, el uso adecuada de agregar o importar instrucción en la parte superior del formulario.  
   
-     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#4)]
-     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#4)]
+     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#4)]  
   
 10. Llame al método de instalación desde el paso anterior en el constructor del formulario o <xref:System.Windows.Forms.Form.Load> el método de control de eventos. Agregue este código al constructor del formulario.  
   
-     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]  
   
 11. Controlar la <xref:System.Windows.Forms.TreeView.NodeMouseClick> eventos para `treeview1` **,** e implemente el código para rellenar `listview1` con contenido de un nodo cuando se hace clic en un nodo. Agregue este código a la clase `Form1`.  
   
-     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]  
   
      Si está utilizando C#, asegúrese de que tiene el <xref:System.Windows.Forms.TreeView.NodeMouseClick> evento asociado a su método de control de eventos. Agregue este código al constructor del formulario.  
   
-     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#5)]  
+     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#5)]  
   
 ## <a name="testing-the-application"></a>Probar la aplicación  
  Puede comprobar el formulario para asegurarse de que se comporta de la forma prevista.  
@@ -94,16 +94,16 @@ Una de las ventajas de Visual Studio es la capacidad para crear aplicaciones de 
 ## <a name="next-steps"></a>Pasos siguientes  
  Esta aplicación le ofrece un ejemplo de cómo puede usar <xref:System.Windows.Forms.TreeView> y <xref:System.Windows.Forms.ListView> controles juntos. Para obtener más información sobre estos controles, vea los temas siguientes:  
   
--   [Cómo: Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+-   [Cómo: Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [Cómo: Agregar capacidades de búsqueda a un Control ListView](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
+-   [Cómo: Agregar capacidades de búsqueda a un Control ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [Cómo: Asociar un menú contextual a un nodo TreeView](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+-   [Cómo: Asociar un menú contextual a un nodo TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
-- [ListView (Control)](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
-- [Cómo: Agregar y quitar nodos con el Control TreeView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [Cómo: Agregar y quitar elementos con el Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Cómo: Agregar columnas al Control de ListView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [ListView (Control)](listview-control-windows-forms.md)
+- [Cómo: Agregar y quitar nodos con el Control TreeView de formularios Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Cómo: Agregar y quitar elementos con el Control ListView de formularios de Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Cómo: Agregar columnas al Control de ListView de Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)

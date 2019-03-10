@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Usar el modo de composición para controlar la mezcla alfa
+title: Filtrar Usar el modo de composición para controlar la mezcla alfa
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 2e00b0b9b22bc8dcdd1c63494f1bc5854bc4f033
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b6ff14de7ff524b8af603ae5fa3969d5230b1a7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632015"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714130"
 ---
-# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Procedimiento Usar el modo de composición para controlar la mezcla alfa
+# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Filtrar Usar el modo de composición para controlar la mezcla alfa
 Puede haber ocasiones en que desee crear un mapa de bits fuera de la pantalla que tiene las siguientes características:  
   
 -   Colores tienen valores alfabéticos que son menos de 255.  
@@ -34,28 +34,28 @@ Puede haber ocasiones en que desee crear un mapa de bits fuera de la pantalla qu
   
  La siguiente ilustración muestra el resultado del ejemplo de código. Tenga en cuenta que los puntos suspensivos se mezclan con el fondo, pero no se mezclan entre sí.  
   
- ![Copia de origen](../../../../docs/framework/winforms/advanced/media/sourcecopy.png "sourcecopy")  
+ ![Copia de origen](./media/sourcecopy.png "sourcecopy")  
   
  El ejemplo de código contiene esta instrucción:  
   
- [!code-csharp[System.Drawing.AlphaBlending#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#41)]
- [!code-vb[System.Drawing.AlphaBlending#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#41)]  
+ [!code-csharp[System.Drawing.AlphaBlending#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.AlphaBlending#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#41)]  
   
  Si desea que los puntos suspensivos para que se mezclan entre sí, así como con el fondo, cambie esa instrucción a lo siguiente:  
   
- [!code-csharp[System.Drawing.AlphaBlending#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#42)]
- [!code-vb[System.Drawing.AlphaBlending#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#42)]  
+ [!code-csharp[System.Drawing.AlphaBlending#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#42)]
+ [!code-vb[System.Drawing.AlphaBlending#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#42)]  
   
  La siguiente ilustración muestra el resultado del código revisado.  
   
- ![Origen a través de](../../../../docs/framework/winforms/advanced/media/sourceover.png "sourceover")  
+ ![Origen a través de](./media/sourceover.png "sourceover")  
   
- [!code-csharp[System.Drawing.AlphaBlending#43](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
- [!code-vb[System.Drawing.AlphaBlending#43](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
+ [!code-csharp[System.Drawing.AlphaBlending#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
+ [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+ El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Drawing.Color.FromArgb%2A>
-- [Líneas y rellenos con combinación alfa](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
+- [Líneas y rellenos con combinación alfa](alpha-blending-lines-and-fills.md)

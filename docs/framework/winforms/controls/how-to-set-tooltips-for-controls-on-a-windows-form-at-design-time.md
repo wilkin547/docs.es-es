@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Establecer componentes ToolTip en controles de Windows Forms en tiempo de diseño
+title: Filtrar Establecer componentes ToolTip en controles de Windows Forms en tiempo de diseño
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: ebefe596728b5cabd9d24720d8c39f13c8836bd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 541e50a8ee9c5338acc7c5e347549fd03a0f6323
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609413"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710724"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Procedimiento Establecer componentes ToolTip en controles de Windows Forms en tiempo de diseño
-Puede establecer un <xref:System.Windows.Forms.ToolTip> cadena en el código o en el Diseñador de Windows Forms. Para obtener más información sobre la <xref:System.Windows.Forms.ToolTip> componente, vea [información general del componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).  
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Filtrar Establecer componentes ToolTip en controles de Windows Forms en tiempo de diseño
+Puede establecer un <xref:System.Windows.Forms.ToolTip> cadena en el código o en el Diseñador de Windows Forms. Para obtener más información sobre la <xref:System.Windows.Forms.ToolTip> componente, vea [información general del componente ToolTip](tooltip-component-overview-windows-forms.md).  
   
 > [!NOTE]
 >  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -77,6 +77,6 @@ Puede establecer un <xref:System.Windows.Forms.ToolTip> cadena en el código o e
 2.  En el **propiedades** ventana, elimine el texto en el **información sobre herramientas en ToolTip1**.  
 
 ## <a name="see-also"></a>Vea también
-- [Información general sobre el componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)
-- [Cómo: Cambiar el retardo del componente ToolTip de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
-- [ToolTip (componente)](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)
+- [Información general sobre el componente ToolTip](tooltip-component-overview-windows-forms.md)
+- [Cómo: Cambiar el retardo del componente ToolTip de formularios Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+- [ToolTip (componente)](tooltip-component-windows-forms.md)

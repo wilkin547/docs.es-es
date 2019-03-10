@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f98f095f888a8ef3622fabbf4c4745af60e930e3
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: cbcc04625a14ebc23cacfb567951bf8f76f14985
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584062"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725108"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Filtrar Enlazar datos al control DataGridView de formularios Windows Forms
 
-El <xref:System.Windows.Forms.DataGridView> control admite el modelo de enlace de datos de Windows Forms estándar, por lo que se puede enlazar a una variedad de orígenes de datos. Por lo general, enlaza a un <xref:System.Windows.Forms.BindingSource> que administra la interacción con el origen de datos. El <xref:System.Windows.Forms.BindingSource> puede ser cualquier origen de datos de Windows Forms, que proporciona gran flexibilidad al elegir o modificar la ubicación de sus datos. Para obtener más información acerca de los orígenes de datos la <xref:System.Windows.Forms.DataGridView> control admite, vea la [información general del control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
+El <xref:System.Windows.Forms.DataGridView> control admite el modelo de enlace de datos de Windows Forms estándar, por lo que se puede enlazar a una variedad de orígenes de datos. Por lo general, enlaza a un <xref:System.Windows.Forms.BindingSource> que administra la interacción con el origen de datos. El <xref:System.Windows.Forms.BindingSource> puede ser cualquier origen de datos de Windows Forms, que proporciona gran flexibilidad al elegir o modificar la ubicación de sus datos. Para obtener más información acerca de los orígenes de datos la <xref:System.Windows.Forms.DataGridView> control admite, vea la [información general del control DataGridView](datagridview-control-overview-windows-forms.md).  
 
 Visual Studio tiene una amplia compatibilidad para el enlace de datos para el control DataGridView de formularios. Para obtener más información, vea [Cómo: Enlazar datos al control DataGridView de formularios Windows Forms mediante el diseñador](bind-data-to-the-datagrid-using-the-designer.md).  
 
@@ -44,8 +44,8 @@ Para compilar y ejecutar este ejemplo, pegue el código en el *Form1* archivo de
   
 Rellenar el `connectionString` variable en el ejemplo con los valores para la conexión de base de datos de ejemplo Northwind de SQL Server. Autenticación de Windows, también denominada seguridad integrada, es una forma más segura para conectarse a la base de datos que el almacenamiento de una contraseña en la cadena de conexión. Para obtener más información acerca de la seguridad de conexión, consulte [proteger la información de conexión](../../data/adonet/protecting-connection-information.md).  
 
-[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
-[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
+[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
+[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.DataGridView>

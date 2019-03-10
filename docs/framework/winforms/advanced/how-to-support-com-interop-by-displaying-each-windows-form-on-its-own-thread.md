@@ -10,19 +10,19 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: 91c0b6384d8c39848cfd199950034d2f62e716df
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 36f9280ff3269997098673c30a1b95f8b51b9df8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441773"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717484"
 ---
-# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Procedimiento Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso
+# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Filtrar Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso
 Puede resolver problemas de interoperabilidad COM mostrando el formulario en un bucle de mensajes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , que puede crear con el método <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> .  
   
  Para que un Windows Form funcione correctamente con una aplicación cliente COM, debe ejecutar el formulario en un bucle de mensajes de Windows Forms. Para ello, siga uno de estos procedimientos:  
   
--   Use el método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> para mostrar el Windows Form. Para obtener más información, vea [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms con el método ShowDialog](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md).  
+-   Use el método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> para mostrar el Windows Form. Para obtener más información, vea [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms con el método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md).  
   
 -   Muestre cada Windows Form en un subproceso independiente.  
   
@@ -35,19 +35,19 @@ Puede resolver problemas de interoperabilidad COM mostrando el formulario en un 
   
  Este enfoque requiere que cada instancia de un formulario se ejecuta en su propio subproceso usando su propio bucle de mensajes. No puede tener más de un bucle de mensajes en ejecución por subproceso. Por lo tanto, no puede cambiar el bucle de mensajes de la aplicación cliente. Sin embargo, puede modificar el componente [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para iniciar un nuevo subproceso que use su propio bucle de mensajes.  
   
- [!code-vb[System.Windows.Forms.ComInterop#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/COMForm.vb#1)]  
+ [!code-vb[System.Windows.Forms.ComInterop#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/COMForm.vb#1)]  
   
- [!code-vb[System.Windows.Forms.ComInterop#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/FormManager.vb#10)]  
+ [!code-vb[System.Windows.Forms.ComInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/FormManager.vb#10)]  
   
- [!code-vb[System.Windows.Forms.ComInterop#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/Form1.vb#100)]  
+ [!code-vb[System.Windows.Forms.ComInterop#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ComInterop/VB/Form1.vb#100)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
--   Compile los tipos `COMForm`, `Form1`y `FormManager` en un ensamblado llamado `COMWinform.dll`. Registre el ensamblado para la interoperabilidad COM usando uno de los métodos descritos en [Packaging an Assembly for COM](../../../../docs/framework/interop/packaging-an-assembly-for-com.md). Ahora puede usar el ensamblado y el archivo de biblioteca de tipos (.tlb) correspondiente en las aplicaciones no administradas. Por ejemplo, puede usar la biblioteca de tipos como una referencia en un proyecto ejecutable de Visual Basic 6.0.  
+-   Compile los tipos `COMForm`, `Form1`y `FormManager` en un ensamblado llamado `COMWinform.dll`. Registre el ensamblado para la interoperabilidad COM usando uno de los métodos descritos en [Packaging an Assembly for COM](../../interop/packaging-an-assembly-for-com.md). Ahora puede usar el ensamblado y el archivo de biblioteca de tipos (.tlb) correspondiente en las aplicaciones no administradas. Por ejemplo, puede usar la biblioteca de tipos como una referencia en un proyecto ejecutable de Visual Basic 6.0.  
   
 ## <a name="see-also"></a>Vea también
-- [Exponer componentes de .NET Framework en COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [Empaquetar un ensamblado para COM](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)
-- [Registrar ensamblados con COM](../../../../docs/framework/interop/registering-assemblies-with-com.md)
-- [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms con el método ShowDialog](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)
-- [Información general sobre formularios Windows Forms y aplicaciones no administradas](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications-overview.md)
+- [Exponer componentes de .NET Framework en COM](../../interop/exposing-dotnet-components-to-com.md)
+- [Empaquetar un ensamblado para COM](../../interop/packaging-an-assembly-for-com.md)
+- [Registrar ensamblados con COM](../../interop/registering-assemblies-with-com.md)
+- [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms con el método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Información general sobre formularios Windows Forms y aplicaciones no administradas](windows-forms-and-unmanaged-applications-overview.md)

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 964f2130c650d486bf8a20af96b74122b1450e05
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 4c3e20ad7a09cc21e6c1d2a6d8fbbc47d11c903d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304432"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703561"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Filtrar Agrupar elementos en un Control de ListView de Windows Forms mediante el diseñador
 La característica de agrupación de la <xref:System.Windows.Forms.ListView> control permite mostrar conjuntos relacionados de elementos en grupos. Estos grupos se separan en la pantalla con los encabezados de grupo horizontal que contienen los títulos de grupo. Puede usar <xref:System.Windows.Forms.ListView> grupos para facilitar la navegación sea más fácil de listas grandes mediante la agrupación de elementos por orden alfabético, por fecha, o por cualquier otra agrupación lógica. La imagen siguiente muestra algunos elementos agrupados.  
   
- ![Grupos ListView](../../../../docs/framework/winforms/controls/media/listviewgroups.gif "ListViewGroups")  
+ ![Grupos ListView](./media/listviewgroups.gif "ListViewGroups")  
   
- El procedimiento siguiente requiere una **aplicación Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.ListView> control. Para obtener información acerca de cómo configurar un proyecto de este tipo, vea [Cómo: Cree un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) y [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ El procedimiento siguiente requiere una **aplicación Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.ListView> control. Para obtener información acerca de cómo configurar un proyecto de este tipo, vea [Cómo: Cree un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) y [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md).  
   
  Para habilitar la agrupación, primero debe crear uno o varios <xref:System.Windows.Forms.ListViewGroup> objetos en el diseñador o mediante programación. Una vez que se ha definido un grupo, puede asignar elementos a él.  
   
@@ -29,7 +29,7 @@ La característica de agrupación de la <xref:System.Windows.Forms.ListView> con
   
 ### <a name="to-add-or-remove-groups-in-the-designer"></a>Para agregar o quitar grupos en el diseñador  
   
-1.  En el **propiedades** ventana, haga clic en el **puntos suspensivos** (![de pantalla de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) situado junto a el <xref:System.Windows.Forms.ListView.Groups%2A> propiedad.  
+1.  En el **propiedades** ventana, haga clic en el **puntos suspensivos** (![de pantalla de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) situado junto a el <xref:System.Windows.Forms.ListView.Groups%2A> propiedad.  
   
      El **Editor de la colección ListViewGroup** aparece.  
   
@@ -37,7 +37,7 @@ La característica de agrupación de la <xref:System.Windows.Forms.ListView> con
   
 ### <a name="to-assign-items-to-groups-in-the-designer"></a>Para asignar elementos a grupos en el diseñador  
   
-1.  En el **propiedades** ventana, haga clic en el **puntos suspensivos** (![de pantalla de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) situado junto a el <xref:System.Windows.Forms.ListView.Items%2A> propiedad.  
+1.  En el **propiedades** ventana, haga clic en el **puntos suspensivos** (![de pantalla de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) situado junto a el <xref:System.Windows.Forms.ListView.Items%2A> propiedad.  
   
      El **Editor de la colección ListViewItem** aparece.  
   
@@ -49,6 +49,6 @@ La característica de agrupación de la <xref:System.Windows.Forms.ListView> con
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>
 - <xref:System.Windows.Forms.ListViewGroup>
-- [ListView (Control)](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
-- [Información general del control ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
-- [Cómo: Agregar y quitar elementos con el Control ListView de formularios de Windows](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [ListView (Control)](listview-control-windows-forms.md)
+- [Información general del control ListView](listview-control-overview-windows-forms.md)
+- [Cómo: Agregar y quitar elementos con el Control ListView de formularios de Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

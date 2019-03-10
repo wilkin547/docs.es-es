@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: fa8bdf17f7dc7f6d09059e54b208acaec6207e48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 021cb448e5dbcb3ea1405d5cedaed1ae6d4f1b53
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604787"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709821"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Procedimiento Modificar el tamaño o la ubicación de una imagen en tiempo de ejecución (formularios Windows Forms)
 Si utiliza los formularios de Windows <xref:System.Windows.Forms.PictureBox> control en un formulario, puede establecer el <xref:System.Windows.Forms.PictureBox.SizeMode%2A> propiedad en él para:  
@@ -84,7 +84,7 @@ Si utiliza los formularios de Windows <xref:System.Windows.Forms.PictureBox> con
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.PictureBox>
-- [Cómo: Cargar una imagen mediante el diseñador](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Información general del control PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
-- [Cómo: Establecer imágenes en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)
-- [PictureBox (control)](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+- [Cómo: Cargar una imagen mediante el diseñador](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Información general del control PictureBox](picturebox-control-overview-windows-forms.md)
+- [Cómo: Establecer imágenes en tiempo de ejecución](how-to-set-pictures-at-run-time-windows-forms.md)
+- [PictureBox (control)](picturebox-control-windows-forms.md)

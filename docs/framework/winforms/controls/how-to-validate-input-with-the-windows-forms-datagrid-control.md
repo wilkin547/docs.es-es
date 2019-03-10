@@ -11,17 +11,17 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: 84057a2d9709963c7a7302110ab11931b86fcad9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dc8c8f157e6673c1bddc68bfb511683e6d2b99be
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497631"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720337"
 ---
-# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Procedimiento Validar la entrada con el Control DataGrid de Windows Forms
+# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Filtrar Validar la entrada con el Control DataGrid de Windows Forms
 
 > [!NOTE]
-> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).
+> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).
 
 Hay dos tipos de validación de entrada disponibles para los formularios de Windows <xref:System.Windows.Forms.DataGrid> control. Si el usuario intenta especificar un valor que es de un tipo de datos aceptable para la celda, por ejemplo, una cadena en un entero, el nuevo valor no válido se reemplaza con el valor anterior. Este tipo de validación de entrada se realiza automáticamente y no se pueden personalizar.
 
@@ -89,4 +89,4 @@ El otro tipo de validación de entrada puede utilizarse para rechazar todos los 
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>
 - <xref:System.Data.DataRow.SetColumnError%2A>
-- [DataGrid (control)](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [DataGrid (control)](datagrid-control-windows-forms.md)
