@@ -12,19 +12,19 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], navigating to URLs
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-ms.openlocfilehash: 599ae9fbaed3240efa05dc04f5b6dc4180e55cfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d592aea972a95a582cc35ecb14227edec5860ce
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524226"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707240"
 ---
-# <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a><span data-ttu-id="9a974-102">Procedimiento Navegue a una dirección URL con el Control WebBrowser</span><span class="sxs-lookup"><span data-stu-id="9a974-102">How to: Navigate to a URL with the WebBrowser Control</span></span>
-<span data-ttu-id="9a974-103">En el ejemplo de código siguiente se muestra cómo navegar hasta el <xref:System.Windows.Forms.WebBrowser> control a una dirección URL específica.</span><span class="sxs-lookup"><span data-stu-id="9a974-103">The following code example demonstrates how to navigate the <xref:System.Windows.Forms.WebBrowser> control to a specific URL.</span></span>  
+# <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a><span data-ttu-id="2671f-102">Procedimiento Navegue a una dirección URL con el Control WebBrowser</span><span class="sxs-lookup"><span data-stu-id="2671f-102">How to: Navigate to a URL with the WebBrowser Control</span></span>
+<span data-ttu-id="2671f-103">En el ejemplo de código siguiente se muestra cómo navegar hasta el <xref:System.Windows.Forms.WebBrowser> control a una dirección URL específica.</span><span class="sxs-lookup"><span data-stu-id="2671f-103">The following code example demonstrates how to navigate the <xref:System.Windows.Forms.WebBrowser> control to a specific URL.</span></span>  
   
- <span data-ttu-id="9a974-104">Para determinar cuándo se ha cargado completamente el documento nuevo, controle el <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> eventos.</span><span class="sxs-lookup"><span data-stu-id="9a974-104">To determine when the new document is fully loaded, handle the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event.</span></span> <span data-ttu-id="9a974-105">Para ver una demostración de este evento, vea [Cómo: Impresión con un Control WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md).</span><span class="sxs-lookup"><span data-stu-id="9a974-105">For a demonstration of this event, see [How to: Print with a WebBrowser Control](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md).</span></span>  
+ <span data-ttu-id="2671f-104">Para determinar cuándo se ha cargado completamente el documento nuevo, controle el <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> eventos.</span><span class="sxs-lookup"><span data-stu-id="2671f-104">To determine when the new document is fully loaded, handle the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event.</span></span> <span data-ttu-id="2671f-105">Para ver una demostración de este evento, vea [Cómo: Impresión con un Control WebBrowser](how-to-print-with-a-webbrowser-control.md).</span><span class="sxs-lookup"><span data-stu-id="2671f-105">For a demonstration of this event, see [How to: Print with a WebBrowser Control](how-to-print-with-a-webbrowser-control.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9a974-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9a974-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2671f-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2671f-106">Example</span></span>  
   
 ```vb  
 Me.webBrowser1.Navigate("http://www.microsoft.com")  
@@ -34,17 +34,17 @@ Me.webBrowser1.Navigate("http://www.microsoft.com")
 this.webBrowser1.Navigate("http://www.microsoft.com");  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="9a974-107">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="9a974-107">Compiling the Code</span></span>  
- <span data-ttu-id="9a974-108">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="9a974-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2671f-107">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="2671f-107">Compiling the Code</span></span>  
+ <span data-ttu-id="2671f-108">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="2671f-108">This example requires:</span></span>  
   
--   <span data-ttu-id="9a974-109">Control <xref:System.Windows.Forms.WebBrowser> denominado `webBrowser1`.</span><span class="sxs-lookup"><span data-stu-id="9a974-109">A <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1`.</span></span>  
+-   <span data-ttu-id="2671f-109">Control <xref:System.Windows.Forms.WebBrowser> denominado `webBrowser1`.</span><span class="sxs-lookup"><span data-stu-id="2671f-109">A <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1`.</span></span>  
   
--   <span data-ttu-id="9a974-110">Referencias a los ensamblados `System` y `System.Windows.Forms`.</span><span class="sxs-lookup"><span data-stu-id="9a974-110">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
+-   <span data-ttu-id="2671f-110">Referencias a los ensamblados `System` y `System.Windows.Forms`.</span><span class="sxs-lookup"><span data-stu-id="2671f-110">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a974-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="9a974-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2671f-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="2671f-111">See also</span></span>
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.DocumentCompleted?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=nameWithType>
-- [<span data-ttu-id="9a974-112">WebBrowser (control)</span><span class="sxs-lookup"><span data-stu-id="9a974-112">WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)
-- [<span data-ttu-id="9a974-113">Cómo: Imprimir con un Control WebBrowser</span><span class="sxs-lookup"><span data-stu-id="9a974-113">How to: Print with a WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
+- [<span data-ttu-id="2671f-112">WebBrowser (control)</span><span class="sxs-lookup"><span data-stu-id="2671f-112">WebBrowser Control</span></span>](webbrowser-control-windows-forms.md)
+- [<span data-ttu-id="2671f-113">Cómo: Imprimir con un Control WebBrowser</span><span class="sxs-lookup"><span data-stu-id="2671f-113">How to: Print with a WebBrowser Control</span></span>](how-to-print-with-a-webbrowser-control.md)
