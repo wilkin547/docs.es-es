@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 9ee357e343c5e060393359f0666886bef6b87b50
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: caef9590e57503171ab295f6e99b62d860bc0a81
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664359"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708059"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Representar controles con estilos visuales
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proporciona compatibilidad para representar controles y otros elementos de la interfaz de usuario (IU) de Windows usando estilos visuales en los sistemas operativos compatibles. En este tema se tratan los distintos niveles de compatibilidad de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para representar controles y otros elementos de IU con el estilo visual actual del sistema operativo.  
@@ -49,7 +49,7 @@ ms.locfileid: "56664359"
   
 -   <xref:System.Windows.Forms.TrackBarRenderer>  
   
- Para obtener más información sobre el uso de estas clases para dibujar un control, vea [Cómo: Usar un Control de clase de representación](../../../../docs/framework/winforms/controls/how-to-use-a-control-rendering-class.md).  
+ Para obtener más información sobre el uso de estas clases para dibujar un control, vea [Cómo: Usar un Control de clase de representación](how-to-use-a-control-rendering-class.md).  
   
 ## <a name="visual-style-element-and-rendering-classes"></a>Clases de representación y de elementos de estilos visuales  
  El espacio de nombres <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> incluye clases que se pueden usar para dibujar y obtener información sobre cualquier control o elemento de IU que sea compatible con los estilos visuales. Los controles compatibles incluyen controles comunes que tienen una clase de representación en el espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> (consulte la sección anterior), así como otros controles, como los controles de pestaña y los controles rebar. Otros elementos de IU compatibles incluyen las partes del menú **Inicio** , la barra de tareas y el área de no cliente de Windows.  
@@ -58,7 +58,7 @@ ms.locfileid: "56664359"
   
  <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> proporciona los métodos necesarios para dibujar y obtener información sobre cada clase <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> definida por el estilo visual actual del sistema operativo. En la información que se puede recuperar de un elemento se incluye su tamaño predeterminado, el tipo de fondo y las definiciones de color. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> ajusta la funcionalidad de la API de estilos visuales (UxTheme) desde la parte del Shell de Windows de Windows Platform SDK. Para obtener más información, consulte [Enabling Visual Styles](/windows/desktop/controls/cookbook-overview).  
   
- Para obtener más información sobre el uso de <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> y <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, vea [Cómo: Representar un elemento de estilo Visual](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md).  
+ Para obtener más información sobre el uso de <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> y <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, vea [Cómo: Representar un elemento de estilo Visual](how-to-render-a-visual-style-element.md).  
   
 ## <a name="enabling-visual-styles"></a>Habilitar los estilos visuales  
  Para habilitar los estilos visuales de una aplicación escrita para la versión 1.0 de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , los programadores deben incluir un manifiesto de aplicación que especifique que se usará la versión 6 o posterior de ComCtl32.dll para dibujar los controles. Para las aplicaciones compiladas con la versión 1.1 o posterior de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , se puede usar el método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> de la clase <xref:System.Windows.Forms.Application> .  
@@ -79,4 +79,4 @@ ms.locfileid: "56664359"
 >  Si quiere usar <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> para representar un control o un elemento de IU cuando el usuario habilita los estilos visuales o cambia de un estilo a otro, asegúrese de llevar a cabo esta acción cuando controle el evento <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> , no el evento <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> . Si usa la clase <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> al controlar <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>, se producirá una excepción.  
   
 ## <a name="see-also"></a>Vea también
-- [Custom Control Painting and Rendering](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md) (Pintura y representación personalizadas de controles)
+- [Custom Control Painting and Rendering](custom-control-painting-and-rendering.md) (Pintura y representación personalizadas de controles)
