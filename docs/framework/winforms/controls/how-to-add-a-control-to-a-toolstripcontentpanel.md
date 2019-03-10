@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
-ms.openlocfilehash: 193ad1e8c85e0b8830eb4f6efcb87a154b82949f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 23ec06c86454938b9cdf40c7a45a305a1f61e685
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442456"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720883"
 ---
 # <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>Filtrar Agregar un Control a un ToolStripContentPanel
 Puede agregar uno o más controles a <xref:System.Windows.Forms.ToolStripContentPanel> mediante programación.  
@@ -20,8 +20,8 @@ Puede agregar uno o más controles a <xref:System.Windows.Forms.ToolStripContent
 ## <a name="example"></a>Ejemplo  
  El ejemplo de código siguiente muestra cómo agregar un control <xref:System.Windows.Forms.RichTextBox> a un panel <xref:System.Windows.Forms.ToolStripContentPanel>.  
   
- [!code-csharp[System.Windows.Forms.ToolStripContainer#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripContainer/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.ToolStripContainer#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripContainer/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.ToolStripContainer#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripContainer/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStripContainer#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripContainer/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo de código se necesita:  
@@ -33,5 +33,5 @@ Puede agregar uno o más controles a <xref:System.Windows.Forms.ToolStripContent
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.ToolStripContentPanel>
 - <xref:System.Windows.Forms.ToolStripContainer>
-- [ToolStripContainer (control)](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)
-- [Control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [ToolStripContainer (control)](toolstripcontainer-control.md)
+- [Control ToolStrip](toolstrip-control-windows-forms.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 3e1aced8ecb4f85dd81c8a928422cbb7d0b10dcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa4d18c0e3bbc2613502c7232771c57acc7f0dc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564336"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721455"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Tutorial: Demostración de la herencia Visual
 La herencia visual le permite ver los controles del formulario base y agregar controles nuevos. En este tutorial, creará un formulario base y lo compilará para convertirlo en una biblioteca de clases. Importará la biblioteca de clases en otro proyecto y creará un nuevo formulario que herede del formulario base. Durante este tutorial aprenderá a:  
@@ -140,7 +140,7 @@ La herencia visual le permite ver los controles del formulario base y agregar co
   
 5.  Abra el formulario heredado (**Form2**) en el diseñador haciendo doble clic en él, si aún no está abierto.  
   
-     En el diseñador, los botones heredados tienen un símbolo (![captura de pantalla de VisualBasicInheritanceSymbol](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) en la esquina superior para indicar que son heredados.  
+     En el diseñador, los botones heredados tienen un símbolo (![captura de pantalla de VisualBasicInheritanceSymbol](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) en la esquina superior para indicar que son heredados.  
   
 6.  Seleccione el **Say Hello** botón y observe los controladores de tamaño. Como este botón está protegido, los herederos pueden moverlo, cambiarlo de tamaño, cambiar su descripción y realizar otras modificaciones.  
   
@@ -161,9 +161,9 @@ La herencia visual le permite ver los controles del formulario base y agregar co
 12. Presione F5 para ejecutar la aplicación y observe el comportamiento del formulario heredado.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- La herencia de los controles de usuario funciona más o menos de la misma manera. Abra un proyecto nuevo de biblioteca de clases y agregue un control de usuario. Coloque en él controles constituyentes y compile el proyecto. Abra otro proyecto nuevo de biblioteca de clases y agregue una referencia a la biblioteca de clases compilada. Además, pruebe a agregar un control heredado (a través de la **agregar nuevos elementos** cuadro de diálogo) al proyecto y el uso de la **selector de herencia**. Agregue un control de usuario y cambie la `Inherits` (`:` en Visual C#) instrucción. Para obtener más información, vea [Cómo: Heredar formularios Windows](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
+ La herencia de los controles de usuario funciona más o menos de la misma manera. Abra un proyecto nuevo de biblioteca de clases y agregue un control de usuario. Coloque en él controles constituyentes y compile el proyecto. Abra otro proyecto nuevo de biblioteca de clases y agregue una referencia a la biblioteca de clases compilada. Además, pruebe a agregar un control heredado (a través de la **agregar nuevos elementos** cuadro de diálogo) al proyecto y el uso de la **selector de herencia**. Agregue un control de usuario y cambie la `Inherits` (`:` en Visual C#) instrucción. Para obtener más información, vea [Cómo: Heredar formularios Windows](how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Heredar Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
-- [Herencia visual de Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [Cómo: Heredar Windows Forms](how-to-inherit-windows-forms.md)
+- [Herencia visual de Windows Forms](windows-forms-visual-inheritance.md)
+- [Windows Forms](../index.md)

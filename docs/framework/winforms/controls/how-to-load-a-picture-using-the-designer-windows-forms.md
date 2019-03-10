@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Cargar una imagen mediante el diseñador (formularios Windows Forms)
+title: Filtrar Cargar una imagen mediante el diseñador (formularios Windows Forms)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - picture formats
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: 6142474c2009e0998852dc28d346e73f4abbf1b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: febe1fc616bd1405e699c03fa673814a45976769
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539095"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723080"
 ---
-# <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Procedimiento Cargar una imagen mediante el diseñador (formularios Windows Forms)
+# <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Filtrar Cargar una imagen mediante el diseñador (formularios Windows Forms)
 Con los formularios de Windows <xref:System.Windows.Forms.PictureBox> control, puede cargar y mostrar una imagen en un formulario en tiempo de diseño estableciendo el <xref:System.Windows.Forms.PictureBox.Image%2A> propiedad en una imagen válida. En la tabla siguiente se muestra los tipos de archivo aceptables.  
   
 |Tipo|Extensión de nombre de archivo|  
@@ -45,7 +45,7 @@ Con los formularios de Windows <xref:System.Windows.Forms.PictureBox> control, p
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.PictureBox>
-- [Información general del control PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
-- [Cómo: Modificar el tamaño o la ubicación de una imagen en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [Cómo: Establecer imágenes en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)
-- [PictureBox (control)](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+- [Información general del control PictureBox](picturebox-control-overview-windows-forms.md)
+- [Cómo: Modificar el tamaño o la ubicación de una imagen en tiempo de ejecución](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Cómo: Establecer imágenes en tiempo de ejecución](how-to-set-pictures-at-run-time-windows-forms.md)
+- [PictureBox (control)](picturebox-control-windows-forms.md)

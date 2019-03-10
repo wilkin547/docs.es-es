@@ -2,12 +2,12 @@
 title: Detalles de las características de Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b7fed8c40c998ff0ecc0080139690614d985fc42
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492600"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721858"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Detalles de las características de Windows Workflow Foundation
 
@@ -43,9 +43,9 @@ El <xref:System.ServiceModel.WorkflowServiceHost> es el host de flujo de trabajo
 
 - Los ejemplos para <xref:System.ServiceModel.WorkflowServiceHost> se pueden encontrar en las siguientes secciones:
 
-    - [Ejecución](samples/execution.md)
+    - [Ejecución](./samples/execution.md)
 
-    - Aplicación: [Administración de instancias suspendidas](samples/suspended-instance-management.md)
+    - Aplicación: [Administración de instancias suspendidas](./samples/suspended-instance-management.md)
 
 - [Información general de servicios de flujo de trabajo de hospedaje](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -121,7 +121,7 @@ En .NET 3.5, había unas cuantas limitaciones en el diseño de tipos conocidos:
 
 - No era posible que los usuarios especificasen qué xsi:type preferirían que apareciese en la conexión para, por ejemplo, reducir el tamaño de una instancia de serialización en la conexión.
 
-El [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md) soluciona estos problemas en .NET 4.5.
+El [DataContractResolver](../wcf/samples/datacontractresolver.md) soluciona estos problemas en .NET 4.5.
 
 ### <a name="getting-started"></a>Introducción
 
@@ -131,9 +131,9 @@ El [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolv
 
 - Ejemplos:
 
-    - [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md)
+    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../../../docs/framework/wcf/samples/knownassemblyattribute.md)
+    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>Escenarios de resolución del contrato de datos
 
@@ -163,9 +163,9 @@ El diagrama de flujo es un paradigma conocido para representar visualmente los p
 
 - Ejemplos:
 
-    - [Control de errores en una actividad de diagrama de flujo utilizando TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+    - [Control de errores en una actividad de diagrama de flujo utilizando TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [Proceso de contratación](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [Proceso de contratación](./samples/hiring-process.md)
 
 - Documentación del diseñador:
 
@@ -197,9 +197,9 @@ Las actividades de procedimiento proporcionan un mecanismo para modelar el flujo
 
 - Ejemplos:
 
-    - [Proceso de contratación](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [Proceso de contratación](./samples/hiring-process.md)
 
-    - [Proceso de compra corporativa](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)
+    - [Proceso de compra corporativa](./samples/corporate-purchase-process.md)
 
 - Documentación del diseñador:
 
@@ -237,7 +237,7 @@ La actividad <xref:System.Activities.Statements.TryCatch> proporciona un mecanis
 
 - En Visual Studio 2012, cree una aplicación de consola de flujo de trabajo. Agregue una actividad <xref:System.Activities.Statements.TryCatch> en el diseñador de flujo de trabajo.
 
-- Ejemplo: [Control de errores en una actividad de diagrama de flujo utilizando TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+- Ejemplo: [Control de errores en una actividad de diagrama de flujo utilizando TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
 - Documentación del diseñador: [Diseñadores de actividad de control de errores](/visualstudio/workflow-designer/error-handling-activity-designers)
 
@@ -253,7 +253,7 @@ La actividad <xref:System.Activities.Statements.Pick> proporciona un modelado de
 
 - En Visual Studio 2012, cree una aplicación de consola de flujo de trabajo. Agregue una actividad <xref:System.Activities.Statements.Pick> en el diseñador de flujo de trabajo.
 
-- Ejemplo: [Uso de la actividad Pick](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)
+- Ejemplo: [Uso de la actividad Pick](./samples/using-the-pick-activity.md)
 
 - Documentación del diseñador: [Diseñador de actividades Pick](/visualstudio/workflow-designer/pick-activity-designer)
 
@@ -283,9 +283,9 @@ El servicio del enrutamiento en .NET 4 está diseñado para facilitar la soluci�
 
 ### <a name="getting-started"></a>Introducción
 
-1. Documentación: [Enrutamiento](../../../docs/framework/wcf/feature-details/routing.md)
+1. Documentación: [Enrutamiento](../wcf/feature-details/routing.md)
 
-2. Ejemplos: [Servicios de enrutamiento &#91;ejemplos de WCF&#93;](../../../docs/framework/wcf/samples/routing-services.md)
+2. Ejemplos: [Servicios de enrutamiento &#91;ejemplos de WCF&#93;](../wcf/samples/routing-services.md)
 
 3. Blog: [Reglas de enrutamiento.](https://go.microsoft.com/fwlink/?LinkId=204956)
 
@@ -317,9 +317,9 @@ Además, los mensajes de detección son válidos para distintos protocolos de re
 
 ### <a name="getting-started"></a>Introducción
 
-- Documentación: [Detección de WCF](../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- Documentación: [Detección de WCF](../wcf/feature-details/wcf-discovery.md)
 
-- Ejemplos: [Detección (ejemplos)](../../../docs/framework/wcf/samples/discovery-samples.md)
+- Ejemplos: [Detección (ejemplos)](../wcf/samples/discovery-samples.md)
 
 ### <a name="discovery-scenarios"></a>Escenarios de detección
 
@@ -343,9 +343,9 @@ Seguimiento de flujo de trabajo proporciona una visión de la ejecución de una 
 
     4. Observe los eventos de seguimiento de flujo de trabajo en el visor de eventos.
 
-3. Ejemplos: [Seguimiento](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)
+3. Ejemplos: [Seguimiento](./samples/tracking.md)
 
-4. Documentación conceptual: [Seguimiento y traza de flujos de trabajo](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+4. Documentación conceptual: [Seguimiento y traza de flujos de trabajo](workflow-tracking-and-tracing.md)
 
 ## <a name="sql-workflow-instance-store"></a>Almacén de instancias de flujo de trabajo de SQL
 
@@ -355,6 +355,6 @@ Seguimiento de flujo de trabajo proporciona una visión de la ejecución de una 
 
 1. En Visual Studio 2012, cree un flujo de trabajo que contiene un implícita o explícita <xref:System.Activities.Statements.Persist> actividad. Agregue el comportamiento de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> al host de servicio de flujo de trabajo. Esto se puede realizar en el código o en el archivo de configuración de la aplicación.
 
-2. Ejemplos: [Persistencia](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)
+2. Ejemplos: [Persistencia](./samples/persistence.md)
 
-3. Documentación conceptual: [Store de instancia de flujo de trabajo de SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).
+3. Documentación conceptual: [Store de instancia de flujo de trabajo de SQL](sql-workflow-instance-store.md).

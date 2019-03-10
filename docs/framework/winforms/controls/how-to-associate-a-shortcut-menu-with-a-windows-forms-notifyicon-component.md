@@ -10,12 +10,12 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: 142d40040872a0fbe4e679a8ad67ef0ca48b4753
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9e50aee63ec36ac005daabed27c3ac3c42a4dc9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573691"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720389"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Procedimiento Asociar un menú contextual con un componente NotifyIcon de formularios Windows Forms
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "54573691"
   
 1.  Agregar un <xref:System.Windows.Forms.NotifyIcon> al formulario y establecer las propiedades importantes, como el <xref:System.Windows.Forms.NotifyIcon.Icon%2A> y <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propiedades.  
   
-     Para obtener más información, vea [Cómo: Agregar iconos de aplicación a la barra de tareas con el Windows Forms control NotifyIcon](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+     Para obtener más información, vea [Cómo: Agregar iconos de aplicación a la barra de tareas con el Windows Forms control NotifyIcon](app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
 2.  Agregar un <xref:System.Windows.Forms.ContextMenu> al formulario de Windows.  
   
@@ -129,6 +129,6 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Cómo: Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de formularios de Windows](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)
-- [NotifyIcon (componente)](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)
-- [Información general sobre el componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)
+- [Cómo: Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de formularios de Windows](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [NotifyIcon (componente)](notifyicon-component-windows-forms.md)
+- [Información general sobre el componente NotifyIcon](notifyicon-component-overview-windows-forms.md)

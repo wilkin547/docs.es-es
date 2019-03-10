@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Proporcionar ayuda en una aplicación de Windows
+title: Filtrar Proporcionar ayuda en una aplicación de Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], Windows applications
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 00ee19f343d8f471d84f3dc8180e61b7354e3985
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738607"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724939"
 ---
-# <a name="how-to-provide-help-in-a-windows-application"></a>Procedimiento Proporcionar ayuda en una aplicación de Windows
+# <a name="how-to-provide-help-in-a-windows-application"></a>Filtrar Proporcionar ayuda en una aplicación de Windows
 Puede usar de la <xref:System.Windows.Forms.HelpProvider> componente para asociar los temas de ayuda dentro de un archivo de ayuda a controles específicos en los formularios de Windows. El archivo de ayuda puede ser HTML, HTMLHelp 1.x o superior.  
   
 > [!NOTE]
@@ -53,10 +53,10 @@ Puede usar de la <xref:System.Windows.Forms.HelpProvider> componente para asocia
 > [!IMPORTANT]
 >  Tenga cuidado de comprobar cualquier información que se envíe desde un cliente antes de utilizarla en su aplicación. Los usuarios malintencionados podrían intentar enviar o inyectar scripts ejecutables, instrucciones SQL u otro código. Antes de mostrar la entrada del usuario, almacénela en una base de datos o trabaje con ella, y compruebe que no contiene información potencialmente insegura. Una forma habitual de comprobación es utilizar una expresión regular para buscar palabras clave como "SCRIPT" cuando se recibe la entrada de un usuario.  
   
- También puede usar el <xref:System.Windows.Forms.HelpProvider> componente para mostrar Ayuda emergente, aunque se haya configurado para mostrar archivos de ayuda para los controles de formularios de Windows. Para obtener más información, vea [Cómo: Mostrar ayuda emergente](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
+ También puede usar el <xref:System.Windows.Forms.HelpProvider> componente para mostrar Ayuda emergente, aunque se haya configurado para mostrar archivos de ayuda para los controles de formularios de Windows. Para obtener más información, vea [Cómo: Mostrar ayuda emergente](how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Mostrar ayuda emergente](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)
-- [Controlar la ayuda mediante componentes Tooltip](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
-- [Integrar la Ayuda de usuario en Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [Cómo: Mostrar ayuda emergente](how-to-display-pop-up-help.md)
+- [Controlar la ayuda mediante componentes Tooltip](control-help-using-tooltips.md)
+- [Integrar la Ayuda de usuario en Windows Forms](integrating-user-help-in-windows-forms.md)
+- [Windows Forms](../index.md)

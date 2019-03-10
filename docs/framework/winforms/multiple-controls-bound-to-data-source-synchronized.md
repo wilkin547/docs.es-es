@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: c6930acb57aa3c311c76b1a2acd3bbca213d1f24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558896"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721390"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Procedimiento Garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados
 A menudo, cuando se trabaja con enlace de datos en Windows Forms, varios controles están enlazados al mismo origen de datos. En algunos casos, puede ser necesario realizar pasos adicionales para asegurarse de que permanezcan sincronizadas entre sí y el origen de datos con las propiedades de los controles enlazadas. Estos pasos son necesarios en dos situaciones:  
@@ -29,8 +29,8 @@ A menudo, cuando se trabaja con enlace de datos en Windows Forms, varios control
   
  El ejemplo se usa un <xref:System.Windows.Forms.BindingSource> para enlazar el origen de datos y los controles. Como alternativa, puede enlazar los controles directamente al origen de datos y recuperar el <xref:System.Windows.Forms.BindingManagerBase> para el enlace desde el formulario <xref:System.Windows.Forms.Control.BindingContext%2A> y, a continuación, controlar el <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> eventos para el <xref:System.Windows.Forms.BindingManagerBase>. Para obtener un ejemplo de cómo hacerlo, consulte la página de ayuda la <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> událostí <xref:System.Windows.Forms.BindingManagerBase>.  
   
- [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
@@ -41,7 +41,7 @@ A menudo, cuando se trabaja con enlace de datos en Windows Forms, varios control
 -   Un formulario con el <xref:System.Windows.Forms.Form.Load> evento como controlado y una llamada a la `InitializeControlsAndDataSource` método en el ejemplo desde el formulario <xref:System.Windows.Forms.Form.Load> controlador de eventos.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Compartir datos enlazados entre formularios mediante el componente BindingSource](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
-- [Notificación de cambios en el enlace de datos de Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Interfaces relacionadas con el enlace de datos](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)
-- [Enlace de datos en Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Cómo: Compartir datos enlazados entre formularios mediante el componente BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [Notificación de cambios en el enlace de datos de Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Interfaces relacionadas con el enlace de datos](interfaces-related-to-data-binding.md)
+- [Enlace de datos en Windows Forms](windows-forms-data-binding.md)

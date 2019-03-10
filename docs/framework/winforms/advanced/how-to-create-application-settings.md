@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: 52687347707139ba583ef4dfdeebbb41d568e95c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: d540715c0b4c69b2981cc65f55b0fa950c5a4eaf
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441364"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721247"
 ---
 # <a name="how-to-create-application-settings"></a>Filtrar Crear configuración de la aplicación
 Usando código administrado, puede crear una nueva opción de configuración de la aplicación y enlazarla a las propiedades o a los controles del formulario para que esta opción de configuración se cargue y se guarde automáticamente en tiempo de ejecución.  
@@ -26,20 +26,20 @@ Usando código administrado, puede crear una nueva opción de configuración de 
   
 1.  Agregue una nueva clase al proyecto y cámbiele el nombre. Para este procedimiento, llamaremos a esta clase `MyUserSettings`. Cambie la definición de clase para que la clase derive de <xref:System.Configuration.ApplicationSettingsBase>.  
   
-2.  Defina una propiedad en esta clase contenedora para cada opción de configuración de la aplicación que necesite y aplique esa propiedad con los atributos <xref:System.Configuration.ApplicationScopedSettingAttribute> o <xref:System.Configuration.UserScopedSettingAttribute>, según el ámbito de la opción de configuración. Para obtener más información acerca del ámbito de configuración, consulte [Application Settings Overview](../../../../docs/framework/winforms/advanced/application-settings-overview.md). En este momento, el código debe ser similar al siguiente:  
+2.  Defina una propiedad en esta clase contenedora para cada opción de configuración de la aplicación que necesite y aplique esa propiedad con los atributos <xref:System.Configuration.ApplicationScopedSettingAttribute> o <xref:System.Configuration.UserScopedSettingAttribute>, según el ámbito de la opción de configuración. Para obtener más información acerca del ámbito de configuración, consulte [Application Settings Overview](application-settings-overview.md). En este momento, el código debe ser similar al siguiente:  
   
-     [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
-     [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
+     [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
+     [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
 3.  Cree una instancia de esta clase contenedora en la aplicación. Normalmente será un miembro privado del formulario principal. Ahora que ha definido la clase, necesita enlazarla a una propiedad; en este caso, la propiedad <xref:System.Windows.Forms.Form.BackColor%2A> del formulario. Puede hacerlo en el formulario `Load` controlador de eventos.  
   
-     [!code-csharp[ApplicationSettings.Create#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#2)]
-     [!code-vb[ApplicationSettings.Create#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#2)]  
+     [!code-csharp[ApplicationSettings.Create#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#2)]
+     [!code-vb[ApplicationSettings.Create#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#2)]  
   
 4.  Si proporciona una manera de cambiar la configuración en tiempo de ejecución, tendrá que guardar la configuración actual del usuario en el disco cuando el formulario se cierre o los cambios se perderán.  
   
-     [!code-csharp[ApplicationSettings.Create#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#3)]
-     [!code-vb[ApplicationSettings.Create#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#3)]  
+     [!code-csharp[ApplicationSettings.Create#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#3)]
+     [!code-vb[ApplicationSettings.Create#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#3)]  
   
      Ya ha creado una nueva opción de configuración de la aplicación y la ha enlazado a la propiedad especificada.  
   
@@ -49,5 +49,5 @@ Usando código administrado, puede crear una nueva opción de configuración de 
 ## <a name="see-also"></a>Vea también
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [Introducción a la configuración de la aplicación](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [Cómo: Validar la configuración de la aplicación](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+- [Introducción a la configuración de la aplicación](application-settings-overview.md)
+- [Cómo: Validar la configuración de la aplicación](how-to-validate-application-settings.md)

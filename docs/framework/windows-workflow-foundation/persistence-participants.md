@@ -2,12 +2,12 @@
 title: Participantes de persistencia
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: 66178adda593192678542ebf5ed8906e0dffc908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8392bd756d8315a72d9df131476414f8982cf03
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569510"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723769"
 ---
 # <a name="persistence-participants"></a>Participantes de persistencia
 Un participante de persistencia puede tomar parte en una operación de persistencia (guardar o cargar) desencadenada por un host de la aplicación. El [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] se suministra con dos clases abstractas, **PersistenceParticipant** y **PersistenceIOParticipant**, que puede usar para crear un participante de persistencia. Un participante de persistencia se deriva de una de estas clases, implementa los métodos de interés y, a continuación, agrega una instancia de la clase a la colección <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> del objeto <xref:System.ServiceModel.Activities.WorkflowServiceHost>. El host de la aplicación puede buscar estas extensiones de flujo de trabajo cuando se conserve una instancia de flujo de trabajo e invocar los métodos apropiados en los participantes de persistencia en los momentos adecuados.  
@@ -58,7 +58,7 @@ Un participante de persistencia puede tomar parte en una operación de persisten
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Cómo: Crear a un participante de persistencia personalizado](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
+-   [Cómo: Crear a un participante de persistencia personalizado](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Vea también
-- [Extensibilidad de almacén](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)
+- [Extensibilidad de almacén](store-extensibility.md)

@@ -2,12 +2,12 @@
 title: Perfiles de seguimiento
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: f7acb46e16894dd287512541ad4c2be1adafb42a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482306"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721377"
 ---
 # <a name="tracking-profiles"></a>Perfiles de seguimiento
 
@@ -344,7 +344,7 @@ Los elementos de consulta de seguimiento se usan para crear un perfil de seguimi
 > [!WARNING]
 > Para que WF use el host de servicio de flujo de trabajo, el perfil de seguimiento se crea normalmente con un archivo de configuración. También es posible crear un perfil de seguimiento con código que use el perfil de seguimiento y la API de consulta de seguimiento.
 
-Los perfiles configurados como un archivo de configuración XML se aplican a un participante de seguimiento mediante una extensión de comportamiento. Esto se agrega a WorkflowServiceHost tal como se describe en la sección posterior [configuración del seguimiento para un flujo de trabajo](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).
+Los perfiles configurados como un archivo de configuración XML se aplican a un participante de seguimiento mediante una extensión de comportamiento. Esto se agrega a WorkflowServiceHost tal como se describe en la sección posterior [configuración del seguimiento para un flujo de trabajo](configuring-tracking-for-a-workflow.md).
 
 El nivel de detalle de los registros del seguimiento emitidos por el host está determinado por los valores de configuración en el perfil de seguimiento. Un participante de seguimiento se suscribe a los registros de seguimiento mediante la adición de consultas a un perfil de seguimiento. Para suscribirse a todos los registros de seguimiento, debe especificar todas las consultas de seguimiento mediante el perfil de seguimiento "\*" en los campos de nombre en cada una de las consultas.
 
@@ -387,6 +387,6 @@ A continuación, se especifican algunos ejemplos comunes de perfiles de seguimie
 
 ## <a name="see-also"></a>Vea también
 
-- [Seguimiento de SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [Seguimiento de SQL](./samples/sql-tracking.md)
 - [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

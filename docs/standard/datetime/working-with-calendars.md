@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f6b758dd509ac2d318180c014ac3d262fe331f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b116944a45546604d1d60a5a44afcce8fee2f026
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623240"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721520"
 ---
 # <a name="working-with-calendars"></a>Trabajar con calendarios
 
@@ -138,7 +138,7 @@ Sin embargo, hay una excepción importante. El valor (sin inicializar) predeterm
 Los calendarios suelen dividir las fechas en eras. Sin embargo, el <xref:System.Globalization.Calendar> las clases de .NET no admiten todas las eras definidas por un calendario y la mayoría de los <xref:System.Globalization.Calendar> clases admiten solo una era. Únicamente las clases <xref:System.Globalization.JapaneseCalendar> y <xref:System.Globalization.JapaneseLunisolarCalendar> admiten varias eras.
 
 > [!IMPORTANT]
->  El día 1 de mayo de 2019 empieza una nueva era para <xref:System.Globalization.JapaneseCalendar> y <xref:System.Globalization.JapaneseLunisolarCalendar>. Este cambio afecta a todas las aplicaciones que usan estos calendarios. Para obtener más información y determinar si sus aplicaciones están entre las afectadas, consulte [Handling a new era in the Japanese calendar in .NET](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/) (Gestión de una nueva era del calendario japonés en .NET). Consulte [preparar la aplicación para que el cambio era japonés](/windows/uwp/design/globalizing/japanese-era-change) para obtener información sobre cómo probar sus aplicaciones en Windows para garantizar su disponibilidad para que el cambio era.
+>  El día 1 de mayo de 2019 empieza una nueva era para <xref:System.Globalization.JapaneseCalendar> y <xref:System.Globalization.JapaneseLunisolarCalendar>. Este cambio afecta a todas las aplicaciones que usan estos calendarios. Para obtener más información y determinar si sus aplicaciones están entre las afectadas, consulte [Handling a new era in the Japanese calendar in .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/) (Gestión de una nueva era del calendario japonés en .NET). Consulte [preparar la aplicación para que el cambio era japonés](/windows/uwp/design/globalizing/japanese-era-change) para obtener información sobre cómo probar sus aplicaciones en Windows para garantizar su disponibilidad para que el cambio era.
 
 ### <a name="eras-and-era-names"></a>Eras y nombres de era
 

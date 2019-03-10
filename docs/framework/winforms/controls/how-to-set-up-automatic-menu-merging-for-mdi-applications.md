@@ -5,14 +5,14 @@ helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
-ms.openlocfilehash: 3aeaf9ee4818b6689905c10d2bd46fc887609c35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 152db39e7c947d5a49eaed81b00d13c02aa8014c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549829"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719741"
 ---
-# <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>Procedimiento Configurar la combinación automática de menús para aplicaciones MDI
+# <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>Filtrar Configurar la combinación automática de menús para aplicaciones MDI
 El siguiente procedimiento proporcionan los pasos básicos para configurar la combinación automática en una aplicación de interfaz de múltiples documentos (MDI) con <xref:System.Windows.Forms.MenuStrip>.  
   
 ### <a name="to-set-up-automatic-menu-merging"></a>Para configurar la combinación automática de menús  
@@ -34,4 +34,4 @@ El siguiente procedimiento proporcionan los pasos básicos para configurar la co
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Información general sobre el control MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [Información general sobre el control MenuStrip](menustrip-control-overview-windows-forms.md)

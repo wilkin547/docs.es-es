@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], sorting data
 - DataGridView control [Windows Forms], sorting data
 ms.assetid: c1d4f24c-d961-4181-809d-5a5caa6122e4
-ms.openlocfilehash: 588678b3ba0d75fea58709c1969a3e276d65439e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 606ffc7bd6136b775adaaaa79cf5042cf1e2dd70
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688290"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724926"
 ---
 # <a name="sorting-data-in-the-windows-forms-datagridview-control"></a>Ordenar datos en el control DataGridView de formularios Windows Forms
 
@@ -19,13 +19,13 @@ De forma predeterminada, los usuarios pueden ordenar los datos en un <xref:Syste
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Modos de ordenación de columnas del control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)  
+[Modos de ordenación de columnas del control DataGridView de Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)  
 Describe las opciones para ordenar los datos en el control.
 
-[Cómo: Establecer modos de ordenación de columnas en el Control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)  
+[Cómo: Establecer modos de ordenación de columnas en el Control DataGridView de Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)  
 Describe cómo habilitar usuarios ordenar por columnas que no se puede ordenar de forma predeterminada.
 
-[Cómo: Personalizar la ordenación en el Control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
+[Cómo: Personalizar la ordenación en el Control DataGridView de Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
 Describe cómo ordenar los datos mediante programación y cómo personalizar la ordenación mediante el uso de la <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType> eventos o implementando la <xref:System.Collections.IComparer> interfaz.
 
 ## <a name="reference"></a>Referencia
@@ -44,5 +44,5 @@ Proporciona documentación de referencia para el <xref:System.Windows.Forms.Data
 
 ## <a name="see-also"></a>Vea también
 
-- [DataGridView (control)](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [Tipos de columnas en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+- [DataGridView (control)](datagridview-control-windows-forms.md)
+- [Tipos de columnas en el control DataGridView de Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

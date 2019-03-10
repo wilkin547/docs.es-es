@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 869ef0d7717ca64209bc61c2ae22ce929edcec5e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 71b17e8a4bedca54cb7fff5f14ce28a0c572fe88
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967872"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722672"
 ---
-# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Filtrar Conectar varios eventos con un único controlador de eventos en Windows Forms
+# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Procedimiento Conectar varios eventos con un único controlador de eventos en Windows Forms
 En el diseño de aplicaciones, puede que sea necesario para usar un único controlador de eventos para varios eventos o tener varios eventos de realizar el mismo procedimiento. Por ejemplo, a menudo es ahorrar mucho tiempo si un comando de menú producen el mismo evento que un botón en el formulario si expone la misma funcionalidad. Puede hacerlo mediante el uso de la vista eventos de la ventana Propiedades de C# o mediante el `Handles` palabra clave y el **nombre de la clase** y **nombre del método** listas desplegables en el Editor de código de Visual Basic.  
   
 ### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>Para conectar varios eventos con un único controlador de eventos en Visual Basic  
@@ -50,7 +50,7 @@ En el diseño de aplicaciones, puede que sea necesario para usar un único contr
   
 1.  Seleccione el control al que desea conectarse a un controlador de eventos.  
   
-2.  En la ventana Propiedades, haga clic en el **eventos** botón (![botón eventos](../../../docs/framework/winforms/media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).  
+2.  En la ventana Propiedades, haga clic en el **eventos** botón (![botón eventos](./media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).  
   
 3.  Haga clic en el nombre del evento que desea controlar.  
   
@@ -61,5 +61,5 @@ En el diseño de aplicaciones, puede que sea necesario para usar un único contr
      Se agregará código al formulario para enlazar el evento al controlador de eventos existente.  
   
 ## <a name="see-also"></a>Vea también
-- [Crear controladores de eventos en Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Información general sobre controladores de eventos](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md)
+- [Información general sobre controladores de eventos](event-handlers-overview-windows-forms.md)
