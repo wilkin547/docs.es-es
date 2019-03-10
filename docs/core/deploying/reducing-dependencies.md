@@ -4,16 +4,16 @@ description: Reduzca las dependencias de paquete al crear bibliotecas basadas en
 author: cartermp
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 932344ff40dd32793727fbce7bc0d6cd02592f8b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168288"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674970"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Reducción de dependencias de paquete con project.json
 
-En este artículo se analiza todo lo que necesita saber sobre cómo reducir las dependencias de paquete cuando se crean bibliotecas `project.json`. Al final de este artículo, habrá aprendido a redactar la biblioteca de manera tal que solo use las dependencias necesarias. 
+En este artículo se analiza todo lo que necesita saber sobre cómo reducir las dependencias de paquete cuando se crean bibliotecas `project.json`. Al final de este artículo, habrá aprendido a redactar la biblioteca de manera tal que solo use las dependencias necesarias.
 
 ## <a name="why-its-important"></a>Por qué es importante
 
@@ -27,18 +27,17 @@ Actualmente, no hay ningún comando de `dotnet` oficial que recorte las referenc
 
 1. Haga referencia a `NETStandard.Library` versión `1.6.0` en una sección `dependencies` del `project.json`.
 2. Restaure paquetes con `dotnet restore` ([vea la nota](#dotnet-restore-note)) desde la línea de comandos.
-3. Revise el archivo `project.lock.json` y encuentre la sección `NETSTandard.Library`.  Se encuentra cerca del comienzo del archivo.
+3. Revise el archivo `project.lock.json` y encuentre la sección `NETStandard.Library`.  Se encuentra cerca del comienzo del archivo.
 4. Copie todos los paquetes que aparecen en `dependencies`.
 5. Quite la referencia a `.NETStandard.Library` y reemplácela por los paquetes copiados.
 6. Quite las referencias a paquetes que no necesita.
-
 
 Una de las siguientes formas le permite saber cuáles son los paquetes que no necesita:
 
 1. Prueba y error.  Esto implica quitar un paquete, realizar la restauración, ver si la biblioteca se compila y repetir este proceso.
 2. Mediante el uso de una herramienta como [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) o [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) para echar un vistazo a las referencias y ver las que realmente usa el código.  De ese modo, puede quitar los paquetes que no corresponden a los tipos que usa.
 
-## <a name="example"></a>Ejemplo 
+## <a name="example"></a>Ejemplo
 
 Imagine que escribió una biblioteca que brindó una funcionalidad adicional a los tipos de colección genéricos.  Dicha biblioteca debería depender de paquetes como `System.Collections`, pero probablemente no dependería para nada de paquetes tales como `System.Net.Http`.  Por lo tanto, sería bueno recortar las dependencias de paquete para que solo queden las que necesita esta biblioteca.
 
@@ -56,7 +55,7 @@ Para recortar esta biblioteca, comience con el archivo `project.json` y agregue 
 }
 ```
 
-Luego, restaure los paquetes con `dotnet restore` ([vea la nota](#dotnet-restore-note)), revise el archivo `project.lock.json` y encuentre todos los paquetes restaurados para `NETSTandard.Library`.
+Luego, restaure los paquetes con `dotnet restore` ([vea la nota](#dotnet-restore-note)), revise el archivo `project.lock.json` y encuentre todos los paquetes restaurados para `NETStandard.Library`.
 
 Aquí puede ver el aspecto que tiene la sección correspondiente del archivo `project.lock.json` cuando se tiene como destino `netstandard1.0`:
 

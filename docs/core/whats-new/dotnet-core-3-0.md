@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 47a5ae3e81b0320a094ecc79e6b08035de66e785
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 89264098ed17b398c83bc2dcddd98d9d8fc958f7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443080"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679741"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>Novedades de .NET Core 3.0 (versión preliminar 2)
 
@@ -24,16 +24,16 @@ En este artículo se describen las novedades de .NET Core 3.0 (versión prelimin
 
 Para más información sobre lo que se ha publicado con cada versión, vea los anuncios siguientes:
 
-- [Anuncio de la versión preliminar 1 de .NET Core 3.0](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-- [Anuncio de la versión preliminar 2 de .NET Core 3.0](https://blogs.msdn.microsoft.com/dotnet/2019/01/29/announcing-net-core-3-preview-2/)
+- [Anuncio de la versión preliminar 1 de .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [Anuncio de la versión preliminar 2 de .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8
 
 .NET Core 3.0 admite C# 8 y, a partir de .NET Core 3.0 (versión preliminar 2), admite estas nuevas características. Para obtener más información sobre las características de C# 8.0, consulte las siguientes entradas de blog:
 
-- [Do more with patterns in C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/) (Hacer más con patrones en C# 8.0)
-- [Take C# 8.0 for a spin](https://blogs.msdn.microsoft.com/dotnet/2018/12/05/take-c-8-0-for-a-spin/) (Probar C# 8.0)
-- [Building C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2018/11/12/building-c-8-0/) (Compilación de C# 8.0)
+- [Do more with patterns in C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/) (Hacer más con patrones en C# 8.0)
+- [Take C# 8.0 for a spin](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/) (Probar C# 8.0)
+- [Building C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/) (Compilación de C# 8.0)
 
 
 ### <a name="ranges-and-indices"></a>Rangos e índices
@@ -108,7 +108,7 @@ Los patrones le permiten escribir código declarativo que captura su intención 
 
 Seguirá habiendo casos en los que las *instrucciones switch* sean una opción mejor que las *expresiones switch* y los patrones puedan usarse con ambos estilos de sintaxis.
 
-Para obtener más información, consulte [Do more with patterns in C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/) (Hacer más con patrones en C# 8.0).
+Para obtener más información, consulte [Do more with patterns in C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/) (Hacer más con patrones en C# 8.0).
 
 ## <a name="ieee-floating-point-improvements"></a>Mejoras de punto flotante de IEEE
 
@@ -271,7 +271,7 @@ dotnet new winforms
 
 Visual Studio 2019 (versión preliminar 2) agrega plantillas de **nuevo proyecto** para WPF y Windows Forms de .NET Core 3.0. Los diseñadores aún no se admiten. Y puede abrir, iniciar y depurar estos proyectos en Visual Studio 2019.
 
-Visual Studio 2017 15.9 agrega la capacidad de [habilitar versiones preliminares de .NET Core](https://blogs.msdn.microsoft.com/dotnet/2018/11/13/net-core-tooling-update-for-visual-studio-2017-version-15-9/), pero debe activar esa característica y no es un escenario admitido.
+Visual Studio 2017 15.9 agrega la capacidad de [habilitar versiones preliminares de .NET Core](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/), pero debe activar esa característica y no es un escenario admitido.
 
 Los nuevos proyectos son los mismos que los existentes de .NET Core, con algunas adiciones. Esta es la comparación del proyecto de consola de .NET Core básico y un proyecto básico de Windows Forms y WPF.
 
@@ -730,9 +730,9 @@ Las mejoras siguientes también son nuevas en la versión preliminar 1 de .NET C
 
 ## <a name="tiered-compilation"></a>Compilación en niveles
 
-La [compilación en niveles](https://blogs.msdn.microsoft.com/dotnet/2018/08/02/tiered-compilation-preview-in-net-core-2-1/) está activada de forma predeterminada con .NET Core 3.0. Se trata de una característica que permite que el entorno de ejecución use de forma más adaptable el compilador Just-In-Time (JIT) para obtener un mejor rendimiento, tanto en el inicio como al maximizar el rendimiento.
+La [compilación en niveles](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) está activada de forma predeterminada con .NET Core 3.0. Se trata de una característica que permite que el entorno de ejecución use de forma más adaptable el compilador Just-In-Time (JIT) para obtener un mejor rendimiento, tanto en el inicio como al maximizar el rendimiento.
 
-Se agregó como una característica opcional en [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/) y, más tarde, se habilitó de forma predeterminada en la [versión preliminar 2 de .NET Core 2.2](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/). Posteriormente, se revirtió a opcional con .NET Core 2.2.
+Se agregó como una característica opcional en [.NET Core 2.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/) y, más tarde, se habilitó de forma predeterminada en la [versión preliminar 2 de .NET Core 2.2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/). Posteriormente, se revirtió a opcional con .NET Core 2.2.
 
 ## <a name="arm64-linux-support"></a>Compatibilidad con ARM64 para Linux
 

@@ -3,12 +3,12 @@ title: Sobre .NET Core
 description: Obtenga información sobre .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: c9247a33d59571c10dc59e91968c2b1c60006a50
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 6c76d5e80cba6947eb5a91fb31fc3e511970d165
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058560"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675971"
 ---
 # <a name="about-net-core"></a>Sobre .NET Core
 
@@ -34,7 +34,7 @@ Los lenguajes C#, Visual Basic y F# pueden usarse para escribir aplicaciones y b
 - Colecciones, como <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> y <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Tipos de utilidades, como <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> y <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Tipos de datos, como <xref:System.Data.DataSet?displayProperty=nameWithType> y [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
-- Tipos de alto rendimiento, como <xref:System.Numerics.Vector?displayProperty=nameWithType> y [Canalizaciones](https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/).
+- Tipos de alto rendimiento, como <xref:System.Numerics.Vector?displayProperty=nameWithType> y [Canalizaciones](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/).
 
 .NET Core proporciona compatibilidad con las API .NET Framework y Mono API implementando la especificación de [.NET Standard](../standard/net-standard.md).
 
@@ -95,7 +95,7 @@ Microsoft presentó la plataforma .NET en el año 2000, y a partir de ese moment
 
 Las principales diferencias entre .NET Core y .NET Framework son:
 
-- **Modelos de aplicación**: .NET Core no es compatible con todos los modelos de aplicación de .NET Framework. En concreto, no es compatible con los formularios Web Forms ASP.NET ni ASP.NET MVC, pero sí con ASP.NET Core MVC. Se anunció que [.NET Core 3 será compatible con WPF y Windows Forms](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/).
+- **Modelos de aplicación**: .NET Core no es compatible con todos los modelos de aplicación de .NET Framework. En concreto, no es compatible con los formularios Web Forms ASP.NET ni ASP.NET MVC, pero sí con ASP.NET Core MVC. Se anunció que [.NET Core 3 será compatible con WPF y Windows Forms](https://devblogs.microsoft.com/dotnet/net-core-3-and-support-for-windows-desktop-applications/).
 - **API**: .NET Core contiene un amplio subconjunto de bibliotecas de clases base de .NET Framework con una factorización distinta (los nombres de ensamblado son distintos y los miembros expuestos en los tipos difieren en los casos clave). Estas diferencias requieren cambios en el origen del puerto de .NET Core en algunos casos (vea [microsoft/dotnet-apiport](https://github.com/microsoft/dotnet-apiport)). .NET Core implementa la especificación de la API [.NET Standard](../standard/net-standard.md).
 - **Subsistemas**: .NET Core implementa un subconjunto de los subsistemas de .NET Framework, de cara a una implementación y un modelo de programación más sencillos. Por ejemplo, no se admite seguridad de acceso del código (CAS), aunque se admite la reflexión.
 - **Plataformas**: .NET Framework admite Windows y Windows Server, mientras que .NET Core también es compatible con macOS y Linux.

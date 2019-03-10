@@ -4,12 +4,12 @@ description: Este tutorial enseña cómo crear una aplicación básica de .NET C
 ms.date: 10/11/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: addaabb41e57e03a5cf4ec5b2fa3b8b4f3089b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169591"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372924"
 ---
 # <a name="how-to-containerize-a-net-core-application"></a>Cómo incluir una aplicación de .NET Core en un contenedor
 
@@ -159,7 +159,7 @@ La instrucción [**COPY**](https://docs.docker.com/engine/reference/builder/#cop
 COPY *.csproj ./
 ```
 
-La instrucción [**RUN**](https://docs.docker.com/engine/reference/builder/#run) ejecuta los comandos en una nueva capa sobre la imagen actual y confirma los resultados. La imagen resultante confirmada se usa para el siguiente paso en el Dockerfile. Se está ejecutando **dotnet restore** para obtener las dependencias necesarias del archivo de proyecto de C#. 
+La instrucción [**RUN**](https://docs.docker.com/engine/reference/builder/#run) ejecuta los comandos en una nueva capa sobre la imagen actual y confirma los resultados. La imagen resultante confirmada se usa para el siguiente paso en el Dockerfile. Se está ejecutando **dotnet restore** para obtener las dependencias necesarias del archivo de proyecto de C#.
 
 ```Dockerfile
 RUN dotnet restore
@@ -263,7 +263,7 @@ Estos son algunos de los pasos que puede realizar a continuación:
 * [Docker para tutoriales rápidos de Azure](https://docs.docker.com/docker-for-azure/#docker-community-edition-ce-for-azure)
 * [Implementar la aplicación en Docker para Azure](https://docs.docker.com/docker-for-azure/deploy/)
 
-> [!Note]
+> [!NOTE]
 > Si no tiene una suscripción de Azure, [regístrese hoy](https://azure.microsoft.com/free/?b=16.48) para obtener una cuenta gratuita durante 30 días y obtenga 200 dólares en créditos de Azure para probar cualquier combinación de servicios de Azure.
 
 ## <a name="docker-images-used-in-this-sample"></a>Imágenes de Docker usadas en este ejemplo

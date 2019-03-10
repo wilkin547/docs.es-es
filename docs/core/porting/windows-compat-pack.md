@@ -4,12 +4,12 @@ description: Obtenga información sobre el paquete de compatibilidad de Windows 
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 09c5533dbc46d16585b7f3cbfd2a3a70819ceb75
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: c4fd888e0fbce86ab317f18fd77374af5d3ca244
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903743"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717900"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Uso del paquete de compatibilidad de Windows para trasladar código a .NET Core
 
@@ -53,7 +53,7 @@ Para más información, vea las [especificaciones del paquete de compatibilidad]
 
 3. Si quiere permanecer en Windows, ya está listo.
 
-4. Si quiere ejecutar la aplicación .NET Core o la biblioteca de .NET Standard en Linux o macOS, use el [analizador de API](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) para informarse de qué API no funcionan en varias plataformas.
+4. Si quiere ejecutar la aplicación .NET Core o la biblioteca de .NET Standard en Linux o macOS, use el [analizador de API](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) para informarse de qué API no funcionan en varias plataformas.
 
 5. Quite esas API, reemplácelas con alternativas multiplataforma o restrínjalas con una comprobación de plataforma, como:
 
