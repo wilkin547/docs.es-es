@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: ad91f7591e2fa07605fe4f7ac026b7c969ab7ef0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a1abfaeab735746edbf089d576dc6f56dc4a6eea
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678944"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712778"
 ---
-# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a><span data-ttu-id="d2922-102">Procedimiento Cambiar los estilos de un elemento en el modelo de objetos de documento HTML administrado</span><span class="sxs-lookup"><span data-stu-id="d2922-102">How to: Change Styles on an Element in the Managed HTML Document Object Model</span></span>
+# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a><span data-ttu-id="e1c4e-102">Procedimiento Cambiar los estilos de un elemento en el modelo de objetos de documento HTML administrado</span><span class="sxs-lookup"><span data-stu-id="e1c4e-102">How to: Change Styles on an Element in the Managed HTML Document Object Model</span></span>
 
-<span data-ttu-id="d2922-103">Puede usar los estilos en HTML para controlar la apariencia de un documento y sus elementos.</span><span class="sxs-lookup"><span data-stu-id="d2922-103">You can use styles in HTML to control the appearance of a document and its elements.</span></span> <span data-ttu-id="d2922-104"><xref:System.Windows.Forms.HtmlDocument> y <xref:System.Windows.Forms.HtmlElement> admite <xref:System.Windows.Forms.HtmlElement.Style%2A> propiedades que toman cadenas de estilo del formato siguiente:</span><span class="sxs-lookup"><span data-stu-id="d2922-104"><xref:System.Windows.Forms.HtmlDocument> and <xref:System.Windows.Forms.HtmlElement> support <xref:System.Windows.Forms.HtmlElement.Style%2A> properties that take style strings of the following format:</span></span>
+<span data-ttu-id="e1c4e-103">Puede usar los estilos en HTML para controlar la apariencia de un documento y sus elementos.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-103">You can use styles in HTML to control the appearance of a document and its elements.</span></span> <span data-ttu-id="e1c4e-104"><xref:System.Windows.Forms.HtmlDocument> y <xref:System.Windows.Forms.HtmlElement> admite <xref:System.Windows.Forms.HtmlElement.Style%2A> propiedades que toman cadenas de estilo del formato siguiente:</span><span class="sxs-lookup"><span data-stu-id="e1c4e-104"><xref:System.Windows.Forms.HtmlDocument> and <xref:System.Windows.Forms.HtmlElement> support <xref:System.Windows.Forms.HtmlElement.Style%2A> properties that take style strings of the following format:</span></span>
 
 `name1:value1;...;nameN:valueN;`
 
-<span data-ttu-id="d2922-105">Este es un `DIV` con una cadena de estilo que establece la fuente en Arial y todo el texto en negrita:</span><span class="sxs-lookup"><span data-stu-id="d2922-105">Here is a `DIV` with a style string that sets the font to Arial and all text to bold:</span></span>
+<span data-ttu-id="e1c4e-105">Este es un `DIV` con una cadena de estilo que establece la fuente en Arial y todo el texto en negrita:</span><span class="sxs-lookup"><span data-stu-id="e1c4e-105">Here is a `DIV` with a style string that sets the font to Arial and all text to bold:</span></span>
 
 `<DIV style="font-face:arial;font-weight:bold;">`
 
@@ -28,19 +28,19 @@ ms.locfileid: "57678944"
 
 `</DIV>`
 
-<span data-ttu-id="d2922-106">El problema de manipular estilos utilizando el <xref:System.Windows.Forms.HtmlElement.Style%2A> propiedad es que puede resultar complicado para agregar y quitar la configuración de estilo individuales de la cadena.</span><span class="sxs-lookup"><span data-stu-id="d2922-106">The problem with manipulating styles using the <xref:System.Windows.Forms.HtmlElement.Style%2A> property is that it can prove cumbersome to add to and remove individual style settings from the string.</span></span> <span data-ttu-id="d2922-107">Por ejemplo, convertiría en un procedimiento complejo para representar el texto en cursiva anterior siempre que el usuario coloca el cursor sobre la `DIV`y tomar cursiva desactivada cuando el cursor abandona el `DIV`.</span><span class="sxs-lookup"><span data-stu-id="d2922-107">For example, it would become a complex procedure for you to render the previous text in italics whenever the user positions the cursor over the `DIV`, and take italics off when the cursor leaves the `DIV`.</span></span> <span data-ttu-id="d2922-108">Tiempo podría ser un problema si necesita manipular un gran número de estilos de esta manera.</span><span class="sxs-lookup"><span data-stu-id="d2922-108">Time would become an issue if you need to manipulate a large number of styles in this manner.</span></span>
+<span data-ttu-id="e1c4e-106">El problema de manipular estilos utilizando el <xref:System.Windows.Forms.HtmlElement.Style%2A> propiedad es que puede resultar complicado para agregar y quitar la configuración de estilo individuales de la cadena.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-106">The problem with manipulating styles using the <xref:System.Windows.Forms.HtmlElement.Style%2A> property is that it can prove cumbersome to add to and remove individual style settings from the string.</span></span> <span data-ttu-id="e1c4e-107">Por ejemplo, convertiría en un procedimiento complejo para representar el texto en cursiva anterior siempre que el usuario coloca el cursor sobre la `DIV`y tomar cursiva desactivada cuando el cursor abandona el `DIV`.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-107">For example, it would become a complex procedure for you to render the previous text in italics whenever the user positions the cursor over the `DIV`, and take italics off when the cursor leaves the `DIV`.</span></span> <span data-ttu-id="e1c4e-108">Tiempo podría ser un problema si necesita manipular un gran número de estilos de esta manera.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-108">Time would become an issue if you need to manipulate a large number of styles in this manner.</span></span>
 
-<span data-ttu-id="d2922-109">El procedimiento siguiente contiene código que puede usar para manipular fácilmente los estilos de elementos y documentos HTML.</span><span class="sxs-lookup"><span data-stu-id="d2922-109">The following procedure contains code that you can use to easily manipulate styles on HTML documents and elements.</span></span> <span data-ttu-id="d2922-110">El procedimiento requiere que sepa cómo realizar tareas básicas en los formularios de Windows, como crear un nuevo proyecto y agregar un control a un formulario.</span><span class="sxs-lookup"><span data-stu-id="d2922-110">The procedure requires that you know how to perform basic tasks in Windows Forms, such as creating a new project and adding a control to a form.</span></span>
+<span data-ttu-id="e1c4e-109">El procedimiento siguiente contiene código que puede usar para manipular fácilmente los estilos de elementos y documentos HTML.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-109">The following procedure contains code that you can use to easily manipulate styles on HTML documents and elements.</span></span> <span data-ttu-id="e1c4e-110">El procedimiento requiere que sepa cómo realizar tareas básicas en los formularios de Windows, como crear un nuevo proyecto y agregar un control a un formulario.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-110">The procedure requires that you know how to perform basic tasks in Windows Forms, such as creating a new project and adding a control to a form.</span></span>
 
-### <a name="to-process-style-changes-in-a-windows-forms-application"></a><span data-ttu-id="d2922-111">Para procesar los cambios de estilo en una aplicación Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d2922-111">To process style changes in a Windows Forms application</span></span>
+### <a name="to-process-style-changes-in-a-windows-forms-application"></a><span data-ttu-id="e1c4e-111">Para procesar los cambios de estilo en una aplicación Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e1c4e-111">To process style changes in a Windows Forms application</span></span>
 
-1. <span data-ttu-id="d2922-112">Cree un nuevo proyecto de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="d2922-112">Create a new Windows Forms project.</span></span>
+1. <span data-ttu-id="e1c4e-112">Cree un nuevo proyecto de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-112">Create a new Windows Forms project.</span></span>
 
-2. <span data-ttu-id="d2922-113">Cree un nuevo archivo de clase termina en extensión adecuada para su lenguaje de programación.</span><span class="sxs-lookup"><span data-stu-id="d2922-113">Create a new class file ending in the extension appropriate for your programming language.</span></span>
+2. <span data-ttu-id="e1c4e-113">Cree un nuevo archivo de clase termina en extensión adecuada para su lenguaje de programación.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-113">Create a new class file ending in the extension appropriate for your programming language.</span></span>
 
-3. <span data-ttu-id="d2922-114">Copia el `StyleGenerator` código en la sección de ejemplo de este tema de la clase en el archivo de clase y guarde el código.</span><span class="sxs-lookup"><span data-stu-id="d2922-114">Copy the `StyleGenerator` class code in the Example section of this topic into the class file, and save the code.</span></span>
+3. <span data-ttu-id="e1c4e-114">Copia el `StyleGenerator` código en la sección de ejemplo de este tema de la clase en el archivo de clase y guarde el código.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-114">Copy the `StyleGenerator` class code in the Example section of this topic into the class file, and save the code.</span></span>
 
-4. <span data-ttu-id="d2922-115">Guarde el siguiente código HTML en un archivo denominado Test.htm.</span><span class="sxs-lookup"><span data-stu-id="d2922-115">Save the following HTML to a file named Test.htm.</span></span>
+4. <span data-ttu-id="e1c4e-115">Guarde el siguiente código HTML en un archivo denominado Test.htm.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-115">Save the following HTML to a file named Test.htm.</span></span>
 
     ```html
     <HTML>
@@ -58,25 +58,24 @@ ms.locfileid: "57678944"
     </HTML>
     ```
 
-5. <span data-ttu-id="d2922-116">Agregar un <xref:System.Windows.Forms.WebBrowser> control denominado `webBrowser1` al formulario principal de su proyecto.</span><span class="sxs-lookup"><span data-stu-id="d2922-116">Add a <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1` to the main form of your project.</span></span>
+5. <span data-ttu-id="e1c4e-116">Agregar un <xref:System.Windows.Forms.WebBrowser> control denominado `webBrowser1` al formulario principal de su proyecto.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-116">Add a <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1` to the main form of your project.</span></span>
 
-6. <span data-ttu-id="d2922-117">Agregue el código siguiente al archivo de código del proyecto.</span><span class="sxs-lookup"><span data-stu-id="d2922-117">Add the following code to your project's code file.</span></span>
+6. <span data-ttu-id="e1c4e-117">Agregue el código siguiente al archivo de código del proyecto.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-117">Add the following code to your project's code file.</span></span>
 
     > [!IMPORTANT]
-    > <span data-ttu-id="d2922-118">Asegúrese de que el `webBrowser1_DocumentCompleted` controlador de eventos está configurado como un agente de escucha para el <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> eventos.</span><span class="sxs-lookup"><span data-stu-id="d2922-118">Ensure that the `webBrowser1_DocumentCompleted` event handler is configured as a listener for the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event.</span></span> <span data-ttu-id="d2922-119">En Visual Studio, haga doble clic en el <xref:System.Windows.Forms.WebBrowser> control; en un editor de texto, configure el agente de escucha mediante programación.</span><span class="sxs-lookup"><span data-stu-id="d2922-119">In Visual Studio, double-click on the <xref:System.Windows.Forms.WebBrowser> control; in a text editor, configure the listener programmatically.</span></span>
-
-    [!code-csharp[ManagedDOMStyles#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
-    [!code-vb[ManagedDOMStyles#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]
-
-7. <span data-ttu-id="d2922-120">Ejecute el proyecto.</span><span class="sxs-lookup"><span data-stu-id="d2922-120">Run the project.</span></span> <span data-ttu-id="d2922-121">Ejecute el cursor sobre la primera `DIV` para observar los efectos del código.</span><span class="sxs-lookup"><span data-stu-id="d2922-121">Run your cursor over the first `DIV` to observe the effects of the code.</span></span>
-
-## <a name="example"></a><span data-ttu-id="d2922-122">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d2922-122">Example</span></span>
-
-<span data-ttu-id="d2922-123">El ejemplo de código siguiente muestra el código completo para el `StyleGenerator` admite clase, que analiza un valor de estilo existente, agregar, cambiar y quitar los estilos y devuelve un nuevo valor de estilo con los cambios solicitados.</span><span class="sxs-lookup"><span data-stu-id="d2922-123">The following code example shows the full code for the `StyleGenerator` class, which parses an existing style value, supports adding, changing, and removing styles, and returns a new style value with the requested changes.</span></span>
-
-[!code-csharp[ManagedDOMStyles#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
-[!code-vb[ManagedDOMStyles#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]
-
-## <a name="see-also"></a><span data-ttu-id="d2922-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="d2922-124">See also</span></span>
+    >  <span data-ttu-id="e1c4e-118">Asegúrese de que el `webBrowser1_DocumentCompleted` controlador de eventos está configurado como un agente de escucha para el <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> eventos.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-118">Ensure that the `webBrowser1_DocumentCompleted` event hander is configured as a listener for the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event.</span></span> <span data-ttu-id="e1c4e-119">En Visual Studio, haga doble clic en el <xref:System.Windows.Forms.WebBrowser> control; en un editor de texto, configure el agente de escucha mediante programación.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-119">In Visual Studio, double-click on the <xref:System.Windows.Forms.WebBrowser> control; in a text editor, configure the listener programmatically.</span></span>  
+  
+     [!code-csharp[ManagedDOMStyles#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
+     [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
+  
+7.  <span data-ttu-id="e1c4e-120">Ejecute el proyecto.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-120">Run the project.</span></span> <span data-ttu-id="e1c4e-121">Ejecute el cursor sobre la primera `DIV` para observar los efectos del código.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-121">Run your cursor over the first `DIV` to observe the effects of the code.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="e1c4e-122">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e1c4e-122">Example</span></span>  
+ <span data-ttu-id="e1c4e-123">El ejemplo de código siguiente muestra el código completo para el `StyleGenerator` admite clase, que analiza un valor de estilo existente, agregar, cambiar y quitar los estilos y devuelve un nuevo valor de estilo con los cambios solicitados.</span><span class="sxs-lookup"><span data-stu-id="e1c4e-123">The following code example shows the full code for the `StyleGenerator` class, which parses an existing style value, supports adding, changing, and removing styles, and returns a new style value with the requested changes.</span></span>  
+  
+ [!code-csharp[ManagedDOMStyles#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
+ [!code-vb[ManagedDOMStyles#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]  
+  
+## <a name="see-also"></a><span data-ttu-id="e1c4e-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="e1c4e-124">See also</span></span>
 
 - <xref:System.Windows.Forms.HtmlElement>
