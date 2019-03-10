@@ -5,42 +5,42 @@ helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 427a865bc9550fe489d1a1f22ea4a07b421de1fe
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 3d628d75b75c311c266648886b3b971c4833d172
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442716"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716444"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Desarrollar controles personalizados de formularios Windows Forms con .NET Framework
 Los controles de Windows Forms son componentes reutilizables que encapsulan la funcionalidad de la interfaz de usuario y se usan en aplicaciones de cliente basadas en Windows. Windows Forms no solo ofrece muchos controles listos para usar, también proporciona la infraestructura para desarrollar sus propios controles. Puede combinar los controles existentes, ampliar los controles existentes o crear sus propios controles personalizados. En esta sección se ofrece información general y ejemplos que le ayudarán a desarrollar controles de Windows Forms.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Overview of Using Controls in Windows Forms](../../../../docs/framework/winforms/controls/overview-of-using-controls-in-windows-forms.md) (Información general sobre cómo utilizar controles en Windows Forms)  
+ [Overview of Using Controls in Windows Forms](overview-of-using-controls-in-windows-forms.md) (Información general sobre cómo utilizar controles en Windows Forms)  
  Destaca los elementos básicos del uso de controles en aplicaciones de Windows Forms.  
   
- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [Variedades de controles personalizados](varieties-of-custom-controls.md)  
  Describe los diferentes tipos de controles personalizados que puede crear con el espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
- [Fundamentos de desarrollo de controles de Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)  
+ [Fundamentos de desarrollo de controles de Windows Forms](windows-forms-control-development-basics.md)  
  Describe los primeros pasos para desarrollar un control de Windows Forms.  
   
- [Propiedades de los controles de Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [Propiedades de los controles de Windows Forms](properties-in-windows-forms-controls.md)  
  Muestra cómo agregar propiedades a controles de Windows Forms.  
   
- [Eventos de los controles de Windows Forms](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ [Eventos de los controles de Windows Forms](events-in-windows-forms-controls.md)  
  Muestra cómo controlar y definir eventos en los controles de Windows Forms.  
   
- [Atributos en controles de Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ [Atributos en controles de Windows Forms](attributes-in-windows-forms-controls.md)  
  Describe los atributos que se puede aplicar a propiedades u otros miembros de los controles y componentes personalizados.  
   
- [Custom Control Painting and Rendering](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md) (Pintura y representación personalizadas de controles)  
+ [Custom Control Painting and Rendering](custom-control-painting-and-rendering.md) (Pintura y representación personalizadas de controles)  
  Muestra cómo personalizar la apariencia de los controles.  
   
- [Layout in Windows Forms Controls](../../../../docs/framework/winforms/controls/layout-in-windows-forms-controls.md) (Diseño en controles de Windows Forms)  
+ [Layout in Windows Forms Controls](layout-in-windows-forms-controls.md) (Diseño en controles de Windows Forms)  
  Muestra cómo crear diseños sofisticados para los controles y formularios.  
   
- [Multithreading in Windows Forms Controls](../../../../docs/framework/winforms/controls/multithreading-in-windows-forms-controls.md) (Multithreading en controles de Windows Forms)  
+ [Multithreading in Windows Forms Controls](multithreading-in-windows-forms-controls.md) (Multithreading en controles de Windows Forms)  
  Muestra cómo implementar controles multiproceso.  
   
 ## <a name="reference"></a>Referencia  

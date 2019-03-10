@@ -6,12 +6,12 @@ helpviewer_keywords:
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: 93a477bcaed8ebdc2c7cb4daaa1dce1651cccd12
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 2805ebc66be5908c333e9a5db41076518ad77c1a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664320"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705862"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Tutorial: Realizar tareas comunes utilizando etiquetas inteligentes en controles de formularios Windows Forms
 Como construir formularios y controles para la aplicación de Windows Forms, hay muchas tareas que llevará a cabo varias veces. Estas son algunas de las tareas realizadas normalmente que encontrará:  
@@ -53,7 +53,7 @@ Como construir formularios y controles para la aplicación de Windows Forms, hay
   
 #### <a name="to-use-smart-tags"></a>Utilizar etiquetas inteligentes  
   
-1.  Arrastre un <xref:System.Windows.Forms.TabControl> desde el **cuadro de herramientas** hasta su formulario. Tenga en cuenta el glifo de etiqueta inteligente (![glifo de etiqueta inteligente](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) que aparece en la en paralelo de la <xref:System.Windows.Forms.TabControl>.  
+1.  Arrastre un <xref:System.Windows.Forms.TabControl> desde el **cuadro de herramientas** hasta su formulario. Tenga en cuenta el glifo de etiqueta inteligente (![glifo de etiqueta inteligente](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) que aparece en la en paralelo de la <xref:System.Windows.Forms.TabControl>.  
   
 2.  Haga clic en el glifo de etiqueta inteligente. En el menú contextual que aparece al lado del glifo, seleccione el **Agregar pestaña** elemento. Observe que una nueva página de ficha se agrega a la <xref:System.Windows.Forms.TabControl>.  
   

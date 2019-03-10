@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: b516a88b4830c5ed1bccfc5ecb76ebc97c6e3b56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bc59f08d811ef542206b5788f251f30f89af301
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530303"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702794"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Procedimiento Cambiar la apariencia del componente ColorDialog de formularios Windows Forms
+# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Filtrar Cambiar la apariencia del componente ColorDialog de formularios Windows Forms
 Puede configurar la apariencia de los formularios de Windows <xref:System.Windows.Forms.ColorDialog> componente con un número de sus propiedades. El cuadro de diálogo tiene dos secciones: una que muestra los colores básicos y otra que permite al usuario definir colores personalizados.  
   
  La mayoría de las propiedades restringen los colores que el usuario puede seleccionar desde el cuadro de diálogo. Si el <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> propiedad está establecida en `true`, el usuario puede definir colores personalizados. El <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> propiedad es `true` si se expande el cuadro de diálogo para definir colores personalizados; en caso contrario, el usuario debe hacer clic en un botón "Definir colores personalizados". Cuando el <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> propiedad está establecida en `true`, el cuadro de diálogo muestra todos los colores disponibles en el conjunto de colores básicos. Si el <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> propiedad está establecida en `true`, el usuario no puede seleccionar colores interpolados; están disponibles para seleccionar sólo colores sólidos.  
@@ -51,5 +51,5 @@ Puede configurar la apariencia de los formularios de Windows <xref:System.Window
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.ColorDialog>
-- [ColorDialog (componente)](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)
-- [Información general del componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)
+- [ColorDialog (componente)](colordialog-component-windows-forms.md)
+- [Información general del componente ColorDialog](colordialog-component-overview-windows-forms.md)

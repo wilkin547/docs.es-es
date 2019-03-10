@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar elementos de menú a ContextMenuStrip
+title: Filtrar Agregar elementos de menú a ContextMenuStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], adding items
 - context menus [Windows Forms], adding menu items
 ms.assetid: 1ec14776-3ea2-4752-bd22-4fae0fd19e1a
-ms.openlocfilehash: 88bf56ea21c4f120b9d745e7f8a31fed485fa192
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a12a201ac73c86bf391d39f47baa47c87bf96095
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506243"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716767"
 ---
 # <a name="how-to-add-menu-items-to-a-contextmenustrip"></a>Procedimiento Agregar elementos de menú a ContextMenuStrip
 Puede agregar simplemente un elemento de menú o varios elementos a la vez a un <xref:System.Windows.Forms.ContextMenuStrip>.  
@@ -48,4 +48,4 @@ Puede agregar simplemente un elemento de menú o varios elementos a la vez a un 
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [ContextMenuStrip (Control)](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)
+- [ContextMenuStrip (Control)](contextmenustrip-control.md)

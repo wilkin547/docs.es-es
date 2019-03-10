@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], error handling
 - BindingSource component [Windows Forms], handling errors and exceptions
 ms.assetid: eddc5bad-9513-47df-ab28-f02d8dff7892
-ms.openlocfilehash: 30301086842d9bf07690d7394dd4275a1fa2816e
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 8400ce602d15c195aea43f9e5a162fddb1783830
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260665"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703165"
 ---
 # <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>Filtrar Controlar errores y excepciones que se producen con el enlace de datos
 A menudo, las excepciones y los errores se producen en los objetos comerciales subyacentes cuando se enlazan a controles. Puede interceptar estos errores y excepciones y, después, recuperar o pasar la información de error al usuario controlando el evento <xref:System.Windows.Forms.Binding.BindingComplete> para un componente <xref:System.Windows.Forms.Binding>, <xref:System.Windows.Forms.BindingSource> o <xref:System.Windows.Forms.CurrencyManager> determinado.  
@@ -26,9 +26,9 @@ A menudo, las excepciones y los errores se producen en los objetos comerciales s
 ## <a name="example"></a>Ejemplo  
  En este ejemplo de código se muestra cómo controlar errores y excepciones que se producen durante una operación de enlace de datos. Muestra cómo interceptar los errores controlando el evento <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType> de los objetos <xref:System.Windows.Forms.Binding>. Para interceptar errores y excepciones controlando este evento, debe habilitar el formato del enlace. Puede habilitar el formato al crear el enlace o al agregarlo a la colección de enlaces, o estableciendo la propiedad <xref:System.Windows.Forms.Binding.FormattingEnabled%2A> en `true`.  
   
- [!code-cpp[System.Windows.Forms.DataConnectorBindingComplete#3](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorBindingComplete/CPP/form1.cpp#3)]
- [!code-csharp[System.Windows.Forms.DataConnectorBindingComplete#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorBindingComplete/CS/form1.cs#3)]
- [!code-vb[System.Windows.Forms.DataConnectorBindingComplete#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorBindingComplete/VB/form1.vb#3)]  
+ [!code-cpp[System.Windows.Forms.DataConnectorBindingComplete#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorBindingComplete/CPP/form1.cpp#3)]
+ [!code-csharp[System.Windows.Forms.DataConnectorBindingComplete#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorBindingComplete/CS/form1.cs#3)]
+ [!code-vb[System.Windows.Forms.DataConnectorBindingComplete#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorBindingComplete/VB/form1.vb#3)]  
   
  Cuando se ejecuta el código y se especifica una cadena vacía como nombre de elemento o un valor inferior a 100 como número de elemento, aparece un cuadro de mensaje. Este es el resultado de controlar el evento <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType> para estos enlaces de cuadro de texto.  
   
@@ -42,4 +42,4 @@ A menudo, las excepciones y los errores se producen en los objetos comerciales s
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.BindingSource.BindingComplete?displayProperty=nameWithType>
-- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [Componente BindingSource](bindingsource-component.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: 5206289eaab1195e5314e21b0d49e4b8a5455b72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50f180f2f3fe825f617ae441906a7414a6b8bced
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696313"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707366"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Controles compatibles con dibujos propietarios integrados
 Los dibujos propietarios en formularios Windows Forms, que también se conocen como dibujos personalizados, es una técnica para cambiar la apariencia visual de determinados controles.  
@@ -86,7 +86,7 @@ Los dibujos propietarios en formularios Windows Forms, que también se conocen c
   
 -   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [Cómo: Crear texto de tamaño Variable en un Control ComboBox](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+-   [Cómo: Crear texto de tamaño Variable en un Control ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>Componente MenuItem  
  El <xref:System.Windows.Forms.MenuItem> componente representa un solo elemento de menú en un <xref:System.Windows.Forms.MainMenu> o <xref:System.Windows.Forms.ContextMenu> componente.  
@@ -172,9 +172,9 @@ Los dibujos propietarios en formularios Windows Forms, que también se conocen c
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [Cómo: Personalizar la apariencia de celdas en el Control DataGridView de formularios de Windows](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [Cómo: Personalizar la apariencia de celdas en el Control DataGridView de formularios de Windows](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [Cómo: Personalizar la apariencia de las filas en el Control DataGridView de formularios de Windows](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [Cómo: Personalizar la apariencia de las filas en el Control DataGridView de formularios de Windows](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip  
  <xref:System.Windows.Forms.ToolStrip> y los controles derivados le permiten personalizar cualquier aspecto de su apariencia.  
@@ -185,9 +185,9 @@ Los dibujos propietarios en formularios Windows Forms, que también se conocen c
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [Cómo: Crear y establecer a un representador personalizado para el Control ToolStrip de Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [Cómo: Crear y establecer a un representador personalizado para el Control ToolStrip de Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [Cómo: Dibujar un Control ToolStrip personalizada](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
+-   [Cómo: Dibujar un Control ToolStrip personalizada](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>Vea también
-- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

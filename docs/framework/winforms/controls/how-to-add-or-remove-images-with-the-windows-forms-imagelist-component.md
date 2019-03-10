@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar o quitar imágenes con el componente ImageList de formularios Windows Forms
+title: Filtrar Agregar o quitar imágenes con el componente ImageList de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: a81cf11ea5ca405e2013b7c7375a863aeb1f110f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81c85186d2f15917a6aa1067814a0119edf3f460
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609621"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705173"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Procedimiento Agregar o quitar imágenes con el componente ImageList de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.ImageList> componente normalmente se rellena con las imágenes antes de asociarlo con un control. Sin embargo, puede agregar y quitar imágenes después de asociar la lista de imágenes con un control.  
@@ -142,6 +142,6 @@ imageList1.Images.RemoveByKey("myPhoto");
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [ImageList (componente)](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
-- [Información general sobre el componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)
-- [Imágenes, mapas de bits y metarchivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [ImageList (componente)](imagelist-component-windows-forms.md)
+- [Información general sobre el componente ImageList](imagelist-component-overview-windows-forms.md)
+- [Imágenes, mapas de bits y metarchivos](../advanced/images-bitmaps-and-metafiles.md)

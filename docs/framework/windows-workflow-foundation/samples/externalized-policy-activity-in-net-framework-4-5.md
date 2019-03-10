@@ -2,24 +2,24 @@
 title: Actividad Externalized Policy en .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 1c2f66caeb9932422681ba7176346a5e5e084c11
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850242"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706382"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Actividad Externalized Policy en .NET Framework 4.5
 
-Este ejemplo muestra cómo la actividad ExternalizedPolicy4 permite ejecutar [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objetos [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) utilizando el motor de reglas que se distribuye con WF 3.5. Con esta actividad, se puede abrir y ejecutar cualquier <xref:System.Workflow.Activities.Rules.RuleSet>de WF 3.5 existente. Para obtener más información sobre el motor de reglas de WF 3.5 incluye como parte de Windows Workflow Foundation, lea [Introducción al motor de reglas de Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=166079). Para obtener más información sobre cómo migrar reglas a [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], lea la Guía de migración en [Guía de migración](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
+Este ejemplo muestra cómo la actividad ExternalizedPolicy4 permite ejecutar [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objetos [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) utilizando el motor de reglas que se distribuye con WF 3.5. Con esta actividad, se puede abrir y ejecutar cualquier <xref:System.Workflow.Activities.Rules.RuleSet>de WF 3.5 existente. Para obtener más información sobre el motor de reglas de WF 3.5 incluye como parte de Windows Workflow Foundation, lea [Introducción al motor de reglas de Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=166079). Para obtener más información sobre cómo migrar reglas a [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], lea la Guía de migración en [Guía de migración](../migration-guidance.md).
 
 ## <a name="projects-in-this-sample"></a>Proyectos en este ejemplo
 
 |Nombre del proyecto|Descripción|Archivos principales|
 |-|-|-|
-|ExternalizedPolicy4|Contiene la actividad ExternalizedPolicy4 y su diseñador de WF4.|**ExternalizedPolicy4.cs**: definición de actividad.<br /><br /> **ExternalizedPolicy4Designer.xaml**: diseñador personalizado para la actividad ExternalizedPolicy4. Utiliza el editor de reglas (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) del motor de reglas de WF 3.5.|
-|ImperativeCodeClientSample|Aplicación cliente de ejemplo que configura y ejecuta un flujo de trabajo mediante una aplicación ExternalizedPolicy4 que utiliza el código C# imperativo (no se utiliza ningún diseñador).|**ApplyDiscount.rules**: archivo con [!INCLUDE[wf1](../../../../includes/wf1-md.md)] definiciones de reglas.<br /><br /> **Order.cs**: tipo que representa un pedido de cliente. Las reglas se aplican a los objetos de este tipo.<br /><br /> **Program.cs**: configura y ejecuta un flujo de trabajo que tiene una actividad Policy4 para aplicar las reglas definidas en ApplyDiscount.rules a las instancias de objetos Order.<br /><br /> App.config: el archivo de configuración con la ruta de acceso del archivo de reglas.|
-|DesignerClientSample|Aplicación cliente de ejemplo que configura y ejecuta un flujo de trabajo utilizando una aplicación ExternalPolicy4 en el diseñador de [!INCLUDE[wf1](../../../../includes/wf1-md.md)].|**Sequence1.XAML**: flujo de trabajo secuencial que utiliza una actividad Policy4 para realizar evaluaciones de reglas.<br /><br /> **Program.cs**: se ejecuta una instancia de flujo de trabajo definida en Sequence1.xaml.|
+|ExternalizedPolicy4|Contiene la actividad ExternalizedPolicy4 y su diseñador de WF4.|**ExternalizedPolicy4.cs**: definición de actividad.<br /><br /> **ExternalizedPolicy4Designer.xaml**: Diseñador personalizado para la actividad ExternalizedPolicy4. Utiliza el editor de reglas (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) del motor de reglas de WF 3.5.|
+|ImperativeCodeClientSample|Aplicación cliente de ejemplo que configura y ejecuta un flujo de trabajo mediante una aplicación ExternalizedPolicy4 que utiliza el código C# imperativo (no se utiliza ningún diseñador).|**ApplyDiscount.rules**: Archivo con [!INCLUDE[wf1](../../../../includes/wf1-md.md)] definiciones de reglas.<br /><br /> **Order.cs**: Tipo que representa un pedido de cliente. Las reglas se aplican a los objetos de este tipo.<br /><br /> **Program.cs**: Configura y ejecuta un flujo de trabajo que tiene una actividad Policy4 para aplicar las reglas definidas en ApplyDiscount.rules a las instancias de objetos Order.<br /><br /> App.config: El archivo de configuración con la ruta de acceso del archivo de reglas.|
+|DesignerClientSample|Aplicación cliente de ejemplo que configura y ejecuta un flujo de trabajo utilizando una aplicación ExternalPolicy4 en el diseñador de [!INCLUDE[wf1](../../../../includes/wf1-md.md)].|**Sequence1.xaml**: Flujo de trabajo secuencial que utiliza una actividad Policy4 para realizar evaluaciones de reglas.<br /><br /> **Program.cs**: Ejecuta una instancia de flujo de trabajo definida en Sequence1.xaml.|
 
 ## <a name="the-externalizedpolicy4-activity"></a>La actividad ExternalizedPolicy4
 
@@ -62,7 +62,7 @@ La actividad de directiva permite crear y ejecutar un conjunto de reglas de .NET
 
 No se exige ninguna configuración especial para ejecutar este ejemplo. Abra la solución en Visual Studio y, a continuación, presione **F5** para ejecutar la aplicación.
 
-Este ejemplo contiene dos aplicaciones cliente: ImperativeCodeClientSample y DesignerClientSample. El cliente ImperativeCodeClientSample muestra cómo configurar y ejecutar la actividad ExternalizedPolicy4 utilizando el código imperativo C#. DesignerClientSample muestra cómo configurar y ejecutar la actividad ExternalizedPolicy4 mediante el diseñador.
+Este ejemplo contiene dos aplicaciones de cliente: ImperativeCodeClientSample y DesignerClientSample. El cliente ImperativeCodeClientSample muestra cómo configurar y ejecutar la actividad ExternalizedPolicy4 utilizando el código imperativo C#. DesignerClientSample muestra cómo configurar y ejecutar la actividad ExternalizedPolicy4 mediante el diseñador.
 
 ### <a name="run-the-imperativecodeclientsample-application"></a>Ejecutar la aplicación ImperativeCodeClientSample
 

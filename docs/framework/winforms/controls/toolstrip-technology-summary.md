@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: 94b061b6c403c22fc7eed4ca3632f3165693e868
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c32b14e1394004b68247d4d7bf2d0fcc8870b730
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747144"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703297"
 ---
 # <a name="toolstrip-technology-summary"></a>Resumen de la tecnología ToolStrip
 En este tema se resume la información sobre el control `ToolStrip` y las clases que admiten su uso.  
@@ -87,7 +87,7 @@ En este tema se resume la información sobre el control `ToolStrip` y las clases
 ## <a name="hosting-controls"></a>Hospedaje de controles  
  La clase <xref:System.Windows.Forms.ToolStripControlHost> proporciona contenedores integrados para los controles <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox> y <xref:System.Windows.Forms.ToolStripProgressBar>. También puede hospedar cualquier otro control existente o COM en un <xref:System.Windows.Forms.ToolStripControlHost>.  
   
- Para obtener un ejemplo de hospedaje de controles, vea [Cómo: Ajustar un Control de Windows Forms con ToolStripControlHost](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).  
+ Para obtener un ejemplo de hospedaje de controles, vea [Cómo: Ajustar un Control de Windows Forms con ToolStripControlHost](how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).  
   
 ## <a name="rendering"></a>Representación  
  Las clases <xref:System.Windows.Forms.ToolStrip> implementan un esquema de representación que es significativamente diferente de otros controles de formularios Windows Forms. Con este esquema, puede aplicar fácilmente estilos y temas.  
@@ -96,7 +96,7 @@ En este tema se resume la información sobre el control `ToolStrip` y las clases
   
  Puede aplicar el mismo estilo a varios objetos <xref:System.Windows.Forms.ToolStrip> de la misma aplicación estableciendo <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> como <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> y estableciendo la propiedad <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A> o <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> como el <xref:System.Windows.Forms.ToolStripManagerRenderMode> que quiera o el valor <xref:System.Windows.Forms.ToolStripRenderer>, respectivamente.  
   
- Para obtener ejemplos de representación, vea [Cómo: Crear y establecer un representador personalizado para el Control ToolStrip de Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md).  
+ Para obtener ejemplos de representación, vea [Cómo: Crear y establecer un representador personalizado para el Control ToolStrip de Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md).  
   
 ## <a name="styles-and-themes"></a>Estilos y temas  
  <xref:System.Windows.Forms.ToolStrip> y las clases asociadas permiten admitir fácilmente estilos visuales y aspectos personalizados sin necesidad de reemplazar los métodos <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> de cada elemento. Use <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> y las propiedades <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> y <xref:System.Windows.Forms.ToolStrip.Renderer%2A>.  
@@ -112,12 +112,12 @@ En este tema se resume la información sobre el control `ToolStrip` y las clases
   
  La ventaja del espacio compartido frente al acoplamiento es que los controles <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> y <xref:System.Windows.Forms.StatusStrip> pueden compartir el espacio horizontal o vertical con otros controles.  
   
- La mayoría de los controles <xref:System.Windows.Forms.ToolStrip> se puede acoplar al formulario como otros controles en lugar de utilizar el espacio compartido. También puede especificar que un control <xref:System.Windows.Forms.ToolStrip> se sitúe libremente en el formulario quitándolo de su <xref:System.Windows.Forms.ToolStripContainer> y estableciendo su propiedad `Dock` como `None`, o puede especificar su posición absoluta estableciendo la propiedad <xref:System.Windows.Forms.Control.Location%2A> correspondiente. Vea [Cómo: Mover un objeto ToolStrip de un contenedor ToolStripContainer a un formulario](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).  
+ La mayoría de los controles <xref:System.Windows.Forms.ToolStrip> se puede acoplar al formulario como otros controles en lugar de utilizar el espacio compartido. También puede especificar que un control <xref:System.Windows.Forms.ToolStrip> se sitúe libremente en el formulario quitándolo de su <xref:System.Windows.Forms.ToolStripContainer> y estableciendo su propiedad `Dock` como `None`, o puede especificar su posición absoluta estableciendo la propiedad <xref:System.Windows.Forms.Control.Location%2A> correspondiente. Vea [Cómo: Mover un objeto ToolStrip de un contenedor ToolStripContainer a un formulario](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).  
   
  Utilice uno o más controles <xref:System.Windows.Forms.ToolStripPanel> para una mayor flexibilidad, especialmente para las aplicaciones de interfaz de múltiples documentos (MDI), o si no necesita <xref:System.Windows.Forms.ToolStripContainer>. Un <xref:System.Windows.Forms.ToolStripPanel> proporciona un espacio acoplable para buscar y compartir el espacio de los controles <xref:System.Windows.Forms.ToolStrip>, pero no los controles tradicionales. De forma predeterminada, el <xref:System.Windows.Forms.ToolStripPanel> no aparece en el diseñador **cuadro de herramientas**, pero puede poner allí haciendo clic con el **cuadro de herramientas**y, a continuación, haga clic en **elegir elementos**. También puede acceder al <xref:System.Windows.Forms.ToolStripPanel> mediante programación, como con cualquier otra clase.  
   
  <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> y <xref:System.Windows.Forms.StatusStrip> permiten el desbordamiento de elementos. Es similar al comportamiento de estos elementos en las barras de herramientas de Microsoft Office.  
   
 ## <a name="see-also"></a>Vea también
-- [Información sobre el control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [Arquitectura del control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+- [Información sobre el control ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Arquitectura del control ToolStrip](toolstrip-control-architecture.md)

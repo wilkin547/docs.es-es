@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constituent controls [Windows Forms]
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
-ms.openlocfilehash: 28ae15165327a1bd72e1099460a2a1e3d337ca48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb6db63806c4a0e024fcf1c7759a2c7f4487f713
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739159"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703089"
 ---
 # <a name="constituent-controls"></a>Controles constituyentes
 Los controles que componen un control de usuario, o *controles constituyentes* tal como se denominan, son relativamente inflexibles en cuanto a la representación gráfica personalizada. Todos los controles de Windows Forms controlan su propia representación a través de sus propios <xref:System.Windows.Forms.Control.OnPaint%2A> método. Como este método está protegido, no es accesible al desarrollador y por tanto no se puede evitar ejecutarlo cuando se dibuja el control. Sin embargo, esto no significa que no se pueda agregar código que afecte a la apariencia de controles constituyentes. Otras representaciones pueden realizarse mediante la adición de un controlador de eventos. Por ejemplo, suponga que está creando un <xref:System.Windows.Forms.UserControl> con un botón denominado `MyButton`. Si desea realizar una representación adicional más allá de la proporcionada por el <xref:System.Web.UI.WebControls.Button>, podría agregar código al control de usuario similar al siguiente:  
@@ -41,11 +41,11 @@ System.Windows.Forms.PaintEventArgs e)
 > [!NOTE]
 >  Controla algunas formas de Windows, como <xref:System.Windows.Forms.TextBox>, se dibuja directamente en Windows. En estos casos, el <xref:System.Windows.Forms.Control.OnPaint%2A> nunca se llama al método y, por tanto, nunca se llamará en el ejemplo anterior.  
   
- Esto crea un método que se ejecuta cada vez que se ejecuta el evento `MyButton.Paint`, agregando por tanto representación gráfica adicional al control. Tenga en cuenta que esto no impide la ejecución de `MyButton.OnPaint` y, por tanto, toda la pintura realizada con un botón se llevará a cabo además en el dibujo personalizado. Para más información acerca de la tecnología GDI+ y de la representación personalizada, consulte [Crear imágenes gráficas con GDI+](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md). Si desea obtener una representación única del control, la mejor línea de acción es crear un control heredado y escribir código de representación personalizado para él. Para más información, consulte [Controles dibujados por el usuario](../../../../docs/framework/winforms/controls/user-drawn-controls.md).  
+ Esto crea un método que se ejecuta cada vez que se ejecuta el evento `MyButton.Paint`, agregando por tanto representación gráfica adicional al control. Tenga en cuenta que esto no impide la ejecución de `MyButton.OnPaint` y, por tanto, toda la pintura realizada con un botón se llevará a cabo además en el dibujo personalizado. Para más información acerca de la tecnología GDI+ y de la representación personalizada, consulte [Crear imágenes gráficas con GDI+](../advanced/how-to-create-graphics-objects-for-drawing.md). Si desea obtener una representación única del control, la mejor línea de acción es crear un control heredado y escribir código de representación personalizado para él. Para más información, consulte [Controles dibujados por el usuario](user-drawn-controls.md).  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
-- [Controles dibujados por el usuario](../../../../docs/framework/winforms/controls/user-drawn-controls.md)
-- [Cómo: Crear objetos Graphics para dibujar](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
-- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Controles dibujados por el usuario](user-drawn-controls.md)
+- [Cómo: Crear objetos Graphics para dibujar](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Variedades de controles personalizados](varieties-of-custom-controls.md)

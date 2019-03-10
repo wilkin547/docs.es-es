@@ -8,14 +8,14 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: 1f6d721edc4f889c2da8ece63f262c7fb55192bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95343ad2c7bc6a83bc4d935f33712ab910d658ff
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707705"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705823"
 ---
-# <a name="how-to-crop-and-scale-images"></a>Procedimiento Recortar y escalar imágenes
+# <a name="how-to-crop-and-scale-images"></a>Filtrar Recortar y escalar imágenes
 El <xref:System.Drawing.Graphics> clase proporciona varios <xref:System.Drawing.Graphics.DrawImage%2A> métodos, algunos de los cuales tienen parámetros de rectángulo de origen y destino que pueden usar para recortar y escalar imágenes.  
   
 ## <a name="example"></a>Ejemplo  
@@ -27,14 +27,14 @@ El <xref:System.Drawing.Graphics> clase proporciona varios <xref:System.Drawing.
   
  La ilustración siguiente muestra la manzana original y la escala y recorta apple.  
   
- ![E & scala de recorte](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")  
+ ![E & scala de recorte](./media/cscropscale1.png "csCropScale1")  
   
- [!code-csharp[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.WorkingWithImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>. No olvide reemplazar `Apple.gif` con un nombre de archivo de imagen y la ruta de acceso que son válidos en el sistema.  
   
 ## <a name="see-also"></a>Vea también
-- [Imágenes, mapas de bits y metarchivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Trabajar con imágenes, mapas de bits, iconos y metarchivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Imágenes, mapas de bits y metarchivos](images-bitmaps-and-metafiles.md)
+- [Trabajar con imágenes, mapas de bits, iconos y metarchivos](working-with-images-bitmaps-icons-and-metafiles.md)

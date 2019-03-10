@@ -2,12 +2,12 @@
 title: Restricciones declarativas
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-ms.openlocfilehash: 5599513405c77aa213b329b085075660baed5c47
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842377"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708159"
 ---
 # <a name="declarative-constraints"></a>Restricciones declarativas
 Las restricciones declarativas proporcionan un método eficaz de validación para una actividad y sus relaciones con otras actividades. Las restricciones se configuran para una actividad durante el proceso de creación, aunque el host del flujo de trabajo puede especificar también las restricciones adicionales. En este tema se ofrece información general sobre cómo usar restricciones declarativas para proporcionar la validación de actividad.  
@@ -63,7 +63,7 @@ public sealed class SampleActivity : CodeActivity
 
 Hay disponibles varias actividades de validación que proporcionan información sobre las demás actividades del flujo de trabajo en relación con la actividad que se va a validar. <xref:System.Activities.Validation.GetParentChain> devuelve una colección de actividades que contiene todas las actividades entre la actividad actual y la actividad raíz. <xref:System.Activities.Validation.GetChildSubtree> proporciona una colección de actividades que contiene las actividades secundarias en un patrón recursivo y <xref:System.Activities.Validation.GetWorkflowTree> obtiene todas las actividades del flujo de trabajo.  
   
-En el ejemplo siguiente, se define una actividad `CreateState`. La actividad `CreateState` debe estar dentro de una actividad `CreateCountry` y el método `GetParent` devuelve una restricción que aplica este requisito. `GetParent` usa la actividad <xref:System.Activities.Validation.GetParentChain> junto con una actividad <xref:System.Activities.Statements.ForEach%601> para inspeccionar las actividades primarias de la actividad `CreateState` para determinar si se cumple el requisito.  
+En el ejemplo siguiente, se define una actividad `CreateState` . La actividad `CreateState` debe estar dentro de una actividad `CreateCountry` y el método `GetParent` devuelve una restricción que aplica este requisito. `GetParent` usa la actividad <xref:System.Activities.Validation.GetParentChain> junto con una actividad <xref:System.Activities.Statements.ForEach%601> para inspeccionar las actividades primarias de la actividad `CreateState` para determinar si se cumple el requisito.  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -176,4 +176,4 @@ else
 }  
 ```  
   
- Si la propiedad <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> es `true`, sólo se evaluarán las restricciones adicionales especificadas cuando la validación se invoca llamando al método <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Esto puede ser útil a la hora de inspeccionar flujos de trabajo para configuraciones de validación concretas. Sin embargo, tenga en cuenta que cuando se invoca el flujo de trabajo, la lógica de validación configurada en el flujo de trabajo se evalúa y se debe pasar para que el flujo de trabajo comience correctamente. Para obtener más información sobre cómo invocar la validación, consulte [invocar la validación de actividad](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Si la propiedad <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> es `true`, sólo se evaluarán las restricciones adicionales especificadas cuando la validación se invoca llamando al método <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Esto puede ser útil a la hora de inspeccionar flujos de trabajo para configuraciones de validación concretas. Sin embargo, tenga en cuenta que cuando se invoca el flujo de trabajo, la lógica de validación configurada en el flujo de trabajo se evalúa y se debe pasar para que el flujo de trabajo comience correctamente. Para obtener más información sobre cómo invocar la validación, consulte [invocar la validación de actividad](invoking-activity-validation.md).

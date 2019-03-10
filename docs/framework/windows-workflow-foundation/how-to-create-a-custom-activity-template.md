@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Crear una plantilla de actividad personalizado
+title: Filtrar Crear una plantilla de actividad personalizado
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: c90721676fc5b77704ee86bcd5e98c99e3af6683
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9594f799e1b6a176e7bbf28cdea77c9cdfb70ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512716"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703470"
 ---
-# <a name="how-to-create-a-custom-activity-template"></a>Procedimiento Crear una plantilla de actividad personalizado
+# <a name="how-to-create-a-custom-activity-template"></a>Filtrar Crear una plantilla de actividad personalizado
 
 Las plantillas de actividad personalizadas se utilizan para personalizar la configuración de actividades, incluidas las actividades compuestas personalizadas, para que los usuarios no tengan que crear cada actividad de forma individual y configurar propiedades y otros valores manualmente. Estas plantillas personalizadas pueden estar disponibles en el **cuadro de herramientas** en el [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] o desde un diseñador rehospedado, desde el que los usuarios pueden arrastrarlas a la superficie de diseño preconfigurada. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] se suministra con buenos ejemplos de esas plantillas: el [Diseñador de plantillas SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) y [Diseñador de plantillas ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) en el [diseñadores de actividades de mensajería](/visualstudio/workflow-designer/messaging-activity-designers) categoría.
 
@@ -127,4 +127,4 @@ namespace DelayActivityTemplate
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Activities.Presentation.IActivityTemplateFactory>
-- [Personalización de la experiencia de diseño del flujo de trabajo](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+- [Personalización de la experiencia de diseño del flujo de trabajo](customizing-the-workflow-design-experience.md)

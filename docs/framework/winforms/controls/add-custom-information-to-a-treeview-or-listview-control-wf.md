@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)
+title: Filtrar Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 8120f35f866c353ae1493515bed3d216776ede23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40ac3fb3a148c351cf5acca235569e2a1a439a3e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694599"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709683"
 ---
-# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Procedimiento Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Filtrar Agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)
 Puede crear un nodo derivado en un formulario Windows Forms <xref:System.Windows.Forms.TreeView> control o un elemento derivado en un <xref:System.Windows.Forms.ListView> control. La derivación permite agregar cualquier campo que se necesite, así como métodos personalizados y constructores para controlarlos. Uno de los usos de esta característica consiste en adjuntar un objeto Customer a cada nodo de árbol o elemento de lista. Los ejemplos siguientes son para un <xref:System.Windows.Forms.TreeView> control, pero el mismo enfoque se puede usar para un <xref:System.Windows.Forms.ListView> control.  
   
 ### <a name="to-derive-a-tree-node"></a>Para derivar un nodo de árbol  
@@ -131,5 +131,5 @@ Puede crear un nodo derivado en un formulario Windows Forms <xref:System.Windows
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [TreeView (control)](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
-- [ListView (Control)](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [TreeView (control)](treeview-control-windows-forms.md)
+- [ListView (Control)](listview-control-windows-forms.md)

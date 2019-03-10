@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Admitir la interoperabilidad COM al mostrar Windows Forms con el método ShowDialog
+title: Filtrar Admitir la interoperabilidad COM al mostrar Windows Forms con el método ShowDialog
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [Windows Forms]
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-ms.openlocfilehash: 4ae48a824f69c417daa38fb4b5f88fc5d980c47b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ded3118d0961f38c77d3db4fc879eb241a7520
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724387"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715443"
 ---
-# <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Procedimiento Admitir la interoperabilidad COM al mostrar Windows Forms con el método ShowDialog
+# <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Filtrar Admitir la interoperabilidad COM al mostrar Windows Forms con el método ShowDialog
 Puede resolver problemas de interoperabilidad del Modelo de objetos componentes (COM) mostrando el formulario de Windows Forms en un bucle de mensajes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , que se crea con el método <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> .  
   
  Para que un formulario funcione correctamente con una aplicación cliente COM, debe ejecutarlo en un bucle de mensajes de Windows Forms. Para ello, siga uno de estos procedimientos:  
   
 -   Use el método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> para mostrar el formulario de Windows Forms.  
   
--   Muestre cada Windows Form en un subproceso independiente. Para obtener más información, vea [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+-   Muestre cada Windows Form en un subproceso independiente. Para obtener más información, vea [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="procedure"></a>Procedimiento  
  El uso del método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> puede ser la manera más fácil de mostrar un formulario en un bucle de mensajes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] porque, de todos los enfoques, es el que necesita menos código para su implementación.  
@@ -38,6 +38,6 @@ Puede resolver problemas de interoperabilidad del Modelo de objetos componentes 
 -   Reemplace todas las llamadas al método <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> por llamadas al método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> en su componente de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
   
 ## <a name="see-also"></a>Vea también
-- [Exponer componentes de .NET Framework en COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
-- [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
+- [Exponer componentes de .NET Framework en COM](../../interop/exposing-dotnet-components-to-com.md)
+- [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)

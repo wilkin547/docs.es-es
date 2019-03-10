@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Proporcionar un mapa de bits del cuadro de herramientas para un control'
+title: Filtrar Proporcionar un mapa de bits del cuadro de herramientas para un Control
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - custom controls [Windows Forms], Toolbox bitmaps
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
-ms.openlocfilehash: aa32850b9bcd1a15a93bd6c80b2278278d12c417
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9072f96bd6e3485e759ed72819229b3f0c33d641
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746550"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715963"
 ---
-# <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Cómo: Proporcionar un mapa de bits del cuadro de herramientas para un control
+# <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Procedimiento Proporcionar un mapa de bits del cuadro de herramientas para un Control
 Si desea tener un icono especial para el control aparezca en el **cuadro de herramientas**, puede especificar una imagen determinada mediante el <xref:System.Drawing.ToolboxBitmapAttribute>. Esta clase es un *atributo*, un tipo especial de clase que se puede asociar a otras clases. Para obtener más información acerca de los atributos, vea [información general de atributos (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) para Visual Basic o [atributos (C#)](../../../csharp/programming-guide/concepts/attributes/index.md) para C#.  
   
  Mediante el <xref:System.Drawing.ToolboxBitmapAttribute>, puede especificar una cadena que indica la ruta de acceso y nombre de archivo para un mapa de bits de 16 por 16 píxeles. Este mapa de bits aparecerá junto al control cuando se agregue al **cuadro de herramientas**. También puede especificar un <xref:System.Type>, en cuyo caso se carga el mapa de bits asociado con ese tipo. Si especifica tanto un <xref:System.Type> y una cadena, el control busca un recurso de imagen con el nombre especificado por el parámetro de cadena en el ensamblado que contiene el tipo especificado por el <xref:System.Type> parámetro.  
@@ -61,7 +61,7 @@ Si desea tener un icono especial para el control aparezca en el **cuadro de herr
 2.  Recompile el proyecto.  
   
     > [!NOTE]
-    >  El mapa de bits no aparece en el cuadro de herramientas para componentes y controles generados automáticamente. Para ver el mapa de bits, vuelva a cargar el control con el cuadro de diálogo **Elegir elementos del cuadro de herramientas**. Para más información, consulte [Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+    >  El mapa de bits no aparece en el cuadro de herramientas para componentes y controles generados automáticamente. Para ver el mapa de bits, vuelva a cargar el control con el cuadro de diálogo **Elegir elementos del cuadro de herramientas**. Para obtener más información, vea [Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
 ## <a name="see-also"></a>Vea también
 

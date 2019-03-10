@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Cambiar los datos mostrados en tiempo de ejecución en el Control DataGrid de Windows Forms
+title: Filtrar Cambiar los datos mostrados en tiempo de ejecución en el Control DataGrid de Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: fc0fe47d728a196de81f7bf099e3a25ac2bb9211
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ba23dd3966591777c7e354f79dd45ec4530955a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605570"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714962"
 ---
-# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Procedimiento Cambiar los datos mostrados en tiempo de ejecución en el Control DataGrid de Windows Forms
+# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Filtrar Cambiar los datos mostrados en tiempo de ejecución en el Control DataGrid de Windows Forms
 > [!NOTE]
->  El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
+>  El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
  Después de haber creado un formulario Windows Forms <xref:System.Windows.Forms.DataGrid> con las características de tiempo de diseño, es posible que también desee cambiar dinámicamente los elementos de la <xref:System.Data.DataSet> objeto de la cuadrícula en tiempo de ejecución. Esto puede incluir los cambios realizados en valores individuales de la tabla o cambiar el origen de datos se enlaza a la <xref:System.Windows.Forms.DataGrid> control. Los cambios realizados en los valores individuales se realizan a través de la <xref:System.Data.DataSet> objeto, no el <xref:System.Windows.Forms.DataGrid> control.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "54605570"
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [Objetos DataSet de ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)
-- [Cómo: Eliminar u ocultar columnas en el Control DataGrid de Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [Cómo: Agregar tablas y columnas al Control DataGrid de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [Cómo: Enlazar el Control DataGrid de Windows Forms a un origen de datos](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Objetos DataSet de ADO.NET](../../data/adonet/ado-net-datasets.md)
+- [Cómo: Eliminar u ocultar columnas en el Control DataGrid de Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Cómo: Agregar tablas y columnas al Control DataGrid de formularios Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Cómo: Enlazar el Control DataGrid de Windows Forms a un origen de datos](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

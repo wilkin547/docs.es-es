@@ -1,5 +1,5 @@
 ---
-title: Filtrar Administrar el desbordamiento de ToolStrip en Windows Forms
+title: Procedimiento Administrar el desbordamiento de ToolStrip en Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - CanOverflow property
 ms.assetid: fa10e0ad-4cbf-4c0d-9082-359c2f855d4e
-ms.openlocfilehash: 24304b64b4214f9c15006e4f6cf35fac0bd0ced1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 53f610a728925d454a8833a49e705818f027aec5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480083"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707279"
 ---
-# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Procedimiento Administrar el desbordamiento de ToolStrip en Windows Forms
+# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Filtrar Administrar el desbordamiento de ToolStrip en Windows Forms
 
 Cuando todos los elementos en un <xref:System.Windows.Forms.ToolStrip> control no caben en el espacio asignado, puede habilitar la funcionalidad del desbordamiento en el <xref:System.Windows.Forms.ToolStrip> y determinar el comportamiento de desbordamiento específicas de <xref:System.Windows.Forms.ToolStripItem>s.
 
@@ -49,6 +49,6 @@ Al agregar <xref:System.Windows.Forms.ToolStripItem>s que requieren más espacio
 - <xref:System.Windows.Forms.ToolStripOverflowButton>
 - <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>
 - <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>
-- [Información sobre el control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [Arquitectura del control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [Resumen de la tecnología ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [Información sobre el control ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Arquitectura del control ToolStrip](toolstrip-control-architecture.md)
+- [Resumen de la tecnología ToolStrip](toolstrip-technology-summary.md)

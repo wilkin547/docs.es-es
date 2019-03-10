@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 06d75abe814ed25fbb9d729705a6afd3bc03baed
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cb552752c1693ce8008eb57e0703882b7281830
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366714"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705992"
 ---
-# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Procedimiento Hospedar varias versiones de un flujo de trabajo paralelo
+# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Filtrar Hospedar varias versiones de un flujo de trabajo paralelo
 `WorkflowIdentity` proporciona una manera para que los desarrolladores de aplicaciones de flujo de trabajo asocien un nombre y una versión con una definición de flujo de trabajo, y para que esta información se asocie a una instancia de flujo de trabajo persistente. Los desarrolladores de aplicaciones de flujo de trabajo pueden usar esta información de identidad para habilitar escenarios como la ejecución en paralelo de varias versiones de una definición de flujo de trabajo; además esta información proporciona la piedra angular para otras funcionalidades como la actualización dinámica. Este paso del tutorial demuestra cómo usar `WorkflowIdentity` para hospedar varias versiones de un flujo de trabajo simultáneamente.
 
 > [!NOTE]
@@ -21,22 +21,22 @@ ms.locfileid: "57366714"
 ## <a name="in-this-topic"></a>En este tema  
  En este paso del tutorial, las actividades de `WriteLine` en el flujo de trabajo se modifican para proporcionar información adicional y se agrega una nueva actividad `WriteLine`. Una copia del ensamblado original de flujo de trabajo queda almacenada y la aplicación de host se actualiza de tal modo que puede ejecutar tanto el flujo de trabajo original como el actualizado al mismo tiempo.  
   
--   [Para realizar una copia del proyecto NumberGuessWorkflowActivities](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
+-   [Para realizar una copia del proyecto NumberGuessWorkflowActivities](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
   
--   [Para actualizar los flujos de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
+-   [Para actualizar los flujos de trabajo](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
-    -   [Para actualizar el flujo de trabajo StateMachine](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+    -   [Para actualizar el flujo de trabajo StateMachine](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
-    -   [Para actualizar el flujo de trabajo de diagrama de flujo](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+    -   [Para actualizar el flujo de trabajo de diagrama de flujo](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
-    -   [Para actualizar el flujo de trabajo secuencial](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
+    -   [Para actualizar el flujo de trabajo secuencial](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [Para actualizar WorkflowVersionMap para incluir las versiones anteriores del flujo de trabajo](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [Para actualizar WorkflowVersionMap para incluir las versiones anteriores del flujo de trabajo](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [Para compilar y ejecutar la aplicación](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
+-   [Para compilar y ejecutar la aplicación](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  Antes de seguir los pasos de este tema, ejecute la aplicación, inicie varios flujos de trabajo de cada tipo y realice uno o dos intentos con cada uno. Estos flujos de trabajo persistentes se usan en este paso y el paso siguiente, [Cómo: Actualizar la definición de una instancia de flujo de trabajo de ejecución](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+>  Antes de seguir los pasos de este tema, ejecute la aplicación, inicie varios flujos de trabajo de cada tipo y realice uno o dos intentos con cada uno. Estos flujos de trabajo persistentes se usan en este paso y el paso siguiente, [Cómo: Actualizar la definición de una instancia de flujo de trabajo de ejecución](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 > [!NOTE]
 >  Cada paso del tutorial de introducción depende de los pasos anteriores. Si no completó los pasos anteriores, puede descargar una versión completada del tutorial de [Windows Workflow Foundation (WF45): Tutorial de introducción](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -60,7 +60,7 @@ ms.locfileid: "57366714"
     > [!NOTE]
     >  En los pasos de este tema se muestra una manera de administrar los ensamblados usados para contener varias versiones de los flujos de trabajo. También se pueden usar otros métodos, como el nombre seguro de los ensamblados y su registro en la memoria caché global de ensamblados.
 
-8.  Cree una carpeta nueva denominada **NumberGuessWorkflowActivities_du** en la misma carpeta que **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**y la recién agregar **PreviousVersions** carpeta y copie todos los archivos y subcarpetas de la **NumberGuessWorkflowActivities** carpeta en el nuevo  **NumberGuessWorkflowActivities_du** carpeta. Esta copia de seguridad del proyecto para la versión inicial de las actividades se usa en [Cómo: Actualizar la definición de una instancia de flujo de trabajo de ejecución](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+8.  Cree una carpeta nueva denominada **NumberGuessWorkflowActivities_du** en la misma carpeta que **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**y la recién agregar **PreviousVersions** carpeta y copie todos los archivos y subcarpetas de la **NumberGuessWorkflowActivities** carpeta en el nuevo  **NumberGuessWorkflowActivities_du** carpeta. Esta copia de seguridad del proyecto para la versión inicial de las actividades se usa en [Cómo: Actualizar la definición de una instancia de flujo de trabajo de ejecución](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 9. Vuelva a abrir el **WF45GettingStartedTutorial** solución en Visual Studio 2012.
 
@@ -580,4 +580,4 @@ ms.locfileid: "57366714"
 
 4.  Vuelva a la aplicación para adivinar números y seleccione uno de los flujos de trabajo iniciado antes de que se realizaran las actualizaciones. Puede identificar la versión del flujo de trabajo seleccionado actualmente si examina la información de versión que aparece debajo de la ventana de estado. Escriba los números y observe que las actualizaciones de estado coinciden con el resultado de la actividad `WriteLine` de la versión anterior y no incluyen el intento del usuario. Esto se debe a que estos flujos de trabajo usan la definición de flujo de trabajo anterior que no tiene las actualizaciones `WriteLine`.
 
-     En el paso siguiente, [Cómo: Actualizar la definición de una instancia de flujo de trabajo ejecuta](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), la ejecución `v1` las instancias de flujo de trabajo se actualizan para que contengan la nueva funcionalidad como la `v2` instancias.
+     En el paso siguiente, [Cómo: Actualizar la definición de una instancia de flujo de trabajo ejecuta](how-to-update-the-definition-of-a-running-workflow-instance.md), la ejecución `v1` las instancias de flujo de trabajo se actualizan para que contengan la nueva funcionalidad como la `v2` instancias.

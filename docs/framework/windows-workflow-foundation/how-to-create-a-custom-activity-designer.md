@@ -2,12 +2,12 @@
 title: Filtrar Crear un diseñador de actividad personalizado
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 755aea092d5906d7313234d7ddd1c99d87a7e54d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466887"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716834"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Filtrar Crear un diseñador de actividad personalizado
 
@@ -21,9 +21,9 @@ El otro elemento importante que se debe destacar en la implementación de un dis
 
 En este tema se describen dos procedimientos.
 
-1. El primer procedimiento describe cómo crear un diseñador de actividad personalizado con una clase <xref:System.Activities.Presentation.WorkflowItemPresenter> que proporciona el área de colocación que recibe a otras actividades. Este procedimiento se basa en el [compuesto diseñadores personalizados - moderador de elementos de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) ejemplo.
+1. El primer procedimiento describe cómo crear un diseñador de actividad personalizado con una clase <xref:System.Activities.Presentation.WorkflowItemPresenter> que proporciona el área de colocación que recibe a otras actividades. Este procedimiento se basa en el [compuesto diseñadores personalizados - moderador de elementos de flujo de trabajo](./samples/custom-composite-designers-workflow-item-presenter.md) ejemplo.
 
-2. El segundo procedimiento describe cómo crear un diseñador de actividad personalizado con una clase <xref:System.Activities.Presentation.WorkflowItemsPresenter> que proporciona la funcionalidad necesaria para editar una colección de elementos contenidos. Este procedimiento se basa en el [compuesto diseñadores personalizados - moderador de elementos de flujo de trabajo](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) ejemplo.
+2. El segundo procedimiento describe cómo crear un diseñador de actividad personalizado con una clase <xref:System.Activities.Presentation.WorkflowItemsPresenter> que proporciona la funcionalidad necesaria para editar una colección de elementos contenidos. Este procedimiento se basa en el [compuesto diseñadores personalizados - moderador de elementos de flujo de trabajo](./samples/custom-composite-designers-workflow-items-presenter.md) ejemplo.
 
 ## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>Para crear un diseñador de actividad personalizado con un área de colocación mediante WorkflowItemPresenter
 
@@ -350,4 +350,4 @@ En este tema se describen dos procedimientos.
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - <xref:System.Activities.Presentation.WorkflowViewElement>
 - <xref:System.Activities.Presentation.Model.ModelItem>
-- [Personalización de la experiencia de diseño del flujo de trabajo](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+- [Personalización de la experiencia de diseño del flujo de trabajo](customizing-the-workflow-design-experience.md)

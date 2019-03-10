@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6c798d0f6a454c7ee819d5556970bca12f1812e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529628"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708280"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Tutorial: Crear una aplicación accesible basada en Windows
 Crear una aplicación accesible conlleva importantes implicaciones empresariales. Muchos gobiernos tienen normativas sobre accesibilidad aplicadas a la compra de software. El logotipo “Certificado para Windows” incluye requisitos de accesibilidad. Tan solo en EE. UU hay aproximadamente unos 30 millones de ciudadanos, muchos de ellos clientes potenciales, que se ven afectados por la accesibilidad del software.  
@@ -30,7 +30,7 @@ Crear una aplicación accesible conlleva importantes implicaciones empresariales
   
  Para más información, consulte [Recursos para diseñar aplicaciones accesibles](/visualstudio/ide/reference/resources-for-designing-accessible-applications).  
   
- Para información sobre la compatibilidad con diversas distribuciones de teclado, consulte [Procedimientos recomendados para desarrollar aplicaciones de uso internacional](../../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).  
+ Para información sobre la compatibilidad con diversas distribuciones de teclado, consulte [Procedimientos recomendados para desarrollar aplicaciones de uso internacional](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).  
   
 ## <a name="creating-the-project"></a>Crear el proyecto  
  En este tutorial se crea la interfaz de usuario de una aplicación que admite pedidos de pizzas. La interfaz consta de un <xref:System.Windows.Forms.TextBox> para el nombre del cliente, un grupo <xref:System.Windows.Forms.RadioButton> para seleccionar el tamaño de la pizza, un <xref:System.Windows.Forms.CheckedListBox> para seleccionar los ingredientes, dos controles de botón (Button) con la etiqueta Order y Cancel y un menú con un comando Exit.  
@@ -46,7 +46,7 @@ Crear una aplicación accesible conlleva importantes implicaciones empresariales
 ## <a name="adding-the-controls-to-the-form"></a>Agregar controles al formulario  
  Cuando agregue controles a un formulario, tenga en cuenta las siguientes instrucciones para crear una aplicación accesible:  
   
--   Establezca las propiedades <xref:System.Windows.Forms.Control.AccessibleDescription%2A> y <xref:System.Windows.Forms.Control.AccessibleName%2A>. En este ejemplo, la configuración predeterminada para <xref:System.Windows.Forms.Control.AccessibleRole%2A> es suficiente. Para más información sobre las propiedades de accesibilidad, consulte [Proporcionar información de accesibilidad de controles en Windows Forms](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
+-   Establezca las propiedades <xref:System.Windows.Forms.Control.AccessibleDescription%2A> y <xref:System.Windows.Forms.Control.AccessibleName%2A>. En este ejemplo, la configuración predeterminada para <xref:System.Windows.Forms.Control.AccessibleRole%2A> es suficiente. Para más información sobre las propiedades de accesibilidad, consulte [Proporcionar información de accesibilidad de controles en Windows Forms](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
   
 -   Establezca el tamaño de la fuente en 10 puntos o más.  
   
@@ -137,7 +137,7 @@ Crear una aplicación accesible conlleva importantes implicaciones empresariales
     |MenuItem|Nombre|exitApp|  
     ||Texto|&Salir|  
   
-     ![Formulario de pedido de pizza](../../../../docs/framework/winforms/advanced/media/vbpizzaorderform.gif "vbPizzaOrderForm")  
+     ![Formulario de pedido de pizza](./media/vbpizzaorderform.gif "vbPizzaOrderForm")  
 El formulario tendrá una apariencia similar a la siguiente:  
   
 ## <a name="supporting-high-contrast-mode"></a>Compatibilidad con el modo de contraste alto  
@@ -153,7 +153,7 @@ El formulario tendrá una apariencia similar a la siguiente:
   
  La aplicación debe comprobar la configuración de <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> cuando se inicia la aplicación y responder al evento de sistema <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>. El evento <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> se genera siempre que el valor de <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> cambia.  
   
- En nuestra aplicación, el único elemento que no usa la configuración de color del sistema es `lblCompanyName`. La <xref:System.Drawing.SystemColors> clase se utiliza para cambiar la configuración de color de la etiqueta a los colores del sistema seleccionada por el usuario.  
+ En nuestra aplicación, el único elemento que no usa la configuración de color del sistema es `lblCompanyName`. La <xref:System.Drawing.SystemColors> clase se utiliza para cambiar la configuración de color de la etiqueta a los colores del sistema seleccionados por el usuario.  
   
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>Para habilitar el modo de contraste alto de forma eficaz  
   
@@ -287,7 +287,7 @@ El formulario tendrá una apariencia similar a la siguiente:
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>Para proporcionar información por otros medios distintos del sonido  
   
-1.  Haga parpadear la barra de título flash con la función de API de Windows FlashWindow. Para ver un ejemplo de cómo llamar a funciones de API de Windows, consulte [Tutorial: Llamar a las API de Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+1.  Haga parpadear la barra de título flash con la función de API de Windows FlashWindow. Para obtener un ejemplo de cómo llamar a funciones de la API de Windows, consulte [Tutorial: Llamar a las API de Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
     > [!NOTE]
     >  El usuario puede tener el servicio SoundSentry de Windows habilitado, que también hace que la ventana parpadee cuando se reproducen los sonidos del sistema a través de los altavoces integrados en el equipo.  
@@ -296,7 +296,7 @@ El formulario tendrá una apariencia similar a la siguiente:
   
 3.  Muestre un cuadro de mensaje que adquiera el foco del teclado. Evite usar este método cuando el usuario esté escribiendo.  
   
-4.  Muestre un indicador de estado en el área de notificación de estado de la barra de tareas. Para ver detalles, consulte [Cómo: Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de Windows Forms](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+4.  Muestre un indicador de estado en el área de notificación de estado de la barra de tareas. Para ver detalles, consulte [Cómo: Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de Windows Forms](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
 ## <a name="testing-the-application"></a>Probar la aplicación  
  Antes de implementar la aplicación, pruebe las características de accesibilidad que se han implementado.  

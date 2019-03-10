@@ -2,12 +2,12 @@
 title: Activación de instancias
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 78f134ca2d78261a5f6ff9376bd9a98116315f0c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366054"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703405"
 ---
 # <a name="instance-activation"></a>Activación de instancias
 El almacén de instancias de flujo de trabajo de SQL ejecuta una tarea interna que se inicia periódicamente y que detecta instancias de flujo de trabajo ejecutables o activables en la base de datos de persistencia. Si encuentra una instancia de flujo de trabajo ejecutable, notifica al host de flujo de trabajo que es capaz de activar la instancia. Si el almacén de instancias encuentra una instancia de flujo de trabajo activable, notifica a un host genérico que activa un host del flujo de trabajo, que a su vez ejecuta la instancia de flujo de trabajo. Las siguientes secciones en este tema explican el proceso de activación de la instancia en detalle.  
@@ -40,4 +40,4 @@ El almacén de instancias de flujo de trabajo de SQL ejecuta una tarea interna q
  Para la activación WAS, un host genérico exige que un conjunto de parámetros de activación derive la dirección del extremo en la que se pueden activar los nuevos hosts. Los parámetros de activación para la activación WAS son los nombre del sitio, la ruta de acceso a la aplicación relativa al sitio y la ruta de acceso al servicio relativa a la aplicación. El almacén de instancias de flujo de trabajo de SQL almacena estos parámetros de activación durante la ejecución de <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>.  
   
 ## <a name="runnable-instances-detection-period"></a>Período de detección de instancias ejecutables  
- El **período de detección de instancias ejecutables** propiedad del Store de instancia de flujo de trabajo de SQL especifica el período de tiempo después del cual el Store de instancia de flujo de trabajo de SQL ejecuta una tarea de detección para detectar cualquier flujo de trabajo ejecutable o activable instancias de la base de datos de persistencia después del ciclo de detección anterior. Consulte [período de detección de instancias ejecutables](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md) para obtener más información acerca de esta propiedad.
+ El **período de detección de instancias ejecutables** propiedad del Store de instancia de flujo de trabajo de SQL especifica el período de tiempo después del cual el Store de instancia de flujo de trabajo de SQL ejecuta una tarea de detección para detectar cualquier flujo de trabajo ejecutable o activable instancias de la base de datos de persistencia después del ciclo de detección anterior. Consulte [período de detección de instancias ejecutables](runnable-instances-detection-period.md) para obtener más información acerca de esta propiedad.

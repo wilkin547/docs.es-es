@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Quitar un elemento ToolStripMenuItem de un menú de lista desplegable MDI (formularios Windows Forms)
+title: Filtrar Quitar un elemento ToolStripMenuItem de un menú de lista desplegable MDI (formularios Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], removing
 - MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
-ms.openlocfilehash: c650f8a26629d942aa4ccf0066aee6af4b51f8b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe18b83456c4d02c31581caee30c65d0835eecc1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632067"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703301"
 ---
 # <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>Procedimiento Quitar un elemento ToolStripMenuItem de un menú de lista desplegable MDI (formularios Windows Forms)
 En algunas aplicaciones, el tipo de ventana secundaria de una interfaz de múltiples documentos (MDI) puede ser diferente de la ventana primaria MDI. Por ejemplo, el elemento primario MDI podría ser una hoja de cálculo y el elemento secundario MDI podría ser un gráfico. En ese caso, querrá actualizar el contenido del menú del elemento primario MDI con el contenido del menú del elemento secundario MDI cuando se activan ventanas secundarias MDI de diferentes tipos.  
@@ -95,6 +95,6 @@ En algunas aplicaciones, el tipo de ventana secundaria de una interfaz de múlti
 -   Referencias a los ensamblados <xref:System?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Crear formularios principales MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Cómo: Crear formularios MDI secundarios](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [Información general sobre el control MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [Cómo: Crear formularios principales MDI](../advanced/how-to-create-mdi-parent-forms.md)
+- [Cómo: Crear formularios MDI secundarios](../advanced/how-to-create-mdi-child-forms.md)
+- [Información general sobre el control MenuStrip](menustrip-control-overview-windows-forms.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
-ms.openlocfilehash: 8a2dcde82c4bdded05fe1d69578b6becb5c1175e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 9beacc84001aa1a5d505b8563794c49f3287cbc1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442001"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705797"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>Controles y componentes de cuadros de diálogo (formularios Windows Forms)
 Los siguientes controles y componentes de Windows Forms presentan cuadros de diálogo estándar. Siga los vínculos para obtener más información acerca de las funciones disponibles en cada cuadro de diálogo.  
@@ -40,31 +40,31 @@ Los siguientes controles y componentes de Windows Forms presentan cuadros de di�
  Contiene información de referencia sobre la clase <xref:System.Windows.Forms.SaveFileDialog> y sus miembros.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Cuadros de diálogo en Windows Forms](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+ [Cuadros de diálogo en Windows Forms](../dialog-boxes-in-windows-forms.md)  
  Describe cómo crear un cuadro de diálogo para un Windows Forms.  
   
- [Información general del componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
+ [Información general del componente ColorDialog](colordialog-component-overview-windows-forms.md)  
  Permite al usuario seleccionar un color de una paleta en un cuadro de diálogo preconfigurado y agregar colores personalizados a la paleta.  
   
- [Información general del componente FolderBrowserDialog (Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
+ [Información general del componente FolderBrowserDialog (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)  
  Permite a los usuarios buscar y seleccionar carpetas.  
   
- [Información general del componente FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
+ [Información general del componente FontDialog](fontdialog-component-overview-windows-forms.md)  
  Expone las fuentes que están instaladas actualmente en el sistema.  
   
- [Información general del componente OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
+ [Información general del componente OpenFileDialog](openfiledialog-component-overview-windows-forms.md)  
  Permite a los usuarios abrir archivos mediante un cuadro de diálogo preconfigurado.  
   
- [Información general del componente PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
+ [Información general del componente PageSetupDialog](pagesetupdialog-component-overview-windows-forms.md)  
  Establece la página de detalles de impresión mediante un cuadro de diálogo preconfigurado.  
   
- [Información general del componente PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-overview-windows-forms.md)  
+ [Información general del componente PrintDialog](printdialog-component-overview-windows-forms.md)  
  Selecciona una impresora, elige las páginas que se van a imprimir y determina otros valores de configuración relacionados con la impresión.  
   
- [Información general del control PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md)  
+ [Información general del control PrintPreviewDialog](printpreviewdialog-control-overview-windows-forms.md)  
  Muestra un documento tal y como aparecerá cuando se imprima.  
   
- [Información general del componente SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
+ [Información general del componente SaveFileDialog](savefiledialog-component-overview-windows-forms.md)  
  Selecciona archivos para guardar y dónde guardarlos.  
   
  Consulte también [Cuadros de diálogo en Windows Forms](../dialog-boxes-in-windows-forms.md).

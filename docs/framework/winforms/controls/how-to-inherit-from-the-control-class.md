@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Heredar de la clase de Control
+title: Filtrar Heredar de la clase de Control
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: 11856152b3bf3bb256f44a0571c467072e545206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf1b3c7d7d530710c4c7e0fbd137667c3598500a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532648"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702976"
 ---
-# <a name="how-to-inherit-from-the-control-class"></a>Procedimiento Heredar de la clase de Control
+# <a name="how-to-inherit-from-the-control-class"></a>Filtrar Heredar de la clase de Control
 Si desea crear un control completamente personalizado para usar en un formulario de Windows, debe heredar la <xref:System.Windows.Forms.Control> clase. Al heredar el <xref:System.Windows.Forms.Control> clase requiere que realice más planeación e implementación, también proporciona con la mayor variedad de opciones. Al heredar de <xref:System.Windows.Forms.Control>, hereda la funcionalidad básica que hace funcionar los controles. La funcionalidad inherente a la <xref:System.Windows.Forms.Control> clase controla la entrada de usuario a través del teclado y mouse, define los límites y el tamaño del control, proporciona un identificador de windows y proporciona seguridad y control de mensajes. No incorpora ningún dibujo, que en este caso es la representación real de la interfaz gráfica del control, ni cualquier funcionalidad de interacción de usuario específico. Debe proporcionar todos estos elementos por medio del código personalizado.  
   
 > [!NOTE]
@@ -37,16 +37,16 @@ Si desea crear un control completamente personalizado para usar en un formulario
   
 6.  Modifique el código para incorporar el dibujo personalizado que desee para su control.  
   
-     Para información sobre cómo escribir código para representar gráficos para los controles, vea [Dibujo y representación personalizados de controles](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md).  
+     Para información sobre cómo escribir código para representar gráficos para los controles, vea [Dibujo y representación personalizados de controles](custom-control-painting-and-rendering.md).  
   
 7.  Implemente los métodos, propiedades o eventos personalizados que vaya a incorporar el control.  
   
 8.  Guarde y pruebe el control.  
   
 ## <a name="see-also"></a>Vea también
-- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
-- [Cómo: Heredar de la clase UserControl](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)
-- [Cómo: Heredar de Windows existente controles de formularios](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)
-- [Cómo: Crear controles de Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)
+- [Variedades de controles personalizados](varieties-of-custom-controls.md)
+- [Cómo: Heredar de la clase UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Cómo: Heredar de Windows existente controles de formularios](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Cómo: Crear controles de Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Solucionar problemas de controladores de eventos heredados en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Desarrollar controles de Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [Desarrollar controles de Windows Forms en tiempo de diseño](developing-windows-forms-controls-at-design-time.md)

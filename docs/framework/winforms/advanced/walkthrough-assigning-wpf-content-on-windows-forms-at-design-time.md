@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: a2597348075f870723abb07d13ac7a687e47ab41
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 364cfe521a1e141bdfcfb3cfc47170714d010a87
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304406"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707929"
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Tutorial: Asignar el contenido WPF en Windows Forms en tiempo de diseño
 Este tutorial muestra cómo seleccionar los tipos de control de Windows Presentation Foundation (WPF) que desea mostrar en el formulario. Puede seleccionar cualquier tipo de control WPF incluido en su proyecto.
@@ -49,7 +49,7 @@ Este tutorial muestra cómo seleccionar los tipos de control de Windows Presenta
   
 #### <a name="to-create-wpf-control-types"></a>Para crear tipos de control WPF  
   
-1.  Agregue un nuevo proyecto de <xref:System.Windows.Controls.UserControl> de WPF a la solución. Use el nombre predeterminado del tipo de control, `UserControl1.xaml`. Para obtener más información, vea [Tutorial: Crear nuevo contenido WPF en Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Agregue un nuevo proyecto de <xref:System.Windows.Controls.UserControl> de WPF a la solución. Use el nombre predeterminado del tipo de control, `UserControl1.xaml`. Para obtener más información, vea [Tutorial: Crear nuevo contenido WPF en Windows Forms en tiempo de diseño](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
 2.  En la vista Diseño, asegúrese de que `UserControl1` está seleccionado. Para obtener más información, vea [Cómo: Seleccionar y mover elementos en la superficie de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).  
   
@@ -99,6 +99,6 @@ Este tutorial muestra cómo seleccionar los tipos de control de Windows Presenta
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Migración e interoperabilidad](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [Utilizar controles WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [Migración e interoperabilidad](../../wpf/advanced/migration-and-interoperability.md)
+- [Utilizar controles WPF](using-wpf-controls.md)
 - [Diseño de XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

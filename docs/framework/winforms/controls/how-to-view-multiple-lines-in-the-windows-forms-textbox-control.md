@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: 11047b9308905b153662c5449abeeae8c23af26c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d80a0262455b9b5e0e8535d88eb6292ab60e3ea8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565636"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716015"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Procedimiento Ver múltiples líneas en el Control TextBox de Windows Forms
 De forma predeterminada, los formularios de Windows <xref:System.Windows.Forms.TextBox> control muestra una sola línea de texto y no muestra barras de desplazamiento. Si el texto es mayor que el espacio disponible, sólo una parte del texto es visible. Puede cambiar este comportamiento predeterminado estableciendo la <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, y <xref:System.Windows.Forms.TextBox.ScrollBars%2A> propiedades en los valores adecuados.  
@@ -48,10 +48,10 @@ De forma predeterminada, los formularios de Windows <xref:System.Windows.Forms.T
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Forms.TextBox>
-- [Información general sobre el control TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [Cómo: Controlar el punto de inserción en un Control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Cómo: Crear un cuadro de texto de contraseña con el Control TextBox de Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Cómo: Crear un cuadro de texto de solo lectura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [Cómo: Insertar comillas en una cadena](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Cómo: Seleccionar texto en el Control TextBox de Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Control TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [Información general sobre el control TextBox](textbox-control-overview-windows-forms.md)
+- [Cómo: Controlar el punto de inserción en un Control TextBox de formularios Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Cómo: Crear un cuadro de texto de contraseña con el Control TextBox de Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Cómo: Crear un cuadro de texto de solo lectura](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Cómo: Insertar comillas en una cadena](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Cómo: Seleccionar texto en el Control TextBox de Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Control TextBox](textbox-control-windows-forms.md)

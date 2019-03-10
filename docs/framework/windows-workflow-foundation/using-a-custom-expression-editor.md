@@ -2,12 +2,12 @@
 title: Usar un editor de expresiones personalizado
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 3959fdb5b75ae6e48c19130cf6e825455d8f7103
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3bbad843c5e4d409627c255be7341d364a3d36d6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526917"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716535"
 ---
 # <a name="using-a-custom-expression-editor"></a>Usar un editor de expresiones personalizado
 Se puede implementar un editor de expresiones personalizado para proporcionar una experiencia de edición de expresiones más sencilla o más enriquecida. Existen varios escenarios en los que se podría desear utilizar un editor de expresiones personalizado:  
@@ -281,4 +281,4 @@ namespace WpfApplication1
 ## <a name="see-also"></a>Vea también
 - <xref:System.Activities.Presentation.View.IExpressionEditorService>
 - <xref:System.Activities.Presentation.View.IExpressionEditorInstance>
-- [Uso de ExpressionTextBox en un diseñador de actividad personalizado](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [Uso de ExpressionTextBox en un diseñador de actividad personalizado](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

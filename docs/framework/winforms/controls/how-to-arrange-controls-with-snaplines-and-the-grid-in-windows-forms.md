@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-ms.openlocfilehash: 3a295eadae854a2e1a982f18ec49570944cc999d
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 23a1c850133982c5f0136e4c21e6b73fcb94e887
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303522"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716366"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Filtrar Organizar controles con las líneas de ajuste y la cuadrícula en formularios de Windows
 Uso de las características de diseño de Visual Studio, puede dirigir con precisión donde se colocan los controles en un formulario. Los controles que se agrega a un formulario o se desplaza en un formulario se pueden alinear automáticamente a las filas y columnas de cuadrícula del Diseñador de Windows Forms o alinear los controles mediante la característica de las guías de alineación.  
@@ -27,20 +27,20 @@ Uso de las características de diseño de Visual Studio, puede dirigir con preci
   
      Para obtener más información, consulte [General, el Diseñador de Windows Forms, el cuadro de diálogo Opciones](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)). Todos los controles ahora se alinearán a lo largo de los puntos en la cuadrícula.  
   
-     Puede ajustar los controles individuales a la cuadrícula bloqueando en su lugar. Sin embargo, mientras estén bloqueados, que no se pueden mover o cambiar de tamaño. Para obtener más información acerca de los controles de bloqueos, vea [Cómo: Bloquear controles en Windows Forms](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md).  
+     Puede ajustar los controles individuales a la cuadrícula bloqueando en su lugar. Sin embargo, mientras estén bloqueados, que no se pueden mover o cambiar de tamaño. Para obtener más información acerca de los controles de bloqueos, vea [Cómo: Bloquear controles en Windows Forms](how-to-lock-controls-to-windows-forms.md).  
   
 ### <a name="to-align-controls-using-snaplines"></a>Para alinear controles mediante líneas de ajuste  
   
 -   Seleccione el **las guías de alineación** el modo de diseño en el Diseñador de Windows Forms **opciones** cuadro de diálogo.  
   
-     Para obtener más información, vea [Tutorial: Organizar controles en Windows Forms mediante líneas de ajuste](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). Ahora puede usar las guías de alineación para alinear y organizar controles en el formulario.  
+     Para obtener más información, vea [Tutorial: Organizar controles en Windows Forms mediante líneas de ajuste](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). Ahora puede usar las guías de alineación para alinear y organizar controles en el formulario.  
   
 ## <a name="see-also"></a>Vea también
 - [General, Diseñador de formularios de Windows, cuadro de diálogo Opciones](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [Tutorial: Organizar controles en formularios de Windows Forms mediante líneas de ajuste](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/index.md)
-- [Cómo: Agregar controles a Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
-- [Organizar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Controles de formularios Windows Forms por función](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Tutorial: Organizar controles en formularios de Windows Forms mediante líneas de ajuste](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Controles de formularios Windows Forms](index.md)
+- [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
+- [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)
