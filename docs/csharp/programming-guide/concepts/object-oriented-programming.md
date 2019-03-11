@@ -2,12 +2,12 @@
 title: Programación orientada a objetos (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8f7a810b3f3ec74723ca5e715b7428e1b60928f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7822b9afa4b568563222d6096ea1b1ecc5d5ee0a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702488"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377929"
 ---
 # <a name="object-oriented-programming-c"></a>Programación orientada a objetos (C#)
 C# proporciona compatibilidad completa para la programación orientada a objetos incluida la encapsulación, la herencia y el polimorfismo.  
@@ -54,7 +54,7 @@ C# proporciona compatibilidad completa para la programación orientada a objetos
   
 -   [Delegados](#Delegates)  
   
-##  <a name="Classes"></a> Clases y objetos  
+## <a name="Classes"></a> Clases y objetos  
  Los términos *clase* y *objeto* se usan a veces indistintamente pero, en realidad, las clases describen el *tipo* de los objetos, mientras que los objetos son *instancias* de clases que se pueden usar. Así, la acción de crear un objeto se denomina *creación de instancias*. Con la analogía de plano, una clase es un plano y un objeto es un edificio construido a partir de ese plano.  
   
  Para definir una clase:  
@@ -81,10 +81,10 @@ struct SampleStruct
   
 -   [struct](../../../csharp/language-reference/keywords/struct.md)  
   
-###  <a name="Members"></a> Miembros de clases  
+### <a name="Members"></a> Miembros de clases  
  Cada clase puede tener distintos *miembros de clase*, entre los que se incluyen las propiedades que describen los datos de clase, los métodos que definen el comportamiento de la clase y los eventos que proporcionan comunicación entre distintos objetos y clases.  
   
-####  <a name="Properties"></a> Propiedades y campos  
+#### <a name="Properties"></a> Propiedades y campos  
  Los campos y propiedades representan información que contiene un objeto. Los campos se parecen a las variables ya que se pueden leer y establecer directamente.  
   
  Para definir un campo:  
@@ -133,7 +133,7 @@ class SampleClass
   
 -   [set](../../../csharp/language-reference/keywords/set.md)  
   
-####  <a name="Methods"></a> Métodos  
+#### <a name="Methods"></a> Métodos  
  Un *método* es una acción que un objeto puede realizar.  
   
  Para definir un método de una clase:  
@@ -165,7 +165,7 @@ public int sampleMethod(int sampleParam) {}
   
 -   [Métodos de extensión](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
   
-####  <a name="Constructors"></a> Constructores  
+#### <a name="Constructors"></a> Constructores  
  Los constructores son métodos de clase que se ejecutan automáticamente cuando se crea un objeto de un tipo determinado. Normalmente, los constructores inicializan los miembros de datos del nuevo objeto. Un constructor solo puede ejecutarse una vez cuando se crea una clase. Además, el código del constructor siempre se ejecuta antes que cualquier otro código en una clase. Sin embargo, puede crear varias sobrecargas del constructor de la misma forma que para cualquier otro método.  
   
  Para definir un constructor para una clase:  
@@ -184,12 +184,12 @@ public class SampleClass
   
  [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md).  
   
-####  <a name="Finalizers"></a> Finalizadores  
+#### <a name="Finalizers"></a> Finalizadores  
  Los finalizadores se usan para destruir instancias de clases. En .NET Framework, el recolector de elementos no utilizados administra automáticamente la asignación y la liberación de memoria para los objetos administrados en la aplicación. En cambio, es posible que aún se necesiten finalizadores para limpiar cualquiera de los recursos no administrados creados por la aplicación. Solo puede haber un finalizador para una clase.  
   
  Para obtener más información sobre los finalizadores y la recolección de elementos no utilizados en .NET Framework, vea [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md).  
   
-####  <a name="Events"></a> Eventos  
+#### <a name="Events"></a> Eventos  
  Cuando ocurre algo interesante, los eventos habilitan una clase u objeto para notificarlo a otras clases u objetos. La clase que envía (o genera) el evento recibe el nombre de *publicador* y las clases que reciben (o controlan) el evento se denominan *suscriptores*. Para obtener más información sobre los eventos y la forma en que se generan y controlan, vea [Eventos](../../../standard/events/index.md).  
   
 -   Para declarar un evento en una clase, use la palabra clave [event](../../../csharp/language-reference/keywords/event.md).  
@@ -198,7 +198,7 @@ public class SampleClass
   
 -   Para suscribirse a un evento, use el operador `+=`; para anular la suscripción de un evento, use el operador `-=`.  
   
-####  <a name="NestedClasses"></a> Clases anidadas  
+#### <a name="NestedClasses"></a> Clases anidadas  
  Una clase definida dentro de otra se denomina *anidada*. De forma predeterminada, una clase anidada es privada.  
   
 ```csharp  
@@ -217,7 +217,7 @@ class Container
 Container.Nested nestedInstance = new Container.Nested()  
 ```  
   
-###  <a name="AccessModifiers"></a> Modificadores y niveles de acceso  
+### <a name="AccessModifiers"></a> Modificadores y niveles de acceso  
  Todas las clases y miembros de clase pueden especificar el nivel de acceso que proporcionan a otras clases mediante los *modificadores de acceso*.  
   
  Están disponibles los siguientes modificadores de acceso:  
@@ -233,7 +233,7 @@ Container.Nested nestedInstance = new Container.Nested()
   
  Para obtener más información, consulte [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
-###  <a name="InstantiatingClasses"></a> Creación de instancias de las clases  
+### <a name="InstantiatingClasses"></a> Creación de instancias de las clases  
  Para crear un objeto, debe crear una o varias instancias de una clase.  
   
 ```csharp  
@@ -263,7 +263,7 @@ SampleClass sampleObject = new SampleClass
   
 -   [Inicializadores de objeto y colección](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
   
-###  <a name="Static"></a> Clases y miembros estáticos  
+### <a name="Static"></a> Clases y miembros estáticos  
  Un miembro estático de la clase es una propiedad, un procedimiento o un campo que comparten todas las instancias de una clase.  
   
  Para definir un miembro estático:  
@@ -285,7 +285,7 @@ Console.WriteLine(SampleClass.SampleString);
   
  Para obtener más información, vea: [static](../../../csharp/language-reference/keywords/static.md).  
   
-###  <a name="AnonymousTypes"></a> Tipos anónimos  
+### <a name="AnonymousTypes"></a> Tipos anónimos  
  Los tipos anónimos permiten crear objetos sin escribir una definición de clase para el tipo de datos. En su lugar, el compilador genera una clase. La clase no tiene ningún nombre que se pueda usar y contiene las propiedades especificadas al declarar el objeto.  
   
  Para crear una instancia de un tipo anónimo:  
@@ -298,7 +298,7 @@ var sampleObject =
   
  Para obtener más información, consulte: [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
-##  <a name="Inheritance"></a> Herencia  
+## <a name="Inheritance"></a> Herencia  
  La herencia permite crear una nueva clase que reutiliza, extiende y modifica el comportamiento que se define en otra clase. La clase cuyos miembros se heredan se denomina *clase base* y la clase que hereda esos miembros se denomina *clase derivada*. En cambio, todas las clases de C# heredan implícitamente de la clase <xref:System.Object> que admite la jerarquía de clases .NET y proporciona servicios de bajo nivel a todas las clases.  
   
 > [!NOTE]
@@ -330,7 +330,7 @@ public abstract class B { }
   
 -   [abstract](../../../csharp/language-reference/keywords/abstract.md)  
   
-###  <a name="Overriding"></a> Reemplazar miembros  
+### <a name="Overriding"></a> Reemplazar miembros  
  De forma predeterminada, una clase derivada hereda todos los miembros de su clase base. Si desea cambiar el comportamiento del miembro heredado, debe invalidarlo. Es decir, se puede definir una nueva implementación del método, la propiedad o el evento en la clase derivada.  
   
  Los siguientes modificadores se utilizan para controlar cómo se reemplazan propiedades y métodos:  
@@ -342,7 +342,7 @@ public abstract class B { }
 |[abstract](../../../csharp/language-reference/keywords/abstract.md)|Requiere que se invalide un miembro de clase en la clase derivada.|  
 |[new (modificador)](../../../csharp/language-reference/keywords/new-modifier.md)|Oculta un miembro heredado de una clase base.|  
   
-##  <a name="Interfaces"></a> Interfaces  
+## <a name="Interfaces"></a> Interfaces  
  Las interfaces, como las clases, definen un conjunto de propiedades, métodos y eventos. Pero de forma contraria a las clases, las interfaces no proporcionan implementación. Se implementan como clases y se definen como entidades separadas de las clases. Una interfaz representa un contrato, en el cual una clase que implementa una interfaz debe implementar cualquier aspecto de dicha interfaz exactamente como esté definido.  
   
  Para definir una interfaz:  
@@ -372,7 +372,7 @@ class SampleClass : ISampleInterface
   
  [interface](../../../csharp/language-reference/keywords/interface.md)  
   
-##  <a name="Generics"></a> Genéricos  
+## <a name="Generics"></a> Genéricos  
  Las clases, las estructuras, las interfaces y los métodos de .NET Framework pueden incluir *parámetros de tipo* que definen los tipos de objetos que estos pueden almacenar o usar. El ejemplo más común de elementos genéricos es una colección, donde se puede especificar el tipo de objetos que se va a almacenar en una colección.  
   
  Para definir una clase genérica:  
@@ -397,7 +397,7 @@ sampleObject.Field = "Sample string";
   
 -   [Genéricos](../../../csharp/programming-guide/generics/index.md)  
   
-##  <a name="Delegates"></a> Delegados  
+## <a name="Delegates"></a> Delegados  
  Un *delegado* es un tipo que define una firma de método y que puede proporcionar una referencia a cualquier método con una firma compatible. Puede invocar (o llamar) al método a través del delegado. Los delegados se utilizan para pasar métodos como argumentos a otros métodos.  
   
 > [!NOTE]

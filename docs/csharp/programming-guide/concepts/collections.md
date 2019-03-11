@@ -2,12 +2,12 @@
 title: Colecciones (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: ddbbc60c497b324bdeb2614149569d5de5f4c114
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: d5e3aeab2e035ec2b5f97fd41c84ffa7625ba0b4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675418"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373444"
 ---
 # <a name="collections-c"></a>Colecciones (C#)
 Para muchas aplicaciones, puede que desee crear y administrar grupos de objetos relacionados. Existen dos formas de agrupar objetos: mediante la creación de matrices de objetos y con la creación de colecciones de objetos.  
@@ -541,7 +541,7 @@ public class Color
 ```  
 
 <a name="BKMK_Iterators"></a> 
-##  <a name="iterators"></a>Iterators  
+## <a name="iterators"></a>Iterators  
  Los *iteradores* se usan para efectuar una iteración personalizada en una colección. Un iterador puede ser un método o un descriptor de acceso `get`. Un iterador usa una instrucción [yield return](../../../csharp/language-reference/keywords/yield.md) para devolver cada elemento de la colección a la vez.  
   
  Llame a un iterador mediante una instrucción [foreach](../../../csharp/language-reference/keywords/foreach-in.md). Cada iteración del bucle `foreach` llama al iterador. Cuando se alcanza una instrucción `yield return` en el iterador, se devuelve una expresión y se conserva la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama al iterador.  

@@ -3,12 +3,12 @@ title: 'Números en C#: tutorial de introducción a C#'
 description: Obtenga información sobre C# mediante la exploración de tipos numéricos, sus propiedades y métodos.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 009c737297c331b1aa4dcad058ac6bfdf05ac037
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1b09a65b42395bfa1caf9e564120d3df1f3f1ed5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978623"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673865"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipular números enteros y de punto flotante en C\#
 
@@ -20,7 +20,7 @@ En este tutorial se supone que cuenta con una máquina que puede usar para el de
 
 Cree un directorio denominado **numbers-quickstart**. Conviértalo en el directorio actual y ejecute `dotnet new console -n NumbersInCSharp -o .`.
 
-Abra **Program.cs** en su editor favorito y reemplace la línea `Console.Writeline("Hello World!");` por lo siguiente:
+Abra **Program.cs** en su editor favorito y reemplace la línea `Console.WriteLine("Hello World!");` por lo siguiente:
 
 ```csharp
 int a = 18;
@@ -29,7 +29,7 @@ int c = a + b;
 Console.WriteLine(c);
 ```
 
-Ejecute este código escribiendo `dotnet run` en la ventana de comandos. 
+Ejecute este código escribiendo `dotnet run` en la ventana de comandos.
 
 Ya ha visto una de las operaciones matemáticas fundamentales con enteros. El tipo `int` representa un **entero**, que puede ser un número entero positivo o negativo. Use el símbolo `+` para la suma. Otros operadores matemáticos comunes con enteros son:
 
@@ -48,13 +48,13 @@ c = a / b;
 Console.WriteLine(c);
 ```
 
-Ejecute este código escribiendo `dotnet run` en la ventana de comandos. 
-    
+Ejecute este código escribiendo `dotnet run` en la ventana de comandos.
+
 Si lo desea, también puede experimentar con la realización de varias operaciones matemáticas en la misma línea. Pruebe `c = a + b - 12 * 17;` por ejemplo. Se permite la combinación de variables y números constantes.
 
 > [!TIP]
 > Cuando explore C# o cualquier otro lenguaje de programación, cometerá errores al escribir código. El **compilador** buscará dichos errores y los notificará. Si la salida contiene mensajes de error, revise detenidamente el código de ejemplo y el código de la ventana para saber qué debe corregir.
-> Este ejercicio le ayudará a aprender la estructura del código de C#.     
+> Este ejercicio le ayudará a aprender la estructura del código de C#.
 
 Ha terminado el primer paso. Antes comenzar con la siguiente sección, se va a mover el código actual a un método independiente. Con este paso, resulta más fácil empezar con un nuevo ejemplo. Cambie el nombre del método `Main` por `WorkingWithIntegers` y escriba un método `Main` nuevo que llame a `WorkingWithIntegers`. Cuando termine, el código debe tener un aspecto similar al siguiente:
 
@@ -164,7 +164,7 @@ namespace NumbersInCSharp
         }
 
         static void OrderPrecedence()
-        {   
+        {
             int a = 5;
             int b = 4;
             int c = 2;
@@ -196,6 +196,7 @@ namespace NumbersInCSharp
 ```
 
 ## <a name="explore-integer-precision-and-limits"></a>Información sobre los límites y la precisión de los enteros
+
 En el último ejemplo se ha mostrado que la división de enteros trunca el resultado.
 Puede obtener el **resto** con el operador de **módulo**, el carácter `%`. Pruebe el código siguiente en el método `Main`:
 
@@ -210,7 +211,7 @@ Console.WriteLine($"remainder: {e}");
 ```
 
 El tipo de entero de C# difiere de los enteros matemáticos en un aspecto: el tipo `int` tiene límites mínimo y máximo. Agregue este código a su método `Main` para ver esos límites:
-    
+
 ```csharp
 int max = int.MaxValue;
 int min = int.MinValue;
@@ -223,13 +224,14 @@ Si un cálculo genera un valor que supera los límites, se producirá una condic
 int what = max + 3;
 Console.WriteLine($"An example of overflow: {what}");
 ```
-    
-Tenga en cuenta que la respuesta está muy próxima al entero mínimo (negativo). Es lo mismo que `min + 2`. La operación de suma **desbordó** los valores permitidos para los enteros.
+
+Tenga en cuenta que la respuesta está muy próxima al entero mínimo (negativo). Es lo mismo que `min + 2`.
+La operación de suma **desbordó** los valores permitidos para los enteros.
 La respuesta es un número negativo muy grande porque un desbordamiento "se ajusta" desde el valor de entero más alto posible al más bajo.
 
 Hay otros tipos numéricos con distintos límites y precisiones que podría usar si el tipo `int` no satisface sus necesidades. Veámoslo a continuación.
 
-Una vez más, vamos a mover el código que escribió en esta sección a un método independiente. Denomínelo `TestLimits`. 
+Una vez más, vamos a mover el código que escribió en esta sección a un método independiente. Denomínelo `TestLimits`.
 
 ## <a name="work-with-the-double-type"></a>Operaciones con el tipo double
 
@@ -262,7 +264,7 @@ double min = double.MinValue;
 Console.WriteLine($"The range of double is {min} to {max}");
 ```
 
-Estos valores se imprimen en notación científica. El número a la izquierda de `E` es la mantisa. El número a la derecha es el exponente, como una potencia de diez. 
+Estos valores se imprimen en notación científica. El número a la izquierda de `E` es la mantisa. El número a la derecha es el exponente, como una potencia de diez.
 
 Al igual que sucede con los números decimales en las operaciones matemáticas, los tipos double en C# pueden presentar errores de redondeo. Pruebe este código:
 
@@ -303,23 +305,23 @@ Console.WriteLine(c / d);
 
 El sufijo `M` en los números es la forma de indicar que una constante debe usar el tipo `decimal`.
 
-Observe que la expresión matemática con el tipo decimal tiene más dígitos a la derecha del punto decimal. 
+Observe que la expresión matemática con el tipo decimal tiene más dígitos a la derecha del punto decimal.
 
 ***Desafío***
 
-Ahora que ya conoce los diferentes tipos numéricos, escriba código para calcular el área de un círculo cuyo radio sea de 2,50 centímetros. Recuerde que el área de un circulo es igual al valor de su radio elevado al cuadrado multiplicado por Pi. Sugerencia: .NET contiene una constante de Pi, <xref:System.Math.PI?displayProperty=nameWithType>, que puede usar para ese valor. 
+Ahora que ya conoce los diferentes tipos numéricos, escriba código para calcular el área de un círculo cuyo radio sea de 2,50 centímetros. Recuerde que el área de un circulo es igual al valor de su radio elevado al cuadrado multiplicado por Pi. Sugerencia: .NET contiene una constante de Pi, <xref:System.Math.PI?displayProperty=nameWithType>, que puede usar para ese valor.
 
 Debe obtener una respuesta entre 19 y 20.
 Puede comprobar la respuesta si [consulta el ejemplo de código terminado en GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106).
 
-Si lo desea, pruebe con otras fórmulas. 
+Si lo desea, pruebe con otras fórmulas.
 
 Ha completado el inicio rápido "Números en C#". Puede continuar con la guía de inicio rápido [Ramas y bucles](branches-and-loops-local.md) en su propio entorno de desarrollo.
 
 Puede obtener más información sobre los números en C# en los temas siguientes:
 
-[Tabla de tipos enteros](../../language-reference/keywords/integral-types-table.md)   
-[Tabla de tipos de punto flotante](../../language-reference/keywords/floating-point-types-table.md)   
-[Tabla de tipos integrados](../../language-reference/keywords/built-in-types-table.md)   
-[Tabla de conversiones numéricas implícitas](../../language-reference/keywords/implicit-numeric-conversions-table.md)   
-[Tabla de conversiones numéricas explícitas](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Tabla de tipos enteros](../../language-reference/keywords/integral-types-table.md)
+- [Tabla de tipos de punto flotante](../../language-reference/keywords/floating-point-types-table.md)
+- [Tabla de tipos integrados](../../language-reference/keywords/built-in-types-table.md)
+- [Tabla de conversiones numéricas implícitas](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Tabla de conversiones numéricas explícitas](../../language-reference/keywords/explicit-numeric-conversions-table.md)

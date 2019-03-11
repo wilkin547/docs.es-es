@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01bbd3e4fd113c39fe6fdd95945381978ab49f9f
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ac6dbf4792df9e287c849ba2a1a93468a444d221
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093949"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715690"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalación de .NET Framework para desarrolladores
 
@@ -228,7 +228,7 @@ En la siguiente tabla se indican los idiomas compatibles.
 
 - Para obtener información sobre cómo migrar la aplicación de .NET Framework 4 a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o a una de sus versiones secundarias, consulte la [guía de migración](~/docs/framework/migration-guide/index.md).
 
-- Consulte el [código fuente de referencia de .NET Framework](https://referencesource.microsoft.com/) para ver este código en línea. El origen de referencia también está disponible en [GitHub](https://github.com/Microsoft/referencesource). Puede [descargar el origen de referencia](https://referencesource.microsoft.com/download.html) para visualizar y examinar el código fuente (incluidas revisiones y actualizaciones) sin conexión durante la depuración. Para obtener más información, vea la entrada de blog [A new look for .NET Reference Source](https://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx) (Un nuevo aspecto para el origen de referencia de .NET).
+- Consulte el [código fuente de referencia de .NET Framework](https://referencesource.microsoft.com/) para ver este código en línea. El origen de referencia también está disponible en [GitHub](https://github.com/Microsoft/referencesource). Puede [descargar el origen de referencia](https://referencesource.microsoft.com/download.html) para visualizar y examinar el código fuente (incluidas revisiones y actualizaciones) sin conexión durante la depuración. Para obtener más información, vea la entrada de blog [A new look for .NET Reference Source](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/) (Un nuevo aspecto para el origen de referencia de .NET).
 
 ## <a name="see-also"></a>Vea también
 

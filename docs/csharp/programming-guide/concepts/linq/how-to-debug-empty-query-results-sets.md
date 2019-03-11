@@ -2,12 +2,12 @@
 title: Procedimiento para depurar conjuntos de resultados de consulta vacíos (C#)
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 0503c09bbdd28276ea4fdc1147e0bca5471fa6e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d77a92acf54420b5add3bb9ae8b3f0b8c5448d18
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723188"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357916"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>Procedimiento para depurar conjuntos de resultados de consulta vacíos (C#)
 Uno de los problemas más habituales al consultar árboles XML es que si el árbol XML tiene un espacio de nombres predeterminado, el desarrollador a veces escribe la consulta como si el código XML no estuviera en un espacio de nombres.  
@@ -50,7 +50,7 @@ End of result set
 ## <a name="example"></a>Ejemplo  
  Este ejemplo muestra la creación de XML en un espacio de nombres, y una consulta que se codifica correctamente.  
   
- La solución consiste en declarar e inicializar un objeto <xref:System.Xml.Linq.XNamespace>, y usarlo cuando se especifiquen objetos <xref:System.Xml.Linq.XName>. En este caso, el argumento para el método <xref:System.Xml.Linq.XElement.Elements%2A> es un objeto <xref:System.Xml.Linq.XName>.  
+ La solución consiste en declarar e inicializar un objeto <xref:System.Xml.Linq.XNamespace>, y usarlo cuando se especifiquen objetos <xref:System.Xml.Linq.XName>. En este caso, el argumento para el método <xref:System.Xml.Linq.XContainer.Elements%2A> es un objeto <xref:System.Xml.Linq.XName>.  
   
 ```csharp  
 XElement root = XElement.Parse(  

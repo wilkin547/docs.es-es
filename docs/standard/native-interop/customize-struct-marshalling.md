@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: c4d2d84a59aebedda2d1e6380caeef170051c0a3
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 5bce891a0061bb1810559febf1ab904a5fb6fc94
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411479"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675789"
 ---
 # <a name="customizing-structure-marshalling"></a>Personalización de la serialización de estructuras
 
@@ -65,7 +65,7 @@ struct WinBool
 };
 ```
 
-Mediante los valores `UmanagedType.U1` o `UnmanagedType.I1`, puede indicar el entorno de ejecución para serializar el campo `b` como un tipo `bool` nativo de 1 byte.
+Mediante los valores `UnmanagedType.U1` o `UnmanagedType.I1`, puede indicar el entorno de ejecución para serializar el campo `b` como un tipo `bool` nativo de 1 byte.
 
 ```csharp
 public struct CBool
@@ -342,7 +342,7 @@ struct Currency
 En Windows, puede serializar campos con tipo `object` al código nativo. Puede serializar estos campos a uno de los tres tipos:
 - [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
-- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch). 
+- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 
 De forma predeterminada, un campo con tipo `object` se serializará a uno de tipo `IUnknown*` que encapsula el objeto.
 

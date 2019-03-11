@@ -2,12 +2,12 @@
 title: Tipos de valor devueltos asincrónicos (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 4587ec66df91683a1fd02f0ec09c09099d922b0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548262"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368186"
 ---
 # <a name="async-return-types-c"></a>Tipos de valor devueltos asincrónicos (C#)
 Los métodos asincrónicos pueden tener los siguientes tipos de valor devuelto:
@@ -24,7 +24,7 @@ Para más información sobre los métodos async, vea [Programación asincrónica
   
 Cada tipo de valor devuelto se examina en una de las siguientes secciones, y puede encontrar un ejemplo completo que usa los tres tipos al final del tema.  
   
-##  Tipo de valor devuelto<a name="BKMK_TaskTReturnType"></a> Task\<TResult\>  
+## Tipo de valor devuelto<a name="BKMK_TaskTReturnType"></a> Task\<TResult\>  
 El tipo de valor devuelto <xref:System.Threading.Tasks.Task%601> se usa para un método asincrónico que contiene una instrucción [return](../../../../csharp/language-reference/keywords/return.md) (C#) en la que el operando tiene el tipo `TResult`.  
   
 En el ejemplo siguiente, el método asincrónico `GetLeisureHours` contiene una instrucción `return` que devuelve un entero. Por tanto, la declaración del método debe tener un tipo de valor devuelto de `Task<int>`.  El método asincrónico <xref:System.Threading.Tasks.Task.FromResult%2A> es un marcador de posición para una operación que devuelve una cadena.
@@ -40,7 +40,7 @@ Comprenderá mejor cómo sucede esto separando la llamada a `GetLeisureHours` de
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
-##  <a name="BKMK_TaskReturnType"></a> Tipo de valor devuelto Task  
+## <a name="BKMK_TaskReturnType"></a> Tipo de valor devuelto Task  
 Los métodos asincrónicos que no contienen una instrucción `return` o que contienen una instrucción `return` que no devuelve un operando tienen normalmente un tipo de valor devuelto de <xref:System.Threading.Tasks.Task>. Dichos métodos devuelven `void` si se ejecutan de manera sincrónica. Si se usa un tipo de valor devuelto <xref:System.Threading.Tasks.Task> para un método asincrónico, un método de llamada puede usar un operador `await` para suspender la finalización del llamador hasta que finalice el método asincrónico llamado.  
   
 En el ejemplo siguiente, el método asincrónico `WaitAndApologize` no contiene una instrucción `return`, de manera que el método devuelve un objeto <xref:System.Threading.Tasks.Task>. Esto permite que se espere a `WaitAndApologize`. Tenga en cuenta que el tipo <xref:System.Threading.Tasks.Task> no incluye una propiedad `Result` porque no tiene ningún valor devuelto.  
@@ -55,7 +55,7 @@ El código siguiente separa la llamada del método `WaitAndApologize` de la espe
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a> Tipo de valor devuelto Void
+## <a name="BKMK_VoidReturnType"></a> Tipo de valor devuelto Void
 
 Usa el tipo de valor devuelto `void` en controladores de eventos asincrónicos, que necesitan un tipo de valor devuelto `void`. Para métodos que no sean controladores de eventos que no devuelven un valor, debe devolver <xref:System.Threading.Tasks.Task> en su lugar, porque no se espera a un método asincrónico que devuelva `void`. Cualquier llamador de este método debe poder continuar hasta completarse sin esperar a que finalice el método asincrónico llamado y el llamador debe ser independiente de los valores o las excepciones que genera el método asincrónico.  
   
