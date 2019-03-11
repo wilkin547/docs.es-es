@@ -3,12 +3,12 @@ title: 'Ramas y bucles: tutorial de introducción a C#'
 description: En este tutorial sobre ramas y bucles, escribirá código de C# para explorar la sintaxis del lenguaje que admite ramas y bucles condicionales para ejecutar instrucciones de forma repetida.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153779"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677791"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Obtenga información sobre la lógica condicional con instrucciones de rama y bucle
 
@@ -20,7 +20,7 @@ En este tutorial se supone que cuenta con una máquina que puede usar para el de
 
 Cree un directorio denominado **branches-tutorial**. Conviértalo en el directorio actual y ejecute `dotnet new console -n BranchesAndLoops -o .`. Este comando crea una nueva aplicación de consola de .NET Core en el directorio actual.
 
-Abra **Program.cs** en su editor favorito y reemplace la línea `Console.Writeline("Hello World!");` por el código siguiente:
+Abra **Program.cs** en su editor favorito y reemplace la línea `Console.WriteLine("Hello World!");` por el código siguiente:
 
 ```csharp
 int a = 5;
@@ -31,7 +31,7 @@ if (a + b > 10)
 
 Pruebe este código escribiendo `dotnet run` en la ventana de la consola. Debería ver el mensaje "The answer is greater than 10" (La respuesta es mayor que 10) impreso en la consola.
 
-Modifique la declaración de `b` para que el resultado de la suma sea menor que diez: 
+Modifique la declaración de `b` para que el resultado de la suma sea menor que diez:
 
 ```csharp
 int b = 3;
@@ -63,7 +63,8 @@ La instrucción que sigue a la palabra clave `else` se ejecuta solo si la condic
 
 > [!IMPORTANT]
 > La sangría debajo de las instrucciones `if` y `else` se utiliza para los lectores humanos.
-> El lenguaje C# no considera significativos los espacios en blanco ni las sangrías. La instrucción que sigue a la palabra clave `if` o `else` se ejecutará en función de la condición. Todos los ejemplos de este tutorial siguen una práctica común para aplicar sangría a las líneas en función del flujo de control de las instrucciones.
+> El lenguaje C# no considera significativos los espacios en blanco ni las sangrías.
+> La instrucción que sigue a la palabra clave `if` o `else` se ejecutará en función de la condición. Todos los ejemplos de este tutorial siguen una práctica común para aplicar sangría a las líneas en función del flujo de control de las instrucciones.
 
 Dado que la sangría no es significativa, debe usar `{` y `}` para indicar si desea que más de una instrucción forme parte del bloque que se ejecuta de forma condicional. Los programadores de C# suelen usar esas llaves en todas las cláusulas `if` y `else`. El siguiente ejemplo es igual al que acaba de crear. Modifique el código anterior para que coincida con el código siguiente:
 
@@ -158,7 +159,7 @@ namespace BranchesAndLoops
             {
                 Console.WriteLine("The answer is not greater than 10");
                 Console.WriteLine("And the first number is not greater than the second");
-            }            
+            }
         }
 
         static void Main(string[] args)
@@ -218,7 +219,7 @@ El bucle **for** se utiliza con frecuencia en C#. Pruebe este código en su mét
 for(int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
-} 
+}
 ```
 
 Funciona de la misma forma que los bucles `while` y `do` que ya ha usado. La instrucción `for` consta de tres partes que controlan su funcionamiento.
@@ -252,7 +253,7 @@ Puede continuar con el tutorial de [interpolación de cadenas](interpolated-stri
 
 Puede obtener más información sobre estos conceptos en los temas siguientes:
 
-[Instrucciones If y else](../../language-reference/keywords/if-else.md)  
-[Instrucción while](../../language-reference/keywords/while.md)  
-[Instrucción do](../../language-reference/keywords/do.md)  
-[Instrucción for](../../language-reference/keywords/for.md)  
+- [Instrucciones If y else](../../language-reference/keywords/if-else.md)
+- [Instrucción while](../../language-reference/keywords/while.md)
+- [Instrucción do](../../language-reference/keywords/do.md)
+- [Instrucción for](../../language-reference/keywords/for.md)

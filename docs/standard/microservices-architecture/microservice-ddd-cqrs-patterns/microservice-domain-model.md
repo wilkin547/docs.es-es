@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fa0e81f6eb54ad01b3f2f84a37499302ff9abd06
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: b3dbce5185415374b2c0f6de134e03b44fe48420
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066277"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676374"
 ---
 # <a name="design-a-microservice-domain-model"></a>Diseño de un modelo de dominio de microservicio
 
@@ -78,7 +78,7 @@ Una persona con un nombre y apellido normalmente es una entidad debido a que una
 
 Los objetos de valor son difíciles de administrar en bases de datos relacionales y ORM como EF, mientras que en las bases de datos orientadas a documentos son más fáciles de implementar y usar.
 
-EF Core 2.0 incluye la característica [Entidades poseídas](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) que facilita administrar los objetos de valor, como veremos en detalle más adelante.
+EF Core 2.0 incluye la característica [Entidades poseídas](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) que facilita administrar los objetos de valor, como veremos en detalle más adelante.
 
 #### <a name="additional-resources"></a>Recursos adicionales
 

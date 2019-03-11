@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 86c2226796d5632281f2b6b2cb533bfeacebd288
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: ef52031f75bd2004bcb5927524a9c82ac8fbf36f
+  ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54030521"
+  ms.lasthandoff: 03/05/2019
+  ms.locfileid: "57370324"
 items:
 - durationInMinutes: 1
   content: >
@@ -259,7 +259,7 @@ items:
     Existen dos métodos similares, <xref:System.String.StartsWith%2A> y <xref:System.String.EndsWith%2A>, que también buscan subcadenas en una cadena. Encuentran una subcadena al principio o al final de la cadena. Intente modificar el ejemplo anterior para utilizar <xref:System.String.StartsWith%2A> y <xref:System.String.EndsWith%2A> en lugar de <xref:System.String.Contains%2A>. Busque "You" o "goodbye" al principio de una cadena. Busque "hello" o "goodbye" al final de una cadena.
 
 
-    > [!Note]
+    > [!NOTE]
 
     > Fíjese en la puntuación cuando analice el texto al final de la cadena. Si la cadena finaliza con un punto, debe comprobar si hay una cadena que termina con un punto.
 

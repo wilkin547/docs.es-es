@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d48c78e6ea63ea1a2f3dbfea6b9fec646493c751
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4ec170c5951147e4979152a0208b00a1369b16d7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148076"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679546"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Diseño de validaciones en el nivel de modelo de dominio
 
@@ -42,7 +42,7 @@ Un ejemplo mejor demostraría la necesidad de garantizar que el estado interno n
 public void SetAddress(string line1, string line2,
     string city, string state, int zip)
 {
-    _shipingAddress.line1 = line1 ?? throw new ...
+    _shippingAddress.line1 = line1 ?? throw new ...
     _shippingAddress.line2 = line2;
     _shippingAddress.city = city ?? throw new ...
     _shippingAddress.state = (IsValid(state) ? state : throw new …);
@@ -108,6 +108,6 @@ Si usa la validación de campos con anotaciones de datos, por ejemplo, no se dup
 - **Jimmy Bogard. Validation in a DDD world** \ (Validación en un mundo de diseños guiados por dominio)
   [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
 
->[!div class="step-by-step"]
->[Anterior](enumeration-classes-over-enum-types.md)
->[Siguiente](client-side-validation.md)
+> [!div class="step-by-step"]
+> [Anterior](enumeration-classes-over-enum-types.md)
+> [Siguiente](client-side-validation.md)
