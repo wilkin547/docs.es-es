@@ -2,96 +2,97 @@
 title: Varianza en interfaces genéricas (C#)
 ms.date: 07/20/2015
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: b713cb4f2b13c54a4a60c522bbef492a5962cdc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffe437fc88722b9f38aa2fde6cdd87ed2e2060be
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601798"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469553"
 ---
-# <a name="variance-in-generic-interfaces-c"></a><span data-ttu-id="695a3-102">Varianza en interfaces genéricas (C#)</span><span class="sxs-lookup"><span data-stu-id="695a3-102">Variance in Generic Interfaces (C#)</span></span>
-<span data-ttu-id="695a3-103">En .NET Framework 4 se ha presentado la compatibilidad con la varianza para varias interfaces genéricas existentes.</span><span class="sxs-lookup"><span data-stu-id="695a3-103">.NET Framework 4 introduced variance support for several existing generic interfaces.</span></span> <span data-ttu-id="695a3-104">La compatibilidad con la varianza permite la conversión implícita de clases que implementan estas interfaces.</span><span class="sxs-lookup"><span data-stu-id="695a3-104">Variance support enables implicit conversion of classes that implement these interfaces.</span></span> <span data-ttu-id="695a3-105">Las interfaces siguientes ahora son variantes:</span><span class="sxs-lookup"><span data-stu-id="695a3-105">The following interfaces are now variant:</span></span>  
-  
--   <span data-ttu-id="695a3-106"><xref:System.Collections.Generic.IEnumerable%601> (T es covariante)</span><span class="sxs-lookup"><span data-stu-id="695a3-106"><xref:System.Collections.Generic.IEnumerable%601> (T is covariant)</span></span>  
-  
--   <span data-ttu-id="695a3-107"><xref:System.Collections.Generic.IEnumerator%601> (T es covariante)</span><span class="sxs-lookup"><span data-stu-id="695a3-107"><xref:System.Collections.Generic.IEnumerator%601> (T is covariant)</span></span>  
-  
--   <span data-ttu-id="695a3-108"><xref:System.Linq.IQueryable%601> (T es covariante)</span><span class="sxs-lookup"><span data-stu-id="695a3-108"><xref:System.Linq.IQueryable%601> (T is covariant)</span></span>  
-  
--   <span data-ttu-id="695a3-109"><xref:System.Linq.IGrouping%602> (`TKey` y `TElement` son covariantes)</span><span class="sxs-lookup"><span data-stu-id="695a3-109"><xref:System.Linq.IGrouping%602> (`TKey` and `TElement` are covariant)</span></span>  
-  
--   <span data-ttu-id="695a3-110"><xref:System.Collections.Generic.IComparer%601> (T es contravariante)</span><span class="sxs-lookup"><span data-stu-id="695a3-110"><xref:System.Collections.Generic.IComparer%601> (T is contravariant)</span></span>  
-  
--   <span data-ttu-id="695a3-111"><xref:System.Collections.Generic.IEqualityComparer%601> (T es contravariante)</span><span class="sxs-lookup"><span data-stu-id="695a3-111"><xref:System.Collections.Generic.IEqualityComparer%601> (T is contravariant)</span></span>  
-  
--   <span data-ttu-id="695a3-112"><xref:System.IComparable%601> (T es contravariante)</span><span class="sxs-lookup"><span data-stu-id="695a3-112"><xref:System.IComparable%601> (T is contravariant)</span></span>  
-  
- <span data-ttu-id="695a3-113">La covarianza permite que un método tenga un tipo de valor devuelto más derivado que los que se definen en los parámetros de tipo genérico de la interfaz.</span><span class="sxs-lookup"><span data-stu-id="695a3-113">Covariance permits a method to have a more derived return type than that defined by the generic type parameter of the interface.</span></span> <span data-ttu-id="695a3-114">Para ilustrar la característica de la covarianza, considere estas interfaces genéricas: `IEnumerable<Object>` y `IEnumerable<String>`.</span><span class="sxs-lookup"><span data-stu-id="695a3-114">To illustrate the covariance feature, consider these generic interfaces: `IEnumerable<Object>` and `IEnumerable<String>`.</span></span> <span data-ttu-id="695a3-115">La interfaz `IEnumerable<String>` no hereda la interfaz `IEnumerable<Object>`.</span><span class="sxs-lookup"><span data-stu-id="695a3-115">The `IEnumerable<String>` interface does not inherit the `IEnumerable<Object>` interface.</span></span> <span data-ttu-id="695a3-116">En cambio, el tipo `String` hereda el tipo `Object`, y en algunos casos puede que quiera asignar objetos de estas interfaces entre sí.</span><span class="sxs-lookup"><span data-stu-id="695a3-116">However, the `String` type does inherit the `Object` type, and in some cases you may want to assign objects of these interfaces to each other.</span></span> <span data-ttu-id="695a3-117">Esto se muestra en el ejemplo de código siguiente.</span><span class="sxs-lookup"><span data-stu-id="695a3-117">This is shown in the following code example.</span></span>  
-  
-```csharp  
-IEnumerable<String> strings = new List<String>();  
-IEnumerable<Object> objects = strings;  
-```  
-  
- <span data-ttu-id="695a3-118">En versiones anteriores de .NET Framework, este código provoca un error de compilación en C# con `Option Strict On`.</span><span class="sxs-lookup"><span data-stu-id="695a3-118">In earlier versions of the .NET Framework, this code causes a compilation error in C# with `Option Strict On`.</span></span> <span data-ttu-id="695a3-119">Pero ahora puede usar `strings` en lugar de `objects`, como se muestra en el ejemplo anterior, porque la interfaz <xref:System.Collections.Generic.IEnumerable%601> es covariante.</span><span class="sxs-lookup"><span data-stu-id="695a3-119">But now you can use `strings` instead of `objects`, as shown in the previous example, because the <xref:System.Collections.Generic.IEnumerable%601> interface is covariant.</span></span>  
-  
- <span data-ttu-id="695a3-120">La contravarianza permite que un método tenga tipos de argumento menos derivados que los que se especifican en el parámetro genérico de la interfaz.</span><span class="sxs-lookup"><span data-stu-id="695a3-120">Contravariance permits a method to have argument types that are less derived than that specified by the generic parameter of the interface.</span></span> <span data-ttu-id="695a3-121">Para ilustrar la contravarianza, se presupone que ha creado una clase `BaseComparer` para comparar instancias de la clase `BaseClass`.</span><span class="sxs-lookup"><span data-stu-id="695a3-121">To illustrate contravariance, assume that you have created a `BaseComparer` class to compare instances of the `BaseClass` class.</span></span> <span data-ttu-id="695a3-122">La clase `BaseComparer` implementa la interfaz `IEqualityComparer<BaseClass>`.</span><span class="sxs-lookup"><span data-stu-id="695a3-122">The `BaseComparer` class implements the `IEqualityComparer<BaseClass>` interface.</span></span> <span data-ttu-id="695a3-123">Como la interfaz <xref:System.Collections.Generic.IEqualityComparer%601> ahora es contravariante, puede usar `BaseComparer` para comparar instancias de clases que heredan la clase `BaseClass`.</span><span class="sxs-lookup"><span data-stu-id="695a3-123">Because the <xref:System.Collections.Generic.IEqualityComparer%601> interface is now contravariant, you can use `BaseComparer` to compare instances of classes that inherit the `BaseClass` class.</span></span> <span data-ttu-id="695a3-124">Esto se muestra en el ejemplo de código siguiente.</span><span class="sxs-lookup"><span data-stu-id="695a3-124">This is shown in the following code example.</span></span>  
-  
-```csharp  
-// Simple hierarchy of classes.  
-class BaseClass { }  
-class DerivedClass : BaseClass { }  
-  
-// Comparer class.  
-class BaseComparer : IEqualityComparer<BaseClass>   
-{  
-    public int GetHashCode(BaseClass baseInstance)  
-    {  
-        return baseInstance.GetHashCode();  
-    }  
-    public bool Equals(BaseClass x, BaseClass y)  
-    {  
-        return x == y;  
-    }  
-}  
-class Program  
-{  
-    static void Test()  
-    {  
-        IEqualityComparer<BaseClass> baseComparer = new BaseComparer();  
-  
-        // Implicit conversion of IEqualityComparer<BaseClass> to   
-        // IEqualityComparer<DerivedClass>.  
-        IEqualityComparer<DerivedClass> childComparer = baseComparer;  
-    }  
-}  
-```  
-  
- <span data-ttu-id="695a3-125">Para obtener más ejemplos, vea [Usar la varianza en interfaces para las colecciones genéricas (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).</span><span class="sxs-lookup"><span data-stu-id="695a3-125">For more examples, see [Using Variance in Interfaces for Generic Collections (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).</span></span>  
-  
- <span data-ttu-id="695a3-126">La varianza para interfaces genéricas solo es compatible con tipos de referencia.</span><span class="sxs-lookup"><span data-stu-id="695a3-126">Variance in generic interfaces is supported for reference types only.</span></span> <span data-ttu-id="695a3-127">Los tipos de valor no admiten la varianza.</span><span class="sxs-lookup"><span data-stu-id="695a3-127">Value types do not support variance.</span></span> <span data-ttu-id="695a3-128">Por ejemplo, `IEnumerable<int>` no puede convertirse implícitamente en `IEnumerable<object>`, porque los enteros se representan mediante un tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="695a3-128">For example, `IEnumerable<int>` cannot be implicitly converted to `IEnumerable<object>`, because integers are represented by a value type.</span></span>  
-  
-```csharp  
-IEnumerable<int> integers = new List<int>();  
-// The following statement generates a compiler errror,  
-// because int is a value type.  
-// IEnumerable<Object> objects = integers;  
-```  
-  
- <span data-ttu-id="695a3-129">También es importante recordar que las clases que implementan las interfaces variantes siguen siendo invariables.</span><span class="sxs-lookup"><span data-stu-id="695a3-129">It is also important to remember that classes that implement variant interfaces are still invariant.</span></span> <span data-ttu-id="695a3-130">Por ejemplo, aunque <xref:System.Collections.Generic.List%601> implementa la interfaz covariante <xref:System.Collections.Generic.IEnumerable%601>, no puede convertir `List<Object>` en `List<String>` implícitamente.</span><span class="sxs-lookup"><span data-stu-id="695a3-130">For example, although <xref:System.Collections.Generic.List%601> implements the covariant interface <xref:System.Collections.Generic.IEnumerable%601>, you cannot implicitly convert `List<Object>` to `List<String>`.</span></span> <span data-ttu-id="695a3-131">Esto se muestra en el siguiente código de ejemplo.</span><span class="sxs-lookup"><span data-stu-id="695a3-131">This is illustrated in the following code example.</span></span>  
-  
-```csharp  
-// The following line generates a compiler error  
-// because classes are invariant.  
-// List<Object> list = new List<String>();  
-  
-// You can use the interface object instead.  
-IEnumerable<Object> listObjects = new List<String>();  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="695a3-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="695a3-132">See also</span></span>
+# <a name="variance-in-generic-interfaces-c"></a><span data-ttu-id="9eb18-102">Varianza en interfaces genéricas (C#)</span><span class="sxs-lookup"><span data-stu-id="9eb18-102">Variance in Generic Interfaces (C#)</span></span>
 
-- [<span data-ttu-id="695a3-133">Usar la varianza en interfaces para las colecciones genéricas (C#)</span><span class="sxs-lookup"><span data-stu-id="695a3-133">Using Variance in Interfaces for Generic Collections (C#)</span></span>](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
-- [<span data-ttu-id="695a3-134">Crear interfaces genéricas variantes (C#)</span><span class="sxs-lookup"><span data-stu-id="695a3-134">Creating Variant Generic Interfaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
-- [<span data-ttu-id="695a3-135">Interfaces genéricas</span><span class="sxs-lookup"><span data-stu-id="695a3-135">Generic Interfaces</span></span>](../../../../standard/generics/interfaces.md)
-- [<span data-ttu-id="695a3-136">Varianza en delegados (C#)</span><span class="sxs-lookup"><span data-stu-id="695a3-136">Variance in Delegates (C#)</span></span>](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+<span data-ttu-id="9eb18-103">En .NET Framework 4 se ha presentado la compatibilidad con la varianza para varias interfaces genéricas existentes.</span><span class="sxs-lookup"><span data-stu-id="9eb18-103">.NET Framework 4 introduced variance support for several existing generic interfaces.</span></span> <span data-ttu-id="9eb18-104">La compatibilidad con la varianza permite la conversión implícita de clases que implementan estas interfaces.</span><span class="sxs-lookup"><span data-stu-id="9eb18-104">Variance support enables implicit conversion of classes that implement these interfaces.</span></span> <span data-ttu-id="9eb18-105">Las interfaces siguientes ahora son variantes:</span><span class="sxs-lookup"><span data-stu-id="9eb18-105">The following interfaces are now variant:</span></span>
+
+- <span data-ttu-id="9eb18-106"><xref:System.Collections.Generic.IEnumerable%601> (T es covariante)</span><span class="sxs-lookup"><span data-stu-id="9eb18-106"><xref:System.Collections.Generic.IEnumerable%601> (T is covariant)</span></span>
+
+- <span data-ttu-id="9eb18-107"><xref:System.Collections.Generic.IEnumerator%601> (T es covariante)</span><span class="sxs-lookup"><span data-stu-id="9eb18-107"><xref:System.Collections.Generic.IEnumerator%601> (T is covariant)</span></span>
+
+- <span data-ttu-id="9eb18-108"><xref:System.Linq.IQueryable%601> (T es covariante)</span><span class="sxs-lookup"><span data-stu-id="9eb18-108"><xref:System.Linq.IQueryable%601> (T is covariant)</span></span>
+
+- <span data-ttu-id="9eb18-109"><xref:System.Linq.IGrouping%602> (`TKey` y `TElement` son covariantes)</span><span class="sxs-lookup"><span data-stu-id="9eb18-109"><xref:System.Linq.IGrouping%602> (`TKey` and `TElement` are covariant)</span></span>
+
+- <span data-ttu-id="9eb18-110"><xref:System.Collections.Generic.IComparer%601> (T es contravariante)</span><span class="sxs-lookup"><span data-stu-id="9eb18-110"><xref:System.Collections.Generic.IComparer%601> (T is contravariant)</span></span>
+
+- <span data-ttu-id="9eb18-111"><xref:System.Collections.Generic.IEqualityComparer%601> (T es contravariante)</span><span class="sxs-lookup"><span data-stu-id="9eb18-111"><xref:System.Collections.Generic.IEqualityComparer%601> (T is contravariant)</span></span>
+
+- <span data-ttu-id="9eb18-112"><xref:System.IComparable%601> (T es contravariante)</span><span class="sxs-lookup"><span data-stu-id="9eb18-112"><xref:System.IComparable%601> (T is contravariant)</span></span>
+
+<span data-ttu-id="9eb18-113">La covarianza permite que un método tenga un tipo de valor devuelto más derivado que los que se definen en los parámetros de tipo genérico de la interfaz.</span><span class="sxs-lookup"><span data-stu-id="9eb18-113">Covariance permits a method to have a more derived return type than that defined by the generic type parameter of the interface.</span></span> <span data-ttu-id="9eb18-114">Para ilustrar la característica de la covarianza, considere estas interfaces genéricas: `IEnumerable<Object>` y `IEnumerable<String>`.</span><span class="sxs-lookup"><span data-stu-id="9eb18-114">To illustrate the covariance feature, consider these generic interfaces: `IEnumerable<Object>` and `IEnumerable<String>`.</span></span> <span data-ttu-id="9eb18-115">La interfaz `IEnumerable<String>` no hereda la interfaz `IEnumerable<Object>`.</span><span class="sxs-lookup"><span data-stu-id="9eb18-115">The `IEnumerable<String>` interface does not inherit the `IEnumerable<Object>` interface.</span></span> <span data-ttu-id="9eb18-116">En cambio, el tipo `String` hereda el tipo `Object`, y en algunos casos puede que quiera asignar objetos de estas interfaces entre sí.</span><span class="sxs-lookup"><span data-stu-id="9eb18-116">However, the `String` type does inherit the `Object` type, and in some cases you may want to assign objects of these interfaces to each other.</span></span> <span data-ttu-id="9eb18-117">Esto se muestra en el ejemplo de código siguiente.</span><span class="sxs-lookup"><span data-stu-id="9eb18-117">This is shown in the following code example.</span></span>
+
+```csharp
+IEnumerable<String> strings = new List<String>();
+IEnumerable<Object> objects = strings;
+```
+
+<span data-ttu-id="9eb18-118">En versiones anteriores de .NET Framework, este código provoca un error de compilación en C# con `Option Strict On`.</span><span class="sxs-lookup"><span data-stu-id="9eb18-118">In earlier versions of the .NET Framework, this code causes a compilation error in C# with `Option Strict On`.</span></span> <span data-ttu-id="9eb18-119">Pero ahora puede usar `strings` en lugar de `objects`, como se muestra en el ejemplo anterior, porque la interfaz <xref:System.Collections.Generic.IEnumerable%601> es covariante.</span><span class="sxs-lookup"><span data-stu-id="9eb18-119">But now you can use `strings` instead of `objects`, as shown in the previous example, because the <xref:System.Collections.Generic.IEnumerable%601> interface is covariant.</span></span>
+
+<span data-ttu-id="9eb18-120">La contravarianza permite que un método tenga tipos de argumento menos derivados que los que se especifican en el parámetro genérico de la interfaz.</span><span class="sxs-lookup"><span data-stu-id="9eb18-120">Contravariance permits a method to have argument types that are less derived than that specified by the generic parameter of the interface.</span></span> <span data-ttu-id="9eb18-121">Para ilustrar la contravarianza, se presupone que ha creado una clase `BaseComparer` para comparar instancias de la clase `BaseClass`.</span><span class="sxs-lookup"><span data-stu-id="9eb18-121">To illustrate contravariance, assume that you have created a `BaseComparer` class to compare instances of the `BaseClass` class.</span></span> <span data-ttu-id="9eb18-122">La clase `BaseComparer` implementa la interfaz `IEqualityComparer<BaseClass>`.</span><span class="sxs-lookup"><span data-stu-id="9eb18-122">The `BaseComparer` class implements the `IEqualityComparer<BaseClass>` interface.</span></span> <span data-ttu-id="9eb18-123">Como la interfaz <xref:System.Collections.Generic.IEqualityComparer%601> ahora es contravariante, puede usar `BaseComparer` para comparar instancias de clases que heredan la clase `BaseClass`.</span><span class="sxs-lookup"><span data-stu-id="9eb18-123">Because the <xref:System.Collections.Generic.IEqualityComparer%601> interface is now contravariant, you can use `BaseComparer` to compare instances of classes that inherit the `BaseClass` class.</span></span> <span data-ttu-id="9eb18-124">Esto se muestra en el ejemplo de código siguiente.</span><span class="sxs-lookup"><span data-stu-id="9eb18-124">This is shown in the following code example.</span></span>
+
+```csharp
+// Simple hierarchy of classes.
+class BaseClass { }
+class DerivedClass : BaseClass { }
+
+// Comparer class.
+class BaseComparer : IEqualityComparer<BaseClass>
+{
+    public int GetHashCode(BaseClass baseInstance)
+    {
+        return baseInstance.GetHashCode();
+    }
+    public bool Equals(BaseClass x, BaseClass y)
+    {
+        return x == y;
+    }
+}
+class Program
+{
+    static void Test()
+    {
+        IEqualityComparer<BaseClass> baseComparer = new BaseComparer();
+
+        // Implicit conversion of IEqualityComparer<BaseClass> to
+        // IEqualityComparer<DerivedClass>.
+        IEqualityComparer<DerivedClass> childComparer = baseComparer;
+    }
+}
+```
+
+<span data-ttu-id="9eb18-125">Para obtener más ejemplos, vea [Usar la varianza en interfaces para las colecciones genéricas (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).</span><span class="sxs-lookup"><span data-stu-id="9eb18-125">For more examples, see [Using Variance in Interfaces for Generic Collections (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).</span></span>
+
+<span data-ttu-id="9eb18-126">La varianza para interfaces genéricas solo es compatible con tipos de referencia.</span><span class="sxs-lookup"><span data-stu-id="9eb18-126">Variance in generic interfaces is supported for reference types only.</span></span> <span data-ttu-id="9eb18-127">Los tipos de valor no admiten la varianza.</span><span class="sxs-lookup"><span data-stu-id="9eb18-127">Value types do not support variance.</span></span> <span data-ttu-id="9eb18-128">Por ejemplo, `IEnumerable<int>` no puede convertirse implícitamente en `IEnumerable<object>`, porque los enteros se representan mediante un tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="9eb18-128">For example, `IEnumerable<int>` cannot be implicitly converted to `IEnumerable<object>`, because integers are represented by a value type.</span></span>
+
+```csharp
+IEnumerable<int> integers = new List<int>();
+// The following statement generates a compiler error,
+// because int is a value type.
+// IEnumerable<Object> objects = integers;
+```
+
+<span data-ttu-id="9eb18-129">También es importante recordar que las clases que implementan las interfaces variantes siguen siendo invariables.</span><span class="sxs-lookup"><span data-stu-id="9eb18-129">It is also important to remember that classes that implement variant interfaces are still invariant.</span></span> <span data-ttu-id="9eb18-130">Por ejemplo, aunque <xref:System.Collections.Generic.List%601> implementa la interfaz covariante <xref:System.Collections.Generic.IEnumerable%601>, no puede convertir `List<Object>` en `List<String>` implícitamente.</span><span class="sxs-lookup"><span data-stu-id="9eb18-130">For example, although <xref:System.Collections.Generic.List%601> implements the covariant interface <xref:System.Collections.Generic.IEnumerable%601>, you cannot implicitly convert `List<Object>` to `List<String>`.</span></span> <span data-ttu-id="9eb18-131">Esto se muestra en el siguiente código de ejemplo.</span><span class="sxs-lookup"><span data-stu-id="9eb18-131">This is illustrated in the following code example.</span></span>
+
+```csharp
+// The following line generates a compiler error
+// because classes are invariant.
+// List<Object> list = new List<String>();
+
+// You can use the interface object instead.
+IEnumerable<Object> listObjects = new List<String>();
+```
+
+## <a name="see-also"></a><span data-ttu-id="9eb18-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="9eb18-132">See also</span></span>
+
+- [<span data-ttu-id="9eb18-133">Usar la varianza en interfaces para las colecciones genéricas (C#)</span><span class="sxs-lookup"><span data-stu-id="9eb18-133">Using Variance in Interfaces for Generic Collections (C#)</span></span>](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
+- [<span data-ttu-id="9eb18-134">Crear interfaces genéricas variantes (C#)</span><span class="sxs-lookup"><span data-stu-id="9eb18-134">Creating Variant Generic Interfaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
+- [<span data-ttu-id="9eb18-135">Interfaces genéricas</span><span class="sxs-lookup"><span data-stu-id="9eb18-135">Generic Interfaces</span></span>](../../../../standard/generics/interfaces.md)
+- [<span data-ttu-id="9eb18-136">Varianza en delegados (C#)</span><span class="sxs-lookup"><span data-stu-id="9eb18-136">Variance in Delegates (C#)</span></span>](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
