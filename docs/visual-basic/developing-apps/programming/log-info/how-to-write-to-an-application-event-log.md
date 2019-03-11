@@ -7,72 +7,71 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: 78d7fbd7aa5cb0062a51145725a6fc2e9dce7525
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3c7d350132ee6c891633141fc5c4b280989e77f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662639"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366509"
 ---
-# <a name="how-to-write-to-an-application-event-log-visual-basic"></a><span data-ttu-id="69050-102">Procedimiento para escribir en el registro de eventos de una aplicación (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69050-102">How to: Write to an Application Event Log (Visual Basic)</span></span>
-<span data-ttu-id="69050-103">Puede usar los objetos `My.Application.Log` y `My.Log` para escribir información sobre los eventos que se producen en su aplicación.</span><span class="sxs-lookup"><span data-stu-id="69050-103">You can use the `My.Application.Log` and `My.Log` objects to write information about events that occur in your application.</span></span> <span data-ttu-id="69050-104">En este ejemplo se muestra cómo configurar un agente de escucha de registro de eventos para que `My.Application.Log` escriba información de seguimiento en el registro de eventos de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="69050-104">This example shows how to configure an event log listener so `My.Application.Log` writes tracing information to the Application event log.</span></span>  
-  
- <span data-ttu-id="69050-105">No se puede escribir en el registro de seguridad.</span><span class="sxs-lookup"><span data-stu-id="69050-105">You cannot write to the Security log.</span></span> <span data-ttu-id="69050-106">Para poder escribir en el registro del sistema, debe ser miembro de la cuenta LocalSystem o Administrador.</span><span class="sxs-lookup"><span data-stu-id="69050-106">In order to write to the System log, you must be a member of the LocalSystem or Administrator account.</span></span>  
-  
- <span data-ttu-id="69050-107">Para ver un registro de eventos, puede usar el **Explorador de servidores** o el **Visor de eventos de Windows**.</span><span class="sxs-lookup"><span data-stu-id="69050-107">To view an event log, you can use **Server Explorer** or **Windows Event Viewer**.</span></span> <span data-ttu-id="69050-108">Para obtener más información, consulta [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).</span><span class="sxs-lookup"><span data-stu-id="69050-108">For more information, see [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="69050-109">Los registros de eventos no se admiten en Windows 95, Windows 98 o Windows Millennium Edition.</span><span class="sxs-lookup"><span data-stu-id="69050-109">Event logs are not supported on Windows 95, Windows 98, or Windows Millennium Edition.</span></span>  
-  
-### <a name="to-add-and-configure-the-event-log-listener"></a><span data-ttu-id="69050-110">Para agregar y configurar el agente de escucha de registro de eventos</span><span class="sxs-lookup"><span data-stu-id="69050-110">To add and configure the event log listener</span></span>  
-  
-1.  <span data-ttu-id="69050-111">Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.</span><span class="sxs-lookup"><span data-stu-id="69050-111">Right-click app.config in **Solution Explorer** and choose **Open**.</span></span>  
-  
-     <span data-ttu-id="69050-112">\- o -</span><span class="sxs-lookup"><span data-stu-id="69050-112">\- or -</span></span>  
-  
-     <span data-ttu-id="69050-113">Si no hay ningún archivo app.config:</span><span class="sxs-lookup"><span data-stu-id="69050-113">If there is no app.config file,</span></span>  
-  
-    1.  <span data-ttu-id="69050-114">En el menú **Proyecto** , elija **Agregar nuevo elemento**.</span><span class="sxs-lookup"><span data-stu-id="69050-114">On the **Project** menu, choose **Add New Item**.</span></span>  
-  
-    2.  <span data-ttu-id="69050-115">En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Archivo de configuración de aplicación**.</span><span class="sxs-lookup"><span data-stu-id="69050-115">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>  
-  
-    3.  <span data-ttu-id="69050-116">Haga clic en **Agregar**.</span><span class="sxs-lookup"><span data-stu-id="69050-116">Click **Add**.</span></span>  
-  
-2.  <span data-ttu-id="69050-117">Ubique la sección `<listeners>` en el archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="69050-117">Locate the `<listeners>` section in the application configuration file.</span></span>  
-  
-     <span data-ttu-id="69050-118">Encontrará la sección `<listeners>` en la sección `<source>` con el atributo de nombre "DefaultSource", que está anidada bajo la sección `<system.diagnostics>` , anidada bajo la sección de nivel superior `<configuration>` .</span><span class="sxs-lookup"><span data-stu-id="69050-118">You will find the `<listeners>` section in the `<source>` section with the name attribute "DefaultSource", which is nested under the `<system.diagnostics>` section, which is nested under the top-level `<configuration>` section.</span></span>  
-  
-3.  <span data-ttu-id="69050-119">Agregue este elemento a dicha sección `<listeners>` :</span><span class="sxs-lookup"><span data-stu-id="69050-119">Add this element to that `<listeners>` section:</span></span>  
-  
-    ```xml  
-    <add name="EventLog"/>  
-    ```  
-  
-4.  <span data-ttu-id="69050-120">Busque la sección `<sharedListeners>` , en la sección `<system.diagnostics>` , en la sección de nivel superior `<configuration>` .</span><span class="sxs-lookup"><span data-stu-id="69050-120">Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>  
-  
-5.  <span data-ttu-id="69050-121">Agregue este elemento a dicha sección `<sharedListeners>` :</span><span class="sxs-lookup"><span data-stu-id="69050-121">Add this element to that `<sharedListeners>` section:</span></span>  
-  
-    ```xml  
-    <add name="EventLog"  
-        type="System.Diagnostics.EventLogTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
-         initializeData="APPLICATION_NAME"/>  
-    ```  
-  
-     <span data-ttu-id="69050-122">Reemplace `APPLICATION_NAME` por el nombre de su aplicación.</span><span class="sxs-lookup"><span data-stu-id="69050-122">Replace `APPLICATION_NAME` with the name of your application.</span></span>  
-  
+# <a name="how-to-write-to-an-application-event-log-visual-basic"></a><span data-ttu-id="779b6-102">Procedimiento para escribir en el registro de eventos de una aplicación (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="779b6-102">How to: Write to an Application Event Log (Visual Basic)</span></span>
+
+<span data-ttu-id="779b6-103">Puede usar los objetos `My.Application.Log` y `My.Log` para escribir información sobre los eventos que se producen en su aplicación.</span><span class="sxs-lookup"><span data-stu-id="779b6-103">You can use the `My.Application.Log` and `My.Log` objects to write information about events that occur in your application.</span></span> <span data-ttu-id="779b6-104">En este ejemplo se muestra cómo configurar un agente de escucha de registro de eventos para que `My.Application.Log` escriba información de seguimiento en el registro de eventos de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="779b6-104">This example shows how to configure an event log listener so `My.Application.Log` writes tracing information to the Application event log.</span></span>
+
+<span data-ttu-id="779b6-105">No se puede escribir en el registro de seguridad.</span><span class="sxs-lookup"><span data-stu-id="779b6-105">You cannot write to the Security log.</span></span> <span data-ttu-id="779b6-106">Para poder escribir en el registro del sistema, debe ser miembro de la cuenta LocalSystem o Administrador.</span><span class="sxs-lookup"><span data-stu-id="779b6-106">In order to write to the System log, you must be a member of the LocalSystem or Administrator account.</span></span>
+
+<span data-ttu-id="779b6-107">Para ver un registro de eventos, puede usar el **Explorador de servidores** o el **Visor de eventos de Windows**.</span><span class="sxs-lookup"><span data-stu-id="779b6-107">To view an event log, you can use **Server Explorer** or **Windows Event Viewer**.</span></span> <span data-ttu-id="779b6-108">Para obtener más información, consulta [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).</span><span class="sxs-lookup"><span data-stu-id="779b6-108">For more information, see [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md).</span></span>
+
+### <a name="to-add-and-configure-the-event-log-listener"></a><span data-ttu-id="779b6-109">Para agregar y configurar el agente de escucha de registro de eventos</span><span class="sxs-lookup"><span data-stu-id="779b6-109">To add and configure the event log listener</span></span>
+
+1. <span data-ttu-id="779b6-110">Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.</span><span class="sxs-lookup"><span data-stu-id="779b6-110">Right-click app.config in **Solution Explorer** and choose **Open**.</span></span>
+
+    <span data-ttu-id="779b6-111">\- o -</span><span class="sxs-lookup"><span data-stu-id="779b6-111">\- or -</span></span>
+
+    <span data-ttu-id="779b6-112">Si no hay ningún archivo app.config:</span><span class="sxs-lookup"><span data-stu-id="779b6-112">If there is no app.config file,</span></span>
+
+    1. <span data-ttu-id="779b6-113">En el menú **Proyecto** , elija **Agregar nuevo elemento**.</span><span class="sxs-lookup"><span data-stu-id="779b6-113">On the **Project** menu, choose **Add New Item**.</span></span>
+
+    2. <span data-ttu-id="779b6-114">En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Archivo de configuración de aplicación**.</span><span class="sxs-lookup"><span data-stu-id="779b6-114">From the **Add New Item** dialog box, choose **Application Configuration File**.</span></span>
+
+    3. <span data-ttu-id="779b6-115">Haga clic en **Agregar**.</span><span class="sxs-lookup"><span data-stu-id="779b6-115">Click **Add**.</span></span>
+
+2. <span data-ttu-id="779b6-116">Ubique la sección `<listeners>` en el archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="779b6-116">Locate the `<listeners>` section in the application configuration file.</span></span>
+
+    <span data-ttu-id="779b6-117">Encontrará la sección `<listeners>` en la sección `<source>` con el atributo de nombre "DefaultSource", que está anidada bajo la sección `<system.diagnostics>` , anidada bajo la sección de nivel superior `<configuration>` .</span><span class="sxs-lookup"><span data-stu-id="779b6-117">You will find the `<listeners>` section in the `<source>` section with the name attribute "DefaultSource", which is nested under the `<system.diagnostics>` section, which is nested under the top-level `<configuration>` section.</span></span>
+
+3. <span data-ttu-id="779b6-118">Agregue este elemento a dicha sección `<listeners>` :</span><span class="sxs-lookup"><span data-stu-id="779b6-118">Add this element to that `<listeners>` section:</span></span>
+
+    ```xml
+    <add name="EventLog"/>
+    ```
+
+4. <span data-ttu-id="779b6-119">Busque la sección `<sharedListeners>` , en la sección `<system.diagnostics>` , en la sección de nivel superior `<configuration>` .</span><span class="sxs-lookup"><span data-stu-id="779b6-119">Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.</span></span>
+
+5. <span data-ttu-id="779b6-120">Agregue este elemento a dicha sección `<sharedListeners>` :</span><span class="sxs-lookup"><span data-stu-id="779b6-120">Add this element to that `<sharedListeners>` section:</span></span>
+
+    ```xml
+    <add name="EventLog"
+        type="System.Diagnostics.EventLogTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+         initializeData="APPLICATION_NAME"/>
+    ```
+
+    <span data-ttu-id="779b6-121">Reemplace `APPLICATION_NAME` por el nombre de su aplicación.</span><span class="sxs-lookup"><span data-stu-id="779b6-121">Replace `APPLICATION_NAME` with the name of your application.</span></span>
+
     > [!NOTE]
-    >  <span data-ttu-id="69050-123">Normalmente, una aplicación escribe solo errores en el registro de eventos.</span><span class="sxs-lookup"><span data-stu-id="69050-123">Typically, an application writes only errors to the event log.</span></span> <span data-ttu-id="69050-124">Para obtener información sobre el filtrado de la salida del registro, vea [Tutorial: Filtrar el resultado de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).</span><span class="sxs-lookup"><span data-stu-id="69050-124">For information on filtering log output, see [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).</span></span>  
-  
-### <a name="to-write-event-information-to-the-event-log"></a><span data-ttu-id="69050-125">Para escribir información de eventos en el registro de eventos</span><span class="sxs-lookup"><span data-stu-id="69050-125">To write event information to the event log</span></span>  
-  
--   <span data-ttu-id="69050-126">Use el método `My.Application.Log.WriteEntry` o `My.Application.Log.WriteException` para escribir información en el registro de eventos.</span><span class="sxs-lookup"><span data-stu-id="69050-126">Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the event log.</span></span> <span data-ttu-id="69050-127">Para obtener más información, vea [Cómo: Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) y [Cómo: Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="69050-127">For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span></span>  
-  
-     <span data-ttu-id="69050-128">Después de configurar el agente de escucha de registro de eventos para un ensamblado, este recibe todos los mensajes que `My.Applcation.Log` escribe desde ese ensamblado.</span><span class="sxs-lookup"><span data-stu-id="69050-128">After you configure the event log listener for an assembly, it receives all messages that `My.Applcation.Log` writes from that assembly.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="69050-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="69050-129">See also</span></span>
+    > <span data-ttu-id="779b6-122">Normalmente, una aplicación escribe solo errores en el registro de eventos.</span><span class="sxs-lookup"><span data-stu-id="779b6-122">Typically, an application writes only errors to the event log.</span></span> <span data-ttu-id="779b6-123">Para obtener información sobre el filtrado de la salida del registro, vea [Tutorial: Filtrar el resultado de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).</span><span class="sxs-lookup"><span data-stu-id="779b6-123">For information on filtering log output, see [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).</span></span>
+
+### <a name="to-write-event-information-to-the-event-log"></a><span data-ttu-id="779b6-124">Para escribir información de eventos en el registro de eventos</span><span class="sxs-lookup"><span data-stu-id="779b6-124">To write event information to the event log</span></span>
+
+- <span data-ttu-id="779b6-125">Use el método `My.Application.Log.WriteEntry` o `My.Application.Log.WriteException` para escribir información en el registro de eventos.</span><span class="sxs-lookup"><span data-stu-id="779b6-125">Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the event log.</span></span> <span data-ttu-id="779b6-126">Para obtener más información, vea [Cómo: Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) y [Cómo: Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="779b6-126">For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).</span></span>
+
+    <span data-ttu-id="779b6-127">Después de configurar el agente de escucha de registro de eventos para un ensamblado, este recibe todos los mensajes que `My.Application.Log` escribe desde ese ensamblado.</span><span class="sxs-lookup"><span data-stu-id="779b6-127">After you configure the event log listener for an assembly, it receives all messages that `My.Application.Log` writes from that assembly.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="779b6-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="779b6-128">See also</span></span>
+
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [<span data-ttu-id="69050-130">Trabajar con registros de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="69050-130">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [<span data-ttu-id="69050-131">Cómo: Registrar excepciones</span><span class="sxs-lookup"><span data-stu-id="69050-131">How to: Log Exceptions</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [<span data-ttu-id="69050-132">Tutorial: Determinar el lugar en el que My.Application.Log escribe la información</span><span class="sxs-lookup"><span data-stu-id="69050-132">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [<span data-ttu-id="779b6-129">Trabajar con registros de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="779b6-129">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [<span data-ttu-id="779b6-130">Cómo: Registrar excepciones</span><span class="sxs-lookup"><span data-stu-id="779b6-130">How to: Log Exceptions</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [<span data-ttu-id="779b6-131">Tutorial: Determinar el lugar en el que My.Application.Log escribe la información</span><span class="sxs-lookup"><span data-stu-id="779b6-131">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
