@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 5a83198a665563c3d283cac042c9fec95c60f8e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec72b67da72bde9392d523787e8c0d4d0981ad7b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547136"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703543"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Interfaces relacionadas con el enlace de datos
 Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], puede crear varias estructuras de datos distintas para satisfacer las necesidades de enlace de la aplicación y los datos con los que trabaja. Es posible que quiera crear sus propias clases que proporcionen o consuman datos en Windows Forms. Estos objetos pueden ofrecer varios niveles de funcionalidad y complejidad, desde el enlace de datos básico hasta proporcionar compatibilidad en tiempo de diseño, comprobación de errores, notificación de cambios o incluso compatibilidad con la reversión estructurada de los cambios hechos en los datos.  
@@ -150,6 +150,6 @@ Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], puede crear varias e
     >  Una clase que hereda de <xref:System.Windows.Forms.Control> administra enlaces automáticamente mediante su <xref:System.Windows.Forms.Control.BindingContext%2A> propiedad, por lo que casos en que necesite implementar el <xref:System.Windows.Forms.ICurrencyManagerProvider> muy poco frecuente.  
   
 ## <a name="see-also"></a>Vea también
-- [Enlace de datos y Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Cómo: Crear un Control con enlace Simple en un formulario de Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Enlace de datos en Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Enlace de datos y Windows Forms](data-binding-and-windows-forms.md)
+- [Cómo: Crear un Control con enlace Simple en un formulario de Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Enlace de datos en Windows Forms](windows-forms-data-binding.md)
