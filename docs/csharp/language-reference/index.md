@@ -1,19 +1,13 @@
 ---
-title: Referencia de C#
+title: 'Referencia de C#'
 ms.date: 02/14/2017
 helpviewer_keywords:
-- Visual C#, language reference
-- language reference [C#]
-- Programmer's Reference for C#
-- C# language, reference
-- reference, C# language
+  - 'Visual C#, language reference'
+  - 'language reference [C#]'
+  - 'Programmer''s Reference for C#'
+  - 'C# language, reference'
+  - 'reference, C# language'
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: c9400c2836d923fe92ed88ec947a1953800bc47d
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472508"
 ---
 # <a name="c-reference"></a>Referencia de C#
 En esta sección se proporciona material de referencia sobre palabras clave, operadores, caracteres especiales, directivas de preprocesador, opciones del compilador y errores y advertencias del compilador de C#.  
@@ -37,8 +31,11 @@ En esta sección se proporciona material de referencia sobre palabras clave, ope
  [Errores del compilador de C#](../../csharp/language-reference/compiler-messages/index.md)  
  Incluye fragmentos de código que muestran la causa y la corrección de errores y advertencias del compilador de C#.  
   
- [Especificación del lenguaje C#](../../csharp/language-reference/language-specification/index.md)  
- Proporciona vínculos a las últimas versiones de la especificación del lenguaje C#.  
+ [Especificación del lenguaje C#](../../../_csharplang/spec/introduction.md)  
+ Especificación del lenguaje C# 6.0 Se trata de un borrador de propuesta para el lenguaje C# 6.0. La versión 5.0 se ha publicado en diciembre de 2017 como el documento [Norma ECMA-334 estándar, quinta edición](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf).
+  
+ [Propuestas del lenguaje de C# 7.0](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
+ Hay una serie de nuevas características implementadas en C# 7.0. Entre ellas, está la coincidencia de patrones, las funciones locales, las declaraciones de variable out, las expresiones throw, los literales binarios y los separadores de dígitos. Esta carpeta contiene las especificaciones para cada una de esas características.
   
 ## <a name="related-sections"></a>Secciones relacionadas  
 

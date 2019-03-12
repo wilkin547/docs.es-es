@@ -4,6 +4,7 @@ description: Obtenga información sobre cómo realizar tareas específicas para 
 ms.custom: seodec18
 ms.date: 03/01/2019
 ---
+
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>Guías de procedimientos de aprendizaje automático de .NET: ML.NET
 
 En la sección de procedimientos de la guía de ML.NET encontrará respuestas rápidas a preguntas frecuentes. En algunos casos, los artículos pueden mostrarse en varias secciones para que sean fáciles de encontrar.
@@ -44,7 +45,7 @@ En la sección de procedimientos de la guía de ML.NET encontrará respuestas r�
 
 * [Aplicación de ingeniería de características para el entrenamiento del modelo en datos textuales con ML.NET](train-model-textual-ml-net.md)
 
-## <a name="run"></a>Run 
+## <a name="run"></a>Run
 
 * [Inspección de los valores de datos intermedios durante el procesamiento de canalizaciones de ML.NET](inspect-intermediate-data-ml-net.md)
 
@@ -52,7 +53,6 @@ En la sección de procedimientos de la guía de ML.NET encontrará respuestas r�
 
 * [Uso de PredictionFunction para realizar una predicción cada vez](single-predict-model-ml-net.md)
 
-## <a name="probabalistic-infernet"></a>Probabalistic (Infer.NET)
+## <a name="probabilistic-infernet"></a>Probabilistic (Infer.NET)
 
 * [Creación de una aplicación de listas de enfrentamientos en juegos con Infer.NET y programación probabilística](matchup-app-infer-net.md)
-
