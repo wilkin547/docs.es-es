@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ---
 
-# Novedades de .NET Framework <a name="introduction"></a>
+# <a name="whats-new-in-the-net-framework"></a>Novedades de .NET Framework
 
 En este artículo se resumen las nuevas características y mejoras en las siguientes versiones de .NET Framework:
 
@@ -1571,8 +1571,6 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
      Los paquetes de .NET Core como las colecciones inmutables, las [API de SIMD](https://go.microsoft.com/fwlink/?LinkID=518639) y las API de red, como las que se encuentran en el espacio de nombres <xref:System.Net.Http>, ahora están disponibles como paquetes de código abierto en [GitHub](https://github.com/). Para tener acceso al código, vea [CoreFx en GitHub](https://github.com/dotnet/corefx). Para obtener más información y saber cómo contribuir a estos paquetes, vea [.NET Core y código abierto](../../../docs/framework/get-started/net-core-and-open-source.md) y la [página principal de .NET en GitHub](https://github.com/dotnet/home).
 
-[Volver al principio](#introduction)
-
 <a name="v452" />
 
 ## <a name="whats-new-in-the-net-framework-452"></a>Novedades de .NET Framework 4.5.2
@@ -1644,8 +1642,6 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
      El método se puede usar con una inscripción creada previamente por <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> en respuesta al método <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>. Pide a `System.Transactions` que promueva la transacción a una transacción MSDTC y que "convierta" la inscripción que se puede promover en una inscripción duradera. Cuando este método finalice correctamente, `System.Transactions` ya no hará referencia a la interfaz <xref:System.Transactions.IPromotableSinglePhaseNotification> y todas las notificaciones futuras llegarán a la interfaz <xref:System.Transactions.ISinglePhaseNotification> proporcionada. La inscripción en cuestión debe actuar como inscripción duradera y admitir el registro y la recuperación de transacciones. Vea <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> para obtener más información. Además, la inscripción debe admitir <xref:System.Transactions.ISinglePhaseNotification>.  *Solo* se puede llamar a este método al procesar una llamada de <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>. Si no es el caso, se produce una excepción <xref:System.Transactions.TransactionException>.
 
-[Volver al principio](#introduction)
-
 <a name="v451" />
 
 ## <a name="whats-new-in-the-net-framework-451"></a>Novedades de .NET Framework 4.5.1
@@ -1707,8 +1703,6 @@ Algunas de las mejoras realizadas durante la depuración de las aplicaciones de 
 A partir de Visual Studio 2013, puede usar la [herramienta de optimización guiada por perfiles administrados (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) para optimizar las aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], así como las de escritorio.
 
 Para descubrir las nuevas características de ASP.NET 4.5.1, vea [ASP.NET and Web Tools for Visual Studio 2013 Release Notes](/aspnet/visual-studio/overview/2013/release-notes) (Notas de la versión de ASP.NET y herramientas web para Visual Studio 2013).
-
-[Volver al principio](#introduction)
 
 <a name="v45" />
 
