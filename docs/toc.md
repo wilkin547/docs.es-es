@@ -1209,6 +1209,7 @@
 ### Uso del modelo entrenado
 #### [Una predicción a la vez con PredictionEngine](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [Poner en marcha un modelo entrenado](machine-learning/how-to-guides/consuming-model-ml-net.md)
+#### [Publicación de un modelo de Azure Functions](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
 ### Infer.NET
 #### [Programación probabilística con Infer.NET](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## Referencia
