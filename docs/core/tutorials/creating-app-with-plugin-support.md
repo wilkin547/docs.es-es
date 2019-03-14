@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear una aplicación .NET Core qu
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: f2997c778b87ecd88c0fd2fadf491763066a4950
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 85ea06d56ed1c3312a010c5e575dd193c00b93e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739602"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363909"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Creación de una aplicación de .NET Core con complementos
 
@@ -244,7 +244,7 @@ Casi todos los complementos son más complejos que un simple ejemplo "Hola mundo
 
 ## <a name="other-plugin-examples-in-the-sample"></a>Otros ejemplos de complemento en el ejemplo
 
-El objeto `AssemblyDependencyResolver` también puede resolver las bibliotecas nativas incluidas en los paquetes NuGet así como los ensamblados satélite localizados. En `UVPlugin` y `FrenchPlugin` se describen estos escenarios, respectivamente.
+Puede encontrar el código fuente completo para este tutorial en el [repositorio dotnet/samples](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). El ejemplo completo incluye algunos otros ejemplos de comportamiento `AssemblyDependencyResolver`. Por ejemplo, el objeto `AssemblyDependencyResolver` también puede resolver las bibliotecas nativas, así como los ensamblados satélite localizados en paquetes NuGet. `UVPlugin` y `FrenchPlugin` en el repositorio de ejemplos demuestran estos escenarios.
 
 ## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>Procedimientos para hacer referencia a un ensamblado de interfaz de complemento definido en un paquete NuGet
 

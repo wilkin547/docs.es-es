@@ -1,6 +1,7 @@
 ---
 title: Fundamentos de la recolección de elementos no utilizados
-ms.date: 03/30/2017
+description: Obtenga información sobre cómo funciona el recolector de elementos no utilizados y cómo puede configurarse para un rendimiento óptimo.
+ms.date: 03/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066338"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712479"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Fundamentos de la recolección de elementos no utilizados
 <a name="top"></a> En el Common Language Runtime (CLR), el recolector de elementos no utilizados actúa como administrador de memoria automático. Proporciona las siguientes ventajas:  
@@ -30,28 +31,8 @@ ms.locfileid: "55066338"
   
 -   Proporciona seguridad de memoria, al asegurarse de que un objeto no pueda utilizar el contenido de otro objeto.  
   
- En este tema se describen los conceptos básicos de la recolección de elementos no utilizados. Contiene las siguientes secciones:  
-  
--   [Fundamentos de memoria](#fundamentals_of_memory)  
-  
--   [Condiciones para la recolección de elementos no utilizados](#conditions_for_a_garbage_collection)  
-  
--   [Montón administrado](#the_managed_heap)  
-  
--   [Generaciones](#generations)  
-  
--   [Lo que sucede durante la recolección de elementos no utilizados](#what_happens_during_a_garbage_collection)  
-  
--   [Manipular recursos no administrados](#manipulating_unmanaged_resources)  
-  
--   [Recolección de elementos no utilizados de estación de trabajo y de servidor](#workstation_and_server_garbage_collection)  
-  
--   [Recolección de elementos no utilizados simultánea](#concurrent_garbage_collection)  
-  
--   [Recolección de elementos no utilizados de estación de trabajo en segundo plano](#background_garbage_collection)  
-  
--   [Recolección de elementos no utilizados de servidor en segundo plano](#background_server_garbage_collection)  
-  
+ En este tema se describen los conceptos básicos de la recolección de elementos no utilizados. 
+ 
 <a name="fundamentals_of_memory"></a>   
 ## <a name="fundamentals-of-memory"></a>Fundamentos de memoria  
  En la lista siguiente se resumen los conceptos importantes de memoria de CLR.  
@@ -109,9 +90,9 @@ ms.locfileid: "55066338"
   
  La tendencia a la intrusión (frecuencia y duración) de las recolecciones de elementos no utilizados es el resultado del volumen de asignaciones y la cantidad de memoria que sobrevivió en el montón administrado.  
   
- El montón considerarse una acumulación de dos montones: el montón de objetos grandes y el montón de objetos pequeños.  
+ El montón considerarse una acumulación de dos montones: el [montón de objetos grandes](large-object-heap.md) y el montón de objetos pequeños.  
   
- El montón de objetos grandes contiene objetos muy grandes de 85.000 bytes o más. Los objetos del montón de objetos grandes suelen ser matrices. Es raro que un objeto de instancia sea sumamente grande.  
+ El [montón de objetos grandes](large-object-heap.md) contiene objetos muy grandes de 85 000 bytes o más. Los objetos del montón de objetos grandes suelen ser matrices. Es raro que un objeto de instancia sea sumamente grande.  
   
  [Volver al principio](#top)  
   

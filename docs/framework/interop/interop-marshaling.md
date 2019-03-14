@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221256"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677219"
 ---
 # <a name="interop-marshaling"></a>Serialización de interoperabilidad
 <a name="top"></a> La serialización de interoperabilidad rige cómo se pasan los datos en argumentos de método y valores devueltos entre la memoria administrada y la no administrada durante las llamadas. La serialización de interoperabilidad es una actividad en tiempo de ejecución realizada por el servicio de serialización de Common Language Runtime.  
@@ -44,8 +44,7 @@ ms.locfileid: "56221256"
   
  Tanto la invocación de plataforma como la interoperabilidad COM usan serialización de interoperabilidad para mover con precisión los argumentos de método desde el llamador al destinatario y viceversa, si es necesario. Como se muestra en la siguiente ilustración, una llamada al método de invocación de plataforma fluye desde el código administrado al no administrado y nunca en sentido contrario, excepto cuando hay [funciones de devolución de llamada](callback-functions.md) implicadas. Aunque las llamadas de invocación de plataforma solo pueden realizarse desde código administrado a código no administrado, los datos pueden fluir en ambas direcciones como parámetros de entrada o salida. Las llamadas a métodos de interoperabilidad COM pueden fluir en ambas direcciones.  
   
- ![Invocación de plataforma](./media/interopmarshaling.png "interopmarshaling")  
-Flujo de llamadas de invocación de plataforma e interoperabilidad COM  
+ ![Invocación de plataforma](./media/interop-marshaling/interop-marshaling-invoke-and-com.png "Flujo de llamadas de invocación de plataforma e interoperabilidad COM")  
   
  En el nivel más bajo, ambos mecanismos usan el mismo servicio de serialización de interoperabilidad; sin embargo, hay determinados tipos de datos que solo se admiten en la interoperabilidad COM o en la invocación de plataforma. Para obtener más información, vea [Comportamiento de serialización predeterminado](default-marshaling-behavior.md).  
   
@@ -67,8 +66,7 @@ Flujo de llamadas de invocación de plataforma e interoperabilidad COM
   
  Dado que el cliente y el servidor están en el mismo apartamento, el servicio de serialización de interoperabilidad controla automáticamente toda la serialización de datos. La ilustración siguiente muestra cómo opera el servicio de serialización de interoperabilidad entre montones administrados y no administrados dentro del mismo apartamento de estilo COM.  
   
- ![Serialización de interoperabilidad](./media/interopheap.gif "interopheap")  
-Proceso de serialización en el mismo apartamento  
+ ![Serialización de interoperabilidad entre los montones administrado y no administrado](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "Proceso de serialización del mismo apartamento")  
   
  Si planea exportar un servidor administrado, tenga en cuenta que el cliente COM determina el apartamento del servidor. Un servidor administrado llamado por un cliente COM inicializado en un MTA debe garantizar la seguridad de subprocesos.  
   
@@ -84,8 +82,7 @@ Proceso de serialización en el mismo apartamento
   
  Cuando un cliente administrado y un servidor no administrado están en el mismo apartamento, el servicio de serialización de interoperabilidad controla toda la serialización de datos. Sin embargo, cuando el cliente y el servidor se inicializan en apartamentos diferentes, también es necesaria la serialización de COM. La ilustración siguiente muestra los elementos de una llamada entre apartamentos.  
   
- ![Serialización COM](./media/singleprocessmultapt.gif "singleprocessmultapt")  
-Llamada entre apartamentos entre un cliente .NET y un objeto COM  
+ ![Serialización COM](./media/interop-marshaling/single-process-across-multi-apartment.gif "Llamada entre apartamentos entre un cliente .NET y un objeto COM")  
   
  Para una serialización entre apartamentos, puede hacer lo siguiente:  
   
@@ -110,14 +107,12 @@ Llamada entre apartamentos entre un cliente .NET y un objeto COM
   
  En la ilustración siguiente se muestra cómo la serialización de interoperabilidad y la serialización de COM proporcionan canales de comunicación a través de procesos y límites de hosts.  
   
- ![Serialización COM](./media/interophost.gif "interophost")  
-Serialización entre procesos  
+ ![Serialización COM](./media/interop-marshaling/interop-and-com-marshaling.gif "Serialización entre procesos")  
   
 ### <a name="preserving-identity"></a>Conservar la identidad  
  Common Language Runtime conserva la identidad de las referencias administradas y no administradas. En la siguiente ilustración se muestra el flujo de referencias directas no administradas (fila superior) y de referencias directas administradas (fila inferior) entre procesos y límites de hosts.  
   
- ![Contenedor CCW y contenedor RCW](./media/interopdirectref.gif "interopdirectref")  
-Paso de referencia entre límites de hosts y procesos  
+ ![Contenedor CCW y contenedor RCW](./media/interop-marshaling/interop-direct-ref-across-process.gif "Referencia que pasa a través de los límites de proceso y de host")  
   
  En esta ilustración:  
   
@@ -133,7 +128,7 @@ Paso de referencia entre límites de hosts y procesos
 ### <a name="managed-remoting"></a>Comunicación remota administrada  
  El runtime también proporciona comunicación remota administrada que puede usarse para establecer un canal de comunicaciones entre objetos administrados a través varios procesos y límites de hosts. La comunicación remota administrada puede alojar un firewall entre los componentes de la comunicación, como se muestra en la ilustración siguiente.  
   
- ![SOAP o TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
+ ![SOAP o TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "Llamadas remotas a través de firewalls que usan SOAP o la clase TcpChannel")  
 Llamadas remotas a través de firewalls que usan SOAP o la clase TcpChannel  
   
  Algunas llamadas no administradas pueden canalizarse mediante SOAP, como las llamadas entre componentes de servicio y COM.  

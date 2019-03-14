@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Realizar escuchas de varias solicitudes de cancelación'
+title: Procedimiento Realizar escuchas de varias solicitudes de cancelación
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ba8000544d0b7d35a818d41a75f38e6fd0293d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 17874b8b9733ea18d4877e2c79810fcd6247db0b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44178576"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680244"
 ---
-# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Cómo: Realizar escuchas de varias solicitudes de cancelación
+# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Procedimiento Realizar escuchas de varias solicitudes de cancelación
 En este ejemplo se muestra cómo escuchar dos tokens de cancelación simultáneamente, para poder cancelar una operación si el token lo solicita.  
   
 > [!NOTE]
@@ -32,7 +32,7 @@ En este ejemplo se muestra cómo escuchar dos tokens de cancelación simultánea
   
  Cuando el token vinculado produce una clase <xref:System.OperationCanceledException>, el token que se pasa a la excepción es el token vinculado, no uno de los tokens predecesores. Para determinar cuál de los tokens se canceló, compruebe el estado de los tokens predecesores directamente.  
   
- En este ejemplo, <xref:System.AggregateException> nunca debería iniciarse, pero se detecta aquí porque en escenarios del mundo real cualquier otra excepción aparte de <xref:System.OperationCanceledException> producida a partir del delegado de tarea se encapsula en <xref:System.OperationCanceledException>.  
+ En este ejemplo, <xref:System.AggregateException> nunca debería iniciarse, pero se detecta aquí porque en escenarios del mundo real cualquier otra excepción aparte de <xref:System.OperationCanceledException> producida a partir del delegado de tarea se encapsula en <xref:System.AggregateException>.  
   
 ## <a name="see-also"></a>Vea también
 

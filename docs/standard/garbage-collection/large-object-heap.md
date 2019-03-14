@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066433"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677188"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Montón de objetos grandes en sistemas Windows
 
@@ -47,12 +47,12 @@ Cuando se activa una recolección de elementos no utilizados, el recolector de e
 
 En la figura 1 se ilustra un escenario en el que el recolector de elementos no utilizados crea la generación 1 después de la primera recolección de elementos no utilizados de generación 0, donde `Obj1` y `Obj3` están inactivos, y crea la generación 2 después de la primera recolección de elementos no utilizados de generación 1, donde `Obj2` y `Obj5` están inactivos. Cabe mencionar que tanto esta como las demás figuras se muestran a título meramente ilustrativo; contienen muy pocos objetos para mostrar de mejor forma lo que sucede en el montón. En realidad, en una recolección de elementos no utilizados suele haber muchos más objetos.
 
-![Figura 1: recolecciones de elementos no utilizados de generación 0 y de generación 1](media/loh/loh-figure-1.jpg)  
+![Figura 1: recolecciones de elementos no utilizados de generación 0 y de generación 1](media/loh/loh-figure-1.jpg)\
 Figura 1: recolecciones de elementos no utilizados de generación 0 y de generación 1.
 
 En la figura 2 se muestra que, después de una recolección de elementos no utilizados de generación 2 en la que se apreciaba que `Obj1` y `Obj2` estaban inactivos, el recolector de elementos no utilizados libera el espacio en memoria que solía estar ocupado por `Obj1` y `Obj2`, que pasa a usarse para cumplir una solicitud de asignación de `Obj4`. El espacio que hay después del último objeto, `Obj3`, hasta el final del segmento se puede usar también para cumplir solicitudes de asignación.
 
-![Figura 2: Después de una recolección de elementos no utilizados de generación 2](media/loh/loh-figure-2.jpg)  
+![Figura 2: Después de una recolección de elementos no utilizados de generación 2](media/loh/loh-figure-2.jpg)\
 Figura 2: Después de una recolección de elementos no utilizados de generación 2
 
 Si no existe suficiente espacio libre para las solicitudes de asignación de objeto grande, el recolector de elementos no utilizados intenta primero adquirir más segmentos del sistema operativo. Si esto no sirve, activa una recolección de elementos no utilizados de generación 2 con la esperanza de liberar algo de espacio.
@@ -61,7 +61,7 @@ Durante una recolección de elementos no utilizados de generación 1 o de genera
 
 Como el montón de objetos grandes solo se recopila durante las recolecciones de elementos no utilizados de generación 2, el segmento del montón de objetos grandes solo se puede liberar durante una recolección de este tipo. En la figura 3 se ilustra un escenario en el que el recolector de elementos no utilizados libera un segmento (segmento 2) para el sistema operativo y anula la confirmación de más espacio en los segmentos restantes. Si necesitara usar el espacio que no está confirmado al final del segmento para cumplir asignaciones de objetos grandes, confirmará la memoria de nuevo. Para obtener una explicación sobre cómo confirmar/anular confirmaciones, vea la documentación de [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc).
 
-![Figura 3: Montón de objetos grandes después de una recolección de elementos no utilizados de generación 2](media/loh/loh-figure-3.jpg)  
+![Figura 3: Montón de objetos grandes después de una recolección de elementos no utilizados de generación 2](media/loh/loh-figure-3.jpg)\
 Figura 3: Montón de objetos grandes después de una recolección de elementos no utilizados de generación 2
 
 ## <a name="when-is-a-large-object-collected"></a>¿Cuándo se recolecta un objeto grande?
@@ -156,7 +156,7 @@ Estos contadores de rendimiento suelen ser un buen punto de partida para investi
 
 Una forma habitual de examinar los contadores de rendimiento es a través del Monitor de rendimiento (perfmon.exe). Use "Agregar contadores" para agregar los contadores de interés relativos a los procesos que le preocupen. Puede guardar los datos de contador de rendimiento en un archivo de registro, como muestra la figura 4.
 
-![Figura 4: Agregar contadores de rendimiento.](media/loh/perfcounter.png)  
+![Figura 4: Agregar contadores de rendimiento.](media/loh/perfcounter.png)\
 Figura 4: Montón de objetos grandes después de una recolección de elementos no utilizados de generación 2
 
 Los contadores de rendimiento también se pueden consultar mediante programación. Muchas personas los recolectan de esta forma como parte de su proceso rutinario de pruebas. Al detectar contadores con valores que no son normales, usan otros medios para obtener más detalles que ayuden en la investigación.
@@ -184,8 +184,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 El resultado es similar al siguiente:
 
-![Figura 5: Examinar eventos ETW con PerfView](media/loh/perfview.png)  
-Figura 5: Eventos ETW con PerfView
+![Figura 5: Examinar eventos ETW con PerfView](media/loh/perfview.png) Figura 5: Eventos ETW con PerfView
 
 Como se puede ver, todas las recolecciones de elementos no utilizados pertenecen a la generación 2 y todas ellas se han activado por medio de AllocLarge, lo que significa que esta recolección de elementos no utilizados se ha activado a raíz de la asignación de un objeto grande. Sabemos que estas asignaciones son temporales porque la columna **LOH Survival Rate %** (% de tasa de supervivencia del montón de objetos grandes) muestra 1%.
 
@@ -197,7 +196,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 recopila un evento AllocationTick que se activa aproximadamente con cada asignación con un volumen de 100 000. Dicho de otro modo, se activa un evento cada vez que se asigna un objeto grande. Así, puede consultar una de las vistas de asignación del montón de recolección de elementos no utilizados, en las que se muestran las pilas de llamadas que han asignado objetos grandes:
 
-![Figura 6: Vista de asignación del montón de recolección de elementos no utilizados](media/loh/perfview2.png)  
+![Figura 6: Vista de asignación del montón de recolección de elementos no utilizados](media/loh/perfview2.png)\
 Figura 6: Vista de asignación del montón de recolección de elementos no utilizados
 
 Como se puede ver, se trata de una prueba muy sencilla que simplemente asigna objetos grandes desde el método `Main`.

@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759137"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680274"
 ---
 # <a name="net-api-analyzer"></a>Analizador de API en .NET
 
@@ -44,7 +44,7 @@ Cuando una API en desuso, como <xref:System.Net.WebClient>, se utiliza en un có
 
 La ventana **Lista de errores** contiene advertencias con un identificador exclusivo por cada API en desuso, como se muestra en el ejemplo siguiente (`DE004`): 
 
-!["Captura de pantalla de la ventana Lista de errores en que se muestra el identificador de la advertencia y su descripción"](media/api-analyzer/warnings.jpg)
+!["Captura de pantalla de la ventana Lista de errores en que se muestra el identificador de la advertencia y su descripción"](media/api-analyzer/warnings-id-and-descriptions.jpg "Ventana de Lista de errores que incluye advertencias.")
 
 Al hacer clic en el identificador, se le remite a una página web que contiene información detallada sobre la API en desuso y sugerencias sobre las API alternativas que pueden usarse.
 
@@ -112,5 +112,5 @@ El usuario decide cómo se deben tratar los diagnósticos: como advertencias, er
 
 ## <a name="see-also"></a>Vea también
 
-- Entrada de blog de [introducción al analizador de API](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/).
+- Entrada de blog de [introducción al analizador de API](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/).
 - Vídeo de demostración del [analizador de API](https://youtu.be/eeBEahYXGd0) de YouTube.

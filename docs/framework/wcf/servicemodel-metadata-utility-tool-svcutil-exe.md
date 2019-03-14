@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 9682d79a912ac24e549093e0713cf65fb61bb4d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533213"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788432"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)
 
@@ -39,11 +39,11 @@ La tabla siguiente resume las varias funcionalidades proporcionadas por esta her
 >
 > Además, el `/r` y `/ct` modificadores para hacer referencia a tipos son para generar contratos de datos. Estos modificadores no funcionan al utilizar XmlSerializer.
 
-### <a name="timeout"></a>Timeout
+### <a name="timeout"></a>Tiempo de espera
 
 La herramienta tiene un tiempo de espera de cinco minutos al recuperar los metadatos. Este tiempo de espera sólo se aplica a la recuperación de metadatos a través de la red. No se aplica a cualquier procesamiento de esos metadatos.
 
-### <a name="multi-targetting"></a>Compatibilidad con múltiples versiones (multi-targeting)
+### <a name="multi-targeting"></a>Compatibilidad con múltiples versiones
 
 La herramienta no es compatible con múltiples versiones. Si desea generar un artefacto de .NET 4 desde *svcutil.exe*, utilice el *svcutil.exe* desde el SDK de .NET 4. Para generar un artefacto de .NET 3.5, use el ejecutable del SDK de .NET 3.5.
 
@@ -71,7 +71,7 @@ Svcutil.exe puede generar el código para los contratos de servicios, clientes y
 
 Puede usar el *SvcUtil.exe* herramienta para generar contratos de servicio y los datos basados en un documento WSDL predefinido. Use el modificador /serviceContract y especifique una dirección URL o una ubicación de archivo donde el documento de WSDL se puede descargar o encontrar. Esto genera los contratos de servicio y los datos definidos en el documento WSDL que, a continuación, se puede usar para implementar un servicio de reclamaciones. Para obtener más información, vea [Cómo: Recuperar metadatos e implementar un servicio conforme](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).
 
-Para un servicio con un punto de conexión BasicHttpContextbinding, *Svcutil.exe* genera un BasicHttpBinding con el `allowCookies` atributo establecido en `true` en su lugar. Las cookies se utilizan para el contexto del servidor. Si desea administrar el contexto del cliente cuando el servicio utiliza cookies, puede modificar manualmente la configuración para usar un enlace de contexto.
+Para un servicio con un punto de conexión BasicHttpContextBinding, *Svcutil.exe* genera un BasicHttpBinding con el `allowCookies` atributo establecido en `true` en su lugar. Las cookies se utilizan para el contexto del servidor. Si desea administrar el contexto del cliente cuando el servicio utiliza cookies, puede modificar manualmente la configuración para usar un enlace de contexto.
 
 > [!CAUTION]
 > Svcutil.exe genera el cliente basado en el WSDL o en el archivo de directivas recibido del servicio. El nombre principal de usuario (UPN) se genera concatenando el nombre de usuario, "\@" y un nombre de dominio completo (FQDN). Sin embargo, para los usuarios que se registraron en Active Directory, este formato no es válido y el UPN generado por la herramienta produce un error en la autenticación de Kerberos con el mensaje de error "El intento de inicio de sesión ha producido un error." Para resolver este problema, debe corregir manualmente el archivo de cliente generado por esta herramienta.
@@ -80,9 +80,9 @@ Para un servicio con un punto de conexión BasicHttpContextbinding, *Svcutil.exe
 
 |Argumento|Descripción|
 |--------------|-----------------|
-|`epr`|La ruta de acceso a un archivo XML que contiene un WS-Addressing EndpointReference para un punto de conexión de servicio compatible con WS-Metadata Exchange. Para obtener más información, vea la sección Descarga de metadatos.|
+|`epr`|La ruta de acceso a un archivo XML que contiene un WS-Addressing EndpointReference para un extremo de servicio compatible con WS-Metadata Exchange. Para obtener más información, vea la sección Descarga de metadatos.|
 |`metadataDocumentPath`|La ruta de acceso a un documento de metadatos (*wsdl* o *xsd*) que contiene el contrato para importar a código (.wsdl, .xsd, .wspolicy o .wsmex).<br /><br /> Svcutil sigue importaciones e inclusiones al especificar una dirección URL remota para los metadatos. Sin embargo, si desea procesar los archivos de metadatos en el sistema de archivos local, debe especificar todos los archivos en este argumento. De esta manera, puede usar Svcutil en un entorno de compilación donde no puede tener dependencias de red. Puede usar caracteres comodín (*.xsd, \*.wsdl) para este argumento.|
-|`url`|La dirección URL a un punto de conexión de servicio que proporciona metadatos o a un documento de metadatos hospedado en línea. Para obtener más información sobre cómo se recuperan estos documentos, vea la sección Descarga de metadatos.|
+|`url`|La dirección URL a un extremo de servicio que proporciona metadatos o a un documento de metadatos hospedado en línea. Para obtener más información sobre cómo se recuperan estos documentos, vea la sección Descarga de metadatos.|
 
 |Opción|Descripción|
 |------------|-----------------|
@@ -166,8 +166,8 @@ De forma predeterminada, Svcutil.exe utiliza los enlaces definidos en la clase <
 
 |Argumento|Descripción|
 |--------------|-----------------|
-|`url`|La dirección URL a un punto de conexión de servicio que proporciona metadatos o a un documento de metadatos hospedado en línea.|
-|`epr`|La ruta de acceso a un archivo XML que contiene un WS-Addressing EndpointReference para un punto de conexión de servicio compatible con WS-Metadata Exchange.|
+|`url`|La dirección URL a un extremo de servicio que proporciona metadatos o a un documento de metadatos hospedado en línea.|
+|`epr`|La ruta de acceso a un archivo XML que contiene un WS-Addressing EndpointReference para un extremo de servicio compatible con WS-Metadata Exchange.|
 
 ### <a name="xmlserializer-type-generation"></a>Generación de tipo XmlSerializer
 

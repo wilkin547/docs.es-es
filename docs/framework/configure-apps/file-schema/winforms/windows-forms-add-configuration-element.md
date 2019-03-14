@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 107de172e523758474bafb3b86a2960b926a010a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371377"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788484"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms Agregar elemento de configuración
 
@@ -41,14 +41,14 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 | `key` Nombre | Valores | Descripción |
 | ---------- | ------ | ----------- |
-| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica si los controles delimitados se escalan en un único paso. "true" para deshabilitar solo pasa escalado; en caso contrario, false. Consulte la sección "Solo pasar escalado" en el [comentarios](#Remarks) para obtener más información. |
+| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica si los controles delimitados se escalan en un único paso. "true" para deshabilitar solo pasa escalado; en caso contrario, false. Consulte la sección "Solo pasar escalado" en el [comentarios](#remarks) para obtener más información. |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | Indica si una aplicación tiene reconocimiento de PPP. Establezca la clave para "PerMonitorV2" para admitir el reconocimiento de PPP; en caso contrario, establézcalo en "false". Reconocimiento de PPP es una característica opcional; para aprovechar las ventajas de la compatibilidad con PPP elevado de Windows Forms, debe establecer su valor a "PerMonitorV2". Consulte la [comentarios](#remarks) sección para obtener más información. |
 | "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Indica si el <xref:System.Windows.Forms.CheckedListBox> control aprovecha las ventajas de adaptación y diseño de las mejoras introducidas en .NET Framework 4.7. "true" para dejar de participar en las mejoras de diseño y caling; en caso contrario, "false". |
 | "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | Indica si el <xref:System.Windows.Forms.DataGridView> controlar adaptación y diseño de las mejoras introducidas en .NET Framework 4.7. "true" para dejar de participar en el reconocimiento de PPP; "false" en caso contrario. |
 | "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true" para optar por recibir los mensajes relacionados con los cambios; de ajuste de PPP "false" en caso contrario. Consulte la [comentarios](#remarks) sección para obtener más información. |
 | "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Indica si una aplicación de Windows Forms cambia automáticamente de tamaño debido a cambios de escala de PPP. "true" para habilitar el cambio de tamaño automático; en caso contrario, false. |
-| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica si el <xref:System.Windows.Forms.Form> se escala en un único paso. paso único es "true" para deshabilitar escalado; en caso contrario, false. Consulte la sección "Solo pasar escalado" en el [comentarios](#Remarks) para obtener más información. |
-| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica si el <xref:System.Windows.Forms.MonthCalendar> se escala el control en un único paso. paso único es "true" para deshabilitar escalado; en caso contrario, false. Consulte la sección "Solo pasar escalado" en el [comentarios](#Remarks) para obtener más información. |
+| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica si el <xref:System.Windows.Forms.Form> se escala en un único paso. paso único es "true" para deshabilitar escalado; en caso contrario, false. Consulte la sección "Solo pasar escalado" en el [comentarios](#remarks) para obtener más información. |
+| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica si el <xref:System.Windows.Forms.MonthCalendar> se escala el control en un único paso. paso único es "true" para deshabilitar escalado; en caso contrario, false. Consulte la sección "Solo pasar escalado" en el [comentarios](#remarks) para obtener más información. |
 | "Toolstrip.DisableHighDpiImprovements" | "true"&#124;"false" | Indica si el <xref:System.Windows.Forms.ToolStrip> control aprovecha las ventajas de adaptación y diseño de las mejoras introducidas en .NET Framework 4.7. "true" para dejar de participar en el reconocimiento de PPP; "false" en caso contrario. |
 
 ### <a name="child-elements"></a>Elementos secundarios
@@ -61,7 +61,7 @@ Ninguno.
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | Configura la compatibilidad con nuevas características de aplicación de Windows Forms. |
 
-## <a name="a-nameremarks--remarks"></a><a name="remarks" /> Comentarios
+## <a name="remarks"></a>Comentarios
 
 A partir de .NET Framework 4.7, el elemento `<System.Windows.Forms.ApplicationConfigurationSection>` permite configurar las aplicaciones de Windows Forms para aprovechar las características agregadas en versiones recientes de .NET Framework.
 
@@ -96,6 +96,7 @@ El valor opt predeterminado único proporcionado estableciendo `DpiAwareness` a 
    <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
 </System.Windows.Forms.ApplicationConfigurationSection>
 ```
+
 Normalmente, rechazar una característica determinada porque ha elegido controlarlo mediante programación.
 
 Para obtener más información sobre el aprovechamiento de la compatibilidad con valores altos de PPP en aplicaciones de Windows Forms, consulte [alto PPP admite en Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md).

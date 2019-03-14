@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c265b583b74ac9d7df128e3343bbc368e3cf9c4e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: d0efe9234bd61a45fa87e68cdbed1be69957d218
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220816"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675165"
 ---
 # <a name="deploying-an-interop-application"></a>Implementar una aplicación interoperativa
 Una aplicación de interoperabilidad suele incluir un ensamblado de cliente de .NET, uno o varios ensamblados de interoperabilidad que representan diferentes bibliotecas de tipos COM, y uno o varios componentes COM registrados. Visual Studio y el [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] proporcionan herramientas para importar y convertir una biblioteca de tipos en un ensamblado de interoperabilidad, como se describe en [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md). Hay dos maneras de implementar una aplicación de interoperabilidad:  
@@ -38,8 +38,7 @@ Una aplicación de interoperabilidad suele incluir un ensamblado de cliente de .
 ### <a name="private-assemblies"></a>Ensamblados privados  
  Para instalar un ensamblado que se va a usar de forma privada, el archivo ejecutable de la aplicación y el ensamblado de interoperabilidad que contiene los tipos COM importados deben instalarse en la misma estructura de directorios. En la ilustración siguiente se muestra un ensamblado de interoperabilidad sin firma que se va a usar de forma privada por parte de Client1.exe y Client2.exe, que residen en directorios de aplicación diferentes. El ensamblado de interoperabilidad, denominado LOANLib.dll en este ejemplo, se instala dos veces.  
   
- ![Estructura de directorios y Registro de Windows](media/comdeployprivate.gif "comdeployprivate")  
-Estructura de directorios y entradas del Registro para una implementación privada  
+ ![Estructura de directorios y Registro de Windows](./media/deploying-an-interop-application/com-private-deployment.gif "Estructura de directorios y entradas del Registro para una implementación privada")  
   
  Todos los componentes COM asociados a la aplicación deben instalarse en el Registro de Windows. Si Client1.exe y Client2.exe en la ilustración se instalan en equipos diferentes, debe registrar los componentes COM en ambos equipos.  
   

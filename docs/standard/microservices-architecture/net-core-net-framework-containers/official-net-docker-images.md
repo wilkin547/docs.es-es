@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c4fce49b079473ddcc2b840527b8aeb951fec780
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479612"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674658"
 ---
 # <a name="official-net-docker-images"></a>Imágenes oficiales de Docker de .NET
 
@@ -23,9 +23,9 @@ La mayoría de los repositorios de imágenes ofrece un etiquetado exhaustivo con
 
 Al compilar imágenes de Docker para desarrolladores, Microsoft se centró en los siguientes escenarios principales:
 
--   Imágenes que se usan para *desarrollar* y compilar aplicaciones de .NET Core.
+- Imágenes que se usan para *desarrollar* y compilar aplicaciones de .NET Core.
 
--   Imágenes que se usan para *ejecutar* aplicaciones de .NET Core.
+- Imágenes que se usan para *ejecutar* aplicaciones de .NET Core.
 
 ¿Por qué varias imágenes? Al desarrollar, compilar y ejecutar aplicaciones en contenedor, normalmente hay prioridades diferentes. Al proporcionar diferentes imágenes para estas tareas independientes, con Microsoft es más fácil optimizar los procesos independientes de desarrollo, creación e implementación de aplicaciones.
 
@@ -50,6 +50,6 @@ Al explorar los repositorios de imágenes de .NET en Docker Hub, encontrará var
 | microsoft/dotnet:**2.2-aspnetcore-runtime** | ASP.NET Core, solo con tiempo de ejecución y las optimizaciones de ASP.NET Core, en Linux y Windows (multiarquitectura) |
 | microsoft/dotnet:**2.2-sdk**                | .NET Core, con los SDK incluidos, en Linux y Windows (multiarquitectura)                                  |
 
->[!div class="step-by-step"]
->[Anterior](net-container-os-targets.md)
->[Siguiente](../architect-microservice-container-applications/index.md)
+> [!div class="step-by-step"]
+> [Anterior](net-container-os-targets.md)
+> [Siguiente](../architect-microservice-container-applications/index.md)

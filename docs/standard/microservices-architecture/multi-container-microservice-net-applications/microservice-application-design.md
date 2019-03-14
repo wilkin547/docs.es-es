@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 124bd402af7b721366af67b362747dfd71907f34
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 777262ddeecf1e171344b34e586032e56f398463
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981886"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674398"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Diseño de una aplicación orientada a microservicios
 
@@ -91,7 +91,7 @@ Por tanto, las unidades de implementación de los microservicios (e incluso de l
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Repositorio de GitHub de eShopOnContainers. Código fuente de la aplicación de referencia**  
+- **Repositorio de GitHub de eShopOnContainers. Código fuente de la aplicación de referencia**\
     [https://aka.ms/eShopOnContainers/](https://aka.ms/eShopOnContainers/)
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Ventajas de una solución basada en microservicios
@@ -150,7 +150,7 @@ En el ejemplo *eShopOnContainers*, los microservicios de catálogo, cesta de la 
 
 Otra razón para usar una tecnología distinta por microservicio podría ser la naturaleza de cada microservicio. Por ejemplo, podría ser mejor usar un lenguaje de programación funcional como F\#, o incluso un lenguaje como R si los dominios de destino son de IA y aprendizaje automático, en lugar de un lenguaje de programación más orientado a objetos como C\#.
 
-La conclusión es que cada microservicio puede tener una arquitectura interna diferente basada en patrones de diseño diferentes. Para evitar la ingeniería excesiva de los microservicios, no todos deben implementarse mediante patrones de DDD avanzados. Del mismo modo, los microservicios complejos con lógica de negocios cambiante no deberían implementarse como componentes CRUD o el resultado sería código de baja calidad. 
+La conclusión es que cada microservicio puede tener una arquitectura interna diferente basada en patrones de diseño diferentes. Para evitar la ingeniería excesiva de los microservicios, no todos deben implementarse mediante patrones de DDD avanzados. Del mismo modo, los microservicios complejos con lógica de negocios cambiante no deberían implementarse como componentes CRUD o el resultado sería código de baja calidad.
 
 ## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>El nuevo mundo: varios modelos arquitectónicos y microservicios políglotas
 

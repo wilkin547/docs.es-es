@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: cf1757531fc9eceee17f1faec66668945b9c2758
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b451d896186ffb650e495c10786106c37ab16131
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967976"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676023"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementación de comunicación basada en eventos entre microservicios (eventos de integración)
 
@@ -76,19 +76,19 @@ El bus de eventos está relacionado con el patrón de observador y con el patró
 
 En el [patrón de observador](https://en.wikipedia.org/wiki/Observer_pattern), su objeto principal (conocido como "Observable") proporciona información pertinente (eventos) a otros objetos interesados (conocidos como "Observadores").
 
-### <a name="publishsubscribe-pubsub-pattern"></a>Patrón de publicación/suscripción (Pub/Sus) 
+### <a name="publishsubscribe-pubsub-pattern"></a>Patrón de publicación/suscripción (Pub/Sus)
 
 El propósito del [patrón de publicación/suscripción ](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) es el mismo que el del modelo de observador: informar a otros servicios de la realización de determinados eventos. Pero hay una diferencia importante entre los patrones Observador y Pub/Sus. En el patrón de observador, la difusión se realiza directamente desde el objeto observable a los observadores, por lo que "se reconocen" entre sí. Pero cuando se usa un patrón Pub/Sus, hay un tercer componente, denominado "agente", "mensaje de agente" o "bus de eventos", que tanto el publicador como el suscriptor conocen. Por lo tanto, al utilizar el patrón Pub/Sus, el publicador y los suscriptores se desvinculan precisamente gracias al bus de eventos o al mensaje de agente mencionados.
 
-### <a name="the-middleman-or-event-bus"></a>El intermediario o bus de eventos 
+### <a name="the-middleman-or-event-bus"></a>El intermediario o bus de eventos
 
 ¿Cómo se consigue el anonimato entre el publicador y el suscriptor? Una forma sencilla de hacerlo es permitir que un intermediario se ocupe de toda la comunicación. Un bus de eventos es un intermediario de este tipo.
 
 Normalmente, los buses de eventos están compuestos de dos partes:
 
--   La abstracción o interfaz.
+- La abstracción o interfaz.
 
--   Una o varias implementaciones.
+- Una o varias implementaciones.
 
 En la Figura 6-19 puede ver cómo, desde el punto de vista de la aplicación, el bus de eventos no es más que un canal de Pub/Sus. La forma de implementar este tipo de comunicación asincrónica puede variar. Puede tener varias implementaciones para intercambiarlas dependiendo de los requisitos del entorno (por ejemplo, entornos de producción frente a entornos de desarrollo).
 
@@ -129,6 +129,6 @@ El método `Publish` es sencillo. El bus de eventos difunde el evento de integra
 
 Los microservicios que quieren recibir eventos utilizan los métodos `Subscribe` (puede tener varias implementaciones dependiendo de los argumentos). Este método tiene dos argumentos. El primero es el evento de integración para suscribirse a (`IntegrationEvent`). El segundo es el controlador del evento de integración (o el método de devolución de llamada), denominado `IIntegrationEventHandler<T>`, que se ejecuta cuando el microservicio receptor recibe ese mensaje de evento de integración.
 
->[!div class="step-by-step"]
->[Anterior](database-server-container.md)
->[Siguiente](rabbitmq-event-bus-development-test-environment.md)
+> [!div class="step-by-step"]
+> [Anterior](database-server-container.md)
+> [Siguiente](rabbitmq-event-bus-development-test-environment.md)

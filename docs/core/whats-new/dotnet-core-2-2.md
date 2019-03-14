@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 058e7ee1dc834ff23a9a4aa191f7eaeb1016375c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49a65dd44159e9800f7cf50a1edaa3d9e9b82e47
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679782"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677271"
 ---
 # <a name="whats-new-in-net-core-22"></a>Novedades de .NET Core 2.2
 
@@ -28,9 +28,9 @@ Este nuevo modo de implementación tiene la ventaja de compilar un archivo ejecu
 
 **Control de eventos en los servicios en tiempo de ejecución**
 
-A menudo es posible que desee supervisar el uso que hace la aplicación de los servicios de tiempo de ejecución, como GC, JIT y ThreadPool, para comprender cómo afectan a la aplicación. En los sistemas Windows, esto se hace normalmente mediante la supervisión de los eventos ETW del proceso actual. Aunque este método sigue funcionando bien, no siempre es posible usar ETW si la ejecución se realiza en un entorno con pocos privilegios o en Linux o macOS.  
+A menudo es posible que desee supervisar el uso que hace la aplicación de los servicios de tiempo de ejecución, como GC, JIT y ThreadPool, para comprender cómo afectan a la aplicación. En los sistemas Windows, esto se hace normalmente mediante la supervisión de los eventos ETW del proceso actual. Aunque este método sigue funcionando bien, no siempre es posible usar ETW si la ejecución se realiza en un entorno con pocos privilegios o en Linux o macOS. 
 
-A partir de .NET Core 2.2, ahora se pueden consumir eventos CoreCLR utilizando la clase <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithtype>. Estos eventos describen el comportamiento de esos servicios en tiempo de ejecución como la interoperabilidad, ThreadPool, JIT y GC. Estos son los mismos eventos que forman parte del proveedor ETW de CoreCLR.  De esta forma, las aplicaciones pueden consumir estos eventos o usar un mecanismo de transporte para enviarlos a un servicio de agregación de telemetría. Puede ver cómo suscribirse a eventos en el código de ejemplo siguiente:
+A partir de .NET Core 2.2, ahora se pueden consumir eventos CoreCLR utilizando la clase <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType>. Estos eventos describen el comportamiento de esos servicios en tiempo de ejecución como la interoperabilidad, ThreadPool, JIT y GC. Estos son los mismos eventos que se exponen como parte del proveedor ETW de CoreCLR.  De esta forma, las aplicaciones pueden consumir estos eventos o usar un mecanismo de transporte para enviarlos a un servicio de agregación de telemetría. Puede ver cómo suscribirse a eventos en el código de ejemplo siguiente:
 
 ```csharp
 internal sealed class SimpleEventListener : EventListener
@@ -82,7 +82,7 @@ En .NET Core 2.1, el compilador JIT implementó una nueva tecnología de compila
 
 - Un **segundo nivel**, que genera código optimizado para los métodos que se ejecutan con frecuencia. El segundo nivel de la compilación se realiza en paralelo para mejorar el rendimiento.
 
-Para obtener información sobre la mejora del rendimiento que puede obtenerse gracias a la compilación en niveles, vea [Announcing .NET Core 2.2 Preview 2](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/) (Anuncio de la versión preliminar 2 de .NET Core 2.2). 
+Para obtener información sobre la mejora del rendimiento que puede obtenerse gracias a la compilación en niveles, vea [Announcing .NET Core 2.2 Preview 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/) (Anuncio de la versión preliminar 2 de .NET Core 2.2).
 
 En la versión preliminar 2 de .NET Core 2.2, la compilación en niveles se habilitó de forma predeterminada. Sin embargo, hemos decidido que aún no estamos listos para habilitar la compilación en niveles de forma predeterminada. Por tanto, en .NET Core 2.2, la compilación en nieves sigue siendo una característica opcional. Para obtener información sobre cómo usar la compilación en niveles, vea [Mejoras del compilador JIT](dotnet-core-2-1.md#jit-compiler-improvements) en [Novedades de .NET Core 2.1](dotnet-core-2-1.md).
 

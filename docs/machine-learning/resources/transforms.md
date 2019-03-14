@@ -4,12 +4,12 @@ description: Explore los componentes de ingeniería de características que se a
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 01/14/2019
-ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e649c9a27f0409cb9cdfb554963b5c0e732991f2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415356"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355420"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Transformaciones de datos de aprendizaje automático: ML.NET
 
@@ -25,7 +25,7 @@ Las tablas siguientes contienen información sobre todas las transformaciones de
 | <xref:Microsoft.ML.Transforms.GroupTransform> | Agrupa los valores de una columna escalar en un vector en función de un identificador de grupo contiguo. |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | Desagrupa todas las columnas de vector en secuencias de filas; es la transformación inversa a Group. |
 
-## <a name="conversions"></a>Conversiones 
+## <a name="conversions"></a>Conversiones
 
 | Transformación | de esquema JSON |
 | --- | --- |
@@ -36,7 +36,6 @@ Las tablas siguientes contienen información sobre todas las transformaciones de
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | Convierte una clave en una columna de vectores. |
 | <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | Cambia el tipo de columna subyacente siempre que el tipo se pueda convertir. |
 | <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | Convierte valores de entrada (palabras, números, etc.) en el índice de un diccionario. |
-
 
 ## <a name="deep-learning"></a>Aprendizaje profundo
 
@@ -49,17 +48,17 @@ Las tablas siguientes contienen información sobre todas las transformaciones de
 
 | Transformación | de esquema JSON |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Quita la lista especificada de palabras irrelevantes mediante la comparación de tokens individuales (comparación sin distinción entre mayúsculas y minúsculas) con las palabras irrelevantes.| 
+| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Quita la lista especificada de palabras irrelevantes mediante la comparación de tokens individuales (comparación sin distinción entre mayúsculas y minúsculas) con las palabras irrelevantes.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | Toma una o varias columnas de tipo de imagen y las convierte en una representación de escala de grises de la misma imagen.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | Toma una o varias columnas ReadOnlyMemory y las carga como un tipo de imagen. |
 | <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | Toma una o varias columnas de tipo de imagen y las convierte en una representación vectorial.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | Toma una o varias columnas de tipo de imagen y cambia su tamaño al alto y ancho proporcionados.|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | Implementa LightLDA, una implementación de última generación de la asignación Dirichlet latente.|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | Carga transformaciones específicas desde el archivo de modelo especificado. Permite transformaciones de selección exclusiva ("cherry picking") desde una cadena serializada, o bien aplicar una transformación previamente entrenada a otra vista de datos (pero que sigue siendo compatible). |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Genera un contenedor de los recuentos de n-gramas (secuencias de valores consecutivos de longitud 1-n) en un vector de claves especificado. Lo hace mediante la creación de un diccionario de n-gramas y con el identificador del diccionario como el índice del contenedor. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Convierte una colección de texto acortado (vector de ReadOnlyMemory) o vectores de claves en vectores de característica numéricos. Los vectores de característica son recuentos de n-gramas (secuencias de tokens consecutivos, palabras o claves, de longitud 1-n). | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Convierte una colección de texto acortado (vector de ReadOnlyMemory) en vectores de característica numéricos mediante hash. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Genera un contenedor de los recuentos de n-gramas (secuencias de palabras consecutivas de longitud 1-n) en un texto especificado. | 
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Genera un contenedor de los recuentos de n-gramas (secuencias de valores consecutivos de longitud 1-n) en un vector de claves especificado. Lo hace mediante la creación de un diccionario de n-gramas y con el identificador del diccionario como el índice del contenedor. |
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Convierte una colección de texto acortado (vector de ReadOnlyMemory) o vectores de claves en vectores de característica numéricos. Los vectores de característica son recuentos de n-gramas (secuencias de tokens consecutivos, palabras o claves, de longitud 1-n). |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Convierte una colección de texto acortado (vector de ReadOnlyMemory) en vectores de característica numéricos mediante hash. |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Genera un contenedor de los recuentos de n-gramas (secuencias de palabras consecutivas de longitud 1-n) en un texto especificado. |
 | <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | Convierte el valor categórico en una matriz de indicador mediante la creación de un diccionario de categorías en función de los datos y con el identificador del diccionario como el índice de la matriz. |
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | Calcula la proyección del vector de característica en un subespacio de rango bajo. |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | Usa un modelo de opinión previamente entrenado para puntuar las cadenas de entrada. |
@@ -73,7 +72,7 @@ Las tablas siguientes contienen información sobre todas las transformaciones de
 
 | Transformación | de esquema JSON |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.AlexNetExtension> | Se trata de un método de extensión que se usará con <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> para poder utilizar un modelo [AlexNet](https://en.wikipedia.org/wiki/AlexNet) previamente entrenado. Se garantiza que el paquete NuGet que contiene esta extensión también incluye el archivo de modelo binario. | 
+| <xref:Microsoft.ML.Transforms.AlexNetExtension> | Se trata de un método de extensión que se usará con <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> para poder utilizar un modelo [AlexNet](https://en.wikipedia.org/wiki/AlexNet) previamente entrenado. Se garantiza que el paquete NuGet que contiene esta extensión también incluye el archivo de modelo binario. |
 | <xref:Microsoft.ML.Transforms.ResNet18Extension> | Se trata de un método de extensión que se usará con <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> para utilizar un modelo ResNet18 previamente entrenado. Se garantiza que el paquete NuGet que contiene esta extensión también incluye el archivo de modelo binario. |
 | <xref:Microsoft.ML.Transforms.ResNet50Extension> | Se trata de un método de extensión que se usará con <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> para utilizar un modelo ResNet50 previamente entrenado. Se garantiza que el paquete NuGet que contiene esta extensión también incluye el archivo de modelo binario. |
 | <xref:Microsoft.ML.Transforms.ResNet101Extension> | Se trata de un método de extensión que se usará con <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> para utilizar un modelo ResNet101 previamente entrenado. Se garantiza que el paquete NuGet que contiene esta extensión también incluye el archivo de modelo binario. |
@@ -110,7 +109,7 @@ Las tablas siguientes contienen información sobre todas las transformaciones de
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.OnnxTransform> | Puntúa modelos ONNX previamente entrenados que usan el estándar ONNX v1.2 |
 
-## <a name="preprocessing"></a>Preprocesando
+## <a name="preprocessing"></a>Preprocesamiento
 | Transformación | de esquema JSON |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.BootstrapSamplingTransformer> | Muestreo de arranque aproximado mediante muestreo de Poisson. |

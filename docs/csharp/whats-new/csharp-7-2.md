@@ -2,17 +2,17 @@
 title: Novedades de C# 7.2
 description: Información general sobre las nuevas características en C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9525d52e5eab4b8213b8a1920531dc4b4d7ac0a3
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148180"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673228"
 ---
 # <a name="whats-new-in-c-72"></a>Novedades de C# 7.2
 
 C# 7.2 es otra versión de punto que agrega varias características útiles.
-Una de las ventajas de esta versión es que funciona mejor con tipos de valor, ya que evita copias o asignaciones innecesarias. 
+Una de las ventajas de esta versión es que funciona mejor con tipos de valor, ya que evita copias o asignaciones innecesarias.
 
 El resto de características son menos importantes, pero igualmente útiles.
 
@@ -48,7 +48,7 @@ Las llamadas de método ya pueden usar argumentos con nombre que precedan a argu
 
 ## <a name="leading-underscores-in-numeric-literals"></a>Caracteres de subrayado iniciales en literales numéricos
 
-La implementación de la compatibilidad con separadores de dígitos en C# 7.0 no permitía que `_` fuera el primer carácter del valor literal. Los literales numéricos hexadecimales y binarios ya pueden empezar con un `_`. 
+La implementación de la compatibilidad con separadores de dígitos en C# 7.0 no permitía que `_` fuera el primer carácter del valor literal. Los literales numéricos hexadecimales y binarios ya pueden empezar con un `_`.
 
 Por ejemplo:
 
