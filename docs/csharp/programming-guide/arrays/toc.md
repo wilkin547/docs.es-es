@@ -5,5 +5,4 @@
 ## [Matrices escalonadas](jagged-arrays.md)
 ## [Utilizar foreach con matrices](using-foreach-with-arrays.md)
 ## [Pasar matrices como argumentos](passing-arrays-as-arguments.md)
-## [Pasar matrices mediante Ref y Out](passing-arrays-using-ref-and-out.md)
 ## [Matrices con tipo implícito](implicitly-typed-arrays.md)
