@@ -1,22 +1,17 @@
 ---
-title: Un paseo por C# - Guía de C#
-description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.
+title: 'Un paseo por C# - Guía de C#'
+description: '¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.'
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: bece954c095870651126e486c2c6eb978e78f96d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150399"
 ---
-# <a name="a-tour-of-the-c-language"></a>Un paseo por el lenguaje C#  
+
+# <a name="a-tour-of-the-c-language"></a>Un paseo por el lenguaje C#
 
 C# (pronunciado "si sharp" en inglés) es un lenguaje de programación sencillo, moderno, orientado a objetos y con seguridad de tipos. C# tiene sus raíces en la familia de lenguajes C, y a los programadores de C, C++, Java y JavaScript les resultará familiar inmediatamente.
 
 C# es un lenguaje orientado a objetos, pero también incluye compatibilidad para programación ***orientada a componentes***. El diseño de software contemporáneo se basa cada vez más en componentes de software en forma de paquetes independientes y autodescriptivos de funcionalidad. La clave de estos componentes es que presentan un modelo de programación con propiedades, métodos y eventos; tienen atributos que proporcionan información declarativa sobre el componente; e incorporan su propia documentación. C# proporciona construcciones de lenguaje para admitir directamente estos conceptos, por lo que se trata de un lenguaje muy natural en el que crear y usar componentes de software.
 
-Varias características de C# ayudan en la construcción de aplicaciones sólidas y duraderas: la ***recolección de elementos no utilizados*** automáticamente reclama la memoria ocupada por objetos no utilizados y no accesibles; el ***control de excepciones*** proporciona un enfoque estructurado y extensible para la detección de errores y la recuperación; y el diseño del lenguaje ***con seguridad de tipos*** hace imposible leer desde las variables sin inicializar, indizar matrices más allá de sus límites o realizar conversiones de tipos no comprobados.
+Varias características de C# ayudan en la construcción de aplicaciones sólidas y duraderas: la ***recolección de elementos no utilizados*** automáticamente reclama la memoria ocupada por objetos no utilizados y no accesibles; el ***control de excepciones*** proporciona un enfoque estructurado y extensible para la detección de errores y la recuperación; y el diseño del lenguaje ***con seguridad de tipos*** hace imposible leer desde variables sin inicializar, indexar matrices más allá de sus límites o realizar conversiones de tipos no comprobados.
 
 C# tiene un ***sistema de tipo unificado***. Todos los tipos de C#, incluidos los tipos primitivos como `int` y `double`, se heredan de un único tipo `object` raíz. Por lo tanto, todos los tipos comparten un conjunto de operaciones comunes, y los valores de todos los tipos se pueden almacenar, transportar y utilizar de manera coherente. Además, C# admite tipos de valor y tipos de referencia definidos por el usuario, lo que permite la asignación dinámica de objetos, así como almacenamiento en línea de estructuras ligeras.
 
@@ -73,7 +68,7 @@ Hay mucha más información sobre C#.  Los temas siguientes proporcionan introdu
 * [Delegados](delegates.md)
     - Un ***tipo de delegado*** representa las referencias a métodos con una lista de parámetros determinada y un tipo de valor devuelto. Los delegados permiten tratar métodos como entidades que se puedan asignar a variables y se puedan pasar como parámetros. Los delegados son similares al concepto de punteros de función en otros lenguajes, pero a diferencia de los punteros de función, los delegados están orientados a objetos y presentan seguridad de tipos.
 * [Atributos](attributes.md)
-    * Los ***atributos*** permiten a los programas especificar información declarativa adicional sobre los tipos, miembros y otras entidades.
+     * Los ***atributos*** permiten a los programas especificar información declarativa adicional sobre los tipos, miembros y otras entidades.
 
->[!div class="step-by-step"]
->[Siguiente](program-structure.md)
+> [!div class="step-by-step"]
+> [Siguiente](program-structure.md)
