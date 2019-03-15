@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidNullValue1
 ms.assetid: abbde904-c191-4911-8822-c9dd2f81d616
-ms.openlocfilehash: 4b4b18f4d64870fcaa91f146f940c6148ac1dd24
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a6453f605d7e5eed8fe13f69b7b9e82d46cdb824
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288241"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58036258"
 ---
 # <a name="argument-argumentname-is-nothing"></a>Argumento '\<argumentname >' es Nothing
 Una expresión contiene un argumento nulo.  
@@ -21,5 +21,5 @@ Una expresión contiene un argumento nulo.
 2.  Compruebe las operaciones anteriores en las variables de la expresión, especialmente las que se pasaron al procedimiento como argumentos de otros procedimientos.  
   
 ## <a name="see-also"></a>Vea también
-- [Paso de argumentos por valor y por referencia](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
 
+- [Paso de argumentos por valor y por referencia](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
