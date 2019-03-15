@@ -2,12 +2,12 @@
 title: Detalles de las características de Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721858"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846550"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Detalles de las características de Windows Workflow Foundation
 
@@ -101,7 +101,7 @@ El esquema de configuración de WCF es complejo y proporciona a los usuarios muc
 
 - [Elemento de punto de conexión estándar](https://go.microsoft.com/fwlink/?LinkId=204942)
 
-- [Mejoras de servicio configuration en .net Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [Mejoras de la configuración de servicio en .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
 
 - [Error común del usuario en .NET 4: Escribir incorrectamente el nombre de configuración del servicio WCF/WF](https://go.microsoft.com/fwlink/?LinkId=204944)
 
@@ -271,7 +271,7 @@ El servicio de enrutamiento está diseñado para ser un enrutador que le permite
 
 - Los servicios raramente se factorizaban correctamente: es más fácil que el cliente hable con un servicio que implementa todo en lugar de tener que elegir entre varios servicios.
 
-El servicio del enrutamiento en .NET 4 está diseñado para facilitar la solución de estos problemas. El nuevo servicio de enrutamiento tiene las siguientes características:
+El servicio de enrutamiento en .NET 4 está diseñado para que sea más fácil solucionar estos problemas. El nuevo servicio de enrutamiento tiene las siguientes características:
 
 1. Enrutamiento basado en contenido (los objetos <xref:System.ServiceModel.Dispatcher.MessageFilter> examinan un mensaje para determinar dónde se debe enviar).
 
@@ -327,7 +327,7 @@ Un desarrollador no desea codificar de forma rígida los extremos, porque no se 
 
 ## <a name="tracking"></a>Seguimiento
 
-Seguimiento de flujo de trabajo proporciona una visión de la ejecución de una instancia de flujo de trabajo. Los eventos de seguimiento se emiten desde un flujo de trabajo en el nivel de instancia de flujo de trabajo y cuando se ejecutan las actividades del flujo de trabajo. Se necesita agregar un participante de seguimiento de flujo de trabajo al host de flujo de trabajo para suscribirse a los registros de seguimiento. Los registros de seguimiento se filtran utilizando un perfil de seguimiento. .NET Framework proporciona un participante de seguimiento ETW (Seguimiento de eventos para Windows) y se instala un perfil básico en el archivo machine.config.
+Seguimiento de flujo de trabajo proporciona una visión de la ejecución de una instancia de flujo de trabajo. Los eventos de seguimiento se emiten desde un flujo de trabajo en el nivel de instancia de flujo de trabajo y cuando se ejecutan las actividades del flujo de trabajo. Se necesita agregar un participante de seguimiento de flujo de trabajo al host de flujo de trabajo para suscribirse a los registros de seguimiento. Los registros de seguimiento se filtran utilizando un perfil de seguimiento. .NET Framework proporciona a un participante de seguimiento de ETW (seguimiento de eventos para Windows), y se instala un perfil básico en el archivo machine.config.
 
 ### <a name="getting-started"></a>Introducción
 

@@ -2,15 +2,15 @@
 title: Crear actividades de control de flujo personalizadas
 ms.date: 03/30/2017
 ms.assetid: 27f409f6-2d1d-4cfb-9765-93eb2ad667d5
-ms.openlocfilehash: de1378cc0dd304db37aefd437d1ce6feac9f2ed2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2be47281335066def5c1d267cd709db5a8ff1187
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724679"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57847016"
 ---
 # <a name="creating-custom-flow-control-activities"></a>Crear actividades de control de flujo personalizadas
-.NET Framework contiene una variedad de actividades de control de flujo que funcionan de forma similar a las estructuras de programación abstractas (como <xref:System.Activities.Statements.Flowchart>) o a las instrucciones de programación estándar (como <xref:System.Activities.Statements.If>). En este tema se describe la arquitectura de uno de los proyectos de ejemplo, [ForEach no genérica](./samples/non-generic-foreach.md).  
+.NET Framework contiene una variedad de actividades de control de flujo que funcionan de forma similar a abstraer las estructuras de programación (como <xref:System.Activities.Statements.Flowchart>) o a las instrucciones de programación estándares (como <xref:System.Activities.Statements.If>). En este tema se describe la arquitectura de uno de los proyectos de ejemplo, [ForEach no genérica](./samples/non-generic-foreach.md).  
   
 ## <a name="creating-the-custom-class"></a>Crear la clase personalizada  
  Dado que la clase ForEach no genérica tendrá que programar actividades secundarias, será necesario que derive de <xref:System.Activities.NativeActivity>, ya que las actividades que derivan de <xref:System.Workflow.Activities.CodeActivity> no tienen esta funcionalidad.  

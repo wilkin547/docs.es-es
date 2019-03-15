@@ -4,12 +4,12 @@ description: Comprender los conceptos básicos para incluir en un contenedor apl
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e7454100b09f602e1e103c38685609e1dab62fe9
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676842"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843550"
 ---
 # <a name="monolithic-applications"></a>Aplicaciones monolíticas
 
@@ -63,7 +63,7 @@ Dado que los contenedores son intrínsecamente inmutables, por diseño, nunca de
 
 Aunque las aplicaciones monolíticas pueden beneficiarse de Docker, tocamos en sólo las sugerencias de las ventajas. Las mayores ventajas de administrar contenedores proceden de implementar con orquestadores de contenedores que administran las distintas instancias y ciclo de vida de cada instancia del contenedor. Separar la aplicación monolítica en subsistemas que se pueden escalar, desarrollar e implementar de forma individual es el punto de entrada al reino de los microservicios.
 
-Para obtener información acerca de cómo "Levantar y mover" aplicaciones monolíticas con contenedores y cómo puede modernizar las aplicaciones, puede leer esta guía adicional de Microsoft, [modernizar aplicaciones .NET existentes con la nube de Azure y contenedores de Windows ](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/), que también puede descargar como PDF desde <https://aka.ms/LiftAndShiftWithContainersEbook>.
+Para obtener información acerca de cómo "Levantar y mover" aplicaciones monolíticas con contenedores y cómo puede modernizar las aplicaciones, puede leer esta guía adicional de Microsoft, [modernizar aplicaciones .NET existentes con la nube de Azure y contenedores de Windows ](../../modernize-with-azure-and-containers/index.md), que también puede descargar como PDF desde <https://aka.ms/LiftAndShiftWithContainersEbook>.
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Publicar una única aplicación de contenedor de Docker en Azure App Service
 

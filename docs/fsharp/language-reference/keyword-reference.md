@@ -2,12 +2,12 @@
 title: Referencia de palabras clave
 description: Encuentre vínculos a información acerca de todos los F# palabras clave del lenguaje.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: d55846fe7c8d31454b6bc8684de75546800df7d6
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "54857910"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845299"
 ---
 # <a name="keyword-reference"></a>Referencia de palabras clave
 
@@ -17,7 +17,7 @@ En este tema contiene vínculos a información acerca de todos los F# palabras c
 
 La tabla siguiente se muestran todos los F# palabras clave en orden alfabético, junto con descripciones breves y vínculos a temas relevantes que contienen más información.
 
-|Palabra clave|Vínculo|Descripción|
+|Palabra clave|Link|Descripción|
 |-------|----|-----------|
 |`abstract`|[Miembros](members/index.md)<br /><br />[Clases abstractas](abstract-classes.md)|Indica un método que ya sea en el tipo en el que se declara o que es virtual y tiene una implementación predeterminada no tiene ninguna implementación.|
 |`and`|[`let` enlaces](functions/let-bindings.md)<br /><br />[Registros](records.md)<br /><br />[Miembros](members/index.md)<br /><br />[Restricciones](generics/constraints.md)|Usar en mutuamente los enlaces recursivos y registros, en las declaraciones de propiedad y con varias restricciones en parámetros genéricos.|
@@ -50,7 +50,7 @@ La tabla siguiente se muestran todos los F# palabras clave en orden alfabético,
 |`inline`|[Funciones](functions/index.md)<br /><br />[Funciones insertadas](functions/inline-functions.md)|Se usa para indicar que una función que se debe integrar directamente en el código del llamador.|
 |`interface`|[Interfaces](interfaces.md)|Se utiliza para declarar e implementar interfaces.|
 |`internal`|[Control de acceso](access-control.md)|Se utiliza para especificar que un miembro es visible dentro de un ensamblado, pero no fuera de él.|
-|`lazy`|[Expresiones con procesamiento diferido](lazy-computations.md)|Se usa para especificar un cálculo que se realiza solo cuando se necesita un resultado.|
+|`lazy`|[Expresiones diferidas](lazy-expressions.md)|Se usa para especificar una expresión que debe realizarse solo cuando se necesita un resultado.|
 |`let`|[`let` enlaces](functions/let-bindings.md)|Se utiliza para asociar o enlazar un nombre a un valor o una función.|
 |`let!`|[Flujos de trabajo asincrónicos](asynchronous-workflows.md)<br /><br />[Expresiones de cálculo](computation-expressions.md)|Se usa en flujos de trabajo asincrónicos para enlazar un nombre al resultado de un cálculo asincrónico, o bien, en otras expresiones de cálculo, que se usa para enlazar un nombre a un resultado, que es del tipo de cálculo.|
 |`match`|[Expresiones de coincidencia](match-expressions.md)|Utilizado para la rama comparando un valor a un patrón.|

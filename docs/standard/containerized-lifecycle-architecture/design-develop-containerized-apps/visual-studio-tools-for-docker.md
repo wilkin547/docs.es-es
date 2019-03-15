@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680365"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844254"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Use herramientas de Docker en Visual Studio 2017 en Windows
 
@@ -20,7 +20,8 @@ El flujo de trabajo de desarrollador al usar las herramientas de Docker que se i
 
 Con las últimas versiones de Docker para Windows, es más fácil que nunca para desarrollar aplicaciones de Docker porque el programa de instalación es sencilla, como se explica en las siguientes referencias.
 
-> [! INFORMACIÓN] para más información acerca de cómo instalar Docker para Windows, vaya a (<https://docs.docker.com/docker-for-windows/>).
+> [!TIP]
+> Para más información acerca de cómo instalar Docker para Windows, vaya a (<https://docs.docker.com/docker-for-windows/>).
 
 ## <a name="docker-support-in-visual-studio-2017"></a>Compatibilidad con docker en Visual Studio 2017
 
@@ -83,7 +84,8 @@ En la tabla siguiente puede ayudarle a decidir cómo establecer estas opciones.
 > [!WARNING]
 > Si el certificado SSL de localhost no es de confianza y la casilla para suprimir la solicitud, a continuación, las solicitudes HTTPS web pueden producir un error en tiempo de ejecución en su aplicación o servicio. En ese caso, desactive la **no preguntar** checkbox, ejecute el proyecto e indicar confianza en el símbolo del sistema.
 
-> [! INFORMACIÓN] para obtener más información sobre la implementación de los servicios y el uso de Visual Studio Tools para Docker, lea los artículos siguientes:
+> [!TIP]
+> Para obtener más información sobre la implementación de los servicios y el uso de Visual Studio Tools para Docker, lea los artículos siguientes:
 >
 >Depuración de aplicaciones en un contenedor de Docker local: <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >

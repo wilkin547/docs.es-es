@@ -2,12 +2,12 @@
 title: Programación asincrónica
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 30eb07f9f6f3a9e1d1d6a346ca0dca272c262bb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366132"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846134"
 ---
 # <a name="asynchronous-programming"></a>Programación asincrónica
 
@@ -38,9 +38,9 @@ Para obtener más información sobre la característica de programación asincr�
 
 - [Programación asincrónica con Async y Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [Usar los nuevos métodos asincrónicos de SqlDataReader en .net 4.5 (1ª parte)](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [Uso de los nuevos métodos asincrónicos de SqlDataReader en .NET 4.5 (1ª parte)](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
 
-- [Usar los nuevos métodos asincrónicos de SqlDataReader en .net 4.5 (2ª parte)](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [Uso de los nuevos métodos asincrónicos de SqlDataReader en .NET 4.5 (2ª parte)](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
 
 Cuando la interfaz de usuario no responde o el servidor no escala, es probable que necesite que el código sea más asincrónico. La escritura de código asincrónico ha implicado tradicionalmente la instalación de una devolución de llamada (también denominada continuación) para expresar la lógica que tiene lugar después de que la operación asincrónica finalice. Esto complica la estructura del código asincrónico con respecto al código sincrónico.
 

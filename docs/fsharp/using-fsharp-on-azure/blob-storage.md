@@ -3,12 +3,12 @@ title: Introducción a Azure Blob storage medianteF#
 description: Store datos no estructurados en la nube con Azure Blob storage.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981912"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846433"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Introducción a Azure Blob storage mediante F\#
 
@@ -102,14 +102,14 @@ También puede blobs de nombre de la información de ruta de acceso en sus nombr
 
 Por ejemplo, considere el siguiente conjunto de blobs en bloques en un contenedor denominado `photos`:
 
-*photo1.jpg*
-*2015/architecture/description.txt*
-*2015/architecture/photo3.jpg*
-*2015 / arquitectura/photo4.jpg*
-*2016/architecture/photo5.jpg*
-*2016/architecture/photo6.jpg* 
- *2016/architecture/description.txt*
-*2016/photo7.jpg*
+*photo1.jpg*\
+*2015/architecture/description.txt*\
+*2015/architecture/photo3.jpg*\
+*2015/architecture/photo4.jpg*\
+*2016/architecture/photo5.jpg*\
+*2016/architecture/photo6.jpg*\
+*2016/architecture/description.txt*\
+*2016/photo7.jpg*\
 
 Cuando se llama a `ListBlobs` en un contenedor (como se muestra en el ejemplo anterior), se devuelve una lista jerárquica. Si contiene ambos `CloudBlobDirectory` y `CloudBlockBlob` objetos, que representan los directorios y los blobs del contenedor, de respectivamente, a continuación, el resultado tendrá un aspecto similar al siguiente:
 

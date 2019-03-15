@@ -2,12 +2,12 @@
 title: Características de simplificación de WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: f4c5d1c0dc5aa9df92368de1266044db3a6c294a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 54255e07df5a46cc975ffd4db5c18dc828a1de44
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467186"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845285"
 ---
 # <a name="wcf-simplification-features"></a>Características de simplificación de WCF
 
@@ -96,7 +96,7 @@ En la tabla siguiente se describen los valores que han cambiado y dónde encontr
 
 |Property|Activado|Nuevo valor predeterminado|Más información|
 |--------------|--------|-----------------|----------------------|
-|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 segundos|Esta propiedad determina cuánto tiempo puede tardar una conexión TCP en autenticarse a sí misma mediante el protocolo de tramas .NET. Un cliente debe enviar algunos datos iniciales antes de que el servidor tenga información suficiente para realizar la autenticación. Este tiempo de expiración se ha hecho intencionadamente más breve que ReceiveTimeout (10 min) para que los clientes no autenticados y malintencionados no conserven las conexiones con el servidor durante mucho tiempo. El valor predeterminado es 30 segundos. Para obtener más información acerca de <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
+|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 segundos|Esta propiedad determina cuánto tiempo puede tardar una conexión TCP autenticarse a sí mismo mediante el protocolo de tramas. NET. Un cliente debe enviar algunos datos iniciales antes de que el servidor tenga información suficiente para realizar la autenticación. Este tiempo de expiración se ha hecho intencionadamente más breve que ReceiveTimeout (10 min) para que los clientes no autenticados y malintencionados no conserven las conexiones con el servidor durante mucho tiempo. El valor predeterminado es 30 segundos. Para obtener más información acerca de <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * número de procesadores|Esta propiedad del nivel de socket describe el número de solicitudes "pendientes de aceptación" que se van a poner en cola. Si la cola de trabajos pendientes de escucha se llena, las nuevas solicitudes de socket se rechazarán. Para obtener más información acerca de <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * número de procesadores para transporte<br /><br /> 4 \* número de procesadores para SMSvcHost.exe|Esta propiedad limita el número de canales que el servidor pueda tener en espera en un agente de escucha. Cuando MaxPendingAccepts es demasiado bajo, hay un pequeño intervalo de tiempo en el que todos los canales en espera han iniciado conexiones de mantenimiento, pero sin que ningún canal nuevo haya empezado a escuchar. Una conexión puede llegar durante este intervalo y producirá un error porque no hay nada en espera en el servidor. Esta propiedad se puede configurar si se establece la propiedad <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> en un número mayor. Para obtener más información, consulte <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> y [configurar el servicio de uso compartido de puertos Net.TCP](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * número de procesadores|Esta propiedad controla cuántas conexiones ha aceptado un transporte pero no las ha seleccionado el distribuidor de ServiceModel. Para establecer este valor, use `MaxConnections` en el enlace o `maxOutboundConnectionsPerEndpoint` en el elemento de enlace. Para obtener más información acerca de <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
