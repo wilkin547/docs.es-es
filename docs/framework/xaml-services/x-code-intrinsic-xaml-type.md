@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 74fcc158c0556b85ac5175584fa4948513c69053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641114"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58050603"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code (Tipo XAML intrínseco)
 Permite la selección de ubicación de código dentro de una producción de XAML. Dicho código puede compilarse por cualquier implementación de procesador XAML que se compila en XAML o a la izquierda en la producción de XAML para usos posteriores como interpretación por un tiempo de ejecución.  
@@ -40,7 +40,7 @@ Permite la selección de ubicación de código dentro de una producción de XAML
   
 -   El `x:Code` elemento de directiva debe ser un elemento secundario inmediato del elemento raíz de la producción de XAML.  
   
--   [x: Class directiva](../../../docs/framework/xaml-services/x-class-directive.md) debe proporcionarse en el elemento raíz primario.  
+-   [x: Class directiva](x-class-directive.md) debe proporcionarse en el elemento raíz primario.  
   
 -   El código se coloca dentro de `x:Code` se tratará de compilación dentro del ámbito de la clase parcial que ya se está creando para esa página XAML. Por lo tanto, todo el código que defina debe ser miembros o las variables de la clase parcial.  
   
@@ -49,6 +49,6 @@ Permite la selección de ubicación de código dentro de una producción de XAML
 -   Las referencias a entidades de código fuera del espacio de nombres CLR de la clase parcial deben ubicarse completas. Si los miembros que se declara reemplazos para los miembros de clase parcial que se puede invalidar, esto debe especificarse con la palabra clave override específicos del idioma. Si los miembros declaran en `x:Code` ámbito entran en conflicto con los miembros de la clase parcial creada desde el XAML, de tal forma que el compilador informa el conflicto, el archivo XAML no se puede compilar o cargar.  
   
 ## <a name="see-also"></a>Vea también
-- [x:Class (Directiva)](../../../docs/framework/xaml-services/x-class-directive.md)
-- [Código subyacente y XAML en WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [Información general sobre XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [x:Class (Directiva)](x-class-directive.md)
+- [Código subyacente y XAML en WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [Información general sobre XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
