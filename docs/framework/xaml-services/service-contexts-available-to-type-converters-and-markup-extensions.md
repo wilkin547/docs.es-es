@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: f3417ed53131a695623ea6c365314ab2c5eedd37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04d1a8b1c6f05537f12c3df79fda007332621264
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629307"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049461"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Contextos de servicio disponibles para los convertidores de tipos y las extensiones de marcado
 Los autores de los tipos que admiten los usos de la extensión de marcado y el convertidor de tipos deben tener a menudo la información contextual sobre dónde se encuentra un uso en el marcado o en la estructura gráfica del objeto adyacente. Puede ser necesaria cierta información para que se cree una instancia correcta del objeto proporcionado o para que puedan crearse referencias a objetos existentes del gráfico del objeto. Al usar los servicios XAML de .NET Framework, el contexto que puede ser necesario se expone como una serie de interfaces de servicio. El código de soporte de la extensión de marcado o el convertidor de tipos puede consultar un servicio usando un contexto de proveedor de servicio que esté disponible y se haya pasado desde <xref:System.Xaml.XamlObjectWriter> o tipos relacionados. El contexto de esquema XAML está disponible directamente con uno de estos servicios. En este tema se describe cómo acceder a los contextos de servicio desde una implementación de convertidor de valor y se enumeran los servicios normalmente disponibles y sus funciones.  
@@ -129,7 +129,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **API de servicio:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
- El contexto de esquema XAML es necesario para las operaciones de carga diferidas porque el mismo contexto del esquema debe actuar sobre el área diferida para integrar el contenido diferido. Para más información sobre la función del contexto de esquema XAML, vea [XAML Services](../../../docs/framework/xaml-services/index.md).  
+ El contexto de esquema XAML es necesario para las operaciones de carga diferidas porque el mismo contexto del esquema debe actuar sobre el área diferida para integrar el contenido diferido. Para más información sobre la función del contexto de esquema XAML, vea [XAML Services](index.md).  
   
 ### <a name="irootobjectprovider"></a>IRootObjectProvider  
  **Documentación de referencia**: <xref:System.Xaml.IRootObjectProvider>  
@@ -189,5 +189,5 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [Información general sobre las extensiones de marcado para el lenguaje XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)
-- [Información general sobre los convertidores de tipos para XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+- [Información general sobre las extensiones de marcado para el lenguaje XAML](markup-extensions-for-xaml-overview.md)
+- [Información general sobre los convertidores de tipos para XAML](type-converters-for-xaml-overview.md)

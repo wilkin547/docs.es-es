@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: 23c483daed0156dd29134b255e9da2f7922980ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8474fd5ee6f9f6e6dccda5fb57fbed9ddd787c26
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492787"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58046206"
 ---
 # <a name="xkey-directive"></a>x:Key (Directiva)
 Identifica los elementos que se crean y se hace referencia en un diccionario definido por XAML. Agregar un `x:Key` valor a un elemento de objeto XAML es la manera más común para identificar un recurso en un diccionario de recursos, por ejemplo, en un WPF <xref:System.Windows.ResourceDictionary>.  
@@ -44,15 +44,15 @@ Identifica los elementos que se crean y se hace referencia en un diccionario def
   
 |||  
 |-|-|  
-|`stringKeyValue`|Una cadena de texto que se usará como una clave. La cadena de texto debe ajustarse a la [gramática de XamlName](../../../docs/framework/xaml-services/xamlname-grammar.md).|  
+|`stringKeyValue`|Una cadena de texto que se usará como una clave. La cadena de texto debe ajustarse a la [gramática de XamlName](xamlname-grammar.md).|  
 |`markupExtensionUsage`|Dentro de los delimitadores de extensión de marcado {}, uso de una extensión de marcado que proporciona un objeto que se va a usar como clave. Vea la sección Comentarios.|  
   
 ## <a name="remarks"></a>Comentarios  
- `x:Key` admite el concepto de diccionario de recursos XAML. XAML como un lenguaje no define una implementación de diccionario de recursos, que es de izquierda a los marcos de interfaz de usuario específicos. Para obtener más información acerca de cómo se implementan los diccionarios de recursos XAML en WPF, vea [recursos XAML](../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ `x:Key` admite el concepto de diccionario de recursos XAML. XAML como un lenguaje no define una implementación de diccionario de recursos, que es de izquierda a los marcos de interfaz de usuario específicos. Para obtener más información acerca de cómo se implementan los diccionarios de recursos XAML en WPF, vea [recursos XAML](../wpf/advanced/xaml-resources.md).  
   
  En XAML 2006 y WPF, `x:Key` debe proporcionarse como un atributo. Todavía puede usar las claves que no son cadenas, pero esto requiere el uso de una extensión de marcado para proporcionar el valor de no cadena en forma de atributo. Si utiliza XAML 2009, `x:Key` puede especificarse como un elemento admitir explícitamente diccionarios con clave por tipos de objetos distintos de cadenas sin necesidad de un intermediario de extensión de marcado. Consulte la sección "XAML 2009" de este tema. El resto de la sección de comentarios se aplica específicamente a la implementación de XAML 2006.  
   
- El valor del atributo `x:Key` puede ser cualquier cadena definida en el [gramática de XamlName](../../../docs/framework/xaml-services/xamlname-grammar.md) o puede ser un objeto evaluado mediante una extensión de marcado. Para obtener un ejemplo de WPF, vea "Notas de uso de WPF".  
+ El valor del atributo `x:Key` puede ser cualquier cadena definida en el [gramática de XamlName](xamlname-grammar.md) o puede ser un objeto evaluado mediante una extensión de marcado. Para obtener un ejemplo de WPF, vea "Notas de uso de WPF".  
   
  Los elementos secundarios de un elemento primario que es un <xref:System.Collections.IDictionary> implementación normalmente debe incluir un `x:Key` atributo que especifica un valor de clave única dentro de ese diccionario. .NET Framework podría implementar propiedades de clave con alias para sustituir `x:Key` sobre determinados tipos; los tipos que definen tales propiedades deben atribuirse con <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>.  
   
@@ -63,19 +63,19 @@ Identifica los elementos que se crean y se hace referencia en un diccionario def
   
 -   Algunos tipos WPF declaran una clave implícita para el uso del diccionario. Por ejemplo, un <xref:System.Windows.Style> con un <xref:System.Windows.Style.TargetType%2A>, o un <xref:System.Windows.DataTemplate> con un <xref:System.Windows.DataTemplate.DataType%2A>, puede estar en un <xref:System.Windows.ResourceDictionary> y usar la clave implícita.  
   
--   WPF admite un concepto de diccionario de recursos combinados. Las claves se pueden compartir entre diccionarios combinados y el comportamiento de la clave compartido se puede acceder mediante <xref:System.Windows.FrameworkContentElement.FindResource%2A>. Para más información, consulte [Merged Resource Dictionaries](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md) (Diccionarios de recursos combinados).  
+-   WPF admite un concepto de diccionario de recursos combinados. Las claves se pueden compartir entre diccionarios combinados y el comportamiento de la clave compartido se puede acceder mediante <xref:System.Windows.FrameworkContentElement.FindResource%2A>. Para más información, consulte [Merged Resource Dictionaries](../wpf/advanced/merged-resource-dictionaries.md) (Diccionarios de recursos combinados).  
   
  WPF XAML a la aplicación modelo general, la unicidad de las claves no se comprueba el compilador de marcado XAML. En su lugar, falta o no únicos `x:Key` valores provocar errores del analizador de XAML en tiempo de carga. Sin embargo, un control Visual Studio de diccionarios para WPF puede anotar a menudo tales errores en la fase de diseño.  
   
- Tenga en cuenta que en la sintaxis mostrada, el <xref:System.Windows.ResourceDictionary> objeto está implícito en cómo el procesador de WPF XAML genera una colección para rellenar un <xref:System.Windows.FrameworkElement.Resources%2A> colección. Un <xref:System.Windows.ResourceDictionary> no se suele proporcionar explícitamente como un elemento en el marcado, aunque podría serlo en algunos casos, si se desea para mayor claridad (sería un elemento de objeto de colección entre el <xref:System.Windows.FrameworkElement.Resources%2A> rellenan el elemento de propiedad y los elementos que contiene el diccionario). Para obtener información sobre por qué un objeto de colección casi siempre es un elemento implícito en el marcado, vea [XAML detalles de la sintaxis](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ Tenga en cuenta que en la sintaxis mostrada, el <xref:System.Windows.ResourceDictionary> objeto está implícito en cómo el procesador de WPF XAML genera una colección para rellenar un <xref:System.Windows.FrameworkElement.Resources%2A> colección. Un <xref:System.Windows.ResourceDictionary> no se suele proporcionar explícitamente como un elemento en el marcado, aunque podría serlo en algunos casos, si se desea para mayor claridad (sería un elemento de objeto de colección entre el <xref:System.Windows.FrameworkElement.Resources%2A> rellenan el elemento de propiedad y los elementos que contiene el diccionario). Para obtener información sobre por qué un objeto de colección casi siempre es un elemento implícito en el marcado, vea [XAML detalles de la sintaxis](../wpf/advanced/xaml-syntax-in-detail.md).  
   
  En la implementación WPF XAML, se define el control para las claves del diccionario de recursos el <xref:System.Windows.ResourceKey> clase abstracta. Sin embargo, el procesador de WPF XAML genera tipos de extensión subyacentes diferentes para las claves en función de sus usos. Por ejemplo, la clave para un <xref:System.Windows.DataTemplate> o cualquier clase derivada se administra por separado y genera una distinct <xref:System.Windows.DataTemplateKey> objeto.  
   
- Claves y nombres usan elementos de lenguaje y las distintas directivas (`x:Key` frente a `x:Name`) en la definición de XAML básica. Las claves y los nombres también se usan en situaciones diferentes mediante la definición y aplicación WPF de estos conceptos. Para obtener más información, consulte [ámbitos de nombres de XAML de WPF](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
+ Claves y nombres usan elementos de lenguaje y las distintas directivas (`x:Key` frente a `x:Name`) en la definición de XAML básica. Las claves y los nombres también se usan en situaciones diferentes mediante la definición y aplicación WPF de estos conceptos. Para obtener más información, consulte [ámbitos de nombres de XAML de WPF](../wpf/advanced/wpf-xaml-namescopes.md).  
   
- Como se indicó anteriormente, el valor de una clave puede proporcionarse a través de una extensión de marcado y puede ser distinto de un valor de cadena. Un escenario de WPF de ejemplo es que el valor de `x:Key` puede ser un [ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md). Algunos controles exponen una clave de estilo de ese tipo para un recurso de estilo personalizado que influye en parte de la apariencia y comportamiento de ese control sin reemplazar el estilo completamente. Un ejemplo de este tipo de clave es <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
+ Como se indicó anteriormente, el valor de una clave puede proporcionarse a través de una extensión de marcado y puede ser distinto de un valor de cadena. Un escenario de WPF de ejemplo es que el valor de `x:Key` puede ser un [ComponentResourceKey](../wpf/advanced/componentresourcekey-markup-extension.md). Algunos controles exponen una clave de estilo de ese tipo para un recurso de estilo personalizado que influye en parte de la apariencia y comportamiento de ese control sin reemplazar el estilo completamente. Un ejemplo de este tipo de clave es <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
   
- La característica de diccionario combinado de WPF presenta algunas consideraciones adicionales para la unicidad de las claves y el comportamiento de búsqueda de claves. Para más información, consulte [Merged Resource Dictionaries](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md) (Diccionarios de recursos combinados).  
+ La característica de diccionario combinado de WPF presenta algunas consideraciones adicionales para la unicidad de las claves y el comportamiento de búsqueda de claves. Para más información, consulte [Merged Resource Dictionaries](../wpf/advanced/merged-resource-dictionaries.md) (Diccionarios de recursos combinados).  
   
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 relaja la restricción que `x:Key` siempre se proporcione en forma de atributo.  
@@ -111,6 +111,6 @@ keyObject
  `x:Key` para Silverlight se documenta por separado. Para obtener más información, consulte [XAML Namespace (x:) Características del lenguaje (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>Vea también
-- [Recursos XAML](../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [Recursos y código](../../../docs/framework/wpf/advanced/resources-and-code.md)
-- [StaticResource (extensión de marcado)](../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+- [Recursos XAML](../wpf/advanced/xaml-resources.md)
+- [Recursos y código](../wpf/advanced/resources-and-code.md)
+- [StaticResource (extensión de marcado)](../wpf/advanced/staticresource-markup-extension.md)

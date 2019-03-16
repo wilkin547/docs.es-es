@@ -11,12 +11,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: 8a065573abb5a230d2a51f1767bd8d2e829bccd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eaee0a1f92d8b7cb3810651eda21f1cc800ebf57
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521275"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58018554"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} Secuencia de escape / extensión de marcado
 Proporciona la secuencia de escape XAML para los valores de atributo. La secuencia de escape permite los valores siguientes en el atributo debe interpretarse como un literal.  
@@ -56,8 +56,8 @@ Proporciona la secuencia de escape XAML para los valores de atributo. La secuenc
   
  La secuencia de escape ({}) se requiere con frecuencia al especificar un tipo XML que se debe incluir un calificador de espacio de nombres en una ubicación donde podría aparecer una extensión de marcado XAML. Esto incluye el inicio de un valor de atributo XAML y, en una extensión de marcado, inmediatamente después de un signo igual (=). El ejemplo siguiente muestra las secuencias de escape para un espacio de nombres XML que aparece al principio de un valor de atributo XAML.  
   
- [!code-xaml[XLINQExample#StackPanelResources](../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
+ [!code-xaml[XLINQExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
 ## <a name="see-also"></a>Vea también
-- [Convertidores de tipos y extensiones de marcado para XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [Entidades de caracteres XML y XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
+- [Convertidores de tipos y extensiones de marcado para XAML](type-converters-and-markup-extensions-for-xaml.md)
+- [Entidades de caracteres XML y XAML](xml-character-entities-and-xaml.md)

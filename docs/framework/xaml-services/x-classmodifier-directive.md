@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: ef55549b43ecbef539d7e84a7281fa704a328938
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc9e866f859192e1fa13ead24dc44a7b9d286877
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507595"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58026784"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier (Directiva)
 Modifica el comportamiento de compilación de XAML cuando `x:Class` también se proporciona. En concreto, en lugar de crear una parcial `class` que tiene un `Public` (valor predeterminado), nivel de acceso proporcionado `x:Class` se crea con un `NotPublic` nivel de acceso. Este comportamiento afecta al nivel de acceso para la clase en los ensamblados generados.  
@@ -35,7 +35,7 @@ Modifica el comportamiento de compilación de XAML cuando `x:Class` también se 
 |*NotPublic*|La cadena exacta debe pasar para especificar <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> frente a <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> varía según el lenguaje de programación de código subyacente que usar. Vea la sección Comentarios.|  
   
 ## <a name="dependencies"></a>Dependencias  
- [x: Class](../../../docs/framework/xaml-services/x-class-directive.md) también debe proporcionarse en el mismo elemento, y ese elemento debe ser el elemento raíz en una página. Para obtener más información, consulte [ \[MS-XAML\] sección 4.3.1.8](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ [x: Class](x-class-directive.md) también debe proporcionarse en el mismo elemento, y ese elemento debe ser el elemento raíz en una página. Para obtener más información, consulte [ \[MS-XAML\] sección 4.3.1.8](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="remarks"></a>Comentarios  
  El valor de `x:ClassModifier` en los servicios XAML de .NET Framework uso varía según el lenguaje de programación. La cadena que se va a utilizar depende de cómo cada lenguaje implementa su <xref:System.CodeDom.Compiler.CodeDomProvider> y los convertidores de tipos que devuelve para definir los significados de <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> y <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, y si dicho idioma distingue mayúsculas de minúsculas.  
@@ -54,8 +54,8 @@ Modifica el comportamiento de compilación de XAML cuando `x:Class` también se 
  Como se declara en el nivel de acceso `x:ClassModifier` aún está sujeto a interpretación por marcos de trabajo concreto y sus capacidades. WPF incluye funciones para cargar y crear instancias de tipos donde `x:ClassModifier` es `internal`, si se hace referencia a esa clase desde un recurso WPF a través de una referencia de URI de paquete. Como consecuencia de este caso y posiblemente otras similares implementado por otros marcos de trabajo, no confíe exclusivamente en `x:ClassModifier` bloquear la creación de instancias de todas las posibles intentos.  
   
 ## <a name="see-also"></a>Vea también
-- [x:Class (Directiva)](../../../docs/framework/xaml-services/x-class-directive.md)
-- [Código subyacente y XAML en WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [x:FieldModifier (Directiva)](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)
-- [Seguridad (WPF)](../../../docs/framework/wpf/security-wpf.md)
-- [Tipos migrados de WPF a System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [x:Class (Directiva)](x-class-directive.md)
+- [Código subyacente y XAML en WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [x:FieldModifier (Directiva)](x-fieldmodifier-directive.md)
+- [Seguridad (WPF)](../wpf/security-wpf.md)
+- [Tipos migrados de WPF a System.Xaml](types-migrated-from-wpf-to-system-xaml.md)
