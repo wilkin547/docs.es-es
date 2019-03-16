@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: 8b951b33242fa7e17a02133adb8fed4ce638e51e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68468c3c10fd884cf5fb92160e3cde41dbf7d529
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498052"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58030267"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData (Tipo XAML intrínseco)
 Habilita la posición de islas de datos XML dentro de una producción de XAML. Elementos XML dentro de `x:XData` no deben tratarse los procesadores XAML como si fueran una parte de la predeterminada que actúa el espacio de nombres XAML o cualquier otro espacio de nombres XAML. `x:XData` puede contener XML correcto arbitrario.  
@@ -45,11 +45,11 @@ Habilita la posición de islas de datos XML dentro de una producción de XAML. E
 ## <a name="wpf-usage-notes"></a>Notas de uso WPF  
  El `x:XData` objeto se usa principalmente como un objeto secundario de un <xref:System.Windows.Data.XmlDataProvider>, o bien, como el objeto secundario de la <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> propiedad (en XAML, esto normalmente se expresa en sintaxis de elemento de propiedad).  
   
- Los datos normalmente deben volver a definir el espacio de nombres XML base dentro de la isla de datos como un nuevo espacio de nombres XML (establecido en una cadena vacía). Esto es más fácil para islas de datos simple porque la <xref:System.Windows.Data.Binding.XPath%2A> expresiones que se usan para hacer referencia y enlazar a los datos pueden evitar la inclusión de prefijos. Islas de datos más compleja podrían definir varios prefijos para los datos y usar un prefijo específico para el espacio de nombres XML en la raíz. En este caso, todos los <xref:System.Windows.Data.Binding.XPath%2A> las referencias a expresiones deben incluir el prefijo de espacio de nombres asignado adecuado. Para obtener más información, consulte [Información general sobre el enlace de datos](../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Los datos normalmente deben volver a definir el espacio de nombres XML base dentro de la isla de datos como un nuevo espacio de nombres XML (establecido en una cadena vacía). Esto es más fácil para islas de datos simple porque la <xref:System.Windows.Data.Binding.XPath%2A> expresiones que se usan para hacer referencia y enlazar a los datos pueden evitar la inclusión de prefijos. Islas de datos más compleja podrían definir varios prefijos para los datos y usar un prefijo específico para el espacio de nombres XML en la raíz. En este caso, todos los <xref:System.Windows.Data.Binding.XPath%2A> las referencias a expresiones deben incluir el prefijo de espacio de nombres asignado adecuado. Para obtener más información, consulte [Información general sobre el enlace de datos](../wpf/data/data-binding-overview.md).  
   
  Técnicamente, `x:XData` puede usarse como el contenido de cualquier propiedad de tipo <xref:System.Xml.Serialization.IXmlSerializable>. Sin embargo, <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> es la única implementación notable.  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Windows.Data.XmlDataProvider>
-- [Información general sobre el enlace de datos](../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Binding (extensión de marcado)](../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+- [Información general sobre el enlace de datos](../wpf/data/data-binding-overview.md)
+- [Binding (extensión de marcado)](../wpf/advanced/binding-markup-extension.md)
