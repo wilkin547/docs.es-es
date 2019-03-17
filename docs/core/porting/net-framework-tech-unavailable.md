@@ -4,12 +4,12 @@ description: Más información sobre las tecnologías de .NET Framework no dispo
 author: cartermp
 ms.author: mairaw
 ms.date: 12/7/2018
-ms.openlocfilehash: 8b43c15a942e0effab486e5399325bec746484a2
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9d7860184806288dd0d5eb3b0447839d5e47c27f
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904892"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "58125478"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Tecnologías de .NET Framework no disponibles en .NET Core
 
@@ -21,7 +21,7 @@ El hecho de que una API o tecnología no estén implementadas actualmente no imp
 
 Los dominios de aplicación aíslan las aplicaciones entre sí. Los dominios de aplicación requieren la compatibilidad con el runtime y suelen ser muy caros. No se admite la creación de dominios de aplicación adicionales. No se pretende agregar esta compatibilidad en el futuro. En el caso del aislamiento del código, se recomiendan procesos independientes o usar contenedores como alternativa. Para la carga dinámica de ensamblados, se recomienda la nueva clase <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
-Para facilitar la migración de código de .NET Framework, .NET Core expone algunas de las superficies de la API <xref:System.AppDomain>. Algunas de las API funcionan con normalidad (por ejemplo, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), algunos miembros no hacen nada (por ejemplo, <xref:System.AppDomain.SetCachePath%2A>) y algunos de ellos generan <xref:System.PlatformNotSupportedException> (por ejemplo, <xref:System.AppDomain.CreateDomain%2A>). Compruebe los tipos que usa en la [fuente de referencias de `System.AppDomain`](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs) en el [repositorio dotnet/corefx de GitHub](https://github.com/dotnet/corefx), y asegúrese de que selecciona la rama correspondiente a la versión implementada.
+Para facilitar la migración de código de .NET Framework, .NET Core expone algunas de las superficies de la API <xref:System.AppDomain>. Algunas de las API funcionan con normalidad (por ejemplo, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), algunos miembros no hacen nada (por ejemplo, <xref:System.AppDomain.SetCachePath%2A>) y algunos de ellos generan <xref:System.PlatformNotSupportedException> (por ejemplo, <xref:System.AppDomain.CreateDomain%2A>). Compruebe los tipos que usa en la [fuente de referencias de `System.AppDomain`](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/AppDomain.cs) en el [repositorio dotnet/corefx de GitHub](https://github.com/dotnet/corefx), y asegúrese de que selecciona la rama correspondiente a la versión implementada.
 
 ## <a name="remoting"></a>Comunicación remota
 
