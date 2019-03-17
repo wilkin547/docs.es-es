@@ -2,12 +2,12 @@
 title: Configurar seguimiento para un flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719408"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126206"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configurar seguimiento para un flujo de trabajo
 
@@ -183,9 +183,9 @@ Para ver los registros de seguimiento, siga estos pasos.
 
 6. Haga clic en el **analítico** nodo y seleccione **actualizar.** Los registros de seguimiento deben estar visibles en el panel central.
 
-La siguiente imagen muestra eventos de seguimiento en el Visor de eventos.
+La siguiente imagen muestra los eventos de seguimiento en el Visor de eventos:
 
-![Los registros de seguimiento que muestra de Visor de eventos](./media/trackingeventviewer.PNG "TrackingEventViewer")
+![Captura de pantalla de la exhibición de Visor de eventos, registros de seguimiento.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
 ### <a name="registering-an-application-specific-provider-id"></a>Registrar un identificador de proveedor específico de la aplicación
 

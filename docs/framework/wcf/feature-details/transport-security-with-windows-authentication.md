@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: bd4e12a861207e5318e8f3f34b38204f6724e7b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96fce3cb56cf328e0fbb589113e3ac24519de557
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652597"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125452"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Seguridad del transporte con la autenticación de Windows
 El siguiente escenario muestra un cliente de Windows Communication Foundation (WCF) y el servicio protegido por seguridad de Windows. Para obtener más información acerca de la programación, vea [Cómo: Proteger un servicio con credenciales de Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
  Un Servicio Web de la intranet muestra la información de recursos humanos. El cliente es una aplicación de Windows Form. La aplicación se implementa en un dominio con un controlador Kerberos que protege el dominio.  
   
- ![Seguridad de transporte con autenticación de Windows](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")  
+ ![Seguridad del transporte con la autenticación de Windows](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -37,13 +37,13 @@ El siguiente escenario muestra un cliente de Windows Communication Foundation (W
 -   Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.  
   
 ### <a name="code"></a>Código  
- El código siguiente muestra cómo crear un punto de conexión de servicio que utilice la seguridad de Windows.  
+ El código siguiente muestra cómo crear un extremo de servicio que utilice la seguridad de Windows.  
   
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
 ### <a name="configuration"></a>Configuración  
- Se puede usar la configuración siguiente en lugar del código para configurar el extremo de servicio:  
+ Se puede usar la configuración siguiente en lugar del código para configurar el punto de conexión de servicio:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

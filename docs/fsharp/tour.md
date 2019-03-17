@@ -2,12 +2,12 @@
 title: Paseo por F#
 description: Examine algunas de las características claves del lenguaje en esta visita con ejemplos de código de programación F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: d741f7066517ad9bc004e2a89ba0d85a1d4c424d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968301"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125582"
 ---
 # <a name="tour-of-f"></a>Paseo por F\#
 
@@ -136,10 +136,6 @@ Si no sigue los pasos anteriores se producirá un error de compilación.
 [Coincidencia de patrón](language-reference/pattern-matching.md) es la característica del lenguaje F# que permite la corrección para operar en tipos de F#.  En los ejemplos anteriores, probablemente ha observado un poco de `match x with ...` sintaxis.  Esta construcción permite que el compilador, que puede conocer la "forma" de los tipos de datos, para forzar que tener en cuenta todos los casos posibles cuando se usa un tipo de datos a través de lo que se conoce como coincidencia de patrones exhaustiva.  Esto es increíblemente eficaz es correcto y se puede usar inteligentemente para "alzan" lo que normalmente sería un problema en tiempo de ejecución en tiempo de compilación.
 
 [!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
-
-También puede usar la forma abreviada `function` construcción de coincidencia de patrones, lo que resulta útil al escribir funciones que hacen usan de [aplicación parcial](language-reference/functions/index.md#partial-application-of-arguments):
-
-[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L744-L762)]
 
 Algo que quizás haya observado es el uso de la `_` patrón.  Esto se conoce como el [patrón comodín](language-reference/pattern-matching.md#wildcard-pattern), que es una manera de decir "No me importa algo What ' s".  Aunque es útil, puede omitir accidentalmente la coincidencia de patrones exhaustiva y ya no beneficiarse de las exigencias de tiempo de compilación si no tiene cuidado en utilizando `_`.  Se usa preferiblemente cuando no le interesa ciertas partes de un tipo descompuesto al patrón coincidente, o en la cláusula final cuando ha enumerado todos los casos significativos en una expresión de coincidencia.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 639b53ada8639ed686d04b4aa2e5295ca08240b0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a66edd0297b723b81c31675c9b0e6b6def9ed10a
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714182"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125868"
 ---
 # <a name="using-nested-graphics-containers"></a>Utilizar contenedores de gráficos anidados
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona contenedores que puede usar para reemplazar o aumentar temporalmente parte del estado en un <xref:System.Drawing.Graphics> objeto. Crear un contenedor mediante una llamada a la <xref:System.Drawing.Graphics.BeginContainer%2A> método de un <xref:System.Drawing.Graphics> objeto. Puede llamar a <xref:System.Drawing.Graphics.BeginContainer%2A> varias veces para formar contenedores anidados. Cada llamada a <xref:System.Drawing.Graphics.BeginContainer%2A> deben estar emparejados con una llamada a <xref:System.Drawing.Graphics.EndContainer%2A>.  
@@ -25,9 +25,9 @@ ms.locfileid: "57714182"
  [!code-csharp[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#61)]  
   
- En el código anterior, el rectángulo dibujado desde dentro del contenedor se transforma en primer lugar por la transformación universal del contenedor (rotación) y después por la transformación universal de la <xref:System.Drawing.Graphics> objeto (conversión). Se transforma el rectángulo dibujado desde fuera del contenedor solo por la transformación universal de la <xref:System.Drawing.Graphics> objeto (conversión). La ilustración siguiente muestra los dos rectángulos.  
+ En el código anterior, el rectángulo dibujado desde dentro del contenedor se transforma en primer lugar por la transformación universal del contenedor (rotación) y después por la transformación universal de la <xref:System.Drawing.Graphics> objeto (conversión). Se transforma el rectángulo dibujado desde fuera del contenedor solo por la transformación universal de la <xref:System.Drawing.Graphics> objeto (conversión). La siguiente ilustración muestra los dos rectángulos: 
   
- ![Anidar contenedores](./media/csnestedcontainers1.png "csnestedcontainers1")  
+ ![Ilustración que muestra los contenedores anidados.](./media/using-nested-graphics-containers/nested-containers-illustration.png)  
   
 ## <a name="clipping-in-nested-containers"></a>Recorte de los contenedores anidados  
  En el ejemplo siguiente se muestra cómo los contenedores anidados controlan las regiones de recorte. El código crea un <xref:System.Drawing.Graphics> objeto y un contenedor dentro de ese <xref:System.Drawing.Graphics> objeto. La región de recorte el <xref:System.Drawing.Graphics> objeto es un rectángulo y la región de recorte del contenedor es una elipse. El código hace dos llamadas a la <xref:System.Drawing.Graphics.DrawLine%2A> método. La primera llamada a <xref:System.Drawing.Graphics.DrawLine%2A> está dentro del contenedor y la segunda llamada a <xref:System.Drawing.Graphics.DrawLine%2A> está fuera del contenedor (después de llamar a <xref:System.Drawing.Graphics.EndContainer%2A>). La primera línea se recorta por la intersección de las dos regiones de recorte. La segunda línea se recorta únicamente por la región de recorte rectangular del <xref:System.Drawing.Graphics> objeto.  
@@ -35,9 +35,9 @@ ms.locfileid: "57714182"
  [!code-csharp[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#62)]
  [!code-vb[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#62)]  
   
- La ilustración siguiente muestra las dos líneas recortadas.  
+ La siguiente ilustración muestra las dos líneas recortadas:
   
- ![Anidar contenedor](./media/nestedcontainers2.png "nestedcontainers2")  
+ ![Ilustración que muestra un contenedor anidado con líneas recortadas.](./media/using-nested-graphics-containers/nested-container-clipped-lines.png)  
   
  Como muestran los dos ejemplos anteriores, las transformaciones y las regiones de recorte son acumulativas en los contenedores anidados. Si se establecen las transformaciones del mundo del contenedor y el <xref:System.Drawing.Graphics> de objeto, ambas transformaciones se aplicarán a los elementos dibujados desde dentro del contenedor. La transformación del contenedor será aplica en primer lugar y la transformación de la <xref:System.Drawing.Graphics> objeto se aplicará en segundo lugar. Si se establecen las regiones de recorte del contenedor y el <xref:System.Drawing.Graphics> de objeto, se recortará dibujados desde dentro del contenedor de elementos por la intersección de las dos regiones de recorte.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "57714182"
   
  La siguiente ilustración muestra las tres cadenas. Las cadenas que se dibuja desde el contenedor interior y desde el <xref:System.Drawing.Graphics> se suavizan objeto mediante el suavizado de contorno. La cadena que se dibuja desde el contenedor exterior no se suaviza mediante suavizado de contorno porque la <xref:System.Drawing.Graphics.TextRenderingHint%2A> propiedad está establecida en <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>.  
   
- ![Anidar contenedores](./media/nestedcontainers3.png "nestedcontainers3")  
+ ![Ilustración que muestra las cadenas que se extraen de los contenedores anidados.](./media/using-nested-graphics-containers/nested-containers-three-strings.png)  
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.Drawing.Graphics>

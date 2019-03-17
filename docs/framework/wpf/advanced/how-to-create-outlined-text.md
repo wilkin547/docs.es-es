@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear texto con contorno
+title: Filtrar Crear texto con contorno
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,39 +11,34 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 409981e9c751144d26151210977a45b5e1eccf0a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5de1068401dac61c5de5b86604da9417e18a94ae
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368156"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125946"
 ---
-# <a name="how-to-create-outlined-text"></a>Procedimiento Crear texto con contorno
+# <a name="how-to-create-outlined-text"></a>Filtrar Crear texto con contorno
 En la mayoría de los casos, cuando se agregan adorno a cadenas de texto en su [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicación, que usa texto en términos de una colección de caracteres discretos, o glifos. Por ejemplo, podría crear un pincel de degradado lineal y se aplicará la <xref:System.Windows.Controls.Control.Foreground%2A> propiedad de un <xref:System.Windows.Controls.TextBox> objeto. Al mostrar o editar el cuadro de texto, el pincel de degradado lineal se aplica automáticamente al conjunto actual de caracteres de la cadena de texto.  
   
- ![Texto mostrado con un pincel de degradado lineal](./media/outlinedtext01.jpg "OutlinedText01")  
-Ejemplo de un pincel de degradado lineal aplicado a un cuadro de texto  
+ ![Texto que se muestra con un pincel de degradado lineal](./media/how-to-create-outlined-text/text-linear-gradient.jpg)    
   
  Sin embargo, también puede convertir texto en <xref:System.Windows.Media.Geometry> objetos, lo que permite crear otros tipos de texto enriquecido visualmente. Por ejemplo, podría crear un <xref:System.Windows.Media.Geometry> objeto basado en el esquema de una cadena de texto.  
   
- ![Esquema de texto con un pincel de degradado lineal](./media/outlinedtext02.jpg "OutlinedText02")  
-Ejemplo de un pincel de degradado lineal que se aplica a la geometría del contorno del texto  
+ ![Esquema de texto que usa un pincel de degradado lineal](./media/how-to-create-outlined-text/text-outline-linear-gradient.jpg)  
   
  Cuando el texto se convierte en un <xref:System.Windows.Media.Geometry> de objeto, ya no es una colección de caracteres, no se puede modificar los caracteres de la cadena de texto. Sin embargo, puede afectar a la apariencia del texto convertido modificando sus propiedades de trazo y relleno. El trazo se refiere al contorno del texto convertido; el relleno es el área dentro del contorno del texto convertido.  
   
  Los ejemplos siguientes ilustran varias maneras de crear efectos visuales modificando el trazo y el relleno del texto convertido.  
   
- ![Texto con colores diferentes para relleno y trazo](./media/outlinedtext03.jpg "OutlinedText03")  
-Ejemplo de configuración a diferentes colores de trazo y relleno  
+ ![Texto con colores diferentes para relleno y trazo](./media/how-to-create-outlined-text/fill-stroke-text-effect.jpg)  
   
- ![Texto con pincel de imagen aplicado al trazo](./media/outlinedtext04.jpg "OutlinedText04")  
-Ejemplo de pincel de imagen aplicado al trazo  
+ ![Texto con pincel de imagen aplicado a trazo](./media/how-to-create-outlined-text/image-brush-application.jpg)
   
  También es posible modificar el rectángulo delimitador, o el resaltado del texto convertido. El ejemplo siguiente muestra una manera de crear efectos visuales modificando el trazo y el resaltado del texto convertido.  
   
- ![Texto con pincel de imagen aplicado al trazo](./media/outlinedtext05.jpg "OutlinedText05")  
-Ejemplo de pincel de imagen aplicado al trazo y el resaltado  
-  
+ ![Texto con pincel de imagen aplicado para trazar y resaltar](./media/how-to-create-outlined-text/image-brush-text-application.jpg)
+
 ## <a name="example"></a>Ejemplo  
  La clave para convertir texto a un <xref:System.Windows.Media.Geometry> objeto consiste en usar el <xref:System.Windows.Media.FormattedText> objeto. Una vez que ha creado este objeto, puede usar el <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> y <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> métodos para convertir el texto en <xref:System.Windows.Media.Geometry> objetos. El primer método devuelve la geometría del texto con formato; el segundo método devuelve que el cuadro de límite de la geometría del texto con formato. En el ejemplo de código siguiente se muestra cómo crear un <xref:System.Windows.Media.FormattedText> objeto y recuperar las geometrías de texto con formato y su rectángulo de selección.  
   

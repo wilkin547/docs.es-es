@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: e2a4b1157ec1f114b9e33f220e09fc791cfb9fc3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a1417c5ee6fe774214c10b0164eb84dbfb2ed2bb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353041"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125686"
 ---
 # <a name="threading-model"></a>Modelo de subprocesos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] está diseñado para evitar a los programadores las dificultades de los subprocesos. Como resultado, la mayoría de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] los desarrolladores no tienen que escribir una interfaz que usa más de un subproceso. Dado que los programas multiproceso son complejos y difíciles de depurar, se deben evitar cuando existan soluciones de un único subproceso.  
@@ -63,7 +63,7 @@ ms.locfileid: "57353041"
   
  Considere el ejemplo siguiente:  
   
- ![Captura de pantalla de números primos](./media/threadingprimenumberscreenshot.PNG "ThreadingPrimeNumberScreenShot")  
+ ![Captura de pantalla que muestra los subprocesos de números primos.](./media/threading-model/threading-prime-numbers.png)  
   
  Esta sencilla aplicación cuenta en orden ascendente a partir de tres, buscando números primos. Cuando el usuario hace clic en el **iniciar** botón, la búsqueda comienza. Cuando el programa encuentra un número primo, actualiza la interfaz de usuario con su detección. En cualquier momento, el usuario puede detener la búsqueda.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "57353041"
   
  La mejor manera de dividir el tiempo de procesamiento entre el cálculo y control de eventos es administrar el cálculo desde el <xref:System.Windows.Threading.Dispatcher>. Mediante el uso de la <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> método, se pueden programar las comprobaciones de números primos en la misma que la cola [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] se extraen de los eventos. En el ejemplo, solamente se programa una comprobación de número primo cada vez. Una vez completada la comprobación de número primo, se programa la siguiente de manera inmediata. Esta comprobación se realiza solamente después pendientes [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] han sido controlados o eventos.  
   
- ![Ilustración de la cola del distribuidor](./media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
+ ![Captura de pantalla que muestra la cola del distribuidor.](./media/threading-model/threading-dispatcher-queue.png)  
   
  [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] realiza la revisión ortográfica mediante este mecanismo. Corrector ortográfico se realiza en segundo plano con el tiempo de inactividad de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso. Echemos un vistazo al código.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "57353041"
   
  En este ejemplo, se imita una llamada a procedimiento remoto que recupera la previsión meteorológica. Se usa un subproceso de trabajo independiente para ejecutar esta llamada y se programa un método de actualización en el <xref:System.Windows.Threading.Dispatcher> de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subprocesos cuando hayamos terminado.  
   
- ![Captura de pantalla de UI de información meteorológica](./media/threadingweatheruiscreenshot.PNG "ThreadingWeatherUIScreenShot")  
+ ![Captura de pantalla que muestre el tiempo en la interfaz de usuario.](./media/threading-model/threading-weather-ui.png)  
   
  [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweathercodebehind)]
  [!code-vb[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweathercodebehind)]  
@@ -190,7 +190,7 @@ ms.locfileid: "57353041"
 ### <a name="nested-pumping"></a>Bombeo anidado  
  A veces no es factible bloquear completamente el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso. Consideremos el <xref:System.Windows.MessageBox.Show%2A> método de la <xref:System.Windows.MessageBox> clase. <xref:System.Windows.MessageBox.Show%2A> no vuelve hasta que el usuario hace clic en el botón Aceptar. Pero crea una ventana que debe tener un bucle de mensajes para poder ser interactiva. Mientras se espera a que el usuario haga clic en Aceptar, la ventana de la aplicación original no responde a la entrada del usuario. Pero sigue procesando los mensajes de pintura. La ventana original se vuelve a dibujar cuando se oculta y se muestra.  
   
- ![MessageBox con un botón "Aceptar"](./media/threadingnestedpumping.png "ThreadingNestedPumping")  
+ ![Captura de pantalla que muestra un cuadro de mensajes con un botón Aceptar](./media/threading-model/threading-message-loop.png)  
   
  Algún subproceso debe estar a cargo de la ventana del cuadro de mensaje. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] podría crear un nuevo subproceso para la ventana del cuadro de mensaje, pero este subproceso no podría representar los elementos deshabilitados en la ventana original (recuerde la explicación anterior sobre la exclusión mutua). En su lugar, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utiliza un sistema de procesamiento de mensajes anidados. El <xref:System.Windows.Threading.Dispatcher> clase incluye un método especial denominado <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, que almacena el punto de ejecución actual de la aplicación, a continuación, comienza un nuevo bucle de mensajes. Cuando finaliza el bucle de mensajes anidados, se reanuda la ejecución después del original <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> llamar.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "57353041"
   
  Mayoría de las interfaces no se compila con la seguridad para subprocesos en mente porque los desarrolladores trabajan bajo el supuesto de que un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nunca se tiene acceso a más de un subproceso. En este caso, que el único subproceso puede realizar cambios en el entorno en momentos inesperados, provocando esos mal efectos que el <xref:System.Windows.Threading.DispatcherObject> mecanismo de exclusión mutua supuestamente debe para resolver. Considere el siguiente seudocódigo:  
   
- ![Diagrama de reentrada de subprocesos](./media/threadingreentrancy.png "ThreadingReentrancy")  
+ ![Diagrama que muestra la reentrada de subprocesos. ](./media/threading-model/threading-reentrancy.png "ThreadingReentrancy")  
   
  La mayoría de las veces que es lo correcto, pero hay ocasiones en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] donde esa reentrada inesperada realmente puede causar problemas. Por tanto, en determinados momentos clave, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] llamadas <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>, que cambia la instrucción de bloqueo de ese subproceso para que use el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bloqueo sin reentrada, en lugar de la habitual [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] bloqueo.  
   

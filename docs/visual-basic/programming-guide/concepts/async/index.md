@@ -98,7 +98,7 @@ Dim urlContents As String = Await client.GetStringAsync()
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> Lo que ocurre en un método asincrónico  
  Lo más importante de entender en la programación asincrónica es cómo el flujo de control pasa de un método a otro. El diagrama siguiente le guía por el proceso.  
   
- ![Seguimiento de un programa asincrónico](../../../../csharp/programming-guide/concepts/async/media/navigationtrace.png "NavigationTrace")  
+ ![Diagrama que muestra el seguimiento de un programa asincrónico.](./media/index/navigation-trace-async-program.png)  
   
  Los números en el diagrama se corresponden con los pasos siguientes.  
   

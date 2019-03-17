@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 6fbe8a78131cb64e28326133a7cc0fbdcbffd46b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720402"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126232"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Filtrar Crear un degradado de trazado
 La <xref:System.Drawing.Drawing2D.PathGradientBrush> clase le permite personalizar el modo de rellenar una forma con colores que cambian gradualmente. Por ejemplo, puede especificar un color para el centro de una ruta de acceso y otro color para el límite de una ruta de acceso. También puede especificar colores independientes para cada uno de varios puntos a lo largo del límite de una ruta de acceso.  
@@ -26,13 +26,13 @@ La <xref:System.Drawing.Drawing2D.PathGradientBrush> clase le permite personaliz
   
 -   El ejemplo siguiente rellena una elipse con un pincel de degradado de la ruta de acceso. Se establece el color central en azul y el color del límite se establece a aguamarina. La siguiente ilustración muestra la elipse rellena.  
   
-     ![Trayecto degradado](./media/pathgradient1.png "pathgradient1")  
+     ![Trayecto degradado rellena una elipse.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
      De forma predeterminada, un pincel de degradado de la ruta de acceso no se extiende fuera del límite de la ruta de acceso. Si usa el pincel de degradado de trazado para rellenar una figura que se extiende más allá del límite de la ruta de acceso, no se rellenará el área de la pantalla fuera de la ruta de acceso.  
   
-     La siguiente ilustración se muestra lo que sucede si cambia la <xref:System.Drawing.Graphics.FillEllipse%2A> llamar en el código siguiente a `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`.  
+     La siguiente ilustración se muestra lo que sucede si cambia la <xref:System.Drawing.Graphics.FillEllipse%2A> llamar en el código siguiente al `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
-     ![Trayecto degradado](./media/pathgradient2.png "pathgradient2")  
+     ![Trayecto degradado extendida más allá del límite de la ruta de acceso.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
@@ -46,9 +46,9 @@ La <xref:System.Drawing.Drawing2D.PathGradientBrush> clase le permite personaliz
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   En el ejemplo siguiente se dibuja un degradado de trazado sin un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto en el código. La instancia concreta <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> constructor en el ejemplo recibe una matriz de puntos pero no requiere un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. Además, tenga en cuenta que el <xref:System.Drawing.Drawing2D.PathGradientBrush> se utiliza para rellenar un rectángulo, no una ruta de acceso. El rectángulo es mayor que el trayecto cerrado utilizado para definir el pincel, por lo que parte del rectángulo no lo pinta el pincel. La siguiente ilustración muestra el rectángulo (línea de puntos) y la parte del rectángulo pintado mediante el pincel de degradado de trazado.  
+-   En el ejemplo siguiente se dibuja un degradado de trazado sin un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto en el código. La instancia concreta <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> constructor en el ejemplo recibe una matriz de puntos pero no requiere un <xref:System.Drawing.Drawing2D.GraphicsPath> objeto. Además, tenga en cuenta que el <xref:System.Drawing.Drawing2D.PathGradientBrush> se utiliza para rellenar un rectángulo, no una ruta de acceso. El rectángulo es mayor que el trayecto cerrado utilizado para definir el pincel, por lo que parte del rectángulo no lo pinta el pincel. La siguiente ilustración muestra el rectángulo (línea de puntos) y la parte del rectángulo pintado mediante el pincel de degradado de la ruta de acceso: 
   
-     ![Degradado](./media/gradient4.png "gradient4")  
+     ![Parte de degradado pintada el pincel de degradado de trazado.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
@@ -65,7 +65,7 @@ La <xref:System.Drawing.Drawing2D.PathGradientBrush> clase le permite personaliz
   
      En la siguiente ilustración se muestra el resultado del código siguiente. La elipse de la izquierda es de color aguamarina sólo en el punto central. La elipse de la derecha es de color aguamarina en cualquier lugar dentro de la ruta de acceso interna.  
   
- ![Gradient](./media/focusscales1nogamma.png "focusscales1NoGamma")  
+ ![Efecto de degradado de escalas de foco](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
@@ -78,7 +78,7 @@ La <xref:System.Drawing.Drawing2D.PathGradientBrush> clase le permite personaliz
   
      La siguiente ilustración muestra el triángulo que se rellena con el pincel de degradado de la ruta de acceso personalizada.  
   
-     ![Trayecto degradado](./media/pathgradient4.png "pathgradient4")  
+     ![Triángulo se rellena con el pincel de degradado de la ruta de acceso personalizada.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
@@ -92,18 +92,18 @@ La <xref:System.Drawing.Drawing2D.PathGradientBrush> clase le permite personaliz
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     La siguiente ilustración muestra la elipse con relleno y el punto central del pincel de degradado de trazado.  
+     La siguiente ilustración muestra la elipse con relleno y el punto central del pincel de degradado de la ruta de acceso:  
   
-     ![Trayecto degradado](./media/pathgradient5.png "pathgradient5")  
+     ![Trayecto degradado con relleno elipse y el punto central.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
 -   Puede establecer el punto central de un pincel de degradado de la ruta de acceso a una ubicación fuera de la ruta de acceso que se usó para construir el pincel. En el ejemplo siguiente se sustituye la llamada para establecer el <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> propiedad en el código anterior.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     La siguiente ilustración muestra el resultado con este cambio.  
+     La siguiente ilustración muestra la salida con este cambio:  
   
-     ![Trayecto degradado](./media/pathgradient6.png "pathgradient6")  
+     ![Trayecto degradado con el punto central fuera de la ruta de acceso.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
   
      En la ilustración anterior, los puntos en el extremo derecho de la elipse no son azul puro (aunque son muy similares). Los colores de degradado se colocan como si el relleno alcanza el punto (145, 35) donde el color sería azul puro (0, 0, 255). Pero nunca alcanza el relleno (145, 35) porque se pinta un pincel de degradado de la ruta de acceso solo dentro de su ruta de acceso.  
   
