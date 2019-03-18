@@ -3,12 +3,12 @@ title: Introducción a la transformación de sintaxis (API de Roslyn)
 description: Introducción para recorrer y consultar árboles de sintaxis.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122590"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788445"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introducción a la transformación de sintaxis
 
@@ -152,7 +152,7 @@ Ahora, agregue esta instrucción para enlazar la expresión de inicializador:
 
 Por último, agregue la siguiente instrucción `if` para reemplazar el nombre de tipo existente por la palabra clave `var` si el tipo de la expresión de inicializador coincide con el tipo especificado:
 
-[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Replace the initializer node")]
+[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
 El atributo condicional es necesario porque la declaración puede convertir la expresión de inicializador en una interfaz o clase base. Si se desea, los tipos del lado izquierdo y derecho de la asignación no coinciden. El hecho de quitar el tipo explícito en estos casos también cambiaría la semántica de un programa. `var` se especifica como un identificador en lugar de una palabra clave porque `var` es una palabra clave contextual. Las curiosidades iniciales y finales (espacios en blanco) se transfieren desde el nombre de tipo anterior a la palabra clave `var` para mantener el espacio en blanco vertical y la sangría. Es más fácil utilizar `ReplaceNode` en lugar de `With*` para transformar el <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> porque el nombre de tipo es realmente el descendiente del elemento secundario de la instrucción de declaración.
 

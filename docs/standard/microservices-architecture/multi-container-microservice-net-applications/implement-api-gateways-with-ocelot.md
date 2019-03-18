@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo implementar puertas de enlace de A
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b51341b25fb81d93f85ff33fe6f2225196126ea0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 404f19f55b3be1e4be161543556bb2619f164b9b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679494"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846109"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementación de puertas de enlace de API con Ocelot
 
@@ -176,10 +176,10 @@ namespace OcelotApiGw
             var builder = WebHost.CreateDefaultBuilder(args);
 
             builder.ConfigureServices(s => s.AddSingleton(builder))
-                                                          .ConfigureAppConfiguration(
-                              ic => ic.AddJsonFile(Path.Combine("configuration",
-                                                                "configuration.json")))
-                                                                .UseStartup<Startup>();
+                    .ConfigureAppConfiguration(
+                          ic => ic.AddJsonFile(Path.Combine("configuration",
+                                                            "configuration.json")))
+                    .UseStartup<Startup>();
             var host = builder.Build();
             return host;
         }
@@ -541,19 +541,19 @@ Pero la entrada simplemente redirige las solicitudes HTTP pero no intenta oculta
 
 Tener un nivel Nginx de entrada en Kubernetes delante de las aplicaciones web además de las distintas puertas de enlace de API de Ocelot o BFF es la arquitectura ideal, como se muestra en el diagrama siguiente.
 
- ![Una entrada de Kubernetes actúa como un proxy inverso para todo el tráfico a la aplicación, incluidas las aplicaciones web, que normalmente están fuera del ámbito de la puerta de enlace de la API.](./media/image41.png)
+![Una entrada de Kubernetes actúa como un proxy inverso para todo el tráfico a la aplicación, incluidas las aplicaciones web, que normalmente están fuera del ámbito de la puerta de enlace de la API.](./media/image41.png)
 
 **Figura 6-41**. El nivel de entrada en eShopOnContainers cuando se implementa en Kubernetes
 
 Al implementar eShopOnContainers en Kubernetes, solo expone algunos servicios o puntos de conexión a través de la _entrada_, básicamente la lista siguiente de postfijos en las direcciones URL:
 
--   `/` para la aplicación web SPA cliente
--   `/webmvc` para la aplicación web MVC cliente
--   `/webstatus` para la aplicación web cliente en la que se muestra el estado o las comprobaciones de estado
--   `/webshoppingapigw` para el BFF web y los procesos empresariales de compra
--   `/webmarketingapigw` para el BFF web y los procesos empresariales de marketing
--   `/mobileshoppingapigw` para el BFF para dispositivos móviles y los procesos empresariales de compra
--   `/mobilemarketingapigw` para el BFF para dispositivos móviles y los procesos empresariales de marketing
+- `/` para la aplicación web SPA cliente
+- `/webmvc` para la aplicación web MVC cliente
+- `/webstatus` para la aplicación web cliente en la que se muestra el estado o las comprobaciones de estado
+- `/webshoppingapigw` para el BFF web y los procesos empresariales de compra
+- `/webmarketingapigw` para el BFF web y los procesos empresariales de marketing
+- `/mobileshoppingapigw` para el BFF para dispositivos móviles y los procesos empresariales de compra
+- `/mobilemarketingapigw` para el BFF para dispositivos móviles y los procesos empresariales de marketing
 
 Al implementar en Kubernetes, cada puerta de enlace de API Ocelot usa un archivo "configuration.json" diferente para cada _pod_ en el que se ejecutan las puertas de enlace de API. Dichos archivos "configuration.json" se proporcionan mediante el montaje (originalmente con el script deploy.ps1) de un volumen creado en función de un _mapa de configuración_ de Kubernetes denominado "ocelot". Cada contenedor monta su archivo de configuración relacionado en la carpeta `/app/configuration` del contenedor.
 

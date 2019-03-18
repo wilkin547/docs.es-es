@@ -3,12 +3,12 @@ title: 'Clases y objetos en C#: un paseo por el lenguaje C#'
 description: ¿Nuevo en C#? Lea esta información general sobre clases, objetos y herencia.
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 51661a0728e9a68c0c646f493b648120897f95fd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147559"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846147"
 ---
 # <a name="classes-and-objects"></a>Clases y objetos
 
@@ -123,7 +123,7 @@ La *signatura* de un método debe ser única en la clase en la que se declara el
 
 Los parámetros se usan para pasar valores o referencias a variables a métodos. Los parámetros de un método obtienen sus valores reales de los *argumentos* que se especifican cuando se invoca el método. Hay cuatro tipos de parámetros: parámetros de valor, parámetros de referencia, parámetros de salida y matrices de parámetros.
 
-Un *parámetro de valor* se usa para pasar argumentos de entrada. Un parámetro de valor corresponde a una variable local que obtiene su valor inicial del argumento que se ha pasado para el parámetro. Las modificaciones en un parámetro de valor no afectan el argumento que se pasa para el parámetro. 
+Un *parámetro de valor* se usa para pasar argumentos de entrada. Un parámetro de valor corresponde a una variable local que obtiene su valor inicial del argumento que se ha pasado para el parámetro. Las modificaciones en un parámetro de valor no afectan el argumento que se pasa para el parámetro.
 
 Los parámetros de valor pueden ser opcionales; se especifica un valor predeterminado para que se puedan omitir los argumentos correspondientes.
 
@@ -293,6 +293,6 @@ El recolector de elementos no utilizados tiene una amplia libertad para decidir 
 
 La instrucción `using` proporciona un mejor enfoque para la destrucción de objetos.
 
->[!div class="step-by-step"]
->[Anterior](statements.md)
->[Siguiente](structs.md)
+> [!div class="step-by-step"]
+> [Anterior](statements.md)
+> [Siguiente](structs.md)

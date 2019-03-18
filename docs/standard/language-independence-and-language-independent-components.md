@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836557"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846472"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 .NET Framework. es independiente del lenguaje. Esto significa que, como desarrollador, puede utilizar uno de los muchos lenguajes que tienen como destino .NET Framework; por ejemplo, C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL y Windows PowerShell. Puede acceder a los tipos y miembros de las bibliotecas de clases desarrolladas para .NET Framework sin necesidad de conocer el lenguaje en el que se escribieron originalmente y sin necesidad de seguir ninguna de las convenciones del lenguaje original. Si es un desarrollador de componentes, podrá acceder a su componente desde cualquier aplicación de .NET Framework, con independencia del lenguaje.  
@@ -343,7 +343,7 @@ ms.locfileid: "56836557"
 ### <a name="member-accessibility"></a>Accesibilidad de miembros  
  Al reemplazar un miembro heredado no se puede cambiar la accesibilidad de dicho miembro. Por ejemplo, un método público de una clase base no se puede reemplazar por un método privado de una clase derivada. Existe una excepción: un miembro `protected internal` (en C#) o `Protected Friend` (en Visual Basic) de un ensamblado que se haya reemplazado por un tipo de un ensamblado diferente. En ese caso, la accesibilidad del reemplazo es `Protected`.  
   
- En el ejemplo siguiente se muestra el error que se genera cuando el atributo <xref:System.CLSCompliantAttribute> se establece en `true` y `Person`, que es una clase derivada de `Animal`, intenta cambiar la accesibilidad de la propiedad `Species` de pública a privada. El ejemplo se compila correctamente si su accesibilidad se cambia a pública.  
+ En el ejemplo siguiente se muestra el error que se genera cuando el atributo <xref:System.CLSCompliantAttribute> se establece en `true` y `Human`, que es una clase derivada de `Animal`, intenta cambiar la accesibilidad de la propiedad `Species` de pública a privada. El ejemplo se compila correctamente si su accesibilidad se cambia a pública.  
   
  [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
  [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  

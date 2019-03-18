@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e29c0cc85f0ec6ccd3f428d64121f53b91ae9a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6911ff96ca847f554e9b615aba6ab83a212efee
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713855"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125998"
 ---
 # <a name="throw-c-reference"></a>throw (Referencia de C#)
 
@@ -60,7 +60,7 @@ A partir de C# 7.0, se puede usar `throw` como una expresión y como una instruc
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]  
 
-- Un método o [lambda](../../lambda-expressions.md) con forma de expresión. En el ejemplo siguiente se muestra un método con forma de expresión que produce una excepción <xref:System.InvalidCastException> porque no se admite una conversión a un valor <xref:System.DateTime>.
+- Un método o [lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) con forma de expresión. En el ejemplo siguiente se muestra un método con forma de expresión que produce una excepción <xref:System.InvalidCastException> porque no se admite una conversión a un valor <xref:System.DateTime>.
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]  
 

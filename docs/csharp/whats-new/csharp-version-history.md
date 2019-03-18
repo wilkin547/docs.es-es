@@ -3,12 +3,12 @@ title: Historia de C# - Guía de C#
 description: ¿Qué aspecto tenía el lenguaje en sus primeras versiones y cómo ha evolucionado desde entonces?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: c750bf8e1ae6dd94c11dc887921c5c365cc04b10
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981938"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126154"
 ---
 # <a name="the-history-of-c"></a>Historia de C\#
 
@@ -84,7 +84,7 @@ La versión 3.0 de C# llegó a finales de 2007, junto con Visual Studio 2008, au
 - [Propiedades implementadas automáticamente](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Anonymous Types](../programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#])
 - [Expresiones de consulta](../linq/query-expression-basics.md)
-- [Expresiones lambda](../lambda-expressions.md)
+- [Expresiones lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Árboles de expresión](../expression-trees.md)
 - [Métodos de extensión](../programming-guide/classes-and-structs/extension-methods.md)
 - [Variables locales con asignación implícita de tipos](../language-reference/keywords/var.md)

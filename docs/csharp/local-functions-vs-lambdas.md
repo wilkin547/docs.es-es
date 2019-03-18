@@ -3,16 +3,16 @@ title: Funciones locales frente a expresiones lambda
 description: Obtenga información sobre por qué las funciones locales pueden ser una opción mejor que las expresiones lambda.
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 2b98ebeeb3866779715fa629c2518f739e196ae8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 17ad1e8782adbf9e0f892d72849e58ef9c5ddce1
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43740437"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125777"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Funciones locales frente a expresiones lambda
 
-A primera vista, las [funciones locales](programming-guide/classes-and-structs/local-functions.md) y las [expresiones lambda](lambda-expressions.md) son muy similares. En muchos casos, la elección entre usar expresiones lambda y funciones locales es una cuestión de estilo y de preferencia personal, aunque hay diferencias que debe tener en cuenta acerca de dónde puede usar una u otra.
+A primera vista, las [funciones locales](programming-guide/classes-and-structs/local-functions.md) y las [expresiones lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md) son muy similares. En muchos casos, la elección entre usar expresiones lambda y funciones locales es una cuestión de estilo y de preferencia personal, aunque hay diferencias que debe tener en cuenta acerca de dónde puede usar una u otra.
 
 Vamos a examinar las diferencias entre las implementaciones de la función local y la expresión lambda del algoritmo factorial. Primero la versión que usa una función local:
 

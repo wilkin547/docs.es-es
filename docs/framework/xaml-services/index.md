@@ -2,16 +2,10 @@
 title: Servicios XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
-- XAML [XAML Services], System.Xaml concepts
-- XAML Services in WPF [XAML Services]
-- System.Xaml [XAML Services], conceptual documentation
+  - 'XAML [XAML Services], System.Xaml concepts'
+  - 'XAML Services in WPF [XAML Services]'
+  - 'System.Xaml [XAML Services], conceptual documentation'
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 373478e8c21fca66cbfbf7a58fc7d53f65ce5d0b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617388"
 ---
 # <a name="xaml-services"></a>Servicios XAML
 En este tema se describe las funcionalidades de un conjunto de tecnologías servicios conocidos como XAML de .NET Framework. La mayoría de los servicios y las API descritas se encuentran en el ensamblado System.Xaml, que es un ensamblado que se introdujo con la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] conjunto de ensamblados de .NET core. Los servicios incluyen lectores y escritores, clases de esquema y la compatibilidad con el esquema, fábricas, atribución de clases, compatibilidad intrínseca con el lenguaje XAML y otras características del lenguaje XAML.  
@@ -33,14 +27,14 @@ En este tema se describe las funcionalidades de un conjunto de tecnologías serv
   
 -   Mediante el `Lookup` o `Invoker` técnicas para influir en el XAML tipo de sistema y cómo se evalúa los respaldos de tipo.  
   
- Si desea obtener material introductorio en XAML como lenguaje, podría intentar [información general sobre XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Ese tema discute XAML para una audiencia que es una novedad tanto a [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] y también al uso de marcado XAML y las características del lenguaje XAML. Otro documento útil es el material de introducción de la [especificación del lenguaje XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Si desea obtener material introductorio en XAML como lenguaje, podría intentar [información general sobre XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md). Ese tema discute XAML para una audiencia que es una novedad tanto a [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] y también al uso de marcado XAML y las características del lenguaje XAML. Otro documento útil es el material de introducción de la [especificación del lenguaje XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>Servicios XAML de .NET framework y System.Xaml en la arquitectura de .NET  
  En versiones anteriores de Microsoft .NET Framework, la compatibilidad con los marcos de trabajo que se basan en Microsoft .NET Framework la implementó características del lenguaje XAML ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation y Windows Communication Foundation (WCF)) y, por tanto, varían en su comportamiento y la API usa dependiendo de qué marco concreto estaba usando. Esto incluye el XAML analizador y su objeto de gráfico de mecanismo de creación, intrínsecos del lenguaje XAML, compatibilidad con la serialización y así sucesivamente.  
   
  En [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], los servicios XAML de .NET Framework y el ensamblado System.Xaml definen gran parte de lo necesario para admitir las características del lenguaje XAML. Esto incluye las clases base para los lectores XAML y escritores XAML. La característica más importante que se agregan a los servicios XAML de .NET Framework que no estaba presente en cualquiera de las implementaciones de XAML específicas del marco es una representación de sistema de tipos para XAML. La representación del tipo sistema presenta XAML de una manera orientada a objetos que se centra en las capacidades XAML sin tener dependencias en las capacidades específicas de marcos.  
   
- El sistema de tipos XAML no está limitado por el formulario de marcado o detalles de tiempo de ejecución del origen XAML; tampoco está limitado por cualquier sistema de tipos específicos de seguridad. El sistema de tipos XAML incluye las representaciones de objeto para los tipos, miembros, contextos de esquema XAML, los conceptos de nivel de XML y otros conceptos del lenguaje XAML o intrínsecos XAML. Usar o ampliar el sistema de tipos XAML hace posible derivar clases como lectores XAML y escritores XAML y extender la funcionalidad de representaciones XAML en las características específicas habilitadas por un marco de trabajo, una tecnología o una aplicación que consume o emite XAML. El concepto de un contexto de esquema XAML permite operaciones de escritura de gráfico de objeto práctico de la combinación de una implementación de sistema de escritura de objetos XAML, sistema de tipos de respaldo de una tecnología como comunica a través de la información de ensamblado en el contexto y el nodo XAML código fuente. Para obtener más información sobre el concepto de esquema XAML. consulte [el contexto de esquema XAML predeterminado y contexto de esquema XAML de WPF](../../../docs/framework/xaml-services/default-xaml-schema-context-and-wpf-xaml-schema-context.md).  
+ El sistema de tipos XAML no está limitado por el formulario de marcado o detalles de tiempo de ejecución del origen XAML; tampoco está limitado por cualquier sistema de tipos específicos de seguridad. El sistema de tipos XAML incluye las representaciones de objeto para los tipos, miembros, contextos de esquema XAML, los conceptos de nivel de XML y otros conceptos del lenguaje XAML o intrínsecos XAML. Usar o ampliar el sistema de tipos XAML hace posible derivar clases como lectores XAML y escritores XAML y extender la funcionalidad de representaciones XAML en las características específicas habilitadas por un marco de trabajo, una tecnología o una aplicación que consume o emite XAML. El concepto de un contexto de esquema XAML permite operaciones de escritura de gráfico de objeto práctico de la combinación de una implementación de sistema de escritura de objetos XAML, sistema de tipos de respaldo de una tecnología como comunica a través de la información de ensamblado en el contexto y el nodo XAML código fuente. Para obtener más información sobre el concepto de esquema XAML. consulte [el contexto de esquema XAML predeterminado y contexto de esquema XAML de WPF](default-xaml-schema-context-and-wpf-xaml-schema-context.md).  
   
 ## <a name="xaml-node-streams-xaml-readers-and-xaml-writers"></a>Secuencias de nodo XAML, los lectores XAML y escritores XAML  
  Para comprender el papel que desempeña servicios XAML de .NET Framework en la relación entre el lenguaje XAML y las tecnologías concretas que usan XAML como lenguaje, es útil comprender el concepto de un flujo de nodo XAML y cómo ese concepto da forma a la API y terminología. El flujo de nodo XAML es un conceptual intermedio entre una representación del lenguaje XAML y el gráfico de objetos que representa el XAML o que define.  
@@ -79,7 +73,7 @@ En este tema se describe las funcionalidades de un conjunto de tecnologías serv
   
 -   Llame a <xref:System.Xaml.XamlXmlWriter.Flush%2A> para obtener el resultado final.  
   
- Para obtener más información sobre los conceptos de flujo de nodo XAML, vea [Understanding XAML Node Stream Structures y conceptos](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md).  
+ Para obtener más información sobre los conceptos de flujo de nodo XAML, vea [Understanding XAML Node Stream Structures y conceptos](understanding-xaml-node-stream-structures-and-concepts.md).  
   
 ### <a name="the-xamlservices-class"></a>La clase XamlServices  
  No siempre es necesario tratar con un flujo de nodo XAML. Si desea que una ruta de acceso de carga básico o guardar la ruta de acceso básico, puede usar las API en el <xref:System.Xaml.XamlServices> clase.  
@@ -90,7 +84,7 @@ En este tema se describe las funcionalidades de un conjunto de tecnologías serv
   
 -   <xref:System.Xaml.XamlServices.Transform%2A> Convierte XAML vinculando una ruta de acceso de carga y una operación de guardar ruta de acceso como una sola operación. Un contexto de esquema o el sistema de tipos de respaldo diferentes podría usarse para <xref:System.Xaml.XamlReader> y <xref:System.Xaml.XamlWriter>, que es lo que afecta a cómo se transforma el XAML resultante.  
   
- Para obtener más información sobre cómo usar <xref:System.Xaml.XamlServices>, consulte [la clase XAMLServices y básicos de XAML de lectura o escritura](../../../docs/framework/xaml-services/xamlservices-class-and-basic-xaml-reading-or-writing.md).  
+ Para obtener más información sobre cómo usar <xref:System.Xaml.XamlServices>, consulte [la clase XAMLServices y básicos de XAML de lectura o escritura](xamlservices-class-and-basic-xaml-reading-or-writing.md).  
   
 ## <a name="xaml-type-system"></a>Sistema de tipos XAML  
  El sistema de tipos XAML proporciona las API que son necesarios para trabajar con un determinado nodo individual de un flujo de nodo XAML.  
@@ -104,4 +98,4 @@ En este tema se describe las funcionalidades de un conjunto de tecnologías serv
  El comportamiento predeterminado del sistema de tipos XAML tal como se implementa servicios XAML de .NET Framework se basa en el common language runtime (CLR) y el análisis estático de tipos CLR en ensamblados mediante reflexión. Por lo tanto, para un tipo específico de CLR, la implementación predeterminada del sistema de tipos XAML puede exponer el esquema XAML de ese tipo y sus miembros y notificarlo en términos del sistema de tipos XAML. En el sistema de tipos XAML de forma predeterminada, el concepto de capacidad de asignación de tipos se asigna a la herencia de CLR y los conceptos de instancias, los tipos de valor y así sucesivamente también se asignan a los comportamientos de compatibilidad y las características de CLR.  
   
 ## <a name="reference-for-xaml-language-features"></a>Referencia de características del lenguaje XAML  
- Para admitir XAML, los servicios XAML de .NET Framework proporciona una implementación específica de los conceptos del lenguaje XAML definido para el espacio de nombres XAML de lenguaje XAML. Estos se documentan como páginas de referencia específica. Las características del lenguaje se documentan desde la perspectiva de cómo se comportan estas características del lenguaje cuando se procesan mediante un lector XAML o sistema de escritura XAML que se define por los servicios XAML de .NET Framework. Para obtener más información, consulta [XAML Namespace (x:) Language Features](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).
+ Para admitir XAML, los servicios XAML de .NET Framework proporciona una implementación específica de los conceptos del lenguaje XAML definido para el espacio de nombres XAML de lenguaje XAML. Estos se documentan como páginas de referencia específica. Las características del lenguaje se documentan desde la perspectiva de cómo se comportan estas características del lenguaje cuando se procesan mediante un lector XAML o sistema de escritura XAML que se define por los servicios XAML de .NET Framework. Para obtener más información, consulte [XAML Namespace (x:) Características del lenguaje](xaml-namespace-x-language-features.md).

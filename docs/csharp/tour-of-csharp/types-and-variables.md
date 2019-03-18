@@ -3,12 +3,12 @@ title: 'Variables y tipos de C#: un paseo por el lenguaje C#'
 description: Obtenga información sobre cómo definir tipos y declarar variables de C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 6880fa51ca30dadac901d2b86de189b59658d164
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 5159d75c601bbcb8248a11993a4aaf39299734f0
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212006"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846615"
 ---
 # <a name="types-and-variables"></a>Tipos y variables
 
