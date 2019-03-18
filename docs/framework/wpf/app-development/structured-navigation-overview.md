@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0a10a3f5fd07c7e3ceb7e08802f2c821b7d9a7f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7c8c1697ff18e919711e84e724b5b8698dfe088e
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369752"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125608"
 ---
 # <a name="structured-navigation-overview"></a>Información general sobre la navegación estructurada
 Contenido que puede hospedarse en una [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], un <xref:System.Windows.Controls.Frame>, o un <xref:System.Windows.Navigation.NavigationWindow> se compone de páginas que se pueden identificar por módulo [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] y navegar mediante hipervínculos. La estructura de páginas y las formas en que se puede navegar por ellas, tal como se define mediante hipervínculos, se conoce como topología de navegación. Esta topología se adapta a diversos tipos de aplicaciones, especialmente a aquéllas que navegan por documentos. Con estas aplicaciones, el usuario puede navegar de una página a otra sin necesidad de saber nada sobre la otra.  
@@ -37,9 +37,9 @@ Contenido que puede hospedarse en una [!INCLUDE[TLA#tla_xbap](../../../../includ
   
 -   Cuando se devuelve la página que llama a la página llamada, la página llamada se quita del historial de navegación para aislar cada instancia de una página llamada de otra.  
   
- En la ilustración siguiente se muestran estos comportamientos.  
+ En la ilustración siguiente se muestran estos comportamientos:  
   
- ![Flujo entre la página que llama y la página llamada](./media/structurednavigationoverviewfigure1.png "StructuredNavigationOverviewFigure1")  
+ ![Captura de pantalla muestra el flujo entre página que llama y página llamada.](./media/structured-navigation-overview/flow-between-calling-page-called-page.png)  
   
  Puede implementar estos comportamientos mediante un <xref:System.Windows.Navigation.PageFunction%601> como la página llamada.  
   

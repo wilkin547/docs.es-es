@@ -2,12 +2,12 @@
 title: La carpeta de destino es un archivo
 ms.date: 07/20/2015
 ms.assetid: c5e40bcb-2414-4484-b2b9-a9c391ad0029
-ms.openlocfilehash: eff48eadf57e749c768f88e11f5a36b79912f558
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 3189b6284939fabaaff923b80e6e767b89df50b2
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738609"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58035091"
 ---
 # <a name="target-folder-is-a-file"></a>La carpeta de destino es un archivo
 Está especificando un archivo mientras intenta realizar una acción relacionada con una carpeta.  
@@ -17,6 +17,7 @@ Está especificando un archivo mientras intenta realizar una acción relacionada
 -   Compruebe la ruta de acceso que está facilitando para asegurarse de que está especificando una carpeta en lugar de un archivo.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Cómo: Analizar rutas de acceso a archivos](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
 - [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [Creación, eliminación y movimiento de archivos y directorios](../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
