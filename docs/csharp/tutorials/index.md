@@ -43,7 +43,11 @@ Todos los tutoriales de introducción posteriores a la lección Hola mundo se en
 
 ## <a name="explore-new-features-in-c"></a>Explorar las nuevas características de C\#
 
-Pruebe las nuevas características en [C# 6](../whats-new/csharp-6.md) en esta [exploración interactiva](exploration/csharp-6.yml).
+* [Prueba de las características nuevas en C# 6 de manera interactiva](exploration/csharp-6.yml): explore las características agregadas en [C# 6](../whats-new/csharp-6.md) de manera interactiva en el explorador.
+* [Interpolación de cadenas](string-interpolation.md): muestra cómo usar la interpolación de cadenas para crear cadenas con formato en C#.
+* [Tipos de referencia que aceptan valores NULL](nullable-reference-types.md): se muestra cómo usar los tipos de referencia que aceptan valores NULL para expresar la intención de referencias nulas.
+* [Actualización de un proyecto para usar tipos de referencia nula](upgrade-to-nullable-references.md): demuestra técnicas para actualizar un proyecto existente y usar los tipos de referencia nula.
+* [Ampliación de las funcionalidades de datos mediante la coincidencia de patrones](pattern-matching.md): demuestra cómo usar la coincidencia de patrones para ampliar los tipos más allá de sus características principales.
 
 ## <a name="general-tutorials"></a>Tutoriales generales
 
@@ -53,6 +57,4 @@ Los siguientes tutoriales le permiten crear programas de C# mediante [.NET Core]
 * [Cliente de REST](console-webapiclient.md): muestra las comunicaciones web, la serialización de JSON y las características orientadas a objetos del lenguaje C#.
 * [Inheritance in C# and .NET](inheritance.md) (Herencia en C# y .NET): muestra la herencia en C#, incluido el uso de la herencia para definir clases base, clases base abstractas y clases derivadas.
 * [Working with LINQ](working-with-linq.md) (Trabajar con LINQ): muestra muchas de las características de LINQ y los elementos del lenguaje compatibles.
-* [Interpolación de cadenas](string-interpolation.md): muestra cómo usar la interpolación de cadenas para crear cadenas con formato en C#.
 * [Uso de atributos](attributes.md): muestra cómo crear y usar atributos en C#.
-* [Tipos de referencia que aceptan valores NULL](nullable-reference-types.md): se muestra cómo usar los tipos de referencia que aceptan valores NULL para expresar la intención de referencias nulas.

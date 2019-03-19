@@ -98,9 +98,9 @@ Las siguientes características resumen lo que hace que el ejemplo anterior sea 
  Para obtener más información sobre la asincronía en versiones anteriores de .NET Framework, vea [TPL y la programación asincrónica tradicional de .NET Framework](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md).  
   
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> Lo que ocurre en un método asincrónico  
- Lo más importante de entender en la programación asincrónica es cómo el flujo de control pasa de un método a otro. El diagrama siguiente le guía por el proceso.  
+ Lo más importante de entender en la programación asincrónica es cómo el flujo de control pasa de un método a otro. El diagrama siguiente lo guía en el proceso:  
   
- ![Seguimiento de un programa asincrónico](../../../../csharp/programming-guide/concepts/async/media/navigationtrace.png "NavigationTrace")  
+ ![Diagrama que muestra cómo hacer seguimiento de un programa asincrónico.](./media/index/navigation-trace-async-program.png)  
   
  Los números en el diagrama se corresponden con los pasos siguientes.  
   
