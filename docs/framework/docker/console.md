@@ -4,12 +4,12 @@ description: Aprenda a ejecutar una aplicación de consola existente de .NET Fra
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 379e0814d7d254935ef23a483d5e0f9163babcd1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145285"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126089"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Ejecución de aplicaciones de consola en contenedores de Windows
 
@@ -50,7 +50,7 @@ Los contenedores de Windows son compatibles con [Actualización de aniversario d
 
 Para admitir los contenedores de Windows, debe tener Docker para Windows, versión 1.12 Beta 26 o superior. De forma predeterminada, Docker habilita los contenedores basados en Linux. Cambie a los contenedores de Windows al hacer clic con el botón derecho en el icono de Docker de la bandeja del sistema y seleccionar la opción para **cambiar a contenedores de Windows**. Docker ejecutará el proceso de cambio. Es posible que sea necesario reiniciar.
 
-![Contenedores de Windows](./media/console/SwitchContainer.png)
+![Captura de pantalla de la opción de menú del contenedor de Windows.](./media/console/windows-container-option.png)
 
 ## <a name="building-the-application"></a>Compilación de la aplicación
 Normalmente las aplicaciones de consola se distribuyen a través de un instalador, un FTP o una implementación de recurso compartido de archivos. Al implementar en un contenedor, los activos tienen que compilarse y colocarse en una ubicación que se pueda usar una vez creada la imagen de Docker.

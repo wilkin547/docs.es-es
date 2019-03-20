@@ -2,12 +2,12 @@
 title: Procedimiento para buscar elementos relacionados (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 47609f9bf047000585c56387acf648bcfa6ee5b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0463be7cabca088a1a5a200b9e8648914f16e7f5
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617413"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57843344"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Procedimiento para buscar elementos relacionados (XPath-LINQ to XML) (C#)
 Este tema muestra cómo obtener un elemento seleccionando en un atributo al que hace referencia el valor de otro elemento.  
@@ -19,7 +19,7 @@ Este tema muestra cómo obtener un elemento seleccionando en un atributo al que 
 ## <a name="example"></a>Ejemplo  
  Este ejemplo encuentra el duodécimo (12) elemento `Order`, y después encuentra el cliente de dicho pedido.  
   
- Tenga en cuenta que la indización en una lista de .Net se basa en "cero". Sin embargo, la indización en una colección de nodos de un predicado XPath se basa en "uno". Este ejemplo refleja esta diferencia.  
+ Tenga en cuenta que la indización en una lista de .NET se basa en "cero". Sin embargo, la indización en una colección de nodos de un predicado XPath se basa en "uno". Este ejemplo refleja esta diferencia.  
   
  Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   

@@ -3,12 +3,12 @@ title: System.Delegate y la palabra clave `delegate`
 description: Obtenga información sobre las clases de .NET Framework que admiten delegados y sobre cómo se asignan a la palabra clave "delegate".
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827305"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126180"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate y la palabra clave `delegate`
 
@@ -67,7 +67,7 @@ int result = comparator(left, right);
 En la línea anterior, el código *invoca* al método asociado al delegado.
 La variable se trata como un nombre de método y se invoca mediante la sintaxis de llamada de método normal.
 
-Esta línea de código realiza una suposición arriesgada, ya que no hay ninguna garantía de que se haya agregado un destino al delegado. Si no se ha asociado ningún destino, la línea anterior haría que se produjese una `NullReferenceException`. Las expresiones que se usan para resolver este problema son más complicadas que una simple comprobación de null y se tratan más adelante en esta [serie](delegates-patterns.md).
+Esa línea de código realiza una suposición no segura: No hay ninguna garantía de que se haya agregado un destino en el delegado. Si no se ha asociado ningún destino, la línea anterior haría que se produjese una `NullReferenceException`. Las expresiones que se usan para resolver este problema son más complicadas que una simple comprobación de null y se tratan más adelante en esta [serie](delegates-patterns.md).
 
 ## <a name="assigning-adding-and-removing-invocation-targets"></a>Asignar, agregar y quitar destinos de invocación
 
@@ -99,7 +99,7 @@ Comparison<string> comparer = CompareLength;
 phrases.Sort(comparer);
 ```
 
-En los casos en los que el método que se usa como destino del delegado es un método pequeño, es habitual usar la sintaxis de [expresión lambda](lambda-expressions.md) para realizar la asignación:
+En los casos en los que el método que se usa como destino del delegado es un método pequeño, es habitual usar la sintaxis de [expresión lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md) para realizar la asignación:
 
 ```csharp
 Comparison<string> comparer = (left, right) => left.Length.CompareTo(right.Length);

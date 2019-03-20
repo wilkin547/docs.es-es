@@ -3,12 +3,12 @@ title: Iterators
 description: Obtenga información sobre cómo usar iteradores de C# integrados y cómo crear sus propios métodos de iterador personalizados.
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: d9139f565fb1e426cc1b8cef530187877bdde0e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37ed45fc563eacf0c6bf412dcfb28dbc6db2bb17
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218350"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126050"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -191,7 +191,7 @@ while (enumerator.MoveNext())
 }
 ```
 
-Se modificó porque el comportamiento anterior podía provocar errores leves y difíciles de diagnosticar en las expresiones lambda. Vea la sección sobre [expresiones lambda](lambda-expressions.md) para obtener más información. 
+Se modificó porque el comportamiento anterior podía provocar errores leves y difíciles de diagnosticar en las expresiones lambda. Para más información sobre las expresiones lambda, consulte [Expresiones lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md).
 
 El código exacto generado por el compilador es algo más complicado y controla las situaciones en las que el objeto devuelto por `GetEnumerator()` implementa la interfaz `IDisposable`. La expansión completa genera código más parecido al siguiente:
 

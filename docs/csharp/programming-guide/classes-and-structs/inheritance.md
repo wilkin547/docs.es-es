@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ad7253fb9efc891e1f0fdea118e1fe7bde6a857
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202358"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125920"
 ---
 # <a name="inheritance-c-programming-guide"></a>Herencia (Guía de programación de C#)
 
@@ -30,8 +30,7 @@ La herencia, junto con la encapsulación y el polimorfismo, es una de las tres c
   
  En la ilustración siguiente se muestra una clase `WorkItem` que representa un elemento de trabajo de un proceso empresarial. Como con todas las clases, se deriva de <xref:System.Object?displayProperty=nameWithType> y hereda todos sus métodos. `WorkItem` agrega cinco miembros propios. Entre estos se incluye un constructor, dado que los constructores no se heredan. La clase `ChangeRequest` hereda de `WorkItem` y representa un tipo concreto de elemento de trabajo. `ChangeRequest` agrega dos miembros más a los miembros que hereda de `WorkItem` y de <xref:System.Object>. Debe agregar su propio constructor y además agrega `originalItemID`. La propiedad `originalItemID` permite que la instancia `ChangeRequest` se asocie con el `WorkItem` original al que se aplica la solicitud de cambio.  
   
- ![Herencia de clases](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
-Herencia de clases  
+ ![Diagrama que muestra la herencia de clases](./media/inheritance/class-inheritance-diagram.png)  
   
  En el ejemplo siguiente se muestra cómo se expresan en C# las relaciones de clase de la ilustración anterior. En el ejemplo también se muestra cómo `WorkItem` reemplaza el método virtual <xref:System.Object.ToString%2A?displayProperty=nameWithType> y cómo la clase `ChangeRequest` hereda la implementación `WorkItem` del método.  
   

@@ -1,6 +1,6 @@
 ---
 title: Modelo asincrónico basado en tareas (TAP)
-ms.date: 03/30/2017
+ms.date: 02/26/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe69943a6f87bbbb7f29d1e4d6d30c26709725d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9dd8e49ad3270fe62b65469470485fcb169a4e7
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579020"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788549"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Modelo asincrónico basado en tareas (TAP)
 El patrón asincrónico basado en tareas (TAP) se basa en los tipos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> del espacio de nombres <xref:System.Threading.Tasks?displayProperty=nameWithType>, que se usan para representar operaciones asincrónicas arbitrarias. TAP es el patrón asincrónico de diseño recomendado para los nuevos desarrollos.  
   
-## <a name="naming-parameters-and-return-types"></a>Nombres, parámetros y tipos de valores devueltos  
- TAP usa un solo método para representar el inicio y la finalización de una operación asincrónica. Esto contrasta con el modelo de programación asincrónica (APM o `IAsyncResult`), que necesita los métodos `Begin` y `End`, y también con el patrón asincrónico basado en eventos (EAP), que necesita un método que tenga el sufijo `Async` y también necesita uno o más eventos, tipos de delegado de controlador de eventos y tipos derivados de `EventArg`. Los métodos asincrónicos de TAP incluyen el sufijo `Async` después del nombre de la operación; por ejemplo, `GetAsync` para una operación `Get`. Si va a agregar un método de TAP a una clase que ya contiene ese nombre de método con el sufijo `Async`, use el sufijo `TaskAsync` en su lugar. Por ejemplo, si la clase ya tiene un método `GetAsync`, use el nombre `GetTaskAsync`.  
+## <a name="naming-parameters-and-return-types"></a>Nombres, parámetros y tipos de valores devueltos
+
+TAP usa un solo método para representar el inicio y la finalización de una operación asincrónica. Esto contrasta con el modelo de programación asincrónico (APM o `IAsyncResult`) y con el modelo asincrónico basado en eventos (EAP). APM requiere los métodos `Begin` y `End`. EPA requiere un método con el sufijo `Async` y también requiere uno o más eventos, tipos de delegado de controlador de eventos y tipos derivados de `EventArg`. Los métodos asincrónicos en TAP incluyen el sufijo `Async` después del nombre de la operación para los métodos que devuelven tipos que admiten await, como <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> y <xref:System.Threading.Tasks.ValueTask%601>. Por ejemplo, una operación `Get` asincrónica que devuelve un `Task<String>` se puede denominar `GetAsync`. Si va a agregar un método de TAP a una clase que ya contiene un nombre de método EAP con el sufijo `Async`, use el sufijo `TaskAsync` en su lugar. Por ejemplo, si la clase ya tiene un método `GetAsync`, use el nombre `GetTaskAsync`. Si un método inicia una operación asincrónica pero no devuelve un tipo que admite await, su nombre debe comenzar por `Begin`, `Start` u otro verbo que sugiera que este método no devuelve ni genera el resultado de la operación.  
   
  Un método de TAP devuelve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>, en función de si el método sincrónico correspondiente devuelve void o un tipo `TResult`.  
   
- Los parámetros de un método de TAP deben coincidir con los parámetros de su homólogo sincrónico y se deben proporcionar en el mismo orden.  Sin embargo, los parámetros `out` y `ref` están exentos de esta regla y se deben evitar completamente. En su lugar, los datos que se hubieran devuelto con un parámetro `out` o `ref` se deben devolver como parte del tipo `TResult` devuelto por <xref:System.Threading.Tasks.Task%601> y deben usar una tupla o una estructura de datos personalizada para incluir varios valores. 
+ Los parámetros de un método de TAP deben coincidir con los parámetros de su homólogo sincrónico y se deben proporcionar en el mismo orden.  Sin embargo, los parámetros `out` y `ref` están exentos de esta regla y se deben evitar completamente. En su lugar, los datos que se hubieran devuelto con un parámetro `out` o `ref` se deben devolver como parte del tipo `TResult` devuelto por <xref:System.Threading.Tasks.Task%601> y deben usar una tupla o una estructura de datos personalizada para incluir varios valores. También debería considerar agregar un parámetro <xref:System.Threading.CancellationToken> incluso si el homólogo sincrónico del método TAP no ofrece ninguno.
  
  Los métodos que están dedicados exclusivamente a la creación, manipulación o combinación de tareas (donde el intento asincrónico del método está claro en el nombre del método o en el nombre del tipo al que el método pertenece) no necesitan seguir este modelo de nomenclatura; esos métodos se conocen a menudo como *combinadores* (también denominados elementos de combinación). Los ejemplos de combinadores incluyen <xref:System.Threading.Tasks.Task.WhenAll%2A> y <xref:System.Threading.Tasks.Task.WhenAny%2A>, y se describen en la sección que describe los combinadores integrados basados en tareas titulada [Usar los combinadores integrados basados en tareas](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators) del artículo [Utilizar el modelo asincrónico basado en tareas](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).  
   
  Para obtener ejemplos de cómo la sintaxis de TAP difiere de la sintaxis empleada en patrones heredados de programación asincrónica como el modelo de programación asincrónica (APM) y el patrón asincrónico basado en eventos (EAP), vea [Modelos para la programación asincrónica](../../../docs/standard/asynchronous-programming-patterns/index.md).  
   
-## <a name="initiating-an-asynchronous-operation"></a>Iniciar una operación asincrónica  
+## <a name="initiating-an-asynchronous-operation"></a>Inicio de una operación asincrónica  
  Un método asincrónico basado en TAP puede hacer una pequeña cantidad de trabajo sincrónicamente, como validar argumentos e iniciar la operación asincrónica, antes de que devuelva la tarea resultante. El trabajo sincrónico debe reducirse al mínimo de modo que el método asincrónico pueda volver rápidamente. Entre las razones para un retorno rápido se incluyen las siguientes:  
   
 -   Los métodos asincrónicos se pueden invocar desde subprocesos de la interfaz de usuario (UI) y cualquier trabajo sincrónico de ejecución prolongada puede dañar la capacidad de respuesta de la aplicación.  
@@ -72,7 +73,7 @@ El patrón asincrónico basado en tareas (TAP) se basa en los tipos <xref:System
 ## <a name="progress-reporting-optional"></a>Informe de progreso (opcional)  
  Algunas operaciones asincrónicas se benefician de proporcionar notificaciones de progreso; se suelen usar para actualizar una interfaz de usuario con información sobre el progreso de la operación asincrónica. 
  
- En TAP, el progreso se controla a través de una interfaz <xref:System.IProgress%601>, la cual se pasa al método asincrónico como un parámetro normalmente denominado `progress`.  Proporcionar la interfaz de progreso cuando se llama al método asincrónico ayuda a eliminar condiciones de carrera resultantes de un uso incorrecto (es decir, cuando los controladores de eventos registrados incorrectamente después del inicio de la operación pueden perder actualizaciones).  Lo que es más importante, la interfaz de progreso admite implementaciones diferentes de progreso, según determina el código usado.  Por ejemplo, el código usado puede que desee encargarse solo de la última actualización de progreso, almacenar en búfer todas las actualizaciones, invocar una acción para cada actualización o controlar si se calculan las referencias de la invocación en un subproceso determinado. Todas estas opciones se pueden lograr utilizando otra implementación de la interfaz, personalizada según las necesidades particulares del consumidor.  Como ocurre con la cancelación, las implementaciones de TAP deben proporcionar un parámetro <xref:System.IProgress%601> solo si la API admite notificaciones de progreso. 
+ En TAP, el progreso se controla a través de una interfaz <xref:System.IProgress%601>, la cual se pasa al método asincrónico como un parámetro normalmente denominado `progress`.  Proporcionar la interfaz de progreso cuando se llama al método asincrónico ayuda a eliminar condiciones de carrera resultantes de un uso incorrecto (es decir, cuando los controladores de eventos registrados incorrectamente después del inicio de la operación pueden perder actualizaciones).  Lo que es más importante, la interfaz de progreso admite implementaciones diferentes de progreso, según determina el código usado.  Por ejemplo, el código usado puede que desee encargarse solo de la última actualización de progreso, almacenar en búfer todas las actualizaciones, invocar una acción para cada actualización o controlar si se serializa la invocación en un subproceso determinado. Todas estas opciones se pueden lograr utilizando otra implementación de la interfaz, personalizada según las necesidades particulares del consumidor.  Como ocurre con la cancelación, las implementaciones de TAP deben proporcionar un parámetro <xref:System.IProgress%601> solo si la API admite notificaciones de progreso. 
  
  Por ejemplo, si el método `ReadAsync` anteriormente mencionado en este artículo puede informar del progreso intermedio en forma de número de bytes leídos hasta el momento, la devolución de llamada de progreso puede ser una interfaz <xref:System.IProgress%601>:  
   
@@ -91,10 +92,11 @@ El patrón asincrónico basado en tareas (TAP) se basa en los tipos <xref:System
   
  En este último caso, el tipo de datos especial suele tener el sufijo `ProgressInfo`.  
   
- Si las implementaciones de TAP proporcionan sobrecargas que aceptan un parámetro `progress`, deben permitir que el argumento sea `null`, en cuyo caso no se notifica ningún progreso. Las implementaciones de TAP deben notificar el progreso al objeto <xref:System.Progress%601> sincrónicamente, lo cual permite al método asincrónico proporcionar rápidamente el progreso y hacer que el consumidor de este determine cómo y dónde es mejor controlar la información. Por ejemplo, la instancia de progreso puede optar por serializar las devoluciones de llamada y generar eventos en un contexto capturado de sincronización.  
+ Si las implementaciones de TAP proporcionan sobrecargas que aceptan un parámetro `progress`, deben permitir que el argumento sea `null`, en cuyo caso no se notifica ningún progreso. Las implementaciones de TAP deben notificar el progreso al objeto <xref:System.Progress%601> sincrónicamente, lo cual permite al método asincrónico proporcionar rápidamente el progreso y hacer que el consumidor de este determine cómo y dónde es mejor controlar la información. Por ejemplo, la instancia de progreso puede optar por hacerse con las devoluciones de llamada y generar eventos en un contexto capturado de sincronización.  
   
 ## <a name="iprogresst-implementations"></a>Implementaciones de IProgress\<T>  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] proporciona una única implementación de <xref:System.IProgress%601>: <xref:System.Progress%601>. La clase <xref:System.Progress%601> se declara de la forma siguiente:  
+ 
+  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] proporciona una única implementación de <xref:System.IProgress%601>: <xref:System.Progress%601>. La clase <xref:System.Progress%601> se declara de la forma siguiente:  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  
@@ -117,7 +119,7 @@ End Class
   
  Una instancia de <xref:System.Progress%601> expone un evento <xref:System.Progress%601.ProgressChanged>, que se provoca cada vez que la operación asincrónica informe de una actualización de progreso. El evento <xref:System.Progress%601.ProgressChanged> se genera en el objeto <xref:System.Threading.SynchronizationContext> que se capturó cuando se creó la instancia de <xref:System.Progress%601>. Si no había ningún contexto de sincronización disponible, se usa un contexto predeterminado destinado al grupo de subprocesos. Los controladores pueden registrarse con este evento. También se puede proporcionar un único controlador al constructor <xref:System.Progress%601> por comodidad, y se comportará como un controlador de eventos para el evento <xref:System.Progress%601.ProgressChanged>. Las actualizaciones de progreso se generan de forma asincrónica para evitar retrasar la operación asincrónica mientras los controladores de eventos se ejecutan. Otra implementación <xref:System.IProgress%601> podría elegir aplicar semánticas diferentes.  
   
-## <a name="choosing-the-overloads-to-provide"></a>Elegir las sobrecargas que se van a proporcionar  
+## <a name="choosing-the-overloads-to-provide"></a>Elección de las sobrecargas que se van a proporcionar  
  Si una implementación TAP usa la propiedad <xref:System.Threading.Tasks.TaskFactory.CancellationToken%2A> y los parámetros <xref:System.IProgress%601> opcionales, podría requerir hasta cuatro sobrecargas:  
   
 ```csharp  
@@ -190,9 +192,9 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Patrones para la programación asincrónica](../../../docs/standard/asynchronous-programming-patterns/index.md)|Presenta los tres patrones para realizar las operaciones asincrónicas: el patrón asincrónico basado en tareas (TAP), el modelo de programación asincrónica (APM) y el patrón asincrónico basado en eventos (EAP).|  
 |[Implementar el modelo asincrónico basado en tareas](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|Describe cómo implementar el patrón asincrónico basado en tareas (TAP) de tres maneras: mediante los compiladores de C# y Visual Basic de Visual Studio, manualmente o a través de una combinación del compilador y de métodos manuales.|  
-|[Utilizar el modelo asincrónico basado en tareas](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|Describe cómo se pueden utilizar las tareas y las devoluciones de llamada para conseguir esperas sin bloqueos.|  
+|[Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|Describe cómo se pueden utilizar las tareas y las devoluciones de llamada para conseguir esperas sin bloqueos.|  
 |[Interoperabilidad con otros tipos y patrones asincrónicos](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)|Describe cómo usar el patrón asincrónico basado en tareas (TAP) para implementar el modelo de programación asincrónica (APM) y el patrón asincrónico basado en eventos (EAP).|

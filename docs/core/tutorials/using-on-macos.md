@@ -4,14 +4,14 @@ description: En este documento se proporcionan los pasos y el flujo de trabajo p
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: ad403ed96435f162899e600a317d00bab00638f2
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 8deaab67f7a824f6eb079f49b7fd75e0c02f1025
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170294"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788458"
 ---
-# <a name="getting-started-with-net-core-on-macos"></a>Introducción a .NET Core en macOS
+# <a name="get-started-with-net-core-on-macos"></a>Introducción a .NET Core en macOS
 
 En este documento se proporcionan los pasos y el flujo de trabajo para crear una solución de .NET Core para macOS. Obtendrá información sobre cómo crear proyectos, pruebas unitarias, usar las herramientas de depuración e incorporar bibliotecas de terceros a través de [NuGet](https://www.nuget.org/).
 
@@ -26,7 +26,7 @@ Instale [Visual Studio Code](https://code.visualstudio.com). Durante el transcur
 
 Instale la extensión de C# de Visual Studio Code; para ello, abra Visual Studio Code y presione <kbd>F1</kbd> para abrir la paleta de Visual Studio Code. Escriba **ext install** para ver la lista de extensiones. Seleccione la extensión de C#. Reinicie Visual Studio Code para activar la extensión. Para obtener más información, vea la [documentación de la extensión de C# en Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-## <a name="getting-started"></a>Introducción
+## <a name="get-started"></a>Primeros pasos
 
 En este tutorial, creará tres proyectos: un proyecto de biblioteca, pruebas para ese proyecto de biblioteca y una aplicación de consola que usa la biblioteca. Puede [ver o descargar el origen](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) de este tema en el repositorio dotnet/samples de GitHub. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 

@@ -2,12 +2,12 @@
 title: Novedades de C# 7.3
 description: Información general sobre las nuevas características en C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873805"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58028676"
 ---
 # <a name="whats-new-in-c-73"></a>Novedades de C# 7.3
 
@@ -51,7 +51,7 @@ unsafe struct S
 }
 ```
 
-En versiones anteriores de C#, era necesario anclar una variable para acceder a uno de los enteros que forman parte de `myFixedField`. Ahora, el siguiente código se compila en un contexto seguro:
+En versiones anteriores de C#, era necesario anclar una variable para acceder a uno de los enteros que forman parte de `myFixedField`. Ahora, el código siguiente se compila sin anclar la variable `p` dentro de una instrucción `fixed` independiente:
 
 ```csharp
 class C
@@ -163,7 +163,7 @@ Ahora, la sobrecarga por valor (primera en el ejemplo anterior) es mejor que la 
 > [!NOTE]
 > Esto se implementó como una corrección de errores. Ya no es ambiguo, incluso con la versión de lenguaje establecida en "7.2".
 
-Para obtener más información, consulte el artículo sobre el [modificador de parámetros `in`](../language-reference/keywords/in-parameter-modifier.md).
+Para obtener más información, consulte el artículo sobre el [modificador de parámetros`in`](../language-reference/keywords/in-parameter-modifier.md).
 
 ### <a name="extend-expression-variables-in-initializers"></a>Ampliación de variables de la expresión en inicializadores
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5920935637393f8cfd11aed85a600dc28d49011
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635980"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58038176"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Miembros obsoletos en .NET Framework
-En las tablas de este artículo se enumeran los miembros de tipo que están obsoletos en .NET Framework 4.5 y versiones posteriores organizados por ensamblado. Use los vínculos siguientes para ver una lista de miembros obsoletos y las alternativas recomendadas en cada ensamblado. En este tema no se muestran los miembros de los tipos obsoletos. Para obtener una lista de tipos obsoletos, vea [Tipos obsoletos](../../../docs/framework/whats-new/obsolete-types.md).  
+En las tablas de este artículo se enumeran los miembros de tipo que están obsoletos en .NET Framework 4.5 y versiones posteriores organizados por ensamblado. Use los vínculos siguientes para ver una lista de miembros obsoletos y las alternativas recomendadas en cada ensamblado. En este tema no se muestran los miembros de los tipos obsoletos. Para obtener una lista de tipos obsoletos, vea [Tipos obsoletos](obsolete-types.md).  
   
 -   [Miembros obsoletos en ensamblados del sistema](#SystemMembers)  
   
@@ -799,5 +799,5 @@ En las tablas de este artículo se enumeran los miembros de tipo que están obso
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|La clave del Registro `DynData` solo funciona en Win9x, que ya no es admitido por esta versión de .NET Framework. Utilice la clave del Registro `PerformanceData` en su lugar. Esta propiedad se quitará de futuras versiones de .NET Framework.|  
   
 ## <a name="see-also"></a>Vea también
-- [Lo obsoleto en la biblioteca de clases](../../../docs/framework/whats-new/whats-obsolete.md)
-- [Tipos obsoletos](../../../docs/framework/whats-new/obsolete-types.md)
+- [Lo obsoleto en la biblioteca de clases](whats-obsolete.md)
+- [Tipos obsoletos](obsolete-types.md)
