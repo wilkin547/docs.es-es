@@ -4,12 +4,12 @@ description: Modernizar aplicaciones .NET existentes con contenedores de Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
-ms.openlocfilehash: 20d8899d404ec72e3b1b9c2471524133a6428c44
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125501"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186109"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Seleccionar plataformas de Azure compute para las aplicaciones basadas en contenedor
 
@@ -17,12 +17,12 @@ Como habrá observado después de leer las secciones anteriores, Azure es una nu
 
 Como un *predeterminada* recomendación, el siguiente es el criterio principal recomendado en esta guía:
 
-  - **Aplicación monolítica única:** Elija Azure App Service
-  - **Aplicación de N niveles:** Elegir los orquestadores como App Service, Service Fabric (SF) o Azure Kubernetes Service (AKS) si tiene un único o algunos servicios de back-end
-  - **Microservicios de Linux:** Elija AKS/Kubernetes
-  - **Microservicios de Windows:** Elija Service Fabric
-  - **Funciones sin servidor y los controladores de eventos:** Elija las funciones de Azure
-  - **Lote a gran escala:** Elija Azure Batch
+- **Aplicación monolítica única:** Elija Azure App Service
+- **Aplicación de N niveles:** Elegir los orquestadores como App Service, Service Fabric (SF) o Azure Kubernetes Service (AKS) si tiene un único o algunos servicios de back-end
+- **Microservicios de Linux:** Elija AKS/Kubernetes
+- **Microservicios de Windows:** Elija Service Fabric
+- **Funciones sin servidor y los controladores de eventos:** Elija las funciones de Azure
+- **Lote a gran escala:** Elija Azure Batch
 
 Sin embargo, esta recomendación se debe tomar con una pizca de sal, como selección del producto dependerá de características y necesidades de la aplicación específica. No todas las aplicaciones son los mismos, incluso cuando inicialmente podría ser tipos similares.
 
@@ -36,6 +36,6 @@ Tenga en cuenta el modo subyacente del sistema operativo (Windows vs. Linux) tam
 
 Sin embargo, estas diferencias en el nivel de madurez del sistema operativo quedará en el futuro y varias plataformas tienen comparable madurez del sistema operativo y la decisión está más en las preferencias según características específicas, la aplicación podría necesitar o según el ecosistema de la plataforma motivos.
 
->[!div class="step-by-step"]
->[Anterior](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
->[Siguiente](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+> [!div class="step-by-step"]
+> [Anterior](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [Siguiente](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
