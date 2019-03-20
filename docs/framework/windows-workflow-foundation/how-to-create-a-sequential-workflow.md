@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 2213d766435aaafbf37b8646a66ea3007bfcb734
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719642"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262577"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Procedimiento Creación de un flujo de trabajo secuencial
 Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En este tema le ayudará a crear un flujo de trabajo que usa tanto las actividades integradas, como el <xref:System.Activities.Statements.Sequence> actividad y las actividades personalizadas del anterior [Cómo: Crear una actividad](how-to-create-an-activity.md) tema. El flujo de trabajo modela un juego de adivinanzas de números.  
@@ -21,7 +21,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 > [!NOTE]
 >  Para descargar una versión completa del tutorial, consulte [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45): tutorial introductorio)](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
-### <a name="to-create-the-workflow"></a>Para crear el flujo de trabajo  
+## <a name="to-create-the-workflow"></a>Para crear el flujo de trabajo  
   
 1.  Haga clic en **NumberGuessWorkflowActivities** en **el Explorador de soluciones** y seleccione **agregar**, **nuevo elemento**.  
   
@@ -31,7 +31,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
 4.  Arrastre un **secuencia** actividad desde la **flujo de Control** sección de la **cuadro de herramientas** y colóquela en la **colocar actividad aquí** etiquetar en el superficie de diseño de flujo de trabajo.  
   
-### <a name="to-create-the-workflow-variables-and-arguments"></a>Para crear las variables y argumentos de flujo de trabajo  
+## <a name="to-create-the-workflow-variables-and-arguments"></a>Para crear las variables y argumentos de flujo de trabajo  
   
 1.  Haga doble clic en **SequentialNumberGuessWorkflow.xaml** en **el Explorador de soluciones** para mostrar el flujo de trabajo en el diseñador, si aún no se muestra.  
   
@@ -62,7 +62,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
 13. Haga clic en **Variables** en el lado inferior izquierdo del Diseñador de actividad para cerrar el **Variables** panel.  
   
-### <a name="to-add-the-workflow-activities"></a>Para agregar actividades de flujo de trabajo  
+## <a name="to-add-the-workflow-activities"></a>Para agregar actividades de flujo de trabajo  
   
 1.  Arrastre un **asignar** actividad desde la **primitivas** sección de la **cuadro de herramientas** y colóquela en la **secuencia** actividad. Tipo `Target` en el **a** cuadro y la siguiente expresión en el **escriba una expresión de C#** o **escriba una expresión de VB** cuadro.  
   
@@ -137,13 +137,13 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
 13. Haga clic en el **WriteLine** actividad en el **, a continuación,** sección para seleccionarla y escriba la siguiente expresión en el **texto** cuadro del valor de propiedad.  
   
-    ```vb  
+    ```text
     "Your guess is too low."  
     ```  
   
 14. Haga clic en el **WriteLine** actividad en el **Else** sección para seleccionarla y escriba la siguiente expresión en el **texto** cuadro del valor de propiedad.  
   
-    ```vb  
+    ```text
     "Your guess is too high."  
     ```  
   
@@ -151,7 +151,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
      ![Flujo de trabajo secuencial completado](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
   
-### <a name="to-build-the-workflow"></a>Para compilar el flujo de trabajo  
+## <a name="to-build-the-workflow"></a>Para compilar el flujo de trabajo  
   
 1.  Presione Ctrl+MAYÚS+B para compilar la solución.  
   
