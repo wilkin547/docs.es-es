@@ -21,9 +21,9 @@ El nombre de la estructura debe ser un [nombre de identificador](../inside-a-pro
 
 Cualquier clase o estructura que implementa la interfaz <xref:System.IEquatable%601> debe contener una definición para un método <xref:System.IEquatable%601.Equals%2A> que coincida con la firma que la interfaz especifica. Como resultado, puede contar con una clase que implementa `IEquatable<T>` para contener un método `Equals` con el que una instancia de la clase puede determinar si es igual a otra instancia de la misma clase.  
   
-La definición de `IEquatable<T>` no proporciona una implementación para `Equals`. La interfaz define solo la firma. De esa manera, una interfaz en C# es similar a una clase abstracta en la que todos los métodos son abstractos. Sin embargo, una clase o estructura puede implementar varias interfaces, pero una clase solo puede heredar una clase única, ya sea abstracta o no. Por tanto, mediante las interfaces, puede incluir un comportamiento de varios orígenes en una clase.  
+La definición de `IEquatable<T>` no proporciona una implementación para `Equals`. La interfaz define solo la firma. De esa manera, una interfaz en C# es similar a una clase abstracta en la que todos los métodos son abstractos. Sin embargo, una clase o estructura puede implementar varias interfaces, pero una clase solo puede heredar una clase única, ya sea abstracta o no.
   
-Para obtener más información sobre las clases abstractas, vea [Clases y miembros de clase abstractos y sellados ](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+Para obtener más información sobre las clases abstractas, vea [Abstract and Sealed Classes and Class Members](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md) (Clases y miembros de clase abstractos y sellados [Guía de programación de C#]).  
   
 Las interfaces pueden contener métodos, propiedades, eventos, indizadores o cualquier combinación de estos cuatro tipos de miembros. Para obtener vínculos a ejemplos, vea [Secciones relacionadas](../interfaces/index.md#BKMK_RelatedSections). Una interfaz no puede contener constantes, campos, operadores, constructores de instancias, finalizadores ni tipos. Los miembros de interfaz son públicos automáticamente y no pueden incluir modificadores de acceso. Los miembros tampoco pueden ser [estáticos](../../language-reference/keywords/static.md).  
   
@@ -45,7 +45,7 @@ Una clase base también puede implementar miembros de interfaz mediante el uso d
 
 Una interfaz tiene las propiedades siguientes:  
 
-- Una interfaz es como una clase base abstracta. Cualquier clase o estructura que implementa la interfaz debe implementar todos sus miembros.
+- Una interfaz es como una clase base abstracta con solo miembros abstractos. Cualquier clase o estructura que implementa la interfaz debe implementar todos sus miembros.
 - No se puede crear una instancia de una interfaz directamente. Sus miembros se implementan por medio de cualquier clase o estructura que implementa la interfaz.
 - Las interfaces pueden contener eventos, indizadores, métodos y propiedades.
 - Las interfaces no contienen ninguna implementación de métodos.
