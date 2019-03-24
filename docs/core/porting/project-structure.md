@@ -4,12 +4,12 @@ description: Ayuda para los propietarios del proyecto que quieren compilar su so
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 57bb766f1d91c502a508b6362dc642310009c8c4
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: ab484ccc2c5b51b2ee1dca57df51669d288f3e6b
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904023"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186070"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organización del proyecto para admitir .NET Framework y .NET Core
 
@@ -36,7 +36,7 @@ Aprenda a crear una solución que se compila para .NET Framework y .NET Core en 
 
 Considere el siguiente repositorio:
 
-![Proyecto existente](media/project-structure/project.png)
+![Proyecto existente](./media/project-structure/existing-project-structure.png)
 
 [**Código fuente**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/)
 
@@ -46,7 +46,7 @@ A continuación se describen varias formas de agregar compatibilidad para .NET C
 
 Reorganice el repositorio de manera que se quite cualquier archivo *\*.csproj* existente y se cree un archivo *\*.csproj* único que establezca varios marcos de trabajo como destino. Esta es una opción excelente, porque un proyecto único se puede compilar para distintos marcos de trabajo. También tiene la capacidad de controlar distintas dependencias y opciones de compilación por cada marco de trabajo de destino.
 
-![Creación de un csproj con varios marcos de destino](media/project-structure/project.csproj.png)
+![Creación de un csproj con varios marcos de destino](./media/project-structure/multi-targeted-project.png)
 
 [**Código fuente**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/)
 
@@ -58,7 +58,7 @@ Los cambios que debe tener en cuenta son los siguientes:
 
 Si hay proyectos existentes que tienen como destino marcos de trabajo anteriores, puede que desee dejarlos intactos y usar un proyecto .NET Core para establecer como destino marcos de trabajo futuros.
 
-![Proyecto .NET Core con un proyecto existente en otra carpeta](media/project-structure/project.csproj.different.png)
+![Proyecto .NET Core con un proyecto existente en otra carpeta](./media/project-structure/separate-projects-same-source.png)
 
 [**Código fuente**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
 
