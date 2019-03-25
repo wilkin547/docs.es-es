@@ -2,12 +2,12 @@
 title: Canal de fragmentación
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: db14ceb956202bee06ff5e6b37b21fb837c6f1d9
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 4adbd558aff9e1689b1e14521c43f1cad281dbc6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066420"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411504"
 ---
 # <a name="chunking-channel"></a>Canal de fragmentación
 Al enviar mensajes de gran tamaño mediante Windows Communication Foundation (WCF), suele ser deseable para limitar la cantidad de memoria utilizada para almacenar en búfer esos mensajes. Una posible solución es transmitir en secuencias el cuerpo del mensaje (suponiendo que la mayor parte de los datos se encuentra en el cuerpo). Sin embargo, algunos protocolos requieren almacenado en búfer del mensaje completo. La mensajería de confianza y la seguridad son dos ejemplos de lo anterior. Otra posible solución es dividir el mensaje grande en mensajes menores llamados fragmentos, enviar uno por uno esos fragmentos y reconstituir el mensaje entero en el lado receptor. La propia aplicación podría hacer esta fragmentación y desfragmentación, o podría utilizar un canal personalizado para hacerlo. El canal de fragmentación muestra cómo un protocolo personalizado o un canal en capas se pueden utilizar para la fragmentación y desfragmentación de mensajes arbitrariamente grandes.  
@@ -199,13 +199,15 @@ as the ChunkingStart message.
 ```  
   
 ## <a name="chunking-channel-architecture"></a>Arquitectura del canal de fragmentación  
- El canal de fragmentación es un `IDuplexSessionChannel` que, a un nivel alto, sigue la arquitectura de canal típica. Hay un `ChunkingBindingElement` que puede generar un `ChunkingChannelFactory` y un `ChunkingChannelListener`. `ChunkingChannelFactory` crea instancias de `ChunkingChannel` cuando se le pide. `ChunkingChannelListener` crea instancias de `ChunkingChannel` cuando se acepta un nuevo canal interno. El propio `ChunkingChannel` es responsable de enviar y recibir los mensajes.  
+ El canal de fragmentación es un `IDuplexSessionChannel` que, a un nivel alto, sigue la arquitectura de canal típica. Hay un `ChunkingBindingElement` que puede generar un `ChunkingChannelFactory` y un `ChunkingChannelListener`. 
+  `ChunkingChannelFactory` crea instancias de `ChunkingChannel` cuando se le pide. 
+  `ChunkingChannelListener` crea instancias de `ChunkingChannel` cuando se acepta un nuevo canal interno. El propio `ChunkingChannel` es responsable de enviar y recibir los mensajes.  
   
- En el siguiente nivel inferior, `ChunkingChannel` confia en varios componentes para implementar el protocolo de fragmentación. En el lado emisor, el canal usa un `XmlDictionaryWriter` personalizado denominado `ChunkingWriter` que realiza la fragmentación real. `ChunkingWriter` usa el canal interno directamente para enviar fragmentos. Utilizar un `XmlDictionaryWriter` personalizado nos permite mandar fragmentos mientras se escribe el cuerpo grande del mensaje original. Esto significa que no almacenamos en búfer el mensaje original completo.  
+ En el siguiente nivel inferior, `ChunkingChannel` confia en varios componentes para implementar el protocolo de fragmentación. En el lado emisor, el canal usa un <xref:System.Xml.XmlDictionaryWriter> personalizado denominado `ChunkingWriter` que realiza la fragmentación real. `ChunkingWriter` usa el canal interno directamente para enviar fragmentos. Utilizar un `XmlDictionaryWriter` personalizado nos permite mandar fragmentos mientras se escribe el cuerpo grande del mensaje original. Esto significa que no almacenamos en búfer el mensaje original completo.  
   
  ![Canal de fragmentación](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
   
- En el lado receptor, `ChunkingChannel` extrae mensajes del canal interno y los ofrece a un `XmlDictionaryReader` personalizado denominado `ChunkingReader`, que reconstituye el mensaje original a partir de los fragmentos de entrada. `ChunkingChannel` ajusta este `ChunkingReader` en una implementación de `Message` `ChunkingMessage` personalizada y devuelve este mensaje al nivel anterior. Esta combinación de `ChunkingReader` y `ChunkingMessage` nos permite al anular la fragmentación del cuerpo del mensaje original mientras la lee el nivel anterior en lugar de tener que almacenar en búfer todo el cuerpo del mensaje original. `ChunkingReader` tiene una cola donde almacena en búfer fragmentos de entrada hasta un número máximo configurable de fragmentos almacenados en búfer. Cuando se alcanza este límite máximo, el lector espera que la capa superior recoja los mensajes de la cola (es decir, simplemente leyendo el cuerpo del mensaje original) o hasta que se alcance el tiempo de espera máximo de recepción.  
+ En el lado receptor, `ChunkingChannel` extrae mensajes del canal interno y los ofrece a un <xref:System.Xml.XmlDictionaryReader> personalizado denominado `ChunkingReader`, que reconstituye el mensaje original a partir de los fragmentos de entrada. `ChunkingChannel` ajusta este `ChunkingReader` en una implementación de `Message``ChunkingMessage` personalizada y devuelve este mensaje al nivel anterior. Esta combinación de `ChunkingReader` y `ChunkingMessage` nos permite al anular la fragmentación del cuerpo del mensaje original mientras la lee el nivel anterior en lugar de tener que almacenar en búfer todo el cuerpo del mensaje original. `ChunkingReader` tiene una cola donde almacena en búfer fragmentos de entrada hasta un número máximo configurable de fragmentos almacenados en búfer. Cuando se alcanza este límite máximo, el lector espera que la capa superior recoja los mensajes de la cola (es decir, simplemente leyendo el cuerpo del mensaje original) o hasta que se alcance el tiempo de espera máximo de recepción.  
   
  ![Canal de fragmentación](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
   
@@ -236,7 +238,8 @@ interface ITestService
 ## <a name="implementing-the-send-operation"></a>Implementar la operación Send  
  A un nivel alto, la operación Send comprueba primero si el mensaje saliente debe fragmentarse y, si no, envía el mensaje directamente mediante el canal interno.  
   
- Si el mensaje debe fragmentarse, Send crea un nuevo `ChunkingWriter` y llama `WriteBodyContents` en el mensaje saliente pasándole este `ChunkingWriter`. `ChunkingWriter` realiza a continuación la fragmentación del mensaje (incluyendo copiar los encabezados originales del mensaje al fragmento inicial del mensaje) y envía fragmentos mediante el canal interno.  
+ Si el mensaje debe fragmentarse, Send crea un nuevo `ChunkingWriter` y llama `WriteBodyContents` en el mensaje saliente pasándole este `ChunkingWriter`. 
+  `ChunkingWriter` realiza a continuación la fragmentación del mensaje (incluyendo copiar los encabezados originales del mensaje al fragmento inicial del mensaje) y envía fragmentos mediante el canal interno.  
   
  Detalles que se han de tener en cuenta:  
   
@@ -248,7 +251,7 @@ interface ITestService
   
 -   El tiempo de espera pasado a Send se utiliza como tiempo de espera para la operación de envío al completo, la cual incluye el envío de todos los fragmentos.  
   
--   El diseño `XmlDictionaryWriter` personalizado fue elegido para evitar almacenar en búfer el cuerpo del mensaje original completo. Si deseáramos obtener un `XmlDictionaryReader` en el cuerpo utilizando `message.GetReaderAtBodyContents` el cuerpo completo se almacenaría en búfer. En su lugar, tenemos un `XmlDictionaryWriter` personalizado que se pasa a `message.WriteBodyContents`. Mientras el mensaje llama a WriteBase64 en el sistema de escritura, el sistema de escritura empaqueta los fragmentos en los mensajes y los envía utilizando el canal interno. WriteBase64 se bloquea hasta que se envía el fragmento.  
+-   El diseño <xref:System.Xml.XmlDictionaryWriter> personalizado fue elegido para evitar almacenar en búfer el cuerpo del mensaje original completo. Si deseáramos obtener un <xref:System.Xml.XmlDictionaryReader> en el cuerpo utilizando `message.GetReaderAtBodyContents` el cuerpo completo se almacenaría en búfer. En su lugar, tenemos un personalizado <xref:System.Xml.XmlDictionaryWriter> que se pasa a `message.WriteBodyContents`. Mientras el mensaje llama a WriteBase64 en el sistema de escritura, el sistema de escritura empaqueta los fragmentos en los mensajes y los envía utilizando el canal interno. WriteBase64 se bloquea hasta que se envía el fragmento.  
   
 ## <a name="implementing-the-receive-operation"></a>Implementar la operación Receive  
  A un nivel alto, la operación Receive comprueba primero que el mensaje entrante no es `null` y que su acción es `ChunkingAction`. Si no cumple ambos criterios, el mensaje se devuelve sin modificar desde Receive. De lo contrario, Receive crea un nuevo `ChunkingReader` y un nuevo `ChunkingMessage` ajustado alrededor de él (llamando a `GetNewChunkingMessage`). Antes de devolver ese nuevo `ChunkingMessage`, Receive utiliza un subproceso de un conjunto de subprocesos para ejecutar `ReceiveChunkLoop`, que llama `innerChannel.Receive` en un bucle y entrega fragmentos a `ChunkingReader` hasta que se reciba el fragmento de mensaje final o se alcance el tiempo de espera de recepción.  
@@ -257,7 +260,7 @@ interface ITestService
   
 -   Al igual que Send, Receive primero llama `ThrowIfDisposedOrNotOepned` para asegurar que se abre `CommunicationState`.  
   
--   Receive también se sincroniza para que solo se pueda recibir un mensaje de la sesión al mismo tiempo. Esto es especialmente importante porque una vez se recibe un fragmento de mensaje de inicio, se espera que todos los mensajes siguientes recibidos sean fragmentos de esta nueva secuencia de fragmentos hasta que se reciba un fragmento de mensaje final. Receive no puede extraer los mensajes del canal interno hasta que no se reciban todos los fragmentos que pertenecen al mensaje que se está desfragmentando. Para lograr esto, Receive utiliza un `ManualResetEvent` denominado `currentMessageCompleted`, que se establece cuando el fragmento de mensaje final se recibe y se restablece cuando se recibe un nuevo fragmento de mensaje de inicio.  
+-   Receive también se sincroniza para que solo se pueda recibir un mensaje de la sesión al mismo tiempo. Esto es especialmente importante porque una vez se recibe un fragmento de mensaje de inicio, se espera que todos los mensajes siguientes recibidos sean fragmentos de esta nueva secuencia de fragmentos hasta que se reciba un fragmento de mensaje final. Receive no puede incorporar los cambios de los mensajes del canal interno hasta que no se reciban todos los fragmentos que pertenecen al mensaje que se está desfragmentando. Para lograr esto, Receive utiliza un `ManualResetEvent` denominado `currentMessageCompleted`, que se establece cuando el fragmento de mensaje final se recibe y se restablece cuando se recibe un nuevo fragmento de mensaje de inicio.  
   
 -   A diferencia de Send, Receive no evita las transiciones de estado sincronizadas mientras recibe. Por ejemplo, se puede llamar a Close mientras se recibe y se espera hasta que las recepciones pendientes del mensaje original se completen o se alcance el valor de tiempo de espera especificado.  
   
@@ -271,23 +274,27 @@ interface ITestService
  `OnOpen` llama `innerChannel.Open` para abrir el canal interno.  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose` establece primero `stopReceive` a `true` para señalar el `ReceiveChunkLoop` pendiente para detenerse. Éste espera a continuación a `receiveStopped`<xref:System.Threading.ManualResetEvent>, que se establece cuando `ReceiveChunkLoop` se detiene. Suponiendo las pausas `ReceiveChunkLoop` dentro del tiempo de espera especificado, `OnClose` llama `innerChannel.Close` con el tiempo de espera restante.  
+ `OnClose` establece primero `stopReceive` a `true` para señalar el `ReceiveChunkLoop` pendiente para detenerse. A continuación, espera el `receiveStopped` <xref:System.Threading.ManualResetEvent>, que se establece cuando `ReceiveChunkLoop` se detiene. Suponiendo las pausas `ReceiveChunkLoop` dentro del tiempo de espera especificado, `OnClose` llama `innerChannel.Close` con el tiempo de espera restante.  
   
 ### <a name="onabort"></a>OnAbort  
  `OnAbort` llama `innerChannel.Abort` para anular el canal interno. Si hay un `ReceiveChunkLoop` pendiente, recibe a una excepción de la llamada `innerChannel.Receive` pendiente.  
   
 ### <a name="onfaulted"></a>OnFaulted  
- `ChunkingChannel` no requiere comportamiento especial cuando el canal tiene errores, por lo que no se invalida `OnFaulted`.  
+ 
+  `ChunkingChannel` no requiere comportamiento especial cuando el canal tiene errores, por lo que no se invalida `OnFaulted`.  
   
 ## <a name="implementing-channel-factory"></a>Implementar el generador de canales  
- `ChunkingChannelFactory` es responsable de crear instancias de `ChunkingDuplexSessionChannel` y de colocar en cascada las transiciones de estado al generador de canales interno.  
+ 
+  `ChunkingChannelFactory` es responsable de crear instancias de `ChunkingDuplexSessionChannel` y de colocar en cascada las transiciones de estado al generador de canales interno.  
   
  `OnCreateChannel` utiliza el generador de canales interno para crear un canal interno `IDuplexSessionChannel`. Crea a continuación un nuevo `ChunkingDuplexSessionChannel` que le pasa este canal interno junto con la lista de acciones de mensaje para ser fragmentada y el número máximo de fragmentos para almacenar en búfer cuando se produce la recepción. La lista de acciones de mensaje para ser fragmentada y el número máximo de fragmentos para almacenar en búfer son dos parámetros pasados a `ChunkingChannelFactory` en su constructor. La sección en `ChunkingBindingElement` describe de dónde proceden estos valores.  
   
- `OnOpen`, `OnClose`, `OnAbort` y sus equivalentes asincrónicos llaman al método de transición de estado correspondiente en el generador de canales interno.  
+ 
+  `OnOpen`, `OnClose`, `OnAbort` y sus equivalentes asincrónicos llaman al método de transición de estado correspondiente en el generador de canales interno.  
   
 ## <a name="implementing-channel-listener"></a>Implementar el escuchado del canal  
- `ChunkingChannelListener` es un contenedor alrededor de una escucha de canal interno. Su función principal, además de delegar llamadas a esa escucha del canal interno, es ajustar nuevo `ChunkingDuplexSessionChannels` alrededor de los canales aceptados por la escucha del canal interno. Esto se hace en `OnAcceptChannel` y `OnEndAcceptChannel`. El `ChunkingDuplexSessionChannel` recientemente creado se pasa al canal interno junto con los otros parámetros descritos previamente.  
+ 
+  `ChunkingChannelListener` es un contenedor alrededor de una escucha de canal interno. Su función principal, además de delegar llamadas a esa escucha del canal interno, es ajustar nuevo `ChunkingDuplexSessionChannels` alrededor de los canales aceptados por la escucha del canal interno. Esto se hace en `OnAcceptChannel` y `OnEndAcceptChannel`. El `ChunkingDuplexSessionChannel` recientemente creado se pasa al canal interno junto con los otros parámetros descritos previamente.  
   
 ## <a name="implementing-binding-element-and-binding"></a>Implementar elemento de enlace y enlace  
  `ChunkingBindingElement` es el responsable de crear el `ChunkingChannelFactory` y `ChunkingChannelListener`. El `ChunkingBindingElement` comprueba si T en `CanBuildChannelFactory` \<T > y `CanBuildChannelListener` \<T > es de tipo `IDuplexSessionChannel` (el único canal admitido por el canal de fragmentación) y que los demás elementos de enlace en el enlace admiten esto tipo de canal.  

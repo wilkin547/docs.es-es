@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 48b151bb718cb05e171909d41ce4415a0988d1b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: decde09c2225da0af420813b477b86f4564d42f7
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662587"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411803"
 ---
 # <a name="data-contract-schema-reference"></a>Referencia de esquema de contrato de datos
 En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.Runtime.Serialization.DataContractSerializer> usa para describir los tipos de Common Language Runtime (CLR) para la serialización XML.  
@@ -523,7 +523,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>Asignación de tipos ISerializable  
- En la versión 1.0 de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0, `ISerializable` se introdujo como un mecanismo general para serializar objetos para proporcionar persistencia o transferencia de datos. Hay muchos tipos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] que implementan `ISerializable` y que pueden pasarse entre aplicaciones. `DataContractSerializer` proporciona de manera natural compatibilidad para las clases `ISerializable` . `DataContractSerializer` asigna tipos de esquema de implementación de `ISerializable` que solo difieren en cuanto al QName (nombre completo) del tipo y son colecciones de propiedades. Por ejemplo, el `DataContractSerializer` asigna <xref:System.Exception> al tipo XSD siguiente en el `http://schemas.datacontract.org/2004/07/System` espacio de nombres.  
+ En la versión 1.0 de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0, <xref:System.Runtime.Serialization.ISerializable> se introdujo como un mecanismo general para serializar objetos para proporcionar persistencia o transferencia de datos. Hay muchos tipos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] que implementan `ISerializable` y que pueden pasarse entre aplicaciones. <xref:System.Runtime.Serialization.DataContractSerializer> proporciona de manera natural compatibilidad para las clases `ISerializable` . `DataContractSerializer` asigna tipos de esquema de implementación de `ISerializable` que solo difieren en cuanto al QName (nombre completo) del tipo y son colecciones de propiedades. Por ejemplo, el `DataContractSerializer` asigna <xref:System.Exception> al tipo XSD siguiente en el `http://schemas.datacontract.org/2004/07/System` espacio de nombres.  
   
 ```xml  
 <xs:complexType name="Exception">  

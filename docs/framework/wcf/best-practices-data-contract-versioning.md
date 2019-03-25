@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 297d7ea0fbbd5b066539e6f2341b29390b3d38b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738357"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409476"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Procedimientos recomendados: Versiones de contratos de datos
 En este tema se enumeran los procedimientos recomendados para crear contratos de datos que pueden evolucionar con facilidad con el tiempo. Para obtener más información acerca de los contratos de datos, vea los temas de [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -37,7 +37,7 @@ En este tema se enumeran los procedimientos recomendados para crear contratos de
   
  Para obtener más información, consulte los procedimientos recomendados: [Versión del servicio](../../../docs/framework/wcf/service-versioning.md).  
   
- En algunos casos, debe garantizar la compatibilidad estricta del esquema para los mensajes enviados por su aplicación, pero no puede confiar en que los mensajes entrantes sean estrictamente conformes al esquema. En este caso, existe el peligro de que un mensaje entrante pueda contener datos extraños. Los valores extraños se almacenan y devueltos por WCF y, por tanto, los resultados en el envío de mensajes de esquema no válida. Para evitar este problema, la característica de ida y vuelta debería estar desactivada. Existen dos formas de lograr esto.  
+ En algunos casos, debe garantizar la compatibilidad estricta del esquema para los mensajes enviados por su aplicación, pero no puede confiar en que los mensajes entrantes sean estrictamente conformes al esquema. En este caso, existe el peligro de que un mensaje entrante pueda contener datos extraños. Los valores extraños se almacenan y devueltos por WCF y, por tanto, los resultados en el envío de mensajes de esquema no válida. Para evitar este problema, la característica de ida y vuelta debería estar desactivada. Hay dos formas de hacerlo.  
   
 -   No implemente la interfaz <xref:System.Runtime.Serialization.IExtensibleDataObject> en ninguno de sus tipos.  
   
@@ -70,7 +70,7 @@ En este tema se enumeran los procedimientos recomendados para crear contratos de
   
     2.  Si el miembro no acepta el valor predeterminado `null` o cero, se debería proporcionar un método de devolución de llamada mediante <xref:System.Runtime.Serialization.OnDeserializingAttribute> para proporcionar un valor predeterminado razonable en caso de que el miembro no se encuentre en la secuencia de entrada. Para obtener más información acerca de la devolución de llamada, vea [devoluciones de llamada de serialización tolerante a versiones](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3.  La propiedad `Order` en `DataMemberAttribute` se debería utilizar para asegurarse de que todos los miembros de datos recientemente agregados aparecen después de los miembros de datos existentes. La manera recomendada de hacerlo es como sigue: Ninguno de los miembros de datos en la primera versión del contrato de datos debe tener su `Order` conjunto de propiedades. Todos los miembros de datos agregados en la versión 2 del contrato de datos deberían tener su propiedad `Order` establecida en 2. Todos los miembros de datos agregados en la versión 3 del contrato de datos deberían tener su propiedad `Order` establecida en 3, etc. Se permite tener más de un miembro de datos establecido en el mismo número de `Order`.  
+    3.  El <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> propiedad debe utilizarse para asegurarse de que todos los miembros de datos recientemente agregados aparecen después de los miembros de datos existente. La manera recomendada de hacerlo es como sigue: Ninguno de los miembros de datos en la primera versión del contrato de datos debe tener su `Order` conjunto de propiedades. Todos los miembros de datos agregados en la versión 2 del contrato de datos deberían tener su propiedad `Order` establecida en 2. Todos los miembros de datos agregados en la versión 3 del contrato de datos deberían tener su propiedad `Order` establecida en 3, etc. Se permite tener más de un miembro de datos establecido en el mismo número de `Order`.  
   
 9. No quite los miembros de datos en versiones posteriores, ni siquiera si la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> se dejó en su propiedad predeterminada de `false` en versiones anteriores.  
   

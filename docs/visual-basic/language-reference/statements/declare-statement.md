@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 4a2e1704e72e608f5b5fd9c6dace42c144f92bb4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5f9ac99078d64387acee9160118928ad8de1764c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973176"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411543"
 ---
 # <a name="declare-statement"></a>Declare Statement
 Declara una referencia a un procedimiento implementado en un archivo externo.  
@@ -51,7 +51,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`attributelist`|Opcional. Consulte [lista de los atributos](../../../visual-basic/language-reference/statements/attribute-list.md).|  
 |`accessmodifier`|Opcional. Puede ser uno de los siguientes:<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privado](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Private protegida](../../language-reference/modifiers/private-protected.md)<br /><br /> Vea [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
@@ -63,7 +63,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`Lib`|Obligatorio. Presenta un `Lib` cláusula que identifica el archivo externo (DLL o recurso de código) que contiene un procedimiento externo.|  
 |`libname`|Obligatorio. Nombre del archivo que contiene el procedimiento declarado.|  
 |`Alias`|Opcional. Indica que no se puede identificar el procedimiento que se declara dentro de su archivo por el nombre especificado en `name`. Especifique su identificación en `aliasname`.|  
-|`aliasname`|Obligatorio si se usa el `Alias` palabra clave. Cadena que identifica el procedimiento de dos maneras:<br /><br /> El nombre del punto de entrada del procedimiento dentro de su archivo entre comillas (`""`)<br /><br /> O bien<br /><br /> Un signo de número (`#`) seguido de un entero que especifica el número ordinal del punto de entrada del procedimiento dentro de su archivo|  
+|`aliasname`|Obligatorio si se usa el `Alias` palabra clave. Cadena que identifica el procedimiento de dos maneras:<br /><br /> El nombre del punto de entrada del procedimiento dentro de su archivo entre comillas (`""`)<br /><br /> -o bien-<br /><br /> Un signo de número (`#`) seguido de un entero que especifica el número ordinal del punto de entrada del procedimiento dentro de su archivo|  
 |`parameterlist`|Requerido si el procedimiento toma parámetros. Consulte [Lista_de_parámetros](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`returntype`|Es necesario si `Function` se especifica y `Option Strict` es `On`. Tipo de datos del valor devuelto por el procedimiento.|  
   
@@ -127,7 +127,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 -   **Mecanismo.** Visual Basic utiliza .NET Framework *de invocación de plataforma* mecanismo (PInvoke) para resolver y tener acceso a procedimientos externos. El `Declare` instrucción y el <xref:System.Runtime.InteropServices.DllImportAttribute> clase ambos utilizan este mecanismo automáticamente y no es necesario tener conocimientos de PInvoke. Para obtener más información, vea [Tutorial: Llamar a las API de Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
 > [!IMPORTANT]
->  Si el procedimiento externo se ejecuta fuera de common language runtime (CLR), es *código no administrado*. Cuando se llama a este tipo de procedimiento, por ejemplo, una función de la API de Win32 o un método COM, puede exponer su aplicación a riesgos de seguridad. Para obtener más información, consulte [instrucciones de codificación segura para código no administrado](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
+>  Si el procedimiento externo se ejecuta fuera de common language runtime (CLR), es *código no administrado*. Cuando se llama a este tipo de procedimiento, por ejemplo, una función de la API de Windows o un método COM, puede exponer su aplicación a riesgos de seguridad. Para obtener más información, consulte [instrucciones de codificación segura para código no administrado](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se declara una referencia externa a una `Function` procedimiento que devuelve el nombre de usuario actual. A continuación, llama el procedimiento externo `GetUserNameA` como parte de la `getUser` procedimiento.  

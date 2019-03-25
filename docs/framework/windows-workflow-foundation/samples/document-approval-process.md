@@ -2,12 +2,12 @@
 title: Proceso de aprobación de un documento
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: d1e37dcbc21239822937c57d9779a52357aac518
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4451719bfb1d46a4e0e4dcde19666d1f8b2de427
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717718"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409554"
 ---
 # <a name="document-approval-process"></a>Proceso de aprobación de un documento
 Este ejemplo muestra el uso de muchas características de Windows Workflow Foundation (WF) y Windows Communication Foundation (WCF) juntos. Juntas implementan un escenario de proceso de aprobación de un documento. Una aplicación cliente puede enviar documentos para su aprobación y aprobar documentos. Existe una aplicación de administrador de aprobaciones para facilitar las comunicaciones entre los clientes y aplicar las reglas del proceso de aprobación. El proceso de aprobación es un flujo de trabajo que puede ejecutar varios tipos de aprobación. Existen actividades para obtener una aprobación única, una aprobación de quórum (un porcentaje de un conjunto de aprobadores) y un proceso de aprobación compleja que consta de una aprobación de quórum y una aprobación única en una secuencia.
@@ -22,9 +22,9 @@ Este ejemplo muestra el uso de muchas características de Windows Workflow Found
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
- El siguiente gráfico muestra el flujo de trabajo del proceso de aprobación de un documento.  
+ El gráfico siguiente muestra el flujo de trabajo de proceso de aprobación de documentos:  
   
- ![Un flujo de trabajo de proceso de aprobación de documentos](./media/approvalprocess.jpg "ApprovalProcess")  
+ ![Flujo de trabajo del proceso de aprobación de un documento](./media/document-approval-process/document-approval-process.jpg)  
   
  Desde la perspectiva del cliente, el proceso de aprobación funciona del siguiente modo:  
   

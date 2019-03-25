@@ -2,12 +2,12 @@
 title: Codificadores personalizados
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: a438ad327cdd75e981af2ef8ca3999a2f482a2b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b68725346a2de23d405ed21ead93e3a6a8374e6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509371"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411374"
 ---
 # <a name="custom-encoders"></a>Codificadores personalizados
 Este tema describe cómo crear codificadores personalizados.  
@@ -18,7 +18,7 @@ Este tema describe cómo crear codificadores personalizados.
   
  Los codificadores del mensaje transforman las instancias <xref:System.ServiceModel.Channels.Message> a y desde una representación de la conexión. Aunque los codificadores se describen como situados encima del nivel de transporte en la pila del canal, en realidad residen en el nivel de transporte. Los transportes (por ejemplo HTTP) dan formato al mensaje según los requisitos de la norma de transporte. Los codificadores (por ejemplo texto/Xml) apenas codifican el mensaje.  
   
- Al establecer una conexión con un cliente o servidor existente previamente, puede tener opciones sobre la utilización de una codificación de mensajes determinada. Sin embargo, los servicios de WCF pueden hacerse accesibles a través de varios extremos, cada uno con un codificador de mensajes diferentes. Cuando un único codificador no abarca toda la audiencia de su servicio, considere la exposición del servicio en varios puntos de conexión. De este modo, las aplicaciones cliente pueden elegir el extremo que más les convenga. La utilización de múltiples extremos permite combinar las ventajas de diferentes codificadores de mensaje con otros elementos de enlace.  
+ Al establecer una conexión con un cliente o servidor existente previamente, puede tener opciones sobre la utilización de una codificación de mensajes determinada. Sin embargo, los servicios de WCF pueden hacerse accesibles a través de varios extremos, cada uno con un codificador de mensajes diferentes. Cuando un único codificador no abarca toda la audiencia de su servicio, considere la exposición del servicio en varios extremos. De este modo, las aplicaciones cliente pueden elegir el extremo que más les convenga. La utilización de múltiples extremos permite combinar las ventajas de diferentes codificadores de mensaje con otros elementos de enlace.  
   
 ## <a name="system-provided-encoders"></a>Codificadores proporcionados por el sistema  
  WCF ofrece varios enlaces proporcionados por el sistema que están diseñados para cubrir los escenarios más comunes de la aplicación. Cada uno de estos enlaces combina un transporte, un codificador de mensaje y otras opciones (por ejemplo, seguridad). Este tema describe cómo extender el `Text`, `Binary`, y `MTOM` codificadores que se incluyen en WCF, o crear su propio codificador personalizado de mensajes. El codificador de mensajes de texto admite tanto la codificación XML como la codificación SOAP. El modo de codificación XML sin formato del codificador de mensajes de texto se denomina POX (“XML sin formato"), para distinguirlo de la codificación SOAP basada en texto.  
@@ -50,7 +50,7 @@ Este tema describe cómo crear codificadores personalizados.
 ### <a name="pooling"></a>Agrupación  
  Cada una de las implementaciones del codificador intenta agrupar el máximo posible. La reducción de las asignaciones es una manera clave de mejorar el rendimiento del código administrado. Para lograr esta agrupación, las implementaciones utilizan la clase `SynchronizedPool`. El archivo C# contiene una descripción de las optimizaciones adicionales utilizadas por esta clase.  
   
- `XmlDictionaryReader` y las instancias `XmlDictionaryWriter` se agrupan y reinicializan para evitar la asignación de otras nuevas para cada mensaje. Para los lectores, una devolución de llamada `OnClose` reclama al lector cuando se llama a `Close()`. El codificador también recicla algunos objetos de estados del mensaje utilizados al construir los mensajes. Los tamaños de estos grupos pueden configurarse mediante `MaxReadPoolSize` y las propiedades `MaxWritePoolSize`, en cada una de las tres clases derivadas de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
+ <xref:System.Xml.XmlDictionaryReader> y las instancias <xref:System.Xml.XmlDictionaryWriter> se agrupan y reinicializan para evitar la asignación de otras nuevas para cada mensaje. Para los lectores, una devolución de llamada `OnClose` reclama al lector cuando se llama a `Close()`. El codificador también recicla algunos objetos de estados del mensaje utilizados al construir los mensajes. Los tamaños de estos grupos pueden configurarse mediante `MaxReadPoolSize` y las propiedades `MaxWritePoolSize`, en cada una de las tres clases derivadas de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
 ### <a name="binary-encoding"></a>Codificación binaria  
  Cuando la codificación binaria utiliza sesiones, la cadena del diccionario dinámico debe comunicarse con el receptor del mensaje. Para ello, las cadenas del diccionario dinámico se incluyen como prefijo del mensaje. El receptor quita las cadenas, las agrega a la sesión, y procesa el mensaje. Para pasar correctamente las cadenas del diccionario es necesario que el transporte se almacene en búfer.  
@@ -85,7 +85,7 @@ Este tema describe cómo crear codificadores personalizados.
   
  Es el código que se escribe en los métodos que administran la conversión entre el protocolo de transporte estándar y su codificación personalizada.  
   
- A continuación, es necesario codificar una clase de generador que cree el codificador personalizado. Invalide <xref:System.ServiceModel.Channels.MessageEncoderFactory.Encoder%2A> para devolver una instancia de su <xref:System.ServiceModel.Channels.MessageEncoder> personalizado.  
+ A continuación, es necesario programar una clase de generador que cree el codificador personalizado. Invalide <xref:System.ServiceModel.Channels.MessageEncoderFactory.Encoder%2A> para devolver una instancia de su <xref:System.ServiceModel.Channels.MessageEncoder> personalizado.  
   
  A continuación, conecte su <xref:System.ServiceModel.Channels.MessageEncoderFactory> personalizado a la pila de elementos de enlace utilizada para configurar el servicio o el cliente, invalidando el método <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>, para devolver una instancia de este generador.  
   

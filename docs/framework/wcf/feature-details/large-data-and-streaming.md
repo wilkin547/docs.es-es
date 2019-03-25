@@ -2,12 +2,12 @@
 title: Datos de gran tamaño y secuencias
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: c6514903294147671804b5b8de47fddc764b0547
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fa49f9da7caf9146f73017ec051381a8e9ef9e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674120"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411062"
 ---
 # <a name="large-data-and-streaming"></a>Datos de gran tamaño y secuencias
 Windows Communication Foundation (WCF) es una infraestructura de comunicaciones basado en XML. Dado que los datos XML se codifican habitualmente en el formato de texto estándar definido en el [especificación XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838)conectados los arquitectos y desarrolladores de sistemas normalmente están preocupados por la superficie de la conexión (o tamaño) de los mensajes enviados a través de la red y la codificación basada en texto de XML plantea desafíos especiales para la transferencia eficaz de los datos binarios.  
@@ -67,7 +67,7 @@ Windows Communication Foundation (WCF) es una infraestructura de comunicaciones 
   
 |Elemento de enlace del codificador.|Descripción|  
 |-----------------------------|-----------------|  
-|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|El codificador del mensaje de texto es el codificador predeterminado para todos los enlaces basados en HTTP y la opción adecuada para todos los enlaces personalizados donde la interoperabilidad es la preocupación superior. Este codificador lee y escribe los mensajes de texto SOAP 1.1/SOAP 1.2 estándar sin control especial para los datos binarios. Si <xref:System.ServiceModel.Channels.MessageVersion> de un mensaje está establecido en `None`, el contenedor del sobre SOAP se omite del resultado y solamente se serializa el contenido del cuerpo del mensaje.|  
+|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|El codificador del mensaje de texto es el codificador predeterminado para todos los enlaces basados en HTTP y la opción adecuada para todos los enlaces personalizados donde la interoperabilidad es la preocupación superior. Este codificador lee y escribe los mensajes de texto SOAP 1.1/SOAP 1.2 estándar sin control especial para los datos binarios. Si el <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> propiedad de un mensaje está establecida en <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>, el contenedor sobre SOAP se omite del resultado y se serializa el contenido de cuerpo del mensaje.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|El codificador del mensaje MTOM es un codificador de texto que implementa el control especial para los datos binarios y no se utiliza de forma predeterminada en ninguno de los enlaces estándar porque es estrictamente una utilidad de optimización caso por caso. Si el mensaje contiene datos binarios que superan un umbral donde la codificación MTOM produce una ventaja, los datos se exteriorizan en una parte MIME que sigue a la envoltura del mensaje. Vea "Habilitar MTOM" más adelante en esta sección.|  
 |<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|El codificador del mensaje binario es el codificador predeterminado para los enlaces Net * y la opción más adecuada, siempre que ambas partes en comunicación se basan en WCF. El codificador del mensaje binario utiliza el Formato XML Binario .NET, una representación binaria específica de Microsoft para conjuntos de información XML (Infosets) que generalmente produce una superficie menor que la representación equivalente XML 1.0 y codifica los datos binarios como una secuencia de bytes.|  
   
@@ -90,9 +90,9 @@ Windows Communication Foundation (WCF) es una infraestructura de comunicaciones 
 <system.serviceModel>  
 ```  
   
- Tal y como se ha mencionado anteriormente, la decisión de utilizar la codificación MTOM depende del volumen de datos que está enviando. Además, como MTOM está habilitado en el nivel de enlace, habilitar MTOM afecta a todas las operaciones en un extremo determinado.  
+ Tal y como se ha mencionado anteriormente, la decisión de utilizar la codificación MTOM depende del volumen de datos que está enviando. Además, como MTOM está habilitado en el nivel de enlace, habilitar MTOM afecta a todas las operaciones en un punto de conexión determinado.  
   
- Dado que el codificador MTOM siempre emite un mensaje MIME/de varias partes codificado con MTOM sin tener en cuenta si los datos binarios acaban exteriorizándose, generalmente se debería habilitar MTOM solo para los extremos que intercambian los mensajes con más de 1 KB de datos binarios. Asimismo, los contratos de servicios diseñados para el uso con extremos habilitados por MTOM deben, cuando sea posible, ser restringidos a especificar tales operaciones de transferencia de datos. La funcionalidad de control relacionada debería residir en un contrato independiente. Esta norma "solo MTOM" se aplica solamente a los mensajes enviados a través de un punto de conexión habilitado por MTOM; el codificador MTOM puede descodificar y analizar también los mensajes de entrada no MTOM.  
+ Dado que el codificador MTOM siempre emite un mensaje MIME/de varias partes codificado con MTOM sin tener en cuenta si los datos binarios acaban exteriorizándose, generalmente se debería habilitar MTOM solo para los puntos de conexión que intercambian los mensajes con más de 1 KB de datos binarios. Asimismo, los contratos de servicios diseñados para el uso con puntos de conexión habilitados por MTOM deben, cuando sea posible, ser restringidos a especificar tales operaciones de transferencia de datos. La funcionalidad de control relacionada debería residir en un contrato independiente. Esta norma "solo MTOM" se aplica solamente a los mensajes enviados a través de un punto de conexión habilitado por MTOM; el codificador MTOM puede descodificar y analizar también los mensajes de entrada no MTOM.  
   
  Uso del codificador MTOM se ajusta a todas las demás características WCF. Tenga en cuenta que tal vez no sea posible respetar esta regla en todos los casos, por ejemplo, cuando se requiere la compatibilidad de la sesión.  
   
@@ -203,7 +203,8 @@ public interface IStreamedService
 }  
 ```  
   
- `Echo` en el ejemplo anterior recibe y devuelve una secuencia y se debería utilizar por consiguiente en un enlace con <xref:System.ServiceModel.TransferMode.Streamed>. Para `RequestInfo` de la operación, <xref:System.ServiceModel.TransferMode.StreamedResponse> se adapta mejor, porque solo devuelve <xref:System.IO.Stream>. La operación unidireccional se adapta mejor para <xref:System.ServiceModel.TransferMode.StreamedRequest>.  
+ 
+  `Echo` en el ejemplo anterior recibe y devuelve una secuencia y se debería utilizar por consiguiente en un enlace con <xref:System.ServiceModel.TransferMode.Streamed>. Para `RequestInfo` de la operación, <xref:System.ServiceModel.TransferMode.StreamedResponse> se adapta mejor, porque solo devuelve <xref:System.IO.Stream>. La operación unidireccional se adapta mejor para <xref:System.ServiceModel.TransferMode.StreamedRequest>.  
   
  Tenga en cuenta que si se agrega un segundo parámetro a las operaciones `Echo` o `ProvideInfo` siguientes, se hace que el modelo de servicio se revierta a una estrategia con almacenamiento en búfer y se utilice la representación de serialización en tiempo de ejecución de la secuencia. Solo las operaciones con un parámetro de flujo de entrada único son compatibles con la transmisión por secuencias de solicitud de principio a fin.  
   

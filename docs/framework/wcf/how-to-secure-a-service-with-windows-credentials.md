@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: 83b55ca42a3cebb6ceb2aec128202f14dc35da0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5fece86dca524cb3f94f64dcb98361a93bf84a3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657563"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410932"
 ---
-# <a name="how-to-secure-a-service-with-windows-credentials"></a>Procedimiento Proteger un servicio con credenciales de Windows
+# <a name="how-to-secure-a-service-with-windows-credentials"></a>Filtrar Proteger un servicio con credenciales de Windows
 En este tema se muestra cómo habilitar la seguridad de transporte en un servicio de Windows Communication Foundation (WCF) que reside en un dominio de Windows y es llamado por los clientes en el mismo dominio. Para obtener más información acerca de este escenario, consulte [seguridad de transporte con autenticación de Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Para una aplicación de ejemplo, consulte el [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) ejemplo.  
   
  En este tema se parte del supuesto de que ya tiene definidas una interfaz e implementación de contrato. También puede modificar un servicio y cliente existentes.  
@@ -52,13 +52,13 @@ En este tema se muestra cómo habilitar la seguridad de transporte en un servici
   
 2.  Cree una variable <xref:System.Type>`contractType` con nombre y asígnele el tipo de la interfaz (`ICalculator`). Al usar Visual Basic, utilice el `GetType` operador; cuando se usa C#, utilice el `typeof` palabra clave.  
   
-3.  Cree una segunda variable `Type``serviceType` con nombre y asígnele el tipo del contrato implementado (`Calculator`).  
+3.  Cree una segunda variable <xref:System.Type>`serviceType` con nombre y asígnele el tipo del contrato implementado (`Calculator`).  
   
 4.  Cree una instancia de la clase <xref:System.Uri> denominada `baseAddress` con la dirección base del servicio. La dirección base debe tener un esquema que coincida con el transporte. En este caso, el esquema de transporte es HTTP y la dirección incluye especial "Localhost" de identificador uniforme de recursos (URI) y un puerto de número (8036), así como una dirección de punto de conexión base ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`.  
   
 5.  Cree una instancia de la clase<xref:System.ServiceModel.ServiceHost> con `serviceType` y variables `baseAddress`.  
   
-6.  Agregue un extremo al servicio incluyendo `contractType`, el enlace y el nombre del extremo ("secureCalculator"). Un cliente debe concatenar la dirección base y el nombre de extremo al iniciar una llamada al servicio.  
+6.  Agregue un punto de conexión al servicio incluyendo `contractType`, el enlace y el nombre del punto de conexión ("secureCalculator"). Un cliente debe concatenar la dirección base y el nombre de punto de conexión al iniciar una llamada al servicio.  
   
 7.  Llame al método <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> para iniciar el servicio. El código de este procedimiento se muestra aquí:  
   
@@ -80,7 +80,7 @@ En este tema se muestra cómo habilitar la seguridad de transporte en un servici
   
 3.  Cree una instancia de la clase <xref:System.ServiceModel.WSHttpBinding> y establezca su modo de seguridad en `Message` y su tipo de credencial de cliente en `Windows`. El ejemplo denomina el `clientBinding`variable.  
   
-4.  Cree una instancia de la clase <xref:System.ServiceModel.EndpointAddress> denominada `serviceAddress`. Inicialice la instancia con la dirección base concatenada con el nombre de extremo.  
+4.  Cree una instancia de la clase <xref:System.ServiceModel.EndpointAddress> denominada `serviceAddress`. Inicialice la instancia con la dirección base concatenada con el nombre de punto de conexión.  
   
 5.  Cree una instancia de la clase de cliente generada con `serviceAddress` y las variables `clientBinding`.  
   
@@ -102,11 +102,11 @@ En este tema se muestra cómo habilitar la seguridad de transporte en un servici
   
 1.  Agregar un [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento a la [ \<enlaces >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sección del elemento del archivo de configuración.  
   
-2.  Agregue un elemento <`binding`> al elemento <`WSHttpBinding`> y establezca el atributo `configurationName` a un valor apropiado para su aplicación.  
+2.  Agregar un <`binding`> elemento para el <`WSHttpBinding`> y establezca el `configurationName` en un valor apropiado para su aplicación.  
   
-3.  Agregue un elemento <`security`> y establezca el atributo `mode` en Message.  
+3.  Agregar un <`security`> y establezca el `mode` atributo al mensaje.  
   
-4.  Agregue un elemento <`message`> y establezca el atributo `clientCredentialType` en Windows.  
+4.  Agregar un <`message`> y establezca el `clientCredentialType` atribuir a Windows.  
   
 5.  En el archivo de configuración del servicio, reemplace la sección `<bindings>` con el código siguiente. Si no dispone de un archivo de configuración de servicio, consulte [uso de enlaces para configurar servicios y clientes](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   

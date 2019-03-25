@@ -2,12 +2,12 @@
 title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: 998f44d691231db14d24c36bdf769b502642d8c5
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: f508d814fb1e23c59606fcf78ad38f7661609c26
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758721"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411296"
 ---
 # <a name="nettcpcontextbinding"></a>\<netTcpContextBinding>
 Especifica un contexto para <xref:System.ServiceModel.NetTcpBinding> que requiere que se firme el nivel de protección. El contextExchangeMechanism para NetTcpContextBinding es SOAPHeader.  
@@ -68,8 +68,8 @@ Especifica un contexto para <xref:System.ServiceModel.NetTcpBinding> que requier
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |closeTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de cierre para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
-|contextProtectionLevel|Un valor <xref:System.Net.Security.ProtectionLevel> válido que especifica el nivel de protección deseado del encabezado SOAP usado para propagar la información de contexto.  El valor predeterminado es `Sign`.|  
-|hostnameComparisonMode|Especifica el modo de comparación de nombres de host HTTP usado para analizar los URI. Este atributo es del tipo `System.ServiceModel.HostnameComparisonMode`, que indica si se va a utilizar el nombre del host para llegar al servicio cuando coincida en el URI. El valor predeterminado es `StrongWildcard`, que omite el nombre del host en la coincidencia.|  
+|contextProtectionLevel|Un valor <xref:System.Net.Security.ProtectionLevel> válido que especifica el nivel de protección deseado del encabezado SOAP usado para propagar la información de contexto.  El valor predeterminado es <xref:System.Net.Security.ProtectionLevel.Sign>.|  
+|hostnameComparisonMode|Especifica el modo de comparación de nombres de host HTTP usado para analizar los URI. Este atributo es del tipo <xref:System.ServiceModel.HostNameComparisonMode>, que indica si se va a utilizar el nombre del host para llegar al servicio cuando coincida en el URI. El valor predeterminado es <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, que omite el nombre del host en la coincidencia.|  
 |listenBacklog|Un entero positivo que especifica el número máximo de canales que esperan ser aceptados en el agente de escucha. Conexiones que sobrepasen este límite se pondrán a la cola hasta que quede disponible un espacio por debajo del límite. El atributo `connectionTimeout` limita el tiempo durante el cual el cliente espera a ser conectado antes de iniciar una excepción de conexión. El valor predeterminado es 10.|  
 |maxBufferPoolSize|Entero que especifica el tamaño máximo del grupo de búferes para este enlace. El valor predeterminado es 512 * 1024 bytes. En muchas partes de Windows Communication Foundation (WCF) se utilizan búferes. Crear y destruir búferes cada vez que se usan es caro, y la recolección de elementos no utilizados para los búferes también es cara. Con grupos de búferes, puede tomar un búfer del grupo, usarlo y devolverlo al grupo una vez haya terminado. Así se evita la sobrecarga al crear y destruir búferes.|  
 |maxBufferSize|Un entero positivo que especifica el tamaño máximo, en bytes, del búfer usado para almacenar los mensajes en memoria. Si el búfer está completo, los datos excedentes permanecen en el socket subyacente hasta que el búfer tenga de nuevo espacio. Este valor no puede ser menor que el del atributo `maxReceivedMessageSize`. El valor predeterminado es 65536. Para obtener más información, consulta <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>.|  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: d7a00f2508769534e49c965d098dbacb01a1f189
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 8da1f49bf5b7d3daf6319906fb49390c008d209c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843537"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412219"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Ampliar el marco de vidrio en una aplicación de WPF
 
@@ -26,11 +26,9 @@ En este tema muestra cómo extender el [!INCLUDE[TLA#tla_winvista](../../../../i
 
 ## <a name="example"></a>Ejemplo
 
-En la siguiente imagen se muestra el marco de vidrio ampliado en la barra de direcciones de Internet Explorer 7.
+La siguiente imagen ilustra el marco glass extendido en la barra de direcciones de Internet Explorer 7:
 
-**Internet Explorer con marco de cristal ampliado detrás de la barra de direcciones.**
-
-![IE7 con marco de cristal ampliado detrás de la barra de direcciones.](./media/ie7glasstopbar.PNG "IE7glasstopbar")
+![Captura de pantalla mostrando marco de vidrio ampliado detrás de la barra de direcciones de IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
 Para ampliar el marco de cristal en una aplicación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se requiere acceso a la [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] no administrada. El siguiente ejemplo de código realiza una invocación de plataforma (pinvoke) para las dos [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] necesarias para ampliar el marco en el área cliente. Cada una de estas [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] se declaran en una clase denominada **NonClientRegionAPI**.
 
@@ -147,11 +145,9 @@ En el ejemplo siguiente se muestra una ventana simple en la que el marco se ampl
 </Window>
 ```
 
-En la siguiente imagen se muestra el marco de vidrio ampliado en una aplicación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+La siguiente imagen ilustra el marco glass extendido en un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicación:
 
-**Marco de vidrio ampliado en una**  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**aplicación**.
-
-![Marco de vidrio ampliado en una aplicación WPF.](./media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")
+![Captura de pantalla que muestra un marco de vidrio ampliado en una aplicación WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
 ## <a name="see-also"></a>Vea también
 

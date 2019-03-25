@@ -44,8 +44,7 @@ Puede establecer el valor de cada opción en 0 o 1. Cualquier opción que no se 
 
 A partir de la versión 2.0 de .NET Framework, el compilador JIT genera siempre información de seguimiento, independientemente del valor de `GenerateTrackingInfo`; sin embargo, el `AllowOptimize` valor sigue teniendo efecto. Al usar [Ngen.exe (generador de imágenes nativo)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) para precompilar la imagen nativa sin la optimización, el archivo .ini debe estar presente en la carpeta de destino con `AllowOptimize=0` cuando se ejecuta Ngen.exe. Si ha precompilado un ensamblado sin la optimización, debe quitar el código precompilado con NGen.exe **/ uninstall** opción antes de volver a ejecutar Ngen.exe para precompilar el código como optimizado. Si el archivo .ini no está presente en la carpeta, de forma predeterminada Ngen.exe precompila el código como optimizado.
 
-
-  <xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> controla los valores de un ensamblado. **DebuggableAttribute** incluye dos campos que controlan si el compilador JIT debe optimizar y/o generar información de seguimiento. A partir de la versión 2.0 de .NET Framework, el compilador JIT genera siempre información de seguimiento.
+<xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> controla los valores de un ensamblado. **DebuggableAttribute** incluye dos campos que controlan si el compilador JIT debe optimizar y/o generar información de seguimiento. A partir de la versión 2.0 de .NET Framework, el compilador JIT genera siempre información de seguimiento.
 
 Para una compilación comercial, los compiladores no establecen ningún **DebuggableAttribute**. De forma predeterminada, el compilador JIT genera el mayor rendimiento, más difícil de depurar el código máquina. Si se habilita el seguimiento JIT, disminuye un poco el rendimiento; si se deshabilita, disminuye mucho.
 

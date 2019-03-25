@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 3afb6a9bd62083704a3147df9d1cc5477b4f5921
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7378ddc8ada198beb005bc8682e6cb131def4ceb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125634"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412141"
 ---
 # <a name="typography-in-wpf"></a>Tipografía en WPF
 En este tema se presentan las características tipográficas principales de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Estas características incluyen la mejora de la calidad y el rendimiento de la representación de texto, la compatibilidad con tipografía [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], el texto internacional mejorado, la compatibilidad mejorada con fuentes y nuevas interfaces de programación de aplicaciones (API) de texto.  
@@ -121,7 +121,7 @@ Texto con función de suavizado de contorno de ClearType en la dirección del ej
  Para obtener más información, consulte [Documentos en WPF](documents-in-wpf.md).  
   
 ### <a name="lightweight-text-drawing"></a>Dibujo de texto ligero  
- Puede dibujar texto directamente en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objetos mediante el uso de la <xref:System.Windows.Media.DrawingContext.DrawText%2A> método de la <xref:System.Windows.Media.DrawingContext> objeto. Para usar este método, se crea un <xref:System.Windows.Media.FormattedText> objeto. Este objeto permite dibujar texto de varias líneas, en el que se puede dar formato individual a cada carácter del texto. La funcionalidad de la <xref:System.Windows.Media.FormattedText> objeto contiene gran parte de la funcionalidad de las marcas DrawText de la API de Win32. Además, el <xref:System.Windows.Media.FormattedText> objeto contiene la funcionalidad como la compatibilidad con puntos suspensivos, en el que se muestra un botón de puntos suspensivos al texto supera los límites establecidos. En el ejemplo siguiente se muestra texto al que se han aplicado varios formatos diferentes, incluido un degradado lineal en la segunda y tercera palabra.  
+ Puede dibujar texto directamente en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objetos mediante el uso de la <xref:System.Windows.Media.DrawingContext.DrawText%2A> método de la <xref:System.Windows.Media.DrawingContext> objeto. Para usar este método, se crea un <xref:System.Windows.Media.FormattedText> objeto. Este objeto permite dibujar texto de varias líneas, en el que se puede dar formato individual a cada carácter del texto. La funcionalidad de la <xref:System.Windows.Media.FormattedText> objeto contiene gran parte de la funcionalidad de las marcas DrawText de la API de Windows. Además, el <xref:System.Windows.Media.FormattedText> objeto contiene la funcionalidad como la compatibilidad con puntos suspensivos, en el que se muestra un botón de puntos suspensivos al texto supera los límites establecidos. En el ejemplo siguiente se muestra texto al que se han aplicado varios formatos diferentes, incluido un degradado lineal en la segunda y tercera palabra.  
   
  ![Texto mostrado mediante un objeto FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   

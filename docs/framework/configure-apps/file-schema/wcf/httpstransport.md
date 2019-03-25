@@ -2,12 +2,12 @@
 title: <httpsTransport>
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: efc568990c6af87f24f93790886388e4c505456c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dc95b1a31d582f255740152a235b9ca5e67cf5c6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289788"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411322"
 ---
 # <a name="httpstransport"></a>\<httpsTransport>
 Especifica un transporte HTTP para transmitir los mensajes SOAP para un enlace personalizado.  
@@ -54,7 +54,7 @@ Especifica un transporte HTTP para transmitir los mensajes SOAP para un enlace p
 |maxBufferSize|Un entero positivo que especifica el tamaño máximo del búfer. El valor predeterminado es 524288.|  
 |maxReceivedMessageSize|Un entero positivo que especifica el tamaño del mensaje permitido máximo que se puede recibir. El valor predeterminado es 65536.|  
 |proxyAddress|Un URI que especifica la dirección del proxy HTTP. Si `useSystemWebProxy` es `true`, este valor debe ser `null`. De manera predeterminada, es `null`.|  
-|proxyAuthenticationScheme|Especifica el protocolo utilizado para autenticar solicitudes de cliente que son procesadas por un proxy HTTP. Los valores válidos son los siguientes:<br /><br /> -None: Se realiza ninguna autenticación.<br />-Digest: Especifica la autenticación implícita.<br />-Negotiate: Negocia con el cliente para determinar el esquema de autenticación. Si cliente y el servidor son compatibles con Kerberos, se utiliza; de lo contrario, se utiliza NTLM.<br />-Ntlm: Especifica la autenticación de NTLM.<br />-Básicas: Especifica la autenticación básica.<br />-Anónimo: Especifica la autenticación anónima.<br /><br /> El valor predeterminado es Anonymous. Este atributo es del tipo <xref:System.Net.AuthenticationSchemes>. Tenga en cuenta que `IntegratedWindowsAuthentication` no se admite.|  
+|proxyAuthenticationScheme|Especifica el protocolo utilizado para autenticar solicitudes de cliente que son procesadas por un proxy HTTP. Los valores válidos son los siguientes:<br /><br /> -None: Se realiza ninguna autenticación.<br />-Digest: Especifica la autenticación implícita.<br />-Negotiate: Negocia con el cliente para determinar el esquema de autenticación. Si cliente y el servidor son compatibles con Kerberos, se utiliza; de lo contrario, se utiliza NTLM.<br />-Ntlm: Especifica la autenticación de NTLM.<br />-Básicas: Especifica la autenticación básica.<br />-Anónimo: Especifica la autenticación anónima.<br /><br /> El valor predeterminado es Anonymous. Este atributo es del tipo <xref:System.Net.AuthenticationSchemes>. Tenga en cuenta que <xref:System.Net.AuthenticationSchemes.IntegratedWindowsAuthentication?displayProperty=nameWithType> no se admite.|  
 |realm|Una cadena que especifica el dominio kerberos que se utilizará en el proxy/servidor. El valor predeterminado es una cadena vacía.<br /><br /> Los servidores usan los dominios para particionar recursos protegidos. Cada partición puede tener su propio esquema de autenticación y/o base de datos de autorización. Los dominios sólo se utilizan para la autenticación básica e implícita. Cuando un cliente se autentica correctamente, la autenticación es válida para todos los recursos de un dominio kerberos determinado. Para obtener una descripción detallada de dominios Kerberos, consulte RFC 2617 en el [sitio Web IETF](https://www.ietf.org).|  
 |requireClientCertificate|Un valor booleano que especifica si el servidor necesita que el cliente proporcione un certificado de cliente como parte del protocolo de enlace HTTPS. De manera predeterminada, es `false`.|  
 |transferMode|Especifica si los mensajes se almacenan en búfer, se transmiten o si son una solicitud o una respuesta. Los valores válidos son los siguientes:<br /><br /> -En el búfer: Se almacenan en búfer los mensajes de solicitud y respuesta.<br />-Transmite por secuencias: Se transmiten los mensajes de solicitud y respuesta.<br />-   StreamedRequest: Se transmite el mensaje de solicitud y se almacena en búfer el mensaje de respuesta.<br />-   StreamedResponse: Se almacena en búfer el mensaje de solicitud y se transmite el mensaje de respuesta.<br /><br /> El valor predeterminado es Buffered. Este atributo es del tipo <xref:System.ServiceModel.TransferMode>.|  

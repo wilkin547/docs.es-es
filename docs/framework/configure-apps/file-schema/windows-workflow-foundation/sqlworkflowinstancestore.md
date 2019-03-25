@@ -3,12 +3,12 @@ title: <sqlWorkflowInstanceStore>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
-ms.openlocfilehash: 350ffc2eff94492b43acefd95c71e02f6525d55e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9808d5f1f5053f8b68603e03d44b502aee6f5f0c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285381"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412024"
 ---
 # <a name="sqlworkflowinstancestore"></a>\<sqlWorkflowInstanceStore>
 Un comportamiento del servicio que le permite configurar el <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> característica, que admite conservar información de estado para las instancias de servicio de flujo de trabajo en una base de datos de SQL Server 2005 o SQL Server 2008. Para obtener más información sobre esta característica, consulte [Store de instancia de flujo de trabajo de SQL](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
@@ -43,11 +43,12 @@ Un comportamiento del servicio que le permite configurar el <xref:System.Activit
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|connectionString|Una cadena que contiene una cadena de conexión utilizada para conectarse a una base de datos de persistencia subyacente.|  
+|
+  connectionString|Una cadena que contiene una cadena de conexión utilizada para conectarse a una base de datos de persistencia subyacente.|  
 |connectionStringName|Una cadena que contiene una cadena de conexión con nombre en el servidor de base de datos. Un ejemplo de una cadena de conexión con nombre es "DefaultConnectionString".|  
 |honstLockRenewalPeriod|Valor de Timespan que especifica el período de tiempo en el que el host debe renovar el bloqueo en una instancia. Si el host no renueva el bloqueo en el período de tiempo especificado, la instancia se desbloquea y se puede escoger a por otro host.<br /><br /> Descargar un flujo de trabajo implica que también se conserva. Si este atributo se establece en cero se conservan y se descargan inmediatamente después de la instancia de flujo de trabajo el flujo de trabajo se vuelve inactiva. Establecer este atributo en TimeSpan.MaxValue eficazmente, deshabilita la operación de descarga. Las instancias de flujo de trabajo inactivas nunca se descargan.|  
 |instanceCompletionAction|Un valor que especifica si los datos de la instancia de flujo de trabajo se mantienen en el almacén de persistencia después de que la instancia de flujo de trabajo se complete o si se ha eliminado en ese punto. Este valor es del tipo <xref:System.Activities.DurableInstancing.InstanceCompletionAction>.<br /><br /> Las acciones enumeradas consisten en eliminar los datos de instancia del almacén de persistencia o en no eliminar los datos de instancia del almacén de persistencia cuando la instancia haya completado su operación.<br /><br /> Mantener las instancias una vez completadas provoca que la base de datos de persistencia crezca rápidamente y esto afecta al rendimiento de la base de datos. Debería configurar una directiva de purga de base de datos para eliminar estos registros de forma periódica para asegurarse de que el rendimiento de la base de datos está en el nivel que satisface sus requisitos de rendimiento.|  
-|instanceEncodingOption|Un valor opcional que especifica si la información de estado de la instancia se comprime utilizando el algoritmo Gzip antes de que la información se guarde en el almacén de persistencia. Este valor es del tipo `System.Activities.DurableInstancing.InstanceEncodingAction`. Los valores posibles para esta propiedad son "None", donde no se especifica ninguna compresión y "GZip", que se especifica esa instancia de datos se comprimen y utilizan el algoritmo gzip.|  
+|instanceEncodingOption|Un valor opcional que especifica si la información de estado de la instancia se comprime utilizando el algoritmo Gzip antes de que la información se guarde en el almacén de persistencia. Este valor es del tipo <xref:System.Activities.DurableInstancing.InstanceEncodingOption>. Los valores posibles para esta propiedad son <xref:System.Activities.DurableInstancing.InstanceEncodingOption.None>, que especifica que no hay compresión, y <xref:System.Activities.DurableInstancing.InstanceEncodingOption.GZip>, que especifica que los datos de instancia se comprimen y utilizan el algoritmo gzip.|  
 |instanceLockedExceptionAction|Un valor que especifica la acción que se produce en respuesta a una excepción que se produce cuando el host intenta bloquear una instancia porque otro host bloquea actualmente la instancia. Este valor es del tipo <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction>.<br /><br /> Las opciones permitidas para este campo son: Ninguno, reintento básico y reintento agresivo. El valor predeterminado es None. La siguiente lista proporciona las descripciones de estas tres opciones:<br /><br /> -   Ninguno. El host del servicio no intenta bloquear la instancia y pasa el objeto <xref:System.Runtime.DurableInstancing.InstanceLockedException> al autor de la llamada.<br />-Básica de reintentos. El host del servicio vuelve a intentar bloquear la instancia con un intervalo de reintento lineal y pasa la excepción al autor de la llamada al final de la secuencia.<br />-Reintento agresiva. El host del servicio vuelve a intentar bloquear la instancia con un retraso en aumento exponencial y pasa el objeto <xref:System.Runtime.DurableInstancing.InstanceLockedException> al autor de llamada al final de la secuencia.|  
 |runnableInstancesDetectionPeriod||  
   
