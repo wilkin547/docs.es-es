@@ -2,12 +2,12 @@
 title: conjunto de asociaciones
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-ms.openlocfilehash: 29150eea7781784c2cdbd1f0137e02b94f66e106
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2eaa4d3c70e0efbf9705b4285d1abd4753bd1db9
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565935"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411270"
 ---
 # <a name="association-set"></a>conjunto de asociaciones
 Un *conjunto de asociaciones* es un contenedor lógico para [asociación](../../../../docs/framework/data/adonet/association-type.md) instancias del mismo tipo. Un conjunto de asociaciones no es una construcción del modelado de datos; es decir, no describe la estructura de datos o relaciones. En su lugar, un conjunto de asociaciones proporciona una construcción para que un entorno de hospedaje o de almacenamiento (como Common Language Runtime o una base de datos de SQL Server) agrupe las instancias de asociaciones a fin de que se puedan asignar a un almacén de datos.  
@@ -25,11 +25,11 @@ Un *conjunto de asociaciones* es un contenedor lógico para [asociación](../../
 ## <a name="example"></a>Ejemplo  
  El diagrama siguiente muestra un modelo conceptual con dos asociaciones: `PublishedBy` y `WrittenBy`. Aunque la información sobre los conjuntos de asociaciones no se muestra en el diagrama, el diagrama siguiente muestra un ejemplo de conjuntos de asociaciones y conjuntos de entidades basados en este modelo.  
   
- ![Ejemplo de modelo](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Modelo de ejemplo con tres tipos de entidad](./media/association-set/example-model-three-entity-types.gif)  
   
  El siguiente ejemplo muestra un conjunto de asociaciones (`PublishedBy` y dos conjuntos de entidades (`Books` y `Publishers`) basados en el modelo conceptual mostrado anteriormente. BI en el `Books` conjunto de entidades representa una instancia de la `Book` tipo de entidad en tiempo de ejecución. De forma similar, Pj representa un `Publisher` de instancia en el `Publishers` conjunto de entidades. BiPj representa una instancia de la `PublishedBy` asociación en el `PublishedBy` conjunto de asociaciones.  
   
- ![Establece ejemplo](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
+ ![Captura de pantalla que muestra un ejemplo de conjuntos.](./media/association-set/sets-example-association.gif)  
   
  El [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales. El siguiente CSDL define un contenedor de entidad con un conjunto de asociaciones para cada asociación en el diagrama anterior. Observe que el nombre y asociación para cada conjunto de asociaciones se definen utilizando los atributos XML.  
   

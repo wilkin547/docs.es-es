@@ -2,12 +2,12 @@
 title: Elección de un codificador de mensajes
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538432"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409489"
 ---
 # <a name="choosing-a-message-encoder"></a>Elección de un codificador de mensajes
 En este tema se analiza los criterios para elegir entre los codificadores de mensajes que se incluyen en Windows Communication Foundation (WCF): binario, texto y Message Transmission Optimization Mechanism (MTOM).  
@@ -65,9 +65,9 @@ Se omite el valor de IgnoreWhitespace.
 
 A partir de WCF 4.5, el codificador binario de WCF agrega compatibilidad con la compresión. Esto le permite usar el algoritmo gzip/deflate para enviar mensajes comprimidos desde un cliente de WCF y también responder con mensajes comprimidos desde un servicio WCF hospedado a sí mismo. Esta característica habilita la compresión en los transportes HTTP y TCP. Un servicio de WCF hospedado en IIS siempre se puede habilitar para enviar respuestas comprimidas si se configura el servidor host de IIS. El tipo de compresión se configura con la propiedad <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A?displayProperty=nameWithType>. Esta propiedad se establece en uno de los valores de la enumeración <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType>:
 
-* `CompressionFormat.Deflate`
-* `CompressionFormat.GZip`
-* `CompressionFormat.None`
+- <xref:System.ServiceModel.Channels.CompressionFormat.Deflate>
+- <xref:System.ServiceModel.Channels.CompressionFormat.GZip>
+- <xref:System.ServiceModel.Channels.CompressionFormat.None>
   
 Puesto que esta propiedad solo se expone en el binaryMessageEncodingBindingElement, necesitará crear un enlace personalizado similar al siguiente para usar esta característica:
 

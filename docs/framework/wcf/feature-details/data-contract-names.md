@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-ms.openlocfilehash: cd878452f3ec99627507334a26873a004e5b5314
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16a42a2808104a77e56e93564a679dfc578e73f6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196699"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408879"
 ---
 # <a name="data-contract-names"></a>Nombres de contratos de datos
 
@@ -64,7 +64,7 @@ En este ejemplo, el tipo `Drawing<Square,RegularRedBrush>` tiene el nombre de co
 
 ## <a name="customizing-data-contract-names-for-generic-types"></a>Personalizar nombres de contrato de datos para tipos genéricos
 
-A veces, los nombres de contrato de datos generados para tipos genéricos, como se describió previamente, son inaceptables. Por ejemplo, puede conocer de antemano que no se encontrará con nombres coincidentes y puede que desee eliminar el hash. En este caso, puede utilizar la propiedad <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> del atributo `DataContractAttribute` para especificar una manera diferente de generar los nombres. Puede utilizar números dentro de llaves dentro de la propiedad `Name` para hacer referencia a los nombres de contratos de datos de los parámetros genéricos. (0 hace referencia al primer parámetro, 1 hace referencia al segundo, etc.). Puede utilizar una almohadilla (#) dentro de llaves para hacer referencia al hash. Puede utilizar cada una de estas referencias varias veces o ninguna.
+A veces, los nombres de contrato de datos generados para tipos genéricos, como se describió previamente, son inaceptables. Por ejemplo, puede conocer de antemano que no se encontrará con nombres coincidentes y puede que desee eliminar el hash. En este caso, puede usar el <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A?displayProperty=nameWithType> propiedad para especificar otra forma de generar nombres. Puede utilizar números dentro de llaves dentro de la propiedad `Name` para hacer referencia a los nombres de contratos de datos de los parámetros genéricos. (0 hace referencia al primer parámetro, 1 hace referencia al segundo, etc.). Puede utilizar una almohadilla (#) dentro de llaves para hacer referencia al hash. Puede utilizar cada una de estas referencias varias veces o ninguna.
 
 Por ejemplo, el tipo genérico `Drawing` anterior podría haberse declarado como se muestra en el ejemplo siguiente.
 

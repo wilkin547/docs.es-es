@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: c1d7654dc190b00363fa6cc47c362b5f9e90d8f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: da455adb23dd70a915e81217c6c30f2d523e001c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375537"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409658"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Información general sobre la representación de gráficos en WPF
 En este tema se ofrece información de la capa de objeto visual de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Se centra en el rol de la <xref:System.Windows.Media.Visual> clase para representar la compatibilidad en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelo.  
@@ -49,8 +49,7 @@ En este tema se ofrece información de la capa de objeto visual de [!INCLUDE[TLA
   
  <xref:System.Windows.Media.Visual> se expone como una clase abstracta pública desde el que se deben derivar clases secundarias. La siguiente ilustración muestra la jerarquía de los objetos visuales que se exponen en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- ![Diagrama de clases derivadas del objeto Visual](./media/visualclass01.png "VisualClass01")  
-Jerarquía de clase Visual  
+ ![Diagrama de clases derivadas del objeto Visual](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
 ### <a name="drawingvisual-class"></a>Clase DrawingVisual  
  El <xref:System.Windows.Media.DrawingVisual> es una clase que se utiliza para representar formas, imágenes o texto de dibujo de ligera. Esta clase se considera ligera porque no proporciona control de diseño ni control de eventos, lo que mejora su rendimiento en tiempo de ejecución. Por esta razón, los dibujos son ideales para fondos e imágenes prediseñadas. El <xref:System.Windows.Media.DrawingVisual> puede usarse para crear un objeto visual personalizado. Para más información, consulte [Usar objetos DrawingVisual](using-drawingvisual-objects.md).  
@@ -110,8 +109,7 @@ Orden de las operaciones de DrawingGroup
   
  Si tuviera que enumerar los objetos visuales que constituyen el valor predeterminado <xref:System.Windows.Controls.Button> control, encontraría la jerarquía de objetos visuales se muestra a continuación:  
   
- ![Diagrama de jerarquía de árbol visual](./media/visuallayeroverview03.gif "VisualLayerOverview03")  
-Diagrama de jerarquía de árbol visual  
+ ![Diagrama de jerarquía de árbol visual](./media/wpf-graphics-rendering-overview/visual-object-diagram.gif) 
   
  El <xref:System.Windows.Controls.Button> control contiene un <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> elemento, que a su vez, contiene un <xref:System.Windows.Controls.ContentPresenter> elemento. El <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> elemento es responsable de dibujar un borde y un fondo para el <xref:System.Windows.Controls.Button>. El <xref:System.Windows.Controls.ContentPresenter> es responsable de mostrar el contenido del elemento de la <xref:System.Windows.Controls.Button>. En este caso, ya que se va a mostrar texto, el <xref:System.Windows.Controls.ContentPresenter> elemento contiene un <xref:System.Windows.Controls.TextBlock> elemento. El hecho de que el <xref:System.Windows.Controls.Button> control utiliza un <xref:System.Windows.Controls.ContentPresenter> significa que el contenido podría representarse por otros elementos, como un <xref:System.Windows.Controls.Image> o una geometría, como un <xref:System.Windows.Media.EllipseGeometry>.  
   
@@ -124,8 +122,7 @@ Diagrama de jerarquía de árbol visual
   
  Si tuviera que enumerar los objetos visuales y vectoriales listas de instrucciones de gráficos que componen el <xref:System.Windows.Controls.Button> control, encontraría la jerarquía de objetos que se muestra a continuación:  
   
- ![Diagrama de árbol visual y datos de representación](./media/visuallayeroverview04.png "VisualLayerOverview04")  
-Diagrama de árbol visual y datos de representación  
+ ![Diagrama de árbol visual y datos de representación](./media/wpf-graphics-rendering-overview/visual-tree-rendering-data.png)  
   
  El <xref:System.Windows.Controls.Button> control contiene un <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> elemento, que a su vez, contiene un <xref:System.Windows.Controls.ContentPresenter> elemento. El <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> elemento es responsable de dibujar todos los elementos gráficos discretos que constituyen el borde y fondo de un botón. El <xref:System.Windows.Controls.ContentPresenter> es responsable de mostrar el contenido del elemento de la <xref:System.Windows.Controls.Button>. En este caso, ya que se va a mostrar una imagen, el <xref:System.Windows.Controls.ContentPresenter> elemento contiene un <xref:System.Windows.Controls.Image> elemento.  
   
@@ -149,14 +146,12 @@ Diagrama de árbol visual y datos de representación
   
  Si tuviera que enumerar los objetos visuales que constituyen el <xref:System.Windows.Controls.StackPanel> elemento del ejemplo de marcación, encontraría la jerarquía de objetos visuales se muestra a continuación:  
   
- ![Diagrama de jerarquía de árbol visual](./media/visuallayeroverview05.gif "VisualLayerOverview05")  
-Diagrama de jerarquía de árbol visual  
+ ![Diagrama de jerarquía de árbol visual](./media/wpf-graphics-rendering-overview/visual-tree-hierarchy.gif)  
   
 ### <a name="rendering-order"></a>Orden de representación  
  El árbol visual determina el orden de representación de objetos visuales y de dibujo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. El orden del recorrido comienza con el objeto visual raíz, que es el nodo de nivel superior del árbol visual. A continuación, se atraviesan los elementos secundarios del objeto visual raíz, de izquierda a derecha. Si un objeto visual tiene elementos secundarios, estos se atraviesan antes que los elementos del mismo nivel del objeto visual. Esto significa que el contenido de un objeto visual secundario se representa delante del contenido propio del objeto visual.  
   
- ![Diagrama de orden de representación de árbol visual](./media/visuallayeroverview06.gif "VisualLayerOverview06")  
-Diagrama de orden de representación de árbol visual  
+ ![Diagrama de orden de representación de árbol visual](./media/wpf-graphics-rendering-overview/visual-tree-rendering-order.gif) 
   
 ### <a name="root-visual"></a>Objeto visual raíz  
  El **objeto visual raíz** es el elemento de nivel superior de una jerarquía de árbol visual. En la mayoría de las aplicaciones, la clase base del objeto visual raíz es <xref:System.Windows.Window> o <xref:System.Windows.Navigation.NavigationWindow>. Sin embargo, si se hospedaran objetos visuales en una aplicación Win32, el objeto visual raíz sería el objeto visual de nivel superior que se hospeda en la ventana de Win32. Para obtener más información, consulte [Tutorial: Hospedar objetos visuales en una aplicación Win32](tutorial-hosting-visual-objects-in-a-win32-application.md).  
@@ -178,9 +173,8 @@ Diagrama de árbol lógico
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>Visualización del árbol visual con XamlPad  
  La herramienta de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], XamlPad, proporciona una opción para ver y explorar el árbol visual que corresponde al contenido de [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] definido actualmente. Haga clic en el botón **Show Visual Tree** (Mostrar árbol visual) de la barra de menús para mostrar el árbol visual. A continuación se muestra la expansión del contenido de [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] en nodos de árbol visual en el panel **Visual Tree Explorer** (Explorador de árbol visual) de XamlPad:  
   
- ![Panel del explorador de árbol visual en XamlPad](./media/visuallayeroverview08.png "VisualLayerOverview08")  
-Panel del explorador de árbol visual en XamlPad  
-  
+ ![Panel del explorador de árbol visual en XamlPad](./media/wpf-graphics-rendering-overview/visual-tree-explorer.png)  
+
  Observe cómo el <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, y <xref:System.Windows.Controls.Button> todos los controles de mostrar una jerarquía de objetos visuales independiente en el **Visual Tree Explorer** panel de XamlPad. Esto es porque [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controles tienen un <xref:System.Windows.Controls.ControlTemplate> que contiene el árbol visual de ese control. Al hacer referencia explícitamente a un control, implícitamente también se hace referencia a su jerarquía visual.  
   
 ### <a name="profiling-visual-performance"></a>Generación de perfiles de rendimiento visual  
@@ -196,14 +190,12 @@ Resultados del generador de perfiles visuales
 ### <a name="retained-mode-graphics"></a>Gráficos en modo retenido  
  Una de las claves para conocer el rol del objeto visual es conocer la diferencia entre los sistemas de gráficos del **modo inmediato** y del **modo retenido**. Una aplicación Win32 estándar basada en GDI o GDI + utiliza un sistema de gráficos de modo inmediato. Esto significa que la aplicación es responsable de volver a dibujar la parte del área de cliente que se ha invalidado, debido a una acción, como el cambio de tamaño de una ventana o al cambio de la apariencia visual de un objeto.  
   
- ![Diagrama de secuencia de representación de Win32](./media/visuallayeroverview01.png "VisualLayerOverview01")  
-Diagrama de secuencia de representación de Win32  
+ ![Diagrama de secuencia de representación de Win32](./media/wpf-graphics-rendering-overview/win32-rendering-squence.png)  
   
  En cambio, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utiliza un sistema de modo retenido. Esto significa que los objetos de la aplicación que tienen una apariencia visual definen un conjunto de datos de dibujo serializados. Una vez que se definen los datos de dibujo, el sistema es responsable de responder a todas las solicitudes de repetición del dibujo para representar los objetos de la aplicación. Incluso en tiempo de ejecución, puede modificar o crear objetos de la aplicación y seguir confiando en que el sistema responderá a las solicitudes de dibujo. La eficacia de un sistema de gráficos en modo retenido es que la aplicación guarda siempre la información de dibujo en un estado serializado, pero la responsabilidad de la representación se deja al sistema. El siguiente diagrama muestra la forma en que la aplicación usa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para responder a las solicitudes de dibujo.  
   
- ![Diagrama de secuencia de representación de WPF](./media/visuallayeroverview02.png "VisualLayerOverview02")  
-Diagrama de secuencia de representación de WPF  
-  
+ ![Diagrama de secuencia de representación de WPF](./media/wpf-graphics-rendering-overview/wpf-rendering-sequence.png)  
+
 #### <a name="intelligent-redrawing"></a>Volver a dibujar de forma inteligente  
  Una de las mayores ventajas de utilizar gráficos en modo retenido es que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] puede optimizar eficazmente lo que hay que volver a dibujar en la aplicación. Aunque tenga una escena compleja con diferentes niveles de opacidad, por lo general no es preciso escribir código especial para optimizar el redibujado. Compárelo esto con la programación de Win32, en la que se puede dedicar mucho esfuerzo a optimizar la aplicación mediante la minimización de la cantidad de redibujado que se realiza en la región de actualización. Consulte [Redrawing in the Update Region](/windows/desktop/gdi/redrawing-in-the-update-region) (Redibujado en la región de actualización) para obtener un ejemplo del tipo de complejidad implicado en la optimización del redibujado en las aplicaciones de Win32.  
   
@@ -214,8 +206,7 @@ Diagrama de secuencia de representación de WPF
   
  La ilustración siguiente muestra una imagen de origen cuyo tamaño se ha cambiado en un 300 %. Observe las distorsiones que aparecen cuando la imagen de origen es un gráfico de mapa de bits y se ajusta, en lugar de escalarse como imagen de gráfico vectorial.  
   
- ![Diferencias entre gráficos de trama y vectoriales](./media/vectorgraphics01.png "VectorGraphics01")  
-Diferencias entre gráficos de trama y vectoriales  
+ ![Diferencias entre gráficos de trama y vectoriales](./media/wpf-graphics-rendering-overview/raster-vector-differences.png)  
   
  El marcado siguiente muestra dos <xref:System.Windows.Shapes.Path> elementos definidos. El segundo elemento utiliza un <xref:System.Windows.Media.ScaleTransform> para cambiar el tamaño de las instrucciones de dibujo del primer elemento en un 300%. Tenga en cuenta que las instrucciones de dibujo en el <xref:System.Windows.Shapes.Path> elementos permanecen sin cambios.  
   

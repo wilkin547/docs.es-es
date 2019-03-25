@@ -2,12 +2,12 @@
 title: Operaciones Set (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 8ec7f2785617c354a1aa506ac0df9eef7d051b59
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7b8dcaaa82ac5a30c35222417245153e55a522cc
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679299"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409255"
 ---
 # <a name="set-operations-visual-basic"></a>Operaciones Set (Visual Basic)
 Las operaciones set de LINQ se refieren a operaciones de consulta que generan un conjunto de resultados en función de la presencia o ausencia de elementos equivalentes dentro de la misma colección o en distintas colecciones (o conjuntos).  
@@ -28,23 +28,21 @@ Las operaciones set de LINQ se refieren a operaciones de consulta que generan un
 ### <a name="distinct"></a>Distinct  
  En la siguiente ilustración se muestra el comportamiento del método <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> en una secuencia de caracteres. La secuencia devuelta contiene los elementos únicos de la secuencia de entrada.  
   
- ![Gráfico que muestra el comportamiento de Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
+ ![Gráfico que muestra el comportamiento de Distinct&#40;&#41;.](./media/set-operations/distinct-method-behavior.png)  
   
 ### <a name="except"></a>Except  
  En la siguiente ilustración se muestra el comportamiento de <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. La secuencia devuelta solo contiene los elementos de la primera secuencia de entrada que no están en la segunda secuencia de entrada.  
   
- ![Gráfico mostrando la acción de excepto&#40;&#41;. ](./media/set-operations/except-behavior-graphic.png "Muestra el comportamiento de excepción.")  
+ ![Gráfico que muestra la acción de Except&#40;&#41;. ](./media/set-operations/except-behavior-graphic.png "Muestra el comportamiento de Except.")  
   
 ### <a name="intersect"></a>Formar intersección  
  En la siguiente ilustración se muestra el comportamiento de <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. La secuencia devuelta contiene los elementos que son comunes a las dos secuencias de entrada.  
   
- ![Gráfico que muestra la intersección de dos secuencias.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
-  
+ ![Gráfico mostrando la intersección de dos secuencias.](./media/set-operations/intersection-two-sequences.png)    
 ### <a name="union"></a>Unión  
  En la siguiente ilustración se muestra una operación de unión en dos secuencias de caracteres. La secuencia devuelta contiene los elementos únicos de las dos secuencias de entrada.  
   
- ![Gráfico que muestra la unión de dos secuencias.](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
-  
+ ![Gráfico mostrando la unión de dos secuencias.](./media/set-operations/union-operation-two-sequences.png)    
 ## <a name="query-expression-syntax-example"></a>Ejemplo de sintaxis de expresiones de consulta  
  En el ejemplo siguiente se usa el `Distinct` cláusula en una consulta LINQ para devolver los números únicos de una lista de enteros.  
   

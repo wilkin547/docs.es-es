@@ -2,12 +2,12 @@
 title: Patrones activos
 description: Aprenda a usar los patrones activos para definir particiones con nombre que subdividen los datos de entrada en el F# lenguaje de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: c830011b69809bd399aab0c8a8bc25d40d5c82cc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 0f1f57de425836738201d2d8f84ab67a0df142ee
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612847"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412089"
 ---
 # <a name="active-patterns"></a>Patrones activos
 
@@ -86,23 +86,23 @@ La salida del ejemplo anterior es el siguiente:
 Something else : Not matched.
 ```
 
-Al usar patrones activos parciales, en ocasiones, las opciones individuales pueden ser separados o mutuamente excluyentes, pero no se necesita. En el ejemplo siguiente, el cuadrado de patrón y el modelo del cubo no son separados, porque algunos números son cuadrados y cubos, como los 64. El siguiente programa imprime todos los enteros hasta 1000000 que son cuadrados y cubos.
+Al usar patrones activos parciales, en ocasiones, las opciones individuales pueden ser separados o mutuamente excluyentes, pero no se necesita. En el ejemplo siguiente, el cuadrado de patrón y el modelo del cubo no son separados, porque algunos números son cuadrados y cubos, como los 64. El siguiente programa usa el modelo de AND para combinar los patrones de cuadrado y el cubo. Imprimen todos los enteros hasta 1000 que son tanto cuadrados y cubos, así como a los que solo los cubos. 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 La salida es la siguiente:
 
 ```
-1
-64
-729
-4096
-15625
-46656
-117649
-262144
-531441
-1000000
+1 is a cube and a square
+8 is a cube
+27 is a cube
+64 is a cube and a square
+125 is a cube
+216 is a cube
+343 is a cube
+512 is a cube
+729 is a cube and a square
+1000 is a cube
 ```
 
 ## <a name="parameterized-active-patterns"></a>Modelos activos con parámetros

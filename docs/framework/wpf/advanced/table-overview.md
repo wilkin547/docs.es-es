@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: e202fe839de547145c36a5664b62c350f40bfce6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4abb6368946f9dac5fdefd6ca44f3adeed55f78f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379021"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410828"
 ---
 # <a name="table-overview"></a>Información general sobre tablas
 <xref:System.Windows.Documents.Table> es un elemento de nivel de bloque que admite presentación basada en cuadrícula de contenido de documentos dinámicos. La flexibilidad de este elemento lo hace muy útil, pero también más complicado de entender y usar correctamente.  
@@ -72,7 +72,7 @@ ms.locfileid: "57379021"
   
  En la ilustración siguiente, se muestra cómo se representa este ejemplo.  
   
- ![Captura de pantalla: Representar una tabla básica](./media/basictablerrender.png "BasicTablerRender")  
+ ![Captura de pantalla que muestra cómo se representa una tabla básica.](./media/table-overview/basic-table-render-example.png)  
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>Contención de tablas  

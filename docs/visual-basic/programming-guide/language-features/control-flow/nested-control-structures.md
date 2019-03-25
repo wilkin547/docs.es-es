@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 9b10363e2273a22ac7ee3d9a943a1bec4616d232
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 13e2c5c8d818a09ec5e77ec47fe8a2c83b675d82
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185732"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409801"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Estructuras de control anidadas (Visual Basic)
 Puede colocar las instrucciones de control dentro de otras instrucciones de control, por ejemplo un `If...Then...Else` bloquear dentro de un `For...Next` bucle. Una instrucción de control que se coloca dentro de otra instrucción de control se dice que *anidada*.  
@@ -67,8 +67,7 @@ Next ctl
 ## <a name="overlapping-control-structures"></a>Estructuras de Control superpuestas  
  No se pueden superponer las estructuras de control. Esto significa que cualquier estructura anidada debe estar contenido completamente dentro de la siguiente estructura más interna. Por ejemplo, la organización siguiente no es válida porque la `For` bucle finaliza antes de interno `With` finaliza el bloque.  
   
- ![Diagrama gráfico de anidación no válida](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
-Anidamiento no válido de para y con las estructuras  
+ ![Diagrama que muestra un ejemplo de anidación no válida.](./media/nested-control-structures/example-invalid-nesting.gif) 
   
  El compilador de Visual Basic detecta estas estructuras de control que se superponen y señala un error de tiempo de compilación.  
   

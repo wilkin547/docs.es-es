@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8314f34f9fe0be43e7371d29cb4b366a819807c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5ca8cf76745190bd9819dde522c34e57952cd1ca
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356109"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410464"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)
 
@@ -337,7 +337,8 @@ Aplicar la directiva `Dynamic` a un método implica los siguientes cambios de di
 
 - Si el método es genérico, los tipos sobre los cuales se crea una instancia del método se marcan con la directiva `Browse`.
 
-- `MethodInfo.Invoke` puede invocar al método y la creación de delegados se hace posible mediante <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>.
+- 
+  `MethodInfo.Invoke` puede invocar al método y la creación de delegados se hace posible mediante <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>.
 
 Aplicar la directiva `Dynamic` a un campo implica los siguientes cambios de directiva:
 
@@ -405,7 +406,7 @@ Aplicar la directiva `Serialize` a un campo implica los siguientes cambios de di
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>El efecto de las directivas XmlSerializer, DataContractSerializer y DataContractJsonSerializer
 
-A diferencia de la directiva `Serialize`, que está destinada a los serializadores basados en reflexión, las directivas `XmlSerializer`, `DataContractSerializer` y `DataContractJsonSerializer` se utilizan para habilitar un conjunto de serializadores conocidos por la cadena de herramientas de [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Estos serializadores no se implementan mediante reflexión, pero el conjunto de tipos que se pueden serializar en tiempo de ejecución se determina de manera similar a los tipos que admiten reflexión.
+A diferencia de la directiva `Serialize`, que está destinada a los serializadores basados en reflexión, las directivas <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer> y <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> se utilizan para habilitar un conjunto de serializadores conocidos por la cadena de herramientas de [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Estos serializadores no se implementan mediante reflexión, pero el conjunto de tipos que se pueden serializar en tiempo de ejecución se determina de manera similar a los tipos que admiten reflexión.
 
 Aplicar una de estas directivas a un tipo permite la serialización del tipo con el serializador correspondiente. Además, los tipos que el motor de serialización puede determinar de forma estática que necesitan serialización también se podrán serializar.
 

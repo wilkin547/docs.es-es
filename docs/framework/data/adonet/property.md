@@ -2,12 +2,12 @@
 title: propiedad
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: bc8f890479e195f1e6ef847219a74f165c722fd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80c4bb3ccbab75c17b098723fc10b8b996e40576
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589430"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409723"
 ---
 # <a name="property"></a>propiedad
 *Propiedades* son los pilares fundamentales de [tipos de entidad](../../../../docs/framework/data/adonet/entity-type.md) y [tipos complejos](../../../../docs/framework/data/adonet/complex-type.md). Las propiedades definen la forma y características de datos que una instancia del tipo de entidad o la instancia del tipo complejo contendrá. Las propiedades en un modelo conceptual son análogas a las propiedades definidas en una clase. Del mismo modo que las propiedades en una clase definen la forma de la clase y proporcionan información sobre los objetos, las propiedades en un modelo conceptual definen la forma de un tipo de entidad y proporcionan información sobre las instancias del tipo de entidad.  
@@ -31,7 +31,7 @@ ms.locfileid: "54589430"
 ## <a name="example"></a>Ejemplo  
  El diagrama siguiente muestra un modelo conceptual con tres tipos de entidades: `Book`, `Publisher` y `Author`. Cada tipo de entidad tiene varias propiedades, aunque la información de tipo para cada propiedad no se muestra en el diagrama. Las propiedades que son [claves de entidad](../../../../docs/framework/data/adonet/entity-key.md) se denotan con (Key).  
   
- ![Ejemplo de modelo](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Modelo de ejemplo con tres tipos de entidad](./media/property/example-model-three-entity-types.gif)  
   
  El [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales. En el siguiente CSDL se define el tipo de entidad `Book` (como se muestra en el diagrama anterior) y se indica el tipo y nombre de cada propiedad utilizando atributos XML. Una faceta opcional, `Nullable`, también se define utilizando un atributo de XML.  
   

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Realizar una prueba de posicionamiento usando Geometry como parámetro
+title: Procedimiento Realizar una prueba de posicionamiento usando Geometry como parámetro
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 15a33d05cb3ca4fd40f04170bd1756e466631275
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3d6f4190a5b5c8410a6be01d2645df9c123f9ac4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366366"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410620"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>Filtrar Realizar una prueba de posicionamiento usando Geometry como parámetro
 En este ejemplo se muestra cómo realizar una prueba de posicionamiento en un objeto visual mediante un <xref:System.Windows.Media.Geometry> como un impacto en el parámetro de la prueba.  
@@ -27,8 +27,7 @@ En este ejemplo se muestra cómo realizar una prueba de posicionamiento en un ob
   
  El <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> propiedad de <xref:System.Windows.Media.GeometryHitTestResult> proporciona información acerca de los resultados de una prueba de posicionamiento que utiliza un <xref:System.Windows.Media.Geometry> como un impacto en el parámetro de la prueba. La siguiente ilustración muestra la relación entre la geometría de la prueba de posicionamiento (círculo azul) y el contenido representado del objeto visual de destino (cuadrado rojo).  
   
- ![Diagrama de IntersectionDetail utilizado en la prueba de posicionamiento](./media/intersectiondetail01.png "IntersectionDetail01")  
-Intersección entre la geometría de la prueba de posicionamiento y el objeto visual de destino  
+ ![Diagrama que muestra IntersectionDetail utilizado en la prueba de posicionamiento.](./media/how-to-hit-test-using-geometry-as-a-parameter/intersectiondetail-hit-test.png)  
   
  El ejemplo siguiente muestra cómo implementar una devolución de llamada de prueba de posicionamiento cuando un <xref:System.Windows.Media.Geometry> se utiliza como un parámetro de prueba de posicionamiento. El `result` parámetro se convierte en un <xref:System.Windows.Media.GeometryHitTestResult> con el fin de recuperar el valor de la <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> propiedad. El valor de propiedad le permite determinar si el <xref:System.Windows.Media.Geometry> parámetro de prueba de posicionamiento está total o parcialmente dentro del contenido representado del destino de prueba de posicionamiento. En este caso, el código de ejemplo solo está agregando los resultados de la prueba de posicionamiento a la lista para elementos visuales que estén totalmente entro del límite de destino.  
   

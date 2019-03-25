@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: db0738008766343fa19454cac14e75b318663f34
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352781"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409411"
 ---
 # <a name="optimizing-performance-text"></a>Optimizar el rendimiento: Texto
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incluye compatibilidad para la presentación de contenido de texto mediante el uso de controles [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] completos. En general, puede dividir la representación de texto en tres capas:  
@@ -133,8 +133,9 @@ ms.locfileid: "57352781"
 ### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a>Mostrar subrayado solo en hipervínculos de eventos MouseEnter  
  Un <xref:System.Windows.TextDecoration> objeto es un adorno visual que se puede agregar al texto; sin embargo, se puede mejorar el rendimiento al crear una instancia. Si realiza un uso extensivo de <xref:System.Windows.Documents.Hyperlink> elementos, considere la posibilidad de mostrar subrayado solo al desencadenar un evento, como el <xref:System.Windows.ContentElement.MouseEnter> eventos. Para obtener más información, consulte [Especificar el subrayado de un hipervínculo](how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
- ![Hipervínculos que muestran TextDecorations](./media/textdecoration03.png "TextDecoration03")  
-Hipervínculo que aparece en MouseEnter  
+  La siguiente imagen muestra cómo desencadena el evento MouseEnter el hipervínculo subrayado:
+
+  ![Hipervínculos que muestran TextDecorations](./media/how-to-specify-whether-a-hyperlink-is-underlined/text-decorations-hyperlinks.png)   
   
  El ejemplo de marcado siguiente se muestra un <xref:System.Windows.Documents.Hyperlink> definido con y sin subrayado:  
   

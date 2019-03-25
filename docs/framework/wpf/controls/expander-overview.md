@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369934"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409463"
 ---
 # <a name="expander-overview"></a>Información general sobre el control Expander
 Un <xref:System.Windows.Controls.Expander> control proporciona una manera de proporcionar contenido en un área ampliable que se parece a una ventana e incluye un encabezado.  
@@ -45,7 +45,7 @@ Un <xref:System.Windows.Controls.Expander> control proporciona una manera de pro
   
  **Control Expander en un control ScrollViewer**  
   
- ![Control Expander con ScrollBar](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![Captura de pantalla que muestra un control expander con ScrollBar.](./media/expander-overview/expander-scrollbar-control.jpg)  
   
  Cuando coloca un <xref:System.Windows.Controls.Expander> controlar en un <xref:System.Windows.Controls.ScrollViewer>, establezca el <xref:System.Windows.Controls.ScrollViewer> dimensión de la propiedad que corresponde a la dirección en la que el <xref:System.Windows.Controls.Expander> contenido se abre en el tamaño de la <xref:System.Windows.Controls.Expander> área de contenido. Por ejemplo, si establece la <xref:System.Windows.Controls.Expander.ExpandDirection%2A> propiedad en el <xref:System.Windows.Controls.Expander> a <xref:System.Windows.Controls.ExpandDirection.Down> (el área de contenido se abre hacia abajo), establezca el <xref:System.Windows.FrameworkElement.Height%2A> propiedad en el <xref:System.Windows.Controls.ScrollViewer> control a la altura requerida para el área de contenido. Si establece la dimensión de altura en su lugar en el propio contenido, <xref:System.Windows.Controls.ScrollViewer> no reconoce este valor y por lo tanto, no proporciona contenido desplazable.  
   

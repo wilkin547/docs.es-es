@@ -2,12 +2,12 @@
 title: clave de entidad
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 02b877efb463e47f9147239c895c482f2d716714
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c3a809884fc7b7c1f188af9881f784527fa87ba
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664031"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408969"
 ---
 # <a name="entity-key"></a>clave de entidad
 Un *clave de entidad* es un [propiedad](../../../../docs/framework/data/adonet/property.md) o un conjunto de propiedades de un [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) que se usan para determinar la identidad. Las propiedades que constituyen una entidad se eligen en tiempo de diseño. Los valores de las propiedades de clave de entidad deben identificar de forma exclusiva una instancia del tipo de entidad dentro de un [conjunto de entidades](../../../../docs/framework/data/adonet/entity-set.md) en tiempo de ejecución. Las propiedades que constituyen una clave de entidad se deben elegir de tal forma que garanticen la unicidad de las instancias de un conjunto de entidades.  
@@ -25,7 +25,7 @@ Un *clave de entidad* es un [propiedad](../../../../docs/framework/data/adonet/p
 ## <a name="example"></a>Ejemplo  
  El diagrama siguiente muestra un modelo conceptual con tres tipos de entidades: `Book`, `Publisher` y `Author`. Las propiedades de cada tipo de entidad que constituyen su clave de entidad se denotan con "(Key)". Tenga en cuenta que el tipo de entidad `Author` tiene una clave de entidad que consta de dos propiedades, `Name` y `Address`.  
   
- ![Ejemplo de modelo](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Modelo de ejemplo con tres tipos de entidad](./media/entity-key/example-model-three-entity-types.gif)  
   
  El [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales. El código CSDL siguiente define el tipo de entidad `Book` mostrado en el diagrama anterior. Observe que la clave de entidad se define haciendo referencia a la propiedad `ISBN` del tipo de entidad.  
   
