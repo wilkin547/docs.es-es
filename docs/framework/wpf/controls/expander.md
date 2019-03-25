@@ -10,26 +10,25 @@ helpviewer_keywords:
 - Expander control [WPF]
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
-ms.openlocfilehash: ba034dfceb4a42e1f88d15379b482e47a0700b8d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a7dc0d2cc32d387f87221748ab94ac82c2dfc8b0
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371949"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410516"
 ---
-# <a name="expander"></a><span data-ttu-id="7d67c-102">Expander</span><span class="sxs-lookup"><span data-stu-id="7d67c-102">Expander</span></span>
-<span data-ttu-id="7d67c-103">Un <xref:System.Windows.Controls.Expander> permite que un usuario ver un encabezado y expanda ese encabezado para ver más detalles, o contraer una sección hasta un encabezado.</span><span class="sxs-lookup"><span data-stu-id="7d67c-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
+# <a name="expander"></a><span data-ttu-id="45e95-102">Expander</span><span class="sxs-lookup"><span data-stu-id="45e95-102">Expander</span></span>
+<span data-ttu-id="45e95-103">Un <xref:System.Windows.Controls.Expander> permite que un usuario ver un encabezado y expanda ese encabezado para ver más detalles, o contraer una sección hasta un encabezado.</span><span class="sxs-lookup"><span data-stu-id="45e95-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
   
- <span data-ttu-id="7d67c-104">La ilustración siguiente proporciona un ejemplo de este control en su posición expandida.</span><span class="sxs-lookup"><span data-stu-id="7d67c-104">The following illustration provides an example of this control in its expanded position.</span></span>  
+ <span data-ttu-id="45e95-104">La ilustración siguiente proporciona un ejemplo de este control en su posición expandida.</span><span class="sxs-lookup"><span data-stu-id="45e95-104">The following illustration provides an example of this control in its expanded position.</span></span>  
   
- <span data-ttu-id="7d67c-105">![Ejemplo de Expander](./media/expanderexample.JPG "ExpanderExample")</span><span class="sxs-lookup"><span data-stu-id="7d67c-105">![Expander example](./media/expanderexample.JPG "ExpanderExample")</span></span>  
-<span data-ttu-id="7d67c-106">Expander (control)</span><span class="sxs-lookup"><span data-stu-id="7d67c-106">Expander control</span></span>  
+ ![Ejemplo de Expander](./media/expander/expander-control-example.jpg)
   
-## <a name="in-this-section"></a><span data-ttu-id="7d67c-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="7d67c-107">In This Section</span></span>  
- [<span data-ttu-id="7d67c-108">Información general sobre el control Expander</span><span class="sxs-lookup"><span data-stu-id="7d67c-108">Expander Overview</span></span>](expander-overview.md)  
- [<span data-ttu-id="7d67c-109">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="7d67c-109">How-to Topics</span></span>](expander-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="45e95-106">En esta sección</span><span class="sxs-lookup"><span data-stu-id="45e95-106">In This Section</span></span>  
+ [<span data-ttu-id="45e95-107">Información general sobre el control Expander</span><span class="sxs-lookup"><span data-stu-id="45e95-107">Expander Overview</span></span>](expander-overview.md)  
+ [<span data-ttu-id="45e95-108">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="45e95-108">How-to Topics</span></span>](expander-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="7d67c-110">Referencia</span><span class="sxs-lookup"><span data-stu-id="7d67c-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="45e95-109">Referencia</span><span class="sxs-lookup"><span data-stu-id="45e95-109">Reference</span></span>  
  <xref:System.Windows.Controls.Expander>  
   
-## <a name="related-sections"></a><span data-ttu-id="7d67c-111">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="7d67c-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="45e95-110">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="45e95-110">Related Sections</span></span>
