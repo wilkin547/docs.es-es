@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: a36f4a6f01c4e11429fda3a3022b4092e98db6cf
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 90fd7332242ed58d7716e248248e2c06a6ba023f
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212214"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185745"
 ---
 # <a name="asynchronous-programming"></a>Programación asincrónica
 
@@ -254,12 +254,12 @@ Bloquear el subproceso actual como un medio para esperar que se complete una tar
 
 No dependa del estado de los objetos globales o la ejecución de ciertos métodos. En su lugar, dependa únicamente de los valores devueltos de los métodos. ¿Por qué?
 
-  * Le resultará más fácil razonar sobre el código.
-  * Le resultará más fácil probar el código.
-  * Resulta mucho más sencillo mezclar código asincrónico y sincrónico.
-  * Normalmente se pueden evitar por completo las condiciones de carrera.
-  * Depender de los valores devueltos facilita la coordinación de código asincrónico.
-  * (Extra) Funciona muy bien con la inserción de dependencias.
+* Le resultará más fácil razonar sobre el código.
+* Le resultará más fácil probar el código.
+* Resulta mucho más sencillo mezclar código asincrónico y sincrónico.
+* Normalmente se pueden evitar por completo las condiciones de carrera.
+* Depender de los valores devueltos facilita la coordinación de código asincrónico.
+* (Extra) Funciona muy bien con la inserción de dependencias.
 
 Un objetivo recomendado es lograr una [transparencia referencial](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29) completa o casi completa en el código. Esto se traducirá en un código base extremadamente predecible, que se puede probar y es fácil de mantener.
 

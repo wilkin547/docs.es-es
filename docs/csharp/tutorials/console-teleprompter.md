@@ -3,12 +3,12 @@ title: Aplicación de consola
 description: Este tutorial le enseña varias características de .NET Core y el lenguaje C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: dfd8124eb79690286e5cd876de57394a4d741328
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 3ac4312ba5d6088826fdf151609f6693a265e5a3
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058404"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348835"
 ---
 # <a name="console-application"></a>Aplicación de consola
 
@@ -230,17 +230,13 @@ namespace TeleprompterConsole
 {
     internal class TelePrompterConfig
     {
-        private object lockHandle = new object();
         public int DelayInMilliseconds { get; private set; } = 200;
 
         public void UpdateDelay(int increment) // negative to speed up
         {
             var newDelay = Min(DelayInMilliseconds + increment, 1000);
             newDelay = Max(newDelay, 20);
-            lock (lockHandle)
-            {
-                DelayInMilliseconds = newDelay;
-            }
+            DelayInMilliseconds = newDelay;
         }
 
         public bool Done { get; private set; }
@@ -258,8 +254,6 @@ Coloque esa clase en un archivo nuevo e inclúyala en el espacio de nombres `Tel
 ```csharp
 using static System.Math;
 ```
-
-La otra característica del lenguaje que es nueva es la instrucción [`lock`](../language-reference/keywords/lock-statement.md). Esta instrucción garantiza que solo un subproceso pueda estar en ese código en un momento dado. Si un subproceso está en la sección bloqueada, otros subprocesos deben esperar a que el primer subproceso salga de esa sección. La instrucción `lock` usa un objeto que protege la sección de bloqueo. Esta clase sigue un giro estándar para bloquear un objeto privado en la clase.
 
 A continuación, debe actualizar los métodos `ShowTeleprompter` y `GetInput` para usar el nuevo objeto `config`. Escriba un método final `async` de devolución de `Task` para iniciar ambas tareas y salir cuando la primera tarea finalice:
 

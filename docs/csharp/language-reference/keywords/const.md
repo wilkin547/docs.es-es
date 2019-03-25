@@ -8,21 +8,21 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: f0b2b3632e767710bd31f5f6edaccaf0c2ef8c85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cf4fc52691565a850b4f34574828ad4e043998e
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526982"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307894"
 ---
 # <a name="const-c-reference"></a>const (Referencia de C#)
 
 La palabra clave `const` se usa para declarar un campo constante o una local constante. Los campos y locales constantes no son variables y no se pueden modificar. Las constantes pueden ser números, valores booleanos, cadenas o una referencia nula. No cree una constante para representar información que esperas que cambie en algún momento. Por ejemplo, no use un campo constante para almacenar el precio de un servicio, un número de versión de producto o el nombre comercial de una compañía. Estos valores pueden cambiar con el tiempo y, como los compiladores propagan las constantes, otro código compilado con sus bibliotecas tendrán que volver a compilarse para ver los cambios. Vea también la palabra clave [readonly](../../../csharp/language-reference/keywords/readonly.md). Por ejemplo:
 
 ```csharp
-const int x = 0;
-public const double gravitationalConstant = 6.673e-11;
-private const string productName = "Visual C#";
+const int X = 0;
+public const double GravitationalConstant = 6.673e-11;
+private const string ProductName = "Visual C#";
 ```
 
 ## <a name="remarks"></a>Comentarios
@@ -34,7 +34,7 @@ Una expresión constante es una expresión que se puede evaluar por completo en 
 La declaración de constante puede declarar varias constantes, tales como:
 
 ```csharp
-public const double x = 1.0, y = 2.0, z = 3.0;
+public const double X = 1.0, Y = 2.0, Z = 3.0;
 ```
 
 El modificador `static` no se permite en una declaración de constante.
@@ -42,8 +42,8 @@ El modificador `static` no se permite en una declaración de constante.
 Una constante puede participar en una expresión constante, de la siguiente manera:
 
 ```csharp
-public const int c1 = 5;
-public const int c2 = c1 + 100;
+public const int C1 = 5;
+public const int C2 = C1 + 100;
 ```
 
 > [!NOTE]

@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo .NET serializa los tipos en una re
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2c62581d34e77f208b7764f955dfa37613615ee4
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b4846f2e6cd945a25ec6a747c9038d48fe115559
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411476"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185420"
 ---
 # <a name="type-marshalling"></a>Serializar tipos
 
@@ -38,8 +38,8 @@ Esta primera tabla describe las asignaciones para distintos tipos para los que l
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | `char` o `char16_t` según el elemento `CharSet` de la estructura o P/Invoke. Consulte la [documentación de juego de caracteres](/.charset.md). |
-| `string`  | `char*` o `char16_t*` según el elemento `CharSet` de la estructura o P/Invoke. Consulte la [documentación de juego de caracteres](/.charset.md). |
+| `char`    | `char` o `char16_t` según el elemento `CharSet` de la estructura o P/Invoke. Consulte la [documentación de juego de caracteres](charset.md). |
+| `string`  | `char*` o `char16_t*` según el elemento `CharSet` de la estructura o P/Invoke. Consulte la [documentación de juego de caracteres](charset.md). |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
 | Tipos de puntero de .NET (por ejemplo, `void*`)  | `void*` |
@@ -73,7 +73,7 @@ Algunos tipos solo pueden serializarse como parámetros y no como campos. Estas 
 
 | Tipo de .NET | Tipo nativo (solo parámetros) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | `char*` o `char16_t*` según el elemento `CharSet` de P/Invoke.  Consulte la [documentación de juego de caracteres](/.charset.md). |
+| `System.Text.StringBuilder` | `char*` o `char16_t*` según el elemento `CharSet` de P/Invoke.  Consulte la [documentación de juego de caracteres](charset.md). |
 | `System.ArgIterator` | `va_list` (solo en Windows x86/x64/arm64) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
