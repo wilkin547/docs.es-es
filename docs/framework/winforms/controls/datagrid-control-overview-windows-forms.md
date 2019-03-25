@@ -40,8 +40,7 @@ ms.locfileid: "57722001"
  ![Un control DataGrid enlazado a datos con varias tablas](./media/vbcontrol1.gif "vbControl1")  
 Un control DataGrid enlazado a datos con múltiples tablas  
   
- 
-  <xref:System.Windows.Forms.DataGrid> puede proporcionar una interfaz de usuario para un conjunto de datos, navegación entre tablas relacionadas, formato enriquecido y capacidades de edición.  
+ <xref:System.Windows.Forms.DataGrid> puede proporcionar una interfaz de usuario para un conjunto de datos, navegación entre tablas relacionadas, formato enriquecido y capacidades de edición.  
   
  La presentación y manipulación de datos son funciones independientes: El control administra la interfaz de usuario, mientras que las actualizaciones de datos se controlan con la arquitectura de enlace de datos de Windows Forms y con [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proveedores de datos. Por lo tanto, si hay varios controles enlazados al mismo origen de datos, estarán sincronizados.  
   
@@ -100,8 +99,7 @@ Un control DataGrid enlazado a datos con múltiples tablas
 ## <a name="columns-and-rows"></a>Columnas y filas  
  <xref:System.Windows.Forms.DataGrid> consta de una colección de objetos <xref:System.Windows.Forms.DataGridTableStyle> que se encuentran en la propiedad <xref:System.Windows.Forms.DataGrid.TableStyles%2A> del control <xref:System.Windows.Forms.DataGrid>. Un estilo de tabla puede contener una colección de objetos <xref:System.Windows.Forms.DataGridColumnStyle> que se encuentran en la propiedad <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> de <xref:System.Windows.Forms.DataGridTableStyle>. Puede editar el <xref:System.Windows.Forms.DataGrid.TableStyles%2A> y <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propiedades mediante el uso de editores de colección que tiene acceso a través del **propiedades** ventana.  
   
- Cualquier <xref:System.Windows.Forms.DataGridTableStyle> asociado con el control <xref:System.Windows.Forms.DataGrid> puede tener acceso mediante <xref:System.Windows.Forms.GridTableStylesCollection>. 
-  <xref:System.Windows.Forms.GridTableStylesCollection> se puede editar en el diseñador con el editor de colección <xref:System.Windows.Forms.DataGridTableStyle>, o mediante programación a través de la propiedad <xref:System.Windows.Forms.DataGrid.TableStyles%2A> del control <xref:System.Windows.Forms.DataGrid>.  
+ Cualquier <xref:System.Windows.Forms.DataGridTableStyle> asociado con el control <xref:System.Windows.Forms.DataGrid> puede tener acceso mediante <xref:System.Windows.Forms.GridTableStylesCollection>. <xref:System.Windows.Forms.GridTableStylesCollection> se puede editar en el diseñador con el editor de colección <xref:System.Windows.Forms.DataGridTableStyle>, o mediante programación a través de la propiedad <xref:System.Windows.Forms.DataGrid.TableStyles%2A> del control <xref:System.Windows.Forms.DataGrid>.  
   
  ![Objetos incluidos en el control DataGrid](./media/vbcolumns1.gif "vbColumns1")  
 La ilustración siguiente muestra los objetos incluidos en el control DataGrid.  

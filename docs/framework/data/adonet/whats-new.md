@@ -48,8 +48,7 @@ Las siguientes características son nuevas en [!INCLUDE[vstecado](../../../../in
 -   El ensamblado Microsoft.SqlServer.Types.dll, que contiene los tipos de datos espaciales, se ha actualizado de la versión 10.0 a la versión 11.0. Las aplicaciones que hacen referencia a este ensamblado pueden producir errores. Para obtener más información, consulte [cambios recientes en las características del motor de base de datos](https://go.microsoft.com/fwlink/?LinkId=224367).  
   
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
- 
-  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] agrega las API que permiten nuevos escenarios al trabajar con Entity Framework 5.0. Para obtener más información sobre las mejoras y características que se agregaron a Entity Framework 5.0, consulte los temas siguientes: [¿Qué novedades](https://go.microsoft.com/fwlink/?LinkID=251106) y [versiones de Entity Framework y control de versiones](https://go.microsoft.com/fwlink/?LinkId=234899).  
+ [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] agrega las API que permiten nuevos escenarios al trabajar con Entity Framework 5.0. Para obtener más información sobre las mejoras y características que se agregaron a Entity Framework 5.0, consulte los temas siguientes: [¿Qué novedades](https://go.microsoft.com/fwlink/?LinkID=251106) y [versiones de Entity Framework y control de versiones](https://go.microsoft.com/fwlink/?LinkId=234899).  
   
 ## <a name="see-also"></a>Vea también
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
