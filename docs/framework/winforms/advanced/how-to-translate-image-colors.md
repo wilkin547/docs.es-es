@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Translate Image Colors
+title: Filtrar Translate Image Colors
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 81aecddb28903649ff2d59e80fc90368df5e2db4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8b2e28cab2d2d04f7c99880f2b35a02ebe80dcd8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703028"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464468"
 ---
-# <a name="how-to-translate-image-colors"></a>Procedimiento Translate Image Colors
+# <a name="how-to-translate-image-colors"></a>Filtrar Translate Image Colors
 Una traducción, agrega un valor a uno o varios de los cuatro componentes de color. En la siguiente tabla figuran las entradas de la matriz de color que representan las traducciones.  
   
 |Componente que se deben traducir|Entrada de matriz|  
@@ -29,9 +29,9 @@ Una traducción, agrega un valor a uno o varios de los cuatro componentes de col
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crea un <xref:System.Drawing.Image> objeto a partir del archivo ColorBars.bmp. A continuación, el código agrega 0,75 al componente rojo de cada píxel de la imagen. Se dibuja la imagen original junto con la imagen transformada.  
   
- La siguiente ilustración muestra la imagen original a la izquierda y la imagen transformada de la derecha.  
+ La siguiente ilustración muestra la imagen original a la izquierda y la imagen transformada de la derecha:  
   
- ![Translate Colors](./media/colortrans2.png "colortrans2")  
+ ![Captura de pantalla de la imagen original y transformada.](./media/how-to-translate-image-colors/original-image-translate-colors.png)  
   
  En la tabla siguiente se enumera los vectores de color de las cuatro barras antes y después de la traducción de color rojo. Tenga en cuenta que dado que el valor máximo para un componente de color es 1, el componente rojo de la segunda fila no cambia. (De forma similar, el valor mínimo de un componente de color es 0).  
   

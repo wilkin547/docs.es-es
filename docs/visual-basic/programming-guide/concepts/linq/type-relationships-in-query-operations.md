@@ -11,18 +11,17 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: d72a55cadce287979fad25396327680e1f0e0aaf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4dc5497f2e9bacac3062fde6e7dc48270697f1df
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979104"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465222"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relaciones entre tipos en operaciones de consulta (Visual Basic)
 Las variables utilizadas en [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] consulta operaciones están fuertemente tipadas y deben ser compatibles entre sí. Establecimiento inflexible de tipos se usa en el origen de datos, en la propia consulta y en la ejecución de consultas. La ilustración siguiente identifica los términos usados para describir un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consulta. Para obtener más información acerca de los elementos de una consulta, vea [operaciones básicas de consulta (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
   
- ![Consulta de pseudocódigo con elementos resaltados. ](../../../../visual-basic/programming-guide/concepts/linq/media/sjltyperels.png "SJLtypeRels")  
-Partes de una consulta LINQ  
+ ![Captura de pantalla que muestra una consulta de pseudocódigo con elementos resaltados.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)  
   
  El tipo de la variable de rango en la consulta debe ser compatible con el tipo de los elementos del origen de datos. El tipo de la variable de consulta debe ser compatible con el elemento de secuencia definido en el `Select` cláusula. Por último, el tipo de los elementos de la secuencia también debe ser compatible con el tipo de la variable de control de bucle que se usa en el `For Each` instrucción que ejecuta la consulta. Este establecimiento inflexible de tipos facilita la identificación de errores de tipo en tiempo de compilación.  
   

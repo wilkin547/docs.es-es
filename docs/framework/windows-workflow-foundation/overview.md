@@ -2,12 +2,12 @@
 title: Información general de Windows Workflow
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: 385be91538bb6ee9ee570107c22d4b0ffc6afcba
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 049d955b191e14ac79702df3fe218e23a555e6d3
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718758"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464689"
 ---
 # <a name="windows-workflow-overview"></a>Información general de Windows Workflow
 Un flujo de trabajo es un conjunto de unidades elementales llamadas *actividades* que se almacenan como un modelo que describe un proceso real. Los flujos de trabajo proporcionan una manera de describir el orden de ejecución y las relaciones de dependencia entre las partes de trabajo de ejecución corta o prolongada. Este trabajo pasa a través del modelo desde el principio hasta al final y las actividades pueden ser ejecutadas por personas o por funciones de sistema.  
@@ -31,7 +31,7 @@ Componentes de flujo de trabajo del proceso de host
 ## <a name="interaction-between-workflow-components"></a>Interacción entre los componentes de flujo de trabajo  
  El siguiente diagrama muestra cómo los componentes de flujo de trabajo interactúan unos con otros.  
   
- ![Interacción del flujo de trabajo](./media/workflowinteraction.gif "WorkflowInteraction")  
+ ![Diagrama que muestra cómo interactúan los componentes de flujo de trabajo.](./media/overview/workflow-component-interatction.gif)  
   
  En el diagrama anterior, el método <xref:System.Activities.WorkflowInvoker.Invoke%2A> de la clase <xref:System.Activities.WorkflowInvoker> se usa para invocar varias instancias de flujo de trabajo. <xref:System.Activities.WorkflowInvoker> se usa para los flujos de trabajo ligeros que no necesitan la administración desde el host; los flujos de trabajo que necesitan la administración desde el host (como la reanudación de <xref:System.Activities.Bookmark>) se deben ejecutar mediante <xref:System.Activities.WorkflowApplication.Run%2A> en su lugar. Antes de invocar una nueva instancia de flujo de trabajo no es necesario esperar a que se complete la instancia de flujo de trabajo en ejecución. El motor de tiempo de ejecución permite ejecutar varias instancias de flujo de trabajo simultáneamente.  Los flujos de trabajo invocados son los siguientes:  
   
@@ -39,8 +39,7 @@ Componentes de flujo de trabajo del proceso de host
   
 -   Una actividad personalizada llamada `ReadLine`. Un argumento <xref:System.Activities.OutArgument> de la actividad `ReadLine` se devuelve al método <xref:System.Activities.WorkflowInvoker.Invoke%2A> de llamada.  
   
--   Una actividad personalizada que se deriva de la clase abstracta <xref:System.Activities.CodeActivity>. 
-  <xref:System.Activities.CodeActivity> puede tener acceso a características del tiempo de ejecución (como el seguimiento y las propiedades) usando el <xref:System.Activities.CodeActivityContext> que está disponible como parámetro del método <xref:System.Activities.CodeActivity.Execute%2A>. Para obtener más información acerca de estas características de tiempo de ejecución, consulte [seguimiento y traza del flujo de trabajo](workflow-tracking-and-tracing.md) y [las propiedades de ejecución de flujo de trabajo](workflow-execution-properties.md).  
+-   Una actividad personalizada que se deriva de la clase abstracta <xref:System.Activities.CodeActivity>. <xref:System.Activities.CodeActivity> puede tener acceso a características del tiempo de ejecución (como el seguimiento y las propiedades) usando el <xref:System.Activities.CodeActivityContext> que está disponible como parámetro del método <xref:System.Activities.CodeActivity.Execute%2A>. Para obtener más información acerca de estas características de tiempo de ejecución, consulte [seguimiento y traza del flujo de trabajo](workflow-tracking-and-tracing.md) y [las propiedades de ejecución de flujo de trabajo](workflow-execution-properties.md).  
   
 ## <a name="see-also"></a>Vea también
 - [¿BizTalk Server 2006 o WF? Elegir la herramienta de flujo de trabajo adecuada para su proyecto](https://go.microsoft.com/fwlink/?LinkId=154901)

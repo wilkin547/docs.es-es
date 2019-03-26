@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 93a3ec342a852c28173d3051d65c091c0adc4492
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 1fd2809af805c641484545b1c3606898e0bc3e2d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333032"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466171"
 ---
 # <a name="queues-overview"></a>Información general de colas
 En esta sección se presentan los conceptos generales y básicos detrás de la comunicación puesta en la cola. Secciones subsiguientes no entran en detalles acerca de cómo los conceptos de puesta en cola descritos aquí se manifiestan en Windows Communication Foundation (WCF).  
@@ -74,7 +74,6 @@ En esta sección se presentan los conceptos generales y básicos detrás de la c
  Una vez el mensaje alcance la cola de destino, puede que el servicio no pueda procesar el mensaje repetidamente. Por ejemplo, una aplicación que lee un mensaje desde la cola de una transacción y actualiza una base de datos puede encontrar la base de datos temporalmente desconectada. En este caso, la transacción se deshace, se crea una nueva transacción y se relee el mensaje de la cola. Puede que un segundo intento funcione o no. En algunos casos, dependiendo de la causa del error, el mensaje puede producir un error repetidamente en la entrega a la aplicación. En este caso, el mensaje se considera "dudoso." Estos mensajes se mueven a una cola de mensajes dudosos, que se puede leer por una aplicación de administración de mensajes dudosos.  
   
 ## <a name="see-also"></a>Vea también
-- [Colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Sesiones y colas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
 - [Colas de mensajes fallidos](../../../../docs/framework/wcf/samples/dead-letter-queues.md)

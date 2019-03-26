@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Utilizar una tabla de reasignación de colores
+title: Filtrar Utilizar una tabla de reasignación de colores
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-ms.openlocfilehash: 72965d6968aab256579929acc00e629bcd3c71f0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 73f4f19229a31266b406214e93e2b59acd343ca2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707343"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463896"
 ---
 # <a name="how-to-use-a-color-remap-table"></a>Filtrar Utilizar una tabla de reasignación de colores
 Reasignación es el proceso de convertir los colores de una imagen según una tabla de reasignación de colores. La tabla de reasignación de colores es una matriz de <xref:System.Drawing.Imaging.ColorMap> objetos. Cada <xref:System.Drawing.Imaging.ColorMap> objeto de la matriz tiene un <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> propiedad y un <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> propiedad.  
@@ -28,7 +28,7 @@ Reasignación es el proceso de convertir los colores de una imagen según una ta
   
  La siguiente ilustración muestra la imagen original a la izquierda y la imagen reasignada a la derecha.  
   
- ![Reasignación de colores](./media/colortrans7.png "colortrans7")  
+ ![Captura de pantalla que muestra la imagen original y la imagen reasignada.](./media/how-to-use-a-color-remap-table/original-image-remap-colors.png)  
   
  [!code-csharp[System.Drawing.RecoloringImages#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.RecoloringImages#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  

@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 3991c16e00f1cbb4f8c1f2c8391f89ea51c1e6f2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262577"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463805"
 ---
-# <a name="how-to-create-a-sequential-workflow"></a>Procedimiento Creación de un flujo de trabajo secuencial
+# <a name="how-to-create-a-sequential-workflow"></a>Filtrar Creación de un flujo de trabajo secuencial
 Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En este tema le ayudará a crear un flujo de trabajo que usa tanto las actividades integradas, como el <xref:System.Activities.Statements.Sequence> actividad y las actividades personalizadas del anterior [Cómo: Crear una actividad](how-to-create-an-activity.md) tema. El flujo de trabajo modela un juego de adivinanzas de números.  
   
 > [!NOTE]
@@ -147,9 +147,9 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
     "Your guess is too high."  
     ```  
   
-     En el siguiente ejemplo se muestra el flujo de trabajo completado.  
+     El ejemplo siguiente muestra el flujo de trabajo completado:  
   
-     ![Flujo de trabajo secuencial completado](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
+     ![Captura de pantalla que muestra el flujo de trabajo secuencial completado.](./media/how-to-create-a-sequential-workflow/complete-sequential-workflow.jpg)  
   
 ## <a name="to-build-the-workflow"></a>Para compilar el flujo de trabajo  
   

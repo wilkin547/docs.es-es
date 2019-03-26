@@ -2,12 +2,12 @@
 title: Participantes de seguimiento
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 934c49aaa48ecb319d55fa997aaac4eec93b54c3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 343c2eea5d8e4cb7e90f2e2344cce9f3418c25dd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711972"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462999"
 ---
 # <a name="tracking-participants"></a>Participantes de seguimiento
 Los participantes de seguimiento son puntos de extensibilidad que permiten a un desarrollador de flujo de trabajo tener acceso a objetos <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> y procesarlos. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] incluye un participante de seguimiento estándar que escribe los registros de seguimiento como eventos de Seguimiento de eventos para Windows (ETW). Si eso no cumple sus requisitos, también puede escribir un participante de seguimiento personalizado.  
@@ -60,7 +60,7 @@ Los participantes de seguimiento son puntos de extensibilidad que permiten a un 
   
  La siguiente ilustración muestra el flujo de los datos de seguimiento a través del participante de seguimiento de ETW. Una vez que los datos de seguimiento llegan a la sesión de ETW, se puede tener acceso a ellos de varias maneras. Una de las maneras más útiles de tener acceso a estos eventos es a través del visor de eventos, una herramienta común de Windows para ver registros y trazas de aplicaciones y servicios.  
   
- ![El flujo de seguimiento y el proveedor de seguimiento de ETW](./media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![Flujo de datos a través del proveedor de seguimiento de ETW de seguimiento.](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
   
 ## <a name="tracking-participant-event-data"></a>Datos de eventos del participante de seguimiento  
  Un participante del seguimiento serializa los datos de eventos a los que se ha realizado el seguimiento en una sesión de ETW con el formato de un evento por registro de seguimiento.  Un evento se identifica mediante un id. en un intervalo entre 100 y 199. Para obtener definiciones de evento de seguimiento de los registros emitidos por un participante de seguimiento, vea el [referencia de eventos de seguimiento](tracking-events-reference.md) tema.  
@@ -114,8 +114,7 @@ class ConsoleTrackingParticipant : TrackingParticipant
 myInstance.Extensions.Add(new ConsoleTrackingParticipant());  
 ```  
   
- En el ejemplo siguiente, se crea un flujo de trabajo que está compuesto de una actividad <xref:System.Activities.Statements.Sequence> que contiene una actividad <xref:System.Activities.Statements.WriteLine>. 
-  `ConsoleTrackingParticipant` se agrega a las extensiones y después se invoca el flujo de trabajo.  
+ En el ejemplo siguiente, se crea un flujo de trabajo que está compuesto de una actividad <xref:System.Activities.Statements.Sequence> que contiene una actividad <xref:System.Activities.Statements.WriteLine>. `ConsoleTrackingParticipant` se agrega a las extensiones y después se invoca el flujo de trabajo.  
   
 ```csharp  
 Activity activity= new Sequence()  

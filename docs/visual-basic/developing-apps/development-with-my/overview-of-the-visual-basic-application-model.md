@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 16522424ecd3009cb905bacb39694189a9540318
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517388"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464104"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Información general sobre el modelo de aplicaciones de Visual Basic
 Visual Basic ofrece un modelo bien definido para controlar el comportamiento de las aplicaciones de Windows Forms: el modelo de aplicación de Visual Basic. Este modelo incluye eventos para controlar la aplicación inicio y apagado, así como eventos para detectar las excepciones no controladas. También se proporciona soporte técnico para el desarrollo de aplicaciones de instancia única. El modelo de aplicación es extensible, por lo que los desarrolladores que necesitan más control pueden personalizar sus métodos reemplazables.  
@@ -26,9 +26,9 @@ Visual Basic ofrece un modelo bien definido para controlar el comportamiento de 
   
 -   Cada intento posterior para iniciar la aplicación, mientras se ejecuta la primera instancia, da como resultado un comportamiento muy diferente. El intento subsiguiente notifica a la primera instancia acerca de los argumentos de línea de comandos y, a continuación, sale inmediatamente. Los identificadores de la primera instancia el `StartupNextInstance` eventos para determinar qué argumentos de línea de comandos de la instancia subsiguiente estaban y continúa ejecutándose.  
   
-     Este diagrama muestra cómo una instancia subsiguiente señala la primera instancia.  
+     Este diagrama muestra cómo una instancia subsiguiente señala la primera instancia:  
   
-     ![Imagen de la aplicación de instancia único de](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
+     ![Diagrama que muestra una imagen de la aplicación de instancia única.](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
   
  Controlando la `StartupNextInstance` eventos, puede controlar cómo se comporta su aplicación de instancia única. Por ejemplo, Microsoft Outlook se ejecuta normalmente como una aplicación de instancia única; Cuando Outlook se ejecuta y se intenta iniciar Outlook nuevo, éste se desplaza a la instancia original pero no se abre otra instancia.  
   

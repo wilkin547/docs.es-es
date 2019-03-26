@@ -2,12 +2,12 @@
 title: Protocolos de transacción versión 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: c28c013bc791b5358a2282dc21446d5f2129aa2c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1501bbd5364773359f9b62602ba4bb684f076ba
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258024"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463909"
 ---
 # <a name="transaction-protocols-version-10"></a>Protocolos de transacción versión 1.0
 Versión 1 de Windows Communication Foundation (WCF) implementa la versión 1.0 de los protocolos WS-Atomic Transaction y WS-Coordination. Para obtener más información acerca de la versión 1.1, vea [protocolos de transacción](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
@@ -21,9 +21,9 @@ Versión 1 de Windows Communication Foundation (WCF) implementa la versión 1.0 
   
  Este tema describe una composición de la especificación de transacción WS-Atomic (WS-AT) con seguridad y describe el enlace seguro utilizado para la comunicación entre administradores de transacciones. El enfoque descrito en este documento se ha probado correctamente con otras implementaciones de WS-AT y WS-Coordination incluidos IBM, IONA, Sun Microsystems y otros.  
   
- La siguiente figura describe la interoperabilidad entre dos administradores de transacciones, Administrador de transacciones 1 y Administrador de transacciones 2, y dos aplicaciones, Aplicación 1 y Aplicación 2.  
+ La figura siguiente muestra la interoperabilidad entre dos administradores de transacciones, el Administrador de transacciones 1 y 2 de administrador de transacciones y dos aplicaciones, aplicación 1 y 2 de la aplicación:  
   
- ![Protocolos de transacción](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "los administradores de transacciones")  
+ ![Captura de pantalla que muestra los administradores de la interacción entre transacciones.](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  Considere un escenario típico WS-Coordination/transacciones WS-Atomic con un Iniciador (I) y un Participante (P). Iniciador y Participante tienen administradores de transacciones (ITM y PTM, respectivamente). La confirmación en dos fases se conoce como 2PC en este tema.  
   
@@ -350,7 +350,7 @@ Versión 1 de Windows Communication Foundation (WCF) implementa la versión 1.0 
 ### <a name="two-phase-commit-protocol-messages"></a>Mensajes de protocolo de confirmación de dos fase  
  El siguiente mensaje se relaciona con el protocolo de confirmación en dos fases (2PC).  
   
-#### <a name="commit"></a>Confirmar  
+#### <a name="commit"></a>Confirmación  
   
 ```xml  
 <s:Envelope>  

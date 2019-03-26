@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 7583eab4673dc14380f18456d1713351dbc74f17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8cd2c58efb08523050e19c31201be48ae98ba03
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603123"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466236"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Cliente y servicio de intranet no protegidos
 La siguiente ilustración muestra un servicio de Windows Communication Foundation (WCF) sencillo desarrollado para proporcionar información sobre una red privada segura a una aplicación de WCF. No se requiere seguridad porque los datos son de poca importancia, espera que la red es intrínsecamente segura o una capa debajo de la infraestructura de WCF proporciona seguridad.  
   
- ![Escenario de servicio y cliente de intranet segura](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
+ ![Escenario de servicio y cliente no segura de la intranet.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -27,12 +27,12 @@ La siguiente ilustración muestra un servicio de Windows Communication Foundatio
 |Integridad|Ninguna|  
 |Confidencialidad|Ninguna|  
   
-## <a name="service"></a>Servicio  
+## <a name="service"></a>web de Office  
  El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 -   Cree un servicio independiente mediante el código sin configuración.  
   
--   Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.  
+-   Cree un servicio mediante la configuración proporcionada, pero sin definir ningún punto de conexión.  
   
 ### <a name="code"></a>Código  
  El siguiente código muestra cómo crear un extremo sin seguridad:  
@@ -75,7 +75,7 @@ La siguiente ilustración muestra un servicio de Windows Communication Foundatio
   
 -   Cree un cliente independiente mediante el código (y el código de cliente).  
   
--   Cree un cliente que no defina direcciones de extremo. En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento. Por ejemplo:  
+-   Cree un cliente que no defina direcciones de punto de conexión. En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento. Por ejemplo:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

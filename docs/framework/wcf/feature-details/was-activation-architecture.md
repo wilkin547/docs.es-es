@@ -2,12 +2,12 @@
 title: Arquitectura de activación de WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 2dd11ec9d642f5bfdd08c71487e82a8cb5133520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71546bf6fb13c9d2fecf09b79460a953f60e4e3b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557112"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465764"
 ---
 # <a name="was-activation-architecture"></a>Arquitectura de activación de WAS
 Este tema detalla y discute los componentes de Windows Process Activation Service (también conocido como WAS).  
@@ -27,7 +27,7 @@ Este tema detalla y discute los componentes de Windows Process Activation Servic
   
  Cuando WAS activa una instancia del proceso de trabajo, carga los controladores de protocolo de proceso requeridos en el proceso de trabajo y utiliza el administrador de aplicaciones para crear un dominio de aplicación que hospede la aplicación. El dominio de la aplicación carga el código de la aplicación así como los controladores de protocolo del AppDomain que requieren los protocolos de red utilizados por la aplicación.  
   
- ![Arquitectura de WAS](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
+ ![Captura de pantalla que muestra la arquitectura WAS.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>Adaptadores de escucha  
  Los adaptadores de escucha son servicios de Windows individuales que implementan la lógica de comunicación de red utilizada para recibir mensajes mediante el protocolo de red en el que realizan escuchas. En la tabla siguiente se enumera los adaptadores de escucha para los protocolos de Windows Communication Foundation (WCF).  

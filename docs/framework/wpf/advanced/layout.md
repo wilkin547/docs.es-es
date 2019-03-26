@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369856"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464572"
 ---
 # <a name="layout"></a>Diseño
 En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Comprender cómo y cuándo se producen los cálculos de diseño es esencial para crear interfaces de usuario en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -41,7 +41,7 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
   
  En la siguiente ilustración se muestra un diseño sencillo.  
   
- ![Cuadrícula típica sin rectángulo de selección superpuesto.](./media/boundingbox1.png "boundingbox1")  
+ ![Captura de pantalla que muestra una cuadrícula típica sin rectángulo superpuesto.](./media/layout/grid-no-bounding-box-superimpose.png)  
   
  Este diseño se puede lograr con el siguiente código [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
@@ -49,7 +49,7 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
   
  Una sola <xref:System.Windows.Controls.TextBlock> elemento se hospeda dentro de un <xref:System.Windows.Controls.Grid>. Aunque el texto rellena solo en la esquina superior izquierda de la primera columna, el espacio asignado para el <xref:System.Windows.Controls.TextBlock> es mucho mayor. El cuadro de límite de cualquier <xref:System.Windows.FrameworkElement> se puede recuperar mediante el <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> método. La ilustración siguiente muestra el cuadro de límite para el <xref:System.Windows.Controls.TextBlock> elemento.  
   
- ![El rectángulo de selección de TextBlock está visible ahora.](./media/boundingbox2.png "boundingbox2")  
+ ![Captura de pantalla que muestra que el cuadro de límite de TextBlock ahora está visible.](./media/layout/visible-textblock-bounding-box.png)  
   
  Como se muestra en el rectángulo amarillo, el espacio asignado para el <xref:System.Windows.Controls.TextBlock> elemento es mucho mayor de lo que parece. Cuando se agregan elementos adicionales a la <xref:System.Windows.Controls.Grid>, podría reducir o expandir, dependiendo del tipo y tamaño de los elementos que se agregan esta asignación.  
   

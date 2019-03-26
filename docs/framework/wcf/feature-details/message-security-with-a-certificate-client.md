@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: a027577f5118f9a5b2f3eeaa29ddfde20851a8f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c8a9dc17af5809ce1e3b97304535361c2cc5e58
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530858"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465716"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Seguridad de mensajes con un cliente de certificado
-El escenario siguiente muestra un cliente de Windows Communication Foundation (WCF) y el servicio protegido utilizando el modo de seguridad de mensajes. Tanto el cliente como el servicio se autentican con certificados. Para obtener más información, consulte [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
+El escenario siguiente muestra un cliente de Windows Communication Foundation (WCF) y el servicio protegido utilizando el modo de seguridad de mensajes. Tanto el cliente como el servicio se autentican con certificados. Para obtener más información, consulte [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
+
+ ![Captura de pantalla que muestra a un cliente con el certificado.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
  Para una aplicación de ejemplo, vea [certificado de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
   
- ![Cliente con certificado](../../../../docs/framework/wcf/feature-details/media/clientwithcertificate.gif "ClientWithCertificate")  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -30,12 +31,12 @@ El escenario siguiente muestra un cliente de Windows Communication Foundation (W
 |Transporte|HTTP|  
 |Enlaces|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Servicio  
+## <a name="service"></a>web de Office  
  El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 -   Cree un servicio independiente mediante el código sin configuración.  
   
--   Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.  
+-   Cree un servicio mediante la configuración proporcionada, pero sin definir ningún punto de conexión.  
   
 ### <a name="code"></a>Código  
  El código siguiente muestra cómo crear un punto de conexión de servicio que utilice la seguridad del mensaje para establecer un contexto seguro.  
@@ -89,7 +90,7 @@ El escenario siguiente muestra un cliente de Windows Communication Foundation (W
   
 -   Cree un cliente independiente mediante el código (y el código de cliente).  
   
--   Cree un cliente que no defina direcciones de extremo. En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento. Por ejemplo:  
+-   Cree un cliente que no defina direcciones de punto de conexión. En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento. Por ejemplo:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

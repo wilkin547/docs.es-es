@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: d1a93fe81b892b85f77547d48428d3d9a78d5173
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373118"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466223"
 ---
 # <a name="wpf-windows-overview"></a>Información general sobre ventanas de WPF
 Los usuarios interactúan con las aplicaciones independientes de Windows Presentation Foundation (WPF) a través de windows. El propósito principal de una ventana es hospedar contenido que permita visualizar datos y que permita a los usuarios interactuar con estos. Independiente [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones proporcionan sus propias ventanas mediante el uso de la <xref:System.Windows.Window> clase. Este tema se presentan <xref:System.Windows.Window> antes de tratar los aspectos básicos de creación y administración de windows en las aplicaciones independientes.  
@@ -44,9 +44,9 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Clase de la ventana  
- La ilustración siguiente muestra las partes constituyentes de una ventana.  
+ La ilustración siguiente muestra las partes constituyentes de una ventana:  
   
- ![Elementos de la ventana](./media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![Captura de pantalla que muestra los elementos de la ventana.](./media/wpf-windows-overview/window-constituent-elements.png)  
   
  Una ventana se divide en dos áreas: el área distinta del cliente y el área cliente.  
   
@@ -146,7 +146,7 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
  La ventana se abre finalmente llamando el <xref:System.Windows.Window.Show%2A> método; el resultado se muestra en la ilustración siguiente.  
   
- ![Ventana abierta mediante una llamada a Window.Show](./media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![Una ventana que se abre mediante una llamada a Window.Show](./media/wpf-windows-overview//window-opened-show-method.png)  
   
  Una ventana que se abre mediante una llamada a <xref:System.Windows.Window.Show%2A> es una ventana no modal, lo que significa que la aplicación funciona en un modo que permite a los usuarios activar otras ventanas en la misma aplicación.  
   
@@ -282,13 +282,13 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>Eventos de vigencia de ventanas  
- La ilustración siguiente muestra la secuencia de eventos principales en la vigencia de una ventana.  
+ La siguiente ilustración muestra la secuencia de eventos principales de la duración de una ventana:  
   
- ![Window Lifetime](./media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![Diagrama que muestra los eventos de duración de una ventana.](./media/wpf-windows-overview/window-lifetime-events.png)  
   
- La siguiente ilustración muestra la secuencia de eventos principales de la duración de una ventana que aparece sin activación (<xref:System.Windows.Window.ShowActivated%2A> está establecido en `false` antes de que se muestra la ventana).  
+ La siguiente ilustración muestra la secuencia de eventos principales de la duración de una ventana que aparece sin activación (<xref:System.Windows.Window.ShowActivated%2A> está establecido en `false` antes de que se muestra la ventana):  
   
- ![Window Lifetime &#40;Window.ShowActivated &#61; False&#41;](./media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![Diagrama que muestra los eventos de duración de una ventana sin activación.](./media/wpf-windows-overview/window-lifetime-no-activation.png)  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>Ubicación de la ventana  
@@ -351,21 +351,21 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
  **Para las propiedades de altura:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **Para las propiedades de anchura:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
@@ -437,9 +437,9 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
 -   <xref:System.Windows.WindowStyle.ToolWindow>  
   
- El efecto de estos estilos de ventana se muestra en la ilustración siguiente.  
+ El efecto de estos estilos de ventana se muestran en la ilustración siguiente:  
   
- ![Estilos de ventana](./media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![Ilustración de los estilos de borde de ventana.](./media/wpf-windows-overview/window-border-styles.png)  
   
  Puede establecer <xref:System.Windows.Window.WindowStyle%2A> mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcación o código porque es improbable que cambie durante la vigencia de una ventana, probablemente configurará mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcado.  
   
@@ -448,9 +448,9 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
 #### <a name="non-rectangular-window-style"></a>Estilo de ventana no rectangular  
  También existen situaciones donde los estilos de borde que <xref:System.Windows.Window.WindowStyle%2A> permite tener no es suficientes. Por ejemplo, es posible que desea crear una aplicación con un borde no rectangular, como [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] usa.  
   
- Considere, por ejemplo, la ventana de globo que se muestra en la ilustración siguiente.  
+ Por ejemplo, considere la posibilidad de la ventana de globo que se muestra en la ilustración siguiente:  
   
- ![Ventana no rectangular](./media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![Una ventana de globo que dice a mi alrededor de arrastre.](./media/wpf-windows-overview/non-rectangular-window-figure.png)  
   
  Se puede crear este tipo de ventana estableciendo la <xref:System.Windows.Window.WindowStyle%2A> propiedad <xref:System.Windows.WindowStyle.None>y mediante el uso especial admitir que <xref:System.Windows.Window> tiene para la transparencia.  
   
@@ -460,9 +460,10 @@ Los usuarios interactúan con las aplicaciones independientes de Windows Present
   
 <a name="Task_Bar_Presence"></a>   
 ### <a name="task-bar-presence"></a>Presencia de la barra de tareas  
- El aspecto predeterminado de una ventana incluye un botón de barra de tareas, como el que se muestra en la siguiente ilustración.  
-  
- ![Ventana con un botón de barra de tareas](./media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+
+La apariencia predeterminada de una ventana incluye un botón de barra de tareas, como se muestra en la ilustración siguiente:
+
+ ![Captura de pantalla que muestra una ventana con un botón de barra de tareas.](./media/wpf-windows-overview/window-taskbar-button.png)  
   
  Algunos tipos de ventanas no tienen un botón de barra de tareas, como cuadros de mensajes y cuadros de diálogo (vea [información general sobre cuadros de diálogo](dialog-boxes-overview.md)). Puede controlar si se muestra el botón de barra de tareas para una ventana estableciendo la <xref:System.Windows.Window.ShowInTaskbar%2A> propiedad (`true` de forma predeterminada).  
   

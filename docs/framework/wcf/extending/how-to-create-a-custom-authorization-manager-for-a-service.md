@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear un administrador de autorización personalizado para un servicio
+title: Filtrar Crear un administrador de autorización personalizado para un servicio
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 64eb44c948f669ea5364cc38c7416fdd12cdabd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 571c1d66bcf1ea62972eb1be3fd694964581db38
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573954"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465144"
 ---
-# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Procedimiento Crear un administrador de autorización personalizado para un servicio
+# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Filtrar Crear un administrador de autorización personalizado para un servicio
 La infraestructura del modelo de identidad en Windows Communication Foundation (WCF) admite un modelo de autorización basada en notificaciones extensible. Las demandas se extraen de los tokens y opcionalmente son procesadas por directivas de autorización personalizadas y, a continuación, colocadas en <xref:System.IdentityModel.Policy.AuthorizationContext>. Un administrador de autorización examina las demandas en <xref:System.IdentityModel.Policy.AuthorizationContext> para tomar las decisiones de autorización.  
   
  La clase <xref:System.ServiceModel.ServiceAuthorizationManager> toma de forma predeterminada, las decisiones de la autorización; sin embargo estas decisiones se pueden invalidar creando un administrador de autorización personalizado. Para crear un administrador de autorización personalizado, cree una clase que derive de <xref:System.ServiceModel.ServiceAuthorizationManager> e implemente el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>. Las decisiones de la autorización se toman en el método <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>, que devuelve `true` cuando se permite el acceso y `false` cuando se niega el acceso.  
@@ -119,5 +119,4 @@ La infraestructura del modelo de identidad en Windows Communication Foundation (
   
 ## <a name="see-also"></a>Vea también
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Directiva de autorización](../../../../docs/framework/wcf/samples/authorization-policy.md)
 - [Directiva de autorización](../../../../docs/framework/wcf/samples/authorization-policy.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear una sesión segura
+title: Filtrar Crear una sesión segura
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-ms.openlocfilehash: c2e2b34c1d1589f26f3aea80384b5a96f1c64fb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d484bb6d11e7e81ebd14586450f16d8a18bcaa54
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544723"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463636"
 ---
-# <a name="how-to-create-a-secure-session"></a>Procedimiento Crear una sesión segura
+# <a name="how-to-create-a-secure-session"></a>Filtrar Crear una sesión segura
 Con la excepción de la [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) enlace, los enlaces proporcionados por el sistema en Windows Communication Foundation (WCF) utilizan automáticamente sesiones seguras cuando está habilitada la seguridad del mensaje.  
   
  De forma predeterminada, las sesiones seguras no permanecen en ningún servidor reciclado. Cuando se establece una sesión segura, el cliente y el servicio almacenan en memoria caché la clave asociada a la sesión segura. Cuando se intercambian los mensajes, se intercambia solo un identificador de la clave almacenada en memoria caché. Si se recicla el servidor web, también se recicla la memoria en caché, de manera que el servidor web no puede recuperar la clave almacenada en memoria caché para el identificador. Si ocurre esto, se produce una excepción que se devuelve al cliente. Las sesiones seguras que usan un token de contexto de seguridad (SCT) con estado pueden sobrevivir en un servidor web que se recicle. Para obtener más información acerca de cómo utilizar un SCT con estado en una sesión segura, consulte [Cómo: Crear un contexto de seguridad para una sesión segura Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
@@ -54,7 +54,7 @@ Con la excepción de la [ \<basicHttpBinding >](../../../../docs/framework/confi
      [!code-vb[c_CreateSecureSession#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#1)]  
   
     > [!NOTE]
-    >  Las sesiones seguras pueden desactivarse para el [ <wsHttpBinding> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) estableciendo el `establishSecurityContext` atributo `false`. Para los otros enlaces proporcionados por el sistema, las sesiones seguras pueden desactivarse solo mediante la creación un enlace personalizado.  
+    >  Las sesiones seguras pueden desactivarse para el [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) estableciendo el `establishSecurityContext` atributo `false`. Para los otros enlaces proporcionados por el sistema, las sesiones seguras pueden desactivarse solo mediante la creación un enlace personalizado.  
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>Especificar que un servicio utiliza sesiones seguras utilizando un enlace personalizado  
   

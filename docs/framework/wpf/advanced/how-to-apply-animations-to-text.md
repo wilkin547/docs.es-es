@@ -5,14 +5,14 @@ helpviewer_keywords:
 - typography [WPF], animations
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
-ms.openlocfilehash: e62c8288460206e7ebfbc18787bd9c2f2144a5bc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4cc7932b43f8a3c35d750f9a9020e16257867f76
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356967"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463129"
 ---
-# <a name="how-to-apply-animations-to-text"></a>Procedimiento Aplicar animaciones a texto
+# <a name="how-to-apply-animations-to-text"></a>Filtrar Aplicar animaciones a texto
 Las animaciones pueden modificar la presentación y la apariencia del texto en la aplicación. En los ejemplos siguientes usan diferentes tipos de animaciones para influir en la presentación del texto en un <xref:System.Windows.Controls.TextBlock> control.  
   
 ## <a name="example"></a>Ejemplo  
@@ -26,9 +26,8 @@ Las animaciones pueden modificar la presentación y la apariencia del texto en l
   
  El siguiente diagrama muestra el efecto de la <xref:System.Windows.Controls.TextBlock> control cambia su opacidad de `1.00` a `0.00` durante el intervalo de 5 segundos definido por el <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
   
- ![Texto cuya opacidad cambia de 1,00 a 0,00](./media/fadedtext01.png "FadedText01")  
-Opacidad del texto que cambia de 1,00 a 0,00  
-  
+ ![Texto cuya opacidad cambia de 1,00 a 0,00.](./media/how-to-apply-animations-to-text/faded-text-opacity-change.png)  
+   
  En el ejemplo siguiente se usa un <xref:System.Windows.Media.Animation.ColorAnimation> para animar el color de primer plano del bloque de texto. El valor de color de primer plano cambia de un color a un segundo color durante 5 segundos y, a continuación, invierte los valores de color y continúa.  
   
  [!code-xaml[TextAnimationSample#TextAnimationSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample3)]  

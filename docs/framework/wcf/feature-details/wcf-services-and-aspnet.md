@@ -2,12 +2,12 @@
 title: Servicios WCF y ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 837d03bbbac01be48d03c9170fc0a9a36c970da0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 80f4f9a473f223928981ee3f0c2e9f2464cbafaf
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282612"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463480"
 ---
 # <a name="wcf-services-and-aspnet"></a>Servicios WCF y ASP.NET
 
@@ -17,7 +17,7 @@ En este tema se describe hospedaje Windows Communication Foundation (WCF) servic
 
 Servicios WCF hospedados en Internet Information Services (IIS) pueden encontrarse con. Las páginas ASPX y servicios Web ASMX dentro de un dominio de aplicación único y común. ASP.NET proporciona servicios de infraestructura común como administración de AppDomain y compilación dinámica para WCF y el tiempo de ejecución HTTP de ASP.NET. La configuración predeterminada de WCF es en paralelo con ASP.NET.
 
-![Servicios WCF y ASP.NET: uso compartido del estado](./media/hostingwcfwithaspnet.gif "HostingWCFwithASPNET")
+![Captura de pantalla muestra los servicios WCF y ASP.NET: uso compartido del estado.](./media/wcf-services-and-aspnet/windows-communication-foundation-services-asp-dotnet-configuration.gif)
 
 El tiempo de ejecución HTTP de ASP.NET controla las solicitudes ASP.NET, pero no participa en el procesamiento de solicitudes destinadas a los servicios WCF, aunque estos servicios se hospedan en el mismo AppDomain, como es el contenido ASP.NET. En su lugar, el modelo de servicio WCF intercepta los mensajes dirigidos a los servicios de WCF y los enruta a través de la pila de transporte/canal WCF.
 

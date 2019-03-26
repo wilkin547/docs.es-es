@@ -3,17 +3,17 @@ title: Modelo de programación de notificaciones de WIF
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 543db91eaa058a87cfe579a23abb710f21ec1b85
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316511"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462817"
 ---
 # <a name="wif-claims-programming-model"></a>Modelo de programación de notificaciones de WIF
 Los desarrolladores de ASP.NET y de Windows Communication Foundation (WCF) suelen usar las interfaces IIdentity e IPrincipal para trabajar con la información de identidad del usuario. En .NET 4.5, Windows Identity Foundation (WIF) se ha integrado de tal manera que las notificaciones ahora siempre están presentes para cualquier entidad de seguridad, como se muestra en el diagrama siguiente:
 
- ![Modelo de programación de notificaciones de WIF](../../../docs/framework/security/media/wifclaimsprogrammingmodel.png "WIFClaimsProgrammingModel")
+ ![Diagrama que muestra el modelo de programación de notificaciones de WIF.](./media/wif-claims-programming-model/wif-claims-programming-model.png)
 
  En .NET 4.5, System.Security.Claims contiene las nuevas clases ClaimsPrincipal y ClaimsIdentity (vea el diagrama anterior). Todas las entidades de seguridad de .NET ahora se derivan de ClaimsPrincipal. Todas las clases de identidad integradas, como FormsIdentity para ASP.NET y WindowsIdentity, ahora se derivan de ClaimsIdentity. De forma similar, todas las clases de entidad de seguridad integradas, como GenericPrincipal y WindowsPrincipal, se derivan de ClaimsPrincipal.
 
@@ -59,7 +59,7 @@ WIF admite de forma predeterminada varias combinaciones de mecanismos de autenti
 |SAML 2.0|Igual que "SAML 1.1".|Igual que "SAML 1.1 Asignado a la cuenta de Windows".|
 |X509|1.  Notificaciones con el nombre distintivo del certificado X500, emailName, dnsName, SimpleName, UpnName, UrlName, thumbprint, RsaKey (este se puede extraer de la propiedad X509Certificate2.PublicKey.Key mediante el método RSACryptoServiceProvider.ExportParameters), DsaKey (este se puede extraer de la propiedad X509Certificate2.PublicKey.Key mediante el método DSACryptoServiceProvider.ExportParameters), propiedades SerialNumber del certificado X509.<br />2.  Notificación AuthenticationMethod con el valor `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`. Notificación AuthenticationInstant con el valor de la hora a la que se validó el certificado en formato XmlSchema DateTime.|1.  Usa el nombre de dominio completo de la cuenta de Windows como valor de la notificación `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`. .<br />2.  Notificaciones del certificado X509 no asignadas a Windows y notificaciones de la cuenta de Windows obtenidas mediante la asignación del certificado a Windows.|
 |UPN|1.  Las notificaciones son similares a las notificaciones de la sección de autenticación de Windows.<br />2.  Notificación AuthenticationMethod con el valor `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`. Notificación AuthenticationInstant con el valor de la hora a la que se validó la contraseña en formato XmlSchema DateTime.||
-|Windows (Kerberos o NTLM)|1.  Notificaciones generadas a partir del token de acceso. Por ejemplo: PrimarySID, DenyOnlyPrimarySID, PrimaryGroupSID, DenyOnlyPrimaryGroupSID, GroupSID, DenyOnlySID y Name.<br />2.  AuthenticationMethod con el valor `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`. AuthenticationInstant con el valor de la hora a la que se creó el token de acceso a Windows con el formato XMLSchema DateTime.||
+|Windows (Kerberos o NTLM)|1.  Notificaciones generadas desde el token de acceso, como: PrimarySID, DenyOnlyPrimarySID, PrimaryGroupSID, DenyOnlyPrimaryGroupSID, GroupSID, DenyOnlySID y nombre<br />2.  AuthenticationMethod con el valor `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`. AuthenticationInstant con el valor de la hora a la que se creó el token de acceso a Windows con el formato XMLSchema DateTime.||
 |Par de claves RSA|1.  Notificación `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa` con el valor de RSAKeyValue.<br />2.  Notificación AuthenticationMethod con el valor `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature`. Notificación AuthenticationInstant con el valor de la hora a la que se autenticó la clave RSA (es decir, la hora a la que se comprobó la firma) con el formato XMLSchema DateTime.||
 
 |Tipo de autenticación|URI que se emite en la notificación "AuthenticationMethod"|

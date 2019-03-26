@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 7d591c85211492e4ad0b7e226cffba309e8d418b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379645"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464962"
 ---
 # <a name="toolbar-overview"></a>Información general sobre controles ToolBar
 <xref:System.Windows.Controls.ToolBar> los controles son contenedores para un grupo de comandos o controles que suelen estar relacionados en su función. Un <xref:System.Windows.Controls.ToolBar> suele contener botones que invocan comandos.  
@@ -28,10 +28,9 @@ ms.locfileid: "57379645"
   
 <a name="ToolBars_with_Overflow_Items"></a>   
 ## <a name="toolbars-with-overflow-items"></a>Controles ToolBar con elementos de desbordamiento  
- A menudo <xref:System.Windows.Controls.ToolBar> controles contienen más elementos que pueden caber en el tamaño de la barra de herramientas. Cuando esto sucede, el <xref:System.Windows.Controls.ToolBar> muestra un botón de desbordamiento. Para ver los elementos de desbordamiento, un usuario hace clic en el botón de desbordamiento y los elementos se muestran en una ventana emergente que aparece a continuación el <xref:System.Windows.Controls.ToolBar>. El gráfico siguiente muestra un <xref:System.Windows.Controls.ToolBar> con elementos de desbordamiento.  
+ A menudo <xref:System.Windows.Controls.ToolBar> controles contienen más elementos que pueden caber en el tamaño de la barra de herramientas. Cuando esto sucede, el <xref:System.Windows.Controls.ToolBar> muestra un botón de desbordamiento. Para ver los elementos de desbordamiento, un usuario hace clic en el botón de desbordamiento y los elementos se muestran en una ventana emergente que aparece a continuación el <xref:System.Windows.Controls.ToolBar>. El gráfico siguiente muestra un <xref:System.Windows.Controls.ToolBar> con elementos de desbordamiento:  
   
- ![ToolBar con desbordamiento](./media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
-ToolBar con elementos de desbordamiento  
+ ![Captura de pantalla que muestra una barra de herramientas con elementos de desbordamiento.](./media/toolbar-overview/toolbar-overflow-items.png)  
   
  Puede especificar cuando se coloca un elemento en una barra de herramientas en el panel de desbordamiento estableciendo el <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType> propiedad adjunta <xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>, <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>, o <xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>. En el ejemplo siguiente se especifica que los cuatro últimos botones de la barra de herramientas siempre deben estar en el panel de desbordamiento.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 41f02013feb1405e5640afa73b954dc84921c924
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e18bc7d60b47b083a0b102938634473d85b39882
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351488"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463324"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Filtrar Usar el patrón principal-detalle con datos jerárquicos
 En este ejemplo se muestra cómo implementar el escenario principal-detalle.  
@@ -23,7 +23,7 @@ En este ejemplo se muestra cómo implementar el escenario principal-detalle.
   
  La siguiente captura de pantalla muestra el ejemplo. El `Divisions` <xref:System.Windows.Controls.ListBox> automáticamente realiza un seguimiento de las selecciones en la `Leagues` <xref:System.Windows.Controls.ListBox> y mostrar los datos correspondientes. El `Teams` <xref:System.Windows.Controls.ListBox> realiza un seguimiento de las selecciones en las otras dos <xref:System.Windows.Controls.ListBox> controles.  
   
- ![Master&#45;ejemplo detalle](./media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
+ ![Captura de pantalla que muestra un patrón&#45;ejemplo de escenario de detalle.](./media/how-to-use-the-master-detail-pattern-with-hierarchical-data/databinding-master-detail-scenario.png)  
   
  Las dos cosas a tener en cuenta en este ejemplo son:  
   

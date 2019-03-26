@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Dibujar líneas opacas y semitransparentes
+title: Filtrar Dibujar líneas opacas y semitransparentes
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing alpha blended
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
-ms.openlocfilehash: 44047b5a35c2ca87f3136d082331d2f31a1abbec
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 210916bbaf437d8f71b07e8107eb0cdc0989ea42
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721156"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465625"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Filtrar Dibujar líneas opacas y semitransparentes
 Al dibujar una línea, debe pasar un objeto <xref:System.Drawing.Pen> al método <xref:System.Drawing.Graphics.DrawLine%2A> de la clase <xref:System.Drawing.Graphics>. Uno de los parámetros del constructor <xref:System.Drawing.Pen.%23ctor%2A> es un objeto <xref:System.Drawing.Color>. Para dibujar una línea opaca, establezca el componente alfa del color en 255. Para dibujar una línea semitransparente, establezca el componente alfa en cualquier valor entre 1 y 254.  
@@ -25,13 +25,13 @@ Al dibujar una línea, debe pasar un objeto <xref:System.Drawing.Pen> al método
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se dibuja un mapa de bits y, después, se dibujan tres líneas que usan el mapa de bits como fondo. La primera línea usa un componente alfa de 255, por lo que es opaca. La segunda y tercera líneas usan un componente alfa de 128, por lo que son semitransparentes; puede ver la imagen de fondo a través de las líneas. La instrucción que establece la propiedad <xref:System.Drawing.Graphics.CompositingQuality%2A> hace que la mezcla de la tercera línea se realice conjuntamente con la corrección gamma.  
   
- En la siguiente ilustración se muestra el resultado del código siguiente.  
-  
- ![Opacas y semitransparentes](./media/compqualline.png "compqualline")  
-  
  [!code-csharp[System.Drawing.AlphaBlending#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.AlphaBlending#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#11)]  
   
+ La siguiente ilustración muestra la salida del código siguiente:  
+  
+ ![Ilustración que muestra la salida opaca y semitransparente](./media/how-to-draw-opaque-and-semitransparent-lines/opaque-semitransparent-lines.png)  
+
 ## <a name="compiling-the-code"></a>Compilar el código  
  El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>.  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text [Windows Forms], antialiasing
 - strings [Windows Forms], antialiasing when drawing
 ms.assetid: 48fc34f3-f236-4b01-a0cb-f0752e6d22ae
-ms.openlocfilehash: b0dc3cf5cff9cf3e163478861ec55a05427ad6ce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ffd8600c730baca54a9cbd098dd2f37ce5ecb728
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718576"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464728"
 ---
-# <a name="how-to-use-antialiasing-with-text"></a>Procedimiento Usa suavizado de contorno con texto
+# <a name="how-to-use-antialiasing-with-text"></a>Filtrar Usa suavizado de contorno con texto
 *Suavizado de contorno* hace referencia al suavizado de los bordes escalonados de dibujados gráficos y texto para mejorar su apariencia y legibilidad. Con el administrado [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] clases, puede representar texto con suavizado de contorno de alta calidad, así como texto de menor calidad. Normalmente, una representación de mayor calidad toma más tiempo de procesamiento que una calidad inferior. Para establecer el nivel de calidad de texto, establezca el <xref:System.Drawing.Graphics.TextRenderingHint%2A> propiedad de un <xref:System.Drawing.Graphics> a uno de los elementos de la <xref:System.Drawing.Text.TextRenderingHint> (enumeración)  
   
 ## <a name="example"></a>Ejemplo  
@@ -29,7 +29,7 @@ ms.locfileid: "57718576"
  
  La siguiente ilustración muestra la salida del código de ejemplo:  
   
- ![Fonts Text](./media/fontstext10.png "FontsText10")  
+ ![Captura de pantalla que muestra texto con dos configuraciones de calidad diferente.](./media/how-to-use-antialiasing-with-text/antialiasing-text-quality-settings.png)  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  El ejemplo de código anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
