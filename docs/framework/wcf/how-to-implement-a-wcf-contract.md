@@ -7,27 +7,27 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-ms.openlocfilehash: fcf96af11bae701585acd92001c8000125858449
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: fa8c5457c636d7f37215f0d4b4fdbb1c96c9481e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410087"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463623"
 ---
-# <a name="tutorial-implement-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="9585f-102">Tutorial: Implementar un contrato de servicio de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="9585f-102">Tutorial: Implement a Windows Communication Foundation service contract</span></span>
+# <a name="tutorial-implement-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="edbd3-102">Tutorial: Implementar un contrato de servicio de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="edbd3-102">Tutorial: Implement a Windows Communication Foundation service contract</span></span>
 
-<span data-ttu-id="9585f-103">Este tutorial describe al segundo de cinco tareas necesarias para crear una aplicación básica de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="9585f-103">This tutorial describes the second of five tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="9585f-104">Para obtener información general de los tutoriales, consulte [Tutorial: Introducción a las aplicaciones de Windows Communication Foundation](getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="9585f-104">For an overview of the tutorials, see [Tutorial: Get started with Windows Communication Foundation applications](getting-started-tutorial.md).</span></span>
+<span data-ttu-id="edbd3-103">Este tutorial describe al segundo de cinco tareas necesarias para crear una aplicación básica de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="edbd3-103">This tutorial describes the second of five tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="edbd3-104">Para obtener información general de los tutoriales, consulte [Tutorial: Introducción a las aplicaciones de Windows Communication Foundation](getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="edbd3-104">For an overview of the tutorials, see [Tutorial: Get started with Windows Communication Foundation applications](getting-started-tutorial.md).</span></span>
 
-<span data-ttu-id="9585f-105">El siguiente paso para crear una aplicación de WCF es agregar código para implementar la interfaz de servicio WCF que creó en el paso anterior.</span><span class="sxs-lookup"><span data-stu-id="9585f-105">The next step for creating a WCF application is to add code to implement the WCF service interface that you created in the previous step.</span></span> <span data-ttu-id="9585f-106">En este paso, creará una clase denominada `CalculatorService` que implementa definido por el usuario `ICalculator` interfaz.</span><span class="sxs-lookup"><span data-stu-id="9585f-106">In this step, you create a class named `CalculatorService` that implements the user-defined `ICalculator` interface.</span></span> <span data-ttu-id="9585f-107">Cada método en el código siguiente llama a una operación de calculadora y escribe texto en la consola para probarlo.</span><span class="sxs-lookup"><span data-stu-id="9585f-107">Each method in the following code calls a calculator operation and writes text to the console to test it.</span></span> 
+<span data-ttu-id="edbd3-105">El siguiente paso para crear una aplicación de WCF es agregar código para implementar la interfaz de servicio WCF que creó en el paso anterior.</span><span class="sxs-lookup"><span data-stu-id="edbd3-105">The next step for creating a WCF application is to add code to implement the WCF service interface that you created in the previous step.</span></span> <span data-ttu-id="edbd3-106">En este paso, creará una clase denominada `CalculatorService` que implementa definido por el usuario `ICalculator` interfaz.</span><span class="sxs-lookup"><span data-stu-id="edbd3-106">In this step, you create a class named `CalculatorService` that implements the user-defined `ICalculator` interface.</span></span> <span data-ttu-id="edbd3-107">Cada método en el código siguiente llama a una operación de calculadora y escribe texto en la consola para probarlo.</span><span class="sxs-lookup"><span data-stu-id="edbd3-107">Each method in the following code calls a calculator operation and writes text to the console to test it.</span></span> 
 
-<span data-ttu-id="9585f-108">En este tutorial aprenderá a:</span><span class="sxs-lookup"><span data-stu-id="9585f-108">In this tutorial, you learn how to:</span></span>
+<span data-ttu-id="edbd3-108">En este tutorial aprenderá a:</span><span class="sxs-lookup"><span data-stu-id="edbd3-108">In this tutorial, you learn how to:</span></span>
 > [!div class="checklist"]
-> - <span data-ttu-id="9585f-109">Agregue código para implementar el contrato de servicio WCF.</span><span class="sxs-lookup"><span data-stu-id="9585f-109">Add code to implement the WCF service contract.</span></span>
-> - <span data-ttu-id="9585f-110">Compile la solución.</span><span class="sxs-lookup"><span data-stu-id="9585f-110">Build the solution.</span></span>
+> - <span data-ttu-id="edbd3-109">Agregue código para implementar el contrato de servicio WCF.</span><span class="sxs-lookup"><span data-stu-id="edbd3-109">Add code to implement the WCF service contract.</span></span>
+> - <span data-ttu-id="edbd3-110">Compile la solución.</span><span class="sxs-lookup"><span data-stu-id="edbd3-110">Build the solution.</span></span>
 
-## <a name="add-code-to-implement-the-wcf-service-contract"></a><span data-ttu-id="9585f-111">Agregue código para implementar el contrato de servicio WCF</span><span class="sxs-lookup"><span data-stu-id="9585f-111">Add code to implement the WCF service contract</span></span>
+## <a name="add-code-to-implement-the-wcf-service-contract"></a><span data-ttu-id="edbd3-111">Agregue código para implementar el contrato de servicio WCF</span><span class="sxs-lookup"><span data-stu-id="edbd3-111">Add code to implement the WCF service contract</span></span>
 
-<span data-ttu-id="9585f-112">En **GettingStartedLib**, abra el **Service1.cs** o **Service1.vb** de archivo y reemplace su código con el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="9585f-112">In **GettingStartedLib**, open the **Service1.cs** or **Service1.vb** file and replace its code with the following code:</span></span>
+<span data-ttu-id="edbd3-112">En **GettingStartedLib**, abra el **Service1.cs** o **Service1.vb** de archivo y reemplace su código con el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="edbd3-112">In **GettingStartedLib**, open the **Service1.cs** or **Service1.vb** file and replace its code with the following code:</span></span>
 
 ```csharp
 using System;
@@ -116,32 +116,31 @@ Namespace GettingStartedLib
 End Namespace
 ```
 
-## <a name="edit-appconfig"></a><span data-ttu-id="9585f-113">Edición de App.config</span><span class="sxs-lookup"><span data-stu-id="9585f-113">Edit App.config</span></span>
+## <a name="edit-appconfig"></a><span data-ttu-id="edbd3-113">Edición de App.config</span><span class="sxs-lookup"><span data-stu-id="edbd3-113">Edit App.config</span></span>
 
-<span data-ttu-id="9585f-114">Editar **App.config** en **GettingStartedLib** para reflejar los cambios realizados en el código.</span><span class="sxs-lookup"><span data-stu-id="9585f-114">Edit **App.config** in **GettingStartedLib** to reflect the changes you made to the code.</span></span>
-   - <span data-ttu-id="9585f-115">Para Visual C# proyectos:</span><span class="sxs-lookup"><span data-stu-id="9585f-115">For Visual C# projects:</span></span>
-       - <span data-ttu-id="9585f-116">Cambie la línea 14 a `<service name="GettingStartedLib.CalculatorService">`</span><span class="sxs-lookup"><span data-stu-id="9585f-116">Change line 14 to `<service name="GettingStartedLib.CalculatorService">`</span></span>
-       - <span data-ttu-id="9585f-117">Cambie la línea 17 a `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span><span class="sxs-lookup"><span data-stu-id="9585f-117">Change line 17 to `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span></span>
-       - <span data-ttu-id="9585f-118">Cambie la línea 22 en `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`</span><span class="sxs-lookup"><span data-stu-id="9585f-118">Change line 22 to `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`</span></span>
+<span data-ttu-id="edbd3-114">Editar **App.config** en **GettingStartedLib** para reflejar los cambios realizados en el código.</span><span class="sxs-lookup"><span data-stu-id="edbd3-114">Edit **App.config** in **GettingStartedLib** to reflect the changes you made to the code.</span></span>
+- <span data-ttu-id="edbd3-115">Para Visual C# proyectos:</span><span class="sxs-lookup"><span data-stu-id="edbd3-115">For Visual C# projects:</span></span>
+  - <span data-ttu-id="edbd3-116">Cambie la línea 14 a `<service name="GettingStartedLib.CalculatorService">`</span><span class="sxs-lookup"><span data-stu-id="edbd3-116">Change line 14 to `<service name="GettingStartedLib.CalculatorService">`</span></span>
+  - <span data-ttu-id="edbd3-117">Cambie la línea 17 a `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span><span class="sxs-lookup"><span data-stu-id="edbd3-117">Change line 17 to `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span></span>
+  - <span data-ttu-id="edbd3-118">Cambie la línea 22 en `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`</span><span class="sxs-lookup"><span data-stu-id="edbd3-118">Change line 22 to `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`</span></span>
 
-   - <span data-ttu-id="9585f-119">Para proyectos de Visual Basic:</span><span class="sxs-lookup"><span data-stu-id="9585f-119">For Visual Basic projects:</span></span>
-       - <span data-ttu-id="9585f-120">Cambie la línea 14 a `<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`</span><span class="sxs-lookup"><span data-stu-id="9585f-120">Change line 14 to `<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`</span></span>
-       - <span data-ttu-id="9585f-121">Cambie la línea 17 a `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span><span class="sxs-lookup"><span data-stu-id="9585f-121">Change line 17 to `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span></span>
-       - <span data-ttu-id="9585f-122">Cambie la línea 22 en `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`</span><span class="sxs-lookup"><span data-stu-id="9585f-122">Change line 22 to `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`</span></span>
+- <span data-ttu-id="edbd3-119">Para proyectos de Visual Basic:</span><span class="sxs-lookup"><span data-stu-id="edbd3-119">For Visual Basic projects:</span></span>
+  - <span data-ttu-id="edbd3-120">Cambie la línea 14 a `<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`</span><span class="sxs-lookup"><span data-stu-id="edbd3-120">Change line 14 to `<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`</span></span>
+  - <span data-ttu-id="edbd3-121">Cambie la línea 17 a `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span><span class="sxs-lookup"><span data-stu-id="edbd3-121">Change line 17 to `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span></span>
+  - <span data-ttu-id="edbd3-122">Cambie la línea 22 en `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`</span><span class="sxs-lookup"><span data-stu-id="edbd3-122">Change line 22 to `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`</span></span>
 
+## <a name="compile-the-code"></a><span data-ttu-id="edbd3-123">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="edbd3-123">Compile the code</span></span>
 
-## <a name="compile-the-code"></a><span data-ttu-id="9585f-123">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="9585f-123">Compile the code</span></span>
+<span data-ttu-id="edbd3-124">Compile la solución para comprobar que no haya errores de compilación.</span><span class="sxs-lookup"><span data-stu-id="edbd3-124">Build the solution to verify there aren't any compilation errors.</span></span> <span data-ttu-id="edbd3-125">Si usa Visual Studio, en el **compilar** menú, seleccione **compilar solución** (o presione **Ctrl**+**MAYÚS** + **B**).</span><span class="sxs-lookup"><span data-stu-id="edbd3-125">If you're using Visual Studio, on the **Build** menu select **Build Solution** (or press **Ctrl**+**Shift**+**B**).</span></span>
 
-<span data-ttu-id="9585f-124">Compile la solución para comprobar que no haya errores de compilación.</span><span class="sxs-lookup"><span data-stu-id="9585f-124">Build the solution to verify there aren't any compilation errors.</span></span> <span data-ttu-id="9585f-125">Si usa Visual Studio, en el **compilar** menú, seleccione **compilar solución** (o presione **Ctrl**+**MAYÚS** + **B**).</span><span class="sxs-lookup"><span data-stu-id="9585f-125">If you're using Visual Studio, on the **Build** menu select **Build Solution** (or press **Ctrl**+**Shift**+**B**).</span></span>
+## <a name="next-steps"></a><span data-ttu-id="edbd3-126">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="edbd3-126">Next steps</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="9585f-126">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="9585f-126">Next steps</span></span>
-
-<span data-ttu-id="9585f-127">En este tutorial ha aprendido a:</span><span class="sxs-lookup"><span data-stu-id="9585f-127">In this tutorial, you learned how to:</span></span>
+<span data-ttu-id="edbd3-127">En este tutorial ha aprendido a:</span><span class="sxs-lookup"><span data-stu-id="edbd3-127">In this tutorial, you learned how to:</span></span>
 > [!div class="checklist"]
-> - <span data-ttu-id="9585f-128">Agregue código para implementar el contrato de servicio WCF.</span><span class="sxs-lookup"><span data-stu-id="9585f-128">Add code to implement the WCF service contract.</span></span>
-> - <span data-ttu-id="9585f-129">Compile la solución.</span><span class="sxs-lookup"><span data-stu-id="9585f-129">Build the solution.</span></span>
+> - <span data-ttu-id="edbd3-128">Agregue código para implementar el contrato de servicio WCF.</span><span class="sxs-lookup"><span data-stu-id="edbd3-128">Add code to implement the WCF service contract.</span></span>
+> - <span data-ttu-id="edbd3-129">Compile la solución.</span><span class="sxs-lookup"><span data-stu-id="edbd3-129">Build the solution.</span></span>
 
-<span data-ttu-id="9585f-130">En el siguiente tutorial para aprender a ejecutar el servicio WCF.</span><span class="sxs-lookup"><span data-stu-id="9585f-130">Advance to the next tutorial to learn how to run the WCF service.</span></span>
+<span data-ttu-id="edbd3-130">En el siguiente tutorial para aprender a ejecutar el servicio WCF.</span><span class="sxs-lookup"><span data-stu-id="edbd3-130">Advance to the next tutorial to learn how to run the WCF service.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="9585f-131">Tutorial: Hospedar y ejecutar un servicio WCF básico</span><span class="sxs-lookup"><span data-stu-id="9585f-131">Tutorial: Host and run a basic WCF service</span></span>](how-to-host-and-run-a-basic-wcf-service.md)
+> [<span data-ttu-id="edbd3-131">Tutorial: Hospedar y ejecutar un servicio WCF básico</span><span class="sxs-lookup"><span data-stu-id="edbd3-131">Tutorial: Host and run a basic WCF service</span></span>](how-to-host-and-run-a-basic-wcf-service.md)
