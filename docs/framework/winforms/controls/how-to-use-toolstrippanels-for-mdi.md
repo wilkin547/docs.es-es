@@ -17,8 +17,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57722066"
 ---
 # <a name="how-to-use-toolstrippanels-for-mdi"></a>Filtrar Utilizar controles ToolStripPanel para MDI
-
-  <xref:System.Windows.Forms.ToolStripPanel> proporciona flexibilidad para las aplicaciones de interfaz de múltiples documentos (MDI) mediante el método <xref:System.Windows.Forms.ToolStripPanel.Join%2A>.  
+<xref:System.Windows.Forms.ToolStripPanel> proporciona flexibilidad para las aplicaciones de interfaz de múltiples documentos (MDI) mediante el método <xref:System.Windows.Forms.ToolStripPanel.Join%2A>.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo de código muestra cómo utilizar los controles <xref:System.Windows.Forms.ToolStripPanel> para MDI.  

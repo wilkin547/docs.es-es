@@ -13,8 +13,7 @@ ms.locfileid: "57844306"
 [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)] es una versión ligera de total .NET Framework diseñada para los clientes que no necesitan el marco de trabajo completo. El marco del cliente no admite la totalidad de Windows Communication Foundation.  
   
 ## <a name="wcf-features-supported-by-the-net-framework-client-profile"></a>Características WCF compatibles con .NET Framework Client Profile  
- 
-  [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)] admite las siguientes características de Windows Communication Foundation:  
+ [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)] admite las siguientes características de Windows Communication Foundation:  
   
 -   Se admite todo WCF, salvo Cardspace y el hospedaje web.  
   

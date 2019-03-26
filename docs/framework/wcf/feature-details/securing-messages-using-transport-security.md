@@ -45,8 +45,7 @@ En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ)
  Teniendo en cuenta estas cuestiones básicas, las secciones siguientes detallan propiedades de seguridad de transporte incluidas con <xref:System.ServiceModel.NetMsmqBinding> y <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  
   
 #### <a name="msmq-authentication-mode"></a>Modo de autenticación MSMQ  
- 
-  <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> dicta si utilizar la seguridad de dominio de Windows o una seguridad externa basada en certificado para proteger el mensaje. En ambos modos de autenticación, el canal de transporte en cola de WCF usa los `CertificateValidationMode` especificado en la configuración del servicio. El modo de validación de certificado especifica el mecanismo utilizado para comprobar la validez del certificado.  
+ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> dicta si utilizar la seguridad de dominio de Windows o una seguridad externa basada en certificado para proteger el mensaje. En ambos modos de autenticación, el canal de transporte en cola de WCF usa los `CertificateValidationMode` especificado en la configuración del servicio. El modo de validación de certificado especifica el mecanismo utilizado para comprobar la validez del certificado.  
   
  Cuando la seguridad de transporte está activada, la configuración predeterminada es <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
   

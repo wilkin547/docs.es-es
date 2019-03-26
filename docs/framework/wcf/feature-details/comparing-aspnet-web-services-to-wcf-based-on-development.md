@@ -145,9 +145,7 @@ public class LineItem
 }
 ```
 
-
-  <xref:System.Runtime.Serialization.DataContractAttribute> significa que cero o más campos o propiedades de un tipo deberán serializarse, mientras que <xref:System.Runtime.Serialization.DataMemberAttribute> indica que se serializará un campo o propiedad concreta. El atributo <xref:System.Runtime.Serialization.DataContractAttribute> se puede aplicar a una clase o a una estructura. 
-  <xref:System.Runtime.Serialization.DataMemberAttribute> se puede aplicar a un campo o una propiedad, y los campos y propiedades a las que se aplica el atributo pueden ser públicos o privados. Las instancias de tipos que tienen el <xref:System.Runtime.Serialization.DataContractAttribute> aplicado a ellos se conocen como contratos de datos en WCF. Se serializan en XML mediante <xref:System.Runtime.Serialization.DataContractSerializer>.
+<xref:System.Runtime.Serialization.DataContractAttribute> significa que cero o más campos o propiedades de un tipo deberán serializarse, mientras que <xref:System.Runtime.Serialization.DataMemberAttribute> indica que se serializará un campo o propiedad concreta. El atributo <xref:System.Runtime.Serialization.DataContractAttribute> se puede aplicar a una clase o a una estructura. <xref:System.Runtime.Serialization.DataMemberAttribute> se puede aplicar a un campo o una propiedad, y los campos y propiedades a las que se aplica el atributo pueden ser públicos o privados. Las instancias de tipos que tienen el <xref:System.Runtime.Serialization.DataContractAttribute> aplicado a ellos se conocen como contratos de datos en WCF. Se serializan en XML mediante <xref:System.Runtime.Serialization.DataContractSerializer>.
 
 La siguiente lista enumera las principales diferencias entre la utilización de <xref:System.Runtime.Serialization.DataContractSerializer> y <xref:System.Xml.Serialization.XmlSerializer>, así como los distintos atributos del espacio de nombres <xref:System.Xml.Serialization>.
 
@@ -180,8 +178,7 @@ La siguiente lista enumera las principales diferencias entre la utilización de 
 
 - Otra consecuencia de que <xref:System.Runtime.Serialization.DataContractSerializer> pueda tener acceso a los miembros no públicos de un tipo es que requiere plena confianza, al contrario que <xref:System.Xml.Serialization.XmlSerializer>. Permiso de acceso del código de plena confianza otorga acceso completo a todos los recursos en un equipo que se puede acceder mediante las credenciales bajo las que se está ejecutando el código. Esta opción debe usarse con cuidado como código de plena confianza tiene acceso a todos los recursos en el equipo.
 
-- 
-  <xref:System.Runtime.Serialization.DataContractSerializer> incorpora cierta compatibilidad para el control de versiones:
+- <xref:System.Runtime.Serialization.DataContractSerializer> incorpora cierta compatibilidad para el control de versiones:
 
     - <xref:System.Runtime.Serialization.DataMemberAttribute> posee una propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> a la puede asignarse un valor de falso para los miembros que se agregan a las nuevas versiones de un contrato de datos que no se encontraban en versiones anteriores, con lo que las aplicaciones con la versión más reciente del contrato pueden procesar las versiones anteriores.
 

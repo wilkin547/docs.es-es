@@ -35,7 +35,7 @@ End With
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`objectExpression`|Obligatorio. Una expresión que se evalúa como un objeto. La expresión puede ser arbitrariamente compleja y se evalúa solo una vez. La expresión se puede evaluar como cualquier tipo de datos, incluidos los tipos elementales.|  
 |`statements`|Opcional. Una o varias instrucciones entre `With` y `End With` que pueden hacer referencia a los miembros de un objeto generado por la evaluación de `objectExpression`.|  
@@ -54,8 +54,7 @@ End With
   
  El tipo de datos de `objectExpression` puede ser cualquier tipo de clase o estructura, o incluso un tipo elemental de Visual Basic, como `Integer`.  Si `objectExpression` produce un valor que no es un objeto, solo podrá leer los valores de sus miembros o invocar métodos, y recibirá un error si intenta asignar valores a los miembros de una estructura utilizada en una instrucción `With...End With`.  Este es el mismo error que obtendría si invocara un método que devolviera una estructura y accediera inmediatamente a un miembro del resultado de la función, como `GetAPoint().x = 1`, y le asignara un valor.  El problema en ambos casos es que la estructura solo existe en la pila de llamadas y no hay forma de que un miembro de la estructura modificada en estas situaciones pueda escribir en una ubicación de forma que cualquier otro código del programa pueda observar el cambio.  
   
- 
-  `objectExpression` se evalúa una vez, tras su entrada en el bloque. No se puede reasignar `objectExpression` desde el interior del bloque `With`.  
+ `objectExpression` se evalúa una vez, tras su entrada en el bloque. No se puede reasignar `objectExpression` desde el interior del bloque `With`.  
   
  En un bloque `With`, solo de puede acceder a los métodos y propiedades del objeto especificado sin calificarlos. Se pueden usar métodos y propiedades de otros objetos, pero es necesario calificarlos con los nombres de objeto.  
   

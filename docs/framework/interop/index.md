@@ -2,28 +2,22 @@
 title: Interoperar con código no administrado
 ms.date: 01/17/2018
 helpviewer_keywords:
-- unmanaged code, interoperation
-- managed code, interoperation with unmanaged code
-- .NET Framework, interoperation with unmanaged code
-- unmanaged code
-- interoperation with unmanaged code
-- interoperation with unmanaged code, about interoperation
-- components [.NET Framework], interoperation with unmanaged code
+  - 'unmanaged code, interoperation'
+  - 'managed code, interoperation with unmanaged code'
+  - '.NET Framework, interoperation with unmanaged code'
+  - unmanaged code
+  - interoperation with unmanaged code
+  - 'interoperation with unmanaged code, about interoperation'
+  - 'components [.NET Framework], interoperation with unmanaged code'
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 583cfb6e3a5145c6c0dfc82ec9ff64c6d87414ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389541"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Interoperar con código no administrado
 
 .NET Framework promueve la interacción con componentes COM, servicios COM+, bibliotecas de tipos externas y muchos servicios del sistema operativo. Los tipos de datos, las firmas de método y los mecanismos de control de errores varían entre los modelos de objetos administrados y no administrados. Para simplificar la interoperación entre los componentes de .NET Framework y el código no administrado, así como para facilitar la ruta de migración, Common Language Runtime oculta a los clientes y servidores las diferencias en estos modelos de objetos.
 
-El código que se ejecuta bajo el control del tiempo de ejecución se denomina código administrado. Por el contrario, el código que se ejecuta fuera del tiempo de ejecución se denomina código no administrado. Los componentes COM, las interfaces ActiveX y las funciones de la API de Win32 son ejemplos de código no administrado.
+El código que se ejecuta bajo el control del tiempo de ejecución se denomina código administrado. Por el contrario, el código que se ejecuta fuera del tiempo de ejecución se denomina código no administrado. Los componentes COM, las interfaces ActiveX y las funciones de la API de Windows son ejemplos de código no administrado.
 
 ## <a name="in-this-section"></a>En esta sección
 
@@ -39,7 +33,7 @@ Se describe cómo llamar a funciones DLL no administradas mediante la invocació
 [Serialización de interoperabilidad](interop-marshaling.md)  
 Se describe la serialización de la interoperabilidad COM y la invocación de plataforma.
 
-[Asignar resultados HRESULT y excepciones](how-to-map-hresults-and-exceptions.md)  
+[Cómo: Asignar resultados HRESULT y excepciones](how-to-map-hresults-and-exceptions.md)  
 Se describe la asignación entre las excepciones y los valores HRESULT.
 
 [Contenedores COM](com-wrappers.md)  
@@ -48,7 +42,7 @@ Describe los contenedores proporcionados por la interoperabilidad COM.
 [Equivalencia de tipos y tipos de interoperabilidad incrustados](type-equivalence-and-embedded-interop-types.md)  
 Describe cómo la información de tipo para tipos COM está insertada en los ensamblados y cómo Common Language Runtime determina la equivalencia de los tipos COM insertados.
 
-[Cómo: Generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+[Cómo: para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
 Describe cómo producir ensamblados de interoperabilidad primarios con *Tlbimp.exe*  (importador de bibliotecas de tipos).
 
 [Cómo: Registrar ensamblados de interoperabilidad primarios](how-to-register-primary-interop-assemblies.md)  

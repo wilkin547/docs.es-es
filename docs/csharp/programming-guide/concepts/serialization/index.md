@@ -8,9 +8,9 @@ La serialización es el proceso de convertir un objeto en una secuencia de bytes
 
 ## <a name="how-serialization-works"></a>Funcionamiento de la serialización
 
-En esta ilustración se muestra el proceso general de la serialización.
+En esta ilustración se muestra el proceso general de la serialización:
 
-![Gráfico de serialización](./media/serialization.gif "serialización")
+![Gráfico serialización](./media/index/serialization-process.gif)
 
 El objeto se serializa en una secuencia, que incluye no solo los datos, sino también la información sobre el tipo de objeto, como su versión, referencia cultural y nombre de ensamblado. A partir de esa secuencia, el almacenamiento se puede realizar en una base de datos, en un archivo o en la memoria.
 
