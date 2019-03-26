@@ -1,8 +1,0 @@
-# [Matrices](index.md)
-## [Matrices como objetos](arrays-as-objects.md)
-## [Matrices unidimensionales](single-dimensional-arrays.md)
-## [Matrices multidimensionales](multidimensional-arrays.md)
-## [Matrices escalonadas](jagged-arrays.md)
-## [Utilizar foreach con matrices](using-foreach-with-arrays.md)
-## [Pasar matrices como argumentos](passing-arrays-as-arguments.md)
-## [Matrices con tipo implícito](implicitly-typed-arrays.md)
