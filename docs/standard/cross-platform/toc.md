@@ -1,7 +1,0 @@
-# [Desarrollo de varias plataformas](index.md)
-## [Biblioteca de clases portable](cross-platform-development-with-the-portable-class-library.md)
-## [Uso de la Biblioteca de clases portable con MVVM](using-portable-class-library-with-model-view-view-model.md)
-## [Recursos de aplicación para bibliotecas destinadas a varias plataformas](app-resources-for-libraries-that-target-multiple-platforms.md)
-## [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime](support-for-windows-store-apps-and-windows-runtime.md)
-## [Transferencia de un URI a Windows Runtime](passing-a-uri-to-the-windows-runtime.md)
-## [WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) (método)](windowsruntimestreamextensions-asrandomaccessstream-method.md)

@@ -1,5 +1,0 @@
-# [Tipos que aceptan valores NULL](index.md)
-## [Utilizar tipos que aceptan valores NULL](using-nullable-types.md)
-## [Aplicar la conversión boxing a tipos que aceptan valores NULL](boxing-nullable-types.md)
-## [Cómo: Identificar tipos que aceptan valores NULL](how-to-identify-a-nullable-type.md)
-## [Cómo: Convertir con seguridad de bool? en bool](how-to-safely-cast-from-bool-to-bool.md)

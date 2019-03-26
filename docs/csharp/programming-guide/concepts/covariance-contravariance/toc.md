@@ -1,7 +1,0 @@
-# [Covarianza y contravarianza](index.md)
-## [Varianza en interfaces genéricas](variance-in-generic-interfaces.md)
-### [Creación de interfaces genéricas variantes](creating-variant-generic-interfaces.md)
-### [Uso de la varianza en interfaces para colecciones genéricas](using-variance-in-interfaces-for-generic-collections.md)
-## [Varianza en delegados](variance-in-delegates.md)
-### [Uso de varianza en delegados](using-variance-in-delegates.md)
-### [Uso de varianza para los delegados genéricos Func y Action](using-variance-for-func-and-action-generic-delegates.md)
