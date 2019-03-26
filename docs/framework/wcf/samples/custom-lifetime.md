@@ -2,12 +2,12 @@
 title: Vigencia personalizada
 ms.date: 08/20/2018
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: 1946608c69401fb08f6eb458a8adabea24563963
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be6013d568e3625c5eac7e0c145db7df1c6917e3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520776"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410386"
 ---
 # <a name="custom-lifetime"></a>Vigencia personalizada
 
@@ -201,7 +201,7 @@ public void InitializeInstanceContext(InstanceContext instanceContext,
 }
 ```
 
- Por último el <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementación está enlazada al modelo de servicio mediante el uso de la <xref:System.ServiceModel.Description.IServiceBehavior> implementación. Esta implementación se coloca en la clase `CustomLeaseTimeAttribute` y también deriva de la clase base `Attribute` para exponer este comportamiento como un atributo.
+ Por último el <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementación está enlazada al modelo de servicio mediante el uso de la <xref:System.ServiceModel.Description.IServiceBehavior> implementación. Esta implementación se coloca en la clase `CustomLeaseTimeAttribute` y también deriva de la clase base <xref:System.Attribute> para exponer este comportamiento como un atributo.
 
 ```csharp
 public void ApplyDispatchBehavior(ServiceDescription description,
@@ -240,7 +240,7 @@ Al ejecutar el ejemplo, las solicitudes y las respuestas de operación se muestr
 
 1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Para compilar la edición de la solución de C# o Visual Basic. NET, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](building-the-samples.md).
+2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
 3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](running-the-samples.md).
 

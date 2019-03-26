@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 5de30627d6d0e1209b12912437ae3403890f1678
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5e83d13d24a0b17fd886995e552dd0a7e2cf8ff4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828350"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409957"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Cadenas de conexión y archivos de configuración
 La incrustación de cadenas de conexión en el código de la aplicación puede producir vulnerabilidades en la seguridad y problemas de mantenimiento. Las cadenas de conexión sin cifrar compiladas en el código fuente de una aplicación se pueden ver con la herramienta [Ildasm.exe (Desensamblador de IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Además, si la cadena de conexión cambia en algún momento, será necesario compilar de nuevo la aplicación. Por estas razones, se recomienda almacenar las cadenas de conexión en un archivo de configuración de la aplicación.  
@@ -67,21 +67,21 @@ La incrustación de cadenas de conexión en el código de la aplicación puede p
 >  El archivo **machine.config** también contiene una sección **connectionStrings**, donde se encuentran las cadenas de conexión que usa Visual Studio. Al recuperar cadenas de conexión mediante el nombre del proveedor del archivo **app.config** en una aplicación Windows, primero se cargan las cadenas de conexión de **machine.config** y, después, las entradas de **app.config**. Si se agrega **clear** inmediatamente después del elemento **connectionStrings**, se quitan todas las referencias heredadas de la estructura de datos en memoria, de forma que solo se tendrán en cuenta las cadenas de conexión definidas en el archivo **app.config** local.  
   
 ### <a name="working-with-the-configuration-classes"></a>Trabajar con clases de configuración  
- A partir de .NET Framework 2.0, se usa el elemento <xref:System.Configuration.ConfigurationManager> al trabajar con archivos de configuración en el equipo local, reemplazando al elemento desusado <xref:System.Configuration.ConfigurationSettings>. <xref:System.Web.Configuration.WebConfigurationManager> se usa para trabajar con archivos de configuración de ASP.NET. Esta característica se ha diseñado para trabajar con archivos de configuración en un servidor web y permite el acceso mediante programación a secciones del archivo de configuración como **system.web**.  
+ A partir de .NET Framework 2.0, se usa el elemento <xref:System.Configuration.ConfigurationManager> al trabajar con archivos de configuración en el equipo local, reemplazando al elemento en desuso <xref:System.Configuration.ConfigurationSettings>. <xref:System.Web.Configuration.WebConfigurationManager> se usa para trabajar con archivos de configuración de ASP.NET. Esta característica se ha diseñado para trabajar con archivos de configuración en un servidor web y permite el acceso mediante programación a secciones del archivo de configuración como **system.web**.  
   
 > [!NOTE]
 >  El acceso a los archivos de configuración en tiempo de ejecución requiere la concesión de permisos al llamador; los permisos necesarios dependen del tipo de aplicación, del archivo de configuración y de la ubicación. Para obtener más información, vea [Utilizar las clases Configuration](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100)) y <xref:System.Web.Configuration.WebConfigurationManager> para las aplicaciones ASP.NET, o bien <xref:System.Configuration.ConfigurationManager> para las aplicaciones Windows.  
   
  Puede usar <xref:System.Configuration.ConnectionStringSettingsCollection> para recuperar cadenas de conexión de archivos de configuración de aplicación. Esta clase contiene una colección de objetos <xref:System.Configuration.ConnectionStringSettings>, cada uno de los cuales representa una única entrada en la sección **connectionStrings**. Sus propiedades se asignan a los atributos de cadenas de conexión, lo que permite recuperar una cadena de conexión mediante la especificación de su nombre o del nombre del proveedor.  
   
-|Propiedad|Descripción|  
+|Property|Descripción|  
 |--------------|-----------------|  
 |<xref:System.Configuration.ConnectionStringSettings.Name%2A>|Nombre de la cadena de conexión. Se asigna al atributo **name**.|  
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|Nombre completo del proveedor. Se asigna al atributo **providerName**.|  
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|La cadena de conexión. Se asigna al atributo **connectionString**.|  
   
 ### <a name="example-listing-all-connection-strings"></a>Ejemplo: Enumerar todas las cadenas de conexión  
- Este ejemplo recorre en iteración la colección `ConnectionStringSettings` y muestra las propiedades <xref:System.Configuration.ConnectionStringSettings.Name%2A>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> y <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> en la ventana de la consola.  
+ En este ejemplo se recorre el <xref:System.Configuration.ConnectionStringSettingsCollection> y muestra el <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>, y <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> propiedades en la ventana de consola.  
   
 > [!NOTE]
 >  System.Configuration.dll no se incluye en todos los tipos de proyectos y es posible que deba establecer una referencia a este elemento para usar las clases de configuración. El nombre y la ubicación de un archivo de configuración de aplicación determinado varían en función del tipo de aplicación y del proceso de hospedaje.  
@@ -139,7 +139,7 @@ La incrustación de cadenas de conexión en el código de la aplicación puede p
 |<xref:System.Configuration.RsaProtectedConfigurationProvider>|Usa el algoritmo de cifrado RSA para cifrar y descifrar datos. Los algoritmos RSA se pueden usar para el cifrado de clave pública y para firmas digitales. También se conoce como cifrado de "clave pública" o asimétrico, ya que usa dos claves diferentes. Puede usar la [Herramienta de registro de IIS en ASP.NET (aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) para cifrar secciones de un archivo Web.config y administrar las claves de cifrado. ASP.NET descifra el archivo de configuración cuando lo procesa. La identidad de la aplicación ASP.NET debe tener acceso de lectura a la clave de cifrado utilizada para cifrar y descifrar las secciones cifradas.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Usa la API de protección de datos (DPAPI) de Windows para cifrar y descifrar las secciones de configuración. Usa los servicios criptográficos integrados de Windows y se puede configurar para la protección específica de equipo o para la protección específica de cuenta de usuario. La protección específica de equipo resulta útil cuando varias aplicaciones del mismo servidor deben compartir información. La protección específica de cuenta de usuario se puede utilizar para los servicios que se ejecutan con una identidad de usuario concreta, como un entorno de hospedaje compartido. Cada aplicación se ejecuta con una identidad independiente que limita el acceso a recursos como los archivos y las bases de datos.|  
   
- Ambos proveedores proporcionan cifrado de datos de alta seguridad. No obstante, si prevé usar el mismo archivo de configuración de cifrado en varios servidores como, por ejemplo, una granja de servidores web, solo `RsaProtectedConfigurationProvider` permite exportar las claves de cifrado usadas para cifrar los datos e importarlas a otro servidor. Para obtener más información, vea [Importar y exportar contenedores de claves RSA con configuración protegida](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
+ Ambos proveedores proporcionan cifrado de datos de alta seguridad. No obstante, si prevé usar el mismo archivo de configuración de cifrado en varios servidores como, por ejemplo, una granja de servidores web, solo <xref:System.Configuration.RsaProtectedConfigurationProvider> permite exportar las claves de cifrado usadas para cifrar los datos e importarlas a otro servidor. Para obtener más información, vea [Importar y exportar contenedores de claves RSA con configuración protegida](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
   
 ### <a name="using-the-configuration-classes"></a>Uso de clases de configuración  
  El espacio de nombres <xref:System.Configuration> proporciona clases para trabajar con valores de configuración mediante programación. La clase <xref:System.Configuration.ConfigurationManager> proporciona acceso a los archivos de configuración de equipo, aplicación y usuario. Si va a crear una aplicación ASP.NET, puede usar la clase <xref:System.Web.Configuration.WebConfigurationManager>, que proporciona las mismas funciones a la vez que permite tener acceso a configuraciones únicas de las aplicaciones ASP.NET, como las que se encuentran en **\<system.web>**.  

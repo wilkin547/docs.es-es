@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37e6b995a84a54dfcb52460d11e9843a933a5684
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353080"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409879"
 ---
 # <a name="reliability-best-practices"></a>Procedimientos recomendados para la confiabilidad
 
@@ -241,7 +241,7 @@ Para SQL Server, todos los métodos que se usan para introducir la sincronizaci�
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>No realizar bloqueos indefinidos en código no administrado
 
-El bloqueo en código no administrado en lugar de en código administrado puede provocar un ataque por denegación de servicio porque el CLR no puede anular el subproceso.  Un subproceso bloqueado impide al CLR descargar <xref:System.AppDomain>, al menos sin tener que realizar algunas operaciones extremadamente no seguras.  El bloqueo mediante una primitiva de sincronización de Win32 es un claro ejemplo de algo que no se puede permitir.  El bloqueo en una llamada a `ReadFile` en un socket debería evitarse si es posible; lo ideal es que la API Win32 proporcionara un mecanismo para que una operación similar a esta agote el tiempo de espera.
+El bloqueo en código no administrado en lugar de en código administrado puede provocar un ataque por denegación de servicio porque el CLR no puede anular el subproceso.  Un subproceso bloqueado impide al CLR descargar <xref:System.AppDomain>, al menos sin tener que realizar algunas operaciones extremadamente no seguras.  El bloqueo mediante un Windows primitiva de sincronización es un claro ejemplo de algo que no podemos permitir.  Bloqueo en una llamada a `ReadFile` en un socket debería evitarse si es posible, lo ideal es que la API de Windows debe proporcionar un mecanismo para una operación similar al siguiente tiempo de espera.
 
 Cualquier método que realice llamadas nativas debería usar idealmente una llamada de Win32 con un tiempo de espera razonable y finito.  Si se permite al usuario especificar el tiempo de espera, el usuario no debería poder especificar un tiempo de espera infinito sin algunos permisos de seguridad específicos.  Como norma, si un método se va a bloquear durante más de 10 segundos, se debe usar una versión que admita tiempos de espera o necesitará soporte adicional del CLR.
 
