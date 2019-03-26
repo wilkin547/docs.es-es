@@ -839,8 +839,7 @@ End Function
 
 **Compatibilidad con SignedXml para hash SHA-2**
 
-
-  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] agrega compatibilidad con la clase <xref:System.Security.Cryptography.Xml.SignedXml> para los métodos de firma PKCS#1 RSA-SHA256, RSA-SHA384 y RSA-SHA512, y para los algoritmos de resumen de referencia SHA256, SHA384 y SHA512.
+[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] agrega compatibilidad con la clase <xref:System.Security.Cryptography.Xml.SignedXml> para los métodos de firma PKCS#1 RSA-SHA256, RSA-SHA384 y RSA-SHA512, y para los algoritmos de resumen de referencia SHA256, SHA384 y SHA512.
 
 Todas las constantes URI se exponen en <xref:System.Security.Cryptography.Xml.SignedXml>:
 
@@ -869,7 +868,7 @@ Este comportamiento no es el deseable al conectarse a bases de datos SQL de Azur
 
 La adición de la nueva palabra clave `PoolBlockingPeriod` permite seleccionar el período de bloqueo más adecuado para la aplicación. Estos valores incluyen:
 
-`Auto`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
 El período de bloqueo del grupo de conexiones para una aplicación que se conecta a una base de datos SQL de Azure está deshabilitado, mientras que el período de bloqueo del grupo de conexiones para una aplicación que se conecta a cualquier otra instancia de SQL Server está habilitado. Este es el valor predeterminado. Si el nombre del punto de conexión del servidor termina de alguna de las siguientes maneras, se considera que se trata de bases de datos SQL de Azure:
 
@@ -881,11 +880,11 @@ El período de bloqueo del grupo de conexiones para una aplicación que se conec
 
 - .database.cloudapi.de
 
-`AlwaysBlock`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock>
 
 El período de bloqueo del grupo de conexión siempre está habilitado.
 
-`NeverBlock`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.NeverBlock>
 
 El período de bloqueo del grupo de conexión siempre está deshabilitado.
 
