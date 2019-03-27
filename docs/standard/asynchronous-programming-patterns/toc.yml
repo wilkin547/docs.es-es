@@ -1,0 +1,58 @@
+items:
+- name: Modelos para la programación asincrónica
+  href: index.md
+  items:
+  - name: Modelo asincrónico basado en tareas (TAP)
+    href: task-based-asynchronous-pattern-tap.md
+    items:
+    - name: Implementar el modelo asincrónico basado en tareas
+      href: implementing-the-task-based-asynchronous-pattern.md
+    - name: Utilizar el modelo asincrónico basado en tareas
+      href: consuming-the-task-based-asynchronous-pattern.md
+    - name: Interoperabilidad con otros tipos y patrones asincrónicos
+      href: interop-with-other-asynchronous-patterns-and-types.md
+  - name: Patrón asincrónico basado en eventos (EAP)
+    href: event-based-asynchronous-pattern-eap.md
+    items:
+    - name: Información general sobre el modelo asincrónico basado en eventos
+      href: event-based-asynchronous-pattern-overview.md
+    - name: Implementar el modelo asincrónico basado en eventos
+      href: implementing-the-event-based-asynchronous-pattern.md
+    - name: Procedimientos recomendados para implementar el modelo asincrónico basado en eventos
+      href: best-practices-for-implementing-the-event-based-asynchronous-pattern.md
+    - name: Decidir cuándo implementar el modelo asincrónico basado en eventos
+      href: deciding-when-to-implement-the-event-based-asynchronous-pattern.md
+    - name: Procedimiento para implementar un componente que admita el modelo asincrónico basado en eventos
+      href: component-that-supports-the-event-based-asynchronous-pattern.md
+    - name: Procedimiento para implementar un cliente en un modelo asincrónico basado en eventos
+      href: how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md
+    - name: Procedimiento para usar componentes que admitan el modelo asincrónico basado en eventos
+      href: how-to-use-components-that-support-the-event-based-asynchronous-pattern.md
+  - name: Modelo de programación asincrónica (APM)
+    href: asynchronous-programming-model-apm.md
+    items:
+    - name: Llamar a métodos asincrónicos mediante IAsyncResult
+      href: calling-asynchronous-methods-using-iasyncresult.md
+      items:
+      - name: Bloquear la ejecución de una aplicación mediante AsyncWaitHandle
+        href: blocking-application-execution-using-an-asyncwaithandle.md
+      - name: Bloquear la ejecución de una aplicación al finalizar una operación asincrónica
+        href: blocking-application-execution-by-ending-an-async-operation.md
+      - name: Sondear el estado de una operación asincrónica
+        href: polling-for-the-status-of-an-asynchronous-operation.md
+      - name: Utilizar un delegado AsyncCallback para finalizar una operación asincrónica
+        href: using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md
+        items:
+        - name: Utilizar un delegado AsyncCallback y un objeto State
+          href: using-an-asynccallback-delegate-and-state-object.md
+    - name: Programación asincrónica mediante delegados
+      href: asynchronous-programming-using-delegates.md
+      items:
+      - name: Llamar a métodos sincrónicos de forma asincrónica
+        href: calling-synchronous-methods-asynchronously.md
+ms.openlocfilehash: 2f93abd762516ade20948cceb3b2a1617af04885
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470198"

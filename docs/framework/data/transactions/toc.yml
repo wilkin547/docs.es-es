@@ -1,0 +1,45 @@
+items:
+- name: Procesar transacciones
+  href: index.md
+  items:
+  - name: Principios de la transacción
+    href: transaction-fundamentals.md
+  - name: Características proporcionadas por System.Transactions
+    href: features-provided-by-system-transactions.md
+    items:
+    - name: Crear una aplicación transaccional
+      href: writing-a-transactional-application.md
+      items:
+      - name: Implementar una transacción implícita mediante el ámbito de la transacción
+        href: implementing-an-implicit-transaction-using-transaction-scope.md
+      - name: Implementar una transacción explícita mediante una transacción confirmable
+        href: implementing-an-explicit-transaction-using-committabletransaction.md
+      - name: Administrar la simultaneidad con DependentTransaction
+        href: managing-concurrency-with-dependenttransaction.md
+      - name: Interoperabilidad con Enterprise Services y transacciones de COM+
+        href: interoperability-with-enterprise-services-and-com-transactions.md
+      - name: Extensión de administración de transacción
+        href: transaction-management-escalation.md
+      - name: Seguimiento del diagnóstico
+        href: diagnostic-traces.md
+      - name: Usar System.Transactions en ASP.NET
+        href: using-system-transactions-in-aspnet.md
+    - name: Implementar un administrador de recursos
+      href: implementing-a-resource-manager.md
+      items:
+      - name: Dar de alta los recursos como participantes en una transacción
+        href: enlisting-resources-as-participants-in-a-transaction.md
+      - name: Confirmar una transacción en fase única y múltiple
+        href: committing-a-transaction-in-single-phase-and-multi-phase.md
+      - name: Realizar la recuperación
+        href: performing-recovery.md
+      - name: Niveles de confianza de seguridad para acceder a los recursos
+        href: security-trust-levels-in-accessing-resources.md
+      - name: Optimización mediante el uso de la confirmación de fase única y de la inscripción de fase única promovible
+        href: optimization-spc-and-promotable-spn.md
+ms.openlocfilehash: 9ebce82b22c684bc2cee3892cb53803eef725dee
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470239"
