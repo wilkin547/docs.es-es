@@ -1,0 +1,252 @@
+items:
+- name: Accesibilidad
+  href: index.md
+  items:
+  - name: Procedimientos de accesibilidad recomendados
+    href: accessibility-best-practices.md
+  - name: Fundamentos de UI Automation
+    href: ui-automation-fundamentals.md
+    items:
+    - name: Información general sobre UI Automation
+      href: ui-automation-overview.md
+    - name: UI Automation y Microsoft Active Accessibility
+      href: ui-automation-and-microsoft-active-accessibility.md
+    - name: Información general sobre el árbol de la UI Automation
+      href: ui-automation-tree-overview.md
+    - name: Información general acerca de los patrones de control de UI Automation
+      href: ui-automation-control-patterns-overview.md
+    - name: Información general acerca de las propiedades de UI Automation
+      href: ui-automation-properties-overview.md
+    - name: Información general sobre eventos de UI Automation
+      href: ui-automation-events-overview.md
+    - name: Información general sobre la seguridad de UI Automation
+      href: ui-automation-security-overview.md
+    - name: Utilizar la UI Automation para pruebas automatizadas
+      href: using-ui-automation-for-automated-testing.md
+  - name: Proveedores de UI Automation para código administrado
+    href: ui-automation-providers-for-managed-code.md
+    items:
+    - name: Implementación del proveedor de UI Automation en el servidor
+      href: server-side-ui-automation-provider-implementation.md
+    - name: Información general sobre proveedores de UI Automation
+      href: ui-automation-providers-overview.md
+    - name: Implementación del proveedor de UI Automation en el cliente
+      href: client-side-ui-automation-provider-implementation.md
+    - name: Temas "Cómo..."
+      href: ui-automation-providers-for-managed-code-how-to-topics.md
+      items:
+      - name: Exponer un proveedor de UI Automation en el servidor
+        href: expose-a-server-side-ui-automation-provider.md
+      - name: Devolución de propiedades por parte de un proveedor de UI Automation
+        href: return-properties-from-a-ui-automation-provider.md
+      - name: Provocar eventos desde un proveedor de UI Automation
+        href: raise-events-from-a-ui-automation-provider.md
+      - name: Habilitar la navegación en un proveedor de fragmentos de UI Automation
+        href: enable-navigation-in-a-ui-automation-fragment-provider.md
+      - name: Patrones de control compatibles en un proveedor de UI Automation
+        href: support-control-patterns-in-a-ui-automation-provider.md
+      - name: Crear un proveedor de UI Automation en el cliente
+        href: create-a-client-side-ui-automation-provider.md
+      - name: Implementar proveedores de UI Automation en una aplicación cliente
+        href: implement-ui-automation-providers-in-a-client-application.md
+  - name: Clientes de UI Automation para código administrado
+    href: ui-automation-clients-for-managed-code.md
+    items:
+    - name: UI Automation y ajuste de escala de la pantalla
+      href: ui-automation-and-screen-scaling.md
+    - name: Compatibilidad de UI Automation con controles estándar
+      href: ui-automation-support-for-standard-controls.md
+    - name: Eventos de UI Automation para clientes
+      href: ui-automation-events-for-clients.md
+    - name: Almacenar en caché en los clientes de automatización de la interfaz de usuario
+      href: caching-in-ui-automation-clients.md
+    - name: Propiedades de UI Automation para clientes
+      href: ui-automation-properties-for-clients.md
+    - name: Asignación de patrones de controles para clientes de UI Automation
+      href: control-pattern-mapping-for-ui-automation-clients.md
+    - name: Patrones de controles de UI Automation para clientes
+      href: ui-automation-control-patterns-for-clients.md
+    - name: Obtener elementos de UI Automation
+      href: obtaining-ui-automation-elements.md
+    - name: Aspectos relacionados con subprocesos de la UI Automation
+      href: ui-automation-threading-issues.md
+    - name: Temas "Cómo..."
+      href: ui-automation-clients-for-managed-code-how-to-topics.md
+      items:
+      - name: Buscar un elemento de UI Automation basándose en una condición de propiedad
+        href: find-a-ui-automation-element-based-on-a-property-condition.md
+      - name: Navegar entre elementos de UI Automation con TreeWalker
+        href: navigate-among-ui-automation-elements-with-treewalker.md
+      - name: Buscar un elemento de UI Automation para un elemento de lista
+        href: find-a-ui-automation-element-for-a-list-item.md
+      - name: Obtener propiedades del elemento de la UI Automation
+        href: get-ui-automation-element-properties.md
+      - name: Utilizar el almacenamiento en caché en la UI Automation
+        href: use-caching-in-ui-automation.md
+      - name: Suscribirse a eventos de UI Automation
+        href: subscribe-to-ui-automation-events.md
+      - name: Registrar un ensamblado de proveedor de cliente
+        href: register-a-client-side-provider-assembly.md
+      - name: Utilizar la propiedad AutomationID
+        href: use-the-automationid-property.md
+  - name: Patrones de control de UI Automation
+    href: ui-automation-control-patterns.md
+    items:
+    - name: Implementar el patrón de control Dock de UI Automation
+      href: implementing-the-ui-automation-dock-control-pattern.md
+    - name: Implementar el patrón de control ExpandCollapse de UI Automation
+      href: implementing-the-ui-automation-expandcollapse-control-pattern.md
+    - name: Implementar el patrón de control Grid de UI Automation
+      href: implementing-the-ui-automation-grid-control-pattern.md
+    - name: Implementar el patrón de control GridItem de UI Automation
+      href: implementing-the-ui-automation-griditem-control-pattern.md
+    - name: Implementar el patrón de control Invoke de UI Automation
+      href: implementing-the-ui-automation-invoke-control-pattern.md
+    - name: Implementación del patrón de control MultipleView de UI Automation
+      href: implementing-the-ui-automation-multipleview-control-pattern.md
+    - name: Implementar el patrón de control RangeValue de UI Automation
+      href: implementing-the-ui-automation-rangevalue-control-pattern.md
+    - name: Implementación del patrón de control Scroll de UI Automation
+      href: implementing-the-ui-automation-scroll-control-pattern.md
+    - name: Implementar el patrón de control ScrollItem de UI Automation
+      href: implementing-the-ui-automation-scrollitem-control-pattern.md
+    - name: Implementar el patrón de control Selection de UI Automation
+      href: implementing-the-ui-automation-selection-control-pattern.md
+    - name: Implementación del patrón de control SelectionItem de UI Automation
+      href: implementing-the-ui-automation-selectionitem-control-pattern.md
+    - name: Implementar el patrón de control Table de UI Automation
+      href: implementing-the-ui-automation-table-control-pattern.md
+    - name: Implementar el patrón de control TableItem de UI Automation
+      href: implementing-the-ui-automation-tableitem-control-pattern.md
+    - name: Implementar el patrón de control Toggle de UI Automation
+      href: implementing-the-ui-automation-toggle-control-pattern.md
+    - name: Implementación del patrón de control Transform de UI Automation
+      href: implementing-the-ui-automation-transform-control-pattern.md
+    - name: Implementar el patrón de control Value de UI Automation
+      href: implementing-the-ui-automation-value-control-pattern.md
+    - name: Implementar el patrón de control Window de UI Automation
+      href: implementing-the-ui-automation-window-control-pattern.md
+    - name: Temas "Cómo..."
+      href: ui-automation-control-patterns-how-to-topics.md
+      items:
+      - name: Exponer el contenido de una tabla mediante UI Automation
+        href: expose-the-content-of-a-table-using-ui-automation.md
+      - name: Obtener patrones de control de UI Automation admitidos
+        href: get-supported-ui-automation-control-patterns.md
+      - name: Obtener el estado de alternancia de una casilla mediante UI Automation
+        href: get-the-toggle-state-of-a-check-box-using-ui-automation.md
+      - name: Llamar a un control utilizando la UI Automation
+        href: invoke-a-control-using-ui-automation.md
+      - name: Mover un elemento de UI Automation
+        href: move-a-ui-automation-element.md
+  - name: Modelo de texto de UI Automation
+    href: ui-automation-text-pattern.md
+    items:
+    - name: Información general sobre el modelo de texto de UI Automation
+      href: ui-automation-textpattern-overview.md
+    - name: Información general sobre TextPattern y objetos incrustados
+      href: textpattern-and-embedded-objects-overview.md
+    - name: Temas "Cómo..."
+      href: ui-automation-text-pattern-how-to-topics.md
+      items:
+      - name: Agregar contenido a un cuadro de texto utilizando la UI Automation
+        href: add-content-to-a-text-box-using-ui-automation.md
+      - name: Buscar y resaltar texto mediante UI Automation
+        href: find-and-highlight-text-using-ui-automation.md
+      - name: Obtener atributos de texto mediante UI Automation
+        href: obtain-text-attributes-using-ui-automation.md
+      - name: Obtener detalles de atributos de texto diversos mediante UI Automation
+        href: obtain-mixed-text-attribute-details-using-ui-automation.md
+      - name: Recorrer texto mediante usando UI Automation
+        href: traverse-text-using-ui-automation.md
+      - name: Acceso a objetos incrustados mediante la UI Automation
+        href: access-embedded-objects-using-ui-automation.md
+  - name: Tipos de control de UI Automation
+    href: ui-automation-control-types.md
+    items:
+    - name: Información general sobre tipos de control de UI Automation
+      href: ui-automation-control-types-overview.md
+    - name: Compatibilidad de UI Automation para el tipo de control Button
+      href: ui-automation-support-for-the-button-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control Calendar
+      href: ui-automation-support-for-the-calendar-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control CheckBox
+      href: ui-automation-support-for-the-checkbox-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control ComboBox
+      href: ui-automation-support-for-the-combobox-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control DataGrid
+      href: ui-automation-support-for-the-datagrid-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control DataItem
+      href: ui-automation-support-for-the-dataitem-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control Document
+      href: ui-automation-support-for-the-document-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control Edit
+      href: ui-automation-support-for-the-edit-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control Group
+      href: ui-automation-support-for-the-group-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control Header
+      href: ui-automation-support-for-the-header-control-type.md
+    - name: Compatibilidad de la UI Automation para el tipo de control HeaderItem
+      href: ui-automation-support-for-the-headeritem-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control Hyperlink
+      href: ui-automation-support-for-the-hyperlink-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control Image
+      href: ui-automation-support-for-the-image-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control List
+      href: ui-automation-support-for-the-list-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control ListItem
+      href: ui-automation-support-for-the-listitem-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control Menu
+      href: ui-automation-support-for-the-menu-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control MenuBar
+      href: ui-automation-support-for-the-menubar-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control MenuItem
+      href: ui-automation-support-for-the-menuitem-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control Pane
+      href: ui-automation-support-for-the-pane-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control ProgressBar
+      href: ui-automation-support-for-the-progressbar-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control RadioButton
+      href: ui-automation-support-for-the-radiobutton-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control ScrollBar
+      href: ui-automation-support-for-the-scrollbar-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control Separator
+      href: ui-automation-support-for-the-separator-control-type.md
+    - name: Compatibilidad de la UI Automation para el tipo de control Slider
+      href: ui-automation-support-for-the-slider-control-type.md
+    - name: Compatibilidad de automatización de la IU para el tipo de control Spinner
+      href: ui-automation-support-for-the-spinner-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control SplitButton
+      href: ui-automation-support-for-the-splitbutton-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control StatusBar
+      href: ui-automation-support-for-the-statusbar-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control Tab
+      href: ui-automation-support-for-the-tab-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control TabItem
+      href: ui-automation-support-for-the-tabitem-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control Table
+      href: ui-automation-support-for-the-table-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control Text
+      href: ui-automation-support-for-the-text-control-type.md
+    - name: Compatibilidad de automatización de la interfaz de usuario para el tipo de control de posición
+      href: ui-automation-support-for-the-thumb-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control TitleBar
+      href: ui-automation-support-for-the-titlebar-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control ToolBar
+      href: ui-automation-support-for-the-toolbar-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control ToolTip
+      href: ui-automation-support-for-the-tooltip-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control Tree
+      href: ui-automation-support-for-the-tree-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control TreeItem
+      href: ui-automation-support-for-the-treeitem-control-type.md
+    - name: Compatibilidad de UI Automation para el tipo de control Window
+      href: ui-automation-support-for-the-window-control-type.md
+  - name: UI Automation Specification y Community Promise
+    href: ui-automation-specification-and-community-promise.md
+ms.openlocfilehash: b30bb47e5b2bfb91c64a07c055889e83310da789
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470183"
