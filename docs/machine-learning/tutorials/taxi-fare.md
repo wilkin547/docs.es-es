@@ -3,15 +3,15 @@ title: Predicción de precios mediante un aprendiz de regresión con ML.NET
 description: Prediga precios mediante un aprendiz de regresión con ML.NET.
 author: aditidugar
 ms.author: johalex
-ms.date: 03/12/2019
+ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 7830849efaff2aa36f9bd436851a22f948908bb6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 0a027b3b4930f7dda48d884faf0484cf33856c8d
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846340"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307985"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Tutorial: Predicción de precios mediante un aprendiz de regresión con ML.NET
 
@@ -152,7 +152,7 @@ Cargue los datos mediante el contenedor `MLContext.Data.LoadFromTextFile` para e
 
 Como la entrada y salida de `Transforms`, `DataView` es el tipo de canalización de datos fundamentales, comparable con `IEnumerable` para `LINQ`.
 
-En ML.NET, los datos son similares a una vista SQL. Se evalúan lentamente, se esquematizan y son heterogéneos. El objeto es la primera parte de la canalización y carga los datos. Para este tutorial, carga un conjunto de datos con comentarios y opiniones tóxicas o no tóxicas correspondiente. Esto se usa para crear el modelo y entrenarlo.
+En ML.NET, los datos son similares a una vista SQL. Se evalúan lentamente, se esquematizan y son heterogéneos. El objeto es la primera parte de la canalización y carga los datos. Para este tutorial, carga un conjunto de datos con información sobre los precios de los viajes en taxi. Esto se usa para crear el modelo y entrenarlo.
 
 Agregue el código siguiente a la primera línea del método `Train`:
 
@@ -187,8 +187,6 @@ Agregue el código siguiente al método `Train` para agregar `FastTreeRegression
 El último paso es entrenar el modelo. Se entrena el modelo, <xref:Microsoft.ML.Data.TransformerChain>, en función del conjunto de datos que se haya cargado y transformado. Una vez que se ha definido el estimador, se entrena el modelo mediante <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> y, al mismo tiempo, se proporcionan los datos de entrenamiento ya cargados. Esto devuelve un modelo que se usa para las predicciones. `pipeline.Fit()` entrena la canalización y devuelve `Transformer` según la `DataView` que se pasa. El experimento no se ejecuta hasta que esto suceda.
 
 [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
-
-Y listo. Ha entrenado correctamente un modelo de aprendizaje automático que puede predecir tarifas de taxi en Nueva York. Ahora, eche un vistazo para medir la precisión del modelo y aprender a usarlo para predecir los valores de tarifas de viajes en taxi.
 
 ### <a name="save-the-model"></a>Guardado del modelo
 

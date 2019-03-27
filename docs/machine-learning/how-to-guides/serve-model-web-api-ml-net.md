@@ -3,12 +3,12 @@ title: Publicación de un modelo de Machine Learning en ASP.NET Core Web API
 description: Publicación del modelo de Machine Learning de Análisis de sentimiento de ML.NET en Internet mediante ASP.NET Core Web API
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 07b751caff8ef0ca9a23bed68ddf88feb7b5ae4f
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 0cc13ec22b3a8805ec4aa17bf10560b2564ccd63
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57856711"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307920"
 ---
 # <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>Publicación de un modelo de Machine Learning a través de ASP.NET Core Web API
 
@@ -96,56 +96,9 @@ public class SentimentPrediction
 }
 ```
 
-## <a name="create-prediction-service"></a>Creación del servicio de predicción
+## <a name="register-predictionengine-for-use-in-application"></a>Registro de PredictionEngine para usarlo en una aplicación
 
-Para organizar y volver a usar la lógica de predicción en toda la aplicación, cree un servicio de predicción.
-
-1. Cree un directorio denominado *Services* en el proyecto para contener servicios que usará la aplicación:
-
-    En el Explorador de soluciones, haga clic con el botón derecho en el proyecto y seleccione **Agregar > Nueva carpeta**. Escriba "Servicios" y presione **ENTRAR**.
-
-1. En el Explorador de soluciones, haga clic con el botón derecho en el directorio *Servicios* y luego seleccione **Agregar > Nuevo elemento**.
-1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Clase** y cambie el campo **Nombre** a *PredictionService.cs*. A continuación, seleccione el botón **Agregar**. El archivo *PredictionService.cs* se abre en el editor de código. Agregue la instrucción using siguiente en la parte superior del archivo *PredictionService.cs*:
-
-```csharp
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.ML;
-using Microsoft.ML.Core.Data;
-using SentimentAnalysisWebAPI.DataModels;
-```
-
-Quite la definición de clase existente y agregue el código siguiente al archivo *PredictionService.cs*:
-
-```csharp
-public class PredictionService
-{
-    private readonly PredictionEngine<SentimentData, SentimentPrediction> _predictionEngine;
-    public PredictionService(PredictionEngine<SentimentData,SentimentPrediction> predictionEngine)
-    {
-        _predictionEngine = predictionEngine;
-    }
-
-    public string Predict(SentimentData input)
-    {
-        // Make a prediction
-        SentimentPrediction prediction = _predictionEngine.Predict(input);
-
-        //If prediction is true then it is toxic. If it is false, the it is not.
-        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
-
-        return isToxic;
-
-    }
-}
-```
-
-## <a name="register-predictions-service-for-use-in-application"></a>Registro del servicio de predicciones para usarlo en una aplicación
-
-Para usar el servicio de predicciones en la aplicación, deberá crearlo cada vez que sea necesario. En ese caso, un procedimiento recomendado que se debe considerar es la inserción de dependencias de ASP.NET Core.
+Para realizar una sola predicción, puede usar `PredictionEngine`. Para usar `PredictionEngine` en la aplicación, deberá crearlo cada vez que sea necesario. En ese caso, un procedimiento recomendado que se debe considerar es la inserción de dependencias de ASP.NET Core.
 
 En el vínculo siguiente se proporciona más información si quiere aprender sobre la [inserción de dependencias](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
 
@@ -161,18 +114,17 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.ML;
 using Microsoft.ML.Core.Data;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
 ```
 
-1. Agregue las líneas de código siguientes al método *ConfigureServices*:
+2. Agregue las líneas de código siguientes al método *ConfigureServices*:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-    services.AddSingleton<MLContext>();
-    services.AddSingleton<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
+    services.AddScoped<MLContext>();
+    services.AddScoped<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
     {
         MLContext mlContext = ctx.GetRequiredService<MLContext>();
         string modelFilePathName = "MLModels/sentiment_model.zip";
@@ -187,9 +139,11 @@ public void ConfigureServices(IServiceCollection services)
         // Return prediction engine
         return model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
     });
-    services.AddSingleton<PredictionService>();
 }
 ```
+
+> [!WARNING]
+> `PredictionEngine` no es seguro para subprocesos. Una manera de limitar el coste que supone crear el objeto consiste en hacer que la duración del servicio sea *Con ámbito*. Los objetos *con ámbito* son iguales dentro de una solicitud, pero varían entre solicitudes. Visite el vínculo siguiente para obtener más información sobre las [duraciones de los servicios](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1#service-lifetimes).
 
 En un nivel alto, este código inicializa los objetos y servicios de manera automática cuando lo solicita la aplicación en lugar de tener que hacerlo manualmente.
 
@@ -202,9 +156,10 @@ Para procesar las solicitudes HTTP entrantes, necesita crear un controlador.
 1. En el símbolo del sistema, cambie el campo **Nombre del controlador** a *PredictController.cs*. Luego, haga clic en el botón Agregar. El archivo *PredictController.cs* se abre en el editor de código. Agregue la instrucción using siguiente en la parte superior del archivo *PredictController.cs*:
 
 ```csharp
+using System;
 using Microsoft.AspNetCore.Mvc;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
+using Microsoft.ML;
 ```
 
 Quite la definición de clase existente y agregue el código siguiente al archivo *PredictController.cs*:
@@ -212,12 +167,12 @@ Quite la definición de clase existente y agregue el código siguiente al archiv
 ```csharp
 public class PredictController : ControllerBase
 {
+    
+    private readonly PredictionEngine<SentimentData,SentimentPrediction> _predictionEngine;
 
-    private readonly PredictionService _predictionService;
-
-    public PredictController(PredictionService predictionService)
+    public PredictController(PredictionEngine<SentimentData, SentimentPrediction> predictionEngine)
     {
-        _predictionService = predictionService; //Define prediction service
+        _predictionEngine = predictionEngine; //Define prediction engine
     }
 
     [HttpPost]
@@ -227,13 +182,20 @@ public class PredictController : ControllerBase
         {
             return BadRequest();
         }
-        return Ok(_predictionService.Predict(input));
-    }
 
+        // Make a prediction
+        SentimentPrediction prediction = _predictionEngine.Predict(input);
+
+        //If prediction is true then it is toxic. If it is false, the it is not.
+        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+
+        return Ok(isToxic);
+    }
+    
 }
 ```
 
-Esto asigna el servicio de predicción al pasarlo al constructor del controlador que se obtiene a través de una inserción de dependencias. A continuación, en el método POST de este controlador, el servicio de predicción se usa para hacer predicciones y devolver los resultados al usuario si se realiza correctamente.
+Esto asigna `PredictionEngine` al pasarlo al constructor del controlador que se obtiene a través de una inserción de dependencias. Después, en el método POST de este controlador, `PredictionEngine` se usa para hacer predicciones y devolver los resultados al usuario si la operación se realiza correctamente.
 
 ## <a name="test-web-api-locally"></a>Prueba local de Web API
 

@@ -2,12 +2,12 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0. Este artículo está actualizado con la versión preliminar 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: 23197a051109d6c6c22c8855e3772cf4f824264c
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: d95ec3dc050f5633b4b069caa5bd2811f6b61300
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57843947"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262584"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -180,6 +180,8 @@ static string Quadrant(Point p) => p switch
 ```
 
 El patrón de descarte del modificador anterior coincide cuando `x` o `y`, pero no ambos, es 0. Una expresión switch debe generar un valor o producir una excepción. Si ninguno de los casos coincide, la expresión switch produce una excepción. El compilador genera una advertencia si no cubre todos los posibles casos en la expresión switch.
+
+Puede explorar las técnicas de coincidencia de patrones en este [tutorial avanzado sobre la coincidencia de patrones](../tutorials/pattern-matching.md).
 
 ## <a name="using-declarations"></a>Declaraciones using
 

@@ -3,12 +3,12 @@ title: Uso de las características de coincidencia de patrones para ampliar los 
 description: En este tutorial avanzado se muestra cómo usar técnicas de coincidencia de patrones para crear una funcionalidad con datos y algoritmos creados por separado.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 0d7c853709d0986710bf4d1a72daeb1f7cda3109
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125816"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262520"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Uso de las características de coincidencia de patrones para ampliar los tipos de datos
 
@@ -45,12 +45,12 @@ Puede descargar el código de inicio del repositorio [dotnet/samples](https://gi
 
 ## <a name="pattern-matching-designs"></a>Diseños de coincidencia de patrones
 
-En el escenario que se usa en este tutorial se resaltan los tipos de problemas en los que resulta adecuado usar la coincidencia de patrones para resolverlos: 
+En el escenario que se usa en este tutorial se resaltan los tipos de problemas en los que resulta adecuado usar la coincidencia de patrones para resolverlos:
 
 - Los objetos con los que necesita trabajar no están en una jerarquía de objetos que coincida con sus objetivos. Es posible que trabaje con clases que forman parte de sistemas no relacionados.
 - La funcionalidad que agrega no forma parte de la abstracción central de estas clases. El peaje que paga un vehículo *cambia* según los distintos tipos de vehículos, pero el peaje no es una función central del vehículo.
 
-Cuando la *forma* de los datos y las *operaciones* que se realizan en esos datos no se describen en conjunto, las características de coincidencia de patrones de C# permiten que sea más fácil trabajar con ellos. 
+Cuando la *forma* de los datos y las *operaciones* que se realizan en esos datos no se describen en conjunto, las características de coincidencia de patrones de C# permiten que sea más fácil trabajar con ellos.
 
 ## <a name="implement-the-basic-toll-calculations"></a>Implementación de cálculos de peajes básicos
 
@@ -61,7 +61,7 @@ El cálculo de peaje más básico solo se basa en el tipo de vehículo:
 - Un `Bus` es USD 5,00.
 - Un `DeliveryTruck` es USD 10,00
 
-Cree una clase `TollCalculator` nueva e implemente la coincidencia de patrones en el tipo de vehículo para obtener el importe del peaje.
+Cree una clase `TollCalculator` nueva e implemente la coincidencia de patrones en el tipo de vehículo para obtener el importe del peaje. En el siguiente código se muestra la implementación inicial de `TollCalculator`.
 
 ```csharp
 using System;
@@ -87,7 +87,7 @@ namespace toll_calculator
 }
 ```
 
-El código anterior usa una **expresión switch** (que no es la misma que en una instrucción [`switch`](../language-reference/keywords/switch.md)) que prueba el **patrón de tipo**. Una **expresión switch** comienza por la variable, `vehicle` en el código anterior, seguida de la palabra clave `switch`. A continuación, todos los **segmentos modificadores** aparecen entre llaves. La expresión `switch` lleva a cabo otras mejoras en la sintaxis que rodea la instrucción `switch`. La palabra clave `case` se omite y el resultado de cada segmento es una expresión. Los dos últimos segmentos muestran una característica de lenguaje nueva. El caso `{ }` coincide con cualquier objeto no nulo que no coincidía con ningún segmento anterior. Este segmento detecta todo tipo incorrecto que se pasa a este método. Por último, el patrón `null` detecta cuando `null` se pasa a este método. El patrón `null` puede ser el último porque los otros patrones de tipos solo coinciden con un objeto no nulo del tipo correcto.
+El código anterior usa una **expresión switch** (que no es la misma que en una instrucción [`switch`](../language-reference/keywords/switch.md)) que prueba el **patrón de tipo**. Una **expresión switch** comienza por la variable, `vehicle` en el código anterior, seguida de la palabra clave `switch`. A continuación, todos los **segmentos modificadores** aparecen entre llaves. La expresión `switch` lleva a cabo otras mejoras en la sintaxis que rodea la instrucción `switch`. La palabra clave `case` se omite y el resultado de cada segmento es una expresión. Los dos últimos segmentos muestran una característica de lenguaje nueva. El caso `{ }` coincide con cualquier objeto no nulo que no coincidía con ningún segmento anterior. Este segmento detecta todo tipo incorrecto que se pasa a este método.  El caso `{ }` debe seguir los casos de cada tipo de vehículo. Si se invierte el orden, el caso `{ }` tendrá prioridad. Por último, el patrón `null` detecta si se pasa `null` a este método. El patrón `null` puede ser el último porque los otros patrones de tipos solo coinciden con un objeto no nulo del tipo correcto.
 
 Puede probar este código con el código siguiente en `Program.cs`:
 
@@ -121,7 +121,7 @@ namespace toll_calculator
             }
             catch (ArgumentException e)
             {
-                Console.WriteLine("Caught an argument exception when using the wrong type", DayOfWeek.Friday);
+                Console.WriteLine("Caught an argument exception when using the wrong type");
             }
             try
             {
@@ -150,7 +150,7 @@ La autoridad encargada de los peajes quiere incentivar que los vehículos viajen
 - Los buses que viajan con menos del 50 % de su capacidad pagan USD 2 adicionales.
 - Los buses que viajan con más del 90 % de su capacidad tienen un descuento de USD 1.
 
-Estas reglas se pueden implementar con el **patrón de propiedad** en la misma expresión switch. El patrón de propiedad examina las propiedades del objeto una vez que se determina el tipo.  El caso único de `Car` se amplía a cuatro casos distintos:
+Estas reglas se pueden implementar con el **patrón de propiedad** en la misma expresión switch. El patrón de propiedad examina las propiedades del objeto una vez que se determina el tipo. El caso único de `Car` se amplía a cuatro casos distintos:
 
 ```csharp
 vehicle switch
@@ -158,13 +158,13 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1 }       => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
+    Car c                       => 2.00m - 1.0m,
 
     // ...
 };
 ```
 
-Los primeros tres casos prueban el tipo como `Car` y luego comprueban el valor de la propiedad `Passengers`. Si ambos coinciden, esa expresión se evalúa y devuelve. La cláusula final muestra la cláusula `when` de un segmento modificador. Puede usar la cláusula `when` para probar condiciones distintas de la igualdad de una propiedad. En el ejemplo anterior, la cláusula `when` realiza una prueba para ver que hay más de 2 pasajeros en el automóvil. En realidad, no es necesaria en este ejemplo.
+Los primeros tres casos prueban el tipo como `Car` y luego comprueban el valor de la propiedad `Passengers`. Si ambos coinciden, esa expresión se evalúa y devuelve.
 
 También podría expandir los casos para los taxis de manera similar:
 
@@ -192,14 +192,14 @@ vehicle switch
     // ...
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     // ...
 };
 ```
 
-A la autoridad encargada de los peajes no le preocupa el número de pasajeros en los camiones de reparto. En su lugar, se cobra más en función de la clase de peso de los camiones. A los camiones de más de 2268 kilos se les cobran USD 5 adicionales. Los camiones livianos, por debajo de los 1360 kilos, tienen un descuento de USD 2.  Esta regla se implementa con el código siguiente:
+A la autoridad encargada de los peajes no le preocupa el número de pasajeros en los camiones de reparto. En su lugar, se cobra más en función de la clase de peso de los camiones. A los camiones de más de 2268 kilos se les cobran USD 5 adicionales. Los camiones livianos, por debajo de los 1360 kilos, tienen un descuento de 2 USD. Esta regla se implementa con el código siguiente:
 
 ```csharp
 vehicle switch
@@ -212,7 +212,7 @@ vehicle switch
 };
 ```
 
-Cuando termine, tendrá un método bastante similar al siguiente:
+En el código anterior se muestra la cláusula `when` de un segmento modificador. Puede usar la cláusula `when` para probar condiciones distintas de la igualdad de una propiedad. Cuando termine, tendrá un método bastante similar al siguiente:
 
 ```csharp
 vehicle switch
@@ -220,17 +220,17 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1}        => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
-   
+    Car c                       => 2.00m - 1.0m,
+
     Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
     Taxi { Fares: 2}  => 3.50m - 0.50m,
     Taxi t            => 3.50m - 1.00m,
-    
+
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
@@ -252,7 +252,7 @@ public decimal CalculateToll(object vehicle) =>
             2 => 2.0m - 0.5m,
             _ => 2.00m - 1.0m
         },
-    
+
         Taxi t => t.Fares switch
         {
             0 => 3.50m + 1.00m,
@@ -260,11 +260,11 @@ public decimal CalculateToll(object vehicle) =>
             2 => 3.50m - 0.50m,
             _ => 3.50m - 1.00m
         },
-    
+
         Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
         Bus b => 5.00m,
-    
+
         DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
         DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
         DeliveryTruck t => 10.00m,
@@ -274,7 +274,7 @@ public decimal CalculateToll(object vehicle) =>
     };
 ```
 
-En el ejemplo anterior, usar una expresión recursiva significa que no repite los segmentos `Car` y `Taxi` que contienen segmentos secundarios que prueban el valor de propiedad. Esta técnica no se usa para los segmentos `Bus` y `DeliveryTruck`, porque esos segmentos prueban intervalos para la propiedad, no valores discretos.
+En el ejemplo anterior, el uso de una expresión recursiva significa que no repite los segmentos `Car` y `Taxi` que contienen segmentos secundarios que prueban el valor de propiedad. Esta técnica no se usa para los segmentos `Bus` y `DeliveryTruck`, porque esos segmentos prueban intervalos para la propiedad, no valores discretos.
 
 ## <a name="add-peak-pricing"></a>Incorporación de precio en horas punta
 
@@ -309,7 +309,7 @@ En la tabla siguiente se muestran las combinaciones de valores de entrada y el m
 
 Hay 16 combinaciones distintas de las tres variables. Mediante la combinación de algunas de las condiciones, simplificará la expresión switch final.
 
-El sistema que cobra los peajes usa una estructura <xref:System.DateTime> para la hora en que se cobró el peaje. Genere métodos de miembro que creen las variables a partir de la tabla anterior.  La función siguiente usa una expresión switch de coincidencia de patrones para expresar si una <xref:System.DateTime> representa un día laborable o un fin de semana:
+El sistema que cobra los peajes usa una estructura <xref:System.DateTime> para la hora en que se cobró el peaje. Genere métodos de miembro que creen las variables a partir de la tabla anterior. La función siguiente usa una expresión switch de coincidencia de patrones para expresar si la estructura <xref:System.DateTime> representa un día laborable o un fin de semana:
 
 ```csharp
 private static bool IsWeekDay(DateTime timeOfToll) =>
@@ -372,9 +372,9 @@ Por último, puede quitar las dos horas punta en que se paga el precio regular. 
 
 [!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
-En este ejemplo se resalta una de las ventajas de la coincidencia de patrones. Las ramas del patrón se evalúan en orden. Si vuelve a ordenarlas para que una rama anterior controle uno de los últimos casos, el compilador genera una advertencia. Esas reglas de lenguaje facilitan la realización de las simplificaciones anteriores con la confianza de que el código no cambió.
+En este ejemplo se resalta una de las ventajas de la coincidencia de patrones: las ramas del patrón se evalúan en orden. Si vuelve a ordenarlas para que una rama anterior controle uno de los últimos casos, el compilador genera una advertencia sobre el código inaccesible. Esas reglas de lenguaje facilitan la realización de las simplificaciones anteriores con la confianza de que el código no cambió.
 
-La coincidencia de patrones proporciona una sintaxis natural para implementar distintas soluciones que podría crear si usara técnicas orientadas a los objetos. La nube hace que los datos y la funcionalidad residan por separado. La *forma* de los datos y las *operaciones* que se realizan en ellos no necesariamente se describen en conjunto. En este tutorial, consumió datos existentes de maneras totalmente distintas de su función original. La coincidencia de patrones le brindó la capacidad de escribir una funcionalidad sobre esos tipos, incluso si no pudo extenderlos.
+La coincidencia de patrones hace que algunos tipos de código sean más legibles y ofrece una alternativa a las técnicas orientadas a objetos cuando no se puede agregar código a las clases. La nube hace que los datos y la funcionalidad residan por separado. La *forma* de los datos y las *operaciones* que se realizan en ellos no necesariamente se describen en conjunto. En este tutorial, consumió datos existentes de maneras totalmente distintas de su función original. La coincidencia de patrones le ha brindado la capacidad de escribir una funcionalidad que reemplazase a esos tipos, aunque no le permitía extenderlos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
