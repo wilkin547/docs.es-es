@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dcaeb6d3adcd658a9844ae5cf8e758172bd7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5799ab8e827305fca565064a0ae7290c6c19eb01
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516520"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463012"
 ---
 # <a name="using-the-assert-method"></a>Utilizar el método Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -57,8 +57,7 @@ ms.locfileid: "54516520"
   
 -   El método A está incluido en el ensamblado A, el método B incluido en el ensamblado B, y así sucesivamente.  
   
- ![](../../../docs/framework/misc/media/assert.gif "assert")  
-Utilizar Assert  
+ ![Diagrama que muestra los ensamblados del método Assert.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   
  En este escenario de método A llama a B, B llama a C, C llama a E y E llama F. método C valida el permiso para leer archivos en la unidad C (permiso P1) y el método E solicita permiso para leer archivos .txt de la unidad C (permiso P1A). Cuando se detecta la petición en F en tiempo de ejecución, se realiza un recorrido de pila para comprobar los permisos de todos los llamadores de F, empezando por E. E concedió permiso P1A, por lo que el recorrido de pila pasa a examinar los permisos de C, donde se descubre la aserción de c. Dado que el permiso solicitado (P1A) es un subconjunto del permiso validado (P1), el recorrido de pila se detiene y se supera automáticamente la comprobación de seguridad. No importa que los ensamblados A y B no dispongan del permiso P1A. Al validar el permiso P1, el método C garantiza que sus llamadores puedan acceder al recurso protegido por P1, aunque los llamadores no tengan permiso para acceder a ese recurso.  
   
