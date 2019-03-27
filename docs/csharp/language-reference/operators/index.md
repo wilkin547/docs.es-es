@@ -1,29 +1,23 @@
 ---
-title: Operadores de C#
+title: 'Operadores de C#'
 ms.date: 04/04/2018
 f1_keywords:
-- cs.operators
+  - cs.operators
 helpviewer_keywords:
-- boolean operators [C#]
-- expressions [C#], operators
-- logical operators [C#]
-- operators [C#]
-- Visual C#, operators
-- indirection operators [C#]
-- assignment operators [C#]
-- shift operators [C#]
-- relational operators [C#]
-- bitwise operators [C#]
-- address operators [C#]
-- keywords [C#], operators
-- arithmetic operators [C#]
+  - 'boolean operators [C#]'
+  - 'expressions [C#], operators'
+  - 'logical operators [C#]'
+  - 'operators [C#]'
+  - 'Visual C#, operators'
+  - 'indirection operators [C#]'
+  - 'assignment operators [C#]'
+  - 'shift operators [C#]'
+  - 'relational operators [C#]'
+  - 'bitwise operators [C#]'
+  - 'address operators [C#]'
+  - 'keywords [C#], operators'
+  - 'arithmetic operators [C#]'
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 6380fa4ec99f598be0d01db1061900520e94d5f1
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333413"
 ---
 # <a name="c-operators"></a>Operadores de C#
 
@@ -47,9 +41,9 @@ Estos son los operadores de precedencia más alta.
 
 [a&#91;x&#93;](index-operator.md): indización de objeto agregado.
 
-[x++](increment-operator.md): incremento de postfijo. Devuelve el valor de x y, a continuación, actualiza la ubicación de almacenamiento con el valor de x que es uno mayor (normalmente agrega el entero 1).
+[x++](arithmetic-operators.md#increment-operator-): incremento de postfijo. Devuelve el valor de x y, a continuación, actualiza la ubicación de almacenamiento con el valor de x que es uno mayor (normalmente agrega el entero 1).
 
-[x--](decrement-operator.md): decremento de postfijo. Devuelve el valor de x; a continuación, actualiza la ubicación de almacenamiento con el valor de x que es uno menos (normalmente resta el entero 1).
+[x--](arithmetic-operators.md#decrement-operator---): decremento de postfijo. Devuelve el valor de x; a continuación, actualiza la ubicación de almacenamiento con el valor de x que es uno menos (normalmente resta el entero 1).
 
 [new](../keywords/new-operator.md): creación de instancias de tipo.
 
@@ -79,9 +73,9 @@ Estos operadores tienen mayor precedencia que los de la sección siguiente y men
 
 [~x](bitwise-complement-operator.md): complemento bit a bit.
 
-[++x](increment-operator.md): incremento de prefijo. Devuelve el valor de x después de actualizar la ubicación de almacenamiento con el valor de x que es uno mayor (normalmente agrega el entero 1).
+[++x](arithmetic-operators.md#increment-operator-): incremento de prefijo. Devuelve el valor de x después de actualizar la ubicación de almacenamiento con el valor de x que es uno mayor (normalmente agrega el entero 1).
 
-[--x](decrement-operator.md): decremento de prefijo. Devuelve el valor de x después de actualizar la ubicación de almacenamiento con el valor de x que es uno menos (normalmente resta el entero 1).
+[--x](arithmetic-operators.md#decrement-operator---): decremento de prefijo. Devuelve el valor de x después de actualizar la ubicación de almacenamiento con el valor de x que es uno menos (normalmente resta el entero 1).
 
 [(T)x](invocation-operator.md): conversión de tipos.
 
@@ -95,19 +89,19 @@ Estos operadores tienen mayor precedencia que los de la sección siguiente y men
 
 Estos operadores tienen mayor precedencia que los de la sección siguiente y menor que el de la anterior.
 
-[x * y](multiplication-operator.md): multiplicación.
+[x * y](arithmetic-operators.md#multiplication-operator-): multiplicación.
 
-[x / y](division-operator.md): división. Si los operandos son enteros, el resultado es un entero que se trunca hacia cero (por ejemplo, `-7 / 2 is -3`).
+[x / y](arithmetic-operators.md#division-operator-): división. Si los operandos son enteros, el resultado es un entero que se trunca hacia cero (por ejemplo, `-7 / 2 is -3`).
 
-[x % y](remainder-operator.md): resto. Si los operandos son enteros, devuelve el resto de dividir x entre y.  Si `q = x / y` y `r = x % y`, entonces `x = q * y + r`.
+[x % y](arithmetic-operators.md#remainder-operator-): resto. Si los operandos son enteros, devuelve el resto de dividir x entre y.  Si `q = x / y` y `r = x % y`, entonces `x = q * y + r`.
 
 ## <a name="additive-operators"></a>Operadores aditivos
 
 Estos operadores tienen mayor precedencia que los de la sección siguiente y menor que el de la anterior.
 
-[x + y](addition-operator.md): suma.
+[x + y](arithmetic-operators.md#addition-operator-): suma.
 
-[x – y](subtraction-operator.md): resta.
+[x – y](arithmetic-operators.md#subtraction-operator--): resta.
 
 ## <a name="shift-operators"></a>Operadores de desplazamiento
 
@@ -195,9 +189,9 @@ Estos operadores tienen mayor precedencia que los de la sección siguiente y men
 
 [x *= y](multiplication-assignment-operator.md): asignación de multiplicación. Multiplique el valor de `y` por el valor de `x`, almacene el resultado en `x` y devuelva el nuevo valor.
 
-[x /= y](division-assignment-operator.md): asignación de división. Divida el valor de `x` por el valor de `y`, almacene el resultado en `x` y devuelva el nuevo valor.
+[x /= y](arithmetic-operators.md#compound-assignment): asignación de división. Divida el valor de `x` por el valor de `y`, almacene el resultado en `x` y devuelva el nuevo valor.
 
-[x %= y](remainder-assignment-operator.md): asignación del resto. Divida el valor de `x` por el valor de `y`, almacene el resto en `x` y devuelva el nuevo valor.
+[x %= y](arithmetic-operators.md#compound-assignment): asignación del resto. Divida el valor de `x` por el valor de `y`, almacene el resto en `x` y devuelva el nuevo valor.
 
 [x &= y](and-assignment-operator.md): asignación de AND. AND el valor de `y` con el valor de `x`, almacene el resultado en `x` y devuelva el nuevo valor.
 
@@ -210,20 +204,6 @@ Estos operadores tienen mayor precedencia que los de la sección siguiente y men
 [x >>= y](right-shift-assignment-operator.md): asignación de desplazamiento a la derecha. Desplace el valor de `x` a la derecha `y` posiciones, almacene el resultado en `x` y devuelva el nuevo valor.
 
 [=>](lambda-operator.md): declaración lambda.
-
-## <a name="arithmetic-overflow"></a>Desbordamiento aritmético
-
-Los operadores aritméticos ([+](addition-operator.md), [-](subtraction-operator.md), [*](multiplication-operator.md) y [/](division-operator.md)) pueden producir resultados fuera del rango de valores posibles para el tipo numérico implicado. Para obtener detalles debe ir a la sección del operador en cuestión, pero en general:
-
-- El desbordamiento aritmético de enteros produce una <xref:System.OverflowException> o descarta los bits más significativos del resultado. La división de enteros por cero siempre produce una <xref:System.DivideByZeroException>.
-
-   Cuando se produce el desbordamiento de enteros, lo que suceda dependerá del contexto de ejecución, que puede ser [comprobado o no comprobado](../keywords/checked-and-unchecked.md). En un contexto comprobado, se produce una <xref:System.OverflowException>. En un contexto no comprobado, se descartan los bits más significativos del resultado y la ejecución continúa. Por lo tanto, C# ofrece la posibilidad de controlar u omitir el desbordamiento. De forma predeterminada, las operaciones aritméticas se producen en un contexto *no comprobado*.
-
-   Además de los operadores aritméticos, las conversiones de tipo entero a tipo entero también pueden provocar un desbordamiento (por ejemplo, al convertir un [long](../keywords/long.md) en un [int](../keywords/int.md)) y están sujetas a ejecución comprobada o no comprobada. Sin embargo, los operadores bit a bit y los de desplazamiento nunca producen desbordamiento.
-
-- El desbordamiento aritmético de punto flotante o la división por cero nunca producen una excepción, porque los tipos de punto flotante se basan en el estándar IEEE 754 y por tanto tienen disposiciones para representar el infinito y NaN (No es un número).
-
-- El desbordamiento aritmético [decimal](../keywords/decimal.md) siempre produce una excepción <xref:System.OverflowException>. La división decimal por cero siempre produce una <xref:System.DivideByZeroException>.
 
 ## <a name="see-also"></a>Vea también
 
