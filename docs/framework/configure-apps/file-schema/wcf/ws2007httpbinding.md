@@ -95,8 +95,7 @@ Define un enlace interoperable que proporciona compatibilidad para las versiones
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- 
-  `WS2007HttpBinding` agrega el enlace proporcionado por un sistema similar a `WSHttpBinding` pero usa las versiones estándar de la Organización para el avance de estándares de información estructurada (OASIS, Organization for the Advancement of Structured Information Standards) de los protocolos ReliableSession, Security y TransactionFlow. Se requiere ningún cambio en el modelo de objetos o la configuración predeterminada cuando se utilice este enlace.  
+ `WS2007HttpBinding` agrega el enlace proporcionado por un sistema similar a `WSHttpBinding` pero usa las versiones estándar de la Organización para el avance de estándares de información estructurada (OASIS, Organization for the Advancement of Structured Information Standards) de los protocolos ReliableSession, Security y TransactionFlow. Se requiere ningún cambio en el modelo de objetos o la configuración predeterminada cuando se utilice este enlace.  
   
 ## <a name="example"></a>Ejemplo  
   
