@@ -1,0 +1,18 @@
+items:
+- name: Accessing Application Settings
+  href: index.md
+  items:
+  - name: Procedimiento para crear cuadrículas de propiedades para la configuración del usuario
+    href: how-to-create-property-grids-for-user-settings.md
+  - name: Procedimiento para conservar la configuración del usuario
+    href: how-to-persist-user-settings.md
+  - name: Procedimiento para cambiar la configuración del usuario
+    href: how-to-change-user-settings.md
+  - name: Procedimiento para leer la configuración de la aplicación
+    href: how-to-read-application-settings.md
+ms.openlocfilehash: 1360983a14f27ca882a6d5323ee4620386352b99
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470863"

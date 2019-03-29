@@ -1,0 +1,43 @@
+items:
+- name: Implementación
+  href: index.md
+  items:
+  - name: Implementación de .NET Framework
+    href: deploying-the-net-framework.md
+    items:
+    - name: Guía de implementación para desarrolladores
+      href: deployment-guide-for-developers.md
+    - name: Guía de implementación para administradores
+      href: guide-for-administrators.md
+    - name: Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5
+      href: reducing-system-restarts.md
+    - name: Procedimiento para obtener el progreso del instalador de .NET Framework 4.5
+      href: how-to-get-progress-from-the-dotnet-installer.md
+    - name: 'Errores de inicialización de .NET Framework: administración de la experiencia del usuario'
+      href: initialization-errors-managing-the-user-experience.md
+    - name: Procedimiento para depurar problemas de activación de CLR
+      href: how-to-debug-clr-activation-issues.md
+  - name: Implementar aplicaciones de .NET Framework
+    href: net-framework-applications.md
+    items:
+    - name: Cómo el motor en tiempo de ejecución ubica ensamblados
+      href: how-the-runtime-locates-assemblies.md
+    - name: Procedimientos recomendados para cargar ensamblados
+      href: best-practices-for-assembly-loading.md
+  - name: .NET Framework Client Profile
+    href: client-profile.md
+  - name: Ejecución en paralelo
+    href: side-by-side-execution.md
+    items:
+    - name: Configurar la redirección del enlace de ensamblados
+      href: configuring-assembly-binding-redirection.md
+    - name: Instrucciones para crear componentes para la ejecución en paralelo
+      href: guidelines-for-creating-components-for-side-by-side-execution.md
+    - name: Ejecución en paralelo y en proceso
+      href: in-process-side-by-side-execution.md
+ms.openlocfilehash: 73f101fc5031c1ae97a626025d6b16c5729a2568
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470327"

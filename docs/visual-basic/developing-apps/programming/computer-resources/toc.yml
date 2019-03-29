@@ -1,0 +1,58 @@
+items:
+- name: Acceso a los recursos del equipo
+  href: index.md
+  items:
+  - name: Reproducir sonidos
+    href: playing-sounds.md
+  - name: Almacenar y leer datos en el Portapapeles
+    href: storing-data-to-and-reading-from-the-clipboard.md
+  - name: Obtener información acerca del equipo
+    href: getting-information-about-the-computer.md
+  - name: Acceso al teclado
+    href: accessing-the-keyboard.md
+    items:
+    - name: Procedimiento para iniciar una aplicación y enviarle pulsaciones de teclas
+      href: how-to-start-an-application-and-send-it-keystrokes.md
+  - name: Acceso al mouse
+    href: accessing-the-mouse.md
+  - name: Realizar operaciones de red
+    href: performing-network-operations.md
+    items:
+    - name: Procedimiento para cargar un archivo
+      href: how-to-upload-a-file.md
+    - name: Procedimiento para descargar un archivo
+      href: how-to-download-a-file.md
+    - name: Procedimiento para comprobar el estado de la conexión
+      href: how-to-check-connection-status.md
+  - name: Acceso a los puertos del equipo
+    href: accessing-the-computer-s-ports.md
+    items:
+    - name: Procedimiento para mostrar los puertos serie disponibles
+      href: how-to-show-available-serial-ports.md
+    - name: Procedimiento para marcar a través de módems conectados a puertos serie
+      href: how-to-dial-modems-attached-to-serial-ports.md
+    - name: Procedimiento para enviar cadenas a puertos serie
+      href: how-to-send-strings-to-serial-ports.md
+    - name: Procedimiento para recibir cadenas de puertos serie
+      href: how-to-receive-strings-from-serial-ports.md
+    - name: Operaciones de puertos en .NET Framework
+      href: port-operations-in-the-net-framework.md
+  - name: Leer y escribir en el Registro
+    href: reading-from-and-writing-to-the-registry.md
+    items:
+    - name: Procedimiento para crear una clave del Registro y establecer su valor
+      href: how-to-create-a-registry-key-and-set-its-value.md
+    - name: Procedimiento para leer un valor en una clave del Registro
+      href: how-to-read-a-value-from-a-registry-key.md
+    - name: Procedimiento para eliminar una clave del Registro
+      href: how-to-delete-a-registry-key.md
+    - name: Leer y escribir en el Registro mediante Microsoft.Win32 Namespace
+      href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md
+    - name: Seguridad y Registro
+      href: security-and-the-registry.md
+ms.openlocfilehash: b45e258b05c06cb8494a1644bd43cca447578e6c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469702"

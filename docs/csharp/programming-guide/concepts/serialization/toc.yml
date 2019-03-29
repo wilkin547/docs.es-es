@@ -1,0 +1,16 @@
+items:
+- name: Serialización (C#)
+  href: index.md
+  items:
+  - name: Procedimiento para escribir datos de objeto en un archivo XML
+    href: how-to-write-object-data-to-an-xml-file.md
+  - name: Procedimiento para leer datos de objetos en un archivo XML
+    href: how-to-read-object-data-from-an-xml-file.md
+  - name: 'Tutorial: Conservar un objeto en Visual Studio'
+    href: walkthrough-persisting-an-object-in-visual-studio.md
+ms.openlocfilehash: ccf7c795b437ff2c4046b6005ec7b05528aa884f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470375"

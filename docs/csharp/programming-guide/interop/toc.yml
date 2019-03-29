@@ -1,0 +1,22 @@
+items:
+- name: Interoperabilidad
+  href: index.md
+  items:
+  - name: Información general sobre interoperabilidad
+    href: interoperability-overview.md
+  - name: Procedimiento para obtener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#
+    href: how-to-access-office-onterop-objects.md
+  - name: Procedimiento para usar propiedades indexadas en la programación de interoperabilidad COM
+    href: how-to-use-indexed-properties-in-com-interop-rogramming.md
+  - name: Procedimiento para usar la invocación de plataforma para reproducir un archivo de sonido
+    href: how-to-use-platform-invoke-to-play-a-wave-file.md
+  - name: 'Tutorial: Programación de Office (C# y Visual Basic)'
+    href: walkthrough-office-programming.md
+  - name: Clase COM de ejemplo
+    href: example-com-class.md
+ms.openlocfilehash: 73e8696b89fa8ce212bc517f884f0ac615de09fc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470302"

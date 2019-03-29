@@ -1,0 +1,24 @@
+items:
+- name: Flujo de control
+  href: index.md
+  items:
+  - name: Estructuras de decisión
+    href: decision-structures.md
+  - name: Estructuras de bucle
+    href: loop-structures.md
+    items:
+    - name: 'Tutorial: Implementar IEnumerable(Of T)'
+      href: walkthrough-implementing-ienumerable-of-t.md
+  - name: Estructuras de control adicionales
+    href: other-control-structures.md
+    items:
+    - name: Procedimiento para deshacerse de un recurso del sistema
+      href: how-to-dispose-of-a-system-resource.md
+  - name: Estructuras de control anidadas
+    href: nested-control-structures.md
+ms.openlocfilehash: 8f6ec473d9d635ca93013aa23f21dee916fba1ba
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470383"

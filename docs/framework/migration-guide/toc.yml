@@ -1,0 +1,35 @@
+items:
+- name: Guía de migración
+  href: index.md
+  items:
+  - name: Compatibilidad de aplicaciones
+    href: application-compatibility.md
+    items:
+    - name: Cambios en tiempo de ejecución
+      href: runtime/index.md
+    - name: Cambios de redestinación
+      href: retargeting/index.md
+  - name: Compatibilidad de versiones
+    href: version-compatibility.md
+  - name: Versiones y dependencias
+    href: versions-and-dependencies.md
+    items:
+    - name: Procedimiento para determinar qué versiones de .NET Framework están instaladas
+      href: how-to-determine-which-versions-are-installed.md
+      items:
+      - name: Claves de la versión de .NET Framework y versiones del sistema operativo Windows
+        href: release-keys-and-os-versions.md
+    - name: Procedimiento para determinar qué actualizaciones de .NET Framework están instaladas
+      href: how-to-determine-which-net-framework-updates-are-installed.md
+  - name: Procedimiento Configuración de una aplicación para que admita .NET Framework 4 o versiones posteriores
+    href: how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
+  - name: Migración desde .NET Framework 1.1
+    href: migrating-from-the-net-framework-1-1.md
+  - name: Problemas de migración de .NET Framework 4
+    href: net-framework-4-migration-issues.md
+ms.openlocfilehash: c46b7ac4680e6aa988e39055cb51c80a4bb0e8b4
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470494"

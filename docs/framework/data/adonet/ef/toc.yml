@@ -1,0 +1,126 @@
+items:
+- name: ADO.NET Entity Framework
+  href: index.md
+- name: Información general sobre Entity Framework
+  href: overview.md
+- name: Modelado y asignación
+  href: modeling-and-mapping.md
+  items:
+  - name: Generador de EDM (EdmGen.exe)
+    href: edm-generator-edmgen-exe.md
+    items:
+    - name: Procedimiento para usar EdmGen.exe para generar los archivos de asignación y de modelo
+      href: how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md
+    - name: Procedimiento para usar EdmGen.exe para generar código de capa de objeto
+      href: how-to-use-edmgen-exe-to-generate-object-layer-code.md
+    - name: Procedimiento para usar EdmGen.exe para validar los archivos de asignación y de modelo
+      href: how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md
+  - name: Procedimiento para defina la cadena de conexión
+    href: how-to-define-the-connection-string.md
+  - name: Procedimiento para hacer que los archivos de asignación y de modelo sean recursos incrustados
+    href: how-to-make-model-and-mapping-files-embedded-resources.md
+  - name: Trabajar con lenguaje de definición de datos
+    href: working-with-data-definition-language.md
+- name: Consultar un modelo conceptual
+  href: querying-a-conceptual-model.md
+- name: Trabajar con objetos
+  href: working-with-objects.md
+- name: Trabajar con proveedores de datos
+  href: working-with-data-providers.md
+  items:
+  - name: Cadenas de conexión
+    href: connection-strings.md
+  - name: Proveedores de datos de Entity Framework
+    href: data-providers.md
+    items:
+    - name: Proveedor de EntityClient para Entity Framework
+      href: entityclient-provider-for-the-entity-framework.md
+      items:
+      - name: Procedimiento para compilar una cadena de conexión EntityConnection
+        href: how-to-build-an-entityconnection-connection-string.md
+      - name: Procedimiento para ejecutar una consulta que devuelve resultados PrimitiveType
+        href: how-to-execute-a-query-that-returns-primitivetype-results.md
+      - name: Procedimiento para ejecutar una consulta que devuelve resultados StructuralType
+        href: how-to-execute-a-query-that-returns-structuraltype-results.md
+      - name: Procedimiento para ejecutar una consulta que devuelve resultados RefType
+        href: how-to-execute-a-query-that-returns-reftype-results.md
+      - name: Procedimiento para ejecutar una consulta que devuelve tipos complejos
+        href: how-to-execute-a-query-that-returns-complex-types.md
+      - name: Procedimiento para ejecutar una consulta que devuelve colecciones anidadas
+        href: how-to-execute-a-query-that-returns-nested-collections.md
+      - name: Procedimiento para ejecutar una consulta parametrizada de Entity SQL mediante EntityCommand
+        href: how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md
+      - name: Procedimiento para ejecutar un procedimiento almacenado parametrizado mediante EntityCommand
+        href: how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md
+      - name: Procedimiento para ejecutar una consulta polimórfica
+        href: how-to-execute-a-polymorphic-query.md
+      - name: Procedimiento para navegar por las relaciones con el operador Navigate
+        href: how-to-navigate-relationships-with-the-navigate-operator.md
+    - name: SqlClient para Entity Framework
+      href: sqlclient-for-the-entity-framework.md
+      items:
+      - name: SqlClient para las funciones de Entity Framework
+        href: sqlclient-for-ef-functions.md
+        items:
+        - name: Asignación entre las funciones canónicas del modelo conceptual y las funciones de SQL Server
+          href: conceptual-model-canonical-to-sql-server-functions-mapping.md
+        - name: Funciones de agregado
+          href: aggregate-functions-sqlclient-for-entity-framework.md
+        - name: Funciones de fecha y hora
+          href: date-and-time-functions.md
+        - name: Funciones matemáticas
+          href: mathematical-functions.md
+        - name: Funciones de cadena
+          href: string-functions.md
+        - name: Funciones del sistema
+          href: system-functions.md
+      - name: SqlClient para tipos de Entity Framework
+        href: sqlclient-for-ef-types.md
+      - name: Problemas conocidos en SqlClient para Entity Framework
+        href: known-issues-in-sqlclient-for-entity-framework.md
+  - name: Escribir un proveedor de datos de Entity Framework
+    href: writing-an-ef-data-provider.md
+    items:
+    - name: Generación de SQL
+      href: sql-generation.md
+      items:
+      - name: Forma de los árboles de comandos
+        href: the-shape-of-the-command-trees.md
+      - name: 'Generar SQL a partir de árboles de comandos: procedimientos recomendados'
+        href: generating-sql-from-command-trees-best-practices.md
+      - name: Generación de SQL en el proveedor de ejemplo
+        href: sql-generation-in-the-sample-provider.md
+        items:
+        - name: Arquitectura y diseño
+          href: architecture-and-design.md
+        - name: 'Tutorial: Generación de SQL'
+          href: walkthrough-sql-generation.md
+    - name: Generar SQL de modificación
+      href: modification-sql-generation.md
+    - name: Especificación del manifiesto del proveedor
+      href: provider-manifest-specification.md
+- name: Consideraciones de desarrollo e implementación
+  href: development-and-deployment-considerations.md
+  items:
+  - name: Consideraciones de seguridad
+    href: security-considerations.md
+  - name: Consideraciones sobre el rendimiento
+    href: performance-considerations.md
+  - name: Consideraciones de migración
+    href: migration-considerations.md
+  - name: Consideraciones de implementación
+    href: deployment-considerations.md
+- name: Recursos de Entity Framework
+  href: resources.md
+- name: Terminología de Entity Framework
+  href: terminology.md
+- name: Introducción
+  href: getting-started.md
+- name: Referencia del lenguaje
+  href: language-reference/index.md
+ms.openlocfilehash: 7b6de341e548ca64690cf9a17281fcbb30f160cf
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470734"
