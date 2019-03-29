@@ -2,12 +2,12 @@
 title: 'Campos explícitos: Val (palabra clave)'
 description: Obtenga información sobre la F# palabra clave 'val', que se utiliza para declarar una ubicación para almacenar un valor en un tipo de clase o estructura sin inicializar el tipo.
 ms.date: 05/16/2016
-ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53773632"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634016"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Campos explícitos: Val (palabra clave)
 
@@ -40,9 +40,9 @@ Por ejemplo, un campo inmutable denominado `someField` tiene un campo de respald
 Para un campo mutable, la representación compilada de .NET es un campo .NET.
 
 >[!WARNING]
-`Note` El espacio de nombres de .NET Framework `System.ComponentModel` contiene un atributo que tiene el mismo nombre. Para obtener más información sobre el atributo, vea `System.ComponentModel.DefaultValueAttribute`.
+>El espacio de nombres de .NET Framework `System.ComponentModel` contiene un atributo que tiene el mismo nombre. Para obtener más información sobre el atributo, vea `System.ComponentModel.DefaultValueAttribute`.
 
-El código siguiente muestra el uso de campos explícitos y, para la comparación, un `let` de enlace en una clase que tiene un constructor primario. Tenga en cuenta que el campo enlazado a `let``myInt1` es privado. Si se hace referencia al campo enlazado a `let` `myInt1` desde un método de miembro, el identificador propio `this` no es necesario. Pero si hace referencia a los campos explícitos `myInt2` y `myString`, se requiere el identificador propio.
+El código siguiente muestra el uso de campos explícitos y, para la comparación, un `let` de enlace en una clase que tiene un constructor primario. Tenga en cuenta que el campo enlazado a `let``myInt1` es privado. Si se hace referencia al campo enlazado a `let``myInt1` desde un método de miembro, el identificador propio `this` no es necesario. Pero si hace referencia a los campos explícitos `myInt2` y `myString`, se requiere el identificador propio.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6701.fs)]
 

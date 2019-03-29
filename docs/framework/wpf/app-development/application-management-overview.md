@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: ef9771f44ce5bc61787f2060469d7a0b244e96b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 395077b7c82ee54a51b8086df0c59f731e3a2b70
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356512"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634224"
 ---
 # <a name="application-management-overview"></a>Información general sobre la administración de aplicaciones
 Todas las aplicaciones suelen compartir un conjunto común de funciones que se aplica a la implementación y la administración de la aplicación. Este tema proporciona información general de la funcionalidad de la <xref:System.Windows.Application> clase para crear y administrar aplicaciones.  
@@ -323,7 +323,7 @@ Todas las aplicaciones suelen compartir un conjunto común de funciones que se a
 ### <a name="unhandled-exceptions"></a>Excepciones no controladas  
  A veces, puede que una aplicación se cierre en condiciones irregulares, como cuando se produce una excepción imprevista. En este caso, es posible que la aplicación no tenga el código necesario para detectar y procesar la excepción. Este tipo de excepción es una excepción no controlada; se muestra una notificación similar a la que aparece en la figura siguiente antes de que se cierre la aplicación.  
   
- ![Notificación de excepción no controlada](./media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
+ ![Captura de pantalla que muestra una notificación de excepción no controlada.](./media/application-management-overview/unhandled-exception-notification.png)  
   
  Desde la perspectiva del usuario, es mejor que una aplicación evite este comportamiento predeterminado realizando todas o alguna de las siguientes acciones:  
   

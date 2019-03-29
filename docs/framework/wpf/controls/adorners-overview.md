@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 9c9d77c9771fd8759530267bd38cb7c0bb59598c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357955"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634536"
 ---
 # <a name="adorners-overview"></a>Información general sobre adornos
 Los Adorners son un tipo especial de <xref:System.Windows.FrameworkElement>, que se usa para proporcionar indicaciones visuales a un usuario. Entre otros usos, los Adorners se pueden utilizar para agregar controladores funcionales a los elementos o proporcionar información de estado sobre un control.  
@@ -55,7 +55,7 @@ Los Adorners son un tipo especial de <xref:System.Windows.FrameworkElement>, que
   
  La siguiente imagen muestra el adorno SimpleCircleAdorner aplicada a un <xref:System.Windows.Controls.TextBox>.  
   
- ![Ejemplo de adornos: Cuadro de texto](./media/adornedtextbox.png "AdornedTextBox")  
+ ![Captura de pantalla que muestra un cuadro de texto adornado.](./media/adorners-overview/simplecircleadorner-textbox.png)  
   
 <a name="rendering_behavior_for_Adorners"></a>   
 ## <a name="rendering-behavior-for-adorners"></a>Comportamiento de representación de los adornos  

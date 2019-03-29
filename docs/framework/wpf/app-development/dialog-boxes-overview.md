@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: e0a52dcd3b403b3b5795dc0d025ac93176f009c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359138"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634458"
 ---
 # <a name="dialog-boxes-overview"></a>Información general sobre cuadros de diálogo
 Las aplicaciones independientes tienen normalmente una ventana principal que muestra los datos principales en el que la aplicación funciona y expone la funcionalidad para procesar los datos a través de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mecanismos, como las barras de menús, barras de herramientas y barras de estado. Una aplicación no trivial también puede mostrar ventanas adicionales para realizar lo siguiente:  
@@ -40,7 +40,7 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
 ## <a name="message-boxes"></a>Cuadros de mensaje  
  Un *cuadro de mensaje* es un cuadro de diálogo que puede usarse para mostrar información textual y permitir a los usuarios tomar decisiones con los botones. En la siguiente figura se muestra un cuadro de mensaje que muestra información de texto, realiza una pregunta y proporciona tres botones al usuario para responderla.  
   
- ![Cuadro de diálogo Procesador de textos](./media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
+ ![Cierra un cuadro de diálogo procesador de textos que le pregunta si desea guardar los cambios en el documento antes de que la aplicación.](./media/dialog-boxes-overview/word-processor-dialog.png)  
   
  Para crear un cuadro de mensaje, utilice el <xref:System.Windows.MessageBox> clase. <xref:System.Windows.MessageBox> le permite configurar el texto del cuadro de mensaje, título, icono y botones, mediante código similar al siguiente.  
   
@@ -73,7 +73,7 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
 ### <a name="open-file-dialog"></a>Cuadro de diálogo Abrir archivo  
  El cuadro de diálogo Abrir archivo, que se muestra en la siguiente figura, se usa por la función de apertura de archivos para recuperar el nombre de un archivo que se va a abrir.  
   
- ![Cuadro de diálogo Abrir](./media/dialogboxesoverviewfigure2.png "DialogBoxesOverviewFigure2")  
+ ![Un cuadro de diálogo Abrir que muestra la ubicación para recuperar el archivo.](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
  El cuadro de diálogo Abrir archivo común se implementa como la <xref:Microsoft.Win32.OpenFileDialog> clase y se encuentra en la <xref:Microsoft.Win32> espacio de nombres. En el siguiente código se muestra cómo crear, configurar y mostrar uno, y cómo procesar el resultado.  
   
@@ -89,7 +89,7 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
 ### <a name="save-file-dialog-box"></a>Cuadro de diálogo Guardar archivo  
  El cuadro de diálogo Guardar archivo, que se muestra en la siguiente figura, se usa por la función de guardado de archivos para recuperar el nombre de un archivo que se va a guardar.  
   
- ![Cuadro de diálogo Guardar como](./media/dialogboxesoverviewfigure3.png "DialogBoxesOverviewFigure3")  
+ ![Guardar como cuadro de diálogo que muestra la ubicación para guardar el archivo.](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
  Guardar el cuadro de diálogo de archivo común se implementa como la <xref:Microsoft.Win32.SaveFileDialog> clase y se encuentra en la <xref:Microsoft.Win32> espacio de nombres. En el siguiente código se muestra cómo crear, configurar y mostrar uno, y cómo procesar el resultado.  
   
@@ -102,7 +102,7 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
 ### <a name="print-dialog-box"></a>Cuadro de diálogo Imprimir  
  El cuadro de diálogo Imprimir, que se muestra en la siguiente figura, se usa por la función de impresión para elegir y configurar la impresora con la que el usuario quiere imprimir los datos.  
   
- ![Cuadro de diálogo Imprimir](./media/dialogboxesoverviewfigure4.png "DialogBoxesOverviewFigure4")  
+ ![Captura de pantalla que muestra un cuadro de diálogo Imprimir.](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
  El cuadro de diálogo Imprimir común se implementa como la <xref:System.Windows.Controls.PrintDialog> clase y se encuentra en la <xref:System.Windows.Controls> espacio de nombres. En el siguiente código se muestra cómo crear, configurar y mostrar uno.  
   
@@ -119,7 +119,7 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
 ### <a name="creating-a-modal-custom-dialog-box"></a>Crear un cuadro de diálogo modal personalizado  
  En este tema se muestra cómo usar <xref:System.Windows.Window> para crear una implementación de cuadro de diálogo modal típica, con el `Margins` cuadro de diálogo como ejemplo (consulte [ejemplo de cuadro de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984)). El `Margins` cuadro de diálogo se muestra en la ilustración siguiente.  
   
- ![Cuadro de diálogo Márgenes](./media/dialogboxesoverviewfigure5.png "DialogBoxesOverviewFigure5")  
+ ![Un cuadro de diálogo márgenes con campos para definir el margen izquierdo, el margen superior, el margen derecho y el margen inferior.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
 #### <a name="configuring-a-modal-dialog-box"></a>Configurar un cuadro de diálogo modal  
  La interfaz de usuario de un cuadro de diálogo típico incluye lo siguiente:  
@@ -208,7 +208,7 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
   
  Una vez que está asociada, la regla de validación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicará automáticamente cuando se escriben datos en el control enlazado. Cuando un control contiene datos no válidos, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] mostrará un borde rojo alrededor del control no válido, tal como se muestra en la ilustración siguiente.  
   
- ![Margen izquierdo no válido](./media/dialogboxesoverviewfigure7.png "DialogBoxesOverviewFigure7")  
+ ![Un cuadro de diálogo márgenes con un borde rojo alrededor del valor del margen izquierdo no válido.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] no restringe un usuario al control no válido hasta que haya especificado los datos válidos. Este es un buen comportamiento para un cuadro de diálogo; un usuario debe poder navegar libremente por los controles de un cuadro de diálogo sean los datos válidos o no. Sin embargo, esto significa que un usuario puede escribir datos no válidos y presionar el **Aceptar** botón. Por este motivo, el código también necesita validar todos los controles en un cuadro de diálogo cuadro cuando el **Aceptar** está presionado controlando el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
@@ -277,7 +277,7 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
 ### <a name="creating-a-modeless-custom-dialog-box"></a>Crear un cuadro de diálogo no modal personalizado  
  Un cuadro de diálogo no modal, como el cuadro de diálogo Buscar que se muestra en la figura siguiente, tiene el mismo aspecto fundamental que el cuadro de diálogo modal.  
   
- ![Cuadro de diálogo Buscar](./media/dialogboxesoverviewfigure6.PNG "DialogBoxesOverviewFigure6")  
+ ![Captura de pantalla que muestra un cuadro de diálogo Buscar.](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
   
  En cambio, el comportamiento es un poco diferente, como se describe en las secciones siguientes.  
   

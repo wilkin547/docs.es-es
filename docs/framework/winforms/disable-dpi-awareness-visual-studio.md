@@ -1,17 +1,17 @@
 ---
 title: Deshabilitar el reconocimiento de PPP en Visual Studio
 description: Se describen los límites del Diseñador de Windows Forms en monitores HDPI y cómo ejecutar Visual Studio como un proceso no reconocen el PPP.
-ms.date: 12/17/2018
-ms.prod: visual-studio-dev15
+ms.date: 03/19/2019
+ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710542"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633873"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Deshabilitar el reconocimiento de PPP en Visual Studio
 
@@ -23,11 +23,14 @@ El **Diseñador de Windows Forms** en Visual Studio no tiene ajuste de escala de
 
 ![Diseñador de Windows Forms en monitor HDPI](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
-En Visual Studio 2017 versión 15,8 y versiones posterior, cuando se abre un formulario en el **Diseñador de Windows Forms** en un monitor HDPI, Visual Studio muestra un informativo de la barra de selección amarillo en la parte superior del diseñador:
+Cuando se abre un formulario en el **Diseñador de Windows Forms** en Visual Studio en un monitor HDPI, Visual Studio muestra un informativo de la barra de selección amarillo en la parte superior del diseñador:
 
 ![Barra informativa en Visual Studio se reinicie en modo no reconocen el PPP](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 Lee el mensaje **ajuste de escala en la pantalla principal está establecido en 200% (192 PPP). Esto podría provocar problemas de representación en la ventana del diseñador.**
+
+> [!NOTE]
+> Esta barra informativa se introdujo en Visual Studio 2017 versión 15,8.
 
 Si no está trabajando en el diseñador y no es necesario ajustar el diseño del formulario, puede omitir la barra informativa y seguir trabajando en el editor de código o en otros tipos de diseñadores. (También puede [deshabilitar las notificaciones](#disable-notifications) para que la barra informativa no seguirán apareciendo.) Solo el **Diseñador de Windows Forms** se ve afectado. Si necesita trabajar el **Diseñador de Windows Forms**, la siguiente sección le ayuda a [resolver el problema](#to-resolve-the-problem).
 
@@ -51,10 +54,13 @@ Es importante reiniciar Visual Studio como un proceso con reconocimiento de PPP,
 
 Visual Studio se puede marcar como no reconocen el PPP modificando el registro. Abra **Editor del registro** y agregar una entrada a la **NT\CurrentVersion\AppCompatFlags\Layers HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows** subclave:
 
-**Entrada**: C:\Program archivos (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**Entrada**: Dependiendo de si está utilizando Visual Studio 2017 o 2019, use uno de estos valores:
 
-   > [!NOTE]
-   > Si usa la edición Professional o Enterprise de Visual Studio 2017, reemplace **Comunidad** con **Professional** o **Enterprise** en la entrada. Además, reemplace la letra de unidad según sea necesario.
+- C:\Program archivos (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+- C:\Program archivos (x86) \Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+
+> [!NOTE]
+> Si usa la edición Professional o Enterprise de Visual Studio, reemplace **Comunidad** con **Professional** o **Enterprise** en la entrada. Además, reemplace la letra de unidad según sea necesario.
 
 **Tipo**: REG_SZ
 

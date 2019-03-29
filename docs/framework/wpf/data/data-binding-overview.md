@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: ad86577aa4a66d9296c3c1844c9f8fa8c2b89d24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364832"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634562"
 ---
 # <a name="data-binding-overview"></a>Información general sobre el enlace de datos
 El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una manera sencilla y coherente para que las aplicaciones presenten datos e interactúen con ellos. Los elementos se pueden enlazar a datos desde una variedad de orígenes de datos en forma de objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] y [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>Por ejemplo, <xref:System.Windows.Controls.Button> y <xref:System.Windows.Controls.ItemsControl>s como <xref:System.Windows.Controls.ListBox> y <xref:System.Windows.Controls.ListView> tiene funciones integradas para habilitar flexible estilo de elementos de datos individuales o colecciones de elementos de datos. Se pueden generar vistas de ordenación, filtrado ya agrupación encima de los datos.  
@@ -61,7 +61,7 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
  Independientemente del elemento que se vaya a enlazar y de la naturaleza del origen de datos, cada enlace sigue siempre el modelo que se muestra en la ilustración siguiente:  
   
- ![Diagrama de enlace de datos básico](./media/databindingmostbasic.png "DataBindingMostBasic")  
+ ![Diagrama que muestra el modelo de enlace de datos básicos.](./media/data-binding-overview/basic-data-binding-diagram.png)  
   
  Como se muestra en la ilustración anterior, el enlace de datos es esencialmente el puente entre el destino del enlace y el origen del enlace. En la ilustración se muestran los siguientes conceptos fundamentales del enlace de datos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
@@ -101,7 +101,7 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
  Pero ¿se actualizará su valor de origen mientras edita el texto o después de terminar de editarlo y sacar el mouse fuera del control TextBox? El <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propiedad del enlace determina qué desencadena la actualización del origen. Los puntos de las flechas derecha en la ilustración siguiente muestran el rol de la <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propiedad:  
   
- ![Diagrama de UpdateSourceTrigger](./media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
+ ![Diagrama que muestra el rol de la propiedad UpdateSourceTrigger.](./media/data-binding-overview/data-binding-updatesource-trigger.png)  
   
  Si el <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor es <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, a continuación, el valor que apunta la flecha derecha de <xref:System.Windows.Data.BindingMode.TwoWay> o <xref:System.Windows.Data.BindingMode.OneWayToSource> enlaces se actualiza tan pronto como los cambios de propiedad de destino. Sin embargo, si la <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor es <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>, a continuación, ese valor solo se actualiza con el nuevo valor cuando la propiedad de destino pierde el foco.  
   
@@ -132,7 +132,7 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
  Si aplicamos este ejemplo a nuestro diagrama básico, la ilustración resultante tendrá el siguiente aspecto. Se trata de un <xref:System.Windows.Data.BindingMode.OneWay> enlace porque la propiedad Background admite <xref:System.Windows.Data.BindingMode.OneWay> enlazar de forma predeterminada.  
   
- ![Diagrama de enlace de datos](./media/databindingbuttonbackgroundexample.png "DataBindingButtonBackgroundExample")  
+ ![Diagrama que muestra la propiedad de enlace de datos en segundo plano.](./media/data-binding-overview/data-binding-button-background-example.png)  
   
  Quizás se pregunte por qué esto funciona incluso si la *ColorName* propiedad es de tipo string mientras el <xref:System.Windows.Controls.Control.Background%2A> propiedad es de tipo <xref:System.Windows.Media.Brush>. Se ha aplicado la conversión predeterminada de tipos, que se explica en la sección [Conversión de datos](#data_conversion).  
   
@@ -185,7 +185,7 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
  Al agregar esta información a la ilustración de la sección [Creación de un enlace](#creating_a_binding), obtenemos el diagrama siguiente:  
   
- ![Diagrama de enlace de datos](./media/databindingbuttondefaultconversion.png "DataBindingButtonDefaultConversion")  
+ ![Diagrama que muestra la propiedad de enlace de datos predeterminada.](./media/data-binding-overview/data-binding-button-default-conversion.png)  
   
  Sin embargo, ¿qué ocurre si en lugar de tener una propiedad de tipo cadena, el objeto de origen de enlace tiene un *Color* propiedad de tipo <xref:System.Windows.Media.Color>? En ese caso, en orden para el enlace funcione necesitaría convertir el *Color* valor de propiedad en algo que el <xref:System.Windows.Controls.Control.Background%2A> propiedad acepta. Deberá crear un convertidor personalizado implementando la <xref:System.Windows.Data.IValueConverter> interfaz, como en el ejemplo siguiente:  
   
@@ -196,7 +196,7 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
  Ahora que se ha utilizado el convertidor personalizado en lugar de la conversión predeterminada, nuestro diagrama presenta el siguiente aspecto:  
   
- ![Diagrama de enlace de datos](./media/databindingconvertercolorexample.png "DataBindingConverterColorExample")  
+ ![Diagrama que muestra el convertidor personalizado de enlace de datos.](./media/data-binding-overview/data-binding-converter-color-example.png)  
   
  Recordemos que las conversiones predeterminadas pueden estar disponibles si el tipo que se va a enlazar contiene convertidores de tipo. Este comportamiento dependerá de los convertidores de tipos disponibles en el destino. Si no está seguro, cree su propio convertidor.  
   
@@ -217,7 +217,7 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
  Afortunadamente, nuestro diagrama básico aún sigue siendo válido. Si va a enlazar un <xref:System.Windows.Controls.ItemsControl> a una colección, el diagrama se ve así:  
   
- ![Diagrama de ItemsControl de enlace de datos](./media/databindingitemscontrol.png "DataBindingItemsControl")  
+ ![Diagrama que muestra el objeto de ItemsControl de enlace de datos.](./media/data-binding-overview/data-binding-itemscontrol.png)  
   
  Como se muestra en este diagrama, para enlazar un <xref:System.Windows.Controls.ItemsControl> a un objeto de colección, <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> es la propiedad a usar. Puede pensar en <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propiedad como el contenido de la <xref:System.Windows.Controls.ItemsControl>. Tenga en cuenta que el enlace es <xref:System.Windows.Data.BindingMode.OneWay> porque el <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> admite la propiedad <xref:System.Windows.Data.BindingMode.OneWay> enlazar de forma predeterminada.  
   
@@ -340,7 +340,7 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
 ## <a name="data-templating"></a>Inclusión de datos en plantillas  
  Sin el uso de plantillas de datos, nuestra [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de aplicación de la sección [¿Qué es el enlace de datos?](#what_is_data_binding) tendría este aspecto:  
   
- ![Data Binding Demo sin plantillas de datos](./media/databindingdemotemplates.png "DataBindingDemoTemplates")  
+ ![Demo de enlace de datos sin plantillas de datos](./media/data-binding-overview/data-binding-demo-templates.png)  
   
  Como se muestra en el ejemplo en la sección anterior, tanto el <xref:System.Windows.Controls.ListBox> control y el <xref:System.Windows.Controls.ContentControl> están enlazados al objeto de colección completo (o más concretamente, la vista sobre el objeto de colección) de *AuctionItem*s. Sin instrucciones específicas de cómo mostrar la recopilación de datos, el <xref:System.Windows.Controls.ListBox> muestra una representación de cadena de cada objeto de la colección subyacente y el <xref:System.Windows.Controls.ContentControl> muestra una representación de cadena del objeto que está enlazado.  
   

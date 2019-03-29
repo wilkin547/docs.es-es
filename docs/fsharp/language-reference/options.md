@@ -2,12 +2,12 @@
 title: Opciones
 description: Aprenda a usar F# opción tipos cuando no exista un valor real para un valor con nombre o variable.
 ms.date: 05/16/2016
-ms.openlocfilehash: ebd1c1c39468594de83b3c2af1da48c277bfcbe1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 6d32693bccc74c2cab642e4f626c9463092e8a39
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613510"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634107"
 ---
 # <a name="options"></a>Opciones
 
@@ -40,6 +40,8 @@ Opciones también pueden ser útiles cuando un valor no exista, por ejemplo, si 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1402.fs)]
 
 El `openFile` función en el ejemplo anterior tiene un tipo `string -> File option` porque devuelve un `File` objeto si el archivo se abre correctamente y `None` si se produce una excepción. Según la situación, no puede ser una opción de diseño apropiado para detectar una excepción en lugar de permitir para propagarse.
+
+Además, es posible pasar `null` o un valor null para el `Some` case de una opción. Esto suele ser deben evitar y normalmente se encuentra en la rutina F# de programación, pero es posible debido a la naturaleza de los tipos de referencia en. NET.
 
 ## <a name="option-properties-and-methods"></a>Los métodos y propiedades de opción
 
