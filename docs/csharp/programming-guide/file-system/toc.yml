@@ -1,0 +1,28 @@
+items:
+- name: Registro y sistema de archivos
+  href: index.md
+  items:
+  - name: Procedimiento para iterar un árbol de directorio
+    href: how-to-iterate-through-a-directory-tree.md
+  - name: Procedimiento para obtener información sobre archivos, carpetas y unidades
+    href: how-to-get-information-about-files-folders-and-drives.md
+  - name: Procedimiento para crear un archivo o una carpeta
+    href: how-to-create-a-file-or-folder.md
+  - name: Procedimiento para copiar, eliminar y mover archivos y carpetas
+    href: how-to-copy-delete-and-move-files-and-folders.md
+  - name: Procedimiento para proporcionar un cuadro de diálogo de progreso para operaciones de archivos
+    href: how-to-provide-a-progress-dialog-box-for-file-operations.md
+  - name: Procedimiento para escribir en un archivo de texto
+    href: how-to-write-to-a-text-file.md
+  - name: Procedimiento para leer de un archivo de texto
+    href: how-to-read-from-a-text-file.md
+  - name: Procedimiento para leer un archivo de texto línea a línea (Visual C#)
+    href: how-to-read-a-text-file-one-line-at-a-time.md
+  - name: Procedimiento para crear una clave en el Registro (Visual C#)
+    href: how-to-create-a-key-in-the-registry.md
+ms.openlocfilehash: 779f7fad6c2ba693a27f2657fc55c5db55ce00ed
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469974"

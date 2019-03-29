@@ -1,0 +1,38 @@
+items:
+- name: Referencia de la API no administrada
+  href: index.md
+  items:
+  - name: Tipos de datos comunes
+    href: common-data-types-unmanaged-api-reference.md
+  - name: API de ALink
+    href: alink/
+  - name: Authenticode
+    href: authenticode/
+  - name: Constantes
+    href: constants-unmanaged-api-reference.md
+  - name: Depuración
+    href: debugging/
+  - name: Almacén de símbolos de diagnósticos
+    href: diagnostics/
+  - name: Fusión
+    href: fusion/
+  - name: Hospedaje
+    href: hosting/
+  - name: Metadatos
+    href: metadata/
+  - name: Generación de perfiles
+    href: profiling/
+  - name: Nombres seguros
+    href: strong-naming/
+  - name: WMI y contadores de rendimiento
+    href: wmi/
+  - name: Funciones del asistente Tlbexp
+    href: tlbexp/
+  - name: GUID_ManagedName (Atributo)
+    href: guid-managedname-attribute.md
+ms.openlocfilehash: 48454d1cf9285a229de8d3b852d33c985c3b53bc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470895"

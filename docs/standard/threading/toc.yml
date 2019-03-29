@@ -1,0 +1,87 @@
+items:
+- name: Subprocesos
+  href: index.md
+  items:
+  - name: Principios básicos del subprocesamiento administrado
+    href: managed-threading-basics.md
+    items:
+    - name: Subprocesos y subprocesamiento
+      href: threads-and-threading.md
+    - name: Excepciones en subprocesos administrados
+      href: exceptions-in-managed-threads.md
+    - name: Sincronizar datos para subprocesamiento múltiple
+      href: synchronizing-data-for-multithreading.md
+    - name: Subprocesos de primer y segundo plano
+      href: foreground-and-background-threads.md
+    - name: Subprocesamiento administrado y no administrado en Windows
+      href: managed-and-unmanaged-threading-in-windows.md
+    - name: Thread.Suspend, recolección de elementos no utilizados y puntos de seguridad
+      href: thread-suspend-garbage-collection-and-safe-points.md
+    - name: 'Almacenamiento local para el subproceso: Campos estáticos relacionados con subprocesos y ranuras de datos'
+      href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
+  - name: Uso de subprocesos y subprocesamiento
+    href: using-threads-and-threading.md
+    items:
+    - name: Creación de subprocesos y análisis los datos en el inicio
+      href: creating-threads-and-passing-data-at-start-time.md
+    - name: Pausa e interrupción de subprocesos
+      href: pausing-and-resuming-threads.md
+    - name: Destrucción de subprocesos
+      href: destroying-threads.md
+    - name: Programación de subprocesos
+      href: scheduling-threads.md
+    - name: Cancelación en subprocesos administrados
+      href: cancellation-in-managed-threads.md
+      items:
+      - name: Cancelación de subprocesos de manera cooperativa
+        href: canceling-threads-cooperatively.md
+      - name: Procedimiento para escuchar solicitudes de cancelación mediante sondeo
+        href: how-to-listen-for-cancellation-requests-by-polling.md
+      - name: Procedimiento para registrar devoluciones de llamadas de solicitudes de cancelación
+        href: how-to-register-callbacks-for-cancellation-requests.md
+      - name: Procedimiento para escuchar solicitudes de cancelación que tienen controladores de espera
+        href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
+      - name: Procedimiento Realizar escuchas de varias solicitudes de cancelación
+        href: how-to-listen-for-multiple-cancellation-requests.md
+  - name: Procedimientos recomendados para el subprocesamiento administrado
+    href: managed-threading-best-practices.md
+  - name: Objetos y características de subprocesos
+    href: threading-objects-and-features.md
+    items:
+    - name: Grupo de subprocesos administrado
+      href: the-managed-thread-pool.md
+    - name: Temporizadores
+      href: timers.md
+    - name: Información general sobre las primitivas de sincronización
+      href: overview-of-synchronization-primitives.md
+    - name: EventWaitHandle
+      href: eventwaithandle.md
+    - name: CountdownEvent
+      href: countdownevent.md
+    - name: Mutexes
+      href: mutexes.md
+    - name: Semaphore y SemaphoreSlim
+      href: semaphore-and-semaphoreslim.md
+    - name: Barrier
+      href: barrier.md
+      items:
+      - name: Procedimiento para sincronizar operaciones simultáneas con una clase Barrier
+        href: how-to-synchronize-concurrent-operations-with-a-barrier.md
+    - name: SpinLock
+      href: spinlock.md
+      items:
+      - name: Procedimiento para usar SpinLock para la sincronización de bajo nivel
+        href: how-to-use-spinlock-for-low-level-synchronization.md
+      - name: Procedimiento para habilitar el modo de seguimiento de subproceso en el bloqueo por subproceso
+        href: how-to-enable-thread-tracking-mode-in-spinlock.md
+    - name: SpinWait
+      href: spinwait.md
+      items:
+      - name: Procedimiento para usar SpinWait para implementar una operación de espera de dos fases
+        href: how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md
+ms.openlocfilehash: c015db2bc66897ca487e29e36d93e7d84a0897f1
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469815"

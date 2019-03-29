@@ -1,0 +1,32 @@
+items:
+- name: Paseo por C#
+  href: index.md
+  items:
+  - name: Estructura del programa
+    href: program-structure.md
+  - name: Tipos y variables
+    href: types-and-variables.md
+  - name: Expresiones
+    href: expressions.md
+  - name: Instrucciones
+    href: statements.md
+  - name: Clases y objetos
+    href: classes-and-objects.md
+  - name: Estructuras
+    href: structs.md
+  - name: Matrices
+    href: arrays.md
+  - name: Interfaces
+    href: interfaces.md
+  - name: Enumeraciones
+    href: enums.md
+  - name: Delegados
+    href: delegates.md
+  - name: Atributos
+    href: attributes.md
+ms.openlocfilehash: 9f1265c48bea8f76bd352eb95605187b1385cae5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470047"

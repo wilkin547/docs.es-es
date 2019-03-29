@@ -1,0 +1,16 @@
+items:
+- name: Interfaces
+  href: index.md
+  items:
+  - name: Implementación de interfaz explícita
+    href: explicit-interface-implementation.md
+  - name: Procedimiento para implementar explícitamente miembros de interfaz
+    href: how-to-explicitly-implement-interface-members.md
+  - name: Procedimiento para implementar explícitamente miembros de dos interfaces
+    href: how-to-explicitly-implement-members-of-two-interfaces.md
+ms.openlocfilehash: e57ba8a9916b35c4bfdedba8f720615ea1eaf727
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470742"

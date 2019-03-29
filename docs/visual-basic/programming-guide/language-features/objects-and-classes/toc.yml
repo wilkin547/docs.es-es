@@ -1,0 +1,30 @@
+items:
+- name: Objetos y clases
+  href: index.md
+  items:
+  - name: 'Tutorial: Definir clases'
+    href: walkthrough-defining-classes.md
+  - name: Propiedades y métodos sobrecargados
+    href: overloaded-properties-and-methods.md
+  - name: Fundamentos de la herencia
+    href: inheritance-basics.md
+  - name: 'Duración de los objetos: cómo se crean y destruyen'
+    href: object-lifetime-how-objects-are-created-and-destroyed.md
+  - name: 'Inicializadores de objeto: tipos con nombre y anónimos'
+    href: object-initializers-named-and-anonymous-types.md
+    items:
+    - name: Procedimiento para declarar un objeto mediante un inicializador de objeto
+      href: how-to-declare-an-object-by-using-an-object-initializer.md
+  - name: Tipos anónimos
+    href: anonymous-types.md
+    items:
+    - name: Procedimiento para deducir tipos y nombres de propiedades en declaraciones de tipos anónimos
+      href: how-to-infer-property-names-and-types-in-anonymous-type-declarations.md
+    - name: Definición de tipo anónimo
+      href: anonymous-type-definition.md
+ms.openlocfilehash: e048ae6781560ee70ff6121814f5ad93b6ea30f4
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469902"

@@ -1,0 +1,18 @@
+items:
+- name: Árboles de expresión
+  href: index.md
+  items:
+  - name: Procedimiento para ejecutar árboles de expresión
+    href: how-to-execute-expression-trees.md
+  - name: Procedimiento para modificar árboles de expresión
+    href: how-to-modify-expression-trees.md
+  - name: Procedimiento para usar árboles de expresión para crear consultas dinámicas
+    href: how-to-use-expression-trees-to-build-dynamic-queries.md
+  - name: Depuración de árboles de expresión en Visual Studio
+    href: debugging-expression-trees-in-visual-studio.md
+ms.openlocfilehash: 4f5abd220c0835eec40fd815088ef5dca1dca417
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470583"

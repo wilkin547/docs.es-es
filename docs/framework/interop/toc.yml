@@ -1,0 +1,122 @@
+items:
+- name: Interoperar con código no administrado
+  href: index.md
+  items:
+  - name: Exponer componentes COM en .NET Framework
+    href: exposing-com-components.md
+    items:
+    - name: Importar una biblioteca de tipos como un ensamblado
+      href: importing-a-type-library-as-an-assembly.md
+    - name: Procedimiento para agregar referencias a bibliotecas de tipos
+      href: how-to-add-references-to-type-libraries.md
+    - name: Procedimiento para generar ensamblados de interoperabilidad a partir de bibliotecas de tipos
+      href: how-to-generate-interop-assemblies-from-type-libraries.md
+    - name: Compilar un proyecto de interoperabilidad
+      href: compiling-an-interop-project.md
+    - name: Implementar una aplicación interoperativa
+      href: deploying-an-interop-application.md
+    - name: 'Ejemplo de interoperabilidad COM: cliente .NET y servidor COM'
+      href: com-interop-sample-net-client-and-com-server.md
+  - name: Exponer componentes de .NET Framework en COM
+    href: exposing-dotnet-components-to-com.md
+    items:
+    - name: Habilitar tipos de .NET para la interoperación
+      href: qualifying-net-types-for-interoperation.md
+    - name: Aplicar atributos de interoperabilidad
+      href: applying-interop-attributes.md
+    - name: Empaquetar un ensamblado para COM
+      href: packaging-an-assembly-for-com.md
+    - name: Registrar ensamblados con COM
+      href: registering-assemblies-with-com.md
+    - name: Procedimiento para hacer referencia a tipos de .NET desde COM
+      href: how-to-reference-net-types-from-com.md
+    - name: 'Ejemplo de interoperabilidad COM: Cliente COM y servidor .NET'
+      href: com-interop-sample-com-client-and-net-server.md
+  - name: Consumir funciones DLL no administradas
+    href: consuming-unmanaged-dll-functions.md
+    items:
+    - name: Identificar funciones en archivos DLL
+      href: identifying-functions-in-dlls.md
+    - name: Crear una clase para contener funciones de archivos DLL
+      href: creating-a-class-to-hold-dll-functions.md
+    - name: Crear prototipos en código administrado
+      href: creating-prototypes-in-managed-code.md
+      items:
+      - name: Especificar un punto de entrada
+        href: specifying-an-entry-point.md
+      - name: Especificar un juego de caracteres
+        href: specifying-a-character-set.md
+      - name: Ejemplos de invocación de plataforma
+        href: platform-invoke-examples.md
+    - name: Llamar a una función DLL
+      href: calling-a-dll-function.md
+      items:
+      - name: Pasar estructuras
+        href: passing-structures.md
+      - name: Funciones de devolución de llamada
+        href: callback-functions.md
+      - name: Procedimiento para implementar funciones de devolución de llamada
+        href: how-to-implement-callback-functions.md
+  - name: Serialización de interoperabilidad
+    href: interop-marshaling.md
+    items:
+    - name: Comportamiento de serialización predeterminado
+      href: default-marshaling-behavior.md
+      items:
+      - name: Tipos que pueden o que no pueden transferirse en bloque de bits
+        href: blittable-and-non-blittable-types.md
+      - name: Copiar y fijar
+        href: copying-and-pinning.md
+      - name: Cálculo de referencias predeterminado para matrices
+        href: default-marshaling-for-arrays.md
+      - name: Serialización predeterminada para objetos
+        href: default-marshaling-for-objects.md
+      - name: Cálculo de referencias predeterminado para cadenas
+        href: default-marshaling-for-strings.md
+    - name: Serialización de datos con invocación de plataforma
+      href: marshaling-data-with-platform-invoke.md
+      items:
+      - name: Serialización de cadenas
+        href: marshaling-strings.md
+      - name: Ejemplo MsgBox
+        href: msgbox-sample.md
+      - name: Calcular las referencias de clases, estructuras y uniones
+        href: marshaling-classes-structures-and-unions.md
+      - name: Cálculo de referencias de tipos diferentes de matrices
+        href: marshaling-different-types-of-arrays.md
+      - name: Calcular las referencias de un delegado como un método de devolución de llamada
+        href: marshaling-a-delegate-as-a-callback-method.md
+    - name: serialización de datos con la interoperabilidad COM
+      href: marshaling-data-with-com-interop.md
+      items:
+      - name: Procedimiento para la creación manual de contenedores
+        href: how-to-create-wrappers-manually.md
+      - name: Procedimiento Migrar código administrado DCOM a WCF
+        href: how-to-migrate-managed-code-dcom-to-wcf.md
+  - name: Procedimiento para asignar resultados HRESULT y excepciones
+    href: how-to-map-hresults-and-exceptions.md
+  - name: Contenedores COM
+    href: com-wrappers.md
+    items:
+    - name: Contenedor al que se puede llamar en tiempo de ejecución
+      href: runtime-callable-wrapper.md
+    - name: Contenedor CCW
+      href: com-callable-wrapper.md
+    - name: Procedimiento para crear contenedores COM
+      href: how-to-create-com-wrappers.md
+  - name: Equivalencia de tipos y tipos de interoperabilidad insertados
+    href: type-equivalence-and-embedded-interop-types.md
+  - name: Procedimiento para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
+    href: how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md
+  - name: Procedimiento para registrar ensamblados de interoperabilidad primarios
+    href: how-to-register-primary-interop-assemblies.md
+  - name: Interoperabilidad COM sin registro
+    href: registration-free-com-interop.md
+  - name: Procedimiento para configurar componentes COM basados en .NET Framework para la activación sin registro
+    href: configure-net-framework-based-com-components-for-reg.md
+ms.openlocfilehash: be9d4bcdaeb8b7389d72bddfa36e1594b5149ce4
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469783"

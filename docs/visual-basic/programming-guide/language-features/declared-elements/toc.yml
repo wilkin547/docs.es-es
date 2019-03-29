@@ -1,0 +1,42 @@
+items:
+- name: Elementos declarados
+  href: index.md
+  items:
+  - name: Declared Element Names
+    href: declared-element-names.md
+  - name: Características de los elementos declarados
+    href: declared-element-characteristics.md
+    items:
+    - name: Período de duración
+      href: lifetime.md
+    - name: Ámbito
+      href: scope.md
+      items:
+      - name: Procedimiento para controlar el ámbito de una variable
+        href: how-to-control-the-scope-of-a-variable.md
+      - name: Promoción de tipos
+        href: type-promotion.md
+    - name: Niveles de acceso
+      href: access-levels.md
+      items:
+      - name: Procedimiento para controlar la disponibilidad de una variable
+        href: how-to-control-the-availability-of-a-variable.md
+    - name: References to Declared Elements
+      href: references-to-declared-elements.md
+    - name: Sombreado
+      href: shadowing.md
+      items:
+      - name: Diferencias entre sombrear y reemplazar
+        href: differences-between-shadowing-and-overriding.md
+      - name: Procedimiento para ocultar una variable con el mismo nombre que su variable
+        href: how-to-hide-a-variable-with-the-same-name-as-your-variable.md
+      - name: Procedimiento para ocultar una variable heredada
+        href: how-to-hide-an-inherited-variable.md
+      - name: Procedimiento para obtener acceso a una variable que se encuentra oculta por una clase derivada
+        href: how-to-access-a-variable-hidden-by-a-derived-class.md
+ms.openlocfilehash: d747436df2e7ad7187e39808ea19d64ac1b082fc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469870"

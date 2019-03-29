@@ -1,0 +1,57 @@
+items:
+- name: Cadenas en Visual Basic
+  href: index.md
+  items:
+  - name: Introducción a las cadenas
+    href: introduction-to-strings.md
+    items:
+    - name: Fundamentos de las cadenas
+      href: string-basics.md
+    - name: Tipos de métodos de manipulación de cadenas
+      href: types-of-string-manipulation-methods.md
+    - name: Nothing y cadenas
+      href: nothing-and-strings.md
+    - name: Cómo afecta la referencia cultural a las cadenas
+      href: how-culture-affects-strings.md
+    - name: Cadenas interpoladas
+      href: interpolated-strings.md
+    - name: Acceso a cadenas basado en cero y basado en uno
+      href: zero-based-vs-one-based-string-access.md
+  - name: Procedimiento para crear cadenas mediante StringBuilder
+    href: how-to-create-strings-using-a-stringbuilder.md
+  - name: Procedimiento para buscar en una cadena
+    href: how-to-search-within-a-string.md
+  - name: Conversión entre cadenas y otros tipos de datos
+    href: converting-between-strings-and-other-data-types.md
+    items:
+    - name: Procedimiento para convertir una matriz de bytes en una cadena
+      href: how-to-convert-an-array-of-bytes-into-a-string.md
+    - name: Procedimiento para convertir cadenas en una matriz de bytes
+      href: how-to-convert-strings-into-an-array-of-bytes.md
+    - name: Procedimiento para crear una cadena a partir de una matriz de valores de caracteres
+      href: how-to-create-a-string-from-an-array-of-char-values.md
+    - name: Procedimiento para convertir cadenas hexadecimales en números
+      href: how-to-convert-hexadecimal-strings-to-numbers.md
+    - name: Procedimiento para convertir una cadena en una matriz de caracteres
+      href: how-to-convert-a-string-to-an-array-of-characters.md
+    - name: Procedimiento para obtener acceso a caracteres de cadenas
+      href: how-to-access-characters-in-strings.md
+  - name: Validación de cadenas
+    href: validating-strings.md
+    items:
+    - name: Procedimiento para validar rutas de acceso y nombres de archivo
+      href: how-to-validate-file-names-and-paths.md
+    - name: Procedimiento para validar cadenas que representan fechas u horas
+      href: how-to-validate-strings-that-represent-dates-or-times.md
+    - name: Uso de expresiones regulares con el control MaskedTextBox
+      href: using-regular-expressions-with-the-maskedtextbox-control.md
+    - name: 'Tutorial: Validar la complejidad de las contraseñas'
+      href: walkthrough-validating-that-passwords-are-complex.md
+  - name: 'Tutorial: Cifrar y descifrar cadenas'
+    href: walkthrough-encrypting-and-decrypting-strings.md
+ms.openlocfilehash: 2c148e2d34ef032785f1ccd723fb1d8aad136332
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470558"
