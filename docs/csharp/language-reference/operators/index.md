@@ -131,9 +131,9 @@ Estos operadores tienen mayor precedencia que los de la sección siguiente y men
 
 Estos operadores tienen mayor precedencia que los de la sección siguiente y menor que el de la anterior.
 
-[x == y](equality-comparison-operator.md): igualdad. De forma predeterminada, para los tipos de referencia distintos de `string`, devuelve igualdad de referencia (prueba de identidad). Sin embargo, los tipos pueden sobrecargar `==`, por lo que si su intención es probar la identidad, es mejor usar el método `ReferenceEquals` en `object`.
+[x == y](equality-operators.md#equality-operator-): igualdad. De forma predeterminada, para los tipos de referencia distintos de `string`, devuelve igualdad de referencia (prueba de identidad). Sin embargo, los tipos pueden sobrecargar `==`, por lo que si su intención es probar la identidad, es mejor usar el método `ReferenceEquals` en `object`.
 
-[x != y](not-equal-operator.md): distinto de. Vea el comentario de `==`. Si un tipo sobrecarga `==`, debe sobrecargar `!=`.
+[x != y](equality-operators.md#inequality-operator-): distinto de. Vea el comentario de `==`. Si un tipo sobrecarga `==`, debe sobrecargar `!=`.
 
 ## <a name="logical-and-operator"></a>AND lógico (operador)
 
