@@ -2,12 +2,12 @@
 title: Propiedades
 description: Obtenga información sobre F# propiedades, que son miembros que representan los valores asociados a un objeto.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8e74e0bc0850b5f07c4697f624d5393813bec6e0
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: bf605ee1135bd3b3561bde9a8ae66353497931b0
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614511"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675697"
 ---
 # <a name="properties"></a>Propiedades
 
@@ -103,7 +103,7 @@ class1.ExplicitProperty = 1131210765
 El resultado del código anterior muestra que el valor de AutoProperty no cambia cuando se llama varias veces, mientras que el ExplicitProperty cambia cada vez que se llama. Esto demuestra que la expresión para una propiedad implementada automáticamente no se evalúa cada vez, como es el método Get para la propiedad explícita.
 
 >[!WARNING]
-Hay algunas bibliotecas, como Entity Framework (`System.Data.Entity`) que realizan las operaciones personalizadas en los constructores de clase base que no funcionan bien con la inicialización de las propiedades implementadas automáticamente. En esos casos, pruebe a usar las propiedades explícitas.
+>Hay algunas bibliotecas, como Entity Framework (`System.Data.Entity`) que realizan las operaciones personalizadas en los constructores de clase base que no funcionan bien con la inicialización de las propiedades implementadas automáticamente. En esos casos, pruebe a usar las propiedades explícitas.
 
 Las propiedades pueden ser miembros de clases, estructuras, uniones discriminadas, registros, interfaces y las extensiones de tipo y también se pueden definir en expresiones de objeto.
 

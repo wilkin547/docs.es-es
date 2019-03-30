@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862321"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654099"
 ---
 # <a name="profiling-overview"></a>Información general sobre la generación de perfiles
 <a name="top"></a> Un generador de perfiles es una herramienta que supervisa la ejecución de otra aplicación. Un generador de perfiles de Common Language Runtime (CLR) es una biblioteca de vínculos dinámicos (DLL) compuesta de funciones que intercambian mensajes con el CLR utilizando la API de generación de perfiles. CLR carga en tiempo de ejecución la DLL del generador de perfiles.  
@@ -78,8 +78,7 @@ ms.locfileid: "43862321"
   
  La ilustración siguiente muestra cómo interactúa la DLL del generador de perfiles con la aplicación para la que se está generando el perfil y CLR.  
   
- ![Arquitectura de generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/media/profilingarch.png "ProfilingArch")  
-Arquitectura de generación de perfiles  
+ ![Captura de pantalla que muestra la arquitectura de generación de perfiles.](./media/profiling-overview/profiling-architecture.png)  
   
 ### <a name="the-notification-interfaces"></a>Las interfaces de notificación  
  [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) y [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) pueden considerarse interfaces de notificación. Estas interfaces constan de métodos como [ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md), y [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md). Cada vez que CLR carga o descarga una clase, compila una función, etc., llama al método correspondiente de la interfaz `ICorProfilerCallback` o `ICorProfilerCallback2` del generador de perfiles.  
@@ -131,7 +130,7 @@ Arquitectura de generación de perfiles
   
  La API de generación de perfiles es útil tanto para los generadores de perfiles de muestreo como no de muestreo. Un *generador de perfiles de muestreo* inspecciona el perfil a intervalos regulares del reloj, digamos, 5 milisegundos. Un *generador de perfiles de muestreo no* se informa de un evento sincrónicamente con el subproceso que provoca el evento.  
   
-### <a name="unsupported-functionality"></a>Funcionalidad no admitida  
+### <a name="unsupported-functionality"></a>Funcionalidad incompatible  
  La API de generación de perfiles no admite la funcionalidad siguiente:  
   
 -   Código no administrado, que se debe perfilar usando métodos de Win32 convencionales. Sin embargo, el generador de perfiles de CLR incluye eventos de transición para determinar los límites entre el código administrado y no administrado.  

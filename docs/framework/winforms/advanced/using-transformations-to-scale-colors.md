@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: ea4abc38968b929412945cddaca3ca3fe6f377d6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9255dd4adba19bfef1332e5e3dfa463ee96f43f0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707435"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653995"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Utilizar transformaciones para ajustar la escala de los colores
 Una transformación de escala multiplica uno o varios de los cuatro componentes de color por un número. En la siguiente tabla figuran las entradas de la matriz de color que representan el escalado.  
@@ -31,9 +31,9 @@ Una transformación de escala multiplica uno o varios de los cuatro componentes 
  [!code-csharp[System.Drawing.RecoloringImages#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.RecoloringImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
   
- La siguiente ilustración muestra la imagen original a la izquierda y la imagen ajustada a la derecha.  
+ La siguiente ilustración muestra la imagen original a la izquierda y la imagen de la derecha:  
   
- ![Escala de colores](./media/colortrans3.png "colortrans3")  
+ ![Captura de pantalla que compara los colores originales y se escalan.](./media/using-transformations-to-scale-colors/four-bar-scale-one-color.png)  
   
  En la tabla siguiente se enumera los vectores de color de las cuatro barras antes y después de ajustar el azul. Tenga en cuenta que el componente azul de la cuarta barra de color pasó de 0,8 a 0,6. Eso es porque [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] conserva sólo la parte fraccionaria del resultado. Por ejemplo, (2)(0.8) = 1.6, y la parte fraccionaria de 1,6 es 0,6. Conservar solo la parte fraccionaria garantiza que el resultado es siempre en el intervalo [0, 1].  
   
@@ -50,9 +50,9 @@ Una transformación de escala multiplica uno o varios de los cuatro componentes 
  [!code-csharp[System.Drawing.RecoloringImages#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
  [!code-vb[System.Drawing.RecoloringImages#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
   
- La siguiente ilustración muestra la imagen original a la izquierda y la imagen ajustada a la derecha.  
+ La siguiente ilustración muestra la imagen original a la izquierda y la imagen de la derecha:  
   
- ![Escala de colores](./media/colortrans4.png "colortrans4")  
+ ![Captura de pantalla que compara los colores originales y se escalan.](./media/using-transformations-to-scale-colors/four-bar-scale-multiple-colors.png)  
   
  En la tabla siguiente se enumera los vectores de color de las cuatro barras antes y después de la escala de color rojo, verde y azul.  
   
