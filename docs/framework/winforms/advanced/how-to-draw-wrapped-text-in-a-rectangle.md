@@ -9,21 +9,21 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-ms.openlocfilehash: 5c4e76cda37527d0167b21c0d206749ba6dab4a9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 35eca2fc0fe40db1b590f4c599baee01c9a9faf3
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708865"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654538"
 ---
-# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Procedimiento Dibujar texto ajustado en un rectángulo
+# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Filtrar Dibujar texto ajustado en un rectángulo
 Puede dibujar texto ajustado en un rectángulo mediante el uso de la <xref:System.Drawing.Graphics.DrawString%2A> sobrecargar el método de la <xref:System.Drawing.Graphics> clases que toman un <xref:System.Drawing.Rectangle> o <xref:System.Drawing.RectangleF> parámetro. También se puede utilizar un <xref:System.Drawing.Brush> y un <xref:System.Drawing.Font>.  
   
  También puede dibujar texto ajustado en un rectángulo mediante el uso de la <xref:System.Windows.Forms.TextRenderer.DrawText%2A> sobrecargar el método de la <xref:System.Windows.Forms.TextRenderer> que toma un <xref:System.Drawing.Rectangle> y un <xref:System.Windows.Forms.TextFormatFlags> parámetro. También se puede utilizar un <xref:System.Drawing.Color> y un <xref:System.Drawing.Font>.  
   
- La siguiente ilustración muestra el resultado del texto dibujado en el rectángulo, cuando se usa el <xref:System.Drawing.Graphics.DrawString%2A> método.  
+ La siguiente ilustración muestra el resultado del texto dibujado en el rectángulo, cuando se usa el <xref:System.Drawing.Graphics.DrawString%2A> método:
   
- ![Texto de las fuentes](./media/csfontstext2.png "csfontstext2")  
+ ![Captura de pantalla que muestra el resultado cuando se usa el método DrawString.](./media/how-to-draw-wrapped-text-in-a-rectangle/drawstring-method-font-text.png)  
   
 ### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>Para dibujar texto ajustado en un rectángulo con GDI +  
   

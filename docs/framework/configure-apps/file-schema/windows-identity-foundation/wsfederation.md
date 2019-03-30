@@ -3,12 +3,12 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 801970ec05fc88587a5b45b5bb3a855d1a81afb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de79ad6447fe67afc596783eff3fa3e6a02b600c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356096"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654593"
 ---
 # <a name="wsfederation"></a>\<wsFederation>
 Proporciona la configuración de la <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
@@ -52,7 +52,7 @@ Proporciona la configuración de la <xref:System.IdentityModel.Services.WSFedera
 |---------------|-----------------|  
 |authenticationType|Un URI que especifica el tipo de autenticación. Establece el parámetro wauth de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que el parámetro wauth no está incluido en la solicitud.|  
 |índice de actualización|La antigüedad máxima deseada de las solicitudes de autenticación, en minutos. Establece el parámetro wfresh de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es cero. Opcional. **Advertencia:**  En la próxima versión de .NET Framework 4.5, el `freshness` será el atributo de tipo `xs:string` y su valor predeterminado será `null`.|  
-|homeRealm|El dominio de inicio del proveedor de identidades (IP) que se usará para la autenticación. Establece el parámetro whr de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que el parámetro whr no está incluido en la solicitud.|  
+|homeRealm|El dominio de inicio del proveedor de identidades (IdP) que se usará para la autenticación. Establece el parámetro whr de solicitud de inicio de sesión de WS-Federation. Opcional. El valor predeterminado es una cadena vacía, que especifica que el parámetro whr no está incluido en la solicitud.|  
 |issuer|El URI del emisor del token previsto. Establece las solicitudes de inicio de sesión de dirección URL de WS-Federation base y las solicitudes de cierre de sesión necesarias.|  
 |persistentCookiesOnPassiveRedirects|Especifica si se emiten cookies persistentes en la autenticación. Opcional. El valor predeterminado es "false", no se emiten cookies.|  
 |passiveRedirectEnabled|Especifica si está habilitado el WSFAM redirigir automáticamente las solicitudes no autorizadas a un STS. Opcional. El valor predeterminado es "true", las solicitudes no autorizadas se redirigen automáticamente.|  

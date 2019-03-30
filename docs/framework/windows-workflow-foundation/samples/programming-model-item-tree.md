@@ -2,12 +2,12 @@
 title: Programar el árbol de elementos de modelo
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: 9a2af628e10d8b04a91c4f6565dfa1d0d879e870
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 428012cf483595a280ef70b488ed1f344474948a
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714754"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653852"
 ---
 # <a name="programming-model-item-tree"></a>Programar el árbol de elementos de modelo
 Este ejemplo muestra cómo navegar por la <xref:System.Activities.Presentation.Model.ModelItem> árbol mediante enlace de datos declarativo de la vista de árbol de Windows Presentation Foundation (WPF).
@@ -15,7 +15,7 @@ Este ejemplo muestra cómo navegar por la <xref:System.Activities.Presentation.M
 ## <a name="sample-details"></a>Detalles del ejemplo
  El árbol <xref:System.Activities.Presentation.Model.ModelItem> es la abstracción que usa la infraestructura de [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] para mostrar los datos sobre la instancia subyacente que se está editando. La siguiente ilustración describe los diferentes niveles de infraestructura dentro de [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].
 
- ![Arquitectura del Diseñador de flujo de trabajo](./media/workflowdesignerarch.JPG "WorkflowDesignerArch")
+ ![Diagrama que muestra la arquitectura del Diseñador de flujo de trabajo.](./media/programming-model-item-tree/workflow-designer-architecture.jpg)
 
  Un objeto <xref:System.Activities.Presentation.Model.ModelItem> consta de un puntero al valor subyacente, así como de una colección de objetos <xref:System.Activities.Presentation.Model.ModelProperty>. Un objeto <xref:System.Activities.Presentation.Model.ModelProperty> a su vez consta de datos como el nombre y tipo de la propiedad, y un puntero al valor que, a su vez, es otro objeto <xref:System.Activities.Presentation.Model.ModelItem>. Se utiliza un convertidor de valores para manipular algunos de los objetos <xref:System.Activities.Presentation.Model.ModelItem> que devuelve <xref:System.Activities.Presentation.Model.ModelProperty> para que aparezcan correctamente en la vista de árbol. A continuación, el ejemplo muestra cómo programar de manera imperativa en el árbol <xref:System.Activities.Presentation.Model.ModelItem> utilizando la sintaxis imperativa, tal y como se puede ver en el siguiente ejemplo.
 

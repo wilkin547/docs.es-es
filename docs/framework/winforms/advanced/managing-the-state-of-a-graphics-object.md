@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a0166d2ee5a16916fdc2ece95eaf130ebd2598d5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717627"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653787"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Administrar el estado de un objeto Graphics
 El <xref:System.Drawing.Graphics> clase es la esencia de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Para dibujar algo, obtendrá un <xref:System.Drawing.Graphics> objeto, establecer sus propiedades y llamar a sus métodos <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>etc.).  
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  La siguiente ilustración muestra las dos elipses. Tenga en cuenta que la rotación de 30 grados sobre el origen del sistema de coordenadas (esquina superior izquierda del área de cliente), pero no los centros de los puntos suspensivos. Tenga en cuenta también que el ancho del lápiz de 1 significa 1 píxel de la primera elipse y 1 milímetro para la segunda.  
   
- ![Óvalos](./media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![Ilustración que muestra dos elipses: ancho de rotación y el lápiz.](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
   
 ### <a name="clipping-region"></a>Región de recorte  
  Un <xref:System.Drawing.Graphics> objeto mantiene una región de recorte que se aplica a todos los elementos dibujados por el que <xref:System.Drawing.Graphics> objeto. Puede establecer la región de recorte mediante una llamada a la <xref:System.Drawing.Graphics.SetClip%2A> método.  
@@ -146,9 +146,9 @@ graphics.DrawLine(pen, 0, 30, 150, 160);
 graphics.DrawLine(pen, 40, 20, 190, 150);  
 ```  
   
- La ilustración siguiente muestra las líneas recortadas.  
+ La siguiente ilustración muestra las líneas recortadas:  
   
- ![Limita la región de recorte](./media/graphicsascon2.png "graphicsascon2")  
+ ![Diagrama que muestra la región de recorte limitada.](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
   
 ## <a name="see-also"></a>Vea también
 - [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)

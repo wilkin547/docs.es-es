@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Mejorar el rendimiento evitando el ajuste de escala automática
+title: Filtrar Mejorar el rendimiento evitando el ajuste de escala automática
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: b8238a4f0ce482d63ab33833c4bceaaa2814253d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705351"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653800"
 ---
-# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Procedimiento Mejorar el rendimiento evitando el ajuste de escala automática
+# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Filtrar Mejorar el rendimiento evitando el ajuste de escala automática
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] puede escalar automáticamente una imagen como dibujar, lo que reduciría el rendimiento. Como alternativa, puede controlar la escala de la imagen pasando las dimensiones del rectángulo de destino para el <xref:System.Drawing.Graphics.DrawImage%2A> método.  
   
  Por ejemplo, la llamada siguiente a la <xref:System.Drawing.Graphics.DrawImage%2A> método especifica una esquina superior izquierda de (50, 30) pero no especifica un rectángulo de destino.  
@@ -30,15 +30,15 @@ ms.locfileid: "57705351"
  Incluso si difiere la resolución de pantalla de 96 puntos por pulgada, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] probablemente escala la imagen como si tratara de la resolución de pantalla de 96 puntos por pulgada. Eso es porque una [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> objeto está asociado con un contexto de dispositivo y cuándo [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] consultas el contexto de dispositivo para la resolución de pantalla, el resultado suele ser 96, independientemente de la resolución de pantalla real. Puede evitar el escalado automático mediante la especificación de rectángulo de destino en el <xref:System.Drawing.Graphics.DrawImage%2A> método.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente dibuja la misma imagen dos veces. En el primer caso, no se especifican el ancho y alto del rectángulo de destino y la imagen se escala automáticamente. En el segundo caso, el ancho y alto (medido en píxeles) del rectángulo de destino se especifican para ser igual que el ancho y alto de la imagen original. La siguiente ilustración muestra la imagen representada dos veces.  
+ El ejemplo siguiente dibuja la misma imagen dos veces. En el primer caso, no se especifican el ancho y alto del rectángulo de destino y la imagen se escala automáticamente. En el segundo caso, el ancho y alto (medido en píxeles) del rectángulo de destino se especifican para ser igual que el ancho y alto de la imagen original. La siguiente ilustración muestra la imagen representada dos veces:  
   
- ![Textura de escala](./media/csscaledtexture1.png "csscaledtexture1")  
+ ![Captura de pantalla que muestra imágenes con textura ajustada.](./media/how-to-improve-performance-by-avoiding-automatic-scaling/two-scaled-texture-images.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>. Reemplace Texture.jpg por un nombre de la imagen y la ruta de acceso que son válidos en el sistema.  
+ El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos. Reemplace Texture.jpg por un nombre de la imagen y la ruta de acceso que son válidos en el sistema.  
   
 ## <a name="see-also"></a>Vea también
 - [Imágenes, mapas de bits y metarchivos](images-bitmaps-and-metafiles.md)

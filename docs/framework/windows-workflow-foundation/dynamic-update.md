@@ -2,12 +2,12 @@
 title: actualización dinámica
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: a1d5337bf69cb87d790ce4074cde4c18c989a4d8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e28a34e500034eec6cf250d94cf7631ca85a7d40
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724485"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653891"
 ---
 # <a name="dynamic-update"></a>actualización dinámica
 
@@ -101,7 +101,7 @@ using (FileStream fs = System.IO.File.Open(@"C:\WorkflowDefinitions\MortgageWork
 }
 ```
 
-Cuando <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> vuelve, se quita la definición de flujo de trabajo clonada y otra información de actualización dinámica que se agregó en la llamada a <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> y la definición de flujo de trabajo modificada está lista para guardarse de forma que se pueda usar más adelante cuando se reanuden instancias de flujo de trabajo actualizadas. En el ejemplo siguiente, la definición de flujo de trabajo modificada se guarda en `MortgageWorkflow_v2.xaml`.
+Cuando <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> vuelve, se quita la definición de flujo de trabajo clonada y otra información de actualización dinámica que se agregó en la llamada a <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> y la definición de flujo de trabajo modificada está lista para guardarse de forma que se pueda usar más adelante cuando se reanuden instancias de flujo de trabajo actualizadas. En el ejemplo siguiente, la definición de flujo de trabajo modificada se guarda en `MortgageWorkflow_v1.1.xaml`.
 
 ```csharp
 // Save the modified workflow definition.

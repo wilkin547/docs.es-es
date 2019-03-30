@@ -1,5 +1,5 @@
 ---
-title: 'Duración del objeto: Cómo los objetos se crean y destruyen (Visual Basic)'
+title: 'Duración de los objetos: Cómo los objetos se crean y destruyen (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Constructor
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: e6274f470e042fa5d581a574d13bd67ae8e8d6e9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 582988c9eed19fe49bc86e75e7a9d80bbf2a6d59
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979468"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654541"
 ---
-# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Duración del objeto: Cómo los objetos se crean y destruyen (Visual Basic)
+# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Duración de los objetos: Cómo los objetos se crean y destruyen (Visual Basic)
 Mediante el uso de la palabra clave `New` se crea una instancia de una clase, un objeto. A menudo, las tareas de inicialización deben realizarse en los objetos nuevos antes de utilizarlos. Las tareas de inicialización comunes incluyen abrir archivos, conectarse a bases de datos y leer los valores de las claves del registro. Visual Basic controla la inicialización de objetos nuevos mediante procedimientos denominados *constructores* (métodos especiales que permiten controlar la inicialización).  
   
  Después de que un objeto abandone el ámbito, se libera por Common Language Runtime (CLR). Visual Basic controla la liberación de recursos del sistema mediante procedimientos denominados *destructores*. Juntos, los constructores y los destructores permiten la creación de bibliotecas de clases completas y predecibles.  
@@ -70,11 +70,11 @@ Mediante el uso de la palabra clave `New` se crea una instancia de una clase, un
   
  Cuando se crea una instancia de una clase derivada, se ejecuta primero el constructor `Sub New` de la clase base, seguido de los constructores de las clases derivadas. Esto se debe a que la primera línea de código de un constructor `Sub New` utiliza la sintaxis `MyBase.New()` para llamar al constructor de la clase que se encuentra inmediatamente encima en la jerarquía de clases. A continuación, se llama al constructor `Sub New` para cada clase de la jerarquía de clases hasta que se alcanza el constructor de la clase base. En ese momento, se ejecuta el código en el constructor de la clase base, seguido del código en cada constructor de todas las clases derivadas y, en último lugar, se ejecuta el código de las clases más derivadas.  
   
- ![Los constructores y herencia](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance.gif "vaConstructorsInheritance")  
+ ![Captura de pantalla que muestra herencia y constructores de la jerarquía de clases.](./media/object-lifetime-how-objects-are-created-and-destroyed/subnew-constructor-inheritance.gif)  
   
  Cuando un objeto ya no es necesario, CLR llama al método <xref:System.Object.Finalize%2A> para ese objeto antes de liberar su memoria. El método <xref:System.Object.Finalize%2A> se denomina `destructor`, ya que realiza tareas de limpieza, como guardar información de estado, cerrar archivos y conexiones a bases de datos, y otras tareas que deben realizarse antes de liberar el objeto.  
   
- ![Constructores y herencia 2](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance_2.gif "vaConstructorsInheritance_2")  
+ ![Captura de pantalla que muestra el destructor del método Finalize.](./media/object-lifetime-how-objects-are-created-and-destroyed/finalize-method-destructor.gif)  
   
 ## <a name="idisposable-interface"></a>Interfaz IDisposable  
  Las instancias de clase suelen controlar los recursos no administrados por CLR, como identificadores de ventanas y conexiones de base de datos. Estos recursos deben eliminarse en el método `Finalize` de la clase, para que se liberen cuando el recolector de elementos no utilizados destruya el objeto. Sin embargo, el recolector de elementos no utilizados solo destruye objetos cuando CLR requiere más memoria libre. Esto significa que los recursos podrían no liberarse hasta mucho después de que el objeto haya salido del ámbito.  

@@ -2,12 +2,12 @@
 title: Expresiones de consulta
 description: Obtenga información sobre la compatibilidad con expresiones de consulta de LINQ en el F# lenguaje de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8fd3e2d4cfbbe890fe3b04b2676eb1d5bbc087a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1a6450bdcec4240fac58f6c27af2298dfd7f45a2
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463233"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654827"
 ---
 # <a name="query-expressions"></a>Expresiones de consulta
 
@@ -60,7 +60,7 @@ Tabla 1 muestra los operadores de consulta disponibles. Además, vea Table2, que
 
 Esta tabla presupone una base de datos de la forma siguiente:
 
-![Diagrama de base de datos de ejemplo](../media/StudentCourseDB.png)
+![Diagrama que muestra una base de datos de ejemplo.](./media/query-expressions/student-course-database.png)
 
 El código en las siguientes tablas también supone el siguiente código de conexión de base de datos. Los proyectos deben agregar referencias a ensamblados System.Data, System.Data.Linq y FSharp.Data.TypeProviders. El código que crea esta base de datos se incluye al final de este tema.
 

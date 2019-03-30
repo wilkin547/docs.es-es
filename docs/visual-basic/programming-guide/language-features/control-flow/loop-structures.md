@@ -10,20 +10,19 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: b72eef632b4564abc69e6ebef43b940eb0950e9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c09c0bdee0e8740abb7cc085f0796048a5db150c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523394"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654372"
 ---
 # <a name="loop-structures-visual-basic"></a>Estructuras de bucles (Visual Basic)
 Estructuras de bucle de Visual Basic permiten ejecutar repetidamente una o varias líneas de código. Puede repetir las instrucciones en una estructura de bucle hasta que una condición es `True`, hasta que una condición es `False`, un número de veces o una vez por cada elemento especificado en una colección.  
   
- La siguiente ilustración muestra una estructura de bucle que se ejecuta un conjunto de instrucciones hasta que una condición sea true.  
+ La siguiente ilustración muestra una estructura de bucle que se ejecuta un conjunto de instrucciones hasta que una condición sea true:  
   
- ![Diagrama de flujo de un bucle Do... Bucle Until](../../../../visual-basic/programming-guide/language-features/control-flow/media/dountilloop.gif "DoUntilLoop")  
-Ejecución de un conjunto de instrucciones hasta que una condición sea true  
+ ![Diagrama de flujo que muestra una... Hasta el bucle.](./media/loop-structures/do-until-loop-true-condition.gif)  
   
 ## <a name="while-loops"></a>Bucles while  
  El `While`... `End While` construcción ejecuta un conjunto de instrucciones mientras la condición especificada en el `While` instrucción es `True`. Para obtener más información, consulte [mientras... End While (instrucción)](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  

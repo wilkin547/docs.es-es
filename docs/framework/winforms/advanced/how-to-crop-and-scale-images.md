@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Recortar y escalar imágenes
+title: Filtrar Recortar y escalar imágenes
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: 95343ad2c7bc6a83bc4d935f33712ab910d658ff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff0567dca0fd86736e02a9dd827ec15df8bf2df8
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705823"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654502"
 ---
 # <a name="how-to-crop-and-scale-images"></a>Filtrar Recortar y escalar imágenes
 El <xref:System.Drawing.Graphics> clase proporciona varios <xref:System.Drawing.Graphics.DrawImage%2A> métodos, algunos de los cuales tienen parámetros de rectángulo de origen y destino que pueden usar para recortar y escalar imágenes.  
@@ -27,13 +27,13 @@ El <xref:System.Drawing.Graphics> clase proporciona varios <xref:System.Drawing.
   
  La ilustración siguiente muestra la manzana original y la escala y recorta apple.  
   
- ![E & scala de recorte](./media/cscropscale1.png "csCropScale1")  
+ ![Captura de pantalla de una imagen original y la misma imagen recortada.](./media/how-to-crop-and-scale-images/original-image-cropped-image.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.WorkingWithImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>. No olvide reemplazar `Apple.gif` con un nombre de archivo de imagen y la ruta de acceso que son válidos en el sistema.  
+ El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos. No olvide reemplazar `Apple.gif` con un nombre de archivo de imagen y la ruta de acceso que son válidos en el sistema.  
   
 ## <a name="see-also"></a>Vea también
 - [Imágenes, mapas de bits y metarchivos](images-bitmaps-and-metafiles.md)
