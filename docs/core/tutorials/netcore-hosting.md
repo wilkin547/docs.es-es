@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo hospedar el entorno de tiempo de e
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 78eb4bb1f0dfb1b2469b69f2b90b9bacc66754aa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 27717cd68d2ef7c19289a9e06f99bb8767f2f582
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980378"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654060"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escritura de un host personalizado de .NET Core para controlar el entorno de tiempo de ejecución de .NET desde el código nativo
 
@@ -208,4 +208,4 @@ Una vez que se ha compilado el host, este puede probarse si se ejecuta desde la 
 
 Si las cosas no funcionan inicialmente, vuelva a comprobar que *coreclr.dll* está disponible en la ubicación que espera el host, que todas las bibliotecas de Framework necesarias están en la lista TPA y que el valor de bits de CoreCLR (32 o 64 bits) coincide con la manera en que se ha compilado el host.
 
-Hospedar el runtime de .NET Core es un escenario avanzado que muchos desarrolladores no necesitarán, pero para los que necesiten iniciar el código administrado desde un proceso nativo, o que necesiten más control sobre el comportamiento del runtime de .NET Core, puede resultar muy útil. Como .NET Core es capaz de ejecutarse en paralelo, es posible incluso crear hosts que inicialicen varias versiones del runtime de .NET Core y ejecuten aplicaciones en todos ellos en el mismo proceso.
+Hospedar el runtime de .NET Core es un escenario avanzado que muchos desarrolladores no necesitarán, pero para los que necesiten iniciar el código administrado desde un proceso nativo, o que necesiten más control sobre el comportamiento del runtime de .NET Core, puede resultar muy útil.
