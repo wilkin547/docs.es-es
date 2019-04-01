@@ -36,10 +36,6 @@ Los siguientes temas se encuentran disponibles:
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-* [Usar el entorno de desarrollo de Visual C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
-
-    Proporciona una guía para utilizar el entorno de desarrollo integrado de Visual C#.
-
 * [Guía de programación de C#](../../csharp/programming-guide/index.md)
 
     Proporciona información sobre conceptos de programación en C# y describe cómo realizar diversas tareas en C#.
@@ -48,14 +44,10 @@ Los siguientes temas se encuentran disponibles:
 
     Proporciona información de referencia detallada sobre palabras clave, operadores, directivas de preprocesador, opciones del compilador y errores del compilador y advertencias de C#.
 
-* [Ejemplos de Visual Studio](/visualstudio/ide/visual-studio-samples)
-
-    Proporciona información sobre cómo obtener acceso a los ejemplos en línea.
-
 * [Tutoriales](../../csharp/walkthroughs.md)
 
     Proporciona vínculos a los tutoriales de programación que usan C# y una breve descripción de cada uno.
 
 ## <a name="see-also"></a>Vea también
 
-- [Introducción a Visual C# y Visual Basic con Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- * [Desarrollo de C# con Visual Studio](/visualstudio/get-started/csharp/)

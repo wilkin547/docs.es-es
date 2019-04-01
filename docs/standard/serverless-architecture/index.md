@@ -1,19 +1,14 @@
 ---
-title: 'Aplicaciones sin servidor: arquitectura, patrones e implementación de Azure'
-description: Guía sobre la arquitectura sin servidor. Obtenga información sobre cuándo, cómo y por qué implementar una arquitectura sin servidor (en lugar de una infraestructura como servicio [IaaS] o una plataforma como servicio [PaaS]) para las aplicaciones empresariales.
+title: 'Aplicaciones sin servidor: Arquitectura, patrones e implementación de Azure'
+description: 'Guía sobre la arquitectura sin servidor. Obtenga información sobre cuándo, cómo y por qué implementar una arquitectura sin servidor (en lugar de una infraestructura como servicio [IaaS] o una plataforma como servicio [PaaS]) para las aplicaciones empresariales.'
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: a19784f42c63914e9cf8f42ee6408ec9aa46e4f3
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745321"
 ---
-# <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplicaciones sin servidor: arquitectura, patrones e implementación de Azure
 
-![](./media/Cover.jpg)
+# <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplicaciones sin servidor: Arquitectura, patrones e implementación de Azure
+
+![Captura de pantalla en la que se muestra la portada del libro electrónico Aplicaciones sin servidor.](./media/index/serverless-apps-cover.jpg)
 
 > DESCARGA disponible en: <https://aka.ms/serverless-ebook>
 
@@ -43,7 +38,7 @@ El resto de marcas y logotipos pertenece a sus respectivos propietarios.
 
 Autor:
 
-> Sr. **[Jeremy Likness](https://twitter.com/jeremylikness)** Promotor de desarrollo en la nube, APEX, Microsoft Corp.
+> **[Jeremy Likness](https://twitter.com/jeremylikness)**, promotor sénior de desarrollo en la nube, APEX, Microsoft Corp.
 
 Colaborador:
 
