@@ -92,8 +92,7 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
  Un servicio WCF comprueba que todos los mensajes que recibe se direccionaron a la cola específica que está escuchando. Si la cola de destino del mensaje no coincide con la cola donde se encuentra, el servicio no procesa el mensaje. Se trata de una cuestión que los servicios que escuchan a una cola de mensajes no enviados deben abordar porque cualquier mensaje en la cola de mensajes no enviados debía ser entregado a otra parte. Para leer los mensajes de una cola de mensajes no enviados o de una cola de mensajes dudosos, debe utilizarse `ServiceBehavior` con el parámetro <xref:System.ServiceModel.AddressFilterMode.Any>. Para obtener un ejemplo, vea [colas de mensajes no enviados](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding y direccionamiento del servicio  
- 
-  `MsmqIntegrationBinding` se utiliza para la comunicación con aplicaciones MSMQ tradicionales. Para facilitar la interoperación con una aplicación MSMQ existente, WCF es compatible con direccionamiento del nombre de formato único. Por consiguiente, los mensajes enviados utilizando este enlace deben cumplir el esquema del URI:  
+ `MsmqIntegrationBinding` se utiliza para la comunicación con aplicaciones MSMQ tradicionales. Para facilitar la interoperación con una aplicación MSMQ existente, WCF es compatible con direccionamiento del nombre de formato único. Por consiguiente, los mensajes enviados utilizando este enlace deben cumplir el esquema del URI:  
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   
