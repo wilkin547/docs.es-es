@@ -83,17 +83,37 @@ items:
       href: datamemberfieldeditor-class.md
     - name: Clase DataMemberListEditor
       href: datamemberlisteditor-class.md
+  - name: Espacio de nombres adodb
+    items:
+    - name: Interfaz de conexión
+      href: adodb.connection.md
+    - name: Enumeración EventReason
+      href: adodb.eventreasonenum.md
+    - name: Enumeración EventStatus
+      href: adodb.eventstatusenum.md
   - name: Espacio de nombres stdole
     items:
+    - name: Estructura DISPPARAMS
+      href: stdole.dispparams.md
+    - name: Estructura EXCEPINFO
+      href: stdole.excepinfo.md
     - name: Propiedad IFont.Name
       href: stdole.ifont.name.md
+    - name: Interfaz IFontDisp
+      href: stdole.ifontdisp.md
     - name: Propiedad IPicture.Handle
       href: stdole.ipicture.handle.md
+    - name: Interfaz IPictureDisp
+      href: stdole.ipicturedisp.md
     - name: Propiedad IPictureDisp.Handle
       href: stdole.ipicturedisp.handle.md
-ms.openlocfilehash: fc163ef7a254443ce25676eafd75f34b36e8f336
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+    - name: Interfaz StdFont
+      href: stdole.stdfont.md
+    - name: Interfaz StdPicture
+      href: stdole.stdpicture.md
+ms.openlocfilehash: b585db5164cd29fdb7f7e203ef56d6f39b1d0960
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471055"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634055"
