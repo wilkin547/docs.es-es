@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
-ms.openlocfilehash: 51029c071b3c5bdefe5af798f01238086b8e6d4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06d21843c6e2d7aeb1858c3ce72426d080f73595
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589797"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410217"
 ---
 # <a name="-refout-c-compiler-options"></a>-refout (Opciones del compilador de C#)
 
@@ -37,7 +37,7 @@ Los ensamblados de referencia incluyen un atributo `ReferenceAssembly` de nivel 
 Los ensamblados de referencia también quitan los metadatos (miembros privados) de los ensamblados de solo metadatos:
 
 - Un ensamblado de referencia solo tiene referencias para lo que necesita en la superficie de la API. El ensamblado real puede tener referencias adicionales relacionadas con las implementaciones específicas. Por ejemplo, el ensamblado de referencia de `class C { private void M() { dynamic d = 1; ... } }` no hace referencia a ningún tipo necesario para `dynamic`.
-- Los miembros de función privados (métodos, propiedades y eventos) se quitan en los casos donde su retirada no afecta a la compilación de manera visible. Si no hay ningún atributo `InternalsVisibleTo`, haga lo mismo para los miembros de función internos.
+- Los miembros de función privados (métodos, propiedades y eventos) se quitan en los casos donde su retirada no afecta a la compilación de manera visible. Si no hay ningún atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, haga lo mismo para los miembros de función internos.
 - Pero todos los tipos (incluidos los tipos anidados o privados) se conservan en los ensamblados de referencia. Se conservan todos los atributos (incluso los internos).
 - Se conservan todos los métodos virtuales. Se mantienen las implementaciones explícitas de interfaces. Se conservan los eventos y propiedades que se han implementado explícitamente, ya que sus descriptores de acceso son virtuales (y por lo tanto se conservan).
 - Se conservan todos los campos de un struct. (Es un candidato para el refinamiento posterior de C#-7.1)

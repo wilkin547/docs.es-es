@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6ee44cb58033e0e235222fb3f74302f84092dbcb
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203115"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545447"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procedimiento Definir la igualdad de valores para un tipo (Guía de programación de C#)
 Cuando defina una clase o un struct, debe decidir si tiene sentido crear una definición personalizada de igualdad (o equivalencia) de valores para el tipo. Normalmente, la igualdad de valores se implementa cuando se espera agregar objetos del tipo a una colección de algún tipo, o cuando su objetivo principal es almacenar un conjunto de campos o propiedades. Puede basar la definición de la igualdad de valores en una comparación de todos los campos y propiedades del tipo, o bien puede basarla en un subconjunto. En cualquier caso, y tanto en las clases como en los structs, la implementación debe cumplir las cinco garantías de equivalencia:  
@@ -37,7 +37,7 @@ Cuando defina una clase o un struct, debe decidir si tiene sentido crear una def
   
 2.  Implemente la interfaz <xref:System.IEquatable%601?displayProperty=nameWithType> proporcionando un método `Equals` específico del tipo. Aquí es donde se realiza la comparación de equivalencias propiamente dicha. Por ejemplo, podría decidir que, para definir la igualdad, solo se comparen uno o dos campos del tipo. No genere excepciones desde `Equals`. Solo para las clases: este método debe examinar únicamente los campos que se declaran en la clase. Debe llamar a `base.Equals` para examinar los campos que están en la clase base. (No realice esto si el tipo hereda directamente de <xref:System.Object>, porque la implementación <xref:System.Object> de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> realiza una comprobación de igualdad de referencia).  
   
-3.  Opcional, pero recomendado: Sobrecargue los operadores [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y [!=](../../../csharp/language-reference/operators/not-equal-operator.md).  
+3.  Opcional, pero recomendado: Sobrecargue los operadores [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-).  
   
 4.  Invalide <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> de manera que dos objetos que tengan igualdad de valor produzcan el mismo código hash.  
   
@@ -61,7 +61,7 @@ Cuando defina una clase o un struct, debe decidir si tiene sentido crear una def
   
  Para los structs, la implementación predeterminada de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (que es la versión invalidada de <xref:System.ValueType?displayProperty=nameWithType>) realiza una comprobación de igualdad de valor con la reflexión para comparar valores de cada campo en el tipo. Cuando un implementador invalida el método `Equals` virtual en un struct, lo hace para proporcionar un medio más eficaz de llevar a cabo la comprobación de igualdad de valores y, opcionalmente, para basar la comparación en un subconjunto de propiedades o campos del struct.  
   
- Los operadores [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y [!=](../../../csharp/language-reference/operators/not-equal-operator.md) no pueden funcionar en un struct a menos que el struct los sobrecargue explícitamente.  
+ Los operadores [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) no pueden funcionar en un struct a menos que el struct los sobrecargue explícitamente.  
   
 ## <a name="see-also"></a>Vea también
 

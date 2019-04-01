@@ -4,12 +4,12 @@ description: La soberanía de datos por microservicio es uno de los puntos clave
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4900c294f94f4b4d604ba841595fc5c6d7952c10
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8db5e4ae8e0da63493a09c76614d898358bdea98
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144907"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464040"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Propiedad de los datos por microservicio
 
@@ -49,17 +49,17 @@ DDD se beneficia de los microservicios al obtener límites reales en forma de mi
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Chris Richardson. Pattern: Database per service** \ (Patrón: base de datos por servicio)
-  [*https://microservices.io/patterns/data/database-per-service.html*](https://microservices.io/patterns/data/database-per-service.html)
+- **Chris Richardson. Patrón: Database per service** \ (Patrón: base de datos por servicio)
+  [https://microservices.io/patterns/data/database-per-service.html](https://microservices.io/patterns/data/database-per-service.html)
 
 - **Martin Fowler. BoundedContext** \
-  [*https://martinfowler.com/bliki/BoundedContext.html*](https://martinfowler.com/bliki/BoundedContext.html)
+  [https://martinfowler.com/bliki/BoundedContext.html](https://martinfowler.com/bliki/BoundedContext.html)
 
 - **Martin Fowler. PolyglotPersistence** \
-  [*https://martinfowler.com/bliki/PolyglotPersistence.html*](https://martinfowler.com/bliki/PolyglotPersistence.html)
+  [https://martinfowler.com/bliki/PolyglotPersistence.html](https://martinfowler.com/bliki/PolyglotPersistence.html)
 
 - **Alberto Brandolini. Strategic Domain Driven Design with Context Mapping** \ (Diseño orientado a dominios estratégicos con asignación de contexto)
-  [*https://www.infoq.com/articles/ddd-contextmapping*](https://www.infoq.com/articles/ddd-contextmapping)
+  [https://www.infoq.com/articles/ddd-contextmapping](https://www.infoq.com/articles/ddd-contextmapping)
 
 >[!div class="step-by-step"]
 >[Anterior](microservices-architecture.md)

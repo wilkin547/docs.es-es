@@ -4,12 +4,12 @@ description: Conozca varias estrategias para controlar errores parciales con ele
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 2da0dfee97ac9c7c33ab4edeb670e0f813e6c463
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dd485eae7163ecf5e5622b960448385e33ae718a
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981327"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464273"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>Estrategias para controlar errores parciales
 
@@ -30,19 +30,19 @@ Las estrategias para tratar los errores parciales son las siguientes.
 ## <a name="additional-resources"></a>Recursos adicionales
 
 - **Resiliency patterns (Patrones de resistencia)**\
-  [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](/azure/architecture/patterns/category/resiliency)
+  [https://docs.microsoft.com/azure/architecture/patterns/category/resiliency](/azure/architecture/patterns/category/resiliency)
 
 - **Adding Resilience and Optimizing Performance (Agregar resistencia y optimizar el rendimiento)**\
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
 - **Bulkhead** (Mampara). Repositorio de GitHub. Implementación con la directiva de Polly. \
-  [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+  [https://github.com/App-vNext/Polly/wiki/Bulkhead](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
 - **Designing resilient applications for Azure (Diseñar aplicaciones resistentes de Azure)**\
-  [*https://docs.microsoft.com/azure/architecture/resiliency/*](/azure/architecture/resiliency/)
+  [https://docs.microsoft.com/azure/architecture/resiliency/](/azure/architecture/resiliency/)
 
 - **Control de errores transitorios**\
-  [*https://docs.microsoft.com/azure/architecture/best-practices/transient-faults*](/azure/architecture/best-practices/transient-faults)
+  [https://docs.microsoft.com/azure/architecture/best-practices/transient-faults](/azure/architecture/best-practices/transient-faults)
 
 >[!div class="step-by-step"]
 >[Anterior](handle-partial-failure.md)

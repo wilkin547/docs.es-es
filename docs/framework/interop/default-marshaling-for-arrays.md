@@ -10,29 +10,20 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae339b18032becffcaece1924a22b958ed86d364
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c2b5646a1a556c57814602790d5f17104d2148e5
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219690"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410750"
 ---
 # <a name="default-marshaling-for-arrays"></a>Cálculo de referencias predeterminado para matrices
 En una aplicación que consta únicamente de código administrado, Common Language Runtime pasa los tipos de matriz como parámetros In/Out. En cambio, el serializador de interoperabilidad pasa una matriz como parámetros In de forma predeterminada.  
   
  Con [optimización de anclaje](copying-and-pinning.md), una matriz que puede transferirse en bloque de bits puede parecer que opera como un parámetro In/Out al interactuar con objetos en el mismo contenedor. Pero si posteriormente se exporta el código a una biblioteca de tipos que se usa para generar el proxy entre equipos y esa biblioteca se usa para serializar las llamadas entre contenedores, las llamadas pueden revertir al comportamiento real del parámetro.  
   
- Las matrices son complejas por naturaleza y las distinciones entre matrices administradas y no administradas garantizan más información que otros tipos que no pueden transferirse en bloque de bits. En este tema se proporciona la siguiente información sobre la serialización de matrices:  
+ Las matrices son complejas por naturaleza y las distinciones entre matrices administradas y no administradas garantizan más información que otros tipos que no pueden transferirse en bloque de bits.  
   
--   [Matrices administradas](#cpcondefaultmarshalingforarraysanchor1)  
-  
--   [Matrices no administradas](#cpcondefaultmarshalingforarraysanchor2)  
-  
--   [Pasar parámetros de matriz a código de .NET](#cpcondefaultmarshalingforarraysanchor3)  
-  
--   [Pasar matrices a COM](#cpcondefaultmarshalingforarraysanchor4)  
-  
-<a name="cpcondefaultmarshalingforarraysanchor1"></a>   
 ## <a name="managed-arrays"></a>Matrices administradas  
  Los tipos de matriz administrados pueden variar, pero la clase <xref:System.Array?displayProperty=nameWithType> es la clase base de todos los tipos de matriz. La clase **System.Array** tiene propiedades para determinar el rango, la longitud y los límites inferior y superior de una matriz, así como métodos para tener acceso, ordenar, buscar, copiar y crear matrices.  
   
@@ -46,11 +37,9 @@ En una aplicación que consta únicamente de código administrado, Common Langua
 |**ELEMENT_TYPE_CLASS**|Desconocido|Desconocido|Desconocido|**System.Array**|  
 |**ELEMENT_TYPE_SZARRAY**|Especificado por el tipo.|1|0|*tipo* **[** *n* **]**|  
   
-<a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>Matrices no administradas  
  Las matrices no administradas son matrices seguras de estilo COM o matrices de estilo C de longitud fija o variable. Las matrices seguras se describen a sí mismas y contienen el tipo, rango y límites de los datos de la matriz asociada. Las matrices de estilo C son matrices con tipo unidimensionales con un límite inferior fijo de 0. El servicio de serialización proporciona compatibilidad limitada para ambos tipos de matrices.  
   
-<a name="cpcondefaultmarshalingforarraysanchor3"></a>   
 ## <a name="passing-array-parameters-to-net-code"></a>Pasar parámetros de matriz a código de .NET  
  Las matrices de estilo C y las matrices seguras pueden pasarse a código de .NET desde código no administrado como una matriz segura o una matriz de estilo C. En la tabla siguiente se muestra el valor de tipo no administrado y el tipo importado.  
   
@@ -190,7 +179,6 @@ void New3(ref String ar);
   
  El serializador de interoperabilidad usa los métodos **CoTaskMemAlloc** y **CoTaskMemFree** para asignar y recuperar memoria. La asignación de memoria realizada por el código no administrado también debe usar estos métodos.  
   
-<a name="cpcondefaultmarshalingforarraysanchor4"></a>   
 ## <a name="passing-arrays-to-com"></a>Pasar matrices a COM  
  Todos los tipos de matriz administrados pueden pasarse a código no administrado desde código administrado. Según el tipo administrado y los atributos que se le apliquen, se puede obtener acceso a la matriz como una matriz segura o una matriz de estilo C, como se muestra en la tabla siguiente.  
   

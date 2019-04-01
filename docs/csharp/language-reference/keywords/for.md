@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 6584889f527e1459090bea322720f0cd8d9694f6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba156eed25f28a0568e11c986de1e84db3cd9cf0
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149242"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504488"
 ---
 # <a name="for-c-reference"></a>for (Referencia de C#)
 
@@ -47,9 +47,9 @@ Las instrucciones de la sección *inicializador* se ejecutan solo una vez, antes
 
   - invocación de un método
 
-  - expresión de [incremento](../operators/increment-operator.md) de prefijo o sufijo, como `++i` o `i++`
+  - expresión de [incremento](../operators/arithmetic-operators.md#increment-operator-) de prefijo o sufijo, como `++i` o `i++`
 
-  - expresión de [decremento](../operators/decrement-operator.md) de prefijo o sufijo, como `--i` o `i--`
+  - expresión de [decremento](../operators/arithmetic-operators.md#decrement-operator---) de prefijo o sufijo, como `--i` o `i--`
 
   - creación de un objeto mediante la palabra clave [new](new-operator.md)
 
@@ -79,9 +79,9 @@ La sección *iterador* define lo que sucede después de cada iteración del cuer
 
 - invocación de un método
 
-- expresión de [incremento](../operators/increment-operator.md) de prefijo o sufijo, como `++i` o `i++`
+- expresión de [incremento](../operators/arithmetic-operators.md#increment-operator-) de prefijo o sufijo, como `++i` o `i++`
 
-- expresión de [decremento](../operators/decrement-operator.md) de prefijo o sufijo, como `--i` o `i--`
+- expresión de [decremento](../operators/arithmetic-operators.md#decrement-operator---) de prefijo o sufijo, como `--i` o `i--`
 
 - creación de un objeto mediante la palabra clave [new](new-operator.md)
 

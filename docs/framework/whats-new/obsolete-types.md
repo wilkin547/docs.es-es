@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d2800e4608d6055f4815f835a1375f9fffee9fc
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58049727"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412349"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos en .NET Framework
 <a name="introduction"></a> En las tablas de este artículo se muestran los tipos que están obsoletos en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] organizados por ensamblados. Utilice los vínculos siguientes para ver una lista de tipos obsoletos y las alternativas recomendadas en cada ensamblado. Dado que estos tipos están en desuso, todos sus miembros también lo están. Para obtener una lista de miembros obsoletos adicionales de la biblioteca de clases de .NET Framework, vea [Miembros obsoletos](obsolete-members.md).
@@ -205,7 +205,7 @@ ms.locfileid: "58049727"
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|Esta interfaz está desusada. En su lugar, agregue un objeto <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> para controlar el tipo <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType>.|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|Utilice <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType> en su lugar para trabajar con el nuevo modelo de configuración.|
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|Este atributo está obsoleto. Utilice <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType> en su lugar. Por ejemplo, para especificar un diseñador raíz de CodeDom, utilice `DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)`.|
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|Este atributo está obsoleto. Utilice <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType> en su lugar.|
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|Esta clase está en desuso.|
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|Esta clase está en desuso. Utilice los contadores de rendimiento a través de la clase <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> en su lugar.|
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|Esta clase está en desuso. Utilice <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> en su lugar para obtener acceso al proxy global predeterminado y establecerlo. Use "null" en lugar de <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType>.|
