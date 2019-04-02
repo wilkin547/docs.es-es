@@ -2,15 +2,9 @@
 title: Acceso a la configuración de la aplicación (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- My.Settings object [Visual Basic], application settings
-- examples [Visual Basic], application settings
+  - 'My.Settings object [Visual Basic], application settings'
+  - 'examples [Visual Basic], application settings'
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
-ms.openlocfilehash: d14f53003320bb4c3b71134af324961c7565cebf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535468"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>Acceso a la configuración de la aplicación (Visual Basic)
 Esta sección contiene temas en los que se describe el objeto `My.Settings` y las tareas que le permite realizar.  
@@ -31,5 +25,6 @@ Esta sección contiene temas en los que se describe el objeto `My.Settings` y la
 |Determinar los valores de la configuración de usuario|[Cómo: Leer la configuración de la aplicación en Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Administrar la configuración de la aplicación (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
 - [My.Settings (objeto)](../../../../visual-basic/language-reference/objects/my-settings-object.md)

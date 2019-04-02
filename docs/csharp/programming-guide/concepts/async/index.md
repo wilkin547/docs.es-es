@@ -1,337 +1,141 @@
 ---
-title: 'Programación asincrónica con Async y Await (C#)'
-ms.date: 05/22/2017
-ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
+title: 'Programación asincrónica en C#'
+description: 'Información general sobre la compatibilidad con el lenguaje C# para la programación asincrónica mediante async, await, Task y Task<T>'
+ms.date: 03/18/2019
 ---
-# <a name="asynchronous-programming-with-async-and-await-c"></a>Programación asincrónica con Async y Await (C#)
-Puede evitar cuellos de botella de rendimiento y mejorar la capacidad de respuesta total de la aplicación mediante la programación asincrónica. Sin embargo, las técnicas tradicionales para escribir aplicaciones asincrónicas pueden resultar complicadas, haciéndolas difícil de escribir, depurar y mantener.  
-  
-[C# 5](../../../whats-new/csharp-version-history.md#c-version-50) ha introducido un enfoque simplificado, la programación asincrónica, que aprovecha la compatibilidad asincrónica de .NET Framework 4.5 y versiones posteriores, NET Core y Windows Runtime. El compilador realiza el trabajo difícil que el desarrollador suele realizar y la aplicación conserva una estructura lógica similar al código sincrónico. Como resultado, se obtienen todas las ventajas de la programación asincrónica con una parte del trabajo.  
-  
-Este tema proporciona información general sobre cuándo y cómo utilizar la programación asincrónica e incluye vínculos que admiten temas con detalles y ejemplos.  
-  
-## <a name="BKMK_WhentoUseAsynchrony"></a> La asincronía mejora la capacidad de respuesta  
- La asincronía es esencial para actividades que pueden producir bloqueos, por ejemplo, el acceso a Internet. Tener acceso a un recurso web a veces es lento o va retrasado. Si tal actividad queda bloqueada en un proceso sincrónico, toda la aplicación deberá esperar. En un proceso asincrónico, la aplicación puede continuar con otro trabajo que no dependa del recurso web hasta que finaliza la tarea que puede producir bloqueos.  
-  
- En la tabla siguiente se muestran las áreas típicas donde la programación asincrónica mejora su capacidad de respuesta. Las API enumeradas desde .NET y Windows Runtime contienen métodos que admiten la programación asincrónica.  
-  
-| Área de aplicación    | Tipos de .NET con métodos asincrónicos     | Tipos de Windows Runtime con métodos asincrónicos  |
-|---------------------|-----------------------------------|-------------------------------------------|
-|Acceso web|<xref:System.Net.Http.HttpClient>|<xref:Windows.Web.Syndication.SyndicationClient>|
-|Trabajar con archivos|<xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader>, <xref:System.Xml.XmlReader>|<xref:Windows.Storage.StorageFile>|  
-|Trabajar con imágenes||<xref:Windows.Media.Capture.MediaCapture>, <xref:Windows.Graphics.Imaging.BitmapEncoder>, <xref:Windows.Graphics.Imaging.BitmapDecoder>|  
-|Programar WCF|[Operaciones sincrónicas y asincrónicas](../../../../framework/wcf/synchronous-and-asynchronous-operations.md)||  
-  
-La asincronía es especialmente valiosa para aquellas aplicaciones que obtienen acceso al subproceso de interfaz de usuario, ya que todas las actividades relacionadas con la interfaz de usuario normalmente comparten un único subproceso. Si se bloquea un proceso en una aplicación sincrónica, se bloquean todos. La aplicación deja de responder y puede que se piense que se ha producido un error cuando en realidad la aplicación está esperando.  
-  
- Cuando se usan métodos asincrónicos, la aplicación continúa respondiendo a la interfaz de usuario. Puede cambiar el tamaño o minimizar una ventana, por ejemplo, o puede cerrar la aplicación si no desea esperar a que finalice.  
-  
- El enfoque basado en asincrónico agrega el equivalente de una transmisión automática a la lista de opciones entre las que puede elegir al diseñar operaciones asincrónicas. Es decir, obtiene todas las ventajas de la programación asincrónica tradicional pero con mucho menos trabajo de desarrollador.  
-  
-## <a name="BKMK_HowtoWriteanAsyncMethod"></a> Los métodos asincrónicos son más fáciles de escribir  
- Las palabras clave [async](../../../../csharp/language-reference/keywords/async.md) y [await](../../../../csharp/language-reference/keywords/await.md) en C# son fundamentales en la programación asincrónica. Con esas dos palabras clave, se pueden usar los recursos de .NET Framework, .NET Core o Windows Runtime para crear un método asincrónico casi tan fácilmente como se crea un método sincrónico. Los métodos asincrónicos que se definen mediante la palabra clave `async` se denominan *métodos asincrónicos*.  
-  
- En el ejemplo siguiente se muestra un método asincrónico. Casi todo el código deberá ser totalmente familiar. Los comentarios informan sobre las características que se agregan para crear la asincronía.  
-  
- Puede encontrar un archivo de ejemplo completo de Windows Presentation Foundation (WPF) al final de este tema y puede descargar el ejemplo de [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c) (Ejemplo de async: Ejemplo de "Programación asincrónica con Async y Await).  
-  
-```csharp  
-// Three things to note in the signature:  
-//  - The method has an async modifier.   
-//  - The return type is Task or Task<T>. (See "Return Types" section.)  
-//    Here, it is Task<int> because the return statement returns an integer.  
-//  - The method name ends in "Async."  
-async Task<int> AccessTheWebAsync()  
-{   
-    // You need to add a reference to System.Net.Http to declare client.  
-    using (HttpClient client = new HttpClient())  
-    {  
-        // GetStringAsync returns a Task<string>. That means that when you await the  
-        // task you'll get a string (urlContents).  
-        Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com");  
-  
-        // You can do work here that doesn't rely on the string from GetStringAsync.  
-        DoIndependentWork();  
-  
-        // The await operator suspends AccessTheWebAsync.  
-        //  - AccessTheWebAsync can't continue until getStringTask is complete.  
-        //  - Meanwhile, control returns to the caller of AccessTheWebAsync.  
-        //  - Control resumes here when getStringTask is complete.   
-        //  - The await operator then retrieves the string result from getStringTask.  
-        string urlContents = await getStringTask;  
-  
-        // The return statement specifies an integer result.  
-        // Any methods that are awaiting AccessTheWebAsync retrieve the length value.  
-        return urlContents.Length;  
-    }  
-}  
-```  
-  
- Si `AccessTheWebAsync` no hay ningún trabajo que se pueda hacer entre llamar a `GetStringAsync` y esperar a su finalización, se puede simplificar el código llamando y esperando en la siguiente instrucción única.  
-  
-```csharp  
-string urlContents = await client.GetStringAsync("https://docs.microsoft.com");  
-```  
- 
-Las siguientes características resumen lo que hace que el ejemplo anterior sea un método asincrónico.  
-  
--   Method Signature incluye un modificador `async`.  
-  
--   El nombre de un método asincrónico, por convención, finaliza con un sufijo “Async”.  
-  
--   El tipo de valor devuelto es uno de los tipos siguientes:  
-  
-    -   <xref:System.Threading.Tasks.Task%601> si el método tiene una instrucción return en la que el operando tiene el tipo `TResult`.  
-  
-    -   <xref:System.Threading.Tasks.Task> si el método no tiene ninguna instrucción return ni tiene una instrucción return sin operando.  
-  
-    -   `void` si está escribiendo un controlador de eventos asincrónicos.  
+# <a name="the-task-asynchronous-programming-model-in-c"></a>Modelo de programación asincrónica de tareas en C# #
 
-    -   Cualquier otro tipo que tenga un método `GetAwaiter` (a partir de C# 7.0).
-  
-     Para obtener más información, consulte la sección [Tipos de valor devuelto y parámetros](#BKMK_ReturnTypesandParameters).  
-  
--   El método normalmente incluye al menos una expresión await, que marca un punto en el que el método no puede continuar hasta que se completa la operación asincrónica en espera. Mientras tanto, se suspende el método y el control vuelve al llamador del método. La sección siguiente de este tema muestra lo que sucede en el punto de suspensión.  
-  
- En métodos asincrónicos, se utilizan las palabras clave y los tipos proporcionados para indicar lo que se desea hacer y el compilador realiza el resto, incluido el seguimiento de qué debe ocurrir cuando el control vuelve a un punto de espera en un método suspendido. Algunos procesos de rutina, tales como bucles y control de excepciones, pueden ser difíciles de controlar en código asincrónico tradicional. En un método asincrónico, se pueden escribir estos elementos como se haría en una solución sincrónica y se resuelve este problema.  
-  
- Para obtener más información sobre la asincronía en versiones anteriores de .NET Framework, vea [TPL y la programación asincrónica tradicional de .NET Framework](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md).  
-  
-## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> Lo que ocurre en un método asincrónico  
- Lo más importante de entender en la programación asincrónica es cómo el flujo de control pasa de un método a otro. El diagrama siguiente lo guía en el proceso:  
-  
- ![Diagrama que muestra cómo hacer seguimiento de un programa asincrónico.](./media/index/navigation-trace-async-program.png)  
-  
- Los números en el diagrama se corresponden con los pasos siguientes.  
-  
-1.  Un controlador de eventos llama al método asincrónico `AccessTheWebAsync` y lo espera.  
-  
-2.  `AccessTheWebAsync` crea una instancia <xref:System.Net.Http.HttpClient> y llama al método asincrónico <xref:System.Net.Http.HttpClient.GetStringAsync%2A> para descargar el contenido de un sitio web como una cadena.  
-  
-3.  Sucede algo en `GetStringAsync` que suspende el progreso. Quizás debe esperar a un sitio web para realizar la descarga o alguna otra actividad de bloqueo. Para evitar el bloqueo de recursos, `GetStringAsync` genera un control a su llamador, `AccessTheWebAsync`.  
-  
-     `GetStringAsync` devuelve <xref:System.Threading.Tasks.Task%601>, donde `TResult` es una cadena y `AccessTheWebAsync` asigna la tarea a la variable `getStringTask`. La tarea representa el proceso actual para la llamada a `GetStringAsync`, con el compromiso de generar un valor de cadena real cuando se completa el trabajo.  
-  
-4.  Debido a que `getStringTask` no se ha esperado, `AccessTheWebAsync` puede continuar con otro trabajo que no dependa del resultado final de `GetStringAsync`. Ese trabajo se representa mediante una llamada al método sincrónico `DoIndependentWork`.  
-  
-5.  `DoIndependentWork` es un método sincrónico que funciona y vuelve al llamador.  
-  
-6.  `AccessTheWebAsync` se ha quedado sin el trabajo que se puede realizar sin un resultado de `getStringTask`. Después, `AccessTheWebAsync` desea calcular y devolver la longitud de la cadena descargada, pero el método no puede calcular ese valor hasta que el método tiene la cadena.  
-  
-     Por consiguiente, `AccessTheWebAsync` utiliza un operador await para suspender el progreso y producir el control al método que llamó `AccessTheWebAsync`. `AccessTheWebAsync` devuelve `Task<int>` al llamador. La tarea representa una sugerencia para generar un resultado entero que es la longitud de la cadena descargada.  
-  
-    > [!NOTE]
-    >  Si se completa `GetStringAsync` (y por consiguiente `getStringTask`) antes de que `AccessTheWebAsync` lo espere, permanece el control en `AccessTheWebAsync`. El gasto de suspensión y después regresar a `AccessTheWebAsync` se desperdiciaría si el proceso denominado asincrónico (`getStringTask`) ya se ha completado y `AccessTheWebSync` no tiene que esperar el resultado final.  
-  
-     Dentro del llamador (el controlador de eventos en este ejemplo), el patrón de procesamiento continúa. El llamador puede hacer otro trabajo que no depende del resultado de `AccessTheWebAsync` antes de esperar ese resultado, o es posible que el llamador se espere inmediatamente.   El controlador de eventos está esperando `AccessTheWebAsync`, y `AccessTheWebAsync` está esperando `GetStringAsync`.  
-  
-7.  `GetStringAsync` completa y genera un resultado de la cadena. La llamada a `GetStringAsync` no devuelve el resultado de la cadena de la manera que cabría esperar. (Recuerde que el método ya devolvió una tarea en el paso 3). En su lugar, el resultado de la cadena se almacena en la tarea que representa la finalización del método, `getStringTask`. El operador await recupera el resultado de `getStringTask`. La instrucción de asignación asigna el resultado recuperado a `urlContents`.  
-  
-8.  Cuando `AccessTheWebAsync` tiene el resultado de la cadena, el método puede calcular la longitud de la cadena. El trabajo de `AccessTheWebAsync` también se completa y el controlador de eventos que espera se puede reanudar. En el ejemplo completo del final de este tema, puede comprobar que el controlador de eventos recupera e imprime el valor de resultado de longitud.    
-Si no está familiarizado con la programación asincrónica, reserve un minuto para ver la diferencia entre el comportamiento sincrónico y asincrónico. Un método sincrónico devuelve cuando se completa su trabajo (paso 5), pero un método asincrónico devuelve un valor de tarea cuando se suspende el trabajo (pasos 3 y 6). Cuando el método asincrónico completa finalmente el trabajo, se marca la tarea como completa y el resultado, si existe, se almacena en la tarea.  
-  
-Para obtener más información sobre el flujo de control, vea [Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) (Flujo de control en programas asincrónicos [C#]).  
-  
-## <a name="BKMK_APIAsyncMethods"></a> Métodos asincrónicos de API  
- Tal vez se pregunte dónde encontrar métodos como `GetStringAsync` que sean compatibles con la programación asincrónica. .NET Framework 4.5 o versiones posteriores y .NET Core contienen muchos miembros que trabajan con `async` y `await`. Puede reconocerlos por el sufijo "Async" que se anexa al nombre del miembro y por su tipo de valor devuelto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Por ejemplo, la clase `System.IO.Stream` contiene métodos como <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> y <xref:System.IO.Stream.WriteAsync%2A> junto con los métodos sincrónicos <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> y <xref:System.IO.Stream.Write%2A>.  
-  
- Windows Runtime también contiene muchos métodos que puede utilizar con `async` y `await` en Aplicaciones Windows. Para más información, consulte [Subprocesamiento y programación asincrónica](/windows/uwp/threading-async/) para el desarrollo con UWP, y [Programación asincrónica (aplicaciones de la Tienda Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)) y [Guía de inicio rápido: Llamadas a API asincrónicas en C# o Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10)) si usa versiones anteriores de Windows Runtime.  
-  
-## <a name="BKMK_Threads"></a> Subprocesos  
-La intención de los métodos Async es ser aplicaciones que no pueden producir bloqueos. Una expresión `await` en un método asincrónico no bloquea el subproceso actual mientras la tarea esperada se encuentra en ejecución. En vez de ello, la expresión declara el resto del método como una continuación y devuelve el control al llamador del método asincrónico.  
-  
-Las palabras clave `async` y `await` no hacen que se creen subprocesos adicionales. Los métodos Async no requieren multithreading, ya que un método asincrónico no se ejecuta en su propio subproceso. El método se ejecuta en el contexto de sincronización actual y ocupa tiempo en el subproceso únicamente cuando el método está activo. Puede utilizar <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> para mover el trabajo enlazado a la CPU a un subproceso en segundo plano, pero un subproceso en segundo plano no ayuda con un proceso que solo está esperando a que los resultados estén disponibles.  
-  
-El enfoque basado en asincrónico en la programación asincrónica es preferible a los enfoques existentes en casi todos los casos. En concreto, este enfoque es mejor que la clase <xref:System.ComponentModel.BackgroundWorker> para las operaciones enlazadas a E/S porque el código es más sencillo y no se tiene que proteger contra las condiciones de carrera. Junto con el método <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>, la programación asincrónica es mejor que <xref:System.ComponentModel.BackgroundWorker> para las operaciones enlazadas a la CPU, ya que la programación asincrónica separa los detalles de coordinación en la ejecución del código del trabajo que `Task.Run` transfiere al grupo de subprocesos.  
-  
-## <a name="BKMK_AsyncandAwait"></a> Async y Await  
- Si especifica que un método es un método asincrónico mediante el modificador [async](../../../../csharp/language-reference/keywords/async.md), habilita las dos funciones siguientes.  
-  
--   El método asincrónico marcado puede utilizar [await](../../../../csharp/language-reference/keywords/await.md) para designar puntos de suspensión. El operador `await` indica al compilador que el método asincrónico no puede continuar pasado ese punto hasta que se complete el proceso asincrónico aguardado. Mientras tanto, el control devuelve al llamador del método asincrónico.  
-  
-     La suspensión de un método asincrónico en una expresión `await` no constituye una salida del método y los bloques `finally` no se ejecutan.  
-  
--   El método asincrónico marcado sí se puede esperar por los métodos que lo llaman.  
-  
-Un método asincrónico normalmente contiene una o más apariciones de un operador `await`, pero la ausencia de una expresión `await` no causa errores de compilación. Si un método asincrónico no usa un operador `await` para marcar el punto de suspensión, se ejecuta como un método sincrónico, a pesar del modificador `async`. El compilador detecta una advertencia para dichos métodos.  
-  
- `async` y `await` son palabras clave contextuales. Para mayor información y ejemplos, vea los siguientes temas:  
-  
--   [async](../../../../csharp/language-reference/keywords/async.md)  
-  
--   [await](../../../../csharp/language-reference/keywords/await.md)  
-  
-## <a name="BKMK_ReturnTypesandParameters"></a> Tipos de valor devuelto y parámetros  
-Un método asincrónico suele devolver <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Dentro de un método asincrónico, se aplica un operador `await` a una tarea que devuelve una llamada a otro método asincrónico.  
-  
-Puede especificar <xref:System.Threading.Tasks.Task%601> como tipo de valor devuelto si el método contiene una instrucción [return](../../../../csharp/language-reference/keywords/return.md) que especifica un operando de tipo `TResult`. 
-  
-Puede usar <xref:System.Threading.Tasks.Task> como tipo de valor devuelto si el método no tiene instrucción return o si tiene una instrucción return que no devuelve un operando.  
+El modelo de programación asincrónica de tareas (TAP) es una abstracción del código asincrónico. El código se escribe como una secuencia de instrucciones, como es habitual. Puede leerlo como si cada instrucción se completase antes de comenzar la siguiente. El compilador realiza una serie de transformaciones, debido a que algunas de estas instrucciones podrían empezar a funcionar y devolver una clase <xref:System.Threading.Tasks.Task> que representa el trabajo en curso.
 
-A partir de C# 7.0, también puede especificar cualquier otro tipo de valor devuelto, siempre que dicho tipo incluya un método `GetAwaiter`. Un ejemplo de este tipo es <xref:System.Threading.Tasks.ValueTask%601>. Está disponible en el paquete NuGet [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/).
-  
- En el ejemplo siguiente se muestra cómo declarar y llamar a un método que devuelve <xref:System.Threading.Tasks.Task%601> o <xref:System.Threading.Tasks.Task>.  
-  
-```csharp  
-// Signature specifies Task<TResult>  
-async Task<int> GetTaskOfTResultAsync()  
-{  
-    int hours = 0;  
-    await Task.Delay(0);  
-    // Return statement specifies an integer result.  
-    return hours;  
-}  
-  
-// Calls to GetTaskOfTResultAsync  
-Task<int> returnedTaskTResult = GetTaskOfTResultAsync();  
-int intResult = await returnedTaskTResult;  
-// or, in a single statement  
-int intResult = await GetTaskOfTResultAsync();  
-  
-// Signature specifies Task  
-async Task GetTaskAsync()  
-{  
-    await Task.Delay(0);  
-    // The method has no return statement.    
-}  
-  
-// Calls to GetTaskAsync  
-Task returnedTask = GetTaskAsync();  
-await returnedTask;  
-// or, in a single statement  
-await GetTaskAsync();  
-```  
-  
-Cada tarea devuelta representa el trabajo en curso. Una tarea encapsula la información sobre el estado del proceso asincrónico y, finalmente, el resultado final del proceso o la excepción que el proceso provoca si no tiene éxito.  
-  
-Un método asincrónico también puede tener un tipo de valor devuelto `void`. Este tipo de valor devuelto se utiliza principalmente para definir controladores de eventos, donde se requiere un tipo de valor devuelto `void`. Los controladores de eventos asincrónicos sirven a menudo como punto de partida para programas asincrónicos.  
-  
-No se puede esperar a un método asincrónico que tenga un tipo de valor devuelto `void` y el llamador de un método con tipo de valor devuelto void no puede capturar ninguna excepción producida por este.  
-  
-Un método asincrónico no puede declarar ningún parámetro [in](../../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../../csharp/language-reference/keywords/ref.md) o [out](../../../../csharp/language-reference/keywords/out-parameter-modifier.md), pero el método puede llamar a los métodos que tienen estos parámetros. De forma similar, un método asincrónico no puede devolver un valor por referencia, aunque puede llamar a métodos con valores devueltos ref. 
-  
-Para más información y ejemplos, vea [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto asincrónicos [C#]). Para más información sobre cómo capturar excepciones en métodos asincrónicos, vea [try-catch](../../../../csharp/language-reference/keywords/try-catch.md). 
-  
-Las API asincrónicas en la programación de Windows Runtime tienen uno de los siguientes tipos de valor devuelto, que son similares a las tareas:  
-  
--   <xref:Windows.Foundation.IAsyncOperation%601>, lo que equivale a <xref:System.Threading.Tasks.Task%601>  
-  
--   <xref:Windows.Foundation.IAsyncAction>, lo que equivale a <xref:System.Threading.Tasks.Task>  
-  
--   <xref:Windows.Foundation.IAsyncActionWithProgress%601>  
-  
--   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
-   
-  
-## <a name="BKMK_NamingConvention"></a> Convención de nomenclatura  
-Por convención, los nombres de los métodos que devuelven tipos que suelen admitir "await" (p. ej., `Task`, `Task<T>`, `ValueTask` y `ValueTask<T>`) deben terminar por "Async". Los nombres de los métodos que inician operaciones asincrónicas, pero que no devuelven un tipo que admite "await", no deben terminar por "Async". Sin embargo, pueden empezar por "Begin", "Start" u otro verbo que permita sugerir que este método no devuelve ni genera el resultado de la operación.
-  
- Puede ignorar esta convención cuando un evento, clase base o contrato de interfaz sugieren un nombre diferente. Por ejemplo, no se debería cambiar el nombre de los controladores de eventos, tales como `Button1_Click`.  
-  
-## <a name="BKMK_RelatedTopics"></a> Temas relacionados y ejemplos (Visual Studio)  
-  
-|Title|Descripción|Ejemplo|  
-|-----------|-----------------|------------|  
-|[Tutorial: Acceso a web usando Async y Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|Muestra cómo convertir una solución WPF sincrónica en una solución WPF asincrónica. La aplicación descarga una serie de sitios web.|[Async Sample: Accessing the Web Walkthrough](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Ejemplo de async: Tutorial de acceso a web)|  
-|[Cómo: Ampliar el tutorial de async usando Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Agrega <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> al tutorial anterior. El uso de `WhenAll` inicia todas las descargas al mismo tiempo.||  
-|[Cómo: Hacer varias solicitudes web en paralelo usando async y await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|Demuestra cómo comenzar varias tareas al mismo tiempo.|[Async Sample: Make Multiple Web Requests in Parallel](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) (Ejemplo de async: Realizar varias solicitudes web en paralelo)|  
-|[Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de async [C#])|Muestra los tipos que los métodos asincrónicos pueden devolver y explica cuándo es apropiado cada uno de ellos.||  
-|[Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) (Flujos de control en programas asincrónicos [C#])|Rastrea en detalle el flujo de control a través de una sucesión de expresiones await en un programa asincrónico.|[Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Ejemplo de async: Flujo de control en programas de async)|  
-|[Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Ajuste de la aplicación asincrónica [C#])|Muestra cómo agregar la siguiente funcionalidad a la solución asincrónica:<br /><br /> -   [Cancel an Async Task or a List of Tasks (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) (Cancelación de una tarea asincrónica o de una lista de tareas [C#])<br />-   [Cancel Async Tasks after a Period of Time (C#)](../../../../csharp/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md) (Cancelación de tareas asincrónicas tras un período de tiempo [C#])<br />-   [Cancel Remaining Async Tasks after One Is Complete (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) (Cancelación de tareas asincrónicas restantes cuando se completa una [C#])<br />-   [Start Multiple Async Tasks and Process Them As They Complete (C#)](../../../../csharp/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md) (Inicio de varias tareas asincrónicas y cómo procesarlas a medida que se completan [C#])|[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de async: Ajuste de la aplicación)|  
-|[Handling Reentrancy in Async Apps (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md) (Control de la reentrada en aplicaciones asincrónicas [C#])|Muestra cómo controlar los casos en los que se reinicia una operación asincrónica activa mientras se ejecuta.||  
-|[WhenAny: Bridging between the .NET Framework and the Windows Runtime](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120)) (Puente entre .NET Framework y Windows Runtime)|Muestra cómo unir entre tipos de tareas en .NET Framework e IAsyncOperations en [!INCLUDE[wrt](~/includes/wrt-md.md)] para poder usar <xref:System.Threading.Tasks.Task.WhenAny%2A> con un método [!INCLUDE[wrt](~/includes/wrt-md.md)].|[Async Sample: Bridging between .NET and Windows Runtime (AsTask and WhenAny)](https://code.msdn.microsoft.com/Async-Sample-Bridging-d6a2f739) (Ejemplo de async: Puente entre .NET y Windows Runtime [AsTask y WhenAny])|  
-|Async Cancellation: Bridging between the .NET Framework and the Windows Runtime (Puente entre NET. Framework y Windows Runtime)|Muestra cómo unir entre tipos de tareas en .NET Framework e IAsyncOperations en [!INCLUDE[wrt](~/includes/wrt-md.md)] para poder usar <xref:System.Threading.CancellationTokenSource> con un método [!INCLUDE[wrt](~/includes/wrt-md.md)].|[Async Sample: Bridging between .NET and Windows Runtime (AsTask & Cancellation)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3) (Ejemplo de async: Puente entre .NET y Windows Runtime [AsTask y Cancellation])|  
-|[Using Async for File Access (C#)](../../../../csharp/programming-guide/concepts/async/using-async-for-file-access.md) (Uso de Async en acceso a archivos [C#])|Enumera y demuestra los beneficios de usar async y await para obtener acceso a archivos.||  
-|[Task-based Asynchronous Pattern (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Modelo asincrónico basado en tareas [TAP])|Describe un nuevo patrón de asincronía en .NET Framework. El patrón está basado en los tipos <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>.||  
-|[Vídeos de Async en Channel 9](https://channel9.msdn.com/search?term=async%20&type=All#pubDate=year&ch9Search&lang-en=en)|Proporciona vínculos a una serie de vídeos sobre programación asincrónica.||  
-  
-## <a name="BKMK_CompleteExample"></a> Ejemplo completo  
- El código siguiente es el archivo MainWindow.xaml.cs de la aplicación de Windows Presentation Foundation (WPF) que se explica en este tema. Puede descargar el ejemplo de [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c) (Ejemplo de async: Ejemplo de "Programación asincrónica con Async y Await).  
-  
-```csharp  
-using System;  
-using System.Collections.Generic;  
-using System.Linq;  
-using System.Text;  
-using System.Threading.Tasks;  
-using System.Windows;  
-using System.Windows.Controls;  
-using System.Windows.Data;  
-using System.Windows.Documents;  
-using System.Windows.Input;  
-using System.Windows.Media;  
-using System.Windows.Media.Imaging;  
-using System.Windows.Navigation;  
-using System.Windows.Shapes;  
-  
-// Add a using directive and a reference for System.Net.Http;  
-using System.Net.Http;  
-  
-namespace AsyncFirstExample  
-{  
-    public partial class MainWindow : Window  
-    {  
-        // Mark the event handler with async so you can use await in it.  
-        private async void StartButton_Click(object sender, RoutedEventArgs e)  
-        {  
-            // Call and await separately.  
-            //Task<int> getLengthTask = AccessTheWebAsync();  
-            //// You can do independent work here.  
-            //int contentLength = await getLengthTask;  
-  
-            int contentLength = await AccessTheWebAsync();  
-  
-            resultsTextBox.Text +=
-                $"\r\nLength of the downloaded string: {contentLength}.\r\n";
-        }  
-  
-        // Three things to note in the signature:  
-        //  - The method has an async modifier.   
-        //  - The return type is Task or Task<T>. (See "Return Types" section.)  
-        //    Here, it is Task<int> because the return statement returns an integer.  
-        //  - The method name ends in "Async."  
-        async Task<int> AccessTheWebAsync()  
-        {   
-            // You need to add a reference to System.Net.Http to declare client.  
-            using (HttpClient client = new HttpClient())  
-            {  
-                    // GetStringAsync returns a Task<string>. That means that when you await the  
-                    // task you'll get a string (urlContents).  
-                    Task<string> getStringTask = client.GetStringAsync("https://docs.microsoft.com");  
-  
-                    // You can do work here that doesn't rely on the string from GetStringAsync.  
-                    DoIndependentWork();  
-  
-                    // The await operator suspends AccessTheWebAsync.  
-                    //  - AccessTheWebAsync can't continue until getStringTask is complete.  
-                    //  - Meanwhile, control returns to the caller of AccessTheWebAsync.  
-                    //  - Control resumes here when getStringTask is complete.   
-                    //  - The await operator then retrieves the string result from getStringTask.  
-                    string urlContents = await getStringTask;  
-  
-                    // The return statement specifies an integer result.  
-                    // Any methods that are awaiting AccessTheWebAsync retrieve the length value.  
-                    return urlContents.Length;  
-            }  
-        }  
-  
-        void DoIndependentWork()  
-        {  
-            resultsTextBox.Text += "Working . . . . . . .\r\n";  
-        }  
-    }  
-}  
-  
-// Sample Output:  
-  
-// Working . . . . . . .  
-  
-// Length of the downloaded string: 25035.  
-```  
-  
-## <a name="see-also"></a>Vea también
+Este es el objetivo de la sintaxis: habilitar código que se lea como una secuencia de instrucciones, pero que se ejecute siguiendo un orden mucho más complicado, en función de la asignación de recursos externos y del momento en el que se completen las tareas. Es similar a la manera en la que las personas dan instrucciones para los procesos que incluyen las tareas asincrónicas. En este artículo, usará un ejemplo con instrucciones para preparar el desayuno que le ayudará a comprender cómo las palabras clave `async` y `await` facilitan el proceso de razonar sobre el código que incluye una serie de instrucciones asincrónicas. Para explicar cómo se prepara un desayuno, probablemente escribirá unas instrucciones parecidas a las que se recogen en la lista siguiente:
 
-- [async](../../../../csharp/language-reference/keywords/async.md)
-- [await](../../../../csharp/language-reference/keywords/await.md)
-- [Programación asincrónica](../../../../csharp/async.md)
-- [Información general de Async](../../../../standard/async.md)
+1. Sirva una taza de café.
+1. Caliente una sartén y fría dos huevos.
+1. Fría tres lonchas de beicon.
+1. Tueste dos rebanadas de pan.
+1. Unte el pan con mantequilla y mermelada.
+1. Sirva un vaso de zumo de naranja.
+
+Si es un experto cocinero, lo más probable es que ejecute estas instrucciones **asincrónicamente**. Primero, calentará la sartén para los huevos e irá friendo el beicon. Después, pondrá el pan en la tostadora y empezará a freír los huevos. En cada paso del proceso, iniciará una tarea y volverá la atención a las tareas que tiene pendientes.
+
+La preparación del desayuno es un buen ejemplo de un trabajo asincrónico que no es paralelo. Una persona (o un subproceso) puede controlar todas estas tareas. Siguiendo con la analogía del desayuno, una persona puede preparar el desayuno asincrónicamente si comienza la tarea siguiente antes de que finalice la anterior. Los alimentos se cocinan tanto si una persona supervisa el proceso como si no. En cuanto se empieza a calentar la sartén para los huevos, se puede comenzar a freír el beicon. Una vez que el beicon se esté haciendo, se puede poner el pan en la tostadora.
+
+En el caso de un algoritmo paralelo, necesitaría varios cocineros (o subprocesos). Uno se encargaría de los huevos, otro del beicon, etc. Cada uno de ellos se centraría en una sola tarea. Un cocinero (o subproceso) se bloqueará al esperar asincrónicamente a que el beicon se dore para darle la vuelta, o al esperar a que las tostadas estén listas. 
+
+Piense ahora en estas mismas instrucciones escritas como instrucciones de C#:
+
+[!code-csharp[SynchronousBreakfast](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-starter/Program.cs#Main)]
+
+Los equipos no interpretan estas instrucciones de la misma manera que las personas. El equipo se bloqueará en cada instrucción hasta que el trabajo se complete antes de pasar a la instrucción siguiente. Podría decirse que esto da lugar a un desayuno poco satisfactorio. Las tareas posteriores no se pueden iniciar mientras no se completen las anteriores. Así pues, se tardará mucho más en preparar el desayuno y algunos alimentos se habrán enfriado incluso antes de servirse. 
+
+Si quiere que el equipo ejecute las instrucciones anteriores de forma asincrónica, debe escribir código asincrónico.
+
+Estas cuestiones son importantes para los programas que se escriben hoy en día. Al escribir programas cliente, le interesa que la interfaz de usuario responda a la entrada del usuario. La aplicación no debería hacer que un teléfono parezca congelado mientras descarga datos de la Web. Al escribir programas de servidor, no le conviene que los subprocesos se bloqueen. La intención es que puedan atender también otras solicitudes. El uso de código sincrónico cuando existen alternativas asincrónicas va en detrimento de la capacidad de escalar horizontalmente a un menor coste. Al final, los subprocesos bloqueados pasarán factura.
+
+Las aplicaciones modernas de más éxito requieren código asincrónico. Sin la compatibilidad con los lenguajes, la escritura de código asincrónico requería devoluciones de llamada, eventos de finalización u otros medios que impedían ver claramente la intención original del código. La ventaja del código sincrónico es que resulta fácil de entender. Las acciones detalladas hacen que sea fácil examinar el código y comprenderlo. Los modelos asincrónicos tradicionales obligaban a centrarse en la naturaleza asincrónica del código, no en las acciones fundamentales.
+
+## <a name="dont-block-await-instead"></a>Uso de await para evitar los bloqueos
+
+El código anterior muestra una práctica incorrecta, que consiste en construir código sincrónico para llevar a cabo operaciones asincrónicas. Tal como está escrito, este código bloquea el subproceso que lo ejecuta y le impide realizar cualquier otro trabajo. Nada lo interrumpirá mientras alguna de las tareas esté en curso. Es como si usted se quedara mirando la tostadora después de meter el pan y no pudiera oír a nadie que le dirigiera la palabra hasta que las tostadas estuvieran listas. 
+
+Empecemos por actualizar este código para que el subproceso no se bloquee mientras se ejecutan las tareas. La palabra clave `await` proporciona un modo sin bloqueo para iniciar una tarea y, después, proseguir la ejecución cuando dicha tarea se complete. Una versión asincrónica sencilla del código para preparar el desayuno tendría un aspecto parecido al del fragmento siguiente:
+
+[!code-csharp[SimpleAsyncBreakfast](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V2/Program.cs#Main)]
+
+Este código no produce un bloqueo mientras se cocinan los huevos o el beicon, pero tampoco inicia otras tareas. Es decir, pondría el pan en la tostadora y se quedaría esperando a que estuviera listo, pero, por lo menos, si alguien reclamara su atención, le haría caso. En un restaurante en el que se atienden varios pedidos, el cocinero empezaría a preparar otro desayuno mientras se hace el primero.
+
+El subproceso que se encarga del desayuno ya no se bloquearía mientras espera por las tareas iniciadas que aún no han terminado. En algunas aplicaciones, lo único que se necesita es este cambio. Una aplicación de interfaz gráfica de usuario seguirá respondiendo al usuario con este único cambio. Aun así, para este escenario, necesita algo más. No le interesa que todas las tareas de componente se ejecuten secuencialmente. Es mejor iniciar cada una de estas tareas sin esperar a que la tarea anterior se complete.
+
+## <a name="start-tasks-concurrently"></a>Inicio simultáneo de tareas
+
+En muchos escenarios, necesita iniciar varias tareas independientes de inmediato. Después, a medida que finalice cada tarea, podrá seguir con el trabajo que esté listo. Siguiendo con la analogía del desayuno, esta es la manera más rápida de prepararlo. Además, de este modo, todo estará listo aproximadamente en el mismo momento. Así podrá disfrutar de un desayuno caliente.
+
+La clase <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> y los tipos relacionados se pueden usar para razonar sobre las tareas que están en curso. Esto le permite escribir código que se asemeje más a la manera en que realmente se prepara el desayuno. Para ello, cocinará los huevos, el beicon y las tostadas al mismo tiempo. Como cada uno de estos elementos requiere una acción, se ocupará de esa tarea, se encargará de la acción siguiente y esperará por todo lo que necesite su atención.
+
+Comenzará una tarea y conservará el objeto <xref:System.Threading.Tasks.Task> que representa el trabajo. Llevará a cabo una instrucción `await` para esperar por cada tarea antes de trabajar con su resultado.
+
+Realicemos estos cambios en el código del desayuno. El primer paso consiste en almacenar las tareas de las operaciones cuando se inician, en lugar de esperar por ellas:
+
+```csharp
+Coffee cup = PourCoffee();
+Console.WriteLine("coffee is ready");
+Task<Egg> eggTask = FryEggs(2);
+Egg eggs = await eggTask;
+Console.WriteLine("eggs are ready");
+Task<Bacon> baconTask = FryBacon(3);
+Bacon bacon = await baconTask;
+Console.WriteLine("bacon is ready");
+Task<Toast> toastTask = ToastBread(2);
+Toast toast = await toastTask;
+ApplyButter(toast);
+ApplyJam(toast);
+Console.WriteLine("toast is ready");
+Juice oj = PourOJ();
+Console.WriteLine("oj is ready");
+
+Console.WriteLine("Breakfast is ready!");
+```
+
+Después, puede mover las instrucciones `await` del beicon y los huevos al final del método, antes de servir el desayuno:
+
+```csharp
+Coffee cup = PourCoffee();
+Console.WriteLine("coffee is ready");
+Task<Egg> eggTask = FryEggs(2);
+Task<Bacon> baconTask = FryBacon(3);
+Task<Toast> toastTask = ToastBread(2);
+Toast toast = await toastTask;
+ApplyButter(toast);
+ApplyJam(toast);
+Console.WriteLine("toast is ready");
+Juice oj = PourOJ();
+Console.WriteLine("oj is ready");
+
+Egg eggs = await eggTask;
+Console.WriteLine("eggs are ready");
+Bacon bacon = await baconTask;
+Console.WriteLine("bacon is ready");
+
+Console.WriteLine("Breakfast is ready!");
+```
+
+El código anterior funciona mejor. Iniciará todas las tareas asincrónicas a la vez y esperará por una tarea solo cuando necesite los resultados. El código anterior se parece al código de una aplicación web que realiza solicitudes a diferentes microservicios y, después, combina los resultados en una sola página. Podrá realizar todas las solicitudes de inmediato y, luego, llevará a cabo una instrucción `await` para esperar por todas esas tareas y componer la página web.
+
+## <a name="composition-with-tasks"></a>Composición con tareas
+
+ Ya tiene todo listo al mismo tiempo para el desayuno, excepto las tostadas. La preparación de las tostadas es la composición de una operación asincrónica (tostar el pan) y varias operaciones sincrónicas (untar la mantequilla y la mermelada). La actualización de este código ilustra un concepto importante:
+
+> [!IMPORTANT]
+> La composición de una operación asincrónica seguida de un trabajo sincrónico es una operación asincrónica. Dicho de otra manera, si una parte cualquiera de una operación es asincrónica, toda la operación es asincrónica.
+
+En el código anterior se muestra que se puede usar un objeto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> para conservar tareas en ejecución. Lleva a cabo una instrucción `await` para esperar por una tarea a fin de poder usar su resultado. El siguiente paso consiste en crear métodos que representan la combinación de otro trabajo. Antes de servir el desayuno, quiere esperar por la tarea que representa tostar el pan antes de untar la mantequilla y la mermelada. Puede representar este trabajo con el código siguiente:
+
+[!code-csharp[ComposeToastTask](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V3/Program.cs#ComposeToastTask)]
+
+El método anterior tiene el modificador `async` en su firma, lo que indica al compilador que este método incluye una instrucción `await`, es decir, que contiene operaciones asincrónicas. Este método representa la tarea que tuesta el pan y, después, agrega la mantequilla y la mermelada. El método devuelve un objeto <xref:System.Threading.Tasks.Task%601> que representa la composición de estas tres operaciones. El bloque principal de código se convierte en lo siguiente:
+
+[!code-csharp[StartConcurrentTasks](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V3/Program.cs#Main)]
+
+El cambio anterior ilustra una técnica importante para trabajar con código asincrónico. Para componer tareas, las operaciones se separan en un método nuevo que devuelve una tarea. Usted puede elegir cuándo se debe esperar por esta tarea y puede iniciar otras tareas simultáneamente.
+
+## <a name="await-tasks-efficiently"></a>Espera de la finalización de las tareas de forma eficaz
+
+La serie de instrucciones `await` al final del código anterior se puede mejorar mediante el uso de métodos de la clase `Task`. Una de estas API es <xref:System.Threading.Tasks.Task.WhenAll%2A>, que devuelve un objeto <xref:System.Threading.Tasks.Task> que se completa cuando finalizan todas las tareas de la lista de argumentos, como se muestra en el código siguiente:
+
+```csharp
+await Task.WhenAll(eggTask, baconTask, toastTask);
+Console.WriteLine("eggs are ready");
+Console.WriteLine("bacon is ready");
+Console.WriteLine("toast is ready");
+Console.WriteLine("Breakfast is ready!");
+```
+
+Otra opción consiste en usar <xref:System.Threading.Tasks.Task.WhenAny%2A>, que devuelve un objeto `Task<Task>` que se completa cuando finaliza cualquiera de sus argumentos. Puede esperar por la tarea devuelta, con la certeza de saber que ya ha terminado. En el código siguiente se muestra cómo se puede usar <xref:System.Threading.Tasks.Task.WhenAny%2A> para esperar a que la primera tarea finalice y, después, procesar su resultado. Después de procesar el resultado de la tarea completada, quítela de la lista de tareas que se pasan a `WhenAny`.
+
+[!code-csharp[AwaitAnyTask](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-final/Program.cs#AwaitAnyTask)]
+
+Después de todos estos cambios, la versión final de `Main` tiene un aspecto similar al código siguiente:
+
+[!code-csharp[Final](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-final/Program.cs#Main)]
+
+Este código final es asincrónico. Refleja con más precisión la manera en que una persona prepara un desayuno. Compare el código anterior con el primer ejemplo de código del artículo. Las acciones principales siguen siendo claras cuando se lee el código. De hecho, puede leerlo como si se tratara de las instrucciones para preparar el desayuno que se indican al principio del artículo. Las características del lenguaje para `async` y `await` proporcionan la traducción que cualquier persona haría para seguir las instrucciones escritas, a saber: las tareas deben iniciarse a medida que sea posible y debe evitarse el bloqueo por esperar a que se completen las tareas.
