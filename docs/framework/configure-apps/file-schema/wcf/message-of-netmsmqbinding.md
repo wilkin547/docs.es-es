@@ -2,23 +2,25 @@
 title: <message> de <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: 306bc56820cdbcba17cce9fc50d426260eb0e0d4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c623b7daf1e91c9c1800b9653525cd51b1087506
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360672"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890571"
 ---
 # <a name="message-of-netmsmqbinding"></a>\<mensaje > de \<netMsmqBinding >
 
 Define la configuración de seguridad del mensaje SOAP en este enlace `netMsmqBinding`.
 
-\<system.ServiceModel>\
-\<bindings>\
-\<netMsmqBinding>\
-\<binding>\
-\<seguridad > \
-\<message>
+```xml
+<system.ServiceModel>
+  <bindings>
+    <netMsmqBinding>
+      <binding>
+        <security>
+          <message>
+```
 
 ## <a name="syntax"></a>Sintaxis
 

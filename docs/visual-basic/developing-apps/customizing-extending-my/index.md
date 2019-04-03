@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 89a9a988bab62cb77e3e5a5075fa01bdbb11f4c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820950"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890402"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Personalizar proyectos y ampliar My con Visual Basic
 Puede personalizar las plantillas de proyecto para proporcionar más `My` objetos. Esto facilita encontrar y usar los objetos de otros desarrolladores.  
@@ -20,14 +20,14 @@ Puede personalizar las plantillas de proyecto para proporcionar más `My` objeto
  [Extender el espacio de nombres My en Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  Describe cómo agregar miembros personalizados y valores para el `My` espacio de nombres en Visual Basic.  
   
- [Empaquetado e implementación de extensiones de My personalizadas](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  
+ [Empaquetar e implementar extensiones de My personalizadas](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  
  Describe cómo publicar personalizado `My` extensiones de espacio de nombres mediante el uso de plantillas de Visual Studio.  
   
- [Extensión del modelo de la aplicación de Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
+ [Ampliar el modelo de la aplicación de Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
  Describe cómo especificar sus propias extensiones al modelo de aplicación mediante la invalidación de los miembros de la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> clase.  
   
- [Personalización de los objetos que están disponibles en My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- Describe cómo controlarlas `My` objetos se habilitan estableciendo la constante de compilación condicional _MYTYPE de su proyecto.  
+ [Personalizar los objetos que están disponibles en My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
+ Describe cómo controlarlas `My` objetos se habilitan estableciendo el proyecto \_constante de compilación condicional MYTYPE.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Desarrollo con la función My](../../../visual-basic/developing-apps/development-with-my/index.md)  

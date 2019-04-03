@@ -1,25 +1,27 @@
 ---
-title: <issuerChannelBehaviors> (Elemento)
+title: <issuerChannelBehaviors> Elemento
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: 3386a287d577681b67bd3ad54a75b0276e29da1f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7cbd50daa82b0ca937a1bba93786545898b03c8b
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357253"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890480"
 ---
 # <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors > elemento
 
 Contiene una colección de comportamientos de punto de conexión de cliente de Windows Communication Foundation (WCF) (definido en la configuración) que se usará al comunicarse con los servicios de Token de servicio especificado. Los comportamientos definidos no pueden contener ninguno [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementos.
 
-\<system.ServiceModel>\
-\<comportamientos > \
-section\ endpointBehaviors
-\<comportamiento > \
-\<clientCredentials>\
-\<issuedToken>\
-\<issuerChannelBehaviors>
+```xml
+<system.ServiceModel>
+  <behaviors>
+    <endpointBehaviors>
+      <behavior>
+        <clientCredentials>
+          <issuedToken>
+            <issuerChannelBehaviors>
+```
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -65,6 +67,6 @@ Use este elemento cuando se deba utilizar un comportamiento (excepto los comport
 - [Federación y tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)
-- [Cómo: Crear a un cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Cómo: Configurar a un emisor Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Filtrar para crear un cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Filtrar para configurar un emisor local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [Federación y tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

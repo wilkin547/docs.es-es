@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fd1a4d41e65ea4d39f1cfee33aa5e166eec71ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0911132a705f3de89d771324cbb63e8db31bdfdb
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628557"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890519"
 ---
 # <a name="clr-etw-providers"></a>Proveedores ETW de CLR
 El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime y el proveedor del informe detallado.  
@@ -81,10 +81,10 @@ El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime 
     xperf -stop clr  
     ```  
   
-4.  Combine los perfiles para crear un archivo de registro:  
+4.  Fusione mediante combinación los perfiles para crear un archivo de registro:  
   
     ```  
-    xperf -merge -d clr1.etl clr2.etl merged.etl  
+    xperf -merge clr1.etl clr2.etl merged.etl  
     ```  
   
      El archivo merged.etl contendrá los eventos de las sesiones de los proveedores en tiempo de ejecución y de informe detallado.  
