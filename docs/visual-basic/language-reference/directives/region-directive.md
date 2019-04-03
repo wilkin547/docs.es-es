@@ -10,39 +10,40 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: d0abbdb9cb96ad9977a9af542f90eaad8a7e160e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: eaaf0f8279ec905767be3f364a88357f0d393bba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969718"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818883"
 ---
-# <a name="region-directive"></a><span data-ttu-id="01907-102">#Region (Directiva)</span><span class="sxs-lookup"><span data-stu-id="01907-102">#Region Directive</span></span>
-<span data-ttu-id="01907-103">Contrae y oculta secciones de código en archivos de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="01907-103">Collapses and hides sections of code in Visual Basic files.</span></span>  
+# <a name="region-directive"></a><span data-ttu-id="bb1ae-102">#Region (Directiva)</span><span class="sxs-lookup"><span data-stu-id="bb1ae-102">#Region Directive</span></span>
+<span data-ttu-id="bb1ae-103">Contrae y oculta secciones de código en archivos de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="bb1ae-103">Collapses and hides sections of code in Visual Basic files.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01907-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="01907-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bb1ae-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="bb1ae-104">Syntax</span></span>  
 
 ```vb
 #Region "identifier_string"  
 #End Region  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="01907-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="01907-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="bb1ae-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="bb1ae-105">Parts</span></span>  
   
-|<span data-ttu-id="01907-106">Término</span><span class="sxs-lookup"><span data-stu-id="01907-106">Term</span></span>|<span data-ttu-id="01907-107">Definición</span><span class="sxs-lookup"><span data-stu-id="01907-107">Definition</span></span>|  
+|<span data-ttu-id="bb1ae-106">Término</span><span class="sxs-lookup"><span data-stu-id="bb1ae-106">Term</span></span>|<span data-ttu-id="bb1ae-107">de esquema JSON</span><span class="sxs-lookup"><span data-stu-id="bb1ae-107">Definition</span></span>|  
 |---|---|  
-|`identifier_string`|<span data-ttu-id="01907-108">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="01907-108">Required.</span></span> <span data-ttu-id="01907-109">Cadena que actúa como título de una región cuando esta se contrae.</span><span class="sxs-lookup"><span data-stu-id="01907-109">String that acts as the title of a region when it is collapsed.</span></span> <span data-ttu-id="01907-110">Las regiones están contraídas de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="01907-110">Regions are collapsed by default.</span></span>|  
-|`#End Region`|<span data-ttu-id="01907-111">Finaliza el bloque `#Region`.</span><span class="sxs-lookup"><span data-stu-id="01907-111">Terminates the `#Region` block.</span></span>|  
+|`identifier_string`|<span data-ttu-id="bb1ae-108">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="bb1ae-108">Required.</span></span> <span data-ttu-id="bb1ae-109">Cadena que actúa como título de una región cuando esta se contrae.</span><span class="sxs-lookup"><span data-stu-id="bb1ae-109">String that acts as the title of a region when it is collapsed.</span></span> <span data-ttu-id="bb1ae-110">Las regiones están contraídas de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="bb1ae-110">Regions are collapsed by default.</span></span>|  
+|`#End Region`|<span data-ttu-id="bb1ae-111">Finaliza el bloque `#Region`.</span><span class="sxs-lookup"><span data-stu-id="bb1ae-111">Terminates the `#Region` block.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="01907-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="01907-112">Remarks</span></span>  
- <span data-ttu-id="01907-113">La directiva `#Region` permite especificar un bloque de código que se puede expandir o contraer cuando se usa la característica de esquematización del Editor de código de Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="01907-113">Use the `#Region` directive to specify a block of code to expand or collapse when using the outlining feature of the Visual Studio Code Editor.</span></span> <span data-ttu-id="01907-114">Puede colocar, o *anidar*, las regiones dentro de otras regiones para agrupar regiones similares.</span><span class="sxs-lookup"><span data-stu-id="01907-114">You can place, or *nest*, regions within other regions to group similar regions together.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bb1ae-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="bb1ae-112">Remarks</span></span>  
+ <span data-ttu-id="bb1ae-113">La directiva `#Region` permite especificar un bloque de código que se puede expandir o contraer cuando se usa la característica de esquematización del Editor de código de Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="bb1ae-113">Use the `#Region` directive to specify a block of code to expand or collapse when using the outlining feature of the Visual Studio Code Editor.</span></span> <span data-ttu-id="bb1ae-114">Puede colocar, o *anidar*, las regiones dentro de otras regiones para agrupar regiones similares.</span><span class="sxs-lookup"><span data-stu-id="bb1ae-114">You can place, or *nest*, regions within other regions to group similar regions together.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="01907-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="01907-115">Example</span></span>  
- <span data-ttu-id="01907-116">En este ejemplo se usa la directiva `#Region`.</span><span class="sxs-lookup"><span data-stu-id="01907-116">This example uses the `#Region` directive.</span></span>  
+## <a name="example"></a><span data-ttu-id="bb1ae-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="bb1ae-115">Example</span></span>  
+ <span data-ttu-id="bb1ae-116">En este ejemplo se usa la directiva `#Region`.</span><span class="sxs-lookup"><span data-stu-id="bb1ae-116">This example uses the `#Region` directive.</span></span>  
   
  [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   
-## <a name="see-also"></a><span data-ttu-id="01907-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="01907-117">See also</span></span>
-- [<span data-ttu-id="01907-118">#If...Then...#Else (directivas)</span><span class="sxs-lookup"><span data-stu-id="01907-118">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [<span data-ttu-id="01907-119">Esquematización</span><span class="sxs-lookup"><span data-stu-id="01907-119">Outlining</span></span>](/visualstudio/ide/outlining)
-- [<span data-ttu-id="01907-120">Cómo: Contraer y ocultar secciones de código</span><span class="sxs-lookup"><span data-stu-id="01907-120">How to: Collapse and Hide Sections of Code</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)
+## <a name="see-also"></a><span data-ttu-id="bb1ae-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="bb1ae-117">See also</span></span>
+
+- [<span data-ttu-id="bb1ae-118">#If...Then...#Else (directivas)</span><span class="sxs-lookup"><span data-stu-id="bb1ae-118">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [<span data-ttu-id="bb1ae-119">Esquematización</span><span class="sxs-lookup"><span data-stu-id="bb1ae-119">Outlining</span></span>](/visualstudio/ide/outlining)
+- [<span data-ttu-id="bb1ae-120">Cómo: Contraer y ocultar secciones de código</span><span class="sxs-lookup"><span data-stu-id="bb1ae-120">How to: Collapse and Hide Sections of Code</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)
