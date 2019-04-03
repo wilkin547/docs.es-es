@@ -6,10 +6,10 @@ helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
 ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
+ms.lasthandoff: 04/01/2019
 ms.locfileid: "58634237"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Cómo comparar cadenas en C\#

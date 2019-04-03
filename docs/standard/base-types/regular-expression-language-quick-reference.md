@@ -16,35 +16,23 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f44bf779060a2f9ff2de96ccad5f397a9cdd33c7
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836310"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410529"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Lenguaje de expresiones regulares - Referencia rápida
-<a name="top"></a> Una expresión regular es un patrón con el que el motor de expresiones regulares intenta buscar una coincidencia en el texto de entrada. Un modelo consta de uno o más literales de carácter, operadores o estructuras.  Para obtener una breve introducción, consulte [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md).  
+ Una expresión regular es un modelo con el que el motor de expresiones regulares intenta buscar una coincidencia en el texto de entrada. Un modelo consta de uno o más literales de carácter, operadores o estructuras.  Para obtener una breve introducción, consulte [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md).  
   
- Cada sección de esta referencia rápida enumera una categoría determinada de caracteres, operadores y construcciones que puede usar para definir expresiones regulares:  
-  
- [Escapes de carácter](#character_escapes)  
- [Clases de caracteres](#character_classes)  
- [Delimitadores](#anchors)  
- [Construcciones de agrupamiento](#grouping_constructs)  
- [Cuantificadores](#quantifiers)  
- [Construcciones de referencia inversa](#backreference_constructs)  
- [Construcciones de alternancia](#alternation_constructs)  
- [Sustituciones](#substitutions)  
- [Opciones de expresiones regulares](#options)  
- [Construcciones misceláneas](#miscellaneous_constructs)  
+ Cada sección de esta referencia rápida enumera una categoría determinada de caracteres, operadores y construcciones que puede usar para definir expresiones regulares.  
   
  Esta información también se proporciona en dos formatos que se puede descargar e imprimir para facilitar su consulta:  
   
  [Descargar en formato Word (.docx)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [Descarga en formato PDF (.pdf)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
-<a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>Escapes de carácter  
  El carácter de barra diagonal inversa (\\) en una expresión regular indica que el carácter que le sigue es un carácter especial (como se muestra en la tabla siguiente) o que se debe interpretar literalmente. Para más información, consulte [Escapes de carácter](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md).  
   
@@ -66,7 +54,6 @@ ms.locfileid: "56836310"
   
  [Volver al principio](#top)  
   
-<a name="character_classes"></a>   
 ## <a name="character-classes"></a>Clases de caracteres  
  Una clase de caracteres coincide con cualquiera de un juego de caracteres. Las clases de caracteres incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para más información, consulte [Clases de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
@@ -103,7 +90,6 @@ ms.locfileid: "56836310"
   
  [Volver al principio](#top)  
   
-<a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>Construcciones de agrupamiento  
  Las construcciones de agrupamiento definen subexpresiones de una expresión regular y, normalmente, capturan subcadenas de una cadena de entrada. Las construcciones de agrupamiento incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md).  
   
@@ -122,7 +108,6 @@ ms.locfileid: "56836310"
   
  [Volver al principio](#top)  
   
-<a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>Cuantificadores  
  Un cuantificador especifica cuántas instancias del elemento anterior (que puede ser un carácter, un grupo o una clase de caracteres) debe haber en la cadena de entrada para que se encuentre una coincidencia. Los cuantificadores incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Cuantificadores](quantifiers-in-regular-expressions.md).  
   
@@ -143,7 +128,6 @@ ms.locfileid: "56836310"
   
  [Volver al principio](#top)  
   
-<a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>Construcciones de referencia inversa  
  Una referencia inversa permite identificar una subexpresión coincidente previamente más adelante en la misma expresión regular. En la tabla siguiente se enumeran las construcciones de referencia inversa admitidas en las expresiones regulares de .NET. Para obtener más información, consulta [Construcciones de referencia inversa](backreference-constructs-in-regular-expressions.md).  
   
@@ -154,7 +138,6 @@ ms.locfileid: "56836310"
   
  [Volver al principio](#top)  
   
-<a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>Construcciones de alternancia  
  Las estructuras de alternancia modifican una expresión regular para habilitar o no la coincidencia. Estas construcciones incluyen los elementos del lenguaje enumerados en la tabla siguiente. Para obtener más información, consulta [Construcciones de alternancia](alternation-constructs-in-regular-expressions.md).  
   
@@ -166,7 +149,6 @@ ms.locfileid: "56836310"
   
  [Volver al principio](#top)  
   
-<a name="substitutions"></a>   
 ## <a name="substitutions"></a>Sustituciones  
  Las sustituciones son elementos del lenguaje de expresiones regulares que se admiten en modelos de reemplazo. Para obtener más información, consulta [Substituciones](substitutions-in-regular-expressions.md). Los metacaracteres enumerados en la tabla siguiente son aserciones atómicas de ancho cero.  
   
@@ -183,7 +165,6 @@ ms.locfileid: "56836310"
   
  [Volver al principio](#top)  
   
-<a name="options"></a>   
 ## <a name="regular-expression-options"></a>Opciones de expresiones regulares  
  Puede especificar opciones que controlen cómo debe interpretar el motor de expresiones regulares un patrón de expresión regular. Muchas de estas opciones pueden especificarse alineadas (en el patrón de expresión regular) o como una o más constantes de <xref:System.Text.RegularExpressions.RegexOptions> . Esta referencia rápida solo muestra las opciones alineadas. Para obtener más información sobre las opciones alineadas y <xref:System.Text.RegularExpressions.RegexOptions> , consulte el artículo [Opciones de expresiones regulares](regular-expression-options.md).  
   
@@ -205,7 +186,6 @@ ms.locfileid: "56836310"
   
  [Volver al principio](#top)  
   
-<a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>Construcciones misceláneas  
  Las estructuras misceláneas modifican un modelo de expresión regular o proporcionan información sobre él. En la tabla siguiente se enumeran las construcciones misceláneas admitidas por .NET. Para obtener más información, consulta [Construcciones misceláneas](miscellaneous-constructs-in-regular-expressions.md).  
   
