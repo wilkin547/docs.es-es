@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
 ms.openlocfilehash: e4c78a12d6ba66ea88573e6ef2e5b4cc04c1121a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829192"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890789"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log (objeto)
 Proporciona una propiedad y métodos para escribir información de eventos y excepciones en los agentes de escucha de registro de la aplicación.  
@@ -23,7 +23,7 @@ Proporciona una propiedad y métodos para escribir información de eventos y exc
 >  También puede usar clases de .NET Framework para registrar información desde la aplicación. Para obtener más información, consulta [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:** <xref:Microsoft.VisualBasic.Logging>  
+ **Espacio de nombres: ** <xref:Microsoft.VisualBasic.Logging>  
   
  **Clase:** <xref:Microsoft.VisualBasic.Logging.Log>  
   
@@ -31,4 +31,4 @@ Proporciona una propiedad y métodos para escribir información de eventos y exc
   
 ## <a name="see-also"></a>Vea también
 
-- [My.Application (objeto)](../../../visual-basic/language-reference/objects/my-application-object.md)
+- [My.Application (Objeto)](../../../visual-basic/language-reference/objects/my-application-object.md)
