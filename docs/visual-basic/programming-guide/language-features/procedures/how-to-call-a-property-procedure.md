@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Llamar a un procedimiento de propiedad (Visual Basic)
+title: Filtrar Llamar a un procedimiento de propiedad (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 6a7c55433001af5c5695044f41f866c1df8c3651
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7b85239f80b4bfa87d1dbb1e3207e63d0cef7eeb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977869"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827216"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Filtrar Llamar a un procedimiento de propiedad (Visual Basic)
 Se llama a un procedimiento de propiedad almacenar un valor en la propiedad o recuperar su valor. Obtener acceso a una propiedad del mismo modo que obtener acceso a una variable.  
@@ -24,7 +24,7 @@ Se llama a un procedimiento de propiedad almacenar un valor en la propiedad o re
   
 1.  Utilice el nombre de propiedad en una expresión de la misma manera que utilizaría un nombre de variable. Puede usar una propiedad en cualquier lugar puede usar una variable o una constante.  
   
-     O bien  
+     -o bien-  
   
      Utilice el nombre de propiedad tras la igual (`=`) inicie sesión en una instrucción de asignación.  
   
@@ -53,6 +53,7 @@ Se llama a un procedimiento de propiedad almacenar un valor en la propiedad o re
  El valor generado en el lado derecho de la instrucción de asignación se almacena en la propiedad.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Procedimientos de propiedades](./property-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
 - [Property (instrucción)](../../../../visual-basic/language-reference/statements/property-statement.md)

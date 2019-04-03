@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: 3939d05b74dc6b9d79cae8307f5c5c736a1917d5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d071e59d94e51ca55167983d0ee3098bd5c7dd8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968275"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843635"
 ---
 # <a name="type-list-visual-basic"></a>Lista de tipos (Visual Basic)
 Especifica el *parámetros de tipo* para un *genérico* elemento de programación. Varios parámetros están separados por comas. Siguiente es la sintaxis para un parámetro de tipo.  
@@ -42,7 +42,7 @@ Especifica el *parámetros de tipo* para un *genérico* elemento de programació
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`genericmodifier`|Opcional. Puede usarse solo en interfaces y delegados genéricos. Puede declarar un tipo covariante mediante el [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) palabra clave o contravariante mediante la [en](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) palabra clave. Vea [Covarianza y contravarianza](../../programming-guide/concepts/covariance-contravariance/index.md).|  
 |`typename`|Obligatorio. Nombre del parámetro de tipo. Se trata de un marcador de posición, reemplazarse por un tipo definido proporcionado por el argumento de tipo correspondiente.|  
@@ -93,6 +93,7 @@ Especifica el *parámetros de tipo* para un *genérico* elemento de programació
  [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)
 - [New (operador)](../../../visual-basic/language-reference/operators/new-operator.md)
 - [Niveles de acceso en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

@@ -2,12 +2,12 @@
 title: Modificar elementos, atributos y nodos en un Tree1 XML
 ms.date: 07/20/2015
 ms.assetid: 865cf54e-f8ac-4871-863b-a3e6fc61a4b9
-ms.openlocfilehash: c3863f52976303407cbad3d0bacc9bd0b2ec1d31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d548e6f5912437e5c5df27f55fcdb28990e92c8d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547545"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814905"
 ---
 # <a name="modifying-elements-attributes-and-nodes-in-an-xml-tree"></a>Modificar elementos, atributos y nodos de un árbol XML
 La tabla siguiente resume los métodos y las propiedades que puede usar para modificar un elemento, sus elementos secundarios o sus atributos.  
@@ -46,4 +46,5 @@ La tabla siguiente resume los métodos y las propiedades que puede usar para mod
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A?displayProperty=nameWithType>|Reemplaza los nodos secundarios por contenido nuevo.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Modificar árboles XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

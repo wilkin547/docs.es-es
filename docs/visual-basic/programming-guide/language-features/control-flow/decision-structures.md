@@ -9,12 +9,12 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 4aabb1eef717b06222696980d4cbce7a781fb567
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735252"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825383"
 ---
 # <a name="decision-structures-visual-basic"></a>Estructuras de decisión (Visual Basic)
 Visual Basic le permite probar condiciones y realizar diferentes operaciones en función de los resultados de la prueba. Se puede comprobar una condición es true o false para distintos valores de una expresión, o varias excepciones que se genera cuando se ejecuta una serie de instrucciones.  
@@ -47,6 +47,7 @@ Emprender acciones diferentes cuando una condición es true y cuando es false
 >  Para muchas de las estructuras de control, al hacer clic en una palabra clave, se resaltan todas las palabras clave en la estructura. Por ejemplo, al hacer clic en `If` en un `If...Then...Else` construcción, todas las instancias de `If`, `Then`, `ElseIf`, `Else`, y `End If` se resaltan en la construcción. Para mover a la palabra clave resaltada siguiente o anterior, presione CTRL + MAYÚS + flecha abajo o CTRL + MAYÚS + flecha arriba.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Flujo de control](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Estructuras de bucle](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Estructuras de control adicionales](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

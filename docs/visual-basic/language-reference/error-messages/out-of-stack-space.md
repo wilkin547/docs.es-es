@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 2f91763888069b6dca90da03995dc1b6812fd426
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25905e65e74b11d167d3ce2ad258599fb958eb88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655496"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814606"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Espacio de pila insuficiente (Visual Basic)
 La pila es un área de trabajo de memoria que aumenta y disminuye dinámicamente con las exigencias de su programa en ejecución. Se superaron su límite.  
@@ -29,4 +29,5 @@ La pila es un área de trabajo de memoria que aumenta y disminuye dinámicamente
 6.  Asegúrese de que no ha provocado "eventos en cascada" desencadenando un evento que llama a un procedimiento de evento ya en la pila. Un evento en cascada es similar a una llamada de procedimiento recursiva indefinida, pero es menos evidente, puesto que la llamada se realiza por Visual Basic, en lugar de una llamada explícita en el código. Use la `Calls` cuadro de diálogo para ver qué procedimientos están activos en la pila.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Ventana Memoria](/visualstudio/debugger/memory-windows)

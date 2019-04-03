@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: 7acec56be60f88147bac1ba4179ad0234ea1c6e1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dac8613d79e3262e4d1fd6ad1599fd01182e329b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270061"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819377"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>Declaración de un operador debe ser uno de: +,-, *,\,/, ^, &amp;, Like, Mod y, Or, Xor, no, \< \<, >>...
 Puede declarar sólo un operador que sea apto para la sobrecarga. En la tabla siguiente se enumera los operadores que se puede declarar.  
@@ -34,6 +34,7 @@ Puede declarar sólo un operador que sea apto para la sobrecarga. En la tabla si
 2.  Si necesita la función de sobrecarga de un operador que no se puede sobrecargar directamente, cree un procedimiento `Function` que tome los parámetros adecuados y devuelva el valor adecuado.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Operator (instrucción)](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Procedimientos de operadores](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
 - [Cómo: Definir un operador](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Demostración de la herencia Visual'
+title: 'Tutorial: Demostración de la herencia visual'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: aa4d18c0e3bbc2613502c7232771c57acc7f0dc8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721455"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816322"
 ---
-# <a name="walkthrough-demonstrating-visual-inheritance"></a>Tutorial: Demostración de la herencia Visual
+# <a name="walkthrough-demonstrating-visual-inheritance"></a>Tutorial: Demostración de la herencia visual
 La herencia visual le permite ver los controles del formulario base y agregar controles nuevos. En este tutorial, creará un formulario base y lo compilará para convertirlo en una biblioteca de clases. Importará la biblioteca de clases en otro proyecto y creará un nuevo formulario que herede del formulario base. Durante este tutorial aprenderá a:  
   
 -   Crear un proyecto de biblioteca de clases que contiene un formulario base.  
@@ -140,7 +140,7 @@ La herencia visual le permite ver los controles del formulario base y agregar co
   
 5.  Abra el formulario heredado (**Form2**) en el diseñador haciendo doble clic en él, si aún no está abierto.  
   
-     En el diseñador, los botones heredados tienen un símbolo (![captura de pantalla de VisualBasicInheritanceSymbol](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) en la esquina superior para indicar que son heredados.  
+     En el diseñador, los botones heredados tienen un símbolo)![Captura de pantalla del símbolo de herencia de Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) en la esquina superior para indicar que son heredados.  
   
 6.  Seleccione el **Say Hello** botón y observe los controladores de tamaño. Como este botón está protegido, los herederos pueden moverlo, cambiarlo de tamaño, cambiar su descripción y realizar otras modificaciones.  
   

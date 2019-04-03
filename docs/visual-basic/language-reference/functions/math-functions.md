@@ -7,12 +7,12 @@ helpviewer_keywords:
 - math routines
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
-ms.openlocfilehash: a644183f0af7a10672acc62e39ac174b88a47b90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5f87a8e367e8c9df65b979fea3781b42ee3ce83
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731821"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824967"
 ---
 # <a name="math-functions-visual-basic"></a>Funciones matemáticas (Visual Basic)
 Los métodos de la <xref:System.Math?displayProperty=nameWithType> clase proporcionar operaciones trigonométricas, logarítmicas y otras funciones matemáticas comunes.  
@@ -167,6 +167,7 @@ End Function
  **Ensamblado:** mscorlib (en mscorlib.dll)  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>
 - <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>
 - <xref:System.Double.NaN>

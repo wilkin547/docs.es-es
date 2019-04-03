@@ -2,12 +2,12 @@
 title: Activación UDP
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 09b208f88b456b6d98e45fc34db3857f8938cd6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a61b7fce891ea1ab68f48f836ffaae2b96c8e25d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715522"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836329"
 ---
 # <a name="udp-activation"></a>Activación UDP
 En este ejemplo se basa en el [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo. Extiende el [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo para admitir la activación del proceso usando el servicio de activación de procesos de Windows (WAS).  
@@ -53,7 +53,7 @@ En este ejemplo se basa en el [transporte: UDP](../../../../docs/framework/wcf/s
 ```  
   
 ### <a name="protocol-listener"></a>Agente de escucha de protocolo  
- El agente de escucha del protocolo UDP es un módulo dentro del activador de protocolo que realiza escuchas en un punto de conexión de UDP en nombre de la aplicación virtual. Se implementa en la clase `UdpSocketListener`. El extremo se representa como `IPEndpoint` para lo que el número de puerto se extrae del enlace del protocolo para el sitio.  
+ El agente de escucha del protocolo UDP es un módulo dentro del activador de protocolo que realiza escuchas en un extremo de UDP en nombre de la aplicación virtual. Se implementa en la clase `UdpSocketListener`. El punto de conexión se representa como `IPEndpoint` para lo que el número de puerto se extrae del enlace del protocolo para el sitio.  
   
 ### <a name="control-service"></a>Servicio de control  
  En este ejemplo, se usa WCF para comunicarse entre el activador y el proceso de trabajo WAS. El servicio que reside en el activador se denomina "servicio de control".  
@@ -162,4 +162,3 @@ En este ejemplo se basa en el [transporte: UDP](../../../../docs/framework/wcf/s
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  
   
-## <a name="see-also"></a>Vea también

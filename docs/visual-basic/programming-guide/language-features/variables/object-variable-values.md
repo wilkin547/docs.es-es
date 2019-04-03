@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: ce38089e91b25cf50e738d956881f3a44bfa3306
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c17c5f85952596f0a080ca473e8f792740e66b8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588741"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840398"
 ---
 # <a name="object-variable-values-visual-basic"></a>Valores de las variables de objeto (Visual Basic)
 Una variable de la [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) puede hacer referencia a datos de cualquier tipo. El valor que se almacena en un `Object` variable se mantiene en otro lugar en la memoria, mientras que la propia variable contiene un puntero a los datos.  
@@ -67,6 +67,7 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
  Puede declarar y usar una matriz de `Object` variables. Esto es útil cuando deba controlar una variedad de tipos de datos y las clases de objeto. Todos los elementos de matriz deben tener los mismos datos declarados de tipo. Este tipo de datos como se declara `Object` le permite almacenar objetos e instancias junto con otros tipos de datos de la matriz de clase.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Declaración de variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [Asignación de variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)

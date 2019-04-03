@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-ms.openlocfilehash: a8a85f4f089de9be6f2ecadac05256b30d3014b0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 598aef3943a53ee6eb97064819c9128de1839f52
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267461"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813943"
 ---
 # <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>Estructura '\<structurename >' debe contener al menos una variable miembro de instancia o declaración de evento de al menos una instancia no esté marcada como 'Custom'
 Una definición de estructura no incluye las variables no compartidas o eventos no personalizados no compartidos.  
@@ -26,6 +26,7 @@ Una definición de estructura no incluye las variables no compartidas o eventos 
 -   Definir al menos una variable o evento que no es `Shared`. Si define un solo evento, debe ser compartidas, así como no compartidos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Estructuras](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Cómo: Declarar una estructura](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md)

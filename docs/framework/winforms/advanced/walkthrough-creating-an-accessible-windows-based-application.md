@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708280"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823472"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Tutorial: Crear una aplicación accesible basada en Windows
 Crear una aplicación accesible conlleva importantes implicaciones empresariales. Muchos gobiernos tienen normativas sobre accesibilidad aplicadas a la compra de software. El logotipo “Certificado para Windows” incluye requisitos de accesibilidad. Tan solo en EE. UU hay aproximadamente unos 30 millones de ciudadanos, muchos de ellos clientes potenciales, que se ven afectados por la accesibilidad del software.  
@@ -55,9 +55,9 @@ Crear una aplicación accesible conlleva importantes implicaciones empresariales
   
 -   Asegúrese de que los controles Label que describen controles TextBox precedan inmediatamente al TextBox en el orden de tabulación.  
   
--   Agregue una tecla de acceso con el carácter “&” a la propiedad <xref:System.Windows.Forms.Control.Text%2A> de cualquier control al que el usuario desee tener acceso.  
+-   Agregue una tecla de acceso con el carácter "&" a la <xref:System.Windows.Forms.Control.Text%2A> propiedad de cualquier control que el usuario desee navegar a.  
   
--   Agregue una tecla de acceso con el carácter “&” a la propiedad <xref:System.Windows.Forms.Control.Text%2A> de la etiqueta que precede a un control al que el usuario desee tener acceso. Establezca la propiedad <xref:System.Windows.Forms.Label.UseMnemonic%2A> de las etiquetas en `true`, de modo que el foco se centre en el siguiente control del orden de tabulación cuando el usuario presione la tecla de acceso.  
+-   Agregue una tecla de acceso con el carácter "&" a la <xref:System.Windows.Forms.Control.Text%2A> propiedad de la etiqueta que precede a un control que el usuario es posible que desee navegar a. Establezca la propiedad <xref:System.Windows.Forms.Label.UseMnemonic%2A> de las etiquetas en `true`, de modo que el foco se centre en el siguiente control del orden de tabulación cuando el usuario presione la tecla de acceso.  
   
 -   Agregue teclas de acceso a todos los elementos de menú.  
   
@@ -65,17 +65,17 @@ Crear una aplicación accesible conlleva importantes implicaciones empresariales
   
 -   Agregue los controles al formulario y establezca las propiedades como se describe a continuación. Consulte la imagen al final de la tabla para ver un modelo de cómo organizar los controles en el formulario.  
   
-    |Objeto|Propiedad|Valor|  
+    |Object|Property|Valor|  
     |------------|--------------|-----------|  
     |Form1|AccessibleDescription|Formulario de pedido|  
     ||AccessibleName|Formulario de pedido|  
     ||Tamaño de fuente|10|  
     ||Texto|Pizza Order Form|  
-    |PictureBox|Nombre|logo|  
+    |PictureBox|Name|logo|  
     ||AccessibleDescription|Porción de pizza|  
     ||AccessibleName|Logotipo de la compañía|  
     ||Imagen|Cualquier icono o mapa de bits|  
-    |Etiqueta|Nombre|companyLabel|  
+    |Etiqueta|Name|companyLabel|  
     ||Texto|Good Pizza|  
     ||TabIndex|1|  
     ||AccessibleDescription|Nombre de la compañía|  
@@ -83,62 +83,64 @@ Crear una aplicación accesible conlleva importantes implicaciones empresariales
     ||Backcolor|Azul|  
     ||Forecolor|Amarillo|  
     ||Tamaño de fuente|18|  
-    |Etiqueta|Nombre|customerLabel|  
+    |Etiqueta|Name|customerLabel|  
     ||Texto|&Nombre|  
     ||TabIndex|2|  
     ||AccessibleDescription|Etiqueta de nombre de cliente|  
     ||AccessibleName|Etiqueta de nombre de cliente|  
     ||UseMnemonic|True|  
-    |TextBox|Nombre|customerName|  
+    |TextBox|Name|customerName|  
     ||Texto|(ninguno)|  
     ||TabIndex|3|  
     ||AccessibleDescription|Nombre del cliente|  
     ||AccessibleName|Nombre del cliente|  
-    |GroupBox|Nombre|sizeOptions|  
+    |GroupBox|Name|sizeOptions|  
     ||AccessibleDescription|Opciones de tamaño de pizza|  
     ||AccessibleName|Opciones de tamaño de pizza|  
     ||Texto|Pizza size|  
     ||TabIndex|4|  
-    |RadioButton|Nombre|smallPizza|  
+    |RadioButton|Name|smallPizza|  
     ||Texto|&Small $6.00|  
-    ||Activadas|True|  
+    ||Activado|True|  
     ||TabIndex|0|  
     ||AccessibleDescription|Pizza pequeña|  
     ||AccessibleName|Pizza pequeña|  
-    |RadioButton|Nombre|largePizza|  
+    |RadioButton|Name|largePizza|  
     ||Texto|&Large $10.00|  
     ||TabIndex|1|  
     ||AccessibleDescription|Pizza grande|  
     ||AccessibleName|Pizza grande|  
-    |Etiqueta|Nombre|toppingsLabel|  
+    |Etiqueta|Name|toppingsLabel|  
     ||Texto|&Toppings ($0.75 each)|  
     ||TabIndex|5|  
     ||AccessibleDescription|Etiqueta de ingredientes|  
     ||AccessibleName|Etiqueta de ingredientes|  
     ||UseMnemonic|True|  
-    |CheckedListBox|Nombre|toppings|  
+    |CheckedListBox|Name|toppings|  
     ||TabIndex|6|  
     ||AccessibleDescription|Ingredientes disponibles|  
     ||AccessibleName|Ingredientes disponibles|  
     ||Elementos|Pepperoni, Sausage, Mushrooms|  
-    |Botón|Nombre|orden|  
+    |Botón|Name|orden|  
     ||Texto|&Ordenar|  
     ||TabIndex|7|  
     ||AccessibleDescription|Total del pedido|  
     ||AccessibleName|Total del pedido|  
-    |Botón|Nombre|cancel|  
+    |Botón|Name|cancel|  
     ||Texto|&Cancelar|  
     ||TabIndex|8|  
     ||AccessibleDescription|Cancelar el pedido|  
     ||AccessibleName|Cancelar pedido|  
-    |MainMenu|Nombre|theMainMenu|  
-    |MenuItem|Nombre|fileCommands|  
+    |MainMenu|Name|theMainMenu|  
+    |MenuItem|Name|fileCommands|  
     ||Texto|&Archivo|  
-    |MenuItem|Nombre|exitApp|  
-    ||Texto|&Salir|  
-  
-     ![Formulario de pedido de pizza](./media/vbpizzaorderform.gif "vbPizzaOrderForm")  
-El formulario tendrá una apariencia similar a la siguiente:  
+    |MenuItem|Name|exitApp|  
+    ||Texto|&Salir|
+    
+      El formulario tendrá un aspecto similar a la siguiente imagen:
+    
+      ![El formulario de pedido de pizza con una selección del nombre de cuadro de texto y el tamaño e ingredientes.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+
   
 ## <a name="supporting-high-contrast-mode"></a>Compatibilidad con el modo de contraste alto  
  El modo de contraste alto es una configuración de sistema de Windows que mejora la legibilidad mediante el uso de colores de contraste y tamaños de fuente que son beneficiosos para los usuarios con discapacidades visuales. El <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> propiedad se proporciona para determinar si se ha establecido el modo de contraste alto.  

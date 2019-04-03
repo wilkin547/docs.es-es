@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 2f8b10082bb39c76ba1393daf8327df2ed631caf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20e83306925e91e579aca52f2e7c209c8c686dee
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568106"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817620"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>La expresión lambda no se quitará de este controlador de eventos
 Expresión lambda no se quitará de este controlador de eventos. Asigne la expresión lambda a una variable y use la variable para agregar y quitar el evento.  
@@ -85,6 +85,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Conversión de delegado flexible](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)

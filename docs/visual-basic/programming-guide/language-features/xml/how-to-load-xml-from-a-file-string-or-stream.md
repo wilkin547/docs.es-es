@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Cargar XML desde un archivo, cadena o Stream (Visual Basic)
+title: Filtrar Cargar XML desde un archivo, cadena o Stream (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [Visual Basic], loading
 - LINQ to XML [Visual Basic], loading XML from files
 ms.assetid: 2b02dcec-4cca-4575-b4ad-89ceb87b984c
-ms.openlocfilehash: 36a7f23eed7f47e8c33958f96e8e3694fb958d11
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2b9da2062068ef25c5df97ef19b1502999ea78ed
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977700"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832143"
 ---
-# <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Procedimiento Cargar XML desde un archivo, cadena o Stream (Visual Basic)
+# <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>Filtrar Cargar XML desde un archivo, cadena o Stream (Visual Basic)
 Puede crear [literales XML](../../../../visual-basic/language-reference/xml-literals/index.md) y rellenarlas con el contenido de un origen externo, como un archivo, una cadena o una secuencia mediante varios métodos. Estos métodos se muestran en los ejemplos siguientes.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -42,6 +42,7 @@ Puede crear [literales XML](../../../../visual-basic/language-reference/xml-lite
  [!code-vb[VbXMLSamples#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#46)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>

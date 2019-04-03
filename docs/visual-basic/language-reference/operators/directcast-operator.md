@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
-ms.openlocfilehash: 03e632bad538f65d010dfaa12f7eb5da15c11091
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 628ce4f06b91d0f514f71dea3aad8ea0fee6dccf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979832"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821509"
 ---
 # <a name="directcast-operator-visual-basic"></a>DirectCast (Operador) (Visual Basic)
 Introduce una operación de conversión de tipos en función de herencia o implementación.  
@@ -42,6 +42,7 @@ Introduce una operación de conversión de tipos en función de herencia o imple
  En el ejemplo anterior, tipo de tiempo de ejecución de `q` es `Double`. `CType` se realiza correctamente porque `Double` puede convertirse en `Integer`. Sin embargo, la primera `DirectCast` produce un error en tiempo de ejecución porque el tiempo de ejecución de tipos de `Double` no tiene ninguna relación de herencia con `Integer`, aunque existe una conversión. El segundo `DirectCast` se realiza correctamente porque convierte del tipo <xref:System.Windows.Forms.Form> escriba <xref:System.Windows.Forms.Control>, desde el que <xref:System.Windows.Forms.Form> hereda.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Convert.ChangeType%2A?displayProperty=nameWithType>
 - [Conversiones de ampliación y de restricción](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Conversiones implícitas y explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

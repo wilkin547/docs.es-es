@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 0d1d7e2650aaa357e4972ce61c1e19eef7c40b97
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 245d2cc36abde76a8f8bd73bae5d7ede183d4d03
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973423"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840515"
 ---
 # <a name="get-statement"></a>Get (Instrucción)
 Declara un `Get` procedimiento de propiedad que se usa para recuperar el valor de una propiedad.  
@@ -31,7 +31,7 @@ End Get
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`attributelist`|Opcional. Consulte [lista de los atributos](../../../visual-basic/language-reference/statements/attribute-list.md).|  
 |`accessmodifier`|Opcional en al menos uno de los `Get` y `Set` instrucciones de esta propiedad. Puede ser uno de los siguientes:<br /><br /> -   [protegido](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [privado](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Vea [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
@@ -83,6 +83,7 @@ End Get
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Set (instrucción)](../../../visual-basic/language-reference/statements/set-statement.md)
 - [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Exit (instrucción)](../../../visual-basic/language-reference/statements/exit-statement.md)

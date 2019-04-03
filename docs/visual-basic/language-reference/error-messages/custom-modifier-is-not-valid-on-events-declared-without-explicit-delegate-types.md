@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: c50cee530cab0d5d164d930678651f302ddc7f09
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0fc645671eb899faff0dbb5c6d745ba23faf4557
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980768"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827229"
 ---
 # <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>El modificador 'Custom' no es válido en eventos declarados sin tipos de delegado explícitos
 A diferencia de un evento no personalizado, un `Custom Event` declaración requiere un `As` cláusula después del nombre de evento que se especifica explícitamente el tipo de delegado para el evento.  
@@ -41,6 +41,7 @@ A diferencia de un evento no personalizado, un `Custom Event` declaración requi
  [!code-vb[VbVbalrEventError#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#2)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Delegate (instrucción)](../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)

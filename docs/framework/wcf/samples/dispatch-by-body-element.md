@@ -2,12 +2,12 @@
 title: Distribución mediante el elemento del cuerpo
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 43f429a0111198bce17f750b855d8e5588b947b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 376dfc0dcca3c3278ee4d4afefbe4756dd631212
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547912"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817063"
 ---
 # <a name="dispatch-by-body-element"></a>Distribución mediante el elemento del cuerpo
 Este ejemplo muestra cómo implementar un algoritmo alternativo para asignar mensajes entrantes a las operaciones.  
@@ -87,7 +87,7 @@ class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior
     // public void Validate(...)  
 ```  
   
- Primero, la implementación <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> prepara el diccionario de búsqueda para el selector de la operación procesa una iteración sobre los elementos <xref:System.ServiceModel.Description.OperationDescription> en <xref:System.ServiceModel.Description.ContractDescription>del extremo de servicio. A continuación, cada descripción de la operación se inspecciona para la presencia del comportamiento `DispatchBodyElementAttribute`, una implementación de <xref:System.ServiceModel.Description.IOperationBehavior> que también se define en este ejemplo. Aunque esta clase también es un comportamiento, es pasivo y no contribuye activamente con ningún cambio de configuración a la expedición en tiempo de ejecución. Todos sus métodos vuelven al llamador sin tomar ninguna medida. El comportamiento de la operación solo existe para que los metadatos exigidos para el nuevo mecanismo de la expedición, a saber, el nombre completo del cuerpo del elemento en cuya aparición se selecciona una operación, puedan estar asociados a las operaciones respectivas.  
+ Primero, la implementación <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> prepara el diccionario de búsqueda para el selector de la operación procesa una iteración sobre los elementos <xref:System.ServiceModel.Description.OperationDescription> en <xref:System.ServiceModel.Description.ContractDescription>del punto de conexión de servicio. A continuación, cada descripción de la operación se inspecciona para la presencia del comportamiento `DispatchBodyElementAttribute`, una implementación de <xref:System.ServiceModel.Description.IOperationBehavior> que también se define en este ejemplo. Aunque esta clase también es un comportamiento, es pasivo y no contribuye activamente con ningún cambio de configuración a la expedición en tiempo de ejecución. Todos sus métodos vuelven al llamador sin tomar ninguna medida. El comportamiento de la operación solo existe para que los metadatos exigidos para el nuevo mecanismo de la expedición, a saber, el nombre completo del cuerpo del elemento en cuya aparición se selecciona una operación, puedan estar asociados a las operaciones respectivas.  
   
  Si se busca este tipo de comportamiento, un par de valor creado a partir del nombre completo de XML (propiedad`QName` ) y el nombre de la operación (propiedad`Name` ) se agrega al diccionario.  
   
@@ -179,4 +179,3 @@ public interface IDispatchedByBody
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
   
-## <a name="see-also"></a>Vea también

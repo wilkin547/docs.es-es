@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Obtener un valor de una propiedad (Visual Basic)
+title: Filtrar Obtener un valor de una propiedad (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: de5719527216411c7bd156f2cc0d369442eaee20
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7dbc9d926ae937dd032c0c054bde440037ab9f0d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964778"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842920"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Filtrar Obtener un valor de una propiedad (Visual Basic)
 Para recuperar un valor de propiedad, incluido el nombre de propiedad en una expresión.  
@@ -24,7 +24,7 @@ Para recuperar un valor de propiedad, incluido el nombre de propiedad en una exp
   
 1.  Utilice el nombre de propiedad en una expresión de la misma manera que utilizaría un nombre de variable. Puede usar una propiedad en cualquier lugar puede usar una variable o una constante.  
   
-     O bien  
+     -o bien-  
   
      Utilice el nombre de propiedad tras la igual (`=`) inicie sesión en una instrucción de asignación.  
   
@@ -39,6 +39,7 @@ Para recuperar un valor de propiedad, incluido el nombre de propiedad en una exp
  El valor de la propiedad participa en la expresión igual que una variable o constante, o se almacena en la variable o propiedad en el lado izquierdo de la instrucción de asignación.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Procedimientos](./index.md)
 - [Procedimientos de propiedades](./property-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)

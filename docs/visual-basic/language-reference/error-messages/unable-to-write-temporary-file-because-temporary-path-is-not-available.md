@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30698
 ms.assetid: 3b77b7e3-8b17-40de-b4e1-05e4b9b325ad
-ms.openlocfilehash: 3c17d5f35dcf9e4dc9f6f128c003d8ccca21be48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cafd2f657f618de66a132c03b5245fad4c2f3264
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586585"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828048"
 ---
 # <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>No se puede escribir el archivo temporal porque la ruta de acceso temporal no está disponible
 Visual Basic no se pudo determinar la ruta de acceso donde se almacenan los archivos temporales.  
@@ -26,4 +26,5 @@ Visual Basic no se pudo determinar la ruta de acceso donde se almacenan los arch
 2.  Si el problema persiste, vuelva a instalar Visual Studio.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Hable con nosotros](/visualstudio/ide/talk-to-us)

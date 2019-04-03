@@ -2,12 +2,12 @@
 title: Ejemplo de configuración
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 6273b6b0f84887f031539581fbf664b9dbf50300
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b999c84fc6fd4d1a367b4e1476de8376858008a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579464"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814398"
 ---
 # <a name="configuration-sample"></a>Ejemplo de configuración
 En este ejemplo se muestra el uso de un archivo de configuración para hacer que un servicio se pueda detectar.  
@@ -33,7 +33,7 @@ En este ejemplo se muestra el uso de un archivo de configuración para hacer que
   
  Para habilitar la detección, se deben realizar algunas modificaciones en el archivo de configuración de la aplicación para el servicio:  
   
--   Un extremo de detección se debe agregar al elemento `<service>`. Se trata de un punto de conexión <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> estándar. Este es un extremo del sistema que el tiempo de ejecución asocia al servicio de detección. El servicio de descarga realiza escuchas de los mensajes en este punto de conexión.  
+-   Un extremo de detección se debe agregar al elemento `<service>`. Se trata de un punto de conexión <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> estándar. Este es un punto de conexión del sistema que el tiempo de ejecución asocia al servicio de detección. El servicio de descarga realiza escuchas de los mensajes en este extremo.  
   
 -   Se agrega un comportamiento `<serviceDiscovery>` a la sección `<serviceBehaviors>`. Esto permite detectar el servicio en tiempo de ejecución runtime y utiliza el punto de conexión de la detección mencionado previamente para realizar escuchas de `Probe` de detección y mensajes `Resolve`. Con estas dos incorporaciones, el servicio se puede detectar en el punto de conexión de detección especificado.  
   
@@ -65,13 +65,13 @@ En este ejemplo se muestra el uso de un archivo de configuración para hacer que
   
  Al agregar un punto de conexión de anuncio al comportamiento del servicio de detección, se crea un cliente de anuncio predeterminado para el servicio. Esto garantiza que el servicio enviará un anuncio en línea y sin conexión cuando el servicio se abra y se cierre respectivamente.  
   
- Este archivo de configuración supera esos pasos sencillos al modificar comportamientos adicionales. Es posible controlar la información relacionada con la detección utilizando extremos concretos. Es decir, un usuario puede controlar si se puede detectar un extremo y también puede marcar ese extremo con metadatos XML personalizados y la propiedad <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A>. Para ello, el usuario debe agregar una propiedad `behaviorConfiguration` al punto de conexión de la aplicación. En este caso, la siguiente propiedad se agrega al extremo de la aplicación.  
+ Este archivo de configuración supera esos pasos sencillos al modificar comportamientos adicionales. Es posible controlar la información relacionada con la detección utilizando extremos concretos. Es decir, un usuario puede controlar si se puede detectar un punto de conexión y también puede marcar ese punto de conexión con metadatos XML personalizados y la propiedad <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A>. Para ello, el usuario debe agregar una propiedad `behaviorConfiguration` al extremo de la aplicación. En este caso, la siguiente propiedad se agrega al extremo de la aplicación.  
   
 ```  
 behaviorConfiguration="endpointBehaviorConfiguration"  
 ```  
   
- Ahora, a través del elemento de configuración de comportamiento, puede controlar los atributos relacionados con la detección. En este caso, se agregan dos ámbitos al punto de conexión de la aplicación.  
+ Ahora, a través del elemento de configuración de comportamiento, puede controlar los atributos relacionados con la detección. En este caso, se agregan dos ámbitos al extremo de la aplicación.  
   
 ```xml  
 <endpointBehaviors>  
@@ -269,4 +269,3 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
 4.  Ejecute la aplicación cliente. Observe que el cliente puede localizar el servicio.  
   
-## <a name="see-also"></a>Vea también

@@ -5,14 +5,14 @@ helpviewer_keywords:
 - TileBrush [WPF], size of tile properties
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: ecac41b0ca40abf59dfcba1efffc076687c2f1ff
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 80b5dfc668464df829db593668bea8a9a4ec09e4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502233"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839702"
 ---
-# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Procedimiento Establecer el tamaño del mosaico de un TileBrush
+# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Filtrar Establecer el tamaño del mosaico de un TileBrush
 
 En este ejemplo se muestra cómo establecer el tamaño del mosaico para un <xref:System.Windows.Media.TileBrush>. De forma predeterminada, un <xref:System.Windows.Media.TileBrush> genera un mosaico único que rellena completamente el área que se está pintando. Puede invalidar este comportamiento estableciendo el <xref:System.Windows.Media.TileBrush.Viewport%2A> y <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propiedades.
 
@@ -20,19 +20,19 @@ El <xref:System.Windows.Media.TileBrush.Viewport%2A> propiedad especifica el tam
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se usa un <xref:System.Windows.Media.ImageBrush>, un tipo de <xref:System.Windows.Media.TileBrush>, para pintar un rectángulo con mosaicos. El ejemplo establece cada mosaico en un área de salida de 50 por 50 (el rectángulo). Como resultado, el rectángulo se pinta con cuatro proyecciones de la imagen.
+En el ejemplo siguiente se usa un <xref:System.Windows.Media.ImageBrush>, un tipo de <xref:System.Windows.Media.TileBrush>, para pintar un rectángulo con mosaicos. El ejemplo establece cada mosaico al 50 por ciento al 50 por ciento del área de salida (rectángulo). Como resultado, el rectángulo se pinta con cuatro proyecciones de la imagen.
 
-La siguiente ilustración muestra el resultado que genera el ejemplo.
+La siguiente ilustración muestra la salida que genera el ejemplo:
 
-![Ejemplo de la disposición en mosaico con un pincel de imagen](./media/0.png "0")
+![Un rectángulo con cuatro cerezas demostrar la disposición en mosaico con un pincel de imagen.](./media/how-to-set-the-tile-size-for-a-tilebrush/rectangle-tile-image-brush.png)
 
 [!code-csharp[UsingImageBrush_snip#RelativeTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#relativetilesizeexample)]
 
 El ejemplo siguiente se crea un <xref:System.Windows.Media.ImageBrush>, establece su <xref:System.Windows.Media.TileBrush.Viewport%2A> a `0,0,25,25` y su <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> a <xref:System.Windows.Media.BrushMappingMode.Absolute>y lo usa para pintar otro rectángulo. Como resultado, el pincel genera iconos que tienen un ancho de 25 píxeles y un alto de 25 píxeles.
 
-La siguiente ilustración muestra el resultado que genera el ejemplo.
+La siguiente ilustración muestra la salida que genera el ejemplo:
 
-![TileBrush en mosaico con una ventanilla de 0,0,0,25,0,25](./media/25x25viewport.png "25x25viewport")
+![Un rectángulo con cerezas cuarenta y ocho demostrar un TileBrush en mosaico con una ventanilla.](./media/how-to-set-the-tile-size-for-a-tilebrush/25-x-25-viewport-tilebrush.png)
 
 [!code-csharp[UsingImageBrush_snip#AbsoluteTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#absolutetilesizeexample)]
 

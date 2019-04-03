@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30029
 ms.assetid: 63afa1c6-2f93-4512-a2f0-372455979771
-ms.openlocfilehash: 3cb61a40e4522695b876d85f67dac1a109d3c3e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e9acf4b3e71295655c15ae9b1c80852c9aca8df
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595869"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835146"
 ---
 # <a name="derived-classes-cannot-raise-base-class-events"></a>Las clases derivadas no pueden provocar eventos de clase base
 Un evento puede generarse solo desde el espacio de declaración en el que se declara. Por lo tanto, una clase no puede provocar los eventos de cualquier otra clase, incluso uno desde el que se deriva.  
@@ -24,5 +24,6 @@ Un evento puede generarse solo desde el espacio de declaración en el que se dec
 -   Mover el `Event` instrucción o el `RaiseEvent` instrucción para que estén en la misma clase.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)
 - [RaiseEvent (instrucción)](../../../visual-basic/language-reference/statements/raiseevent-statement.md)

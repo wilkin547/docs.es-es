@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 279fe008c8624ff2209f5e08c3c9f9713ad201cd
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c97ae4f277395a75fb7522ffb74061001c10e07d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412037"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819585"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Información general sobre la globalización y la localización de WPF
 
@@ -94,9 +94,9 @@ El proceso de localización comienza después el sin localizar `MyDialog.resourc
   
  En el gráfico siguiente se muestra un flujo de trabajo de localización típico basado en el formato BAML de XAML. Este diagrama se presupone que el desarrollador escribe la aplicación en inglés. El desarrollador crea y globaliza la aplicación WPF. En el proyecto de archivos el desarrollador establece `<UICulture>en-US</UICulture>` para que en la compilación, se genera un ensamblado principal independiente del idioma con una licencia satélite. resources.dll que contiene todos los recursos localizables. De manera alternativa, puede mantenerse el idioma de origen en el ensamblado principal porque las API de localización de WPF admiten la extracción desde el ensamblado principal. Después del proceso de compilación, el XAML se genera en BAML. El archivo MyDialog.exe.resources.dll culturalmente neutral se distribuye al cliente angloparlante.  
   
- ![Flujo de trabajo de localización](./media/localizationworkflow.png "LocalizationWorkflow")  
+ ![Diagrama que muestra el flujo de trabajo de localización.](./media/wpf-globalization-and-localization-overview/localization-workflow.png)  
   
- ![Flujo de trabajo sin localizar](./media/localizationworkflow2.png "LocalizationWorkflow2")  
+ ![Diagrama que muestra el flujo de trabajo sin localizar.](./media/wpf-globalization-and-localization-overview/unlocalized-workflow.png)  
   
 ## <a name="examples-of-wpf-localization"></a>Ejemplos de localización de WPF
 
@@ -108,11 +108,11 @@ El proceso de localización comienza después el sin localizar `MyDialog.resourc
   
  **Inglés:**  
   
- ![Cuadro de diálogo Ejecutar](./media/rundialogenglish.PNG "RunDialogEnglish")  
+ ![Captura de pantalla que muestra un cuadro de diálogo Ejecutar inglés.](./media/wpf-globalization-and-localization-overview/run-dialog-box-english.png)  
   
  **Alemán:**  
   
- ![Cuadro de diálogo Ejecutar en alemán](./media/rundialoggerman.PNG "RunDialogGerman")  
+ ![Captura de pantalla que muestra un cuadro de diálogo German Run.](./media/wpf-globalization-and-localization-overview/run-dialog-box-german.png)  
   
  **Diseñar un cuadro de diálogo Ejecutar global**  
   
@@ -226,13 +226,13 @@ El proceso de localización comienza después el sin localizar `MyDialog.resourc
   
  **Inglés:**  
   
- ![Página en inglés](./media/englishhomepage.jpg "EnglishHomepage")  
+ ![Captura de pantalla que muestra una página principal de inglés.](./media/wpf-globalization-and-localization-overview/english-home-page-sample.jpg)  
   
  **Árabe:**  
   
- ![Página en árabe](./media/arabichomepage.jpg "ArabicHomepage")  
+ ![Captura de pantalla que muestra una página principal de árabe.](./media/wpf-globalization-and-localization-overview/arabic-home-page-sample.jpg)  
   
-### <a name="designing-a-global-microsoft-homepage"></a>Diseñar una página principal de Microsoft global  
+### <a name="designing-a-global-microsoft-home-page"></a>Diseñar una página principal de Microsoft Global  
  En este ejemplo de sitio web de Microsoft Arabia Saudí se muestran las características de globalización que se proporcionan para los idiomas de derecha a izquierda. Idiomas como el hebreo y árabe tienen un orden de lectura de derecha a izquierda, por lo que el diseño de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a menudo se debe disponer muy diferente del que sería en idiomas de izquierda a derecha como el inglés. Localizar de un idioma de izquierda a derecha a uno de derecha a izquierda, o viceversa, puede ser todo un reto. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se ha diseñado de modo que tales localizaciones resulten mucho más fáciles.  
   
  **FlowDirection**  
@@ -247,11 +247,11 @@ El proceso de localización comienza después el sin localizar `MyDialog.resourc
   
  **FlowDirection="LeftToRight"**  
   
- ![Flujo de izquierda a derecha](./media/lefttoright.PNG "LeftToRight")  
+ ![Captura de pantalla que muestra el flujo de degradado de izquierda a derecha.](./media/wpf-globalization-and-localization-overview/gradient-flow-left-right.png)  
   
  **FlowDirection="RightToLeft"**  
   
- ![Flujo de derecha a izquierda](./media/righttoleft.PNG "RightToLeft")  
+ ![Captura de pantalla que muestra el flujo de degradado de derecha a izquierda.](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)  
   
  **Evitar usar dimensiones fijas para paneles y controles**  
   

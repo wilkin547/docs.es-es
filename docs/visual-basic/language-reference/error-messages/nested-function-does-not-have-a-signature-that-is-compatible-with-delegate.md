@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-ms.openlocfilehash: ea6f230715520cb35809d57db76b300da326ec9a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 04eae6d2c6d64e8a0f46ae3c2801a7eb6d893dca
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283470"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822301"
 ---
 # <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>Función anidada no tiene una firma que es compatible con el delegado '\<delegatename >'
 Una expresión lambda se asignó a un delegado que tiene una firma incompatible. Por ejemplo, en el código siguiente, el delegado `Del` tiene dos parámetros enteros.  
@@ -36,5 +36,6 @@ Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
 -   Ajuste la definición del delegado o la expresión lambda asignada para que las firmas son compatibles.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Conversión de delegado flexible](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

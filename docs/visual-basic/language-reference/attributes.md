@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - attributes [Visual Basic]
 ms.assetid: 5deb2b8a-1afd-4dbd-8ee8-f093d74ad0eb
-ms.openlocfilehash: 2040cee33d41ca1dfcce068c84be0589c958a707
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3f93cfdde8e5063c5bf0503857dfc149ee90026
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579347"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818454"
 ---
 # <a name="attributes-visual-basic"></a>Atributos de Visual Basic
 Visual Basic ofrece varios atributos que permiten a los objetos de interactúan con código no administrado y un atributo que permite a los miembros de módulo tener acceso sin el nombre del módulo. En la tabla siguiente se enumera los atributos utilizados por Visual Basic.  
@@ -22,4 +22,5 @@ Visual Basic ofrece varios atributos que permiten a los objetos de interactúan 
 |<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Indica que una cadena debe tratarse como si fuera de longitud fija.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general de atributos](../../visual-basic/programming-guide/concepts/attributes/index.md)

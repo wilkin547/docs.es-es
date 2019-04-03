@@ -5,12 +5,12 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: b03dcba7675793070c54bdadaf6ec418f8896b7d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965715"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831129"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Solucionar problemas de variables en Visual Basic
 Esta página enumera algunos problemas comunes que pueden producirse al trabajar con variables en Visual Basic.  
@@ -48,6 +48,7 @@ Esta página enumera algunos problemas comunes que pueden producirse al trabajar
  Evite usar variables con el mismo nombre pero con un ámbito diferente. Si usa otros ensamblados o proyectos, evite en la medida de lo posible usar nombres definidos en dichos componentes externos. Si tiene más de una variable con el mismo nombre, asegúrese de calificar todas las referencias a esta. Para obtener más información, consulta [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

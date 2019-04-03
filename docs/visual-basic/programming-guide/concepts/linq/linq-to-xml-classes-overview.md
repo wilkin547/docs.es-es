@@ -2,12 +2,12 @@
 title: LINQ to XML de información general de clases (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
-ms.openlocfilehash: 0b95a3f4411e20390962a2eccf28b8cfad4b8e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd6990c387da3c687335561d1e13b7ec62fb5b84
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570127"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822835"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML de información general de clases (Visual Basic)
 En este tema se proporciona una lista de las clases de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] en el espacio de nombres <xref:System.Xml.Linq> y proporciona una breve descripción de cada una.  
@@ -78,7 +78,7 @@ En este tema se proporciona una lista de las clases de [!INCLUDE[sqltecxlinq](~/
  <xref:System.Xml.Linq.XObjectChange> especifica el tipo de evento cuando se produce para un <xref:System.Xml.Linq.XObject>.  
   
 ### <a name="xobjectchangeeventargs-class"></a>Clase XObjectChangeEventArgs  
- <xref:System.Xml.Linq.XObjectChangeEventArgs> proporciona datos para los eventos <xref:System.Xml.Linq.XObject.Changing> y <xref:System.Xml.Linq.XObject.Changed>.  
+ <xref:System.Xml.Linq.XObjectChangeEventArgs> proporciona datos de los eventos <xref:System.Xml.Linq.XObject.Changing> y <xref:System.Xml.Linq.XObject.Changed>.  
   
 ### <a name="xprocessinginstruction-class"></a>Clase XProcessingInstruction  
  <xref:System.Xml.Linq.XProcessingInstruction> representa una instrucción de procesamiento de XML. Una instrucción de procesamiento comunica información a una aplicación que procesa el XML.  
@@ -87,4 +87,5 @@ En este tema se proporciona una lista de las clases de [!INCLUDE[sqltecxlinq](~/
  <xref:System.Xml.Linq.XText> representa un nodo de texto. En la mayoría de casos no tiene que usar esta clase. Esta clase se utiliza principalmente para el contenido mixto.  
   
 ## <a name="see-also"></a>Vea también
+
 - [LINQ to XML de información general de programación (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

@@ -2,12 +2,12 @@
 title: 'Archivo XML de ejemplo: Libros (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 27ca5847-2289-40c0-8331-ede67ec59d1c
-ms.openlocfilehash: 3f99541f9c0aaafe25fe1fd09510b93c8e815eaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d16a67ba95f7fa9f940c12c61f9ab128abd55a57
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525760"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817089"
 ---
 # <a name="sample-xml-file-books-linq-to-xml"></a>Archivo XML de ejemplo: Libros (LINQ to XML)
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. El archivo contiene información acerca de libros.  
@@ -40,4 +40,5 @@ El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Documentos XML de ejemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

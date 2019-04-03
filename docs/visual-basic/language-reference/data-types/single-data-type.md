@@ -20,12 +20,12 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: cd94411629f18557f677a6d1f65bfc0dede43e83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b90fdb562f9d65858ac477321a18067cc6e621a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534523"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833338"
 ---
 # <a name="single-data-type-visual-basic"></a>Single (Tipo de datos, Visual Basic)
 Contiene con signo de números de punto flotante IEEE 32 bits (4 bytes) precisión sencilla que van de - 3, 4028235E + 38 a - 1, 401298E-45 para los valores negativos y de 1, 401298E-45 a 3, 4028235E + 38 para los valores positivos. Números de precisión sencilla almacenan una aproximación de un número real.  
@@ -48,6 +48,7 @@ Contiene con signo de números de punto flotante IEEE 32 bits (4 bytes) precisi�
 -   **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Single?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Single?displayProperty=nameWithType>
 - [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)
 - [Decimal (tipo de datos)](../../../visual-basic/language-reference/data-types/decimal-data-type.md)

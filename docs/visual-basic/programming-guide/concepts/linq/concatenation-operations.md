@@ -2,12 +2,12 @@
 title: Operaciones de concatenación (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4021e019-a8f7-477b-879e-07dd7f44feb9
-ms.openlocfilehash: 06f46e55545f669214f4a14775252df1a86b2008
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90e848b21c79278f81507831025045224c4cf634
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501274"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834119"
 ---
 # <a name="concatenation-operations-visual-basic"></a>Operaciones de concatenación (Visual Basic)
 La concatenación hace referencia a la operación de anexar una secuencia a otra.  
@@ -25,6 +25,7 @@ La concatenación hace referencia a la operación de anexar una secuencia a otra
 |Concat|Concatena dos secuencias para formar una secuencia.|No es aplicable.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Linq>
 - [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Cómo: Combinar y comparar colecciones de cadenas (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

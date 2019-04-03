@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Obtener acceso a miembros de un objeto (Visual Basic)
+title: Filtrar Obtener acceso a miembros de un objeto (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 5e91f1b99a17f4bbdc65a77ab26050ee57e96ac4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b7e600a23ed326fe3e914957b4e698bc34c6135
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724848"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819661"
 ---
-# <a name="how-to-access-members-of-an-object-visual-basic"></a>Procedimiento Obtener acceso a miembros de un objeto (Visual Basic)
+# <a name="how-to-access-members-of-an-object-visual-basic"></a>Filtrar Obtener acceso a miembros de un objeto (Visual Basic)
 Cuando haya una variable de objeto que hace referencia a un objeto, a menudo desea trabajar con los miembros de ese objeto, como sus métodos, propiedades, campos y eventos. Por ejemplo, una vez haya creado un nuevo <xref:System.Windows.Forms.Form> objeto que desea establecer su <xref:System.Windows.Forms.Control.Text%2A> propiedad o llamada a su <xref:System.Windows.Forms.Control.Focus%2A> método.  
   
 ## <a name="accessing-members"></a>Acceso a miembros  
@@ -71,6 +71,7 @@ Cuando haya una variable de objeto que hace referencia a un objeto, a menudo des
      Para poder tener acceso a los miembros de cualquier objeto que se asigne a la variable de objeto, debe establecer `Option Strict Off`. Al hacerlo, el compilador no puede garantizar que un miembro determinado se expone mediante el objeto que se asigna a la variable. Si el objeto no expone un miembro que intenta tener acceso, un <xref:System.MemberAccessException> se produce una excepción.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Object>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.MemberAccessException>

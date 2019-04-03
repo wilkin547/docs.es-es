@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: 1b4e703cb3f723ea283f725d0f4ce4711dca3c9e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a60f32c4f581e42f240fca55ce496776c5511ba3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967820"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840437"
 ---
 # <a name="mywebservices-object"></a>My.WebServices (Objeto)
 Proporciona propiedades para crear y tener acceso a una sola instancia de cada servicio Web XML al que hace referencia el proyecto actual.  
@@ -63,6 +63,7 @@ Proporciona propiedades para crear y tener acceso a una sola instancia de cada s
 |Sitio web|No|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>
 - <xref:System.ArgumentException>
 - [Acceso a los servicios web de la aplicación](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)

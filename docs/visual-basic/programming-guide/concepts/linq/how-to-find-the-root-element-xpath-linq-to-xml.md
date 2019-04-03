@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Busque el elemento raíz (XPath-LINQ to XML) (Visual Basic)
+title: Filtrar Busque el elemento raíz (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 72c3aed5-9522-4454-a876-2070aad13f2e
-ms.openlocfilehash: 6a08817c16bafb2ba1f91931f9718d6ef5053fb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0936300a51c697eaff5a1aeafff70e37b04a2a96
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687341"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816763"
 ---
-# <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a>Procedimiento Busque el elemento raíz (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a>Filtrar Busque el elemento raíz (XPath-LINQ to XML) (Visual Basic)
 Este tema muestra cómo obtener el elemento raíz con XPath y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
  La expresión XPath es:  
@@ -46,4 +46,5 @@ PurchaseOrders
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [LINQ to XML para usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

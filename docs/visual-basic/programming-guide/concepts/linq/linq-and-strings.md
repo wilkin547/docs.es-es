@@ -2,12 +2,12 @@
 title: LINQ y cadenas (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: 0ffff11243b96d46cfd9424502ec43ed2319136d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e0ebe64494182191dafa033ecbc38bad17180be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569997"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818961"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ y cadenas (Visual Basic)
 Se puede usar LINQ para consultar y transformar cadenas y colecciones de cadenas. Puede resultar especialmente útil con datos semiestructurados de archivos de texto. Las consultas LINQ se pueden combinar con funciones de cadena tradicionales y expresiones regulares. Por ejemplo, puede usar el método <xref:System.String.Split%2A> o <xref:System.Text.RegularExpressions.Regex.Split%2A> para crear una matriz de cadenas que después puede consultar o modificar mediante LINQ. Puede usar el método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> en la cláusula `where` de una consulta LINQ. Y puede usar LINQ para consultar o modificar los resultados <xref:System.Text.RegularExpressions.MatchCollection> que se han devuelto mediante una expresión regular.  
@@ -60,5 +60,6 @@ Se puede usar LINQ para consultar y transformar cadenas y colecciones de cadenas
  Muestra cómo realizar cálculos matemáticos en datos de texto en archivos .csv.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Language-Integrated Query (LINQ) (Visual Basic)](index.md)
 - [Cómo: Generar XML a partir de archivos CSV](how-to-generate-xml-from-csv-files.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 33a9dd3144f6f51eb6a63ff93750019878cb4a03
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fe12d18c7f403c1a50ed548a260ba39e83280eb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507478"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814203"
 ---
 # <a name="user-defined-data-type"></a>Tipo de datos definido por el usuario
 Contiene los datos en un formato que defina. El `Structure` instrucción define el formato.  
@@ -72,6 +72,7 @@ End Structure
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ValueType>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)

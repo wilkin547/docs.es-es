@@ -2,12 +2,12 @@
 title: Acceso a atributos mediante reflexión (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: caf48372f165f3689503d47472a5fa28d2299193
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5cbce8529cc7554a8edacb2d83dabb73a495eec
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625122"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827658"
 ---
 # <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Acceso a atributos mediante reflexión (Visual Basic)
 El hecho de que pueda definir atributos personalizados y colocarlos en el código fuente no serviría de mucho si no existiera ninguna forma de recuperar la información y actuar en consecuencia. Mediante la reflexión, puede recuperar la información que se ha definido con atributos personalizados. El método clave es `GetCustomAttributes`, que devuelve una matriz de objetos que son los equivalentes en tiempo de ejecución de los atributos de código fuente. Este método tiene varias versiones sobrecargadas. Para obtener más información, consulta <xref:System.Attribute>.  
@@ -100,6 +100,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Guía de programación en Visual Basic](../../../../visual-basic/programming-guide/index.md)

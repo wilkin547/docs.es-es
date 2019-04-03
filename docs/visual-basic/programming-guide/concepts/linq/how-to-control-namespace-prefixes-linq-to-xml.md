@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Control de los prefijos de Namespace (Visual Basic) (LINQ to XML)
+title: Filtrar Control de los prefijos de Namespace (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-ms.openlocfilehash: 91117307caf7e55bd8b512fbd841760616f0b2c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e5a05d2fa93e61338f450d0a4d890fa94c04fd2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623747"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839045"
 ---
-# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Procedimiento Control de los prefijos de Namespace (Visual Basic) (LINQ to XML)
+# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Filtrar Control de los prefijos de Namespace (Visual Basic) (LINQ to XML)
 En este tema se describe cómo puede controlar prefijos de espacios de nombres.  
   
 ## <a name="example"></a>Ejemplo  
@@ -54,4 +54,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

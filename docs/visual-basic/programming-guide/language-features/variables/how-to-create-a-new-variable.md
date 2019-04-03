@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Crear una nueva Variable (Visual Basic)
+title: Filtrar Crear una nueva Variable (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Dim statement [Visual Basic]
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
-ms.openlocfilehash: db317b160a27c7e38bddba82eb4eac3088886705
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86236f7e6f4821cc45dfab80273d82b6f167fba8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506893"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823290"
 ---
-# <a name="how-to-create-a-new-variable-visual-basic"></a>Procedimiento Crear una nueva Variable (Visual Basic)
+# <a name="how-to-create-a-new-variable-visual-basic"></a>Filtrar Crear una nueva Variable (Visual Basic)
 Crear una variable con un [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).  
   
 ### <a name="to-create-a-new-variable"></a>Para crear una nueva variable  
@@ -56,6 +56,7 @@ Crear una variable con un [instrucción Dim](../../../../visual-basic/language-r
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

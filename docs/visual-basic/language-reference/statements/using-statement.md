@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-ms.openlocfilehash: 1cf0772bf4e9a77474849c59454617261475fa76
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fe53ea58dc98a4de793fe9dad1c3ceeac71622fc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966091"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843206"
 ---
 # <a name="using-statement-visual-basic"></a>Using (Instrucción, Visual Basic)
 Declara el principio de un `Using` bloquear y, opcionalmente, adquiere los recursos del sistema que controla el bloque.  
@@ -40,13 +40,13 @@ End Using
   
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`  
   
- O bien  
+ -o bien-  
   
  `resourcename As resourcetype = resourceexpression`  
   
 ## <a name="resourcelist-parts"></a>Partes de resourceList  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`resourcename`|Obligatorio. Variable de referencia que hace referencia a un recurso del sistema que la `Using` Bloquear controles.|  
 |`New`|Es necesario si la `Using` instrucción adquiere el recurso. Si ya ha adquirido el recurso, use la segunda alternativa de sintaxis.|  
@@ -110,6 +110,7 @@ End Try
  [!code-vb[VbVbalrStatements#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#50)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.IDisposable>
 - [Try...Catch...Finally (instrucción)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [Cómo: Deshacerse de un recurso del sistema](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)

@@ -2,12 +2,12 @@
 title: Ejemplo de uso compartido de puertos Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 6180e615d6ae363a4e6fe4bfca3fe0e60f403f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ff63de62ad11ab89721cbf87f1edaca8c54a027
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735495"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830180"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Ejemplo de uso compartido de puertos Net.TCP
 El protocolo TCP/IP utiliza un número de 16 bits, llamado "puerto", para diferenciar las conexiones en varias aplicaciones de red que se ejecutan en el mismo equipo. Si una aplicación está realizando escuchas en un puerto, todo el tráfico TCP para ese puerto se dirige a esa aplicación. Otras aplicaciones no pueden realizar escuchas en ese puerto al mismo tiempo.  
@@ -34,7 +34,7 @@ Unhandled Exception: System.ServiceModel.CommunicationException: The TransportMa
  El uso compartido del puerto se habilita en el servidor estableciendo la propiedad <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> del enlace <xref:System.ServiceModel.NetTcpBinding> o el elemento de enlace <xref:System.ServiceModel.Channels.TcpTransportBindingElement>. El cliente no tiene que saber cómo se ha configurado el uso compartido de puerto para usarlo en el servidor.  
   
 ## <a name="enabling-port-sharing"></a>Cómo habilitar el uso compartido del puerto  
- El código siguiente muestra cómo habilitar el uso compartido del puerto en el servidor. Inicia una instancia del servicio `ICalculator` en un puerto fijo con una ruta de acceso del URI aleatoria. Aunque dos servicios pueden compartir el mismo puerto, sus direcciones de extremo totales deben seguir siendo únicas de manera que el servicio de uso compartido de puertos de NetTcp puede enrutar los mensajes a la aplicación correcta.  
+ El código siguiente muestra cómo habilitar el uso compartido del puerto en el servidor. Inicia una instancia del servicio `ICalculator` en un puerto fijo con una ruta de acceso del URI aleatoria. Aunque dos servicios pueden compartir el mismo puerto, sus direcciones de punto de conexión totales deben seguir siendo únicas de manera que el servicio de uso compartido de puertos de NetTcp puede enrutar los mensajes a la aplicación correcta.  
 
 ```csharp
 // Configure a binding with TCP port sharing enabled  
@@ -121,7 +121,7 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- Este ejemplo se puede ejecutar en una configuración de equipos cruzada cambiando la dirección generada que utiliza el cliente. En el archivo Client.cs, cambie la cadena de formato de dirección de extremo para que coincida con la nueva dirección del servicio. Reemplace cualquier referencia al "host local" con la dirección IP del equipo del servidor. Debe recompilar el ejemplo después de realizar esta modificación.  
+ Este ejemplo se puede ejecutar en una configuración de equipos cruzada cambiando la dirección generada que utiliza el cliente. En el archivo Client.cs, cambie la cadena de formato de dirección de punto de conexión para que coincida con la nueva dirección del servicio. Reemplace cualquier referencia al "host local" con la dirección IP del equipo del servidor. Debe recompilar el ejemplo después de realizar esta modificación.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
@@ -139,4 +139,3 @@ Press <ENTER> to terminate client.
   
 5.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Los detalles concretos para ejecutar este ejemplo se han incluido previamente en la sección Ejecución del ejemplo.  
   
-## <a name="see-also"></a>Vea también

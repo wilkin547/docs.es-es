@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: e2a6b4893229115ed1bc1329d5e81939b92eab2e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: e7b4ebc58b6fe9850b92ef945cb0d715e4369efe
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738947"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820916"
 ---
 # <a name="-bugreport"></a>-bugreport
 Crea un archivo que puede usar cuando se archiva un informe de errores.  
@@ -24,7 +24,7 @@ Crea un archivo que puede usar cuando se archiva un informe de errores.
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`file`|Obligatorio. El nombre del archivo que contendrá el informe de errores. Ponga el nombre de archivo entre comillas ("") si el nombre contiene un espacio.|  
   
@@ -61,6 +61,7 @@ vbc -bugreport:problem.txt t2.vb
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
 - [-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)

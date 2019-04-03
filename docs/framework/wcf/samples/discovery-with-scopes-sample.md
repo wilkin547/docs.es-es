@@ -2,25 +2,25 @@
 title: Ejemplo de detección con ámbitos
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 0d874116b90f423fbb78803a3641ef55fc848952
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba49021022c33c1490f3dbaafc5bba1352ecf55c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508774"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814299"
 ---
 # <a name="discovery-with-scopes-sample"></a>Ejemplo de detección con ámbitos
-Este ejemplo muestra cómo utilizar los ámbitos para clasificar los puntos de conexión detectables además de cómo utilizar <xref:System.ServiceModel.Discovery.DiscoveryClient> para realizar una búsqueda asincrónica de los puntos de conexión. En el servicio, este ejemplo muestra cómo personalizar la detección de cada punto de conexión agregando un comportamiento de detección de punto de conexión y utilizándolo para agregar un ámbito al punto de conexión así como controlando la detectabilidad del punto de conexión. En el cliente, el ejemplo revisa el modo en que los clientes pueden crear un <xref:System.ServiceModel.Discovery.DiscoveryClient> y ajustar los parámetros de búsqueda para incluir ámbitos agregándolos a <xref:System.ServiceModel.Discovery.FindCriteria>. Este ejemplo también muestra el modo en que los clientes pueden restringir las respuestas agregando un criterio de terminación.  
+Este ejemplo muestra cómo utilizar los ámbitos para clasificar los extremos detectables además de cómo utilizar <xref:System.ServiceModel.Discovery.DiscoveryClient> para realizar una búsqueda asincrónica de los extremos. En el servicio, este ejemplo muestra cómo personalizar la detección de cada extremo agregando un comportamiento de detección de extremo y utilizándolo para agregar un ámbito al extremo así como controlando la detectabilidad del extremo. En el cliente, el ejemplo revisa el modo en que los clientes pueden crear un <xref:System.ServiceModel.Discovery.DiscoveryClient> y ajustar los parámetros de búsqueda para incluir ámbitos agregándolos a <xref:System.ServiceModel.Discovery.FindCriteria>. Este ejemplo también muestra el modo en que los clientes pueden restringir las respuestas agregando un criterio de terminación.  
   
 ## <a name="service-features"></a>Características de servicio  
- Este proyecto muestra dos extremos de servicio que se agregan a un <xref:System.ServiceModel.ServiceHost>. Cada punto de conexión tiene un <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> asociado. Este comportamiento se utiliza para agregar los ámbitos del URI para ambos puntos de conexión. Los ámbitos se utilizan para distinguir cada uno de estos puntos de conexión para que los clientes puedan ajustar la búsqueda. Para el segundo punto de conexión, la detectabilidad puede deshabilitarse estableciendo la propiedad <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> en `false`. De este modo se asegura de que los metadatos de detección asociados a este punto de conexión no se envían como parte de ningún mensaje de detección.  
+ Este proyecto muestra dos puntos de conexión de servicio que se agregan a un <xref:System.ServiceModel.ServiceHost>. Cada extremo tiene un <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> asociado. Este comportamiento se utiliza para agregar los ámbitos del URI para ambos puntos de conexión. Los ámbitos se utilizan para distinguir cada uno de estos extremos para que los clientes puedan ajustar la búsqueda. Para el segundo extremo, la detectabilidad puede deshabilitarse estableciendo la propiedad <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> en `false`. De este modo se asegura de que los metadatos de detección asociados a este punto de conexión no se envían como parte de ningún mensaje de detección.  
   
 ## <a name="client-features"></a>Características de cliente  
- El método `FindCalculatorServiceAddress()` muestra cómo utilizar <xref:System.ServiceModel.Discovery.DiscoveryClient> y pasarlo en un <xref:System.ServiceModel.Discovery.FindCriteria> con dos restricciones. Un ámbito se agrega a los criterios y la propiedad <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> se establece en 1. El ámbito limita los resultados solo a los servicios que publican el mismo ámbito. Al establecer <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> en 1, se limitan las respuestas que el <xref:System.ServiceModel.Discovery.DiscoveryClient> espera a un extremo, como máximo. La llamada a <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> es una operación sincrónica que bloquea el subproceso hasta que se alcance un tiempo de espera o se encuentre un extremo.  
+ El método `FindCalculatorServiceAddress()` muestra cómo utilizar <xref:System.ServiceModel.Discovery.DiscoveryClient> y pasarlo en un <xref:System.ServiceModel.Discovery.FindCriteria> con dos restricciones. Un ámbito se agrega a los criterios y la propiedad <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> se establece en 1. El ámbito limita los resultados solo a los servicios que publican el mismo ámbito. Al establecer <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> en 1, se limitan las respuestas que el <xref:System.ServiceModel.Discovery.DiscoveryClient> espera a un punto de conexión, como máximo. La llamada a <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> es una operación sincrónica que bloquea el subproceso hasta que se alcance un tiempo de espera o se encuentre un punto de conexión.  
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
-1.  Este ejemplo utiliza los puntos de conexión HTTP y para ejecutarlo, se deben agregar las ACL de dirección URL apropiadas. Consulte [configurar HTTP y HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) para obtener más información. Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas. Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  Este ejemplo utiliza los extremos HTTP y para ejecutarlo, se deben agregar las ACL de dirección URL apropiadas. Consulte [configurar HTTP y HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) para obtener más información. Al ejecutar el siguiente comando con privilegios elevados, se deberían agregar las ACL adecuadas. Puede que desee sustituir su dominio y nombre de usuario para los siguientes argumentos si el comando no funciona como debería: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  Compile la solución.  
   
@@ -37,4 +37,3 @@ Este ejemplo muestra cómo utilizar los ámbitos para clasificar los puntos de c
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
   
-## <a name="see-also"></a>Vea también

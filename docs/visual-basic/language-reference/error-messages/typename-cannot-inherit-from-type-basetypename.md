@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: 226c85f887ecc706a5cb554c2163742f10896141
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dc979a66c73fdf15a4349a003680156e0ce27ed3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269827"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838955"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<typename >' no puede heredar de \<tipo > '\<nombreDeTipoBase >' porque expande el acceso de la base de \<tipo > fuera del ensamblado
 Una clase o interfaz hereda de una clase base o interfaz, pero tiene un nivel de acceso menos restrictivo.  
@@ -25,11 +25,12 @@ Una clase o interfaz hereda de una clase base o interfaz, pero tiene un nivel de
   
 -   Cambiar el nivel de acceso de la clase derivada o interfaz sea al menos tan restrictiva como de la clase base o interfaz.  
   
-     O bien  
+     -o bien-  
   
 -   Si necesita el nivel de acceso menos restrictivo, quite el `Inherits` instrucción. No se puede heredar de una clase base más restringido o interfaz.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Class (instrucción)](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Interface (instrucción)](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [Inherits (instrucción)](../../../visual-basic/language-reference/statements/inherits-statement.md)

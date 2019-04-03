@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Contener más de un valor en una Variable (Visual Basic)
+title: Filtrar Contener más de un valor en una Variable (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: c6cd9c61c332fc98e99334143b50e395f4eabf47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22888075184e0359daec1056af09132eaf772a5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671504"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825162"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Procedimiento Contener más de un valor en una Variable (Visual Basic)
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Filtrar Contener más de un valor en una Variable (Visual Basic)
 Una variable contiene más de un valor si se declara de un *tipo de datos compuesto*.  
   
  [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) incluyen clases, matrices y estructuras. Una variable de un tipo de datos compuesto puede contener una combinación de tipos de datos básicos y otros tipos compuestos. Estructuras y clases pueden contener código, así como los datos.  
@@ -42,6 +42,7 @@ Una variable contiene más de un valor si se declara de un *tipo de datos compue
 5.  Siga el `As` palabra clave con el nombre del tipo de datos compuesto adecuado.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Tipos de datos](../../../../visual-basic/language-reference/data-types/index.md)
 - [Caracteres de tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

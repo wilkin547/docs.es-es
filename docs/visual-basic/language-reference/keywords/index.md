@@ -2,14 +2,20 @@
 title: Palabras clave de Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'reserved keywords, Visual Basic'
-  - 'keywords [Visual Basic]'
-  - 'Members [Visual Basic], Visual Basic run-time'
-  - 'Visual Basic code, keywords'
-  - 'Visual Basic, language reference'
-  - 'reserved words, Visual Basic keywords'
-  - 'Visual Basic, keywords'
+- reserved keywords, Visual Basic
+- keywords [Visual Basic]
+- Members [Visual Basic], Visual Basic run-time
+- Visual Basic code, keywords
+- Visual Basic, language reference
+- reserved words, Visual Basic keywords
+- Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
+ms.openlocfilehash: e00cb8579ba2692acdfbf3fd349e08bb8647e2d0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814980"
 ---
 # <a name="keywords-visual-basic"></a>Palabras clave de Visual Basic
 Las siguientes tablas enumeran todas las palabras clave del lenguaje Visual Basic.  
@@ -112,4 +118,5 @@ Las siguientes tablas enumeran todas las palabras clave del lenguaje Visual Basi
 |[Resumen de manipulación de cadenas](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|Enumera las funciones que se usan para manipular cadenas.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

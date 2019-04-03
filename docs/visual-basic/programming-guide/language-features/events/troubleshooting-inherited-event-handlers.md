@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handling, troubleshooting
 - event handlers, troubleshooting
 ms.assetid: e1c8759f-5370-4308-8476-8c48b73509bf
-ms.openlocfilehash: 91bded2f1249bfcbeeca28419ee9bcec819babf6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 704ca667a6d14ade7be0192e872f5e40791cb864
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965429"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830193"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Solucionar problemas de controladores de eventos heredados en Visual Basic
 En este tema se enumera problemas comunes que surgen con controladores de eventos en componentes heredados.  
@@ -29,4 +29,5 @@ En este tema se enumera problemas comunes que surgen con controladores de evento
 -   Si el método heredado no tiene un `Handles` palabra clave, compruebe que el código no contiene un archivo extra [AddHandler (instrucción)](../../../../visual-basic/language-reference/statements/addhandler-statement.md) o métodos adicionales que controlan el mismo evento.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)

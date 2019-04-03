@@ -1,15 +1,15 @@
 ---
-title: 'Patrones de diseño: Basado en la lista de publicación y suscripción'
+title: 'Modelos de diseño: suscripción-publicación basada en la lista'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: a71e6c060a7da4161902266eabda9dd350e40f80
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 59b56ce5b3be031a598c690976d5f9c23932fc66
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333397"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815035"
 ---
-# <a name="design-patterns-list-based-publish-subscribe"></a>Patrones de diseño: Basado en la lista de publicación y suscripción
+# <a name="design-patterns-list-based-publish-subscribe"></a>Modelos de diseño: suscripción-publicación basada en la lista
 Este ejemplo muestra el patrón basado en lista suscripción-publicación implementado como un programa de Windows Communication Foundation (WCF).  
   
 > [!NOTE]
@@ -140,13 +140,13 @@ public class PriceChangeEventArgs : EventArgs
   
     1.  Copie los archivos de programa del cliente de la carpeta \client\bin\, bajo la carpeta específica del lenguaje, a los equipos del cliente.  
   
-    2.  En cada archivo de configuración del cliente, cambie el valor de la dirección de la definición del extremo para que coincida con la nueva dirección de su servicio. Reemplace cualquier referencia a "localhost" con un nombre de dominio completo en la dirección.  
+    2.  En cada archivo de configuración del cliente, cambie el valor de la dirección de la definición del punto de conexión para que coincida con la nueva dirección de su servicio. Reemplace cualquier referencia a "localhost" con un nombre de dominio completo en la dirección.  
   
 3.  Preparar el equipo del origen de datos:  
   
     1.  Copie los archivos de programa de origen de datos de la carpeta \ datasource \bin\, en la carpeta específica del lenguaje, al equipo del origen de datos.  
   
-    2.  En el archivo de configuración del origen de datos, cambie el valor de la dirección de la definición del extremo para que coincida con la nueva dirección de su servicio. Reemplace cualquier referencia a "localhost" con un nombre de dominio completo en la dirección.  
+    2.  En el archivo de configuración del origen de datos, cambie el valor de la dirección de la definición del punto de conexión para que coincida con la nueva dirección de su servicio. Reemplace cualquier referencia a "localhost" con un nombre de dominio completo en la dirección.  
   
 4.  En los equipos cliente, inicie Client.exe desde el símbolo del sistema.  
   
@@ -161,4 +161,3 @@ public class PriceChangeEventArgs : EventArgs
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
   
-## <a name="see-also"></a>Vea también

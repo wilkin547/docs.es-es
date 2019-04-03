@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: d60d668c97019418b30b89147e86f7beea1c31f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640694"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827931"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Diferencias entre sombrear y reemplazar (Visual Basic)
 Al definir una clase que hereda de una clase base, a veces desea definir uno o más de los elementos de la clase base en la clase derivada. Sombrear y reemplazar ambos están disponibles para este propósito.  
@@ -22,8 +22,8 @@ Al definir una clase que hereda de una clase base, a veces desea definir uno o m
   
 ||||  
 |---|---|---|  
-|Punto de comparación|Sombrear|Reemplazar|  
-|Propósito|Protege frente a una modificación posterior de clase base que introduce a un miembro que ya ha definido en la clase derivada|Consigue polimorfismo mediante la definición de una implementación diferente de un procedimiento o propiedad con la misma secuencia de llamada<sup>1</sup>|  
+|Punto de comparación|Sombreado|Reemplazar|  
+|Finalidad|Protege frente a una modificación posterior de clase base que introduce a un miembro que ya ha definido en la clase derivada|Consigue polimorfismo mediante la definición de una implementación diferente de un procedimiento o propiedad con la misma secuencia de llamada<sup>1</sup>|  
 |Elemento redefinido|Cualquier tipo de elemento declarado|Solo un procedimiento (`Function`, `Sub`, o `Operator`) o una propiedad|  
 |Redefinición de elemento|Cualquier tipo de elemento declarado|Solo un procedimiento o propiedad con la secuencia de llamada idéntica<sup>1</sup>|  
 |Nivel de acceso de elemento de redefinición|Cualquier nivel de acceso|No se puede cambiar el nivel de acceso de elemento invalidado|  
@@ -52,6 +52,7 @@ Al definir una clase que hereda de una clase base, a veces desea definir uno o m
 -   Desea la libertad de cambiar el tipo de elemento o secuencia de llamada.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Sombrear en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Cómo: Ocultar una Variable con el mismo nombre que su Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)

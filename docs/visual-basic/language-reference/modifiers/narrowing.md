@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Narrowing keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: a207ee91-aca4-4771-b4e2-713f029bf2bb
-ms.openlocfilehash: bd88c05f16a2027b0367effebef809cb5e5abfe8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb5f021371291483b8eb2a13727a9fda94540638
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617442"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838856"
 ---
 # <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
 Indica que un operador de conversión (`CType`) convierte una clase o estructura a un tipo que no pueda mantener algunos de los valores posibles de la clase o estructura original.  
@@ -32,6 +32,7 @@ Indica que un operador de conversión (`CType`) convierte una clase o estructura
  [Operator (instrucción)](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - [Operator (instrucción)](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
 - [Conversiones de ampliación y de restricción](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

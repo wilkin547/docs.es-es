@@ -2,12 +2,12 @@
 title: 'Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 08e148ff-4070-4bb4-b089-306f4a9a7641
-ms.openlocfilehash: 676592b0bd77a10fa8bb5fa01bf3b3a06af1ca46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a3edba9d071b04e67d5350c9833fc515a08f218
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623487"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835679"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo contiene varios pedidos de compra.  
@@ -110,4 +110,5 @@ El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Documentos XML de ejemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

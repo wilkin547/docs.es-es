@@ -5,14 +5,14 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML namespace prefixes
 - XML namespace prefixes [Visual Basic]
 ms.assetid: 4292e1d9-eb8f-49d6-a3aa-f05a5fbe24d1
-ms.openlocfilehash: 699bb05fd0c1c38cc0919fbf881e6bd628f01393
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 244329058624bebb03440961c1dda4a50b4efb8b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965740"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818668"
 ---
-# <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>Procedimiento Declarar y usar prefijos de Namespace XML (Visual Basic)
+# <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>Filtrar Declarar y usar prefijos de Namespace XML (Visual Basic)
 En este ejemplo se muestra cómo importar el prefijo del espacio de nombres XML `ns` y su uso en un literal XML y propiedades de eje XML.  
   
 ## <a name="example"></a>Ejemplo  
@@ -24,6 +24,7 @@ En este ejemplo se muestra cómo importar el prefijo del espacio de nombres XML 
 -   Una referencia al espacio de nombres <xref:System.Xml.Linq>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
 - [Imports (instrucción), espacio de nombres XML](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
 - [Propiedad del eje de atributo XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)

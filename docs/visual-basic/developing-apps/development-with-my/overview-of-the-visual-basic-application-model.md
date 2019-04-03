@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464104"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819767"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Información general sobre el modelo de aplicaciones de Visual Basic
 Visual Basic ofrece un modelo bien definido para controlar el comportamiento de las aplicaciones de Windows Forms: el modelo de aplicación de Visual Basic. Este modelo incluye eventos para controlar la aplicación inicio y apagado, así como eventos para detectar las excepciones no controladas. También se proporciona soporte técnico para el desarrollo de aplicaciones de instancia única. El modelo de aplicación es extensible, por lo que los desarrolladores que necesitan más control pueden personalizar sus métodos reemplazables.  
@@ -55,6 +55,7 @@ Visual Basic ofrece un modelo bien definido para controlar el comportamiento de 
  De forma predeterminada, el modelo de aplicación de Visual Basic está disponible para los proyectos de Windows Forms. Si configurar la aplicación para usar un objeto de inicio diferente, o iniciar el código de aplicación con una personalizada `Sub Main`, a continuación, dicho objeto o clase que deba proporcionar una implementación de la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> clase se debe utilizar el modelo de aplicación. Para obtener información acerca de cómo cambiar el objeto de inicio, consulte [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>

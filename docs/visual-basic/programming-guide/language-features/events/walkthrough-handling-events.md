@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 0757c3ce0528f76eab5607e20ebca2e66a903900
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2a8b515f500884d743b7dcca41ffe8c1607375a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974151"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840931"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Tutorial: Control de eventos (Visual Basic)
 Éste es el segundo de dos temas que muestran cómo trabajar con eventos. El primer tema, [Tutorial: Declarar y provocar eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), se muestra cómo declarar y provocar eventos. En esta sección se usa el formulario y la clase del tutorial para mostrar cómo controlar eventos cuando tienen lugar.  
@@ -117,5 +117,6 @@ ms.locfileid: "56974151"
 >  Puede declarar tantas `WithEvents` variables que usted necesitan, pero las matrices de `WithEvents` no se admiten variables.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Tutorial: Declarar y provocar eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
 - [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)

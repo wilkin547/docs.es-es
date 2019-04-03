@@ -2,12 +2,12 @@
 title: Uso del moniker de WCF con clientes COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 3cd334dab8574845e10332e90b50fef833447a1d
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: e784b40cb16177fe31f8031ea26617122b9b27db
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303964"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836212"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Uso del moniker de WCF con clientes COM
 Este ejemplo muestra cómo utilizar el moniker de servicio de Windows Communication Foundation (WCF) para integrar servicios Web en entornos de desarrollo basado en COM, como Microsoft Office Visual Basic para aplicaciones (Office VBA) o Visual Basic 6.0. El ejemplo está compuesto por un cliente de Windows Script Host (.vbs), una biblioteca de cliente auxiliar (.dll) y una biblioteca de servicios (.dll) hospedados en Internet Information Services (IIS). El servicio es un servicio de calculadora y el cliente COM llama operaciones matemáticas: Sumar, Restar, Multiplicar y Dividir, en el servicio. La actividad Client está visible en las ventanas de cuadro de mensaje.  
@@ -47,7 +47,7 @@ public interface ICalculator
   
 -   Contrato de WSDL: el contrato se proporciona en forma de documento WSDL.  
   
--   Contrato de intercambio de metadatos: el contrato se recupera en tiempo de ejecución a partir de un extremo de intercambio de metadatos (MEX).  
+-   Contrato de intercambio de metadatos: el contrato se recupera en tiempo de ejecución a partir de un punto de conexión de intercambio de metadatos (MEX).  
   
 ## <a name="typed-contract"></a>Contrato con tipo  
  Para utilizar el moniker con un uso del contrato con tipo, los tipos apropiadamente atribuidos para el contrato de servicios se deben registrar con COM. En primer lugar, se debe generar un cliente mediante el uso de la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Ejecute el comando siguiente desde un símbolo del sistema en el directorio del cliente para generar el proxy especificado.  
@@ -87,9 +87,9 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
  Los parámetros utilizados por el moniker especifican:  
   
--   La dirección del extremo de servicio.  
+-   La dirección del punto de conexión de servicio.  
   
--   El enlace que el cliente debería utilizar para conectar con ese extremo. En este caso se utiliza el wsHttpBinding definido por el sistema aunque se pueden definir enlaces personalizados en archivos de configuración del cliente. Para el uso con Windows Scripting Host, el enlace personalizado se define en un archivo Cscript.exe.config en el mismo directorio que Cscript.exe.  
+-   El enlace que el cliente debería utilizar para conectar con ese punto de conexión. En este caso se utiliza el wsHttpBinding definido por el sistema aunque se pueden definir enlaces personalizados en archivos de configuración del cliente. Para el uso con Windows Scripting Host, el enlace personalizado se define en un archivo Cscript.exe.config en el mismo directorio que Cscript.exe.  
   
 -   El tipo del contrato que se admite en el extremo. Éste es el tipo que se generó y se registró anteriormente. Dado que el script Visual Basic no proporciona un entorno COM fuertemente tipado, se debe especificar un identificador para el contrato. Este GUID es `interfaceID` de CalcProxy.tlb, que se puede ver utilizando herramientas COM como el Visor de Objetos OLE/COM(OleView.exe). Para los entornos fuertemente tipados como Office VBA o Visual Basic 6.0, agregar una referencia explícita a la biblioteca de tipos y declarando a continuación el tipo del objeto proxy que se puede utilizar en lugar del parámetro de contrato. Esto también proporciona la compatibilidad IntelliSense durante el desarrollo de la aplicación cliente.  
   
@@ -103,7 +103,7 @@ WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(1
  Al ejecutar el ejemplo, la respuesta de la operación se muestra en una ventana de cuadro de mensaje de Windows Script Host. Esto demuestra que un cliente COM que realiza llamadas COM utilizando el moniker con tipo para comunicarse con un servicio WCF. A pesar del uso de COM en la aplicación cliente, la comunicación con el servicio está solo compuesto por las llamadas del Servicio Web.  
   
 ## <a name="wsdl-contract"></a>Contrato WSDL  
- No se exigen ningún registro de biblioteca de cliente para utilizar el moniker con un contrato WSDL, pero el contrato WSDL para el servicio se debe recuperar a través de un mecanismo fuera de banda, como utilizar un explorador para tener acceso al extremo WSDL para el servicio. El moniker puede tener acceso entonces a ese contrato en el tiempo de ejecución.  
+ No se exigen ningún registro de biblioteca de cliente para utilizar el moniker con un contrato WSDL, pero el contrato WSDL para el servicio se debe recuperar a través de un mecanismo fuera de banda, como utilizar un explorador para tener acceso al punto de conexión WSDL para el servicio. El moniker puede tener acceso entonces a ese contrato en el tiempo de ejecución.  
   
  La aplicación cliente ComCalcClient.vbs utiliza `FileSystemObject` para tener acceso al archivo WSDL guardado localmente y, a continuación, usa de nuevo la función `GetObject` para construir un proxy para el servicio.  
   
@@ -127,9 +127,9 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
  Los parámetros utilizados por el moniker especifican:  
   
--   La dirección del extremo de servicio.  
+-   La dirección del punto de conexión de servicio.  
   
--   El enlace que el cliente debería utilizar para conectarse con ese extremo y el espacio de nombres en el que se define ese enlace. En este caso, se usa `wsHttpBinding_ICalculator`.  
+-   El enlace que el cliente debería utilizar para conectarse con ese punto de conexión y el espacio de nombres en el que se define ese enlace. En este caso, se usa `wsHttpBinding_ICalculator`.  
   
 -   El WSDL que define el contrato. En este caso ésta es la cadena leída del archivo serviceWsdl.xml.  
   
@@ -165,11 +165,11 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
   
  Los parámetros utilizados por el moniker especifican:  
   
--   La dirección del extremo de intercambio de metadatos del servicio.  
+-   La dirección del punto de conexión de intercambio de metadatos del servicio.  
   
--   La dirección del extremo de servicio.  
+-   La dirección del punto de conexión de servicio.  
   
--   El enlace que el cliente debería utilizar para conectarse con ese extremo y el espacio de nombres en el que se define ese enlace. En este caso, se usa `wsHttpBinding_ICalculator`.  
+-   El enlace que el cliente debería utilizar para conectarse con ese punto de conexión y el espacio de nombres en el que se define ese enlace. En este caso, se usa `wsHttpBinding_ICalculator`.  
   
 -   El nombre y espacio de nombres del contrato. Se requiere esta identificación porque el WSDL puede contener más de un contrato.  
   
@@ -215,7 +215,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 3.  Copie el archivo de script de cliente de la carpeta \client, en la carpeta específica del lenguaje, al equipo cliente.  
   
-4.  En el archivo de script, cambie el valor de la dirección de la definición del extremo para que coincida con la nueva dirección de su servicio. Reemplace cualquier referencia a "localhost" con un nombre de dominio completo en la dirección.  
+4.  En el archivo de script, cambie el valor de la dirección de la definición del punto de conexión para que coincida con la nueva dirección de su servicio. Reemplace cualquier referencia a "localhost" con un nombre de dominio completo en la dirección.  
   
 5.  Copie el archivo WSDL al equipo cliente. En el archivo WSDL, serviceWsdl.xml, reemplace cualquier referencia al "host local" con un nombre de dominio completo en la dirección.  
   
@@ -237,4 +237,3 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 -   Por razones de seguridad, quite la definición del directorio virtual y los permisos concedidos en los pasos de instalación cuando haya acabado con los ejemplos.  
   
-## <a name="see-also"></a>Vea también

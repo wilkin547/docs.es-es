@@ -2,12 +2,12 @@
 title: Emisión de trazas del código de usuario
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 5ecc0c2110362f715275729b5e4c4c7e1ec03496
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eadfe1a77f815f904fb54b8bab51440f3d9f5532
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492669"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831784"
 ---
 # <a name="emitting-user-code-traces"></a>Emisión de trazas del código de usuario
 Además de habilitar el seguimiento en configuración para recopilar datos de instrumentación generados por Windows Communication Foundation (WCF), también pueden emitir trazas mediante programación en código de usuario. De esta manera, puede crear proactivamente datos de instrumentación que examinará más tarde con el fin de realizar un diagnóstico. En este tema se describe cómo hacerlo.  
@@ -126,19 +126,21 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
  ![Visor de seguimiento: Emisión de usuario&#45;código seguimientos](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 Lista de actividades por hora de creación (panel izquierdo) y sus actividades anidadas (panel superior derecho)  
   
- Si el código del servicio inicia una excepción que da lugar a que el cliente también se inicie (por ejemplo, cuando el cliente no obtuvo la respuesta a su solicitud), los mensajes de error del servicio y del cliente se producen en la misma actividad para una correlación directa. En el diagrama siguiente, el servicio inicia una excepción que indica "el servicio rechaza procesar esta solicitud en código de usuario". El cliente también produce una excepción que indica "el servidor no pudo procesar la solicitud debido a un error interno."  
+ Si el código del servicio inicia una excepción que da lugar a que el cliente también se inicie (por ejemplo, cuando el cliente no obtuvo la respuesta a su solicitud), los mensajes de error del servicio y del cliente se producen en la misma actividad para una correlación directa. En la siguiente imagen, el servicio inicia una excepción que indica "el servicio rechaza procesar esta solicitud en código de usuario". El cliente también produce una excepción que indica "el servidor no pudo procesar la solicitud debido a un error interno."
+ 
+ Las siguientes imágenes se muestra que los errores en los puntos de conexión para una solicitud determinada aparecen en la misma actividad si se propagó el identificador de actividad de solicitud:       
   
- ![Utilizando el Visor de seguimiento para emitir usuario&#45;código seguimientos](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
-Los errores en los puntos de conexión de una solicitud determinada aparecen en la misma actividad, si se propagó el identificador de actividad de solicitud  
+ ![Captura de pantalla que muestra los errores en los puntos de conexión para una solicitud determinada.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)  
   
- Al hacer doble clic en la actividad de multiplicación, en el panel izquierdo, se muestra el siguiente gráfico con las trazas de la actividad de multiplicación de cada proceso implicado. Podemos ver que primero tuvo lugar una advertencia en el servicio (excepción iniciada), que estuvo seguida de advertencias y errores en el cliente al no poder procesarse la solicitud. Por lo tanto, podemos deducir la relación del error causal entre los puntos de conexión, y derivar la causa principal del error.  
+ Al hacer doble clic en la actividad de multiplicación, en el panel izquierdo, se muestra el siguiente gráfico con las trazas de la actividad de multiplicación de cada proceso implicado. Podemos ver que primero tuvo lugar una advertencia en el servicio (excepción iniciada), que estuvo seguida de advertencias y errores en el cliente al no poder procesarse la solicitud. Por lo tanto, podemos deducir la relación del error causal entre los extremos, y derivar la causa raíz del error. 
+
+ La siguiente imagen muestra un gráfico de correlación de errores:    
   
- ![Utilizando el Visor de seguimiento para emitir usuario&#45;código seguimientos](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
-Vista del gráfico de la correlación del error  
+ ![Captura de pantalla que muestra la vista Gráfico de correlación de errores.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)  
   
  Para obtener las trazas anteriores, se establece `ActivityTracing` para los orígenes del seguimiento de traza del usuario, y `propagateActivity=true` para el origen de seguimiento de traza `System.ServiceModel`. No se estableció `ActivityTracing` para el origen del seguimiento de traza `System.ServiceModel` para permitir habilitar el código de usuario a la propagación de actividad del código de usuario. (Cuando el seguimiento de actividad ServiceModel está activado, el identificador de actividad definido en el cliente no se propaga hasta el código de usuario del servicio; Las transferencias, sin embargo, poner en correlación las actividades de código de usuario de cliente y servicio a las actividades WCF intermedias.)  
   
- La definición de actividades y la propagación de la id. de actividad permite poner directamente en correlación los errores con los puntos de conexión. De esta manera, podemos buscar más rápidamente la causa raíz de un error.  
+ La definición de actividades y la propagación de la id. de actividad permite poner directamente en correlación los errores con los extremos. De esta manera, podemos buscar más rápidamente la causa raíz de un error.  
   
 ## <a name="see-also"></a>Vea también
 - [Extensión del seguimiento](../../../../../docs/framework/wcf/samples/extending-tracing.md)

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: f37f5b232b6b5e7bb56ec028c702d5fa9ec798d9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2d05d43ae8f9b93fd3e5e405bb7ff0d59832e830
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971382"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823355"
 ---
-# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Procedimiento Llamar a un procedimiento almacenado usando LINQ (Visual Basic)
+# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Filtrar Llamar a un procedimiento almacenado usando LINQ (Visual Basic)
 Language-Integrated Query (LINQ) facilita el acceso a la información de la base de datos, incluidos procedimientos almacenados, como los objetos de base de datos.  
   
  El ejemplo siguiente muestra cómo crear una aplicación que llama a un procedimiento almacenado en una base de datos de SQL Server. El ejemplo muestra cómo llamar a dos procedimientos almacenados diferentes en la base de datos. Cada procedimiento devuelve los resultados de una consulta. Un procedimiento toma parámetros de entrada y el otro procedimiento no toma parámetros.  
@@ -69,6 +69,7 @@ Language-Integrated Query (LINQ) facilita el acceso a la información de la base
 4.  Presione F5 para ejecutar el proyecto y ver los resultados.  
   
 ## <a name="see-also"></a>Vea también
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

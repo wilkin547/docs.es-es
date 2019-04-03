@@ -2,12 +2,12 @@
 title: Avanzada de LINQ to XML (Visual Basic) de programación
 ms.date: 07/20/2015
 ms.assetid: 36018532-a55c-4538-8a27-98f475ea3415
-ms.openlocfilehash: 1aae385db8f989aa142f588bb459486b805074e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f30f8f1c6dcdbabc1f32f4f7e216ce65a50396c6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668384"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835328"
 ---
 # <a name="advanced-linq-to-xml-programming-visual-basic"></a>Avanzada de LINQ to XML (Visual Basic) de programación
 Esta sección proporciona información que solo será aplicable a desarrolladores avanzados en determinados escenarios de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -29,4 +29,5 @@ Esta sección proporciona información que solo será aplicable a desarrolladore
 |[Enlace de datos WPF con LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|En esta sección se describe cómo usar LINQ to XML como origen de datos para el enlace de datos en aplicaciones de Windows Presentation Foundation (WPF).|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Guía de programación (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

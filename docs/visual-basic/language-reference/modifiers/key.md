@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-ms.openlocfilehash: 0f4778b69963c7b0df14308b3cb6312555647b92
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e13a773f0b585a5c8803a77c7aaad441d90dfe75
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967781"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842309"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 El `Key` palabra clave le permite especificar el comportamiento de las propiedades de tipos anónimos. Solo las propiedades se designa como propiedades clave participan en las pruebas de igualdad entre las instancias de tipo anónimo, o un cálculo de valores de código hash. No se puede cambiar los valores de las propiedades de clave.  
@@ -54,6 +54,7 @@ El `Key` palabra clave le permite especificar el comportamiento de las propiedad
  [!code-vb[VbVbalrAnonymousTypes#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#28)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Definición de tipo anónimo](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
 - [Cómo: Deducir tipos y nombres de propiedad en declaraciones de tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [Tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

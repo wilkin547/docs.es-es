@@ -14,12 +14,12 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: f2388f091278d398b5e8f3b82f147ab69937f2aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4800e23519c2cc1c8b2b219287b9fa018b9bbf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689528"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842907"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Diferencias entre propiedades y variables en Visual Basic
 Variables y propiedades representan valores que puede tener acceso. Sin embargo, hay diferencias en el almacenamiento y la implementación.  
@@ -45,6 +45,7 @@ Variables y propiedades representan valores que puede tener acceso. Sin embargo,
  <sup>1</sup> a diferencia de una variable, el valor de una propiedad no es posible que corresponden directamente a un único elemento de almacenamiento. El almacenamiento puede dividirse en partes para mayor comodidad o seguridad, o el valor se puede almacenar en un formato cifrado. En estos casos el `Get` podría ensamblar los elementos o descifrar el valor almacenado, procedimiento y la `Set` procedimiento podría cifrar el valor nuevo o dividirla en el almacenamiento constituyente. Un valor de propiedad podría ser transitorios, como la hora del día, en cuyo caso el `Get` procedimiento lo calcularía sobre la marcha cada vez que se tiene acceso a la propiedad.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Procedimientos de propiedades](./property-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
 - [Property (instrucción)](../../../../visual-basic/language-reference/statements/property-statement.md)

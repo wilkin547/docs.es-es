@@ -2,12 +2,12 @@
 title: Crear árboles XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e86ba12b-17de-4579-81bb-66322b84cfbe
-ms.openlocfilehash: fa7afe913c0faffca23b457ce58755f1db55400c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22dcb111b3c6da01fa60b3ea918b91cb89031b3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630949"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819195"
 ---
 # <a name="creating-xml-trees-visual-basic"></a>Crear árboles XML (Visual Basic)
 Una de las tareas XML más habituales es la construcción de un árbol XML. Esta sección describe varias formas de crearlos.  
@@ -25,4 +25,5 @@ Una de las tareas XML más habituales es la construcción de un árbol XML. Esta
 |[Contenido válido de objetos XElement y XDocument](../../../../visual-basic/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects.md)|Describe los argumentos válidos que se pueden pasar a los constructores y los métodos que se usan para agregar contenido a elementos y documentos.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Guía de programación (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

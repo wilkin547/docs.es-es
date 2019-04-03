@@ -18,12 +18,12 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: d841eaab8b09c9a2c126c40a1f846876f3e88601
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598820"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842296"
 ---
 # <a name="string-data-type-visual-basic"></a>String (Tipo de datos, Visual Basic)
 Contiene secuencias de puntos de código (2 bytes) de 16 bits sin signo de ese intervalo de valor comprendido entre 0 y 65535. Cada *punto de código*, o código de carácter representa un único carácter Unicode. Puede contener una cadena de 0 a dos mil millones (2 ^ 31) caracteres Unicode.  
@@ -79,6 +79,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
 -   **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la <xref:System.String?displayProperty=nameWithType> clase.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.String?displayProperty=nameWithType>
 - [Tipos de datos](../../../visual-basic/language-reference/data-types/index.md)
 - [Char (tipo de datos)](../../../visual-basic/language-reference/data-types/char-data-type.md)

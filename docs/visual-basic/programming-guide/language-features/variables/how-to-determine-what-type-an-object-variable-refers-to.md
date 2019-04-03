@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Determinar el tipo hace referencia una Variable de objeto (Visual Basic)
+title: Filtrar Determinar el tipo hace referencia una Variable de objeto (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TypeOf operator [Visual Basic], determining object variable type
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 149af116f2b848082367b33d826bace8345cee05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc6f54719d4f30be00b7b85f0ab18c4cb02b0d7c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571183"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816413"
 ---
-# <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Procedimiento Determinar el tipo hace referencia una Variable de objeto (Visual Basic)
+# <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Filtrar Determinar el tipo hace referencia una Variable de objeto (Visual Basic)
 Una variable de objeto contiene un puntero a los datos que se almacenan en otro lugar. Puede cambiar el tipo de los datos durante el tiempo de ejecución. En cualquier momento, puede usar el <xref:System.Type.GetTypeCode%2A> método para determinar el tipo de tiempo de ejecución actual, o la [operador TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) para averiguar si el actual, tipo de tiempo de ejecución es compatible con un tipo especificado.  
   
 ### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>Para determinar que el tipo exacto una variable de objeto actualmente hace referencia a  
@@ -53,6 +53,7 @@ Una variable de objeto contiene un puntero a los datos que se almacenan en otro 
  Tenga en cuenta que el tipo especificado no puede ser una variable o expresión. Debe ser el nombre de un tipo definido, por ejemplo, una clase, estructura o interfaz. Esto incluye tipos intrínsecos como `Integer` y `String`.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.GetTypeCode%2A>

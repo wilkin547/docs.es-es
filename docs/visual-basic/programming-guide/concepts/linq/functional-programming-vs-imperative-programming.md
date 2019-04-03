@@ -2,12 +2,12 @@
 title: Diferencias entre la programación funcional y Programación imperativa (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 762889717d2b20d5a06848ebaa41f3e066a8c061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dec9fd4b59d96c0548e49276a27103114a7b3e8b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579815"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827345"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Diferencias entre la programación funcional y Programación imperativa (Visual Basic)
 Este tema compara y contrasta la programación funcional y la programación imperativa (orientada a procedimientos) más tradicional.  
@@ -51,6 +51,7 @@ Este tema compara y contrasta la programación funcional y la programación impe
  Afortunadamente, Visual Basic no requiere un salto completo a la programación funcional, ya que admite enfoques de programación imperativos y funcionales. Un desarrollador puede elegir el enfoque más adecuado para una escenario específico. En realidad, los programas suelen combinar ambos enfoques.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Introducción a las transformaciones funcionales puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Transformaciones XSLT](../../../../standard/data/xml/xslt-transformations.md)
 - [Refactorizar en funciones puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

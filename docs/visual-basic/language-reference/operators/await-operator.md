@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: eb6e2c0e59ae0c29937fb5542e3b4638dd2b7b8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9d50433e3bc24df7cda137a145ab3f0f0302a1f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671452"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841984"
 ---
 # <a name="await-operator-visual-basic"></a>Await (Operador) (Visual Basic)
 El operador `Await` se aplica a un operando de un método asincrónico o a una expresión lambda para suspender la ejecución del método hasta que la tarea en espera se complete. La tarea representa el trabajo en curso.  
@@ -104,6 +104,7 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Programación asincrónica con Async y Await](../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Tutorial: Acceso a web usando Async y Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async](../../../visual-basic/language-reference/modifiers/async.md)

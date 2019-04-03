@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Movimiento de datos dentro y fuera de una Variable (Visual Basic)
+title: Filtrar Movimiento de datos dentro y fuera de una Variable (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], retrieving values
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-ms.openlocfilehash: 9b34173ebb3226fa00610c124c7b680e18d80de9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717953"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818545"
 ---
-# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Procedimiento Movimiento de datos dentro y fuera de una Variable (Visual Basic)
+# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Filtrar Movimiento de datos dentro y fuera de una Variable (Visual Basic)
 Almacenar un valor en una variable colocando el nombre de variable en el lado izquierdo de una instrucción de asignación.  
   
 ## <a name="putting-data-in-a-variable"></a>Colocación de datos en una Variable  
@@ -36,7 +36,7 @@ Almacenar un valor en una variable colocando el nombre de variable en el lado iz
   
 -   Utilice el nombre de variable en una expresión. Puede usar una variable en cualquier lugar puede usar una constante o un literal, excepto en una expresión que define el valor de una constante.  
   
-     O bien  
+     -o bien-  
   
 -   Utilice el nombre de variable siguiendo la igual (`=`) inicie sesión en una instrucción de asignación.  
   
@@ -50,6 +50,7 @@ Almacenar un valor en una variable colocando el nombre de variable en el lado iz
      El valor de la variable participa en la expresión tal como haría una constante y, a continuación, se almacena en la variable o propiedad en el lado izquierdo de la instrucción de asignación.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

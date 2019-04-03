@@ -9,12 +9,12 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-ms.openlocfilehash: 269a4c0f069b3837959b04f8463f96e7c5d5fdf7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 00ca0ad24231128b25a988921386d6bd3265e9a0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970155"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843718"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>Instrucción While...End While (Visual Basic)
 Ejecuta una serie de instrucciones mientras una condición dada sea `True`.  
@@ -33,7 +33,7 @@ End While
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`condition`|Obligatorio. `Boolean` expresión. Si `condition` es `Nothing`, Visual Basic lo trata como `False`.|  
 |`statements`|Opcional. Uno o más instrucciones que siguen `While`, que ejecutará cada vez `condition` es `True`.|  
@@ -82,6 +82,7 @@ End While
  [!code-vb[VbVbalrStatements#173](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#173)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Estructuras de bucle](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Do...Loop (instrucción)](../../../visual-basic/language-reference/statements/do-loop-statement.md)
 - [For...Next (instrucción)](../../../visual-basic/language-reference/statements/for-next-statement.md)

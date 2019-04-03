@@ -2,12 +2,12 @@
 title: Kit de herramientas de RuleSet externo
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: 510b70f7ebeda784dce4731bb4a08896ac2e8361
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c453c6137beeae8eee0e356734a1f9cdf8d8568b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710048"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840242"
 ---
 # <a name="external-ruleset-toolkit"></a>Kit de herramientas de RuleSet externo
 
@@ -28,11 +28,9 @@ Los componentes de este ejemplo incluyen:
 
 - Una actividad `ExternalPolicy` que solicita un RuleSet al servicio de RuleSet y ejecuta el RuleSet contra el flujo de trabajo.
 
-La interacción de los componentes se muestra en la figura 1. Las secciones que siguen describen cada componente.
+La interacción de los componentes se muestra en la siguiente imagen. Las secciones que siguen describen cada componente.
 
-![Información general Conceptual de ejemplo de RuleSet externo](./media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
-
-Figura 1: Información general del ejemplo
+![Diagrama que muestra la información general del ejemplo External RuleSet Toolkit.](./media/external-ruleset-toolkit/ruleset-toolkit-overview.gif)
 
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.
@@ -45,19 +43,15 @@ Figura 1: Información general del ejemplo
 
 ## <a name="ruleset-tool"></a>Herramienta RuleSet
 
-En la figura 2 se muestra una captura de pantalla de la herramienta RuleSet. Desde el **regla Store** menú, puede cargar los RuleSets disponibles desde la base de datos y guardar los RuleSets modificados en el almacén. Un archivo de configuración de la aplicación proporciona una cadena de conexión a bases de datos para la base de datos RuleSet. Al iniciar la herramienta, carga automáticamente los RuleSets de la base de datos configurada.
+La siguiente imagen es una captura de pantalla de la herramienta RuleSet. Desde el **regla Store** menú, puede cargar los RuleSets disponibles desde la base de datos y guardar los RuleSets modificados en el almacén. Un archivo de configuración de la aplicación proporciona una cadena de conexión a bases de datos para la base de datos RuleSet. Al iniciar la herramienta, carga automáticamente los RuleSets de la base de datos configurada.
 
-![Resultado de ejemplo del Kit de herramientas de RuleSet externo](./media/rulesetbrowser.gif "RuleSetBrowser")
-
-Figura 2: Explorador RuleSet
+![Captura de pantalla que muestra el explorador RuleSet.](./media/external-ruleset-toolkit/ruleset-browser-dialog.gif)
 
 La herramienta RuleSet aplica números de versión principal y secundario a los RuleSets, permitiéndole mantener simultáneamente y almacenar varias versiones (la herramienta no proporciona ningún bloqueo u otras características de gestión de la configuración además de la función de administración de la versión). Con la herramienta, puede crear nuevas versiones de RuleSet o eliminar las versiones existentes. Al hacer clic en **New**, la herramienta crea un nuevo nombre de RuleSet y aplica la versión 1.0. Al copiar una versión, la herramienta crea una copia de la versión RuleSet seleccionada, incluidas las reglas contenidas, y asigna los nuevos números de versión únicos. Estos números de versión están basados en los números de versión de los RuleSets existentes. Puede cambiar el nombre de RuleSet y los números de versión utilizando los campos asociados en el formulario.
 
-Al hacer clic en **editar reglas**, se inicia el editor RuleSet, como se muestra en la figura 3.
+Al hacer clic en **editar reglas**, se inicia el editor RuleSet, como se muestra en la siguiente imagen:
 
-![Salida de ejemplo del Kit de herramientas de RuleSet externo](./media/ruleseteditor.gif "RuleSetEditor")
-
-Figura 3: Editor de RuleSet
+![Captura de pantalla que muestra el Editor RuleSet.](./media/external-ruleset-toolkit/ruleset-editor-dialog.gif)
 
 Esto es un RE-alojamiento del diálogo del editor que forma parte del complemento Visual Studio en Windows Workflow Foundation. Proporciona la misma funcionalidad, incluyendo la compatibilidad del IntelliSense. Las reglas se crean con un tipo de destino (por ejemplo, un flujo de trabajo) que está asociado con el conjunto de reglas en la herramienta. al hacer clic en **examinar** en el cuadro de diálogo principal de la herramienta, el **Selector de flujo de trabajo/tipo** aparece el cuadro de diálogo, como se muestra en la figura 4.
 
@@ -69,21 +63,17 @@ Puede usar el **Selector de flujo de trabajo/tipo** cuadro de diálogo para espe
 
 La ruta de acceso en el archivo de ensamblado y el tipo `name are stored with the` RuleSet en la base de datos, por lo que cuando se recupera el conjunto de reglas de la base de datos, la herramienta intente cargar automáticamente el tipo de destino.
 
-Al hacer clic en **Aceptar** en el **Selector de flujo de trabajo/tipo** cuadro de diálogo, valida el tipo seleccionado contra el RuleSet, para asegurarse de que el tipo de destino tiene todos los miembros referenciados por las reglas. Los errores se muestran en un **errores de validación** cuadro de diálogo (consulte la figura 5). Puede elegir continuar con el cambio a pesar de los errores, o haga clic en **cancelar**. Desde el **herramientas** menú en el cuadro de diálogo principal de la herramienta, puede hacer clic en **validar** para volver a validar la versión de RuleSet contra la actividad de destino.
+Al hacer clic en **Aceptar** en el **Selector de flujo de trabajo/tipo** cuadro de diálogo, valida el tipo seleccionado contra el RuleSet, para asegurarse de que el tipo de destino tiene todos los miembros referenciados por las reglas. Los errores se muestran en un **errores de validación** cuadro de diálogo. Puede elegir continuar con el cambio a pesar de los errores, o haga clic en **cancelar**. Desde el **herramientas** menú en el cuadro de diálogo principal de la herramienta, puede hacer clic en **validar** para volver a validar la versión de RuleSet contra la actividad de destino.
 
-![Errores de validación de ejemplo de RuleSet externo](./media/validationerrorsruleset.png "ValidationErrorsRuleSet")
-
-Figura 5: Errores de validación
+![Captura de pantalla que muestra el cuadro de diálogo errores de validación.](./media/external-ruleset-toolkit/validation-errors-dialog.png)
 
 Desde el **datos** menú en la herramienta, puede importar y exportar RuleSets. Al hacer clic en **importación**, aparece un cuadro de diálogo Selector de archivos, desde el que puede seleccionar un archivo. Rules. Esto puede o no puede ser un archivo creado inicialmente en Visual Studio. El archivo .rules debería contener una instancia `RuleDefinitions` serializada que contiene una colección de condiciones y una colección de RuleSets. La herramienta no utiliza la colección de condiciones, pero utiliza el `RuleDefinitions` formato .rules para permitir la interacción con el entorno de Visual Studio.
 
-Después de seleccionar un archivo. Rules, un **Selector RuleSet** cuadro de diálogo aparece (consulte la figura 6). Puede utilizar el cuadro de diálogo para seleccionar RuleSets desde el archivo que desea importar (el valor predeterminado especificada todos los RuleSets). Los RuleSets en el archivo .rules no tienen números de versión, porque su versión dentro de un proyecto WF es igual que la versión del ensamblado. Durante el proceso de importación, la herramienta asigna automáticamente el siguiente número de versión principal (que se puede cambiar después de importar); puede ver los números de versión asignado en el **Selector RuleSet** lista.
+Después de seleccionar un archivo. Rules, un **Selector RuleSet** aparece el cuadro de diálogo. Puede utilizar el cuadro de diálogo para seleccionar RuleSets desde el archivo que desea importar (el valor predeterminado especificada todos los RuleSets). Los RuleSets en el archivo .rules no tienen números de versión, porque su versión dentro de un proyecto WF es igual que la versión del ensamblado. Durante el proceso de importación, la herramienta asigna automáticamente el siguiente número de versión principal (que se puede cambiar después de importar); puede ver los números de versión asignado en el **Selector RuleSet** lista.
 
-Para cada RuleSet que importa, la herramienta intenta buscar el tipo asociado de la carpeta bin\Debug bajo la ubicación del archivo .rules (si existe), basándose en los miembros utilizados en el RuleSet. Si la herramienta encuentra varios tipos correspondientes, intenta elegir un tipo basado en una coincidencia entre el nombre de archivo de .rules y el nombre de tipo (por ejemplo, el tipo `Workflow1` corresponde a Workflow1.rules). Si existen varias coincidencias, se le pedirá que seleccione el tipo. Si se produce un error de este mecanismo de identificación automática buscar un ensamblado o tipo correspondiente, a continuación, después de importar puede hacer clic en **examinar** en el cuadro de diálogo principal de la herramienta para navegar al tipo asociado.
+Para cada RuleSet que importa, la herramienta intenta buscar el tipo asociado de la carpeta bin\Debug bajo la ubicación del archivo .rules (si existe), basándose en los miembros utilizados en el RuleSet. Si la herramienta encuentra varios tipos correspondientes, intenta elegir un tipo basado en una coincidencia entre el nombre de archivo de .rules y el nombre de tipo (por ejemplo, el tipo `Workflow1` corresponde a Workflow1.rules). Si existen varias coincidencias, se le pedirá que seleccione el tipo. Si se produce un error de este mecanismo de identificación automática buscar un ensamblado o tipo correspondiente, a continuación, después de importar puede hacer clic en **examinar** en el cuadro de diálogo principal de la herramienta para navegar al tipo asociado. La siguiente imagen muestra el Selector de conjunto de reglas:
 
-![Selector de ruleSet](./media/rulesetselector.gif "RuleSetSelector")
-
-Figura 6: Selector de RuleSet
+![Captura de pantalla que muestra el cuadro de diálogo Selector de RuleSet.](./media/external-ruleset-toolkit/ruleset-selector-dialog.gif)
 
 Al hacer clic en **exportación de datos** en el menú principal de la herramienta, el **Selector RuleSet** aparezca de nuevo, cuadro de diálogo desde el que puede determinar los RuleSets de la base de datos que debe exportarse. Al hacer clic en **Aceptar**, un **Guardar archivo** aparece el cuadro de diálogo, en el que puede especificar el nombre y la ubicación del archivo .rules resultante. Dado que el archivo .rules no contiene información de versión, sólo puede seleccionar una versión RuleSet con un nombre RuleSet determinado.
 

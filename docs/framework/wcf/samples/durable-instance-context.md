@@ -2,12 +2,12 @@
 title: Contexto de instancia duradera
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: ec01f83e25eb003e194424bbfa247011701dc1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9981c4293f651bce3a0abaa3e0243d0d656ff257
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527501"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841456"
 ---
 # <a name="durable-instance-context"></a>Contexto de instancia duradera
 Este ejemplo muestra cómo personalizar el tiempo de ejecución de Windows Communication Foundation (WCF) para habilitar los contextos de instancia duraderos. Utiliza SQL Server 2005 como su memoria auxiliar (SQL Server 2005 Express en este caso). Sin embargo, también proporciona una manera de tener acceso a los mecanismos de almacenamiento personalizados.  
@@ -47,9 +47,9 @@ class DurableInstanceContextChannelBase
 }  
 ```  
   
- Estos dos métodos utilizan implementaciones `IContextManager` para escribir y leer el id. de contexto a o del mensaje. (`IContextManager` es una interfaz personalizada utilizada para definir el contrato para todos los administradores del contexto). El canal puede incluir o el id. de contexto en un encabezado SOAP personalizado o en un encabezado cookie HTTP. Cada implementación de administrador de contexto hereda de la clase `ContextManagerBase` que contiene la funcionalidad común para todos los administradores del contexto. El método `GetContextId` en esta clase se utiliza para originar el id. de contexto del cliente. Cuando se origina un id. de contexto por primera vez, este método lo guarda en un archivo de texto cuyo nombre se construye a partir de la dirección remota del punto de conexión (los caracteres del nombre de archivo no válidos en los URI típicos se reemplazan con caracteres @).  
+ Estos dos métodos utilizan implementaciones `IContextManager` para escribir y leer el id. de contexto a o del mensaje. (`IContextManager` es una interfaz personalizada utilizada para definir el contrato para todos los administradores del contexto). El canal puede incluir o el id. de contexto en un encabezado SOAP personalizado o en un encabezado cookie HTTP. Cada implementación de administrador de contexto hereda de la clase `ContextManagerBase` que contiene la funcionalidad común para todos los administradores del contexto. El método `GetContextId` en esta clase se utiliza para originar el id. de contexto del cliente. Cuando se origina un id. de contexto por primera vez, este método lo guarda en un archivo de texto cuyo nombre se construye a partir de la dirección remota del extremo (los caracteres del nombre de archivo no válidos en los URI típicos se reemplazan con caracteres @).  
   
- Después, cuando el id. de contexto se requiere para el mismo punto de conexión remoto, comprueba si existe un archivo adecuado. Si es así, lee el id. de contexto y lo devuelve. De lo contrario devuelve un id. de contexto recientemente generado y lo guarda en un archivo. Con la configuración predeterminada, estos archivos se colocan en un directorio llamado ContextStore, que reside en el directorio temp del usuario actual. No obstante, esta ubicación es configurable utilizando el elemento de enlace.  
+ Después, cuando el id. de contexto se requiere para el mismo extremo remoto, comprueba si existe un archivo adecuado. Si es así, lee el id. de contexto y lo devuelve. De lo contrario devuelve un id. de contexto recientemente generado y lo guarda en un archivo. Con la configuración predeterminada, estos archivos se colocan en un directorio llamado ContextStore, que reside en el directorio temp del usuario actual. No obstante, esta ubicación es configurable utilizando el elemento de enlace.  
   
  El mecanismo utilizado para transportar el id. de contexto es configurable. Se pudría escribir en el encabezado cookie HTTP o en un encabezado SOAP personalizado. El enfoque del encabezado SOAP personalizado permite utilizar este protocolo con protocolos que no son HTTP (por ejemplo, TCP o canalizaciones con nombre). Hay dos clases, a saber `MessageHeaderContextManager` y `HttpCookieContextManager`, que implementan estas dos opciones.  
   
@@ -321,7 +321,7 @@ if (serviceBehavior != null &&
 }  
 ```  
   
- Después de esto se crean las instancias del administrador de almacenamiento, el inicializador de contexto de instancias y el proveedor de instancias, y se instalan en `DispatchRuntime` creado para cada extremo.  
+ Después de esto se crean las instancias del administrador de almacenamiento, el inicializador de contexto de instancias y el proveedor de instancias, y se instalan en `DispatchRuntime` creado para cada punto de conexión.  
   
 ```  
 IStorageManager storageManager =   
@@ -460,4 +460,3 @@ Press ENTER to shut down client
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   
-## <a name="see-also"></a>Vea también

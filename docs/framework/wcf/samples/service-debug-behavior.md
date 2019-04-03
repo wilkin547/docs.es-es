@@ -2,12 +2,12 @@
 title: Comportamiento de depuración de servicio
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
-ms.openlocfilehash: d84f3281beee78f8328011026e4d4653c05ed849
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4eac577775074abf8c5f35c73dfa3286a75c2744
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574903"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835782"
 ---
 # <a name="service-debug-behavior"></a>Comportamiento de depuración de servicio
 Este ejemplo muestra cómo se pueden configurar los valores del comportamiento de servicio de depuración. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa el `ICalculator` contrato de servicio. Este ejemplo define explícitamente el comportamiento de depuración de servicio en el archivo de configuración. También se puede hacer de forma imperiosa en el código.  
@@ -38,7 +38,7 @@ Este ejemplo muestra cómo se pueden configurar los valores del comportamiento d
     > [!IMPORTANT]
     >  No es seguro para activar este valor en un entorno de producción. Una excepción de servidor inesperada puede tener alguna información que no se piensa para el cliente y establecer así `includeExceptionDetailsInFaults` como `true` podría producir pérdida de la información.  
   
--   El [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) también permite que un usuario habilitar o deshabilitar la página de ayuda. Cada servicio puede exponer opcionalmente una página de ayuda que contiene información sobre el servicio que incluye el punto de conexión para obtener WSDL para el servicio. Esto puede estar habilitado estableciendo `httpHelpPageEnabled` como `true`. Esto permite devolver la página de ayuda a una solicitud GET en la dirección base del servicio. Puede cambiar esta dirección estableciendo otro atributo `httpHelpPageUrl`. Puede realizarlo de manera segura utilizando HTTPS en lugar de HTTP. Esto se puede hacer estableciendo `httpsHelpPageEnabled` y `httpsHelpPageUrl`.  
+-   El [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) también permite que un usuario habilitar o deshabilitar la página de ayuda. Cada servicio puede exponer opcionalmente una página de ayuda que contiene información sobre el servicio que incluye el extremo para obtener WSDL para el servicio. Esto puede estar habilitado estableciendo `httpHelpPageEnabled` como `true`. Esto permite devolver la página de ayuda a una solicitud GET en la dirección base del servicio. Puede cambiar esta dirección estableciendo otro atributo `httpHelpPageUrl`. Puede realizarlo de manera segura utilizando HTTPS en lugar de HTTP. Esto se puede hacer estableciendo `httpsHelpPageEnabled` y `httpsHelpPageUrl`.  
   
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Las primeras tres operaciones (Sumar, Restar y Multiplicar) deben ejecutarse exitosamente. Los últimos errores de la operación ("dividir") con una excepción de división entre cero.  
   
@@ -59,4 +59,3 @@ Este ejemplo muestra cómo se pueden configurar los valores del comportamiento d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\ServiceDebug`  
   
-## <a name="see-also"></a>Vea también

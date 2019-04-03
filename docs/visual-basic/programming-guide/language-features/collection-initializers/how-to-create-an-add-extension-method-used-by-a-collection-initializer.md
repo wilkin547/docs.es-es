@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Crear una extensión método Add usado por un inicializador de colección (Visual Basic)
+title: Filtrar Crear una extensión método Add usado por un inicializador de colección (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: f64b52c7-8b11-4410-93a6-cb3aeebcc772
-ms.openlocfilehash: 458421da70aca6728f3f03945c28b4c988e44ad7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a5af41e25b8f82aa173e2df28cc41b313c8d68dd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978545"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825409"
 ---
 # <a name="how-to-create-an-add-extension-method-used-by-a-collection-initializer-visual-basic"></a>Filtrar Crear una extensión método Add usado por un inicializador de colección (Visual Basic)
 Cuando se usa un inicializador de colección para crear una colección, el compilador de Visual Basic busca un `Add` método del tipo de colección para el que los parámetros para el `Add` método coinciden con los tipos de los valores del inicializador de colección. Esto `Add` método se usa para rellenar la colección con los valores del inicializador de colección.  
@@ -26,5 +26,6 @@ Cuando se usa un inicializador de colección para crear una colección, el compi
  [!code-vb[VbVbalrCollectionInitializersHowTo1#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializersHowTo1/VB/Module1.vb#3)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Inicializadores de colección](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
 - [Cómo: Crear una colección usada por un inicializador de colección](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)

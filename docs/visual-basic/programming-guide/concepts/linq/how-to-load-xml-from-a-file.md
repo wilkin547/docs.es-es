@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Cargar XML desde un archivo (Visual Basic)
+title: Filtrar Cargar XML desde un archivo (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
-ms.openlocfilehash: 9ca19868629c89c10a8aca8f88860115a9efe7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4f1f9abfa33b76e702b51221715da80c3f66421
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494670"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814969"
 ---
-# <a name="how-to-load-xml-from-a-file-visual-basic"></a>Procedimiento Cargar XML desde un archivo (Visual Basic)
+# <a name="how-to-load-xml-from-a-file-visual-basic"></a>Filtrar Cargar XML desde un archivo (Visual Basic)
 En este tema se muestra cómo cargar XML de una dirección URI usando el método <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -49,4 +49,5 @@ Console.WriteLine(booksFromFile)
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Analizar XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

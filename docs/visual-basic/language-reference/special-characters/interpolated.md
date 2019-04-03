@@ -1,12 +1,12 @@
 ---
 title: $ (Referencia de Visual Basic)
 ms.date: 10/31/2017
-ms.openlocfilehash: 94c88b5f6d741bb35af775b56b1bab273bbf5b1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1927e8277b0fdeda13d715b62c6e7cede28b3c52
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715431"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821367"
 ---
 # <a name="-visual-basic-reference"></a>$ (Referencia de Visual Basic)
 
@@ -19,5 +19,6 @@ En el ejemplo siguiente, se usa el carácter `$` para definir una cadena interpo
 Para obtener más información sobre las cadenas interpoladas, vea el tema [Interpolated Strings](../../programming-guide/language-features/strings/interpolated-strings.md) (Cadenas interpoladas).
 
 ## <a name="see-also"></a>Vea también
+
 - [Referencia de Visual Basic](../index.md)
 - [Caracteres especiales de Visual Basic](index.md)

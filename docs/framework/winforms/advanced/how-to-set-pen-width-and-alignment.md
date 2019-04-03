@@ -1,5 +1,5 @@
 ---
-title: Filtrar Establecer el ancho de lápiz y la alineación
+title: Filtrar para establecer el ancho y la alineación del lápiz
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - pens [Windows Forms], setting width
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
-ms.openlocfilehash: e82f406b4fdca93df7a811eea5506846d56fda28
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b01482c059906d76ad9e506b593d580431f0ec09
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703054"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828204"
 ---
-# <a name="how-to-set-pen-width-and-alignment"></a>Filtrar Establecer el ancho de lápiz y la alineación
+# <a name="how-to-set-pen-width-and-alignment"></a>Filtrar para establecer el ancho y la alineación del lápiz
 Cuando creas un <xref:System.Drawing.Pen>, puede proporcionar el ancho del lápiz como uno de los argumentos al constructor. También puede cambiar el ancho del lápiz con el <xref:System.Drawing.Pen.Width%2A> propiedad de la <xref:System.Drawing.Pen> clase.  
   
  Una línea teórica tiene un ancho de 0. Cuando se dibuja una línea de 1 píxel de ancho, los píxeles se centran en la línea teórica. Si dibuja una línea que tiene más de un píxel de ancho, los píxeles están centrados en la línea teórica o aparecen al lado de la línea teórica. Puede establecer la propiedad de alineación de un <xref:System.Drawing.Pen> para determinar cómo se ubicarán los píxeles dibujados con ese lápiz en relación con las líneas teóricas.  
@@ -28,7 +28,7 @@ Cuando creas un <xref:System.Drawing.Pen>, puede proporcionar el ancho del lápi
   
 -   Establezca el valor de la <xref:System.Drawing.Pen.Alignment%2A> propiedad <xref:System.Drawing.Drawing2D.PenAlignment.Center> (predeterminado) para especificar que los píxeles que se dibuja con el lápiz verde se centrará en la línea teórica. La siguiente ilustración muestra la línea resultante.  
   
-     ![Lápices](./media/pens1a.gif "pens1A")  
+     ![Una delgada línea negra con resaltado verde.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-line.gif)  
   
      En el ejemplo de código siguiente se dibuja un rectángulo dos veces: una vez con un lápiz negro de ancho 1 y otra vez con un lápiz verde de ancho 10.  
   
@@ -39,9 +39,9 @@ Cuando creas un <xref:System.Drawing.Pen>, puede proporcionar el ancho del lápi
   
 -   Establezca el valor de la <xref:System.Drawing.Pen.Alignment%2A> propiedad <xref:System.Drawing.Drawing2D.PenAlignment.Center> para especificar que los píxeles que se dibuja con el lápiz verde se centrará en los límites del rectángulo.  
   
-     La siguiente ilustración muestra el rectángulo resultante.  
+     La siguiente ilustración muestra el rectángulo resultante:
   
-     ![Lápices](./media/pens2.gif "pens2")  
+     ![Un rectángulo que se dibuja con líneas delgadas negras con resaltado verde.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-rectangle.gif)  
   
      [!code-csharp[System.Drawing.UsingAPen#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#42)]
      [!code-vb[System.Drawing.UsingAPen#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#42)]  
@@ -53,9 +53,9 @@ Cuando creas un <xref:System.Drawing.Pen>, puede proporcionar el ancho del lápi
      [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
      [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  
   
-     Los píxeles en la línea verde ancha aparecen ahora en el interior del rectángulo tal como se muestra en la siguiente ilustración.  
+     Los píxeles en la línea verde ancha aparecen ahora en el interior del rectángulo tal como se muestra en la ilustración siguiente:
   
-     ![Lápices](./media/pens3.gif "pens3")  
+     ![Un rectángulo que se dibuja con líneas negras con la línea verde ancha dentro.](./media/how-to-set-pen-width-and-alignment/green-pixels-inside-rectangle.gif)  
   
 ## <a name="see-also"></a>Vea también
 - [Utilizar lápiz para dibujar líneas y formas](using-a-pen-to-draw-lines-and-shapes.md)

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 1e7d767b1ba370ac7303abfd8aa3606a43c33de9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3a09657ee7a79b7f590adba0e4fb0c04a8e89043
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973293"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843648"
 ---
-# <a name="how-to-define-an-operator-visual-basic"></a>Procedimiento Definir un operador (Visual Basic)
+# <a name="how-to-define-an-operator-visual-basic"></a>Filtrar Definir un operador (Visual Basic)
 Si ha definido una clase o estructura, puede definir el comportamiento de un operador estándar (como `*`, `<>`, o `And`) cuando uno o ambos de los operandos es del tipo de la clase o estructura.  
   
  Definir el operador estándar como un procedimiento de operador dentro de la clase o estructura. Todos los procedimientos de operador deben ser `Public` `Shared`.  
@@ -38,6 +38,7 @@ Si ha definido una clase o estructura, puede definir el comportamiento de un ope
   
   
 ## <a name="see-also"></a>Vea también
+
 - [Procedimientos de operadores](./operator-procedures.md)
 - [Cómo: Definir un operador de conversión](./how-to-define-a-conversion-operator.md)
 - [Cómo: Llamar a un procedimiento de operador](./how-to-call-an-operator-procedure.md)

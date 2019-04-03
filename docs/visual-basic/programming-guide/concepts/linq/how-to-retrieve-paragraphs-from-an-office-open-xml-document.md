@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Recuperar párrafos de un documento de Office Open XML (Visual Basic)
+title: Filtrar Recuperar párrafos de un documento de Office Open XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: ea577d114c4c736b074311bfb3c927268d18830d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 325f0d981c4988379938385fbfff5d36d0f5bff8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624259"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828581"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Procedimiento Recuperar párrafos de un documento de Office Open XML (Visual Basic)
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Filtrar Recuperar párrafos de un documento de Office Open XML (Visual Basic)
 Este tema presenta un ejemplo que abre un documento XML abierto de Office y recupera una colección de todos los párrafos del documento.  
   
  Para obtener más información sobre Office Open XML, vea [Blog de Eric White](http://www.ericwhite.com).  
@@ -173,4 +173,5 @@ StyleName:Code >Hello World<
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consulta técnicas avanzadas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

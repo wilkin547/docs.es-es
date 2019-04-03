@@ -2,12 +2,12 @@
 title: Herramienta de contrato primero
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: ef19843d6c8a9de0b926dd8512f5a58a5966e1bf
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: ad0566eaff08d27e8368f091388adda7376a37ef
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846186"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819624"
 ---
 # <a name="contract-first-tool"></a>Herramienta de contrato primero
 Los contratos de servicio deben crearse a menudo desde servicios existentes. En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], las clases de contrato de datos se pueden crear automáticamente a partir de servicios existentes mediante la herramienta de contrato primero. Para usar la herramienta de contrato primero, el archivo de definición de esquema XML (XSD) se debe descargar localmente; la herramienta no puede importar contratos de datos remotos a través de HTTP.
@@ -61,11 +61,11 @@ Los contratos de servicio deben crearse a menudo desde servicios existentes. En 
 ## <a name="configuring-contract-first-options"></a>Configurar opciones de contrato primero
  Opciones de contrato primero pueden configurarse en el menú de propiedades de un proyecto WCF. Para habilitar el desarrollo de contrato primero, seleccione el **habilitar XSD como lenguaje de definición de tipo** casilla de verificación en la página WCF de la ventana Propiedades del proyecto.
 
- ![Contrato que muestra las opciones de proyecto WCF&#45;primera](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")
+ ![Captura de pantalla de las opciones de WCF con el desarrollo de contrato primero habilitado.](./media/contract-first-tool/contract-first-options.png)
 
  Para configurar propiedades avanzadas, haga clic en el botón Avanzadas.
 
- ![Advanced contrato&#45;propiedades primera](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")
+ ![Cuadro de diálogo de configuración de generación de código de contrato avanzada.](./media/contract-first-tool/advanced-contract-settings.png)
 
  Se pueden configurar las opciones avanzadas siguientes para la generación de código desde contratos. Los valores solo se pueden configurar para todos los archivos del proyecto; no se pueden configurar para archivos individuales en este momento.
 
@@ -118,9 +118,9 @@ Los contratos de servicio deben crearse a menudo desde servicios existentes. En 
 using MyProjectNamespace.ContractTypes;
 ```
 
- Los tipos definidos en el contrato de servicio se podrán resolver en el proyecto, como se muestra a continuación.
+ Los tipos definidos en el contrato de servicio se podrán resolver en el proyecto, como se muestra a continuación:
 
- ![Usar tipos derivados de un contrato de servicio](../../../docs/framework/wcf/media/contractfirsttypes.png "ContractFirstTypes")
+ ![Clase de SearchRequest que se muestra en IntelliSense después de escribir las primeras letras.](./media/contract-first-tool/service-contract-types.png)
 
  Los tipos generados por la herramienta se crean en el archivo GeneratedXSDTypes.cs. El archivo se crea en el \<directorio del proyecto >/obj /\<configuración de compilación >/xsdgeneratedcode de forma predeterminada. El esquema de ejemplo al principio de este tema se convierte como sigue:
 

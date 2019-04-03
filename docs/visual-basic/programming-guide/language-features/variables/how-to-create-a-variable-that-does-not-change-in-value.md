@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Crear una Variable que no cambia de valor (Visual Basic)
+title: Filtrar Crear una Variable que no cambia de valor (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 626b46123e3047b391cd67d3e85c25c5432b2a69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57792db826caa996e163bc0a51b01a6bbd6a4858
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640204"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823329"
 ---
-# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Procedimiento Crear una Variable que no cambia de valor (Visual Basic)
+# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Filtrar Crear una Variable que no cambia de valor (Visual Basic)
 La noción de una variable que no cambia su valor podría parecer contradictorios. Pero existen situaciones en una constante no es factible y resulta útil disponer de una variable con un valor fijo. En este caso puede definir una variable miembro con el [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) palabra clave.  
   
  No puede usar el [instrucción Const](../../../../visual-basic/language-reference/statements/const-statement.md) para declarar y asignar un valor constante en las siguientes circunstancias:  
@@ -44,5 +44,6 @@ La noción de una variable que no cambia su valor podría parecer contradictorio
      Si no conoce el valor en tiempo de compilación, o no se puede calcular en tiempo de compilación en una sola instrucción, se puede asignar en tiempo de ejecución en un constructor. Para ello, debe declarar la `ReadOnly` variable en el nivel de clase o estructura. En el constructor para esa clase o estructura, calcular el valor fijo de la variable y asigne a la variable antes de devolver desde el constructor.  
   
 ## <a name="see-also"></a>Vea también
+
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
 - [Const (instrucción)](../../../../visual-basic/language-reference/statements/const-statement.md)

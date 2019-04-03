@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: 545eefc67d52428470c19b62085fd87927505c7e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ff298f001a2d865446436e8099a2fbbef593a00a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972708"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828719"
 ---
 # <a name="let-clause-visual-basic"></a>Let (Cláusula, Visual Basic)
 Calcula un valor y lo asigna a una nueva variable dentro de la consulta.  
@@ -26,7 +26,7 @@ Let variable = expression [, ...]
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`variable`|Obligatorio. Un alias que se puede usar para hacer referencia a los resultados de la expresión proporcionada.|  
 |`expression`|Obligatorio. Una expresión que se evalúa y se asigna a la variable especificada.|  
@@ -42,6 +42,7 @@ Let variable = expression [, ...]
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Consultas](../../../visual-basic/language-reference/queries/index.md)
 - [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)

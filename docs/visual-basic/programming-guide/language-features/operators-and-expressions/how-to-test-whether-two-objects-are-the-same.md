@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Comprobar si dos objetos son el mismo (Visual Basic)
+title: Filtrar Comprobar si dos objetos son el mismo (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], reference
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - objects [Visual Basic], variables referring to same
 - Visual Basic code, operators
 ms.assetid: f760e828-8704-4256-bc2d-c22a4c93b524
-ms.openlocfilehash: d13671f284863fa7bf56964c2b9b963c25e8ea52
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dbb268175d197e7b931af45a98f3a273c593e5a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977453"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819132"
 ---
-# <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>Procedimiento Comprobar si dos objetos son el mismo (Visual Basic)
+# <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>Filtrar Comprobar si dos objetos son el mismo (Visual Basic)
 Si tiene dos variables que hacen referencia a objetos, puede usar el `Is` o `IsNot` operador o ambos, para determinar si hacen referencia a la misma instancia.  
   
 ### <a name="to-test-whether-two-objects-are-the-same"></a>Para comprobar si dos objetos son iguales  
@@ -30,4 +30,5 @@ Si tiene dos variables que hacen referencia a objetos, puede usar el `Is` o `IsN
  Si usa `Is` o `IsNot` es una cuestión de preferencias personales. Uno puede ser más fácil de leer que el otro en una expresión dada.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Operadores de comparación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

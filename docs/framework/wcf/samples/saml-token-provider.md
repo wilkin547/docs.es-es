@@ -2,12 +2,12 @@
 title: Proveedor de tokens SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 1280c2892383ed295884a52e9133624460353309
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 43a6d96716cedc6a732c350bb43ac6d34bebf969
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304601"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842244"
 ---
 # <a name="saml-token-provider"></a>Proveedor de tokens SAML
 Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente personalizado. Un proveedor de tokens de Windows Communication Foundation (WCF) se usa para proporcionar las credenciales a la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF se suministra con el Administrador de credenciales de Token de proveedor predeterminado. WCF también incluye un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] proveedor de tokens. Los proveedores de tokens personalizados son útiles en los casos siguientes:
@@ -30,7 +30,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 
 -   Cómo el cliente autentica el servidor usando el certificado X.509 del servidor.
 
- El servicio expone dos extremos para comunicarse con el servicio, definidos mediante el archivo de configuración App.config. Cada extremo está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsFederationHttpBinding` estándar, que usa la seguridad de mensaje. Un extremo espera que el cliente autentique con un token de SAML que utiliza una clave de prueba simétrica mientras el otro espera que el cliente autentique con un token de SAML que utiliza una clave de prueba asimétrica. El servicio también configura el certificado del servicio utilizando comportamiento`serviceCredentials`. El comportamiento `serviceCredentials` le permite configurar un certificado del servicio. Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje. La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las instrucciones de configuración al final de este tema. El comportamiento `serviceCredentials` también le permite configurar certificados en los que se confia para firmar los tokens de SAML. La configuración siguiente hace referencia al certificado 'Alice' instalado durante el ejemplo.
+ El servicio expone dos puntos de conexión para comunicarse con el servicio, definidos mediante el archivo de configuración App.config. Cada punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsFederationHttpBinding` estándar, que usa la seguridad de mensaje. Un punto de conexión espera que el cliente autentique con un token de SAML que utiliza una clave de prueba simétrica mientras el otro espera que el cliente autentique con un token de SAML que utiliza una clave de prueba asimétrica. El servicio también configura el certificado del servicio utilizando comportamiento`serviceCredentials`. El comportamiento `serviceCredentials` le permite configurar un certificado del servicio. Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje. La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las instrucciones de configuración al final de este tema. El comportamiento `serviceCredentials` también le permite configurar certificados en los que se confia para firmar los tokens de SAML. La configuración siguiente hace referencia al certificado 'Alice' instalado durante el ejemplo.
 
 ```xml
 <system.serviceModel>
@@ -389,7 +389,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
   
 7.  Copie los archivos de programa del cliente de la carpeta \client\bin\, bajo la carpeta específica del lenguaje, al equipo cliente.  
   
-8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del extremo para que coincida con la nueva dirección de su servicio.  
+8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio.  
   
 9. En el equipo cliente, inicie `Client.exe` desde una ventana de símbolo del sistema.  
   
@@ -399,4 +399,3 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
   
 1.  Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
   
-## <a name="see-also"></a>Vea también

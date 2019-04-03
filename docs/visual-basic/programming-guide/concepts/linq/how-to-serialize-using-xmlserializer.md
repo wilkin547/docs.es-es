@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Serializar utilizando XmlSerializer (Visual Basic)
+title: Filtrar Serializar utilizando XmlSerializer (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-ms.openlocfilehash: 0c57c7a1b24a77485684e9ab5d0feaea1416286e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1799ef4a0d0f20cddc4514c9dc901047c631b158
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582687"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821470"
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Procedimiento Serializar utilizando XmlSerializer (Visual Basic)
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Filtrar Serializar utilizando XmlSerializer (Visual Basic)
 Este tema presenta un ejemplo que serializa y deserializa información mediante <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -81,4 +81,5 @@ Testing for type: XElementContainer
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Serializar gráficos de objetos que contienen objetos XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

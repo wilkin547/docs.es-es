@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 4c410fd7dcaae4e19043f5f858a2f75c69587311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21efca701eb16898dd291d73bf0431641ba75d12
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662275"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826124"
 ---
 # <a name="-reference-visual-basic"></a>-referencia (Visual Basic)
 Hace que el compilador para que estén disponibles para el proyecto que se está compilando información de tipo de los ensamblados especificados.  
@@ -29,7 +29,7 @@ Hace que el compilador para que estén disponibles para el proyecto que se está
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`fileList`|Obligatorio. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
   
@@ -58,6 +58,7 @@ vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: e9e6165414db00e7d7182e204d86d23debfbf4f6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c2305cd18cfaaa67355dfb342f22e39d37ae0e79
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967743"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818480"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Filtrar Pasar procedimientos a otro procedimiento en Visual Basic
 En este ejemplo se muestra cómo utilizar a delegados para pasar un procedimiento a otro procedimiento.  
@@ -46,6 +46,7 @@ En este ejemplo se muestra cómo utilizar a delegados para pasar un procedimient
      Cuando `Test` es llama, primero muestra el resultado de `AddNumbers` que actúa en `5` y `3`, que es 8. A continuación, el resultado de `SubtractNumbers` que actúan en `9` y `3` se muestra, que es 6.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [AddressOf (operador)](../../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Delegate (instrucción)](../../../../visual-basic/language-reference/statements/delegate-statement.md)

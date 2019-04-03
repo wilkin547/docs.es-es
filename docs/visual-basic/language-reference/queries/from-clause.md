@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 67f395069c98d8b60eca8c3663fb180a8dd5a2be
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978168"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839618"
 ---
 # <a name="from-clause-visual-basic"></a>From (Cláusula, Visual Basic)
 Especifica uno o más variables de rango y una colección a la consulta.  
@@ -29,7 +29,7 @@ From element [ As type ] In collection [ _ ]
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`element`|Obligatorio. Un *variable de rango* utiliza para recorrer en iteración los elementos de la colección. Una variable de rango se usa para referirse a cada miembro de la `collection` como la consulta se recorre el `collection`. Debe ser un tipo enumerable.|  
 |`type`|Opcional. Tipo de `element`. Si no hay ningún `type` se especifica, el tipo de `element` se deduce del `collection`.|  
@@ -70,6 +70,7 @@ From element [ As type ] In collection [ _ ]
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consultas](../../../visual-basic/language-reference/queries/index.md)
 - [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [For Each...Next (instrucción)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

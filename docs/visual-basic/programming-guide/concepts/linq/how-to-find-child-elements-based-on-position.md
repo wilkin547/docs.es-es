@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Buscar elementos secundarios en función de posición (XPath-LINQ to XML) (Visual Basic)
+title: Filtrar Buscar elementos secundarios en función de posición (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
-ms.openlocfilehash: 023ad921a5ba03adb306cd6ed93e38ad92406c20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57b9f3d7986bd85a65716c833165e7b073414ef0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626071"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831610"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Procedimiento Buscar elementos secundarios en función de posición (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Filtrar Buscar elementos secundarios en función de posición (XPath-LINQ to XML) (Visual Basic)
 En ocasiones, deseará buscar elementos en función de su posición. Quizá desee buscar el segundo elemento o buscar el tercero en el quinto elemento.  
   
  La expresión XPath es:  
@@ -21,7 +21,7 @@ En ocasiones, deseará buscar elementos en función de su posición. Quizá dese
 ## <a name="example"></a>Ejemplo  
  Este ejemplo encontrará el segundo en el cuarto elemento de `Test`. El resultado es una colección de elementos.  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Probar configuración (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Configuración de prueba (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim testCfg As XElement = XElement.Load("TestConfig.xml")  
@@ -79,4 +79,5 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [LINQ to XML para usuarios de XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

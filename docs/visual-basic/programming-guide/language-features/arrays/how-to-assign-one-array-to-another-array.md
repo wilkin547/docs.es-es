@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Asignar una matriz a otra (Visual Basic)
+title: Filtrar Asignar una matriz a otra (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - covariance, arrays
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: f2617d270caf5ed4ade68934486fee6afb6c413f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572726"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835289"
 ---
-# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Procedimiento Asignar una matriz a otra (Visual Basic)
+# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Filtrar Asignar una matriz a otra (Visual Basic)
 Dado que las matrices son objetos, se puede usar en instrucciones de asignación como otros tipos de objeto. Una variable de matriz contiene un puntero a los datos que constituyen los elementos de matriz y la información de rango y la longitud y la copia de una asignación de puntero this.  
   
 ### <a name="to-assign-one-array-to-another-array"></a>Para asignar una matriz a otra  
@@ -43,6 +43,7 @@ Dado que las matrices son objetos, se puede usar en instrucciones de asignación
  El compilador notifica un error si se infringen las reglas anteriores, por ejemplo si los tipos de datos no son compatibles o los rangos no son iguales. Puede agregar el código para asegurarse de que las matrices son compatibles antes de intentar una asignación de control de errores. También puede usar el [TryCast (operador)](../../../../visual-basic/language-reference/operators/trycast-operator.md) palabra clave si desea evitar que se produzca una excepción.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Solución de problemas de matrices](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Enum (instrucción)](../../../../visual-basic/language-reference/statements/enum-statement.md)

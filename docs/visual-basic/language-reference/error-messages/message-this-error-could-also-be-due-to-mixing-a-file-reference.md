@@ -1,5 +1,5 @@
 ---
-title: <message> Este error también puede ser debido a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado '<assemblyname>'
+title: <message> Este error también podría ser debido a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado '<assemblyname>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30971
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-ms.openlocfilehash: f28327b4df5b15f368f736e7402179227035a06e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0f2e7040de5ea74f3793129d23d4ae8c80b71f25
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272557"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841555"
 ---
 # <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<mensaje > Este error también podría ser debido a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado '\<assemblyname >'
 \<mensaje > Este error también podría ser debido a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado '\<assemblyname >. En este caso, intente reemplazar la referencia de archivo a '\<nombredearchivodeensamblado >' en el proyecto '\<projectname1 >' con una referencia de proyecto a '\<projectname2 >'.  
@@ -30,6 +30,7 @@ ms.locfileid: "55272557"
 2.  En las propiedades del proyecto, agregue una referencia al proyecto que contiene el ensamblado que define el tipo que está usando.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project)
 - [Referencias a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 

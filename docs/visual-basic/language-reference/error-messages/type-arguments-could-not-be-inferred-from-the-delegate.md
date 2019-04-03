@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
-ms.openlocfilehash: 17b65a39082ddaf54aabf12ca9b95e49af80f5f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1024cf6f2c1fa112db29cb710eef190a5022d3af
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666311"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838604"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>No se pudieron inferir los argumentos de tipo a partir del delegado
 Una instrucción de asignación usa `AddressOf` para asignar la dirección de un procedimiento genérico a un delegado, pero no proporciona ningún argumento de tipo al procedimiento genérico.  
@@ -26,6 +26,7 @@ Una instrucción de asignación usa `AddressOf` para asignar la dirección de un
 -   Especifique los argumentos de tipo para el procedimiento genérico en la expresión `AddressOf` .  
   
 ## <a name="see-also"></a>Vea también
+
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [AddressOf (operador)](../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Generic Procedures in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)

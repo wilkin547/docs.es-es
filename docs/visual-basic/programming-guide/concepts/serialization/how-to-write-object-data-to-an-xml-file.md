@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Escribir datos de objetos en un archivo XML (Visual Basic)
+title: Filtrar Escribir datos de objetos en un archivo XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: a7784566cba7b9cf85914a410b78240856879ba8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52b896b0191f29f68cc31e02fc325638ca6341b4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715834"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843739"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Procedimiento Escribir datos de objetos en un archivo XML (Visual Basic)
+# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Filtrar Escribir datos de objetos en un archivo XML (Visual Basic)
 En este ejemplo se escribe el objeto de una clase en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -55,6 +55,7 @@ End Module
  En este ejemplo se crea un nuevo archivo, si este no existe aún. Si una aplicación necesita crear un archivo, precisará acceso `Create` para la carpeta. Si el archivo ya existe, la aplicación necesitará solo acceso `Write`, un privilegio menor. Siempre que sea posible, resulta más seguro crear el archivo durante la implementación y conceder solo acceso `Read` a un único archivo, en lugar de acceso `Create` para una carpeta.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.IO.StreamWriter>
 - [Cómo: Leer datos de objetos de un archivo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
 - [Serialización (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

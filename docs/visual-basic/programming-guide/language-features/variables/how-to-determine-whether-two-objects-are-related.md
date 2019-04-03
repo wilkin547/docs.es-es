@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Determinar si dos objetos están relacionados (Visual Basic)
+title: Filtrar Determinar si dos objetos están relacionados (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [Visual Basic], Visual Basic objects
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: 62c0280e3773d2e3ff15bc164d9e0e6cacb7bd4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4ff7c8e616c9126eae11a23e001c219dcbc0907
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544593"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819208"
 ---
-# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Procedimiento Determinar si dos objetos están relacionados (Visual Basic)
+# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Filtrar Determinar si dos objetos están relacionados (Visual Basic)
 Puede comparar dos objetos para determinar la relación, si hay alguno, entre las clases desde el que se crean. El <xref:System.Type.IsInstanceOfType%2A> método de la <xref:System.Type?displayProperty=nameWithType> clase devuelve `True` si hereda de la clase especificada de la clase actual, o si el tipo actual es una interfaz compatible con la clase especificada.  
   
 ### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>Para determinar si un objeto hereda de otro objeto clase o interfaz  
@@ -48,6 +48,7 @@ End Class
  Tenga en cuenta la posición inesperada de las dos variables de objeto en la llamada a <xref:System.Type.IsInstanceOfType%2A>. El tipo base supuesto se utiliza para generar el <xref:System.Type?displayProperty=nameWithType> clase y el tipo derivado supuesto se pasa como argumento a la <xref:System.Type.IsInstanceOfType%2A> método.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>

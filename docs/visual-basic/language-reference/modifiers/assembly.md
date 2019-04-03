@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Assembly keyword [Visual Basic]
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
-ms.openlocfilehash: e6cb7e7a2520d6bb586dab4ed0af75abb04fabd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 819fa9cf1bd25e9426fb1e75925a269fcf7a71cd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726473"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819260"
 ---
 # <a name="assembly-visual-basic"></a>Assembly (Visual Basic)
 Especifica que un atributo al principio de un archivo de código fuente se aplica a todo el ensamblado.  
@@ -28,6 +28,6 @@ Especifica que un atributo al principio de un archivo de código fuente se aplic
  También puede aplicar un atributo a un ensamblado en el archivo AssemblyInfo.vb, en cuyo caso no es necesario usar un bloque de atributos en el archivo de código fuente principal.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Module \<keyword>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
 - [Información general de atributos](../../../visual-basic/programming-guide/concepts/attributes/index.md)
-

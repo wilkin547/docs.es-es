@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: 5e8c66f4f2b21a890b8c61e6fc642ce276df6f60
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5b26a091dc8eb7415702c3c2853a569324def7d5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966728"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824616"
 ---
 # <a name="sub-expression-visual-basic"></a>Subexpresión (Visual Basic)
 Declara los parámetros y el código que definen una expresión lambda de subrutina.  
@@ -28,7 +28,7 @@ End Sub
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`parameterlist`|Opcional. Una lista de nombres de variables locales que representan los parámetros del procedimiento. Los paréntesis deben estar presentes incluso cuando la lista está vacía. Para obtener más información, consulta [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`statement`|Obligatorio. Una sola instrucción.|  
@@ -58,6 +58,7 @@ End Sub
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

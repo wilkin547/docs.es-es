@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30269
 ms.assetid: 39489621-6617-4e5c-9b24-c2faf8273891
-ms.openlocfilehash: 97113227591c40f302d3d1a08a4248a8199817bc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fe8d1d8e11e25bcd79894ed82a57dd06748c3d68
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285433"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831883"
 ---
 # <a name="methodname-has-multiple-definitions-with-identical-signatures"></a>'\<methodname >' tiene varias definiciones con firmas idénticas
 Un `Function` o `Sub` declaración de procedimiento utiliza el procedimiento idéntico nombre y lista de argumentos que una declaración anterior. Una posible causa es un intento de sobrecargar el procedimiento original. Los procedimientos sobrecargados deben tener distintas listas de argumentos.  
@@ -24,5 +24,6 @@ Un `Function` o `Sub` declaración de procedimiento utiliza el procedimiento id�
 -   Cambiar el nombre del procedimiento o la lista de argumentos, o quite la declaración duplicada.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Referencias a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Consideraciones sobre la sobrecarga de procedimientos](../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)

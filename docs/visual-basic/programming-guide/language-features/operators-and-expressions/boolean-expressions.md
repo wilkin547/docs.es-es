@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ce9146791935a488108d110134e9273507b0da6f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965545"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825539"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Expresiones booleanas (Visual Basic)
 Un *expresión booleana* es una expresión que se evalúa como un valor de la [tipo de datos Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` o `False`. `Boolean` las expresiones pueden tener varias formas. La más simple es la comparación directa del valor de un `Boolean` variable a un `Boolean` literal, como se muestra en el ejemplo siguiente.  
@@ -67,6 +67,7 @@ Un *expresión booleana* es una expresión que se evalúa como un valor de la [t
  Puede usar paréntesis para controlar el orden de evaluación de expresiones booleanas. Expresiones entre paréntesis se evalúan primero. Para varios niveles de anidamiento, se concede prioridad a las expresiones más profundamente anidadas. Entre paréntesis, la evaluación continúa según las reglas de precedencia de operadores. Para obtener más información, consulte [prioridad de operador en Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Operadores lógicos y bit a bit en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [Comparaciones de valores](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [Instrucciones](../../../../visual-basic/programming-guide/language-features/statements.md)

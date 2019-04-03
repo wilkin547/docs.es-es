@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976049"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824928"
 ---
 # <a name="lifetime-in-visual-basic"></a>Período de duración en Visual Basic
 El *duración* de un elemento declarado es el período de tiempo durante el cual está disponible para su uso. Las variables son los únicos elementos que tienen duración. Para este propósito, el compilador trata los parámetros de procedimiento y función que se devuelve como casos especiales de variables. La duración de una variable que representa el período de tiempo durante el cual puede contener un valor. Puede cambiar su valor a través de su duración, pero siempre contiene un valor.  
@@ -72,6 +72,7 @@ El *duración* de un elemento declarado es el período de tiempo durante el cual
  En el ejemplo anterior, puede generar la misma duración declarando `applesSold` en nivel de módulo. Si ha cambiado el ámbito de una variable de esta manera, sin embargo, el procedimiento ya no tendría acceso exclusivo a él. Dado que podrían tener acceso otros procedimientos `applesSold` y cambie su valor, el total acumulado podría ser poco confiable y el código podría ser más difícil de mantener.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
 - [Nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

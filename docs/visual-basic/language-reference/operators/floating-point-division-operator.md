@@ -16,12 +16,12 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: 7d9b02a9c997ffcfdd61e277a6ed3779d8821831
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: af2316f92e2904eee1e8c046b34b8147e40cb513
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202462"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825071"
 ---
 # <a name="-operator-visual-basic"></a>/ (Operador, Visual Basic)
 Divide dos números y devuelve un resultado de coma flotante.  
@@ -81,6 +81,7 @@ expression1 / expression2
  Las expresiones en el ejemplo anterior devuelven valores de 2,5 y 3,333333. Tenga en cuenta que el resultado siempre es de punto flotante (`Double`), aunque ambos operandos son constantes de tipo entero.  
   
 ## <a name="see-also"></a>Vea también
+
 - [/ = (Operador) (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
 - [\ (Operador) (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
 - [Tipos de datos de resultados de operador](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)

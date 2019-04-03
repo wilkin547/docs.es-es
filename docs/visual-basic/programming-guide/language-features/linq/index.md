@@ -2,8 +2,14 @@
 title: LINQ en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'what''s new [Visual Basic]'
+- what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
+ms.openlocfilehash: 286e6266ef8f11a7a09a9e9fe898276a6734a96d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824863"
 ---
 # <a name="linq-in-visual-basic"></a>LINQ en Visual Basic
 Esta sección contiene información general, ejemplos e información contextual que le ayudará a comprender y usar Visual Basic y [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
@@ -40,6 +46,7 @@ Esta sección contiene información general, ejemplos e información contextual 
  Proporciona un ejemplo de cómo devolver los resultados de una consulta LINQ como un tipo específico en lugar de como un tipo anónimo.  
   
 ## <a name="see-also"></a>Vea también
+
 - [LINQ (Language Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Información general sobre LINQ to XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
 - [Información general de LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)

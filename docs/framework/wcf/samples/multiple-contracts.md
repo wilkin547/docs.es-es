@@ -2,12 +2,12 @@
 title: Contratos múltiples
 ms.date: 03/30/2017
 ms.assetid: 2bef319b-fe9c-4d49-ac6c-dfb23eb35099
-ms.openlocfilehash: e942c6d4a20ae3578d946edb39a7a3d4b0ea8f27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e52c83d69c15ca5c407240a8971248205fef832
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523173"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818345"
 ---
 # <a name="multiple-contracts"></a>Contratos múltiples
 El ejemplo de contratos múltiples muestra cómo implementar más de un contrato en un servicio y cómo configurar los puntos de conexión para comunicarse con cada uno de los contratos implementados. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). El servicio se ha modificado para definir dos contratos: `ICalculator` y `ICalculatorSession`.  
@@ -17,7 +17,7 @@ El ejemplo de contratos múltiples muestra cómo implementar más de un contrato
   
  La clase de servicio implementa los contratos `ICalculator` e `ICalculatorSession`. Dado que uno de los contratos requiere una sesión, el servicio utiliza el modo de instancia <xref:System.ServiceModel.InstanceContextMode.PerSession> para mantener el estado en toda la duración de la sesión.  
   
- La configuración de servicio se ha modificado para definir dos extremos para exponer cada contrato. El punto de conexión `ICalculator` se expone en la dirección base utilizando `basicHttpBinding`. El extremo `ICalculatorSession` se expone en la dirección base/sesión utilizando `wsHttpBinding` con el atributo `bindingConfiguration` establecido en `BindingWithSession`, tal y como se muestra en la configuración de ejemplo siguiente.  
+ La configuración de servicio se ha modificado para definir dos extremos para exponer cada contrato. El extremo `ICalculator` se expone en la dirección base utilizando `basicHttpBinding`. El extremo `ICalculatorSession` se expone en la dirección base/sesión utilizando `wsHttpBinding` con el atributo `bindingConfiguration` establecido en `BindingWithSession`, tal y como se muestra en la configuración de ejemplo siguiente.  
   
 ```xml  
 <service   
@@ -40,7 +40,7 @@ El ejemplo de contratos múltiples muestra cómo implementar más de un contrato
 </service>  
 ```  
   
- El código de cliente generado incluye ahora una clase de cliente para el contrato original `ICalculator` y el nuevo contrato `ICalculatorSession`. Se han modificado la configuración de cliente y el código para comunicarse con cada contrato en el punto de conexión de servicio adecuado.  
+ El código de cliente generado incluye ahora una clase de cliente para el contrato original `ICalculator` y el nuevo contrato `ICalculatorSession`. Se han modificado la configuración de cliente y el código para comunicarse con cada contrato en el extremo de servicio adecuado.  
   
  El cliente es una aplicación de consola de Windows (.exe). El servicio está hospedado por Internet Information Services (IIS).  
   
@@ -63,4 +63,3 @@ El ejemplo de contratos múltiples muestra cómo implementar más de un contrato
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleContracts`  
   
-## <a name="see-also"></a>Vea también

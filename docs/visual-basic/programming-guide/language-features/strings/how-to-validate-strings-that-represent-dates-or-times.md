@@ -5,14 +5,14 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - String data type [Visual Basic], validation
 ms.assetid: ae7d4b29-3436-4032-bdbf-4650eb1c8e19
-ms.openlocfilehash: c1a3f14354e36dec91aca3afbe8470eff7146318
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f24ff05e48327c21c02eb92b07db17266f743a80
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970415"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815235"
 ---
-# <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Procedimiento Validar cadenas que representan fechas u horas (Visual Basic)
+# <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Filtrar Validar cadenas que representan fechas u horas (Visual Basic)
 El siguiente ejemplo de código establece un `Boolean` valor que indica si una cadena representa una fecha u hora válida.  
   
 ## <a name="example"></a>Ejemplo  
@@ -25,6 +25,7 @@ El siguiente ejemplo de código establece un `Boolean` valor que indica si una c
  Use este método para validar la cadena antes de intentar convertir el `String` a un `DateTime` variable. Comprobando la fecha u hora en primer lugar, puede evitar generar una excepción en tiempo de ejecución.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:Microsoft.VisualBasic.Information.IsDate%2A>
 - <xref:Microsoft.VisualBasic.Interaction.InputBox%2A>
 - [Validar cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)

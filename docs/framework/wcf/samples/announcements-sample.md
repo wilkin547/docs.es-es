@@ -2,18 +2,18 @@
 title: Ejemplo de anuncios
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 775a56f322636664b5a0ced19df7bba347002e38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91422d9b625339236e3d8d09683deba18a24c9d4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568574"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814216"
 ---
 # <a name="announcements-sample"></a>Ejemplo de anuncios
 En este ejemplo se muestra cómo utilizar la funcionalidad de anuncio de la característica de detección. Los anuncios permiten a los servicios enviar mensajes de anuncio que contienen metadatos del servicio. De forma predeterminada, se envía un anuncio de saludo cuando el servicio se inicia y otro de despedida al cerrarse. Estos anuncios pueden ser de multidifusión o se pueden enviar de punto a punto. Este ejemplo está compuesto de dos proyectos: servicio y cliente.  
   
 ## <a name="service"></a>web de Office  
- Este proyecto contiene un servicio de calculadora autohospedado. En el método `Main`, se crea un host de servicio y se le agrega un extremo de servicio. Después, se crea un <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. Para habilitar los anuncios, se debe agregar un extremo de anuncio a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. En este caso, se agrega como extremo del anuncio un extremo estándar que usa multidifusión UDP. De esta forma se difunden los anuncios a través de una dirección UDP conocida.  
+ Este proyecto contiene un servicio de calculadora autohospedado. En el método `Main`, se crea un host de servicio y se le agrega un punto de conexión de servicio. Después, se crea un <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. Para habilitar los anuncios, se debe agregar un extremo de anuncio a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. En este caso, se agrega como punto de conexión del anuncio un punto de conexión estándar que usa multidifusión UDP. De esta forma se difunden los anuncios a través de una dirección UDP conocida.  
   
 ```csharp
 Uri baseAddress = new Uri("http://localhost:8000/" + Guid.NewGuid().ToString());  
@@ -87,4 +87,3 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
   
-## <a name="see-also"></a>Vea también

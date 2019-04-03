@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Into keyword [Visual Basic]
 ms.assetid: e1534550-8f4b-4978-b043-fad7b8fd79ac
-ms.openlocfilehash: 865ec7ce60d731d4d2eced694260f19bcd858d25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a94309b27ae3ad0c4fb6b13ae4824e4d5dece73
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569094"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820237"
 ---
 # <a name="into-clause-visual-basic"></a>Into (Cláusula, Visual Basic)
 Identifica las funciones de agregado o agrupaciones que se aplicará a una colección.  
@@ -24,4 +24,5 @@ Identifica las funciones de agregado o agrupaciones que se aplicará a una colec
  [Group Join (cláusula)](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)

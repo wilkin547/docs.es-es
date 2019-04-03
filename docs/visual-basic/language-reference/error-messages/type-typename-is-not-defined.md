@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 80a3d31a8a46ce616be2dd2ab27faf0af04876f2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c2675d61307d92da1710368668f43af3559060a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275086"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825045"
 ---
 # <a name="type-typename-is-not-defined"></a>Tipo de '\<typename >' no está definido
 La instrucción hace referencia a un tipo que no se ha definido. Puede definir un tipo en una instrucción de declaración como `Enum`, `Structure`, `Class`, o `Interface`.  
@@ -32,6 +32,7 @@ La instrucción hace referencia a un tipo que no se ha definido. Puede definir u
 -   Asegúrese de que el tipo está en un ensamblado que es parte del perfil de .NET Framework de destino. Para obtener más información, consulte [Solucionar problemas de versión de .NET Framework de destino](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Espacios de nombres en Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Enum (instrucción)](../../../visual-basic/language-reference/statements/enum-statement.md)
 - [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md)

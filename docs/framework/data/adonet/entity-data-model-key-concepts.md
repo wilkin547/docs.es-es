@@ -2,12 +2,12 @@
 title: Conceptos clave de Entity Data Model
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: 0a79143f8927a8368eaba1224c27f453ca81bdf7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcfc9cbb82a23dcb4d33ca8a838a49eac7180111
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574331"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825669"
 ---
 # <a name="entity-data-model-key-concepts"></a>Conceptos clave de Entity Data Model
 Entity Data Model (EDM) utiliza tres conceptos clave para describir la estructura de datos: *tipo de entidad*, *tipo de asociación*, y *propiedad*. Estos son los conceptos más importantes para describir la estructura de datos en cualquier implementación de EDM.  
@@ -32,7 +32,7 @@ Entity Data Model (EDM) utiliza tres conceptos clave para describir la estructur
 ## <a name="representations-of-a-conceptual-model"></a>Representaciones de un modelo conceptual  
  Un *modelo conceptual* es una representación específica de la estructura de algunos datos como entidades y relaciones. Una manera de representar un modelo conceptual es con un diagrama. El siguiente diagrama representa un modelo conceptual con tres tipos de entidad (`Book`, `Publisher` y `Author`) y dos asociaciones (`PublishedBy` y `WrittenBy`):  
   
- ![Modelar con propiedades de navegación](../../../../docs/framework/data/adonet/media/modelwithnavprops.gif "ModelWithNavProps")  
+ ![Diagrama que muestra un modelo conceptual con tres tipos de entidad.](./media/entity-data-model-key-concepts/conceptual-model-entity-types-associations.gif)  
   
  Esta representación, sin embargo, tiene algunas limitaciones a la hora de representar algunos detalles acerca del modelo. Por ejemplo, la información sobre el tipo de propiedad y el conjunto de entidades no se representa en el diagrama. La riqueza de un modelo conceptual se puede representar con mayor claridad mediante un lenguaje específico de dominio (ADSL). El [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) utiliza un ADSL basado en XML denominado *lenguaje de definición de esquemas conceptuales* ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales. A continuación se muestra la definición CSDL del modelo conceptual del diagrama anterior:  
   

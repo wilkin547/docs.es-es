@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-ms.openlocfilehash: 96b1677e301d3e83df400472bfa06e921f991bd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a3ef3a8254153fa8695ffacd9829ca9316d77a5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544658"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837656"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Declaración de variables de objeto (Visual Basic)
 Utilice una instrucción de declaración normal para declarar una variable de objeto. Para el tipo de datos, especifica `Object` (es decir, el [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)) o una clase más específica desde la que el objeto se va a crearse.  
@@ -126,6 +126,7 @@ Dim anyForm As System.Windows.Forms.Form
  Todos los miembros de una clase base están disponibles para las clases derivadas, pero los miembros adicionales de una clase derivada no están disponibles para la clase base.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Asignación de variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
 - [Valores de las variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)

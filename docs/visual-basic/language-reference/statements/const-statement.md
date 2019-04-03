@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: eb99213287cda5ce7f9c3afe2998efb02ec68a03
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 089c2dca99373f379e1eff319cf8c41242e5f135
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979078"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835315"
 ---
 # <a name="const-statement-visual-basic"></a>Instrucción Const (Visual Basic)
 Declara y define una o varias constantes.  
@@ -100,6 +100,7 @@ Const constantlist
  El ejemplo anterior utiliza la <xref:System.Type.ToString%2A> método en el <xref:System.Type> objeto devuelto por la [GetType (operador)](../../../visual-basic/language-reference/operators/gettype-operator.md), porque <xref:System.Type> no se puede convertir a `String` mediante `CStr`.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - [Enum (instrucción)](../../../visual-basic/language-reference/statements/enum-statement.md)

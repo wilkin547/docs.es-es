@@ -2,19 +2,19 @@
 title: Ejemplo de seguridad de la detección
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 5a3b3ec42086eb39bffb71df2a0d6d46270a8f1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c77bedbea3d9002b24556d240d5b788fe6c53d67
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680340"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815205"
 ---
 # <a name="discovery-security-sample"></a>Ejemplo de seguridad de la detección
 La especificación de la detección no requiere que los puntos de conexión que participan en el proceso de detección sean seguros. Al mejorar los mensajes de detección gracias a la seguridad, se mitigan varios tipos de ataques (alteración del mensaje, denegación de servicio, repetición y suplantación). Este ejemplo implementa canales personalizados que calculan y comprueban las firmas de mensaje utilizando el formato de firma compacto (descrito en la sección 8.2 de la especificación de detección WS). El ejemplo admiten tanto el [especificación de detección 2005](https://go.microsoft.com/fwlink/?LinkId=177912) y [versión 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
   
  El canal personalizado se aplica encima de la pila del canal existente para los puntos de conexión de anuncio y detección. De esta manera, se aplica un encabezado de firma para cada mensaje enviado. La firma se comprueba en los mensajes recibidos, y cuando no coincide o cuando los mensajes no tienen una firma, los mensajes se quitan. Para firmar y comprobar los mensajes, el ejemplo utiliza los certificados.  
   
-## <a name="discussion"></a>Explicación  
+## <a name="discussion"></a>Discusión  
  WCF es muy extensible y permite a los usuarios la posibilidad de personalizar los canales según deseen. En el ejemplo se implementa un elemento de enlace seguro de detección que crea canales seguros. Los canales seguros aplican y comprueban las firmas de los mensajes, y se aplican encima de la pila actual.  
   
  El elemento de enlace seguro crea generadores de canales seguros y agentes de escucha del canal.  
@@ -75,4 +75,3 @@ La especificación de la detección no requiere que los puntos de conexión que 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
   
-## <a name="see-also"></a>Vea también

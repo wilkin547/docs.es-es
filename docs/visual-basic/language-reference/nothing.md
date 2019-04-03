@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: b8dfc166681dbadf1d2f4ba5a985011f5427f50a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 97c651dbcc657fbab0706c9a959bd0031c0fe343
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981431"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826098"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 Representa el valor predeterminado de cualquier tipo de datos. Tipos de referencia, el valor predeterminado es el `null` referencia. Para los tipos de valor, el valor predeterminado depende de si el tipo de valor es que acepta valores NULL.  
@@ -51,6 +51,7 @@ Representa el valor predeterminado de cualquier tipo de datos. Tipos de referenc
  `Nothing` difiere de la <xref:System.DBNull> objeto, que representa una variante no inicializada o una columna de base de datos que no existe.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Dim (instrucción)](../../visual-basic/language-reference/statements/dim-statement.md)
 - [Duración del objeto: ¿Cómo se crean y destruyen objetos](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Duración en Visual Basic](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

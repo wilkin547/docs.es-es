@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: a7079ff3b56b94cb969a77707dbd79b1d7dd4bb1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270594"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836355"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Acceso a la propiedad predeterminada es ambiguo entre los miembros heredados\<defaultpropertyname >' de interfaz '\<interfacename1 >' y '\<defaultpropertyname >' de interfaz '\< interfacename2 >'
 Una interfaz hereda de dos interfaces, cada una de las cuales declara una propiedad predeterminada con el mismo nombre. El compilador no puede resolver un acceso a esta propiedad predeterminada sin calificación. Esto se ilustra en el siguiente ejemplo:  
@@ -47,7 +47,7 @@ End Class
     Dim testObj As Iface1  
     ```  
   
-     O bien  
+     -o bien-  
   
 -   Implementar la interfaz que hereda de una clase. A continuación, puede implementar cada una de las propiedades heredadas con nombres diferentes. Sin embargo, solo uno de ellos puede ser la propiedad predeterminada de la clase de implementación. Esto se ilustra en el siguiente ejemplo:  
   
@@ -64,4 +64,5 @@ End Class
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

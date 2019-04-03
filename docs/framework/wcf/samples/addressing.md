@@ -2,20 +2,20 @@
 title: Direccionamiento
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 721b010fa8e1d8955515e003d14e1f0778e35a87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3de6c3556ce2a11e1ebcfba179c08a45d87bea6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642966"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835055"
 ---
 # <a name="addressing"></a>Direccionamiento
-El ejemplo de direccionamiento muestra varios aspectos y características de direcciones del punto de conexión. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). En este ejemplo, el servicio es hospedado por sí mismo. El cliente y el servicio son aplicaciones de consola. El servicio define varios extremos mediante una combinación de direcciones del extremo absolutas y relativas.  
+El ejemplo de direccionamiento muestra varios aspectos y características de direcciones del extremo. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). En este ejemplo, el servicio es hospedado por sí mismo. El cliente y el servicio son aplicaciones de consola. El servicio define varios puntos de conexión mediante una combinación de direcciones del punto de conexión absolutas y relativas.  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- El archivo de configuración de servicio especifica una dirección base y cuatro extremos. La dirección base se especifica utilizando el elemento agregar, bajo el servicio/host/baseAddresses como se muestra en la configuración del ejemplo siguiente.  
+ El archivo de configuración de servicio especifica una dirección base y cuatro puntos de conexión. La dirección base se especifica utilizando el elemento agregar, bajo el servicio/host/baseAddresses como se muestra en la configuración del ejemplo siguiente.  
   
 ```xml  
 <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -28,7 +28,7 @@ El ejemplo de direccionamiento muestra varios aspectos y características de dir
 </service>  
 ```  
   
- La primera definición de extremo mostrada en el siguiente ejemplo de configuración especifica una dirección relativa, lo cual significa que la dirección del extremo es una combinación de la dirección base y la dirección relativa siguiendo las reglas de composición de identificadores uniformes de recursos (URI).  
+ La primera definición de punto de conexión mostrada en el siguiente ejemplo de configuración especifica una dirección relativa, lo cual significa que la dirección del punto de conexión es una combinación de la dirección base y la dirección relativa siguiendo las reglas de composición de identificadores uniformes de recursos (URI).  
   
 ```xml
 <!-- Empty relative address specified:   
@@ -79,9 +79,9 @@ El ejemplo de direccionamiento muestra varios aspectos y características de dir
 </service>  
 ```  
   
- El cliente tiene acceso solo a uno de los cuatro puntos de conexión de servicio, pero los cuatro se definen en su archivo de configuración. El cliente selecciona un extremo cuando crea el objeto `CalculatorProxy`. Cambiando el nombre de configuración de `CalculatorEndpoint1` a través de `CalculatorEndpoint4`, puede ejercer cada uno de los extremos.  
+ El cliente tiene acceso solo a uno de los cuatro puntos de conexión de servicio, pero los cuatro se definen en su archivo de configuración. El cliente selecciona un punto de conexión cuando crea el objeto `CalculatorProxy`. Cambiando el nombre de configuración de `CalculatorEndpoint1` a través de `CalculatorEndpoint4`, puede ejercer cada uno de los extremos.  
   
- Al ejecutar el ejemplo, el servicio enumera la dirección, enlazando el nombre y el nombre del contrato para cada uno de sus extremos. El extremo de intercambio (MEX) de metadatos simplemente es otro extremo de la perspectiva del ServiceHost que se presenta en la lista.  
+ Al ejecutar el ejemplo, el servicio enumera la dirección, enlazando el nombre y el nombre del contrato para cada uno de sus puntos de conexión. El punto de conexión de intercambio (MEX) de metadatos simplemente es otro punto de conexión de la perspectiva del ServiceHost que se presenta en la lista.  
   
 ```  
 Service endpoints:  
@@ -125,7 +125,7 @@ Press <ENTER> to terminate client.
 3.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Si usa Svcutil.exe para regenerar la configuración de este ejemplo, asegúrese de que modifica el nombre del punto de conexión en la configuración del cliente para que coincida con el código de cliente.  
+    >  Si usa Svcutil.exe para regenerar la configuración de este ejemplo, asegúrese de que modifica el nombre del extremo en la configuración del cliente para que coincida con el código de cliente.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
@@ -136,4 +136,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   
-## <a name="see-also"></a>Vea también

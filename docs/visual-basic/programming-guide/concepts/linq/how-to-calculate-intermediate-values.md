@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Calcular valores intermedios (Visual Basic)
+title: Filtrar Calcular valores intermedios (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 933a97b2-dfe7-4f4d-94ad-e6e20df84abd
-ms.openlocfilehash: 2908abae5f4c4738752fba62c36da340fb3b2ba3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb619784d487ae12b1fb8bb3adc97acb0f767455
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628830"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827047"
 ---
-# <a name="how-to-calculate-intermediate-values-visual-basic"></a>Procedimiento Calcular valores intermedios (Visual Basic)
+# <a name="how-to-calculate-intermediate-values-visual-basic"></a>Filtrar Calcular valores intermedios (Visual Basic)
 Este ejemplo muestra cómo calcular valores intermedios que se pueden usar para ordenar, filtrar y seleccionar.  
   
 ## <a name="example"></a>Ejemplo  
@@ -43,7 +43,7 @@ Next
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para obtener más información, consulte [trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Datos numéricos en un Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Datos numéricos de un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns="http://www.adatum.com">  
@@ -75,4 +75,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

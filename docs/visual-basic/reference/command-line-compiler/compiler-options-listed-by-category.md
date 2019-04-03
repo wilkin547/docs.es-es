@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: e7e81715b396580208fd7bbbb797a7c93301503d
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738908"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827372"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opciones del compilador de Visual Basic, por categoría
 El compilador de línea de comandos de Visual Basic se proporciona como una alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de Visual Studio. La siguiente es una lista de las opciones del compilador de línea de comandos de Visual Basic ordenadas por categoría funcional.  
@@ -18,7 +18,7 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
   
 ## <a name="compiler-output"></a>Salida del compilador  
   
-|Opción|Propósito|  
+|Opción|Finalidad|  
 |---|---|  
 |[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Suprime la información de titular del compilador.|  
 |[-utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|Muestra los resultados del compilador en codificación UTF-8.|  
@@ -28,14 +28,14 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
   
 ## <a name="optimization"></a>Optimización  
   
-|Opción|Propósito|  
+|Opción|Finalidad|  
 |---|---|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Especifica dónde se alinean las secciones del archivo de salida.|  
 |[-optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|Habilita o deshabilita las optimizaciones.|  
   
 ## <a name="output-files"></a>Archivos de salida  
   
-|Opción|Propósito|  
+|Opción|Finalidad|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Procesa los comentarios de documentación generando un archivo XML.|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Hace que el compilador genere un ensamblado cuyo contenido binario es idéntico en todas las compilaciones si las entradas son idénticas.|
@@ -47,7 +47,7 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
   
 ## <a name="net-assemblies"></a>Ensamblados de .NET  
   
-|Opción|Propósito|  
+|Opción|Finalidad|  
 |---|---|  
 |[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)|Hace que el compilador facilite al proyecto que se está compilando toda la información de tipos presente en los archivos especificados.|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Especifica si el ensamblado estará firmado total o parcialmente.|  
@@ -62,7 +62,7 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
   
 ## <a name="debuggingerror-checking"></a>Depuración y comprobación de errores  
   
-|Opción|Propósito|  
+|Opción|Finalidad|  
 |---|---|  
 |[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|Crea un archivo que contiene información que permite notificar un error fácilmente.|  
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Crea información de depuración.|  
@@ -74,14 +74,14 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
   
 ## <a name="help"></a>Ayuda  
   
-|Opción|Propósito|  
+|Opción|Finalidad|  
 |---|---|  
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|Muestra las opciones del compilador. Este comando equivale a especificar la opción `-help`. No se produce ninguna compilación.|  
 |[-help](../../../visual-basic/reference/command-line-compiler/help.md)|Muestra las opciones del compilador. Este comando equivale a especificar la opción `-?`. No se produce ninguna compilación.|  
   
 ## <a name="language"></a>Lenguaje  
   
-|Opción|Propósito|  
+|Opción|Finalidad|  
 |---|---|  
 |[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Especifique la versión de lenguaje: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|Exige la declaración explícita de variables.|  
@@ -91,13 +91,13 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
   
 ## <a name="preprocessor"></a>Preprocesador  
   
-|Opción|Propósito|  
+|Opción|Finalidad|  
 |---|---|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Define símbolos de compilación condicional.|  
   
 ## <a name="resources"></a>Recursos  
   
-|Opción|Propósito|  
+|Opción|Finalidad|  
 |---|---|  
 |[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|Crea un vínculo a un recurso administrado.|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|Inserta un recurso administrado en un ensamblado.|  
@@ -106,7 +106,7 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
   
 ## <a name="miscellaneous"></a>Varios  
   
-|Opción|Propósito|  
+|Opción|Finalidad|  
 |---|---|  
 |[@ (especificar archivo de respuesta)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Especifica un archivo de respuesta.|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Especifica la dirección base de un archivo DLL.|  
@@ -127,5 +127,6 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
 |`-checksumalgorithm:<alg>`|Especifique el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (el predeterminado) o SHA256.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Opciones del compilador de Visual Basic, por orden alfabético](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
 - [Administración de propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)

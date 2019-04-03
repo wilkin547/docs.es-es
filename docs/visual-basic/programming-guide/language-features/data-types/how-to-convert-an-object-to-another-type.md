@@ -1,17 +1,17 @@
 ---
-title: Procedimiento Convertir un objeto a otro tipo en Visual Basic
+title: Filtrar Convertir un objeto a otro tipo en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 81ac65ad34ad6afdfb89a750fef39b121aabd644
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e515c0f4ce8e787754c61a9b53d247fa93c49f2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611350"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814385"
 ---
-# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Procedimiento Convertir un objeto a otro tipo en Visual Basic
+# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Filtrar Convertir un objeto a otro tipo en Visual Basic
 Convierte un `Object` variable a otro tipo de datos con una palabra clave de conversión como [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md).  
   
 ## <a name="example"></a>Ejemplo  
@@ -34,6 +34,7 @@ End Sub
 -   Una referencia al espacio de nombres <xref:System?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Object>
 - [Conversiones de tipos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Conversiones de ampliación y de restricción](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Invocar el compilador de línea de comandos (Visual Basic)
+title: Filtrar Invocar el compilador de línea de comandos (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: dd5fadb9c9f248b5fb4f289bb2d24f1b085a79a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78bf5b1f19db3a4f39e263cfd71283f0f7718631
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503734"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817193"
 ---
-# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Procedimiento Invocar el compilador de línea de comandos (Visual Basic)
+# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Filtrar Invocar el compilador de línea de comandos (Visual Basic)
 Puede invocar el compilador de línea de comandos escribiendo el nombre de su archivo ejecutable en la línea de comandos, también conocido como el símbolo de MS-DOS. Si compila desde la línea de comandos de Windows de forma predeterminada, debe escribir la ruta de acceso completa al archivo ejecutable. Para invalidar este comportamiento predeterminado, puede utilizar el símbolo del sistema para desarrolladores de Visual Studio o modifique la variable de entorno PATH. Ambos permiten compilar desde cualquier directorio escribiendo simplemente el nombre del compilador.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -58,5 +58,6 @@ Puede invocar el compilador de línea de comandos escribiendo el nombre de su ar
      Por ejemplo, si almacena el código fuente en un directorio llamado `SourceFiles`, abriría el símbolo del sistema y el tipo `cd SourceFiles` para cambiar a ese directorio. Si el directorio contiene un archivo de origen denominado `Source.vb`, compilarlo escribiendo `vbc.exe Source.vb`.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Compilación condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

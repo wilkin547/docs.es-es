@@ -2,12 +2,12 @@
 title: Cliente ASMX con un servicio WCF
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: d526bc01d7809aa2672dcfcf194ad9c7d2e7baa5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63938f866083dac56d6ef43fdd8757c60b9a2f2b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527518"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835159"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Cliente ASMX con un servicio WCF
 Este ejemplo muestra cómo crear un servicio mediante Windows Communication Foundation (WCF) y, a continuación, tener acceso al servicio desde un cliente no WCF, como un cliente ASMX.  
@@ -36,7 +36,7 @@ public interface ICalculator
   
  <xref:System.Runtime.Serialization.DataContractSerializer> y <xref:System.Xml.Serialization.XmlSerializer> asignan los tipos CLR a una representación XML. <xref:System.Runtime.Serialization.DataContractSerializer> interpreta algunas representaciones XML de manera diferente a XmlSerializer. Generadores de proxy no WCF, como Wsdl.exe, generan una interfaz más utilizable cuando se utiliza la clase XmlSerializer. El <xref:System.ServiceModel.XmlSerializerFormatAttribute> se aplica a la `ICalculator` interfaz, para asegurarse de que se usa XmlSerializer para asignar los tipos CLR a XML. La implementación del servicio calcula y devuelve el resultado adecuado.  
   
- El servicio expone un punto de conexión único para comunicarse con el servicio, que se define utilizando el archivo de configuración (Web.config). El extremo está compuesto por una dirección, un enlace y un contrato. El servicio expone el extremo en la dirección base proporcionada por el host de Internet Information Services (IIS). El atributo `binding` está definido en basicHttpBinding, que proporciona las comunicaciones HTTP usando SOAP 1.1, que es conforme a WS-I BasicProfile 1.1, tal y como se muestra en la configuración del ejemplo siguiente.  
+ El servicio expone un extremo único para comunicarse con el servicio, que se define utilizando el archivo de configuración (Web.config). El punto de conexión está compuesto por una dirección, un enlace y un contrato. El servicio expone el extremo en la dirección base proporcionada por el host de Internet Information Services (IIS). El atributo `binding` está definido en basicHttpBinding, que proporciona las comunicaciones HTTP usando SOAP 1.1, que es conforme a WS-I BasicProfile 1.1, tal y como se muestra en la configuración del ejemplo siguiente.  
   
 ```xml  
 <services>  
@@ -72,7 +72,7 @@ public interface ICalculator
 wsdl /n:Microsoft.ServiceModel.Samples /o:generatedClient.cs /urlkey:CalculatorServiceAddress http://localhost/servicemodelsamples/service.svc?wsdl  
 ```  
   
- Al utilizar el proxy con tipo generado, el cliente puede tener acceso a un extremo de servicio determinado configurando la dirección adecuada. El cliente utiliza un archivo de configuración (App.config) para especificar el extremo con el que comunicarse.  
+ Al utilizar el proxy con tipo generado, el cliente puede tener acceso a un punto de conexión de servicio determinado configurando la dirección adecuada. El cliente utiliza un archivo de configuración (App.config) para especificar el punto de conexión con el que comunicarse.  
   
 ```xml  
 <appSettings>  
@@ -149,4 +149,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`  
   
-## <a name="see-also"></a>Vea también

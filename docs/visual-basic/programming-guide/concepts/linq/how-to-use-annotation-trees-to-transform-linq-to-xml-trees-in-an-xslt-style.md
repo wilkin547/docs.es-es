@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (Visual Basic)
+title: Filtrar Usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: ed31e00b6d67a6707a98977c58e4e7afe35c8ad7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8db5f9dc29b4053321c81c9da58e12610ef63c7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746304"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824876"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Procedimiento Usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Filtrar Usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (Visual Basic)
 Se puede usar anotaciones para facilitar transformaciones de un árbol XML.  
   
  Algunos documentos XML están "basados en el documento con contenido mixto". Con estos documentos no se conoce necesariamente la forma de los nodos secundarios de un elemento. Por ejemplo, un nodo que contiene texto puede tener el siguiente aspecto:  
@@ -34,7 +34,7 @@ Se puede usar anotaciones para facilitar transformaciones de un árbol XML.
   
 -   El nuevo elemento que se agrega como anotación puede contener nodos secundarios; puede formar un subárbol con cualquier forma que se desee.  
   
--   Hay una regla especial: Si es un nodo secundario del nuevo elemento en un espacio de nombres diferente, un espacio de nombres que se compone para este propósito (en este ejemplo, el espacio de nombres es `http://www.microsoft.com/LinqToXmlTransform/2007`), a continuación, ese elemento secundario no se copia al nuevo árbol. En su lugar, si el espacio de nombres es el espacio de nombres especial mencionado anteriormente y el nombre local del elemento es `ApplyTransforms`, los nodos secundarios del elemento del árbol de origen se recorren en iteración y se copian al nuevo árbol (con la excepción que los elementos secundarios anotados se transforman de acuerdo con esas reglas).  
+-   Hay una regla especial: si un nodo secundario del nuevo elemento está en otro espacio de nombres, un espacio de nombres creado con esa finalidad (en este ejemplo, el espacio de nombres es `http://www.microsoft.com/LinqToXmlTransform/2007`), entonces el elemento secundario no se copia al árbol nuevo. En su lugar, si el espacio de nombres es el espacio de nombres especial mencionado anteriormente y el nombre local del elemento es `ApplyTransforms`, los nodos secundarios del elemento del árbol de origen se recorren en iteración y se copian al nuevo árbol (con la excepción que los elementos secundarios anotados se transforman de acuerdo con esas reglas).  
   
 -   Esto es parecido a la especificación de transformaciones en XSL. La consulta que selecciona un conjunto de nodos es análoga a la expresión XPath para una plantilla. El código para crear el nuevo <xref:System.Xml.Linq.XElement> que se guarda como anotación es análogo al constructor de secuencias en XSL y el elemento `ApplyTransforms` es análogo en función al elemento `xsl:apply-templates` en XSL.  
   
@@ -379,4 +379,5 @@ After Transform
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Avanzada de LINQ to XML (Visual Basic) de programación](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

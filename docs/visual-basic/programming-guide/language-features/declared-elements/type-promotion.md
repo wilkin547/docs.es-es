@@ -10,12 +10,12 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: b00fdd563a6599b3acfaaafa229fdef9400e57b6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f7ac6bfb944da8bd50e035ba97b2b513176dc661
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969198"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838877"
 ---
 # <a name="type-promotion-visual-basic"></a>Promoción de tipos (Visual Basic)
 Cuando se declara un elemento de programación en un módulo, Visual Basic promueve su ámbito al espacio de nombres que contiene el módulo. Esto se conoce como *promoción de tipos*.  
@@ -59,6 +59,7 @@ Cuando se declara un elemento de programación en un módulo, Visual Basic promu
 -   **Usar el nombre completo.** Cuando se trabaja con módulos y otros elementos en el mismo espacio de nombres, el enfoque más seguro es utilizar siempre la calificación completa para todos los elementos de programación. Si la promoción de tipos se rechaza para un miembro del módulo y no calificar totalmente ese miembro, podría tener acceso a un elemento de programación diferentes sin darse cuenta.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Module (instrucción)](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Namespace (instrucción)](../../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)

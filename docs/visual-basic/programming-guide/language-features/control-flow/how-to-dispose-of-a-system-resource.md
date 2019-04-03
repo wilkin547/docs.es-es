@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Eliminar un recurso de sistema (Visual Basic)
+title: Filtrar Eliminar un recurso de sistema (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: 798650bbefc0c5b2ac097b87ab44a2b380117939
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a399b92c66c8a88d10d661ff41aef58a82bbc2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523225"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829920"
 ---
-# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Procedimiento Eliminar un recurso de sistema (Visual Basic)
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Filtrar Eliminar un recurso de sistema (Visual Basic)
 Puede usar un `Using` bloque para garantizar que el sistema elimina un recurso al que el código sale del bloque. Esto es útil si está utilizando un recurso del sistema que consume una gran cantidad de memoria o que otros componentes que desee utilizar.  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Para eliminar una conexión de base de datos cuando lo esté utilizando el código  
@@ -45,6 +45,7 @@ Puede usar un `Using` bloque para garantizar que el sistema elimina un recurso a
      Puede usar esta misma técnica en un recurso del sistema como un identificador de archivo o un contenedor COM. Usa un `Using` bloquear cuando para asegurarse de que desea que deje el recurso disponible para otros componentes una vez que haya salido el `Using` bloque.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Data.SqlClient.SqlConnection>
 - [Flujo de control](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Estructuras de decisión](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)

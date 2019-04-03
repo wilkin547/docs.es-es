@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: e1464421866ee22f27f9cf0a3611bc09a631c004
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0f74935d58d47e65b5eb614abc86a3fc9c8e6c42
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975841"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838370"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Indica que una declaración de tipo es una definición parcial del tipo.  
@@ -43,7 +43,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`attrlist`|Opcional. Lista de atributos que se aplican a este tipo. Debe incluir el [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) en corchetes angulares (`< >`).|  
 |`accessmodifier`|Opcional. Especifica qué código puede tener acceso a este tipo. Vea [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
@@ -94,6 +94,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
  Las dos definiciones parciales del ejemplo anterior podrían estar en el mismo archivo de origen o en dos archivos distintos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Class (instrucción)](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Promoción de tipos](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)

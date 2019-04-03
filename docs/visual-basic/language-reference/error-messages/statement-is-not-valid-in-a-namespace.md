@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
-ms.openlocfilehash: 98a450fd92993506005268b54798bbc8547a60fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c2b30045b25c1ef6542eff74716e9919ab8af93
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686314"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841763"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>La instrucción no es válida en un espacio de nombres
 La instrucción no puede aparecer en el nivel de un espacio de nombres. Las declaraciones sola permitidas en el nivel de espacio de nombres son el módulo, clase, interfaz, delegado, enumeración y declaraciones de estructura.  
@@ -24,5 +24,6 @@ La instrucción no puede aparecer en el nivel de un espacio de nombres. Las decl
 -   Mueva la instrucción a una ubicación dentro de un módulo, clase, interfaz, estructura, enumeración o definición de delegado.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Ámbito en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Espacios de nombres en Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)

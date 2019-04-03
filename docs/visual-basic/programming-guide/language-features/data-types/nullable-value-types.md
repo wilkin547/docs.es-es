@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 522526392dd12ede729fe8b96677029c05af57c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 437107bb522e1635dffa4a2de88c5d10d6707592
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665700"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825149"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Tipos que admiten valores null (Visual Basic)
 A veces se trabaja con un tipo de valor que no tiene un valor definido en determinadas circunstancias. Por ejemplo, podría tener un campo en una base de datos distinguir entre tener un valor asignado que es significativo y no tener un valor asignado. Tipos de valor pueden ampliarse para aprovechar sus valores normales o un valor null. Se llama a este tipo de extensión un *tipo que acepta valores NULL*.  
@@ -98,6 +98,7 @@ A veces se trabaja con un tipo de valor que no tiene un valor definido en determ
  Una base de datos es uno de los lugares más importantes para utilizar tipos que aceptan valores NULL. Actualmente, no todos los objetos de base de datos admiten tipos que aceptan valores NULL, pero hace de los adaptadores de tabla generado por el diseñador. Consulte "Compatibilidad de TableAdapter para tipos que aceptan valores null" en [información general sobre TableAdapter](/visualstudio/data-tools/tableadapter-overview).
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
 - [Utilizar tipos que aceptan valores NULL](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)

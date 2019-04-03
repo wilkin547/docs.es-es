@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: 4aa8dd030d95e0404c037b2c8b674463bb51b267
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a02c482db81d9d76752cfe66a292dc57c48b2acb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972566"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841281"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Propiedad de indizador de extensión (Visual Basic)
 Proporciona acceso a los elementos individuales de una recopilación.  
@@ -27,7 +27,7 @@ object(index)
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`object`|Obligatorio. Una colección consultable. Es decir, una colección que implementa <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601>.|  
 |(|Obligatorio. Denota el inicio de la propiedad de indizador.|  
@@ -56,6 +56,7 @@ object(index)
  `Second phone number: 425-555-0145`  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Xml.Linq.XElement>
 - [Propiedades del eje XML](../../../visual-basic/language-reference/xml-axis/index.md)
 - [Literales XML](../../../visual-basic/language-reference/xml-literals/index.md)

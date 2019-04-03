@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 11ea31ae245d34525ea33d5d2a53a72f1c415b16
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 645d19219481d22ade90f44aaecb62471eb915d5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981457"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817209"
 ---
 # <a name="string-functions-visual-basic"></a>Funciones de cadena (Visual Basic)
 En la tabla siguiente se enumera las funciones de Visual Basic proporciona para buscar y manipular cadenas.  
@@ -82,6 +82,7 @@ En la tabla siguiente se enumera las funciones de Visual Basic proporciona para 
  [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
 - [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Resumen de manipulación de cadenas](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: 5a6d367f4b09de600bb744aa2abed0da2c93aa0b
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 2de5fe82f1969a2fdb305d45951d7d698252c0c8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202371"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816439"
 ---
 # <a name="-addmodule"></a>-addmodule
 Hace que el compilador facilite al proyecto que se está compilando toda la información de tipos presente en los archivos especificados.  
@@ -50,6 +50,7 @@ Hace que el compilador facilite al proyecto que se está compilando toda la info
  Al ejecutar `t1`, lo que da como resultado `802`.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-referencia (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: 59558583a35f83baa953cfc94a17c6c002f91b83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 161edd2cb3afeb6ba8b10455a1c3a2c43b90dac1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703502"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821656"
 ---
 # <a name="objects-visual-basic"></a>Objetos (Visual Basic)
 En este tema se proporcionan vínculos a otros temas en los que se describen los objetos en tiempo de ejecución de Visual Basic y contienen tablas con sus procedimientos de miembro, propiedades y eventos.  
@@ -46,5 +46,6 @@ En este tema se proporcionan vínculos a otros temas en los que se describen los
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|Proporciona los métodos y propiedades para analizar archivos de texto estructurados.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../../visual-basic/index.md)

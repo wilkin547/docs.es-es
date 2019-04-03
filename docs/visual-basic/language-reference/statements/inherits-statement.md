@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 18e35bab219003439136bc5d88f4b2f0ea6cdd1c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5ab90e44e2809c1e71d7f100970b7be73af4a732
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965753"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817102"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 Hace que la clase o interfaz actual herede los atributos, variables, propiedades, procedimientos y eventos de otra clase o conjunto de interfaces.  
@@ -26,9 +26,9 @@ Inherits basetypenames
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
-|`basetypenames`|Obligatorio. El nombre de la clase del que se deriva esta clase.<br /><br /> O bien<br /><br /> Los nombres de las interfaces que esta interfaz se deriva. Use comas para separar varios nombres.|  
+|`basetypenames`|Obligatorio. El nombre de la clase del que se deriva esta clase.<br /><br /> -o bien-<br /><br /> Los nombres de las interfaces que esta interfaz se deriva. Use comas para separar varios nombres.|  
   
 ## <a name="remarks"></a>Comentarios  
  Si usa, la `Inherits` instrucción debe ser la primera línea no vacía, sin comentarios en una definición de clase o interfaz. Debe seguir inmediatamente a la `Class` o `Interface` instrucción.  
@@ -64,6 +64,7 @@ Inherits basetypenames
  La interfaz denominada `thisInterface` ahora incluye todas las definiciones en el <xref:System.IComparable>, <xref:System.IDisposable>, y <xref:System.IFormattable> interfaces de los miembros heredados proporcionan respectivamente para la comparación específico del tipo de dos objetos, liberar recursos asignan y se expresa el valor de un objeto como un `String`. Una clase que implementa `thisInterface` debe implementar todos los miembros de todas las interfaces base.  
   
 ## <a name="see-also"></a>Vea también
+
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
 - [Objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

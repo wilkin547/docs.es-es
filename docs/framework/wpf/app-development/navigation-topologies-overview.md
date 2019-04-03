@@ -9,12 +9,12 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 16ce791c300c431b7349293d00648c881f97c372
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3e5cca90861ccdeaff904a34c6f484cfdd32c975
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356785"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819598"
 ---
 # <a name="navigation-topologies-overview"></a>Información general sobre topologías de navegación
 <a name="introduction"></a> Esta información general proporciona una introducción a las topologías de navegación en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Posteriormente, se tratan tres topologías de navegación comunes y se incluyen ejemplos de estas.  
@@ -46,7 +46,7 @@ ms.locfileid: "57356785"
   
  En este tema se trata tres topologías de navegación comunes: *fija lineal*, *fija jerárquica*, y *generada dinámicamente*. Cada topología de navegación se muestra con un ejemplo que tiene un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] como la que se muestra en la ilustración siguiente:  
   
- ![Páginas de tareas con elementos de datos](./media/navigationtopologyfigure6.png "NavigationTopologyFigure6")  
+ ![Páginas de tareas con elementos de datos y los botones de navegación.](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
   
 <a name="Structured_Navigation_Topologies"></a>   
 ## <a name="structured-navigation-topologies"></a>Topologías de navegación estructurada  
@@ -60,9 +60,9 @@ ms.locfileid: "57356785"
   
 <a name="Navigation_over_a_Fixed_Linear_Topology"></a>   
 ## <a name="navigation-over-a-fixed-linear-topology"></a>Navegación mediante una topología lineal fija  
- Una topología lineal fija se parece a la estructura de un asistente que tiene una o más páginas por las que se navega en una secuencia fija. En la ilustración siguiente se muestra la estructura de alto nivel y el flujo de un asistente con una topología lineal fija.  
+ Una topología lineal fija se parece a la estructura de un asistente que tiene una o más páginas por las que se navega en una secuencia fija. La siguiente ilustración muestra la estructura de alto nivel y el flujo de un asistente con una topología lineal fija:  
   
- ![Diagrama de topología de navegación](./media/navigationtopologyfigure1.png "NavigationTopologyFigure1")  
+ ![Diagrama que muestra una topología lineal fija.](./media/navigation-topologies-overview/navigation-topology-fixed-linear.png)  
   
  Los comportamientos típicos de la navegación mediante una topología lineal fija son los siguientes:  
   
@@ -84,13 +84,13 @@ ms.locfileid: "57356785"
   
 <a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>   
 ## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>Navegación dinámica mediante una topología jerárquica fija  
- En algunas aplicaciones, las páginas permiten la navegación a dos o más páginas, como se muestra en la ilustración siguiente.  
+ En algunas aplicaciones, páginas permiten la navegación a dos o más páginas, como se muestra en la ilustración siguiente: 
   
- ![Una página que puede navegar a varias páginas](./media/navigationtopologyfigure2.png "NavigationTopologyFigure2")  
+ ![Diagrama que muestra una página que puede navegar a varias páginas.](./media/navigation-topologies-overview/navigation-topology-multiple-pages.png)  
   
- Esta estructura se conoce como topología jerárquica fija, y la secuencia en la que se recorre la jerarquía a menudo la determinan en tiempo de ejecución la aplicación o el usuario. En tiempo de ejecución, cada página de la jerarquía que permite la navegación a dos o más páginas recopila los datos necesarios para determinar a qué página se debe navegar. En la siguiente ilustración se muestra una de varias secuencias de navegación posibles según la ilustración anterior.  
+ Esta estructura se conoce como topología jerárquica fija, y la secuencia en la que se recorre la jerarquía a menudo la determinan en tiempo de ejecución la aplicación o el usuario. En tiempo de ejecución, cada página de la jerarquía que permite la navegación a dos o más páginas recopila los datos necesarios para determinar a qué página se debe navegar. La ilustración siguiente muestra una de varias secuencias de navegación posibles según la ilustración anterior:  
   
- ![Diagrama de topología de navegación](./media/navigationtopologyfigure3.png "NavigationTopologyFigure3")  
+ ![Diagrama que muestra una secuencia de navegación posibles.](./media/navigation-topologies-overview/navigation-topology-fixed-hierarchical.png)  
   
  Aunque la secuencia en la que se navega por las páginas de una estructura jerárquica fija se determina en tiempo de ejecución, la experiencia del usuario es la misma que la de una topología lineal fija:  
   
@@ -114,13 +114,13 @@ ms.locfileid: "57356785"
   
 <a name="Navigation_over_a_Dynamically_Generated_Topology"></a>   
 ## <a name="navigation-over-a-dynamically-generated-topology"></a>Navegación mediante una topología generada dinámicamente  
- En algunas aplicaciones, la secuencia en la que se navega por dos o más páginas solo la puede determinar en tiempo de ejecución el usuario, la aplicación o los datos externos. En la ilustración siguiente se muestra un conjunto de páginas con una secuencia de navegación indeterminada.  
+ En algunas aplicaciones, la secuencia en la que se navega por dos o más páginas solo la puede determinar en tiempo de ejecución el usuario, la aplicación o los datos externos. La ilustración siguiente muestra un conjunto de páginas con una secuencia de navegación indeterminada:  
   
- ![Diagrama de topología de navegación](./media/navigationtopologyfigure4.png "NavigationTopologyFigure4")  
+ ![Un conjunto de páginas con una secuencia de navegación indeterminada.](./media/navigation-topologies-overview/navigation-topology-dynamically-generated.png)  
   
- En la ilustración siguiente se muestra una secuencia de navegación que eligió el usuario en tiempo de ejecución.  
+ La siguiente ilustración representa una secuencia de navegación que se ha elegido por el usuario en tiempo de ejecución:  
   
- ![Diagrama de navegación](./media/navigationtopologyfigure5.png "NavigationTopologyFigure5")  
+ ![Diagrama que muestra una secuencia de navegación elegido en tiempo de ejecución.](./media/navigation-topologies-overview/navigation-topology-sequence-chosen-run-time.png)  
   
  La secuencia de navegación se conoce como topología generada dinámicamente. Para el usuario, al igual que con las otras topologías de navegación, la experiencia del usuario es la misma que en las topologías anteriores:  
   

@@ -1,17 +1,17 @@
 ---
-title: Procedimiento Contraer y ocultar secciones de código (Visual Basic)
+title: Filtrar Contraer y ocultar secciones de código (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, code collapsing
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: bbce0e4a2427843ed9d9d51b25684db8c54ba69a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980131"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822306"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Filtrar Contraer y ocultar secciones de código (Visual Basic)
 El `#Region` directiva le permite contraer y ocultar secciones de código en archivos de Visual Basic. El `#Region` directiva le permite especificar un bloque de código que se puede expandir o contraer cuando se usa el editor de código de Visual Studio. La capacidad de ocultar selectivamente el código hace que los archivos más fáciles de administrar y más fácil de leer. Para obtener más información, vea [Esquematización](/visualstudio/ide/outlining).  
@@ -30,6 +30,7 @@ El `#Region` directiva le permite contraer y ocultar secciones de código en arc
     >  Ocultar el código no evita que se está compilando y no afecta a `#If...#End If` instrucciones.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Compilación condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
 - [#Region (directiva)](../../../visual-basic/language-reference/directives/region-directive.md)
 - [#If...Then...#Else (directivas)](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
