@@ -3,12 +3,12 @@ title: Creación de un cliente de REST con .NET Core
 description: Este tutorial le enseña varias características de .NET Core y el lenguaje C#.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: e7859e9db53e8b126fd66b88d9a5e7565ea1a4ad
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a375215f2d31845333290c85f7701c1a7dfbe780
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846173"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412310"
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -213,9 +213,9 @@ Compile y ejecute la aplicación. Se imprimirán los nombres de los repositorios
 
 ## <a name="controlling-serialization"></a>Control de la serialización
 
-Antes de agregar más características, vamos a abordar el tipo `repo` y hacer que siga convenciones de C# más estándar. Para ello, anotará el tipo `repo` con *atributos* que controlan cómo funciona el serializador de JSON. En su caso, usará estos atributos para definir una asignación entre los nombres de claves JSON y los nombres de miembros y clases de C#. Los dos atributos usados son el atributo `DataContract` y el atributo `DataMember`. Por convención, todas las clases de atributo acaban en el sufijo `Attribute`. Sin embargo, no es necesario usar ese sufijo cuando aplique un atributo.
+Antes de agregar más características, vamos a abordar el tipo `repo` y hacer que siga convenciones de C# más estándar. Para ello, anotará el tipo `repo` con *atributos* que controlan cómo funciona el serializador de JSON. En su caso, usará estos atributos para definir una asignación entre los nombres de claves JSON y los nombres de miembros y clases de C#. Los dos atributos que se usan son <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute>. Por convención, todas las clases de atributo acaban en el sufijo `Attribute`. Sin embargo, no es necesario usar ese sufijo cuando aplique un atributo.
 
-Los atributos `DataContract` y `DataMember` están en una biblioteca diferente, por lo que deberá agregar esa biblioteca a su archivo de proyecto de C# como una dependencia. Agregue la siguiente línea a la sección `<ItemGroup>` del archivo de proyecto:
+Los atributos <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute> están en una biblioteca diferente, por lo que deberá agregar esa biblioteca a su archivo de proyecto de C# como una dependencia. Agregue la siguiente línea a la sección `<ItemGroup>` del archivo de proyecto:
 
 ```xml
 <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
@@ -223,7 +223,7 @@ Los atributos `DataContract` y `DataMember` están en una biblioteca diferente, 
 
 Después de guardar el archivo, ejecute `dotnet restore` ([vea la nota](#dotnet-restore-note)) para recuperar este paquete.
 
-A continuación, abra el archivo `repo.cs`. Vamos a cambiar el nombre por Pascal Case y a deletrear totalmente el nombre `Repository`. Queremos asignar nodos "repo" de JSON a este tipo, así que deberá instalar el atributo `DataContract` en la declaración de clase. Establecerá la propiedad `Name` del atributo en el nombre de los nodos JSON que se asignan a este tipo:
+A continuación, abra el archivo `repo.cs`. Vamos a cambiar el nombre por Pascal Case y a deletrear totalmente el nombre `Repository`. Queremos asignar nodos "repo" de JSON a este tipo, así que deberá instalar el atributo <xref:System.Runtime.Serialization.DataContractAttribute> en la declaración de clase. Establecerá la propiedad `Name` del atributo en el nombre de los nodos JSON que se asignan a este tipo:
 
 ```csharp
 [DataContract(Name="repo")]
@@ -357,7 +357,7 @@ Ese formato no sigue ninguno de los formatos estándar <xref:System.DateTime> de
 private string JsonDate { get; set; }
 ```
 
-El atributo `DataMember` informa al serializador que esta se debe procesar, aunque no sea un miembro público. A continuación, debe escribir una propiedad pública de solo lectura que convierta la cadena en un objeto <xref:System.DateTime> válido y que devuelva ese objeto <xref:System.DateTime>:
+El atributo <xref:System.Runtime.Serialization.DataMemberAttribute> informa al serializador que esta se debe procesar, aunque no sea un miembro público. A continuación, debe escribir una propiedad pública de solo lectura que convierta la cadena en un objeto <xref:System.DateTime> válido y que devuelva ese objeto <xref:System.DateTime>:
 
 ```csharp
 [IgnoreDataMember]

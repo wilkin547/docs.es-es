@@ -2,12 +2,12 @@
 title: 'Archivo XML de ejemplo: Datos numéricos (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 5faef812-0006-4d84-9cf2-5746070e7fbf
-ms.openlocfilehash: 23f5388aeb5cdd97d33423d2d150ccefbae25a52
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 578ec2de69ae549e255fdafb98d3483f6330ce5d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495791"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842686"
 ---
 # <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Archivo XML de ejemplo: Datos numéricos (LINQ to XML)
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo contiene datos numéricos para realizar sumas, promedios y agrupaciones.  
@@ -56,4 +56,5 @@ El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Documentos XML de ejemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

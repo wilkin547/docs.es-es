@@ -11,12 +11,12 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 25b0d7e85fe1c1e0d0589b4b9a9db2d85ca71526
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9ab01755d75c91ce87acf83e7f406b26c466aef6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965921"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834640"
 ---
 # <a name="if-operator-visual-basic"></a>If (Operador) (Visual Basic)
 Usa evaluación de cortocircuito para devolver condicionalmente uno de dos valores. El `If` operador se puede llamar con tres argumentos o con dos argumentos.  
@@ -32,7 +32,7 @@ If( [argument1,] argument2, argument3 )
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`argument1`|Obligatorio. `Boolean`. Determina cuál de los otros argumentos para evaluar y devolver.|  
 |`argument2`|Obligatorio. `Object`. Evaluada y devuelto si `argument1` se evalúa como `True`.|  
@@ -51,7 +51,7 @@ If( [argument1,] argument2, argument3 )
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`argument2`|Obligatorio. `Object`. Debe ser una referencia o tipo que acepta valores NULL. Evalúa y se devuelve cuando se evalúa en algo distinto `Nothing`.|  
 |`argument3`|Obligatorio. `Object`. Evaluada y devuelto si `argument2` se evalúa como `Nothing`.|  
@@ -61,6 +61,7 @@ If( [argument1,] argument2, argument3 )
  [!code-vb[VbVbalrOperators#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#102)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:Microsoft.VisualBasic.Interaction.IIf%2A>
 - [Tipos de valor que aceptan valores NULL](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
 - [Nothing](../../../visual-basic/language-reference/nothing.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 49efaa6470b6fea062be0663d8b1c48b9284bd99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 743160889c4f24a9edb2d0f9799662a74c5061fb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671998"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842088"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>Cómo My depende del tipo de proyecto (Visual Basic)
 `My` muestra sólo los objetos requeridos por un tipo de proyecto determinado. Por ejemplo, el `My.Forms` objeto está disponible en una aplicación Windows Forms pero no está disponible en una aplicación de consola. En este tema se describe los `My` objetos están disponibles en diferentes tipos de proyectos.  
@@ -56,6 +56,7 @@ ms.locfileid: "54671998"
  <sup>7</sup> versión web de `My.User`. Este objeto se asocia con la identidad del usuario de la solicitud HTTP actual de la aplicación.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.Logging.Log>

@@ -1,21 +1,21 @@
 ---
-title: Procedimiento Generar archivos de texto de XML (Visual Basic)
+title: Filtrar Generar archivos de texto de XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-ms.openlocfilehash: bd3c8b0f9faf0b465d9b0f6a5c17ceef62ddb285
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6273152995b458da110a2bda56ebdc35d49b6769
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687729"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829491"
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>Procedimiento Generar archivos de texto de XML (Visual Basic)
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>Filtrar Generar archivos de texto de XML (Visual Basic)
 Este ejemplo muestra cómo generar un archivo de valores separados por comas (CSV) a partir de un archivo XML.  
   
 ## <a name="example"></a>Ejemplo  
  La versión de Visual Basic usa código de procedimientos para agregar la colección de cadenas en una sola cadena.  
   
- Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Los clientes y pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -52,4 +52,5 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Proyecciones y transformaciones (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: dbcd0625cdbcd06affc495ca29972c6c183c10f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9eb19bf5e89b12a32cae28b2c087570acc10f3ad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582118"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826592"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 Especifica que una propiedad o procedimiento invalida una propiedad o procedimiento del mismo nombre heredado de una clase base.  
@@ -51,7 +51,7 @@ Especifica que una propiedad o procedimiento invalida una propiedad o procedimie
   
 -   **Sombrear y reemplazar.** Aunque tanto el sombreado como el reemplazo redefinen elementos heredados, existen diferencias significativas entre ambos conceptos. Para obtener más información, consulte [sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
- Si usa `Overrides`, el compilador agregará `Overloads` de forma implícita para que las API de biblioteca trabajen con C# más fácilmente.  
+ Si usa `Overrides`, el compilador agrega de forma implícita `Overloads` para que las API de la biblioteca trabajen más fácilmente con C#.  
   
  El modificador `Overrides` se puede utilizar en los contextos siguientes:  
   
@@ -62,6 +62,7 @@ Especifica que una propiedad o procedimiento invalida una propiedad o procedimie
  [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)

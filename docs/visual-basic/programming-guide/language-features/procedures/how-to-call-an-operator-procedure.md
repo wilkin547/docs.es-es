@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Llamar a un procedimiento de operador (Visual Basic)
+title: Filtrar Llamar a un procedimiento de operador (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: ab9dd9e3f9abdd8379a59ed458c47d5ec8b4f2ad
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 46614ad43e7be72c8396f47ba7f5d02185f62827
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978974"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837096"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Filtrar Llamar a un procedimiento de operador (Visual Basic)
 Llame a un procedimiento de operador mediante el símbolo de operador en una expresión. En el caso de un operador de conversión, llame a la [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) para convertir un valor de un tipo de datos a otro.  
@@ -54,6 +54,7 @@ Llame a un procedimiento de operador mediante el símbolo de operador en una exp
  Asegúrese de que la clase o estructura que está utilizando define el operador que desea usar.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Procedimientos de operadores](./operator-procedures.md)
 - [Cómo: Definir un operador](./how-to-define-an-operator.md)
 - [Cómo: Definir un operador de conversión](./how-to-define-a-conversion-operator.md)

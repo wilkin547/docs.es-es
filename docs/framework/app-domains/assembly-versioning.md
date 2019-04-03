@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87fb99ee8379a14a4a1d272a6eabb7fa8413bf64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbb681567090cb26d20a31e8645c0b651bef9244
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724075"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675957"
 ---
 # <a name="assembly-versioning"></a>Versiones de los ensamblados
 La creación de versiones de ensamblados mediante Common Language Runtime se realiza en el nivel de ensamblado. La versión específica de un ensamblado y las versiones de los ensamblados dependientes se guardan en el manifiesto del ensamblado. La directiva de versiones predeterminada para el motor en tiempo de ejecución es que las aplicaciones se ejecuten sólo en las versiones con las que se compilaron y comprobaron, a menos que se reemplace con una directiva de versiones explícita en los archivos de configuración (el archivo de configuración de la aplicación, el archivo de directivas de la compañía de software y el archivo de configuración del administrador del equipo).  
@@ -33,10 +33,9 @@ La creación de versiones de ensamblados mediante Common Language Runtime se rea
   
 4.  Comprueba la caché global de ensamblados, el código base especificado en los archivos de configuración y, después, el directorio y los subdirectorios de la aplicación mediante las reglas de búsqueda que se describen en [How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) (Cómo el tiempo de ejecución ubica ensamblados).  
   
- La ilustración siguiente muestra estos pasos.  
+ En la ilustración siguiente se muestran estos pasos:  
   
- ![ensamblado externo myAssembly](../../../docs/framework/app-domains/media/versioningover.gif "versioningover")  
-Resolver la solicitud de enlace de un ensamblado  
+ ![Diagrama en el que se muestran los pasos para la resolución de la solicitud de enlace de ensamblados.](./media/assembly-versioning/resolve-assembly-binding-request.gif)
   
  Para obtener más información sobre cómo configurar aplicaciones, vea [Configuring Apps](../../../docs/framework/configure-apps/index.md) (Configurar aplicaciones). Para obtener más información sobre la directiva de enlace, vea [How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) (Cómo el tiempo de ejecución ubica ensamblados).  
   

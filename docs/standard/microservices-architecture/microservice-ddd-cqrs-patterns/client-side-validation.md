@@ -4,12 +4,12 @@ description: Arquitectura de microservicios de .NET para aplicaciones .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 3ec8ca932924c1b1b6750dd30750e3c1e56b7538
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4c039356e94f843c75430ff61d5fe68906c5c0ed
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130083"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633834"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validación del lado cliente (validación de los niveles de presentación)
 
@@ -30,26 +30,26 @@ La implementación de la validación del lado cliente depende del tipo de aplica
 ### <a name="validation-in-xamarin-mobile-apps"></a>Validación en aplicaciones móviles de Xamarin
 
 - **Validate Text Input and Show Errors** \ (Validar la entrada de texto y mostrar errores)
-  [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+  [https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 - **Validation Callback** \ (Devolución de llamada de validación)
-  [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
+  [https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>Validación en aplicaciones ASP.NET Core
 
 - **Rick Anderson. Agregar validación a una aplicación ASP.NET Core MVC** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+  [https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Validación en aplicaciones SPA Web (Angular 2, TypeScript, JavaScript)
 
 - **Ado Kukic. Angular 2 Form Validation** \ (Validación de formularios de Angular 2)
-  [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+  [https://scotch.io/tutorials/angular-2-form-validation](https://scotch.io/tutorials/angular-2-form-validation)
 
 - **Form Validation** \ (Validación de formularios)
-  [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
+  [https://angular.io/docs/ts/latest/cookbook/form-validation.html](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
 - **Validation (Validación).** Documentación de Breeze. \
-  [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
+  [https://breeze.github.io/doc-js/validation.html](https://breeze.github.io/doc-js/validation.html)
 
 En resumen, estos son los conceptos más importantes en lo que respecta a la validación:
 

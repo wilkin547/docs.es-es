@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: 4b35985aa67cea7b58ddf05611cf4e0813a2d442
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 765a667f18340c53909c3ff1e9fcc5f2ffc0f9bc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977466"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837473"
 ---
 # <a name="partial-methods-visual-basic"></a>Métodos parciales (Visual Basic)
 Los métodos parciales permiten a los desarrolladores insertar lógica personalizada en código. Normalmente, el código es parte de una clase generada por el diseñador. Los métodos parciales se definen en una clase parcial que se crea un generador de código y se suelen usar para proporcionar una notificación que algo ha cambiado. Le permiten al programador especificar un comportamiento personalizado en respuesta al cambio.  
@@ -71,6 +71,7 @@ End Sub
  `Quantity was changed to 100`  
   
 ## <a name="see-also"></a>Vea también
+
 - [Sub (instrucción)](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Subprocedimientos](./sub-procedures.md)
 - [Parámetros opcionales](./optional-parameters.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b4c1b075d54189d195ea38d421463ea6b9e6161
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: ebd54afb312de0796b5a96b3d41f1e98dd97bd1b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835361"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654359"
 ---
 # <a name="memory-mapped-files"></a>Archivos asignados a memoria
 Un archivo asignado a memoria incluye el contenido de un archivo en la memoria virtual. Esta asignación entre un archivo y el espacio de memoria permite a una aplicación, incluidos varios procesos, modificar el archivo leyendo y escribiendo directamente en la memoria. A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], se puede usar código administrado para tener acceso a los archivos asignados a memoria del mismo modo que las funciones nativas de Windows tienen acceso a los archivos asignados a memoria, tal como se describe en [Administración de archivos asignados a memoria](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
@@ -42,10 +42,11 @@ Un archivo asignado a memoria incluye el contenido de un archivo en la memoria v
   
  El acceso a los archivos asignados a memoria se realiza a través del administrador de memoria del sistema operativo, de modo que el archivo se divide automáticamente en varias páginas y el acceso se realizará según sea necesario. El usuario no tiene que encargarse de administrar la memoria.  
   
- En la siguiente ilustración se muestra cómo varios procesos pueden presentar simultáneamente varias vistas superpuestas del mismo archivo asignado a memoria.  
+ En la siguiente ilustración se muestra cómo varios procesos pueden presentar simultáneamente varias vistas superpuestas del mismo archivo asignado a memoria.
+
+ En la imagen siguiente se muestran varias vistas superpuestas de un archivo asignado a memoria:  
   
- ![Muestra vistas en un archivo asignado a la memoria.](../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
-Varias visas superpuestas de un archivo asignado a memoria  
+ ![Captura de pantalla que muestra las vistas de un archivo asignado a memoria.](./media/memory-mapped-files/memory-map-persist-file.png)  
   
 ## <a name="programming-with-memory-mapped-files"></a>Programar con archivos asignados a memoria  
  En la siguiente tabla, se describe cómo usar los objetos de archivo asignado a memoria y sus miembros.  

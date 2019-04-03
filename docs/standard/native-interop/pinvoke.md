@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo llamar a funciones nativas a trav�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 51026eab92ae4fd47ccdd78321be21bdbb5ecf49
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981262"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409242"
 ---
 # <a name="platform-invoke-pinvoke"></a>Invocación de plataforma (P/Invoke)
 
@@ -241,6 +241,6 @@ Los dos ejemplos anteriores dependen de parámetros y, en ambos casos, los pará
 
 ## <a name="more-resources"></a>Más recursos
 
-*   [Wiki de PInvoke.net](https://www.pinvoke.net/): una wiki excelente con información sobre API comunes de Win32 y cómo llamarlas.
+*   [Wiki de PInvoke.net](https://www.pinvoke.net/): una wiki excelente con información sobre API comunes de Windows y cómo llamarlas.
 *   [P/Invoke on MSDN](/cpp/dotnet/native-and-dotnet-interoperability)
 *   [Documentación de Mono en P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/)

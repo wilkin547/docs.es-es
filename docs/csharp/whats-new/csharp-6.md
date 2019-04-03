@@ -2,18 +2,18 @@
 title: Novedades de C# 6 - Guía de C#
 description: Obtenga información sobre las nuevas características de la versión 6 de C#
 ms.date: 12/12/2018
-ms.openlocfilehash: d7e3392412ad6f01cd150e31cec43aa99c42b437
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084685"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654580"
 ---
 # <a name="whats-new-in-c-6"></a>Novedades de C# 6
 
 La versión 6.0 de C# incluye muchas características que mejoran la productividad para los desarrolladores. El efecto general de estas características es que se escribe código más conciso y legible. La sintaxis contiene menos complejidad para muchas de las prácticas habituales. Es más fácil ver la intención del diseño con menos complejidad. Si conoce bien estas características, podrá mejorar la productividad y escribir código más legible. Puede concentrarse más en las características que en las construcciones del lenguaje.
 
-El resto de este artículo proporciona información general de cada una de estas características, con un vínculo para examinar cada una. También puede examinar las características en un [tutorial interactivo sobre C# 6](../tutorials/exploration/csharp-6.yml) en la sección de tutoriales.
+El resto de este artículo proporciona información general de cada una de estas características, con un vínculo para examinar cada una. También puede examinar las características en una [exploración interactiva sobre C# 6](../tutorials/exploration/csharp-6.yml) en la sección de tutoriales.
 
 ## <a name="read-only-auto-properties"></a>Propiedades automáticas de solo lectura
 

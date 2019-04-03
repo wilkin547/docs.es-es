@@ -6,27 +6,25 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea7a26a5b8ce0f30893e9ca66873ad61f82ff8df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395166"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654606"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Ejecución en paralelo en .NET Framework
 La ejecución en paralelo es la capacidad de ejecutar múltiples versiones de una aplicación o componente en el mismo equipo. Se pueden tener varias versiones de Common Language Runtime y varias versiones de las aplicaciones y componentes que utilice una versión del motor en tiempo de ejecución, de forma simultánea y en el mismo equipo.  
   
  La ilustración siguiente muestra varias aplicaciones que utilizan dos versiones diferentes del motor en tiempo de ejecución en el mismo equipo. Las aplicaciones A, B y C utilizan la versión 1.0 del motor en tiempo de ejecución, mientras que la aplicación D utiliza la versión 1.1.  
   
- ![Ejecución en paralelo](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
-Ejecución en paralelo de dos versiones del motor en tiempo de ejecución  
+ ![Ejecución en paralelo de versiones diferentes del tiempo de ejecución](./media/side-by-side-execution/side-by-side-runtime-execution.gif)  
   
  .NET Framework está formado por Common Language Runtime y una colección de ensamblados que contienen los tipos de la API. El motor en tiempo de ejecución y los ensamblados de .NET Framework tienen versiones independientes. Por ejemplo, la versión 4.0 del motor en tiempo de ejecución es en realidad la versión 4.0.319, mientras que la versión 1.0 de los ensamblados de .NET Framework es la versión 1.0.3300.0.  
   
  La ilustración siguiente muestra varias aplicaciones que utilizan dos versiones diferentes de un componente en el mismo equipo. Las aplicaciones A y B utilizan la versión 1.0 del componente mientras que la aplicación C utiliza la versión 2.0 del mismo componente.  
   
- ![Ejecución en paralelo](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
-Ejecución en paralelo de dos versiones de un componente  
+ ![Diagrama en el que se muestra la ejecución en paralelo de un componente.](./media/side-by-side-execution/side-by-side-component-execution.gif)  
   
  La ejecución en paralelo ofrece un mayor control sobre las versiones de un componente a las que se enlaza una aplicación, y sobre la versión del motor en tiempo de ejecución que utiliza una aplicación.  
   
@@ -113,7 +111,7 @@ publicKeyToken=...,
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Describe cómo enlazar una aplicación a una versión específica de un ensamblado.|  
 |[Configurar el redireccionamiento del enlace de ensamblados](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Explica cómo redirigir referencias a enlaces de ensamblados a una versión específica de los ensamblados de .NET Framework.|  

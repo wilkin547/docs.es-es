@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 384fd14a136dbd94725d7ef478c769a1dfce0c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654664"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466158"
 ---
 # <a name="types-of-isolation"></a>Tipos de aislamiento
 El acceso al almacenamiento aislado siempre está restringido al usuario que lo creó. Para implementar este tipo de aislamiento, Common Language Runtime usa el mismo concepto de identidad de usuario que reconoce el sistema operativo, que es la identidad asociada con el proceso en el que se ejecuta el código cuando se abre el almacén. Esta identidad es una identidad de usuario autenticado, pero la suplantación puede hacer que la identidad del usuario actual cambie de forma dinámica.  
@@ -46,10 +46,9 @@ El acceso al almacenamiento aislado siempre está restringido al usuario que lo 
   
  Cualquiera de estos aislamientos se puede combinar con un perfil de usuario móvil. Para obtener más información, vea la sección [Aislamiento aislado y movilidad](#Roaming).  
   
- En la siguiente ilustración se muestra cómo se aíslan los almacenes en distintos ámbitos.  
+ En la siguiente ilustración se muestra cómo se aíslan los almacenes en distintos ámbitos:  
   
- ![Aislamiento por usuario y ensamblado](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")  
-Tipos de almacenamiento aislado  
+ ![Diagrama que muestra el aislamiento por usuario y ensamblado.](./media/types-of-isolation/isolated-storage-types.gif)  
   
  Tenga en cuenta que, excepto para los almacenes móviles, el equipo siempre aísla de forma implícita el almacenamiento aislado, porque usa los medios de almacenamiento locales en un equipo determinado.  
   

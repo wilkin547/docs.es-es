@@ -8,12 +8,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 824481c9c73d496998d5810c620b2317c1ec252a
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 3dc2083e5b4fd06250a1387c32f0eba28e879b30
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203446"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829140"
 ---
 # <a name="anonymous-types-visual-basic"></a>Tipos anónimos (Visual Basic)
 Visual Basic admite los tipos anónimos, lo que le permite crear objetos sin escribir una definición de clase para el tipo de datos. En su lugar, el compilador genera una clase. La clase no tiene ningún nombre utilizable, hereda directamente de <xref:System.Object>y contiene las propiedades especificadas al declarar el objeto. Dado que no se especifica el nombre del tipo de datos, se conoce como un *tipo anónimo*.  
@@ -127,6 +127,7 @@ Visual Basic admite los tipos anónimos, lo que le permite crear objetos sin esc
  Para obtener más información sobre el código creado por el compilador y la funcionalidad de los métodos invalidados, vea [Anonymous Type Definition](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Inicializadores de objeto: Tipos con nombre y anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

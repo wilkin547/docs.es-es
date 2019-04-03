@@ -18,17 +18,17 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411010"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839397"
 ---
 # <a name="shadowing-in-visual-basic"></a>Sombrear en Visual Basic
 Cuando dos elementos de programación comparten el mismo nombre, puede ocultar uno de ellos, o *sombra*, otro. En esta situación, el elemento reemplazado no está disponible como referencia; en su lugar, cuando el código usa el nombre del elemento, el compilador de Visual Basic resuelve en el elemento reemplazado.  
   
-## <a name="purpose"></a>Propósito  
+## <a name="purpose"></a>Finalidad  
  El propósito principal de sombrear es proteger la definición de los miembros de clase. La clase base puede sufrir un cambio que se crea un elemento con el mismo nombre que ya ha definido. Si esto ocurre, el `Shadows` modificador fuerza hace referencia a través de su clase se resuelvan en el miembro está definido, en lugar de para el nuevo elemento de la clase base.  
   
 ## <a name="types-of-shadowing"></a>Tipos de sombreado  
@@ -138,6 +138,7 @@ End Class
  En el ejemplo anterior, la variable `basObj` se declara como clase base. Asignar un `dervCls` objeto constituye una conversión de ampliación y, por tanto, es válida. Sin embargo, la clase base no puede acceder a la versión de la variable de sombreado `z` en la clase derivada, por lo que el compilador resuelve `basObj.z` con el valor de la clase base original.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Conversiones de ampliación y de restricción](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

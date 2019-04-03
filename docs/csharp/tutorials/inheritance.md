@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 942950570253b73cfb9896117bd22189e56389ea
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836648"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463818"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herencia en C# y .NET
 
@@ -61,7 +61,7 @@ Si bien las clases derivadas heredan todos los demás miembros de una clase base
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-Las clases derivadas pueden también *invalidar* los miembros heredados al proporcionar una implementación alternativa. Para poder invalidar un miembro, el miembro de la clase base debe marcarse con la palabra clave [virtual](../language-reference/keywords/virtual.md). De forma predeterminada, los miembros de clase base no están marcados con `virtual` y no se pueden invalidar. Al intentar invalidar un miembro no virtual, como en el ejemplo siguiente, se genera el error de compilador CS0506: "<member> no se puede invalidar el miembro heredado <member> porque no está marcado como virtual, abstract ni override.
+Las clases derivadas pueden también *invalidar* los miembros heredados al proporcionar una implementación alternativa. Para poder invalidar un miembro, el miembro de la clase base debe marcarse con la palabra clave [virtual](../language-reference/keywords/virtual.md). De forma predeterminada, los miembros de clase base no están marcados con `virtual` y no se pueden invalidar. Al intentar invalidar un miembro no virtual, como en el ejemplo siguiente, se genera el error de compilador CS0506: "\<miembro> no puede invalidar el miembro heredado \<miembro> porque no está marcado como virtual, abstract ni override.
 
 ```csharp
 public class A
@@ -194,7 +194,7 @@ A la hora de diseñar la clase `Publication`, se deben tomar varias decisiones d
 
  La clase `Publication` no tiene ningún método `abstract`, pero la propia clase es `abstract`.
 
-- Si una clase derivada representa la clase final en la jerarquía de herencia y no se puede usar ella misma como clase base para clases derivadas adicionales. De forma predeterminada, cualquier clase puede servir como clase base. Se puede aplicar la palabra clave [sealed](../language-reference/keywords/sealed.md) para indicar que una clase no puede servir como clase base para las clases adicionales. Al intentar derivar de una clase sealed se genera el error de compilador CS0509: "no puede derivar del tipo sealed <typeName>".
+- Si una clase derivada representa la clase final en la jerarquía de herencia y no se puede usar ella misma como clase base para clases derivadas adicionales. De forma predeterminada, cualquier clase puede servir como clase base. Se puede aplicar la palabra clave [sealed](../language-reference/keywords/sealed.md) para indicar que una clase no puede servir como clase base para las clases adicionales. Al intentar derivar de una clase sellada, se genera el error de compilador CS0509: "No puede derivar del tipo sellado \<nombreDeTipo>".
 
   Para el ejemplo, la clase derivada se marcará como `sealed`.
 

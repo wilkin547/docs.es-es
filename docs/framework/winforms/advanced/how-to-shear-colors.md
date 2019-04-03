@@ -1,5 +1,5 @@
 ---
-title: Filtrar Sesgar colores
+title: Filtrar para sesgar colores
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: eff468e5761038723e16eddf84bdcf8849ac30d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb5f9043ea5bdd25e984d73d3640c80f599714e6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720230"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826397"
 ---
-# <a name="how-to-shear-colors"></a>Filtrar Sesgar colores
+# <a name="how-to-shear-colors"></a>Filtrar para sesgar colores
 Distorsión aumenta o disminuye un componente de color en una cantidad proporcional a otro componente de color. Por ejemplo, considere la posibilidad de la transformación donde el componente rojo se incrementa por la mitad del valor del componente azul. En este tipo de transformación, el color (0.2, 0.5, 1) se convertiría en (0,7, 0,5, 1). El nuevo componente rojo es 0,2 + (1/2)(1) = 0,7.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crea un <xref:System.Drawing.Image> objeto desde el archivo ColorBars4.bmp. A continuación, el código aplica la transformación de recorte que se describe en el párrafo anterior a cada píxel de la imagen.  
   
- La siguiente ilustración muestra la imagen original a la izquierda y la imagen recortada de la derecha.  
+ La siguiente ilustración muestra la imagen original a la izquierda y la imagen recortada de la derecha: 
   
- ![Sesgar colores](./media/colortrans6.png "colortrans6")  
+ ![Dos cuadrados con barras de colores por en paralelo que ilustra la imagen original y la imagen recortada.](./media/how-to-shear-colors/original-image-sheared-image.png)  
   
  En la tabla siguiente se enumera los vectores de color de las cuatro barras antes y después de la transformación de recorte.  
   

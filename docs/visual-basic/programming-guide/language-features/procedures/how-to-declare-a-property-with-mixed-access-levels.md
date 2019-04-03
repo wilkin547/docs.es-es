@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Declarar una propiedad con niveles de acceso mixtos (Visual Basic)
+title: Filtrar Declarar una propiedad con niveles de acceso mixtos (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access levels [Visual Basic], properties
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: d2b1a80863fe29901554b4912acbbfbdfdab4122
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aa0c71621b72d01067db0749a0678b706d13fbfa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972591"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832130"
 ---
-# <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Procedimiento Declarar una propiedad con niveles de acceso mixtos (Visual Basic)
+# <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Filtrar Declarar una propiedad con niveles de acceso mixtos (Visual Basic)
 Si desea que el `Get` y `Set` procedimientos en una propiedad para tener diferentes niveles de acceso, puede usar el nivel más permisivo en el `Property` instrucción y el nivel más restrictivo en uno el `Get` o `Set` instrucción. Usar niveles de acceso mixtos en una propiedad cuando desee que ciertas partes del código para poder obtener el valor de propiedad y otras partes del código para que pueda cambiar el valor.  
   
  Para obtener más información sobre los niveles de acceso, consulte [tener acceso a los niveles en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
@@ -35,6 +35,7 @@ Si desea que el `Get` y `Set` procedimientos en una propiedad para tener diferen
      En el ejemplo anterior, el `Get` procedimiento tiene el mismo `Protected` acceso como la propiedad propiamente dicha, mientras que el `Set` procedimiento tiene `Private` acceso. Una clase derivada de `employee` puede leer el `salary` valor, pero solo el `employee` puede establecer la clase.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Procedimientos](./index.md)
 - [Procedimientos de propiedades](./property-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)

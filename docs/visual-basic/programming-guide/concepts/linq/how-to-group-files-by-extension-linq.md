@@ -2,12 +2,12 @@
 title: Filtrar Agrupar archivos por extensión (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 0e705e83f1aff6146347be5430fb446da2efd843
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: e40101e7de01d403c5bc55a0d4e68f776ddfc0c1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201799"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829283"
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Filtrar Agrupar archivos por extensión (LINQ) (Visual Basic)
 En este ejemplo se muestra cómo se puede usar LINQ para efectuar operaciones avanzadas de agrupación y ordenación en listas de archivos o de carpetas. También muestra cómo paginar la salida en la ventana de consola mediante los métodos <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Take%2A>.  
@@ -97,5 +97,6 @@ End Module
  Crear un proyecto que tiene como destino .NET Framework versión 3.5 o posterior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
   
 ## <a name="see-also"></a>Vea también
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

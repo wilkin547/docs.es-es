@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Escribir un LINQ al método de eje XML (Visual Basic)
+title: Filtrar Escribir un LINQ al método de eje XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
-ms.openlocfilehash: 5d1fdaa9a5c3cb47bedd6d8f6e98b59f844d9ef5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f10ee90076a71aa44f480639d3bc460ea59044ea
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655483"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824174"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Procedimiento Escribir un LINQ al método de eje XML (Visual Basic)
+# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Filtrar Escribir un LINQ al método de eje XML (Visual Basic)
 Puede escribir sus propios métodos de ejes para recuperar recopilaciones de un árbol XML. Una de las mejores formas de hacerlo es escribir un método de extensión que devuelva una recopilación de elementos o atributos. Puede escribir su método de extensión para devolver subconjuntos específicos de elementos o atributos, basándose en los requisitos de su aplicación.  
   
 ## <a name="example"></a>Ejemplo  
@@ -216,4 +216,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consulta técnicas avanzadas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

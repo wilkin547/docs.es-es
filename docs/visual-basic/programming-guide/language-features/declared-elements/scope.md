@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 38dd9d6d40780c25f06a35cf1ffbe4743b7da4a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537254"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823550"
 ---
 # <a name="scope-in-visual-basic"></a>Ámbito en Visual Basic
 El *ámbito* de un elemento declarado es el conjunto de todo el código que puede hacer referencia sin calificar su nombre o que están disponibles a través de un [instrucción Imports (tipo y Namespace. NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Un elemento puede tener el ámbito en uno de los siguientes niveles:  
@@ -135,6 +135,7 @@ Public strMsg As String
  En general, al declarar cualquier variable o constante, es buena práctica hacer lo más restringidas que sea posible el ámbito de programación (ámbito de bloque es el más restringido). Esto ayuda a conservar memoria y reduce las posibilidades de que el código de forma errónea que hace referencia a la variable equivocada. De forma similar, debe declarar una variable para que sea [estático](../../../../visual-basic/language-reference/modifiers/static.md) sólo cuando es necesario que conserve su valor entre las llamadas a procedimiento.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Características de los elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Cómo: Controlar el ámbito de una Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [Duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

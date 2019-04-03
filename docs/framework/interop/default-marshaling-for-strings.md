@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df65f54a9a7408a22f8b558f99ab42d6c37ae55b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: aeba97a5caef8fc705a3b04496ce1fd17085ec5d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221074"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409320"
 ---
 # <a name="default-marshaling-for-strings"></a>Cálculo de referencias predeterminado para cadenas
 Las clases <xref:System.String?displayProperty=nameWithType> y <xref:System.Text.StringBuilder?displayProperty=nameWithType> tienen un comportamiento de serialización similar.  
@@ -39,8 +39,7 @@ Las clases <xref:System.String?displayProperty=nameWithType> y <xref:System.Text
   
 |Tipo de enumeración|Descripción de formato no administrado|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr` (valor predeterminado)|
-  `BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
+|`UnmanagedType.BStr` (valor predeterminado)|`BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
 |`UnmanagedType.LPStr`|Puntero a una matriz de caracteres Unicode terminada en NULL.|  
 |`UnmanagedType.LPWStr`|Puntero a una matriz de caracteres Unicode terminada en null.|  
   
@@ -86,15 +85,12 @@ HRESULT PassStringRef4([in, out] LPWStr *s);
   
 |Tipo de enumeración|Descripción de formato no administrado|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.AnsiBStr`|
-  `BSTR` de estilo COM con una longitud fija y caracteres ANSI.|  
-|`UnmanagedType.BStr`|
-  `BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
+|`UnmanagedType.AnsiBStr`|`BSTR` de estilo COM con una longitud fija y caracteres ANSI.|  
+|`UnmanagedType.BStr`|`BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
 |`UnmanagedType.LPStr`|Puntero a una matriz de caracteres Unicode terminada en NULL.|  
 |`UnmanagedType.LPTStr`|Un puntero a una matriz terminada en NULL de caracteres dependientes de la plataforma.|  
 |`UnmanagedType.LPWStr`|Puntero a una matriz de caracteres Unicode terminada en null.|  
-|`UnmanagedType.TBStr`|
-  `BSTR` de estilo COM con una longitud fija y caracteres dependientes de la plataforma.|  
+|`UnmanagedType.TBStr`|`BSTR` de estilo COM con una longitud fija y caracteres dependientes de la plataforma.|  
 |`VBByRefStr`|Un valor que permite a Visual Basic .NET cambiar una cadena del código no administrado y reflejar los resultados en el código administrado. Este valor solo se admite con la invocación de plataforma. Este es el valor predeterminado en Visual Basic para las cadenas `ByVal`.|  
   
  Esta tabla se aplica a cadenas. Sin embargo, para <xref:System.Text.StringBuilder>, las únicas opciones permitidas son `LPStr`, `LPTStr` y `LPWStr`.  
@@ -147,8 +143,7 @@ String s);
   
 |Tipo de enumeración|Descripción de formato no administrado|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr`|
-  `BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
+|`UnmanagedType.BStr`|`BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
 |`UnmanagedType.LPStr`|Puntero a una matriz de caracteres Unicode terminada en NULL.|  
 |`UnmanagedType.LPTStr`|Un puntero a una matriz terminada en NULL de caracteres dependientes de la plataforma.|  
 |`UnmanagedType.LPWStr`|Puntero a una matriz de caracteres Unicode terminada en null.|  
@@ -225,7 +220,7 @@ struct StringInfoT {
   
  La solución consiste en pasar un búfer <xref:System.Text.StringBuilder> como argumento en lugar de una cadena. El destinatario puede desreferenciar y modificar un `StringBuilder`, siempre que no exceda la capacidad del `StringBuilder`. También puede inicializarse con una longitud fija. Por ejemplo, si inicializa un búfer `StringBuilder` con una capacidad de `N`, el contador de referencias proporcionará un búfer con un tamaño de (`N`+ 1) caracteres. + 1 tiene en cuenta el hecho de que la cadena no administrada tiene un terminador NULL mientras que `StringBuilder` no.  
   
- Por ejemplo, la función `GetWindowText` de la API Win32 de Microsoft (definida en Windows.h) es un búfer de caracteres de longitud fija que debe pasarse a código no administrado para su manipulación. `LpString` apunta a un búfer asignado por el llamador de tamaño `nMaxCount`. Se espera que el llamador asigne el búfer y establezca el argumento `nMaxCount` en el tamaño del búfer asignado. El siguiente código muestra la declaración de función `GetWindowText`, tal y como se define en Windows.h.  
+ Por ejemplo, la función `GetWindowText` de la API de Microsoft Windows (definida en Windows.h) es un búfer de caracteres de longitud fija que debe pasarse a código no administrado para su manipulación. `LpString` apunta a un búfer asignado por el llamador de tamaño `nMaxCount`. Se espera que el llamador asigne el búfer y establezca el argumento `nMaxCount` en el tamaño del búfer asignado. El siguiente código muestra la declaración de función `GetWindowText`, tal y como se define en Windows.h.  
   
 ```  
 int GetWindowText(  

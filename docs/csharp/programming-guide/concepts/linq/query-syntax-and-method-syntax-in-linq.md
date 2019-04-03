@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 6333094230e09220ab5ccf462e20ae3423d42eb6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978663"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654047"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Sintaxis de consultas y sintaxis de métodos en LINQ (C#)
 La mayoría de las consultas de la documentación introductoria de Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) se escribe con la sintaxis de consulta declarativa de LINQ. Pero la sintaxis de consulta debe traducirse en llamadas de método para .NET Common Language Runtime (CLR) al compilar el código. Estas llamadas de método invocan los operadores de consulta estándar, que tienen nombres tales como `Where`, `Select`, `GroupBy`, `Join`, `Max` y `Average`. Puede llamarlas directamente con la sintaxis de método en lugar de la sintaxis de consulta.  
@@ -26,7 +26,7 @@ La mayoría de las consultas de la documentación introductoria de Language Inte
   
  Para entender la consulta basada en métodos, vamos a examinarla más detenidamente. En el lado derecho de la expresión, observe que la cláusula `where` ahora se expresa como un método de instancia en el objeto `numbers`, que, como recordará, tiene un tipo de `IEnumerable<int>`. Si está familiarizado con la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601>, sabe que no tiene un método `Where`. Pero si se invoca la lista de finalización de IntelliSense en el IDE de Visual Studio, verá no solo un método `Where`, sino muchos otros métodos tales como `Select`, `SelectMany`, `Join` y `Orderby`. Estos son todos los operadores de consulta estándar.  
   
- ![Operadores de consulta estándar en Intellisense](../../../../csharp/programming-guide/concepts/linq/media/standardqueryops.png "StandardQueryOps")  
+ ![Captura de pantalla en la que se muestran todos los operadores de consulta estándar de IntelliSense.](./media/query-syntax-and-method-syntax-in-linq/standard-query-operators.png)  
   
  Aunque parece que <xref:System.Collections.Generic.IEnumerable%601> se haya redefinido para incluir estos métodos adicionales, en realidad no es el caso. Los operadores de consulta estándar se implementan como un nuevo tipo de método denominado *método de extensión*. Los métodos de extensión "extienden" un tipo existente; se pueden llamar como si fueran métodos de instancia en el tipo. Los operadores de consulta estándar extienden <xref:System.Collections.Generic.IEnumerable%601> y esta es la razón por la que la puede escribir `numbers.Where(...)`.  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9cbfd608f52a11f267ade25f80bc60bdfcd89364
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 6db8f5914a325a276872ff804f679f8b3e0745a0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221231"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653930"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperar recursos de aplicaciones de escritorio
 Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Framework, en principio se deberían empaquetar los recursos de la referencia cultural predeterminada o neutra con el ensamblado principal y, luego, crear un ensamblado satélite independiente para todos los idiomas o referencias culturales que admita la aplicación. Después podrá usar la clase <xref:System.Resources.ResourceManager> como se describe en la siguiente sección para obtener acceso a los recursos con nombre. Si opta por no insertar los recursos en el ensamblado principal y los ensamblados satélite, también puede obtener acceso directamente a los archivos .resources binarios, como se describe en la sección [Recuperar recursos desde archivos .resources](#from_file) , que aparece más adelante en este artículo.  Para recuperar recursos en las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] , consulte [Crear y recuperar recursos en las aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674) en el Centro de desarrollo de Windows.  
@@ -149,10 +149,11 @@ GetObject.exe
  Si decide no implementar recursos en los ensamblados satélite, puede usar un objeto <xref:System.Resources.ResourceManager> para obtener acceso directo a los recursos de los archivos .resources. Para ello, debe implementar correctamente los archivos .resources. Luego, deberá usar el método <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> para crear una instancia de un objeto <xref:System.Resources.ResourceManager> y especificar el directorio que contiene los archivos .resources independientes.  
   
 ### <a name="deploying-resources-files"></a>Implementar archivos .resources  
- Al insertar archivos .resources en un ensamblado de aplicación y en ensamblados satélite, todos los ensamblados satélite tienen el mismo nombre de archivo, pero se encuentran en un subdirectorio que refleja la referencia cultural del ensamblado satélite. En cambio, al obtener acceso directo a los recursos desde los archivos .resources, puede colocar todos los archivos .resources en un solo directorio, que normalmente es un subdirectorio del directorio de la aplicación. El nombre del archivo .resources predeterminado de la aplicación consta solo de un nombre de raíz, sin ninguna indicación de la referencia cultural (por ejemplo, strings.resources). Los recursos de cada referencia cultural localizada se almacenan en un archivo cuyo nombre consta del nombre de raíz seguido de la referencia cultural (por ejemplo, strings.ja.resources o strings.de-DE.resources). En la siguiente ilustración se muestra dónde deben estar ubicados los archivos de recursos en la estructura de directorio.  
-  
- ![Directorio principal de la aplicación](../../../docs/framework/resources/media/resappdir.gif "resappdir")  
-Estructura de directorio y convenciones de nomenclatura de los archivos .resources  
+ Al insertar archivos .resources en un ensamblado de aplicación y en ensamblados satélite, todos los ensamblados satélite tienen el mismo nombre de archivo, pero se encuentran en un subdirectorio que refleja la referencia cultural del ensamblado satélite. En cambio, al obtener acceso directo a los recursos desde los archivos .resources, puede colocar todos los archivos .resources en un solo directorio, que normalmente es un subdirectorio del directorio de la aplicación. El nombre del archivo .resources predeterminado de la aplicación consta solo de un nombre de raíz, sin ninguna indicación de la referencia cultural (por ejemplo, strings.resources). Los recursos de cada referencia cultural localizada se almacenan en un archivo cuyo nombre consta del nombre de raíz seguido de la referencia cultural (por ejemplo, strings.ja.resources o strings.de-DE.resources). 
+ 
+ En la siguiente ilustración se muestra dónde deben estar ubicados los archivos de recursos en la estructura de directorio. También proporciona las convenciones de nomenclatura de los archivos .resource.  
+
+ ![Ilustración en la que se muestra el directorio principal de la aplicación.](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
   
 ### <a name="using-the-resource-manager"></a>Usar el Administrador de recursos  
  Una vez creados los recursos y colocados en el directorio correspondiente, debe crear un objeto <xref:System.Resources.ResourceManager> para usar los recursos llamando al método <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> . El primer parámetro especifica el nombre de la raíz del archivo .resources predeterminado de la aplicación (en el ejemplo de la sección anterior sería "strings"). El segundo parámetro especifica la ubicación de los recursos (en el ejemplo anterior, "Resources"). El tercer parámetro especifica la implementación <xref:System.Resources.ResourceSet> que se va a usar. Si el tercer parámetro es `null`, se usará la clase <xref:System.Resources.ResourceSet> en tiempo de ejecución predeterminada.  

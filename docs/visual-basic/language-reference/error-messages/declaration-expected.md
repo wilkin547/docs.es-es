@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: e776d3d08ff7d63b094a71e6990d87ea454a4428
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64ee75c93615f57b15fea29f06fff500a395ba0c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638436"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834184"
 ---
 # <a name="declaration-expected"></a>Se esperaba una declaración
 Una instrucción no declarativa, como una asignación o una instrucción del bucle, se produce fuera de cualquier procedimiento. Sólo se permiten declaraciones procedimientos externos.  
@@ -30,5 +30,6 @@ Una instrucción no declarativa, como una asignación o una instrucción del buc
 -   Asegúrese de que una palabra clave no está mal escrita.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Procedimientos](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)

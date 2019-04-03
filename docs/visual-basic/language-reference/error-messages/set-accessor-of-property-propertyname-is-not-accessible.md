@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31102
 ms.assetid: 6f7b31b7-3656-4ae1-8851-90f5f4c6950a
-ms.openlocfilehash: 1539eb1652d93402c349c65f77a3edc65b3beb57
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3bc50d6762998ca5d8f445d84c8b698c9f46436f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277568"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834470"
 ---
 # <a name="set-accessor-of-property-propertyname-is-not-accessible"></a>'Set' descriptor de acceso de propiedad '\<propertyname >' no es accesible
 Una instrucción intenta almacenar el valor de una propiedad cuando no tiene acceso a la propiedad `Set` procedimiento.  
@@ -34,5 +34,6 @@ Una instrucción intenta almacenar el valor de una propiedad cuando no tiene acc
 -   Si no tiene control sobre el código fuente definiendo la propiedad, o si debe restringir el `Set` procedimiento de nivel de acceso a la propiedad propiamente dicha, intente mover la instrucción que establece el valor de propiedad en una región de código que tiene un mejor acceso a la propiedad.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Procedimientos de propiedades](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
 - [Cómo: Declarar una propiedad con niveles de acceso mixtos](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)

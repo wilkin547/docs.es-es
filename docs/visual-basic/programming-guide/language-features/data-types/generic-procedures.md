@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: e6b7d6a560f2f374c17e011479d6e2e458f9c1ed
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4aed16ce9eb59da54156a0cd5f1594819788521b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976530"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818922"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Procedimientos genéricos en Visual Basic
 Un *procedimiento genérico*, también denominado una *método genérico*, es un procedimiento definido con al menos un parámetro de tipo. Esto permite al código que realiza la llamada a adaptar a sus requisitos de los tipos de datos cada vez que llama al procedimiento.  
@@ -65,6 +65,7 @@ End Sub
  Anterior llama a `MsgBox` mostrar "0", "1" y "-1", respectivamente.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Cómo: Definir una clase que pueda proporcionar la misma funcionalidad en tipos de datos diferentes](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
 - [Cómo: Utilizar una clase genérica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)

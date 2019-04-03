@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: d31cec602516b7cf3e4b358fa4b3f10e167e6e17
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 751f8a0745322e7e8573d392a504ea02cb18572e
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202742"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654034"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumentos opcionales y con nombre (Guía de programación de C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] introduce argumentos opcionales y con nombre. Los *argumentos con nombre* permiten especificar un argumento para un parámetro concreto asociando el argumento al nombre del parámetro y no a la posición del parámetro en la lista de parámetros. Los *argumentos opcionales* permiten omitir argumentos para algunos parámetros. Ambas técnicas se pueden usar con métodos, indexadores, constructores y delegados.  
@@ -86,10 +86,9 @@ ms.locfileid: "57202742"
   
  `anExample.ExampleMethod(3, optionalint: 4);`  
   
- IntelliSense usa corchetes para indicar parámetros opcionales, tal y como se muestra en la ilustración siguiente.  
+ En IntelliSense los corchetes se usan para indicar parámetros opcionales, como se muestra en la ilustración siguiente:  
   
- ![Información rápida de IntelliSense para el método ExampleMethod.](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
-Parámetros opcionales en ExampleMethod  
+ ![Captura de pantalla en la que se muestra información rápida de IntelliSense para el método ExampleMethod.](./media/named-and-optional-arguments/optional-examplemethod-parameters.png)  
   
 > [!NOTE]
 >  También puede declarar parámetros opcionales con la clase <xref:System.Runtime.InteropServices.OptionalAttribute> de .NET. Los parámetros `OptionalAttribute` no requieren un valor predeterminado.  
@@ -102,10 +101,9 @@ Parámetros opcionales en ExampleMethod
 ## <a name="com-interfaces"></a>Interfaces COM  
  Los argumentos opcionales y con nombre, además de compatibilidad con objetos dinámicos y otros avances, mejoran considerablemente la interoperabilidad con las API de COM, como las API de automatización de Office.  
   
- Por ejemplo, el método <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> de la interfaz <xref:Microsoft.Office.Interop.Excel.Range> de Microsoft Office Excel tiene siete parámetros, todos ellos opcionales. Estos parámetros se muestran en la siguiente ilustración.  
+ Por ejemplo, el método <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> de la interfaz <xref:Microsoft.Office.Interop.Excel.Range> de Microsoft Office Excel tiene siete parámetros, todos ellos opcionales. Estos parámetros se muestran en la ilustración siguiente:  
   
- ![Información rápida de IntelliSense para el método AutoFormat.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
-Parámetros de AutoFormat  
+ ![Captura de pantalla en la que se muestra información rápida de IntelliSense para el método AutoFormat.](./media/named-and-optional-arguments/autoformat-method-parameters.png)  
   
  En C# 3.0 y versiones anteriores, se requiere un argumento para cada parámetro, tal y como se muestra en el ejemplo siguiente.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c226960373783c45594e4a41dfaff353bf0b9db4
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 65b13d99873fe1027d0b316d1cf90e766799dbb1
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219612"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409281"
 ---
 # <a name="default-marshaling-for-objects"></a>Serialización predeterminada para objetos
 Los parámetros y campos de tipo <xref:System.Object?displayProperty=nameWithType> pueden exponerse a código no administrado como uno de los siguientes tipos:  
@@ -26,19 +26,6 @@ Los parámetros y campos de tipo <xref:System.Object?displayProperty=nameWithTyp
   
  Solo la interoperabilidad COM admite la serialización para tipos de objeto. El comportamiento predeterminado consiste en serializar los objetos en variantes de COM. Estas reglas se aplican solo al tipo **Object** y no se aplican a objetos fuertemente tipados que se derivan de la clase **Object**.  
   
- En este tema se proporciona la siguiente información adicional sobre la serialización de tipos de objeto:  
-  
--   [Opciones de serialización](#cpcondefaultmarshalingforobjectsanchor7)  
-  
--   [Serialización de Object en Interface](#cpcondefaultmarshalingforobjectsanchor2)  
-  
--   [Serialización de Object en Variant](#cpcondefaultmarshalingforobjectsanchor3)  
-  
--   [Serialización de Variant en Object](#cpcondefaultmarshalingforobjectsanchor4)  
-  
--   [Serialización de variantes ByRef](#cpcondefaultmarshalingforobjectsanchor6)  
-  
-<a name="cpcondefaultmarshalingforobjectsanchor7"></a>   
 ## <a name="marshaling-options"></a>Opciones de serialización  
  En la tabla siguiente se muestran las opciones de serialización para el tipo de datos **Object**. El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> proporciona varios valores de enumeración <xref:System.Runtime.InteropServices.UnmanagedType> para serializar objetos.  
   
@@ -127,11 +114,9 @@ struct ObjectHolder {
 }  
 ```  
   
-<a name="cpcondefaultmarshalingforobjectsanchor2"></a>   
 ## <a name="marshaling-object-to-interface"></a>Serialización de Object en Interface  
  Cuando un objeto se expone a COM como una interfaz, esa interfaz es la interfaz de clase para el tipo administrado <xref:System.Object> (la interfaz **_Object**). Esta interfaz tiene el tipo de **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) o **IUnknown** (**UnmanagedType.IUnknown**) en la biblioteca de tipos resultante. Los clientes COM pueden invocar dinámicamente los miembros de la clase administrada o cualquier miembro implementado por sus clases derivadas a través de la interfaz **_Object**. El cliente puede llamar a **QueryInterface** para obtener cualquier otra interfaz implementada explícitamente por el tipo administrado.  
   
-<a name="cpcondefaultmarshalingforobjectsanchor3"></a>   
 ## <a name="marshaling-object-to-variant"></a>Serialización de Object en Variant  
  Cuando un objeto se serializa en una variante, el tipo de variante interno se determina en tiempo de ejecución, según las reglas siguientes:  
   
@@ -255,7 +240,6 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  El valor de la variante COM se determina mediante una llamada a la interfaz **IConvertible.To** *Tipo*, donde **To** *Tipo* es la rutina de conversión que se corresponde con el tipo que se devolvió desde **IConvertible.GetTypeCode**. Por ejemplo, un objeto que devuelve **TypeCode.Double** de **IConvertible.GetTypeCode** se serializa como una variante COM de tipo **VT_R8**. Puede obtener el valor de la variante (almacenado en el campo **dblVal** de la variante COM) si convierte a la interfaz **IConvertible** y llama al método <xref:System.IConvertible.ToDouble%2A>.  
   
-<a name="cpcondefaultmarshalingforobjectsanchor4"></a>   
 ## <a name="marshaling-variant-to-object"></a>Serialización de Variant en Object  
  Al serializar una variante en un objeto, el tipo y, a veces, el valor de la variante serializada determina el tipo de objeto generado. En la siguiente tabla se identifica cada tipo de variante y el tipo de objeto correspondiente que el serializador crea cuando se pasa una variante desde COM a .NET Framework.  
   
@@ -289,18 +273,17 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  Es posible que los tipos de variante que se pasan desde COM a código administrado y después otra vez a COM no conserven el mismo tipo de variante para la duración de la llamada. Tenga en cuenta lo que sucede cuando una variante de tipo **VT_DISPATCH** se pasa desde COM a .NET Framework. Durante la serialización, la variante se convierte en un <xref:System.Object?displayProperty=nameWithType>. Si después se pasa **Object** a COM, se vuelve a serializar en una variante de tipo **VT_UNKNOWN**. No hay ninguna garantía de que la variante que se genera cuando se serializa un objeto desde código administrado a COM sea del mismo tipo que la variante usada inicialmente para generar el objeto.  
   
-<a name="cpcondefaultmarshalingforobjectsanchor6"></a>   
 ## <a name="marshaling-byref-variants"></a>Serialización de variantes ByRef  
- Aunque las variantes se pueden pasar por valor o por referencia, la marca **VT_BYREF** también se puede usar con cualquier tipo de variante para indicar que el contenido de la variante se está pasando por referencia en lugar de por valor. La diferencia entre serializar variantes por referencia y serializar una variante con la marca **VT_BYREF** establecida puede resultar confusa. En la siguiente ilustración se explican las diferencias.  
+ Aunque las variantes se pueden pasar por valor o por referencia, la marca **VT_BYREF** también se puede usar con cualquier tipo de variante para indicar que el contenido de la variante se está pasando por referencia en lugar de por valor. La diferencia entre serializar variantes por referencia y serializar una variante con la marca **VT_BYREF** establecida puede resultar confusa. En la siguiente ilustración se explican las diferencias:  
   
- ![Variante que se pasa en la pila](./media/interopvariant.gif "interopvariant")  
+ ![Diagrama en el que se muestra la variante que se pasa en la pila.](./media/default-marshaling-for-objects/interop-variant-passed-value-reference.gif)  
 Variantes pasadas por valor y por referencia  
   
  **Comportamiento predeterminado para la serialización de objetos y variantes por valor**  
   
--   Cuando se pasan objetos desde código administrado a COM, el contenido del objeto se copia en una nueva variante creada por el serializador mediante las reglas definidas en [Serialización de Object en Variant](#cpcondefaultmarshalingforobjectsanchor3). Los cambios realizados en la variante en el lado no administrado no se propagan al objeto original en la devolución de la llamada.  
+-   Cuando se pasan objetos desde código administrado a COM, el contenido del objeto se copia en una nueva variante creada por el serializador mediante las reglas definidas en [Serialización de Object en Variant](#marshaling-object-to-variant). Los cambios realizados en la variante en el lado no administrado no se propagan al objeto original en la devolución de la llamada.  
   
--   Al pasar variantes de COM a código administrado, el contenido de la variante se copia en un objeto recién creado, con las reglas definidas en [Serialización de Variant en Object](#cpcondefaultmarshalingforobjectsanchor4). Los cambios realizados en el objeto en el lado no administrado no se propagan a la variante original en la devolución de la llamada.  
+-   Al pasar variantes de COM a código administrado, el contenido de la variante se copia en un objeto recién creado, con las reglas definidas en [Serialización de Variant en Object](#marshaling-variant-to-object). Los cambios realizados en el objeto en el lado no administrado no se propagan a la variante original en la devolución de la llamada.  
   
  **Comportamiento predeterminado para la serialización de objetos y variantes por referencia**  
   

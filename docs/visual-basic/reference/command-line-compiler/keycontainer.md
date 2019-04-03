@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: 18aa82610d337354647a74d2f4ebe768925e2de0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 51cfe4a52af2fbcd51a4f9e2dc738e83fe0852c1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746356"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839605"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 Especifica un nombre de contenedor de claves para un par de claves que asigna un nombre seguro al ensamblado.  
@@ -24,7 +24,7 @@ Especifica un nombre de contenedor de claves para un par de claves que asigna un
   
 ## <a name="arguments"></a>Argumentos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`container`|Obligatorio. Archivo contenedor que contiene la clave. Ponga el nombre de archivo entre comillas ("") si el nombre contiene un espacio.|  
   
@@ -50,6 +50,7 @@ vbc -keycontainer:key1 input.vb
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Ensamblados de .NET](../../../standard/assembly/index.md)
 - [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)

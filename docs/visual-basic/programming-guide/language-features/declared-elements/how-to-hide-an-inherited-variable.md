@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Ocultar una Variable heredada (Visual Basic)
+title: Filtrar Ocultar una Variable heredada (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: 6cf45b12bebc254a0d96516ab262d7aae3d70746
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b052b44043deba85c8b142a2bf1a684c1159809
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691260"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842517"
 ---
-# <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Procedimiento Ocultar una Variable heredada (Visual Basic)
+# <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Filtrar Ocultar una Variable heredada (Visual Basic)
 Una clase derivada hereda todas las definiciones de su clase base. Si desea definir una variable con el mismo nombre que un elemento de la clase base, puede ocultar, o *sombra*, ese elemento de la clase base al definir la variable en la clase derivada. Si lo hace, el código en la clase derivada tiene acceso a la variable a menos que explícitamente omite el mecanismo de sombreado.  
   
  Es otro motivo que desea ocultar una variable heredada para protegerse frente a la revisión de la clase base. La clase base puede sufrir un cambio que modifica el elemento que se hereda. Si esto ocurre, el `Shadows` modificador fuerza las referencias de la clase derivada que se resuelva a la variable, en lugar de en el elemento de la clase base.  
@@ -56,6 +56,7 @@ Una clase derivada hereda todas las definiciones de su clase base. Si desea defi
  El sombreado presenta más de una versión de una variable con el mismo nombre. Cuando una instrucción de código hace referencia al nombre de variable, la versión a la que el compilador resuelve la referencia depende de factores como la ubicación de la instrucción de código y la presencia de una cadena de calificación. Esto puede aumentar el riesgo de que hace referencia a una versión no deseada de una variable sombreada. Puede reducir este riesgo si califica completamente todas las referencias a una variable sombreada.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Sombrear en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Diferencias entre sombrear y reemplazar](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

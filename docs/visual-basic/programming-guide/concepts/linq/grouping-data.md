@@ -2,12 +2,12 @@
 title: Agrupar datos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: 14b114906a0e04a4d11c323f80b070603a7286c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c658ac5c46baec1bfa976074b78ac86d791b6515
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576975"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842062"
 ---
 # <a name="grouping-data-visual-basic"></a>Agrupar datos (Visual Basic)
 El agrupamiento hace referencia a la operación de colocar los datos en grupos de manera que los elementos de cada grupo compartan un atributo común.  
@@ -64,6 +64,7 @@ MsgBox(sb.ToString())
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Linq>
 - [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Group By (cláusula)](../../../../visual-basic/language-reference/queries/group-by-clause.md)

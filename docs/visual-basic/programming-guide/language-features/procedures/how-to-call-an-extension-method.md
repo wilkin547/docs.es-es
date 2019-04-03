@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Llamar a un método de extensión (Visual Basic)
+title: Filtrar Llamar a un método de extensión (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 4e9391a4c4a159cd5e198689bf7af7cd64c3a872
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2543694e6bf8da5b67ecaccc92633a8448154063
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620453"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837141"
 ---
-# <a name="how-to-call-an-extension-method-visual-basic"></a>Procedimiento Llamar a un método de extensión (Visual Basic)
+# <a name="how-to-call-an-extension-method-visual-basic"></a>Filtrar Llamar a un método de extensión (Visual Basic)
 Métodos de extensión permiten agregar métodos a una clase existente. Después de un método de extensión se declaran y se incluyen en el ámbito, puede llamarlo como un método de instancia del tipo que extiende. Para obtener más información sobre cómo escribir un método de extensión, vea [Cómo: Escribir un método de extensión](./how-to-write-an-extension-method.md).  
   
  Las instrucciones siguientes hacen referencia al método de extensión `PrintAndPunctuate`, que mostrará la instancia de cadena que lo invoca, seguida de cualquier valor que se envía para el segundo parámetro, `punc`.  
@@ -95,6 +95,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Cómo: Escribir un método de extensión](./how-to-write-an-extension-method.md)
 - [Métodos de extensión](./extension-methods.md)
 - [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

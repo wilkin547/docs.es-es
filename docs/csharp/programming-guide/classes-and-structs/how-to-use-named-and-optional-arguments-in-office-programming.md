@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: af5f2d13365a93e758962daea2b08ea3ae089aeb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aecac583e509d2a08fae55d911a26134330c74c7
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966806"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412206"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Procedimiento Usar argumentos nombrados y opcionales en la programación de Office (Guía de programación de C#)
 Los argumentos con nombre y los argumentos opcionales, introducidos en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], mejoran la comodidad, la flexibilidad y la legibilidad en la programación de C#. Además, estas características facilitan enormemente el acceso a interfaces COM, como las API de automatización de Microsoft Office.  
@@ -79,8 +79,7 @@ Los argumentos con nombre y los argumentos opcionales, introducidos en [!INCLUDE
   
 1.  Use el método `ConvertToTable` para incluir el texto en una tabla. El método tiene 16 parámetros opcionales. IntelliSense coloca los parámetros opcionales entre corchetes, tal como se muestra en la ilustración siguiente.  
   
-     ![Lista de parámetros para el método ConvertToTable.](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")  
-Parámetros de ConvertToTable  
+     ![Lista de parámetros para el método ConvertToTable](./media/how-to-use-named-and-optional-arguments-in-office-programming/convert-table-parameters.png)  
   
      Los argumentos opcionales y con nombre permiten especificar valores solo para los parámetros que quiere cambiar. Agregue el código siguiente al final del método `DisplayInWord` para crear una tabla simple. El argumento especifica que las comas de la cadena de texto de `range` separan las celdas de la tabla.  
   

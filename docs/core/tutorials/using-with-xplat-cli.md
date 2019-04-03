@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 664ff07bad596ae38b4e31a00c7af0579d8245b8
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 92ca5149ad5f0e4a50c809a316123fbf77d4152d
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788315"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545369"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introducción a .NET Core en Windows, Linux y macOS con la línea de comandos
 
@@ -119,7 +119,8 @@ Y listo.  Puede aumentar `Program.cs` como desee.
 
 ## <a name="working-with-multiple-files"></a>Trabajar con varios archivos
 
-Los archivos únicos están bien para los programas sencillos de uso único, pero si está compilando una aplicación más compleja, probablemente va a tener varios archivos de origen en su proyecto. Vamos a crear el ejemplo de Fibonacci anterior almacenando en caché algunos valores de Fibonacci y agregando algunas características recursivas.
+Los archivos únicos son adecuados para programas sencillos de uso único, pero, si va a crear una aplicación más compleja, probablemente tendrá varios archivos de origen en el proyecto.
+Se compilará sobre el ejemplo de Fibonacci anterior mediante el almacenamiento en caché de algunos valores de Fibonacci y la adición de varias características recursivas.
 
 1. Agregue un archivo nuevo dentro del directorio *Hello* denominado *FibonacciGenerator.cs* con el código siguiente:
 

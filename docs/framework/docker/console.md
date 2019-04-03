@@ -4,12 +4,12 @@ description: Aprenda a ejecutar una aplicación de consola existente de .NET Fra
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 481f62b21e223a13e06fe0cb68e4276968992aca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126089"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633847"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Ejecución de aplicaciones de consola en contenedores de Windows
 
@@ -55,7 +55,9 @@ Para admitir los contenedores de Windows, debe tener Docker para Windows, versi�
 ## <a name="building-the-application"></a>Compilación de la aplicación
 Normalmente las aplicaciones de consola se distribuyen a través de un instalador, un FTP o una implementación de recurso compartido de archivos. Al implementar en un contenedor, los activos tienen que compilarse y colocarse en una ubicación que se pueda usar una vez creada la imagen de Docker.
 
-En *build.ps1*, el script usa [MSBuild](/visualstudio/msbuild/msbuild) para compilar la aplicación a fin de completar la tarea de creación de los activos. Algunos parámetros se pasan a MSBuild para finalizar los activos necesarios. El nombre del archivo del proyecto o la solución que se va a compilar, la ubicación de la salida y, por último, la configuración (lanzamiento o depuración).
+A continuación se muestra la aplicación de ejemplo: [ConsoleRandomAnswerGenerator](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)
+
+En *build.ps1*<sup>[[fuente]](https://github.com/dotnet/samples/blob/master/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator/build.ps1)</sup>, el script usa [MSBuild](/visualstudio/msbuild/msbuild) para compilar la aplicación a fin de completar la tarea de creación de los activos. Algunos parámetros se pasan a MSBuild para finalizar los activos necesarios. El nombre del archivo del proyecto o la solución que se va a compilar, la ubicación de la salida y, por último, la configuración (lanzamiento o depuración).
 
 En la llamada a `Invoke-MSBuild`, `OutputPath` se establece en **publish** y `Configuration` en **Release**. 
 

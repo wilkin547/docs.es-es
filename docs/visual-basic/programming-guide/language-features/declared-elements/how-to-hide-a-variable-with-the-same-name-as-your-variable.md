@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Ocultar una Variable con el mismo nombre que su Variable (Visual Basic)
+title: Filtrar Ocultar una Variable con el mismo nombre que su Variable (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: a770167bca0dc3538c828bfcc8a8de4ef86e80c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8a7eda2a636d7f89131d140c82ad4f3c4743211
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602421"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826683"
 ---
-# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Procedimiento Ocultar una Variable con el mismo nombre que su Variable (Visual Basic)
+# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Filtrar Ocultar una Variable con el mismo nombre que su Variable (Visual Basic)
 Puede ocultar una variable por *sombrear* él, es decir, si se redefine con una variable del mismo nombre. Puede reemplazar la variable que desea ocultar de dos maneras:  
   
 -   **Sombreado por ámbito.** Puede ocultar a través de ámbito por si vuelve a declarar dentro de una subregión de la región que contiene la variable que desea ocultar.  
@@ -104,6 +104,7 @@ Puede ocultar una variable por *sombrear* él, es decir, si se redefine con una 
  El sombreado presenta más de una versión de una variable con el mismo nombre. Cuando una instrucción de código hace referencia al nombre de variable, la versión a la que el compilador resuelve la referencia depende de factores como la ubicación de la instrucción de código y la presencia de una cadena de calificación. Esto puede aumentar el riesgo de que hace referencia a una versión no deseada de una variable sombreada. Puede reducir este riesgo si califica completamente todas las referencias a una variable sombreada.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Sombrear en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Diferencias entre sombrear y reemplazar](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

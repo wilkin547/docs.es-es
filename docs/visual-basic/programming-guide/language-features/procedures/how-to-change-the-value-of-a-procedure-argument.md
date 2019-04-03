@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: ea91e88f6833b9a3abbb349688c277be10312a6c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974918"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837508"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Filtrar Cambie el valor de un argumento de procedimiento (Visual Basic)
 Cuando se llama a un procedimiento, cada argumento proporcionado se corresponde a uno de los parámetros definidos en el procedimiento. En algunos casos, el código del procedimiento puede cambiar el valor subyacente a un argumento en el código de llamada. En otros casos, el procedimiento puede cambiar sólo su copia local de un argumento.  
@@ -48,7 +48,7 @@ Cuando se llama a un procedimiento, cada argumento proporcionado se corresponde 
   
 1.  En la declaración de procedimiento, especifique [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) para el parámetro correspondiente al argumento.  
   
-     O bien  
+     -o bien-  
   
      En el código que realiza la llamada, incluya el argumento entre paréntesis en la lista de argumentos. Esto obligará a Visual Basic para pasar el argumento por valor, incluso si se especifica el parámetro correspondiente `ByRef`.  
   
@@ -78,6 +78,7 @@ Cuando se llama a un procedimiento, cada argumento proporcionado se corresponde 
  Siempre hay un riesgo potencial de permitir que un procedimiento cambiar el valor subyacente a un argumento en el código de llamada. Asegúrese de que se espera que este valor se puede cambiar, y estar preparado para comprobar su validez antes de usarlo.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
 - [Cómo: Pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Forms
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-ms.openlocfilehash: 5a81cde63de258f0996c3ddbc99e0102d58d79b8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ca31e1c40c77bf7f42d246019d81f4ffaed646e8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973917"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839371"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>Instancias de objeto predeterminadas proporcionadas por My.Forms y My.WebServices (Visual Basic)
 El [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) y [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) objetos proporcionan acceso a formularios, orígenes de datos y servicios Web XML utilizados por la aplicación. Para ello, proporcionan colecciones de *las instancias predeterminadas* de cada uno de estos objetos.  
@@ -27,6 +27,7 @@ El [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.m
  El `My.Forms` object devuelve una colección de instancias predeterminadas para cada `Form` clase que exista en el proyecto. De forma similar, `My.WebServices` proporciona una instancia predeterminada de la clase de proxy para cada servicio Web que ha creado una referencia a en la aplicación.  
   
 ## <a name="see-also"></a>Vea también
+
 - [My.Forms (objeto)](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [My.WebServices (objeto)](../../../visual-basic/language-reference/objects/my-webservices-object.md)
 - [Cómo My depende del tipo de proyecto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
