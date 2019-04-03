@@ -1,15 +1,15 @@
 ---
-title: 'Transporte: Interoperabilidad de WSE 3.0 TCP'
+title: 'Transporte: interoperabilidad de WSE 3.0 TCP'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 870a0de493a4e60404d11115de58735e5fbb968f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 342c9c39eaa755363615dd83933cf00480e01c91
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653013"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842361"
 ---
-# <a name="transport-wse-30-tcp-interoperability"></a>Transporte: Interoperabilidad de WSE 3.0 TCP
+# <a name="transport-wse-30-tcp-interoperability"></a>Transporte: interoperabilidad de WSE 3.0 TCP
 El ejemplo de transporte de interoperabilidad de WSE 3.0 TCP muestra cómo implementar una sesión dúplex TCP como un transporte personalizado de Windows Communication Foundation (WCF). También muestra cómo puede utilizar la extensibilidad de la capa del canal para comunicarse a través de la conexión con sistemas que ya estén implementados. Los pasos siguientes muestran cómo crear este transporte WCF personalizado:  
   
 1.  Comenzando con un socket de TCP, cree las implementaciones del cliente y el servidor de <xref:System.ServiceModel.Channels.IDuplexSessionChannel> que utilizan las tramas de DIME para delinear los límites del mensaje.  
@@ -195,4 +195,3 @@ Symbols:
   
     8.  El cliente de prueba de transporte de TCP se inicia en una nueva consola. El cliente solicita las cotizaciones bursátiles desde el servicio y después muestra los resultados en la ventana de la consola.  
   
-## <a name="see-also"></a>Vea también

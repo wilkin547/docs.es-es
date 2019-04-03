@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 6cecc7fc2356a265ca4a3d57c837298ec33efc60
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0aa47fd277cfe47b3d8f08b41ffca9c547dcbfe9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965844"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839693"
 ---
 # <a name="function-expression-visual-basic"></a>Expresión de función (Visual Basic)
 Declara los parámetros y el código que definen una expresión de función lambda.  
@@ -28,7 +28,7 @@ End Function
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`parameterlist`|Opcional. Una lista de nombres de variables locales que representan los parámetros de este procedimiento. Los paréntesis deben estar presentes incluso cuando la lista está vacía. Consulte [Lista_de_parámetros](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`expression`|Obligatorio. Una expresión única. El tipo de la expresión es el tipo de valor devuelto de la función.|  
@@ -88,6 +88,7 @@ Dim londonCusts = db.Customers.
  Para obtener más información acerca de los métodos de consulta, vea [consultas](../../../visual-basic/language-reference/queries/index.md). Para obtener más información acerca de los operadores de consulta estándar, consulte [Standard Query Operators Overview](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c9716193c3429d5dd3aff1734415105713d2538
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221295"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409450"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamiento de serialización predeterminado
 La serialización de interoperabilidad funciona con reglas que dictan cómo se comportan los datos asociados con parámetros de método cuando pasan entre memoria administrada y no administrada. Estas reglas integradas controlan las actividades de serialización como transformaciones de tipos de datos, si un destinatario puede cambiar los datos que recibe y devolver esos cambios al llamador, y en qué circunstancias el serializador proporciona optimizaciones de rendimiento.  
@@ -33,7 +33,7 @@ La serialización de interoperabilidad funciona con reglas que dictan cómo se c
   
 ### <a name="unmanaged-signature"></a>Prototipo no administrado  
   
-```  
+```cpp  
 BSTR MethodOne (BSTR b) {  
      return b;  
 }  
@@ -101,7 +101,7 @@ void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
   
 ### <a name="type-library-representation"></a>Representación de biblioteca de tipos  
   
-```  
+```cpp  
 importlib("mscorlib.tlb");  
 interface DelegateTest : IDispatch {  
 [id(…)] HRESULT m1([in] _Delegate* d);  
@@ -164,13 +164,13 @@ internal class DelegateTest {
 ## <a name="default-marshaling-for-value-types"></a>Serialización predeterminada para tipos de valor  
  La mayoría de los tipos de valor, como enteros y números de punto flotante, [pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md) y no requieren serialización. Otros tipos que [no pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md) tienen representaciones distintas en memoria administrada y no administrada, y requieren serialización. Hay también otros tipos que requieren un formato explícito en el límite de interoperación.  
   
- En este tema se proporciona la siguiente información sobre tipos de valor con formato:  
+ En esta sección se proporciona información sobre los tipos de valor con el formato siguiente:  
   
--   [Tipos de valor utilizados en la invocación de plataforma](#cpcondefaultmarshalingforvaluetypesanchor2)  
+-   [Tipos de valor utilizados en la invocación de plataforma](#value-types-used-in-platform-invoke)  
   
--   [Tipos de valor utilizados en la interoperabilidad COM](#cpcondefaultmarshalingforvaluetypesanchor3)  
+-   [Tipos de valor utilizados en la interoperabilidad COM](#value-types-used-in-com-interop)  
   
- Además de describir tipos con formato, en este tema se identifican [tipos de valor System](#cpcondefaultmarshalingforvaluetypesanchor1) que tienen un comportamiento de serialización poco habitual.  
+ Además de describir tipos con formato, en este tema se identifican [tipos de valor System](#system-value-types) que tienen un comportamiento de serialización poco habitual.  
   
  Un tipo con formato es un tipo complejo que contiene información que controla explícitamente la distribución de sus miembros en la memoria. La información de distribución de miembros se proporciona mediante el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>. La distribución puede ser uno de los siguientes valores de enumeración <xref:System.Runtime.InteropServices.LayoutKind>:  
   
@@ -186,7 +186,6 @@ internal class DelegateTest {
   
      Indica que los miembros se distribuyen según el <xref:System.Runtime.InteropServices.FieldOffsetAttribute> proporcionado con cada campo.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor2"></a>   
 ### <a name="value-types-used-in-platform-invoke"></a>Tipos de valor utilizados en la invocación de plataforma  
  En el ejemplo siguiente, los tipos `Point` y `Rect` proporcionan información de distribución de miembros mediante **StructLayoutAttribute**.  
   
@@ -221,27 +220,28 @@ public struct Rect {
 }  
 ```  
   
- Al serializar a código no administrado, estos tipos con formato se serializan como estructuras de estilo C. Esto proporciona una manera sencilla de llamar a una API no administrada que tiene argumentos de estructura. Por ejemplo, las estructuras `POINT` y `RECT` se pueden pasar a la función **PtInRect** de la API Win32 de Microsoft del modo siguiente:  
+ Al serializar a código no administrado, estos tipos con formato se serializan como estructuras de estilo C. Esto proporciona una manera sencilla de llamar a una API no administrada que tiene argumentos de estructura. Por ejemplo, las estructuras `POINT` y `RECT` se pueden pasar a la función **PtInRect** de la API de Microsoft Windows del modo siguiente:  
   
-```  
+```cpp  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
  Las estructuras se pueden pasar mediante la siguiente definición de invocación de plataforma:  
   
-```vb  
-Class Win32API      
-   Declare Auto Function PtInRect Lib "User32.dll" _  
-    (ByRef r As Rect, p As Point) As Boolean  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+        ByRef r As Rect, p As Point) As Boolean
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("User32.dll")]  
-   public static extern Bool PtInRect(ref Rect r, Point p);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("User32.dll")]
+   internal static extern bool PtInRect(ref Rect r, Point p);
+}
+```
   
  El tipo de valor `Rect` se debe pasar por referencia porque la API no administrada espera que un puntero a un `RECT` se pase a la función. El tipo de valor `Point` se pasa por valor porque la API no administrada espera que `POINT` se pase en la pila. Esta diferencia sutil es muy importante. Las referencias se pasan a código no administrado como punteros. Los valores se pasan a código no administrado en la pila.  
   
@@ -253,7 +253,7 @@ class Win32API {
 > [!NOTE]
 >  Si un tipo de referencia tiene miembros de tipos que no pueden transferirse en bloque de bits, se requiere una conversión doble: la primera vez cuando se pasa un argumento al lado no administrado y la segunda vez en la devolución de la llamada. Debido a esta sobrecarga adicional, los parámetros In/Out deben aplicarse explícitamente a un argumento si el llamador desea ver los cambios realizados por el destinatario.  
   
- En el ejemplo siguiente, la clase `SystemTime` tiene distribución de miembros secuencial y puede pasarse a la función **GetSystemTime** de la API Win32.  
+ En el ejemplo siguiente, la clase `SystemTime` tiene distribución de miembros secuencial y puede pasarse a la función **GetSystemTime** de la API de Windows.  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class SystemTime  
@@ -284,25 +284,26 @@ End Class
   
  La función **GetSystemTime** se define como sigue:  
   
-```  
+```cpp  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
  La definición de invocación de plataforma equivalente para **GetSystemTime** es la siguiente:  
   
-```vb  
-Public Class Win32  
-   Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (ByVal sysTime _  
-   As SystemTime)  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+        ByVal sysTime As SystemTime)
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("Kernel32.dll", CharSet=CharSet.Auto)]  
-   public static extern void GetSystemTime(SystemTime st);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
+   internal static extern void GetSystemTime(SystemTime st);
+}
+```
   
  Tenga en cuenta que el argumento `SystemTime` no se tipifica como argumento de referencia porque `SystemTime` es una clase, no un tipo de valor. A diferencia de los tipos de valor, las clases siempre se pasan por referencia.  
   
@@ -329,13 +330,12 @@ public class Point {
 }  
 ```  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor3"></a>   
 ### <a name="value-types-used-in-com-interop"></a>Tipos de valor utilizados en la interoperabilidad COM  
  Los tipos con formato también pueden pasarse a llamadas de métodos de interoperabilidad COM. De hecho, cuando se exportan a una biblioteca de tipos, los tipos de valor se convierten automáticamente en estructuras. Como se muestra en el ejemplo siguiente, el tipo de valor `Point` se convierte en una definición de tipo (typedef) con el nombre `Point`. Todas las referencias al tipo de valor `Point` en otro lugar de la biblioteca de tipos se reemplazan por el typedef `Point`.  
   
  **Representación de biblioteca de tipos**  
   
-```  
+```cpp  
 typedef struct tagPoint {  
    int x;  
    int y;  
@@ -353,7 +353,6 @@ interface _Graphics {
 > [!NOTE]
 >  Las estructuras que tienen el valor de enumeración <xref:System.Runtime.InteropServices.LayoutKind> establecido en **Explicit** no se pueden usar en la interoperabilidad COM porque la biblioteca de tipos exportada no puede expresar una distribución explícita.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>Tipos de valor System  
  El espacio de nombres <xref:System> tiene varios tipos de valor que representan la forma de conversión boxing de los tipos primitivos en runtime. Por ejemplo, la estructura <xref:System.Int32?displayProperty=nameWithType> de tipo de valor representa la forma de conversión boxing de **ELEMENT_TYPE_I4**. En lugar de serializar estos tipos como estructuras, como otros tipos con formato, se serializan de la misma forma que los tipos primitivos a los que aplican conversión boxing. Por tanto, **System.Int32** se serializa como **ELEMENT_TYPE_I4** en lugar de como una estructura que contiene un único miembro de tipo **long**. La tabla siguiente contiene una lista de los tipos de valor en el espacio de nombres **System** que son representaciones de conversión boxing de tipos primitivos.  
   
@@ -388,7 +387,7 @@ interface _Graphics {
   
 #### <a name="type-library-representation"></a>Representación de biblioteca de tipos  
   
-```  
+```cpp  
 typedef double DATE;  
 typedef DWORD OLE_COLOR;  
   
@@ -430,7 +429,7 @@ public interface IValueTypes {
   
 #### <a name="type-library-representation"></a>Representación de biblioteca de tipos  
   
-```  
+```cpp  
 […]  
 interface IValueTypes : IDispatch {  
    HRESULT M1([in] DATE d);  

@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Crear una unión de C/C ++ mediante atributos (Visual Basic)
+title: Filtrar Crear una unión de C/C ++ mediante atributos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: e37aac03db7a24e6519acb4eb843b46b8c60b4f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c3ebf248f5d2f20e2fff25fb8326a294b51d153
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663289"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829309"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Procedimiento Crear una unión de C/c ++ mediante atributos (Visual Basic)
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Filtrar Crear una unión de C/c ++ mediante atributos (Visual Basic)
 Mediante el uso de atributos, puede personalizar la manera en que los structs se disponen en la memoria. Por ejemplo, puede crear lo que se conoce como una unión en C/ C++ mediante los atributos `StructLayout(LayoutKind.Explicit)` y `FieldOffset`.  
   
 ## <a name="example"></a>Ejemplo  
@@ -67,6 +67,7 @@ Structure TestExplicit
  Los dos campos enteros, `i1` e `i2`, tiene las mismas ubicaciones en la memoria que `lg`. Este tipo de control sobre el diseño del struct es útil cuando se usa la invocación de plataforma.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Guía de programación en Visual Basic](../../../../visual-basic/programming-guide/index.md)

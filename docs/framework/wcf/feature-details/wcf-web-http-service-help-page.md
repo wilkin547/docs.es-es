@@ -2,21 +2,21 @@
 title: Página de ayuda del servicio web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: f803d2046684bc1aa148e78b6325f26a8ec5c427
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 60fd909d6e7d3ba0e0c0254024ef7eb40263b59e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121212"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826839"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Página de ayuda del servicio web HTTP de WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] proporciona una página de ayuda automática para servicios WEB HTTP de WCF. Esta página de ayuda contiene una lista de descripciones de cada operación, formatos de solicitud y respuesta, así como esquemas. Esta funcionalidad se desactiva de forma predeterminada. Cuando un usuario se desplaza a un servicio WEB HTTP de WCF y anexa "/ Ayuda" al final de la dirección URL, por ejemplo `http://localhost:8000/Customers/Help`, una página de ayuda, como se muestra lo siguiente.  
   
- ![Página de Ayuda de WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
+ ![Abra un explorador con la página de Ayuda de REST de WCF.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
  A continuación, el usuario puede hacer clic en cualquier método descrito en la página de ayuda para visualizar la página detallada de esa operación en la que se muestra más información sobre el método, incluidos formatos de mensajes y respuestas de ejemplo. La siguiente imagen es un ejemplo de una página de ayuda para un método.  
   
- ![Detalles de la página de ayuda WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
+ ![Abra un explorador con los detalles de página de Ayuda de REST de WCF para el método GetCustomers.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>Utilizar la página de ayuda web HTTP de WCF  
  La página de ayuda WEB HTTP de WCF muestra una breve descripción de cada operación siempre que haya especificado una con <xref:System.ComponentModel.DescriptionAttribute>. Este atributo toma una cadena que contiene una breve descripción de la operación a la que se aplica. Por ejemplo, el siguiente código muestra cómo utilizar <xref:System.ComponentModel.DescriptionAttribute> para proporcionar una breve descripción.  
@@ -28,7 +28,7 @@ ms.locfileid: "49121212"
 SyndicationFeedFormatter GetTemplate1();  
 ```  
   
- Para activar la página de ayuda WEB HTTP de WCF, debe agregar un comportamiento de extremo a los extremos del servicio. Esto se puede hacer en la configuración o a través de un código. Para habilitar la página de ayuda WEB HTTP de WCF en la configuración, agregue un comportamiento de punto de conexión con un elemento `<webHttp>`, establezca `enableHelp` en `true` y agregue un punto de conexión y configúrelo para utilizar el comportamiento del punto de conexión. El código de configuración siguiente muestra cómo realizar esta operación.  
+ Para activar la página de ayuda WEB HTTP de WCF, debe agregar un comportamiento de punto de conexión a los puntos de conexión del servicio. Esto se puede hacer en la configuración o a través de un código. Para habilitar la página de ayuda WEB HTTP de WCF en la configuración, agregue un comportamiento de extremo con un elemento `<webHttp>`, establezca `enableHelp` en `true` y agregue un extremo y configúrelo para utilizar el comportamiento del extremo. El código de configuración siguiente muestra cómo realizar esta operación.  
   
 ```xml  
 <endpointBehaviors>  

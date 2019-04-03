@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Default keyword [Visual Basic]
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
-ms.openlocfilehash: b63fa66c9cda1e439e3917ca62377f68028fc049
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f78ffe42a9d618d44da2a50c0de831396576430c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497846"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836732"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
 Identifica una propiedad como propiedad predeterminada de su clase, estructura o interfaz.  
@@ -36,5 +36,6 @@ Identifica una propiedad como propiedad predeterminada de su clase, estructura o
  [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - [Cómo: Declarar y llamar a una propiedad predeterminada en Visual Basic](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
 - [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)

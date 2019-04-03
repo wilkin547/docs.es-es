@@ -3,12 +3,12 @@ title: Depuración de la aplicación Hola mundo de .NET Core con Visual Studio 2
 description: Obtenga información sobre cómo depurar una aplicación Hola mundo, escrita en C# o Visual Basic, con Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170670"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463428"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Depuración de la aplicación Hola mundo de .NET Core en C# o Visual Basic con Visual Studio 2017
 
@@ -39,7 +39,7 @@ Ejecute su programa en el modo de depuración y pruebe algunas características 
 
 1. La ejecución del programa se detiene cuando llega al punto de interrupción y antes de que se ejecute el método `Console.WriteLine`. La ventana **Automático** muestra los valores de variables que se usan en torno a la línea actual. La ventana **Variables locales** (que puede ver haciendo clic en la pestaña **Variables locales**) muestra los valores de las variables definidas en el método que se ejecuta actualmente.
 
-   ![Ventana de la aplicación de Visual Studio](./media/debugging-with-visual-studio/break.png)
+   ![Captura de pantalla de un punto de interrupción en Visual Studio.](./media/debugging-with-visual-studio/breakpoint-console-window.png)
 
 1. Puede cambiar el valor de las variables para ver cómo afecta esto a su programa. Si la **ventana Inmediato** no está visible, muéstrela, para ello, seleccione el elemento de menú **Depurar** > **Ventanas** > **Inmediato**. La **ventana Inmediato** le permite interactuar con la aplicación que está depurando.
 

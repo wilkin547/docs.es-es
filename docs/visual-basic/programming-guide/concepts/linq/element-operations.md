@@ -2,12 +2,12 @@
 title: Operaciones de elementos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5fcb0631-dce5-45ff-8abb-353cae21e14f
-ms.openlocfilehash: bbc16599a2688d5e0fe8b1e510946580fa2ca012
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d631c9d091d75c12366e17a862637bdc4f0633b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501248"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836927"
 ---
 # <a name="element-operations-visual-basic"></a>Operaciones de elementos (Visual Basic)
 Las operaciones de elementos devuelven un único elemento específico de una secuencia.  
@@ -28,6 +28,7 @@ Las operaciones de elementos devuelven un único elemento específico de una sec
 |SingleOrDefault|Devuelve el único elemento de una colección, o el único elemento que cumple una condición. Devuelve un valor predeterminado si dicho elemento no existe o si la colección no contiene exactamente un elemento.|No es aplicable.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Linq>
 - [Información general sobre operadores de consulta estándar (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Cómo: Consulta para el archivo de mayor tamaño o archivos en un árbol de directorios (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)

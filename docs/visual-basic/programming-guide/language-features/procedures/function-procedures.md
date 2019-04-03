@@ -9,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: f1e2c707b3caa8c7cc49a6f33840ebdfd0c89f4e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 568489d6034316e895cd999801241fa995aadefa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968652"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834249"
 ---
 # <a name="function-procedures-visual-basic"></a>Procedimientos de función (Visual Basic)
 Un `Function` procedimiento es una serie de instrucciones de Visual Basic está incluido en el `Function` y `End Function` instrucciones. El `Function` procedimiento realiza una tarea y, a continuación, devuelve el control al código de llamada. Cuando devuelve el control, también devuelve un valor al código de llamada.  
@@ -99,6 +99,7 @@ End Function
  [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Procedimientos](./index.md)
 - [Subprocedimientos](./sub-procedures.md)
 - [Procedimientos de propiedades](./property-procedures.md)

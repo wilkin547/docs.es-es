@@ -6,14 +6,14 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: f1fdc5f69b8552ee10131c7408673457fffe16ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2b2c43811cbb3a06ed1e8c092ca42e50a4d037c0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976855"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816088"
 ---
-# <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Procedimiento Determinar si dos objetos son idénticos (Visual Basic)
+# <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Filtrar Determinar si dos objetos son idénticos (Visual Basic)
 En Visual Basic, dos referencias de variables se consideran idénticas si sus punteros son iguales, es decir, si ambas variables señalan a la misma instancia de clase en la memoria. Por ejemplo, en una aplicación Windows Forms, es posible que desee realizar una comparación para determinar si la instancia actual (`Me`) es el mismo que una instancia concreta, como `Form2`.  
   
  Visual Basic proporciona dos operadores para comparar los punteros. El [operador Is](../../../../visual-basic/language-reference/operators/is-operator.md) devuelve `True` si los objetos son idénticos y el [IsNot (operador)](../../../../visual-basic/language-reference/operators/isnot-operator.md) devuelve `True` si no lo son.  
@@ -51,6 +51,7 @@ En Visual Basic, dos referencias de variables se consideran idénticas si sus pu
  `objA identical to objC? True`  
   
 ## <a name="see-also"></a>Vea también
+
 - [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Valores de las variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)

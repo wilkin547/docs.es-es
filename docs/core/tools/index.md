@@ -3,6 +3,12 @@ title: Herramientas de la interfaz de línea de comandos (CLI) de .NET Core
 description: Introducción a las herramientas y características de la interfaz de la línea de comandos (CLI) de .NET Core.
 ms.date: 08/14/2017
 ms.custom: seodec18
+ms.openlocfilehash: e174867ce06e573fc85579183df0196d8276fb37
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826319"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Herramientas de la interfaz de la línea de comandos (CLI) de .NET Core
 
@@ -116,11 +122,17 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>Controlador
 
-El controlador se denomina [dotnet](dotnet.md) y tiene dos responsabilidades, ejecutar una [aplicación dependiente del marco](../deploying/index.md) o ejecutar un comando. La única vez que se usa `dotnet` sin un comando es cuando se usa para iniciar una aplicación.
+El controlador se denomina [dotnet](dotnet.md) y tiene dos responsabilidades, ejecutar una [aplicación dependiente del marco](../deploying/index.md) o ejecutar un comando. 
 
-Para ejecutar una aplicación dependiente del marco, especifique la aplicación después del controlador, por ejemplo, `dotnet /path/to/my_app.dll`. Cuando ejecute el comando desde la carpeta donde reside la DLL de la aplicación, simplemente ejecute `dotnet my_app.dll`.
+Para ejecutar una aplicación dependiente del marco, especifique la aplicación después del controlador, por ejemplo, `dotnet /path/to/my_app.dll`. Cuando ejecute el comando desde la carpeta donde reside la DLL de la aplicación, simplemente ejecute `dotnet my_app.dll`. Si quiere usar una versión específica del entorno de ejecución .NET Core, use la opción `--fx-version <VERSION>` (consulte la referencia del [comando dotnet](dotnet.md)).
 
-Cuando se proporciona un comando para el controlador, `dotnet.exe` inicia el proceso de ejecución del comando de la CLI. En primer lugar, el controlador determina la versión de SDK que se debe usar. Si no se especifica la versión en las opciones de comando, el controlador usa la versión más reciente que esté disponible. Para especificar una versión distinta de la última versión instalada, use la opción `--fx-version <VERSION>` (consulte la referencia del [comando dotnet)](dotnet.md). Una vez determinada la versión del SDK, el controlador ejecuta el comando.
+Cuando se proporciona un comando para el controlador, `dotnet.exe` inicia el proceso de ejecución del comando de la CLI. Por ejemplo:
+
+```bash
+> dotnet build
+```
+
+En primer lugar, el controlador determina la versión de SDK que se debe usar. Si no hay ningún elemento ["global.json"](global-json.md), se usa la última versión del SDK disponible. Podría tratarse de una versión preliminar o de una versión estable, en función de lo último que esté disponible en el equipo.  Una vez determinada la versión del SDK, se ejecutará el comando.
 
 ### <a name="command-verb"></a>Comando ("verbo")
 

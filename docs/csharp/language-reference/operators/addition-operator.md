@@ -9,12 +9,12 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 92e20dad8ae6358f71137e955bb80e3641a66a54
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0f04ba837f9c03107acd0b2174cbd07c14a8c213
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237758"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504475"
 ---
 # <a name="-operator-c-reference"></a>Operador + (Referencia de C#)
 
@@ -29,6 +29,8 @@ El operador `+` unario devuelve el valor de su operando. Es compatible con todos
 Para tipos numéricos, el operador `+` calcula la suma de sus operandos:
 
 [!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
+
+Para obtener más información sobre los operadores aritméticos, vea [Operadores aritméticos](arithmetic-operators.md).
 
 ## <a name="string-concatenation"></a>Concatenación de cadenas
 

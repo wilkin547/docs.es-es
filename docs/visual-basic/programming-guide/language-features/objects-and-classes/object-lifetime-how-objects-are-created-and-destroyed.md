@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 582988c9eed19fe49bc86e75e7a9d80bbf2a6d59
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654541"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839826"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Duración de los objetos: Cómo los objetos se crean y destruyen (Visual Basic)
 Mediante el uso de la palabra clave `New` se crea una instancia de una clase, un objeto. A menudo, las tareas de inicialización deben realizarse en los objetos nuevos antes de utilizarlos. Las tareas de inicialización comunes incluyen abrir archivos, conectarse a bases de datos y leer los valores de las claves del registro. Visual Basic controla la inicialización de objetos nuevos mediante procedimientos denominados *constructores* (métodos especiales que permiten controlar la inicialización).  
@@ -147,6 +147,7 @@ End Sub
  Otra diferencia entre los sistemas de recolección de elementos no utilizados implica el uso de `Nothing`. Para aprovechar el recuento de referencias de Visual Basic 6.0 y versiones anteriores, los programadores a veces asignaban `Nothing` a variables de objetos para liberar las referencias que incluían dichas variables. Si la variable almacenaba la última referencia al objeto, los recursos del objeto se liberaban inmediatamente. En versiones posteriores de Visual Basic, aunque puede haber casos en los que este procedimiento todavía sea útil, su uso nunca hace que el objeto de referencia libere sus recursos inmediatamente. Para liberar inmediatamente los recursos, utilice el método <xref:System.IDisposable.Dispose%2A> del objeto, si está disponible. El único caso en el que una variable debe establecerse en `Nothing` es cuando su duración sea larga en comparación con el tiempo que tarda el recolector de elementos no utilizados en detectar objetos huérfanos.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.IDisposable.Dispose%2A>
 - [Inicialización y finalización de componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
 - [New (operador)](../../../../visual-basic/language-reference/operators/new-operator.md)

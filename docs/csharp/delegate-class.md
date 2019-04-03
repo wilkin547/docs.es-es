@@ -3,12 +3,12 @@ title: System.Delegate y la palabra clave `delegate`
 description: Obtenga información sobre las clases de .NET Framework que admiten delegados y sobre cómo se asignan a la palabra clave "delegate".
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126180"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465781"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate y la palabra clave `delegate`
 
@@ -92,7 +92,7 @@ phrases.Sort(CompareLength);
 
 Observe que se usa el nombre del método sin paréntesis. Al usar el método como un argumento, le indica al compilador que convierta la referencia del método en una referencia que se puede usar como un destino de invocación del delegado y que asocie ese método como un destino de invocación.
 
-También podría haber declarado explícitamente una variable de tipo "Comparison<string>" y realizado una asignación:
+También podría haber declarado de forma explícita una variable de tipo `Comparison<string>` y realizado una asignación:
 
 ```csharp
 Comparison<string> comparer = CompareLength;

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d41d1ee2ab5e423ca6a1b28a0e10bac4bc58ad79
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 9298bb758c205c1ef577942aca6b107828e8e139
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094014"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675918"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guía de implementación de .NET Framework para desarrolladores
 En este tema se proporciona información a los desarrolladores que quieren instalar cualquier versión de NET Framework a partir de .NET Framework 4.5 en [!INCLUDE[net_current](../../../includes/net-current-version.md)] con sus aplicaciones.
@@ -307,7 +307,7 @@ Type: DWORD
  Para instalar un paquete de idioma con el instalador sin conexión de .NET Framework, debe encadenarlo al programa de instalación de la aplicación. Por ejemplo, para implementar un instalador sin conexión de [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] con el paquete de idioma japonés, utilice el comando siguiente:
 
 ```
-NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductName>
+NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>
 ```
 
  No tiene que encadenar los paquetes de idioma si utiliza el instalador web, ya que el programa de instalación instalará el paquete de idioma que coincida con la configuración de MUI del usuario. Si desea instalar un idioma diferente, puede utilizar la opción `/LCID` para especificar un paquete de idioma.
@@ -359,7 +359,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |------------|-----------------|
 |**/CEIPConsent**|Sobrescribe el comportamiento predeterminado y envía comentarios anónimos a Microsoft para mejorar las experiencias de implementación futuras. Se puede utilizar esta opción solamente si el programa de instalación solicita el consentimiento y si el usuario concede el permiso para enviar comentarios anónimos a Microsoft.|
 |**/chainingpackage** `packageName`|Especifica el nombre del archivo ejecutable que realiza el encadenamiento. Esta información se envía a Microsoft como comentarios anónimos para ayudar a mejorar las experiencias de implementación futuras.<br /><br /> Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Lucerne Publishing"**. Para obtener un ejemplo de un paquete de encadenamiento, vea [Obtener información de progreso de un paquete de instalación](https://go.microsoft.com/fwlink/?LinkId=181926) en MSDN Library.|
-|**/LCID**  `LCID`<br /><br /> donde `LCID` especifica un identificador de configuración regional (vea [Idiomas compatibles](#supported-languages))|Instala el paquete de idioma especificado por `LCID` y obliga a mostrar la interfaz de usuario indicada en ese idioma, a no ser que se establezca el modo silencio.<br /><br /> En el instalador web, esta opción instala de forma encadenada el paquete de idioma desde Internet. **Nota:**  Utilice esta opción solo con el instalador web.|
+|**/LCID**  `LCID`<br /><br /> donde `LCID` especifica un identificador de configuración regional (vea [Idiomas compatibles](#supported-languages))|Instala el paquete de idioma especificado por `LCID` y obliga a mostrar la interfaz de usuario indicada en ese idioma, a no ser que se establezca el modo silencio.<br /><br /> En el instalador web, esta opción instala de forma encadenada el paquete de idioma desde Internet. **Nota:**  Use esta opción solo con el instalador web.|
 |**/log** `file` &#124; `folder`|Especifica la ubicación del archivo de registro. El valor predeterminado es la carpeta temporal para el proceso y el nombre de archivo predeterminado se basa en el paquete. Si la extensión de archivo es .txt, se genera un registro de texto. Si especifica cualquier otra extensión o no especifica ninguna, se crea un registro HTML.|
 |**/msioptions**|Especifica opciones que se pasarán para los elementos .msi y .msp; por ejemplo: `/msioptions "PROPERTY1='Value'"`.|
 |**/norestart**|Evita que el programa de instalación se reinicie automáticamente. Si utiliza esta opción, la aplicación de encadenamiento tiene que capturar el código de retorno y controlar el reinicio (vea [Obtener información de progreso de un paquete de instalación](https://go.microsoft.com/fwlink/?LinkId=179606) en MSDN Library).|

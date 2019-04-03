@@ -2,14 +2,14 @@
 title: 'Archivo XML de ejemplo: Los clientes y pedidos en un Namespace1'
 ms.date: 07/20/2015
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
-ms.openlocfilehash: 8ca28be2a65fc249953ebca308fe8133d3bce0c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca12478ab81d114759c07b5d44749aee5a620bbb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558610"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829517"
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Archivo XML de ejemplo: Los clientes y pedidos en un Namespace
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Archivo XML de ejemplo: Clientes y pedidos en un espacio de nombres
 El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo contiene clientes y pedidos. El XML se encuentra en un espacio de nombres.  
   
 ## <a name="customersordersinnamespacexml"></a>CustomersOrdersInNamespace.xml  
@@ -431,4 +431,5 @@ El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Documentos XML de ejemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

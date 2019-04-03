@@ -8,14 +8,14 @@ helpviewer_keywords:
 - greater than or equal to operator (>=) [C#]
 - '>= operator [C#]'
 ms.assetid: 0db4dcaf-56a3-4884-a7ad-35f64978a58d
-ms.openlocfilehash: 821369734e64648714bf89efb0c02d12d4d816e3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0dd3aa8976c10f0adc5dc7620237991202f772ee
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256558"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545551"
 ---
-# <a name="-operator-c-reference"></a>Operador >= (Referencia de C#)
+# <a name="-operator-c-reference"></a>Operador >= (referencia de C#)
 
 El operador relacional "mayor o igual que" `>=` devuelve `true` si su primer operando es mayor o igual que el segundo; en caso contrario, devuelve `false`. Todos los valores numéricos y los tipos de enumeración admiten el operador `>=`. Para los operandos del mismo tipo [enum](../keywords/enum.md), se comparan los valores correspondientes del tipo entero subyacente.
 
@@ -40,5 +40,5 @@ Para obtener más información, vea la sección [Operadores de comprobación de 
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Operadores de C#](index.md)
 - [Operador >](greater-than-operator.md)
-- [Operador ==](equality-comparison-operator.md)
+- [Operador ==](equality-operators.md#equality-operator-)
 - <xref:System.IComparable%601?displayProperty=nameWithType>

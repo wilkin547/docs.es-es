@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034750"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824434"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Introducción a las estructuras y conceptos de secuencias de nodo XAML
 
@@ -218,7 +218,7 @@ La lista siguientes recoge todos los casos en los que se espera que un lector de
 
 - **Contenido desconocido:** El nombre de este nodo de miembro es `_UnknownContent`. En realidad, es una <xref:System.Xaml.XamlDirective>, y se define en el espacio de nombres XAML del lenguaje XAML. Esta directiva se usa como centinela para los casos en que un elemento de objeto XAML incluye contenido en el XAML de origen, pero no puede determinarse ninguna propiedad de contenido en el contexto de esquema XAML que está disponible actualmente. Puede detectar este caso en un flujo de nodo XAML buscando los miembros denominados `_UnknownContent`. Si no se realiza ninguna otra acción en un flujo de nodo XAML de ruta de acceso de carga, se produce el valor predeterminado <xref:System.Xaml.XamlObjectWriter> en un intento de `WriteEndObject` cuando encuentra el miembro `_UnknownContent` en cualquier objeto. El valor predeterminado <xref:System.Xaml.XamlXmlWriter> no se produce y trata el miembro como implícito. Puede obtener una entidad estática para `_UnknownContent` desde <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.
 
-- **Propiedad de colección de una colección:** aunque el tipo CLR de respaldo de una clase de colección que se usa para XAML suele tener una propiedad de nombre dedicado que contiene los elementos de la colección, el sistema de tipos XAML no conoce esa propiedad antes de la resolución de tipos de respaldo. En su lugar, el flujo de nodo XAML introduce un marcador de posición `Items` como miembro del tipo XAML de la colección. En la implementación de servicios XAML de .NET Framework, el nombre de esta directiva o miembro del flujo de nodo es `_Items`. Puede obtenerse una constante para esta directiva a partir de <xref:System.Xaml.XamlLanguage.Items%2A>.
+- **Propiedad de colección de una colección:** Aunque el tipo CLR de respaldo de una clase de colección que se usa para XAML suele tener una propiedad que contiene los elementos de colección denominada dedicado, no conoce esa propiedad para un sistema de tipos XAML antes de la resolución de tipos de respaldo. En su lugar, el flujo de nodo XAML introduce un marcador de posición `Items` como miembro del tipo XAML de la colección. En la implementación de servicios XAML de .NET Framework, el nombre de esta directiva o miembro del flujo de nodo es `_Items`. Puede obtenerse una constante para esta directiva a partir de <xref:System.Xaml.XamlLanguage.Items%2A>.
 
     Tenga en cuenta que un flujo de nodo XAML podría contener una propiedad Items con elementos que resultó para no ser analizable según la resolución de tipos de respaldo y el contexto de esquema XAML. Por ejemplo,
 

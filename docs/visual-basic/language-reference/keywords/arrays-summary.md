@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [Visual Basic]
 ms.assetid: 167f77d4-7cb2-4a31-9dc9-0fd0b26fda7e
-ms.openlocfilehash: b216def2c596a738057fe5583fbf2874094bccd7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 228713bc95be4096549092fcdda0e47feed30849
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537275"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832416"
 ---
 # <a name="arrays-summary-visual-basic"></a>Resumen de matrices (Visual Basic)
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
@@ -22,5 +22,6 @@ Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas e
 |Volver a inicializar una matriz.|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)
 - [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

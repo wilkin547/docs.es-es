@@ -2,12 +2,12 @@
 title: Trabajar con espacios de nombres XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 428bf4b0-e348-4ffd-986b-d905d5a0e7fa
-ms.openlocfilehash: e103920187ecbbfb14a1723556d1fae0265a88d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2b9db9ed547858eb5358d5e3c871c6a84d22ae6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607912"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828906"
 ---
 # <a name="working-with-xml-namespaces-visual-basic"></a>Trabajar con espacios de nombres XML (Visual Basic)
 En los temas de esta sección se describe cómo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] admite espacios de nombres.  
@@ -24,4 +24,5 @@ En los temas de esta sección se describe cómo [!INCLUDE[sqltecxlinq](~/include
 |[Cómo: Escribir consultas de XML en espacios de nombres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|Muestra cómo especificar espacios de nombres XML en Visual Basic LINQ a consultas XML.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Guía de programación (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

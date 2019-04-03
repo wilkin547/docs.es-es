@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Declarar y llamar a una propiedad predeterminada en Visual Basic
+title: Filtrar Declarar y llamar a una propiedad predeterminada en Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: c7510147e2abdcfbb71cf79412a9125724776685
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f11b5a184b72df68e302094dee762ec6876a397c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977557"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829335"
 ---
-# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Procedimiento Declarar y llamar a una propiedad predeterminada en Visual Basic
+# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Filtrar Declarar y llamar a una propiedad predeterminada en Visual Basic
 Un *propiedad predeterminada* es una propiedad de clase o estructura que el código puede tener acceso sin especificarlo. Al llamar a los nombres de código de una clase o estructura, pero no una propiedad y el contexto permite el acceso a una propiedad, Visual Basic resuelve el acceso a esa clase o propiedad de la estructura predeterminada si existe alguno.  
   
  Una clase o estructura puede tener como máximo una propiedad predeterminada. Sin embargo, puede sobrecargar una propiedad predeterminada y tiene más de una versión de éste.  
@@ -82,6 +82,7 @@ Un *propiedad predeterminada* es una propiedad de clase o estructura que el cód
  Debido a estos inconvenientes, considere la posibilidad de no definir propiedades predeterminadas. Para mejorar la legibilidad de código, debe también tener en cuenta siempre referencia explícitamente a todas las propiedades, propiedades incluso predeterminadas.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Procedimientos de propiedades](./property-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
 - [Property (instrucción)](../../../../visual-basic/language-reference/statements/property-statement.md)

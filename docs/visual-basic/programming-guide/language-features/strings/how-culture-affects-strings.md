@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: b9e9b4e199e4504e21b365706ea60d63c9d5fb87
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980950"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834626"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Cómo afecta la referencia cultural a las cadenas en Visual Basic
 Esta página de ayuda explica cómo Visual Basic usa la información de referencia cultural para realizar conversiones de cadenas y comparaciones.  
@@ -79,6 +79,7 @@ Esta página de ayuda explica cómo Visual Basic usa la información de referenc
  Si la aplicación toma decisiones de seguridad en función del resultado de una comparación o la operación de cambio de mayúsculas y, a continuación, la operación debe utilizar el <xref:System.String.Compare%2A?displayProperty=nameWithType> método y pase `Ordinal` o `OrdinalIgnoreCase` para el `comparisonType` argumento.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Globalization.CultureInfo>
 - [Introducción a las cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
 - [Funciones de conversión de tipos](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

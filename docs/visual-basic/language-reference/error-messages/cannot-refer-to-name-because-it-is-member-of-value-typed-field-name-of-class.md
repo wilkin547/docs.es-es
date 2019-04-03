@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30310
 ms.assetid: 2aeb8872-7c87-4f01-98ef-9714ba3eebbe
-ms.openlocfilehash: c29d3def2299dc1d7e3b084b3408b3f919addc63
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: aac190119ced74496c4dd012d200fca6d895ff28
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279595"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826774"
 ---
 # <a name="cannot-refer-to-name-because-it-is-a-member-of-the-value-typed-field-name-of-class-classname-which-has-systemmarshalbyrefobject-as-a-base-class"></a>No se puede hacer referencia a '\<nombre >' porque es un miembro del campo de tipo de valor '\<nombre >' de la clase\<classname >' que tiene 'System.MarshalByRefObject' como clase base
 La `System.MarshalByRefObject` clase permite que las aplicaciones que admiten el acceso remoto a los objetos entre límites de dominio de aplicación. Tipos deben heredar de la `MarshalByRejectObject` clase cuando el tipo se usa en los límites del dominio de aplicación. No se debe copiar el estado del objeto porque los miembros del objeto no se puede usar fuera del dominio de aplicación en el que se crearon.  
@@ -26,5 +26,6 @@ La `System.MarshalByRefObject` clase permite que las aplicaciones que admiten el
 2.  Califique explícitamente el miembro con el `Me` palabra clave.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.MarshalByRefObject>
 - [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)

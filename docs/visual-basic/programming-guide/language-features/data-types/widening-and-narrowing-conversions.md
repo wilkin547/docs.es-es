@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: d1b573dbafbead20330a4fd0f62e8f21f27dce81
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f1a71e8e2e3e4ebb9b412be74b5ea8702eb164f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610934"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842556"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Conversiones de ampliación y de restricción (Visual Basic)
 Una consideración importante con una conversión de tipos es si el resultado de la conversión está dentro del intervalo del tipo de datos de destino.  
@@ -108,6 +108,7 @@ shape = square
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Conversiones de tipos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Conversiones implícitas y explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

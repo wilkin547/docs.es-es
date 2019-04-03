@@ -2,12 +2,12 @@
 title: Atributos comunes (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 9c9e8ba886697b9306a89caed4944fd2752db835
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e001c9a637d2e5e34e77158704e4ad81d6973a50
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375407"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834553"
 ---
 # <a name="common-attributes-visual-basic"></a>Atributos comunes (Visual Basic)
 En este tema se describe los atributos que se usan normalmente en programas de Visual Basic.  
@@ -44,7 +44,7 @@ En este tema se describe los atributos que se usan normalmente en programas de V
   
  En la siguiente tabla se muestran los atributos de identidad.  
   
-|Atributo|Propósito|  
+|Atributo|Finalidad|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyName>|Describe completamente la identidad de un ensamblado.|  
 |<xref:System.Reflection.AssemblyVersionAttribute>|Especifica la versión de un ensamblado.|  
@@ -54,7 +54,7 @@ En este tema se describe los atributos que se usan normalmente en programas de V
 ### <a name="informational-attributes"></a>Atributos informativos  
  Puede utilizar atributos informativos para proporcionar información adicional de la compañía o de producto para un ensamblado. En la tabla siguiente se muestran los atributos informativos definidos en el espacio de nombres <xref:System.Reflection?displayProperty=nameWithType>.  
   
-|Atributo|Propósito|  
+|Atributo|Finalidad|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyProductAttribute>|Define un atributo personalizado que especifica un nombre de producto para un manifiesto del ensamblado.|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Define un atributo personalizado que especifica una marca comercial para un manifiesto del ensamblado.|  
@@ -67,7 +67,7 @@ En este tema se describe los atributos que se usan normalmente en programas de V
 ### <a name="assembly-manifest-attributes"></a>Atributos de manifiesto del ensamblado  
  Puede usar los atributos de manifiesto del ensamblado para proporcionar información en el manifiesto del ensamblado (título, descripción, alias predeterminado y configuración). En la tabla siguiente se muestran los atributos de manifiesto del ensamblado definidos en el espacio de nombres <xref:System.Reflection?displayProperty=nameWithType>.  
   
-|Atributo|Propósito|  
+|Atributo|Finalidad|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyTitleAttribute>|Define un atributo personalizado que especifica un título de ensamblado para un manifiesto del ensamblado.|  
 |<xref:System.Reflection.AssemblyDescriptionAttribute>|Define un atributo personalizado que especifica una descripción de ensamblado para un manifiesto del ensamblado.|  
@@ -225,7 +225,7 @@ End Class
 ## <a name="VB"></a> Atributos de Visual Basic  
  En la tabla siguiente se enumera los atributos que son específicos de Visual Basic.  
   
-|Atributo|Propósito|  
+|Atributo|Finalidad|  
 |---------------|-------------|  
 |<xref:Microsoft.VisualBasic.ComClassAttribute>|Indica al compilador que la clase debe exponerse como un objeto COM.|  
 |<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Permite a los miembros de módulo tener acceso utilizando únicamente la cualificación requerida para el módulo.|  
@@ -255,6 +255,7 @@ End Structure
  Use `VBFixedArrayAttribute` para declarar matrices de tamaño fijo. Como cadenas en Visual Basic, las matrices son de longitud variable de forma predeterminada. Este atributo es útil cuando se serializa o escribir datos en archivos.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Guía de programación en Visual Basic](../../../../visual-basic/programming-guide/index.md)

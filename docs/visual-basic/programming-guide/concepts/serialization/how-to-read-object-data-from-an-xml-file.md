@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Leer datos de objetos de un archivo XML (Visual Basic)
+title: Filtrar Leer datos de objetos de un archivo XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: cd546e167afe45e2d324a784679f5a05cc1473c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6233fc7ce74cbd39237bab07cfd2ed22b9c2240
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521249"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834899"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Procedimiento Leer datos de objetos de un archivo XML (Visual Basic)
+# <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Filtrar Leer datos de objetos de un archivo XML (Visual Basic)
 En este ejemplo se leen los datos de objetos que se han escrito anteriormente en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -30,7 +30,7 @@ End Sub
 ```  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Reemplace el nombre de archivo "c:\temp\SerializationOverview.xml" por el nombre del archivo que contiene los datos serializados. Para obtener más información sobre la serialización de datos, vea [Cómo: Escribir datos de objetos en un archivo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
+ Reemplace el nombre de archivo "c:\temp\SerializationOverview.xml" por el nombre del archivo que contiene los datos serializados. Para más información sobre cómo serializar los datos, vea [Procedimiento Escribir datos de objetos en un archivo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md).  
   
  La clase debe tener un constructor público sin parámetros.  
   
@@ -49,6 +49,7 @@ End Sub
  Compruebe siempre las entradas y nunca deserialice datos de un origen que no sea de confianza. El objeto que se ha vuelto a crear se ejecuta en un equipo local con los permisos del código que lo ha deserializado. Compruebe todas las entradas antes de utilizar los datos en la aplicación.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.IO.StreamWriter>
 - [Cómo: Escribir datos de objetos en un archivo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
 - [Serialización (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

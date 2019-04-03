@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pru
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e3edec65fd10b0a7c05d1865703f2e0a591d8b03
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827557"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463714"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Prueba de aplicaciones ASP.NET Core MVC
 
@@ -66,7 +66,7 @@ Las pruebas de integración se escriben desde la perspectiva del desarrollador, 
 
 > "En muchas ocasiones, el desarrollo de un sistema se asemeja a la construcción de una casa. Aunque esta analogía no es del todo correcta, podemos ampliarla para explicar la diferencia entre las pruebas unitarias y las funcionales. Las pruebas unitarias son similares a un inspector municipal que visita la obra de construcción de una casa. Se centra en los distintos sistemas internos de la casa, los cimientos, los muros, la instalación eléctrica, la fontanería y así sucesivamente. Se asegura (prueba) de que las partes de la casa funcionarán correctamente y de manera segura, es decir, cumplen el código de construcción. En este escenario, las pruebas funcionales son análogas al propietario que visita esta misma obra. Da por supuesto que los sistemas internos se comportarán de forma adecuada, que el inspector municipal está realizando su trabajo. El propietario se centra en cómo será vivir en esta casa. Le preocupa el aspecto de la casa, si las distintas habitaciones tienen un tamaño cómodo, si la casa se ajusta a las necesidades de la familia, si las ventanas están en una zona adecuada para captar el sol por la mañana. El propietario está realizando pruebas funcionales de la casa. Tiene la perspectiva del usuario. El inspector municipal está realizando pruebas unitarias en la casa. Tiene la perspectiva del constructor".
 
-Origen: [Unit Testing versus Functional Tests](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html) (Diferencias entre pruebas unitarias y pruebas funcionales)
+Fuente: [Unit Testing versus Functional Tests](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html) (Diferencias entre pruebas unitarias y pruebas funcionales)
 
 Me gusta decir: "Como desarrolladores, fallamos de dos maneras: creamos algo de forma incorrecta o creamos algo incorrecto". Las pruebas unitarias aseguran que se cree algo de forma correcta y las pruebas funcionales que se cree algo correcto.
 
@@ -197,7 +197,7 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 }
 ```
 
-Con frecuencia, le interesará configurar opciones adicionales del sitio antes de ejecutar cada prueba, como configurar la aplicación para que use un almacén de datos en memoria y, después, propagar datos de prueba en la aplicación. Para ello, debe crear una subclase de WebApplicationFactory<TEntry> propia y reemplazar su método ConfigureWebHost. El ejemplo siguiente es del proyecto eShopOnWeb FunctionalTests y se usa como parte de las pruebas en la aplicación web principal.
+Con frecuencia, le interesará configurar opciones adicionales del sitio antes de ejecutar cada prueba, como configurar la aplicación para que use un almacén de datos en memoria y, después, propagar datos de prueba en la aplicación. Para ello, debe crear una subclase de WebApplicationFactory\<TEntry> propia y reemplazar su método ConfigureWebHost. El ejemplo siguiente es del proyecto eShopOnWeb FunctionalTests y se usa como parte de las pruebas en la aplicación web principal.
 
 ```cs
 using Microsoft.AspNetCore.Hosting;

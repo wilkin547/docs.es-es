@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Acceso a elementos descendientes de XML (Visual Basic)
+title: Filtrar Acceso a elementos descendientes de XML (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML descendent axis property [Visual Basic]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - descendent axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: aabfa258-4112-4e7e-bab9-403f96072ef7
-ms.openlocfilehash: 1edbbc052bbf319d91f1f944451312e7d67594ca
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bfbf849bd296f639f03580346e4a9c52ce000abd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973865"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832221"
 ---
-# <a name="how-to-access-xml-descendant-elements-visual-basic"></a>Procedimiento Acceso a elementos descendientes de XML (Visual Basic)
+# <a name="how-to-access-xml-descendant-elements-visual-basic"></a>Filtrar Acceso a elementos descendientes de XML (Visual Basic)
 En este ejemplo se muestra cómo usar una propiedad de eje descendiente para tener acceso a todos los elementos XML que tiene un nombre especificado y que se incluyen en un elemento XML. En concreto, usa el `Value` propiedad para obtener el valor del primer elemento de la colección que la `name` devuelve de la propiedad de eje descendiente. El `name` propiedad de eje descendiente Obtiene todos los elementos llamados `name` que están contenidas en el `contacts` objeto. En este ejemplo también usa el `phone` propiedad de eje descendiente para tener acceso a todos los descendientes denominados `phone` que están contenidas en el `contacts` objeto.  
   
 ## <a name="example"></a>Ejemplo  
@@ -26,6 +26,7 @@ En este ejemplo se muestra cómo usar una propiedad de eje descendiente para ten
 -   Una referencia al espacio de nombres <xref:System.Xml.Linq>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>
 - [Propiedad del eje descendiente XML](../../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)
 - [Propiedad de valor XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

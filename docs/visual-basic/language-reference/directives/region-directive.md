@@ -10,12 +10,12 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: d0abbdb9cb96ad9977a9af542f90eaad8a7e160e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: eaaf0f8279ec905767be3f364a88357f0d393bba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969718"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818883"
 ---
 # <a name="region-directive"></a>#Region (Directiva)
 Contrae y oculta secciones de código en archivos de Visual Basic.  
@@ -29,7 +29,7 @@ Contrae y oculta secciones de código en archivos de Visual Basic.
   
 ## <a name="parts"></a>Elementos  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |---|---|  
 |`identifier_string`|Obligatorio. Cadena que actúa como título de una región cuando esta se contrae. Las regiones están contraídas de forma predeterminada.|  
 |`#End Region`|Finaliza el bloque `#Region`.|  
@@ -43,6 +43,7 @@ Contrae y oculta secciones de código en archivos de Visual Basic.
  [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [#If...Then...#Else (directivas)](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [Esquematización](/visualstudio/ide/outlining)
 - [Cómo: Contraer y ocultar secciones de código](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)

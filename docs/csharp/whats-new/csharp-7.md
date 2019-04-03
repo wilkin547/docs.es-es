@@ -1,24 +1,24 @@
 ---
 title: Novedades de C# 7.0 | Guía de C#
 description: Obtenga información general de las nuevas características de la versión 7.0 del lenguaje C#.
-ms.date: 12/21/2016
+ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0646eaa999579e5347007dd71defcc643c19c7f9
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 81d06d2e2079e04948ad5e93eefadb1bc11d855a
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665087"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654190"
 ---
 # <a name="whats-new-in-c-70"></a>Novedades de C# 7.0
 
 C# 7.0 incorpora varias características nuevas al lenguaje C#:
 * [Variables de `out`](#out-variables)
-    - Puede declarar valores `out` que se inserten como argumentos en el método en que se usen.
+    - Puede declarar valores `out` insertados como argumentos en el método cuando se usen.
 * [Tuplas](#tuples)
     - Puede crear tipos ligeros sin nombre que contengan varios campos públicos. Los compiladores y las herramientas IDE comprenden la semántica de estos tipos.
 * [Descartes](#discards)
-    - Los descartes son variables temporales y de solo escritura que se usan en argumentos cuando el valor asignado es indiferente. Son especialmente útiles al deconstruir tuplas y tipos definidos por el usuario, así como al realizar llamadas a métodos mediante parámetros de `out`.
+    - Los descartes son variables temporales y de solo escritura que se usan en argumentos cuando el valor asignado es indiferente. Son especialmente útiles al deconstruir tuplas y tipos definidos por el usuario, así como al realizar llamadas a métodos con parámetros `out`.
 * [Coincidencia de patrones](#pattern-matching)
     - Puede crear la lógica de bifurcación en función de tipos y valores arbitrarios de los miembros de esos tipos.
 * [Devoluciones y variables locales `ref`](#ref-locals-and-returns)
@@ -34,49 +34,24 @@ C# 7.0 incorpora varias características nuevas al lenguaje C#:
 * [Mejoras en la sintaxis de literales numéricos](#numeric-literal-syntax-improvements)
     - Nuevos tokens mejoran la legibilidad de las constantes numéricas.
 
-En el resto de este tema se tratan cada una de las características. Para cada característica, conocerá el razonamiento subyacente. Aprenderá la sintaxis. Verá algunos escenarios de ejemplo en que, al usar la nueva característica, será más productivo como desarrollador. 
+En el resto de este artículo se proporciona información general sobre cada característica. Para cada característica, conocerá el razonamiento subyacente. Aprenderá la sintaxis. En nuestra [exploración interactiva](../tutorials/exploration/csharp-7.yml) de estas características puede obtener más información al respecto.
 
 ## <a name="out-variables"></a>Variables `out`
 
-En esta versión se ha mejorado la sintaxis existente que admite parámetros `out`.  
+En esta versión se ha mejorado la sintaxis existente que admite parámetros `out`. Ahora puede declarar variables `out` en la lista de argumentos de una llamada a método, en lugar de escribir una instrucción de declaración distinta:
 
-Anteriormente, tendría que separar la declaración de la variable out y su inicialización en dos instrucciones diferentes:
-
-[!code-csharp[OutVariableOldStyle](../../../samples/snippets/csharp/new-in-7/program.cs#03_OutVariableOldStyle "classic out variable declaration")]
-
-Ahora puede declarar variables `out` en la lista de argumentos de una llamada a método, en lugar de escribir una instrucción de declaración distinta:
-
-[!code-csharp[OutVariableDeclarations](../../../samples/snippets/csharp/new-in-7/program.cs#01_OutVariableDeclarations "Out variable declarations")]
+[!code-csharp[OutVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVariableDeclarations "Out variable declarations")]
 
 Para mayor claridad, puede que prefiera especificar el tipo de la variable `out`, tal y como se muestra anteriormente. Pero el lenguaje admite el uso de una variable local con tipo implícito:
 
-[!code-csharp[OutVarVariableDeclarations](../../../samples/snippets/csharp/new-in-7/program.cs#02_OutVarVariableDeclarations "Implicitly typed Out variable")]
+[!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
 * El código es más fácil de leer. 
     - Declare la variable out donde la use, no en otra línea anterior.
 * No es preciso asignar ningún valor inicial.
-    - Al declarar la variable `out` donde se usa en una llamada a método, no podrá usarla accidentalmente antes de que se asigne.
-
-El uso más común de esta característica será el patrón `Try`. En este patrón, un método devuelve un `bool` que indica éxito o error y una variable `out` que proporciona el resultado si el método tiene éxito.
-
-Cuando se usa la declaración de variable `out`, la variable declarada "se pierde" en el ámbito externo de la instrucción if. Esto permite usar la variable después:
-
-```csharp
-if (!int.TryParse(input, out int result))
-{    
-    return null;
-}
-
-return result;
-```
+    - Al declarar la variable `out` cuando se usa en una llamada de método, no podrá usarla accidentalmente antes de que se asigne.
 
 ## <a name="tuples"></a>Tuplas
-
-> [!NOTE]
-> Las nuevas características de tupla requieren los tipos <xref:System.ValueTuple>.
-> Debe agregar el paquete NuGet [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/) para usarlo en plataformas que no incluyen los tipos.
->
-> Esto es similar a otras características del lenguaje que se basan en tipos que se han proporcionado en el marco. El ejemplo incluye `async` y `await`, que se basan en la interfaz `INotifyCompletion`. LINQ se basa en `IEnumerable<T>`. En cambio, el mecanismo de entrega está cambiando a medida que .NET está pasando a ser más independiente de las plataformas. Puede que .NET Framework no proporcione siempre la misma cadencia que el compilador de lenguaje. Cuando las nuevas características del lenguaje se basan en tipos nuevos, esos tipos estarán disponibles como paquetes NuGet cuando se proporcionen las características del lenguaje. Como estos tipos nuevos se agregan a la API de .NET Standard y se proporcionan como parte del marco, el requisito del paquete NuGet se quitará.
 
 C# ofrece una sintaxis enriquecida para clases y estructuras que se usa para explicar la intención del diseño. Pero a veces esa sintaxis enriquecida requiere trabajo adicional con apenas beneficio. Puede que a menudo escriba métodos que requieren una estructura simple que contenga más de un elemento de datos. Para admitir estos escenarios, se han agregado *tuplas* a C#. Las tuplas son estructuras de datos ligeros que contienen varios campos para representar los miembros de datos.
 Los campos no se validan y no se pueden definir métodos propios
@@ -85,60 +60,29 @@ Los campos no se validan y no se pueden definir métodos propios
 > Las tuplas estaban disponibles antes de C# 7.0, pero no eran eficientes ni compatibles con ningún lenguaje.
 > Esto significaba que solo se podía hacer referencia a los elementos tupla como `Item1`, `Item2`, por ejemplo. C# 7.0 presenta la compatibilidad de lenguaje con las tuplas, que permite usar nombres semánticos en los campos de una tupla mediante tipos de tupla nuevos y más eficientes.
 
-Puede crear una tupla asignando un valor a cada miembro:
+Puede crear una tupla asignando un valor a cada miembro, y, opcionalmente, proporcionando nombres semánticos a cada uno de los miembros de la tupla:
 
-[!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
+[!code-csharp[NamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#NamedTuple "Named tuple")]
 
-Esta asignación crea una tupla con los miembros `Item1` y `Item2`. Se puede usar del mismo modo que <xref:System.Tuple>. Además, puede cambiar la sintaxis para crear una tupla que proporciona nombres de semántica a cada uno de sus miembros:
-
-[!code-csharp[NamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#05_NamedTuple "Named tuple")]
-
-La tupla `namedLetters` contiene campos denominados `Alpha` y `Beta`. Esos nombres solo existen en el tiempo de compilación y no se conservan, por ejemplo, al inspeccionar la tupla mediante una reflexión en tiempo de ejecución.
+La tupla `namedLetters` contiene campos denominados `Alpha` y `Beta`. Esos nombres solo existen en tiempo de compilación y no se conservan, por ejemplo, al inspeccionar la tupla mediante la reflexión en tiempo de ejecución.
 
 En la asignación de una tupla, también pueden especificarse los nombres de los campos a la derecha de la asignación:
 
-[!code-csharp[ImplicitNamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#06_ImplicitNamedTuple "Implicitly named tuple")]
+[!code-csharp[ImplicitNamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#ImplicitNamedTuple "Implicitly named tuple")]
 
-Puede especificar nombres para los campos a la izquierda y la derecha de la asignación:
+Puede que a veces quiera desempaquetar los miembros de una tupla devueltos de un método.  Para ello, declare distintas variables para cada uno de los valores de la tupla. Este desempaquetado se denomina *deconstrucción* de la tupla:
 
-[!code-csharp[NamedTupleConflict](../../../samples/snippets/csharp/new-in-7/program.cs#07_NamedTupleConflict "Named tuple conflict")]
+[!code-csharp[CallingWithDeconstructor](~/samples/snippets/csharp/new-in-7/program.cs#CallingWithDeconstructor "Deconstructing a tuple")]
 
-La línea anterior genera una advertencia, `CS8123`, que indica que los nombres a la derecha de la asignación, `Alpha` y `Beta`, se omiten porque entran en conflicto con los nombres a la izquierda, `First` y `Second`.
+También puede proporcionar una deconstrucción similar para cualquier tipo de .NET. Un método `Deconstruct` se escribe como un miembro de la clase. Ese método `Deconstruct` proporciona un conjunto de argumentos `out` para cada una de las propiedades que quiere extraer. Tenga en cuenta que esta clase `Point` proporciona un método deconstructor que extrae las coordenadas `X` e `Y`:
 
-Los ejemplos anteriores muestran la sintaxis básica para declarar tuplas. Las tuplas resultan más útiles como tipos de valor devuelto para los métodos `private` y `internal`. Las tuplas proporcionan una sintaxis sencilla para que esos métodos devuelvan varios valores discretos: Se ahorra el trabajo de crear un `class` o un `struct` que defina el tipo devuelto. No hay necesidad de crear otra tupla.
-
-La creación de tuplas resulta más eficiente y productiva.
-Se trata de una sintaxis ligera y más sencilla para definir una estructura de datos que incluya más de un valor. El siguiente método de ejemplo devuelve los valores mínimos y máximos de una secuencia de enteros:
-
-[!code-csharp[TupleReturningMethod](../../../samples/snippets/csharp/new-in-7/program.cs#08_TupleReturningMethod "Tuple returning method")]
-
-El uso de tuplas de esta manera supone varias ventajas:
-
-* Se ahorra el trabajo de crear un `class` o un `struct` que defina el tipo devuelto. 
-* No tiene que crear otro tipo.
-* Las mejoras del lenguaje hacen innecesario llamar al método <xref:System.Tuple.Create``1(``0)>.
-
-La declaración del método proporciona los nombres de los campos de la tupla que se devuelve. Cuando se llama al método, el valor devuelto es una tupla cuyos campos son `Max` y `Min`:
-
-[!code-csharp[CallingTupleMethod](../../../samples/snippets/csharp/new-in-7/program.cs#09_CallingTupleMethod "Calling a tuple returning method")]
-
-Puede que a veces quiera desempaquetar los miembros de una tupla devueltos de un método.  Para ello, declare distintas variables para cada uno de los valores de la tupla. Esto se denomina *deconstruir* la tupla:
-
-[!code-csharp[CallingWithDeconstructor](../../../samples/snippets/csharp/new-in-7/program.cs#10_CallingWithDeconstructor "Deconstructing a tuple")]
-
-También puede proporcionar una deconstrucción similar para cualquier tipo de .NET. Para ello, escriba un método `Deconstruct` como miembro de la clase. Ese método `Deconstruct` proporciona un conjunto de argumentos `out` para cada una de las propiedades que quiere extraer. Tenga en cuenta que esta clase `Point` proporciona un método deconstructor que extrae las coordenadas `X` e `Y`:
-
-[!code-csharp[PointWithDeconstruction](../../../samples/snippets/csharp/new-in-7/point.cs#11_PointWithDeconstruction "Point with deconstruction method")]
+[!code-csharp[PointWithDeconstruction](~/samples/snippets/csharp/new-in-7/point.cs#PointWithDeconstruction "Point with deconstruction method")]
  
 Puede extraer los campos individuales asignando un `Point` a una tupla:
 
-[!code-csharp[DeconstructPoint](../../../samples/snippets/csharp/new-in-7/program.cs#12_DeconstructPoint "Deconstruct a point")]
+[!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
 
-No está obligado por los nombres definidos en el método `Deconstruct`. Puede cambiar el nombre de las variables de extracción como parte de la asignación:  
-
-[!code-csharp[DeconstructNames](../../../samples/snippets/csharp/new-in-7/program.cs#13_DeconstructNames "Deconstruct with new names")]
-
-Puede aprender más sobre tuplas en el [tema sobre tuplas](../tuples.md).
+Puede obtener más información sobre las tuplas en el [artículo sobre tuplas](../tuples.md).
 
 ## <a name="discards"></a>Descartes
 
@@ -147,16 +91,13 @@ Habitualmente, al deconstruir una tupla o realizar una llamada a un método medi
 Los descartes se admiten en los escenarios siguientes:
 
 * Al deconstruir tuplas o tipos definidos por el usuario.
-
 * Al realizar llamadas a métodos mediante parámetros [out](../language-reference/keywords/out-parameter-modifier.md).
-
 * En una operación de coincidencia de patrones con las instrucciones [is](../language-reference/keywords/is.md) y [switch](../language-reference/keywords/switch.md).
-
 * Como un identificador independiente cuando quiera identificar explícitamente el valor de una asignación como descarte.
 
 En el ejemplo siguiente se define un método `QueryCityDataForYears` que devuelve una tupla de tipo 6 con datos de una ciudad correspondientes a dos años diferentes. La llamada de método del ejemplo se refiere únicamente a los dos valores de rellenado que devuelve el método, por lo que trata los valores restantes de la tupla como descartes al deconstruirla.
 
-[!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
+[!code-csharp[Tuple-discard](~/samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 Para obtener más información, vea [Descartes](../discards.md).
 
@@ -166,114 +107,81 @@ La *coincidencia de patrones* es una característica que permite implementar la 
 
 La coincidencia de patrones admite expresiones `is` y `switch`. Cada una de ellas habilita la inspección de un objeto y sus propiedades para determinar si el objeto cumple el patrón buscado. Use la palabra clave `when` para especificar reglas adicionales para el patrón.
 
-### <a name="is-expression"></a>Expresión `is`
-
-La expresión de patrón `is` extiende el conocido [operador `is`](../language-reference/keywords/is.md#pattern-matching-with-is) para consultar un objeto más allá de su tipo.
-
-Comencemos por un escenario sencillo. Agregaremos funciones a este escenario que muestren cómo las expresiones de coincidencia de patrones crean algoritmos que funcionan fácilmente con tipos no relacionados. Empezaremos por un método que calcule la suma de varias tiradas de dados:
-
-[!code-csharp[SumDieRolls](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#14_SumDieRolls "Sum die rolls")]
-
-Es posible que descubra rápidamente que tiene que encontrar la suma de tiradas de dados en las que algunas de las tiradas se realizan con más de un dado. Puede que parte de la secuencia de entrada tenga varios resultados en lugar de un solo número:
-
-[!code-csharp[SumDieRollsWithGroups](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#15_SumDieRollsWithGroups "Sum die rolls with groups")]
-
-La expresión de patrón `is` funciona bastante bien en este escenario. Como parte de la comprobación del tipo, escriba una variable de inicialización. Esta crea otra variable del tipo de tiempo de ejecución validado.
-
-Mientras siga extendiendo estos escenarios, puede que vea que crea más instrucciones `if` y `else if`. Cuando esto resulte poco manejable, probablemente prefiera cambiar a expresiones de patrón `switch`.
-
-### <a name="switch-statement-updates"></a>Actualizaciones de instrucciones `switch`
-
-La *expresión de coincidencia* tiene una sintaxis conocida, que se basa en la instrucción `switch` que ya forma parte del lenguaje C#. Vamos a traducir el código existente para usar una expresión de coincidencia antes de agregar nuevos casos: 
-
-[!code-csharp[SumUsingSwitch](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#16_SumUsingSwitch "Sum using switch")]
-
-Las expresiones de coincidencia tienen una sintaxis ligeramente distinta que las expresiones `is`, donde el tipo y la variable se declaran al principio de la expresión `case`.
-
-Las expresiones de coincidencia también admiten constantes. Esto puede ahorrar tiempo al no tener en cuenta casos sencillos:
-
-[!code-csharp[SwitchWithConstants](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#17_SwitchWithConstants "Switch with constants")]
-
-El código anterior agrega casos de `0` como un caso especial de `int` y `null` como un caso especial cuando no hay ninguna entrada. Muestra una nueva característica importante en expresiones de patrón de modificador: el orden de las expresiones `case` ahora cuenta. El caso `0` debe aparecer antes del caso general `int`. De lo contrario, el primer patrón que coincida sería el caso `int`, aunque el valor sea `0`. Si accidentalmente ordena expresiones de coincidencia como estas una vez controlado el último caso, el compilador las marcará y generará un error.
-
-Este mismo comportamiento habilita el caso especial en una secuencia de entrada vacía.
-Puede ver que el caso de un elemento `IEnumerable` que tiene elementos debe aparecer antes que el caso general `IEnumerable`.
-
-En esta versión se ha agregado también un caso `default`. El caso `default` siempre se evalúa en último lugar, independientemente del orden en que aparezca en el origen. Por ese motivo, la convención es poner el caso `default` al final.
-
-Por último, agregaremos un último `case` para un nuevo estilo de dado. Algunos juegos usan dados de percentil para representar intervalos mayores de números. 
-
-> [!NOTE]
-> Dos dados de percentil de 10 caras pueden representar todos los números del 0 al 99. Un dado tiene caras etiquetadas con `00`, `10`, `20`, ...`90`. El otro tiene caras etiquetadas con `0`, `1`, `2`, ...`9`. Sume los valores de los dos dados y podrá obtener todos los números del 0 al 99.
-
-Para agregar este tipo de dado a la colección, defina primero un tipo que represente el dado de percentil. La propiedad `TensDigit` almacena hasta `90` valores `0`, `10` y `20`:
-
-[!code-csharp[18_PercentileDice](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDice "Percentile Die type")]
-
-Después agregue una expresión de coincidencia `case` para el nuevo tipo:
-
-[!code-csharp[SwitchWithNewTypes](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#19_SwitchWithNewTypes "Include Percentile Die type")]
-
-La nueva sintaxis de expresiones de coincidencia de patrones facilita la creación de algoritmos de distribución basados en un tipo del objeto o en otras propiedades, mediante una sintaxis clara y concisa. Las expresiones de coincidencia de patrones habilitan estas construcciones en tipos de datos que no se relacionan por herencia.
-
-Puede obtener más información sobre la coincidencia de patrones en el tema dedicado a [coincidencia de patrones en C#](../pattern-matching.md).
-
-## <a name="ref-locals-and-returns"></a>Devoluciones y variables locales ref
-
-Esta característica habilita algoritmos que usan y devuelven referencias a variables definidas en otro lugar. Por ejemplo, trabajar con matrices de gran tamaño y buscar una sola ubicación con determinadas características. Un método devolvería los dos índices para una sola ubicación en la matriz:
-
-[!code-csharp[FindReturningIndices](../../../samples/snippets/csharp/new-in-7/MatrixSearch.cs#20_FindReturningIndices "Find returning indices")]
-
-Existen varios problemas con este código. En primer lugar, se trata de un método público que devuelve una tupla. El lenguaje admite esto, pero se recomienda usar tipos definidos por el usuario (clases o structs) para las API públicas.
-
-En segundo lugar, este método devuelve los índices al elemento de la matriz.
-Esto lleva a los autores de llamadas a escribir código que use esos índices para desreferenciar la matriz y modificar un solo elemento:
-
-[!code-csharp[UpdateItemFromIndices](../../../samples/snippets/csharp/new-in-7/program.cs#21_UpdateItemFromIndices "Update Item From Indices")]
-
-Es preferible escribir un método que devuelva una *referencia* al elemento de la matriz que quiere cambiar. Esto solo podría llevarse a cabo si usa un código no seguro y devuelve un puntero a un `int` en versiones anteriores.
-
-Repasaremos una serie de cambios que muestran la característica local ref y cómo crear un método que devuelva una referencia al almacenamiento interno.
-Por el camino, conocerá las reglas de devolución de ref y la característica de la variable local ref que impide que accidentalmente se haga un uso incorrecto de ella.
-
-Empiece por modificar la declaración de método `Find` para que devuelva un `ref int` en lugar de una tupla. Luego modifique la instrucción return para que devuelva el valor almacenado en la matriz y no en los dos índices:
+La expresión de patrón `is` extiende el conocido [operador `is`](../language-reference/keywords/is.md#pattern-matching-with-is) para consultar el tipo de un objeto y asignar el resultado en una instrucción. En el código siguiente se comprueba si una variable es de tipo `int` y, si lo es, se agrega a la suma actual:
 
 ```csharp
-// Note that this won't compile. 
-// Method declaration indicates ref return,
-// but return statement specifies a value return.
-public static ref int Find2(int[,] matrix, Func<int, bool> predicate)
+if (input is int count)
+    sum += count;
+```
+
+En el pequeño ejemplo anterior se muestran las mejoras en la expresión `is`. Puede probar con tipos de valor y tipos de referencia, y asignar el resultado correcto a una nueva variable del tipo correcto.
+
+La expresión de coincidencia switch tiene una sintaxis conocida, basada en la instrucción `switch` que ya forma parte del lenguaje C#. La instrucción switch actualizada tiene varias construcciones nuevas:
+
+- El tipo de control de una expresión `switch` ya no se limita a tipos enteros, tipos `Enum`, `string` o a un tipo que acepta valores NULL correspondiente a uno de esos tipos. Se puede usar cualquier tipo.
+- Puede probar el tipo de la expresión `switch` en todas las etiquetas `case`. Como sucede con la expresión `is`, puede asignar una variable nueva a ese tipo.
+- Puede agregar una cláusula `when` para probar más condiciones en esa variable.
+- Ahora el orden de las etiquetas `case` es importante. Se ejecuta la primera rama de la que se quiere obtener la coincidencia, mientras que el resto se omite.
+
+En el código siguiente se muestran estas características:
+
+```csharp
+public static int SumPositiveNumbers(IEnumerable<object> sequence)
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
-        for (int j = 0; j < matrix.GetLength(1); j++)
-            if (predicate(matrix[i, j]))
-                return matrix[i, j];
-    throw new InvalidOperationException("Not found");
+    int sum = 0;
+    foreach (var i in sequence)
+    {
+        switch (i)
+        {
+            case 0: 
+                break;
+            case IEnumerable<int> childSequence:
+            {
+                foreach(var item in childSequence)
+                    sum += (item > 0) ? item : 0;
+                break;
+            }
+            case int n when n > 0: 
+                sum += n; 
+                break;
+            null:
+                throw new NullReferenceException("Null found in sequence");
+            default:
+                throw new InvalidOperationException("Unrecognized type");
+        }
+    }
+    return sum;
 }
 ```
 
-Cuando se declara que un método devuelva una variable `ref`, debe agregarse también la palabra clave `ref` a cada instrucción return. Esto indica una devolución por referencia y ayuda a que los desarrolladores que lean el código después recuerden que el método devuelve por referencia:
+- `case 0:` es el patrón de constante conocido. 
+- `case IEnumerable<int> childSequence:` es un patrón de tipo.
+- `case int n when n > 0:` es un patrón de tipo con una condición `when` adicional.
+- `case null:` es el patrón NULL.
+- `default:` es el caso predeterminado conocido.
 
-[!code-csharp[FindReturningRef](../../../samples/snippets/csharp/new-in-7/MatrixSearch.cs#22_FindReturningRef "Find returning by reference")]
+Puede obtener más información sobre la coincidencia de patrones en [Coincidencia de patrones en C#](../pattern-matching.md).
 
-Ahora que el método devuelve una referencia al valor entero de la matriz, hay que modificar dónde se llama.  La declaración `var` indica que `valItem` es ahora un `int` en lugar de una tupla:
+## <a name="ref-locals-and-returns"></a>Devoluciones y variables locales ref
 
-[!code-csharp[AssignRefReturnToValue](../../../samples/snippets/csharp/new-in-7/program.cs#23_AssignRefReturnToValue "Assign ref return to value")]
+Esta característica habilita algoritmos que usan y devuelven referencias a variables definidas en otro lugar. Por ejemplo, trabajar con matrices de gran tamaño y buscar una sola ubicación con determinadas características. El método siguiente devuelve una **referencia** a ese almacenamiento en la matriz:
 
-La segunda instrucción `WriteLine` del ejemplo anterior imprime el valor `42`, no `24`. La variable `valItem` es un `int`, no un `ref int`. La palabra clave `var` permite que el compilador especifique el tipo, pero no agregará implícitamente el modificador `ref`. En su lugar, el valor al que hace referencia el `ref return` se *copia* en la variable a la izquierda de la asignación. La variable no es una variable local `ref`.
+[!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
-Para obtener el resultado que quiere, debe agregar el modificador `ref` a la declaración de variable local para convertir la variable en una referencia cuando el valor devuelto sea una referencia:
+Puede declarar el valor devuelto como un elemento `ref` y modificar ese valor en la matriz, como se muestra en el código siguiente:
 
-[!code-csharp[AssignRefReturn](../../../samples/snippets/csharp/new-in-7/program.cs#24_AssignRefReturn "Assign ref return")]
+[!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/program.cs#AssignRefReturn "Assign ref return")]
 
-Ahora, la segunda instrucción `WriteLine` del ejemplo anterior imprimirá el valor `24`, que indica que se ha modificado el almacenamiento en la matriz. La variable local se ha declarado con el modificador `ref` y tomará un valor devuelto `ref`. Debe inicializar una variable `ref` cuando se declara, no puede separar la declaración de la inicialización.
+El lenguaje C# tiene varias reglas que impiden el uso incorrecto de las variables locales y devoluciones de `ref`:
 
-El lenguaje C# tiene otras tres reglas que protegen del uso incorrecto de las variables locales y devoluciones de `ref`:
-
-* No se puede asignar un valor devuelto del método estándar para una variable local `ref`.
+* Tendrá que agregar la palabra clave `ref` a la firma del método y a todas las instrucciones `return` de un método.
+    - Esto evidencia que el método se devuelve por referencia a lo largo del método.
+* Se puede asignar `ref return` a una variable de valor, o bien a una variable `ref`.
+    - El autor de la llamada controla si se copia el valor devuelto o no. La omisión del modificador `ref` al asignar el valor devuelto indica que el autor de la llamada quiere una copia del valor, no una referencia al almacenamiento.
+* No se puede asignar un valor devuelto de método estándar a una variable local `ref`.
     - No permite instrucciones como `ref int i = sequence.Count();`
-* No puede devolver un `ref` a una variable cuya duración se extiende más allá de la ejecución del método.
-    - Esto significa que no puede devolver una referencia a una variable local o a una variable con un ámbito similar.
+* No se puede devolver un elemento `ref` a una variable cuya duración se extiende más allá de la ejecución del método.
+    - Esto significa que no se puede devolver una referencia a una variable local o a una variable con un ámbito similar.
 * Las `ref` locales y las devoluciones no se pueden usar con métodos asíncronos.
     - El compilador no puede identificar si una variable a la que se hace referencia se ha establecido en su valor final en la devolución del método asíncrono.
 
@@ -285,37 +193,15 @@ Para más información, consulte el artículo sobre la [palabra clave ref](../la
 
 ## <a name="local-functions"></a>Funciones locales
 
-Muchos diseños de clases incluyen métodos que se llaman desde una sola ubicación. Estos métodos privados adicionales mantienen cada método pequeño y centrado. Pero pueden complicar la comprensión de una clase cuando se lee por primera vez. Estos métodos deben entenderse fuera del contexto de la ubicación de llamada única.
+Muchos diseños de clases incluyen métodos que se llaman desde una sola ubicación. Estos métodos privados adicionales mantienen cada método pequeño y centrado. Las *funciones locales* permiten declarar métodos en el contexto de otro método. Las funciones locales facilitan que los lectores de la clase vean que el método local solo se llama desde el contexto en el que se declara.
 
-En esos diseños, las *funciones locales* permiten declarar métodos en el contexto de otro método. Esto facilita que los lectores de la clase vean que el método local solo se llama desde el contexto en el que se declara.
+Hay dos casos de uso comunes para las funciones locales: métodos de iterador públicos y métodos asincrónicos públicos. Ambos tipos de métodos generan código que informa de errores más tarde de lo que los programadores podrían esperar. En los métodos de iterador, las excepciones solo se observan al llamar a código que enumera la secuencia devuelta. En los métodos asincrónicos, las excepciones solo se observan cuando se espera al elemento `Task` devuelto. En el ejemplo siguiente se muestra la separación de la validación de parámetros de la implementación de iteradores mediante una función local:
 
-Hay dos casos de uso muy común para funciones locales: métodos de iterador públicos y métodos asincrónicos públicos. Ambos tipos de métodos generan código que informa de errores más tarde de lo que los programadores podrían esperar. En el caso de los métodos de iterador, las excepciones solo se observan al llamar a código que enumera la secuencia devuelta. En el caso de los métodos asincrónicos, las excepciones solo se observan cuando se espera al `Task` devuelto.
-
-Empecemos por un método de iterador:
-
-[!code-csharp[IteratorMethod](../../../samples/snippets/csharp/new-in-7/Iterator.cs#25_IteratorMethod "Iterator method")]
-
-Examine el código siguiente que llama al método de iterador incorrectamente:
-
-[!code-csharp[CallIteratorMethod](../../../samples/snippets/csharp/new-in-7/program.cs#26_CallIteratorMethod "Call iterator method")]
-
-La excepción se inicia cuando se itera `resultSet`, no cuando se crea `resultSet`.
-En este ejemplo independiente, la mayoría de los desarrolladores diagnosticarían en seguida el problema. Pero, en bases de datos de mayor tamaño, el código que crea un iterador no suele estar tan cerca del código que enumerar el resultado. Puede refactorizar el código para que el método público valide todos los argumentos y un método privado genere la enumeración:
-
-[!code-csharp[IteratorMethodRefactored](../../../samples/snippets/csharp/new-in-7/Iterator.cs#27_IteratorMethodRefactored "Iterator method refactored")]
-
-Esta versión refactorizada iniciará excepciones inmediatamente porque el método público no es un método de iterador; solo el método privado usa la sintaxis `yield return`. Pero hay posibles problemas con esta refactorización. El método privado solo debe llamarse desde el método de interfaz público, ya que de lo contrario se omiten todas las validaciones de argumento.
-Los lectores de la clase deben detectar este hecho al leer toda la clase y buscar cualquier otra referencia al método `alphabetSubsetImplementation`.
-
-Puede dejar más clara la intención del diseño declarando la `alphabetSubsetImplementation` como función local dentro del método API público:
-
-[!code-csharp[22_IteratorMethodLocal](../../../samples/snippets/csharp/new-in-7/Iterator.cs#28_IteratorMethodLocal "Iterator method with local function")]
-
-La versión anterior deja claro que hace referencia al método local solo en el contexto del método externo. Las reglas para las funciones locales también garantizan que un desarrollador no pueda llamar accidentalmente a la función local desde otra ubicación de la clase y omitir la validación del argumento.
+[!code-csharp[22_IteratorMethodLocal](~/samples/snippets/csharp/new-in-7/Iterator.cs#IteratorMethodLocal "Iterator method with local function")]
 
 La misma técnica se puede emplear con métodos `async` para asegurarse de que las excepciones derivadas de la validación de argumentos se inician antes de comenzar el trabajo asincrónico:
 
-[!code-csharp[TaskExample](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#29_TaskExample "Task returning method with local function")]
+[!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
 > Algunos de los diseños que se admiten con funciones locales también se podrían realizar con *expresiones lambda*. Aquellos que estén interesados pueden [obtener más información sobre las diferencias](../local-functions-vs-lambdas.md)
@@ -324,7 +210,7 @@ La misma técnica se puede emplear con métodos `async` para asegurarse de que l
 
 En C# 6 se presentaron los [miembros con forma de expresión](csharp-6.md#expression-bodied-function-members) para funciones de miembros y propiedades de solo lectura. C# 7.0 amplía los miembros permitidos que pueden implementarse como expresiones. En C# 7.0, se pueden implementar *constructores*, *finalizadores* y descriptores de acceso `get` y `set` en *propiedades* e *indizadores*. En el código siguiente se muestran ejemplos de cada uno:
 
-[!code-csharp[ExpressionBodiedMembers](../../../samples/snippets/csharp/new-in-7/expressionmembers.cs#36_ExpressionBodiedEverything "new expression-bodied members")]
+[!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 
 > [!NOTE]
 > En este ejemplo no se requiere un finalizador, pero se muestra para demostrar la sintaxis. No debe implementar un finalizador en la clase salvo que sea necesario para liberar recursos no administrados. También debe plantearse el uso de la clase <xref:System.Runtime.InteropServices.SafeHandle> en lugar de administrar directamente los recursos no administrados.
@@ -335,64 +221,37 @@ Cambiar un método a un miembro con cuerpo de expresión es un [cambio compatibl
 
 ## <a name="throw-expressions"></a>Expresiones throw
 
-En C#, `throw` siempre ha sido una instrucción. Dado que `throw` es una instrucción, no una expresión, había construcciones de C# en las que no se podía usar. Incluyen expresiones condicionales, expresiones de fusión nulas y algunas expresiones lambda. La incorporación de miembros con forma de expresión agrega más ubicaciones donde las expresiones `throw` resultarían útiles. Para que pueda escribir cualquiera de estas construcciones, C# 7.0 presenta las *expresiones throw*.
+En C#, `throw` siempre ha sido una instrucción. Como `throw` es una instrucción, no una expresión, había construcciones de C# en las que no se podía usar. Incluyen expresiones condicionales, expresiones de fusión nulas y algunas expresiones lambda. La incorporación de miembros con forma de expresión agrega más ubicaciones donde las expresiones `throw` resultarían útiles. Para que pueda escribir cualquiera de estas construcciones, C# 7.0 presenta las *expresiones throw*. 
 
-La sintaxis es la misma que siempre ha usado con instrucciones `throw`. La única diferencia es que ahora puede colocarlas en nuevas ubicaciones, como en una expresión condicional:
-
-[!code-csharp[Throw_ExpressionExample](../../../samples/snippets/csharp/new-in-7/throwexpressions.cs#37_Throw_ExpressionExample "conditional throw expressions")]
-
-Esta característica permite usar expresiones throw en expresiones de inicialización:
-
-[!code-csharp[ThrowInInitialization](../../../samples/snippets/csharp/new-in-7/throwexpressions.cs#38_ThrowInInitialization "conditional throw expressions")]
-
-Anteriormente, esas inicializaciones tendrían que estar en un constructor, con las instrucciones throw en el cuerpo del constructor:
-
-
-[!code-csharp[ThrowInConstructor](../../../samples/snippets/csharp/new-in-7/throwexpressions.cs#39_ThrowInConstructor "throw statements")]
-
-> [!NOTE]
-> Dos de las construcciones anteriores iniciarán excepciones durante la construcción de un objeto. Suele ser difícil recuperarse de ellas.
-> Por ese motivo, no se recomienda usar diseños que inicien excepciones durante la construcción.
+Esta adición facilita la escritura de código más basado en expresiones. No se necesitan instrucciones adicionales para la comprobación de errores.
 
 ## <a name="generalized-async-return-types"></a>Tipos de valor devueltos de async generalizados
 
-La devolución de un objeto `Task` desde métodos asincrónicos puede presentar cuellos de botella de rendimiento en determinadas rutas de acceso. `Task` es un tipo de referencia, por lo que su uso implica la asignación de un objeto. En los casos en los que un método declarado con el modificador `async` devuelva un resultado en caché o se complete sincrónicamente, las asignaciones adicionales pueden suponer un costo considerable de tiempo en secciones críticas para el rendimiento del código. Esas asignaciones pueden resultar muy costosas si se producen en bucles ajustados.
+La devolución de un objeto `Task` desde métodos asincrónicos puede presentar cuellos de botella de rendimiento en determinadas rutas de acceso. `Task` es un tipo de referencia, por lo que su uso implica la asignación de un objeto. En los casos en los que un método declarado con el modificador `async` devuelva un resultado en caché o se complete sincrónicamente, las asignaciones adicionales pueden suponer un costo considerable de tiempo en secciones críticas para el rendimiento del código. Esas asignaciones pueden resultar costosas si se producen en bucles ajustados.
 
-La nueva característica de lenguaje significa que los métodos asincrónicos pueden devolver otros tipos además de `Task`, `Task<T>` y `void`. El tipo devuelto debe seguir cumpliendo con el patrón asincrónico, lo que significa que debe haber un método `GetAwaiter` accesible. Como ejemplo concreto, se ha agregado el tipo `ValueTask` a .NET Framework para sacar partido de esta nueva característica del lenguaje: 
+La nueva característica de lenguaje implica que los tipos de valor devuelto de métodos asincrónicos no están limitados a `Task`, `Task<T>` y `void`. El tipo devuelto debe seguir cumpliendo con el patrón asincrónico, lo que significa que debe haber un método `GetAwaiter` accesible. Como ejemplo concreto, se ha agregado el tipo `ValueTask` a .NET Framework para sacar partido de esta nueva característica del lenguaje: 
 
-[!code-csharp[UsingValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#30_UsingValueTask "Using ValueTask")]
+[!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
 > Debe agregar el paquete de NuGet [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) para poder usar el tipo <xref:System.Threading.Tasks.ValueTask%601>.
 
-Una optimización simple sería usar `ValueTask` en lugares donde antes se usaría `Task`. Pero si quiere realizar otras optimizaciones a mano, puede almacenar en caché los resultados del trabajo asincrónico y volver a usar el resultado en llamadas posteriores. La estructura `ValueTask` tiene un constructor con un parámetro `Task` para que se pueda diseñar un `ValueTask` a partir del valor devuelto de cualquier método asincrónico existente:
-
-[!code-csharp[AsyncOptimizedValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#31_AsyncOptimizedValueTask "Return async result or cached value")]
-
-Como con todas las recomendaciones de rendimiento, debe evaluar las dos versiones antes de realizar grandes cambios de escala en el código.
-
-Cuando el valor devuelto es el destino de una instrucción `await`, cambiar una API de <xref:System.Threading.Tasks.Task%601> a <xref:System.Threading.Tasks.ValueTask%601> es un [cambio compatible con el origen](version-update-considerations.md#source-compatible-changes). En general, cambiar a `ValueTask` no lo es.
+Esta mejora es especialmente útil para que los creadores de bibliotecas eviten la asignación de un elemento `Task` en código de rendimiento crítico.
 
 ## <a name="numeric-literal-syntax-improvements"></a>Mejoras en la sintaxis de literales numéricos
 
-La lectura incorrecta de constantes numéricas puede complicar la comprensión del código cuando se lee por primera vez. Esto suele ocurrir cuando estos números se usan como máscaras de bits u otros elementos simbólicos y no como valores numéricos. C# 7.0 incluye dos nuevas características que hacen que resulte más fácil escribir números de la manera más legible para el uso previsto: *literales binarios* y *separadores de dígitos*.
+La lectura incorrecta de constantes numéricas puede complicar la comprensión del código cuando se lee por primera vez. Las máscaras de bits u otros valores simbólicos son propensos a malentendidos. En C# 7.0 se incluyen dos nuevas características para escribir números de la manera más legible para el uso previsto: *literales binarios* y *separadores de dígitos*.
 
 En aquellos casos en que cree máscaras de bits, o siempre que una representación binaria de un número aumente la legibilidad del código, escriba el número en formato binario:
 
-[!code-csharp[BinaryConstants](../../../samples/snippets/csharp/new-in-7/Program.cs#32_BinaryConstants "Binary constants")]
+[!code-csharp[ThousandSeparators](~/samples/snippets/csharp/new-in-7/Program.cs#ThousandSeparators "Thousands separators")]
 
-El `0b` al principio de la constante indica que el número está escrito como número binario.
+El `0b` al principio de la constante indica que el número está escrito como número binario. Los números binarios pueden ser muy largos, por lo que a menudo resulta más fácil ver los patrones de bits si se introduce `_` como separador de dígitos, como se ha mostrado antes en la constante binaria. El separador de dígitos puede aparecer en cualquier parte de la constante. En números de base 10, es habitual usarlo como separador de miles:
 
-Los números binarios pueden ser muy largos, por lo que a menudo resulta más fácil ver los patrones de bits introduciendo el `_` como separador de dígitos:
+[!code-csharp[LargeIntegers](~/samples/snippets/csharp/new-in-7/Program.cs#LargeIntegers "Large integer")]
 
-[!code-csharp[ThousandSeparators](../../../samples/snippets/csharp/new-in-7/Program.cs#33_ThousandSeparators "Thousands separators")]
+El separador de dígitos también se puede usar con tipos `decimal`, `float` y `double`:
 
-El separador de dígitos puede aparecer en cualquier parte de la constante. En números de base 10, sería habitual usarlo como separador de miles:
-
-[!code-csharp[LargeIntegers](../../../samples/snippets/csharp/new-in-7/Program.cs#34_LargeIntegers "Large integer")]
-
-El separador de dígitos también puede usarse con tipos `decimal`, `float` y `double`:
-
-[!code-csharp[OtherConstants](../../../samples/snippets/csharp/new-in-7/Program.cs#35_OtherConstants "non-integral constants")]
+[!code-csharp[OtherConstants](~/samples/snippets/csharp/new-in-7/Program.cs#OtherConstants "non-integral constants")]
 
 En conjunto, se pueden declarar constantes numéricas con mucha más legibilidad.

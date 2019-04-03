@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
-ms.openlocfilehash: 98d264cb081af0c0ed96b7e439f93224608467d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09941ce5fcf33380cbf3455866e63918edd2ea20
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717420"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842205"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>Transporte y codificación de enlace personalizado
 Un enlace personalizado se define mediante una lista ordenada de elementos de enlace discretos. Este ejemplo muestra cómo configurar un enlace personalizado con varios elementos de codificación de mensajes y transporte.  
@@ -44,7 +44,7 @@ Un enlace personalizado se define mediante una lista ordenada de elementos de en
 </bindings>  
 ```  
   
- Al ejecutar el ejemplo, las solicitudes de operación y las respuestas se muestran en la ventana de la consola del cliente y del servicio. El cliente se comunica con cada uno de los tres extremos, teniendo acceso primero a HTTP, después a TCP y finalmente a NamedPipe. Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente.  
+ Al ejecutar el ejemplo, las solicitudes de operación y las respuestas se muestran en la ventana de la consola del cliente y del servicio. El cliente se comunica con cada uno de los tres puntos de conexión, teniendo acceso primero a HTTP, después a TCP y finalmente a NamedPipe. Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente.  
   
  El enlace `namedPipeTransport` no admite las operaciones de equipo a equipo. Sólo se utiliza para la comunicación en el mismo equipo. Por consiguiente, al ejecutar el ejemplo en un escenario con varios equipos, marque como comentarios las líneas siguientes en el archivo de código de cliente:  
   
@@ -67,7 +67,7 @@ client.Close()
 ```  
   
 > [!NOTE]
->  Si usa Svcutil.exe para regenerar la configuración de este ejemplo, asegúrese de que modifica el nombre del punto de conexión en la configuración del cliente para que coincida con el código de cliente.  
+>  Si usa Svcutil.exe para regenerar la configuración de este ejemplo, asegúrese de que modifica el nombre del extremo en la configuración del cliente para que coincida con el código de cliente.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
@@ -86,4 +86,3 @@ client.Close()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\Transport`  
   
-## <a name="see-also"></a>Vea también

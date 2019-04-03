@@ -22,12 +22,12 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: 78c5303461ecf25a1487e072f4f6be25bde98dca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b872eda97d1e349ad781b12810e4b166d6e46fe1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587468"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837317"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Pasar argumentos por posición o por nombre (Visual Basic)
 Cuando se llama a un `Sub` o `Function` procedimiento, puede pasar argumentos *por posición* , en el orden en que aparecen en la definición del procedimiento, o puede pasarlos *por nombre*, sin cuenta la posición.  
@@ -95,6 +95,7 @@ No se puede pasar argumentos por nombre evitar escribir argumentos necesarios. P
 No se puede pasar una matriz de parámetros por nombre. Esto es porque cuando se llama al procedimiento, se proporciona un número indefinido de argumentos separados por comas de la matriz de parámetros y el compilador no puede asociar más de un argumento con un nombre único.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
 - [Cómo: Pasar argumentos a un procedimiento](./how-to-pass-arguments-to-a-procedure.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: b2c33cb9ba0479df5e69b6979a789253f9fae565
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3027be6ee4ed3664b81c661b6a086a3604573833
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597338"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826138"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>La expresión es un valor y, por lo tanto, no puede ser destino de una asignación
 Una instrucción intenta asignar un valor a una expresión. Puede asignar un valor únicamente a una variable de escritura, propiedad o elemento de matriz en tiempo de ejecución. El ejemplo siguiente muestra cómo puede producirse este error.  
@@ -58,6 +58,7 @@ exitButton.Location = exitLocation
 -   Use la variable para tener acceso a la propiedad para asignarle un valor.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Instrucciones](../../../visual-basic/programming-guide/language-features/statements.md)
 - [Solución de problemas de procedimientos](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
