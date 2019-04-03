@@ -1,5 +1,5 @@
 ---
-title: <type1>'<typename>' debe implementar '<membername>' para la interfaz '<interfacename>'
+title: <type1>'<typename>'debe implementar'<membername>'para la interfaz'<interfacename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30154
@@ -7,34 +7,35 @@ f1_keywords:
 helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
-ms.openlocfilehash: de7dd9026e08495941a89be0db11ad4c68d2a748
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 485680a2984a29037b2836fcba13cf1aa1e2e699
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264237"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822757"
 ---
-# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a><span data-ttu-id="3b527-102">\<tipo1 >'\<typename >' debe implementar '\<membername >' para la interfaz '\<interfacename >'</span><span class="sxs-lookup"><span data-stu-id="3b527-102">\<type1>'\<typename>' must implement '\<membername>' for interface '\<interfacename>'</span></span>
-<span data-ttu-id="3b527-103">'\<typename >' debe implementar '\<membername >' para la interfaz '\<interfacename >'.</span><span class="sxs-lookup"><span data-stu-id="3b527-103">'\<typename>' must implement '\<membername>' for interface '\<interfacename>'.</span></span> <span data-ttu-id="3b527-104">Propiedad de implementación debe tener coincidentes 'ReadOnly' o 'WriteOnly' especificadores.</span><span class="sxs-lookup"><span data-stu-id="3b527-104">Implementing property must have matching 'ReadOnly'/'WriteOnly' specifiers.</span></span>  
+# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a><span data-ttu-id="e0ffc-102">\<tipo1 >'\<typename >' debe implementar '\<membername >' para la interfaz '\<interfacename >'</span><span class="sxs-lookup"><span data-stu-id="e0ffc-102">\<type1>'\<typename>' must implement '\<membername>' for interface '\<interfacename>'</span></span>
+<span data-ttu-id="e0ffc-103">'\<typename >' debe implementar '\<membername >' para la interfaz '\<interfacename >'.</span><span class="sxs-lookup"><span data-stu-id="e0ffc-103">'\<typename>' must implement '\<membername>' for interface '\<interfacename>'.</span></span> <span data-ttu-id="e0ffc-104">Propiedad de implementación debe tener coincidentes 'ReadOnly' o 'WriteOnly' especificadores.</span><span class="sxs-lookup"><span data-stu-id="e0ffc-104">Implementing property must have matching 'ReadOnly'/'WriteOnly' specifiers.</span></span>  
   
- <span data-ttu-id="3b527-105">Una clase o estructura intenta implementar una interfaz, pero no implementa un procedimiento, propiedad o evento definido por la interfaz.</span><span class="sxs-lookup"><span data-stu-id="3b527-105">A class or structure claims to implement an interface but does not implement a procedure, property, or event defined by the interface.</span></span> <span data-ttu-id="3b527-106">Se deben implementar todos los miembros de la interfaz.</span><span class="sxs-lookup"><span data-stu-id="3b527-106">Every member of the interface must be implemented.</span></span>  
+ <span data-ttu-id="e0ffc-105">Una clase o estructura intenta implementar una interfaz, pero no implementa un procedimiento, propiedad o evento definido por la interfaz.</span><span class="sxs-lookup"><span data-stu-id="e0ffc-105">A class or structure claims to implement an interface but does not implement a procedure, property, or event defined by the interface.</span></span> <span data-ttu-id="e0ffc-106">Se deben implementar todos los miembros de la interfaz.</span><span class="sxs-lookup"><span data-stu-id="e0ffc-106">Every member of the interface must be implemented.</span></span>  
   
- <span data-ttu-id="3b527-107">**Identificador de error:** BC30154</span><span class="sxs-lookup"><span data-stu-id="3b527-107">**Error ID:** BC30154</span></span>  
+ <span data-ttu-id="e0ffc-107">**Identificador de error:** BC30154</span><span class="sxs-lookup"><span data-stu-id="e0ffc-107">**Error ID:** BC30154</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="3b527-108">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="3b527-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e0ffc-108">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="e0ffc-108">To correct this error</span></span>  
   
-1.  <span data-ttu-id="3b527-109">Declarar a un miembro con el mismo nombre y firma, tal como se define en la interfaz.</span><span class="sxs-lookup"><span data-stu-id="3b527-109">Declare a member with the same name and signature as defined in the interface.</span></span> <span data-ttu-id="3b527-110">No olvide incluir al menos el `End Function`, `End Sub`, o `End Property` instrucción.</span><span class="sxs-lookup"><span data-stu-id="3b527-110">Be sure to include at least the `End Function`, `End Sub`, or `End Property` statement.</span></span>  
+1.  <span data-ttu-id="e0ffc-109">Declarar a un miembro con el mismo nombre y firma, tal como se define en la interfaz.</span><span class="sxs-lookup"><span data-stu-id="e0ffc-109">Declare a member with the same name and signature as defined in the interface.</span></span> <span data-ttu-id="e0ffc-110">No olvide incluir al menos el `End Function`, `End Sub`, o `End Property` instrucción.</span><span class="sxs-lookup"><span data-stu-id="e0ffc-110">Be sure to include at least the `End Function`, `End Sub`, or `End Property` statement.</span></span>  
   
-2.  <span data-ttu-id="3b527-111">Agregar un `Implements` cláusula al final de la `Function`, `Sub`, `Property`, o `Event` instrucción.</span><span class="sxs-lookup"><span data-stu-id="3b527-111">Add an `Implements` clause to the end of the `Function`, `Sub`, `Property`, or `Event` statement.</span></span> <span data-ttu-id="3b527-112">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="3b527-112">For example:</span></span>  
+2.  <span data-ttu-id="e0ffc-111">Agregar un `Implements` cláusula al final de la `Function`, `Sub`, `Property`, o `Event` instrucción.</span><span class="sxs-lookup"><span data-stu-id="e0ffc-111">Add an `Implements` clause to the end of the `Function`, `Sub`, `Property`, or `Event` statement.</span></span> <span data-ttu-id="e0ffc-112">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="e0ffc-112">For example:</span></span>  
   
     ```  
     Public Event ItHappened() Implements IBaseInterface.ItHappened  
     ```  
   
-3.  <span data-ttu-id="3b527-113">Al implementar una propiedad, asegúrese de que `ReadOnly` o `WriteOnly` se usa en la misma forma que la definición de interfaz.</span><span class="sxs-lookup"><span data-stu-id="3b527-113">When implementing a property, make sure that `ReadOnly` or `WriteOnly` is used in the same way as in the interface definition.</span></span>  
+3.  <span data-ttu-id="e0ffc-113">Al implementar una propiedad, asegúrese de que `ReadOnly` o `WriteOnly` se usa en la misma forma que la definición de interfaz.</span><span class="sxs-lookup"><span data-stu-id="e0ffc-113">When implementing a property, make sure that `ReadOnly` or `WriteOnly` is used in the same way as in the interface definition.</span></span>  
   
-4.  <span data-ttu-id="3b527-114">Al implementar una propiedad, declare `Get` y `Set` procedimientos, según corresponda.</span><span class="sxs-lookup"><span data-stu-id="3b527-114">When implementing a property, declare `Get` and `Set` procedures, as appropriate.</span></span>  
+4.  <span data-ttu-id="e0ffc-114">Al implementar una propiedad, declare `Get` y `Set` procedimientos, según corresponda.</span><span class="sxs-lookup"><span data-stu-id="e0ffc-114">When implementing a property, declare `Get` and `Set` procedures, as appropriate.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b527-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="3b527-115">See also</span></span>
-- [<span data-ttu-id="3b527-116">Implements (instrucción)</span><span class="sxs-lookup"><span data-stu-id="3b527-116">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)
-- [<span data-ttu-id="3b527-117">Interfaces</span><span class="sxs-lookup"><span data-stu-id="3b527-117">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="e0ffc-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="e0ffc-115">See also</span></span>
+
+- [<span data-ttu-id="e0ffc-116">Implements (instrucción)</span><span class="sxs-lookup"><span data-stu-id="e0ffc-116">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [<span data-ttu-id="e0ffc-117">Interfaces</span><span class="sxs-lookup"><span data-stu-id="e0ffc-117">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Trabajar con diccionarios mediante LINQ to XML (Visual Basic)
+title: Filtrar Trabajar con diccionarios mediante LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: 9f08430aeb92b9c6e0b7b08481027fb3b5b77cad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: def00fcd356472825ebc4b9f5c306cf3547991e1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572349"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820772"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a><span data-ttu-id="36e19-102">Procedimiento Trabajar con diccionarios mediante LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="36e19-102">How to: Work with Dictionaries Using LINQ to XML (Visual Basic)</span></span>
-<span data-ttu-id="36e19-103">A menudo resulta cómodo convertir variedades de estructuras de datos a XML y de XML a otras estructuras de datos.</span><span class="sxs-lookup"><span data-stu-id="36e19-103">It is often convenient to convert varieties of data structures to XML, and XML back to other data structures.</span></span> <span data-ttu-id="36e19-104">Este tema muestra una implementación específica de este enfoque general convirtiendo un <xref:System.Collections.Generic.Dictionary%602> a XML y de XML.</span><span class="sxs-lookup"><span data-stu-id="36e19-104">This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.</span></span>  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a><span data-ttu-id="da25e-102">Filtrar Trabajar con diccionarios mediante LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="da25e-102">How to: Work with Dictionaries Using LINQ to XML (Visual Basic)</span></span>
+<span data-ttu-id="da25e-103">A menudo resulta cómodo convertir variedades de estructuras de datos a XML y de XML a otras estructuras de datos.</span><span class="sxs-lookup"><span data-stu-id="da25e-103">It is often convenient to convert varieties of data structures to XML, and XML back to other data structures.</span></span> <span data-ttu-id="da25e-104">Este tema muestra una implementación específica de este enfoque general convirtiendo un <xref:System.Collections.Generic.Dictionary%602> a XML y de XML.</span><span class="sxs-lookup"><span data-stu-id="da25e-104">This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="36e19-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="36e19-105">Example</span></span>  
- <span data-ttu-id="36e19-106">En este ejemplo usa literales XML y una consulta en una expresión incrustada.</span><span class="sxs-lookup"><span data-stu-id="36e19-106">This example uses XML literals and a query in an embedded expression.</span></span> <span data-ttu-id="36e19-107">La consulta proyecta nuevos <xref:System.Xml.Linq.XElement> objetos, que se convierten en el nuevo contenido de la `Root` <xref:System.Xml.Linq.XElement> objeto.</span><span class="sxs-lookup"><span data-stu-id="36e19-107">The query projects new <xref:System.Xml.Linq.XElement> objects, which then become the new content for the `Root` <xref:System.Xml.Linq.XElement> object.</span></span>  
+## <a name="example"></a><span data-ttu-id="da25e-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="da25e-105">Example</span></span>  
+ <span data-ttu-id="da25e-106">En este ejemplo usa literales XML y una consulta en una expresión incrustada.</span><span class="sxs-lookup"><span data-stu-id="da25e-106">This example uses XML literals and a query in an embedded expression.</span></span> <span data-ttu-id="da25e-107">La consulta proyecta nuevos <xref:System.Xml.Linq.XElement> objetos, que se convierten en el nuevo contenido de la `Root` <xref:System.Xml.Linq.XElement> objeto.</span><span class="sxs-lookup"><span data-stu-id="da25e-107">The query projects new <xref:System.Xml.Linq.XElement> objects, which then become the new content for the `Root` <xref:System.Xml.Linq.XElement> object.</span></span>  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -29,7 +29,7 @@ Dim root As XElement = _
 Console.WriteLine(root)  
 ```  
   
- <span data-ttu-id="36e19-108">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="36e19-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="da25e-108">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="da25e-108">This code produces the following output:</span></span>  
   
 ```xml  
           <Root>  
@@ -40,8 +40,8 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="36e19-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="36e19-109">Example</span></span>  
- <span data-ttu-id="36e19-110">El siguiente código genera un diccionario de XML.</span><span class="sxs-lookup"><span data-stu-id="36e19-110">The following code creates a dictionary from XML.</span></span>  
+## <a name="example"></a><span data-ttu-id="da25e-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="da25e-109">Example</span></span>  
+ <span data-ttu-id="da25e-110">El siguiente código genera un diccionario de XML.</span><span class="sxs-lookup"><span data-stu-id="da25e-110">The following code creates a dictionary from XML.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -61,7 +61,7 @@ For Each str As String In dict.Keys
 Next  
 ```  
   
- <span data-ttu-id="36e19-111">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="36e19-111">This code produces the following output:</span></span>  
+ <span data-ttu-id="da25e-111">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="da25e-111">This code produces the following output:</span></span>  
   
 ```  
 Child1:Value1  
@@ -70,5 +70,6 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="36e19-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="36e19-112">See also</span></span>
-- [<span data-ttu-id="36e19-113">Proyecciones y transformaciones (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="36e19-113">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="da25e-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="da25e-112">See also</span></span>
+
+- [<span data-ttu-id="da25e-113">Proyecciones y transformaciones (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="da25e-113">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

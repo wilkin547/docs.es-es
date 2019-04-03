@@ -2,23 +2,23 @@
 title: Serializar con una declaración XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8726f79e-2bb0-4ba0-969d-197cca591647
-ms.openlocfilehash: d0d6ccfdffa76de61c36e4cdb3f68f7cf85f1e68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f51dacb0f89e1042ba9875bec10a0cb1fe25f889
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558480"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814125"
 ---
-# <a name="serializing-with-an-xml-declaration-visual-basic"></a><span data-ttu-id="f9cd0-102">Serializar con una declaración XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f9cd0-102">Serializing with an XML Declaration (Visual Basic)</span></span>
-<span data-ttu-id="f9cd0-103">En este tema se describe cómo controlar si la serialización genera una declaración XML.</span><span class="sxs-lookup"><span data-stu-id="f9cd0-103">This topic describes how to control whether serialization generates an XML declaration.</span></span>  
+# <a name="serializing-with-an-xml-declaration-visual-basic"></a><span data-ttu-id="5d679-102">Serializar con una declaración XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5d679-102">Serializing with an XML Declaration (Visual Basic)</span></span>
+<span data-ttu-id="5d679-103">En este tema se describe cómo controlar si la serialización genera una declaración XML.</span><span class="sxs-lookup"><span data-stu-id="5d679-103">This topic describes how to control whether serialization generates an XML declaration.</span></span>  
   
-## <a name="xml-declaration-generation"></a><span data-ttu-id="f9cd0-104">Generación de declaración XML</span><span class="sxs-lookup"><span data-stu-id="f9cd0-104">XML Declaration Generation</span></span>  
- <span data-ttu-id="f9cd0-105">La serialización en <xref:System.IO.File> o <xref:System.IO.TextWriter> mediante el método <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> o el método <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> genera una declaración XML.</span><span class="sxs-lookup"><span data-stu-id="f9cd0-105">Serializing to a <xref:System.IO.File> or a <xref:System.IO.TextWriter> using the <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> method or the <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> method generates an XML declaration.</span></span> <span data-ttu-id="f9cd0-106">Cuando serializa en <xref:System.Xml.XmlWriter>, la configuración del escritor (especificada en un objeto <xref:System.Xml.XmlWriterSettings>) determina si se genera una declaración XML.</span><span class="sxs-lookup"><span data-stu-id="f9cd0-106">When you serialize to an <xref:System.Xml.XmlWriter>, the writer settings (specified in an <xref:System.Xml.XmlWriterSettings> object) determine whether an XML declaration is generated or not.</span></span>  
+## <a name="xml-declaration-generation"></a><span data-ttu-id="5d679-104">Generación de declaración XML</span><span class="sxs-lookup"><span data-stu-id="5d679-104">XML Declaration Generation</span></span>  
+ <span data-ttu-id="5d679-105">La serialización en <xref:System.IO.File> o <xref:System.IO.TextWriter> mediante el método <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> o el método <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> genera una declaración XML.</span><span class="sxs-lookup"><span data-stu-id="5d679-105">Serializing to a <xref:System.IO.File> or a <xref:System.IO.TextWriter> using the <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> method or the <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> method generates an XML declaration.</span></span> <span data-ttu-id="5d679-106">Cuando serializa en <xref:System.Xml.XmlWriter>, la configuración del escritor (especificada en un objeto <xref:System.Xml.XmlWriterSettings>) determina si se genera una declaración XML.</span><span class="sxs-lookup"><span data-stu-id="5d679-106">When you serialize to an <xref:System.Xml.XmlWriter>, the writer settings (specified in an <xref:System.Xml.XmlWriterSettings> object) determine whether an XML declaration is generated or not.</span></span>  
   
- <span data-ttu-id="f9cd0-107">Si está serializando en una cadena mediante el método `ToString`, el XML resultante no incluirá una declaración XML.</span><span class="sxs-lookup"><span data-stu-id="f9cd0-107">If you are serializing to a string using the `ToString` method, the resulting XML will not include an XML declaration.</span></span>  
+ <span data-ttu-id="5d679-107">Si está serializando en una cadena mediante el método `ToString`, el XML resultante no incluirá una declaración XML.</span><span class="sxs-lookup"><span data-stu-id="5d679-107">If you are serializing to a string using the `ToString` method, the resulting XML will not include an XML declaration.</span></span>  
   
-### <a name="serializing-with-an-xml-declaration"></a><span data-ttu-id="f9cd0-108">Serializar con una declaración XML</span><span class="sxs-lookup"><span data-stu-id="f9cd0-108">Serializing with an XML Declaration</span></span>  
- <span data-ttu-id="f9cd0-109">En el ejemplo siguiente se crea un <xref:System.Xml.Linq.XElement>, se guarda el documento en un archivo y, a continuación, se imprime el archivo en la consola:</span><span class="sxs-lookup"><span data-stu-id="f9cd0-109">The following example creates an <xref:System.Xml.Linq.XElement>, saves the document to a file, and then prints the file to the console:</span></span>  
+### <a name="serializing-with-an-xml-declaration"></a><span data-ttu-id="5d679-108">Serializar con una declaración XML</span><span class="sxs-lookup"><span data-stu-id="5d679-108">Serializing with an XML Declaration</span></span>  
+ <span data-ttu-id="5d679-109">En el ejemplo siguiente se crea un <xref:System.Xml.Linq.XElement>, se guarda el documento en un archivo y, a continuación, se imprime el archivo en la consola:</span><span class="sxs-lookup"><span data-stu-id="5d679-109">The following example creates an <xref:System.Xml.Linq.XElement>, saves the document to a file, and then prints the file to the console:</span></span>  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -29,7 +29,7 @@ Dim str As String = File.ReadAllText("Root.xml")
 Console.WriteLine(str)  
 ```  
   
- <span data-ttu-id="f9cd0-110">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="f9cd0-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="5d679-110">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="5d679-110">This example produces the following output:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -38,8 +38,8 @@ Console.WriteLine(str)
 </Root>  
 ```  
   
-### <a name="serializing-without-an-xml-declaration"></a><span data-ttu-id="f9cd0-111">Serializar sin una declaración XML</span><span class="sxs-lookup"><span data-stu-id="f9cd0-111">Serializing without an XML Declaration</span></span>  
- <span data-ttu-id="f9cd0-112">En el siguiente ejemplo se muestra cómo guardar un <xref:System.Xml.Linq.XElement> en un <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="f9cd0-112">The following example shows how to save an <xref:System.Xml.Linq.XElement> to an <xref:System.Xml.XmlWriter>.</span></span>  
+### <a name="serializing-without-an-xml-declaration"></a><span data-ttu-id="5d679-111">Serializar sin una declaración XML</span><span class="sxs-lookup"><span data-stu-id="5d679-111">Serializing without an XML Declaration</span></span>  
+ <span data-ttu-id="5d679-112">En el siguiente ejemplo se muestra cómo guardar un <xref:System.Xml.Linq.XElement> en un <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="5d679-112">The following example shows how to save an <xref:System.Xml.Linq.XElement> to an <xref:System.Xml.XmlWriter>.</span></span>  
   
 ```vb  
 Dim sb As StringBuilder = New StringBuilder()  
@@ -55,11 +55,12 @@ End Using
 Console.WriteLine(sb.ToString())  
 ```  
   
- <span data-ttu-id="f9cd0-113">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="f9cd0-113">This example produces the following output:</span></span>  
+ <span data-ttu-id="5d679-113">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="5d679-113">This example produces the following output:</span></span>  
   
 ```xml  
 <Root><Child>child content</Child></Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f9cd0-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="f9cd0-114">See also</span></span>
-- [<span data-ttu-id="f9cd0-115">Serializar árboles XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f9cd0-115">Serializing XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="5d679-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="5d679-114">See also</span></span>
+
+- [<span data-ttu-id="5d679-115">Serializar árboles XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5d679-115">Serializing XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

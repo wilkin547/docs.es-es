@@ -1,24 +1,24 @@
 ---
-title: Procedimiento Analizar una cadena (Visual Basic)
+title: Filtrar Analizar una cadena (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: 513a82cbed796be42eb8e531ec71221ef0ac267f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 815e94b3b41c2c0cc1d18d598307ab292919bea4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652454"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827307"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a><span data-ttu-id="fbc8e-102">Procedimiento Analizar una cadena (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fbc8e-102">How to: Parse a String (Visual Basic)</span></span>
-<span data-ttu-id="fbc8e-103">En este tema se muestra cómo crear un árbol XML en C#.</span><span class="sxs-lookup"><span data-stu-id="fbc8e-103">This topic shows how to create an XML tree in C#.</span></span>  
+# <a name="how-to-parse-a-string-visual-basic"></a><span data-ttu-id="bc6e1-102">Filtrar Analizar una cadena (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bc6e1-102">How to: Parse a String (Visual Basic)</span></span>
+<span data-ttu-id="bc6e1-103">En este tema se muestra cómo crear un árbol XML en C#.</span><span class="sxs-lookup"><span data-stu-id="bc6e1-103">This topic shows how to create an XML tree in C#.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fbc8e-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="fbc8e-104">Example</span></span>  
- <span data-ttu-id="fbc8e-105">Puede analizar una cadena en Visual Basic mediante la `XElement.Parse` método.</span><span class="sxs-lookup"><span data-stu-id="fbc8e-105">You can parse a string in Visual Basic by using the `XElement.Parse` method.</span></span> <span data-ttu-id="fbc8e-106">Sin embargo, resulta más eficaz usar literales XML, tal como se muestra en el código siguiente, ya que dichos literales no sufren las mismas pérdidas de rendimiento que se producen al analizar XML de una cadena.</span><span class="sxs-lookup"><span data-stu-id="fbc8e-106">However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.</span></span>  
+## <a name="example"></a><span data-ttu-id="bc6e1-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="bc6e1-104">Example</span></span>  
+ <span data-ttu-id="bc6e1-105">Puede analizar una cadena en Visual Basic mediante la `XElement.Parse` método.</span><span class="sxs-lookup"><span data-stu-id="bc6e1-105">You can parse a string in Visual Basic by using the `XElement.Parse` method.</span></span> <span data-ttu-id="bc6e1-106">Sin embargo, resulta más eficaz usar literales XML, tal como se muestra en el código siguiente, ya que dichos literales no sufren las mismas pérdidas de rendimiento que se producen al analizar XML de una cadena.</span><span class="sxs-lookup"><span data-stu-id="bc6e1-106">However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.</span></span>  
   
- <span data-ttu-id="fbc8e-107">Mediante literales XML, puede simplemente copiar y pegar el código XML en el programa de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fbc8e-107">By using XML literals, you can just copy and paste your XML into your Visual Basic program.</span></span>  
+ <span data-ttu-id="bc6e1-107">Mediante literales XML, puede simplemente copiar y pegar el código XML en el programa de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="bc6e1-107">By using XML literals, you can just copy and paste your XML into your Visual Basic program.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="fbc8e-108">Analizar texto o cargar un documento XML de un archivo de texto es menos eficaz que la construcción funcional.</span><span class="sxs-lookup"><span data-stu-id="fbc8e-108">Parsing text or loading an XML document from a text file is less efficient than functional construction.</span></span> <span data-ttu-id="fbc8e-109">Si inicializa un árbol XML a partir de código, el uso de la construcción funcional consume menos tiempo de procesador que el análisis de texto.</span><span class="sxs-lookup"><span data-stu-id="fbc8e-109">If you are initializing an XML tree from code, it takes less processor time to use functional construction than to parse text.</span></span>  
+>  <span data-ttu-id="bc6e1-108">Analizar texto o cargar un documento XML de un archivo de texto es menos eficaz que la construcción funcional.</span><span class="sxs-lookup"><span data-stu-id="bc6e1-108">Parsing text or loading an XML document from a text file is less efficient than functional construction.</span></span> <span data-ttu-id="bc6e1-109">Si inicializa un árbol XML a partir de código, el uso de la construcción funcional consume menos tiempo de procesador que el análisis de texto.</span><span class="sxs-lookup"><span data-stu-id="bc6e1-109">If you are initializing an XML tree from code, it takes less processor time to use functional construction than to parse text.</span></span>  
   
 ```vb  
 Dim contacts as XElement = _  
@@ -49,5 +49,6 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fbc8e-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="fbc8e-110">See also</span></span>
-- [<span data-ttu-id="fbc8e-111">Analizar XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fbc8e-111">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a><span data-ttu-id="bc6e1-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="bc6e1-110">See also</span></span>
+
+- [<span data-ttu-id="bc6e1-111">Analizar XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bc6e1-111">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
