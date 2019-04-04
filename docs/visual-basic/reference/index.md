@@ -2,9 +2,15 @@
 title: Referencia (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - language reference
-  - 'Visual Basic code, language reference'
+- language reference
+- Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
+ms.openlocfilehash: af8d2c99015304507b2b3361a8a851d125c14a81
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377157"
 ---
 # <a name="reference-visual-basic"></a>Referencia (Visual Basic)
 Esta sección proporciona vínculos a información de referencia sobre diversos aspectos de programación en Visual Basic.  

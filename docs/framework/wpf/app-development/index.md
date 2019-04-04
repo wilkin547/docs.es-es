@@ -2,9 +2,15 @@
 title: Desarrollo de aplicaciones
 ms.date: 01/26/2018
 helpviewer_keywords:
-  - 'WPF [WPF], about application development'
-  - 'application development [WPF], about'
+- WPF [WPF], about application development
+- application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
+ms.openlocfilehash: 979a5324fe9cb6c3469660e061d5df7f312ef2c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365140"
 ---
 # <a name="application-development"></a>Desarrollo de aplicaciones
 <a name="introduction"></a> Windows Presentation Foundation (WPF) es un marco de presentación que se puede usar para desarrollar los siguientes tipos de aplicaciones:  

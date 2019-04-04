@@ -2,13 +2,18 @@
 title: Matrices en Visual Basic
 ms.date: 12/06/2017
 f1_keywords:
-  - vb.Array
+- vb.Array
 helpviewer_keywords:
-  - 'arrays [Visual Basic]'
-  - 'Visual Basic, arrays'
+- arrays [Visual Basic]
+- Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
+ms.openlocfilehash: 6b131d073e10f99feaf770fe5fd3c393551fa5a3
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675970"
 ---
-
 # <a name="arrays-in-visual-basic"></a>Matrices en Visual Basic
 
 Una matriz es un conjunto de valores, que se denomina *elementos*, que se relacionan lógicamente entre sí. Por ejemplo, una matriz puede constar del número de alumnos de cada curso en una escuela primaria; cada elemento de la matriz es el número de alumnos en un único nivel. De forma similar, una matriz puede constar de las calificaciones de un estudiante de una clase; cada elemento de la matriz es un único nivel.

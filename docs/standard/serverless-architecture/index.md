@@ -1,11 +1,16 @@
 ---
 title: 'Aplicaciones sin servidor: Arquitectura, patrones e implementación de Azure'
-description: 'Guía sobre la arquitectura sin servidor. Obtenga información sobre cuándo, cómo y por qué implementar una arquitectura sin servidor (en lugar de una infraestructura como servicio [IaaS] o una plataforma como servicio [PaaS]) para las aplicaciones empresariales.'
+description: Guía sobre la arquitectura sin servidor. Obtenga información sobre cuándo, cómo y por qué implementar una arquitectura sin servidor (en lugar de una infraestructura como servicio [IaaS] o una plataforma como servicio [PaaS]) para las aplicaciones empresariales.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
+ms.openlocfilehash: a44af1fc76b54ec9be0d8e3b3ba2e54f3e3b220b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653943"
 ---
-
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplicaciones sin servidor: Arquitectura, patrones e implementación de Azure
 
 ![Captura de pantalla en la que se muestra la portada del libro electrónico Aplicaciones sin servidor.](./media/index/serverless-apps-cover.jpg)

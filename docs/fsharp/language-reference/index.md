@@ -1,7 +1,13 @@
 ---
-title: 'Referencia del lenguaje F#'
-description: 'Buscar F# información de características de lenguaje de esta referencia a tokens de idioma, conceptos, tipos, expresiones y los temas de construcción compatible con el compilador.'
+title: Referencia del lenguaje F#
+description: Buscar F# información de características de lenguaje de esta referencia a tokens de idioma, conceptos, tipos, expresiones y los temas de construcción compatible con el compilador.
 ms.date: 05/16/2016
+ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846641"
 ---
 # <a name="f-language-reference"></a>Referencia del lenguaje F#
 

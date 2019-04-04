@@ -1,10 +1,15 @@
 ---
-title: 'Un paseo por C# - Guía de C#'
-description: '¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.'
+title: Un paseo por C# - Guía de C#
+description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
+ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843434"
 ---
-
 # <a name="a-tour-of-the-c-language"></a>Un paseo por el lenguaje C#
 
 C# (pronunciado "si sharp" en inglés) es un lenguaje de programación sencillo, moderno, orientado a objetos y con seguridad de tipos. C# tiene sus raíces en la familia de lenguajes C, y a los programadores de C, C++, Java y JavaScript les resultará familiar inmediatamente.

@@ -1,11 +1,16 @@
 ---
-title: 'Ejecución, administración y supervisión de entornos de producción de Docker'
+title: Ejecución, administración y supervisión de entornos de producción de Docker
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 7c470a2d24b8807bdda10e1816bc5a430a5c63f1
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834945"
 ---
-
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Ejecución, administración y supervisión de entornos de producción de Docker
 
 Visión: Deben ejecutar con alta disponibilidad y escalabilidad; las aplicaciones empresariales Las operaciones de TI deben ser capaz de administrar y supervisar los entornos y las propias aplicaciones.

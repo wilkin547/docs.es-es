@@ -4,8 +4,13 @@ description: Resume la API no administrada de .NET Framework para WMI y la infor
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377461"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Instrumental de administración de Windows (WMI) y contadores de rendimiento (referencia de API no administrada)
 
 La API no administrada de la WMI y los contadores de rendimiento de .NET Framework consta de un conjunto de funciones que encapsulan llamadas a la [API nativa de Instrumental de administración de Windows](/windows/desktop/WmiSdk/com-api-for-wmi). Permite desarrollar herramientas y bibliotecas de administración y supervisión de los sistemas con equipos remotos.

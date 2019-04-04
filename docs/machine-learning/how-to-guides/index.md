@@ -3,8 +3,13 @@ title: 'Guías de procedimientos de aprendizaje automático de .NET: ML.NET'
 description: Obtenga información sobre cómo realizar tareas específicas para ayudarle con la creación de soluciones de IA personalizadas y la integración de Machine Learning en sus aplicaciones .NET.
 ms.custom: seodec18
 ms.date: 03/01/2019
+ms.openlocfilehash: 9e5bd146d636b46dcf3835c670207b647e7743c6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673059"
 ---
-
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>Guías de procedimientos de aprendizaje automático de .NET: ML.NET
 
 En la sección de procedimientos de la guía de ML.NET encontrará respuestas rápidas a preguntas frecuentes. En algunos casos, los artículos pueden mostrarse en varias secciones para que sean fáciles de encontrar.
