@@ -3,12 +3,12 @@ title: Guía de contenido de ML.NET
 description: Obtenga información sobre cómo compilar soluciones de IA personalizadas e integrarlas en las aplicaciones .NET mediante ML.NET.
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826289"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920771"
 ---
 # <a name="mlnet-content-guide"></a>Guía de contenido de ML.NET
 
@@ -27,25 +27,25 @@ Para comprender los conceptos básicos, consulte [Conceptos básicos del entrena
 
 ## <a name="tutorials"></a>Tutoriales
 
-En [Análisis de opinión mediante un modelo de clasificación binario](tutorials/sentiment-analysis.md) se muestra cómo compilar una aplicación que determina si la opinión es positiva o negativa.
+En [Análisis de opinión mediante un modelo de clasificación binario](./tutorials/sentiment-analysis.md) se muestra cómo compilar una aplicación que determina si la opinión es positiva o negativa.
 
-En la [clasificación de problemas de GitHub mediante un modelo de clasificación multiclase](tutorials/github-issue-classification.md) se le muestra cómo compilar una aplicación que determina la etiqueta de área para un problema de GitHub.
+En la [clasificación de problemas de GitHub mediante un modelo de clasificación multiclase](./tutorials/github-issue-classification.md) se le muestra cómo compilar una aplicación que determina la etiqueta de área para un problema de GitHub.
 
-En [Tutorial: Predicción de las tarifas de taxi de Nueva York mediante un aprendiz de regresión con ML.NET](tutorials/taxi-fare.md) se muestra cómo compilar una aplicación predictiva que utiliza muchos factores de los datos históricos para determinar la respuesta.
+En [Tutorial: Predicción de las tarifas de taxi de Nueva York mediante un aprendiz de regresión con ML.NET](./tutorials/taxi-fare.md) se muestra cómo compilar una aplicación predictiva que utiliza muchos factores de los datos históricos para determinar la respuesta.
 
-En [Clasificar flores de iris mediante características](tutorials/iris-clustering.md) se muestra cómo usar un modelo de agrupación en clústeres para analizar el conjunto de datos de iris. 
+En [Clasificar flores de iris mediante características](./tutorials/iris-clustering.md) se muestra cómo usar un modelo de agrupación en clústeres para analizar el conjunto de datos de iris. 
 
 ## <a name="how-to-guide"></a>Guía de procedimientos
 
-En [Creación de una aplicación de listas de enfrentamientos en juegos con Infer.NET y programación probabilística](how-to-guides/matchup-app-infer-net.md) se muestra cómo compilar una versión simplificada de una aplicación de emparejamiento, como vería en un juego de Xbox.
+En [Creación de una aplicación de listas de enfrentamientos en juegos con Infer.NET y programación probabilística](./how-to-guides/matchup-app-infer-net.md) se muestra cómo compilar una versión simplificada de una aplicación de emparejamiento, como vería en un juego de Xbox.
 
 ## <a name="resources"></a>Recursos
 
-En el [Glosario de aprendizaje automático](resources/glossary.md) se define la terminología clave.
+En el [Glosario de aprendizaje automático](./resources/glossary.md) se define la terminología clave.
 
-En [Tareas de aprendizaje automático](resources/tasks.md) se describen tareas, como la clasificación y detección de anomalías. 
+En [Tareas de aprendizaje automático](./resources/tasks.md) se describen tareas, como la clasificación y detección de anomalías. 
 
-En [Transformaciones de datos](resources/transforms.md) se describen las funcionalidades de preparación de datos en ML.NET.
+En [Transformaciones de datos](./resources/transforms.md) se describen las funcionalidades de preparación de datos en ML.NET.
 
 
 ## <a name="api-reference"></a>referencia de API
