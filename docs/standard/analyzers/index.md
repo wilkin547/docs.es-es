@@ -5,8 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
+ms.openlocfilehash: 436cfb3904f0891f8c18bb5890563a13d65e2d1c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634250"
 ---
-
 # <a name="the-roslyn-based-analyzers"></a><span data-ttu-id="ce09b-103">Los analizadores basados en Roslyn</span><span class="sxs-lookup"><span data-stu-id="ce09b-103">The Roslyn based Analyzers</span></span>
 
 <span data-ttu-id="ce09b-104">Los analizadores basados en Roslyn usan el SDK de .NET Compiler (API de Roslyn) para analizar el código fuente de su proyecto a fin de detectar problemas y sugerir soluciones.</span><span class="sxs-lookup"><span data-stu-id="ce09b-104">Roslyn-based analyzers use the .NET Compiler SDK (Roslyn APIs) to analyze your project's source code to find issues and suggest corrections.</span></span> <span data-ttu-id="ce09b-105">Los diferentes analizadores buscan distintas clases de problemas, que van desde prácticas susceptibles de generar errores a inquietudes de seguridad relativas a la compatibilidad de la API.</span><span class="sxs-lookup"><span data-stu-id="ce09b-105">Different analyzers look for different classes of issues, ranging from practices that are likely to cause bugs to security concerns to API compatibility.</span></span>

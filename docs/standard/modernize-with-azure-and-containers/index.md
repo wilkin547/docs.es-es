@@ -4,6 +4,12 @@ description: Aprenda a elevación y desplazamiento y modernizar aplicaciones exi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
+ms.openlocfilehash: 68d5ce7ad71fae5ed3e1460c56581dd69c3925f3
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675931"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a><span data-ttu-id="ed2d6-103">Modernizar aplicaciones .NET existentes con la nube de Azure y contenedores de Windows (2nd edition)</span><span class="sxs-lookup"><span data-stu-id="ed2d6-103">Modernize existing .NET applications with Azure cloud and Windows Containers (2nd edition)</span></span>
 

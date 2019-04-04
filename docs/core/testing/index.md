@@ -5,8 +5,13 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
+ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185511"
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a><span data-ttu-id="7aaee-103">Pruebas unitaria en .NET Core y .NET Standard</span><span class="sxs-lookup"><span data-stu-id="7aaee-103">Unit testing in .NET Core and .NET Standard</span></span>
 
 <span data-ttu-id="7aaee-104">.NET Core facilita la creación de pruebas unitarias.</span><span class="sxs-lookup"><span data-stu-id="7aaee-104">.NET Core makes it easy to create unit tests.</span></span> <span data-ttu-id="7aaee-105">En este artículo se presentan las pruebas unitarias y se indican las diferencias con otros tipos de pruebas.</span><span class="sxs-lookup"><span data-stu-id="7aaee-105">This article introduces unit tests and illustrates how they differ from other kinds of tests.</span></span> <span data-ttu-id="7aaee-106">En los recursos vinculados al final de la página se muestra cómo agregar un proyecto de prueba a una solución.</span><span class="sxs-lookup"><span data-stu-id="7aaee-106">The linked resources near the bottom of the page show you how to add a test project to your solution.</span></span> <span data-ttu-id="7aaee-107">Una vez que haya configurado el proyecto de prueba, podrá ejecutar las pruebas unitarias con la línea de comandos o con Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="7aaee-107">After you set up your test project, you will be able to run your unit tests using the command line or Visual Studio.</span></span>

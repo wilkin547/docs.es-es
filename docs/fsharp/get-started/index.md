@@ -1,7 +1,13 @@
 ---
-title: 'Introducción aF#'
-description: 'Obtenga información sobre cómo empezar a trabajar con el F# lenguaje de programación.'
+title: Introducción aF#
+description: Obtenga información sobre cómo empezar a trabajar con el F# lenguaje de programación.
 ms.date: 12/08/2018
+ms.openlocfilehash: df966d6537731650a5f2fcd795ad638ace1b059f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971421"
 ---
 # <a name="get-started-with-f"></a><span data-ttu-id="af5eb-103">Empezar a trabajar con F\#</span><span class="sxs-lookup"><span data-stu-id="af5eb-103">Get Started with F\#</span></span>
 

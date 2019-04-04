@@ -4,8 +4,13 @@ description: Es una guía en la que se proporcionan instrucciones de un extremo 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
+ms.openlocfilehash: 27212045d9870c9f2fc15509d76f3e9b07d8657f
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675840"
 ---
-
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a><span data-ttu-id="7c6dc-103">Diseño de aplicaciones web modernas con ASP.NET Core y Azure</span><span class="sxs-lookup"><span data-stu-id="7c6dc-103">Architect Modern Web Applications with ASP.NET Core and Azure</span></span>
 
 ![Imagen de portada de la guía Diseño de aplicaciones web modernas.](./media/index/web-application-guide-cover-image.png)

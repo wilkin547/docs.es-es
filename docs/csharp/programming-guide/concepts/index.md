@@ -1,7 +1,13 @@
 ---
-title: 'Conceptos de programación (C#)'
+title: Conceptos de programación (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
+ms.openlocfilehash: bfe4046d6d54693867ebe5d8529a4744b9e69c3b
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748250"
 ---
 # <a name="programming-concepts-c"></a><span data-ttu-id="35627-102">Conceptos de programación (C#)</span><span class="sxs-lookup"><span data-stu-id="35627-102">Programming Concepts (C#)</span></span>
 <span data-ttu-id="35627-103">En esta sección se explican los conceptos de programación del lenguaje C#.</span><span class="sxs-lookup"><span data-stu-id="35627-103">This section explains programming concepts in the C# language.</span></span>  

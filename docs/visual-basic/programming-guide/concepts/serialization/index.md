@@ -2,6 +2,12 @@
 title: Serialización (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
+ms.openlocfilehash: 947b38e8166ba05d871aafbaba5766aa9dab21f4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409710"
 ---
 # <a name="serialization-visual-basic"></a><span data-ttu-id="92eaa-102">Serialización (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="92eaa-102">Serialization (Visual Basic)</span></span>
 <span data-ttu-id="92eaa-103">La serialización es un proceso que consiste en convertir un objeto en una secuencia de bytes para almacenar el objeto o transmitirlo a la memoria, a una base de datos o a un archivo.</span><span class="sxs-lookup"><span data-stu-id="92eaa-103">Serialization is the process of converting an object into a stream of bytes in order to store the object or transmit it to memory, a database, or a file.</span></span> <span data-ttu-id="92eaa-104">Su propósito principal es guardar el estado de un objeto para poder volver a crearlo cuando sea necesario.</span><span class="sxs-lookup"><span data-stu-id="92eaa-104">Its main purpose is to save the state of an object in order to be able to recreate it when needed.</span></span> <span data-ttu-id="92eaa-105">El proceso inverso se denomina deserialización.</span><span class="sxs-lookup"><span data-stu-id="92eaa-105">The reverse process is called deserialization.</span></span>  

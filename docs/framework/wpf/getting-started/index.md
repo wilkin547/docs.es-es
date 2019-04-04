@@ -2,10 +2,16 @@
 title: Introducción (WPF)
 ms.date: 01/26/2018
 helpviewer_keywords:
-  - 'getting started [WPF]'
-  - 'introduction [WPF]'
-  - 'WPF [WPF], getting started'
+- getting started [WPF]
+- introduction [WPF]
+- WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
+ms.openlocfilehash: 0717536912802461e6d03e240b22d3e05d535f86
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371147"
 ---
 # <a name="getting-started-wpf"></a><span data-ttu-id="704bf-102">Introducción (WPF)</span><span class="sxs-lookup"><span data-stu-id="704bf-102">Getting Started (WPF)</span></span>
 <span data-ttu-id="704bf-103">Windows Presentation Foundation (WPF) es un marco de interfaz de usuario que crea aplicaciones de cliente de escritorio.</span><span class="sxs-lookup"><span data-stu-id="704bf-103">Windows Presentation Foundation (WPF) is a UI framework that creates desktop client applications.</span></span> <span data-ttu-id="704bf-104">La plataforma de desarrollo de WPF admite un amplio conjunto de características de desarrollo de aplicaciones, incluido un modelo de aplicación, recursos, controles, gráficos, diseños, enlace de datos, documentos y seguridad.</span><span class="sxs-lookup"><span data-stu-id="704bf-104">The WPF development platform supports a broad set of application development features, including an application model, resources, controls, graphics, layout, data binding, documents, and security.</span></span> <span data-ttu-id="704bf-105">Es un subconjunto de .NET Framework, por lo que si ya ha creado aplicaciones con .NET Framework usando Windows Forms o ASP.NET, la experiencia de programación le resultará familiar.</span><span class="sxs-lookup"><span data-stu-id="704bf-105">It is a subset of the .NET Framework, so if you have previously built applications with the .NET Framework using ASP.NET or Windows Forms, the programming experience should be familiar.</span></span> <span data-ttu-id="704bf-106">WPF usa el lenguaje de marcado de aplicaciones extensible (XAML) para proporcionar un modelo declarativo para la programación de aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="704bf-106">WPF uses the Extensible Application Markup Language (XAML) to provide a declarative model for application programming.</span></span> <span data-ttu-id="704bf-107">Esta sección contiene temas que presentan WPF y le ayudarán a empezar a trabajar con él.</span><span class="sxs-lookup"><span data-stu-id="704bf-107">This section has topics that introduce and help you get started with WPF.</span></span>  

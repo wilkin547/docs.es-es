@@ -2,11 +2,17 @@
 title: Interfaces (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic code, interfaces'
-  - 'interfaces [Visual Basic], Visual Basic'
-  - interfaces
-  - 'interfaces [Visual Basic]'
+- Visual Basic code, interfaces
+- interfaces [Visual Basic], Visual Basic
+- interfaces
+- interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
+ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972394"
 ---
 # <a name="interfaces-visual-basic"></a><span data-ttu-id="9bfc1-102">Interfaces (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9bfc1-102">Interfaces (Visual Basic)</span></span>
 <span data-ttu-id="9bfc1-103">Las *interfaces* definen las propiedades, los métodos y los eventos que pueden implementar las clases.</span><span class="sxs-lookup"><span data-stu-id="9bfc1-103">*Interfaces* define the properties, methods, and events that classes can implement.</span></span> <span data-ttu-id="9bfc1-104">Las interfaces permiten definir características como grupos pequeños de propiedades, métodos y eventos estrechamente relacionados; esto reduce los problemas de compatibilidad porque se pueden desarrollar implementaciones mejoradas para las interfaces sin comprometer el código existente.</span><span class="sxs-lookup"><span data-stu-id="9bfc1-104">Interfaces allow you to define features as small groups of closely related properties, methods, and events; this reduces compatibility problems because you can develop enhanced implementations for your interfaces without jeopardizing existing code.</span></span> <span data-ttu-id="9bfc1-105">En cualquier momento se pueden agregar nuevas características mediante el desarrollo de implementaciones e interfaces adicionales.</span><span class="sxs-lookup"><span data-stu-id="9bfc1-105">You can add new features at any time by developing additional interfaces and implementations.</span></span>  

@@ -3,9 +3,15 @@ layout: HubPage
 ms.topic: hub-page
 hide_bc: true
 title: Documentación de .NET
-description: 'Obtenga información sobre cómo usar .NET para crear una variedad de aplicaciones en cualquier plataforma mediante C#, Visual Basic y F#. Examine referencias de API, código de ejemplo, tutoriales y mucho más.'
+description: Obtenga información sobre cómo usar .NET para crear una variedad de aplicaciones en cualquier plataforma mediante C#, Visual Basic y F#. Examine referencias de API, código de ejemplo, tutoriales y mucho más.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
+ms.openlocfilehash: 31e810246528c99a665128d3535b92dbfcb4352d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464520"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">

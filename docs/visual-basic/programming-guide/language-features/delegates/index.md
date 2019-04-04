@@ -2,11 +2,16 @@
 title: Delegados (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'delegates [Visual Basic]'
-  - 'Visual Basic code, delegates'
+- delegates [Visual Basic]
+- Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
+ms.openlocfilehash: b3f333f1714a66a8ff462000385af92cf343a19e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674034"
 ---
-
 # <a name="delegates-visual-basic"></a><span data-ttu-id="e39c8-102">Delegados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e39c8-102">Delegates (Visual Basic)</span></span>
 
 <span data-ttu-id="e39c8-103">Los delegados son objetos que hacen referencia a métodos.</span><span class="sxs-lookup"><span data-stu-id="e39c8-103">Delegates are objects that refer to methods.</span></span> <span data-ttu-id="e39c8-104">A veces se describen como *punteros de función con seguridad de tipos* porque son similares a los punteros de función utilizados en otros lenguajes de programación.</span><span class="sxs-lookup"><span data-stu-id="e39c8-104">They are sometimes described as *type-safe function pointers* because they are similar to function pointers used in other programming languages.</span></span> <span data-ttu-id="e39c8-105">Pero a diferencia de los punteros de función, los delegados de Visual Basic son un tipo de referencia basado en la clase <xref:System.Delegate?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e39c8-105">But unlike function pointers, Visual Basic delegates are a reference type based on the class <xref:System.Delegate?displayProperty=nameWithType>.</span></span> <span data-ttu-id="e39c8-106">Los delegados pueden hacer referencia a los métodos compartidos, métodos a los que se puede llamar sin una instancia específica de una clase, y a los métodos de instancia.</span><span class="sxs-lookup"><span data-stu-id="e39c8-106">Delegates can reference both shared methods — methods that can be called without a specific instance of a class — and instance methods.</span></span>
