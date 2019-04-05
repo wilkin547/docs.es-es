@@ -1,8 +1,14 @@
 ---
 title: 'Introducción a C#: tutoriales interactivos'
-description: 'Aprenda a usar C# en el explorador y empiece a trabajar con su entorno de desarrollo'
+description: Aprenda a usar C# en el explorador y empiece a trabajar con su entorno de desarrollo
 ms.date: 01/30/2018
 ms.custom: mvc
+ms.openlocfilehash: 784461a707f0c40fd559b5652358bc8ec2ba9279
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920521"
 ---
 # <a name="introduction-to-c"></a>Introducción a C\#
 
@@ -12,35 +18,29 @@ En las primeras lecciones se explican los conceptos de C# con la utilización de
 
 Todos los tutoriales de introducción posteriores a la lección Hola mundo se encuentran disponibles mediante la experiencia de explorador en línea o [en el entorno de desarrollo local](local-environment.md). Al final de cada tutorial, decida si desea continuar con la siguiente lección en línea o en su propia máquina. Hay vínculos que le ayudarán a configurar el entorno y continuar con el siguiente tutorial en su máquina.
 
-## <a name="hello-worldhello-worldyml"></a>[Hola mundo](hello-world.yml)
+## [<a name="hello-world"></a>Hola a todos](hello-world.yml)
 
 En el tutorial [Hola mundo](hello-world.yml), creará el programa de C# más básico. Explorará el tipo `string` y cómo trabajar con texto.
 
-## <a name="numbers-in-cnumbers-in-csharpyml"></a>[Números en C#](numbers-in-csharp.yml)
+## [<a name="numbers-in-c"></a>Números en C#](numbers-in-csharp.yml)
 
 En el tutorial [Números en C#](numbers-in-csharp.yml), obtendrá información sobre cómo se almacenan los números en los equipos y cómo realizar cálculos con distintos tipos numéricos. Conocerá los datos básicos sobre cómo realizar redondeos y cálculos matemáticos con C#. Este tutorial también está disponible [para ejecutarse localmente en su máquina](numbers-in-csharp-local.md).
 
 En este tutorial se asume que ha completado la lección [Hola mundo](hello-world.yml).
 
-## <a name="branches-and-loopsbranches-and-loopsyml"></a>[Bifurcaciones y bucles](branches-and-loops.yml)
+## [<a name="branches-and-loops"></a>Bifurcaciones y bucles](branches-and-loops.yml)
 
 En el tutorial [Ramas y bucles](branches-and-loops.yml) se explican los datos básicos sobre la selección de diferentes rutas de acceso de la ejecución del código en función de los valores almacenados en variables. Aprenderá los datos básicos del flujo de control, es decir, cómo los programas toman decisiones y eligen distintas acciones. Este tutorial también está disponible [para ejecutarse localmente en su máquina](branches-and-loops-local.md).
 
 En este tutorial se supone que ha completado las lecciones [Hola mundo](hello-world.yml) y [Números en C#](numbers-in-csharp.yml).
 
-## <a name="string-interpolationinterpolated-stringsyml"></a>[Interpolación de cadenas](interpolated-strings.yml)
-
-En el tutorial [Interpolación de cadenas](interpolated-strings.yml) se muestra cómo insertar valores en una cadena. Aprenderá a crear una cadena interpolada con expresiones C# insertadas y a controlar el formato de la cadena de salida. Este tutorial también está disponible [para ejecutarse localmente en su máquina](interpolated-strings-local.md).
-
-En este tutorial se supone que ha completado las lecciones [Hola mundo](hello-world.yml), [Números en C#](numbers-in-csharp.yml) y [Ramas y bucles](branches-and-loops.yml).
-
-## <a name="list-collectionlist-collectionyml"></a>[Colección de listas](list-collection.yml)
+## [<a name="list-collection"></a>Colección de listas](list-collection.yml)
 
 En la lección [Colección de listas](list-collection.yml) se ofrece información general sobre el tipo de colección de listas que almacena secuencias de datos. Se explica cómo agregar y quitar elementos, buscarlos y ordenar las listas. Explorará los diferentes tipos de listas. Este tutorial también está disponible [para ejecutarse localmente en su máquina](arrays-and-collections.md).
 
 En este tutorial se presupone que ha completado las lecciones que se muestran anteriormente.
 
-## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Introducción a las clases](introduction-to-classes.md)
+## [<a name="introduction-to-classes"></a>Introducción a las clases](introduction-to-classes.md)
 
 Este tutorial solo se encuentra disponible para ejecutarse en el equipo con un entorno de desarrollo local propio y .NET Core.
 Creará una aplicación de consola y conocerá las características básicas orientadas a objetos que forman parte del lenguaje C#.

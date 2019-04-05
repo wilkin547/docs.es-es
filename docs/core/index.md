@@ -4,12 +4,12 @@ description: .NET Core es una implementación modular y de alto rendimiento de .
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 62019c5414857ed5eee99a6a60f5b0b183fe25e8
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 79a0c09074159160dd01b0c7970612f7058cc3fc
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030287"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920628"
 ---
 # <a name="net-core-guide"></a>Guía de .NET Core
 
@@ -21,7 +21,7 @@ Consulte los [tutoriales de .NET Core](tutorials/index.md) para aprender a crear
 
 ## <a name="download-net-core-22"></a>Descarga de .NET Core 2.2
 
-Descargue el [SDK de .NET Core 2.2](https://www.microsoft.com/net/download) para probar .NET Core en su equipo Windows, macOS o Linux. Visite [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) si prefiere usar contenedores de Docker.
+Descargue el [SDK de .NET Core 2.2](https://www.microsoft.com/net/download) para probar .NET Core en su equipo Windows, macOS o Linux. Visite [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) si prefiere usar contenedores de Docker.
 
 Si busca otra versión de .NET Core, todas las versiones de .NET Core están disponibles en la [página de descargas de .NET Core](https://www.microsoft.com/net/download/archives).
 
@@ -44,7 +44,7 @@ Debería ver los siguientes resultados:
 Hello World!
 ```
 
-## <a name="support"></a>Compatibilidad
+## <a name="support"></a>Soporte técnico
 
 [Microsoft admite](https://www.microsoft.com/net/support/policy) .NET Core en Windows, macOS y Linux. Varias veces al año, por lo general mensualmente, se actualiza para aumentar la seguridad y la calidad.
 
