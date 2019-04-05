@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367575"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054993"
 ---
 # <a name="tooltip"></a>Información sobre herramientas
 Información sobre herramientas es una pequeña ventana emergente que aparece cuando un usuario detiene el puntero del mouse sobre un elemento, tal como sobreutilizado un <xref:System.Windows.Controls.Button>.  

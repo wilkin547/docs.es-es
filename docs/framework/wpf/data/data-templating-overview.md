@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 9287656349f2a10619bfe76a36ee7855d3861cba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58d723ccf86e4195674c132f9fb1b76f689f57b2
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376109"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055344"
 ---
 # <a name="data-templating-overview"></a>Información general sobre plantillas de datos
 El modelo de plantillas de datos de WPF ofrece gran flexibilidad para definir la presentación de los datos. Los controles WPF tienen funcionalidad integrada que admite la personalización de la presentación de los datos. En este tema muestra primero cómo definir un <xref:System.Windows.DataTemplate> y, a continuación, presenta otras características de plantillas de datos, como la selección de plantillas basadas en la lógica personalizada y la compatibilidad con la presentación de datos jerárquicos.  
@@ -41,7 +41,7 @@ El modelo de plantillas de datos de WPF ofrece gran flexibilidad para definir la
 ### <a name="without-a-datatemplate"></a>Sin un DataTemplate  
  Sin un <xref:System.Windows.DataTemplate>, nuestro <xref:System.Windows.Controls.ListBox> actualmente tiene este aspecto:  
   
- ![Captura de pantalla de ejemplo de plantillas de datos](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
+ ![Captura de pantalla de ejemplo de creación de plantillas de datos](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
   
  Lo que sucede es que, sin ninguna instrucción concreta, el <xref:System.Windows.Controls.ListBox> mediante llamadas predeterminada `ToString` al intentar mostrar los objetos de la colección. Por lo tanto, si la `Task` objeto invalidaciones el `ToString` método, el <xref:System.Windows.Controls.ListBox> muestra la representación de cadena de cada objeto de origen en la colección subyacente.  
   
@@ -52,7 +52,7 @@ El modelo de plantillas de datos de WPF ofrece gran flexibilidad para definir la
   
  El <xref:System.Windows.Controls.ListBox> el siguiente aspecto:  
   
- ![Captura de pantalla de ejemplo de plantillas de datos](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
+ ![Captura de pantalla de ejemplo de creación de plantillas de datos](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
  Pero eso resulta limitante e inflexible. Además, si enlaza a datos [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], no podrá invalidar `ToString`.  
   
@@ -66,7 +66,7 @@ El modelo de plantillas de datos de WPF ofrece gran flexibilidad para definir la
   
  Ahora nuestra <xref:System.Windows.Controls.ListBox> el siguiente aspecto:  
   
- ![Captura de pantalla de ejemplo de plantillas de datos](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
+ ![Captura de pantalla de ejemplo de creación de plantillas de datos](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
   
 <a name="defining_datatemplate_as_a_resource"></a>   
 ### <a name="creating-the-datatemplate-as-a-resource"></a>Crear el DataTemplate como recurso  
@@ -103,7 +103,7 @@ El modelo de plantillas de datos de WPF ofrece gran flexibilidad para definir la
   
  La siguiente captura de pantalla muestra la <xref:System.Windows.Controls.ListBox> con esto se puede modificar <xref:System.Windows.DataTemplate>:  
   
- ![Captura de pantalla de ejemplo de plantillas de datos](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
+ ![Captura de pantalla de ejemplo de creación de plantillas de datos](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
   
  Podemos establecer <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> a <xref:System.Windows.HorizontalAlignment.Stretch> en el <xref:System.Windows.Controls.ListBox> para asegurarse de que el ancho de los elementos ocupe todo el espacio:  
   
@@ -111,7 +111,7 @@ El modelo de plantillas de datos de WPF ofrece gran flexibilidad para definir la
   
  Con el <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> propiedad establecida en <xref:System.Windows.HorizontalAlignment.Stretch>, el <xref:System.Windows.Controls.ListBox> ahora tiene este aspecto:  
   
- ![Captura de pantalla de ejemplo de plantillas de datos](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
+ ![Captura de pantalla de ejemplo de creación de plantillas de datos](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
   
 <a name="DataTrigger_to_Apply_Property_Values"></a>   
 ### <a name="use-datatriggers-to-apply-property-values"></a>Usar DataTriggers para aplicar valores de propiedad  
@@ -125,7 +125,7 @@ El modelo de plantillas de datos de WPF ofrece gran flexibilidad para definir la
   
  Nuestra aplicación tiene ahora el aspecto siguiente. Las tareas domésticas aparecen con un borde amarillo y las tareas de oficina, con un borde aguamarina:  
   
- ![Captura de pantalla de ejemplo de plantillas de datos](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
+ ![Captura de pantalla de ejemplo de creación de plantillas de datos](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
   
  En este ejemplo el <xref:System.Windows.DataTrigger> usa un <xref:System.Windows.Setter> para establecer un valor de propiedad. Las clases de desencadenador tienen también la <xref:System.Windows.TriggerBase.EnterActions%2A> y <xref:System.Windows.TriggerBase.ExitActions%2A> propiedades que le permiten iniciar un conjunto de acciones, como animaciones. Además, también hay un <xref:System.Windows.MultiDataTrigger> clase que le permite aplicar los cambios en función de varios valores de propiedad enlazada a datos.  
   
@@ -165,7 +165,7 @@ En el ejemplo anterior, situamos el desencadenador dentro de la <xref:System.Win
   
  Con el selector de plantillas en su lugar, el <xref:System.Windows.Controls.ListBox> aparece ahora como sigue:  
   
- ![Captura de pantalla de ejemplo de plantillas de datos](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
+ ![Captura de pantalla de ejemplo de creación de plantillas de datos](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
 
 Con esto concluye la explicación de este ejemplo. Para obtener el ejemplo completo, vea [Introducción a la aplicación de plantillas de ejemplo](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro).
 
@@ -191,11 +191,11 @@ Con esto concluye la explicación de este ejemplo. Para obtener el ejemplo compl
   
  En el ejemplo se muestra que, con el uso de <xref:System.Windows.HierarchicalDataTemplate>, puede mostrar fácilmente datos de la lista que contiene otras listas. La siguiente captura de pantalla muestra el ejemplo.  
   
- ![Captura de pantalla de ejemplo HierarchicalDataTemplate](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
+ ![HierarchicalDataTemplate sample screenshot](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>Vea también
 - [Enlace de datos](../advanced/optimizing-performance-data-binding.md)
-- [Find DataTemplate-Generated Elements](how-to-find-datatemplate-generated-elements.md) (Cómo buscar elementos generados por una clase DataTemplate)
+- [Buscar elementos generados por una clase DataTemplate](how-to-find-datatemplate-generated-elements.md)
 - [Aplicar estilos y plantillas](../controls/styling-and-templating.md)
 - [Información general sobre el enlace de datos](data-binding-overview.md)
-- [GridView Column Header Styles and Templates Overview](../controls/gridview-column-header-styles-and-templates-overview.md) (Información general sobre plantillas y estilos de encabezado de columna en modo GridView)
+- [Información general sobre plantillas y estilos de encabezado de columna en modo GridView](../controls/gridview-column-header-styles-and-templates-overview.md)

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634562"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055357"
 ---
 # <a name="data-binding-overview"></a>Información general sobre el enlace de datos
-El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una manera sencilla y coherente para que las aplicaciones presenten datos e interactúen con ellos. Los elementos se pueden enlazar a datos desde una variedad de orígenes de datos en forma de objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] y [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>Por ejemplo, <xref:System.Windows.Controls.Button> y <xref:System.Windows.Controls.ItemsControl>s como <xref:System.Windows.Controls.ListBox> y <xref:System.Windows.Controls.ListView> tiene funciones integradas para habilitar flexible estilo de elementos de datos individuales o colecciones de elementos de datos. Se pueden generar vistas de ordenación, filtrado ya agrupación encima de los datos.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] enlace de datos proporciona una manera sencilla y coherente para las aplicaciones presentar e interactuar con datos. Los elementos se pueden enlazar a datos desde una variedad de orígenes de datos en forma de objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] y [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>Por ejemplo, <xref:System.Windows.Controls.Button> y <xref:System.Windows.Controls.ItemsControl>s como <xref:System.Windows.Controls.ListBox> y <xref:System.Windows.Controls.ListView> tiene funciones integradas para habilitar flexible estilo de elementos de datos individuales o colecciones de elementos de datos. Se pueden generar vistas de ordenación, filtrado ya agrupación encima de los datos.  
   
  La funcionalidad de enlace de datos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] presenta varias ventajas con respecto a los modelos tradicionales, como un mayor número de propiedades que admiten de forma inherente el enlace de datos, una representación flexible de los datos en la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] y la separación bien definida de la lógica del negocio de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
@@ -69,7 +69,7 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
 -   La propiedad de destino debe ser una propiedad de dependencia. La mayoría <xref:System.Windows.UIElement> propiedades son propiedades de dependencia y la mayoría de las propiedades de dependencia, excepto las de solo lectura, admite el enlace de datos de forma predeterminada. (Solo <xref:System.Windows.DependencyObject> tipos pueden definir las propiedades de dependencia y todos <xref:System.Windows.UIElement>se derivan de <xref:System.Windows.DependencyObject>.)  
   
--   Aunque no se especifica en la ilustración, hay que destacar que el objeto de origen de enlace no está restringido a ser un objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] personalizado. El enlace de datos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] admite datos en forma de objetos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] y [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Para proporcionar algunos ejemplos, el origen de enlace puede ser un <xref:System.Windows.UIElement>, cualquier objeto de lista, un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objeto que está asociado con [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] datos o servicios Web o un objeto XmlNode que contiene su [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] datos. Para más información, consulte [Binding Sources Overview](binding-sources-overview.md) (Introducción a los orígenes de enlace).  
+-   Aunque no se especifica en la ilustración, hay que destacar que el objeto de origen de enlace no está restringido a ser un objeto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] personalizado. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enlace de datos es compatible con los datos en forma de [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objetos y [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Para proporcionar algunos ejemplos, el origen de enlace puede ser un <xref:System.Windows.UIElement>, cualquier objeto de lista, un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objeto que está asociado con [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] datos o servicios Web o un objeto XmlNode que contiene su [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] datos. Para más información, consulte [Binding Sources Overview](binding-sources-overview.md) (Introducción a los orígenes de enlace).  
   
  Cuando consulte otros temas del software [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)], es importante tener en cuenta que cuando establece un enlace, enlaza un destino de enlace *a* un origen de enlace. Por ejemplo, si se va a mostrar algunos subyacente [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] datos en un <xref:System.Windows.Controls.ListBox> mediante enlace de datos, va a enlazar sus <xref:System.Windows.Controls.ListBox> a la [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] datos.  
   
@@ -436,4 +436,4 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
 - [Enlace de datos](../advanced/optimizing-performance-data-binding.md)
 - [Demostración de enlace de datos](https://go.microsoft.com/fwlink/?LinkID=163703)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)
-- [Bind to an ADO.NET Data Source](how-to-bind-to-an-ado-net-data-source.md) (Enlace a un origen de datos de ADO.NET)
+- [Enlazar a un origen de datos de ADO.NET](how-to-bind-to-an-ado-net-data-source.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: cc97fda98badfc27e8b92a0dde6d5e419575ac6c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87ae55c454a72797569de4cd944984ba18c3b2ca
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379567"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055071"
 ---
 # <a name="graphics-and-multimedia"></a>Gráficos y multimedia
 <a name="introduction"></a>
@@ -53,7 +53,7 @@ ms.locfileid: "57379567"
  WPF incluye compatibilidad con gráficos 2D de alta calidad. La funcionalidad incluye pinceles, geometrías, imágenes, formas y transformaciones. Para más información, consulte [Graphics](graphics.md) (Gráficos). La representación de los elementos gráficos se basa en el <xref:System.Windows.Media.Visual> clase. La estructura de objetos visuales en la pantalla se describe en el árbol visual. Para más información, consulte [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md).  
   
 ### <a name="2-d-shapes"></a>Formas 2D  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ofrece una biblioteca de formas [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] comunes dibujadas mediante vectores, como los rectángulos y las elipses que se muestran en la ilustración siguiente.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Proporciona una biblioteca de uso común, dibujadas mediante vectores [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] formas, como rectángulos y elipses que se muestra en la siguiente ilustración.  
   
  ![Elipses y rectángulos](./media/wpfintrofigure4.PNG "WPFIntroFigure4")  
   
@@ -101,7 +101,7 @@ End Class
  Para más información, consulte [Información general sobre geometría](geometry-overview.md). Para obtener un ejemplo introductorio, vea [Ejemplo de geometrías](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ### <a name="2-d-effects"></a>Efectos 2D  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ofrece una biblioteca de clases [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] que puede usar para crear diversos efe efectos. La funcionalidad de representación [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ofrece la posibilidad de pintar elementos de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que tengan degradados, mapas de bits, dibujos y vídeos; así como para manipularlos mediante rotación, escalado y sesgado. En la ilustración siguiente se ofrece un ejemplo de los muchos efectos que puede lograr mediante pinceles de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Proporciona una biblioteca de [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] clases que puede usar para crear una variedad de efectos. La funcionalidad de representación [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ofrece la posibilidad de pintar elementos de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que tengan degradados, mapas de bits, dibujos y vídeos; así como para manipularlos mediante rotación, escalado y sesgado. En la ilustración siguiente se ofrece un ejemplo de los muchos efectos que puede lograr mediante pinceles de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
  ![Ilustración de diferentes pinceles](./media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
@@ -109,9 +109,9 @@ End Class
   
 <a name="rendering"></a>   
 ## <a name="3-d-rendering"></a>Representación 3D  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ofrece un conjunto de funciones de representación [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] que se integran con la compatibilidad de gráficos [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] para que cree un diseño, una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] y una visualización de datos más interesantes. En un extremo del espectro, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] le permite representar imágenes [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] en las superficies de formas [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)], lo que se muestra en la siguiente ilustración.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Proporciona un conjunto de [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] capacidades de representación que se integran con [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] compatibilidad con gráficos en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en orden para crear el diseño más emocionante, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]y visualización de datos. En un extremo del espectro, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] le permite representar imágenes [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] en las superficies de formas [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)], lo que se muestra en la siguiente ilustración.  
   
- ![Captura de pantalla de ejemplo de Visual3D](./media/wpfintrofigure13.png "WPFIntroFigure13")  
+ ![Captura de pantalla de ejemplo Visual3D](./media/wpfintrofigure13.png "WPFIntroFigure13")  
   
  Para obtener más información, consulte [Información general sobre gráficos 3D](3-d-graphics-overview.md). Para obtener un ejemplo introductorio, vea [3-D Solids Sample](https://go.microsoft.com/fwlink/?LinkID=159964) (Ejemplo de sólidos 3D).  
   
@@ -153,6 +153,6 @@ End Class
 - [Información general sobre formas y dibujo básico en WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Información general sobre el dibujo con colores sólidos y degradados](painting-with-solid-colors-and-gradients-overview.md)
 - [Pintar con imágenes, dibujos y elementos visuales](painting-with-images-drawings-and-visuals.md)
-- [Temas de procedimientos de temporización y animación](animation-and-timing-how-to-topics.md)
+- [Temas "Cómo..." de animación y control de tiempo](animation-and-timing-how-to-topics.md)
 - [Información general sobre gráficos 3D](3-d-graphics-overview.md)
 - [Información general sobre multimedia](multimedia-overview.md)

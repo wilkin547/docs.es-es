@@ -2,12 +2,12 @@
 title: Byrefs
 description: Obtenga información sobre byref y tipos byref en F#, que se usan para la programación de bajo nivel.
 ms.date: 09/02/2018
-ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976556"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055370"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -56,9 +56,10 @@ open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-
-let dt = DateTime.Now
-f &dt // Pass a pointer to 'dt'
+    
+let usage =
+    let dt = DateTime.Now
+    f &dt // Pass a pointer to 'dt'
 ```
 
 Para escribir en el puntero mediante el uso de un `outref<'T>` o `byref<'T>`, también debe hacer que el valor tomar un puntero a `mutable`.
@@ -84,7 +85,7 @@ Si solo va a escribir el puntero en lugar de leerlo, considere el uso de `outref
 Observe el código siguiente:
 
 ```fsharp
-let f (x: inref<SomeStruct>) = s.SomeField
+let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
 Semánticamente, esto significa lo siguiente:
@@ -111,19 +112,19 @@ C# admite la `in ref` y `out ref` palabras clave, además de `ref` devuelve. La 
 
 |Construcción de C#|F#deduce|
 |------------|---------|
-|`ref` Valor devuelto|`outref<'T>`|
-|`ref readonly` Valor devuelto|`inref<'T>`|
-|`in ref` Parámetro|`inref<'T>`|
-|`out ref` Parámetro|`outref<'T>`|
+|`ref` valor devuelto|`outref<'T>`|
+|`ref readonly` valor devuelto|`inref<'T>`|
+|`in ref` parámetro|`inref<'T>`|
+|`out ref` parámetro|`outref<'T>`|
 
 La siguiente tabla muestra qué F# emite:
 
 |F#construcción|Construcción emitido|
 |------------|-----------------|
-|`inref<'T>` argumento|`[In]` atributo de argumento|
-|`inref<'T>` devolver|`modreq` atributo de valor|
+|`inref<'T>` argument|`[In]` atributo de argumento|
+|`inref<'T>` return|`modreq` atributo de valor|
 |`inref<'T>` en la ranura abstracta o la implementación|`modreq` en el valor devuelto o argumento|
-|`outref<'T>` argumento|`[Out]` atributo de argumento|
+|`outref<'T>` argument|`[Out]` atributo de argumento|
 
 ### <a name="type-inference-and-overloading-rules"></a>Inferencia de tipos y las reglas de sobrecarga
 

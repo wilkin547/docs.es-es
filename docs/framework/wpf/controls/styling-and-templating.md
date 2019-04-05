@@ -15,15 +15,15 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 580eb2c7efd00382f7fff24984f0ce6f6d8fa027
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370727"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055331"
 ---
 # <a name="styling-and-templating"></a>Aplicar estilos y plantillas
-La aplicación de estilos y plantillas de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] hace referencia a un conjunto de características (estilos, plantillas, desencadenadores y guiones gráficos) que permiten a los desarrolladores y diseñadores crear efectos visualmente atractivos y una apariencia coherente para su producto. Aunque los desarrolladores y los diseñadores pueden personalizar muchas apariencias aplicación por aplicación, es necesario un modelo de aplicación de estilos y plantillas para el mantenimiento y el uso compartido de la apariencia entre las distintas aplicaciones. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ofrece ese modelo.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicar estilos y plantillas que hacen referencia a un conjunto de características (estilos, plantillas, desencadenadores y guiones gráficos) que permite a los desarrolladores y diseñadores crear efectos visualmente atractivos y para crear una apariencia coherente para su producto. Aunque los desarrolladores y los diseñadores pueden personalizar muchas apariencias aplicación por aplicación, es necesario un modelo de aplicación de estilos y plantillas para el mantenimiento y el uso compartido de la apariencia entre las distintas aplicaciones. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ofrece ese modelo.  
   
  Otra característica del modelo de aplicación de estilos y plantillas de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] es la separación de la presentación y la lógica. Esto significa que los diseñadores pueden trabajar en la apariencia de una aplicación solo con usar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mientras los desarrolladores trabajan en la lógica de programación con C# o Visual Basic.  
   
@@ -45,7 +45,7 @@ La aplicación de estilos y plantillas de [!INCLUDE[TLA#tla_winclient](../../../
   
  [!code-xaml[StylingIntroSample_snippet#TextBlocks](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#textblocks)]  
   
- ![Captura de pantalla de aplicación de estilo de ejemplo](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
+ ![Captura de pantalla de ejemplo de aplicación de estilos](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
   
  Puede cambiar la apariencia predeterminada estableciendo las propiedades, como <xref:System.Windows.Controls.Control.FontSize%2A> y <xref:System.Windows.Controls.Control.FontFamily%2A>, en cada <xref:System.Windows.Controls.TextBlock> directamente el elemento. Sin embargo, si desea que su <xref:System.Windows.Controls.TextBlock> elementos que se van a compartir algunas propiedades, puede crear un <xref:System.Windows.Style> en el `Resources` sección de su [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de archivos, como se muestra aquí:  
   
@@ -57,7 +57,7 @@ La aplicación de estilos y plantillas de [!INCLUDE[TLA#tla_winclient](../../../
   
  Ahora el <xref:System.Windows.Controls.TextBlock> elementos aparecerán como sigue:  
   
- ![Captura de pantalla de aplicación de estilo de ejemplo](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
+ ![Captura de pantalla de ejemplo de aplicación de estilos](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
   
 ### <a name="extending-styles"></a>Ampliación de los estilos  
  Quizás desee que los dos <xref:System.Windows.Controls.TextBlock> elementos compartan algunos valores de propiedad, como el <xref:System.Windows.Controls.Control.FontFamily%2A> y el texto centrado <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, pero también desea que el texto "My Pictures" tenga propiedades adicionales. Puede conseguirlo al crear un nuevo estilo basado en el primero, como se muestra aquí:  
@@ -197,6 +197,6 @@ La aplicación de estilos y plantillas de [!INCLUDE[TLA#tla_winclient](../../../
  Si va a crear un tema para su control personalizado, consulte la sección de la biblioteca de controles externos de [Control Authoring Overview](control-authoring-overview.md) (Introducción a la creación de controles).  
   
 ## <a name="see-also"></a>Vea también
-- [Identificadores URI de paquete en WPF](../app-development/pack-uris-in-wpf.md)
-- [Cómo: Buscar elementos generados por el objeto ControlTemplate](how-to-find-controltemplate-generated-elements.md)
-- [Find DataTemplate-Generated Elements](../data/how-to-find-datatemplate-generated-elements.md) (Cómo buscar elementos generados por una clase DataTemplate)
+- [Pack URI en WPF](../app-development/pack-uris-in-wpf.md)
+- [Filtrar para buscar elementos generados por un objeto ControlTemplate](how-to-find-controltemplate-generated-elements.md)
+- [Buscar elementos generados por una clase DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 702f06a37aa98e3a84858a590655e8a4311cfa48
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 28c1e0e23247cfaf48343bf10bb79c4862623fb6
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362141"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055136"
 ---
-# <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Procedimiento Controlar cuándo el texto de TextBox actualiza el origen
+# <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Filtrar Controlar cuándo el texto de TextBox actualiza el origen
 Este tema describe cómo usar el <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propiedad para controlar la temporización de las actualizaciones del origen de enlace. Este tema se usa el <xref:System.Windows.Controls.TextBox> control como un ejemplo.  
   
 ## <a name="example"></a>Ejemplo  
- El elemento de lenguaje <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> propiedad tiene un valor predeterminado <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Esto significa que si una aplicación tiene un <xref:System.Windows.Controls.TextBox> con un enlace de datos <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> propiedad, el texto que escriba en el <xref:System.Windows.Controls.TextBox> no actualiza el origen hasta el <xref:System.Windows.Controls.TextBox> pierde el foco (por ejemplo, al hacer clic en fuera de la <xref:System.Windows.Controls.TextBox>).  
+ <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> propiedad tiene un valor predeterminado <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Esto significa que si una aplicación tiene un <xref:System.Windows.Controls.TextBox> con un enlace de datos <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> propiedad, el texto que escriba en el <xref:System.Windows.Controls.TextBox> no actualiza el origen hasta el <xref:System.Windows.Controls.TextBox> pierde el foco (por ejemplo, al hacer clic en fuera de la <xref:System.Windows.Controls.TextBox>).  
   
  Si desea que el origen de actualizarse a medida que escribe, establezca el <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> del enlace a <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>. En el ejemplo siguiente, las líneas de código resaltadas muestran que el `Text` propiedades de la <xref:System.Windows.Controls.TextBox> y <xref:System.Windows.Controls.TextBlock> están enlazados a la misma propiedad de origen. El <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propiedad de la <xref:System.Windows.Controls.TextBox> enlace está establecido en <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.  
   
@@ -28,7 +28,7 @@ Este tema describe cómo usar el <xref:System.Windows.Data.Binding.UpdateSourceT
   
  Como resultado, el <xref:System.Windows.Controls.TextBlock> muestra el mismo texto (dado que el origen cambia) como el usuario escribe texto en el <xref:System.Windows.Controls.TextBox>, tal y como se muestra en la siguiente captura de pantalla del ejemplo:  
   
- ![Captura de pantalla de ejemplo del enlace de datos simple](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![Captura de pantalla de ejemplo de enlace de datos simple](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
   
  Si tiene un cuadro de diálogo o un formulario modificable por el usuario y desea diferir las actualizaciones de origen hasta que el usuario ha terminado de editar los campos y hace clic en "Aceptar", puede establecer el <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor de los enlaces en <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, como en el ejemplo siguiente:  
   

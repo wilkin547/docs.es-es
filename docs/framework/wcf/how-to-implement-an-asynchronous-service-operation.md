@@ -1,19 +1,19 @@
 ---
-title: Filtrar Implementar una operación de servicio asincrónico
+title: Filtrar para implementar una operación de servicios asincrónica
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: 00cbea3ae4528016a736c639c07059c1d2cb6407
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 8d11f39942793414e9e800b4e180d4d5ed5b2a3a
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332044"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055162"
 ---
-# <a name="how-to-implement-an-asynchronous-service-operation"></a>Filtrar Implementar una operación de servicio asincrónico
-En las aplicaciones de Windows Communication Foundation (WCF), una operación de servicio se puede implementar forma sincrónica o asincrónica sin dictar al cliente cómo llamarla. Por ejemplo, las operaciones de servicio asincrónicas pueden realizar llamadas sincrónicamente y a las operaciones de servicio sincrónicas se las puede llamar de manera asincrónica. Para obtener un ejemplo que muestra cómo llamar a una operación de forma asincrónica en una aplicación cliente, consulte [Cómo: Llamar a las operaciones de servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Para obtener más información acerca de las operaciones sincrónicas y asincrónicas, vea [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) y [sincrónica y operaciones asincrónicas](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). En este tema se describe la estructura básica de una operación de servicio asincrónica, el código no está completo. Para obtener un ejemplo completo de los lados del servicio y el cliente, consulte [asincrónico](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
+# <a name="how-to-implement-an-asynchronous-service-operation"></a>Filtrar para implementar una operación de servicios asincrónica
+En las aplicaciones de Windows Communication Foundation (WCF), una operación de servicio se puede implementar forma sincrónica o asincrónica sin dictar al cliente cómo llamarla. Por ejemplo, operaciones de servicio asincrónicas pueden llamarse de forma sincrónica, y las operaciones de servicio sincrónicas pueden llamarse de forma asincrónica. Para obtener un ejemplo que muestra cómo llamar a una operación de forma asincrónica en una aplicación cliente, consulte [Cómo: Llamar a las operaciones de servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Para obtener más información acerca de las operaciones sincrónicas y asincrónicas, vea [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) y [sincrónica y operaciones asincrónicas](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). En este tema se describe la estructura básica de una operación de servicio asincrónica, el código no está completo. Para obtener un ejemplo completo de los lados del servicio y el cliente, consulte [asincrónico](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Implementación de una operación de servicio de manera asincrónica  
   
@@ -46,5 +46,5 @@ En las aplicaciones de Windows Communication Foundation (WCF), una operación de
  [!code-vb[C_SyncAsyncClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
-- [Diseño de contratos de servicio](../../../docs/framework/wcf/designing-service-contracts.md)
+- [Diseño de contratos de servicios](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Operaciones sincrónicas y asincrónicas](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)

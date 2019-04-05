@@ -11,14 +11,14 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: b7ad8afbad212d5c79c9391bd9f6d1da7ff8fb28
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358198"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055253"
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>Tutorial: Mi primera aplicación de escritorio de WPF
+# <a name="walkthrough-my-first-wpf-desktop-application"></a>Tutorial: Mi primera aplicación de escritorio WPF
 
 Este artículo muestra cómo desarrollar una aplicación de Windows Presentation Foundation (WPF) simple que incluye los elementos que son comunes a la mayoría de las aplicaciones de WPF: Extensible Application Markup Language (XAML) marcado, código subyacente, definiciones de aplicación, controles, diseño, enlace de datos y estilos.
 
@@ -484,7 +484,7 @@ La ilustración siguiente muestra ambas páginas de la `ExpenseIt` aplicación c
 >
 > - [Seguridad](../security-wpf.md)
 >
-> - [Globalización y localización de WPF](../advanced/wpf-globalization-and-localization-overview.md)
+> - [Localización y globalización de WPF](../advanced/wpf-globalization-and-localization-overview.md)
 >
 > - [WPF: rendimiento](../advanced/optimizing-wpf-application-performance.md)
 
@@ -493,7 +493,7 @@ La ilustración siguiente muestra ambas páginas de la `ExpenseIt` aplicación c
 En este tutorial ha aprendido varias técnicas para crear una interfaz de usuario mediante Windows Presentation Foundation (WPF). Ahora debería tener un conocimiento básico de los bloques de creación de una aplicación de .NET Framework, enlazado a datos. Para más información sobre los modelos de programación y arquitectura de WPF, vea los temas siguientes:
 
 - [Arquitectura de WPF](../advanced/wpf-architecture.md)
-- [Información general sobre XAML (WPF)](../advanced/xaml-overview-wpf.md)
+- [Información general XAML (WPF)](../advanced/xaml-overview-wpf.md)
 - [Información general sobre las propiedades de dependencia](../advanced/dependency-properties-overview.md)
 - [Diseño](../advanced/layout.md)
 

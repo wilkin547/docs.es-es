@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ListBox control [WPF]
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
-ms.openlocfilehash: fe458ea2ca4107b7d43b160ba90b57c10b88a7f6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 69f93b902fc3c35749871a187e57d45a404c6602
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362232"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055058"
 ---
 # <a name="listbox"></a>ListBox
 Un <xref:System.Windows.Controls.ListBox> control proporciona a los usuarios con una lista de elementos seleccionables.  

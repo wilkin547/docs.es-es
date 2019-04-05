@@ -1,13 +1,13 @@
 ---
 title: 'Declaraciones de importación: La palabra clave open'
 description: Obtenga información sobre F# importar las declaraciones y cómo especifican un módulo o espacio de nombres cuyos elementos puede hacer referencia sin usar un nombre completo.
-ms.date: 05/16/2016
-ms.openlocfilehash: 261ffdfdea2860db72b052b2ffeb5c7e5d652c24
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 04/04/2019
+ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610325"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055006"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Declaraciones de importación: El `open` palabra clave
 
@@ -68,6 +68,6 @@ Algunos módulos, registros o tipos de unión pueden especificar el `RequireQual
 
 ## <a name="see-also"></a>Vea también
 
-- [# Referencia del lenguaje](index.md)
+- [Referencia del lenguaje F#](index.md)
 - [Espacios de nombres](namespaces.md)
 - [Módulos](modules.md)
