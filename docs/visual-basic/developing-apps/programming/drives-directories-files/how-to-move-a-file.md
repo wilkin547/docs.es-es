@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: 90f315bc9153fd79f12e3dcbbfe0f238f4090b25
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0c909e3dfce1af17cc74ca526ba0409d5e9f93f8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976881"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843726"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>Procedimiento para mover un archivo en Visual Basic
 El método `My.Computer.FileSystem.MoveFile` se puede usar para mover un archivo a otra carpeta. Si la estructura de destino no existe, se creará.  
@@ -50,6 +50,7 @@ El método `My.Computer.FileSystem.MoveFile` se puede usar para mover un archivo
 -   El usuario no tiene el permiso necesario (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>
 - [Cómo: Cambiar el nombre de un archivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
 - [Cómo: Crear una copia de un archivo en otro directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)

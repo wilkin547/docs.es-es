@@ -106,7 +106,7 @@ Todas estas reglas juntas significan que el titular de un `inref` puntero no pue
 
 El propósito de `outref<'T>` consiste en indicar que el puntero solo se debe leer desde. De forma inesperada, `outref<'T>` valor permite leer subyacente a pesar de su nombre. Esto es para fines de compatibilidad. Semánticamente, `outref<'T>` no es diferente a `byref<'T>`.
 
-### <a name="interop-with-c"></a>Interoperabilidad con c#\#
+### <a name="interop-with-c"></a>Interoperabilidad con C#\#
 
 C# admite la `in ref` y `out ref` palabras clave, además de `ref` devuelve. La tabla siguiente muestra cómo F# lo interpreta C# emite:
 

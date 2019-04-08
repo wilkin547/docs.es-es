@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 97c8580b5573348e58acb85b7368eb23927cde17
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307180"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920901"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - Interpolación de cadenas (Referencia de C#)
 
@@ -87,7 +87,7 @@ En el ejemplo siguiente, se usa la conversión implícita a <xref:System.Formatt
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-Si no está familiarizado con la interpolación de cadenas, vea el tutorial interactivo [Interpolación de cadenas en C#](../../tutorials/intro-to-csharp/interpolated-strings.yml). O bien, puede probar el tutorial [Interpolación de cadenas en C# ](../../tutorials/string-interpolation.md) localmente en el equipo.
+Si no está familiarizado con la interpolación de cadenas, vea el tutorial interactivo [Interpolación de cadenas en C#](../../tutorials/exploration/interpolated-strings.yml). O bien, puede probar el tutorial [Interpolación de cadenas en C# ](../../tutorials/string-interpolation.md) localmente en el equipo.
 
 ## <a name="see-also"></a>Vea también
 
@@ -95,7 +95,7 @@ Si no está familiarizado con la interpolación de cadenas, vea el tutorial inte
 - <xref:System.FormattableString?displayProperty=nameWithType>
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - [Formatos compuestos](../../../standard/base-types/composite-formatting.md)
-- [Tabla de formatos de presentación para valores numéricos](../keywords/formatting-numeric-results-table.md)
+- [Tabla de formatos de presentación para resultados numéricos](../keywords/formatting-numeric-results-table.md)
 - [Cadenas](../../programming-guide/strings/index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Caracteres especiales de C#](index.md)
