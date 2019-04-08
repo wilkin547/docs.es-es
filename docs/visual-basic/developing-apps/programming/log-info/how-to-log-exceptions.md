@@ -5,71 +5,72 @@ helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: 10d1d25f830ff563cf70369e7b9d4c66f639c121
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bdbe9b1d05acdc0f67f0264ed1583dff922e527b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969796"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832663"
 ---
-# <a name="how-to-log-exceptions-in-visual-basic"></a><span data-ttu-id="96eca-102">Procedimiento para registrar excepciones en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="96eca-102">How to: Log Exceptions in Visual Basic</span></span>
-<span data-ttu-id="96eca-103">Puede usar los objetos `My.Application.Log` y `My.Log` para registrar información sobre excepciones que se producen en la aplicación.</span><span class="sxs-lookup"><span data-stu-id="96eca-103">You can use the `My.Application.Log` and `My.Log` objects to log information about exceptions that occur in your application.</span></span> <span data-ttu-id="96eca-104">Estos ejemplos muestran cómo usar el método `My.Application.Log.WriteException` para registrar excepciones que detecta explícitamente y excepciones que no se controlan.</span><span class="sxs-lookup"><span data-stu-id="96eca-104">These examples show how to use the `My.Application.Log.WriteException` method to log exceptions that you catch explicitly and exceptions that are unhandled.</span></span>  
+# <a name="how-to-log-exceptions-in-visual-basic"></a><span data-ttu-id="4fc9b-102">Procedimiento para registrar excepciones en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4fc9b-102">How to: Log Exceptions in Visual Basic</span></span>
+<span data-ttu-id="4fc9b-103">Puede usar los objetos `My.Application.Log` y `My.Log` para registrar información sobre excepciones que se producen en la aplicación.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-103">You can use the `My.Application.Log` and `My.Log` objects to log information about exceptions that occur in your application.</span></span> <span data-ttu-id="4fc9b-104">Estos ejemplos muestran cómo usar el método `My.Application.Log.WriteException` para registrar excepciones que detecta explícitamente y excepciones que no se controlan.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-104">These examples show how to use the `My.Application.Log.WriteException` method to log exceptions that you catch explicitly and exceptions that are unhandled.</span></span>  
   
- <span data-ttu-id="96eca-105">Para registrar información de seguimiento, use el método `My.Application.Log.WriteEntry`.</span><span class="sxs-lookup"><span data-stu-id="96eca-105">For logging tracing information, use the `My.Application.Log.WriteEntry` method.</span></span> <span data-ttu-id="96eca-106">Para obtener más información, vea <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A></span><span class="sxs-lookup"><span data-stu-id="96eca-106">For more information, see <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A></span></span>  
+ <span data-ttu-id="4fc9b-105">Para registrar información de seguimiento, use el método `My.Application.Log.WriteEntry`.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-105">For logging tracing information, use the `My.Application.Log.WriteEntry` method.</span></span> <span data-ttu-id="4fc9b-106">Para obtener más información, vea <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A></span><span class="sxs-lookup"><span data-stu-id="4fc9b-106">For more information, see <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A></span></span>  
   
-### <a name="to-log-a-handled-exception"></a><span data-ttu-id="96eca-107">Para registrar una excepción controlada</span><span class="sxs-lookup"><span data-stu-id="96eca-107">To log a handled exception</span></span>  
+### <a name="to-log-a-handled-exception"></a><span data-ttu-id="4fc9b-107">Para registrar una excepción controlada</span><span class="sxs-lookup"><span data-stu-id="4fc9b-107">To log a handled exception</span></span>  
   
-1.  <span data-ttu-id="96eca-108">Cree el método que generará la información de excepción.</span><span class="sxs-lookup"><span data-stu-id="96eca-108">Create the method that will generate the exception information.</span></span>  
+1.  <span data-ttu-id="4fc9b-108">Cree el método que generará la información de excepción.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-108">Create the method that will generate the exception information.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#9)]  
   
-2.  <span data-ttu-id="96eca-109">Use un bloque `Try...Catch` para detectar la excepción.</span><span class="sxs-lookup"><span data-stu-id="96eca-109">Use a `Try...Catch` block to catch the exception.</span></span>  
+2.  <span data-ttu-id="4fc9b-109">Use un bloque `Try...Catch` para detectar la excepción.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-109">Use a `Try...Catch` block to catch the exception.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#6)]  
   
-3.  <span data-ttu-id="96eca-110">Coloque el código que podría generar una excepción en el bloque `Try`.</span><span class="sxs-lookup"><span data-stu-id="96eca-110">Put the code that could generate an exception in the `Try` block.</span></span>  
+3.  <span data-ttu-id="4fc9b-110">Coloque el código que podría generar una excepción en el bloque `Try`.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-110">Put the code that could generate an exception in the `Try` block.</span></span>  
   
-     <span data-ttu-id="96eca-111">Quite la marca de comentario de las líneas `Dim` y `MsgBox` para generar una excepción <xref:System.NullReferenceException>.</span><span class="sxs-lookup"><span data-stu-id="96eca-111">Uncomment the `Dim` and `MsgBox` lines to cause a <xref:System.NullReferenceException> exception.</span></span>  
+     <span data-ttu-id="4fc9b-111">Quite la marca de comentario de las líneas `Dim` y `MsgBox` para generar una excepción <xref:System.NullReferenceException>.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-111">Uncomment the `Dim` and `MsgBox` lines to cause a <xref:System.NullReferenceException> exception.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#7)]  
   
-4.  <span data-ttu-id="96eca-112">En el bloque `Catch`, use el método `My.Application.Log.WriteException` para escribir la información de excepción.</span><span class="sxs-lookup"><span data-stu-id="96eca-112">In the `Catch` block, use the `My.Application.Log.WriteException` method to write the exception information.</span></span>  
+4.  <span data-ttu-id="4fc9b-112">En el bloque `Catch`, use el método `My.Application.Log.WriteException` para escribir la información de excepción.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-112">In the `Catch` block, use the `My.Application.Log.WriteException` method to write the exception information.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#8)]  
   
-     <span data-ttu-id="96eca-113">En el ejemplo siguiente se muestra el código completo para registrar una excepción controlada.</span><span class="sxs-lookup"><span data-stu-id="96eca-113">The following example shows the complete code for logging a handled exception.</span></span>  
+     <span data-ttu-id="4fc9b-113">En el ejemplo siguiente se muestra el código completo para registrar una excepción controlada.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-113">The following example shows the complete code for logging a handled exception.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#10)]  
   
-### <a name="to-log-an-unhandled-exception"></a><span data-ttu-id="96eca-114">Para registrar una excepción no controlada</span><span class="sxs-lookup"><span data-stu-id="96eca-114">To log an unhandled exception</span></span>  
+### <a name="to-log-an-unhandled-exception"></a><span data-ttu-id="4fc9b-114">Para registrar una excepción no controlada</span><span class="sxs-lookup"><span data-stu-id="4fc9b-114">To log an unhandled exception</span></span>  
   
-1.  <span data-ttu-id="96eca-115">Seleccione un proyecto en el **Explorador de soluciones**.</span><span class="sxs-lookup"><span data-stu-id="96eca-115">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="96eca-116">En el menú **Proyecto** , elija **Propiedades**.</span><span class="sxs-lookup"><span data-stu-id="96eca-116">On the **Project** menu, choose **Properties**.</span></span>  
+1.  <span data-ttu-id="4fc9b-115">Seleccione un proyecto en el **Explorador de soluciones**.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-115">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="4fc9b-116">En el menú **Proyecto** , elija **Propiedades**.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-116">On the **Project** menu, choose **Properties**.</span></span>  
   
-2.  <span data-ttu-id="96eca-117">Haga clic en la pestaña **Aplicación** .</span><span class="sxs-lookup"><span data-stu-id="96eca-117">Click the **Application** tab.</span></span>  
+2.  <span data-ttu-id="4fc9b-117">Haga clic en la pestaña **Aplicación** .</span><span class="sxs-lookup"><span data-stu-id="4fc9b-117">Click the **Application** tab.</span></span>  
   
-3.  <span data-ttu-id="96eca-118">Haga clic en el botón **Ver eventos de aplicaciones** para abrir el Editor de código.</span><span class="sxs-lookup"><span data-stu-id="96eca-118">Click the **View Application Events** button to open the Code Editor.</span></span>  
+3.  <span data-ttu-id="4fc9b-118">Haga clic en el botón **Ver eventos de aplicaciones** para abrir el Editor de código.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-118">Click the **View Application Events** button to open the Code Editor.</span></span>  
   
-     <span data-ttu-id="96eca-119">Se abre el archivo ApplicationEvents.vb.</span><span class="sxs-lookup"><span data-stu-id="96eca-119">This opens the ApplicationEvents.vb file.</span></span>  
+     <span data-ttu-id="4fc9b-119">Se abre el archivo ApplicationEvents.vb.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-119">This opens the ApplicationEvents.vb file.</span></span>  
   
-4.  <span data-ttu-id="96eca-120">Tenga el archivo ApplicationEvents.vb abierto en el Editor de código.</span><span class="sxs-lookup"><span data-stu-id="96eca-120">Have the ApplicationEvents.vb file open in the Code Editor.</span></span> <span data-ttu-id="96eca-121">En el menú **General** , elija **Eventos MyApplication**.</span><span class="sxs-lookup"><span data-stu-id="96eca-121">On the **General** menu, choose **MyApplication Events**.</span></span>  
+4.  <span data-ttu-id="4fc9b-120">Tenga el archivo ApplicationEvents.vb abierto en el Editor de código.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-120">Have the ApplicationEvents.vb file open in the Code Editor.</span></span> <span data-ttu-id="4fc9b-121">En el menú **General** , elija **Eventos MyApplication**.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-121">On the **General** menu, choose **MyApplication Events**.</span></span>  
   
-5.  <span data-ttu-id="96eca-122">En el menú **Declaraciones**, pulse **UnhandledException**.</span><span class="sxs-lookup"><span data-stu-id="96eca-122">On the **Declarations** menu, choose **UnhandledException**.</span></span>  
+5.  <span data-ttu-id="4fc9b-122">En el menú **Declaraciones**, pulse **UnhandledException**.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-122">On the **Declarations** menu, choose **UnhandledException**.</span></span>  
   
-     <span data-ttu-id="96eca-123">La aplicación genera el evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> antes de que se ejecute la aplicación principal.</span><span class="sxs-lookup"><span data-stu-id="96eca-123">The application raises the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> event before the main application runs.</span></span>  
+     <span data-ttu-id="4fc9b-123">La aplicación genera el evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> antes de que se ejecute la aplicación principal.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-123">The application raises the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> event before the main application runs.</span></span>  
   
-6.  <span data-ttu-id="96eca-124">Agregue el método `My.Application.Log.WriteException` al controlador de eventos `UnhandledException` .</span><span class="sxs-lookup"><span data-stu-id="96eca-124">Add the `My.Application.Log.WriteException` method to the `UnhandledException` event handler.</span></span>  
+6.  <span data-ttu-id="4fc9b-124">Agregue el método `My.Application.Log.WriteException` al controlador de eventos `UnhandledException` .</span><span class="sxs-lookup"><span data-stu-id="4fc9b-124">Add the `My.Application.Log.WriteException` method to the `UnhandledException` event handler.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#4)]  
   
-     <span data-ttu-id="96eca-125">En el siguiente ejemplo se muestra el código completo para registrar una excepción no controlada.</span><span class="sxs-lookup"><span data-stu-id="96eca-125">The following example shows the complete code for logging an unhandled exception.</span></span>  
+     <span data-ttu-id="4fc9b-125">En el siguiente ejemplo se muestra el código completo para registrar una excepción no controlada.</span><span class="sxs-lookup"><span data-stu-id="4fc9b-125">The following example shows the complete code for logging an unhandled exception.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#5)]  
   
-## <a name="see-also"></a><span data-ttu-id="96eca-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="96eca-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4fc9b-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="4fc9b-126">See also</span></span>
+
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [<span data-ttu-id="96eca-127">Trabajar con registros de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="96eca-127">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [<span data-ttu-id="96eca-128">Cómo: Escribir mensajes de registro</span><span class="sxs-lookup"><span data-stu-id="96eca-128">How to: Write Log Messages</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [<span data-ttu-id="96eca-129">Tutorial: Determinar el lugar en el que My.Application.Log escribe la información</span><span class="sxs-lookup"><span data-stu-id="96eca-129">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [<span data-ttu-id="96eca-130">Tutorial: Cambiar el lugar en el que My.Application.Log escribe la información</span><span class="sxs-lookup"><span data-stu-id="96eca-130">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [<span data-ttu-id="4fc9b-127">Trabajar con registros de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="4fc9b-127">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [<span data-ttu-id="4fc9b-128">Cómo: Escribir mensajes de registro</span><span class="sxs-lookup"><span data-stu-id="4fc9b-128">How to: Write Log Messages</span></span>](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [<span data-ttu-id="4fc9b-129">Tutorial: Determinar el lugar en el que My.Application.Log escribe la información</span><span class="sxs-lookup"><span data-stu-id="4fc9b-129">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [<span data-ttu-id="4fc9b-130">Tutorial: Cambiar el lugar en el que My.Application.Log escribe la información</span><span class="sxs-lookup"><span data-stu-id="4fc9b-130">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
