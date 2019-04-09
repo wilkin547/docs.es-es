@@ -1,5 +1,5 @@
 ---
-title: Filtrar Editar columnas y filas en un Control TableLayoutPanel
+title: Filtrar para editar columnas y filas en un control TableLayoutPanel
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: 40129deed1f43480b7bde59ef8a67f4561af5d38
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: eb194052ecd78d585f251789730a1f9855c509d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201967"
 ---
-# <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Filtrar Editar columnas y filas en un Control TableLayoutPanel
+# <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Filtrar para editar columnas y filas en un control TableLayoutPanel
 Puede usar el editor de colecciones de la <xref:System.Windows.Forms.TableLayoutPanel> control, denominado el **estilos de columna y fila** cuadro de diálogo, para editar las filas y columnas de los controles.  
   
 > [!NOTE]
@@ -44,5 +44,6 @@ Puede usar el editor de colecciones de la <xref:System.Windows.Forms.TableLayout
 8.  Para quitar una fila o columna, haga clic en el **quitar** botón para eliminar el elemento actualmente seleccionado en el **miembro** lista.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.SizeType>
 - [Control TableLayoutPanel](tablelayoutpanel-control-windows-forms.md)

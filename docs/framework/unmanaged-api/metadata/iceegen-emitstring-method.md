@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63ddd3b5cc79cedba6d6acc6a9b6b70c00d917fc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1eabf5631fcfe7a187d0e203d64c7a7f4f5a819a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209962"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString (Método)
 Emite la cadena especificada en la base de código.  
@@ -55,4 +55,5 @@ HRESULT EmitString (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICeeGen (interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+
+- [ICeeGen (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

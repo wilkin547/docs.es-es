@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ebe6924dfe1a4aa640ef8ccd7b4047c1d137948
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b3667f7371131a4c1394ba5ca619d1f605c89ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640048"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190891"
 ---
 # <a name="nextmethod-function"></a>Función NextMethod
 Recupera el siguiente método en una enumeración que comienza con una llamada a [BeginMethodEnumeration](beginmethodenumeration.md).  
@@ -89,4 +89,5 @@ Para obtener un ejemplo de C++, vea el [IWbemClassObject::NextMethod](/windows/d
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

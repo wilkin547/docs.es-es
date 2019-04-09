@@ -2,12 +2,12 @@
 title: Especificación del manifiesto del proveedor
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 409653fa415e62ff0591e09ad4771c5951689b24
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904613"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169915"
 ---
 # <a name="provider-manifest-specification"></a>Especificación del manifiesto del proveedor
 En esta sección se explica cómo puede un proveedor de almacén de datos admitir los tipos y funciones del almacén de datos.  
@@ -250,34 +250,35 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |Nombre de atributo|Tipo de datos|Obligatorio|Valor predeterminado|Descripción|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|String|Sí|no disponible|El nombre del tipo de datos específico del proveedor|  
-|PrimitiveTypeKind|PrimitiveTypeKind|Sí|no disponible|Nombre de tipo EDM|  
+|Name|String|Sí|N/D|El nombre del tipo de datos específico del proveedor|  
+|PrimitiveTypeKind|PrimitiveTypeKind|Sí|N/D|Nombre de tipo EDM|  
   
 ###### <a name="function-node"></a>Nodo Function  
  Cada nodo Function define una función única disponible a través del proveedor.  
   
 |Nombre de atributo|Tipo de datos|Obligatorio|Valor predeterminado|Descripción|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|String|Sí|no disponible|Identificador/nombre de la función|  
+|Name|String|Sí|N/D|Identificador/nombre de la función|  
 |ReturnType|String|No|Void|El tipo de valor devuelto EDM de la función|  
-|Agregar|Boolean|No|False|True si la función es una función de agregado|  
-|BuiltIn|Boolean|No|True|True si la función está integrada en el almacén de datos|  
+|Agregar|Booleano|No|False|True si la función es una función de agregado|  
+|BuiltIn|Booleano|No|True|True si la función está integrada en el almacén de datos|  
 |StoreFunctionName|String|No|\<Nombre >|Nombre de la función en el almacén de datos.  Permite un nivel de redirección de nombres de función.|  
-|NiladicFunction|Boolean|No|False|True si la función no requiere parámetros y se invoca sin ningún parámetro|  
+|NiladicFunction|Booleano|No|False|True si la función no requiere parámetros y se invoca sin ningún parámetro|  
 |ParameterType<br /><br /> Semántica|ParameterSemantics|No|AllowImplicit<br /><br /> Conversión|Opción de cómo la canalización de la consulta debe tratar la sustitución de tipos de parámetro:<br /><br /> -ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
   
- **Nodo de parámetros**  
+ **Nodo Parameters**  
   
  Cada función tiene una colección de uno o más nodos Parameter.  
   
 |Nombre de atributo|Tipo de datos|Obligatorio|Valor predeterminado|Descripción|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|String|Sí|no disponible|Identificador/nombre del parámetro.|  
-|Tipo|String|Sí|no disponible|El tipo EDM del parámetro.|  
-|Modo|Parámetro<br /><br /> Dirección|Sí|no disponible|Dirección del parámetro:<br /><br /> -en<br />-out<br />-inout|  
+|Name|String|Sí|N/D|Identificador/nombre del parámetro.|  
+|Tipo|String|Sí|N/D|El tipo EDM del parámetro.|  
+|Modo|Parámetro<br /><br /> Dirección|Sí|N/D|Dirección del parámetro:<br /><br /> -en<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Atributo Namespace  
  Cada proveedor de almacén de datos debe definir un espacio de nombres o un grupo de espacios de nombres para la información definida en el manifiesto. Este espacio de nombres se puede utilizar en consultas de Entity SQL para resolver nombres de funciones y tipos. Por ejemplo: SQL Server. Ese espacio de nombres debe ser distinto del espacio de nombres canónico, EDM, definido por Servicios de entidad para que las consultas de Entity SQL admitan las funciones estándar.  
   
 ## <a name="see-also"></a>Vea también
-- [Escritura de un proveedor de datos de Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+
+- [Escribir un proveedor de datos de Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
