@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Scroll Bar
 - Scroll Bar control type
 ms.assetid: 329891d7-b609-49e6-920a-09ea8a627d07
-ms.openlocfilehash: 554d3dd2efbd0e7b1e1cf32c8f4dd8d8f41ffd33
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: b9716cd33a3d030121f738fc896d90186791ca2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678272"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081884"
 ---
 # <a name="ui-automation-support-for-the-scrollbar-control-type"></a>Compatibilidad de UI Automation para el tipo de control ScrollBar
 > [!NOTE]
@@ -39,7 +39,7 @@ ms.locfileid: "57678272"
   
  Para más información sobre las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|Propiedad[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Valor|Notas|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Propiedad|Valor|Notas|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Vea las notas.|El valor de esta propiedad debe ser único en todos los controles de una aplicación.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Vea las notas.|El rectángulo exterior que contiene el control completo.|  
@@ -57,7 +57,7 @@ ms.locfileid: "57678272"
 ## <a name="required-ui-automation-control-patterns"></a>Patrones de control necesarios para la automatización de la interfaz de usuario  
  En la tabla siguiente se muestran los patrones de control [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que se admiten por los controles de barra de desplazamiento. Para más información sobre los patrones de control, vea [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md). Tenga en cuenta que cuando se usa una barra de desplazamiento solo como control para manipulación de mouse, no admite patrones de control. Si se usa como control deslizante dentro de una aplicación, se le debe proporcionar el tipo de control Slider.  
   
-|Patrón de control|Compatibilidad|Notas|  
+|Patrón de control|Soporte técnico|Notas|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|Nunca|El patrón de control Scroll nunca se admite directamente en la barra de desplazamiento.|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Depende|La compatibilidad de esta funcionalidad solo es necesaria si el patrón de control Scroll no se admite en el contenedor que tenga la barra de desplazamiento.|  
@@ -66,22 +66,23 @@ ms.locfileid: "57678272"
 ## <a name="required-ui-automation-events"></a>Eventos de automatización de la interfaz de usuario necesarios  
  En la tabla siguiente se muestran los eventos [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que se deben admitir por todos los controles de barra de desplazamiento. Para más información sobre eventos, vea [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Soporte técnico/valor|Notas|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Soporte técnico/valor|Notas|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
-|Evento de cambio de propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obligatorio|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatorio|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatorio|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> .|Nunca|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> .|Nunca|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> .|Nunca|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> .|Nunca|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> .|Nunca|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> .|Nunca|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> .|Depende|Ninguna|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento cambiado por propiedad.|Obligatorio|Ninguna|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento cambiado por propiedad.|Obligatorio|Ninguna|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento cambiado por propiedad.|Obligatorio|Ninguna|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> evento cambiado por propiedad.|Nunca|Ninguna|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> evento cambiado por propiedad.|Nunca|Ninguna|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> evento cambiado por propiedad.|Nunca|Ninguna|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> evento cambiado por propiedad.|Nunca|Ninguna|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> evento cambiado por propiedad.|Nunca|Ninguna|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> evento cambiado por propiedad.|Nunca|Ninguna|  
+|<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> evento cambiado por propiedad.|Depende|Ninguna|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obligatorio|Ninguna|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatorio|Ninguna|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Automation.ControlType.ScrollBar>
-- [Información general sobre tipos de control de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
-- [Información general sobre la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Información general sobre tipos de control de UI Automation](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Información general sobre UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)

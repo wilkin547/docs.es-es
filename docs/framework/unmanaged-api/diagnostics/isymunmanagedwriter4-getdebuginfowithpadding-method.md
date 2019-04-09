@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 881e20ca-8131-4bd0-ba41-c2d6391b0fe2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cfa82ae8bbc87a884887f826d947c2d3f2c5341
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 191aa16c285b3a28beed65004d65525c9214ec93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473531"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081578"
 ---
 # <a name="isymunmanagedwriter4getdebuginfowithpadding-method"></a>ISymUnmanagedWriter4::GetDebugInfoWithPadding (Método)
 Funciona igual que [GetDebugInfo (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) , salvo que la cadena de ruta de acceso se rellena con ceros que siguen el carácter nulo de terminación para que los datos de cadena de un tamaño fijo de `MAX_PATH`. Relleno solo se da si la longitud de cadena de ruta de acceso propio es menor que `MAX_PATH`.  
@@ -38,4 +38,5 @@ HRESULT GetDebugInfoWithPadding(    [in, out] IMAGE_DEBUG_DIRECTORY *pIDD,    [i
  **Encabezado**: CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
-- [ISymUnmanagedWriter4 (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)
+
+- [ISymUnmanagedWriter4 (Interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)

@@ -2,12 +2,12 @@
 title: Ejemplo de XMLSerializer
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 12d11bc0da231f78909b79376cb51e7ab12fe2cd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: eb422e937eb0aeffbaa1ec4288001c5bdb2bdda6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817012"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088644"
 ---
 # <a name="xmlserializer-sample"></a>Ejemplo de XMLSerializer
 Este ejemplo muestra cómo serializar y deserializar tipos que sean compatibles con <xref:System.Xml.Serialization.XmlSerializer>. El formateador de Windows Communication Foundation (WCF) de forma predeterminada es la <xref:System.Runtime.Serialization.DataContractSerializer> clase. Se puede usar la clase <xref:System.Xml.Serialization.XmlSerializer> para serializar y deserializar los tipos cuando no se puede utilizar la clase <xref:System.Runtime.Serialization.DataContractSerializer>. Éste es a menudo el caso cuando se requiere el control preciso sobre XML; por ejemplo, si un dato debe ser un atributo XML y no un elemento XML. Además, el <xref:System.Xml.Serialization.XmlSerializer> se selecciona automáticamente al crear clientes para servicios no WCF.  
@@ -133,4 +133,3 @@ Press <ENTER> to terminate client.
 >  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
-  

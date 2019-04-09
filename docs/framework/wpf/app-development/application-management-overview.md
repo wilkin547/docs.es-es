@@ -7,17 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: 395077b7c82ee54a51b8086df0c59f731e3a2b70
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634224"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100085"
 ---
 # <a name="application-management-overview"></a>Información general sobre la administración de aplicaciones
 Todas las aplicaciones suelen compartir un conjunto común de funciones que se aplica a la implementación y la administración de la aplicación. Este tema proporciona información general de la funcionalidad de la <xref:System.Windows.Application> clase para crear y administrar aplicaciones.  
-   
-  
+
 ## <a name="the-application-class"></a>La clase Application  
  En WPF, se encapsula la funcionalidad común de ámbito de la aplicación en el <xref:System.Windows.Application> clase. La <xref:System.Windows.Application> clase incluye la funcionalidad siguiente:  
   
@@ -106,7 +105,7 @@ Todas las aplicaciones suelen compartir un conjunto común de funciones que se a
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Obtener la aplicación actual  
- Dado que la funcionalidad de la <xref:System.Windows.Application> clase se comparten entre una aplicación, puede haber solo una instancia de la <xref:System.Windows.Application> clase por <xref:System.AppDomain>. Para exigir esto, el <xref:System.Windows.Application> clase se implementa como una clase singleton (vea [Implementing Singleton in C#](https://go.microsoft.com/fwlink/?LinkId=100567)), que crea una única instancia de sí mismo y proporciona acceso comparten a ella con el `static` <xref:System.Windows.Application.Current%2A> propiedad.  
+ Dado que la funcionalidad de la <xref:System.Windows.Application> clase se comparten entre una aplicación, puede haber solo una instancia de la <xref:System.Windows.Application> clase por <xref:System.AppDomain>. Para exigir esto, el <xref:System.Windows.Application> clase se implementa como una clase singleton (vea [Implementing Singleton in C# ](https://go.microsoft.com/fwlink/?LinkId=100567)), que crea una única instancia de sí mismo y proporciona acceso comparten a ella con el `static`<xref:System.Windows.Application.Current%2A> propiedad.  
   
  El código siguiente muestra cómo adquirir una referencia a la <xref:System.Windows.Application> objeto actual <xref:System.AppDomain>.  
   
@@ -125,8 +124,7 @@ Todas las aplicaciones suelen compartir un conjunto común de funciones que se a
 <a name="Application_Lifetime"></a>   
 ## <a name="application-lifetime"></a>Duración de la aplicación  
  La duración de una aplicación de WPF está marcada por varios eventos generados por <xref:System.Windows.Application> para que sepa cuándo se ha iniciado la aplicación, se ha activado y desactivado y se ha cerrado.  
-  
-  
+
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>Pantalla de presentación  
  A partir de la [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], puede especificar una imagen que se usará en una ventana de inicio o *pantalla de presentación*. La <xref:System.Windows.SplashScreen> clase facilita la tarea mostrar una ventana de inicio mientras se carga la aplicación. El <xref:System.Windows.SplashScreen> se crea y se muestra antes de ventana <xref:System.Windows.Application.Run%2A> se llama. Para obtener más información, consulte [Application Startup Time](../advanced/application-startup-time.md) y [agregar una pantalla de presentación a una aplicación WPF](how-to-add-a-splash-screen-to-a-wpf-application.md).  
@@ -357,10 +355,11 @@ Todas las aplicaciones suelen compartir un conjunto común de funciones que se a
  ![XBAP &#45; Eventos de objeto de la aplicación](./media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Application>
 - [Información general sobre ventanas de WPF](wpf-windows-overview.md)
 - [Información general sobre navegación](navigation-overview.md)
 - [Archivos de recursos, contenido y datos de aplicaciones de WPF](wpf-application-resource-content-and-data-files.md)
-- [Identificadores URI de paquete en WPF](pack-uris-in-wpf.md)
-- [Modelo de aplicación: Temas de procedimientos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [Pack URI en WPF](pack-uris-in-wpf.md)
+- [Modelo de aplicación: Temas "Cómo..."](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
 - [Desarrollo de aplicaciones](index.md)

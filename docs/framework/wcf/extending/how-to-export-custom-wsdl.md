@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Exportación de WSDL personalizado
+title: Filtrar para exportar el WSDL personalizado
 ms.date: 03/30/2017
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
-ms.openlocfilehash: 86c6be86febb21f3c676d28357b29db5dcca07db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16f34a71882587bbd9782d7a9ea807faa72e8238
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645150"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080765"
 ---
-# <a name="how-to-export-custom-wsdl"></a>Procedimiento Exportación de WSDL personalizado
+# <a name="how-to-export-custom-wsdl"></a>Filtrar para exportar el WSDL personalizado
 En este tema se explica cómo exportar la información del WSDL personalizado. Para ello, definiremos un nuevo atributo de código llamado `WsdlDocumentationAttribute` que agregará la información personalizada en el WSDL generado por el servicio.  
   
 ### <a name="to-export-custom-wsdl-information"></a>Para exportar la información del WSDL personalizado  
@@ -196,4 +196,5 @@ return lines;
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Metadatos](../../../../docs/framework/wcf/feature-details/metadata.md)

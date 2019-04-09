@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d53a5bbb353ecec1c51a55532cad6206ca41da70
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 08e4c395026a743323b40e5b1ace3db64e368078
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496162"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087270"
 ---
 # <a name="ihostcrsttryenter-method"></a>IHostCrst::TryEnter (Método)
 Intenta entrar en la sección crítica representada por el actual [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instancia.  
@@ -67,6 +67,7 @@ HRESULT TryEnter (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICLRSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostCrst (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
-- [IHostSyncManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+
+- [ICLRSyncManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [IHostCrst (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
+- [IHostSyncManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

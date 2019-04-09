@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: a11118f0fad98d7c719951b97d7ad2b431e7af6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055357"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081273"
 ---
 # <a name="data-binding-overview"></a>Información general sobre el enlace de datos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] enlace de datos proporciona una manera sencilla y coherente para las aplicaciones presentar e interactuar con datos. Los elementos se pueden enlazar a datos desde una variedad de orígenes de datos en forma de objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] y [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>Por ejemplo, <xref:System.Windows.Controls.Button> y <xref:System.Windows.Controls.ItemsControl>s como <xref:System.Windows.Controls.ListBox> y <xref:System.Windows.Controls.ListView> tiene funciones integradas para habilitar flexible estilo de elementos de datos individuales o colecciones de elementos de datos. Se pueden generar vistas de ordenación, filtrado ya agrupación encima de los datos.  
@@ -23,8 +23,7 @@ ms.locfileid: "59055357"
  La funcionalidad de enlace de datos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] presenta varias ventajas con respecto a los modelos tradicionales, como un mayor número de propiedades que admiten de forma inherente el enlace de datos, una representación flexible de los datos en la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] y la separación bien definida de la lógica del negocio de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
  En primer lugar, este tema trata los conceptos fundamentales [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enlace de datos y, a continuación, entran en el uso de la <xref:System.Windows.Data.Binding> clase y otras características de enlace de datos.  
-  
-  
+
 <a name="what_is_data_binding"></a>   
 ## <a name="what-is-data-binding"></a>¿Qué es el enlace de datos?  
  El enlace de datos es el proceso que establece una conexión entre la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de la aplicación y la lógica de negocios. Si el enlace está configurado correctamente y los datos proporcionan las notificaciones adecuadas, al cambiar los valores de los datos, los elementos enlazados a los datos reflejarán de manera automática dichos cambios. El enlace de datos también puede implicar la actualización automática de los datos que subyacen a una representación externa de los datos de un elemento, cuando esta representación cambia. Por ejemplo, si el usuario edita el valor de un <xref:System.Windows.Controls.TextBox> elemento, el valor de datos subyacente se actualiza automáticamente para reflejar ese cambio.  
@@ -232,8 +231,7 @@ ms.locfileid: "59055357"
 <a name="collection_views"></a>   
 ### <a name="collection-views"></a>Vistas de colección  
  Una vez su <xref:System.Windows.Controls.ItemsControl> está enlazado a una recopilación de datos, es posible que desee ordenar, filtrar o agrupar los datos. Para ello, usa las vistas de colección, que son clases que implementan la <xref:System.ComponentModel.ICollectionView> interfaz.  
-  
-  
+
 #### <a name="what-are-collection-views"></a>¿Qué son las vistas de colección?  
  Una vista de colección es un nivel situado encima de la colección de origen del enlace, que le permite navegar y mostrar la colección de origen en función de las consultas de ordenación, filtrado y agrupación, sin tener que cambiar la propia colección de origen subyacente. Una vista de colección también contiene un puntero al elemento actual de la colección. Si la colección de origen implementa la <xref:System.Collections.Specialized.INotifyCollectionChanged> interfaz, los cambios provocados por la <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> eventos se propagan a las vistas.  
   
@@ -430,6 +428,7 @@ ms.locfileid: "59055357"
  Puede establecer la propiedad adjunta <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> en un objeto relacionado con el enlace para recibir información sobre el estado de un enlace específico.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [Novedades de WPF versión 4.5](../getting-started/whats-new.md)
 - [Enlazar a los resultados de una consulta LINQ](how-to-bind-to-the-results-of-a-linq-query.md)

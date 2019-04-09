@@ -1,5 +1,5 @@
 ---
-title: Filtrar Obtener acceso a objetos en una lista desplegable DataGridViewComboBoxCell de formularios de Windows
+title: Filtrar para obtener acceso a objetos de una lista desplegable DataGridViewComboBoxCell en formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 8a4731e081b31f74b4f17c2796b56cdf6b95e3e2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 221774895fa5867ad6ec870f7e293c9366e442f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080792"
 ---
-# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Filtrar Obtener acceso a objetos en una lista desplegable DataGridViewComboBoxCell de formularios de Windows
+# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Filtrar para obtener acceso a objetos de una lista desplegable DataGridViewComboBoxCell en formularios Windows Forms
 Al igual que el <xref:System.Windows.Forms.ComboBox> (control), el <xref:System.Windows.Forms.DataGridViewComboBoxColumn> y <xref:System.Windows.Forms.DataGridViewComboBoxCell> tipos le permiten agregar objetos arbitrarios a las listas de la lista desplegable. Con esta característica, puede representar estados complejos en una lista desplegable sin tener que almacenar los objetos correspondientes en una colección independiente.  
   
  A diferencia de la <xref:System.Windows.Forms.ComboBox> (control), el <xref:System.Windows.Forms.DataGridView> tipos no tienen un <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> propiedad para recuperar el objeto seleccionado actualmente. En su lugar, debe establecer el <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType> o <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType> propiedad en el nombre de una propiedad en el objeto comercial. Cuando el usuario realiza una selección, la propiedad indicada del objeto comercial establece la celda <xref:System.Windows.Forms.DataGridViewCell.Value%2A> propiedad.  
@@ -69,6 +69,7 @@ Al igual que el <xref:System.Windows.Forms.ComboBox> (control), el <xref:System.
 -   Referencias a los ensamblados System y System.Windows.Forms.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A?displayProperty=nameWithType>
@@ -80,4 +81,4 @@ Al igual que el <xref:System.Windows.Forms.ComboBox> (control), el <xref:System.
 - <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCell.Value%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ComboBox>
-- [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Mostrar datos en el control DataGridView de formularios Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)

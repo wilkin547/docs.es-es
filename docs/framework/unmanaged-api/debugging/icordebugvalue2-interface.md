@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c4d4f5d85fb076748b3f8aae498f024804fb0b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6718bbfdb1825b9f01698d76deec3fab16cb2ac6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492369"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091608"
 ---
 # <a name="icordebugvalue2-interface"></a>ICorDebugValue2 (Interfaz)
 Extiende la interfaz "ICorDebugValue" para proporcionar compatibilidad para los objetos "ICorDebugType".  
@@ -30,7 +30,7 @@ Extiende la interfaz "ICorDebugValue" para proporcionar compatibilidad para los 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetExactType (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|Obtiene un puntero de interfaz a un `ICorDebugType` objeto que representa el <xref:System.Type> de este valor.|  
+|[Método GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|Obtiene un puntero de interfaz a un `ICorDebugType` objeto que representa el <xref:System.Type> de este valor.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -47,6 +47,7 @@ Extiende la interfaz "ICorDebugValue" para proporcionar compatibilidad para los 
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 
-- [ICorDebugValue3 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebugValue3 (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)

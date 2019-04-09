@@ -15,12 +15,12 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 42e8b5626cf30010f154e7c978708042c4e3369a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 765df4bcd3cef83e624ad8b11676696b95f7d035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715868"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089307"
 ---
 # <a name="types-of-coordinate-systems"></a>Tipos de sistemas de coordenadas
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] usa tres espacios de coordenadas: universales, página y dispositivo. Coordenadas universales son las coordenadas que se utilizan para modelar un entorno gráfico determinado y las coordenadas que se pasan a los métodos de .NET Framework. Coordenadas de página hacen referencia al sistema de coordenadas utilizado por una superficie de dibujo, como un formulario o control. Coordenadas de dispositivo son las utilizadas por el dispositivo físico que se va a dibujar, como una pantalla o una hoja de papel. Cuando realiza la llamada `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, los puntos que se pasan a la <xref:System.Drawing.Graphics.DrawLine%2A> método —`(0, 0)` y `(160, 80)`, se encuentran en el espacio de coordenadas universales. Antes de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] puede dibujar la línea en la pantalla, las coordenadas que se pasan a través de una secuencia de transformaciones. Una transformación, llama a la transformación universal, convierte las coordenadas universales en coordenadas de página y otra transformación, llama a la transformación de página, convierte las coordenadas de página en coordenadas de dispositivo.  
@@ -95,5 +95,6 @@ ms.locfileid: "57715868"
 |Dispositivo|(192, 48) a (384, 144)|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Sistemas de coordenadas y transformaciones](coordinate-systems-and-transformations.md)
 - [Representación matricial de transformaciones](matrix-representation-of-transformations.md)

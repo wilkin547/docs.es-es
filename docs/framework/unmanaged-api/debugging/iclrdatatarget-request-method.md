@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bafc8be92da72cbb98f7cd47ec6632a3fbb76656
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e9005dd8fde0d7258bd1dd48b561e4925e87733b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487224"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102701"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request (Método)
 Llamado por los servicios de acceso a datos de common language runtime (CLR) para solicitar una operación, como se define en la implementación.  
@@ -72,4 +72,5 @@ HRESULT Request (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICLRDataTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+
+- [ICLRDataTarget (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

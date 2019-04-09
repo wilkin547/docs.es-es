@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bc72b9c5687654c17a01ee9b4fa9d31dcf50b56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df57cd5a2121c216fc23b9c608de091b002147e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101769"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion (Enumeración)
 Especifica una interfaz, una versión de .NET Framework, o la versión de .NET Framework en la que se incorporó una interfaz.  
@@ -212,8 +212,8 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugNativeFrame2`|[ICorDebugNativeFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)|4|  
 |`ver_ICorDebugInternalFrame2`|[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)|4|  
 |`ver_ICorDebugRuntimeUnwindableFrame`|[ICorDebugRuntimeUnwindableFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugruntimeunwindableframe-interface.md)|4|  
-|`ver_ICorDebugHeapValue3`|[ICorDebugHeapValue3 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md)|4|  
-|`ver_ICorDebugBlockingObjectEnum`|[ICorDebugBlockingObjectEnum (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)|4|  
+|`ver_ICorDebugHeapValue3`|[ICorDebugHeapValue3 (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md)|4|  
+|`ver_ICorDebugBlockingObjectEnum`|[ICorDebugBlockingObjectEnum (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)|4|  
 |`ver_ICorDebugValue3`|[ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)|4|  
 |`ver_ICorDebugComObjectValue`|[ICorDebugComObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)|4.5|  
 |`ver_ICorDebugAppDomain3`|[ICorDebugAppDomain3](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)|4.5|  
@@ -247,4 +247,5 @@ typedef enum CorDebugInterfaceVersion {
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -2,12 +2,12 @@
 title: <userNameAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: 05aa326c50823810caee5d6552af4d50424251dd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5a4cf8d429198b889f2bb362294ba3841c814b26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083151"
 ---
 # <a name="usernameauthentication"></a>\<userNameAuthentication>
 Especifica las credenciales de un servicio basadas en el nombre de usuario y contraseña.  
@@ -61,6 +61,7 @@ Especifica las credenciales de un servicio basadas en el nombre de usuario y con
  Si ninguno de los enlaces utilizados por un servicio configurado para utilizar la autenticación de Windows para el nombre de usuario/contraseña, se omite la configuración relacionada con almacenar en memoria caché los tokens de inicio de sesión. Éstos incluyen `cacheLogonTokenLifetime`, `cacheLogonTokens` y `maxCacheLogonTokens`.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.UserNameServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>

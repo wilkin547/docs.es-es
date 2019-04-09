@@ -2,15 +2,15 @@
 title: <add> de <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: fa67d2ec21494bb3d84861f4c2e2e39151aac28f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 856298cb0639cf19b941f326b5b9a25aa6663088
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55253725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091322"
 ---
 # <a name="add-of-contracttypenames"></a>\<Agregar > de \<contractTypeNames >
-Un elemento de configuración que especifica el nombre del contrato de los servicios que se están buscando y los criterios que suelen usarse al buscar un servicio. Si se especifica más de un nombre del contrato, solo responderán los puntos de conexión del servicio que coincidan con TODOS los contratos. Tenga en cuenta que en Windows Communication Foundation (WCF), un punto de conexión solo puede admitir un contrato.  
+Un elemento de configuración que especifica el nombre del contrato de los servicios que se están buscando y los criterios que suelen usarse al buscar un servicio. Si se especifica más de un nombre del contrato, solo responderán los extremos del servicio que coincidan con TODOS los contratos. Tenga en cuenta que en Windows Communication Foundation (WCF), un punto de conexión solo puede admitir un contrato.  
   
  \<system.ServiceModel>  
 \<standardEndpoints>  
@@ -61,6 +61,7 @@ Un elemento de configuración que especifica el nombre del contrato de los servi
 |[\<contractTypeNames>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Colección de nombres de tipos de contrato.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Discovery.FindCriteria>
 - <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>
 - <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement>

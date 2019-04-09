@@ -2,12 +2,12 @@
 title: 'Personalizar operaciones: Información general'
 ms.date: 03/30/2017
 ms.assetid: a3546296-1443-4b88-aa6e-d41011041ba7
-ms.openlocfilehash: 4f13bed76ad2814d669f487b57ae9acbdc08eb74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29fb75271b7bc324d462078e94e4a28534986fba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075982"
 ---
 # <a name="customizing-operations-overview"></a>Personalizar operaciones: Información general
 De forma predeterminada, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genera SQL dinámico para las operaciones de inserción, actualización y eliminación por asignación. Sin embargo, en la práctica, normalmente se agrega lógica empresarial propia para proporcionar seguridad, validación, etc.  
@@ -24,4 +24,5 @@ De forma predeterminada, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecd
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite el uso de procedimientos almacenados y funciones definidas por el usuario. Los procedimientos almacenados se utilizan con frecuencia para personalizar operaciones. Para obtener más información, vea [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Personalización de operaciones de actualización, inserción y eliminación](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+
+- [Personalizar operaciones de actualización, inserción y eliminación](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

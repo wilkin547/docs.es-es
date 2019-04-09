@@ -1,5 +1,5 @@
 ---
-title: Filtrar Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF
+title: Filtrar Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MIME types [WPF], registering
@@ -13,19 +13,18 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: a257da5c229c925fbc653c015ffc8d4b5d744651
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6fa00c4ced8c05d056703560e5740689c6dcfe39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366405"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096295"
 ---
-# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Filtrar Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF
+# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Filtrar Configurar IIS 5.0 e IIS 6.0 para implementar aplicaciones de WPF
 
 Puede implementar una aplicación de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] desde la mayoría de los servidores web, siempre que estén configurados con los tipos [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] adecuados. De manera predeterminada, [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] se configura con estos tipos [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)], pero [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] y [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] no.
 
 En este tema se describe cómo configurar [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] y [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] para implementar aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
-
 
 > [!NOTE]
 > Puede comprobar el *UserAgent* cadena en el registro para determinar si un sistema tiene instalado .NET Framework. Para obtener detalles y un script que examina la *UserAgent* cadena para determinar si .NET Framework está instalada en un sistema, consulte [detectar si .NET Framework 3.0 está instalada la](how-to-detect-whether-the-net-framework-3-0-is-installed.md).

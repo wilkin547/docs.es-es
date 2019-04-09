@@ -2,12 +2,12 @@
 title: Contratos múltiples
 ms.date: 03/30/2017
 ms.assetid: 2bef319b-fe9c-4d49-ac6c-dfb23eb35099
-ms.openlocfilehash: 5e52c83d69c15ca5c407240a8971248205fef832
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 320bfe2f2a290131fcbcef64992a58fa1e6e07d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818345"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073434"
 ---
 # <a name="multiple-contracts"></a>Contratos múltiples
 El ejemplo de contratos múltiples muestra cómo implementar más de un contrato en un servicio y cómo configurar los puntos de conexión para comunicarse con cada uno de los contratos implementados. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). El servicio se ha modificado para definir dos contratos: `ICalculator` y `ICalculatorSession`.  
@@ -62,4 +62,3 @@ El ejemplo de contratos múltiples muestra cómo implementar más de un contrato
 >  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleContracts`  
-  

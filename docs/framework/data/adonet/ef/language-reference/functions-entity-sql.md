@@ -2,12 +2,12 @@
 title: Funciones (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 52b3d776-5acc-4f69-b614-5a43ce56ef9f
-ms.openlocfilehash: 88029f22cc22594d26a05ad66051378a75a6e753
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f31f829b53160da5a043617b9aa999b398859f17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080610"
 ---
 # <a name="functions-entity-sql"></a>Funciones (Entity SQL)
 Entity SQL admite funciones definidas por el usuario, funciones canónicas y funciones específicas del proveedor. Las funciones definidas por el usuario se especifican en el modelo conceptual o inline en la consulta. Para obtener más información, consulte [User-Defined Functions](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).  
@@ -24,4 +24,5 @@ Entity SQL admite funciones definidas por el usuario, funciones canónicas y fun
  [Funciones de agregado](../../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

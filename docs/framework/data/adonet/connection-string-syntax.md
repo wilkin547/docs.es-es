@@ -2,12 +2,12 @@
 title: Sintaxis de cadenas de conexión
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: f6cbfc9676c2c373ab833ac556cf04bb0ba15096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084978"
 ---
 # <a name="connection-string-syntax"></a>Sintaxis de cadenas de conexión
 Cada proveedor de datos .NET Framework tiene un objeto `Connection` que hereda de la clase <xref:System.Data.Common.DbConnection>, así como una propiedad <xref:System.Data.Common.DbConnection.ConnectionString%2A> específica del proveedor. La sintaxis de la cadena de conexión específica de cada proveedor se indica en su propiedad `ConnectionString`. En la tabla siguiente se muestran los cuatro proveedores de datos que se incluyen en .NET Framework.  
@@ -43,7 +43,7 @@ Cada proveedor de datos .NET Framework tiene un objeto `Connection` que hereda d
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  `Integrated Security=true` produce una excepción cuando se usa con el proveedor `OleDb`.  
+>  `Integrated Security=true` produce una excepción cuando se usa con el `OleDb` proveedor.  
   
 ## <a name="sqlclient-connection-strings"></a>Cadenas de conexión SqlClient  
 La sintaxis de una cadena de conexión de <xref:System.Data.SqlClient.SqlConnection> se documenta en la propiedad <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>. Puede usar la propiedad <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> para obtener o establecer una cadena de conexión para una base de datos de SQL Server. Si necesita conectarse a una versión anterior de SQL Server, debe usar el proveedor de datos .NET Framework para OleDb (<xref:System.Data.OleDb>). La mayoría de las palabras clave de cadenas de conexión se corresponden también con las propiedades de <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
@@ -195,6 +195,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
  Para obtener más información acerca de la sintaxis de cadena de conexión ODBC, vea <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Cadenas de conexión](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Conexión a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Conectarse a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

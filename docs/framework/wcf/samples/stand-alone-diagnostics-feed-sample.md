@@ -2,12 +2,12 @@
 title: Ejemplo de fuente de diagnósticos independientes
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 53eadcb8ad806fdec60739c8422abe05087cb937
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 841bcd38516251fe1de306cbf52371d027b8cb36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102146"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Ejemplo de fuente de diagnósticos independientes
 Este ejemplo muestra cómo crear una fuente de distribución con Windows Communication Foundation (WCF) de RSS/Atom. Es un programa básico "Hola mundo" que muestra los aspectos básicos del modelo de objetos y cómo configurarlo en un servicio de Windows Communication Foundation (WCF).  
@@ -34,7 +34,7 @@ Este ejemplo muestra cómo crear una fuente de distribución con Windows Communi
   
  El `GetProcesses` operación se anota con el <xref:System.ServiceModel.Web.WebGetAttribute> solicita el atributo que le permite controlar cómo WCF envía HTTP GET para las operaciones del servicio y especificar el formato de los mensajes enviados.  
   
- Al igual que cualquier servicio WCF, las fuentes de distribución pueden ser alojada en cualquier aplicación administrada por el usuario. Los servicios de distribución requieren un enlace específico (<xref:System.ServiceModel.WebHttpBinding>) y un comportamiento del punto de conexión específico (<xref:System.ServiceModel.Description.WebHttpBehavior>) para funcionar correctamente. La nueva clase <xref:System.ServiceModel.Web.WebServiceHost> proporciona un API apropiado para crear estos extremos sin una configuración específica.  
+ Al igual que cualquier servicio WCF, las fuentes de distribución pueden ser alojada en cualquier aplicación administrada por el usuario. Los servicios de distribución requieren un enlace específico (<xref:System.ServiceModel.WebHttpBinding>) y un comportamiento del extremo específico (<xref:System.ServiceModel.Description.WebHttpBehavior>) para funcionar correctamente. La nueva clase <xref:System.ServiceModel.Web.WebServiceHost> proporciona un API apropiado para crear estos puntos de conexión sin una configuración específica.  
   
 ```  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  
@@ -94,5 +94,6 @@ foreach (SyndicationItem i in feed.Items)
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   
 ## <a name="see-also"></a>Vea también
+
 - [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Redifusión en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+- [Sindicación en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

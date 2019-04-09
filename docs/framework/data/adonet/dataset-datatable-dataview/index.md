@@ -2,12 +2,12 @@
 title: Objetos DataSet, DataTable y DataView
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 098dc3ec198edc84b67ae3ed9d2610b2386a3205
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 9c57f75dd94f3fbda74c13a5d5773825051fe416
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825919"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105734"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Objetos DataSet, DataTable y DataView
 El <xref:System.Data.DataSet> de ADO.NET es una representación de datos residente en memoria que proporciona un modelo de programación relacional coherente independientemente del origen de datos que contiene. Un <xref:System.Data.DataSet> representa un conjunto completo de datos, incluyendo las tablas que contienen, ordenan y restringen los datos, así como las relaciones entre las tablas.  
@@ -59,7 +59,7 @@ El <xref:System.Data.DataSet> de ADO.NET es una representación de datos residen
  [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Describe cómo interactúa el <xref:System.Data.DataSet> con XML como origen de datos, incluyendo cómo cargar y hacer persistente el contenido de un <xref:System.Data.DataSet> como datos XML.  
   
- [Usar un conjunto de datos desde un servicio Web XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md)  
+ [Utilizar un conjunto de datos desde un servicio Web XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md)  
  Describe cómo crear un servicio Web XML que utilice un <xref:System.Data.DataSet> para transportar los datos.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
@@ -79,5 +79,6 @@ El <xref:System.Data.DataSet> de ADO.NET es una representación de datos residen
  Describe cómo se rellena un objeto **DataSet** con información de clave principal de un origen de datos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

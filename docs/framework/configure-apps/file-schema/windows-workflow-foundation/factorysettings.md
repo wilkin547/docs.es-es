@@ -3,12 +3,12 @@ title: <factorySettings>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 202aad17-1b8b-4c87-ad57-4ca5de18ed35
-ms.openlocfilehash: 99320b2b9c93df06ffd1e0d8dd3e3db656548b3f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d8e87799962638ac6514ebb31bbc9e209b39c98d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090932"
 ---
 # <a name="factorysettings"></a>\<factorySettings>
 Especifica los valores de la memoria caché del generador de canales.  
@@ -59,7 +59,7 @@ Especifica los valores de la memoria caché del generador de canales.
 ## <a name="remarks"></a>Comentarios  
  Este comportamiento del servicio está orientado para los flujos de trabajo que envían mensajes a los extremos de servicio. Estos flujos de trabajo son normalmente flujos de trabajo del cliente pero podrían ser también servicios de flujo de trabajo que se hospedan en <xref:System.ServiceModel.WorkflowServiceHost>.  
   
- De manera predeterminada, en un flujo de trabajo hospedado por <xref:System.ServiceModel.WorkflowServiceHost>, la memoria caché usada por las actividades de mensajería de <xref:System.ServiceModel.Activities.Send> se comparte en todas las instancias de flujo de trabajo en <xref:System.ServiceModel.WorkflowServiceHost> (el almacenamiento en caché de nivel de host). Para un flujo de trabajo del cliente que no esté hospedado por <xref:System.ServiceModel.WorkflowServiceHost>, la memoria caché está solo disponible para la instancia de flujo de trabajo (almacenamiento en caché en el nivel de instancia). El almacenamiento en la memoria caché está deshabilitado de forma predeterminada para cualquier actividad de envío del flujo de trabajo que tenga definidos puntos de conexión en su configuración.  
+ De manera predeterminada, en un flujo de trabajo hospedado por <xref:System.ServiceModel.WorkflowServiceHost>, la memoria caché usada por las actividades de mensajería de <xref:System.ServiceModel.Activities.Send> se comparte en todas las instancias de flujo de trabajo en <xref:System.ServiceModel.WorkflowServiceHost> (el almacenamiento en caché de nivel de host). Para un flujo de trabajo del cliente que no esté hospedado por <xref:System.ServiceModel.WorkflowServiceHost>, la memoria caché está solo disponible para la instancia de flujo de trabajo (almacenamiento en caché en el nivel de instancia). El almacenamiento en la memoria caché está deshabilitado de forma predeterminada para cualquier actividad de envío del flujo de trabajo que tenga definidos extremos en su configuración.  
   
  Para obtener más información sobre cómo cambiar la caché predeterminada de uso compartido de los niveles y opciones de caché para el generador de canales y la memoria caché del canal, consulte [cambiar los niveles de uso compartido de caché para actividades Send](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
   
@@ -89,8 +89,9 @@ Especifica los valores de la memoria caché del generador de canales.
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Activities.SendMessageChannelCache>
 - <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>
 - <xref:System.ServiceModel.Activities.Send>
 - <xref:System.ServiceModel.Activities.ChannelCacheSettings>
-- [Cambio de los niveles de uso compartido de caché para actividades Send](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)
+- [Cambiar los niveles de uso compartido de caché para actividades Send](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)

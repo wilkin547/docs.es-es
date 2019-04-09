@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Importar aserciones de directivas personalizadas
+title: Filtrar para importar aserciones de directivas personalizadas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: ff727922aeee7aeaea801dabd842f913ce75c220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e27c6ed6508544180d8659717b700e604b0f3d3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073629"
 ---
-# <a name="how-to-import-custom-policy-assertions"></a>Procedimiento Importar aserciones de directivas personalizadas
-Las aserciones de directivas describen las funciones y requisitos de un punto de conexión de servicio.  Las aplicaciones cliente pueden utilizar aserciones de directivas en metadatos del servicio para configurar el enlace de cliente o para personalizar el contrato de servicio de un extremo de servicio.  
+# <a name="how-to-import-custom-policy-assertions"></a>Filtrar para importar aserciones de directivas personalizadas
+Las aserciones de directivas describen las funciones y requisitos de un extremo de servicio.  Las aplicaciones cliente pueden utilizar aserciones de directivas en metadatos del servicio para configurar el enlace de cliente o para personalizar el contrato de servicio de un punto de conexión de servicio.  
   
  Las aserciones de directiva personalizadas se importan implementando la interfaz <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> y pasando ese objeto al sistema de los metadatos o registrando el tipo de implementación en su archivo de configuración de la aplicación.  Las implementaciones de la interfaz <xref:System.ServiceModel.Description.IPolicyImportExtension> deben proporcionar un constructor predeterminado.  
   
@@ -64,6 +64,7 @@ Las aserciones de directivas describen las funciones y requisitos de un punto de
 1.  Agregue el importador a la propiedad <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType>(por ejemplo, si está utilizando ) <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> antes de importar los metadatos.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>

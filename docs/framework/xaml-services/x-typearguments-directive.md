@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 0d3edf6c7a16fc206832d8d6deff9d4ac2f69ba3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58043264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085810"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments (Directiva)
 Pasa restringir los argumentos de un elemento genérico para el constructor del tipo genérico de tipo.  
@@ -82,7 +82,8 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  En WPF y cuando el destino es [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], puede usar las características de XAML 2009 junto con `x:TypeArguments` pero solo para XAML flexible (XAML que no está compilado por marcado). XAML compilado por marcado para WPF y el formulario BAML de XAML no admiten de momento las palabras clave y características de XAML 2009. Si se necesita compilación de marcado el XAML, debe funcionar en las restricciones que se indican en la sección "XAML 2006 y WPF genérica XAML usos".  
   
 ## <a name="see-also"></a>Vea también
+
 - [x:Class (Directiva)](x-class-directive.md)
-- [x:Type (extensión de marcado)](x-type-markup-extension.md)
+- [x:Type (Extensión de marcado)](x-type-markup-extension.md)
 - [Tipos integrados para primitivas comunes en el lenguaje XAML](built-in-types-for-common-xaml-language-primitives.md)
 - [Elementos genéricos en XAML](generics-in-xaml.md)

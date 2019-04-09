@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc39e4ee47041e70060465a7e220ae1d861d9053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01427e8f90cebca5297e21d54d29c08cf1eab75c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075943"
 ---
 # <a name="security-transparent-code"></a>Código transparente en seguridad
 <a name="top"></a>
@@ -27,7 +27,7 @@ ms.locfileid: "54510122"
   
 -   [Propósito del modelo de transparencia](#purpose)  
   
--   [Especifica el nivel de transparencia](#level)  
+-   [Especificar el nivel de transparencia](#level)  
   
 -   [Cumplimiento de la transparencia](#enforcement)  
   
@@ -107,5 +107,6 @@ ms.locfileid: "54510122"
  Las reglas de transparencia no se aplican hasta que se calcula la transparencia. En ese momento, se genera una <xref:System.InvalidOperationException> si se infringe una regla de transparencia. El momento en que se calcula la transparencia depende de varios factores y no se puede predecir. Se calcula lo más tarde posible. En [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], el cálculo de transparencia de nivel de ensamblado se produce antes de que en .NET Framework 2.0. La única garantía es que el cálculo de transparencia se producirá cuando sea necesario. Esto es similar a cómo el compilador Just-In-Time (JIT) puede cambiar el punto cuando se compila un método y se detectan errores en ese método. El cálculo de transparencia es invisible si el código no tiene errores de transparencia.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Código transparente en seguridad, nivel 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
 - [Código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md)

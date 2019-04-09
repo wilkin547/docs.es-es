@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: a3bcca1e7d031a9351881a5192370bead18aa7bb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467162"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104486"
 ---
 # <a name="opentype-font-features"></a>Características de las fuentes OpenType
 
@@ -22,7 +22,7 @@ En este tema se proporciona información general sobre algunas de las caracterí
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>Formato de fuente OpenType  
- El formato de fuente [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] es una extensión del formato de fuente [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] y agrega compatibilidad para datos de fuentes PostScript. El formato de fuente [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fue desarrollado conjuntamente por [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] y Adobe Corporation. Las fuentes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] y los servicios del sistema operativo compatibles con las fuentes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] proporcionan a los usuarios una manera sencilla de instalar y usar fuentes, si las fuentes contienen esquemas [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] o CFF (PostScript).  
+ El formato de fuente [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] es una extensión del formato de fuente [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] y agrega compatibilidad para datos de fuentes PostScript. El formato de fuente [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fue desarrollado conjuntamente por [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] y Adobe Corporation. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fuentes y el sistema operativo de servicios que admiten [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fuentes proporcionan a los usuarios una manera sencilla de instalar y usar fuentes, si las fuentes contienen [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] contornos o CFF (PostScript).  
   
  El formato de fuente [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] soluciona los desafíos de desarrollo siguientes:  
   
@@ -42,7 +42,7 @@ En este tema se proporciona información general sobre algunas de las caracterí
  Consulte [Especificación OpenType](https://go.microsoft.com/fwlink/?LinkId=96731) para obtener más información sobre el formato de fuente [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
   
 ### <a name="advanced-typographic-extensions"></a>Extensiones tipográficas avanzadas  
- Las tablas tipográficas avanzadas (tablas de diseño [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]) amplían la funcionalidad de fuentes con esquemas [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] o CFF. Las fuentes de diseño [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] contienen información adicional que amplía las capacidades de las fuentes para admitir tipografía internacional de alta calidad. La mayoría de fuentes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] exponen solo un subconjunto del total de características [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] disponibles. Las fuentes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] proporcionan las siguientes características.  
+ Las tablas tipográficas avanzadas (tablas de diseño [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]) amplían la funcionalidad de fuentes con esquemas [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] o CFF. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Las fuentes de distribución contienen información adicional que amplía las capacidades de las fuentes para admitir tipografía internacional de alta calidad. La mayoría de fuentes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] exponen solo un subconjunto del total de características [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] disponibles. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] las fuentes proporcionan las siguientes características.  
   
 -   Asignación enriquecida entre caracteres y glifos que admiten ligaduras, formas posicionales, alternativas y otras sustituciones de fuentes.  
   
@@ -118,7 +118,7 @@ En este tema se proporciona información general sobre algunas de las caracterí
   
 <a name="ligatures"></a>   
 ## <a name="ligatures"></a>Ligaduras  
- Las ligaduras son dos o más glifos que se unen en un solo glifo para crear texto más legible o atractivo. Las fuentes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] admiten cuatro tipos de ligaduras:  
+ Las ligaduras son dos o más glifos que se unen en un solo glifo para crear texto más legible o atractivo. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] las fuentes admiten cuatro tipos de ligaduras:  
   
 -   **Ligaduras estándar**. Diseñadas para mejorar la legibilidad. Las ligaduras estándar incluyen "fi", "fl" y "ff".  
   
@@ -161,8 +161,7 @@ En este tema se proporciona información general sobre algunas de las caracterí
  Los caracteres floreados son glifos decorativos que usan adornos elaborados que suelen asociarse a la caligrafía. El texto siguiente muestran glifos estándar y floreados para la fuente Pescadero.  
   
  ![Texto que usa glifos OpenType estándar y floreados](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "texto mediante glifos OpenType estándar y floreados")  
-  
-  
+
  Los caracteres floreados se usan a menudo como elementos decorativos en frases cortas, como anuncios de eventos. El texto siguiente utiliza caracteres floreados para destacar las letras en mayúscula del nombre del evento.  
   
  ![Texto que usa swash OpenType](./media/opentype-font-features/opentype-swashes.gif "texto que usa swash OpenType")  
@@ -182,11 +181,10 @@ En este tema se proporciona información general sobre algunas de las caracterí
   
 <a name="alternates"></a>   
 ## <a name="alternates"></a>Alternativas  
- Las alternativas son glifos que se pueden sustituir por un glifo estándar. Las fuentes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], como la fuente Pericles usada en los ejemplos siguientes, pueden contener glifos alternativos que se puede usar para crear diferentes aspectos de texto. En el texto siguiente se muestran glifos estándar para la fuente Pericles.  
+ Las alternativas son glifos que se pueden sustituir por un glifo estándar. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] las fuentes, como la fuente Pericles usada en los ejemplos siguientes, pueden contener glifos alternativos que puede usar para crear diferentes aspectos de texto. En el texto siguiente se muestran glifos estándar para la fuente Pericles.  
   
  ![Texto que usa glifos estándares OpenType](./media/opentype-font-features/opentype-standard-glyphs.gif "texto que usa glifos estándares OpenType")  
-  
-  
+
  La fuente [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Pericles contiene glifos adicionales que proporcionan alternativas estilísticas al conjunto estándar de glifos. En el texto siguiente se muestran glifos alternativos de estilo.  
   
  ![Texto que usa glifos alternativos de estilo OpenType](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "texto mediante glifos alternativos de estilo OpenType")  
@@ -226,7 +224,7 @@ En este tema se proporciona información general sobre algunas de las caracterí
  Las fuentes OpenType admiten un gran número de características que se pueden usar con valores numéricos en texto.  
   
 ### <a name="fractions"></a>Fracciones  
- Las fuentes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] admiten estilos para las fracciones, ya sean verticales o con barra diagonal.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] las fuentes admiten estilos de fracción apilada y con barra diagonal.  
   
  En el texto siguiente se muestran estilos de fracciones para la fuente Palatino Linotype.  
   
@@ -237,7 +235,7 @@ En este tema se proporciona información general sobre algunas de las caracterí
  [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>Números de estilo antiguo  
- Las fuentes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] admiten un formato de números de estilo antiguo. Este formato es útil para mostrar números en estilos que ya no son estándar. El texto siguiente muestra una fecha del siglo XVIII en formatos de números de estilo antiguo y estándar para la fuente Palatino Linotype.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] las fuentes admiten un formato de números de estilo antiguo. Este formato es útil para mostrar números en estilos que ya no son estándar. El texto siguiente muestra una fecha del siglo XVIII en formatos de números de estilo antiguo y estándar para la fuente Palatino Linotype.  
   
  ![Texto que usa números de estilo antiguo OpenType](./media/opentype-font-features/opentype-old-style-numerals.gif "texto que usa números de estilo antiguo OpenType")  
     
@@ -250,7 +248,7 @@ En este tema se proporciona información general sobre algunas de las caracterí
  [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>Cifras proporcionales y tabulares  
- Las fuentes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] admiten una característica de cifra proporcional y tabular para controlar la alineación de ancho al usar números. Las cifras proporcionales tratan los números como si tuvieran un ancho diferente: "1" es más estrecho que "5". Las cifras tabulares se tratan como números de igual ancho que se alinean verticalmente, lo que aumenta la legibilidad de la información de tipo financiero.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] las fuentes admiten una característica de cifra proporcional y tabular para controlar la alineación de los anchos cuando se utilizan numerales. Las cifras proporcionales tratan los números como si tuvieran un ancho diferente: "1" es más estrecho que "5". Las cifras tabulares se tratan como números de igual ancho que se alinean verticalmente, lo que aumenta la legibilidad de la información de tipo financiero.  
   
  El texto siguiente muestran dos cifras proporcionales en la primera columna con la fuente Miramonte. Tenga en cuenta la diferencia en el ancho entre los números "5" y "1". La segunda columna muestra los mismos dos valores numéricos con los anchos ajustados mediante la característica de cifra tabular.  
   
@@ -261,7 +259,7 @@ En este tema se proporciona información general sobre algunas de las caracterí
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>Cero con barra diagonal  
- Las fuentes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] admiten un formato numérico de cero con barra diagonal para resaltar la diferencia entre la letra "O" y el número "0". El número cero con barra diagonal se usa a menudo para identificadores en información financiera y comercial.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fuentes admiten un formato numérico de cero para resaltar la diferencia entre la letra "O" y el número "0". El número cero con barra diagonal se usa a menudo para identificadores en información financiera y comercial.  
   
  El texto siguiente muestra un identificador de pedido de ejemplo con la fuente Miramonte. La primera línea usa números estándar. La segunda línea usa cero cruzado para conseguir un mejor contraste con la letra "O" mayúscula.  
   
@@ -291,7 +289,7 @@ En este tema se proporciona información general sobre algunas de las caracterí
 ### <a name="typography-class-properties"></a>Propiedades de la clase de tipografía  
  En la tabla siguiente se enumera las propiedades, valores y configuraciones predeterminadas de la <xref:System.Windows.Documents.Typography> objeto.  
   
-|Property|Valores|Valor predeterminado|  
+|Propiedad|Valores|Valor predeterminado|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|Valor numérico: byte|0|  
 |<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
@@ -338,6 +336,7 @@ En este tema se proporciona información general sobre algunas de las caracterí
 |<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Documents.Typography>
 - [Especificación OpenType](https://go.microsoft.com/fwlink/?LinkId=96731)
 - [Tipografía en WPF](typography-in-wpf.md)

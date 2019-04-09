@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6999de3e1bf1da2d306cf063647b47a2be166781
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 55934ef08b10764bb705d7c166621ec7cfcadd0a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364427"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108527"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags (Enumeración)
 Contiene valores de marca que controlan el comportamiento de los metadatos al abrir archivos de manifiesto.  
@@ -74,4 +74,5 @@ typedef enum CorOpenFlags
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

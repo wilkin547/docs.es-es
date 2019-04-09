@@ -1,15 +1,15 @@
 ---
-title: Crear un encabezado personalizado que está firmado y- o cifrados
+title: Creación de un encabezado personalizado firmado o cifrado
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-ms.openlocfilehash: 0f8f86bcb5494cd502d14aff1cf3c4cdf4f8dd33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76bfb6040f6b78765ed42ce7fbf86cdbd62c1e48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494826"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075653"
 ---
-# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Crear un encabezado personalizado que está firmado y- o cifrados
+# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Creación de un encabezado personalizado firmado o cifrado
 Al llamar a un servicio no WCF utilizando un cliente WCF a veces es necesario utilizar encabezados SOAP personalizados. Hay un error de canonización en WCF que impide que los encabezados personalizados firmados y cifrados funcionen con un servicio no WCF. El problema se debe a la canonización incorrecta de los espacios de nombres XML predeterminados. Este hecho es problemático únicamente al llamar a servicios no WCF con encabezados personalizados firmados o cifrados.  Cuando el servicio recibe el mensaje que contiene el encabezado personalizado firmado o cifrado, no puede comprobar la firma. Esta solución evita el error de canonización, permite la interoperabilidad con servicios no WCF, pero no impide la interoperabilidad con servicios WCF.  
   
 ## <a name="defining-the-custom-header"></a>Definición del encabezado personalizado  
@@ -57,6 +57,7 @@ public  class MyMessageContract
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Contrato de mensaje predeterminado](../../../../docs/framework/wcf/samples/default-message-contract.md)
 - [Contratos de mensajes](../../../../docs/framework/wcf/samples/message-contracts.md)
-- [Uso de contratos de mensaje](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+- [Usar contratos de mensaje](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c29cbfbd1c84d267e129bf97d4e9126c772d06d6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 20657e0a583890b851ab8e15c50bce791a3641b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094494"
 ---
 # <a name="property-element-net-native"></a>\<Propiedad > elemento (.NET Native)
 Aplica la directiva de reflexión en tiempo de ejecución a una propiedad.  
@@ -41,7 +41,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a una propiedad.
 |-----------|-----------------|  
 |*method_name*|Nombre de la propiedad. El tipo de la propiedad se define mediante el elemento primario [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) o [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).|  
   
-## <a name="all-other-attributes"></a>Todos los demás atributos  
+## <a name="all-other-attributes"></a>Resto de atributos  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -54,7 +54,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a una propiedad.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -100,6 +100,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a una propiedad.
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
+
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos de directivas en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Configuración de directiva de la directiva en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

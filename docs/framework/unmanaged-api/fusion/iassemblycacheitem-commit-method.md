@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d234910429961a8a0add1d88d0c0eed96ed12a58
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3757eee4c013ccf4f0f6d21ef64a92a5ffd70f19
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074318"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit (Método)
 Confirma la referencia de ensamblado en la caché en memoria.  
@@ -51,4 +51,5 @@ HRESULT Commit (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [IAssemblyCacheItem (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+
+- [IAssemblyCacheItem (Interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

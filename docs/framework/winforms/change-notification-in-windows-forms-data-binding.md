@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, data binding
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-ms.openlocfilehash: cea6cab76a12d6dbfdc741b426b67859e0e5141e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097582"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Notificación de cambios en el enlace de datos de Windows Forms
 Uno de los conceptos más importantes de enlace de datos de Windows Forms es *notificación de cambio*. Para asegurarse de que el origen de datos y los controles enlazados siempre tienen los datos más recientes, debe agregar la notificación de cambio para el enlace de datos. En concreto, para asegurarse de que los controles enlazados se le notifican los cambios realizados en su origen de datos y el origen de datos se le notifican los cambios realizados en las propiedades de un control enlazadas.  
@@ -33,9 +33,10 @@ Uno de los conceptos más importantes de enlace de datos de Windows Forms es *no
  Por último, desde el control debe exponer un *PropertyName*evento Changed para cada propiedad diseñado para estar enlazado a datos. Los cambios en la propiedad de control, a continuación, se propagan al origen de datos enlazado. Para obtener más información, vea [Cómo: Aplicar el modelo PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>
 - <xref:System.ComponentModel.BindingList%601>
 - [Enlace de datos en Windows Forms](windows-forms-data-binding.md)
-- [Orígenes de datos compatibles con Windows Forms](data-sources-supported-by-windows-forms.md)
-- [Enlace de datos y Windows Forms](data-binding-and-windows-forms.md)
+- [Orígenes de datos compatibles con formularios Windows Forms](data-sources-supported-by-windows-forms.md)
+- [Enlace de datos y formularios Windows Forms](data-binding-and-windows-forms.md)

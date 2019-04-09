@@ -17,12 +17,12 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 91f41fb4acf5ec174bd76498a70aed3dcda076f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705750"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078231"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Lápices, líneas y rectángulos en GDI+
 Para dibujar líneas con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] , deberá crear un <xref:System.Drawing.Graphics> objeto y un <xref:System.Drawing.Pen> objeto. El <xref:System.Drawing.Graphics> objeto proporciona los métodos que realmente realizan el dibujo, y el <xref:System.Drawing.Pen> objeto almacena atributos, como el estilo, ancho y color de línea.  
@@ -68,9 +68,10 @@ Para dibujar líneas con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdi
  Un <xref:System.Drawing.Rectangle> objeto tiene propiedades y métodos para manipular y recopilar información sobre el rectángulo. Por ejemplo, el <xref:System.Drawing.Rectangle.Inflate%2A> y <xref:System.Drawing.Rectangle.Offset%2A> métodos cambian el tamaño y posición del rectángulo. El <xref:System.Drawing.Rectangle.IntersectsWith%2A> método indica si el rectángulo forma una intersección con otra dada rectángulo y el <xref:System.Drawing.Rectangle.Contains%2A> método indica si un punto determinado está dentro del rectángulo.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
-- [Cómo: Crear un lápiz](how-to-create-a-pen.md)
-- [Cómo: Dibujar una línea en un formulario de Windows](how-to-draw-a-line-on-a-windows-form.md)
-- [Cómo: Dibujar una forma con contorno](how-to-draw-an-outlined-shape.md)
+- [Filtrar para crear un lápiz](how-to-create-a-pen.md)
+- [Filtrar para dibujar una línea en un formulario Windows Forms](how-to-draw-a-line-on-a-windows-form.md)
+- [Filtrar para dibujar una forma con contorno](how-to-draw-an-outlined-shape.md)

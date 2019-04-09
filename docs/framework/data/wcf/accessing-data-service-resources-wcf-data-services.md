@@ -1,5 +1,5 @@
 ---
-title: Acceder a recursos de Data Services (Data Services de WCF)
+title: Acceder a recursos de servicios de datos (Servicios de datos de WCF)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, querying
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 9589656c00573f7b3bba07aee1f89902a34d61ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4b0af7f20cbf932773df3ae226729a0a6c2500
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085875"
 ---
-# <a name="accessing-data-service-resources-wcf-data-services"></a>Acceder a recursos de Data Services (Data Services de WCF)
+# <a name="accessing-data-service-resources-wcf-data-services"></a>Acceder a recursos de servicios de datos (Servicios de datos de WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] admite la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para exponer los datos como una fuente con recursos direccionables mediante URI. Estos recursos se representan según las convenciones de entidad-relación de la [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md). En este modelo, las entidades representan unidades operacionales de datos que son tipos de datos en un dominio de aplicación, como clientes, pedidos, elementos y productos. El acceso a los datos de entidad y la modificación de los mismos se realiza usando la semántica de Representational State Transfer (REST), específicamente los verbos HTTP estándar GET, PUT, POST y DELETE.  
   
 ## <a name="addressing-resources"></a>Direccionar recursos  
@@ -37,7 +37,7 @@ http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')
 http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName  
 ```  
   
- Al incluir el extremo `$value` en el URI anterior, en el mensaje de respuesta solamente se devuelve el valor de propiedad primitiva. En el siguiente ejemplo solo se devuelve la cadena "Maria Anders" sin el elemento XML:  
+ Al incluir el punto de conexión `$value` en el URI anterior, en el mensaje de respuesta solamente se devuelve el valor de propiedad primitiva. En el siguiente ejemplo solo se devuelve la cadena "Maria Anders" sin el elemento XML:  
   
 ```  
 http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/ContactName/$value  
@@ -97,4 +97,5 @@ http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper
  El URI de un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] recursos le permite direccionar datos de entidad expuestos por el servicio. Cuando especifique un URI en el campo de dirección de un explorador Web, un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] se devuelve la representación de fuente del recurso solicitado. Para obtener más información, consulte el [tutorial rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Aunque un explorador Web puede ser útil para probar que un recurso de servicio de datos devuelve los datos esperados, normalmente se tiene acceso a servicios de datos de producción que pueden crear, actualizar y eliminar datos también el código de aplicación o lenguajes de scripting en una página Web. Para obtener más información, consulte [mediante un servicio de datos en una aplicación cliente](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Sitio web de Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=182204)
+
+- [Sitio web Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=182204)

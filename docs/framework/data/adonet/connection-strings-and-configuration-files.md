@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 5e83d13d24a0b17fd886995e552dd0a7e2cf8ff4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 786094bc426066b45fd1a214950ec1e030f0b731
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409957"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088839"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Cadenas de conexión y archivos de configuración
 La incrustación de cadenas de conexión en el código de la aplicación puede producir vulnerabilidades en la seguridad y problemas de mantenimiento. Las cadenas de conexión sin cifrar compiladas en el código fuente de una aplicación se pueden ver con la herramienta [Ildasm.exe (Desensamblador de IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Además, si la cadena de conexión cambia en algún momento, será necesario compilar de nuevo la aplicación. Por estas razones, se recomienda almacenar las cadenas de conexión en un archivo de configuración de la aplicación.  
@@ -74,7 +74,7 @@ La incrustación de cadenas de conexión en el código de la aplicación puede p
   
  Puede usar <xref:System.Configuration.ConnectionStringSettingsCollection> para recuperar cadenas de conexión de archivos de configuración de aplicación. Esta clase contiene una colección de objetos <xref:System.Configuration.ConnectionStringSettings>, cada uno de los cuales representa una única entrada en la sección **connectionStrings**. Sus propiedades se asignan a los atributos de cadenas de conexión, lo que permite recuperar una cadena de conexión mediante la especificación de su nombre o del nombre del proveedor.  
   
-|Property|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |<xref:System.Configuration.ConnectionStringSettings.Name%2A>|Nombre de la cadena de conexión. Se asigna al atributo **name**.|  
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|Nombre completo del proveedor. Se asigna al atributo **providerName**.|  
@@ -170,9 +170,10 @@ La incrustación de cadenas de conexión en el código de la aplicación puede p
  Para obtener más información acerca de cómo proteger las aplicaciones ASP.NET, vea [sitios web de ASP.NET protección](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Generadores de cadenas de conexión](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Utilizar las clases Configuration](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
+- [Uso de clases de configuración](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
 - [Configurar aplicaciones](../../../../docs/framework/configure-apps/index.md)
-- [Administrar sitios web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Administración de sitios Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

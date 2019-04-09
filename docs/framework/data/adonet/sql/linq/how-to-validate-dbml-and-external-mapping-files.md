@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Validar archivos DBML y asignación externa
+title: Filtrar para validar archivos DBML y de asignación externa
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 42cba5b9b686f5f94d4ebf8f889461e1bab009b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b01bcf98bba185b7a4b1802f470a585371980177
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078738"
 ---
-# <a name="how-to-validate-dbml-and-external-mapping-files"></a>Procedimiento Validar archivos DBML y asignación externa
+# <a name="how-to-validate-dbml-and-external-mapping-files"></a>Filtrar para validar archivos DBML y de asignación externa
 Los archivos de asignación externa y los archivos .dbml que se modifican se deben validar con sus respectivas definiciones de esquema. En este tema proporciona a los usuarios de Visual Studio con los pasos para implementar el proceso de validación.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -71,4 +71,5 @@ Los archivos de asignación externa y los archivos .dbml que se modifican se deb
 7.  En el **nombre de archivo** cuadro, cree un nombre de archivo con una extensión .xsd.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a01e2fcc7dc00d3a57272abb04ebcecc6d5f74a6
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7ac90473a0bf15173683c45abc8e4a840ea7e733
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467089"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088306"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset (Método)
 Obtiene un objeto "ICorDebugValue" que encapsula el valor devuelto de una función.  
@@ -73,5 +73,6 @@ HRESULT GetReturnValueForILOffset(
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [GetReturnValueLiveOffset (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)
-- [ICorDebugILFrame3 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
+
+- [Método GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)
+- [ICorDebugILFrame3 (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Asignar el contenido WPF en Windows Forms en tiempo de diseño'
+title: 'Tutorial: Asignar contenido de WPF en formularios Windows Forms en tiempo de diseño'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 364cfe521a1e141bdfcfb3cfc47170714d010a87
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 781eaaabb7306018366450c013c227fe5a1fef78
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108685"
 ---
-# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Tutorial: Asignar el contenido WPF en Windows Forms en tiempo de diseño
+# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Tutorial: Asignar contenido de WPF en formularios Windows Forms en tiempo de diseño
 Este tutorial muestra cómo seleccionar los tipos de control de Windows Presentation Foundation (WPF) que desea mostrar en el formulario. Puede seleccionar cualquier tipo de control WPF incluido en su proyecto.
 
  En este tutorial, realizará las tareas siguientes:
@@ -97,6 +97,7 @@ Este tutorial muestra cómo seleccionar los tipos de control de Windows Presenta
 9. El control `elementHost2` ahora hospeda una instancia del tipo `UserControl1`.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Migración e interoperabilidad](../../wpf/advanced/migration-and-interoperability.md)

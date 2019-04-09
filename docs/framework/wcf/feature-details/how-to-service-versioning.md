@@ -2,12 +2,12 @@
 title: Cómo Control de versiones del servicio
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: b02031493df1a63f62b4bdab80b56b1fb220aa92
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc81fcde3c4f731257bf759cbd3f31542483618d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700603"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085381"
 ---
 # <a name="how-to-service-versioning"></a>Cómo Control de versiones del servicio
 Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que enrute mensajes a las diferentes versiones del mismo servicio. En este ejemplo, los mensajes se enrutan a dos versiones diferentes de un servicio de la calculadora, `roundingCalc` (v1) y `regularCalc` (v2). Ambas implementaciones admiten las mismas operaciones; sin embargo, el servicio más antiguo, `roundingCalc`, redondea todos los cálculos al valor entero más cercano antes de devolverlos. Una aplicación cliente debe poder indicar cuándo se debe usar el servicio `regularCalc` más reciente.  
@@ -17,7 +17,7 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
   
  Las operaciones expuestas por ambos servicios son:  
   
--   Add  
+-   Agregar  
   
 -   Restar  
   
@@ -27,9 +27,9 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
   
  Como ambas implementaciones del servicio administran las mismas operaciones y son prácticamente idénticas exceptuando los datos que devuelven, los datos base incluidos en mensajes enviados de las aplicaciones cliente no son lo suficientemente exclusivos como para permitirle determinar cómo enrutar la solicitud. Por ejemplo, no se pueden utilizar los filtros de acción porque las acciones predeterminadas para ambos servicios son las mismas.  
   
- Esto se puede resolver de varias maneras: exponiendo un punto de conexión concreto en el enrutador para cada versión del servicio o agregando un elemento de encabezado personalizado al mensaje para indicar la versión del servicio.  Cada uno de estos sistemas le permite enrutar los mensajes entrantes de forma única a una versión concreta del servicio. Sin embargo, el empleo de contenidos de mensaje únicos es el método preferido para diferenciar entre las solicitudes de versiones del servicio diferentes.  
+ Esto se puede resolver de varias maneras: exponiendo un extremo concreto en el enrutador para cada versión del servicio o agregando un elemento de encabezado personalizado al mensaje para indicar la versión del servicio.  Cada uno de estos sistemas le permite enrutar los mensajes entrantes de forma única a una versión concreta del servicio. Sin embargo, el empleo de contenidos de mensaje únicos es el método preferido para diferenciar entre las solicitudes de versiones del servicio diferentes.  
   
- En este ejemplo, la aplicación cliente agrega el encabezado personalizado 'CalcVer' al mensaje de solicitud. Este encabezado contendrá un valor que indica la versión del servicio al que se debería enrutar el mensaje. Un valor de '1' indica que el servicio roundingCalc debe procesar el mensaje, mientras que un valor de '2' indica el servicio de regularCalc. Esto permite que la aplicación cliente controle directamente que versión del servicio procesará el mensaje.  Como el encabezado personalizado es un valor contenido dentro del mensaje, puede utilizar un extremo para recibir mensajes destinados a ambas versiones del servicio. Se puede utilizar el siguiente código en la aplicación cliente para agregar este encabezado personalizado al mensaje:  
+ En este ejemplo, la aplicación cliente agrega el encabezado personalizado 'CalcVer' al mensaje de solicitud. Este encabezado contendrá un valor que indica la versión del servicio al que se debería enrutar el mensaje. Un valor de '1' indica que el servicio roundingCalc debe procesar el mensaje, mientras que un valor de '2' indica el servicio de regularCalc. Esto permite que la aplicación cliente controle directamente que versión del servicio procesará el mensaje.  Como el encabezado personalizado es un valor contenido dentro del mensaje, puede utilizar un punto de conexión para recibir mensajes destinados a ambas versiones del servicio. Se puede utilizar el siguiente código en la aplicación cliente para agregar este encabezado personalizado al mensaje:  
   
 ```csharp  
 messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custom.namespace/", "2"));  
@@ -37,7 +37,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
   
 ### <a name="implement-service-versioning"></a>Implementación de versiones del servicio  
   
-1.  Cree la configuración de servicio de enrutamiento básica especificando el extremo de servicio expuesto por el servicio. En el siguiente ejemplo, se define un extremo de servicio único que se utilizará para recibir mensajes. También se definen los puntos de conexión del cliente que se utilizarán para enviar mensajes a los servicios `roundingCalc` (v1) y `regularCalc` (v2).  
+1.  Cree la configuración de servicio de enrutamiento básica especificando el extremo de servicio expuesto por el servicio. En el siguiente ejemplo, se define un punto de conexión de servicio único que se utilizará para recibir mensajes. También se definen los puntos de conexión del cliente que se utilizarán para enviar mensajes a los servicios `roundingCalc` (v1) y `regularCalc` (v2).  
   
     ```xml  
     <services>  
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2.  Defina los filtros usados para enrutar mensajes a los puntos de conexión del destino.  En este ejemplo, el filtro de XPath se utiliza para detectar el valor del encabezado personalizado "CalcVer" para determinar qué versión debe enrutarse el mensaje a. También se utiliza un filtro de XPath para detectar mensajes que no contienen el encabezado "CalcVer". En el siguiente ejemplo, se definen los filtros necesarios y la tabla de espacio de nombres.  
+2.  Defina los filtros usados para enrutar mensajes a los extremos del destino.  En este ejemplo, el filtro de XPath se utiliza para detectar el valor del encabezado personalizado "CalcVer" para determinar qué versión debe enrutarse el mensaje a. También se utiliza un filtro de XPath para detectar mensajes que no contienen el encabezado "CalcVer". En el siguiente ejemplo, se definen los filtros necesarios y la tabla de espacio de nombres.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -325,4 +325,5 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)

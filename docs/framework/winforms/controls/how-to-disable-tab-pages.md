@@ -1,5 +1,5 @@
 ---
-title: Filtrar Deshabilitar páginas de fichas
+title: Filtrar para deshabilitar fichas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: a2a0f4084529b1dd2618c1cd6171ee45b8f569d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ace713a635b5d9c4b73f85cd3d378c0f1ff3dba1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107580"
 ---
-# <a name="how-to-disable-tab-pages"></a>Filtrar Deshabilitar páginas de fichas
+# <a name="how-to-disable-tab-pages"></a>Filtrar para deshabilitar fichas
 En algunas ocasiones, deseará restringir el acceso a datos que están disponibles dentro de la aplicación de Windows Forms. Un ejemplo de esto podría ser si tiene datos que se muestran en las páginas de fichas de un control de ficha; los administradores podrían tener información sobre una página de ficha que desee restringir invitados o de los usuarios de nivel inferior.  
   
 ### <a name="to-disable-tab-pages-programmatically"></a>Para deshabilitar páginas de fichas mediante programación  
@@ -102,7 +102,8 @@ En algunas ocasiones, deseará restringir el acceso a datos que están disponibl
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [Información general del control TabControl](tabcontrol-control-overview-windows-forms.md)
-- [Cómo: Agregar un Control a una página de ficha](how-to-add-a-control-to-a-tab-page.md)
-- [Cómo: Agregar y quitar fichas con el control TabControl de formularios de Windows](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [Cómo: Cambiar la apariencia del control TabControl de formularios de Windows](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+
+- [Información general sobre el control TabControl](tabcontrol-control-overview-windows-forms.md)
+- [Filtrar para agregar un control a una ficha](how-to-add-a-control-to-a-tab-page.md)
+- [Filtrar para agregar y quitar fichas con el control TabControl de formularios Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Filtrar para cambiar el aspecto apariencia del control TabControl de formularios Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

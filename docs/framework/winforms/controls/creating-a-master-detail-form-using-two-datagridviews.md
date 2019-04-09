@@ -10,14 +10,14 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 80ec480b5d45a338c1f15796ae82015d6da24fc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705537"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078882"
 ---
-# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Tutorial: Creación de un formulario principal-detalle mediante dos controles DataGridView de formularios Windows Forms
+# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Tutorial: Crear un formulario maestro y detalle mediante dos controles DataGridView de formularios Windows Forms
 Uno de los escenarios más comunes para usar el <xref:System.Windows.Forms.DataGridView> control es el *principal-detalle* formulario, en el que se muestra una relación primaria-secundaria entre dos tablas de base de datos. Selección de filas en la tabla maestra hace que la tabla de detalles actualizar con los datos secundarios correspondientes.  
   
  Implementar un formulario principal-detalle es fácil con la interacción entre el <xref:System.Windows.Forms.DataGridView> control y el <xref:System.Windows.Forms.BindingSource> componente. En este tutorial, compilará el formulario mediante dos <xref:System.Windows.Forms.DataGridView> controles y dos <xref:System.Windows.Forms.BindingSource> componentes. El formulario mostrará dos tablas relacionadas en la base de datos de ejemplo Northwind de SQL Server: `Customers` y `Orders`. Cuando haya terminado, tendrá un formulario que muestra todos los clientes de la base de datos en el servidor maestro <xref:System.Windows.Forms.DataGridView> y todos los pedidos del cliente seleccionado en el detalle <xref:System.Windows.Forms.DataGridView>.  
@@ -76,8 +76,9 @@ Uno de los escenarios más comunes para usar el <xref:System.Windows.Forms.DataG
 -   Personalizar la apariencia de celdas. Para obtener más información, vea [Cómo: Personalizar la apariencia de celdas en el Control DataGridView de formularios de Windows](customize-the-appearance-of-cells-in-the-datagrid.md) y [Cómo: Establecer estilos de celda predeterminados para los Windows Forms DataGridView Control](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Cómo: Crear un formulario principal-detalle mediante dos controles DataGridView de formularios Windows Forms](create-a-master-detail-form-using-two-datagridviews.md)
+- [Mostrar datos en el control DataGridView de formularios Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Filtrar para crear un formulario maestro y detalle mediante dos controles DataGridView de formularios Windows Forms](create-a-master-detail-form-using-two-datagridviews.md)
 - [Proteger la información de conexión](../../data/adonet/protecting-connection-information.md)

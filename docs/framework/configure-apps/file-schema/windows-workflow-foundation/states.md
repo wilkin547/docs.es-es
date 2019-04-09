@@ -3,12 +3,12 @@ title: <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-ms.openlocfilehash: 018ea20342475de40a8392a9272724e37902ecb9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 30cb2efa4c00c8b292a8ace6a03306d6ac76a7f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073127"
 ---
 # <a name="states"></a>\<states>
 Representa una colección de estados suscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.  
@@ -67,14 +67,14 @@ Representa una colección de estados suscritos de la instancia de flujo de traba
 |Estado|Descripción|  
 |-----------|-----------------|  
 |Anulado|Se ha anulado la instancia de flujo de trabajo.|  
-|Completado|Se ha completado la instancia de flujo de trabajo.|  
+|Completada|Se ha completado la instancia de flujo de trabajo.|  
 |Deleted|Se ha eliminado la instancia de flujo de trabajo.|  
 |Inactivo|La instancia de flujo de trabajo está inactiva.|  
 |Conservado|Se ha guardado la instancia de flujo de trabajo.|  
 |Reanudado|Se ha reanudado la instancia de flujo de trabajo.|  
 |Comenzado|Se ha iniciado la instancia de flujo de trabajo.|  
 |UnhandledException|La instancia de flujo de trabajo ha detectado una excepción no controlada.|  
-|Unloaded|Se ha descargado la instancia de flujo de trabajo.|  
+|Descargado|Se ha descargado la instancia de flujo de trabajo.|  
 |Cancelado|Se ha cancelado la instancia de flujo de trabajo.|  
 |Suspendido|Se suspende la instancia de flujo de trabajo.|  
 |Terminado|Se ha terminado la instancia de flujo de trabajo.|  
@@ -94,8 +94,9 @@ Representa una colección de estados suscritos de la instancia de flujo de traba
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [Perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

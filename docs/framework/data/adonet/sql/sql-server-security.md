@@ -2,12 +2,12 @@
 title: Seguridad de SQL Server
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: 33ec28536115f8571bfda47266ed3b5cad1442bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4aa4feadb6305f8a0ea6f99c2add780d6fca95cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650592"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080777"
 ---
 # <a name="sql-server-security"></a>Seguridad de SQL Server
 SQL Server incluye diferentes características que admiten la creación de aplicaciones de base de datos seguras.  
@@ -40,5 +40,6 @@ Describe las consideraciones de seguridad para SQL Server y Azure SQL Database.
 Se describen cuestiones de seguridad a tener en cuenta antes de instalar SQL Server.
 
 ## <a name="see-also"></a>Vea también
+
 - [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)

@@ -2,12 +2,12 @@
 title: 'Entity Data Model: Herencia'
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
-ms.openlocfilehash: bc0467ea1b242c13e00e115f07ccbc5c840df936
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9f77f2ebb86ea050c124fbd1c6f2b30ed9e75a1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083821"
 ---
 # <a name="entity-data-model-inheritance"></a>Entity Data Model: Herencia
 Entity Data Model (EDM) admite la herencia para [tipos de entidad](../../../../docs/framework/data/adonet/entity-type.md). La herencia en EDM es similar a la herencia para las clases en los lenguajes de programación orientados a objetos. Al igual que con las clases de lenguajes orientados a objetos, en un modelo conceptual puede definir un tipo de entidad (una *tipo derivado*) que hereda de otro tipo de entidad (el *tipo base*). Sin embargo, a diferencia de las clases en la programación orientada a objetos, en un modelo conceptual el tipo derivado siempre hereda todas las [propiedades](../../../../docs/framework/data/adonet/property.md) y [las propiedades de navegación](../../../../docs/framework/data/adonet/navigation-property.md) del tipo base. No se pueden reemplazar las propiedades heredadas en un tipo derivado.  
@@ -27,5 +27,6 @@ El siguiente diagrama muestra un modelo conceptual con cuatro tipos de entidad: 
  [!code-xml[EDM_Example_Model#DerivedType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books5.edmx#derivedtype)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Conceptos clave de Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: 8de4eeaa22f83392bcb6bb79a1fea327281dfec9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b762c3002913cbd925579ef28f2aa01411976c32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843752"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073655"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Operadores y expresiones en Visual Basic
 Un *operador* es un elemento de código que realiza una operación en uno o más elementos de código que contienen valores. Los elementos de valor incluyen variables, constantes, literales, propiedades, devoluciones de procedimientos `Function` y `Operator` y expresiones.  
@@ -61,8 +61,7 @@ Un *operador* es un elemento de código que realiza una operación en uno o más
  [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
  En el ejemplo anterior, Visual Basic realiza las operaciones en la expresión en el lado derecho del operador de asignación (`=`), a continuación, asigna el valor resultante a la variable `x` a la izquierda. No hay ningún límite práctico al número de operadores que se pueden combinar en una expresión, pero es necesario conocer la [prioridad de operadores en Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) para asegurarse de que se obtienen los resultados esperados.  
-  
-  
+
 ## <a name="see-also"></a>Vea también
 
 - [Operadores](../../../../visual-basic/language-reference/operators/index.md)

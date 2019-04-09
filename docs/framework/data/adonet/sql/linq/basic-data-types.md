@@ -2,12 +2,12 @@
 title: Tipos de datos básicos
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: b05bc69bdd6eea15806b8d928487da2c3f6503b5
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 00d5c6d866453fe9ece7f2e22a579aa43c09c23e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545707"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072888"
 ---
 # <a name="basic-data-types"></a>Tipos de datos básicos
 Como las consultas de LINQ to SQL se convierten a Transact-SQL antes de ejecutarlas en Microsoft SQL Server, LINQ to SQL admite una funcionalidad muy similar a la integrada en SQL Server para los tipos de datos básicos.  
@@ -23,5 +23,6 @@ Como las consultas de LINQ to SQL se convierten a Transact-SQL antes de ejecutar
 -   Es el operador: El `IS` operador tiene un equivalente compatible cuando se utiliza la asignación de herencia. Se puede utilizar en lugar de probar directamente la columna discriminadora para determinar si un objeto es de un tipo de entidad concreto, y se convierte en una marca de verificación en la columna discriminadora. Para obtener más información acerca de Visual Basic y C# es operadores, vea [operador Is](~/docs/visual-basic/language-reference/operators/is-operator.md) y [es](~/docs/csharp/language-reference/keywords/is.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Asignación de tipos entre CLR y SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
 - [Tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

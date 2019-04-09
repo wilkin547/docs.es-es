@@ -2,12 +2,12 @@
 title: Ejemplo de extensiones débilmente tipadas
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 19d39e4a70022304262c5872636d3ea03a3b861b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22d5b2c1c7680b750d8bd26da10588e0ca9f585
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668488"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086798"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Ejemplo de extensiones débilmente tipadas
 El modelo de objetos de sindicación proporciona compatibilidad enriquecida para trabajar con datos de extensión (información que está presente en una representación XML de una fuente de sindicación pero no explícitamente expuesta por clases como <xref:System.ServiceModel.Syndication.SyndicationFeed> y <xref:System.ServiceModel.Syndication.SyndicationItem>. Este ejemplo muestra las técnicas básicas para trabajar con datos de extensión.  
@@ -56,13 +56,13 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
 -   Atributo `myAttribute` del elemento `<feed>`.  
   
--   Elemento `<simpleString>`.  
+-   `<simpleString>` elemento.  
   
--   Elemento `<DataContractExtension>`.  
+-   `<DataContractExtension>` elemento.  
   
--   Elemento `<XmlSerializerExtension>`.  
+-   `<XmlSerializerExtension>` elemento.  
   
--   Elemento `<xElementExtension>`.  
+-   `<xElementExtension>` elemento.  
   
 ## <a name="writing-extension-data"></a>Cómo escribir datos de extensión  
  Las extensiones de atributo se crean agregando entradas a la colección <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> tal y como se muestra en el código de ejemplo siguiente.  
@@ -156,5 +156,6 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   
 ## <a name="see-also"></a>Vea también
+
 - [Extensiones fuertemente tipadas](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)
-- [Redifusión en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+- [Sindicación en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

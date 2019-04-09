@@ -2,12 +2,12 @@
 title: <persistableType>
 ms.date: 03/30/2017
 ms.assetid: e5425fe6-523a-4076-aab4-2c2515b1d830
-ms.openlocfilehash: 3ea99d360ceb1e3fe6e97cbf9c8827dd7c853f63
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 939a29e90ee21e94ccb78842d6f7224e9a6288d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256529"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083743"
 ---
 # <a name="persistabletype"></a>\<persistableType>
 Especifica todos los tipos con persistencia.  
@@ -53,8 +53,9 @@ Especifica todos los tipos con persistencia.
 |[\<persistableTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)|Una colección de elementos de `persistableType`.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.ComPersistableTypeElementCollection>
 - <xref:System.ServiceModel.Configuration.ComPersistableTypeElement>
 - [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
 - [Integración en aplicaciones COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Cómo: Configurar el servicio COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Filtrar para configurar los parámetros de los servicios COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

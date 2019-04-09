@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Utilice Svcutil.exe para exportar metadatos desde el código de servicio compilado
+title: Filtrar para usar Svcutil.exe para exportar metadatos desde el código de servicio compilado
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 6af43b076f7c508fd17cac367caeed30065b0c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb1cb03a078eeb273c69cc3c49b3ef2173c0a49c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084939"
 ---
-# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Procedimiento Utilice Svcutil.exe para exportar metadatos desde el código de servicio compilado
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Filtrar para usar Svcutil.exe para exportar metadatos desde el código de servicio compilado
 Svcutil.exe puede exportar metadatos para los servicios, contratos y tipos de datos en ensamblados compilados del siguiente modo:  
   
 -   Para exportar los metadatos para todos los contratos de servicios compilados para un conjunto de ensamblados utilizando Svcutil.exe, especifique los ensamblados como parámetros de entrada. Éste es el comportamiento predeterminado.  
@@ -163,5 +163,6 @@ public class MyService : IPersonFinder
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Exportación e importación de metadatos](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

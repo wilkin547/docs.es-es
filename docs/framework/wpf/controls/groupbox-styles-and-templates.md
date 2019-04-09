@@ -9,12 +9,12 @@ helpviewer_keywords:
 - styles [WPF], GroupBox
 - templates [WPF], GroupBox
 ms.assetid: 33df7037-0a1b-476f-b9d0-41566a777699
-ms.openlocfilehash: 26a935b40ede80aad533c7951f667afa37c57477
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5ef8e4b44bc2b6072fa730f33c10191b64954f7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078998"
 ---
 # <a name="groupbox-styles-and-templates"></a>Estilos y plantillas de GroupBox
 <a name="introduction"></a> En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.GroupBox> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -46,9 +46,10 @@ ms.locfileid: "57368969"
  Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
-- [Control Customization](control-customization.md) (Personalización de controles)
+- [Personalización de controles](control-customization.md)
 - [Aplicar estilos y plantillas](styling-and-templating.md)
-- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Personalizar la apariencia de un control existente creando una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

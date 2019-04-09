@@ -2,12 +2,12 @@
 title: Problemas conocidos en SqlClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 112c11edd3955f2bdc6d2b0510e385d4560b80ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3df5a42b40e1851875c35165301af082f5d3269
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073811"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemas conocidos en SqlClient para Entity Framework
 En esta sección se describen problemas conocidos relacionados con el proveedor de datos .NET Framework para SQL Server (SqlClient).  
@@ -60,5 +60,6 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es compatible con los valores de identidad de tipo GUID generados por el servidor, pero el proveedor debe admitir a su vez la devolución de dichos valores después de la inserción de una fila. A partir de SQL Server 2005, puede devolver el tipo GUID generado por el servidor en una base de datos de SQL Server a través de la [cláusula OUTPUT](https://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>Vea también
+
 - [SqlClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
 - [Problemas conocidos y consideraciones en LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

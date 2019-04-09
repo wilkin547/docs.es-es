@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 7ddad36c05d9972b9fc613403b68b7c793b6701d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9afa49525f03c06f94b1b7b704fb3d9caa9e19d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707584"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101821"
 ---
 # <a name="serialization-and-deserialization"></a>Serialización y deserialización
 Windows Communication Foundation (WCF) incluye un nuevo motor de serialización, el <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> traduce entre objetos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] y XML, en ambas direcciones. En este tema se explica cómo funciona el serializador.  
@@ -261,8 +261,9 @@ Windows Communication Foundation (WCF) incluye un nuevo motor de serialización,
  Asimismo, observe que el `NetDataContractSerializer` no genera el nombre de ensamblado y tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] completo para cada nodo del gráfico de objeto. Solo genera esa información cuando hay ambigüedad. Es decir, produce el resultado en el nivel del objeto raíz y para cualquier caso polimórfico.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.NetDataContractSerializer>
 - <xref:System.Runtime.Serialization.XmlObjectSerializer>
 - [Serialización binaria](../../../../docs/standard/serialization/binary-serialization.md)
-- [Tipos admitidos por el serializador de contratos de datos](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Tipos admitidos por el serializador de contrato de datos](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

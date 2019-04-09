@@ -1,18 +1,18 @@
 ---
-title: Filtrar Ejecutar una consulta SQL de entidad parametrizado usando EntityCommand
+title: Filtrar para ejecutar una consulta parametrizada de Entity SQL mediante EntityCommand
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e93fea43-7e03-4d7d-9fee-2517b8b88cba
-ms.openlocfilehash: e605166fa11fbf6424657e1fefa0a5087a11049c
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 252d04ce96e222526bfd3d3e0b798f1c5edd2c8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825659"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079713"
 ---
-# <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>Filtrar Ejecutar una consulta SQL de entidad parametrizado usando EntityCommand
+# <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>Filtrar para ejecutar una consulta parametrizada de Entity SQL mediante EntityCommand
 En este tema se muestra cómo ejecutar un [!INCLUDE[esql](../../../../../includes/esql-md.md)] consulta con parámetros mediante un <xref:System.Data.EntityClient.EntityCommand> objeto.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  
@@ -31,5 +31,6 @@ En este tema se muestra cómo ejecutar un [!INCLUDE[esql](../../../../../include
  [!code-vb[DP EntityServices Concepts#ParameterizedQueryWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#parameterizedquerywithentitycommand)]  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Ejecutar una consulta parametrizada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738521(v=vs.100))
+
+- [Filtrar Ejecutar una consulta parametrizada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738521(v=vs.100))
 - [Lenguaje Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Establecer imágenes en tiempo de ejecución (formularios Windows Forms)
+title: Filtrar Establecer imágenes en tiempo de ejecución (formularios Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 5afb4fe3ebef705cd0671312aacb6f9ad8219621
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073603"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Filtrar Establecer imágenes en tiempo de ejecución (formularios Windows Forms)
 Puede establecer mediante programación la imagen que muestra un formulario Windows Forms <xref:System.Windows.Forms.PictureBox> control.  
@@ -98,9 +98,10 @@ Puede establecer mediante programación la imagen que muestra un formulario Wind
      Este código borrará la imagen incluso si se ha cargado un gráfico en el control en tiempo de diseño.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
-- [Información general del control PictureBox](picturebox-control-overview-windows-forms.md)
-- [Cómo: Cargar una imagen mediante el diseñador](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Cómo: Modificar el tamaño o la ubicación de una imagen en tiempo de ejecución](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [PictureBox (control)](picturebox-control-windows-forms.md)
+- [Información general sobre el control PictureBox](picturebox-control-overview-windows-forms.md)
+- [Filtrar para cargar una imagen mediante el diseñador](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Filtrar para modificar el tamaño o la situación de una imagen en tiempo de ejecución](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Control PictureBox](picturebox-control-windows-forms.md)

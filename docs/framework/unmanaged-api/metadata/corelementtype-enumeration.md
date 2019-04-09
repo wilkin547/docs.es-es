@@ -1,5 +1,5 @@
 ---
-title: CorElementType Enumeration1
+title: CorElementType (enumeración1)
 ms.date: 03/30/2017
 api_name:
 - CorElementType
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2520c37b1969e5e98f02772857f96195b211b549
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 581c5517144dbc94e16acb777b5c272b8390b212
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674170"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091140"
 ---
-# <a name="corelementtype-enumeration1"></a>CorElementType Enumeration1
+# <a name="corelementtype-enumeration1"></a>CorElementType (enumeración1)
 Especifica un common language runtime <xref:System.Type>, un modificador de tipo o información sobre un tipo en una signatura de tipo de metadatos.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -146,4 +146,5 @@ typedef enum CorElementType {
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Enumeraciones para metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

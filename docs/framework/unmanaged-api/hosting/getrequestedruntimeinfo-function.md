@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 514c429fd2ec2cda4576245e2656921f0f10f275
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1290aa864a3f65e549bc26173dcd23648b8dee90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486958"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074890"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo (Función)
 Obtiene información de versión y directorio sobre requerido por una aplicación de common language runtime (CLR).  
@@ -124,6 +124,7 @@ HRESULT GetRequestedRuntimeInfo (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [GetRequestedRuntimeVersion (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
 - [GetVersionFromProcess (Función)](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
 - [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

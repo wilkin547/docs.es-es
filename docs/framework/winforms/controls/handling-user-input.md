@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], keyboard events using code
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
-ms.openlocfilehash: a1129e3778763a4e2cd06759c5a5ad7656244934
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3ebe82fc18deba52fafe76da7ff85fb247446e46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720986"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074961"
 ---
 # <a name="handling-user-input"></a>Controlar la introducción de datos por el usuario
 En este tema se describe los principales eventos de teclado y mouse proporcionados por <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Al controlar un evento, los creadores de controles deben reemplazar el método `On`*EventName* protegido en lugar de asociar un delegado al evento. Para hacer un repaso de los eventos, vea [Provocar eventos de un componente](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120)).  
@@ -64,7 +64,8 @@ En este tema se describe los principales eventos de teclado y mouse proporcionad
  Para el código fuente completo para la `FlashTrackBar` de ejemplo, vea [Cómo: Crear un Control de Windows Forms que muestre el progreso](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Eventos de los controles de Windows Forms](events-in-windows-forms-controls.md)
-- [Definir un evento en los controles de Windows Forms](defining-an-event-in-windows-forms-controls.md)
+
+- [Eventos de los controles de formularios Windows Forms](events-in-windows-forms-controls.md)
+- [Definir un evento](defining-an-event-in-windows-forms-controls.md)
 - [Eventos](../../../standard/events/index.md)
-- [Datos proporcionados por el usuario en Windows Forms](../user-input-in-windows-forms.md)
+- [Datos proporcionados por el usuario en formularios Windows Forms](../user-input-in-windows-forms.md)

@@ -2,12 +2,12 @@
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 2041125e5bb538a9b64beb54778219c2a51a18f7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3fc7828d399555f7c459f6dd067ce9a24b8998b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108035"
 ---
 # <a name="diagnostics"></a>\<diagnostics>
 El elemento `diagnostics` define valores que pueden ser utilizados por un administrador para la inspección y control en tiempo de ejecución.  
@@ -54,7 +54,7 @@ El elemento `diagnostics` define valores que pueden ser utilizados por un admini
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<endToEndTracing>](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Elemento de configuración que le permite habilitar y deshabilitar aspectos diferentes de traza de un punto de conexión a otro durante el funcionamiento de una aplicación de servicio.|  
+|[\<endToEndTracing>](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Elemento de configuración que le permite habilitar y deshabilitar aspectos diferentes de traza de un extremo a otro durante el funcionamiento de una aplicación de servicio.|  
 |[\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|Describe los valores para el registro de mensajes WCF.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -85,5 +85,6 @@ El elemento `diagnostics` define valores que pueden ser utilizados por un admini
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>

@@ -2,12 +2,12 @@
 title: Seguridad de LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-ms.openlocfilehash: 7730419509cd0c3530813734a98f777ddf9d9f04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078149"
 ---
 # <a name="security-in-linq-to-sql"></a>Seguridad de LINQ to SQL
 Siempre hay riesgos de seguridad al conectarse a una base de datos. Aunque LINQ to SQL puede incluir algunos modos nuevos de trabajar con datos de SQL Server, no proporciona ningún mecanismo de seguridad adicional.  
@@ -34,5 +34,6 @@ Siempre hay riesgos de seguridad al conectarse a una base de datos. Aunque LINQ 
 -   Reduzca las duraciones y los puntos de contacto de todas las cadenas de conexión.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [Preguntas más frecuentes](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

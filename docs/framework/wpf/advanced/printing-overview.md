@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: c009d86deada690f673736e0e35eb710e25f7781
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 2aeafa7065b587497fb6f3b23605c21dca291cd1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075865"
 ---
 # <a name="printing-overview"></a>Información general sobre impresión
 Con Microsoft .NET Framework, los desarrolladores de aplicaciones con Windows Presentation Foundation (WPF) tienen un rico conjunto nuevo de administración del sistema de impresión y [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Con [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], algunas de estas mejoras del sistema de impresión también están disponibles para los desarrolladores que crean aplicaciones de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], así como para los que usan código no administrado. La base de esta nueva funcionalidad es el nuevo formato de archivo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] y la ruta de impresión [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
@@ -29,7 +29,7 @@ Con Microsoft .NET Framework, los desarrolladores de aplicaciones con Windows Pr
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>Sobre XPS  
- [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] es un formato de documento electrónico, un formato de archivo de cola de impresión y un lenguaje de descripción de página. Se trata de un formato de documento abierto que usa [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] y otros estándares del sector para crear documentos multiplataforma. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] simplifica el proceso de creación, uso compartido, impresión, visualización y archivo de documentos digitales. Para obtener más información sobre [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], consulte [documentos XPS](/windows/desktop/printdocs/documents).  
+ [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] es un formato de documento electrónico, un formato de archivo de cola de impresión y un lenguaje de descripción de página. Se trata de un formato de documento abierto que usa [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] y otros estándares del sector para crear documentos multiplataforma. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] simplifica el proceso por el que documentos digitales se creó, compartidos, imprimir, ver y archivados. Para obtener más información sobre [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], consulte [documentos XPS](/windows/desktop/printdocs/documents).  
   
  Se explican varias técnicas de impresión de contenido basado en [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] con [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en [Imprimir archivos XPS mediante programación](how-to-programmatically-print-xps-files.md). Estos ejemplos le resultarán útil para comprender el contenido de este tema. (Los desarrolladores de código no administrado deben ver la documentación para el [función MXDC_ESCAPE](/windows/desktop/printdocs/mxdc-escape). Los desarrolladores de Windows Forms deben usar el [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] en el <xref:System.Drawing.Printing> espacio de nombres que no es compatible con las completas [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ruta de impresión, pero sí admite una ruta de impresión híbrida de GDI a XPS. Consulte el siguiente apartado **Arquitectura de la ruta de impresión**).  
   
@@ -43,7 +43,7 @@ Con Microsoft .NET Framework, los desarrolladores de aplicaciones con Windows Pr
   
  Las ventajas de la ruta de impresión [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] son significativas e incluyen:  
   
--   Soporte de impresión [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)].  
+-   [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)] Compatibilidad con impresión  
   
 -   Soporte nativo de perfiles de color avanzados, que incluyen 32 bits por canal (bpc), CMYK, colores con nombre, tintas n y soporte nativo de transparencia y degradados.  
   
@@ -69,7 +69,7 @@ Con Microsoft .NET Framework, los desarrolladores de aplicaciones con Windows Pr
  ![Captura de pantalla muestra el que sistema de impresión XPS.](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>Impresión XPS básica  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] define una [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] básica y una avanzada. Para aquellas aplicaciones que no requieren una amplia personalización de impresión o acceso a todo el conjunto de características de [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], hay disponible soporte básico de impresión. El soporte básico de impresión se expone a través de un control de diálogo de impresión que requiere una configuración mínima y presenta una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] reconocible. Muchas de las características de [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] están disponibles a través de este modelo simplificado de impresión.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] define tanto un básica y avanzada [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Para aquellas aplicaciones que no requieren una amplia personalización de impresión o acceso a todo el conjunto de características de [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], hay disponible soporte básico de impresión. El soporte básico de impresión se expone a través de un control de diálogo de impresión que requiere una configuración mínima y presenta una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] reconocible. Muchas de las características de [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] están disponibles a través de este modelo simplificado de impresión.  
   
 #### <a name="printdialog"></a>PrintDialog  
  El control <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> proporciona un único punto de entrada para [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], configuración y envío de trabajos [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. Para obtener información sobre la creación de instancias y el uso del control, consulte [Invocar un cuadro de diálogo de impresión](how-to-invoke-a-print-dialog.md).  
@@ -116,7 +116,7 @@ Para las aplicaciones que no requieren funcionalidad o soporte [!INCLUDE[TLA2#tl
 ## <a name="xpsdrv-driver-model"></a>Modelo de controlador XPSDrv  
  La ruta de impresión [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] mejora la eficacia del administrador de trabajos en cola ya que usa [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] como el formato nativo de la cola de impresión cuando se imprime en un controlador o una impresora habilitados para [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]. El proceso simplificado de administración de trabajos en cola elimina la necesidad de generar un archivo de cola intermedio, como un archivo de datos [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)], antes de poner en cola el documento. Gracias a tamaños de archivo de cola más pequeños, la ruta de impresión [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] puede reducir el tráfico de red y mejorar el rendimiento de impresión.  
   
- [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] es un formato cerrado que representa la salida de la aplicación como una serie de llamadas a [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] para la presentación de servicios. A diferencia de [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)], el formato de la cola [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] representa el documento real sin necesidad de más interpretación al generar una salida a un controlador de impresora basado en [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv). Los controladores pueden trabajar directamente con los datos en el formato. Esta capacidad elimina las conversiones de espacio de color y datos que son necesarias cuando se usan archivos [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] y controladores de impresión basados en [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)].  
+ [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] es un formato cerrado que representa el resultado de la aplicación como una serie de llamadas en [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] para servicios de representación. A diferencia de [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)], el formato de la cola [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] representa el documento real sin necesidad de más interpretación al generar una salida a un controlador de impresora basado en [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv). Los controladores pueden trabajar directamente con los datos en el formato. Esta capacidad elimina las conversiones de espacio de color y datos que son necesarias cuando se usan archivos [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] y controladores de impresión basados en [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)].  
   
  El tamaño de los archivos de cola de impresión suele reducirse cuando se usan documentos [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] cuyo destino es un controlador de impresora [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv) en comparación a sus equivalentes [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)]; sin embargo, hay excepciones:  
   
@@ -135,6 +135,7 @@ Para las aplicaciones que no requieren funcionalidad o soporte [!INCLUDE[TLA2#tl
 -   **Compresión ZIP**. Todos los documentos [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] usan la compresión ZIP.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.PrintDialog>
 - <xref:System.Windows.Xps.XpsDocumentWriter>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>

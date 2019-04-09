@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4dc09f3e8cb926d31b21f0cc2a6442c7a6b8dec9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4bdb2035906b9383342201017b58d1d0050113b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084562"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>MDA de invalidOverlappedToPinvoke
 El asistente para la depuración administrada (MDA) `invalidOverlappedToPinvoke` se activa cuando un puntero superpuesto que no se ha creado en el montón de recolección de elementos no utilizados se pasa a funciones de Win32 específicas.  
@@ -73,6 +73,7 @@ El asistente para la depuración administrada (MDA) `invalidOverlappedToPinvoke`
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

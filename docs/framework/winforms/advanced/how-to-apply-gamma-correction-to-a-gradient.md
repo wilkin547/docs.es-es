@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Aplicar corrección Gamma a un degradado
+title: Filtrar para aplicar corrección gamma a un degradado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - gradient brushes [Windows Forms], gamma correction
 - gradients [Windows Forms], gamma correction
 ms.assetid: da4690e7-5fac-4fd2-b3f0-5cb35c165b92
-ms.openlocfilehash: e7205058bc2b93ac453b8c37bfc8d5236433158d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7290b7901714e9b71bda3f85f930f5331b8fd4ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077334"
 ---
-# <a name="how-to-apply-gamma-correction-to-a-gradient"></a>Filtrar Aplicar corrección Gamma a un degradado
+# <a name="how-to-apply-gamma-correction-to-a-gradient"></a>Filtrar para aplicar corrección gamma a un degradado
 Puede habilitar la corrección gamma de un pincel de degradado lineal estableciendo el pincel <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> propiedad `true`. Corrección gamma se puede deshabilitar estableciendo la <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> propiedad `false`. La corrección gamma está deshabilitada de forma predeterminada.  
   
 ## <a name="example"></a>Ejemplo  
@@ -29,8 +29,9 @@ Puede habilitar la corrección gamma de un pincel de degradado lineal establecie
  [!code-vb[System.Drawing.UsingaGradientBrush#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>.  
+ El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush>
 - [Utilizar un pincel degradado para rellenar formas](using-a-gradient-brush-to-fill-shapes.md)

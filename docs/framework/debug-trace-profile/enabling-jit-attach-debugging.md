@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4630e6d02b0137021765f954ab0dae19f2f6199
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f1696f9054d44a5f80a1f67cc38e315a8627d295
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093988"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078789"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Habilitar la depuración de adjuntos JIT
 La depuración de adjuntos JIT es la frase usada para describir el hecho de adjuntar un depurador a un proceso cuando se detectan errores, o se puede desencadenar mediante métodos o funciones concretos.  
@@ -21,20 +21,21 @@ La depuración de adjuntos JIT es la frase usada para describir el hecho de adju
   
 -   Excepciones no controladas (el código nativo y administrado).  
   
--   Método <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> o función [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) (familia Windows 7).  
+-   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> método o [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) función (familia Windows 7).  
   
 -   Errores irrecuperables de runtime.  
   
  La depuración de adjuntos JIT también se desencadena mediante llamadas a los métodos y las funciones siguientes:  
   
--   Método <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>.  
+-   <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> .  
   
--   Método <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType>.  
+-   <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> .  
   
 -   [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) (función) (Win32).  
   
  Antes de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework proporcionaba claves del Registro independientes para controlar el comportamiento de los depuradores administrados y nativos. A partir de la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], control se consolida en una única clave del registro: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Los valores que puede establecer para esa clave determinan si se invoca un depurador y, de ser así, si se invoca con un cuadro de diálogo que necesita interacción del usuario. Para obtener información acerca de cómo establecer esta clave del registro, consulte [Configurar depuración automática](https://go.microsoft.com/fwlink/?LinkId=181767).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Depurar, trazar y generar perfiles](../../../docs/framework/debug-trace-profile/index.md)
 - [Facilitar la depuración de una imagen](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)

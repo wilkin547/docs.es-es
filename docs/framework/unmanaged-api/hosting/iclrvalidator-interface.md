@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f34a9aac31fe50974a6f88416d0a00cd72aca8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05287d3674e55a87cfe359fc08f74fa46000d79f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075852"
 ---
 # <a name="iclrvalidator-interface"></a>ICLRValidator (Interfaz)
 Proporciona métodos para validar imágenes portables de ejecutable (PE) e informes de errores de validación.  
@@ -30,8 +30,8 @@ Proporciona métodos para validar imágenes portables de ejecutable (PE) e infor
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[FormatEventInfo (método)](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Obtiene un mensaje detallado sobre el error de validación especificado.|  
-|[Validate (método)](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Valida el archivo ejecutable portable o lenguaje intermedio de Microsoft (MSIL) en el archivo especificado.|  
+|[Método FormatEventInfo](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-formateventinfo-method.md)|Obtiene un mensaje detallado sobre el error de validación especificado.|  
+|[Método Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)|Valida el archivo ejecutable portable o lenguaje intermedio de Microsoft (MSIL) en el archivo especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -43,6 +43,7 @@ Proporciona métodos para validar imágenes portables de ejecutable (PE) e infor
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICLRErrorReportingManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+
+- [ICLRErrorReportingManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
 - [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [CLRRuntimeHost (coclase)](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)
+- [CLRRuntimeHost (Coclase)](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)

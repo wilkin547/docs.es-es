@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: f07bdacddfbaa35b17821d2a8a0191fef86e38f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ee7abb2fa709c6d49b049d69882b2fd6b7f3a0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579399"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088332"
 ---
 # <a name="windows-service-host"></a>Host de servicio de Windows
 Este ejemplo muestra un servicio de Windows Communication Foundation (WCF) hospedado en un servicio de Windows administrado. Servicios de Windows se controlan mediante el applet Servicios en **Panel de Control** y pueden configurarse para iniciarse automáticamente tras un reinicio del sistema. El ejemplo está compuesto de un programa cliente y un programa de servicio de Windows. El servicio se implementa como un programa .exe y contiene su propio código de hospedaje. No es necesario que escriba el código de hospedaje en otros entornos de hospedaje, como los Servicios de activación de procesos de Windows (WAS) o Internet Information Services (IIS).
@@ -31,7 +31,7 @@ Este ejemplo muestra un servicio de Windows Communication Foundation (WCF) hospe
   
  El código del servicio incluye una clase de instalador, una clase de implementación de servicio WCF que implementa el contrato de ICalculator y una clase de servicio de Windows que actúa como el host de tiempo de ejecución. La clase del instalador, que hereda de <xref:System.Configuration.Install.Installer>, permite instalar el programa como un servicio de NT por la herramienta Installutil.exe. La clase de implementación del servicio, `WcfCalculatorService`, es un servicio WCF que implementa un contrato de servicio básico. Este servicio WCF se hospeda dentro de una clase de servicio de Windows denominada `WindowsCalculatorService`. Para que sea calificada como un servicio de Windows, la clase hereda de <xref:System.ServiceProcess.ServiceBase> e implementa los métodos <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> y <xref:System.ServiceProcess.ServiceBase.OnStop>. En <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>, se crea un objeto <xref:System.ServiceModel.ServiceHost> para el tipo `WcfCalculatorService` y se abre. En <xref:System.ServiceProcess.ServiceBase.OnStop>, ServiceHost se cierra llamando al método <xref:System.ServiceModel.Channels.CommunicationObject.Close%28System.TimeSpan%29> del objeto <xref:System.ServiceModel.ServiceHost>. Dirección base del host se configura mediante el [ \<Agregar >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddresses.md) elemento, que es un elemento secundario de [ \<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md), que es un elemento secundario de la [ \<host >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) elemento, que es un elemento secundario de la [ \<servicio >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento.  
   
- El punto de conexión definida utiliza la dirección base y un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). El ejemplo siguiente muestra la configuración de la dirección base así como el punto de conexión que expone CalculatorService.  
+ El punto de conexión definida utiliza la dirección base y un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). El ejemplo siguiente muestra la configuración de la dirección base así como el extremo que expone CalculatorService.  
   
 ```xml  
 <services>  
@@ -64,4 +64,5 @@ Este ejemplo muestra un servicio de Windows Communication Foundation (WCF) hospe
 4.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Ejemplos de persistencia y el hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+
+- [Ejemplos de hospedaje y persistencia de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

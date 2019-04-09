@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 80127bae06a90dccd204b0f2a4baef10732ade76
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039473"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086217"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Atributos de CLR relacionados con XAML para los tipos y bibliotecas personalizados
 En este tema se describe los atributos de runtime (CLR) de lenguaje comunes que se definen por los servicios XAML de .NET Framework. También describe otros atributos CLR que se definen en .NET Framework que tienen un escenario relacionado con el XAML para que los ensamblados o tipos de aplicación. Atribución de ensamblados, tipos o miembros con estos atributos CLR proporciona información de sistema de tipos XAML relacionada con los tipos. Se proporciona información a cualquier consumidor XAML que usa los servicios XAML de .NET Framework para procesar el flujo de nodo XAML directamente o a través de los lectores XAML dedicados y escritores XAML.  
@@ -66,7 +66,7 @@ En este tema se describe los atributos de runtime (CLR) de lenguaje comunes que 
 ### <a name="dependsonattribute"></a>DependsOnAttribute  
  **Documentación de referencia:**  <xref:System.Windows.Markup.DependsOnAttribute>  
   
- **Se aplica a:** Property  
+ **Se aplica a:** Propiedad  
   
  **Argumentos:** Una cadena que especifica el nombre de otro miembro del tipo con atributos.  
   
@@ -269,5 +269,6 @@ En este tema se describe los atributos de runtime (CLR) de lenguaje comunes que 
 >  Servicios XAML de .NET framework también define el atributo relacionado con el XAML <xref:System.Windows.Markup.RootNamespaceAttribute>. Este atributo es un atributo de nivel de ensamblado para la compatibilidad con el sistema de proyecto y no es relevante para los tipos personalizados de XAML.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Attribute>
 - [Definir tipos personalizados para usarlos con los servicios XAML de .NET Framework](defining-custom-types-for-use-with-net-framework-xaml-services.md)

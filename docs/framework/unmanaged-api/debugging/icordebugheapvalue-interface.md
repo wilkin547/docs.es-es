@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHeapValue (Interfaz)
+title: Interfaz ICorDebugHeapValue
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5263474b7b5001d561652291c23220da0a942bd1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d5fcd8c17c4006714fa9d11aece5cccc57c97087
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075501"
 ---
-# <a name="icordebugheapvalue-interface"></a>ICorDebugHeapValue (Interfaz)
+# <a name="icordebugheapvalue-interface"></a>Interfaz ICorDebugHeapValue
 
 Una subclase de "ICorDebugValue" que representa un objeto que se han recopilado por el recolector de elementos no utilizados de common language runtime (CLR).  
   
@@ -31,8 +31,8 @@ Una subclase de "ICorDebugValue" que representa un objeto que se han recopilado 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[CreateRelocBreakpoint (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-createrelocbreakpoint-method.md)|Sin implementar.|  
-|[IsValid (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Obtiene un valor que indica si el objeto representado por este `ICorDebugHeapValue` es válido o ha sido reclamado por el recolector de elementos no utilizados. Este método está desusado en .NET Framework versión 2.0.|  
+|[Método CreateRelocBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-createrelocbreakpoint-method.md)|Sin implementar.|  
+|[Método IsValid](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Obtiene un valor que indica si el objeto representado por este `ICorDebugHeapValue` es válido o ha sido reclamado por el recolector de elementos no utilizados. Este método está desusado en .NET Framework versión 2.0.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -50,6 +50,4 @@ Una subclase de "ICorDebugValue" que representa un objeto que se han recopilado 
   
 ## <a name="see-also"></a>Vea también
 
-
-
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

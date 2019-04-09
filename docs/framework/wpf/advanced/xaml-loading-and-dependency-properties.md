@@ -9,17 +9,16 @@ helpviewer_keywords:
 - dependency properties [WPF], XAML loading and
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
-ms.openlocfilehash: ed608a658b5077a20ed56419c4ac731641610e3d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4db87c5f266a9eed136f0651f48d11720abede65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373080"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083842"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>Carga de XAML y propiedades de dependencia
 Tener en cuenta las propiedades de dependencia es inherente a la implementación actual en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] del procesador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. El procesador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa métodos del sistema de propiedades para las propiedades de dependencia al cargar el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] binario y al procesar atributos que son propiedades de dependencia. En la práctica esto supone la omisión de los contenedores de propiedad. Al implementar propiedades de dependencia personalizadas, debe tener en cuenta para este comportamiento y debe evitar colocar cualquier otro código en el contenedor de propiedad que no sean los métodos de propiedad del sistema <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A>.  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
  En este tema se presupone que comprende las propiedades de dependencia como consumidor y como autor, y que ha leído [Información general sobre las propiedades de dependencia](dependency-properties-overview.md) y [Propiedades de dependencia personalizadas](custom-dependency-properties.md). También es conveniente haber leído [Información general sobre XAML (WPF)](xaml-overview-wpf.md) y [Detalles de la sintaxis XAML](xaml-syntax-in-detail.md).  
@@ -42,6 +41,7 @@ Tener en cuenta las propiedades de dependencia es inherente a la implementación
  [!code-vb[WPFAquariumSln#AGWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)
 - [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
 - [Metadatos de las propiedades de dependencia](dependency-property-metadata.md)

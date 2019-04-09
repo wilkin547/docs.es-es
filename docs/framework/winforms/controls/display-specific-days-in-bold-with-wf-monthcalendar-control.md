@@ -1,5 +1,5 @@
 ---
-title: Filtrar Mostrar días específicos en negrita con el Windows Forms Control MonthCalendar de formularios
+title: Filtrar para mostrar días específicos en negrita con el control MonthCalendar de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: c27037a166d147df51731c5d59fd42f73294c7ad
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cf3ec21aa0272f60599f5659d78214120bcfcaf8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073707"
 ---
-# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Procedimiento Mostrar días específicos en negrita con el Windows Forms Control MonthCalendar de formularios
+# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Filtrar para mostrar días específicos en negrita con el control MonthCalendar de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control puede mostrar días en negrita, como fechas singulares o de forma repetida. Puede hacerlo para llamar la atención sobre las fechas especiales, tales como vacaciones y fines de semana.  
   
  Tres propiedades que controlan esta característica. El <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> propiedad contiene fechas únicas. El <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> propiedad contiene las fechas que aparecen en negrita cada año. El <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> propiedad contiene las fechas que aparecen en negrita cada mes. Cada una de estas propiedades contiene una matriz de <xref:System.DateTime> objetos. Para agregar o quitar una fecha de una de estas listas, debe agregar o quitar un <xref:System.DateTime> objeto.  
@@ -128,7 +128,8 @@ Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control pue
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [MonthCalendar (control)](monthcalendar-control-windows-forms.md)
-- [Cómo: Seleccione un intervalo de fechas en el Control MonthCalendar de formularios de Windows](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Cómo: Cambiar la apariencia de Windows Forms MonthCalendar del Control](how-to-change-monthcalendar-control-appearance.md)
-- [Cómo: Mostrar más de un mes en el Control MonthCalendar de formularios de Windows](display-more-than-one-month-wf-monthcalendar-control.md)
+
+- [Control MonthCalendar](monthcalendar-control-windows-forms.md)
+- [Filtrar para seleccionar un intervalo de fechas en el control MonthCalendar de formularios Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Filtrar para cambiar la apariencia del control MonthCalendar de formularios Windows Forms](how-to-change-monthcalendar-control-appearance.md)
+- [Filtrar para mostrar más de un mes en el control MonthCalendar de formularios Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)

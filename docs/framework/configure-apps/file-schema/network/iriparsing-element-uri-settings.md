@@ -1,19 +1,19 @@
 ---
-title: <iriParsing> (Elemento, Configuración de Uri)
+title: <iriParsing> Elemento (configuración de Uri)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: a4d4df8c214efb955f8f9d6678aaf8d56de71ebc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 710d82b70eb16e88404d4d8bbf38d2d030693103
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092505"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<iriParsing > elemento (configuración de Uri)
 Especifica si se aplica el análisis de identificadores de recursos internacionales (IRI) a un <xref:System.Uri> y si se deben aplicar reglas de análisis de IRI.  
   
 ## <a name="schema-hierarchy"></a>Jerarquía del esquema  
- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<Configuración > elemento](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<URI > elemento (configuración de Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -32,7 +32,7 @@ Especifica si se aplica el análisis de identificadores de recursos internaciona
   
 ### <a name="attributes"></a>Atributos  
   
-|**Element**|**Descripción**|  
+|**Elemento**|**Descripción**|  
 |-----------------|---------------------|  
 |`enabled`|Especifica si está habilitado el análisis de IRI. El valor predeterminado es `false`.|  
   
@@ -41,7 +41,7 @@ Especifica si se aplica el análisis de identificadores de recursos internaciona
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Element**|**Descripción**|  
+|**Elemento**|**Descripción**|  
 |-----------------|---------------------|  
 |[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Contiene valores que especifican cómo .NET Framework controla las direcciones web expresadas mediante identificadores uniformes de recursos (URI).|  
   
@@ -80,6 +80,7 @@ Especifica si se aplica el análisis de identificadores de recursos internaciona
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
 - [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

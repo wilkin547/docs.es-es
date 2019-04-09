@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Buscar elementos generados por un objeto DataTemplate
+title: Filtrar Buscar elementos generados por una clase DataTemplate
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - finding DataTemplate elements [WPF]
 - DataTemplate [WPF]
 ms.assetid: bfcd564e-5e9e-451e-8641-a9b5c3cfac90
-ms.openlocfilehash: 4317d22a786caa6a191002ff411fe54436f3dbcc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de5a4937feabdb4486d9dcf9d5e5bfddd2356690
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362219"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089191"
 ---
-# <a name="how-to-find-datatemplate-generated-elements"></a>Filtrar Buscar elementos generados por un objeto DataTemplate
+# <a name="how-to-find-datatemplate-generated-elements"></a>Filtrar Buscar elementos generados por una clase DataTemplate
 En este ejemplo se muestra cómo buscar elementos generados por un <xref:System.Windows.DataTemplate>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -38,7 +38,8 @@ En este ejemplo se muestra cómo buscar elementos generados por un <xref:System.
  [!code-vb[FindGeneratedItems#FVC](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#fvc)]  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Buscar elementos generados por el objeto ControlTemplate](../controls/how-to-find-controltemplate-generated-elements.md)
+
+- [Filtrar para buscar elementos generados por un objeto ControlTemplate](../controls/how-to-find-controltemplate-generated-elements.md)
 - [Información general sobre el enlace de datos](data-binding-overview.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)
 - [Aplicar estilos y plantillas](../controls/styling-and-templating.md)

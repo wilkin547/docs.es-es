@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a9bef248d00cb62de7c93ba837ebc9f135490cc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4a95008d98436161ac919ef307273bc797519f15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479914"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080623"
 ---
 # <a name="efngetmanagedobjectname-function"></a>_EFN_GetManagedObjectName (Función)
 Obtiene el nombre de un tipo mediante el puntero de objeto administrado proporcionado.  
@@ -61,4 +61,5 @@ HRESULT _EFN_GetManagedObjectName(
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Funciones estáticas globales de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+
+- [Funciones estáticas globales para la depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

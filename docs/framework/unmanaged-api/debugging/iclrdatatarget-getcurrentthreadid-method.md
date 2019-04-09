@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc4ba4f87cd53e12baa0a7cf8b853db0e948201f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9687f6139d67a2387091367c2c72167e03be4eee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080662"
 ---
 # <a name="iclrdatatargetgetcurrentthreadid-method"></a>ICLRDataTarget::GetCurrentThreadID (Método)
 Obtiene el identificador de sistema operativo para el subproceso actual.  
@@ -52,4 +52,5 @@ HRESULT GetCurrentThreadID (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICLRDataTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+
+- [ICLRDataTarget (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

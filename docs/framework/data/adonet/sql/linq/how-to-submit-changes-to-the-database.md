@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Enviar cambios a la base de datos
+title: Filtrar para enviar los cambios a la base de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-ms.openlocfilehash: 455e4e3296a9136b2b9bf24278bb034e4a94fc7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 572c4427ada06701c5982770ae476bd1c6c2b13a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562822"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082547"
 ---
-# <a name="how-to-submit-changes-to-the-database"></a>Procedimiento Enviar cambios a la base de datos
+# <a name="how-to-submit-changes-to-the-database"></a>Filtrar para enviar los cambios a la base de datos
 Con independencia de los cambios que se efectúen en los objetos, éstos sólo se realizan en las réplicas en memoria. Los cambios no se aplican a los datos reales de la base de datos. Los cambios no se transmiten al servidor hasta que se llama a <xref:System.Data.Linq.DataContext.SubmitChanges%2A> explícitamente en <xref:System.Data.Linq.DataContext>.  
   
  Al realizar esta llamada, <xref:System.Data.Linq.DataContext> intenta convertir los cambios a comandos SQL equivalentes. Puede usar su propia lógica personalizada para invalidar estas acciones, pero el orden de envío está organizado por un servicio de la <xref:System.Data.Linq.DataContext> conocido como el *cambiar procesador*. Todo ocurre en este orden:  
@@ -34,7 +34,8 @@ Con independencia de los cambios que se efectúen en los objetos, éstos sólo s
  [!code-vb[DLinqSubmittingChanges#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Detectar y resolver envíos con conflictos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
-- [Cómo: Administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+
+- [Filtrar para detectar y resolver envíos con conflictos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
+- [Filtrar para administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
 - [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Realización y envío de cambios de datos](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Realizar y enviar cambios de datos](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

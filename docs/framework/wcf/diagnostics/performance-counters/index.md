@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: c2bb9d2f67cfc0bf0a28492f77c16fdb39b07fe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087864"
 ---
 # <a name="wcf-performance-counters"></a>Contadores de rendimiento de WCF
 Windows Communication Foundation (WCF) incluye un conjunto grande de contadores de rendimiento para ayudarle a calibrar el rendimiento de su aplicación.  
@@ -95,19 +95,19 @@ ServiceName@ServiceBaseAddress
   
  Los contadores de rendimiento de la creación de una instancia de servicio aumentan cuando se crea un nuevo InstanceContext. Tenga en cuenta que también se crea un nuevo InstanceContext cuando recibe un mensaje de no activación (con un servicio existente), o cuando se conecta a la instancia de una sesión, finaliza la sesión y, a continuación, se vuelve a conectar desde otra sesión.  
   
-### <a name="endpoint-performance-counters"></a>Contadores de rendimiento del extremo  
- Los contadores de rendimiento del extremo permiten examinar datos que reflejan la aceptación de los mensajes por un extremo. Pueden encontrarse en el objeto de rendimiento `ServiceModelEndpoint 4.0.0.0` al visualizarlo mediante el monitor de rendimiento. Los nombres de las instancias se establecen utilizando el siguiente patrón:  
+### <a name="endpoint-performance-counters"></a>Contadores de rendimiento del punto de conexión  
+ Los contadores de rendimiento del punto de conexión permiten examinar datos que reflejan la aceptación de los mensajes por un punto de conexión. Pueden encontrarse en el objeto de rendimiento `ServiceModelEndpoint 4.0.0.0` al visualizarlo mediante el monitor de rendimiento. Los nombres de las instancias se establecen utilizando el siguiente patrón:  
   
 ```  
 (ServiceName).(ContractName)@(endpoint listener address)  
 ```  
   
- Los datos son similares a los recopilados para las operaciones individuales, pero solo se agregan a lo largo del extremo.  
+ Los datos son similares a los recopilados para las operaciones individuales, pero solo se agregan a lo largo del punto de conexión.  
   
  Un contador en un ámbito de extremo se agrega desde los contadores de una colección de operaciones.  
   
 > [!NOTE]
->  Si dos extremos poseen nombres y direcciones de contrato idénticos, se asignan a la misma instancia del contador.  
+>  Si dos puntos de conexión poseen nombres y direcciones de contrato idénticos, se asignan a la misma instancia del contador.  
   
 ### <a name="operation-performance-counters"></a>Contadores de rendimiento de la operación  
  Los contadores de rendimiento de la operación se encuentran en el objeto de rendimiento `ServiceModelOperation 4.0.0.0` al visualizarlo con el monitor de rendimiento. Cada operación posee una instancia individual. Es decir, si un contrato determinado posee 10 operaciones, se asociarán 10 instancias de contador de operación a ese contrato. Los nombres de las instancias de objeto se establecen utilizando el siguiente patrón:  
@@ -118,7 +118,7 @@ ServiceName@ServiceBaseAddress
   
  Este contador permite medir la utilización de la llamada y el buen rendimiento de la operación.  
   
- Cuando los contadores son visibles en varios ámbitos, los datos recopilados de un ámbito superior se agregan a los datos de los ámbitos inferiores. Por ejemplo, `Calls` a un extremo representa la suma de todas las llamadas de la operación en el extremo; `Calls` a un servicio representa la suma de todas las llamadas a todos los extremos del servicio.  
+ Cuando los contadores son visibles en varios ámbitos, los datos recopilados de un ámbito superior se agregan a los datos de los ámbitos inferiores. Por ejemplo, `Calls` a un punto de conexión representa la suma de todas las llamadas de la operación en el punto de conexión; `Calls` a un servicio representa la suma de todas las llamadas a todos los puntos de conexión del servicio.  
   
 > [!NOTE]
 >  Si existen nombres de la operación duplicados en un contrato, solo se obtiene una instancia de contador para ambas operaciones.  
@@ -139,4 +139,5 @@ ServiceName@ServiceBaseAddress
  Para obtener más información sobre cómo obtener acceso a los contadores mediante programación, vea [arquitectura de programación del contador de rendimiento](https://go.microsoft.com/fwlink/?LinkId=95179).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

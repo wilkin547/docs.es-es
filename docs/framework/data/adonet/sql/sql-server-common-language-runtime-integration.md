@@ -2,12 +2,12 @@
 title: Integración con Common Language Runtime de SQL Server
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: 6f8e16ecec1f99a0d7df6224f542eb03506528e3
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: d87f2b89583747b80ef103f419bd9bd2e3b1e0da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092883"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089840"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Integración con Common Language Runtime de SQL Server
 SQL Server 2005 introdujo la integración del componente Common Language Runtime (CLR) de .NET Framework para Microsoft Windows. Esto significa que ahora se pueden escribir procedimientos almacenados, desencadenadores, tipos definidos por el usuario, funciones definidas por el usuario, agregados definidos por el usuario y funciones con valores de tabla de transmisión por secuencias mediante cualquier lenguaje de .NET Framework, como Microsoft Visual Basic .NET y Microsoft Visual C#. El espacio de nombres <xref:Microsoft.SqlServer.Server> contiene un conjunto de nuevas interfaces de programación de aplicaciones (API) que permiten que el código administrado interactúe con el entorno de Microsoft SQL Server.  
@@ -18,7 +18,7 @@ SQL Server 2005 introdujo la integración del componente Common Language Runtime
   
  **Libros en pantalla de SQL Server**  
   
-1.  [Conceptos de programación integración de Common Language Runtime (CLR)](https://go.microsoft.com/fwlink/?LinkId=115240)  
+1.  [Conceptos de programación de la integración con Common Language Runtime (CLR)](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción a la integración con CLR de SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
@@ -43,5 +43,6 @@ SQL Server 2005 introdujo la integración del componente Common Language Runtime
  Describe las extensiones específicas en proceso de SQL Server a ADO.NET, y la conexión de contexto. También proporciona vínculos a temas adicionales.  
   
 ## <a name="see-also"></a>Vea también
+
 - [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

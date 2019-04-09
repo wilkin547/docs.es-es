@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-ms.openlocfilehash: ca013c939e3db2136ffa1504ae0eedd7b870d773
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 33ebb07e350dbbbdd324b442f52dfb6287322bd8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073850"
 ---
 # <a name="bindings-and-binding-elements"></a>Enlaces y elementos de enlace
-Los enlaces son colecciones de elementos de configuración especial, llamados *elementos de enlace*, que son evaluados por el runtime del servicio cada vez que un cliente o el punto de conexión de servicio se está construyendo. El tipo y orden de los elementos de enlace dentro de un enlace determina la selección y el orden de apilamiento del protocolo y los canales de transporte en la pila de canales de un punto de conexión.  
+Los enlaces son colecciones de elementos de configuración especial, llamados *elementos de enlace*, que son evaluados por el runtime del servicio cada vez que un cliente o el punto de conexión de servicio se está construyendo. El tipo y orden de los elementos de enlace dentro de un enlace determina la selección y el orden de apilamiento del protocolo y los canales de transporte en la pila de canales de un extremo.  
   
  Los enlaces, sobre todo los enlaces proporcionados por el sistema, normalmente tienen también varias propiedades de configuración que reflejan las propiedades más modificadas habitualmente de los elementos de enlace encapsulados.  
   
@@ -23,17 +23,16 @@ Los enlaces son colecciones de elementos de configuración especial, llamados *e
   
 -   Para utilizar un nuevo elemento de enlace (como un nuevo transporte, codificación o elemento de enlace protocolar), debe crear un nuevo enlace que incluya ese elemento de enlace. Por ejemplo, si agregase un `UdpTransportBindingElement` personalizado para transporte de UDP, necesitaría crear un nuevo enlace para utilizarlo. Para obtener información acerca de cómo realizar este comportamiento mediante la <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> , vea [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
--   Para configurar elementos de enlace existentes de tal modo que los enlaces proporcionados por el sistema no se expongan en propiedades públicas. Por ejemplo, debe crear un nuevo enlace para cambiar el orden en el que se realizan las operaciones de firmado y cifrado. Para obtener información acerca de cómo realizar este comportamiento, vea [Cómo: personalizar un enlace proporcionados por el sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+-   Para configurar elementos de enlace existentes de tal modo que los enlaces proporcionados por el sistema no se expongan en propiedades públicas. Por ejemplo, debe crear un nuevo enlace para cambiar el orden en el que se realizan las operaciones de firmado y cifrado. Para obtener información acerca de cómo realizar este comportamiento, vea [Cómo: Personalización de un enlace proporcionado por el sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   
 -   Para establecer enlaces estándar corporativos que solo exponen opciones de configuración específicas. Por ejemplo, para crear para su compañía una variante de <xref:System.ServiceModel.WSHttpBinding> en la que la seguridad no puede estar deshabilitada, cree un nuevo enlace que se comporte como el <xref:System.ServiceModel.WSHttpBinding>, pero con la seguridad siempre habilitada. Para obtener más información, consulte [crear enlaces](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
 -   Para realizar alguna personalización de metadatos, normalmente, pero no necesariamente, para configurar o utilizar algún elemento de enlace personalizado. Para obtener más información acerca de cómo proporcionar compatibilidad con metadatos para los enlaces y elementos de enlace, consulte [configuración y compatibilidad con metadatos](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
-  
-  
+
 ## <a name="channels-bindings-and-binding-elements"></a>Canales, enlaces y elementos de enlace  
  Los enlaces y elementos de enlace son la conexión entre el modelo de programación de aplicaciones, que incluye los atributos y comportamientos, y el modelo del canal, que incluye los generadores y agentes de escucha, codificadores de mensajes e implementaciones de protocolo y transporte. Normalmente, los elementos de enlace y los enlaces se implementan para permitir al nivel de aplicaciones el uso de los canales.  
   
- La capa de canales entrega o recibe mensajes a y desde la capa del servicio y transporta esos mensajes entre extremos. En un cliente, la capa de canales es una pila de generadores de canales que crean canales para un punto de conexión de la red. En un servicio, la capa de canales es una pila de agentes de escucha de canales que aceptan los canales recibidos en un extremo de la red.  
+ La capa de canales entrega o recibe mensajes a y desde la capa del servicio y transporta esos mensajes entre puntos de conexión. En un cliente, la capa de canales es una pila de generadores de canales que crean canales para un extremo de la red. En un servicio, la capa de canales es una pila de agentes de escucha de canales que aceptan los canales recibidos en un punto de conexión de la red.  
   
  Hay dos tipos de canales generales: canales de transporte y canales de protocolo. Los canales de transporte son responsables de la transmisión real de un mensaje des un extremo de la red a otro. Los canales de transporte deben tener un codificador de mensajes predeterminado y poder utilizar un codificador de mensajes alternativo proporcionado a través de un elemento de enlace del codificador de mensajes. Un codificador de mensajes es responsable de convertir un<xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> en una representación de la conexión y viceversa. Los canales protocolares son responsables de la implementación de los protocolos de nivel SOAP (por ejemplo, WS-Security o WS-ReliableMessaging).  
   

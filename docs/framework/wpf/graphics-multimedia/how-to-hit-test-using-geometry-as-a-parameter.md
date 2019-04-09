@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Realizar una prueba de posicionamiento usando Geometry como parámetro
+title: Filtrar Realizar una prueba de posicionamiento mediante el uso de Geometry como parámetro
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 3d6f4190a5b5c8410a6be01d2645df9c123f9ac4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 73420d6ae1386676ed900e91b3951df9e0934db8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100969"
 ---
-# <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>Filtrar Realizar una prueba de posicionamiento usando Geometry como parámetro
+# <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>Filtrar Realizar una prueba de posicionamiento mediante el uso de Geometry como parámetro
 En este ejemplo se muestra cómo realizar una prueba de posicionamiento en un objeto visual mediante un <xref:System.Windows.Media.Geometry> como un impacto en el parámetro de la prueba.  
   
 ## <a name="example"></a>Ejemplo  
@@ -38,5 +38,6 @@ En este ejemplo se muestra cómo realizar una prueba de posicionamiento en un ob
 >  El <xref:System.Windows.Media.HitTestResult> devolución de llamada no debe llamarse cuando la información de la intersección es <xref:System.Windows.Media.IntersectionDetail.Empty>.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Realizar pruebas de posicionamiento en la capa visual](hit-testing-in-the-visual-layer.md)
-- [Geometría de una prueba de posicionamiento en un objeto Visual](how-to-hit-test-geometry-in-a-visual.md)
+- [Geometría de una prueba de posicionamiento en un objeto visual](how-to-hit-test-geometry-in-a-visual.md)

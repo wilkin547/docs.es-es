@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], regions
 - regions
 ms.assetid: 52184f9b-16dd-4bbd-85be-029112644ceb
-ms.openlocfilehash: 31c0e4b1509c478786d075b127f0b181d5cdd1c6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 33d4f4ecca7b9d777fa4eab5b6d031de10f03ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724978"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076034"
 ---
 # <a name="regions-in-gdi"></a>Regiones de GDI+
 Una región es una parte del área de visualización de un dispositivo de salida. Pueden ser regiones simples (un único rectángulo) o complejas (una combinación de polígonos y curvas cerradas). La siguiente ilustración muestra dos regiones: una construida a partir de un rectángulo y el otro construido a partir de una ruta de acceso.  
@@ -40,6 +40,7 @@ Una región es una parte del área de visualización de un dispositivo de salida
  [!code-vb[LinesCurvesAndShapes#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#61)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.Region?displayProperty=nameWithType>
 - [Líneas, curvas y formas](lines-curves-and-shapes.md)
 - [Utilizar regiones](using-regions.md)

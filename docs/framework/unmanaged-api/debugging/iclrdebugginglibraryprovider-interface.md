@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9d851a31cbbf429f49b9f369ce9bc03fa110b5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c62079a87c09bcbe09167a137fd39530652ae3e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731990"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106345"
 ---
 # <a name="iclrdebugginglibraryprovider-interface"></a>ICLRDebuggingLibraryProvider (Interfaz)
 Incluye el [ProvideLibrary (método)](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md) método, que obtiene un proveedor de la biblioteca de interfaz de devolución de llamada que permite a common language runtime bibliotecas de depuración específica de la versión a buscar y cargar a petición.  
@@ -30,7 +30,7 @@ Incluye el [ProvideLibrary (método)](../../../../docs/framework/unmanaged-api/d
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[ProvideLibrary (método)](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md)|Permite al depurador proporcionar un identificador para un módulo que se puede usar para cargar una biblioteca de depuración.|  
+|[Método ProvideLibrary](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md)|Permite al depurador proporcionar un identificador para un módulo que se puede usar para cargar una biblioteca de depuración.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -42,5 +42,6 @@ Incluye el [ProvideLibrary (método)](../../../../docs/framework/unmanaged-api/d
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

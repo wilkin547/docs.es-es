@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46072718a7dafc0a00294757d5ccce6242a11e23
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 734857428c205b6d806a4279213afb1193f914c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468369"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086174"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange (Método)
 Especifica el principio y final reales de un método dentro de un archivo de origen. Utilice este método para especificar la extensión de un método con independencia de los puntos de secuencia que existan dentro del método.  
@@ -65,4 +65,5 @@ HRESULT SetMethodSourceRange(
  **Encabezado**: CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
-- [ISymUnmanagedWriter (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+
+- [ISymUnmanagedWriter (Interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

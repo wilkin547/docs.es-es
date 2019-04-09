@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfe71abfa97a3773c8ff50c0f908d48681ebdc8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20ab65be32e6730ef828347c28eeed25d9033777
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680353"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093103"
 ---
 # <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a>ICorDebugEditAndContinueSnapshot::SetILMap (Método)
 `SetILMap` está obsoleto. No llame a este método.  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

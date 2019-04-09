@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Definir un rectángulo usando una clase RectangleGeometry
+title: Filtrar Definir un rectángulo mediante una clase RectangleGeometry
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - graphics [WPF], rectangles
 - rectangles [WPF], creating with RectangleGeometry class
 ms.assetid: e40b8a8e-54b8-416b-a9f2-be6dca9fdf0b
-ms.openlocfilehash: bd42aca2541d67469173f63655ada18a12eb692c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 146ca7017ee38ad5c1065e59662ac441e7bfbfe2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352508"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075801"
 ---
-# <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>Filtrar Definir un rectángulo usando una clase RectangleGeometry
+# <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>Filtrar Definir un rectángulo mediante una clase RectangleGeometry
 En este ejemplo se describe cómo usar el <xref:System.Windows.Media.RectangleGeometry> clase para describir un rectángulo.  
   
 ## <a name="example"></a>Ejemplo  
@@ -34,6 +34,7 @@ RectangleGeometry
  Otras clases de geometría simple incluyen <xref:System.Windows.Media.LineGeometry> y <xref:System.Windows.Media.EllipseGeometry>. Estas geometrías, así como otras más complejas, también se pueden crear mediante un <xref:System.Windows.Media.PathGeometry> o <xref:System.Windows.Media.StreamGeometry>.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre geometría](geometry-overview.md)
 - [Crear una forma compuesta](how-to-create-a-composite-shape.md)
 - [Crear una forma mediante una clase PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)

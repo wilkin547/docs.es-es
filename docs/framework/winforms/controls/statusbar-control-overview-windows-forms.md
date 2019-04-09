@@ -7,12 +7,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], about StatusBar control
 - status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
-ms.openlocfilehash: 516462aa92e2cd836820ec34440f34bb4c5b577d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5fdefa7d7e7c7ef543f677be7beb61dfee54e077
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077321"
 ---
 # <a name="statusbar-control-overview-windows-forms"></a>Información general sobre StatusBar (Control, formularios Windows Forms)
 > [!IMPORTANT]
@@ -26,6 +26,7 @@ ms.locfileid: "57703808"
  Puede mostrar un único mensaje en la barra de estado estableciendo el <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propiedad a `false` (predeterminado) y estableciendo el <xref:System.Windows.Forms.StatusBar.Text%2A> propiedad de la barra de estado para el texto que desee que aparezca en la barra de estado. Puede dividir la barra de estado en paneles para mostrar más de un tipo de información estableciendo el <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propiedad `true` y el uso de la <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método de <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Cómo: Determinar qué Panel de Control StatusBar de formularios Windows Forms se hizo clic](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Filtrar para determinar en qué panel del control StatusBar de formularios Windows Forms se hizo clic](determine-which-panel-wf-statusbar-control-was-clicked.md)

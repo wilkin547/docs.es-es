@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30cecaa1832ba9d45782b164ee65a2f39f28a8f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da2759219901a4f49808300ea3b038b10ce2d032
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605411"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101177"
 ---
 # <a name="icordebugregisterset2-interface"></a>ICorDebugRegisterSet2 (Interfaz)
 Amplía las capacidades de la [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) interfaz para las plataformas de hardware que tienen más de 64 registros.  
@@ -30,9 +30,9 @@ Amplía las capacidades de la [ICorDebugRegisterSet](../../../../docs/framework/
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetRegisters (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-getregisters-method.md)|Obtiene el valor de cada registro (en el equipo que está ejecutando el código) especificado por la máscara de bits.|  
-|[GetRegistersAvailable (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-getregistersavailable-method.md)|Obtiene una matriz de bytes que proporciona un mapa de bits de los registros disponibles.|  
-|[SetRegisters (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-setregisters-method.md)|No se implementa en la versión 2.0 de .NET Framework.|  
+|[Método GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-getregisters-method.md)|Obtiene el valor de cada registro (en el equipo que está ejecutando el código) especificado por la máscara de bits.|  
+|[Método GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-getregistersavailable-method.md)|Obtiene una matriz de bytes que proporciona un mapa de bits de los registros disponibles.|  
+|[Método SetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-setregisters-method.md)|No se implementa en la versión 2.0 de .NET Framework.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -49,5 +49,6 @@ Amplía las capacidades de la [ICorDebugRegisterSet](../../../../docs/framework/
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [ICorDebugRegisterSet (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugRegisterSet (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)

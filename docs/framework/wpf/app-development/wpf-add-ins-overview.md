@@ -12,18 +12,16 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091621"
 ---
 # <a name="wpf-add-ins-overview"></a>Información general sobre los complementos de WPF
 <a name="Introduction"></a> .NET Framework incluye un modelo de complemento que los desarrolladores pueden usar para crear aplicaciones que admiten la extensibilidad de complemento. Dicho modelo permite la creación de complementos que se integran con las aplicaciones y amplían su funcionalidad. En algunos escenarios, las aplicaciones también necesitan mostrar interfaces de usuario que se proporcionan los complementos. En este tema se muestra cómo WPF amplía el modelo de complemento de .NET Framework para habilitar estos escenarios, la arquitectura subyacente, sus ventajas y sus limitaciones.  
-  
 
-  
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
  Es necesario estar familiarizado con el modelo de complemento de .NET Framework. Para más información, consulte [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
@@ -167,7 +165,7 @@ ms.locfileid: "57365846"
  Estas tareas se describen con detalle en las subsecciones siguientes.  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Configuración de la canalización y el complemento para la implementación de ClickOnce  
- Las [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se descargan en una carpeta segura de la caché de implementación de [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] y se ejecutan desde ella. Para que una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] hospede un complemento, la canalización y el ensamblado del complemento también se debe descargar en la carpeta segura. Para lograrlo, es preciso que configure el manifiesto de aplicación para incluir tanto la canalización como el ensamblado del complemento en la descarga. Esto se hace más fácilmente en [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], aunque el ensamblado de la canalización y del ensamblado debe estar la carpeta raíz del proyecto de [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] del host en orden para que [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] detecte los ensamblados de canalización.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se descargan a y ejecutar desde una carpeta segura de la [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] memoria caché de implementación. Para que una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] hospede un complemento, la canalización y el ensamblado del complemento también se debe descargar en la carpeta segura. Para lograrlo, es preciso que configure el manifiesto de aplicación para incluir tanto la canalización como el ensamblado del complemento en la descarga. Esto se hace más fácilmente en [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], aunque el ensamblado de la canalización y del ensamblado debe estar la carpeta raíz del proyecto de [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] del host en orden para que [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] detecte los ensamblados de canalización.  
   
  Por consiguiente, el primer paso es crear el ensamblado de la canalización y del complemento para la raíz del proyecto [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] estableciendo la salida de la compilación de cada proyecto de ensamblado de canalización y ensamblado de complemento. La siguiente tabla muestra las rutas de la salida de la compilación de los proyectos de ensamblado de canalización el proyecto de ensamblado de complemento que se encuentran en la misma carpeta de solución y raíz que el proyecto de [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] del host.  
   
@@ -283,9 +281,10 @@ ms.locfileid: "57365846"
  De forma predeterminada, cuando se utilizan varios dominios de aplicación, los distintos ensamblados de .NET Framework requeridos por cada aplicación todas cargados en el dominio de la aplicación. Como consecuencia, el tiempo requerido para crear nuevos dominios de aplicación e iniciar aplicaciones en ellas puede afectar al rendimiento. Sin embargo, .NET Framework proporciona una manera de reducir los tiempos de inicio indicando a las aplicaciones pueden compartir ensamblados entre dominios de aplicación si ya están cargados. Para ello, uso el <xref:System.LoaderOptimizationAttribute> atributo, que debe aplicarse al método de punto de entrada (`Main`). En este caso, solo debe usar el código para implementar la definición de aplicación (consulte [Información general sobre la administración de aplicaciones](application-management-overview.md)).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.LoaderOptimizationAttribute>
 - [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Dominios de aplicación](../../app-domains/application-domains.md)
-- [Información general de .NET framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [Información general de servicios remotos de .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Hacer que los objetos sean remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [Temas "Cómo..."](how-to-topics.md)

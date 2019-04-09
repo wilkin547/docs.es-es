@@ -1,5 +1,5 @@
 ---
-title: Filtrar Dibujar un mapa de bits existente en la pantalla
+title: Filtrar para dibujar un mapa de bits existente en la pantalla
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], loading in Windows Forms applications
 - images [Windows Forms], displaying on Windows Forms
 ms.assetid: 5bc558d7-b326-4050-a834-b8600da0de95
-ms.openlocfilehash: d2e06aa382bc2b01a4308f99735ca533e7a9a3ea
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 90511adf9caffe7952e270d6fe32dd85162a29d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653826"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089184"
 ---
-# <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>Filtrar Dibujar un mapa de bits existente en la pantalla
+# <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>Filtrar para dibujar un mapa de bits existente en la pantalla
 Puede dibujar fácilmente una imagen existente en la pantalla. En primer lugar, deberá crear un <xref:System.Drawing.Bitmap> objeto utilizando el constructor de mapa de bits que toma un nombre de archivo, <xref:System.Drawing.Bitmap.%23ctor%28System.String%29>. Este constructor acepta imágenes con distintos formatos de archivo, incluidos BMP, GIF, JPEG, PNG y TIFF. Después de haber creado el <xref:System.Drawing.Bitmap> de objetos, pasar ese <xref:System.Drawing.Bitmap> de objeto para el <xref:System.Drawing.Graphics.DrawImage%2A> método de un <xref:System.Drawing.Graphics> objeto.  
   
 ## <a name="example"></a>Ejemplo  
@@ -33,5 +33,6 @@ Puede dibujar fácilmente una imagen existente en la pantalla. En primer lugar, 
  El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Trabajar con imágenes, mapas de bits, iconos y metarchivos](working-with-images-bitmaps-icons-and-metafiles.md)

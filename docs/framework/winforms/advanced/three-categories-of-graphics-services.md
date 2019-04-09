@@ -8,12 +8,12 @@ helpviewer_keywords:
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: f7aa4de8a0d646c441d0921fb2561ef5a9480f4e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ccbd5e236b47d1d870c9b77cfa2b3880619cf3cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711243"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083600"
 ---
 # <a name="three-categories-of-graphics-services"></a>Tres categorías de servicios gráficos
 Las ofertas de gráficos en Windows Forms se dividen en tres amplias categorías:  
@@ -40,6 +40,7 @@ Las ofertas de gráficos en Windows Forms se dividen en tres amplias categorías
  Además, Windows Forms ofrece la opción de dibujar texto con [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] capacidades en su <xref:System.Windows.Forms.TextRenderer> clase.  
   
 ## <a name="see-also"></a>Vea también
-- [Graphics Overview](graphics-overview-windows-forms.md) (Información general sobre gráficos [Windows Forms])
-- [About GDI+ Managed Code](about-gdi-managed-code.md) (Acerca del código administrado de GDI+)
-- [Using Managed Graphics Classes](using-managed-graphics-classes.md) (Usar clases gráficas administradas)
+
+- [Información general sobre gráficos](graphics-overview-windows-forms.md)
+- [Código administrado de GDI+](about-gdi-managed-code.md)
+- [Utilizar clases gráficas administradas](using-managed-graphics-classes.md)

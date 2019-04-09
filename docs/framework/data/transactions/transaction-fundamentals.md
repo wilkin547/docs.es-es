@@ -2,12 +2,12 @@
 title: Principios de la transacción
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-ms.openlocfilehash: cb5123cbee9245178cac43cfd2388cce3f5d356f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49e44ce1112a44c105f47560017331afe4454a0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620518"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076763"
 ---
 # <a name="transaction-fundamentals"></a>Principios de la transacción
 Las transacciones enlazan varias tareas. Por ejemplo, imagine que una aplicación realiza dos tareas. Primero, crea una nueva tabla en una base de datos. Luego, llama un objeto especializado para recoger, dar formato e insertar los datos en la nueva tabla. Estas dos tareas están relacionadas e incluso son interdependientes, de tal manera que se desea evitar crear una nueva tabla a menos que pueda llenarse de datos. La ejecución de ambas tareas dentro del ámbito de una única transacción refuerzan la conexión entre ellas. En caso de error en la segunda tarea, la primera vuelve al punto anterior a la creación de la nueva tabla.  
@@ -25,4 +25,5 @@ Las transacciones enlazan varias tareas. Por ejemplo, imagine que una aplicació
  Se pueden crear transacciones utilizando ADO.NET, <xref:System.EnterpriseServices>, o el modelo de programación transaccional proporcionado por el <xref:System.Transactions> espacio de nombres. El [características proporcionadas por System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md) tema describe las características que puede usar para escribir una aplicación transaccional utilizando el <xref:System.Transactions> espacio de nombres.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Características proporcionadas por System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)

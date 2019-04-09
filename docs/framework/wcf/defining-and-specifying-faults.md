@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: e2217cdac8edcab2f4b9e28484fb0758a149b72c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 337d0a60543aa4ebf42bb2ca0c147607a2548301
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079336"
 ---
 # <a name="defining-and-specifying-faults"></a>Definición y especificación de errores
 Los errores de SOAP transmiten información de condición de error desde un servicio a un cliente y, en caso de comunicación dúplex, desde un cliente a un servicio de una manera interoperable. Este tema describe cuándo y cómo definir contenido personalizado de error y especificar qué operaciones pueden devolverlos. Para obtener más información acerca de cómo un servicio o cliente dúplex, puede enviar esos errores y cómo una aplicación cliente o servicio administra estos errores, vea [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md). Para obtener información general de control de errores en las aplicaciones de Windows Communication Foundation (WCF), consulte [especificar y controlar errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -88,12 +88,13 @@ End Class
  Al tener acceso a servicios que generan errores, ciertas limitaciones existen. WCF admite únicamente los errores con tipos de detalle que describe el esquema y que son compatibles con los contratos de datos. Por ejemplo, como se mencionó anteriormente, WCF no admite errores que utilizan los atributos XML en sus tipos de datos o errores con más de un elemento de nivel superior en la sección de detalles.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Especificación y gestión de errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Especificación y administración de errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Envío y recepción de errores](../../../docs/framework/wcf/sending-and-receiving-faults.md)
-- [Cómo: Declarar errores en contratos de servicio](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
+- [Filtrar para declarar errores en contratos de servicios](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
 - [Descripción de los niveles de protección](../../../docs/framework/wcf/understanding-protection-level.md)
-- [Cómo: Establezca la propiedad ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [Definición de transferencias de datos en contratos de servicio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Filtrar para establecer la propiedad ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Especificación de transferencia de datos en contratos de servicio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

@@ -2,12 +2,12 @@
 title: Roles de servidor y base de datos en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: c7fdac92c2d980669a3cc3bf67119bdbb42509a4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091817"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087981"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Roles de servidor y base de datos en SQL Server
 Todas las versiones de SQL Server usan la seguridad basada en roles, que permite asignar permisos a un rol, o grupo de usuarios, en lugar de asignarlos a usuarios individuales. Los roles fijos de servidor y base de datos cuentan con un conjunto fijo de permisos asignados.  
@@ -16,7 +16,7 @@ Todas las versiones de SQL Server usan la seguridad basada en roles, que permite
  Los roles fijos de servidor cuentan con un conjunto fijo de permisos y ámbito de servidor. Están pensadas para su uso en la administración de SQL Server y los permisos asignadas a ellas no se pueden modificar. Se pueden asignar inicios de sesión a los roles fijos de servidor sin necesidad de disponer de una cuenta de usuario en una base de datos.  
   
 > [!IMPORTANT]
->  El rol fijo de servidor `sysadmin` incluye a todos los demás roles y cuenta con un ámbito ilimitado. No agregue entidades de seguridad a este rol a menos que sean de total confianza. Los miembros del rol `sysadmin` disponen de permisos administrativos irrevocables en todas las bases de datos y recursos del servidor.  
+>  El rol fijo de servidor `sysadmin` incluye a todos los demás roles y cuenta con un ámbito ilimitado. No agregue entidades de seguridad a este rol a menos que sean de total confianza. `sysadmin` los miembros del rol tienen privilegios administrativos irrevocables en todas las bases de datos del servidor y los recursos.  
   
  Sea selectivo a la hora de agregar usuarios a los roles fijos de servidor. Por ejemplo, el rol `bulkadmin` permite a los usuarios insertar el contenido de cualquier archivo local en una tabla, lo que puede poner en peligro la integridad de los datos. Para obtener una lista completa de los roles fijos de servidor y permisos, vea los libros en pantalla de SQL Server.  
   
@@ -27,8 +27,8 @@ Todas las versiones de SQL Server usan la seguridad basada en roles, que permite
   
 |Recurso|Descripción|  
 |--------------|-----------------|  
-|[Funciones de nivel de servidor](/sql/relational-databases/security/authentication-access/server-level-roles)|Describe funciones fijas de servidor y los permisos asociados con ellos en SQL Server.|  
-|[Roles de nivel de base de datos](/sql/relational-databases/security/authentication-access/database-level-roles)|Describe los roles fijos de base de datos y los permisos asociados a ellas.|  
+|[Roles de nivel de servidor](/sql/relational-databases/security/authentication-access/server-level-roles)|Describe funciones fijas de servidor y los permisos asociados con ellos en SQL Server.|  
+|[Roles en el nivel de base de datos](/sql/relational-databases/security/authentication-access/database-level-roles)|Describe los roles fijos de base de datos y los permisos asociados a ellas.|  
   
 ## <a name="database-roles-and-users"></a>Roles y usuarios de base de datos  
  Para trabajar con objetos de base de datos, se deben asignar inicios de sesión a cuentas de usuario de base de datos. Estos usuarios de base de datos se podrán agregar entonces a roles de base de datos y heredarán los conjuntos de permisos asociados con estos roles. Se pueden conceder todos los permisos.  
@@ -62,9 +62,10 @@ Todas las versiones de SQL Server usan la seguridad basada en roles, que permite
 |[Entidades de seguridad](/sql/relational-databases/security/authentication-access/principals-database-engine)|Describe las entidades de seguridad y contiene vínculos a temas que describen los roles de servidor y de base de datos.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Autenticación en SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [Propiedad y separación de esquemas de usuario en SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
 - [Autorización y permisos en SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

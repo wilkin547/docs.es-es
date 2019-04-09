@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help [Windows Forms], Windows Forms
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
-ms.openlocfilehash: 22c07490d0d3b54be96f32d67c9b4aee70306c1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087279"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Sistemas de ayuda en aplicaciones de Windows Forms
 Una de las ventajas más importantes, como desarrollador de aplicaciones, puede ofrecer a los usuarios es un sistema de ayuda competente. Esto es donde activará cuando estén confundidos o normal desorientarse. Proporcionar un sistema de ayuda en una aplicación basada en Windows se realiza fácilmente mediante el [componente HelpProvider](../controls/helpprovider-component-windows-forms.md).  
@@ -24,8 +24,9 @@ Una de las ventajas más importantes, como desarrollador de aplicaciones, puede 
  Puede generar archivos de Ayuda HTML 1.x con HTML Help Workshop. Para obtener más información sobre la Ayuda HTML, vea "HTML Help Workshop" o los otros temas de "HTML Help" en MSDN.  
   
 ## <a name="see-also"></a>Vea también
-- [Integrar la Ayuda de usuario en Windows Forms](integrating-user-help-in-windows-forms.md)
-- [HelpProvider (componente)](../controls/helpprovider-component-windows-forms.md)
-- [ToolTip (componente)](../controls/tooltip-component-windows-forms.md)
+
+- [Integrar la Ayuda de usuario en formularios Windows Forms](integrating-user-help-in-windows-forms.md)
+- [Componente HelpProvider](../controls/helpprovider-component-windows-forms.md)
+- [ToolTip](../controls/tooltip-component-windows-forms.md)
 - [Información general sobre formularios Windows Forms](../windows-forms-overview.md)
 - [Windows Forms](../index.md)

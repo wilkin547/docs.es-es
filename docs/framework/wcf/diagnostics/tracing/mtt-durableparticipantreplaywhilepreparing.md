@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
 ms.date: 03/30/2017
 ms.assetid: 10ef3876-6f8e-4d4e-8444-f47847b64795
-ms.openlocfilehash: 3b51a100677221866186b2e24f34396c012d11c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5d74d73cc43b500d3920ca03905f4eb7543619a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075540"
 ---
 # <a name="microsofttransactionstransactionbridgedurableparticipantreplaywhilepreparing"></a>Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
 El servicio de protocolo WS-AT recibió un mensaje de reproducción desde un participante duradero, que no respondió a la instrucción para preparar. Por consiguiente, se anuló la transacción.  
@@ -19,6 +19,7 @@ El servicio de protocolo WS-AT recibió un mensaje de reproducción desde un par
  Recibir este error puede indicar que un participante duradero (incluidos los administradores de transacciones subordinados) se ha recuperado del error, aunque no se sabe a ciencia cierta el resultado de la transacción y solicita su estado.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Utilizar la propiedad Spring de manera interactiva en un control StatusStrip
+title: Filtrar para usar la propiedad Spring de manera interactiva en un control StatusStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - status bars [Windows Forms], examples
 - Spring property [Windows Forms]
 ms.assetid: 18bde842-a93c-48dd-9db3-15738a1775ce
-ms.openlocfilehash: 13a9809507f30f70d751d24ec68de1e5a62011cd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7d79a885f49168c3883259826e7b8ae62eec1dab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108191"
 ---
-# <a name="how-to-use-the-spring-property-interactively-in-a-statusstrip"></a>Filtrar Utilizar la propiedad Spring de manera interactiva en un control StatusStrip
+# <a name="how-to-use-the-spring-property-interactively-in-a-statusstrip"></a>Filtrar para usar la propiedad Spring de manera interactiva en un control StatusStrip
 Puede utilizar la propiedad <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> para colocar un control <xref:System.Windows.Forms.ToolStripStatusLabel> en un control <xref:System.Windows.Forms.StatusStrip>. La propiedad <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> determina si el control <xref:System.Windows.Forms.ToolStripStatusLabel> rellena automáticamente el espacio disponible en el control <xref:System.Windows.Forms.StatusStrip>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -38,9 +38,10 @@ Puede utilizar la propiedad <xref:System.Windows.Forms.ToolStripStatusLabel.Spri
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - <xref:System.Windows.Forms.StatusStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripItem>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Control ToolStrip](toolstrip-control-windows-forms.md)
+- [ToolStrip](toolstrip-control-windows-forms.md)

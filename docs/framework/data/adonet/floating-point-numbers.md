@@ -2,12 +2,12 @@
 title: Números de punto flotante
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: a30252d7d25b3c3e09dd5e59f364d94aa40dd272
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: aae7bd2ea6b5ba7bc9c69b99c93b62ba7a413d59
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903970"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102523"
 ---
 # <a name="floating-point-numbers"></a>Números de punto flotante
 En este tema se describen algunos de los problemas que con frecuencia se encuentran los programadores al trabajar con números de punto flotante en [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Estos problemas se deben a la forma que los equipos almacenan números de punto flotante y no son específicos de un proveedor determinado, como <xref:System.Data.SqlClient> o <xref:System.Data.OracleClient>.  
@@ -19,5 +19,6 @@ En este tema se describen algunos de los problemas que con frecuencia se encuent
  Para solucionar problemas relacionados con la comparación de igualdad, puede codificar la aplicación de forma que se pasen por alto las diferentes en los dígitos menos significativos. Por ejemplo, en lugar de comparar dos números para comprobar si son iguales, puede restar un número del otro. Si la diferencia se sitúa en un margen aceptable de redondeo, la aplicación puede considerar los números como si fuesen iguales.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Por qué los números de punto flotante pierden precisión](/cpp/build/reference/why-floating-point-numbers-may-lose-precision)
 - [Información general sobre ADO.NET](ado-net-overview.md)

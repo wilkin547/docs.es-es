@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: b98735b111d634584ec019a75d942f39e38cc8c5
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101138"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Asignación de patrones de controles para clientes de UI Automation
 > [!NOTE]
@@ -49,14 +49,14 @@ ms.locfileid: "57679585"
 |Imagen|Ninguna|Grid Item, Table Item|Invoke, Selection Item|  
 |Lista|Ninguna|Grid, Multiple View, Scroll, Selection|Tabla|  
 |List Item|Selection Item|Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value|Ninguna|  
-|Menú|Ninguna|Ninguno|Ninguna|  
+|Menú|Ninguna|Ninguna|Ninguna|  
 |Barra de menús|Ninguna|Expand Collapse, Dock, Transform|Ninguna|  
 |Elemento de menú|Ninguna|Expand Collapse, Invoke, Selection Item, Toggle|Ninguna|  
 |Panel|Ninguna|Dock Scroll, Transform|Ventana|  
 |ProgressBar|Ninguna|Range Value, Value|Ninguna|  
 |Radio Button|Selection Item|Ninguna|Alternar|  
 |Scroll Bar|Ninguna|RangeValue|Scroll|  
-|Separador|Ninguna|Ninguno|Ninguna|  
+|Separador|Ninguna|Ninguna|Ninguna|  
 |Slider|Ninguna|Range Value, Selection, Value|Ninguna|  
 |Spinner|Ninguna|Range Value, Selection, Value|Ninguna|  
 |Botón de expansión|Invoke, Expand Collapse|Ninguna|Ninguna|  
@@ -66,7 +66,7 @@ ms.locfileid: "57679585"
 |Tabla|Grid, Grid Item, Table, Table Item|Ninguna|Ninguna|  
 |Texto|Ninguna|Grid Item, Table Item, Text|Valor|  
 |Thumb|Transformación|Ninguna|Ninguna|  
-|Barra de título|Ninguna|Ninguno|Ninguna|  
+|Barra de título|Ninguna|Ninguna|Ninguna|  
 |Tool Bar|Ninguna|Dock, Expand Collapse, Transform|Ninguna|  
 |Tool Tip|Ninguna|Text, Window|Ninguna|  
 |Árbol|Ninguna|Scroll, Selection|Ninguna|  
@@ -77,4 +77,5 @@ ms.locfileid: "57679585"
 >  Si un tipo de control no muestra patrones de control compatibles enumerados pero tiene uno o más patrones de control que admitidos condicionalmente, se admitirá en todo momento uno de esos patrones de control condicionales.  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-overview.md)
+
+- [Información general sobre UI Automation](../../../docs/framework/ui-automation/ui-automation-overview.md)

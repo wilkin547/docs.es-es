@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 5853c48ad77131d33cd0ab767c4a58ba56aaa39f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369921"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073889"
 ---
 # <a name="focus-overview"></a>Información general sobre el foco
 En [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], hay dos conceptos principales relacionados con el foco: el foco de teclado y el foco lógico.  El foco de teclado hace referencia al elemento que recibe la entrada del teclado, y el foco lógico hace referencia al elemento que tiene el foco en un ámbito de foco.  Estos conceptos se describen con detalle en esta información general.  Entender la diferencia entre estos conceptos es importante para crear aplicaciones complejas que tengan varias regiones donde se pueda obtener el foco.  
@@ -21,9 +21,7 @@ En [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
  Las clases principales que participan en la administración del foco son la <xref:System.Windows.Input.Keyboard> (clase), el <xref:System.Windows.Input.FocusManager> clase y el elemento base, clases, como <xref:System.Windows.UIElement> y <xref:System.Windows.ContentElement>.  Para obtener más información sobre los elementos base, consulte [Información general sobre los elementos base](base-elements-overview.md).  
   
  El <xref:System.Windows.Input.Keyboard> clase se ocupa principalmente del foco de teclado y el <xref:System.Windows.Input.FocusManager> se refiere a principalmente con el foco lógico, pero esto no es una distinción absoluta.  Un elemento que tiene el foco de teclado también tendrá el foco lógico, pero un elemento que tiene el foco lógico no tendrá necesariamente el foco de teclado.  Esto es evidente cuando se usa el <xref:System.Windows.Input.Keyboard> clase para establecer el elemento que tiene el foco de teclado, para también establece el foco lógico en el elemento.  
-  
 
-  
 <a name="Keyboard_Focus"></a>   
 ## <a name="keyboard-focus"></a>Foco de teclado  
  El foco de teclado hace referencia al elemento que recibe actualmente la entrada del teclado.  Puede haber un único elemento en todo el escritorio que tenga el foco de teclado.  En [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], el elemento que tiene el foco de teclado tendrá <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> establecido en `true`.  La propiedad estática <xref:System.Windows.Input.Keyboard.FocusedElement%2A> en el <xref:System.Windows.Input.Keyboard> clase obtiene el elemento que tiene actualmente el foco de teclado.  
@@ -118,6 +116,7 @@ En [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
  Los eventos relacionados con el foco lógico son <xref:System.Windows.UIElement.GotFocus> y <xref:System.Windows.UIElement.LostFocus>.  Estos eventos se definen en el <xref:System.Windows.Input.FocusManager> como eventos adjuntos, pero el <xref:System.Windows.Input.FocusManager> no expone contenedores de eventos CLR.  <xref:System.Windows.UIElement> y <xref:System.Windows.ContentElement> exponen estos eventos de manera más conveniente.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Input.FocusManager>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.ContentElement>

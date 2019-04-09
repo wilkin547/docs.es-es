@@ -5,12 +5,12 @@ helpviewer_keywords:
 - FillBehavior property for inactive timelines [WPF]
 - Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
-ms.openlocfilehash: 1d6a3ec38a6488d997ce5a4734cc095446354070
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9f03c5b8d4585c32e0a9f119649dd15a23523033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091133"
 ---
 # <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Filtrar Especificar el comportamiento de relleno de una escala de tiempo que ha llegado al final de su período de actividad
 En este ejemplo se muestra cómo especificar el <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> para la inactiva <xref:System.Windows.Media.Animation.Timeline> de una propiedad animada.  
@@ -27,6 +27,7 @@ En este ejemplo se muestra cómo especificar el <xref:System.Windows.Media.Anima
  Para obtener un ejemplo completo, vea [Animation Example Gallery](https://go.microsoft.com/fwlink/?LinkID=159969).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.Animation.DoubleAnimation>
 - <xref:System.Windows.FrameworkElement.Width%2A>
 - <xref:System.Windows.Media.Animation.Timeline>
@@ -34,4 +35,4 @@ En este ejemplo se muestra cómo especificar el <xref:System.Windows.Media.Anima
 - <xref:System.Windows.Media.Animation.FillBehavior.Stop>
 - <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>
 - [Información general sobre animaciones](animation-overview.md)
-- [Temas de procedimientos de temporización y animación](animation-and-timing-how-to-topics.md)
+- [Temas "Cómo..." de animación y control de tiempo](animation-and-timing-how-to-topics.md)

@@ -2,12 +2,12 @@
 title: Enlace de datos y LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
-ms.openlocfilehash: 91349de3b12b45e645ad4080c9fc972f28c669ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b081a648023aa21eea3a20ec409600d3bcbe9878
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655782"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073564"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>Enlace de datos y LINQ to DataSet
 *Enlace de datos* es el proceso que establece una conexión entre la aplicación de interfaz de usuario y la lógica de negocios. Si el enlace está configurado correctamente y los datos proporcionan la notificaciones adecuadas, al cambiar los valores de los datos, los elementos enlazados a los mismos reflejarán de manera automática dichos cambios. <xref:System.Data.DataSet> es una representación de datos residente en memoria que proporciona un modelo de programación relacional coherente independientemente del origen de datos que contiene. <xref:System.Data.DataView> de ADO.NET 2.0 permite ordenar y filtrar los datos almacenados en <xref:System.Data.DataTable>. Esta funcionalidad se utiliza con frecuencia en aplicaciones de enlace de datos. Mediante <xref:System.Data.DataView> puede exponer los datos de una tabla con distintos criterios de ordenación y filtrar los datos por el estado de fila o basándose en una expresión de filtro. Para obtener más información sobre la <xref:System.Data.DataView> de objetos, consulte [DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
@@ -26,14 +26,15 @@ ms.locfileid: "54655782"
  [Ordenación con DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)  
  Describe cómo ordenar con <xref:System.Data.DataView>.  
   
- [Consulta de la colección de DataRowView en un objeto DataView](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
+ [Consultar la colección de DataRowView en un objeto DataView](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
  Proporciona información sobre cómo consultar la colección <xref:System.Data.DataRowView> expuesta por <xref:System.Data.DataView>.  
   
  [Rendimiento de DataView](../../../../docs/framework/data/adonet/dataview-performance.md)  
  Proporciona información sobre <xref:System.Data.DataView> y rendimiento.  
   
- [Cómo: Enlazar un objeto DataView a un Control DataGridView de formularios Windows Forms](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
+ [Filtrar para enlazar un objeto DataView a un control DataGridView de formularios Windows Forms](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
  Describe cómo enlazar un objeto <xref:System.Data.DataView> a <xref:System.Windows.Forms.DataGridView>.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Guía de programación](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

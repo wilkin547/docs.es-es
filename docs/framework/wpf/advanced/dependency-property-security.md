@@ -10,17 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 85806ee9fb01cd2ca07697230c46a8847fdf8c6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364819"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077477"
 ---
 # <a name="dependency-property-security"></a>Seguridad de las propiedades de dependencia
 Por lo general, las propiedades de dependencia deben considerarse propiedades públicas. La naturaleza del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] impide realizar garantías de seguridad sobre un valor de propiedad de dependencia.  
-  
-  
+
 <a name="AccessSecurity"></a>   
 ## <a name="access-and-security-of-wrappers-and-dependency-properties"></a>Procedimiento para acceder a los contenedores y las propiedades de dependencia y protegerlos  
  Normalmente, las propiedades de dependencia se implementan junto con las propiedades [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] del "contenedor", que permiten obtener o establecer fácilmente la propiedad de una instancia. Pero los contenedores son métodos de conveniencia realidad, que implementan subyacente <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A> las llamadas estáticas que se utilizan al interactuar con las propiedades de dependencia. Visto de otro modo, las propiedades se exponen como propiedades [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] que están respaldadas por una propiedad de dependencia en lugar de un campo privado. Los mecanismos de seguridad que se aplican a los contenedores no imitan el comportamiento del sistema de propiedades ni el acceso a la propiedad de dependencia subyacente. Al colocar una petición de seguridad en el contenedor solo impedirá el uso del método útil, pero no impedirá que las llamadas a <xref:System.Windows.DependencyObject.GetValue%2A> o <xref:System.Windows.DependencyObject.SetValue%2A>. De forma similar, aplicar un nivel de acceso protegido o privado en los contenedores no proporciona ninguna seguridad efectiva.  
@@ -40,4 +39,5 @@ Por lo general, las propiedades de dependencia deben considerarse propiedades p�
  Aplicar una petición para un <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> y se espera el error de validación en un error de demanda para impedir que una propiedad que se va a establecer no es un mecanismo de seguridad adecuada. Invalidación del valor establecido que se aplica a través de <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> también la pueden suprimir llamadores malintencionados, si estos operan dentro del dominio de aplicación.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Propiedades de dependencia personalizadas](custom-dependency-properties.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - spin button control [Windows Forms], about spin button
 - DomainUpDown control [Windows Forms], about DomainUpDown control
 ms.assetid: 3f40f9c1-20ad-4331-b9b5-b0127eb36eb3
-ms.openlocfilehash: 851c02747a2414e34a5e9d35bdc7d1df916efce0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bfe3e7239f77c6f1a0d9bb46a96c704653b43364
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718901"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102861"
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>Información general sobre el control DomainUpDown (formularios Windows Forms)
 Los formularios de Windows <xref:System.Windows.Forms.DomainUpDown> control es básicamente una combinación de un cuadro de texto y un par de botones para desplazarse hacia arriba o hacia abajo a través de una lista. El control muestra y establece una cadena de texto de una lista de opciones. El usuario puede seleccionar la cadena, haga clic en botones para desplazarse por una lista de arriba y abajo, presionando las teclas de dirección arriba y abajo o escribiendo una cadena que coincide con un elemento en la lista. Es un uso posible para este control para seleccionar elementos de una lista ordenada alfabéticamente de los nombres.  
@@ -28,5 +28,6 @@ Los formularios de Windows <xref:System.Windows.Forms.DomainUpDown> control es b
  Este control muestra solo las cadenas de texto. Si desea un control que muestra los valores numéricos, utilice el <xref:System.Windows.Forms.NumericUpDown> control. Para obtener más información, consulte [información general del Control NumericUpDown](numericupdown-control-overview-windows-forms.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DomainUpDown>
-- [DomainUpDown (control)](domainupdown-control-windows-forms.md)
+- [Control DomainUpDown](domainupdown-control-windows-forms.md)

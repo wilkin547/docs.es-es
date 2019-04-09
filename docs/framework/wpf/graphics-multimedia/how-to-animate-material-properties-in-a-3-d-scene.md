@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], Material properties in 3-D scenes
 - 3-D scenes [WPF], animating Material properties
 ms.assetid: 229fd6eb-7401-4992-b0c9-8b28de230c0f
-ms.openlocfilehash: 59200fa7ec7acb16c37666505143a3679d487f52
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58e880a2828d21ee76f7fac6bdcf313e8454e65b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090906"
 ---
 # <a name="how-to-animate-material-properties-in-a-3-d-scene"></a>Filtrar Animar propiedades de material en una escena 3D
 En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.Brush.Opacity%2A> propiedad de la <xref:System.Windows.Media.Media3D.Material> aplicado a un [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] modelo.  
@@ -30,5 +30,6 @@ En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.Brush.Opac
  [!code-xaml[Animation3DGallery_snip#AnimateMaterialExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexamplewholepage)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Crear una escena 3D](how-to-create-a-3-d-scene.md)
 - [Información general sobre gráficos 3D](3-d-graphics-overview.md)

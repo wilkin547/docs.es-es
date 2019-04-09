@@ -2,19 +2,19 @@
 title: Funciones del sistema
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
-ms.openlocfilehash: 9ab9298214813e7dd3af31f224d84a00040fbf01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 135154d2f5e26cdf7f2e41e8ed2b561bb75f377e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597416"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073454"
 ---
 # <a name="system-functions"></a>Funciones del sistema
 El Proveedor de datos .NET Framework para SQL Server (SqlClient) proporciona las funciones del sistema siguientes:  
   
 |Función|Descripción|  
 |--------------|-----------------|  
-|`CHECKSUM (` `value`, [`value`, [`value`]]`)`|Devuelve el valor de suma. `CHECKSUM` se ha pensado para utilizarlo en la compilación de índices hash.<br /><br /> **Argumentos**<br /><br /> `value`: Un `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `String`, `Binary`, o `Guid`. Puede especificar uno, dos o tres valores.<br /><br /> **Valor devuelto**<br /><br /> Valor absoluto de la expresión especificada.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.CHECKSUM(10,100,1000.0)`|  
+|`CHECKSUM (` `value`, [`value`, [`value`]]`)`|Devuelve el valor de suma. `CHECKSUM` está pensado para su uso en la creación de índices hash.<br /><br /> **Argumentos**<br /><br /> `value`: Un `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `String`, `Binary`, o `Guid`. Puede especificar uno, dos o tres valores.<br /><br /> **Valor devuelto**<br /><br /> Valor absoluto de la expresión especificada.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.CHECKSUM(10,100,1000.0)`|  
 |`CURRENT_TIMESTAMP ()`|Genera la fecha actual y la hora en el formato interno de SQL Server para los valores `DateTime` con una precisión de 7 en SQL Server 2008 y una precisión de 3 en SQL Server 2005.<br /><br /> **Valor devuelto**<br /><br /> La fecha y la hora actuales del sistema como un `DateTime`.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.CURRENT_TIMESTAMP()`|  
 |`CURRENT_ USER` `()`|Devuelve el nombre del usuario actual.<br /><br /> **Valor devuelto**<br /><br /> Valor de tipo `String` ASCII.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.CURRENT_USER()`|  
 |`DATALENGTH` `(` `expression` `)`|Devuelve el número de bytes utilizados para representar cualquier expresión.<br /><br /> **Argumentos**<br /><br /> `expression`: Un `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `Time`, `DateTimeOffset`, `String`, `Binary`, o `Guid`.<br /><br /> **Valor devuelto**<br /><br /> Tamaño de las propiedades en forma de un valor `Int32`.<br /><br /> **Ejemplo**<br /><br /> `SELECT VALUE SqlServer.DATALENGTH(P.Name)FROM`<br /><br /> `AdventureWorksEntities.Product AS P`|  
@@ -28,8 +28,9 @@ El Proveedor de datos .NET Framework para SQL Server (SqlClient) proporciona las
   
 |SQL Server 2000|SQL Server 2005|SQL Server 2008|  
 |---------------------|---------------------|---------------------|  
-|[Sistema funciones Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115918)|[Sistema funciones Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115917)|[Funciones del sistema (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115919)|  
+|[Funciones del sistema (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115918)|[Funciones del sistema (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115917)|[Funciones del sistema (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115919)|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Lenguaje Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
 - [SqlClient para las funciones de Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)

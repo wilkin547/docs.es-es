@@ -2,12 +2,12 @@
 title: <message> de <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: b954ec770ca0c59dec0b25634ccbc59f086d1a99
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 746acd91074863029211a1ca2584743c464c9ce1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083301"
 ---
 # <a name="message-of-basichttpbinding"></a>\<mensaje > de \<basicHttpBinding >
 Define la configuración de seguridad de nivel de mensaje de la [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -120,6 +120,7 @@ Define la configuración de seguridad de nivel de mensaje de la [ \<basicHttpBin
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.BasicHttpMessageSecurity>
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.BasicHttpSecurity.Message%2A>

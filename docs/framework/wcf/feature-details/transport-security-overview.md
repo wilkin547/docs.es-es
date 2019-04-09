@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 3eb18a3e48c185d59879e86801a7df5e6080d7a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04526e8aea09b412de4d3a94f17938b02ad6527b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105279"
 ---
 # <a name="transport-security-overview"></a>Información general de la seguridad del transporte
 Mecanismos de seguridad de transporte en Windows Communication Foundation (WCF) dependen el enlace y el transporte que se va a usar. Por ejemplo, al utilizar la clase <xref:System.ServiceModel.WSHttpBinding>, el transporte es HTTP y el mecanismo principal para garantizar el transporte es Capa de sockets seguros (SSL) sobre HTTP, normalmente denominado HTTPS. En este tema se describe los mecanismos de seguridad de transporte principales utilizados en los enlaces proporcionados por el sistema WCF.  
@@ -46,7 +46,7 @@ Mecanismos de seguridad de transporte en Windows Communication Foundation (WCF) 
   
  Las secciones siguientes tratan otros tipos de credenciales de clientes.  
   
-#### <a name="basic"></a>Basic  
+#### <a name="basic"></a>Básico  
  Se corresponde con el método de autenticación básico de IIS. Cuando se utiliza este modo, el servidor IIS debe configurarse con cuentas de usuario de Windows y permisos de sistema de archivos NTFS adecuados. Para obtener más información acerca de [!INCLUDE[iis601](../../../../includes/iis601-md.md)], consulte [Enabling Basic Authentication and Configuring the Realm Name](https://go.microsoft.com/fwlink/?LinkId=88592). Para obtener más información acerca de [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: Configurar la autenticación básica](https://go.microsoft.com/fwlink/?LinkId=88593).  
   
 #### <a name="certificate"></a>Certificado  
@@ -62,7 +62,7 @@ Mecanismos de seguridad de transporte en Windows Communication Foundation (WCF) 
  Esto permite al servidor usar NTLM para la autenticación si se produce un error en el protocolo Kerberos. Para obtener más información acerca de cómo configurar IIS en [!INCLUDE[iis601](../../../../includes/iis601-md.md)], consulte [forzar la autenticación NTLM](https://go.microsoft.com/fwlink/?LinkId=88598). Para [!INCLUDE[iisver](../../../../includes/iisver-md.md)], la autenticación de Windows incluye la autenticación NTLM. Para obtener más información, consulte [IIS 7.0 Beta: Configuración de certificados de servidor en IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- La clase <xref:System.ServiceModel.WSHttpBinding> está diseñada para la interoperación con servicios que implementan las especificaciones de WS-*. La seguridad de transporte para este enlace es Capa de sockets seguros (SSL) sobre HTTP o HTTPS. Para crear una aplicación de WCF que usa SSL, utilice IIS para hospedar la aplicación. Alternativamente, si está creando una aplicación autohospedada, utilice la herramienta HttpCfg.exe para enlazar un certificado X.509 con un puerto concreto en un equipo. El número de puerto se especifica como parte de la aplicación de WCF como una dirección de punto de conexión. Al utilizar el modo de transporte, la dirección del punto de conexión debe incluir el protocolo HTTPS o se producirá una excepción en el tiempo de ejecución. Para obtener más información, consulte [seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ La clase <xref:System.ServiceModel.WSHttpBinding> está diseñada para la interoperación con servicios que implementan las especificaciones de WS-*. La seguridad de transporte para este enlace es Capa de sockets seguros (SSL) sobre HTTP o HTTPS. Para crear una aplicación de WCF que usa SSL, utilice IIS para hospedar la aplicación. Alternativamente, si está creando una aplicación autohospedada, utilice la herramienta HttpCfg.exe para enlazar un certificado X.509 con un puerto concreto en un equipo. El número de puerto se especifica como parte de la aplicación de WCF como una dirección de punto de conexión. Al utilizar el modo de transporte, la dirección del extremo debe incluir el protocolo HTTPS o se producirá una excepción en el tiempo de ejecución. Para obtener más información, consulte [seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  En el caso de la autenticación del cliente, defina la propiedad <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> de la clase <xref:System.ServiceModel.HttpTransportSecurity> en uno de los valores de enumeración de <xref:System.ServiceModel.HttpClientCredentialType>. Los valores de enumeración son idénticos a los tipos de credencial de cliente para <xref:System.ServiceModel.BasicHttpBinding> y están diseñados para que se hospeden con servicios de IIS.  
   
@@ -109,7 +109,7 @@ Mecanismos de seguridad de transporte en Windows Communication Foundation (WCF) 
 ```  
   
 ## <a name="netnamedpipebinding"></a>NetNamedPipeBinding  
- La clase <xref:System.ServiceModel.NetNamedPipeBinding> está diseñada para la comunicación eficaz dentro de la máquina. Es decir, para los procesos que se ejecuten en el mismo equipo, aunque los canales de canalización con nombre se puedan crear entre dos equipos de la misma red. Este enlace solo proporciona la seguridad de nivel de transporte. Al crear aplicaciones mediante este enlace, las direcciones del extremo deben incluir "net.pipe" como protocolo de la dirección del extremo.  
+ La clase <xref:System.ServiceModel.NetNamedPipeBinding> está diseñada para la comunicación eficaz dentro de la máquina. Es decir, para los procesos que se ejecuten en el mismo equipo, aunque los canales de canalización con nombre se puedan crear entre dos equipos de la misma red. Este enlace solo proporciona la seguridad de nivel de transporte. Al crear aplicaciones mediante este enlace, las direcciones del punto de conexión deben incluir "net.pipe" como protocolo de la dirección del punto de conexión.  
   
 ## <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
  Cuando se usa seguridad de transporte, este enlace usa SSL sobre HTTP, lo que se conoce como HTTPS con un token emitido (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>). Para obtener más información acerca de las aplicaciones de federación, consulte [federación y Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
@@ -121,4 +121,5 @@ Mecanismos de seguridad de transporte en Windows Communication Foundation (WCF) 
  Para obtener una descripción completa de transporte, seguridad con Message Queue Server (anteriormente denominado MSMQ), consulte [proteger mensajes utilizando seguridad de transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Programación de la seguridad de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb458958f55a3f9fb2b79d87f0ee32d4a028e457
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09b2848619256a255cc27f0268d46e5e6db8cbe4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083613"
 ---
 # <a name="interop-etw-events"></a>Eventos ETW de interoperabilidad
 <a name="top"></a> Los eventos de interoperabilidad capturan información sobre el almacenamiento en caché y la generación de código auxiliar del lenguaje intermedio (MSIL) de Microsoft.  
@@ -29,11 +29,11 @@ ms.locfileid: "54611779"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`InteropKeyword` (0 x 2000)|Informativo (4)|  
+|`InteropKeyword` (0x2000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|Se generó código auxiliar MSIL.|  
   
@@ -61,11 +61,11 @@ ms.locfileid: "54611779"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`InteropKeyword` (0 x 2000)|Informativo (4)|  
+|`InteropKeyword` (0x2000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|Se tuvo acceso a la memoria caché MSIL.|  
   
@@ -84,4 +84,5 @@ ms.locfileid: "54611779"
  [Volver al principio](#top)  
   
 ## <a name="see-also"></a>Vea también
-- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md)

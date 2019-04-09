@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 5b7e078b2eb76191ba572a7d141b29f71d7d8a96
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 4b63695992b3af28043a46c62b426ff176505048
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092558"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074331"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configurar el servicio de datos (Data Services de WCF)
 Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede crear servicios de datos que exponen [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuentes de distribución. Los datos de estas fuentes pueden proceder de diferentes orígenes de datos. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa los proveedores de datos para exponer estos datos como un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuentes de distribución. Estos proveedores incluyen un proveedor de [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], un proveedor de reflexión y un conjunto de interfaces de proveedor de servicio de datos personalizados. La implementación del proveedor define el modelo de datos del servicio. Para obtener más información, consulte [proveedores de servicios de datos](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -55,7 +55,7 @@ Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede crear ser
 |------------------|-----------|--------------|-------------|------------|-----------|  
 |`/Customers`|<xref:System.Data.Services.EntitySetRights.ReadMultiple>|No compatibles|No compatibles|<xref:System.Data.Services.EntitySetRights.WriteAppend>|No compatibles|  
 |`/Customers('ALFKI')`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> y <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.ReadSingle> y <xref:System.Data.Services.EntitySetRights.WriteMerge>|N/D|<xref:System.Data.Services.EntitySetRights.ReadSingle> y <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
-|`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|No compatibles|No compatibles|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> y <xref:System.Data.Services.EntitySetRights.WriteMerge> o <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> - y -<br /><br /> `Orders` `:` Y <xref:System.Data.Services.EntitySetRights.WriteAppend>|No compatibles|  
+|`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|No compatibles|No compatibles|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> y <xref:System.Data.Services.EntitySetRights.WriteMerge> o <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> - y -<br /><br /> `Orders` `:` y <xref:System.Data.Services.EntitySetRights.WriteAppend>|No compatibles|  
 |`/Customers('ALFKI')/Orders(10643)`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> y <xref:System.Data.Services.EntitySetRights.WriteDelete>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> y <xref:System.Data.Services.EntitySetRights.WriteMerge>|No compatibles|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> y <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Orders(10643)/Customer`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> y <xref:System.Data.Services.EntitySetRights.WriteDelete><br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> y <xref:System.Data.Services.EntitySetRights.WriteMerge>;<br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend><br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.WriteAppend> y <xref:System.Data.Services.EntitySetRights.ReadSingle>|No compatibles|  
 |`/Customers('ALFKI')/$links/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|No compatibles|No compatibles|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> y <xref:System.Data.Services.EntitySetRights.WriteMerge> o <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> - y -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|No compatibles|  
@@ -84,5 +84,6 @@ Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede crear ser
  Para obtener más información, consulte [versiones del servicio de datos](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Definir Servicios de datos de WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Hospedaje del servicio de datos](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ffca8e076fe6fe966a9a07ed915a7e76ea06f37c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23bda470b8b5812b567081ba268ad503ac39ecaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090360"
 ---
 # <a name="corheapinfo-structure"></a>COR_HEAPINFO (Estructura)
 Proporciona información general sobre el montón de recolección de elementos no utilizados, incluido si es enumerable.  
@@ -63,5 +63,6 @@ typedef struct _COR_HEAPINFO {
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

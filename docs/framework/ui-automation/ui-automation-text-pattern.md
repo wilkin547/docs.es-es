@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
-ms.openlocfilehash: 878b1e57ee9283bf33cec1b38c4510ce4b21969c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 5646ecf9e2d5deb9fd1e7a1460860d8dd2f4dd9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104642"
 ---
 # <a name="ui-automation-text-pattern"></a>Modelo de texto de UI Automation
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "57678103"
  En este tema contiene información general y temas de procedimientos que le ayudarán a empezar a trabajar en la programación de elementos de texto en [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre TextPattern en Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
+ [Información general sobre el modelo de texto de UI Automation](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
  [Información general sobre TextPattern y objetos incrustados](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
  [Temas "Cómo..."](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
   
@@ -30,5 +30,6 @@ ms.locfileid: "57678103"
  <xref:System.Windows.Automation.Text>  
   
 ## <a name="see-also"></a>Vea también
-- [Patrones de control de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
-- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+
+- [Patrones de control de UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
+- [Patrones de controles de UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

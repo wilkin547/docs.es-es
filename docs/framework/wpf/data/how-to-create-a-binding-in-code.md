@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear un enlace mediante código
+title: Filtrar Crear un enlace mediante código
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - binding data [WPF], creating
 - data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
-ms.openlocfilehash: 666dbb4e2de0e8a7a83d6e0dfda50822cfdfd860
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 57ec845c5c9a5bddb801428b9ecde035a97cf447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089268"
 ---
 # <a name="how-to-create-a-binding-in-code"></a>Filtrar Crear un enlace mediante código
 En este ejemplo se muestra cómo crear y establecer un <xref:System.Windows.Data.Binding> en el código.  
@@ -39,5 +39,6 @@ En este ejemplo se muestra cómo crear y establecer un <xref:System.Windows.Data
  [!code-vb[CodeOnlyBinding#BOSetBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#bosetbinding)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre el enlace de datos](data-binding-overview.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

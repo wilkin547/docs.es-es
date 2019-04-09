@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bfe441831cef3f708792767163b9cf2138cd4335
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 89831261c5da156343cb098ace715495ddafccaf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473867"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086096"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute (Método)
 Obtiene un atributo personalizado basándose en su nombre. A diferencia de los atributos personalizados de los metadatos, estos atributos personalizados se encuentran en el almacén de símbolos.  
@@ -62,4 +62,5 @@ HRESULT GetSymAttribute (
  **Encabezado**: CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
-- [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+
+- [ISymUnmanagedReader (Interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

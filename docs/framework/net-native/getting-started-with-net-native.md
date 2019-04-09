@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576c7c10b5ce36092dae7ab9cd7d973568168260
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1ff4db5216cf984af764176fef636bb586f97c2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220959"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081494"
 ---
 # <a name="getting-started-with-net-native"></a>Introducción a .NET Native
 El conjunto de procedimientos que se debe seguir es el mismo, independientemente de si está creando una nueva aplicación de Windows para Windows 10 o si está migrando una aplicación que ya existe en la Tienda Windows. Siga estos pasos para crear una aplicación de [!INCLUDE[net_native](../../../includes/net-native-md.md)] :  
@@ -59,9 +59,9 @@ El conjunto de procedimientos que se debe seguir es el mismo, independientemente
  **Métodos basados en la reflexión**  
  En algunos casos, el uso de reflexión en el código no es obvio. Algunas API comunes o patrones de programación no se consideran parte de la API de reflexión, pero se basan en la reflexión para ejecutarse correctamente. Esto incluye los siguientes métodos de creación de instancias de tipo y de construcción de métodos:  
   
--   El método <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>  
+-   El método <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>   
   
--   Los métodos <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> y <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>  
+-   Los métodos <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> y <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>   
   
 -   El método <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> .  
   
@@ -106,17 +106,18 @@ El conjunto de procedimientos que se debe seguir es el mismo, independientemente
   
  Si desea ver algunos ejemplos específicos de control de excepciones y otros problemas que se producen al probar la aplicación, consulte:  
   
--   [Ejemplo: Control de excepciones al enlazar datos](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [Ejemplo: control de excepciones al enlazar datos](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [Ejemplo: Solución de problemas de programación dinámica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [Ejemplo: solucionar problemas de programación dinámica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
 -   [Excepciones de tiempo de ejecución en las aplicaciones nativas de .NET](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>Vea también
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Instalación y configuración .NET native](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [.NET Native and Compilation](../../../docs/framework/net-native/net-native-and-compilation.md) (.NET Native y compilación)
-- [Reflection and .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) (Reflexión y .NET Native)
-- [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md) (API basadas en Reflection)
+
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Instalación y configuración de .NET Native](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET Native y compilación](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [Reflexión y .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [API basada en la reflexión](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
 - [Serialización y metadatos](../../../docs/framework/net-native/serialization-and-metadata.md)
-- [Migrar la aplicación de la Tienda Windows a .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+- [Migrar la aplicación de la Tienda Windows a .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

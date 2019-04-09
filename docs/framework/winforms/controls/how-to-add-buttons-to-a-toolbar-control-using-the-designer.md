@@ -1,5 +1,5 @@
 ---
-title: Filtrar Agregar botones a un Control ToolBar mediante el diseñador
+title: Filtrar para agregar botones a un control de la barra de herramientas mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding buttons
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 86184fa92917c53d95da21732a7c52cdd08079ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 133190426229a10ed6f637293326c229e808bfdb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084029"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Filtrar Agregar botones a un Control ToolBar mediante el diseñador
+# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Filtrar para agregar botones a un control de la barra de herramientas mediante el diseñador
 > [!NOTE]
 >  El control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar>; sin embargo, el control <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "57702846"
   
 4.  Configurar las propiedades de los botones individuales en el **propiedades** ventana que aparece en el panel en el lado derecho del editor. La siguiente tabla muestra algunas propiedades importantes a tener en cuenta.  
   
-    |Property|Descripción|  
+    |Propiedad|Descripción|  
     |--------------|-----------------|  
     |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|Establece el menú que se mostrará en el botón de barra de herramientas desplegable. El botón de barra de herramientas <xref:System.Windows.Forms.ToolBarButton.Style%2A> propiedad debe establecerse en <xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>. Esta propiedad toma una instancia de la <xref:System.Windows.Forms.ContextMenu> clase como referencia.|  
     |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|Establece si un botón de barra de herramientas de alternar está parcialmente presionado. El botón de barra de herramientas <xref:System.Windows.Forms.ToolBarButton.Style%2A> propiedad debe establecerse en <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>.|  
@@ -48,8 +48,9 @@ ms.locfileid: "57702846"
 5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo y crear los paneles especificados.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Cómo: Definir un icono para un botón de barra de herramientas](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Cómo: Desencadenar eventos de menú para los botones de barra de herramientas](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [Información general del control ToolBar](toolbar-control-overview-windows-forms.md)
-- [ToolBar (control)](toolbar-control-windows-forms.md)
+- [Filtrar para definir un icono para un botón de la barra de herramientas](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Filtrar para desencadenar eventos de menú para los botones de la barra de herramientas](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Información general sobre el control de la barra de herramientas](toolbar-control-overview-windows-forms.md)
+- [Barra de herramientas (Control)](toolbar-control-windows-forms.md)

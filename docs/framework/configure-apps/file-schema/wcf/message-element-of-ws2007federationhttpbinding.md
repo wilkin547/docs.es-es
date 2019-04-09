@@ -2,12 +2,12 @@
 title: <message> elemento de <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: 29d9c318b6cff586095ed9668fdac79d7813e856
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: f05bd90bd2e4c7e1fd606518d9e5cb8d4e5ad974
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092999"
 ---
 # <a name="message-element-of-ws2007federationhttpbinding"></a>\<mensaje > elemento de \<ws2007FederationHttpBinding >
 Define la configuración de seguridad de nivel de mensaje para el [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elemento.  
@@ -118,7 +118,7 @@ Define la configuración de seguridad de nivel de mensaje para el [ \<ws2007Fede
 |-------------|-----------------|  
 |[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Especifica una colección de tipos de demanda para este enlace. Cada elemento es del tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
 |[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Especifica un punto de conexión que emite un token de seguridad. Este elemento es del tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
-|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Especifica la dirección del punto de conexión del emisor.|  
+|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Especifica la dirección del extremo del emisor.|  
 |[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Una colección de parámetros de solicitud de token. Cada parámetro es un elemento XML.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -128,6 +128,7 @@ Define la configuración de seguridad de nivel de mensaje para el [ \<ws2007Fede
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|Define la configuración de seguridad de un enlace.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>

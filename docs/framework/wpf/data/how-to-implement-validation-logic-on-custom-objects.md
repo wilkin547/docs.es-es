@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Implementar lógica de validación en objetos personalizados
+title: Filtrar Implementar lógica de validación en objetos personalizados
 ms.date: 08/02/2018
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implementing validation logic on custom objects [WPF]
 - custom objects [WPF], implementing validation logic on
 ms.assetid: 751fda9b-44f9-4d63-b4f2-1df07ac41e0f
-ms.openlocfilehash: e183d286e4b9cd037c352126203b1ecdcca89ebb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8520504757e9e9ec9557b84ca2608b4cb99daf62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085927"
 ---
 # <a name="how-to-implement-validation-logic-on-custom-objects"></a>Filtrar Implementar lógica de validación en objetos personalizados
 En este ejemplo se muestra cómo implementar la lógica de validación en un objeto personalizado y, a continuación, enlazar a él.  
@@ -33,6 +33,7 @@ En este ejemplo se muestra cómo implementar la lógica de validación en un obj
  Como alternativa, en lugar de usar el <xref:System.Windows.Controls.DataErrorValidationRule>, puede establecer el <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> propiedad `true`.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.ExceptionValidationRule>
 - [Implementar la validación de enlaces](how-to-implement-binding-validation.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

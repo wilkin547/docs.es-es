@@ -2,12 +2,12 @@
 title: EXISTS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
-ms.openlocfilehash: e6668fa2f978ddb785c4dac950c32d3caa2979af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76be542c64f75f27d126d7dbb6bde2baea8f6016
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552546"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078244"
 ---
 # <a name="exists-entity-sql"></a>EXISTS (Entity SQL)
 Determina si una colección está vacía.  
@@ -26,7 +26,7 @@ Determina si una colección está vacía.
  Especifica que el resultado de EXISTS se niega.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` si la colección no está vacía; en caso contrario, `false`.  
+ `true` Si la colección no está vacía; en caso contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
  EXISTS es uno de los operadores de conjuntos de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Todos los operadores de conjuntos de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se evalúan de izquierda a derecha. Para obtener información de prioridad para la [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operadores de conjuntos, vea [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  
@@ -41,4 +41,5 @@ Determina si una colección está vacía.
  [!code-csharp[DP EntityServices Concepts 2#EXISTS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#exists)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

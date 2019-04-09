@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Save File dialog box [Windows Forms], displaying
 - SaveFileDialog component [Windows Forms], about SaveFileDialog
 ms.assetid: be7a625f-46fd-4d06-9985-b613dcbf9bd2
-ms.openlocfilehash: 93bf0f63e18ee3a384aa062c80faa991b68a6abe
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b06c4d510cefdc7558944995594fd209b6121cb1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721507"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103051"
 ---
 # <a name="savefiledialog-component-overview-windows-forms"></a>Información general sobre el componente SaveFileDialog (formularios Windows Forms)
 El componente <xref:System.Windows.Forms.SaveFileDialog> de Windows Forms es un cuadro de diálogo preconfigurado. Es el mismo que el estándar **Guardar archivo** cuadro de diálogo usado por Windows. Se hereda de la clase <xref:System.Windows.Forms.CommonDialog>.  
@@ -25,5 +25,6 @@ El componente <xref:System.Windows.Forms.SaveFileDialog> de Windows Forms es un 
  Cuando se agrega a un formulario, el <xref:System.Windows.Forms.SaveFileDialog> componente aparece en la bandeja en la parte inferior del Diseñador de Windows Forms.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.SaveFileDialog>
-- [SaveFileDialog (componente)](savefiledialog-component-windows-forms.md)
+- [Componente SaveFileDialog](savefiledialog-component-windows-forms.md)

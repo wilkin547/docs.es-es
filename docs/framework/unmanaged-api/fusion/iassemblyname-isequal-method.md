@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cae8f326a293a40164120dc17c13e451c4e93f1f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 80402234d9374fa4f16e1f8bb315536a9bdfb2c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489441"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081520"
 ---
 # <a name="iassemblynameisequal-method"></a>IAssemblyName::IsEqual (Método)
 Determina si un [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) es igual a este objeto `IAssemblyName`, en función de las marcas de comparación especificado.  
@@ -51,5 +51,6 @@ HRESULT IsEqual (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [IAssemblyName (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+
+- [IAssemblyName (Interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
 - [Enumeraciones de fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

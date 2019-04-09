@@ -2,12 +2,12 @@
 title: <resolver>
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: f3d4b049afe55fb9fb80cbad56c49e8ec13e60db
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 39dcb868bd3ff25451509616e1dac7d41f94cfa1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758747"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075884"
 ---
 # <a name="resolver"></a>\<resolver>
 Especifica una resolución del mismo nivel que se utiliza para resolver un id. de malla del mismo nivel como un conjunto de direcciones del nodo del mismo nivel que representa varios nodos que participan en la malla.  
@@ -52,10 +52,11 @@ Especifica una resolución del mismo nivel que se utiliza para resolver un id. d
  Una resolución de nombres del mismo nivel es un servicio de descubrimiento utilizado por los canales del mismo nivel para buscar nodos del mismo nivel que participen en una malla del mismo nivel. También se utiliza para "registrar" un nodo con una malla del mismo nivel, el mecanismo por el que se conoce el nodo del mismo nivel y está disponible en la malla del mismo nivel. Para obtener más información sobre resoluciones del mismo nivel, consulte [resoluciones del mismo nivel](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.PeerResolver>
 - <xref:System.ServiceModel.PeerResolvers.PeerResolverSettings>
 - <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>
 - <xref:System.ServiceModel.Configuration.PeerResolverElement>
 - [Resoluciones del mismo nivel](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
-- [Adición de un solucionador personalizado a una aplicación PeerChannel](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))
+- [Adición de una resolución personalizada a una aplicación PeerChannel](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))

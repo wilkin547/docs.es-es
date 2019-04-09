@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-ms.openlocfilehash: 1274724e1cd93f5788840978b583e4bf05c06bb2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088826"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Asignación de propiedades en formularios Windows Forms y WPF
 El [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tecnologías, hay dos modelos de propiedades similares pero diferentes. *Asignación de propiedad* admite la interoperabilidad entre las dos arquitecturas y proporciona las siguientes capacidades:  
@@ -135,9 +135,10 @@ El [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]
 |<xref:System.Windows.Forms.Control.Visible%2A>|<xref:System.Windows.UIElement.Visibility%2A>|El <xref:System.Windows.Forms.Integration.ElementHost> conjuntos de controles el <xref:System.Windows.UIElement.Visibility%2A> propiedad en el elemento hospedado mediante el uso de las siguientes reglas:<br /><br /> -   <xref:System.Windows.Forms.Control.Visible%2A> = `true` se asigna a <xref:System.Windows.Visibility.Visible>.<br />-   <xref:System.Windows.Forms.Control.Visible%2A> = `false` se asigna a <xref:System.Windows.Visibility.Hidden>.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Interoperabilidad de WPF y Win32](wpf-and-win32-interoperation.md)
 - [Interoperabilidad entre Windows Forms y WPF](wpf-and-windows-forms-interoperation.md)
 - [Tutorial: Asignar propiedades mediante el uso del elemento WindowsFormsHost](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [Tutorial: Asignar propiedades mediante el uso del Control ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [Tutorial: Asignar propiedades mediante el uso del control ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md)

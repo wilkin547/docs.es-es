@@ -2,12 +2,12 @@
 title: Características de SQL Server y ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 9e6f9d0404108428375aa859fa3f0b0939da6a24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b07f5e1e62744e4301acd64034481cf391100af8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705380"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107528"
 ---
 # <a name="sql-server-features-and-adonet"></a>Características de SQL Server y ADO.NET
 En los temas de esta sección se describen las características de SQL Server orientadas al desarrollo de aplicaciones de base de datos con ADO.NET.  
@@ -16,10 +16,10 @@ En los temas de esta sección se describen las características de SQL Server or
   
  **Libros en pantalla de SQL Server**  
   
-1.  [Desarrollo (motor de base de datos)](https://go.microsoft.com/fwlink/?LinkId=115245)  
+1.  [Desarrollo (Motor de base de datos)](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Enumeración de instancias de SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
+ [Enumerar instancias de SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
  Describe cómo enumerar instancias activas de SQL Server.  
   
  [Estadísticas de proveedor de SQL Server](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
@@ -47,8 +47,9 @@ En los temas de esta sección se describen las características de SQL Server or
  Describe la compatibilidad de SqlClient con bases de datos LocalDB.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Operaciones de datos de SQL Server en ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
 - [Recuperar y modificar datos en ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
 - [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

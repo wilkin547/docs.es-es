@@ -1,5 +1,5 @@
 ---
-title: ICorDebugStepper2 (Interfaz)
+title: Interfaz ICorDebugStepper2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStepper2
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69adabbe5bb607e00d383c8bd80d9e150608890e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 256f67d21a22ee4692d88311cc150736e61563a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970420"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073072"
 ---
-# <a name="icordebugstepper2-interface"></a>ICorDebugStepper2 (Interfaz)
+# <a name="icordebugstepper2-interface"></a>Interfaz ICorDebugStepper2
 Proporciona compatibilidad con sólo mi código (JMC) de depuración.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[SetJMC (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|Establece un valor que especifica si los pasos de este ICorDebugStepper únicamente a través del código creado por el desarrollador de una aplicación.|  
+|[Método SetJMC](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|Establece un valor que especifica si los pasos de este ICorDebugStepper únicamente a través del código creado por el desarrollador de una aplicación.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -47,4 +47,5 @@ Proporciona compatibilidad con sólo mi código (JMC) de depuración.
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Agregar botones a un Control de barra de herramientas
+title: Filtrar para agregar botones a un control de la barra de herramientas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 347ca067a5ae5544351f29afe3ebcfe11d0b1e0f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a8666124c09d27d9d2ef936d36e7739d473a996
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085992"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Procedimiento Agregar botones a un Control de barra de herramientas
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Filtrar para agregar botones a un control de la barra de herramientas
 > [!NOTE]
 >  El control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar>; sin embargo, el control <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.  
   
@@ -149,8 +149,9 @@ ms.locfileid: "57713267"
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Cómo: Definir un icono para un botón de barra de herramientas](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Cómo: Desencadenar eventos de menú para los botones de barra de herramientas](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [Información general del control ToolBar](toolbar-control-overview-windows-forms.md)
-- [ToolBar (control)](toolbar-control-windows-forms.md)
+- [Filtrar para definir un icono para un botón de la barra de herramientas](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Filtrar para desencadenar eventos de menú para los botones de la barra de herramientas](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Información general sobre el control de la barra de herramientas](toolbar-control-overview-windows-forms.md)
+- [Barra de herramientas (Control)](toolbar-control-windows-forms.md)

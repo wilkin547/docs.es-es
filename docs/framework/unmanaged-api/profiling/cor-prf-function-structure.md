@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 098aaca8ec318b08c87e30c2a9558b7e64494a4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14d42a4032c3e2b1c231414678912e1658e759d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101730"
 ---
 # <a name="corprffunction-structure"></a>COR_PRF_FUNCTION (Estructura)
 Proporciona una representación única de una función combinando su identificador con el identificador de la versión que se ha vuelto a compilar.  
@@ -51,4 +51,5 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Estructuras para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

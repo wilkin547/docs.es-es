@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6feee7c5137501dbaf1c8cf8d097dfbf06071906
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1b04c0453d9ff8545f79f235e7d73095c55203e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499113"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083288"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach (Método)
 Indica al CLR que desasocie el generador de perfiles.  
@@ -48,7 +48,7 @@ HRESULT RequestProfilerDetach(
 |CORPROF_E_IMMUTABLE_FLAGS_SET|No se puede realizar la desasociación porque el generador de perfiles establece marcas inmutables en el inicio. No se intentó la desasociación; el generador de perfiles sigue totalmente asociado.|  
 |CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Desasociación es imposible porque utiliza el generador de perfiles instrumenta código de lenguaje intermedio (MSIL) de Microsoft o insertadas `enter` / `leave` enlaces. No se intentó la desasociación; el generador de perfiles sigue totalmente asociado.<br /><br /> **Tenga en cuenta** MSIL instrumentado es código que se proporciona el generador de perfiles mediante el [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) método.|  
 |CORPROF_E_RUNTIME_UNINITIALIZED|El tiempo de ejecución no se ha inicializado aún en la aplicación administrada. (Es decir, el tiempo de ejecución no se ha cargado completamente). Este código de error se puede devolver cuando se solicita la desasociación dentro de la devolución de llamada del generador de perfiles [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) método.|  
-|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|Se llamó a `RequestProfilerDetach` en un momento no permitido. Esto se produce si se llama al método en un subproceso administrado pero no desde un [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) método o desde un [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) método que no puede tolerar una recolección de elementos. Para obtener más información, consulte [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
+|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` se llamó a una hora no admitida. Esto se produce si se llama al método en un subproceso administrado pero no desde un [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) método o desde un [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) método que no puede tolerar una recolección de elementos. Para obtener más información, consulte [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
   
 ## <a name="remarks"></a>Comentarios  
  Durante el procedimiento de desasociación, el subproceso de desasociación (el subproceso creado específicamente para desasociar el generador de perfiles) comprueba ocasionalmente si todos los subprocesos han salido del código del generador de perfiles. El generador de perfiles debe proporcionar una estimación de cuánto tiempo deben tardar usando para ello el parámetro `dwExpectedCompletionMilliseconds`. Un valor adecuado es la cantidad de tiempo típica que el generador de perfiles invierte dentro de un método `ICorProfilerCallback*` cualquiera; este valor no debe ser menor que la mitad de la cantidad máxima de tiempo que el generador de perfiles espera invertir.  
@@ -67,6 +67,7 @@ HRESULT RequestProfilerDetach(
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICorProfilerInfo3 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+
+- [ICorProfilerInfo3 (Interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
 - [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/index.md)

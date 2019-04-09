@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 2b49031b0001ddba01a888806206360c1cbdbacb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41157d12f1133878e133895ed0f803bc7018af51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699472"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087812"
 ---
 # <a name="programming-wcf-security"></a>Programación de la seguridad de WCF
 En este tema se describe las tareas de programación fundamentales usadas para crear una aplicación segura de Windows Communication Foundation (WCF). En este tema cubre solo la autenticación, confidencialidad e integridad, conocido colectivamente como *transferir seguridad*. En este tema no cubre la autorización (el control de acceso a recursos o servicios); Para obtener información sobre la autorización, consulte [autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -102,5 +102,6 @@ En este tema se describe las tareas de programación fundamentales usadas para c
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Escenarios de seguridad comunes](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

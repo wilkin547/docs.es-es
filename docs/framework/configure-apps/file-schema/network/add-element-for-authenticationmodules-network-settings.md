@@ -1,5 +1,5 @@
 ---
-title: <add> (Elemento para authenticationModules, Configuración de red)
+title: <add> Elemento para authenticationModules (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: 12dc8be762e1158ddaabbd67e7165d7bdaca6461
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a46e6af97f37974805812fb0d19801d618eee4d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105877"
 ---
 # <a name="add-element-for-authenticationmodules-network-settings"></a>\<Agregar > elemento para authenticationModules (configuración de red)
 Agrega un módulo de autenticación a la aplicación.  
@@ -38,7 +38,7 @@ Agrega un módulo de autenticación a la aplicación.
   
 ### <a name="attributes"></a>Atributos  
   
-|**Attribute**|**Descripción**|  
+|**Atributo**|**Descripción**|  
 |-------------------|---------------------|  
 |`type`|El nombre de tipo completo (indicado por el <xref:System.Type.FullName%2A> propiedad) y el nombre del ensamblado (indicado por el <xref:System.Reflection.Assembly.FullName%2A> propiedad), separados por punto y coma.|  
   
@@ -47,7 +47,7 @@ Agrega un módulo de autenticación a la aplicación.
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Element**|**Descripción**|  
+|**Elemento**|**Descripción**|  
 |-----------------|---------------------|  
 |[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Especifica los módulos que se usa para autenticar las solicitudes de red.|  
   
@@ -82,6 +82,7 @@ Agrega un módulo de autenticación a la aplicación.
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
 - [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

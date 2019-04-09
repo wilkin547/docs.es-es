@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: b8cd2c58efb08523050e19c31201be48ae98ba03
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 540c0fe5c4d06ea341b9cc8be9755cc67fe9bbc2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466236"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085186"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Cliente y servicio de intranet no protegidos
 La siguiente ilustración muestra un servicio de Windows Communication Foundation (WCF) sencillo desarrollado para proporcionar información sobre una red privada segura a una aplicación de WCF. No se requiere seguridad porque los datos son de poca importancia, espera que la red es intrínsecamente segura o una capa debajo de la infraestructura de WCF proporciona seguridad.  
@@ -113,6 +113,7 @@ La siguiente ilustración muestra un servicio de Windows Communication Foundatio
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.NetTcpBinding>
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad para Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

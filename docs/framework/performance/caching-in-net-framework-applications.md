@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 39fd5e7bb6e12178df0f75c6dadb575dac82c228
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a57489af2f2af59f128f5d86be844b43c9c49840
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674853"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085785"
 ---
 # <a name="caching-in-net-framework-applications"></a>Almacenamiento en caché en aplicaciones .NET Framework
 El almacenamiento en caché permite almacenar datos en memoria para un acceso rápido. Cuando se vuelve a acceder a los datos, las aplicaciones pueden obtenerlos de la memoria caché en lugar de recuperarlos de la fuente original. Esto puede mejorar el rendimiento y la escalabilidad. Además, el almacenamiento en caché permite que los datos estén disponibles cuando el origen de datos no está disponible temporalmente.  
@@ -76,7 +76,8 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
  Para más información, vea la entrada [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series) (Almacenamiento en caché de resultados extensible con ASP.NET 4 (VS 2010 y serie .NET 4.0))](https://go.microsoft.com/fwlink/?LinkId=185772) del blog de Scott Guthrie.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [Tutorial: Almacenamiento en caché datos de la aplicación en una aplicación WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
 - [Tutorial: Almacenamiento en caché datos de la aplicación en ASP.NET](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

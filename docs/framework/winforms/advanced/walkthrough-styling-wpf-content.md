@@ -1,19 +1,19 @@
 ---
-title: 'Tutorial: Aplicar estilos al contenido WPF'
+title: 'Tutorial: Aplicar estilos a contenido de WPF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9cf5d1c2e08f18c08273d6c7b34446a3827743b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079363"
 ---
-# <a name="walkthrough-styling-wpf-content"></a>Tutorial: Aplicar estilos al contenido WPF
+# <a name="walkthrough-styling-wpf-content"></a>Tutorial: Aplicar estilos a contenido de WPF
 En este tutorial se muestra cómo aplicar un estilo a un control de Windows Presentation Foundation (WPF) hospedado en un Windows Form.
 
  En este tutorial, realizará las tareas siguientes:
@@ -150,6 +150,7 @@ En este tutorial se muestra cómo aplicar un estilo a un control de Windows Pres
 5.  Haga clic en los botones Aceptar y Cancelar y vea las diferencias.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Migración e interoperabilidad](../../wpf/advanced/migration-and-interoperability.md)

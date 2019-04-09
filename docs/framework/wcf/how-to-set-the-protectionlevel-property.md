@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Establezca la propiedad ProtectionLevel
+title: Filtrar para establecer la propiedad ProtectionLevel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 13e07d06ed795bc50822d95cdd1ab44c6c336d2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce9fc8549218db5a1446026421f1a7ba1e5a23aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586861"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089853"
 ---
-# <a name="how-to-set-the-protectionlevel-property"></a>Procedimiento Establezca la propiedad ProtectionLevel
+# <a name="how-to-set-the-protectionlevel-property"></a>Filtrar para establecer la propiedad ProtectionLevel
 Puede establecer el nivel de protección aplicando un atributo adecuado y estableciendo la propiedad. Puede establecer la protección en el nivel del servicio para que afecte a todas las partes de cada mensaje o puede establecer la protección en los niveles cada vez más individuales, desde los métodos a las partes del mensaje. Para obtener más información sobre la `ProtectionLevel` propiedad, vea [Understanding Protection Level](../../../docs/framework/wcf/understanding-protection-level.md).  
   
 > [!NOTE]
@@ -89,6 +89,7 @@ Puede establecer el nivel de protección aplicando un atributo adecuado y establ
  [!code-vb[C_ProtectionLevel#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#0)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>

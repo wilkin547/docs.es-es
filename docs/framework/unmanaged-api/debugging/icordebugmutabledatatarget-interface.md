@@ -1,26 +1,26 @@
 ---
-title: ICorDebugMutableDataTarget (Interfaz)
+title: Interfaz ICorDebugMutableDataTarget
 ms.date: 03/30/2017
 ms.assetid: 14aad5b3-84ab-4bbc-94e3-1eb92e258d10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f63343b43481d1d91d1db30cd2ace3214c5590a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8b33b07e7c9f83f5874dea1455cd70dcc3206de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492304"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105942"
 ---
-# <a name="icordebugmutabledatatarget-interface"></a>ICorDebugMutableDataTarget (Interfaz)
+# <a name="icordebugmutabledatatarget-interface"></a>Interfaz ICorDebugMutableDataTarget
 Extiende la [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) interfaz para admitir destinos de datos mutables.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[ContinueStatusChanged (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-continuestatuschanged-method.md)|Cambia el estado de continuación para el evento de depuración pendiente en el subproceso especificado.|  
-|[SetThreadContext (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-setthreadcontext-method.md)|Establece el contexto (valores de registro) para un subproceso.|  
-|[WriteVirtual (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-writevirtual-method.md)|Escribe la memoria en el espacio de direcciones de procesos de destino.|  
+|[Método ContinueStatusChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-continuestatuschanged-method.md)|Cambia el estado de continuación para el evento de depuración pendiente en el subproceso especificado.|  
+|[Método SetThreadContext](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-setthreadcontext-method.md)|Establece el contexto (valores de registro) para un subproceso.|  
+|[Método WriteVirtual](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-writevirtual-method.md)|Escribe la memoria en el espacio de direcciones de procesos de destino.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esta extensión a la [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) interfaz puede implementarse mediante herramientas de depuración que desea modificar el proceso de destino (por ejemplo, para realizar una depuración invasiva en directo).  
@@ -39,5 +39,6 @@ Extiende la [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debug
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

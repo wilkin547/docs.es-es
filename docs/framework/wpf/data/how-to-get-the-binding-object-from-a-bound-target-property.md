@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], getting binding objects from bound target properties
 - properties [WPF], getting binding objects from
 ms.assetid: 87974c5f-136b-4de7-b07d-9285b62ab123
-ms.openlocfilehash: af18cf3fc155148816690bdd16baa3a2a5515eee
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7c7392bc11af57b2e9f27e2302f36efb59d40e9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368524"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083119"
 ---
 # <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>Filtrar Obtener el objeto de enlace a partir de una propiedad de destino enlazada
 En este ejemplo se muestra cómo obtener el objeto de enlace desde una propiedad de destino enlazada a datos.  
@@ -31,5 +31,6 @@ En este ejemplo se muestra cómo obtener el objeto de enlace desde una propiedad
 >  Si el enlace es un <xref:System.Windows.Data.MultiBinding>, utilice <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>. Si es un <xref:System.Windows.Data.PriorityBinding>, utilice <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>. Si no está seguro de si la propiedad de destino está enlazada con un <xref:System.Windows.Data.Binding>, un <xref:System.Windows.Data.MultiBinding>, o un <xref:System.Windows.Data.PriorityBinding>, puede usar <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A>.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Crear un enlace mediante código](how-to-create-a-binding-in-code.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 078102da95222d45bec82269edf1eb8e40866408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105422"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementar una transacción explícita mediante una transacción confirmable
 La clase <xref:System.Transactions.CommittableTransaction> proporciona a las aplicaciones una manera explícita de utilizar una transacción, a diferencia de utilizar implícitamente la clase <xref:System.Transactions.TransactionScope>. Es útil para las aplicaciones que desean utilizar la misma transacción por varias llamadas de función o llamadas de subproceso múltiples. A diferencia de la clase <xref:System.Transactions.TransactionScope>, el sistema de escritura de la aplicación ha de llamar específicamente a los métodos <xref:System.Transactions.CommittableTransaction.Commit%2A> y <xref:System.Transactions.Transaction.Rollback%2A> para confirmar o anular la transacción.  
@@ -86,5 +86,6 @@ void OnCommitted(IAsyncResult asyncResult)
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Implementación de una transacción implícita mediante el ámbito de transacción](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
+
+- [Implementar una transacción implícita mediante el ámbito de la transacción](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
 - [Procesar transacciones](../../../../docs/framework/data/transactions/index.md)

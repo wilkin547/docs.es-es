@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Convertir datos enlazados
+title: Filtrar Convertir datos enlazados
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], converting bound data
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
-ms.openlocfilehash: c98f8e4e5c837e6fbbe836a9eb2f228d2d689542
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 40699bec1c6cd775f7f8495b7a49eda15fb2ed83
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093805"
 ---
 # <a name="how-to-convert-bound-data"></a>Filtrar Convertir datos enlazados
 En este ejemplo se muestra cómo aplicar la conversión a datos que se utilizan en enlaces.  
@@ -38,6 +38,7 @@ En este ejemplo se muestra cómo aplicar la conversión a datos que se utilizan 
  Los recursos de estilo que se hace referencia en el ejemplo anterior se definen en una sección de recursos que no se muestra en este tema.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Implementar la validación de enlaces](how-to-implement-binding-validation.md)
 - [Información general sobre el enlace de datos](data-binding-overview.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

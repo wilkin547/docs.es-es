@@ -2,12 +2,12 @@
 title: Generación de un cliente WCF a partir de los metadatos de servicio
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 3bdb283e461076ffd5c1e77963933de0e5b4bb02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cfbfc1e4be0003b3699f818212fbcd959f3ad91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570962"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078257"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generación de un cliente WCF a partir de los metadatos de servicio
 En este tema se describe cómo utilizar los diversos modificadores de Svcutil.exe para generar los clientes a partir de documentos de metadatos.  
@@ -41,13 +41,13 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |**/serializer:DataContractSerializer**|Genera tipos de datos que utilizan el serializador `DataContract` para la serialización y deserialización.<br /><br /> Forma abreviada: `/ser:DataContractSerializer`|  
 |**/serializer:XmlSerializer**|Genera tipos de datos que usan el `XmlSerializer` para la serialización y deserialización.<br /><br /> Forma abreviada: `/ser:XmlSerializer`|  
 |**/importXmlTypes**|Configura el serializador `DataContract` para que importe tipos que no sean de `DataContract` como tipos `IXmlSerializable`.<br /><br /> Forma abreviada: `/ixt`|  
-|**/dataContractOnly**|Genera código para los tipos de `DataContract` únicamente. Se generan los tipos de `ServiceContract`.<br /><br /> Solo debería especificar archivos de metadatos locales para esta opción.<br /><br /> Forma abreviada: `/dconly`|  
+|**/dataContractOnly**|Genera código para los tipos de `DataContract` únicamente. `ServiceContract` se generan tipos.<br /><br /> Solo debería especificar archivos de metadatos locales para esta opción.<br /><br /> Forma abreviada: `/dconly`|  
   
 ## <a name="choosing-a-language-for-the-client"></a>Elección de un lenguaje para el cliente  
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**/ Language:\<lenguaje >**|Especifica el lenguaje de programación a utilizar para la generación de código. Proporcione un nombre de lenguaje registrado en el archivo Machine.config o el nombre completo de una clase que hereda de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valores: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Valor predeterminado: csharp<br /><br /> Forma abreviada: `/l`<br /><br /> Para obtener más información, consulte [clase CodeDomProvider](https://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/ Language:\<lenguaje >**|Especifica el lenguaje de programación a utilizar para la generación de código. Proporcione un nombre de lenguaje registrado en el archivo Machine.config o el nombre completo de una clase que hereda de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valores: C#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Valor predeterminado: csharp<br /><br /> Forma abreviada: `/l`<br /><br /> Para obtener más información, consulte [clase CodeDomProvider](https://go.microsoft.com/fwlink/?LinkId=94778).|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Elección de un espacio de nombres para el cliente  
   
@@ -70,5 +70,6 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |**/noConfig**|No generar archivos de configuración.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Utilización de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)
 - [Información general de la arquitectura de metadatos](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)

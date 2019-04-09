@@ -1,5 +1,5 @@
 ---
-title: <listeners> (Elemento para <source>)
+title: <listeners> (elemento) para <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 34085d06ec3f3b91e5efdba6220d79032baaea52
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b15a30fb6d356f92312bf33bc1964c7922ba1383
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266785"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089658"
 ---
 # <a name="listeners-element-for-source"></a>\<los agentes de escucha > (elemento) para \<origen >
 Agrega o quita los agentes de escucha en el <xref:System.Diagnostics.TraceSource.Listeners%2A> colección para un <xref:System.Diagnostics.TraceSource>. Un agente de escucha dirige los resultados del seguimiento a un destino apropiado, como un registro, la ventana o el archivo de texto.  
@@ -88,6 +88,7 @@ Agrega o quita los agentes de escucha en el <xref:System.Diagnostics.TraceSource
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Diagnostics.TraceListener>
 - [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
 - [Agentes de escucha de seguimiento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

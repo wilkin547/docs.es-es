@@ -1,5 +1,5 @@
 ---
-title: Filtrar Establecer modos de ajuste de tamaño del Control DataGridView de formularios Windows Forms
+title: Filtrar para establecer modos de cambio de tamaño para el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], setting sizing modes
 - DataGridView control [Windows Forms], sizing modes
 ms.assetid: e9ad15e6-b4bb-44aa-a767-3738e9db1651
-ms.openlocfilehash: 85322afcaae96b07d085d2b44d923542ecbf9bf6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d92322da6644c110f5e3177acebea62799a0ed89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085459"
 ---
-# <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>Filtrar Establecer modos de ajuste de tamaño del Control DataGridView de formularios Windows Forms
+# <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>Filtrar para establecer modos de cambio de tamaño para el control DataGridView de formularios Windows Forms
 Los procedimientos siguientes muestran algunos escenarios comunes que personalizan o combinan las opciones de ajuste de tamaño disponibles para el control <xref:System.Windows.Forms.DataGridView> control y para las columnas específicas de un control.  
   
 ### <a name="to-create-a-fixed-width-column"></a>Para crear una columna de ancho fijo  
@@ -59,6 +59,7 @@ Los procedimientos siguientes muestran algunos escenarios comunes que personaliz
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>

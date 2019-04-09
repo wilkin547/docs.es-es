@@ -1,5 +1,5 @@
 ---
-title: Filtrar Establecer estilos de fila alternos para el Control DataGridView de Windows Forms
+title: Filtrar para establecer estilos de fila alternos para el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], row styles
 - rows [Windows Forms], data grids
 ms.assetid: 699ef759-458c-426d-ac87-7c7e71b018ae
-ms.openlocfilehash: 56fe5de9c69d14368508a7f6ccdd6c3becd8ff5b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06b93a756b351213a87e1f52bc691aaa27558ac4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710256"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078595"
 ---
-# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>Filtrar Establecer estilos de fila alternos para el Control DataGridView de Windows Forms
+# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>Filtrar para establecer estilos de fila alternos para el control DataGridView de formularios Windows Forms
 Los datos tabulares suelen presentarse a los usuarios en un formato de doble carta en el que las filas alternas tienen distintos colores de fondo. Este formato permite a los usuarios saber fácilmente qué celdas están en cada fila, especialmente con tablas anchas que tienen muchas columnas.  
   
  Con el control <xref:System.Windows.Forms.DataGridView>, puede especificar la información de estilo completa para las filas alternas. Esto permite usar características de estilo tales como el color de primer plano y la fuente, además del color de fondo, para diferenciar las filas alternas.  
@@ -36,7 +36,7 @@ Los datos tabulares suelen presentarse a los usuarios en un formato de doble car
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Un control <xref:System.Windows.Forms.DataGridView> llamado `dataGridView1`.  
+-   Control <xref:System.Windows.Forms.DataGridView> denominado `dataGridView1`.  
   
 -   Referencias a los ensamblados <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
@@ -44,11 +44,12 @@ Los datos tabulares suelen presentarse a los usuarios en un formato de doble car
  Para conseguir la máxima escalabilidad, debe compartir objetos <xref:System.Windows.Forms.DataGridViewCellStyle> entre varias filas, columnas o celdas que usen los mismos estilos, en lugar de establecer las propiedades de estilo de cada elemento por separado. Para obtener más información, consulte [mejores prácticas para escalar el DataGridView Control de Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - [Estilo y formato básicos del control DataGridView en formularios Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [Estilos de celda en el control DataGridView de Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Estilos de celda en el control DataGridView de formularios Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Procedimientos recomendados para ajustar la escala del control DataGridView en formularios Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Cómo: Establecer estilos de colores y fuentes en el Control DataGridView de Windows Forms](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)
+- [Filtrar para establecer estilos de colores y fuentes en el control DataGridView de formularios Windows Forms](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)

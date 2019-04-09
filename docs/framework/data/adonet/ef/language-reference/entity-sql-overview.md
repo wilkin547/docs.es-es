@@ -2,15 +2,15 @@
 title: Información general sobre Entity SQL
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
-ms.openlocfilehash: 54a3832cffbf3376e6b3ab0826b280b676ccc1a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 100d616462cd76e1dde8fc855787ec3118842fc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534649"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073475"
 ---
 # <a name="entity-sql-overview"></a>Información general sobre Entity SQL
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] es un lenguaje parecido a SQL que permite consultar los modelos conceptuales en [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Los modelos conceptuales representan los datos como entidades y relaciones, y [!INCLUDE[esql](../../../../../../includes/esql-md.md)] le permite consultar estas entidades y relaciones en un formato que resultará familiar a quienes ya hayan usado SQL.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] es un lenguaje similar a SQL que le permite consultar los modelos conceptuales en los [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Los modelos conceptuales representan los datos como entidades y relaciones, y [!INCLUDE[esql](../../../../../../includes/esql-md.md)] le permite consultar estas entidades y relaciones en un formato que resultará familiar a quienes ya hayan usado SQL.  
   
  [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] trabaja con proveedores de datos específicos del almacenamiento para traducir el [!INCLUDE[esql](../../../../../../includes/esql-md.md)] genérico en consultas específicas del almacenamiento. El proveedor EntityClient proporciona una forma de ejecutar un comando de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] en un modelo de entidades y devolver tipos enriquecidos de datos incluidos resultados escalares, conjuntos de resultados y gráficos de objetos. Cuando crea objetos <xref:System.Data.EntityClient.EntityCommand>, puede especificar un nombre de procedimiento guardado o el texto de una consulta asignando una cadena de consulta [!INCLUDE[esql](../../../../../../includes/esql-md.md)] a su propiedad <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType>. <xref:System.Data.EntityClient.EntityDataReader> muestra los resultados de ejecutar <xref:System.Data.EntityClient.EntityCommand> en un EDM. Para ejecutar el comando que devuelve el <xref:System.Data.EntityClient.EntityDataReader>, llame a <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "54534649"
   
  [Sistema de tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)  
   
- [Definiciones de tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)  
+ [Definiciones de tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)  
   
  [Tipos de constructores](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)  
   
@@ -57,11 +57,12 @@ ms.locfileid: "54534649"
   
  [Semántica de comparación](../../../../../../docs/framework/data/adonet/ef/language-reference/comparison-semantics-entity-sql.md)  
   
- [Creación de consultas anidadas de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/composing-nested-entity-sql-queries.md)  
+ [Crear consultas anidadas de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/composing-nested-entity-sql-queries.md)  
   
  [Tipos estructurados que aceptan valores NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Lenguaje Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
 - [Especificaciones CSDL, SSDL MSL](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

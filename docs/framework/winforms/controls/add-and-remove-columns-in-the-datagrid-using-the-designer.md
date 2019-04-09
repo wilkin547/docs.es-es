@@ -1,5 +1,5 @@
 ---
-title: Filtrar Agregar y quitar columnas en el Control de DataGridView de Windows Forms mediante el diseñador
+title: Filtrar para agregar y quitar columnas en el control DataGridView de formularios Windows Forms mediante el diseñador
 ms.date: 03/30/2017
 f1_keywords:
 - vs.DataGridViewAddColumnDialog
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding columns
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-ms.openlocfilehash: 444faafcdf284d000be5daf8e97081bbfb5bb38a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 82bab7a42c7a8de131cc53d792cf2d372580af40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078114"
 ---
-# <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Procedimiento Agregar y quitar columnas en el Control de DataGridView de Windows Forms mediante el diseñador
+# <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Filtrar para agregar y quitar columnas en el control DataGridView de formularios Windows Forms mediante el diseñador
 Los formularios de Windows <xref:System.Windows.Forms.DataGridView> control debe contener columnas con el fin de mostrar los datos. Si va a rellenar el control manualmente, debe agregar las columnas. Como alternativa, puede enlazar el control a un origen de datos, que genera y rellena las columnas automáticamente. Si el origen de datos contiene más columnas que desea mostrar, puede quitar las columnas innecesarias.  
   
  Los procedimientos siguientes requieren un **aplicación Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.DataGridView> control. Para obtener información acerca de cómo configurar un proyecto de este tipo, vea [Cómo: Cree un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) y [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md).  
@@ -42,6 +42,7 @@ Los formularios de Windows <xref:System.Windows.Forms.DataGridView> control debe
 3.  Haga clic en el **quitar** botón para eliminar la columna, lo que hace que desaparece del diseñador.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
-- [Cómo: Crear un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Filtrar Cree un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Filtrar para agregar controles a formularios Windows Forms](how-to-add-controls-to-windows-forms.md)

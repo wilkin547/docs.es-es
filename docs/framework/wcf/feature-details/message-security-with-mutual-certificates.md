@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 51795007b906a6eb71e5e03b4afef2fc83328b28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fc8d6d4a63b7a752fb8c26991d904761fdcebdd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593347"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076027"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Seguridad de mensajes con certificados mutuos
 El escenario siguiente muestra un servicio de Windows Communication Foundation (WCF) y el cliente protegido utilizando el modo de seguridad de mensajes. El cliente y el servicio se autentican con certificados.  
@@ -32,15 +32,15 @@ El escenario siguiente muestra un servicio de Windows Communication Foundation (
 |Transporte|HTTP|  
 |Enlaces|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Servicio  
+## <a name="service"></a>web de Office  
  El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 -   Cree un servicio independiente mediante el código sin configuración.  
   
--   Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.  
+-   Cree un servicio mediante la configuración proporcionada, pero sin definir ningún punto de conexión.  
   
 ### <a name="code"></a>Código  
- El código siguiente muestra cómo crear un extremo de servicio que utilice la seguridad del mensaje. El servicio exige a un certificado que se autentique.  
+ El código siguiente muestra cómo crear un punto de conexión de servicio que utilice la seguridad del mensaje. El servicio exige a un certificado que se autentique.  
   
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
@@ -95,7 +95,7 @@ El escenario siguiente muestra un servicio de Windows Communication Foundation (
   
 -   Cree un cliente independiente mediante el código (y el código de cliente).  
   
--   Cree un cliente que no defina direcciones de extremo. En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento. Por ejemplo:  
+-   Cree un cliente que no defina direcciones de punto de conexión. En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento. Por ejemplo:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -159,6 +159,7 @@ El escenario siguiente muestra un servicio de Windows Communication Foundation (
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
-- [Cómo: Crear e instalar certificados temporales en WCF para la seguridad de transporte durante el desarrollo](https://go.microsoft.com/fwlink/?LinkId=244264)
+- [Modelo de seguridad para Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Filtrar Crear e instalar certificados temporales en WCF para la seguridad de transporte durante el desarrollo](https://go.microsoft.com/fwlink/?LinkId=244264)

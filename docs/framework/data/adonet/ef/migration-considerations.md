@@ -2,12 +2,12 @@
 title: Consideraciones de migración (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: d783bc79585740710e663d26ecd4110f64882b44
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 359e373476398bb26f06eb86eb13296ab05d2705
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903905"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089892"
 ---
 # <a name="migration-considerations-entity-framework"></a>Consideraciones de migración (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework proporciona varias ventajas a una aplicación. Una de las más importantes es la capacidad de utilizar el modelo conceptual para separar las estructuras de datos que usa la aplicación del esquema en el origen de datos. De esta forma se pueden realizar más adelante y con facilidad cambios en el modelo de almacenamiento o en el propio origen de datos sin realizar los cambios correspondientes en la aplicación. Para obtener más información acerca de las ventajas de utilizar el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], consulte [Introducción a Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) y [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -79,7 +79,7 @@ ms.locfileid: "55903905"
   
   Para obtener más información, consulte [enlazar objetos a controles](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100)).  
   
-- Controles de origen de datos de [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] controles de origen de datos.  
 
   El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] incluye un control de origen de datos diseñado para simplificar el enlace de datos en [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] aplicaciones Web. Para obtener más información, consulte [información general sobre el Control de servidor Web EntityDataSource](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
   
@@ -103,5 +103,6 @@ ms.locfileid: "55903905"
   [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Las aplicaciones Web con frecuencia deben mantener el estado de una página Web o de una sesión de usuario. Los objetos en un <xref:System.Data.Objects.ObjectContext> instancia puedan almacenar en el estado de vista de cliente o en el estado de sesión en el servidor y más adelante recuperarse y volver a adjuntar a un nuevo contexto de objeto. Para obtener más información, consulte [adjuntar y desasociar objetos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consideraciones de implementación](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
 - [Terminología de Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)

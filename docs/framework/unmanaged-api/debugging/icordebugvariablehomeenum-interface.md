@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHomeEnum (interfaz)
+title: Interfaz ICorDebugVariableHomeEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHomeEnum
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43f63e09c654c7aab9f1da0db7587a92bee4fb79
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e67e4685320f56a4a6a8be2e3eb2e6c8065ce59
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080389"
 ---
-# <a name="icordebugvariablehomeenum-interface"></a>ICorDebugVariableHomeEnum (interfaz)
+# <a name="icordebugvariablehomeenum-interface"></a>Interfaz ICorDebugVariableHomeEnum
 Proporciona un enumerador para los argumentos en una función y las variables locales.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)|Obtiene el número especificado de [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instancias que contienen información sobre las variables locales y los argumentos en una función.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)|Obtiene el número especificado de [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instancias que contienen información sobre las variables locales y los argumentos en una función.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `ICorDebugVariableHomeEnum` interfaz implementa la interfaz ICorDebugEnum.  
@@ -47,5 +47,6 @@ Proporciona un enumerador para los argumentos en una función y las variables lo
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICorDebugVariableHome (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaz ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

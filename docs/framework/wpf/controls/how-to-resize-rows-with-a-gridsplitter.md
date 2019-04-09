@@ -6,18 +6,18 @@ helpviewer_keywords:
 - grid rows [WPF], resizing
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
-ms.openlocfilehash: b05bda6cd33d3cdd0dda6288f30821d290c60cfc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6760a7a691af4f666294556cae3bc95a4299730a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074279"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>Filtrar Cambiar el tamaño de filas con un GridSplitter
 En este ejemplo se muestra cómo usar una horizontal <xref:System.Windows.Controls.GridSplitter> para redistribuir el espacio entre las dos filas de un <xref:System.Windows.Controls.Grid> sin cambiar las dimensiones de la <xref:System.Windows.Controls.Grid>.  
   
 ## <a name="example"></a>Ejemplo  
- **Cómo crear un control GridSplitter que se superponga al borde de una fila**  
+ **Cómo crear un control GridSplitter que se superpone el borde de una fila**  
   
  Para especificar un <xref:System.Windows.Controls.GridSplitter> que cambia el tamaño de las filas adyacentes en un <xref:System.Windows.Controls.Grid>, establezca el <xref:System.Windows.Controls.Grid.Row%2A> propiedad adjunta en una de las filas que desea cambiar el tamaño. Si su <xref:System.Windows.Controls.Grid> tiene más de una columna, establezca el <xref:System.Windows.Controls.Grid.ColumnSpan%2A> propiedad adjunta para especificar el número de columnas. A continuación, establezca el <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> a <xref:System.Windows.VerticalAlignment.Top> o <xref:System.Windows.VerticalAlignment.Bottom> (cuya alineación establecida depende de que dos filas que desee cambiar el tamaño). Por último, establezca el <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> propiedad <xref:System.Windows.HorizontalAlignment.Stretch>.  
   
@@ -37,5 +37,6 @@ En este ejemplo se muestra cómo usar una horizontal <xref:System.Windows.Contro
 [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.GridSplitter>
 - [Temas "Cómo..."](gridsplitter-how-to-topics.md)

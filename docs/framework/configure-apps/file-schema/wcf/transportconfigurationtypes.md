@@ -2,12 +2,12 @@
 title: <transportConfigurationTypes>
 ms.date: 03/30/2017
 ms.assetid: 929c8b0a-5460-4f66-a098-2cb8d4e10b69
-ms.openlocfilehash: 560da96c50e99461d25c1fd65def2dc10c284470
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b3683a198ec403fb9966bb902c936108fd043bfa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261677"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083652"
 ---
 # <a name="transportconfigurationtypes"></a>\<transportConfigurationTypes>
 Representa una colección de elementos de configuración que identifica el tipo de un transporte determinado. Esto se puede usar para agregar protocolos WAS personalizados.  
@@ -50,7 +50,8 @@ Representa una colección de elementos de configuración que identifica el tipo 
 |[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Define el tipo del que el entorno host del servicio crea instancias para un transporte determinado.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElementCollection>
-- [Hospedar aplicaciones de WPF](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [Hospedaje](../../../../../docs/framework/wcf/feature-details/hosting.md)

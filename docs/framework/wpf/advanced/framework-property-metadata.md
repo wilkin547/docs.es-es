@@ -5,18 +5,16 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: f313c17a278a7b51379c4da9389c01eedf4a1e62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379281"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108711"
 ---
 # <a name="framework-property-metadata"></a>Metadatos de las propiedades de marco de trabajo
 Las opciones de metadatos de propiedad de marco de trabajo se notifican para las propiedades de los elementos de objeto que se consideran presentes en el nivel de marco de trabajo de WPF en la arquitectura de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. En general, la designación de nivel de marco de trabajo de WPF implica que las características, como la representación, el enlace de datos y los refinamientos del sistema de propiedades se controlen mediante las [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] y los ejecutables de presentación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Estos sistemas consultan los metadatos de las propiedades de marco de trabajo para determinar las particularidades específicas de las características de las propiedades de un elemento en particular.  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
  En este tema, se supone que entiende las propiedades de dependencia desde la perspectiva de un consumidor de propiedades de dependencia existentes en las clases [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] y que ha leído [Información general sobre las propiedades de dependencia](dependency-properties-overview.md). También debería haber leído [Metadatos de las propiedades de dependencia](dependency-property-metadata.md).  
@@ -73,6 +71,7 @@ Las opciones de metadatos de propiedad de marco de trabajo se notifican para las
  Este comportamiento se implementa mediante <xref:System.Windows.FrameworkPropertyMetadata.Merge%2A>y se puede invalidar en clases de metadatos derivadas.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
 - [Metadatos de las propiedades de dependencia](dependency-property-metadata.md)
 - [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)

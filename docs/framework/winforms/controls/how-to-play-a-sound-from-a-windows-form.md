@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Reproducir un sonido desde Windows Forms
+title: Filtrar para reproducir un sonido desde un formulario Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 7d8c723fc995e8b9987681e3db343c43d3bc2682
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3b9eb6f902d0d2193f0099f8e868e4ead347ce26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078686"
 ---
-# <a name="how-to-play-a-sound-from-a-windows-form"></a>Filtrar Reproducir un sonido desde Windows Forms
+# <a name="how-to-play-a-sound-from-a-windows-form"></a>Filtrar para reproducir un sonido desde un formulario Windows Forms
 En este ejemplo se reproduce un sonido en una ruta de acceso determinada en tiempo de ejecución.  
   
 ## <a name="example"></a>Ejemplo  
@@ -65,6 +65,6 @@ private void playSimpleSound()
  No tome ninguna decisión sobre el contenido del archivo basándose en su nombre. Por ejemplo, es posible que el archivo `Form1.vb` no sea un archivo de código fuente de Visual Basic. Compruebe todas las entradas antes de utilizar los datos en la aplicación.  
   
 ## <a name="see-also"></a>Vea también
-- <xref:System.Media.SoundPlayer>
-- [Cómo: Cargar un sonido de forma asincrónica en un formulario de Windows](how-to-load-a-sound-asynchronously-within-a-windows-form.md)
 
+- <xref:System.Media.SoundPlayer>
+- [Filtrar para cargar un sonido de forma asincrónica en un formulario Windows Forms](how-to-load-a-sound-asynchronously-within-a-windows-form.md)

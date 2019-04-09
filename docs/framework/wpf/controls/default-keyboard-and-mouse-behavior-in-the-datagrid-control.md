@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-ms.openlocfilehash: f122eb97719182b4cad5fb0e757cd3647e575094
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741618"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083327"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Comportamiento predeterminado de teclado y mouse en el control DataGridView
 Este tema describe cómo los usuarios pueden interactuar con el <xref:System.Windows.Controls.DataGrid> control utilizando el teclado y mouse (ratón).  
@@ -97,5 +97,6 @@ Este tema describe cómo los usuarios pueden interactuar con el <xref:System.Win
  CTRL + MAYÚS se pueden combinar para seleccionar intervalos no contiguos de las filas adyacentes. Para ello, seleccione el primer intervalo con la tecla MAYÚS + clic como se describió anteriormente. Después de selecciona el primer intervalo de filas, utilice CTRL + haga clic para seleccionar la primera fila en el intervalo siguiente y, a continuación, haga clic en la última fila en el intervalo siguiente mientras se presiona CTRL + MAYÚS.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.DataGrid>
 - <xref:System.Windows.Controls.DataGrid.SelectionMode%2A>

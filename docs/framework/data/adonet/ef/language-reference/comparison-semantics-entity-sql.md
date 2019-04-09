@@ -2,12 +2,12 @@
 title: Semántica de comparación (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: 371999df0fb3177ecc90f9b1fa43d457a51bfd7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b4c4177ebd6c45e00a1ac7774e40a43e0c14a74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492499"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083340"
 ---
 # <a name="comparison-semantics-entity-sql"></a>Semántica de comparación (Entity SQL)
 El uso de cualquiera de los operadores de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguientes implica la comparación de las instancias de tipo:  
@@ -66,7 +66,7 @@ El uso de cualquiera de los operadores de [!INCLUDE[esql](../../../../../../incl
 ## <a name="supported-combinations"></a>Combinaciones admitidas  
  En la tabla siguiente se muestran todas las combinaciones admitidas de los operadores de comparación para cada clase de tipo:  
   
-|**Type**|**=**<br /><br /> **\!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**ES NULL**<br /><br /> **NO ES NULL**|  
+|**Tipo**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**IS NULL**<br /><br /> **IS NOT NULL**|  
 |-|-|-|-|-|-|-|-|  
 |Tipo de entidad|Ref<sup>1</sup>|Todas las propiedades<sup>2</sup>|Todas las propiedades<sup>2</sup>|Todas las propiedades<sup>2</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|Ref<sup>1</sup>|  
 |Tipo complejo|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|Producir<sup>3</sup>|  
@@ -103,4 +103,5 @@ WHERE p1 != REF(p2)
  <sup>5</sup>se comparan todos los elementos individuales de las referencias (Esto incluye el nombre del conjunto de entidades y todas las propiedades claves del tipo de entidad).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5347d25f3fe1d5136917564b1fed24df5df0449c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 75ef24162adbb653671ed070587e7155fae6b949
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468083"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079115"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>IAssemblyCache::UninstallAssembly (Método)
 Desinstala el ensamblado especificado de la caché global de ensamblados.  
@@ -71,4 +71,5 @@ HRESULT UninstallAssembly (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [IAssemblyCache (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+
+- [IAssemblyCache (Interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

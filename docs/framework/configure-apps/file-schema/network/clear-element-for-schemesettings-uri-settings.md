@@ -1,13 +1,13 @@
 ---
-title: <clear> (Elemento para schemeSettings, Configuración de URI)
+title: <clear> Elemento para schemeSettings (configuración de Uri)
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-ms.openlocfilehash: 5bb97fbe04cbd3bba85113200abe6495639bab87
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 132506dc15335b738fcdb026f4d31429bc45a228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287110"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082690"
 ---
 # <a name="clear-element-for-schemesettings-uri-settings"></a>\<Borrar > elemento para schemeSettings (configuración de Uri)
 Borra todos los valores de esquema existente.  
@@ -36,7 +36,7 @@ Borra todos los valores de esquema existente.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[Elemento \<schemeSettings> (configuración de URI)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.|  
+|[\<schemeSettings > elemento (configuración de Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.|  
   
 ## <a name="remarks"></a>Comentarios  
  De forma predeterminada, el <xref:System.Uri?displayProperty=nameWithType> delimitadores de ruta de acceso de codificación de porcentaje de anular los caracteres de escape de clase antes de ejecutar la compresión de la ruta de acceso. Esto se implementó como un mecanismo de seguridad frente a ataques similar al siguiente:  
@@ -71,6 +71,7 @@ Borra todos los valores de esquema existente.
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

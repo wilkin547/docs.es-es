@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar el modo de interpolación para controlar la calidad de imagen durante el escalado
+title: Filtrar para usar el modo de interpolación para controlar la calidad de imagen durante el ajuste de tamaño
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-ms.openlocfilehash: 93430f521904d9d38ba98f4055480583fd650114
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 75f5077c2d969f026a28834144c219f289843dd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410373"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080987"
 ---
-# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Filtrar Usar el modo de interpolación para controlar la calidad de imagen durante el escalado
+# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Filtrar para usar el modo de interpolación para controlar la calidad de imagen durante el ajuste de tamaño
 El modo de interpolación de una <xref:System.Drawing.Graphics> objeto influye en la forma [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] imágenes escalas (estira y encoge). El <xref:System.Drawing.Drawing2D.InterpolationMode> enumeración define varios modos de interpolación, algunos de los cuales se muestran en la lista siguiente:  
   
 -   <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
@@ -47,5 +47,6 @@ El modo de interpolación de una <xref:System.Drawing.Graphics> objeto influye e
  El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Imágenes, mapas de bits y metarchivos](images-bitmaps-and-metafiles.md)
 - [Trabajar con imágenes, mapas de bits, iconos y metarchivos](working-with-images-bitmaps-icons-and-metafiles.md)

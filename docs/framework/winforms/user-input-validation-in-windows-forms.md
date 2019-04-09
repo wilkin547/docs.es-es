@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: fb804e6596de14d93ec6f0405480b60c03c7cbf9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076684"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validación de los datos proporcionados por el usuario en formularios Windows Forms
 Cuando los usuarios escriben datos en la aplicación, desea comprobar que los datos son válidos antes de que lo usa la aplicación. Puede requerir que determinados campos de texto no sea de longitud cero, que tenga formato de un campo como un número de teléfono u otro tipo de datos con formato correcto o que una cadena no contiene caracteres no seguros que podrían usarse para poner en peligro la seguridad de una base de datos. Windows Forms proporciona varias maneras de validar la entrada en la aplicación.  
@@ -91,8 +91,9 @@ Cuando los usuarios escriben datos en la aplicación, desea comprobar que los da
 >  Si se fuerza al formulario a cerrarse de esta manera, se perderán los datos en los controles del formulario que no se ha guardado. Además, los formularios modales no validan el contenido de los controles cuando se cierran. Todavía puede utilizar la validación de control para bloquear el foco a un control, pero no tiene que preocuparse sobre el comportamiento asociado al cerrar el formulario.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
 - <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
-- [MaskedTextBox (control)](./controls/maskedtextbox-control-windows-forms.md)
+- [Control MaskedTextBox](./controls/maskedtextbox-control-windows-forms.md)
 - [Ejemplos de expresiones regulares](../../standard/base-types/regular-expression-examples.md)

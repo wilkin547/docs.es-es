@@ -5,20 +5,18 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 12ca85132ca063471092078c6f54e23a57f574ae
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846446"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079830"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Información general sobre características bidireccionales en WPF
 A diferencia de cualquier otra plataforma de desarrollo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tiene muchas características que admiten el desarrollo rápido de contenido bidireccional, por ejemplo, combinados de izquierda a derecha y de derecha a izquierda datos en el mismo documento. Al mismo tiempo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] crea una excelente experiencia para los usuarios que requieren características bidireccionales, como el árabe y hebreo hablando a los usuarios.  
   
  En las siguientes secciones se explican muchas características bidireccionales, junto con ejemplos que muestran cómo conseguir la mejor visualización de contenido bidireccional. La mayoría de los ejemplos usan [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], aunque se pueden aplicar fácilmente los conceptos de C# o código de Microsoft Visual Basic.  
-  
 
-  
 <a name="FlowDirection"></a>   
 ## <a name="flowdirection"></a>FlowDirection  
  La propiedad básica que define la dirección de flujo de contenido en un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación es <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Esta propiedad puede establecerse en uno de dos valores de enumeración, <xref:System.Windows.FlowDirection.LeftToRight> o <xref:System.Windows.FlowDirection.RightToLeft>. La propiedad está disponible para todos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementos que heredan de <xref:System.Windows.FrameworkElement>.  
@@ -43,7 +41,7 @@ A diferencia de cualquier otra plataforma de desarrollo, [!INCLUDE[TLA2#tla_winc
   
  [!code-xaml[FlowDirection#FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
   
- El nivel superior <xref:System.Windows.Window> tiene un <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>, por lo que todos los elementos incluidos en él también heredan la misma <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Para un elemento invalide una especificado <xref:System.Windows.FrameworkElement.FlowDirection%2A> , debe agregar un cambio de dirección explícito como el segundo <xref:System.Windows.Controls.TextBlock> en el ejemplo anterior, que cambia a <xref:System.Windows.FlowDirection.LeftToRight>. Cuando no hay ninguna <xref:System.Windows.FrameworkElement.FlowDirection%2A> está definido, el valor predeterminado <xref:System.Windows.FlowDirection.LeftToRight> se aplica.  
+ El nivel superior <xref:System.Windows.Window> tiene un <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>, por lo que todos los elementos incluidos en él también heredan la misma <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Para un elemento invalide una especificado <xref:System.Windows.FrameworkElement.FlowDirection%2A> , debe agregar un cambio de dirección explícito como el segundo <xref:System.Windows.Controls.TextBlock> en el ejemplo anterior, que cambia a <xref:System.Windows.FlowDirection.LeftToRight>. Cuando no hay ninguna <xref:System.Windows.FrameworkElement.FlowDirection%2A> está definido, el valor predeterminado <xref:System.Windows.FlowDirection.LeftToRight> se aplica.  
   
  El gráfico siguiente muestra la salida del ejemplo anterior:
 
@@ -116,7 +114,7 @@ A diferencia de cualquier otra plataforma de desarrollo, [!INCLUDE[TLA2#tla_winc
     
  ![Gráfico que muestra una barra de herramientas con un derecho de degradado izquierdo.](./media/bidirectional-features-in-wpf-overview/toolbar-right-left-gradient.png)  
   
- En el ejemplo siguiente se dibuja un <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar>. (Para dibujarlo de izquierda a derecha, quite el <xref:System.Windows.FlowDirection> atributo el <xref:System.Windows.Controls.ToolBar>.  
+ En el ejemplo siguiente se dibuja un <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>. (Para dibujarlo de izquierda a derecha, quite el <xref:System.Windows.FlowDirection> atributo el <xref:System.Windows.Controls.ToolBar>.  
   
  [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
   
@@ -124,7 +122,7 @@ A diferencia de cualquier otra plataforma de desarrollo, [!INCLUDE[TLA2#tla_winc
 ### <a name="flowdirection-exceptions"></a>Excepciones de FlowDirection  
  Hay algunos casos donde <xref:System.Windows.FlowDirection> no se comporta según lo previsto. En esta sección se describen dos de estas excepciones.  
   
- **Image**  
+ **Imagen**  
   
  Un <xref:System.Windows.Controls.Image> representa un control que muestra una imagen. En [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] se puede usar con un <xref:System.Windows.Controls.Image.Source%2A> propiedad que define el [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] de la <xref:System.Windows.Controls.Image> para mostrar.  
   
@@ -142,9 +140,9 @@ A diferencia de cualquier otra plataforma de desarrollo, [!INCLUDE[TLA2#tla_winc
   
  **Rutas de acceso**  
   
- Además un <xref:System.Windows.Controls.Image>, otro elemento interesante es <xref:System.Windows.Shapes.Path>. Patch es un objeto que puede dibujar una serie de líneas y curvas conectadas. Se comporta de manera similar a un <xref:System.Windows.Controls.Image> relacionada con su <xref:System.Windows.FlowDirection>; por ejemplo su <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> es un reflejo horizontal de su <xref:System.Windows.FlowDirection.LeftToRight> uno. Sin embargo, a diferencia de un <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> hereda su <xref:System.Windows.FlowDirection> desde el contenedor y uno no es necesario especificarla explícitamente.  
+ Además un <xref:System.Windows.Controls.Image>, otro elemento interesante es <xref:System.Windows.Shapes.Path>. Patch es un objeto que puede dibujar una serie de líneas y curvas conectadas. Se comporta de manera similar a un <xref:System.Windows.Controls.Image> relacionada con su <xref:System.Windows.FlowDirection>; por ejemplo su <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> es un reflejo horizontal de su <xref:System.Windows.FlowDirection.LeftToRight> uno. Sin embargo, a diferencia de un <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> hereda su <xref:System.Windows.FlowDirection> desde el contenedor y uno no es necesario especificarla explícitamente.  
   
- En el ejemplo siguiente se dibuja una flecha simple mediante 3 líneas. La primera flecha hereda la <xref:System.Windows.FlowDirection.RightToLeft> flujo dirección desde el <xref:System.Windows.Controls.StackPanel> para que sus puntos inicial y final se midan desde una raíz en el lado derecho. La segunda flecha, que tiene un explícito <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> también se inicia en el lado derecho. Sin embargo, la tercera flecha tiene su raíz de inicio en el lado izquierdo. Para obtener más información sobre el dibujo vea <xref:System.Windows.Media.LineGeometry> y <xref:System.Windows.Media.GeometryGroup>.  
+ En el ejemplo siguiente se dibuja una flecha simple mediante 3 líneas. La primera flecha hereda la <xref:System.Windows.FlowDirection.RightToLeft> flujo dirección desde el <xref:System.Windows.Controls.StackPanel> para que sus puntos inicial y final se midan desde una raíz en el lado derecho. La segunda flecha, que tiene un explícito <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> también se inicia en el lado derecho. Sin embargo, la tercera flecha tiene su raíz de inicio en el lado izquierdo. Para obtener más información sobre el dibujo vea <xref:System.Windows.Media.LineGeometry> y <xref:System.Windows.Media.GeometryGroup>.  
   
  [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
   
@@ -160,7 +158,7 @@ A diferencia de cualquier otra plataforma de desarrollo, [!INCLUDE[TLA2#tla_winc
   
  Esto permite a las aplicaciones procesar valores numéricos sin necesidad de convertir de un idioma a otro, por ejemplo, un usuario puede abrir un [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] hoja de cálculo en un árabe localizado [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] y ver los números en árabe, pero abrir en una versión Europea de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] y ver una representación Europea de los mismos números. Esto también es necesario para otros símbolos, como el símbolo de porcentaje y los separadores de coma, porque suelen acompañar a los números del mismo documento.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] continúa con la tradición y agrega más compatibilidad con esta característica, que aumenta el control del usuario sobre cuándo y cómo usar la sustitución. Aunque esta característica está diseñada para cualquier idioma, es especialmente útil en el contenido bidireccional, donde definir los dígitos de un idioma concreto normalmente constituye un desafío para los desarrolladores de aplicaciones debido a las distintas referencias culturales en las que se puede ejecutar una aplicación.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] continúa con la tradición y agrega más compatibilidad con esta característica que permite un mayor control de usuario sobre cuándo y cómo se usa la sustitución. Aunque esta característica está diseñada para cualquier idioma, es especialmente útil en el contenido bidireccional, donde definir los dígitos de un idioma concreto normalmente constituye un desafío para los desarrolladores de aplicaciones debido a las distintas referencias culturales en las que se puede ejecutar una aplicación.  
   
  La propiedad de núcleo que controla la sustitución de números de cómo funciona en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] es el <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> propiedad de dependencia. La <xref:System.Windows.Media.NumberSubstitution> clase especifica cómo se mostrarán los números en texto. Tiene tres propiedades públicas que definen su comportamiento. A continuación se muestra un resumen de cada una de las propiedades.  
   
@@ -245,7 +243,7 @@ text1.Language = System.Windows.Markup.XmlLanguage.GetLanguage(System.Globalizat
      
  ![Gráfico que muestra números árabes.](./media/bidirectional-features-in-wpf-overview/displays-arabic-numbers.png)  
   
- **Uso de la propiedad Substitution**  
+ **Uso de la propiedad de sustitución**  
   
  La sustitución de números forma funciona en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] depende tanto del idioma del elemento de texto y su <xref:System.Windows.FlowDirection>. Si el <xref:System.Windows.FlowDirection> izquierda a derecha y, a continuación, se representan dígitos europeos. Sin embargo si está precedido de texto en árabe, o el idioma establecido en "ar" y el <xref:System.Windows.FlowDirection> es <xref:System.Windows.FlowDirection.RightToLeft>, se representan dígitos árabes en su lugar.  
   
