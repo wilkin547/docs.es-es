@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d9bf6bd6b142fadbf8326c96f7220c9b74fbc1d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115705"
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 Para programar la seguridad de Windows Communication Foundation (WCF), los certificados digitales de X.509 se usan normalmente para autenticar clientes y servidores, cifrar y firmar mensajes digitalmente. En este tema se explican brevemente las características de los certificados digitales X.509 y cómo usarlos en WCF, y se incluyen vínculos a los temas en los que se explican estos conceptos en mayor profundidad o en los que se muestra cómo llevar a cabo tareas comunes mediante WCF y los certificados.  
@@ -65,7 +65,7 @@ Para programar la seguridad de Windows Communication Foundation (WCF), los certi
 ### <a name="disabling-chain-trust"></a>Deshabilitación de la confianza de cadena  
  Al crear un nuevo servicio, puede que esté utilizando un certificado que no ha emitido un certificado raíz de confianza, o puede que el propio certificado emisor no esté en el almacén Entidades de certificación raíz de confianza. Solo con fines de desarrollo, puede deshabilitar temporalmente el mecanismo que comprueba la cadena de confianza de un certificado. Para hacerlo, establezca la propiedad `CertificateValidationMode` en `PeerTrust` o `PeerOrChainTrust`. Ambos modos especifican que el certificado puede autoemitirse (confianza de mismo nivel) o formar parte de una cadena de confianza. Puede establecer la propiedad en cualquiera de las clases siguientes.  
   
-|Clase|Property|  
+|Clase|Propiedad|  
 |-----------|--------------|  
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|  
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|  
@@ -171,6 +171,7 @@ Para programar la seguridad de Windows Communication Foundation (WCF), los certi
  En la primera versión de WCF, la asignación se realiza sin consultar la directiva de dominio. Por consiguiente, es posible que las aplicaciones anteriores que solían funcionar al ejecutarse bajo la primera publicación, provoquen un error si se habilita la asignación y el certificado X.509 no cumple la directiva de dominio.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
