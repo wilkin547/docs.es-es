@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: ccf730eb85024687285200db8f978291986dcc18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb3f35f17b2dd451b41035c8e34f7b3a886a26e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178131"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Realizar operaciones por lotes utilizando objetos DataAdapter
-La compatibilidad con lotes en ADO.NET permite que un <xref:System.Data.Common.DataAdapter> agrupe operaciones INSERT, UPDATE y DELETE desde un <xref:System.Data.DataSet> o una <xref:System.Data.DataTable> al servidor, en lugar de enviar las operaciones de una en una. La reducción del número de viajes de ida y vuelta (round trip) al servidor tiene como resultado una mejora considerable del rendimiento. Las actualizaciones por lotes son compatibles con los proveedores de datos de .NET para SQL Server (<xref:System.Data.SqlClient>) y Oracle (<xref:System.Data.OracleClient>).  
+La compatibilidad con las operaciones por lotes en ADO.NET permite que un <xref:System.Data.Common.DataAdapter> agrupe operaciones INSERT, UPDATE y DELETE desde un <xref:System.Data.DataSet> o una <xref:System.Data.DataTable> al servidor, en lugar de enviar las operaciones de una en una. La reducción del número de viajes de ida y vuelta (round trip) al servidor tiene como resultado una mejora considerable del rendimiento. Las actualizaciones por lotes son compatibles con los proveedores de datos de .NET para SQL Server (<xref:System.Data.SqlClient>) y Oracle (<xref:System.Data.OracleClient>).  
   
  Al actualizar una base de datos con modificaciones de un <xref:System.Data.DataSet> en versiones anteriores de ADO.NET, el método `Update` de un `DataAdapter` realizaba actualizaciones de las filas de la base de datos de una en una. A medida que recorría las filas de la <xref:System.Data.DataTable> especificada, examinaba cada <xref:System.Data.DataRow> para ver si se había modificado. Si se había modificado la fila, llamaba al `UpdateCommand`, `InsertCommand` o `DeleteCommand` apropiado, en función del valor de propiedad <xref:System.Data.DataRow.RowState%2A> de la fila. Cada actualización de una fila implicaba un viaje de ida y vuelta (round trip) a la base de datos.  
   
@@ -134,7 +134,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ### <a name="accessing-updated-rows"></a>Obtener acceso a filas actualizadas  
  Si se deshabilita el procesamiento por lotes, se puede obtener acceso a la fila que se está actualizando mediante la propiedad <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> de la clase <xref:System.Data.Common.RowUpdatedEventArgs>.  
   
- Cuando se habilita el procesamiento por lotes, se genera un único evento `RowUpdated` para varias filas. Por tanto, el valor de la propiedad `Row` para cada fila es nulo. Aún así, los eventos `RowUpdating` se generarán para cada fila. El método <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> de la clase <xref:System.Data.Common.RowUpdatedEventArgs> permite obtener acceso a las filas procesadas al copiar referencias a las mismas en una matriz. Si no se está procesando ninguna fila, `CopyToRows` inicia una <xref:System.ArgumentNullException>. Utilice la propiedad <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> para devolver el número de filas procesadas antes de llamar al método <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>.  
+ Cuando se habilita el procesamiento por lotes, se genera un único evento `RowUpdated` para varias filas. Por tanto, el valor de la propiedad `Row` para cada fila es nulo. `RowUpdating` todavía se generan eventos para cada fila. El método <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> de la clase <xref:System.Data.Common.RowUpdatedEventArgs> permite obtener acceso a las filas procesadas al copiar referencias a las mismas en una matriz. Si no se está procesando ninguna fila, `CopyToRows` inicia una <xref:System.ArgumentNullException>. Utilice la propiedad <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> para devolver el número de filas procesadas antes de llamar al método <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>.  
   
 ### <a name="handling-data-errors"></a>Controlar errores de datos  
  La ejecución por lotes tiene el mismo efecto que la ejecución de cada instrucción por separado. Las instrucciones se ejecutan en el mismo orden en el que se agregaron al lote. Los errores se controlan de la misma forma en el modo de procesamiento por lotes que cuando éste se encuentra deshabilitado. Cada fila se procesa por separado. Solo aquellas filas procesadas correctamente en la base de datos se actualizarán en la <xref:System.Data.DataRow> correspondiente dentro de la <xref:System.Data.DataTable>.  
@@ -142,7 +142,8 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
  El proveedor de datos y el servidor de bases de datos back-end determinan qué construcciones SQL son compatibles para la ejecución por lotes. Es posible que se inicie una excepción si se envía una instrucción no compatible para su ejecución.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Actualizar orígenes de datos con objetos DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [Control de eventos de DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Controlar eventos de DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

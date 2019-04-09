@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea711cc03716f4cd0a06a96208da942a69f36d66
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 84f71266d84cc98c2a5deb4aa8639e36808315a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471685"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130187"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager (Función)
 Obtiene un puntero a una interfaz que permite que common language runtime (CLR) para administrar las identidades.  
@@ -57,4 +57,5 @@ STDAPI GetCLRIdentityManager(
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

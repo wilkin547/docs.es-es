@@ -7,17 +7,16 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 22ac109c06659741c673681ad9bfcf3e1dcc5b2e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117765"
 ---
 # <a name="dependency-property-value-precedence"></a>Prioridad de los valores de propiedades de dependencia
 <a name="introduction"></a> En este tema se explica cómo puede afectar el trabajo del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] al valor de una propiedad de dependencia y se describe la precedencia de aplicación de los aspectos del sistema de propiedades al valor efectivo de una propiedad.  
-    
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
  En este tema, se supone que entiende las propiedades de dependencia desde la perspectiva de un consumidor de propiedades de dependencia existentes en las clases [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y que ha leído [Información general sobre las propiedades de dependencia](dependency-properties-overview.md). Para seguir los ejemplos de este tema, también debe comprender el lenguaje [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] y saber cómo escribir aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -40,9 +39,9 @@ ms.locfileid: "57367946"
 ## <a name="dependency-property-setting-precedence-list"></a>Lista de precedencia de configuración de propiedades de dependencia  
  El siguiente es el orden definitivo que usa el sistema de propiedades al asignar los valores de tiempo de ejecución de las propiedades de dependencia. La precedencia más alta aparece primero. Esta lista desarrolla algunas de las generalizaciones realizadas en la [Información general sobre las propiedades de dependencia](dependency-properties-overview.md).  
   
-1.  **Coerción del sistema de propiedades.** Para obtener más información sobre la coerción, consulte [Coerción, animación y valor base](#animations) más adelante en este tema.  
+1.  **Conversión del sistema de propiedades.** Para obtener más información sobre la coerción, consulte [Coerción, animación y valor base](#animations) más adelante en este tema.  
   
-2.  **Animaciones activas o animaciones con un comportamiento Hold.** Para tener cualquier efecto práctico, una animación de una propiedad debe poder tener precedencia sobre el valor base (inanimado), aunque dicho valor se estableciera localmente. Para obtener más información, consulte [Coerción, animación y valor base](#animations) más adelante en este tema.  
+2.  **Animaciones activas o animaciones con un comportamiento de bloqueo.** Para tener cualquier efecto práctico, una animación de una propiedad debe poder tener precedencia sobre el valor base (inanimado), aunque dicho valor se estableciera localmente. Para obtener más información, consulte [Coerción, animación y valor base](#animations) más adelante en este tema.  
   
 3.  **Valor local.** Un valor local se puede establecer a través de la comodidad de la propiedad "contenedor", que también equivale a establecerlo como un atributo o elemento de propiedad en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], o mediante una llamada a la <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] utilizando una propiedad de una instancia específica. Si establece un valor local mediante un enlace o un recurso, cada uno de estos actuará con la precedencia como si se hubiese establecido un valor directo.  
   
@@ -56,11 +55,11 @@ ms.locfileid: "57367946"
   
 6.  **Desencadenadores de estilo.** Desencadenadores dentro de los estilos de una página o aplicación (estos estilos pueden ser explícitos o implícitos, pero no pueden ser predeterminados, con una precedencia más baja).  
   
-7.  **Desencadenadores de plantilla.** Cualquier desencadenador de una plantilla dentro de un estilo o una plantilla aplicada directamente.  
+7.  **Desencadenadores de la plantilla.** Cualquier desencadenador de una plantilla dentro de un estilo o una plantilla aplicada directamente.  
   
 8.  **Establecedores de estilo.** Los valores de un <xref:System.Windows.Setter> dentro de estilos de página o aplicación.  
   
-9. **Estilo (tema) predeterminado.** Para obtener más información sobre cuándo se aplica y cómo se relacionan los estilos de tema con las plantillas dentro de los estilos de tema, consulte [Estilos (temas) predeterminados](#themestyles) más adelante en este tema. Dentro de un estilo predeterminado, se aplica el orden de precedencia siguiente:  
+9. **Estilo predeterminado (tema).** Para obtener más información sobre cuándo se aplica y cómo se relacionan los estilos de tema con las plantillas dentro de los estilos de tema, consulte [Estilos (temas) predeterminados](#themestyles) más adelante en este tema. Dentro de un estilo predeterminado, se aplica el orden de precedencia siguiente:  
   
     1.  Desencadenadores activos del estilo de tema.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "57367946"
   
 10. **Herencia.** Algunas propiedades de dependencia heredan sus valores del elemento primario a los elementos secundarios, de manera que no se tienen que establecer específicamente en cada elemento de una aplicación. Para obtener información detallada, consulte [Herencia de valores de propiedad](property-value-inheritance.md).  
   
-11. **Valor predeterminado de los metadatos de las propiedades de dependencia.** Cualquier propiedad de dependencia puede tener un valor predeterminado establecido en el registro del sistema de propiedades de esa propiedad concreta. Además, las clases derivadas que heredan una propiedad de dependencia tienen la opción de invalidar esos metadatos (incluido el valor predeterminado) por tipo. Para obtener más información, consulte [Metadados de las propiedades de dependencia](dependency-property-metadata.md). Puesto que la herencia se comprueba antes que el valor predeterminado, para una propiedad heredada, un valor predeterminado de un elemento primario tiene precedencia sobre un elemento secundario.  Por consiguiente, si una propiedad heredable no está establecida en ningún lugar, se usa el valor predeterminado tal como se especifica en la raíz o el elemento primario, en lugar del valor predeterminado del elemento secundario.  
+11. **Valor predeterminado de los metadatos de propiedad de dependencia.** Cualquier propiedad de dependencia puede tener un valor predeterminado establecido en el registro del sistema de propiedades de esa propiedad concreta. Además, las clases derivadas que heredan una propiedad de dependencia tienen la opción de invalidar esos metadatos (incluido el valor predeterminado) por tipo. Para obtener más información, consulte [Metadados de las propiedades de dependencia](dependency-property-metadata.md). Puesto que la herencia se comprueba antes que el valor predeterminado, para una propiedad heredada, un valor predeterminado de un elemento primario tiene precedencia sobre un elemento secundario.  Por consiguiente, si una propiedad heredable no está establecida en ningún lugar, se usa el valor predeterminado tal como se especifica en la raíz o el elemento primario, en lugar del valor predeterminado del elemento secundario.  
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  
@@ -127,6 +126,7 @@ ms.locfileid: "57367946"
  El <xref:System.Windows.DependencyObject.ClearValue%2A> método proporciona medios adecuados para borrar cualquier valor aplicado localmente de una propiedad de dependencia que se establece en un elemento. Sin embargo, una llamada a <xref:System.Windows.DependencyObject.ClearValue%2A> no es una garantía de que el valor predeterminado establecido en metadatos durante el registro de la propiedad es el nuevo valor efectivo. Todos los demás participantes en la precedencia de valores siguen estando activos. Solo el valor establecido localmente se quitó de la secuencia de precedencia. Por ejemplo, si se llama a <xref:System.Windows.DependencyObject.ClearValue%2A> en una propiedad donde esa propiedad también se establece mediante un estilo de tema y, después, el valor de tema se aplica como el nuevo valor en lugar de con el valor predeterminado basado en metadatos. Si desea tomar a todos los participantes del valor de propiedad fuera del proceso y establezca el valor en el valor predeterminado de los metadatos registrados, puede obtener que el valor predeterminado definitivamente consultando los metadatos de propiedad de dependencia y, a continuación, puede usar el valor predeterminado para localmente Establezca la propiedad con una llamada a <xref:System.Windows.DependencyObject.SetValue%2A>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>
 - [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)

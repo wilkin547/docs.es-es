@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], about ToolStripContainer control
 ms.assetid: c7d63bff-64e2-4a63-bd89-d31bc96dacb8
-ms.openlocfilehash: 1f8d8bf8edd7968ed2d2a5c4ddd654dccf318f71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c279316c2a372a1498707b27ec8658813306304b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654053"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191268"
 ---
 # <a name="toolstripcontainer-control-overview"></a>Información general del control ToolStripContainer
 Un <xref:System.Windows.Forms.ToolStripContainer> tiene paneles a su izquierda, derecha, superior y lados de la parte inferior para colocar y compartir el espacio <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, y <xref:System.Windows.Forms.StatusStrip> controles. Los diferentes controles <xref:System.Windows.Forms.ToolStrip> se apilan verticalmente si los coloca en el <xref:System.Windows.Forms.ToolStripContainer> izquierdo o derecho. Se apilan horizontalmente si los coloca en el <xref:System.Windows.Forms.ToolStripContainer> superior o inferior. Puede usar el <xref:System.Windows.Forms.ToolStripContentPanel> central del <xref:System.Windows.Forms.ToolStripContainer> para colocar controles tradicionales en el formulario.  
@@ -21,7 +21,7 @@ Un <xref:System.Windows.Forms.ToolStripContainer> tiene paneles a su izquierda, 
   
 ### <a name="important-toolstripcontainer-members"></a>Miembros importantes de ToolStripContainer  
   
-|nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanel%2A>|Obtiene el panel inferior del objeto <xref:System.Windows.Forms.ToolStripContainer>.|  
 |<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanelVisible%2A>|Obtiene o establece un valor que indica si está visible el panel inferior del control <xref:System.Windows.Forms.ToolStripContainer>.|  
@@ -33,5 +33,6 @@ Un <xref:System.Windows.Forms.ToolStripContainer> tiene paneles a su izquierda, 
 |<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanelVisible%2A>|Obtiene o establece un valor que indica si está visible el panel superior del control <xref:System.Windows.Forms.ToolStripContainer>.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ToolStripContainer>
 - <xref:System.Windows.Forms.ToolStripContentPanel>

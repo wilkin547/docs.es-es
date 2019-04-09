@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 357fad55c3c47a5697df7887f251074238a5ff4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29d1e5ae494b2fff4e13886159bb937041152382
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209481"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Realizar una consulta XPath en un objeto DataSet
 La relación entre un sincronizada <xref:System.Data.DataSet> y <xref:System.Xml.XmlDataDocument> le permite hacer uso de XML servicios, como la consulta XML Path Language (XPath), que tienen acceso a la **XmlDataDocument** y puede realizar ciertas funciones una manera más conveniente que el acceso a la **DataSet** directamente. Por ejemplo, en lugar de usar el **seleccione** método de un <xref:System.Data.DataTable> para navegar por relaciones con otras tablas en un **DataSet**, puede realizar una consulta XPath en un **XmlDataDocument**  que está sincronizada con la **DataSet**, para obtener una lista de elementos XML en forma de un <xref:System.Xml.XmlNodeList>. Los nodos en el **XmlNodeList**, convierta como <xref:System.Xml.XmlElement> nodos, a continuación, se puede pasar a la **GetRowFromElement** método de la **XmlDataDocument**para devolver la coincidencia <xref:System.Data.DataRow> referencias a las filas de la tabla en sincronizado **DataSet**.  
@@ -102,5 +102,6 @@ foreach (XmlNode xmlNode in nodeList)
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Sincronización de DataSet y XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: <httpsTransport>
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: dc95b1a31d582f255740152a235b9ca5e67cf5c6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c7e4dc540458bbfb69318d2f14cfa9776f444c55
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172827"
 ---
 # <a name="httpstransport"></a>\<httpsTransport>
 Especifica un transporte HTTP para transmitir los mensajes SOAP para un enlace personalizado.  
@@ -74,6 +74,7 @@ Especifica un transporte HTTP para transmitir los mensajes SOAP para un enlace p
  El elemento `httpsTransport` es el punto inicial para crear un enlace personalizado que implementa el protocolo de transporte HTTPS. HTTPS es el transporte primario utilizado para fines de interoperabilidad segura. Se admite HTTPS mediante Windows Communication Foundation (WCF) para garantizar la interoperabilidad con otras pilas de servicios Web.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.HttpsTransportElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>

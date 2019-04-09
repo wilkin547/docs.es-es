@@ -1,5 +1,5 @@
 ---
-title: Filtrar Definir el orden Z de los controles ToolStrip acoplados
+title: Filtrar para definir el orden Z de los controles ToolStrip acoplados
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], specifying z-order
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
-ms.openlocfilehash: 1ae7e6f63488d2dbb6b408cdf255f111f929298f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3347722383b7388c00335683537e00851e642bb6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722677"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129173"
 ---
-# <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Filtrar Definir el orden Z de los controles ToolStrip acoplados
+# <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Filtrar para definir el orden Z de los controles ToolStrip acoplados
 Para colocar correctamente un control <xref:System.Windows.Forms.ToolStrip> con acoplamiento, debe colocar de forma adecuada el control en el orden z del formulario.  
   
 ## <a name="example"></a>Ejemplo  
@@ -26,7 +26,7 @@ Para colocar correctamente un control <xref:System.Windows.Forms.ToolStrip> con 
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#21)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#21)]  
   
- El orden determina el orden z en que los controles <xref:System.Windows.Forms.ToolStrip> y <xref:System.Windows.Forms.MenuStrip>  
+ El orden z viene determinada por el orden en que el <xref:System.Windows.Forms.ToolStrip> y <xref:System.Windows.Forms.MenuStrip>  
   
  se agregan a la colección <xref:System.Windows.Forms.Control.Controls%2A> del formulario.  
   
@@ -43,9 +43,10 @@ Para colocar correctamente un control <xref:System.Windows.Forms.ToolStrip> con 
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.ControlCollection.Add%2A>
 - <xref:System.Windows.Forms.Control.Controls%2A>
 - <xref:System.Windows.Forms.Control.Dock%2A>
-- [Control ToolStrip](toolstrip-control-windows-forms.md)
+- [ToolStrip](toolstrip-control-windows-forms.md)

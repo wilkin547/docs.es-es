@@ -1,17 +1,17 @@
 ---
-title: Filtrar Autenticar con un nombre de usuario y contraseña
+title: Filtrar para autenticar con un nombre de usuario y contraseña
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: f6939659249ea40e97f340771017d0587ec6a08f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174140"
 ---
-# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Procedimiento Autenticar con un nombre de usuario y contraseña
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Filtrar para autenticar con un nombre de usuario y contraseña
 
 En este tema se muestra cómo habilitar un servicio de Windows Communication Foundation (WCF) autenticar a un cliente con un nombre de usuario de dominio de Windows y una contraseña. Se supone que tiene un servicio WCF autohospedado que funciona. Para obtener un ejemplo de creación de un básica autohospedado WCF service, consulte [Tutorial de introducción](../../../../docs/framework/wcf/getting-started-tutorial.md). En este tema se supone que el servicio se configura en código. Si desea ver un ejemplo de cómo configurar un servicio similar usando un archivo de configuración vea [nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
@@ -83,6 +83,7 @@ En este tema se muestra cómo habilitar un servicio de Windows Communication Fou
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSHttpSecurity>
 - <xref:System.ServiceModel.SecurityMode>
@@ -91,6 +92,6 @@ En este tema se muestra cómo habilitar un servicio de Windows Communication Fou
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>
 - <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>
-- [Seguridad del transporte con la autenticación básica](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
+- [Seguridad de transporte con autenticación básica](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
 - [Seguridad distribuida de aplicaciones](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
 - [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

@@ -2,12 +2,12 @@
 title: <serviceCertificate> de <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-ms.openlocfilehash: bd2d59218ce40639ac04aa7c5cc157fe37eb9937
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 086b700b94198aa36e61289178ebbed75d33da98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173568"
 ---
 # <a name="servicecertificate-of-servicecredentials"></a>\<serviceCertificate > de \<serviceCredentials >
 Especifique un certificado X.509 que se vaya a utilizar para autenticar el servicio a los clientes utilizando el modo de seguridad de mensajes.  
@@ -55,9 +55,10 @@ Especifique un certificado X.509 que se vaya a utilizar para autenticar el servi
  Para obtener más información acerca de cómo utilizar el elemento, vea [Cómo: Especificar los valores de credencial de cliente](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>
-- [Cómo: Especificar los valores de credencial de cliente](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Filtrar para especificar valores de credenciales de cliente](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

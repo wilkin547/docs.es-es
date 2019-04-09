@@ -1,5 +1,5 @@
 ---
-title: Filtrar Objetos en capas en Windows Forms
+title: Filtrar para disponer objetos en capas en formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: ea97e26d31d2cdda353b6ada554cac27c5b56c62
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2b02e5e1a4d9872cc89a26b25a44c226ee545a88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719109"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166015"
 ---
-# <a name="how-to-layer-objects-on-windows-forms"></a>Procedimiento Objetos en capas en Windows Forms
+# <a name="how-to-layer-objects-on-windows-forms"></a>Filtrar para disponer objetos en capas en formularios Windows Forms
 Al crear una interfaz de usuario complejas o trabajar con un formulario de múltiples documentos (MDI) de la interfaz, que a menudo desea capas controles y formularios secundarios para crear interfaces de usuario (UI) más complejas. Para mover y realizar un seguimiento de los controles y ventanas dentro del contexto de un grupo, manipular su orden z. *Orden Z* es el diseño visual de los controles en un formulario de eje z del formulario (intensidad). La ventana en la parte superior del orden z se superpone a todas las demás ventanas. Todas las demás ventanas superponen a la ventana en la parte inferior del orden z.  
   
 > [!NOTE]
@@ -53,7 +53,8 @@ Al crear una interfaz de usuario complejas o trabajar con un formulario de múlt
 >  Los formularios Windows Forms admiten *contención de controles*. Contención de controles implica la colocación de una serie de controles dentro de un control contenedor, como un número de <xref:System.Windows.Forms.RadioButton> controla dentro de un <xref:System.Windows.Forms.GroupBox> control. A continuación, puede agregar los controles dentro del control contenedor. Mover el grupo mueve los controles, porque están contenidos dentro de él.  
   
 ## <a name="see-also"></a>Vea también
-- [Controles de formularios Windows Forms](index.md)
+
+- [Controles de Windows Forms](index.md)
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

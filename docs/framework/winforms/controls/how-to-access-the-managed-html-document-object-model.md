@@ -1,5 +1,5 @@
 ---
-title: Filtrar Obtener acceso al modelo de objeto de documento HTML administrado
+title: Filtrar para obtener acceso a Document Object Model HTML administrado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: f2e2593b161a0dc072f0ecaa872bfa9ab83ac24c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 591d1f4d0b1ebe63b06a30cd01e18addc580d393
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205022"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>Filtrar Obtener acceso al modelo de objeto de documento HTML administrado
+# <a name="how-to-access-the-managed-html-document-object-model"></a>Filtrar para obtener acceso a Document Object Model HTML administrado
 Puede acceder al Document Object Model (DOM) HTML administrado desde dos tipos de aplicaciones:  
   
 -   Una aplicación de A Windows Forms (.exe) que hospedó el control <xref:System.Windows.Forms.WebBrowser> administrado. Estas dos tecnologías se complementan entre sí; el control <xref:System.Windows.Forms.WebBrowser> muestra la página al usuario y el DOM HTML representa la estructura lógica del documento.  
@@ -46,4 +46,5 @@ Puede acceder al Document Object Model (DOM) HTML administrado desde dos tipos d
 1.  Su aplicación o <xref:System.Windows.Forms.UserControl> requerirá confianza completa para poder acceder al DOM HTML administrado. Si está implementando una aplicación de Windows Forms mediante [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], puede solicitar confianza completa usando la elevación de permisos o una implementación de aplicación de confianza; consulte [Proteger las aplicaciones ClickOnce](/visualstudio/deployment/securing-clickonce-applications) para obtener más información.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Utilizar el Modelo de objetos de documento HTML administrado](using-the-managed-html-document-object-model.md)

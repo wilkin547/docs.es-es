@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130408"
 ---
 # <a name="expander-overview"></a>Información general sobre el control Expander
 Un <xref:System.Windows.Controls.Expander> control proporciona una manera de proporcionar contenido en un área ampliable que se parece a una ventana e incluye un encabezado.  
-  
-  
+
 <a name="CreatinganExpanderinXAML"></a>   
 ## <a name="creating-a-simple-expander"></a>Crear un control Expander simple  
  El ejemplo siguiente muestra cómo crear una sencilla <xref:System.Windows.Controls.Expander> control. Este ejemplo se crea un <xref:System.Windows.Controls.Expander> similar a la ilustración anterior.  
@@ -29,7 +28,7 @@ Un <xref:System.Windows.Controls.Expander> control proporciona una manera de pro
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
 ## <a name="setting-the-direction-of-the-expanding-content-area"></a>Establecer la dirección del área de contenido de expansión  
- Puede establecer el área de contenido de un <xref:System.Windows.Controls.Expander> control para expandir en una de las cuatro direcciones (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, o <xref:System.Windows.Controls.ExpandDirection.Right>) mediante el uso de la <xref:System.Windows.Controls.ExpandDirection> propiedad. Cuando se contrae el área de contenido, solo el <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> y aparecen su botón de alternancia. Un <xref:System.Windows.Controls.Button> control que muestra una flecha de dirección se utiliza como un botón de alternancia para expandir o contraer el área de contenido. Expandido, el <xref:System.Windows.Controls.Expander> intenta mostrar todo su contenido en un área de ventana similar.  
+ Puede establecer el área de contenido de un <xref:System.Windows.Controls.Expander> control para expandir en una de las cuatro direcciones (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, o <xref:System.Windows.Controls.ExpandDirection.Right>) mediante el uso de la <xref:System.Windows.Controls.ExpandDirection> propiedad. Cuando se contrae el área de contenido, solo el <xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A> y aparecen su botón de alternancia. Un <xref:System.Windows.Controls.Button> control que muestra una flecha de dirección se utiliza como un botón de alternancia para expandir o contraer el área de contenido. Expandido, el <xref:System.Windows.Controls.Expander> intenta mostrar todo su contenido en un área de ventana similar.  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
 ## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>Controlar el tamaño de un control Expander en un panel  
@@ -60,6 +59,7 @@ Un <xref:System.Windows.Controls.Expander> control proporciona una manera de pro
  Puede alinear contenido estableciendo el <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> y <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> propiedades en el <xref:System.Windows.Controls.Expander> control. Al establecer estas propiedades, la alineación se aplica al encabezado y también al contenido ampliado.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
 - [Temas "Cómo..."](expander-how-to-topics.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ffcd389f9b9e2e113fc45d2961a92790f4c57ae8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ef7d6272c04c3edab8ef652bcb2759861ff2b982
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478055"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129576"
 ---
 # <a name="embedresource-method"></a>EmbedResource (Método)
 Declara un recurso incrustado. Este método realmente no incrustar el recurso.  
@@ -62,6 +62,7 @@ HRESULT EmbedResource(
  Requiere alink.h.  
   
 ## <a name="see-also"></a>Vea también
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+
+- [IALink (Interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 (Interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -2,12 +2,12 @@
 title: <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: 3ffb18fbd410922df4311180ef7af5153ba5c0f5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 04f5fb27a0da7e553ff3c0308f7fb2e2df2e0b20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210014"
 ---
 # <a name="udpannouncementendpoint"></a>\<udpAnnouncementEndpoint>
 Este elemento de configuración define un extremo estándar usado por los servicios para enviar los mensajes del anuncio a través de un enlace de UDP. Tiene un contrato fijo y admite dos versiones de la detección. Además, tiene un enlace de UDP fijo y un valor de dirección predeterminado según se indica en las especificaciones de WS-Discovery (WS-Discovery April 2005 o WS-Discovery versión 1.1). Puede especificar la dirección de multidifusión que se va a usar para enviar y recibir los mensajes del anuncio.  
@@ -40,7 +40,7 @@ Este elemento de configuración define un extremo estándar usado por los servic
 |discoveryVersion|Cadena que especifica una de las dos versiones del protocolo WS-Discovery. Los valores válidos son WSDiscovery11 y WSDiscoveryApril2005. Este valor es del tipo <xref:System.ServiceModel.Discovery.Configuration.AnnouncementEndpointElement.DiscoveryVersion>.|  
 |maxAnnouncementDelay|Valor Timespan que especifica el valor máximo del tiempo que el protocolo Discovery esperará antes de enviar un mensaje de saludo. Los mensajes esperarán un valor de tiempo aleatorio entre 0 y el valor de este atributo antes de enviarse. Este atributo se utiliza para establecer un retraso pequeño y aleatorio con el fin de evitar las tormentas de red cuando se pierde la conexión de una red y todos los servicios vuelven a estar en línea al mismo tiempo.|  
 |multicastAddress|URI que especifica una dirección de multidifusión que se va a usar para enviar y recibir los mensajes de detección. El valor predeterminado es la dirección de multidifusión como compatible con la especificación de protocolo.|  
-|name|Cadena que especifica el nombre de la configuración del extremo estándar. El nombre se utiliza en el atributo `endpointConfiguration` del punto de conexión del servicio para vincular un punto de conexión estándar a su configuración.|  
+|name|Cadena que especifica el nombre de la configuración del punto de conexión estándar. El nombre se utiliza en el atributo `endpointConfiguration` del punto de conexión del servicio para vincular un punto de conexión estándar a su configuración.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -80,4 +80,5 @@ Este elemento de configuración define un extremo estándar usado por los servic
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>

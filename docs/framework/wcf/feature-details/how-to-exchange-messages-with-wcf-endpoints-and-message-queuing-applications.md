@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Intercambiar mensajes con puntos de conexión WCF y Message Queue Server de las aplicaciones
+title: Filtrar para intercambiar mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-ms.openlocfilehash: f0bfb966026d7588de63bef38eb289bb33a7a688
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7fdcebe7ab9ee82a7283add9e0200af2ea5c94bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620167"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198977"
 ---
-# <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Procedimiento Intercambiar mensajes con puntos de conexión WCF y Message Queue Server de las aplicaciones
+# <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Filtrar para intercambiar mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server
 Puede integrar las aplicaciones existentes de Message Queuing (MSMQ) con aplicaciones de Windows Communication Foundation (WCF) utilizando el enlace de integración de MSMQ para convertir los mensajes de MSMQ a y desde los mensajes WCF. Esto permite llamar a las aplicaciones de receptor MSMQ desde clientes WCF, así como llamar a servicios WCF desde las aplicaciones del remitente MSMQ.  
   
  En esta sección, se explica cómo usar <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> para la comunicación en cola entre (1) un cliente WCF y un servicio de aplicación de MSMQ escrito mediante System.Messaging y (2) un cliente de aplicación de MSMQ y un servicio WCF.  
@@ -34,13 +34,9 @@ Puede integrar las aplicaciones existentes de Message Queuing (MSMQ) con aplicac
      [!code-vb[S_MsmqToWcf#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#2)]  
   
 3.  Cree un archivo de configuración que especifique <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  
-  
-  
-  
+
 4.  Cree una instancia de un objeto <xref:System.ServiceModel.ServiceHost> que utilice el enlace configurado.  
-  
-  
-  
+
 ### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a>Para crear un cliente de WCF que envíe mensajes a una aplicación de receptor de MSMQ  
   
 1.  Defina una interfaz que define el contrato de servicio para el cliente de WCF que envía mensajes en cola en el receptor MSMQ, como se muestra en el ejemplo de código siguiente.  
@@ -63,9 +59,10 @@ Puede integrar las aplicaciones existentes de Message Queuing (MSMQ) con aplicac
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Cómo: Intercambiar los mensajes en cola con puntos de conexión WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Filtrar para intercambiar mensajes en cola con puntos de conexión de WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [Windows Communication Foundation a Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
-- [Instalación de Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
+- [Instalar Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [Message Queuing a Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
 - [Seguridad de mensajes mediante Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

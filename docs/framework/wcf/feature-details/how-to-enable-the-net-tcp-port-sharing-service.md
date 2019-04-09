@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Habilitar el servicio de uso compartido de puertos Net.TCP
+title: Filtrar para habilitar el servicio de uso compartido de puertos Net.TCP
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 490c0d8c4c95eeb2b1cd9b43134720c9e44467ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 77d1d983da87b37c6267cc38a16db446782797f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619602"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130655"
 ---
-# <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Procedimiento Habilitar el servicio de uso compartido de puertos Net.TCP
+# <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Filtrar para habilitar el servicio de uso compartido de puertos Net.TCP
 Windows Communication Foundation (WCF) utiliza un servicio de Windows denominado el servicio de uso compartido de puertos Net.TCP para facilitar el uso compartido de puertos TCP entre varios procesos. Este servicio se instala como parte de WCF, pero el servicio no está habilitado de forma predeterminada como precaución de seguridad y por lo que debe habilitarse manualmente antes de usarse por primera vez. En este tema se describe cómo configurar el Servicio de uso compartido de puertos Net.TCP mediante el complemento de Microsoft Management Console (MMC).  
   
  Después de habilitar el servicio de uso compartido de puertos Net.TCP y lo inicie manualmente, vea [Cómo: Configurar un servicio de WCF para utilizar el uso compartido de puertos](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md) para obtener información sobre cómo configurar el servicio para utilizar este servicio.  
@@ -34,5 +34,6 @@ Windows Communication Foundation (WCF) utiliza un servicio de Windows denominado
 ## <a name="example"></a>Ejemplo  
   
 ## <a name="see-also"></a>Vea también
+
 - [Uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
 - [Configuración del servicio de uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: e8a2f00458614367bbb661dd8ff74e88069d2dc0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646924"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118032"
 ---
 # <a name="data-contract-versioning"></a>Versiones de contratos de datos
 A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los contratos de datos que utilizan los servicios. En este tema se explica cómo controlar las versiones de los contratos de datos. En este tema se describen los mecanismos de control de versiones de los contratos de datos. Para una información general completa y una guía preceptiva del control de versiones, vea [prácticas recomendadas: Control de versiones de contratos de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -67,7 +67,7 @@ A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los 
   
  El motor de deserialización en V1 no encuentra un miembro de datos coincidente para el campo `HorsePower` y descarta esos datos.  
   
- Asimismo, el extremo de versión 1 puede enviar datos al extremo de versión 2. La serialización de la versión 1 del contrato de datos de `Car` produce un XML similar al siguiente.  
+ Asimismo, el punto de conexión de versión 1 puede enviar datos al punto de conexión de versión 2. La serialización de la versión 1 del contrato de datos de `Car` produce un XML similar al siguiente.  
   
 ```xml  
 <Car>  
@@ -80,7 +80,7 @@ A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los 
 ## <a name="required-data-members"></a>Miembros de datos necesarios  
  Un miembro de datos se puede marcar como necesario estableciendo la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> de <xref:System.Runtime.Serialization.DataMemberAttribute> en `true`. Si faltan datos necesarios al deserializar, se genera una excepción en lugar de establecer el miembro de datos en su valor predeterminado.  
   
- Agregar un miembro de datos necesario es un cambio con interrupción. Es decir, el tipo más nuevo todavía puede enviarse a los extremos con el tipo anterior, pero no al revés. Eliminar un miembro de datos marcado como necesario en cualquier versión anterior también es un cambio con interrupción.  
+ Agregar un miembro de datos necesario es un cambio con interrupción. Es decir, el tipo más nuevo todavía puede enviarse a los puntos de conexión con el tipo anterior, pero no al revés. Eliminar un miembro de datos marcado como necesario en cualquier versión anterior también es un cambio con interrupción.  
   
  Cambiar el valor de la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> de `true` a `false` no es un cambio con interrupción, pero cambiarlo de `false` a `true` puede ser un cambio con interrupción si cualquier versión anterior del tipo no tiene el miembro de datos en cuestión.  
   
@@ -116,6 +116,7 @@ A medida que las aplicaciones evolucionan, es posible que tenga que cambiar los 
 Naturalmente, cambiar el contrato de datos del contenido de una colección (por ejemplo, cambiar de una lista de enteros a una lista de cadenas) es un cambio brusco.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
@@ -127,5 +128,5 @@ Naturalmente, cambiar el contrato de datos del contenido de una colección (por 
 - [Devoluciones de llamadas en la serialización tolerante a versiones](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
 - [Procedimientos recomendados: Versiones de contratos de datos](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
 - [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Equivalencia de contratos de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Equivalencia del contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Contratos de datos compatibles con el reenvío](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

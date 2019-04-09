@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Declarar errores en contratos de servicio
+title: Filtrar para declarar errores en contratos de servicios
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-ms.openlocfilehash: 145e9d7551e59a246d2540c2a7106e1a16686099
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 90abb29550ce7e027244b220f30e9fe46e282ff3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129498"
 ---
-# <a name="how-to-declare-faults-in-service-contracts"></a>Procedimiento Declarar errores en contratos de servicio
+# <a name="how-to-declare-faults-in-service-contracts"></a>Filtrar para declarar errores en contratos de servicios
 En código administrado, las excepciones se inician al producirse condiciones de error. Sin embargo, en las aplicaciones de Windows Communication Foundation (WCF), los contratos de servicio especifican qué información de error se devuelve a los clientes mediante la declaración de los errores de SOAP en el contrato de servicio. Para obtener información general de la relación entre las excepciones y errores, vea [especificar y controlar errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>Crear un contrato de servicio que especifica un error de SOAP  
@@ -45,5 +45,6 @@ En código administrado, las excepciones se inician al producirse condiciones de
  [!code-vb[FaultContractAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>
 - <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>

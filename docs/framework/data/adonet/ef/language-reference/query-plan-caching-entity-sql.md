@@ -2,12 +2,12 @@
 title: Almacenamiento en caché del plan de consulta [Entity SQL]
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 75c097d66ae23d32465b5a717ae627d35cdc003f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178183"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Almacenamiento en caché del plan de consulta [Entity SQL]
 Siempre que se intenta ejecutar una consulta, la canalización de la consulta examina la memoria caché del plan de consulta para comprobar si la citada consulta ya está compilada y disponible. En ese caso, vuelve a utilizar el plan almacenado en caché en lugar de compilar uno nuevo. Si no se encuentra ninguna coincidencia en la memoria caché del plan de consulta, la consulta se compila y se almacena en memoria caché. Las consultas se identifican mediante su colección de parámetros (nombres y tipos) y texto de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Todas las comparaciones de texto distinguen mayúsculas de minúsculas.  
@@ -36,7 +36,7 @@ Siempre que se intenta ejecutar una consulta, la canalización de la consulta ex
   
 -   El texto de la consulta debe ser un patrón constante, preferentemente una cadena o un recurso constante.  
   
--   Se debe utilizar <xref:System.Data.EntityClient.EntityParameter> o <xref:System.Data.Objects.ObjectParameter> siempre que se deba pasar un valor proporcionado por el usuario.  
+-   <xref:System.Data.EntityClient.EntityParameter> o <xref:System.Data.Objects.ObjectParameter> debe usarse siempre que se debe pasar un valor proporcionado por el usuario.  
   
  Se deben evitar los patrones de consulta siguientes, que consumen innecesariamente espacios en la memoria caché del plan de consulta:  
   
@@ -49,4 +49,5 @@ Siempre que se intenta ejecutar una consulta, la canalización de la consulta ex
 -   Cambios en el texto incluido en los comentarios.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

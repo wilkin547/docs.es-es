@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Configurar un personalizados WS-Metadata Exchange Binding
+title: Filtrar para configurar un enlace de WS-Metadata Exchange personalizado
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 4328306a6b67d2eac498ec48d1769bdf4bd5f81e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ab659e7e586b28f5c06b9b6ba12b313f318c6542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642469"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210508"
 ---
-# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Procedimiento Configurar un personalizados WS-Metadata Exchange Binding
+# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Filtrar para configurar un enlace de WS-Metadata Exchange personalizado
 En este tema se explica cómo configurar un enlace personalizado de intercambio de WS-Metadata. Windows Communication Foundation (WCF) incluye cuatro enlaces de metadatos definido por el sistema, pero puede publicar metadatos usando cualquier enlace que desee. En este tema, se mostrará cómo publicar metadatos mediante `wsHttpBinding`. Este enlace le da la opción de exponer los metadatos de una manera segura. El código de este artículo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>El uso de un archivo de configuración  
@@ -36,7 +36,7 @@ En este tema se explica cómo configurar un enlace personalizado de intercambio 
     behaviorConfiguration="CalculatorServiceBehavior">   
     ```  
   
-3.  Agregue un extremo de metadatos que especifique mex como dirección, `wsHttpBinding` como enlace, y <xref:System.ServiceModel.Description.IMetadataExchange> como contrato:  
+3.  Agregue un punto de conexión de metadatos que especifique mex como dirección, `wsHttpBinding` como enlace, y <xref:System.ServiceModel.Description.IMetadataExchange> como contrato:  
   
     ```xml  
     <endpoint address="mex"  
@@ -44,7 +44,7 @@ En este tema se explica cómo configurar un enlace personalizado de intercambio 
               contract="IMetadataExchange" />  
     ```  
   
-4.  Para comprobar que el extremo de intercambio de metadatos está funcionando correctamente, agregue una etiqueta de extremo en el archivo de configuración del cliente:  
+4.  Para comprobar que el punto de conexión de intercambio de metadatos está funcionando correctamente, agregue una etiqueta de punto de conexión en el archivo de configuración del cliente:  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  
@@ -87,7 +87,7 @@ En este tema se explica cómo configurar un enlace personalizado de intercambio 
     serviceHost.Description.Behaviors.Add(smb);  
     ```  
   
-4.  Agregue un extremo de intercambio de metadatos, especificando <xref:System.ServiceModel.WSHttpBinding> creado anteriormente:  
+4.  Agregue un punto de conexión de intercambio de metadatos, especificando <xref:System.ServiceModel.WSHttpBinding> creado anteriormente:  
   
     ```  
     serviceHost.AddServiceEndpoint(typeof(IMetadataExchange), binding, mexAddress);  
@@ -114,6 +114,7 @@ En este tema se explica cómo configurar un enlace personalizado de intercambio 
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Comportamiento de publicación de metadatos](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
 - [Recuperación de metadatos](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
 - [Metadatos](../../../../docs/framework/wcf/feature-details/metadata.md)

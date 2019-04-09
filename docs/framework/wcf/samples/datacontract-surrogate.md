@@ -2,12 +2,12 @@
 title: Suplente de DataContract
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 33d5db0251d22ff2fac05c475903eca7dcb3e0fb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 663f168ebbba2238be814791fd0d75e211a469ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828061"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196429"
 ---
 # <a name="datacontract-surrogate"></a>Suplente de DataContract
 Este ejemplo muestra cómo se pueden personalizar procesos como la serialización, la deserialización, la exportación e importación del esquema mediante una clase suplente de contrato de datos. En este ejemplo se muestra cómo utilizar a un suplente en un escenario de cliente y el servidor donde se serializa y se transmiten entre un cliente de Windows Communication Foundation (WCF) y el servicio de datos.  
@@ -268,4 +268,3 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 >  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
-  

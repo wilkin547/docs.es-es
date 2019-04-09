@@ -8,12 +8,12 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: a253fef2bc7220d13c0ca373a38a5bf2f5842415
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6c87b3d29a1c55b2a7517da78a1951d94676dd68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715560"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164494"
 ---
 # <a name="effects-of-modifying-a-base-forms-appearance"></a>Efectos de modificar la apariencia de un formulario base
 Durante el desarrollo de aplicaciones, a menudo tendrá que cambiar la apariencia del formulario base del que se heredan los demás formularios del proyecto (o de otros proyectos).  
@@ -26,6 +26,7 @@ Durante el desarrollo de aplicaciones, a menudo tendrá que cambiar la aparienci
  Las modificaciones realizadas en el formulario base en tiempo de ejecución no tienen ningún efecto en los formularios heredados cuya instancia ya se ha creado.  
   
 ## <a name="see-also"></a>Vea también
+
 - [base](~/docs/csharp/language-reference/keywords/base.md)
-- [Cómo: Heredar Windows Forms](how-to-inherit-windows-forms.md)
-- [Herencia visual de Windows Forms](windows-forms-visual-inheritance.md)
+- [Filtrar para heredar formularios Windows Forms](how-to-inherit-windows-forms.md)
+- [Herencia visual de formularios Windows Forms](windows-forms-visual-inheritance.md)

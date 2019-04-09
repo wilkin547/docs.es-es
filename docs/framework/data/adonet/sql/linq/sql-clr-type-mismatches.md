@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 0abb1bd25c40ba55806fe80b39db1ac418f3f308
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77090a9f22dcf3d55739aa03535bee863793d858
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172892"
 ---
 # <a name="sql-clr-type-mismatches"></a>Desajustes de tipos entre SQL y CLR
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatiza gran parte de la conversión entre el modelo de objetos y SQL Server. No obstante, algunas situaciones impiden la exactitud de la conversión. Estas discordancias clave entre los tipos de Common Language Runtime (CLR) y los de base de datos de SQL Server se resumen en las siguientes secciones. Puede encontrar más detalles sobre las asignaciones de tipo específico y conversión de funciones en [asignación de tipos de CLR de SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) y [tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatiza gran parte de la traducción entre el modelo de objetos y SQL Server. No obstante, algunas situaciones impiden la exactitud de la conversión. Estas discordancias clave entre los tipos de Common Language Runtime (CLR) y los de base de datos de SQL Server se resumen en las siguientes secciones. Puede encontrar más detalles sobre las asignaciones de tipo específico y conversión de funciones en [asignación de tipos de CLR de SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) y [tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
   
 ## <a name="data-types"></a>Tipos de datos  
  La conversión entre CLR y SQL Server se produce cuando se envía una consulta a la base de datos y cuando los resultados se devuelven al modelo de objetos. Por ejemplo, la siguiente consulta de Transact-SQL requiere dos conversiones de valores:  
@@ -116,9 +116,9 @@ or col1 != col2
 ### <a name="type-conversion-and-promotion"></a>Conversión y promoción de tipos  
  SQL admite un completo conjunto de conversiones implícitas en las expresiones. Las mismas expresiones en C# requerirían una conversión de tipos explícita. Por ejemplo:  
   
--   Los tipos `Nvarchar` y `DateTime` se pueden comparar en SQL sin ninguna conversión de tipos explícita; C# requiere la conversión explícita.  
+-   `Nvarchar` y `DateTime` tipos se pueden comparar en SQL sin las conversiones explícitas; C# requiere la conversión explícita.  
   
--   `Decimal` se convierte implícitamente a `DateTime` en SQL. C# no permite una conversión implícita.  
+-   `Decimal` se convierte implícitamente en `DateTime` en SQL. C# no permite una conversión implícita.  
   
  De igual forma, la prioridad de los tipos en Transact-SQL difiere de la prioridad de los tipos en C#, ya que el conjunto de tipos subyacente es diferente. De hecho, no hay una relación clara de subconjuntos/supraconjuntos entre las listas de prioridades. Por ejemplo, al comparar `nvarchar` con `varchar`, se produce la conversión implícita de la expresión `varchar` a `nvarchar`. CLR no proporciona ninguna promoción equivalente.  
   
@@ -146,7 +146,7 @@ Where Col1 = Col2
   
  De hecho, se crea la subcláusula de intercalación una *restringido tipo* que no es sustituible.  
   
- De forma similar, el criterio de ordenación puede ser bastante diferente entre los sistemas de tipos. Esta diferencia afecta a la ordenación de los resultados. <xref:System.Guid> se ordena en los 16 bytes por orden lexicográfico (`IComparable()`), mientras que T-SQL compara los GUID en el orden siguiente: node(10-15), clock-seq(8-9), time-high(6-7), time-mid(4-5), time-low(0-3). Esta ordenación era la habitual en SQL 7.0, cuando los GUID generados por NT tenían este orden de octetos. Este enfoque garantizaba que los GUID generados en el mismo clúster de nodos se obtenían juntos y ordenados secuencialmente, según la marca de tiempo. También era útil para compilar índices (las inserciones se convertían en anexos en lugar de E/S aleatorias). Posteriormente, el orden se codificó en Windows por cuestiones de privacidad, pero SQL debe mantener la compatibilidad. Una solución alternativa es usar <xref:System.Data.SqlTypes.SqlGuid> en lugar de <xref:System.Guid>.  
+ De forma similar, el criterio de ordenación puede ser bastante diferente entre los sistemas de tipos. Esta diferencia afecta a la ordenación de los resultados. <xref:System.Guid> se ordena en los 16 bytes por orden lexicográfico (`IComparable()`), mientras que T-SQL compara los GUID en el siguiente orden: node(10-15), clock-seq(8-9), time-high(6-7), time-mid(4-5), time-low(0-3). Esta ordenación era la habitual en SQL 7.0, cuando los GUID generados por NT tenían este orden de octetos. Este enfoque garantizaba que los GUID generados en el mismo clúster de nodos se obtenían juntos y ordenados secuencialmente, según la marca de tiempo. También era útil para compilar índices (las inserciones se convertían en anexos en lugar de E/S aleatorias). Posteriormente, el orden se codificó en Windows por cuestiones de privacidad, pero SQL debe mantener la compatibilidad. Una solución alternativa es usar <xref:System.Data.SqlTypes.SqlGuid> en lugar de <xref:System.Guid>.  
   
 ### <a name="operator-and-function-differences"></a>Diferencias entre operadores y funciones  
  Los operadores y las funciones que son esencialmente comparables presentan una semántica ligeramente diferente. Por ejemplo:  
@@ -157,7 +157,7 @@ Where Col1 = Col2
   
     -   Una conversión libre a `AND` / `OR` podría producir errores inesperados si los C# expresión basa en la evaluación del segundo operando se basa en el resultado de la evaluación del primer operando.  
   
--   La función `Round()` tiene una semántica diferente en [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] y en T-SQL.  
+-   `Round()` función tiene una semántica diferente [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] y en T-SQL.  
   
 -   El índice de inicio de las cadenas es 0 en CLR, pero 1 en SQL. Por consiguiente, cualquier función que tenga un índice requiere la conversión del índice.  
   
@@ -294,4 +294,5 @@ Where Col1 + Col2 > 4
  Además de las diferencias semánticas, es importante tener en cuenta el impacto en el rendimiento si se entrecruzan los sistemas de tipos de CLR y SQL Server. Para los conjuntos de datos grandes, estos problemas de rendimiento pueden determinar si una aplicación se puede implementar o no.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

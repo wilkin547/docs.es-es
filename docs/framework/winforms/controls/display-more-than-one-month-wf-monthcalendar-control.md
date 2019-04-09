@@ -1,5 +1,5 @@
 ---
-title: Filtrar Mostrar más de un mes en el Control MonthCalendar de formularios de Windows
+title: Filtrar para mostrar más de un mes en el control MonthCalendar de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - calendars [Windows Forms], multiple months
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d197caa2-38a5-4cb4-acc3-562130c2ace3
-ms.openlocfilehash: febed820bae460f51bb19f08caa6027011abd55d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79100b52d8e0a5b651edb9d6555a4497287ed858
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209559"
 ---
-# <a name="how-to-display-more-than-one-month-in-the-windows-forms-monthcalendar-control"></a>Procedimiento Mostrar más de un mes en el Control MonthCalendar de formularios de Windows
+# <a name="how-to-display-more-than-one-month-in-the-windows-forms-monthcalendar-control"></a>Filtrar para mostrar más de un mes en el control MonthCalendar de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control puede mostrar un máximo de 12 meses a la vez. De forma predeterminada, el control muestra un solo mes, pero puede especificar el número de meses se muestra y cómo se organizan dentro del control. Al cambiar las dimensiones del calendario, el control cambia de tamaño, por lo que hay espacio suficiente en el formulario para las nuevas dimensiones.  
   
 ### <a name="to-display-multiple-months"></a>Para mostrar varios meses  
@@ -38,6 +38,7 @@ Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control pue
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [MonthCalendar (control)](monthcalendar-control-windows-forms.md)
-- [Cómo: Seleccione un intervalo de fechas en el Control MonthCalendar de formularios de Windows](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Cómo: Cambiar la apariencia de Windows Forms MonthCalendar del Control](how-to-change-monthcalendar-control-appearance.md)
+
+- [Control MonthCalendar](monthcalendar-control-windows-forms.md)
+- [Filtrar para seleccionar un intervalo de fechas en el control MonthCalendar de formularios Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Filtrar para cambiar la apariencia del control MonthCalendar de formularios Windows Forms](how-to-change-monthcalendar-control-appearance.md)

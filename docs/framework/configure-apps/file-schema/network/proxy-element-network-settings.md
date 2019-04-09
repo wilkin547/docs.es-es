@@ -1,5 +1,5 @@
 ---
-title: <proxy> (Elemento, Configuración de red)
+title: <proxy> Elemento (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: a6c6d85d8ec1b79f6b3ddf53af0a4b289289dd6a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8df9bbf2615776c2e023f03401785da95b2226eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256868"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204827"
 ---
 # <a name="proxy-element-network-settings"></a>\<proxy > elemento (configuración de red)
 Define un servidor proxy.  
@@ -40,7 +40,7 @@ Define un servidor proxy.
   
 ### <a name="attributes"></a>Atributos  
   
-|**Attribute**|**Descripción**|  
+|**Atributo**|**Descripción**|  
 |-------------------|---------------------|  
 |`autoDetect`|Especifica si el proxy se detecta automáticamente. El valor predeterminado es `unspecified`.|  
 |`bypassonlocal`|Especifica si se omite el proxy para los recursos locales. Los recursos locales incluyen el servidor local (`http://localhost`, `http://loopback`, o `http://127.0.0.1`) y un URI sin un punto (`http://webserver`). El valor predeterminado es `unspecified`.|  
@@ -53,7 +53,7 @@ Define un servidor proxy.
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Element**|**Descripción**|  
+|**Elemento**|**Descripción**|  
 |-----------------|---------------------|  
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).|  
   
@@ -91,5 +91,6 @@ Define un servidor proxy.
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

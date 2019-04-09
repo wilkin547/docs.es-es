@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Usar un subproceso en segundo plano para buscar archivos
+title: Filtrar para usar un subproceso en segundo plano para buscar archivos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723171"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157803"
 ---
-# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Procedimiento Usar un subproceso en segundo plano para buscar archivos
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Filtrar para usar un subproceso en segundo plano para buscar archivos
 El <xref:System.ComponentModel.BackgroundWorker> componente reemplaza y agrega funcionalidad a la <xref:System.Threading> espacio de nombres; sin embargo, el <xref:System.Threading> espacio de nombres se conserva por compatibilidad con versiones anteriores y uso futuro, si elige. Para obtener más información, consulte [general sobre el componente BackgroundWorker](backgroundworker-component-overview.md).  
   
  Windows Forms utiliza el modelo de contenedor uniproceso (STA) porque Windows Forms se basa en las ventanas de Win32 nativas que son inherentemente apartamento. El modelo STA implica que se puede crear una ventana en cualquier subproceso, pero no puede cambiar una vez creados los subprocesos, y todas las llamadas de función a la se deben producir en su subproceso de creación. Fuera de Windows Forms, las clases de .NET Framework utilizan el modelo de subprocesamiento libre. Para obtener información acerca de los subprocesos en .NET Framework, vea [subprocesamiento](../../../standard/threading/index.md).  
@@ -763,6 +763,7 @@ namespace SampleUsage
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)
+- [Desarrollar controles personalizados de formularios Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)
 - [Información general sobre el modelo asincrónico basado en eventos](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-ms.openlocfilehash: 81ac17c9f78baa71d005883c9dd928e398b10a33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 892168ec282fbf168c43515e0718fe5486a345a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842348"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130265"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>Arquitectura del control DataGridView (formularios Windows Forms)
 El <xref:System.Windows.Forms.DataGridView> control y sus clases relacionadas están diseñadas para ser un sistema flexible y extensible para mostrar y editar datos tabulares. Estas clases están incluidas en el <xref:System.Windows.Forms?displayProperty=nameWithType> espacio de nombres y se denominan con el prefijo "DataGridView".  
@@ -137,6 +137,7 @@ El <xref:System.Windows.Forms.DataGridView> control y sus clases relacionadas es
  Si habilita la <xref:System.Windows.Forms.DataGridView> del control <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> una fila especial para agregar nuevas filas de propiedad, aparece como la última fila. Esta fila es parte de la <xref:System.Windows.Forms.DataGridView.Rows%2A> colección, pero tiene una funcionalidad especial que requiera su atención. Para obtener más información, consulte [utilizando la fila de nuevos registros en el DataGridView Control de Windows Forms](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general del control DataGridView](datagridview-control-overview-windows-forms.md)
-- [Personalizar el control DataGridView de Windows Forms](customizing-the-windows-forms-datagridview-control.md)
+- [Personalizar el control DataGridView de formularios Windows Forms](customizing-the-windows-forms-datagridview-control.md)
 - [Utilizar la fila de nuevos registros en el control DataGridView de formularios Windows Forms](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

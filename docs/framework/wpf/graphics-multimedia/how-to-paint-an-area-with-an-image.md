@@ -9,12 +9,12 @@ helpviewer_keywords:
 - painting [WPF], with images
 - brushes [WPF], painting with images
 ms.assetid: 3432c533-1fc7-492d-94ee-0b13d60125ae
-ms.openlocfilehash: c1db803aacad85ce90fec519b5eabdd8df7bb584
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2b88982e7a8d196c31869dc74aac636d78f68386
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369128"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207817"
 ---
 # <a name="how-to-paint-an-area-with-an-image"></a>Filtrar Pintar un área con una imagen
 En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.ImageBrush> clase para pintar un área con una imagen. Un <xref:System.Windows.Media.ImageBrush> muestra una sola imagen, que se especifica mediante su <xref:System.Windows.Media.ImageBrush.ImageSource%2A> propiedad.  
@@ -36,4 +36,5 @@ En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.ImageBrush> 
  Este ejemplo de código forma parte de un ejemplo más extenso proporcionado para el <xref:System.Windows.Media.ImageBrush> clase. Para obtener un ejemplo completo, vea [ejemplo de ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Pintar con imágenes, dibujos y elementos visuales](painting-with-images-drawings-and-visuals.md)

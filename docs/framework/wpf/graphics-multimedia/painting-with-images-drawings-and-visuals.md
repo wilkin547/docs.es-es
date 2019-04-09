@@ -12,17 +12,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: bb66c34a847f78f7921ae925d0c3d0640c11aeec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361334"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204203"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Pintar con imágenes, dibujos y elementos visuales
 Este tema describe cómo usar <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, y <xref:System.Windows.Media.VisualBrush> objetos que se va a pintar un área con una imagen, un <xref:System.Windows.Media.Drawing>, o un <xref:System.Windows.Media.Visual>.  
-    
-  
+
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
  Para entender este tema, debe estar familiarizado con los distintos tipos de pinceles que [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona y sus características básicas. Para una introducción, consulte [Información general sobre pinceles de WPF](wpf-brushes-overview.md).  
@@ -135,6 +134,7 @@ Componentes de TileBrush con varios mosaicos
  Para obtener más información sobre las características de mosaico de <xref:System.Windows.Media.TileBrush> objetos, vea el [TileBrush Overview](tilebrush-overview.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>

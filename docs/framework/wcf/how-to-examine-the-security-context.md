@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Examine el contexto de seguridad
+title: Filtrar para examinar el contexto de seguridad
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: bcc23097a6778bb537421ba494dd94414b37f4e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 063d9e334575170c632eb49aef527b14a6d164b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207115"
 ---
-# <a name="how-to-examine-the-security-context"></a>Procedimiento Examine el contexto de seguridad
+# <a name="how-to-examine-the-security-context"></a>Filtrar para examinar el contexto de seguridad
 Al programar servicios Windows Communication Foundation (WCF), el contexto de seguridad de servicio le permite determinar los detalles sobre las credenciales de cliente y las notificaciones que se usa para autenticarse con el servicio. Esto se hace utilizando las propiedades de la clase <xref:System.ServiceModel.ServiceSecurityContext>.  
   
  Por ejemplo, puede recuperar la identidad del cliente actual utilizando la propiedad <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> o <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>. Para determinar si el cliente es anónimo, utilice la propiedad <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>.  
@@ -55,5 +55,6 @@ Al programar servicios Windows Communication Foundation (WCF), el contexto de se
 -   <xref:System.IdentityModel.Claims>  
   
 ## <a name="see-also"></a>Vea también
+
 - [Seguridad de servicios](../../../docs/framework/wcf/securing-services.md)
 - [Identidad del servicio y autenticación](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

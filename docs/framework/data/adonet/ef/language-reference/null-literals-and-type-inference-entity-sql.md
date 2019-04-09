@@ -2,12 +2,12 @@
 title: Literales NULL e inferencia de tipos (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 2499579237155ff3f7291f795bd1ce9e8a84163c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22b548f2fc889b20f76a41001438f75c25f99c00
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529114"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118097"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Literales NULL e inferencia de tipos (Entity SQL)
 Los literales null son compatibles con cualquier tipo del sistema de tipos [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Sin embargo, para el tipo de un literal null se infiera correctamente, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] impone determinadas restricciones sobre dónde se puede usar un literal null.  
@@ -41,4 +41,5 @@ Los literales null son compatibles con cualquier tipo del sistema de tipos [!INC
  Los literales null flotantes no se pueden utilizar en otros escenarios. Por ejemplo, no se puede utilizar como argumentos para un constructor row.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

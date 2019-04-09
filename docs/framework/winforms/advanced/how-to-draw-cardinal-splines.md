@@ -1,5 +1,5 @@
 ---
-title: Filtrar Dibujar curvas spline cardinales
+title: Filtrar para dibujar curvas spline cardinales
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 0f5c7a8555130e884b641648d1ffc9865f44dc1e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 2f03177bf97936a2ca9558972d4d82fa3e07463c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464702"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204957"
 ---
-# <a name="how-to-draw-cardinal-splines"></a>Filtrar Dibujar curvas spline cardinales
+# <a name="how-to-draw-cardinal-splines"></a>Filtrar para dibujar curvas spline cardinales
 Una curva spline cardinal es una curva que se pasa sin problemas a través de un conjunto determinado de puntos. Para dibujar una curva spline cardinal, cree un <xref:System.Drawing.Graphics> objeto y pasar la dirección de una matriz de puntos para el <xref:System.Drawing.Graphics.DrawCurve%2A> método.  
   
 ### <a name="drawing-a-bell-shaped-cardinal-spline"></a>Dibujar una curva Cardinal Spline en forma de campana  
@@ -50,5 +50,6 @@ Una curva spline cardinal es una curva que se pasa sin problemas a través de un
  Los ejemplos anteriores están diseñados para su uso con Windows Forms y necesitan <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Líneas, curvas y formas](lines-curves-and-shapes.md)
 - [Crear y dibujar curvas](constructing-and-drawing-curves.md)

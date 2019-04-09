@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-ms.openlocfilehash: fda5330ff75c1744f3ed9d4394e51b5efb737071
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210209"
 ---
 # <a name="planning-for-application-performance"></a>Planear para mejorar el rendimiento de aplicaciones
 El éxito de alcanzar sus objetivos de rendimiento depende del grado de desarrollar la estrategia de rendimiento. El planeamiento es la primera fase de desarrollo de cualquier producto. En este tema se describe unas reglas muy sencillas para desarrollar una estrategia de buen rendimiento.  
@@ -33,6 +33,7 @@ El éxito de alcanzar sus objetivos de rendimiento depende del grado de desarrol
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] los controles son intrínsecamente extensibles por lo que permite la personalización generalizada de su aspecto, sin modificar su comportamiento de control. Aprovechando las ventajas de estilos, plantillas de datos y plantillas de control, puede crear y gradualmente una personalizables [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] que se adapta a sus requisitos de rendimiento.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Optimizar WPF: Rendimiento de aplicaciones](optimizing-wpf-application-performance.md)
 - [Aprovechar el hardware](optimizing-performance-taking-advantage-of-hardware.md)
 - [Presentación y diseño](optimizing-performance-layout-and-design.md)

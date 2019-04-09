@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 510ef77f217cdd6e3441e3d6684d431fc31307fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0625dc72d44485dbb69b42cba5387085d1862bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210430"
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext (Estructura)
 Proporciona un contexto simple que se puede usar en lugar de una estructura `CONTEXT` completa.  
@@ -57,5 +57,6 @@ struct StackTrace_SimpleContext
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

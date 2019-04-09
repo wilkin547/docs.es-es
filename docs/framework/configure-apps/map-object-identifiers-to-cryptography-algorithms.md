@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping object identifiers
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-ms.openlocfilehash: 000d5d94b19907dfed40ac03f3172b9b8449c6f2
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: e035ff04a70a441f7f64bbc230ba6d8036fb2ace
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130616"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Asignar identificadores de objeto a algoritmos de criptografía
 Aseguran de firmas digitales que datos no se manipule cuando se envían desde un programa a otro. Normalmente, la firma digital se calcula aplicando una función matemática con el hash de los datos que se firmarán. Al dar formato a un valor hash que se va a firmar, algunos algoritmos de firma digital anexar ASN.1 identificador del objeto (OID) como parte de la operación de formato. El OID identifica el algoritmo que se usó para calcular el hash. Puede asignar los algoritmos a los identificadores de objeto para extender el mecanismo de criptografía para usar algoritmos personalizados. El ejemplo siguiente muestra cómo asignar un identificador de objeto a un nuevo algoritmo de hash.  
@@ -41,5 +41,6 @@ Aseguran de firmas digitales que datos no se manipule cuando se envían desde un
  El [ \<oidEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) contiene dos atributos. El **OID** atributo es el número de identificador de objeto. El **nombre** atributo es el valor de la **nombre** atributo desde el [ \<nameEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md). Debe haber una asignación de un nombre de algoritmo a una clase antes de que se puede asignar un identificador de objeto a un nombre simple.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Configurar clases de criptografía](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [servicios criptográficos](../../../docs/standard/security/cryptographic-services.md)

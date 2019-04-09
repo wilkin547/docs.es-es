@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Heredar de la clase UserControl
+title: Filtrar para heredar de la clase UserControl
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - user controls [Windows Forms], creating
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
-ms.openlocfilehash: b761c6eefcf7c951a19b77966b87b13b1fc0456e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1b5d69bda08b94ae00ce022d0d323ad4561ff6b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712037"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174803"
 ---
-# <a name="how-to-inherit-from-the-usercontrol-class"></a>Filtrar Heredar de la clase UserControl
+# <a name="how-to-inherit-from-the-usercontrol-class"></a>Filtrar para heredar de la clase UserControl
 Para combinar la funcionalidad de uno o más controles de Windows Forms con código personalizado, puede crear un *control de usuario*. Los controles de usuario combinan el desarrollo rápido de controles, la funcionalidad de los controles de Windows Forms estándar y la versatilidad de los métodos y las propiedades personalizados. Al comenzar a crear un control de usuario, se le presentará un diseñador visible en el que puede colocar los controles de Windows Forms estándar. Estos controles conservan toda su funcionalidad inherente, así como la apariencia y el comportamiento (apariencia) de los controles estándar. Una vez que estos controles están integrados en el control de usuario, dejan de estar disponibles en el código. El control de usuario realiza su propio dibujo y controla también toda la funcionalidad básica asociada a los controles.  
   
 > [!NOTE]
@@ -35,9 +35,10 @@ Para combinar la funcionalidad de uno o más controles de Windows Forms con cód
 5.  Presione F5 para compilar el proyecto y ejecutar el control en **UserControl Test Container**. Para obtener más información, vea [Cómo: Probar el comportamiento de tiempo de ejecución de una clase UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)
-- [Cómo: Heredar de la clase de Control](how-to-inherit-from-the-control-class.md)
-- [Cómo: Heredar de Windows existente controles de formularios](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Cómo: Crear controles de Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Filtrar para heredar de la clase Control](how-to-inherit-from-the-control-class.md)
+- [Filtrar para heredar de controles de formularios Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Filtrar para crear controles de formularios Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Solucionar problemas de controladores de eventos heredados en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Cómo: Probar el comportamiento de tiempo de ejecución de una clase UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Filtrar para comprobar el comportamiento de UserControl en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md)

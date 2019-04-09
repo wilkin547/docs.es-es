@@ -8,12 +8,12 @@ helpviewer_keywords:
 - labels
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
-ms.openlocfilehash: 13dcd6c63c30a5726a959c33f75c0c54e2810ef4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cc38b0f3ded9e3c2a5a4146eb6bb474921d1e19f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210098"
 ---
 # <a name="label-control-overview-windows-forms"></a>Información general sobre el control Label (formularios Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Label> controles se usan para mostrar texto o imágenes que no se puede editar el usuario. Se usan para identificar los objetos en un formulario, para proporcionar una descripción de lo que algunos controles hará si hace clic en, por ejemplo, o para mostrar información en respuesta a un evento de tiempo de ejecución o proceso en la aplicación. Por ejemplo, puede utilizar etiquetas para agregar títulos descriptivos a los cuadros de texto, cuadros de lista, cuadros combinados y así sucesivamente. También puede escribir código que cambia el texto mostrado por una etiqueta en respuesta a eventos en tiempo de ejecución. Por ejemplo, si la aplicación tarda unos minutos en procesar un cambio, puede mostrar un mensaje de estado de procesamiento en una etiqueta.  
@@ -24,6 +24,7 @@ Windows Forms <xref:System.Windows.Forms.Label> controles se usan para mostrar t
  El título mostrado en la etiqueta se encuentra en la <xref:System.Windows.Forms.Label.Text%2A> propiedad. El <xref:System.Windows.Forms.Label.TextAlign%2A> propiedad le permite establecer la alineación del texto dentro de la etiqueta. Para obtener más información, vea [Cómo: Establecer el texto mostrado por un Windows Forms Control](how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.Label>
-- [Cómo: Tamaño de un Control de etiqueta de Windows Forms para ajustar su contenido](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [Cómo: Crear teclas de acceso con controles Label de formularios de Windows](how-to-create-access-keys-with-windows-forms-label-controls.md)
+- [Filtrar para cambiar el tamaño de un control Label de formularios Windows Forms para ajustar su contenido](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Filtrar para crear teclas de acceso con controles Label de formularios Windows Forms](how-to-create-access-keys-with-windows-forms-label-controls.md)

@@ -1,18 +1,18 @@
 ---
-title: Filtrar Bloquear controles en Windows Forms
+title: Filtrar para bloquear controles en formularios Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: cff3b0a3ba547c15e7b1c896bde49931a6a3c742
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ac02e825218f14f8479e67a79da0c86e1c9ffe11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117928"
 ---
-# <a name="how-to-lock-controls-to-windows-forms"></a>Filtrar Bloquear controles en Windows Forms
+# <a name="how-to-lock-controls-to-windows-forms"></a>Filtrar para bloquear controles en formularios Windows Forms
 Al diseñar la interfaz de usuario (UI) de la aplicación de Windows, puede bloquear los controles una vez que se colocan correctamente, por lo que no accidentalmente mover o cambiar su tamaño al establecer otras propiedades.  
   
  Además, puede bloquear y desbloquear todos los controles del formulario a la vez, lo cual resulta útil para formularios con muchos controles, o puede desbloquear controles individuales. Una vez que haya colocado todos los controles donde desee en el formulario, bloquear en lugar de para evitar movimientos erróneos.  
@@ -47,7 +47,8 @@ Al diseñar la interfaz de usuario (UI) de la aplicación de Windows, puede bloq
 1.  En el **propiedades** ventana, haga clic en el **bloqueado** propiedad y seleccione `false`. (Haga doble clic en el nombre, se alterna el valor de propiedad).  
   
 ## <a name="see-also"></a>Vea también
-- [Controles de formularios Windows Forms](index.md)
+
+- [Controles de Windows Forms](index.md)
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

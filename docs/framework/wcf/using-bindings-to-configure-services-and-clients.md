@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 45a904eb9e38b13fc3502264f4659bfd25465630
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 8080451d64f74629451c6ca66fb27d93c9f29ed8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410425"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209507"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Utilización de enlaces para configurar servicios y clientes
 Los enlaces son los objetos que especifican los datos de comunicación exigidos para conectar a un punto de conexión. Más específicamente, los enlaces contienen información de configuración utilizada para crear el cliente o servicio en tiempo de ejecución mediante la definición de las características de transportes, formatos de la conexión (codificación de mensajes) y protocolos que se utilizarán en el punto de conexión respectivo o canal de cliente. Para crear un servicio de Windows Communication Foundation (WCF) funcione, cada punto de conexión en el servicio requiere un enlace. Este tema explica qué enlaces son, cómo se definen, y cómo se especifica un enlace determinado para un punto de conexión.  
@@ -57,8 +57,9 @@ Los enlaces son los objetos que especifican los datos de comunicación exigidos 
 -   [Tutorial: Crear un cliente de Windows Communication Foundation](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) proporciona un ejemplo de creación de un cliente mediante configuración.  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre la creación de puntos finales](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Cómo: Especificar un enlace de servicio en la configuración](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Cómo: Especificar un enlace de servicio en el código](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
-- [Cómo: Especificar un enlace de cliente en configuración](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
-- [Cómo: Especificar un enlace de cliente en el código](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)
+
+- [Información general acerca de la creación de puntos finales](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Filtrar para especificar un enlace de servicio en la configuración](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [Filtrar para especificar un enlace de servicio en el código](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+- [Filtrar para especificar un enlace de cliente en la configuración](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [Filtrar para especificar un enlace de cliente en el código](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)

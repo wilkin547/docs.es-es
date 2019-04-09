@@ -7,12 +7,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms], about StatusStrip control
 - status bars [Windows Forms], about status bars
 ms.assetid: c0d9bcbb-f8b8-46ef-bae2-4146b8c8ce99
-ms.openlocfilehash: 2558c9c89bc296a3a92512a7d1a0ee7110dbcc21
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f6f2d4b19b7ec91c964c72e3aca85e0253c7cc22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129719"
 ---
 # <a name="statusstrip-control-overview"></a>Información general del control StatusStrip
 Un control <xref:System.Windows.Forms.StatusStrip> muestra información sobre un objeto que se visualiza en <xref:System.Windows.Forms.Form>, componentes del objeto o información contextual relativa a esa operación del objeto en la aplicación. Normalmente, un control <xref:System.Windows.Forms.StatusStrip> está formado por objetos <xref:System.Windows.Forms.ToolStripStatusLabel>, cada uno de los cuales muestra texto, un icono o ambos. El control <xref:System.Windows.Forms.StatusStrip> también puede contener los controles <xref:System.Windows.Forms.ToolStripDropDownButton>, <xref:System.Windows.Forms.ToolStripSplitButton> y <xref:System.Windows.Forms.ToolStripProgressBar>.  
@@ -27,14 +27,14 @@ Un control <xref:System.Windows.Forms.StatusStrip> muestra información sobre un
   
 ### <a name="important-statusstrip-members"></a>Miembros de StatusStrip importantes  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.StatusStrip.CanOverflow%2A>|Obtiene o establece un valor que indica si <xref:System.Windows.Forms.StatusStrip> admite la funcionalidad del desbordamiento.|  
 |<xref:System.Windows.Forms.StatusStrip.Stretch%2A>|Obtiene o establece un valor que indica si <xref:System.Windows.Forms.StatusStrip> se expande de punto de conexión a punto de conexión en <xref:System.Windows.Forms.ToolStripContainer>.|  
   
 ### <a name="important-statusstrip-companion-classes"></a>Clases complementarias importantes de StatusStrip  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripStatusLabel>|Representa un panel de un control <xref:System.Windows.Forms.StatusStrip>.|  
 |<xref:System.Windows.Forms.ToolStripDropDownButton>|Muestra un <xref:System.Windows.Forms.ToolStripDropDown> asociado en el que el usuario puede seleccionar un elemento único.|  
@@ -42,6 +42,7 @@ Un control <xref:System.Windows.Forms.StatusStrip> muestra información sobre un
 |<xref:System.Windows.Forms.ToolStripProgressBar>|Muestra el estado de finalización de un proceso.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.StatusStrip>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>

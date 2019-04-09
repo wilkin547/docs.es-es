@@ -2,12 +2,12 @@
 title: Compatibilidad con transacciones
 ms.date: 03/30/2017
 ms.assetid: 8cceb26e-8d36-4365-8967-58e2e89e0187
-ms.openlocfilehash: f53a6081102991c73543b4cd76365f7e2c0faf89
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 519ddab069cf3c4ca1ccfa7b203769b8102db844
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196169"
 ---
 # <a name="transaction-support"></a>Compatibilidad con transacciones
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite tres modelos de transacción distintos. A continuación se enumeran estos modelos por orden de comprobaciones realizadas.  
@@ -24,5 +24,6 @@ ms.locfileid: "54517206"
  Cuando se llama a <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] comprueba si la llamada está en el ámbito de un <xref:System.Transactions.Transaction> o si el `Transaction` propiedad (`IDbTransaction`) está establecida en una transacción local iniciada por el usuario. Si no encuentra ninguna de estas transacciones, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] inicia una transacción local (`IDbTransaction`) y lo usa para ejecutar los comandos SQL generados. Cuando se han completado correctamente todos los comandos SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] confirma la transacción local y devuelve.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Cómo: Envíos de datos mediante el uso de transacciones](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)
+- [Filtrar para poner entre corchetes envíos de datos mediante el uso de transacciones](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)

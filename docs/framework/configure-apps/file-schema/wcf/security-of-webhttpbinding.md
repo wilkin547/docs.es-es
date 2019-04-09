@@ -2,12 +2,12 @@
 title: <security> de <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 7f714ffb89d5ff990239bd1a02ffaeead4ad7d91
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6375a64ea157df01f903901e0414a2989287aee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132304"
 ---
 # <a name="security-of-webhttpbinding"></a>\<seguridad > de \<webHttpBinding >
 Especifica los requisitos de seguridad para un extremo configurado con un [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -43,7 +43,7 @@ Especifica los requisitos de seguridad para un extremo configurado con un [ \<ws
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|modo|Especifica si un extremo usa la seguridad a nivel de transporte o no usa ninguna. De manera predeterminada, es `None`. Este atributo es del tipo <xref:System.ServiceModel.WebHttpSecurityMode>.|  
+|modo|Especifica si un punto de conexión usa la seguridad a nivel de transporte o no usa ninguna. De manera predeterminada, es `None`. Este atributo es del tipo <xref:System.ServiceModel.WebHttpSecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Atributo de modo  
   
@@ -66,6 +66,7 @@ Especifica los requisitos de seguridad para un extremo configurado con un [ \<ws
 |[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Un elemento de enlace que se usa para configurar los puntos de conexión para que responden a solicitudes HTTP en lugar de los mensajes SOAP de los servicios Web de Windows Communication Foundation (WCF).|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.WebHttpBindingElement>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
 - <xref:System.ServiceModel.WebHttpBinding.Security%2A>

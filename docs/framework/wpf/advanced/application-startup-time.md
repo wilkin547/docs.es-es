@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 0bd7875f1e819497ea3a4d846a2876084a54ab80
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379112"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173035"
 ---
 # <a name="application-startup-time"></a>Tiempo de inicio de una aplicación
 La cantidad de tiempo necesaria para iniciar una aplicación de WPF puede variar en gran medida. En este tema se describen varias técnicas para reducir el tiempo de inicio percibido y real de una aplicación de Windows Presentation Foundation (WPF).  
@@ -65,7 +65,7 @@ La cantidad de tiempo necesaria para iniciar una aplicación de WPF puede variar
  La presencia simultánea de módulos JIT y Ngen pueden ejercer el efecto más negativo. La causa es que hay que cargar mscorjit.dll y, cuando el compilador JIT está trabajando con el código, es preciso tener acceso a gran cantidad de páginas de las imágenes de Ngen mientras el compilador JIT lee los metadatos de los ensamblados.  
   
 ### <a name="ngen-and-clickonce"></a>Ngen y ClickOnce  
- La manera en que está previsto implementar la aplicación también puede marcar la diferencia en cuanto al tiempo de carga. La implementación de aplicaciones de [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] no admite Ngen. Si decide utilizar Ngen.exe para su aplicación, tendrá que utilizar otro mecanismo de implementación, como Windows Installer.  
+ La manera en que está previsto implementar la aplicación también puede marcar la diferencia en cuanto al tiempo de carga. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] implementación de la aplicación no admite Ngen. Si decide utilizar Ngen.exe para su aplicación, tendrá que utilizar otro mecanismo de implementación, como Windows Installer.  
   
  Para obtener más información, vea el artículo sobre [Ngen.exe (generador de imágenes nativas)](../../tools/ngen-exe-native-image-generator.md).  
   
@@ -123,10 +123,11 @@ La cantidad de tiempo necesaria para iniciar una aplicación de WPF puede variar
  En lugar de usar XAML para establecer el <xref:System.Windows.FrameworkElement.DataContext%2A> mediante declaración para la ventana principal, puede establecerlo mediante programación en el <xref:System.Windows.Application.OnActivated%2A> método.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.SplashScreen>
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
 - [Agregar una pantalla de presentación a una aplicación WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
 - [Ngen.exe (Generador de imágenes nativas)](../../tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence> (Elemento)](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [\<generatePublisherEvidence > elemento](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Uso de Svcutil.exe para validar el código de servicio compilado
+title: Filtrar para usar Svcutil.exe para validar el código del servicio compilado
 ms.date: 03/30/2017
 ms.assetid: d0d820fb-41c2-45b8-8f22-0fa5aeebbbaa
-ms.openlocfilehash: a06cf57fce883753af4686b294396d6d6da73a13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1e90d71d5831ccf262315ebf9c1deb99b386e224
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196416"
 ---
-# <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>Procedimiento Uso de Svcutil.exe para validar el código de servicio compilado
+# <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>Filtrar para usar Svcutil.exe para validar el código del servicio compilado
 Puede usar el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para detectar errores en las implementaciones de servicio y configuraciones sin hospedar el servicio.  
   
 ### <a name="to-validate-a-service"></a>Validar un servicio  
@@ -36,4 +36,5 @@ svcutil /validate /serviceName:myServiceName myServiceHost.exe
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

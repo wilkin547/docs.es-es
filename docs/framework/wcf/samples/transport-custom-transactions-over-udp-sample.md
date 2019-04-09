@@ -2,12 +2,12 @@
 title: 'Transporte: Transacciones personalizadas sobre ejemplo UDP'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 931cedfeb5604b00ec1cf3f4d2742e2dff2eacca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 283e35b7701a6f95aa000cdd0acabaad81142bc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174283"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transporte: Transacciones personalizadas sobre ejemplo UDP
 En este ejemplo se basa en el [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo en Windows Communication Foundation (WCF)[extensibilidad de transporte](../../../../docs/framework/wcf/samples/transport-extensibility.md). Extiende el ejemplo de transporte UDP para admitir el flujo de transacciones personalizado y muestra el uso de la propiedad <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
@@ -46,7 +46,7 @@ byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMes
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- `TransactionMessageBuffer.WriteTransactionMessageBuffer` es un método del asistente que contiene la nueva funcionalidad para combinar el token de propagación para la transacción actual con la entidad del mensaje y lo coloca en un búfer.  
+ `TransactionMessageBuffer.WriteTransactionMessageBuffer` es un método auxiliar que contiene una nueva funcionalidad para combinar el token de propagación de la transacción actual con la entidad del mensaje y lo coloca en un búfer.  
   
  Para el transporte de flujo de transacciones personalizadas, la implementación del cliente debe conocer qué operaciones de servicio requieren flujo de transacción y pasar esta información a WCF. Debería haber también un mecanismo para transmitir la transacción del usuario en el nivel de transporte. Este ejemplo utiliza "Inspectores de mensaje WCF" para obtener esta información. El inspector de mensaje de cliente implementado aquí, que se denomina `TransactionFlowInspector`, realiza las tareas siguientes:  
   
@@ -263,4 +263,5 @@ if (transaction != null)
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
 ## <a name="see-also"></a>Vea también
+
 - [Transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

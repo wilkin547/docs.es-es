@@ -9,18 +9,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: 18a08c9bec8436399cd3acbf27198e0912e32d09
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148309"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Información general sobre el dibujo con colores sólidos y degradados
 Este tema describe cómo usar <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, y <xref:System.Windows.Media.RadialGradientBrush> objetos para pintar con colores sólidos, degradados lineales y degradados radiales.  
-  
 
-  
 <a name="solidcolor"></a>   
 ## <a name="painting-an-area-with-a-solid-color"></a>Pintar un área con un color sólido  
  Una de las operaciones más comunes en cualquier plataforma es pintar un área con un sólido <xref:System.Windows.Media.Color>. Para realizar esta tarea, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona el <xref:System.Windows.Media.SolidColorBrush> clase. Las secciones siguientes describen las distintas formas de pintar con un <xref:System.Windows.Media.SolidColorBrush>.  
@@ -148,7 +146,7 @@ RadialGradientBrushes con distintos ajustes GradientOrigin, Center, RadiusX y Ra
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Especificación de la opacidad del color en "XAML"  
- En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], usa la notación hexadecimal [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] para especificar la opacidad de colores individuales. La notación hexadecimal [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] usa la sintaxis siguiente:  
+ En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], usa la notación hexadecimal [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] para especificar la opacidad de colores individuales. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] notación hexadecimal utiliza la sintaxis siguiente:  
   
  `#` **aa** *rrggbb*  
   
@@ -169,6 +167,7 @@ RadialGradientBrushes con distintos ajustes GradientOrigin, Center, RadiusX y Ra
  <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, y <xref:System.Windows.Media.VisualBrush> clases le permiten pintar un área con imágenes, dibujos u objetos visuales. Para información sobre cómo pintar con imágenes, dibujos y patrones, consulte el artículo [Pintar con imágenes, dibujos y elementos visuales](painting-with-images-drawings-and-visuals.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.SolidColorBrush>
 - <xref:System.Windows.Media.LinearGradientBrush>
