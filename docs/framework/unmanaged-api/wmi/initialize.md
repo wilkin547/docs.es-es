@@ -16,39 +16,40 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f56ce2da5cc1b79fded3788ddb9631d2c8a2fa7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca8e87157a7adf45f35608aeba1067f2d66c8972
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693657"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081611"
 ---
-# <a name="initialize-function"></a><span data-ttu-id="0fe6f-103">Initialize (función)</span><span class="sxs-lookup"><span data-stu-id="0fe6f-103">Initialize function</span></span>
-<span data-ttu-id="0fe6f-104">Realiza la inicialización de la WMI.</span><span class="sxs-lookup"><span data-stu-id="0fe6f-104">Performs WMI initialization.</span></span>  
+# <a name="initialize-function"></a><span data-ttu-id="9d132-103">Initialize (función)</span><span class="sxs-lookup"><span data-stu-id="9d132-103">Initialize function</span></span>
+<span data-ttu-id="9d132-104">Realiza la inicialización de la WMI.</span><span class="sxs-lookup"><span data-stu-id="9d132-104">Performs WMI initialization.</span></span>  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="0fe6f-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0fe6f-105">Syntax</span></span> 
+## <a name="syntax"></a><span data-ttu-id="9d132-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9d132-105">Syntax</span></span> 
 ```  
 HRESULT Initialize(
    [in] boolean bAllowIManagementObjectQI
 ); 
 ```  
-## <a name="parameters"></a><span data-ttu-id="0fe6f-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="0fe6f-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="9d132-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9d132-106">Parameters</span></span>
 
 `bAllowIManagementObjectQI`   
-<span data-ttu-id="0fe6f-107">[in] `true` para indicar que se permiten las llamadas a QueryInterface en objetos WMI; `false` en caso contrario.</span><span class="sxs-lookup"><span data-stu-id="0fe6f-107">[in] `true` to indicate that calls to QueryInterface on WMI objects are allowed; `false` otherwise.</span></span>
+<span data-ttu-id="9d132-107">[in] `true` para indicar que se permiten las llamadas a QueryInterface en objetos WMI; `false` en caso contrario.</span><span class="sxs-lookup"><span data-stu-id="9d132-107">[in] `true` to indicate that calls to QueryInterface on WMI objects are allowed; `false` otherwise.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="0fe6f-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="0fe6f-108">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="9d132-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="9d132-108">Return value</span></span>
 
-<span data-ttu-id="0fe6f-109">La función siempre devuelve `S_OK` (0).</span><span class="sxs-lookup"><span data-stu-id="0fe6f-109">The function always returns `S_OK` (0).</span></span>
+<span data-ttu-id="9d132-109">La función siempre devuelve `S_OK` (0).</span><span class="sxs-lookup"><span data-stu-id="9d132-109">The function always returns `S_OK` (0).</span></span>
   
-## <a name="requirements"></a><span data-ttu-id="0fe6f-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0fe6f-110">Requirements</span></span>  
- <span data-ttu-id="0fe6f-111">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0fe6f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d132-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9d132-110">Requirements</span></span>  
+ <span data-ttu-id="9d132-111">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9d132-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0fe6f-112">**Encabezado**: WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="0fe6f-112">**Header:** WMINet_Utils.def</span></span>  
+ <span data-ttu-id="9d132-112">**Encabezado**: WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="9d132-112">**Header:** WMINet_Utils.def</span></span>  
   
- <span data-ttu-id="0fe6f-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="0fe6f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ **<span data-ttu-id="9d132-113">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="9d132-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="0fe6f-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="0fe6f-114">See also</span></span>
-- [<span data-ttu-id="0fe6f-115">WMI y contadores de rendimiento (referencia de API no administrada)</span><span class="sxs-lookup"><span data-stu-id="0fe6f-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="9d132-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="9d132-114">See also</span></span>
+
+- [<span data-ttu-id="9d132-115">WMI y contadores de rendimiento (referencia de API no administrada)</span><span class="sxs-lookup"><span data-stu-id="9d132-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

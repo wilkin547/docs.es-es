@@ -2,20 +2,21 @@
 title: System.ServiceModel.ExtensionCollectionDoesNotExist
 ms.date: 03/30/2017
 ms.assetid: 61a5231b-4385-4a49-b676-a8e60cda96c3
-ms.openlocfilehash: dc5f2b940b2e84098e705fd361db3e7d9bae2ee1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de0a6af9693673584dc8805654285dcb0b34401f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564661"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194637"
 ---
-# <a name="systemservicemodelextensioncollectiondoesnotexist"></a><span data-ttu-id="41787-102">System.ServiceModel.ExtensionCollectionDoesNotExist</span><span class="sxs-lookup"><span data-stu-id="41787-102">System.ServiceModel.ExtensionCollectionDoesNotExist</span></span>
-<span data-ttu-id="41787-103">System.ServiceModel.ExtensionCollectionDoesNotExist</span><span class="sxs-lookup"><span data-stu-id="41787-103">System.ServiceModel.ExtensionCollectionDoesNotExist</span></span>  
+# <a name="systemservicemodelextensioncollectiondoesnotexist"></a><span data-ttu-id="18802-102">System.ServiceModel.ExtensionCollectionDoesNotExist</span><span class="sxs-lookup"><span data-stu-id="18802-102">System.ServiceModel.ExtensionCollectionDoesNotExist</span></span>
+<span data-ttu-id="18802-103">System.ServiceModel.ExtensionCollectionDoesNotExist</span><span class="sxs-lookup"><span data-stu-id="18802-103">System.ServiceModel.ExtensionCollectionDoesNotExist</span></span>  
   
-## <a name="description"></a><span data-ttu-id="41787-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="41787-104">Description</span></span>  
- <span data-ttu-id="41787-105">La colección de extensiones no existe.</span><span class="sxs-lookup"><span data-stu-id="41787-105">The extension collection does not exist.</span></span>  
+## <a name="description"></a><span data-ttu-id="18802-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="18802-104">Description</span></span>  
+ <span data-ttu-id="18802-105">La colección de extensiones no existe.</span><span class="sxs-lookup"><span data-stu-id="18802-105">The extension collection does not exist.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="41787-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="41787-106">See also</span></span>
-- [<span data-ttu-id="41787-107">Traza</span><span class="sxs-lookup"><span data-stu-id="41787-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="41787-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="41787-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="41787-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="41787-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="18802-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="18802-106">See also</span></span>
+
+- [<span data-ttu-id="18802-107">Traza</span><span class="sxs-lookup"><span data-stu-id="18802-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="18802-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="18802-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="18802-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="18802-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
