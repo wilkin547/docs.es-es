@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: b09b50d2db277d6aec325fb9305890f8e5be581c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9c8b2cb0417db6481ce0171d85b225ef3a784c1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658905"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119761"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Modos de autenticación de SecurityBindingElement
 Windows Communication Foundation (WCF) proporciona varios modos en que los clientes y servicios autentican entre sí. Puede crear elementos de enlace de seguridad para estos modos de autenticación utilizando los métodos estáticos en la clase <xref:System.ServiceModel.Channels.SecurityBindingElement> o a través de la configuración. Este tema describe brevemente los 18 modos de autenticación.  
@@ -93,7 +93,7 @@ Windows Communication Foundation (WCF) proporciona varios modos en que los clien
  Con este modo de autenticación, el cliente autentica mediante un certificado X.509 que aparece en el nivel de SOAP como un token auxiliar de aprobación; es decir, un token que firma la firma del mensaje. La autenticación del servicio también se realiza mediante un certificado X.509. El elemento de enlace de seguridad es un `SymmetricSecurityBindingElement` devuelto por el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>. Por otra parte, defina el atributo `authenticationMode` en `MutualCertificate`.  
   
 ### <a name="mutualcertificateduplex"></a>MutualCertificateDuplex  
- Con este modo de autenticación, el cliente autentica mediante un certificado X.509 que aparece en el nivel de SOAP como un token auxiliar de aprobación; es decir, un token que firma la firma del mensaje. La autenticación del servicio también se realiza mediante un certificado X.509. Es enlace es un `AsymmetricSecurityBindingElement` devuelto por el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateDuplexBindingElement%2A>. Por otra parte, defina el atributo `authenticationMode` en `MutualCertificateDuplex`.  
+ Con este modo de autenticación, el cliente autentica mediante un certificado X.509 que aparece en el nivel de SOAP como un token auxiliar de aprobación; es decir, un token que firma la firma del mensaje. La autenticación del servicio también se realiza mediante un certificado X.509. Es enlace es un  `AsymmetricSecurityBindingElement` devuelto por el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateDuplexBindingElement%2A>. Por otra parte, defina el atributo `authenticationMode` en `MutualCertificateDuplex`.  
   
 ### <a name="mutualsslnegotiated"></a>MutualSslNegotiated  
  Con este modo de autenticación, el cliente y el servicio autentican utilizando los certificados X.509. El elemento de enlace de seguridad es un `SymmetricSecurityBindingElement` devuelto por el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSslNegotiationBindingElement%2A> cuando se pasa un valor `true` para el primer parámetro. Por otra parte, defina el atributo `authenticationMode` en `MutualSslNegotiated`.  
@@ -121,5 +121,6 @@ Windows Communication Foundation (WCF) proporciona varios modos en que los clien
  Con este modo de autenticación, el cliente se autentica mediante un token de nombre de usuario que aparece en el nivel de SOAP como un token auxiliar firmado; es decir, un token firmado por la firma del mensaje. La autenticación del servicio se realiza mediante un certificado X.509 en el nivel de transporte. El elemento de enlace de seguridad es un `TransportSecurityBindingElement` devuelto por el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A>. Por otra parte, defina el atributo `authenticationMode` en `UserNameOverTransport`.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
-- [Cómo: Crear un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Filtrar para crear un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

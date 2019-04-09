@@ -8,17 +8,16 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: 8013bacf6c4d33ce89fc287e625ce8c8fb6c3ef0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125310"
 ---
 # <a name="tilebrush-overview"></a>Información general sobre objetos TileBrush
 <xref:System.Windows.Media.TileBrush> los objetos que proporcionan un gran control sobre cómo se pinta un área con una imagen, <xref:System.Windows.Media.Drawing>, o <xref:System.Windows.Media.Visual>. Este tema describe cómo usar <xref:System.Windows.Media.TileBrush> características para obtener más control sobre cómo un <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, o <xref:System.Windows.Media.VisualBrush> pinta un área.  
-  
-  
+
 <a name="prerequisite"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
  Para entender este tema, es útil entender cómo usar las características básicas de la <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, o <xref:System.Windows.Media.VisualBrush> clase. Para obtener una introducción a estos tipos, vea la [pintar con imágenes, dibujos y elementos visuales](painting-with-images-drawings-and-visuals.md).  
@@ -122,6 +121,7 @@ Componentes de TileBrush con un valor de TileMode de Tile
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>

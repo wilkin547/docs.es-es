@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Auditar eventos de seguridad de Windows Communication Foundation
+title: Filtrar Auditar eventos de seguridad de Windows Communication Foundation
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: f3d4ed8ea9a3c0f45185cd0f631cd983b0e364c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0dd025b8b7adc97420699eb2f5099ab1ee75b820
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566832"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125767"
 ---
-# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Procedimiento Auditar eventos de seguridad de Windows Communication Foundation
+# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Filtrar Auditar eventos de seguridad de Windows Communication Foundation
 Windows Communication Foundation (WCF) le permite registrar eventos de seguridad en el registro de eventos de Windows, que se pueden ver mediante el Visor de eventos de Windows. Este tema explica cómo configurar una aplicación para que registre los eventos de seguridad. Para obtener más información acerca de la auditoría de WCF, vea [auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ### <a name="to-audit-security-events-in-code"></a>Para auditar los eventos de seguridad en el código  
@@ -88,6 +88,7 @@ Windows Communication Foundation (WCF) le permite registrar eventos de seguridad
  Si el <xref:System.ServiceModel.AuditLogLocation> propiedad está establecida en <xref:System.ServiceModel.AuditLogLocation.Security> y **auditar el acceso a objetos** no está establecido en el **directiva de seguridad Local**, eventos de auditoría no se escribirán en el registro de seguridad. Tenga en cuenta que no se devuelve ningún error, aunque las entradas de auditoría no se escriben en el registro de seguridad.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>

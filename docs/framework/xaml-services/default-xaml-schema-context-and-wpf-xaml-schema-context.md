@@ -2,12 +2,12 @@
 title: Contexto de esquema XAML predeterminado y contexto de esquema XAML de WPF
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: a916d202ab256789a73c713bee49e502ea49ffd3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.openlocfilehash: 1312541321e74668e6527c6c54e712342fbb3a17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58018524"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124701"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Contexto de esquema XAML predeterminado y contexto de esquema XAML de WPF
 Un contexto de esquema XAML es una entidad conceptual que califica cómo interactúa una producción de XAML que usa un vocabulario XAML concreto con el objeto de escritura de comportamiento, incluido cómo resuelve la asignación de tipos, cómo se cargan los ensamblados, cómo ciertos lector y escritor se interpreta la configuración. En este tema se describe las características de los servicios XAML de .NET Framework y el contexto de esquema XAML predeterminado asociado, que se basa en el sistema de tipos CLR. En este tema también se describe el contexto de esquema XAML que se usa para WPF.  
@@ -89,4 +89,5 @@ Un contexto de esquema XAML es una entidad conceptual que califica cómo interac
     -   Use el nombre corto + el token de clave pública para llamar a <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Introducción a las estructuras y conceptos de secuencias de nodo XAML](understanding-xaml-node-stream-structures-and-concepts.md)

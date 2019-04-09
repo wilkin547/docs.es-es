@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-ms.openlocfilehash: 6cd09295f9dac26011652d6b0a33318841b04072
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648367"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162677"
 ---
 # <a name="xaml-security-considerations"></a>Consideraciones de seguridad sobre XAML
 Este tema describe procedimientos recomendados de seguridad en las aplicaciones cuando se usa XAML y API de servicios XAML de .NET Framework.  
@@ -42,4 +42,5 @@ Este tema describe procedimientos recomendados de seguridad en las aplicaciones 
  XAML es compatible con su propio sistema de tipos, que en muchos sentidos es igual a cómo CLR implementa el sistema de tipos CLR básico. Sin embargo, ciertos aspectos de reconocimiento de tipo donde se están tomando decisiones de confianza sobre un tipo en función de su información de tipo, debe diferir la información de tipo en lo tipos de respaldo de CLR. Esto es porque algunas de las capacidades de informes específicas del sistema de tipos XAML se dejan abiertos como los métodos virtuales y por lo tanto, no son totalmente bajo el control de las implementaciones de servicios XAML de .NET Framework originales. Estos puntos de extensibilidad existen porque el sistema de tipos XAML es extensible, para que coincida con la extensibilidad de XAML en sí mismo y sus posibles estrategias alternativas de asignación de tipos frente a la implementación de respaldo de CLR predeterminada y el contexto de esquema XAML predeterminado. Para obtener más información, consulte las notas específicas en varias de las propiedades de <xref:System.Xaml.XamlType> y <xref:System.Xaml.XamlMember>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Xaml.Permissions.XamlAccessLevel>

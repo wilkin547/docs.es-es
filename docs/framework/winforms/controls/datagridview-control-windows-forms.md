@@ -13,12 +13,12 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 52ff12df7de7dc43c9cea2f36d3780fd0dd6ae3e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 86e96045b7de580b7cefd0262369ce860d00e234
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124324"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView (Control, formularios Windows Forms)
 El control `DataGridView` proporciona una forma eficaz y flexible de mostrar datos en formato de tabla. Puede usar el control `DataGridView` para mostrar vistas de solo lectura de una pequeña cantidad de datos, o puede ampliarlo para mostrar vistas editables de conjuntos de datos muy grandes.  
@@ -31,40 +31,40 @@ El control `DataGridView` proporciona una forma eficaz y flexible de mostrar dat
  [Información general del control DataGridView](datagridview-control-overview-windows-forms.md)  
  Proporciona temas que describen los arquitectura y los conceptos fundamentales del control `DataGridView` de Windows Forms.  
   
- [Funcionalidad predeterminada en el control DataGridView de Windows Forms](default-functionality-in-the-windows-forms-datagridview-control.md)  
+ [Funcionalidad predeterminada en el control DataGridView de formularios Windows Forms](default-functionality-in-the-windows-forms-datagridview-control.md)  
  Describe la apariencia y el comportamiento predeterminados del control `DataGridView` de Windows Forms cuándo está enlazado a un origen de datos.  
   
- [Tipos de columnas en el control DataGridView de Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)  
+ [Tipos de columnas en el control DataGridView de formularios Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)  
  Describe los tipos de columna en el control `DataGridView` de Windows Forms que se usan para mostrar datos y permitir a los usuarios modificar o agregar datos.  
   
- [Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ [Características básicas de columnas, filas y celdas en el control DataGridView de formularios Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)  
  Proporciona temas que describen las propiedades de celda, fila y columna que se usan habitualmente.  
   
  [Estilo y formato básicos del control DataGridView en formularios Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen cómo modificar la apariencia básica del control y el formato de presentación de los datos de celda.  
   
- [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Mostrar datos en el control DataGridView de formularios Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen cómo rellenar el control con datos manualmente o desde un origen de datos externo.  
   
- [Cambiar el tamaño de columnas y filas en el control DataGridView de Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)  
+ [Cambiar el tamaño de columnas y filas en el control DataGridView de formularios Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen cómo ajustar automáticamente el tamaño de las filas y columnas al contenido de la celda o al ancho disponible del control.  
   
- [Ordenar datos en el control DataGridView de Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)  
+ [Ordenar datos en el control DataGridView de formularios Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen las características de ordenación en el control.  
   
- [Entrada de datos en el control DataGridView de Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)  
+ [Entrada de datos en el control DataGridView de formularios Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen cómo cambiar la forma en que los usuarios agregan y modifican datos en el control.  
   
- [Selección y uso del Portapapeles con el control DataGridView de Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
+ [Selección y uso del Portapapeles con el control DataGridView de formularios Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen las características de selección de celdas, filas y columnas en el control.  
   
- [Programar con celdas, filas y columnas en el control DataGridView de Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
+ [Programar con celdas, filas y columnas en el control DataGridView de formularios Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  Proporciona temas que describen cómo programar con objetos de columna, fila y celda.  
   
- [Personalizar el control DataGridView de Windows Forms](customizing-the-windows-forms-datagridview-control.md)  
+ [Personalizar el control DataGridView de formularios Windows Forms](customizing-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen el dibujo personalizado de celdas y filas de `DataGridView`, y la creación de tipos derivados de celda, columna y fila.  
   
- [Ajuste del rendimiento del control DataGridView en Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Ajuste del rendimiento del control DataGridView en formularios Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  Proporciona temas que describen cómo usar eficazmente el control para evitar problemas de rendimiento cuando se trabaja con grandes cantidades de datos.  
   
  [Control predeterminado de teclado y mouse en el control DataGridView de Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)  
@@ -83,4 +83,5 @@ El control `DataGridView` proporciona una forma eficaz y flexible de mostrar dat
  Proporciona documentación de referencia para el componente <xref:System.Windows.Forms.BindingSource>. El control <xref:System.Windows.Forms.DataGridView> y el componente <xref:System.Windows.Forms.BindingSource> están diseñados para funcionar en estrecha colaboración.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 708c23f80dc3ed0a5b134295a16a20747d555be4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492343"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153249"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integración en la información general de las aplicaciones COM+
 Windows Communication Foundation (WCF) proporciona un entorno rico para crear aplicaciones distribuidas. Si ya usa lógica de la aplicación basada en componentes alojada en COM +, puede usar WCF para extender su lógica existente en lugar de tener que rescribirla. Un escenario común es cuando se quiere exponer una lógica de negocio de Enterprise Services o COM+ mediante servicios web.  
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) proporciona un entorno rico para crear ap
 ### <a name="limited-object-reference-support"></a>Compatibilidad limitada de referencia de objeto  
  Dado que varios componentes implementados de COM+ utilizan objetos por parámetros de referencia, como devolver un objeto ADO Recordset, la integración de COM+ incluye compatibilidad limitada para los parámetros de referencia de objeto. La compatibilidad se limita a los objetos que implementan la interfaz COM `IPersistStream`. Esto incluye los objetos ADO Recordset y se puede implementar para objetos COM específicos de la aplicación.  
   
- Para habilitar esta compatibilidad, la herramienta ComSvcConfig.exe proporciona el **allowreferences** switch que deshabilita el parámetro de firma de método normal y comprueba que se ejecuta la herramienta para asegurarse de que no se usan parámetros de referencia de objeto . Además, los tipos de objeto que pasa como parámetros se deben denominar e identificar dentro del elemento de configuración <`persistableTypes`>, que es un elemento secundario del elemento <`comContract`>.  
+ Para habilitar esta compatibilidad, la herramienta ComSvcConfig.exe proporciona el **allowreferences** switch que deshabilita el parámetro de firma de método normal y comprueba que se ejecuta la herramienta para asegurarse de que no se usan parámetros de referencia de objeto . Además, se deben denominados e identifica en los tipos de objeto que pasan como parámetros el <`persistableTypes`> elemento de configuración que es un elemento secundario de la <`comContract`> elemento.  
   
  Cuando se usa esta característica, el servicio de integración de COM+ utiliza la interfaz `IPersistStream` para serializar o deserializar la instancia de objeto. Si la instancia de objeto no es compatible con `IPersistStream`, se producirá una excepción.  
   
@@ -95,11 +95,12 @@ Windows Communication Foundation (WCF) proporciona un entorno rico para crear ap
   
  Para los modos de hospedaje en COM+ y web, las aplicaciones de cliente deben permitir al proceso de servidor suplantar al usuario del cliente. Esto puede hacerse en los clientes de WCF estableciendo nivel a la suplantación <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
   
- Si Internet Information Server (IIS) o el Servicio de activación de procesos de Windows (WAS) utilizan transporte HTTP, la herramienta Httpcfg.exe se puede utilizar para reservar una dirección de punto de conexión de transporte. En otras configuraciones es importante proteger contra servicios maliciosos que actúan como el servicio intencional. Para evitar que un servicio malicioso se inicie en el extremo deseado, el servicio legítimo se puede configurar para que se ejecute como un servicio NT. Esto permite que el servicio legítimo exija la dirección del punto de conexión antes que cualquier servicio malicioso.  
+ Si Internet Information Server (IIS) o el Servicio de activación de procesos de Windows (WAS) utilizan transporte HTTP, la herramienta Httpcfg.exe se puede utilizar para reservar una dirección de punto de conexión de transporte. En otras configuraciones es importante proteger contra servicios maliciosos que actúan como el servicio intencional. Para evitar que un servicio malicioso se inicie en el punto de conexión deseado, el servicio legítimo se puede configurar para que se ejecute como un servicio NT. Esto permite que el servicio legítimo exija la dirección del punto de conexión antes que cualquier servicio malicioso.  
   
  Al exponer una aplicación COM + con funciones COM + configuradas como un servicio hospedado en Web, la "cuenta Iniciar proceso de IIS" debe agregarse a uno de los roles de la aplicación. Esta cuenta, que suele tener el nombre IWAM_machinename, se debe agregar para habilitar el apagado limpio de objetos después del uso. No se le deberían otorgar permisos adicionales a esta cuenta.  
   
  Las características de reciclaje de proceso de COM+ no se pueden utilizar en aplicaciones integradas. Si la aplicación se configura para utilizar reciclaje de proceso y los componentes se ejecutan en un proceso hospedado por COM+, el servicio no se inicia. Este requisito no incluye servicios del modo en proceso de hospedaje en web porque no se aplica la configuración de reciclaje de proceso.  
   
 ## <a name="see-also"></a>Vea también
-- [Integración en la información general de las aplicaciones COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+
+- [Integración con la información general de las aplicaciones COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

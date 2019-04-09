@@ -1,5 +1,5 @@
 ---
-title: Filtrar Simular eventos del Mouse y teclado en el código
+title: Filtrar para simular eventos del mouse y del teclado en el código
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: bb51cd5ac3c4961381ceff89054d79dc52531627
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: aa0139c4b51bf33f9156eeb9dab6b9b6093524d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123453"
 ---
-# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Procedimiento Simular eventos del Mouse y teclado en el código
+# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Filtrar para simular eventos del mouse y del teclado en el código
 Windows Forms ofrece varias opciones para simular la entrada de mouse y de teclado mediante programación. En este tema se ofrece una introducción a estas opciones.  
   
 ## <a name="simulating-mouse-input"></a>Simular la entrada de mouse  
@@ -27,7 +27,7 @@ Windows Forms ofrece varias opciones para simular la entrada de mouse y de tecla
   
 #### <a name="to-programmatically-click-the-right-mouse-button"></a>Para hacer clic con el botón secundario del mouse mediante programación  
   
-1.  Cree un <xref:System.Windows.Forms.MouseEventArgs> cuya propiedad <xref:System.Windows.Forms.MouseEventArgs.Button%2A> esté establecida en el valor <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType>.  
+1.  Cree un <xref:System.Windows.Forms.MouseEventArgs> cuya propiedad <xref:System.Windows.Forms.MouseEventArgs.Button%2A> esté establecida en el valor <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> .  
   
 2.  Llame al método <xref:System.Windows.Forms.Control.OnMouseClick%2A> con este <xref:System.Windows.Forms.MouseEventArgs> como argumento.  
   
@@ -90,4 +90,5 @@ Windows Forms ofrece varias opciones para simular la entrada de mouse y de tecla
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
-- [Datos proporcionados por el usuario en Windows Forms](user-input-in-windows-forms.md)
+
+- [Datos proporcionados por el usuario en formularios Windows Forms](user-input-in-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: <cryptographySettings> (Elemento)
+title: <cryptographySettings> Elemento
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 11f07bbf5de04edc98a5a5bc0ba07f1629763a9f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ec3a5a73caa901a21e22dbec7500af9153e01ef4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258713"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164143"
 ---
 # <a name="cryptographysettings-element"></a>\<cryptographySettings > elemento
 Contiene la configuración de criptografía.  
@@ -77,6 +77,7 @@ Contiene la configuración de criptografía.
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Esquema de la configuración de criptografía](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [servicios criptográficos](../../../../../docs/standard/security/cryptographic-services.md)
