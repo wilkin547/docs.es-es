@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Establecer la imagen que muestra un Windows Forms Control
+title: Filtrar para establecer la imagen mostrada por un control de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 93bc7970ce7c287273f8bd7ff50b07c6658e2a08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 031ddcb3b852e75353fed7420735350e79f23df3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085095"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Procedimiento Establecer la imagen que muestra un Windows Forms Control
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Filtrar para establecer la imagen mostrada por un control de formularios Windows Forms
 Varios controles de Windows Forms pueden mostrar imágenes. Estas imágenes pueden ser iconos que aclarar el propósito del control, como un icono de disquete en un botón que denota el **guardar** comando. Como alternativa, los iconos pueden ser las imágenes de fondo para proporcionar el control de la apariencia y comportamiento que desee.  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>Para establecer la imagen que muestra un control  
@@ -57,6 +57,7 @@ Varios controles de Windows Forms pueden mostrar imágenes. Estas imágenes pued
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Aplicar atributos en controles de formularios Windows Forms
+title: Filtrar para aplicar atributos en controles de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: fd41999b1cd1cde940d182f3acc505bbb92a3aa4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e86277c06e515b28bada3331cf4fd63e536319a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718550"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079596"
 ---
-# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Procedimiento Aplicar atributos en controles de formularios Windows Forms
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Filtrar para aplicar atributos en controles de formularios Windows Forms
 Para desarrollar componentes y controles que interactúan correctamente con el entorno de diseño y se ejecuten correctamente en tiempo de ejecución, deberá aplicar correctamente los atributos a clases y miembros.  
   
 ## <a name="example"></a>Ejemplo  
@@ -78,8 +78,9 @@ Para desarrollar componentes y controles que interactúan correctamente con el e
 -   El formulario que hospeda el `AttributesDemoControl` requiere una referencia a la `AttributesDemoControl` ensamblado con el fin de crear.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>
-- [Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)
-- [Atributos en controles de Windows Forms](attributes-in-windows-forms-controls.md)
-- [Cómo: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
+- [Desarrollar controles personalizados de formularios Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)
+- [Atributos en controles de formularios Windows Forms](attributes-in-windows-forms-controls.md)
+- [Filtrar Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))

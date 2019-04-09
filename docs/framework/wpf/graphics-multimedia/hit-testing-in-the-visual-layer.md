@@ -8,18 +8,16 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: c8846c673e36fe64dd13c7acb600b93dedac5f3e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355082"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082183"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Realizar pruebas de posicionamiento en la capa visual
 En este tema se proporciona información general sobre la funcionalidad de prueba de posicionamiento que proporciona la capa visual. Compatibilidad con pruebas de posicionamiento permite determinar si un valor de geometría o un punto está dentro del contenido representado de un <xref:System.Windows.Media.Visual>, lo que permite implementar el comportamiento de la interfaz de usuario, como un rectángulo de selección para seleccionar varios objetos.  
-  
- 
-  
+
 <a name="hit_testing_scenarios"></a>   
 ## <a name="hit-testing-scenarios"></a>Escenarios de pruebas de posicionamiento  
  El <xref:System.Windows.UIElement> clase proporciona el <xref:System.Windows.UIElement.InputHitTest%2A> método, lo que permite a la prueba un elemento con un determinado valor de coordenadas de posicionamiento. En muchos casos, el <xref:System.Windows.UIElement.InputHitTest%2A> método proporciona la funcionalidad deseada para implementar la prueba de posicionamiento de elementos. Sin embargo, hay varios escenarios en los que puede necesitar implementar pruebas de posicionamiento en la capa visual.  
@@ -139,6 +137,7 @@ Eliminar un árbol visual
  [!code-vb[HitTestingOverview#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
 - <xref:System.Windows.Media.HitTestResult>
 - <xref:System.Windows.Media.HitTestResultCallback>
@@ -146,5 +145,5 @@ Eliminar un árbol visual
 - <xref:System.Windows.UIElement.IsHitTestVisible%2A>
 - [Prueba de posicionamiento con DrawingVisuals Sample](https://go.microsoft.com/fwlink/?LinkID=159994)
 - [Prueba con el ejemplo de interoperación de Win32 de posicionamiento](https://go.microsoft.com/fwlink/?LinkID=159995)
-- [Geometría de una prueba de posicionamiento en un objeto Visual](how-to-hit-test-geometry-in-a-visual.md)
+- [Geometría de una prueba de posicionamiento en un objeto visual](how-to-hit-test-geometry-in-a-visual.md)
 - [Realizar pruebas de posicionamiento mediante un contenedor host Win32](how-to-hit-test-using-a-win32-host-container.md)

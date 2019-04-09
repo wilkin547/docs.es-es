@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: bd031b0f7464da2f1e251abfa1fe314ee2fa763d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710237"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087630"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integración con la información general de las aplicaciones COM
 Windows Communication Foundation (WCF) proporciona al desarrollador del código administrado con un entorno rico para crear aplicaciones conectadas. Sin embargo, si tiene una inversión sustancial en código basado en COM no administrado y no desea migrar, puede seguir integrar servicios Web WCF directamente en el código existente mediante el moniker de servicio WCF. El moniker de servicio se puede utilizar a partir de una gama amplia de entornos de desarrollo basados en COM, como Office VBA, Visual Basic 6.0 o Visual C++ 6.0.  
@@ -41,11 +41,11 @@ Windows Communication Foundation (WCF) proporciona al desarrollador del código 
 |`upnIdentity`|Identidad del nombre principal del usuario (UPN) que se va a utilizar para comunicarse con el servicio.|  
 |`dnsIdentity`|Identidad de DNS que se va a utilizar para comunicarse con el servicio.|  
 |`mexAddress`|Ubicación de la dirección URL del punto de conexión de intercambio de metadatos (MEX) del servicio.|  
-|`mexBinding`|El nombre de la sección de enlace a partir de la configuración de la aplicación para conectarse con el punto de conexión MEX.|  
+|`mexBinding`|El nombre de la sección de enlace a partir de la configuración de la aplicación para conectarse con el extremo MEX.|  
 |`mexBindingConfiguration`|Instancia de enlace con nombre desde la que la sección de enlace con nombre se conecta con el punto de conexión MEX.|  
 |`bindingNamespace`|El espacio de nombres del nombre de la sección de enlace desde el MEX recuperado.|  
 |`contractNamespace`|El espacio de nombres del contrato desde el MEX recuperado.|  
-|`mexSpnIdentity`|Identidad del nombre de entidad de seguridad de servidor (SPN) que se va a utilizar para comunicarse con el punto de conexión MEX.|  
+|`mexSpnIdentity`|Identidad del nombre de entidad de seguridad de servidor (SPN) que se va a utilizar para comunicarse con el extremo MEX.|  
 |`mexUpnIdentity`|Identidad del nombre principal del usuario (UPN) que se va a utilizar para comunicarse con el punto de conexión MEX.|  
 |`mexDnsIdentity`|Identidad de DNS que se va a utilizar para comunicarse con el punto de conexión MEX.|  
 |`serializer`|Especifique el uso de "xml" o serializador de "datacontract."|  
@@ -66,4 +66,5 @@ Windows Communication Foundation (WCF) proporciona al desarrollador del código 
 >  `</configuration>`  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Registrar y configurar un Moniker de servicio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+
+- [Filtrar para registrar y configurar un moniker de servicio](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
