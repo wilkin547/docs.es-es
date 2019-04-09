@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: d2e493737adb0a56a55cf497095c648463ee5ee7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c2e554b7e6bde3e82190f70723f272b0d39a18a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152417"
 ---
 # <a name="handling-dataview-events"></a>Controlar eventos de DataView
 Puede utilizar el evento <xref:System.Data.DataView.ListChanged> de la <xref:System.Data.DataView> para determinar si se ha actualizado una vista. Entre las actualizaciones que generan el evento se incluyen la agregación de una fila a la tabla subyacente, así como su eliminación o modificación; la agregación de una columna al esquema de la tabla subyacente o su eliminación y la modificación de una relación primaria o secundaria. El **ListChanged** evento también le notifica si la lista de filas que está viendo ha cambiado considerablemente por la aplicación de un nuevo criterio de ordenación o filtro.  
@@ -52,7 +52,8 @@ protected static void OnListChanged(object sender,
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Data.DataView>
 - <xref:System.ComponentModel.ListChangedEventHandler>
 - [Objetos DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

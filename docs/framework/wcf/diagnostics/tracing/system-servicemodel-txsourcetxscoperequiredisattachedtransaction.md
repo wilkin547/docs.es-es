@@ -2,12 +2,12 @@
 title: System.ServiceModel.TxSourceTxScopeRequiredIsAttachedTransaction
 ms.date: 03/30/2017
 ms.assetid: 40d7b227-ee00-4b2c-a04c-1cd28b103f94
-ms.openlocfilehash: 3ce1697fea968579d6815e0cb234a296b07652a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a93aa9981e062f4e0e4ceb272a1f5c4b4b165323
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119332"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredisattachedtransaction"></a>System.ServiceModel.TxSourceTxScopeRequiredIsAttachedTransaction
 La transacción especificada se recibió para la operación especificada desde una transacción de InstanceContext.  
@@ -16,6 +16,7 @@ La transacción especificada se recibió para la operación especificada desde u
  Seguido si la transacción puesta a disposición del código de usuario se dejó tras un método AutoComplete=false llamado antes de esta invocación.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

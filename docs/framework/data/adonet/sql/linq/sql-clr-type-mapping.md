@@ -2,12 +2,12 @@
 title: Asignación de tipos entre CLR y SQL
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 5c8c6456d108975ec927e28ac80c8dcca1567b46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617348"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152495"
 ---
 # <a name="sql-clr-type-mapping"></a>Asignación de tipos entre CLR y SQL
 En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a un modelo de objetos expresado en el lenguaje de programación que prefiera. Cuando la aplicación se ejecuta, LINQ to SQL convierte las consultas integradas del lenguaje del modelo de objetos a SQL y las envía a la base de datos para su ejecución. Cuando la base de datos devuelve los resultados, LINQ to SQL los vuelve a convertir en objetos con los que pueda trabajar en su propio lenguaje de programación.  
@@ -18,9 +18,9 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
   
 -   [Asignación de tipos predeterminados](#DefaultTypeMapping)  
   
--   [Matriz de comportamiento de tiempo de ejecución de la asignación de tipos](#BehaviorMatrix)  
+-   [Matriz de comportamiento de la asignación de tipos en tiempo de ejecución](#BehaviorMatrix)  
   
--   [Diferencias de comportamiento entre CLR y la ejecución de SQL](#BehaviorDiffs)  
+-   [Diferencias de comportamiento entre la ejecución de CLR y SQL](#BehaviorDiffs)  
   
 -   [Asignación de enumeración](#EnumMapping)  
   
@@ -28,7 +28,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
   
 -   [Asignación de texto y XML](#TextMapping)  
   
--   [Fecha y hora de asignación](#DateMapping)  
+-   [Asignación de fecha y hora](#DateMapping)  
   
 -   [Asignación binaria](#BinaryMapping)  
   
@@ -104,7 +104,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
   
  En la tabla siguiente se muestran las asignaciones de tipos predeterminadas que el método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> utiliza para definir qué tipo de columnas de SQL se deben crear para asignarlas a los tipos de CLR definidos en el modelo de objetos o en el archivo de asignación externo.  
   
-|Tipo CLR|Tipo predeterminado de SQL Server utilizado por <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Tipo CLR|Tipo predeterminado de SQL Server utilizados por <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Boolean?displayProperty=nameWithType>|`BIT`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`TINYINT`|  
@@ -142,7 +142,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
   
  En la tabla siguiente se muestran las asignaciones de tipos predeterminadas que el método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> utiliza para definir qué tipo de columnas de SQL se deben crear para asignarlas a los tipos de CLR definidos en el modelo de objetos o en el archivo de asignación externo.  
   
-|Tipo CLR|Tipo predeterminado de SQL Server utilizado por <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Tipo CLR|Tipo predeterminado de SQL Server utilizados por <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Char?displayProperty=nameWithType>|`NCHAR(1)`|  
 |<xref:System.String?displayProperty=nameWithType>|`NVARCHAR(4000)`|  
@@ -185,7 +185,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
   
  En la tabla siguiente se muestran las asignaciones de tipos predeterminadas que el método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> utiliza para definir qué tipo de columnas de SQL se deben crear para asignarlas a los tipos de CLR definidos en el modelo de objetos o en el archivo de asignación externo.  
   
-|Tipo CLR|Tipo predeterminado de SQL Server utilizado por <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Tipo CLR|Tipo predeterminado de SQL Server utilizados por <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|`DATETIME`|  
 |<xref:System.DateTimeOffset?displayProperty=nameWithType>|`DATETIMEOFFSET`|  
@@ -199,7 +199,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
 ### <a name="systemdatetime"></a>System.Datetime  
  El intervalo y la precisión del tipo <xref:System.DateTime?displayProperty=nameWithType> de CLR son mayores que el intervalo y la precisión del tipo `DATETIME` de SQL Server, que es la asignación de tipos predeterminada para el método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>. Para evitar las excepciones relacionadas con los datos que están fuera del intervalo de `DATETIME`, utilice `DATETIME2`, que está disponible a partir de Microsoft SQL Server 2008. `DATETIME2` puede coincidir con el intervalo y la precisión de CLR <xref:System.DateTime?displayProperty=nameWithType>.  
   
- Las fechas de SQL Server no disponen del concepto de <xref:System.TimeZone>, que es una característica totalmente admitida en CLR. Los valores de <xref:System.TimeZone> se guardan tal como están en la base de datos sin conversión de <xref:System.TimeZone>, independientemente de la información de  <xref:System.DateTimeKind> original. Cuando los valores <xref:System.DateTime> se recuperan de la base de datos, su valor se carga tal cual en <xref:System.DateTime>, con un valor <xref:System.DateTimeKind> de <xref:System.DateTimeKind.Unspecified>. Para obtener más información sobre cómo admite <xref:System.DateTime?displayProperty=nameWithType> métodos, vea [System.DateTime (métodos)](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
+ Las fechas de SQL Server no disponen del concepto de <xref:System.TimeZone>, que es una característica totalmente admitida en CLR. <xref:System.TimeZone> los valores se guardan tal como están en la base de datos sin <xref:System.TimeZone> conversión, independientemente de la original <xref:System.DateTimeKind> información. Cuando los valores <xref:System.DateTime> se recuperan de la base de datos, su valor se carga tal cual en <xref:System.DateTime>, con un valor <xref:System.DateTimeKind> de <xref:System.DateTimeKind.Unspecified>. Para obtener más información sobre cómo admite <xref:System.DateTime?displayProperty=nameWithType> métodos, vea [System.DateTime (métodos)](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
  Microsoft SQL Server 2008 y .NET Framework 3.5 SP1 permiten asignar el tipo <xref:System.TimeSpan?displayProperty=nameWithType> de CLR al tipo `TIME` de SQL Server. Sin embargo, existe una gran diferencia entre el intervalo que admite el tipo <xref:System.TimeSpan?displayProperty=nameWithType> de CLR y el que admite el tipo `TIME` de SQL Server. La asignación de valores menores que 0 horas o mayores que 23:59:59.9999999 horas al tipo `TIME` de SQL producirá excepciones de desbordamiento. Para obtener más información, consulte [System.TimeSpan (métodos)](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md).  
@@ -221,7 +221,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
   
  En la tabla siguiente se muestran las asignaciones de tipos predeterminadas que el método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> utiliza para definir qué tipo de columnas de SQL se deben crear para asignarlas a los tipos de CLR definidos en el modelo de objetos o en el archivo de asignación externo.  
   
-|Tipo CLR|Tipo predeterminado de SQL Server utilizado por <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Tipo CLR|Tipo predeterminado de SQL Server utilizados por <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
@@ -249,7 +249,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
   
  En la tabla siguiente se muestran las asignaciones de tipos predeterminadas que el método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> utiliza para definir qué tipo de columnas de SQL se deben crear para asignarlas a los tipos de CLR definidos en el modelo de objetos o en el archivo de asignación externo.  
   
-|Tipo CLR|Tipo predeterminado de SQL Server utilizado por <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Tipo CLR|Tipo predeterminado de SQL Server utilizados por <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Guid?displayProperty=nameWithType>|`UNIQUEIDENTIFIER`|  
 |<xref:System.Object?displayProperty=nameWithType>|`SQL_VARIANT`|  
@@ -257,6 +257,7 @@ En LINQ to SQL, el modelo de datos de una base de datos relacional se asigna a u
  LINQ to SQL no admite ninguna otra asignación de tipos para estos tipos varios.  Para obtener más información, consulte el [matriz de comportamiento de tiempo tipo de asignación de ejecución](#BehaviorMatrix).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Asignación basada en atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [Asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [Tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
