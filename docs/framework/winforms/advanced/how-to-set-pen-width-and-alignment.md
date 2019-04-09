@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pens [Windows Forms], setting width
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
-ms.openlocfilehash: b01482c059906d76ad9e506b593d580431f0ec09
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bc2ac2587554215ef3b2c2580413fbbb894aa687
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074981"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Filtrar para establecer el ancho y la alineación del lápiz
 Cuando creas un <xref:System.Drawing.Pen>, puede proporcionar el ancho del lápiz como uno de los argumentos al constructor. También puede cambiar el ancho del lápiz con el <xref:System.Drawing.Pen.Width%2A> propiedad de la <xref:System.Drawing.Pen> clase.  
@@ -58,5 +58,6 @@ Cuando creas un <xref:System.Drawing.Pen>, puede proporcionar el ancho del lápi
      ![Un rectángulo que se dibuja con líneas negras con la línea verde ancha dentro.](./media/how-to-set-pen-width-and-alignment/green-pixels-inside-rectangle.gif)  
   
 ## <a name="see-also"></a>Vea también
+
 - [Utilizar lápiz para dibujar líneas y formas](using-a-pen-to-draw-lines-and-shapes.md)
 - [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)

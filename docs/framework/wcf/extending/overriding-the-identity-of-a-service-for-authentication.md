@@ -5,22 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 8c0807a7b811cf2cb3a13576018373d135e3e5cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5a32220ad1f638bf2e93051e9b436d8270aec2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082196"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Invalidación de la identidad de un servicio para la autenticación
 Normalmente, no tiene que establecer la identidad en un servicio porque la selección de un tipo de credencial de cliente dicta el tipo de identidad expuesto en los metadatos del servicio. Por ejemplo, el código de configuración siguiente utiliza el [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento y establece el `clientCredentialType` atribuir a Windows.  
-  
-  
-  
+
  El fragmento siguiente de Lenguaje de descripción de servicios Web (WSDL) muestra la identidad para el punto de conexión previamente definido. En este ejemplo, el servicio se ejecuta como un servicio autohospedado en una cuenta de usuario en particular (username@contoso.com) y, por tanto, la identidad del usuario (UPN) del nombre principal contiene el nombre de cuenta. El UPN también se conoce como el nombre de inicio de sesión de usuario en un dominio de Windows.  
-  
-  
-  
+
  Para una aplicación de ejemplo que muestre la configuración de identidad, vea [ejemplo de identidad de servicio](../../../../docs/framework/wcf/samples/service-identity-sample.md). Para obtener más información acerca de la identidad de servicio, consulte [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Autenticación e identidad de Kerberos  
@@ -33,7 +29,7 @@ Normalmente, no tiene que establecer la identidad en un servicio porque la selec
   
 -   Use la cuenta NetworkService o LocalSystem para ejecutar el servicio. Porque esas cuentas tienen acceso al SPN del equipo que se establece cuando el equipo une al dominio de Active Directory, WCF genera automáticamente el elemento SPN apropiado dentro del extremo del servicio en los metadatos del servicio (WSDL).  
   
--   Utilice una cuenta de dominio arbitraria de Active Directory para ejecutar el servicio. En este caso, establezca un SPN para esa cuenta de dominio, lo cual puede llevar a cabo utilizando la herramienta de utilidad Setspn.exe. Una vez creado el SPN para la cuenta del servicio, configure WCF para publicar ese SPN a los clientes del servicio a través de sus metadatos (WSDL). Para ello, hay que establecer la identidad del punto de conexión para el punto de conexión expuesto, ya sea mediante un archivo de configuración de la aplicación o el código.  
+-   Utilice una cuenta de dominio arbitraria de Active Directory para ejecutar el servicio. En este caso, establezca un SPN para esa cuenta de dominio, lo cual puede llevar a cabo utilizando la herramienta de utilidad Setspn.exe. Una vez creado el SPN para la cuenta del servicio, configure WCF para publicar ese SPN a los clientes del servicio a través de sus metadatos (WSDL). Para ello, hay que establecer la identidad del extremo para el extremo expuesto, ya sea mediante un archivo de configuración de la aplicación o el código.  
   
  Para obtener más información acerca de los SPN, el protocolo Kerberos y Active Directory, consulte [suplemento técnico de Kerberos para Windows](https://go.microsoft.com/fwlink/?LinkId=88330).  
   
@@ -52,13 +48,9 @@ Normalmente, no tiene que establecer la identidad en un servicio porque la selec
   
 ### <a name="using-the-identity-element-in-configuration"></a>Mediante el \<identidad > elemento de configuración  
  Si se cambia el tipo de credencial de cliente del enlace mostrado anteriormente a Certificate`,` el WSDL generado contiene un certificado X.509 serializado en Base64 para el valor de identidad, como se muestra en el código siguiente. Éste es el valor predeterminado para todos los tipos de credencial de cliente excepto Windows.  
-  
-  
-  
- Puede cambiar el valor de la identidad del servicio predeterminada o el tipo de la identidad con el elemento <`identity`> en la configuración o estableciendo la identidad en código. El código de configuración siguiente establece una identidad del sistema de nombres de dominio (DNS) con el valor `contoso.com`.  
-  
-  
-  
+
+ Puede cambiar el valor de la identidad de servicio predeterminada o cambiar el tipo de la identidad mediante el <`identity`> elemento de configuración o estableciendo la identidad en el código. El código de configuración siguiente establece una identidad del sistema de nombres de dominio (DNS) con el valor `contoso.com`.  
+
 ### <a name="setting-identity-programmatically"></a>Establecimiento mediante programación de la identidad  
  El servicio no tiene que especificar explícitamente una identidad, porque WCF determina automáticamente. Sin embargo, WCF permite especificar una identidad en un punto de conexión, si es necesario. El código siguiente agrega un nuevo punto de conexión de servicio con una identidad de DNS concreta.  
   
@@ -66,5 +58,6 @@ Normalmente, no tiene que establecer la identidad en un servicio porque la selec
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Crear un comprobador de identidad de cliente personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+
+- [Filtrar para crear un comprobador de identidad de cliente personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

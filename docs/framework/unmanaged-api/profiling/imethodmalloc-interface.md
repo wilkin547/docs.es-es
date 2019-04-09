@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f5c21d329ed35f82e36c2d88ac911401799e820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ee825da1f3f0fd72a3b47b48783f0f344af99b65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596025"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077789"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc (Interfaz)
 Proporciona un método para asignar memoria para un nuevo cuerpo de función de lenguaje intermedio (MSIL) de Microsoft.  
@@ -33,7 +33,7 @@ Proporciona un método para asignar memoria para un nuevo cuerpo de función de 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Alloc (método)](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Intenta asignar una cantidad de memoria especificada para un nuevo cuerpo de función MSIL.|  
+|[Método Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Intenta asignar una cantidad de memoria especificada para un nuevo cuerpo de función MSIL.|  
   
 ## <a name="remarks"></a>Comentarios  
  Cada asignador es específico del módulo y garantiza que el cuerpo de la función estará en un desplazamiento positivo de la base del módulo. Memoria por encima de la base de un módulo puede ser valioso, por lo que se debe usar el asignador para asignar memoria sólo para un cuerpo de función.  
@@ -48,4 +48,5 @@ Proporciona un método para asignar memoria para un nuevo cuerpo de función de 
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

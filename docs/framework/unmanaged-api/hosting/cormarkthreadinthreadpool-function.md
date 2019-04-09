@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f7141115ff0aa7431f49281bde01b38c5af4260
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a39b0f2546d84cf24a58d5367c87d0a862aead93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481981"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085082"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>CorMarkThreadInThreadPool (Función)
 Marca el subproceso de grupo de subprocesos actualmente en ejecución para la ejecución de código administrado. A partir de la versión 2.0 de .NET Framework, esta función tiene ningún efecto. No es necesario y puede quitarse desde el código. Esta función está en desuso en el [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
@@ -42,4 +42,5 @@ void CorMarkThreadInThreadPool ();
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

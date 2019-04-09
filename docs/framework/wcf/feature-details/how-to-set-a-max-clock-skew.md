@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Conjunto un sesgo de reloj máximo
+title: Filtrar para establecer un sesgo de reloj máximo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-ms.openlocfilehash: 73c3bd7c8bf02fd003510c838fec45a68829fe1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e487da6316ec381c2009ee33575848dd80df8ab2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646885"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076633"
 ---
-# <a name="how-to-set-a-max-clock-skew"></a>Procedimiento Conjunto un sesgo de reloj máximo
+# <a name="how-to-set-a-max-clock-skew"></a>Filtrar para establecer un sesgo de reloj máximo
 Las funciones críticas en el tiempo se pueden desbaratar si los ajustes del reloj en dos equipos son diferentes. Para mitigar esta posibilidad, puede establecer la propiedad `MaxClockSkew` en <xref:System.TimeSpan>. Esta propiedad está disponible en dos clases:  
   
  <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
@@ -44,7 +44,7 @@ Las funciones críticas en el tiempo se pueden desbaratar si los ajustes del rel
   
 6.  Cree un <xref:System.ServiceModel.ServiceHost> con un tipo de servicio y dirección base adecuados.  
   
-7.  Utilice el método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> para agregar un punto de conexión e incluir el <xref:System.ServiceModel.Channels.CustomBinding>.  
+7.  Utilice el método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> para agregar un extremo e incluir el <xref:System.ServiceModel.Channels.CustomBinding>.  
   
      [!code-csharp[c_MaxClockSkew#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_maxclockskew/cs/source.cs#1)]
      [!code-vb[c_MaxClockSkew#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_maxclockskew/vb/source.vb#1)]  
@@ -85,7 +85,8 @@ Las funciones críticas en el tiempo se pueden desbaratar si los ajustes del rel
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Filtrar para crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

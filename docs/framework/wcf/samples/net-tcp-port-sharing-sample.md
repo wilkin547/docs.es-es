@@ -2,12 +2,12 @@
 title: Ejemplo de uso compartido de puertos Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 2ff63de62ad11ab89721cbf87f1edaca8c54a027
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f70069754d712f6f3d70eb3ac3ffb4cc645c3f83
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079622"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Ejemplo de uso compartido de puertos Net.TCP
 El protocolo TCP/IP utiliza un número de 16 bits, llamado "puerto", para diferenciar las conexiones en varias aplicaciones de red que se ejecutan en el mismo equipo. Si una aplicación está realizando escuchas en un puerto, todo el tráfico TCP para ese puerto se dirige a esa aplicación. Otras aplicaciones no pueden realizar escuchas en ese puerto al mismo tiempo.  
@@ -138,4 +138,3 @@ Press <ENTER> to terminate client.
 4.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 5.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Los detalles concretos para ejecutar este ejemplo se han incluido previamente en la sección Ejecución del ejemplo.  
-  

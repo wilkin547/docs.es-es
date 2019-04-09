@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74eb098ee68f57477c8b9115db2bce60919f0b12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8056ef18089f56f1f9b6717d505fa3d058957541
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074422"
 ---
 # <a name="spawninstance-function"></a>Función SpawnInstance
 Crea una instancia a partir de una clase.    
@@ -60,7 +60,7 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 |---------|---------|---------|
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` no es una definición de clase válido y no se puede generar nuevas instancias. Es incompleto o no se registró con la administración de Windows mediante una llamada a [PutClassWmi](putclasswmi.md). |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para completar la operación. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | El valor de `ppNewClass` es `null`. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` es `null`. |
 | `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
@@ -68,9 +68,6 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 Esta función contiene una llamada a la [IWbemClassObject:: SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) método.
 
 `ptr` debe ser una definición de clase obtenida de la administración de Windows. (Tenga en cuenta que al generar una instancia de una instancia es compatible, pero la instancia devuelta está vacía). Utilizamos esta definición de clase para crear nuevas instancias. Una llamada a la [PutInstanceWmi](putinstancewmi.md) función es necesaria si va a escribir la instancia a la administración de Windows.
-
-
-
 
 El nuevo objeto devuelto en `ppNewClass` se convierte automáticamente en una subclase del objeto actual. No se puede invalidar este comportamiento. No hay ningún otro método que se pueden crear subclases (clases derivadas).
 
@@ -82,4 +79,5 @@ El nuevo objeto devuelto en `ppNewClass` se convierte automáticamente en una su
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

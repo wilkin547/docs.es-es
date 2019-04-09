@@ -8,12 +8,12 @@ helpviewer_keywords:
 - directories [Windows Forms], enabling browsing in applications
 - folders [Windows Forms], enabling browsing in applications
 ms.assetid: 796b622c-3ba9-4356-93bb-e217fc52f2c7
-ms.openlocfilehash: d08eb456ea2d2d3b805d3df7e0e79b26ea7d415e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: aae18167b29c71ad692cc6ba447457cd079374b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708254"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074136"
 ---
 # <a name="folderbrowserdialog-component-overview-windows-forms"></a>Información general del componente FolderBrowserDialog (formularios Windows Forms)
 Los formularios de Windows <xref:System.Windows.Forms.FolderBrowserDialog> componente es un cuadro de diálogo modal que se utiliza para examinar y seleccionar carpetas. También se pueden crear nuevas carpetas desde el <xref:System.Windows.Forms.FolderBrowserDialog> componente.  
@@ -26,6 +26,7 @@ Los formularios de Windows <xref:System.Windows.Forms.FolderBrowserDialog> compo
  Cuando se agrega a un formulario, el <xref:System.Windows.Forms.FolderBrowserDialog> componente aparece en la bandeja en la parte inferior del Diseñador de Windows Forms.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [Cómo: Elegir carpetas con el componente FolderBrowserDialog de formularios de Windows](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
-- [FolderBrowserDialog (componente)](folderbrowserdialog-component-windows-forms.md)
+- [Filtrar para elegir carpetas con el componente FolderBrowserDialog de formularios Windows Forms](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
+- [Componente FolderBrowserDialog](folderbrowserdialog-component-windows-forms.md)

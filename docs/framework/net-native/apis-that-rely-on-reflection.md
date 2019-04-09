@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a198db13e5855d9473cf7780dade9ce95e9298
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076866"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API basada en la reflexión
 En algunos casos, el uso de código de reflexión no es obvio, con lo cual la cadena de herramientas de [!INCLUDE[net_native](../../../includes/net-native-md.md)] no conserva los metadatos necesarios en tiempo de ejecución. En este tema se abordan algunas de las API comunes o patrones de programación habituales que no se consideran parte de la API de reflexión, pero que hacen uso de la reflexión para ejecutarse correctamente. Si los usa en su código fuente, puede agregar información sobre ellos en el archivo de directivas en tiempo de ejecución (.rd.xml) para que las llamadas a estas API no generen una excepción [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) u otra excepción en tiempo de ejecución.  
@@ -51,9 +51,9 @@ App1.AppClass`1<System.Int32>.
   
  Para ejecutarse correctamente, este código requiere varios elementos de metadatos:  
   
--   Metadatos de `Browse` para el tipo cuyo método se quiere llamar.  
+-   `Browse` metadatos para el tipo cuyo método desea llamar.  
   
--   Metadatos de `Browse` para el método que se quiere llamar.  Si se trata de un método público, la adición de metadatos de `Browse` públicos para el tipo contenedor incluye también el método.  
+-   `Browse` metadatos para el método que desea llamar.  Si se trata de un método público, la adición de metadatos de `Browse` públicos para el tipo contenedor incluye también el método.  
   
 -   Metadatos dinámicos para el método que se quiere llamar, de modo que la cadena de herramientas de [!INCLUDE[net_native](../../../includes/net-native-md.md)] no quite al delegado de la invocación de reflexión. Si no hay metadatos dinámicos para el método, se generará la siguiente excepción cuando se llame al método <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>:  
   
@@ -86,12 +86,13 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- Se necesitan metadatos de `Browse` para el tipo de matriz para poder crear instancia de esta dinámicamente.  La siguiente directiva en tiempo de ejecución permite la creación dinámica instancias de `Class1[]`.  
+ `Browse` metadatos para el tipo de matriz es necesario para crear dinámicamente instancias de él.  La siguiente directiva en tiempo de ejecución permite la creación dinámica instancias de `Class1[]`.  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 19a37b2d988ba779c4373ba296b43f6508db5925
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b234a00f3194fcf40a33d25302cff16d5999b05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731275"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082992"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hospedaje en Servicio de activación de procesos de Windows
 El servicio de activación de procesos de Windows (WAS) administra la activación y duración de los procesos de trabajo que contienen aplicaciones que hospedar servicios de Windows Communication Foundation (WCF). El modelo de procesamiento WAS generaliza el modelo de procesamiento [!INCLUDE[iis601](../../../../includes/iis601-md.md)] para el servidor HTTP quitando la dependencia en HTTP. Esto permite a los servicios WCF usar HTTP y protocolos no HTTP, tales como Net.TCP, en un entorno de hospedaje que admite la activación basada en mensajes y ofrece la posibilidad de hospedar un gran número de aplicaciones en un equipo determinado.  
@@ -43,7 +43,7 @@ El servicio de activación de procesos de Windows (WAS) administra la activació
 |HTTP y que no sea HTTP|http: *: 80:\*<br /><br /> net.tcp: 808:\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
 |Solo no HTTP|net.pipe: *|/appThree|net.pipe://appThree/|  
   
- Los servicios y recursos dentro de una aplicación también se pueden direccionar. Dentro de una aplicación, los recursos de la aplicación se direccionan en relación a la ruta de acceso base de la aplicación. Por ejemplo, suponga que un sitio con un nombre de equipo contoso.com tiene enlaces del sitio para los protocolos HTTP y Net.TCP. Suponga también que el sitio contiene una aplicación ubicada en /Billing (facturación), que expone un servicio en GetOrders.svc. A continuación, si el servicio GetOrders.svc expuso un punto de conexión con una dirección relativa de SecureEndpoint, el punto de conexión de servicio se expondría en los dos URI siguientes:  
+ Los servicios y recursos dentro de una aplicación también se pueden direccionar. Dentro de una aplicación, los recursos de la aplicación se direccionan en relación a la ruta de acceso base de la aplicación. Por ejemplo, suponga que un sitio con un nombre de equipo contoso.com tiene enlaces del sitio para los protocolos HTTP y Net.TCP. Suponga también que el sitio contiene una aplicación ubicada en /Billing (facturación), que expone un servicio en GetOrders.svc. A continuación, si el servicio GetOrders.svc expuso un extremo con una dirección relativa de SecureEndpoint, el extremo de servicio se expondría en los dos URI siguientes:  
   
 - `http://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
 - `net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
@@ -52,8 +52,9 @@ El servicio de activación de procesos de Windows (WAS) administra la activació
  Las aplicaciones se organizan en sitios para propósitos de direccionamiento y administración. En tiempo de ejecución, las aplicaciones también se agrupan en grupos de aplicaciones. Un grupo de aplicaciones puede alojar muchas aplicaciones diferentes desde muchos sitios diferentes. Todas las aplicaciones dentro de un grupo de aplicaciones comparten un conjunto común de características de tiempo de ejecución. Por ejemplo, todas se ejecutan bajo la misma versión de Common Language Runtime (CLR) y comparten una identidad de proceso común. Cada grupo de aplicaciones corresponde a una instancia de un proceso de trabajo (w3wp.exe). Cada aplicación administrada que se ejecuta dentro de un grupo de aplicaciones compartido se aísla de otras aplicaciones por medio de un AppDomain de CLR.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Arquitectura de activación de WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
 - [Configuración de WAS para su uso con WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Cómo: Instalar y configurar componentes de activación de WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [Cómo: Hospedar un servicio WCF en WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Filtrar para instalar y configurar los componentes de activación de WFC](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [Filtrar para hospedar un servicio WCF en WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
 - [Características de hospedaje de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

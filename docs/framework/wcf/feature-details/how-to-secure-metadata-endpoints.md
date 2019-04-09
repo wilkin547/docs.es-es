@@ -1,25 +1,25 @@
 ---
-title: Procedimiento Proteger los extremos de metadatos
+title: Filtrar para proteger puntos de conexión de metadatos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: e7ba87a0e2a0a9dd0a4cd984dd88b4850a24040e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be4bf9b3601e33d90306401abe1dce73f77d09e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076580"
 ---
-# <a name="how-to-secure-metadata-endpoints"></a>Procedimiento Proteger los extremos de metadatos
-Los metadatos para un servicio pueden contener información confidencial sobre su aplicación que un usuario malintencionado puede aprovechar. Los consumidores de su servicio también pueden requerir un mecanismo seguro para obtener los metadatos sobre su servicio. Por consiguiente, a veces es necesario publicar sus metadatos utilizando un punto de conexión seguro.  
+# <a name="how-to-secure-metadata-endpoints"></a>Filtrar para proteger puntos de conexión de metadatos
+Los metadatos para un servicio pueden contener información confidencial sobre su aplicación que un usuario malintencionado puede aprovechar. Los consumidores de su servicio también pueden requerir un mecanismo seguro para obtener los metadatos sobre su servicio. Por consiguiente, a veces es necesario publicar sus metadatos utilizando un extremo seguro.  
   
  Los extremos de metadatos generalmente se protegen utilizando los mecanismos de seguridad estándar definidos en Windows Communication Foundation (WCF) para la protección de extremos de la aplicación. (Para obtener más información, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
   
- En este tema se describen los pasos para crear un punto de conexión protegido por un certificado SSL (Capa de sockets seguros) o, en otras palabras, un punto de conexión de HTTPS.  
+ En este tema se describen los pasos para crear un extremo protegido por un certificado SSL (Capa de sockets seguros) o, en otras palabras, un extremo de HTTPS.  
   
-### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>Para crear un punto de conexión seguro de metadatos HTTPS GET en código  
+### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>Para crear un extremo seguro de metadatos HTTPS GET en código  
   
 1.  Configure un puerto con un certificado X.509 adecuado. El certificado debe proceder de una autoridad de confianza y debe tener un uso previsto de "Autorización de servicio." Debe utilizar la herramienta HttpCfg.exe para asociar el certificado al puerto. Vea [Cómo: Configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
@@ -80,7 +80,7 @@ Los metadatos para un servicio pueden contener información confidencial sobre s
     ```  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente crea una instancia de una clase <xref:System.ServiceModel.ServiceHost> y agrega un punto de conexión. El código crea a continuación una instancia de la clase <xref:System.ServiceModel.Description.ServiceMetadataBehavior> y establece las propiedades para crear un punto de intercambio seguro de metadatos.  
+ El ejemplo siguiente crea una instancia de una clase <xref:System.ServiceModel.ServiceHost> y agrega un extremo. El código crea a continuación una instancia de la clase <xref:System.ServiceModel.Description.ServiceMetadataBehavior> y establece las propiedades para crear un punto de intercambio seguro de metadatos.  
   
  [!code-csharp[c_HowToSecureEndpoint#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosecureendpoint/cs/source.cs#0)]
  [!code-vb[c_HowToSecureEndpoint#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosecureendpoint/vb/source.vb#0)]  
@@ -93,10 +93,11 @@ Los metadatos para un servicio pueden contener información confidencial sobre s
 -   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [Cómo: Configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Filtrar para configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Consideraciones de seguridad con metadatos](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
 - [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
