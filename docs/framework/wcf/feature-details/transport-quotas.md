@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 0664dbb70df61c0f68d34c4ab364db6623805bfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174634"
 ---
 # <a name="transport-quotas"></a>Cuotas de transporte
 Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una conexión está utilizando recursos excesivos. Una cuota es un límite que evita una vez el uso de recursos adicionales una vez que se supera el valor de cuota. Las cuotas de transporte evitan los ataques de denegación de servicio (DoS) malintencionados o involuntarios.  
@@ -30,7 +30,7 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
   
  Cada valor de cuota tiene un tipo, valor mínimo y valor predeterminado. Su tipo limita el valor máximo de una cuota. Debido a las limitaciones de los equipos, no siempre es posible establecer una cuota en su valor máximo.  
   
-|nombre|Tipo|Mín.<br /><br /> value|Default<br /><br /> value|Descripción|  
+|Name|Tipo|Mín.<br /><br /> value|Default<br /><br /> value|Descripción|  
 |----------|----------|--------------------|-----------------------|-----------------|  
 |`ChannelInitializationTimeout`|TimeSpan|1 tic|5 seg.|Tiempo máximo a esperar para que una conexión envíe el preámbulo durante la lectura inicial. Estos datos se reciben antes de que se produzca la autenticación. Este valor es generalmente mucho más pequeño que el valor de cuota de `ReceiveTimeout`.|  
 |`CloseTimeout`|TimeSpan|0|1 min|El tiempo máximo que se ha de esperar para que una conexión se cierre antes de que el transporte produzca una excepción.|  
@@ -59,7 +59,7 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
 ### <a name="controlling-transport-quotas-from-the-binding-element"></a>Control de las cuotas de transporte a partir del elemento de enlace  
  Establecer las cuotas de transporte a través del elemento de enlace proporciona la máxima flexibilidad para controlar el comportamiento del transporte. Los tiempos de espera predeterminados para operaciones de cierre, apertura, recepción y envío se toman del enlace cuando se crea un canal.  
   
-|nombre|HTTP|TCP/IP|Canalización con nombre|  
+|Name|HTTP|TCP/IP|Canalización con nombre|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||X|X|  
 |`CloseTimeout`||||  
@@ -81,7 +81,7 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
 ### <a name="controlling-transport-quotas-from-the-binding"></a>Control de las cuotas de transporte a partir del enlace  
  Establecer las cuotas de transporte a través del enlace ofrece un conjunto simplificado de cuotas de entre las que elegir al mismo tiempo que se proporciona acceso a los valores de cuota más comunes.  
   
-|nombre|HTTP|TCP/IP|Canalización con nombre|  
+|Name|HTTP|TCP/IP|Canalización con nombre|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
 |`CloseTimeout`|X|X|X|  
@@ -108,6 +108,7 @@ Las cuotas de transporte son un mecanismo de directivas para decidir cuándo una
  La configuración de la aplicación puede establecer las mismas cuotas de transporte como obtener acceso directamente a las propiedades en un enlace. En archivos de configuración, el nombre de una cuota de transporte se inicia siempre con una minúscula. Por ejemplo, la propiedad `CloseTimeout` en un enlace corresponde al valor `closeTimeout` en la configuración y la propiedad `MaxConnections` en un enlace corresponde al valor `maxConnections` en la configuración.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

@@ -2,12 +2,12 @@
 title: <serviceMetadata>
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-ms.openlocfilehash: 04bc29e8e842f5bb0252685fc3088a86535f4668
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0b06d61a33cd6a704a5ab0f75d29bde3f72d77fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379502"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115861"
 ---
 # <a name="servicemetadata"></a>\<serviceMetadata>
 Especifica la publicación de metadatos e información asociada del servicio.  
@@ -58,7 +58,7 @@ Especifica la publicación de metadatos e información asociada del servicio.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
+|[\<comportamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
   
 ## <a name="remarks"></a>Comentarios  
  Este elemento de configuración permite controlar los metadatos que publican características de un servicio. Para evitar la divulgación involuntaria de metadatos de servicio potencialmente confidenciales, la configuración predeterminada para servicios Windows Communication Foundation (WCF) deshabilita la publicación de metadatos. Este comportamiento es seguro de forma predeterminada, pero también quiere decir que no puede usar una herramienta de importación de metadatos (como Svcutil.exe) Para compilar el código de cliente necesario para llamar al servicio a menos que el comportamiento de publicación de metadatos del servicio se habilite de manera explícita en la configuración. Con este elemento de configuración, puede habilitar este comportamiento de publicación para su servicio.  
@@ -117,6 +117,7 @@ Especifica la publicación de metadatos e información asociada del servicio.
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

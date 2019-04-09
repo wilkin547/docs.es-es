@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Windows Forms]
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-ms.openlocfilehash: 5bcc6441ab1a615c31a5a028fc7f8f09cbdd4c10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 38dcad25af31b87afc1cc6ef4f89a1f7903bc0ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710373"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117422"
 ---
 # <a name="method-implementation-in-custom-controls"></a>Implementación de métodos en controles personalizados
 Un método se implementa en un control de la misma manera que se implementa en cualquier otro componente.  
@@ -48,7 +48,7 @@ public int ConvertMatterToEnergy(int matter)
  Si quiere que los usuarios del control puedan suministrar diferentes combinaciones de parámetros a un método, proporcione varias sobrecargas del método usando tipos de datos explícitos. Evite crear parámetros declarados `As Object` que puedan contener algún tipo de datos, porque esto podría provocar errores que quizás no se capturen en las pruebas.  
   
 > [!NOTE]
->  El tipo de datos universal en Common Language Runtime es `Object` en lugar de `Variant`. `Variant` se ha quitado del lenguaje.  
+>  El tipo de datos universal en Common Language Runtime es `Object` en lugar de `Variant`. `Variant` se quitó del idioma.  
   
  Por ejemplo, el método `Spin` de un control `Widget` hipotético podría permitir especificar directamente la dirección y la velocidad de giro, o especificar otro objeto `Widget` desde el cual se absorba el momento angular:  
   
@@ -76,5 +76,6 @@ public void Spin(Widget driver)
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Eventos](../../../standard/events/index.md)
-- [Propiedades de los controles de Windows Forms](properties-in-windows-forms-controls.md)
+- [Propiedades de los controles de formularios Windows Forms](properties-in-windows-forms-controls.md)

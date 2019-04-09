@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb61dbcee1851ebe70c1dc0138e14aaa7a08d901
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3dbfca942d61cd5667293d11f358f06bd000fa2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468694"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118006"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory (Método)
 Obtiene el directorio que contiene el actual common language runtime (CLR). Este método es compatible solo para su uso con los depuradores fuera de proceso. Si se llama desde otro componente, devolverá E_NOTIMPL.  
@@ -57,5 +57,6 @@ HRESULT GetCORSystemDirectory (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [IMetaDataDispenserEx (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataDispenser (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+
+- [IMetaDataDispenserEx (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [IMetaDataDispenser (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

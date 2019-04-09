@@ -1,5 +1,5 @@
 ---
-title: Filtrar Rellenar una forma con una textura de imagen
+title: Filtrar para rellenar una forma con una textura de imagen
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], using texture
 - shapes [Windows Forms], filling with images
 ms.assetid: 508da5a6-2433-4d2b-9680-eaeae4e96e3b
-ms.openlocfilehash: 89ebad6773b076514f5a745db653e0e0a18d4b48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 099bc9f5359f19439f308f28a6766d470956daea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708449"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177325"
 ---
-# <a name="how-to-fill-a-shape-with-an-image-texture"></a>Procedimiento Rellenar una forma con una textura de imagen
+# <a name="how-to-fill-a-shape-with-an-image-texture"></a>Filtrar para rellenar una forma con una textura de imagen
 Puede rellenar una forma cerrada con una textura utilizando la <xref:System.Drawing.Image> clase y el <xref:System.Drawing.TextureBrush> clase.  
   
 ## <a name="example"></a>Ejemplo  
@@ -31,7 +31,8 @@ Puede rellenar una forma cerrada con una textura utilizando la <xref:System.Draw
  [!code-vb[System.Drawing.UsingABrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>.  
+ El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Utilizar un pincel para rellenar formas](using-a-brush-to-fill-shapes.md)

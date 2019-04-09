@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: e6e65b1a75d7a80caff3e7cbacdb9dd706e46cdf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175024"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedimientos de operador (Visual Basic)
 Un procedimiento de operador es una serie de instrucciones de Visual Basic que definen el comportamiento de un operador estándar (como `*`, `<>`, o `And`) en una clase o estructura que ha definido. Esto también se denomina *sobrecarga de operadores*.  
@@ -68,7 +68,7 @@ Un procedimiento de operador es una serie de instrucciones de Visual Basic que d
   
  `Dim testStruct As`  *structurename*  
   
- `Dim testNewStruct As`  *structurename*`= testStruct`*operatorsymbol*  `10`  
+ `Dim testNewStruct As`  *structurename*`= testStruct`*operatorsymbol*   `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Ilustración de la declaración y llamada  
  La siguiente estructura almacena un valor entero de 128 bits con signo como las partes constituyentes de orden superior y orden inferior. Define el `+` operador para agregar dos `veryLong` valores y generar una resultante `veryLong` valor.  
@@ -78,17 +78,16 @@ Un procedimiento de operador es una serie de instrucciones de Visual Basic que d
  El ejemplo siguiente muestra una llamada típica para la `+` operador definido en `veryLong`.  
   
  [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
-  
-  
+
 ## <a name="see-also"></a>Vea también
 
 - [Procedimientos](./index.md)
-- [Subprocedimientos](./sub-procedures.md)
+- [Procedimientos Sub](./sub-procedures.md)
 - [Procedimientos de función](./function-procedures.md)
-- [Procedimientos de propiedades](./property-procedures.md)
+- [Procedimientos de propiedad](./property-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
-- [Operator (instrucción)](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Cómo: Definir un operador](./how-to-define-an-operator.md)
-- [Cómo: Definir un operador de conversión](./how-to-define-a-conversion-operator.md)
-- [Cómo: Llamar a un procedimiento de operador](./how-to-call-an-operator-procedure.md)
-- [Cómo: Usar una clase que define operadores](./how-to-use-a-class-that-defines-operators.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Filtrar para definir un operador](./how-to-define-an-operator.md)
+- [Filtrar para definir un operador de conversión](./how-to-define-a-conversion-operator.md)
+- [Filtrar para llamar a un procedimiento de operador](./how-to-call-an-operator-procedure.md)
+- [Filtrar para usar una clase que define operadores](./how-to-use-a-class-that-defines-operators.md)

@@ -2,12 +2,12 @@
 title: Creación de servicios WCF para AJAX de ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-ms.openlocfilehash: d6d00b5b8839d519ffa3609eafffd4b086689449
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f98a27197115c56686d593105f438fee633f34a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174153"
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>Creación de servicios WCF para AJAX de ASP.NET
 AJAX de ASP.NET de Microsoft le permite crear rápidamente páginas web para que la experiencia del usuario sea más satisfactoria gracias a elementos de la interfaz de usuario más familiares y receptivos. AJAX de ASP.NET proporciona bibliotecas de scripts de cliente que incorporan las tecnologías ECMAScript (JavaScript) y HTML dinámico (DHTML) para varios exploradores, y las integra en la plataforma de desarrollo para servidores de ASP.NET 2.0. Gracias a las características de AJAX de ASP.NET puede mejorar la experiencia del usuario y la eficacia de sus aplicaciones web.  
@@ -20,7 +20,7 @@ AJAX de ASP.NET de Microsoft le permite crear rápidamente páginas web para que
   
  Si no está utilizando las plantillas Visual Studio, hay dos maneras de crear un punto de conexión de AJAX de ASP.NET:  
   
--   Cree el punto de conexión utilizando la activación de host dinámica sin utilizar ninguna configuración. Éste es el enfoque más básico si no se está muy familiarizado con el sistema de configuración de WCF. Para obtener más información, vea [Cómo: Agregar un extremo de AJAX de ASP.NET sin usar la configuración](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
+-   Cree el extremo utilizando la activación de host dinámica sin utilizar ninguna configuración. Éste es el enfoque más básico si no se está muy familiarizado con el sistema de configuración de WCF. Para obtener más información, vea [Cómo: Agregar un extremo de AJAX de ASP.NET sin usar la configuración](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
 -   Agregar un extremo con AJAX habilitado a un servicio WCF mediante la configuración. Para obtener más información, vea [Cómo: Usar configuración para agregar un punto de conexión de AJAX de ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
   
@@ -58,7 +58,8 @@ AJAX de ASP.NET de Microsoft le permite crear rápidamente páginas web para que
  Incluso se pueden utilizar puntos de conexión de AJAX de WCF sin el marco de AJAX de ASP.NET. Si lo hace, requiere una comprensión de la arquitectura de soporte técnico de AJAX en WCF. Para obtener una descripción de esta arquitectura, consulte [modelo de objetos de programación de WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md). Para obtener un ejemplo de código que muestra este enfoque, consulte el [servicio AJAX con JSON y XML](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Cómo: Agregar un extremo de AJAX de ASP.NET sin usar la configuración](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)
-- [Cómo: Usar la configuración para agregar un extremo de AJAX de ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
-- [Cómo: Elija entre HTTP POST y HTTP GET solicitudes para puntos de conexión de AJAX de ASP.NET](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)
+- [Filtrar para agregar un punto de conexión AJAX de ASP.NET sin usar la configuración](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)
+- [Filtrar para usar la configuración para agregar un punto de conexión AJAX de ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [Filtrar para elegir entre solicitudes HTTP POST y HTTP GET para puntos de conexión AJAX de ASP.NET](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Ocultar columnas en el Control de DataGridView de Windows Forms mediante el diseñador
+title: Filtrar para ocultar columnas en el control DataGridView de formularios Windows Forms mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, columns
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column hiding
 - data [Windows Forms], displaying
 ms.assetid: a81c38e6-2527-426a-bcb1-be691403be04
-ms.openlocfilehash: b65c83592334c84c7790da5877efdc9af84380f0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e0255cca5c614f07bbc4a7dfc9a908612e8867a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122387"
 ---
-# <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Filtrar Ocultar columnas en el Control de DataGridView de Windows Forms mediante el diseñador
+# <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Filtrar para ocultar columnas en el control DataGridView de formularios Windows Forms mediante el diseñador
 Algunas veces querrá mostrar solo algunas de las columnas que están disponibles en un control <xref:System.Windows.Forms.DataGridView> de Windows Forms. Por ejemplo, es posible que desea mostrar un empleado columna salary a los usuarios con credenciales de administración y ocultarla a otros usuarios. Como alternativa, es posible que desee enlazar el control a un origen de datos que contiene muchas columnas, que solo algunos de los cuales desea que aparezca. En este caso, se quitarán las columnas que no está interesado en mostrar en lugar de ocultarlas. Para obtener más información, vea [Cómo: Agregar y quitar columnas en la Windows Forms mediante el Diseñador de Control de DataGridView](add-and-remove-columns-in-the-datagrid-using-the-designer.md).  
   
  El procedimiento siguiente requiere una **aplicación Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.DataGridView> control. Para obtener información acerca de cómo configurar un proyecto de este tipo, vea [Cómo: Cree un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) y [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md).  
@@ -34,8 +34,9 @@ Algunas veces querrá mostrar solo algunas de las columnas que están disponible
     >  También puede ocultar una columna al agregarla desactivando el **Visible** casilla de verificación en la **Agregar columna** cuadro de diálogo.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>
-- [Cómo: Agregar y quitar columnas en el Control de DataGridView de Windows Forms mediante el diseñador](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [Cómo: Crear un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Filtrar para agregar y quitar columnas en el control DataGridView de formularios Windows Forms mediante el diseñador](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [Filtrar Cree un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Filtrar para agregar controles a formularios Windows Forms](how-to-add-controls-to-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugClass2 (Interfaz)
+title: Interfaz ICorDebugClass2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugClass2
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46358a66d79030aeea42c75827f05cf07fa925ea
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 015085cff23028814937dfef9aea19af7438b4f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173815"
 ---
-# <a name="icordebugclass2-interface"></a>ICorDebugClass2 (Interfaz)
+# <a name="icordebugclass2-interface"></a>Interfaz ICorDebugClass2
 
 Representa una clase genérica o una clase con un parámetro de método de tipo <xref:System.Type>. Esta interfaz extiende [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).  
   
@@ -31,8 +31,8 @@ Representa una clase genérica o una clase con un parámetro de método de tipo 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetParameterizedType (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|Obtiene la declaración de tipos para esta clase.|  
-|[SetJMCStatus (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|Para cada método de esta clase, establece un valor que indica si el método es código definido por el usuario.|  
+|[Método GetParameterizedType](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|Obtiene la declaración de tipos para esta clase.|  
+|[Método SetJMCStatus](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|Para cada método de esta clase, establece un valor que indica si el método es código definido por el usuario.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -49,5 +49,6 @@ Representa una clase genérica o una clase con un parámetro de método de tipo 
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICorDebugClass (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaz ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

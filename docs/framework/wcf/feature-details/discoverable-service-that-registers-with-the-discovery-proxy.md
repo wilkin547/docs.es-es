@@ -1,15 +1,15 @@
 ---
-title: Filtrar Implementar un servicio reconocible que se registra con el Proxy de detección
+title: Filtrar para implementar un servicio reconocible que se registra con el proxy de detección
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: c708942265ae39ee6e4f198118741068a37512ba
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
-ms.translationtype: MT
+ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177832"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Filtrar Implementar un servicio reconocible que se registra con el Proxy de detección
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Filtrar para implementar un servicio reconocible que se registra con el proxy de detección
 Este tema es el segundo de cuatro temas que describe cómo implementar un proxy de detección. En el tema anterior, [Cómo: Implementar un Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), implementa un proxy de detección. En este tema, creará un servicio WCF que envía mensajes de anuncio (`Hello` y `Bye`) al proxy de detección, provocando que registrar y anular el registro de sí mismo con el proxy de detección.
 
 ### <a name="to-define-the-service-contract"></a>Para definir el contrato de servicio
@@ -290,6 +290,7 @@ namespace Microsoft.Samples.Discovery
 ```
 
 ## <a name="see-also"></a>Vea también
+
 - [Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
-- [Cómo: Implementar a un Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Cómo: Implementar una aplicación cliente que utiliza al Proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [Filtrar para implementar un proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Filtrar para implementar una aplicación cliente que usa el proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

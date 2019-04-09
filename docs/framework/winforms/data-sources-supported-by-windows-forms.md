@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711309"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124623"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Orígenes de datos compatibles con formularios Windows Forms
 Tradicionalmente, el enlace de datos se han usado en las aplicaciones para aprovechar las ventajas de los datos almacenados en bases de datos. Con el enlace de datos de Windows Forms, se puede acceder a datos de las bases de datos, así como datos de otras estructuras, como matrices y colecciones, siempre y cuando se cumplen ciertos requisitos mínimos.  
@@ -58,6 +58,7 @@ Tradicionalmente, el enlace de datos se han usado en las aplicaciones para aprov
 -   <xref:System.Data.DataViewManager>. Un <xref:System.Data.DataViewManager> es una vista personalizada de todo el <xref:System.Data.DataSet>, análogo a un <xref:System.Data.DataView>, pero con las relaciones incluidas. Con un <xref:System.Data.DataViewManager.DataViewSettings%2A> colección, puede establecer filtros predeterminados y las opciones de ordenación para todas las vistas que el <xref:System.Data.DataViewManager> tiene para una tabla determinada.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Notificación de cambios en el enlace de datos de Windows Forms](change-notification-in-windows-forms-data-binding.md)
-- [Enlace de datos y Windows Forms](data-binding-and-windows-forms.md)
+- [Enlace de datos y formularios Windows Forms](data-binding-and-windows-forms.md)
 - [Enlace de datos en Windows Forms](windows-forms-data-binding.md)

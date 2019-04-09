@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 5ec801e1e20fdb495537505a71ddaef6218ad5fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521379"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122153"
 ---
 # <a name="bindings-and-security"></a>Enlaces y seguridad
 Los enlaces proporcionados por el sistema incluidos con Windows Communication Foundation (WCF) ofrecen una forma rápida de programar aplicaciones de WCF. Con una excepción, todos los enlaces tienen un esquema de seguridad predeterminado habilitó. Este tema le ayuda a seleccionar el enlace adecuado a sus necesidades de seguridad.  
@@ -224,9 +224,10 @@ Los enlaces proporcionados por el sistema incluidos con Windows Communication Fo
 |IssuedToken|Permite al servicio utilizar un servicio de token de seguridad para proporcionar un token personalizado.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Selección de tipos de credenciales](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Funcionalidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Capacidades de seguridad con enlaces personalizados](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Comportamientos de seguridad](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad para Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

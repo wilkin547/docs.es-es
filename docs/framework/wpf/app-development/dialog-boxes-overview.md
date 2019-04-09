@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634458"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177416"
 ---
 # <a name="dialog-boxes-overview"></a>Información general sobre cuadros de diálogo
 Las aplicaciones independientes tienen normalmente una ventana principal que muestra los datos principales en el que la aplicación funciona y expone la funcionalidad para procesar los datos a través de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mecanismos, como las barras de menús, barras de herramientas y barras de estado. Una aplicación no trivial también puede mostrar ventanas adicionales para realizar lo siguiente:  
@@ -33,9 +33,7 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
  Un *no modal* cuadro de diálogo, por otro lado, no impide que un usuario active otras ventanas mientras está abierto. Por ejemplo, si un usuario quiere buscar las repeticiones de una palabra determinada en un documento, a menudo una ventana principal abrirá un cuadro de diálogo para solicitar al usuario la palabra que está buscando. En cambio, como buscar una palabra no impide que un usuario edite el documento, el cuadro de diálogo no necesita ser modal. Un cuadro de diálogo no modal proporciona al menos un **cerrar** botón para cerrar el cuadro de diálogo y puede proporcionar botones adicionales para ejecutar funciones específicas, como un **Buscar siguiente** botón para buscar la siguiente palabra que coincide con los criterios de búsqueda de una búsqueda de palabras.  
   
  Windows Presentation Foundation (WPF) le permite crear varios tipos de cuadros de diálogo, incluidos los cuadros de mensaje, cuadros de diálogo comunes y cuadros de diálogo personalizados. Este tema describe cada uno y el [ejemplo de cuadro de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984) proporciona ejemplos relacionados.  
-  
- 
-  
+
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>Cuadros de mensaje  
  Un *cuadro de mensaje* es un cuadro de diálogo que puede usarse para mostrar información textual y permitir a los usuarios tomar decisiones con los botones. En la siguiente figura se muestra un cuadro de mensaje que muestra información de texto, realiza una pregunta y proporciona tres botones al usuario para responderla.  
@@ -47,7 +45,7 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- Para mostrar un cuadro de mensaje, llame a la `static` <xref:System.Windows.MessageBox.Show%2A> método, como se muestra en el código siguiente.  
+ Para mostrar un cuadro de mensaje, llame a la `static`<xref:System.Windows.MessageBox.Show%2A> método, como se muestra en el código siguiente.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -65,7 +63,7 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Cuadros de diálogo comunes  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implementa una variedad de cuadros de diálogo reutilizables que son comunes a todas las aplicaciones, incluidos los cuadros de diálogo para abrir y guardar archivos, e imprimir. Como estos cuadros de diálogo se implementan mediante el sistema operativo, pueden compartirse entre todas las aplicaciones que se ejecutan en el sistema operativo, que ayuda a la coherencia de la experiencia de usuario; cuando los usuarios están familiarizados con el uso de un cuadro de diálogo proporcionado por el sistema operativo en una aplicación, no necesitan obtener información sobre cómo usar ese cuadro de diálogo en otras aplicaciones. Dado que estos cuadros de diálogo están disponibles para todas las aplicaciones y ya que ayudan a proporcionar una experiencia de usuario coherente, se conocen como *cuadros de diálogo comunes*.  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implementa una variedad de cuadros de diálogo reutilizables que son comunes a todas las aplicaciones, incluidos los cuadros de diálogo para abrir y guardar archivos e imprimir. Como estos cuadros de diálogo se implementan mediante el sistema operativo, pueden compartirse entre todas las aplicaciones que se ejecutan en el sistema operativo, que ayuda a la coherencia de la experiencia de usuario; cuando los usuarios están familiarizados con el uso de un cuadro de diálogo proporcionado por el sistema operativo en una aplicación, no necesitan obtener información sobre cómo usar ese cuadro de diálogo en otras aplicaciones. Dado que estos cuadros de diálogo están disponibles para todas las aplicaciones y ya que ayudan a proporcionar una experiencia de usuario coherente, se conocen como *cuadros de diálogo comunes*.  
   
  Windows Presentation Foundation (WPF) encapsula el archivo abierto, guardar archivo y cuadros de diálogo comunes de impresión y los expone como clases administradas para su uso en las aplicaciones independientes. En este tema se proporciona una breve introducción de cada uno.  
   
@@ -210,7 +208,7 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
   
  ![Un cuadro de diálogo márgenes con un borde rojo alrededor del valor del margen izquierdo no válido.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] no restringe un usuario al control no válido hasta que haya especificado los datos válidos. Este es un buen comportamiento para un cuadro de diálogo; un usuario debe poder navegar libremente por los controles de un cuadro de diálogo sean los datos válidos o no. Sin embargo, esto significa que un usuario puede escribir datos no válidos y presionar el **Aceptar** botón. Por este motivo, el código también necesita validar todos los controles en un cuadro de diálogo cuadro cuando el **Aceptar** está presionado controlando el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] no restringe un usuario para el control no válido hasta que haya especificado datos válidos. Este es un buen comportamiento para un cuadro de diálogo; un usuario debe poder navegar libremente por los controles de un cuadro de diálogo sean los datos válidos o no. Sin embargo, esto significa que un usuario puede escribir datos no válidos y presionar el **Aceptar** botón. Por este motivo, el código también necesita validar todos los controles en un cuadro de diálogo cuadro cuando el **Aceptar** está presionado controlando el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
  [!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind1)]
  [!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind1)]  
@@ -345,6 +343,7 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
 [!code-vb[DialogBoxSample#FindDialogCloseCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#finddialogclosecodebehind2)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre el control Popup](../controls/popup-overview.md)
 - [Ejemplo de cuadro de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984)
-- [ColorPicker Custom Control Sample](https://go.microsoft.com/fwlink/?LinkID=159977) (Ejemplo de control personalizado de selector de colores)
+- [Ejemplo ColorPicker Custom Control](https://go.microsoft.com/fwlink/?LinkID=159977)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 513fb623e328a8fa3abb1531715026ff9b6bf97e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83c72704ccb01baf68a3cacb6252367e07909fa8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558090"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179002"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 (Interfaz)
 Proporciona métodos que se usan por common language runtime (CLR) para notificar a un generador de perfiles de código cuando se producen los eventos al que se ha suscrito el generador de perfiles. El `ICorProfilerCallback2` interfaz es una extensión de la [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfaz. Es decir, proporciona las devoluciones de llamada nuevas introducidas en la versión 2.0 de .NET Framework.  
@@ -33,14 +33,14 @@ Proporciona métodos que se usan por common language runtime (CLR) para notifica
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[FinalizeableObjectQueued (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)|Notifica al generador de perfiles de código que un objeto con un finalizador se ha puesto en cola para el subproceso del finalizador para la ejecución de su `Finalize` método.|  
-|[GarbageCollectionFinished (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|Notifica al generador de perfiles que ha completado una recolección y todas las devoluciones de llamada de colección de elementos no utilizados se han emitido para ella.|  
-|[GarbageCollectionStarted (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)|Notifica al generador de perfiles de código que se ha iniciado una recolección de elementos.|  
-|[HandleCreated (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)|Notifica al generador de perfiles de código que se ha creado un identificador de la colección de elementos no utilizados.|  
-|[HandleDestroyed (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)|Notifica al generador de perfiles de código que se ha destruido un identificador de la colección de elementos no utilizados.|  
-|[RootReferences2 (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)|Notifica al generador de perfiles sobre las referencias de raíz después de que se ha producido una recolección de elementos. Este método es una extensión de la [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) método.|  
-|[SurvivingReferences (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)|Notifica al generador de perfiles de referencias a objetos que han sobrevivido a una recolección de elementos.|  
-|[ThreadNameChanged (método)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)|Notifica al generador de perfiles de código que ha cambiado el nombre de un subproceso.|  
+|[Método FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)|Notifica al generador de perfiles de código que un objeto con un finalizador se ha puesto en cola para el subproceso del finalizador para la ejecución de su `Finalize` método.|  
+|[Método GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|Notifica al generador de perfiles que ha completado una recolección y todas las devoluciones de llamada de colección de elementos no utilizados se han emitido para ella.|  
+|[Método GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)|Notifica al generador de perfiles de código que se ha iniciado una recolección de elementos.|  
+|[Método HandleCreated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)|Notifica al generador de perfiles de código que se ha creado un identificador de la colección de elementos no utilizados.|  
+|[Método HandleDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)|Notifica al generador de perfiles de código que se ha destruido un identificador de la colección de elementos no utilizados.|  
+|[Método RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)|Notifica al generador de perfiles sobre las referencias de raíz después de que se ha producido una recolección de elementos. Este método es una extensión de la [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) método.|  
+|[Método SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)|Notifica al generador de perfiles de referencias a objetos que han sobrevivido a una recolección de elementos.|  
+|[Método ThreadNameChanged](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)|Notifica al generador de perfiles de código que ha cambiado el nombre de un subproceso.|  
   
 ## <a name="remarks"></a>Comentarios  
  CLR llama a un método el `ICorProfilerCallback` (o `ICorProfilerCallback2`) interfaz para notificar al generador de perfiles cuando un evento, al que está suscrito el generador de perfiles, se produce. Esta es la interfaz de devolución de llamada principal a través del cual el CLR se comunica con el generador de perfiles de código.  
@@ -62,7 +62,8 @@ Proporciona métodos que se usan por common language runtime (CLR) para notifica
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [ICorProfilerCallback (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback3 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)
-- [ICorProfilerCallback4 (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [ICorProfilerCallback (Interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback3 (Interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)
+- [ICorProfilerCallback4 (Interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

@@ -2,12 +2,12 @@
 title: Complemento MMC de configuración de WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 8dfb9c9a9f6a007e65dbf819d347f335a93d1749
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1d86fa57b31d1f9be12f76c28f9d042e7e28e24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138215"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Complemento MMC de configuración de WS-AtomicTransaction
 El complemento MMC de configuración de WS-AtomicTransaction se utiliza para configurar una parte de los valores WS-AtomicTransaction en los equipos local remoto.  
@@ -21,7 +21,7 @@ El complemento MMC de configuración de WS-AtomicTransaction se utiliza para con
   
  Para utilizar la interfaz de usuario proporcionada por la herramienta, tiene que registrar el archivo WsatUI.dll, que se encuentra en la ruta de acceso siguiente  
   
- **%ProgramFiles%\Microsoft SDKs\Windows\v6.0\Bin\WsatUI.dll**  
+ **%PROGRAMFILES%\Microsoft SDKs\Windows\v6.0\Bin\WsatUI.dll**  
   
  El comando siguiente puede hacer el registro.  
   
@@ -87,6 +87,7 @@ regasm.exe /codebase WsatUI.dll
  Para obtener más información acerca del seguimiento y registro, consulte [administración y diagnóstico](../../../docs/framework/wcf/diagnostics/index.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Configuración de la compatibilidad con WS-Atomic Transaction](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
 - [Utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
 - [Administración y diagnóstico](../../../docs/framework/wcf/diagnostics/index.md)

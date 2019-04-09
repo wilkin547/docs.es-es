@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: f9cf0c165c6c64186eff53676c8b1b06f74361fc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 177b61cab99d21a844298632020244fa424d8d2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708384"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176584"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>Información general sobre el componente HelpProvider (formularios Windows Forms)
 Los formularios de Windows [HelpProvider](helpprovider-component-windows-forms.md) componente se utiliza para asociar un archivo de Ayuda HTML Help 1.x (ya sea un archivo .chm generado con HTML Help Workshop o un archivo .htm) con la aplicación de Windows. Puede proporcionar ayuda en una variedad de formas:  
@@ -37,4 +37,5 @@ Los formularios de Windows [HelpProvider](helpprovider-component-windows-forms.m
 >  Puede encontrar problemas con la ruta de acceso relativa al especificar la ruta de acceso al archivo de ayuda en la <xref:System.Windows.Forms.Help.ShowHelp%2A> método o <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> propiedad de la <xref:System.Windows.Forms.HelpProvider> control. Por lo tanto, asegúrese de usar la ruta de acceso absoluta del archivo para especificar el archivo de ayuda.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Sistemas de ayuda en aplicaciones de Windows Forms](../advanced/help-systems-in-windows-forms-applications.md)

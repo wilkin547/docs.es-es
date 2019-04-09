@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 99869b929e70ab7ae5b68d8c0eb6d70358f4a48d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8f29039185e7171d799543fb1d43e2fa460a97e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123076"
 ---
 # <a name="combobox-styles-and-templates"></a>Estilos y plantillas de ComboBox
 En este tema se describe los estilos y plantillas para el <xref:System.Windows.Controls.ComboBox> control. Puede modificar el valor predeterminado <xref:System.Windows.Controls.ControlTemplate> para proporcionar el control una apariencia única. Para más información, consulte [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -78,9 +78,10 @@ En este tema se describe los estilos y plantillas para el <xref:System.Windows.C
  Para ver un ejemplo completo, consulte [Aplicación de estilos con el ejemplo ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos y plantillas de controles](control-styles-and-templates.md)
-- [Control Customization](control-customization.md) (Personalización de controles)
+- [Personalización de controles](control-customization.md)
 - [Aplicar estilos y plantillas](styling-and-templating.md)
-- [Personalización de la apariencia de un control existente mediante la creación de una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Personalizar la apariencia de un control existente creando una clase ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

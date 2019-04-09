@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-ms.openlocfilehash: d22065abcb04209ebd1ad51b41bfc9167af6d4c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6059bc91588492afdd1f205398e6cdfdba0be7ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177468"
 ---
 # <a name="wshttpbinding"></a>\<wsHttpBinding>
 Define un enlace seguro, de confianza e interoperable, adecuado para contratos de servicio no dúplex. El enlace implementa las especificaciones siguientes: WS-Reliable Messaging para confiabilidad y WS-Security para la autenticación y seguridad de los mensajes. El transporte es HTTP y la codificación del mensaje es codificación de texto/XML.  
@@ -137,6 +137,7 @@ Define un enlace seguro, de confianza e interoperable, adecuado para contratos d
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.Configuration.WSHttpBindingElement>
 - [Enlaces](../../../../../docs/framework/wcf/bindings.md)

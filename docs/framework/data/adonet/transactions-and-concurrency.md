@@ -2,12 +2,12 @@
 title: Transacciones y simultaneidad
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: f5efa8f25e3cd4dedec9e5a9c99db28320a4d93e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba857031a54374ee295c2bfd724e7fb8651b7c1f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174699"
 ---
 # <a name="transactions-and-concurrency"></a>Transacciones y simultaneidad
 Una transacción consiste en un comando único o en un grupo de comandos que se ejecutan como un paquete. Las transacciones permiten combinar varias operaciones en una sola unidad de trabajo. Si en un punto de la transacción se produjera un error, todas las actualizaciones podrían revertirse y devolverse al estado que tenían antes de la transacción.  
@@ -35,9 +35,10 @@ Una transacción consiste en un comando único o en un grupo de comandos que se 
  Describe la simultaneidad optimista y pesimista, y cómo puede probar las infracciones de simultaneidad.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Principios de la transacción](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
-- [Conexión a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Conectarse a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Objetos DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

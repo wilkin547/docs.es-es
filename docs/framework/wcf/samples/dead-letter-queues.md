@@ -2,12 +2,12 @@
 title: Colas con problemas de entrega
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 5877d7ae0c38b82053da87907c54c70ef11bd543
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 2a6ed86b04cd110dcf71efb1a6b0560fc5d45467
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837863"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177936"
 ---
 # <a name="dead-letter-queues"></a>Colas con problemas de entrega
 Este ejemplo muestra cómo administrar y procesar mensajes que han producido errores en la entrega. Se basa en el [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) ejemplo. El ejemplo usa el enlace `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.
@@ -24,7 +24,7 @@ Este ejemplo muestra cómo administrar y procesar mensajes que han producido err
 
  La cola de mensajes no enviados en el enlace `NetMsmqBinding` se expresa en las propiedades siguientes:
 
--   La propiedad <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> expresa el tipo de cola de mensajes no enviados requerido por el cliente. Esta enumeración tiene los valores siguientes:
+-   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> propiedad que se expresa el tipo de cola de mensajes no enviados requerido por el cliente. Esta enumeración tiene los valores siguientes:
 
 -   `None`: No se requiere ninguna cola de mensajes enviados por el cliente.
 
@@ -32,7 +32,7 @@ Este ejemplo muestra cómo administrar y procesar mensajes que han producido err
 
 -   `Custom`: Una cola de mensajes no enviados personalizada especificada mediante el <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propiedad se utiliza para almacenar los mensajes no enviados. Esta característica solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)]. Se utiliza cuando la aplicación debe utilizar su propia cola de mensajes no enviados en lugar de compartirla con otras aplicaciones que se ejecutan en el mismo equipo.
 
--   La propiedad <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> expresa la cola concreta que se debe utilizar como cola de mensajes no enviados. Esto solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
+-   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propiedad para expresar la cola específica para usarla como una cola de mensajes no enviados. Esto solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  En este ejemplo, el cliente envía un lote de mensajes al servicio desde dentro del ámbito de una transacción y especifica un valor arbitrariamente bajo para el "período de vida" para estos mensajes (aproximadamente 2 segundos). El cliente también especifica una cola de mensajes no enviados personalizada utilizada para poner en cola los mensajes que han expirado.
 
@@ -360,4 +360,3 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
-  

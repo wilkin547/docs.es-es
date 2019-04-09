@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar, modificar y eliminar entidades (WCF Data Services)
+title: Filtrar Agregar, modificar y eliminar entidades (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: af087aa2107927d79a7a47080d9fff43244ef4cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5816cb6a765a7cdf49aca9ac50461a4e50e6df14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122192"
 ---
-# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Procedimiento Agregar, modificar y eliminar entidades (WCF Data Services)
+# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Filtrar Agregar, modificar y eliminar entidades (WCF Data Services)
 Con el [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliotecas de cliente, se puede crear, actualizar y eliminar datos de entidad en un servicio de datos realizando las acciones equivalentes en los objetos de la <xref:System.Data.Services.Client.DataServiceContext>. Para obtener más información, consulte [actualizar el servicio de datos](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean cuando se completa la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
@@ -44,7 +44,8 @@ Con el [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliotecas d
  [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addorderdetailtoorderauto)]  
   
 ## <a name="see-also"></a>Vea también
-- [Biblioteca cliente de Servicios de datos de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Cómo: Asociar una entidad existente a DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)
-- [Cómo: Definir relaciones de entidades](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)
+
+- [Biblioteca cliente de Data Services de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Filtrar para adjuntar una entidad existente a DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)
+- [Filtrar para definir relaciones de entidades](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)
 - [Procesamiento por lotes de operaciones](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)

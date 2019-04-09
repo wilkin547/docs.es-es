@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: b8dae094655e7bf2a52848d449a5f604f846e052
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174621"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Utilización de las colas de mensajes no enviados para administrar los errores en la transferencia de mensajes
 Los mensajes en cola pueden producir un error en la entrega. Estos mensajes que no se han podido entregar se graban en una cola de mensajes no enviados. Los errores en la entrega pueden deberse a motivos como errores de la red, una cola eliminada, una cola completa, error de autenticación o un error para entregar a tiempo.  
@@ -61,19 +61,16 @@ Los mensajes en cola pueden producir un error en la entrega. Estos mensajes que 
  [!code-vb[S_DeadLetter#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/client.vb#1)]  
   
  El código siguiente muestra el archivo de configuración del cliente.  
-  
-  
-  
+
  A continuación, se muestra el código para un servicio que procesa los mensajes de una cola de mensajes no enviados.  
   
  [!code-csharp[S_DeadLetter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_deadletter/cs/dlservice.cs#3)]
  [!code-vb[S_DeadLetter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/dlservice.vb#3)]  
   
  A continuación, se muestra el código para el archivo de configuración del servicio de cola de mensajes no enviados.  
-  
-  
-  
+
 ## <a name="see-also"></a>Vea también
+
 - [Información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Cómo: Intercambiar los mensajes en cola con puntos de conexión WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Filtrar para intercambiar mensajes en cola con puntos de conexión de WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [Control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

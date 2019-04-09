@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcessEnum (Interfaz)
+title: Interfaz ICorDebugProcessEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugProcessEnum
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e190c045a70daa04e58604b25ac398fb5a1648d0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3651a4be94fa624d0dd6ab64b8c3f8169945de0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175323"
 ---
-# <a name="icordebugprocessenum-interface"></a>ICorDebugProcessEnum (Interfaz)
+# <a name="icordebugprocessenum-interface"></a>Interfaz ICorDebugProcessEnum
 Implementa métodos ICorDebugEnum y enumera las matrices de ICorDebugProcess.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|Obtiene el número especificado de `ICorDebugProcess` instancias de la enumeración, comenzando en la posición actual.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|Obtiene el número especificado de `ICorDebugProcess` instancias de la enumeración, comenzando en la posición actual.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -47,4 +47,5 @@ Implementa métodos ICorDebugEnum y enumera las matrices de ICorDebugProcess.
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

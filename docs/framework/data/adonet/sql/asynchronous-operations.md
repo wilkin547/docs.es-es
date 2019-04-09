@@ -2,12 +2,12 @@
 title: Operaciones asincrónicas
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: b1c6646f666ca1d931ab8caa8cd0a2e0c6a6722f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72c2cc33185cb7fba5b8c8ce8d3805a6bb76f8d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538666"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116043"
 ---
 # <a name="asynchronous-operations"></a>Operaciones asincrónicas
 Algunas operaciones de base de datos, como las ejecuciones de comandos, pueden tardar bastante tiempo en completarse. En estos casos, las aplicaciones de un único subproceso deben bloquear otras operaciones y esperar a que el comando termine antes de poder continuar sus propias operaciones. En contraposición, la posibilidad de asignar la operación cuya ejecución tiene una larga duración a un subproceso en segundo plano permite que el subproceso en primer plano permanezca activo durante toda la operación. En las aplicaciones Windows, por ejemplo, delegar aquellas operaciones cuya ejecución tiene una larga duración en subprocesos en segundo plano permite que el subproceso de interfaz de usuario permanezca alerta mientras se ejecuta la operación.  
@@ -26,10 +26,11 @@ Algunas operaciones de base de datos, como las ejecuciones de comandos, pueden t
  [Aplicaciones ASP.NET que usan identificadores de espera](../../../../../docs/framework/data/adonet/sql/aspnet-apps-using-wait-handles.md)  
  Proporciona un ejemplo en el que se muestra cómo ejecutar varios comandos simultáneos desde una página de ASP.NET, mediante el uso de controladores de espera que administran la operación al completarse todos los comandos.  
   
- [Sondeo de aplicaciones de consola](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
+ [Sondear aplicaciones de consola](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
  Proporciona un ejemplo en el que se muestra el uso del sondeo para esperar a que se complete la ejecución de un comando asincrónico desde una aplicación de consola. Esta técnica también es válida en una biblioteca de clases u otra aplicación sin una interfaz de usuario.  
   
 ## <a name="see-also"></a>Vea también
+
 - [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Llamada a métodos sincrónicos de forma asincrónica](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Llamar a métodos sincrónicos de forma asincrónica](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

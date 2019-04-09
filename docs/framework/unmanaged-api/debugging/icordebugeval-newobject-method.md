@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97217421d30ee4065aa1b2500e9486405e438902
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9c2d6a66eca080b480b508afea36c33b3e0aeec0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471373"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178235"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject (Método)
 Asigna una nueva instancia de objeto y llama al método de constructor especificado.  
@@ -59,4 +59,5 @@ HRESULT NewObject (
  **Versiones de .NET framework:** 1.1, 1.0  
   
 ## <a name="see-also"></a>Vea también
-- [NewParameterizedObject (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)
+
+- [Método NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)

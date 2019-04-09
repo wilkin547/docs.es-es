@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 9827d14a1e64b6111c6c3c9cf53a49170f1a9077
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592827"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118201"
 ---
 # <a name="windows-communication-foundation-security"></a>Seguridad en Windows Communication Foundation
 Los temas de esta sección describen las características de seguridad de Windows Communication Foundation (WCF) y cómo utilizarlas para ayudar a proteger los mensajes.  
@@ -70,4 +70,5 @@ Los temas de esta sección describen las características de seguridad de Window
  [Información conceptual](../../../../docs/framework/wcf/conceptual-overview.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - [Configuración de su aplicación](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
