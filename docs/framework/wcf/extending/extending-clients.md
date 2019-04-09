@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-ms.openlocfilehash: 46f5b4b1a2721a07decb045cd3734ce6edaa0762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99b4dd5e4acfce8bea4d3c2cae3a53152585675d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522042"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074760"
 ---
 # <a name="extending-clients"></a>Extensión de clientes
 En una aplicación que realiza la llamada, el nivel de modelo de servicio es responsable de traducir invocaciones de método en el código de la aplicación a mensajes salientes, insertarlos en los canales subyacentes, traducir los resultados en valores devueltos y los parámetros de salida en el código de la aplicación, y devolver los resultados al autor de la llamada. Las extensiones de modelo de servicio modifican o implementan el comportamiento de la comunicación o la ejecución y características implicadas en la funcionalidad de distribuidor o cliente, comportamientos personalizados, interceptación de mensajes y parámetros, y otra funcionalidad de extensibilidad.  
@@ -23,14 +23,14 @@ En una aplicación que realiza la llamada, el nivel de modelo de servicio es res
   
  Estas dos clases en tiempo de ejecución son la extensión principal para personalizar el procesamiento de los canales y objetos de cliente WCF. La clase <xref:System.ServiceModel.Dispatcher.ClientRuntime> permite a los usuarios interceptar y extender la ejecución del cliente por todos los mensajes en el contrato. La clase <xref:System.ServiceModel.Dispatcher.ClientOperation> permite a los usuarios interceptar y extender la ejecución del cliente para todos los mensajes en una operación determinada.  
   
- La modificación de las propiedades o la inserción de personalizaciones se realiza mediante los comportamientos del contrato, del punto de conexión y de la operación. Para obtener más información acerca de cómo usar estos tipos de comportamientos para realizar las personalizaciones en tiempo de ejecución del cliente, consulte [configurar y extender el tiempo de ejecución con comportamientos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ La modificación de las propiedades o la inserción de personalizaciones se realiza mediante los comportamientos del contrato, del extremo y de la operación. Para obtener más información acerca de cómo usar estos tipos de comportamientos para realizar las personalizaciones en tiempo de ejecución del cliente, consulte [configurar y extender el tiempo de ejecución con comportamientos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="scenarios"></a>Escenarios  
  Hay varias razones para extender el sistema cliente, incluidas:  
   
 -   Validación personalizada del mensaje. Un usuario puede querer exigir que un mensaje sea válido para un determinado esquema. Esto se puede hacer implementando la interfaz <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> y asignando la implementación en la propiedad <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>. Para obtener ejemplos, vea [Cómo: Inspeccionar o modificar mensajes en el cliente](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md) y [Cómo: Inspeccionar o modificar mensajes en el cliente](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
   
--   Registro personalizado de mensajes. Un usuario puede desear inspeccionar y registrar un conjunto de mensajes de la aplicación que fluyen a través de un punto de conexión. Esto también se puede lograr con las interfaces del interceptor de mensajes.  
+-   Registro personalizado de mensajes. Un usuario puede desear inspeccionar y registrar un conjunto de mensajes de la aplicación que fluyen a través de un extremo. Esto también se puede lograr con las interfaces del interceptor de mensajes.  
   
 -   Transformaciones personalizadas del mensaje. En lugar de modificar el código de aplicación, el usuario puede querer aplicar ciertas transformaciones al mensaje en el tiempo de ejecución (por ejemplo, para controlar las versiones). Esto también se puede lograr, de nuevo, con las interfaces del interceptor de mensajes.  
   
@@ -71,7 +71,7 @@ En una aplicación que realiza la llamada, el nivel de modelo de servicio es res
   
  Para extender la ejecución del cliente WCF a través de un cliente WCF completa, revise las propiedades disponibles en la <xref:System.ServiceModel.Dispatcher.ClientRuntime> clase para ver si modificando una propiedad o implementando una interfaz y agregándola a una propiedad crean la funcionalidad que está buscando. Una vez que haya elegido una extensión determinada que desea crear, inserte su extensión en la propiedad <xref:System.ServiceModel.Dispatcher.ClientRuntime> adecuada implementando un comportamiento de cliente que proporciona el acceso a la clase <xref:System.ServiceModel.Dispatcher.ClientRuntime> cuando se invoca.  
   
- Puede insertar los objetos de extensión personalizados en una colección utilizando un comportamiento de la operación (un objeto que implementa <xref:System.ServiceModel.Description.IOperationBehavior>), un comportamiento del contrato (un objeto que implementa <xref:System.ServiceModel.Description.IContractBehavior>) o un comportamiento del punto de conexión (un objeto que implementa <xref:System.ServiceModel.Description.IEndpointBehavior>). El objeto de comportamiento de instalación se agrega mediante programación a la colección adecuada de comportamientos, mediante declaración (implementando un atributo personalizado) o implementando un objeto <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personalizado para permitir insertar el comportamiento con un archivo de configuración de la aplicación. Para obtener más información, consulte [configurar y extender el tiempo de ejecución con comportamientos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Puede insertar los objetos de extensión personalizados en una colección utilizando un comportamiento de la operación (un objeto que implementa <xref:System.ServiceModel.Description.IOperationBehavior>), un comportamiento del contrato (un objeto que implementa <xref:System.ServiceModel.Description.IContractBehavior>) o un comportamiento del extremo (un objeto que implementa <xref:System.ServiceModel.Description.IEndpointBehavior>). El objeto de comportamiento de instalación se agrega mediante programación a la colección adecuada de comportamientos, mediante declaración (implementando un atributo personalizado) o implementando un objeto <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personalizado para permitir insertar el comportamiento con un archivo de configuración de la aplicación. Para obtener más información, consulte [configurar y extender el tiempo de ejecución con comportamientos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
  Para obtener ejemplos que muestran la interceptación de un cliente de WCF, vea [Cómo: Inspeccionar o modificar mensajes en el cliente](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
   
@@ -115,7 +115,8 @@ En una aplicación que realiza la llamada, el nivel de modelo de servicio es res
  Para obtener ejemplos que muestran la interceptación de un cliente de WCF, vea [Cómo: Inspeccionar o modificar los parámetros](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime>
 - <xref:System.ServiceModel.Dispatcher.ClientOperation>
-- [Cómo: Inspeccionar o modificar mensajes en el cliente](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
-- [Cómo: Inspeccionar o modificar parámetros](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [Filtrar para inspeccionar o modificar mensajes en el cliente](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
+- [Filtrar para inspeccionar o modificar parámetros](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)

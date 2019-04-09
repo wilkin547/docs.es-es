@@ -2,12 +2,12 @@
 title: Conceptos clave de Entity Data Model
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: bcfc9cbb82a23dcb4d33ca8a838a49eac7180111
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2efa54b6bd656129812cc9dd7c2ce38a4fb2a89a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074461"
 ---
 # <a name="entity-data-model-key-concepts"></a>Conceptos clave de Entity Data Model
 Entity Data Model (EDM) utiliza tres conceptos clave para describir la estructura de datos: *tipo de entidad*, *tipo de asociación*, y *propiedad*. Estos son los conceptos más importantes para describir la estructura de datos en cualquier implementación de EDM.  
@@ -22,7 +22,7 @@ Entity Data Model (EDM) utiliza tres conceptos clave para describir la estructur
   
  En una aplicación, una instancia de una asociación representa una asociación concreta (como por ejemplo una asociación entre una instancia Customer y una instancia Order). Las instancias de asociación se agrupan en una [conjunto de asociaciones](../../../../docs/framework/data/adonet/association-set.md). Conjuntos de asociaciones (y [conjuntos de entidades](../../../../docs/framework/data/adonet/entity-set.md)) se agrupan en una [contenedor de entidades](../../../../docs/framework/data/adonet/entity-container.md).  
   
-## <a name="property"></a>Property  
+## <a name="property"></a>Propiedad  
  [Tipos de entidad](../../../../docs/framework/data/adonet/entity-type.md) contienen [propiedades](../../../../docs/framework/data/adonet/property.md) que definen su estructura y características. Por ejemplo, un tipo de entidad Customer puede tener propiedades como CustomerId, Name y Address.  
   
  Las propiedades en un modelo conceptual son análogas a las propiedades definidas en una clase en un programa. Del mismo modo que las propiedades en una clase definen la forma de la clase y proporcionan información sobre los objetos, las propiedades en un modelo conceptual definen la forma de un tipo de entidad y proporcionan información sobre las instancias del tipo de entidad.  
@@ -39,4 +39,5 @@ Entity Data Model (EDM) utiliza tres conceptos clave para describir la estructur
  [!code-xml[EDM_Example_Model#EDMExampleCSDL](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#edmexamplecsdl)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

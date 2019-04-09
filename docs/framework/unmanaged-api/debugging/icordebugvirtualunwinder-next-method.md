@@ -1,17 +1,17 @@
 ---
-title: ICorDebugVirtualUnwinder::Next (método)
+title: Icordebugvirtualunwinder (método)
 ms.date: 03/30/2017
 ms.assetid: 790e0426-e5cd-49fd-a792-f8c8635d72fe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c05fcc9a40c3d47949b547164dc56f6a2246838
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 74be827dc97213507b96da9e025923f859011acd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076892"
 ---
-# <a name="icordebugvirtualunwindernext-method"></a>ICorDebugVirtualUnwinder::Next (método)
+# <a name="icordebugvirtualunwindernext-method"></a>Icordebugvirtualunwinder (método)
 Avanza hasta el contexto del llamador.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -24,7 +24,7 @@ HRESULT Next();
  Ninguno.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` Si el desenredado se realizó correctamente o `CORDBG_S_AT_END_OF_STACK` si el desenredado no se puede completar porque no hay más marcos.  
+ `S_OK` Si el desenredado se realizó correctamente, o `CORDBG_S_AT_END_OF_STACK` si el desenredado no se puede completar porque existen varios marcos.  
   
  Si se devuelve un error HRESULT, las API ICorDebug devolverán `CORDBG_E_DATA_TARGET_ERROR`.  
   
@@ -44,5 +44,6 @@ HRESULT Next();
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICorDebugMemoryBuffer (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Método ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

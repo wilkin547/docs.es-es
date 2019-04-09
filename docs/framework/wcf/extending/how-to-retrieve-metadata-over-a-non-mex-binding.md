@@ -1,20 +1,20 @@
 ---
-title: Procedimiento Recuperar metadatos mediante un enlace que no sea - MEX
+title: Filtrar para recuperar metadatos mediante un enlace que no sea MEX
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04acde96d7e712d8c6bc64988775a37fc79aaeab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689560"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074162"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procedimiento Recuperar metadatos mediante un enlace que no sea - MEX
-En este tema se describe cómo recuperar metadatos de un punto de conexión MEX mediante un enlace que no sea MEX. El código en este ejemplo se basa en el [extremo de metadatos personalizada Secure](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) ejemplo.  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Filtrar para recuperar metadatos mediante un enlace que no sea MEX
+En este tema se describe cómo recuperar metadatos de un extremo MEX mediante un enlace que no sea MEX. El código en este ejemplo se basa en el [extremo de metadatos personalizada Secure](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) ejemplo.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Para recuperar metadatos mediante un enlace que no sea MEX  
   
-1.  Determine el enlace utilizado por el punto de conexión MEX. Para los servicios de Windows Communication Foundation (WCF), puede determinar el enlace MEX obteniendo acceso al archivo de configuración del servicio. En este caso, el enlace de MEX se define en la configuración de servicio siguiente.  
+1.  Determine el enlace utilizado por el extremo MEX. Para los servicios de Windows Communication Foundation (WCF), puede determinar el enlace MEX obteniendo acceso al archivo de configuración del servicio. En este caso, el enlace de MEX se define en la configuración de servicio siguiente.  
   
     ```xml  
     <services>  
@@ -48,7 +48,7 @@ En este tema se describe cómo recuperar metadatos de un punto de conexión MEX 
      </bindings>  
     ```  
   
-2.  En el archivo de configuración del cliente, configure el mismo enlace personalizado. Aquí, el cliente también define un comportamiento `clientCredentials` para proporcionar un certificado que utilizar para autenticarse en el servicio al solicitar metadatos del punto de conexión MEX. Al utilizar Svcutil.exe para solicitar metadatos mediante un enlace personalizado, debería agregar la configuración del punto de conexión MEX al archivo de configuración para Svcutil.exe (Svcutil.exe.config) y el nombre de la configuración del punto de conexión debería coincidir con el esquema del URI de la dirección del punto de conexión MEX, tal y como se muestra en el código siguiente:  
+2.  En el archivo de configuración del cliente, configure el mismo enlace personalizado. Aquí, el cliente también define un comportamiento `clientCredentials` para proporcionar un certificado que utilizar para autenticarse en el servicio al solicitar metadatos del extremo MEX. Al utilizar Svcutil.exe para solicitar metadatos mediante un enlace personalizado, debería agregar la configuración del extremo MEX al archivo de configuración para Svcutil.exe (Svcutil.exe.config) y el nombre de la configuración del extremo debería coincidir con el esquema del URI de la dirección del extremo MEX, tal y como se muestra en el código siguiente:  
   
     ```xml  
     <system.serviceModel>  
@@ -124,4 +124,5 @@ En este tema se describe cómo recuperar metadatos de un punto de conexión MEX 
 5.  En este punto, tiene una colección de puntos de conexión de servicio. Para obtener más información sobre la importación de metadatos, vea [Cómo: Importar los metadatos en los puntos de conexión de servicio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Metadatos](../../../../docs/framework/wcf/feature-details/metadata.md)

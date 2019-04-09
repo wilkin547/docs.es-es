@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 9e3e05a1327f2f1d5f4c064a7982b2d6e38940d9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1212096422f5bb10c7b781228dc54c8790ac97ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072849"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Implementación de ClickOnce para formularios Windows Forms
 Los temas siguientes describen [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], una tecnología que se usa para implementar fácilmente aplicaciones de Windows Forms en equipos cliente.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Elegir una estrategia de implementación ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)  
+ [Elegir una estrategia de implementación de ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)  
  Presenta varias opciones para implementar aplicaciones [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
  [Elegir una estrategia de actualización de ClickOnce](/visualstudio/deployment/choosing-a-clickonce-update-strategy)  
@@ -29,28 +29,28 @@ Los temas siguientes describen [!INCLUDE[ndptecclick](../../../includes/ndpteccl
  [Solucionar problemas en implementaciones ClickOnce](/visualstudio/deployment/troubleshooting-clickonce-deployments)  
  Describe distintos problemas que pueden producirse al implementar aplicaciones [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] y documenta los mensajes de error de nivel superior que [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] podría generar.  
   
- [ClickOnce y la configuración de la aplicación](/visualstudio/deployment/clickonce-and-application-settings)  
+ [ClickOnce y configuración de la aplicación](/visualstudio/deployment/clickonce-and-application-settings)  
  Describe funciona la implementación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] con la configuración de la aplicación, que almacena la configuración de la aplicación y del usuario para su posterior recuperación.  
   
- [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview)  
+ [Información general sobre la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview)  
  Describe una característica de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] que permite a las aplicaciones de confianza ejecutarse con un nivel de permisos superior en equipos cliente.  
   
  [ClickOnce y Authenticode](/visualstudio/deployment/clickonce-and-authenticode)  
  Describe cómo se usa la tecnología Authenticode en la implementación de aplicaciones de confianza.  
   
- [Tutorial: Implementación manual de una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
+ [Tutorial: Implementar manualmente una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  Muestra cómo usar la línea de comandos y las herramientas de SDK para implementar una aplicación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] sin usar Visual Studio.  
   
- [Cómo: Adición de un publicador de confianza a un equipo cliente para aplicaciones ClickOnce](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
+ [Filtrar Agregar un publicador de confianza en un equipo cliente para aplicaciones ClickOnce](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  Muestra la configuración única de equipos cliente necesaria para la implementación de aplicaciones de confianza.  
   
- [Cómo: Especificación de una ubicación alternativa para las actualizaciones de implementación](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
+ [Filtrar Especificar una ubicación alternativa para las actualizaciones de implementación](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
  Muestra cómo configurar una aplicación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] con herramientas de SDK para elegir una ubicación diferente para las nuevas versiones de una aplicación.  
   
- [Tutorial: Descarga de ensamblados a petición con la API de implementación ClickOnce](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
+ [Tutorial: Descargar ensamblados a petición con la API de implementación ClickOnce](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
  Muestra cómo usar llamadas a la API para recuperar un ensamblado la primera vez que la aplicación intenta cargarlo.  
   
- [Cómo: Recuperación de información de la cadena de consulta de una aplicación ClickOnce en línea](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
+ [Filtrar Recuperar información de la cadena de consulta de una aplicación ClickOnce en línea](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
  Muestra cómo recuperar los parámetros de la dirección URL usada para ejecutar una aplicación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
  [Información general sobre la memoria caché de ClickOnce](/visualstudio/deployment/clickonce-cache-overview)  
@@ -59,13 +59,14 @@ Los temas siguientes describen [!INCLUDE[ndptecclick](../../../includes/ndpteccl
  [Obtener acceso local o remoto a los datos en aplicaciones ClickOnce](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)  
  Describe cómo acceder acceso los archivos de datos locales y los orígenes de datos remotos desde una aplicación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
- [Cómo: Inclusión de un archivo de datos en una aplicación ClickOnce](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
+ [Filtrar Incluir un archivo de datos en una aplicación ClickOnce](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  Muestra cómo marcar un archivo para que esté disponible en el directorio de datos de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
 ## <a name="see-also"></a>Vea también
+
 - [Introducción a la configuración de la aplicación](./advanced/application-settings-overview.md)
 - [Publicar aplicaciones ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)
 - [Compilar aplicaciones ClickOnce desde la línea de comandos](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
-- [Depurar aplicaciones ClickOnce que usan System.Deployment.Application](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)
+- [Depurar aplicaciones ClickOnce que utilizan System.Deployment.Application](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)
 - [Implementar componentes COM con ClickOnce](/visualstudio/deployment/deploying-com-components-with-clickonce)
-- [Cómo: Publicación de una aplicación ClickOnce mediante el Asistente para publicación](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)
+- [Filtrar Publicar una aplicación ClickOnce mediante el Asistente para publicación](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)
