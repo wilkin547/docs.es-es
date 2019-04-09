@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09a7cd3afd87653ba2b4270b32077c9946f1ce04
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 75cc16f44ddf29b161c758718b697cc2aaba8e08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204671"
 ---
-# <a name="isymunmanagedconstantgetvalue-method"></a><span data-ttu-id="74504-102">ISymUnmanagedConstant::GetValue (Método)</span><span class="sxs-lookup"><span data-stu-id="74504-102">ISymUnmanagedConstant::GetValue Method</span></span>
-<span data-ttu-id="74504-103">Obtiene el valor de la constante.</span><span class="sxs-lookup"><span data-stu-id="74504-103">Gets the value of the constant.</span></span>  
+# <a name="isymunmanagedconstantgetvalue-method"></a><span data-ttu-id="87c8b-102">ISymUnmanagedConstant::GetValue (Método)</span><span class="sxs-lookup"><span data-stu-id="87c8b-102">ISymUnmanagedConstant::GetValue Method</span></span>
+<span data-ttu-id="87c8b-103">Obtiene el valor de la constante.</span><span class="sxs-lookup"><span data-stu-id="87c8b-103">Gets the value of the constant.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="74504-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="74504-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87c8b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="87c8b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetValue(  
@@ -35,17 +35,18 @@ HRESULT GetValue(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="74504-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="74504-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="87c8b-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="87c8b-105">Parameters</span></span>  
  `pValue`  
- <span data-ttu-id="74504-106">[out] Un puntero a una variable que recibe el valor.</span><span class="sxs-lookup"><span data-stu-id="74504-106">[out] A pointer to a variable that receives the value.</span></span>  
+ <span data-ttu-id="87c8b-106">[out] Un puntero a una variable que recibe el valor.</span><span class="sxs-lookup"><span data-stu-id="87c8b-106">[out] A pointer to a variable that receives the value.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="74504-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="74504-107">Return Value</span></span>  
- <span data-ttu-id="74504-108">S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="74504-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="87c8b-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="87c8b-107">Return Value</span></span>  
+ <span data-ttu-id="87c8b-108">S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="87c8b-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="74504-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="74504-109">Requirements</span></span>  
- <span data-ttu-id="74504-110">**Encabezado**: CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="74504-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="87c8b-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="87c8b-109">Requirements</span></span>  
+ <span data-ttu-id="87c8b-110">**Encabezado**: CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="87c8b-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="74504-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="74504-111">See also</span></span>
-- [<span data-ttu-id="74504-112">ISymUnmanagedConstant (interfaz)</span><span class="sxs-lookup"><span data-stu-id="74504-112">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [<span data-ttu-id="74504-113">GetName (método)</span><span class="sxs-lookup"><span data-stu-id="74504-113">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
-- [<span data-ttu-id="74504-114">GetSignature (método)</span><span class="sxs-lookup"><span data-stu-id="74504-114">GetSignature Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)
+## <a name="see-also"></a><span data-ttu-id="87c8b-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="87c8b-111">See also</span></span>
+
+- [<span data-ttu-id="87c8b-112">ISymUnmanagedConstant (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="87c8b-112">ISymUnmanagedConstant Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
+- [<span data-ttu-id="87c8b-113">Método GetName</span><span class="sxs-lookup"><span data-stu-id="87c8b-113">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
+- [<span data-ttu-id="87c8b-114">Método GetSignature</span><span class="sxs-lookup"><span data-stu-id="87c8b-114">GetSignature Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)

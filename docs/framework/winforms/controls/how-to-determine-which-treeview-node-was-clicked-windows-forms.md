@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Determinar qué nodo de TreeView se hizo clic (formularios Windows Forms)
+title: Filtrar Determinar qué nodo de TreeView se hizo clic (formularios Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], determining node clicked
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
-ms.openlocfilehash: 1bc883cca2ef7fa7abd65362da054251513af76a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 073b953d2a39b27081020c56399ea3beae2083e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189578"
 ---
-# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a><span data-ttu-id="16778-102">Procedimiento Determinar qué nodo de TreeView se hizo clic (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="16778-102">How to: Determine Which TreeView Node Was Clicked (Windows Forms)</span></span>
-<span data-ttu-id="16778-103">Cuando se trabaja con los formularios de Windows <xref:System.Windows.Forms.TreeView> control, es una tarea común determinar qué nodo se hizo clic y responder según corresponda.</span><span class="sxs-lookup"><span data-stu-id="16778-103">When working with the Windows Forms <xref:System.Windows.Forms.TreeView> control, a common task is to determine which node was clicked, and respond appropriately.</span></span>  
+# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a><span data-ttu-id="3df37-102">Filtrar Determinar qué nodo de TreeView se hizo clic (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="3df37-102">How to: Determine Which TreeView Node Was Clicked (Windows Forms)</span></span>
+<span data-ttu-id="3df37-103">Cuando se trabaja con los formularios de Windows <xref:System.Windows.Forms.TreeView> control, es una tarea común determinar qué nodo se hizo clic y responder según corresponda.</span><span class="sxs-lookup"><span data-stu-id="3df37-103">When working with the Windows Forms <xref:System.Windows.Forms.TreeView> control, a common task is to determine which node was clicked, and respond appropriately.</span></span>  
   
-### <a name="to-determine-which-treeview-node-was-clicked"></a><span data-ttu-id="16778-104">Para determinar qué nodo de TreeView se hizo clic</span><span class="sxs-lookup"><span data-stu-id="16778-104">To determine which TreeView node was clicked</span></span>  
+### <a name="to-determine-which-treeview-node-was-clicked"></a><span data-ttu-id="3df37-104">Para determinar qué nodo de TreeView se hizo clic</span><span class="sxs-lookup"><span data-stu-id="3df37-104">To determine which TreeView node was clicked</span></span>  
   
-1.  <span data-ttu-id="16778-105">Use la <xref:System.EventArgs> objeto para devolver una referencia al objeto de nodo donde ha hecho clic.</span><span class="sxs-lookup"><span data-stu-id="16778-105">Use the <xref:System.EventArgs> object to return a reference to the clicked node object.</span></span>  
+1.  <span data-ttu-id="3df37-105">Use la <xref:System.EventArgs> objeto para devolver una referencia al objeto de nodo donde ha hecho clic.</span><span class="sxs-lookup"><span data-stu-id="3df37-105">Use the <xref:System.EventArgs> object to return a reference to the clicked node object.</span></span>  
   
-2.  <span data-ttu-id="16778-106">Determinar qué nodo se hizo clic mediante la comprobación de la <xref:System.Windows.Forms.TreeViewEventArgs> (clase), que contiene los datos relacionados con el evento.</span><span class="sxs-lookup"><span data-stu-id="16778-106">Determine which node was clicked by checking the <xref:System.Windows.Forms.TreeViewEventArgs> class, which contains data related to the event.</span></span>  
+2.  <span data-ttu-id="3df37-106">Determinar qué nodo se hizo clic mediante la comprobación de la <xref:System.Windows.Forms.TreeViewEventArgs> (clase), que contiene los datos relacionados con el evento.</span><span class="sxs-lookup"><span data-stu-id="3df37-106">Determine which node was clicked by checking the <xref:System.Windows.Forms.TreeViewEventArgs> class, which contains data related to the event.</span></span>  
   
     ```vb  
     Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, _  
@@ -56,7 +56,8 @@ ms.locfileid: "57713922"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="16778-107">Como alternativa, puede usar el <xref:System.Windows.Forms.MouseEventArgs> de la <xref:System.Windows.Forms.Control.MouseDown> o <xref:System.Windows.Forms.Control.MouseUp> eventos para obtener el <xref:System.Drawing.Point.X%2A> y <xref:System.Drawing.Point.Y%2A> coordinar los valores de la <xref:System.Drawing.Point> donde se hizo clic.</span><span class="sxs-lookup"><span data-stu-id="16778-107">As an alternative, you can use the <xref:System.Windows.Forms.MouseEventArgs> of the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.MouseUp> event to get the <xref:System.Drawing.Point.X%2A> and <xref:System.Drawing.Point.Y%2A> coordinate values of the <xref:System.Drawing.Point> where the click occurred.</span></span> <span data-ttu-id="16778-108">A continuación, utilice el <xref:System.Windows.Forms.TreeView> del control <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> método para determinar qué nodo se hizo clic.</span><span class="sxs-lookup"><span data-stu-id="16778-108">Then, use the <xref:System.Windows.Forms.TreeView> control's <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> method to determine which node was clicked.</span></span>  
+    >  <span data-ttu-id="3df37-107">Como alternativa, puede usar el <xref:System.Windows.Forms.MouseEventArgs> de la <xref:System.Windows.Forms.Control.MouseDown> o <xref:System.Windows.Forms.Control.MouseUp> eventos para obtener el <xref:System.Drawing.Point.X%2A> y <xref:System.Drawing.Point.Y%2A> coordinar los valores de la <xref:System.Drawing.Point> donde se hizo clic.</span><span class="sxs-lookup"><span data-stu-id="3df37-107">As an alternative, you can use the <xref:System.Windows.Forms.MouseEventArgs> of the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.MouseUp> event to get the <xref:System.Drawing.Point.X%2A> and <xref:System.Drawing.Point.Y%2A> coordinate values of the <xref:System.Drawing.Point> where the click occurred.</span></span> <span data-ttu-id="3df37-108">A continuación, utilice el <xref:System.Windows.Forms.TreeView> del control <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> método para determinar qué nodo se hizo clic.</span><span class="sxs-lookup"><span data-stu-id="3df37-108">Then, use the <xref:System.Windows.Forms.TreeView> control's <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> method to determine which node was clicked.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16778-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="16778-109">See also</span></span>
-- [<span data-ttu-id="16778-110">TreeView (control)</span><span class="sxs-lookup"><span data-stu-id="16778-110">TreeView Control</span></span>](treeview-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="3df37-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="3df37-109">See also</span></span>
+
+- [<span data-ttu-id="3df37-110">TreeView (Control)</span><span class="sxs-lookup"><span data-stu-id="3df37-110">TreeView Control</span></span>](treeview-control-windows-forms.md)
