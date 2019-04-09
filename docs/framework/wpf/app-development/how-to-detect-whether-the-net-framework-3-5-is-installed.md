@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Detectar si .NET Framework 3.5 está instalada
+title: Filtrar Detectar si está instalado .NET Framework 3.5
 ms.date: 03/30/2017
 helpviewer_keywords:
 - verifying whether.NET Framework 3.5 is installed [WPF]
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 2f3e3077f78aed90f4e213d61267131019664fdb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: af2428ece79803953b8c90431d905824dd18fec8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074643"
 ---
-# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a><span data-ttu-id="db624-102">Filtrar Detectar si .NET Framework 3.5 está instalada</span><span class="sxs-lookup"><span data-stu-id="db624-102">How to: Detect Whether the .NET Framework 3.5 Is Installed</span></span>
-<span data-ttu-id="db624-103">Antes de que los administradores pueden implementar aplicaciones de Windows Presentation Foundation (WPF) en un sistema que tiene como destino el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], primero debe confirmar que el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] está presente en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="db624-103">Before administrators can deploy Windows Presentation Foundation (WPF) applications on a system that targets the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], they must first confirm that the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] runtime is present.</span></span> <span data-ttu-id="db624-104">En este tema se proporciona un script escrito en HTML/JavaScript que los administradores pueden usar para determinar si el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] está presente en un sistema.</span><span class="sxs-lookup"><span data-stu-id="db624-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is present on a system.</span></span>  
+# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a><span data-ttu-id="3e39d-102">Filtrar Detectar si está instalado .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="3e39d-102">How to: Detect Whether the .NET Framework 3.5 Is Installed</span></span>
+<span data-ttu-id="3e39d-103">Antes de que los administradores pueden implementar aplicaciones de Windows Presentation Foundation (WPF) en un sistema que tiene como destino el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], primero debe confirmar que el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] está presente en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="3e39d-103">Before administrators can deploy Windows Presentation Foundation (WPF) applications on a system that targets the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], they must first confirm that the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] runtime is present.</span></span> <span data-ttu-id="3e39d-104">En este tema se proporciona un script escrito en HTML/JavaScript que los administradores pueden usar para determinar si el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] está presente en un sistema.</span><span class="sxs-lookup"><span data-stu-id="3e39d-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is present on a system.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="db624-105">Para obtener más información sobre cómo instalar, implementar y detectar el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], consulte [instalar .NET Framework para desarrolladores](../../install/guide-for-developers.md).</span><span class="sxs-lookup"><span data-stu-id="db624-105">For more detailed information on installing, deploying, and detecting the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], see [Install the .NET Framework for developers](../../install/guide-for-developers.md).</span></span>  
+>  <span data-ttu-id="3e39d-105">Para obtener más información sobre cómo instalar, implementar y detectar el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], consulte [instalar .NET Framework para desarrolladores](../../install/guide-for-developers.md).</span><span class="sxs-lookup"><span data-stu-id="3e39d-105">For more detailed information on installing, deploying, and detecting the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], see [Install the .NET Framework for developers](../../install/guide-for-developers.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="db624-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="db624-106">Example</span></span>  
- <span data-ttu-id="db624-107">Cuando el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] está instalado, el archivo MSI agrega ".NET CLR" y el número de versión a la cadena UserAgent.</span><span class="sxs-lookup"><span data-stu-id="db624-107">When the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="db624-108">El ejemplo siguiente muestra un script incrustado en una página HTML sencilla.</span><span class="sxs-lookup"><span data-stu-id="db624-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="db624-109">El script busca la cadena UserAgent para determinar si el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] está instalado y muestra un mensaje de estado sobre los resultados de la búsqueda.</span><span class="sxs-lookup"><span data-stu-id="db624-109">The script searches the UserAgent string to determine whether the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, and displays a status message on the results of the search.</span></span>  
+## <a name="example"></a><span data-ttu-id="3e39d-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3e39d-106">Example</span></span>  
+ <span data-ttu-id="3e39d-107">Cuando el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] está instalado, el archivo MSI agrega ".NET CLR" y el número de versión a la cadena UserAgent.</span><span class="sxs-lookup"><span data-stu-id="3e39d-107">When the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="3e39d-108">El ejemplo siguiente muestra un script incrustado en una página HTML sencilla.</span><span class="sxs-lookup"><span data-stu-id="3e39d-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="3e39d-109">El script busca la cadena UserAgent para determinar si el [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] está instalado y muestra un mensaje de estado sobre los resultados de la búsqueda.</span><span class="sxs-lookup"><span data-stu-id="3e39d-109">The script searches the UserAgent string to determine whether the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, and displays a status message on the results of the search.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="db624-110">Este script está diseñado para Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="db624-110">This script is designed for Internet Explorer.</span></span> <span data-ttu-id="db624-111">Otros exploradores pueden no incluir información de CLR de .NET en la cadena UserAgent.</span><span class="sxs-lookup"><span data-stu-id="db624-111">Other browsers may not include .NET CLR information in the UserAgent string.</span></span>  
+>  <span data-ttu-id="3e39d-110">Este script está diseñado para Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="3e39d-110">This script is designed for Internet Explorer.</span></span> <span data-ttu-id="3e39d-111">Otros exploradores pueden no incluir información de CLR de .NET en la cadena UserAgent.</span><span class="sxs-lookup"><span data-stu-id="3e39d-111">Other browsers may not include .NET CLR information in the UserAgent string.</span></span>  
   
 ```  
 <HTML>  
@@ -116,17 +116,18 @@ ms.locfileid: "57378774"
 </HTML>  
 ```  
   
- <span data-ttu-id="db624-112">Si la búsqueda de la versión de ".NET CLR" se realiza correctamente, aparece el siguiente tipo de mensaje de estado:</span><span class="sxs-lookup"><span data-stu-id="db624-112">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
+ <span data-ttu-id="3e39d-112">Si la búsqueda de la versión de ".NET CLR" se realiza correctamente, aparece el siguiente tipo de mensaje de estado:</span><span class="sxs-lookup"><span data-stu-id="3e39d-112">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
   
  `This machine has the correct version of the .NET Framework 3.5.`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; .NET CLR 3.5.20726; MS-RTC LM 8).`  
   
- <span data-ttu-id="db624-113">En caso contrario, aparece el siguiente tipo de mensaje de estado:</span><span class="sxs-lookup"><span data-stu-id="db624-113">Otherwise, the following type of status message appears:</span></span>  
+ <span data-ttu-id="3e39d-113">En caso contrario, aparece el siguiente tipo de mensaje de estado:</span><span class="sxs-lookup"><span data-stu-id="3e39d-113">Otherwise, the following type of status message appears:</span></span>  
   
  `This machine does not have the correct version of the .NET Framework 3.5. The required version is v3.5.0.0.`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; MS-RTC LM 8).`  
   
-## <a name="see-also"></a><span data-ttu-id="db624-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="db624-114">See also</span></span>
-- [<span data-ttu-id="db624-115">Detectar si .NET Framework 3.0 está instalado</span><span class="sxs-lookup"><span data-stu-id="db624-115">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+## <a name="see-also"></a><span data-ttu-id="3e39d-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="3e39d-114">See also</span></span>
+
+- [<span data-ttu-id="3e39d-115">Detectar si está instalado .NET Framework 3.0</span><span class="sxs-lookup"><span data-stu-id="3e39d-115">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
