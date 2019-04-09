@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 30c57130c2ea504cc94cfed9cdf99077b9a897f0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 45abb39fa7266e19bbd375b476f2ab48bfc5914d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492951"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130005"
 ---
-# <a name="icorprofilerinfogetclassidinfo-method"></a><span data-ttu-id="f084b-102">ICorProfilerInfo::GetClassIDInfo (Método)</span><span class="sxs-lookup"><span data-stu-id="f084b-102">ICorProfilerInfo::GetClassIDInfo Method</span></span>
-<span data-ttu-id="f084b-103">Obtiene el módulo primario y el token de metadatos para la clase especificada.</span><span class="sxs-lookup"><span data-stu-id="f084b-103">Gets the parent module and the metadata token for the specified class.</span></span>  
+# <a name="icorprofilerinfogetclassidinfo-method"></a><span data-ttu-id="9f0e9-102">ICorProfilerInfo::GetClassIDInfo (Método)</span><span class="sxs-lookup"><span data-stu-id="9f0e9-102">ICorProfilerInfo::GetClassIDInfo Method</span></span>
+<span data-ttu-id="9f0e9-103">Obtiene el módulo primario y el token de metadatos para la clase especificada.</span><span class="sxs-lookup"><span data-stu-id="9f0e9-103">Gets the parent module and the metadata token for the specified class.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f084b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f084b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f0e9-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9f0e9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetClassIDInfo(  
@@ -36,29 +36,30 @@ HRESULT GetClassIDInfo(
     [out] mdTypeDef *pTypeDefToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f084b-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f084b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9f0e9-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9f0e9-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="f084b-106">[in] El identificador de la clase que se va a obtener la información.</span><span class="sxs-lookup"><span data-stu-id="f084b-106">[in] The ID of the class for which to get the information.</span></span>  
+ <span data-ttu-id="9f0e9-106">[in] El identificador de la clase que se va a obtener la información.</span><span class="sxs-lookup"><span data-stu-id="9f0e9-106">[in] The ID of the class for which to get the information.</span></span>  
   
  `pModuleId`  
- <span data-ttu-id="f084b-107">[out] Un puntero al identificador del módulo primario de la clase.</span><span class="sxs-lookup"><span data-stu-id="f084b-107">[out] A pointer to the ID of the parent module of the class.</span></span>  
+ <span data-ttu-id="9f0e9-107">[out] Un puntero al identificador del módulo primario de la clase.</span><span class="sxs-lookup"><span data-stu-id="9f0e9-107">[out] A pointer to the ID of the parent module of the class.</span></span>  
   
  `pTypeDefToken`  
- <span data-ttu-id="f084b-108">[out] Un puntero al token de metadatos para la clase.</span><span class="sxs-lookup"><span data-stu-id="f084b-108">[out] A pointer to the metadata token for the class.</span></span>  
+ <span data-ttu-id="9f0e9-108">[out] Un puntero al token de metadatos para la clase.</span><span class="sxs-lookup"><span data-stu-id="9f0e9-108">[out] A pointer to the metadata token for the class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f084b-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="f084b-109">Remarks</span></span>  
- <span data-ttu-id="f084b-110">El código del generador de perfiles puede llamar a [GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) para obtener una interfaz de metadatos para un módulo determinado.</span><span class="sxs-lookup"><span data-stu-id="f084b-110">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module.</span></span> <span data-ttu-id="f084b-111">Después, el token de metadatos que se devuelve a la ubicación a la que `pTypeDefToken` hace referencia puede usarse para acceder a los metadatos de la clase.</span><span class="sxs-lookup"><span data-stu-id="f084b-111">The metadata token that is returned to the location referenced by `pTypeDefToken` can then be used to access the metadata for the class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9f0e9-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9f0e9-109">Remarks</span></span>  
+ <span data-ttu-id="9f0e9-110">El código del generador de perfiles puede llamar a [GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) para obtener una interfaz de metadatos para un módulo determinado.</span><span class="sxs-lookup"><span data-stu-id="9f0e9-110">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a metadata interface for a given module.</span></span> <span data-ttu-id="9f0e9-111">Después, el token de metadatos que se devuelve a la ubicación a la que `pTypeDefToken` hace referencia puede usarse para acceder a los metadatos de la clase.</span><span class="sxs-lookup"><span data-stu-id="9f0e9-111">The metadata token that is returned to the location referenced by `pTypeDefToken` can then be used to access the metadata for the class.</span></span>  
   
- <span data-ttu-id="f084b-112">Para obtener más información sobre tipos genéricos, use [ICorProfilerInfo2:: Getclassidinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md).</span><span class="sxs-lookup"><span data-stu-id="f084b-112">To get more information for generic types, use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md).</span></span>  
+ <span data-ttu-id="9f0e9-112">Para obtener más información sobre tipos genéricos, use [ICorProfilerInfo2:: Getclassidinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md).</span><span class="sxs-lookup"><span data-stu-id="9f0e9-112">To get more information for generic types, use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f084b-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f084b-113">Requirements</span></span>  
- <span data-ttu-id="f084b-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f084b-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f0e9-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9f0e9-113">Requirements</span></span>  
+ <span data-ttu-id="9f0e9-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9f0e9-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f084b-115">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f084b-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="9f0e9-115">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9f0e9-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f084b-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f084b-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9f0e9-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9f0e9-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f084b-117">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f084b-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="9f0e9-117">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="9f0e9-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f084b-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="f084b-118">See also</span></span>
-- [<span data-ttu-id="f084b-119">ICorProfilerInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="f084b-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9f0e9-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="9f0e9-118">See also</span></span>
+
+- [<span data-ttu-id="9f0e9-119">ICorProfilerInfo (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="9f0e9-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
