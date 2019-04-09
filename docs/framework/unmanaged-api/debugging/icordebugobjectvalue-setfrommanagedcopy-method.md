@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04eff6ba8b284a26b9b3ee55c7f323aef52f1208
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e7684804b5f3cb71c38ee498fcc9c80003e7169
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612611"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203774"
 ---
-# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="2f6d6-102">ICorDebugObjectValue::SetFromManagedCopy (Método)</span><span class="sxs-lookup"><span data-stu-id="2f6d6-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
-<span data-ttu-id="2f6d6-103">`SetFromManagedCopy` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="2f6d6-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="2f6d6-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="2f6d6-104">Do not call this method.</span></span>  
+# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="eb419-102">ICorDebugObjectValue::SetFromManagedCopy (Método)</span><span class="sxs-lookup"><span data-stu-id="eb419-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
+`SetFromManagedCopy` <span data-ttu-id="eb419-103">está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="eb419-103">is obsolete.</span></span> <span data-ttu-id="eb419-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="eb419-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2f6d6-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2f6d6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eb419-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="eb419-105">Syntax</span></span>  
   
 ```  
 HRESULT SetFromManagedCopy (  
@@ -35,9 +35,7 @@ HRESULT SetFromManagedCopy (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="2f6d6-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2f6d6-106">Requirements</span></span>  
- <span data-ttu-id="2f6d6-107">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2f6d6-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eb419-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="eb419-106">Requirements</span></span>  
+ <span data-ttu-id="eb419-107">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eb419-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2f6d6-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="2f6d6-108">See also</span></span>
-
-
+## <a name="see-also"></a><span data-ttu-id="eb419-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="eb419-108">See also</span></span>
