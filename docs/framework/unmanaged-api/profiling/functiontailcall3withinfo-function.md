@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4c3487f39d4f4c667ec9eb4705e17ccf29d9a4c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4352d006c95a5b85341625220e6c7e62a86b482a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490390"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178092"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo (Función)
 Notifica el generador de perfiles que la función actualmente en ejecución que se va a realizar una llamada de cola a otra función y proporciona un identificador que puede pasarse a la [método ICorProfilerInfo3:: Getfunctiontailcall3info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) para recuperar el marco de pila.  
@@ -66,6 +66,7 @@ void __stdcall FunctionTailcall3WithInfo(
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
 - [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
 - [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)

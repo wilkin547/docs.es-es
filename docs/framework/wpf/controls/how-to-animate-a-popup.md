@@ -5,14 +5,14 @@ helpviewer_keywords:
 - Popup control [WPF], animating
 - animation [WPF], Popup controls
 ms.assetid: acaa2a0a-6137-4efd-9cd1-75ece222e390
-ms.openlocfilehash: ed5edf298e59d6a9adddc03fc21de1900c7ee8e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b70d9c4cb1bca26a6c77d3a7c50add517ca8ef92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150116"
 ---
-# <a name="how-to-animate-a-popup"></a>Procedimiento Animar un control Popup
+# <a name="how-to-animate-a-popup"></a>Filtrar Animar un control Popup
 En este ejemplo se muestra dos maneras de animar una <xref:System.Windows.Controls.Primitives.Popup> control.  
   
 ## <a name="example"></a>Ejemplo  
@@ -29,6 +29,7 @@ En este ejemplo se muestra dos maneras de animar una <xref:System.Windows.Contro
  [!code-xaml[AnimatedPopup#RotateTransform1](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform1)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.UIElement.RenderTransform%2A>
 - <xref:System.Windows.Controls.Primitives.BulletDecorator>
 - <xref:System.Windows.Media.RotateTransform>

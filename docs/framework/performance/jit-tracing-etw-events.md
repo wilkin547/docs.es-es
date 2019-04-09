@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04c4e1db35b59748067b76cc037c0def6437c531
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7261e5ce06a4ac20b1e7c816ababf8c8ba129b29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150766"
 ---
 # <a name="jit-tracing-etw-events"></a>Eventos ETW de traza JIT
 <a name="top"></a> Estos eventos recopilan información relativa a si la inclusión Just-In-Time (JIT) y las llamadas de cola JIT se realizan correctamente o no.  
@@ -31,11 +31,11 @@ ms.locfileid: "54536651"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0 x 10)|Detallado (5)|  
+|`JITTracingKeyword` (0x10)|Detallado (5)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|Error de inclusión de JIT.|  
   
@@ -61,11 +61,11 @@ ms.locfileid: "54536651"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0 x 10)|Detallado (5)|  
+|`JITTracingKeyword` (0x10)|Detallado (5)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|El método de inclusión se realizó correctamente.|  
   
@@ -94,11 +94,11 @@ ms.locfileid: "54536651"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0 x 10)|Detallado (5)|  
+|`JITTracingKeyword` (0x10)|Detallado (5)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|Error en la llamada de cola del método.|  
   
@@ -124,11 +124,11 @@ ms.locfileid: "54536651"
   
 |Palabra clave para generar el evento|Nivel|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0 x 10)|Detallado (5)|  
+|`JITTracingKeyword` (0x10)|Detallado (5)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|La llamada de cola del método se realizó correctamente.|  
   
@@ -150,4 +150,5 @@ ms.locfileid: "54536651"
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 ## <a name="see-also"></a>Vea también
-- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md)

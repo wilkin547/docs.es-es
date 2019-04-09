@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: 9e4ef54321acec508aac787329cb911e083317bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dae044a9d7802e858f1f24dd4aa0f1de8f6cba7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158957"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Escribir el contenido de un conjunto de datos como datos XML
 En ADO.NET es posible escribir una representación XML de un <xref:System.Data.DataSet>, con o sin su esquema. Si la información de esquema está incluida alineada con el código XML, se escribirá con el lenguaje de definición de esquemas XML (XSD). El esquema contiene las definiciones de tabla del <xref:System.Data.DataSet>, así como las definiciones de relaciones y restricciones.  
@@ -68,15 +68,16 @@ xmlSW.Close();
   
 |Valor MappingType|Descripción|  
 |-----------------------|-----------------|  
-|**Element**|Este es el valor predeterminado. La columna se escribe como un elemento XML, donde ColumnName es el nombre del elemento y el contenido de la columna se escribe como el texto del elemento. Por ejemplo:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
-|**Attribute**|La columna se escribe como un atributo XML del elemento XML para la fila actual, donde ColumnName es el nombre del atributo y el contenido de la columna se escribe como el valor del atributo. Por ejemplo:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
+|**Elemento**|Este es el valor predeterminado. La columna se escribe como un elemento XML, donde ColumnName es el nombre del elemento y el contenido de la columna se escribe como el texto del elemento. Por ejemplo:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
+|**Atributo**|La columna se escribe como un atributo XML del elemento XML para la fila actual, donde ColumnName es el nombre del atributo y el contenido de la columna se escribe como el valor del atributo. Por ejemplo:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
 |**SimpleContent**|El contenido de la columna se escribe como texto en el elemento XML de la fila actual. Por ejemplo:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Tenga en cuenta que **SimpleContent** no se puede establecer para una columna de una tabla que tiene **elemento** columnas o relaciones anidadas.|  
 |**Hidden**|La columna no se escribe en el resultado XML.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DiffGram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
-- [Anidado de objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)
-- [Escritura de información del esquema de un conjunto de datos como XSD](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)
+- [Objetos DiffGram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
+- [Anidar objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)
+- [Escribir información del esquema de un conjunto de datos como XSD](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)
 - [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

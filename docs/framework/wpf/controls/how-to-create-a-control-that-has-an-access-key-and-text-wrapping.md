@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], access keys
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-ms.openlocfilehash: e410b92f90f775471ef5d89365549ccd5bb7f085
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48e439719afa2426b5d8f822c621080cdc32514e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361907"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174049"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Filtrar Crear un control que tenga tecla de acceso y ajuste de texto
 En este ejemplo se explica cómo crear un control que tenga una clave de acceso y que admita el ajuste de texto. El ejemplo se usa un <xref:System.Windows.Controls.Label> control para ilustrar estos conceptos.  
@@ -26,7 +26,7 @@ En este ejemplo se explica cómo crear un control que tenga una clave de acceso 
   
  [!code-xaml[LabelSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
- **Agregar una tecla de acceso y el ajuste de texto a la etiqueta**  
+ **Agregar una clave de acceso y ajuste de texto a la etiqueta**  
   
  Si necesita un <xref:System.Windows.Controls.Label> que tiene una clave de acceso (tecla de acceso), use el <xref:System.Windows.Controls.AccessText> elemento que está dentro de la <xref:System.Windows.Controls.Label>.  
   
@@ -37,4 +37,5 @@ En este ejemplo se explica cómo crear un control que tenga una clave de acceso 
  [!code-xaml[LabelSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Establezca la propiedad de destino de una etiqueta](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))
+
+- [Filtrar Establezca la propiedad de destino de una etiqueta](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 12671c62a887f863bfb423cf67d7a25eed4118b2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132215"
 ---
 # <a name="wpf-brushes-overview"></a>Información general sobre pinceles de WPF
 Todo lo visible en la pantalla está visible porque lo ha pintado por un pincel. Por ejemplo, se usa un pincel para el fondo de un botón, el primer plano del texto y el relleno de una forma de describir. Este tema presentan los conceptos de pintar con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pinceles y proporciona ejemplos. Los pinceles permiten pintar objetos [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] con cualquier cosa, desde colores simples y sólidos hasta conjuntos complejos de patrones e imágenes.  
@@ -161,6 +161,7 @@ Rectángulo pintado mediante VisualBrush
  Para obtener más información sobre por qué <xref:System.Windows.Media.VisualBrush> no pueden ser objetos inmovilizados, consulte la <xref:System.Windows.Media.VisualBrush> página tipo.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
 - [Información general sobre el dibujo con colores sólidos y degradados](painting-with-solid-colors-and-gradients-overview.md)

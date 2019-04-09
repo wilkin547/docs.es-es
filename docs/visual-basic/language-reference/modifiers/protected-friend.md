@@ -4,12 +4,12 @@ ms.date: 05/10/2018
 helpviewer_keywords:
 - Protected Friend keyword [Visual Basic]
 - Protected Friend keyword [Visual Basic], syntax
-ms.openlocfilehash: 1858411e5543448e6d822c97b6e5c18da4a6c11e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 331c63dc290d4096e8158f265ee869b47743a273
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151780"
 ---
 # <a name="protected-friend-visual-basic"></a>Protected Friend (Visual Basic)
 
@@ -22,14 +22,13 @@ La combinación de palabras claves `Protected Friend` es un modificador de acces
 
 - **Contexto de declaración.** Puede usar `Protected Friend` sólo en el nivel de clase. Esto significa que el contexto de declaración de un `Protected` elemento debe ser una clase y no puede ser un archivo de código fuente, espacio de nombres, interfaz, módulo, estructura o procedimiento. 
 
-
 ## <a name="see-also"></a>Vea también
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
-- [Private Protected](./private-protected.md)
+- [Private protegida](./private-protected.md)
 - [Niveles de acceso en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Procedimientos](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Estructuras](../../../visual-basic/programming-guide/language-features/data-types/structures.md)

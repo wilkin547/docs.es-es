@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Recuperar datos del Portapapeles
+title: Filtrar para recuperar datos del Portapapeles
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: 0ed79197190e9f646b5f94ff56e62b19fe4f366a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: aca110339c94afd5442aed5a2481964b456154f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201616"
 ---
-# <a name="how-to-retrieve-data-from-the-clipboard"></a>Filtrar Recuperar datos del Portapapeles
+# <a name="how-to-retrieve-data-from-the-clipboard"></a>Filtrar para recuperar datos del Portapapeles
 La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede usar para interactuar con la función de Portapapeles del sistema operativo Windows. Muchas aplicaciones utilizan el Portapapeles como un repositorio temporal para los datos. Por ejemplo, procesadores de textos utilizan el Portapapeles durante las operaciones de cortar y pegar. El Portapapeles también es útil para transferir información desde una aplicación a otra.  
   
  Algunas aplicaciones almacenan datos en el Portapapeles con varios formatos para aumentar el número de otras aplicaciones que pueden utilizar potencialmente los datos. Un formato de Portapapeles es una cadena que identifica el formato. Una aplicación que utiliza el formato identificado puede recuperar los datos asociados en el Portapapeles. La <xref:System.Windows.Forms.DataFormats> clase proporciona los nombres de formato predefinidos para su uso. También puede utilizar sus propios nombres de formato o usar un tipo de objeto como su formato. Para obtener información acerca de cómo agregar datos al Portapapeles, vea [Cómo: Agregar datos al Portapapeles](how-to-add-data-to-the-clipboard.md).  
@@ -57,5 +57,6 @@ La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede us
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Compatibilidad con las operaciones de arrastrar y colocar y con el Portapapeles](drag-and-drop-operations-and-clipboard-support.md)
-- [Cómo: Agregar datos al Portapapeles](how-to-add-data-to-the-clipboard.md)
+- [Filtrar para agregar datos al Portapapeles](how-to-add-data-to-the-clipboard.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebf2fea9f987818c93a1e865f2ed2ce33142050c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d4bc763d908156f3bbf8998c13073820686903f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132761"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>ISymUnmanagedReader::GetMethodByVersion (Método)
 Obtiene un método del lector de símbolos, dado un token de método y un número de versión de editar y copiar. Números de versión empiezan en 1 y se incrementan cada vez que cambia el método como resultado de una operación de copia y edición.  
@@ -53,4 +53,5 @@ HRESULT GetMethodByVersion (
  **Encabezado**: CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
-- [ISymUnmanagedReader (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+
+- [ISymUnmanagedReader (Interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

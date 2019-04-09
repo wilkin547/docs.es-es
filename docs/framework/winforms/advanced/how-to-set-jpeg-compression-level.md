@@ -1,5 +1,5 @@
 ---
-title: Filtrar Establecer el nivel de compresión de JPEG
+title: Filtrar para establecer el nivel de compresión de imágenes JPEG
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 678e89eaa240cbe3a396c1ee3d6c18e7ceca17ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722300"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130681"
 ---
-# <a name="how-to-set-jpeg-compression-level"></a>Filtrar Establecer el nivel de compresión de JPEG
+# <a name="how-to-set-jpeg-compression-level"></a>Filtrar para establecer el nivel de compresión de imágenes JPEG
 Puede que desee modificar los parámetros de una imagen al guardar la imagen en el disco para minimizar el tamaño de archivo o mejorar su calidad. Puede ajustar la calidad de una imagen JPEG modificando su nivel de compresión. Para especificar el nivel de compresión al guardar una imagen JPEG, debe crear un <xref:System.Drawing.Imaging.EncoderParameters> objeto y pasarlo a la <xref:System.Drawing.Image.Save%2A> método de la <xref:System.Drawing.Image> clase. Inicializar el <xref:System.Drawing.Imaging.EncoderParameters> objeto para que tenga una matriz que consta de uno <xref:System.Drawing.Imaging.EncoderParameter>. Cuando se crea el <xref:System.Drawing.Imaging.EncoderParameter>, especifique el <xref:System.Drawing.Imaging.Encoder.Quality> codificador y el nivel de compresión.  
   
 ## <a name="example"></a>Ejemplo  
@@ -130,6 +130,7 @@ End Function
 -   Un archivo de imagen denominado `TestPhoto.jpg` y que se encuentra en **c:\\**.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Determinar los parámetros admitidos por un codificador](how-to-determine-the-parameters-supported-by-an-encoder.md)
+
+- [Filtrar para determinar los parámetros que admite un codificador](how-to-determine-the-parameters-supported-by-an-encoder.md)
 - [Tipos de mapas de bits](types-of-bitmaps.md)
 - [Usar codificadores y descodificadores de imagen en la interfaz GDI+ administrada](using-image-encoders-and-decoders-in-managed-gdi.md)

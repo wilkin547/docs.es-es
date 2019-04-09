@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4eeecc3b1c248f4f0bf4372801f6bc71a22f260
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 858dfe9b15422680a261fef9e22d8c89d9d7fe45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662237"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155576"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>Enumeración CorDebugCodeInvokePurpose
 Explica los motivos por los que una función exportada llama a código administrado.  
@@ -59,5 +59,6 @@ typedef enum CorDebugCodeInvokePurpose
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

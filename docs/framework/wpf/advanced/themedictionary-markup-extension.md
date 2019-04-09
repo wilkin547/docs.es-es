@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: 0bc4b2a11927bd2551dc322c5a856ade9a85c8b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ad2248c791fadc5363d90ff496d5e040f6036ab3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364806"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132098"
 ---
 # <a name="themedictionary-markup-extension"></a>Extensión de marcado ThemeDictionary
 Proporciona a los autores de controles personalizados o a las aplicaciones que integran controles de otros fabricantes una manera de cargar los diccionarios de recursos específicos del tema para usarlos en la aplicación de estilos al control.  
@@ -49,9 +49,9 @@ Proporciona a los autores de controles personalizados o a las aplicaciones que i
   
  La sintaxis de atributo es la que se usa normalmente con esta extensión de marcado. El token de cadena que se proporciona después de la cadena de identificador `ThemeDictionary` se asigna como valor de <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> de la clase de extensión <xref:System.Windows.ThemeDictionaryExtension> subyacente.  
   
- `ThemeDictionary` también se puede usar en la sintaxis de elementos de objeto. En este caso, especificando el valor de la <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> propiedad es obligatoria.  
+ `ThemeDictionary` También puede utilizarse en la sintaxis de elemento de objeto. En este caso, especificando el valor de la <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> propiedad es obligatoria.  
   
- `ThemeDictionary` también se puede utilizar en el uso de atributos detallado que especifica la propiedad <xref:System.Windows.Markup.StaticExtension.Member%2A> como un par de propiedad=valor:  
+ `ThemeDictionary` También puede utilizarse en el uso de atributos detallado que especifica el <xref:System.Windows.Markup.StaticExtension.Member%2A> como propiedad = par de valor:  
   
 ```xml  
 <object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  
@@ -64,6 +64,7 @@ Proporciona a los autores de controles personalizados o a las aplicaciones que i
  `ThemeDictionary` es una extensión de marcado. Las extensiones de marcado se suelen implementar cuando se necesita que los valores de los atributos de escape no sean valores literales o nombres de controladores, y este requisito es de índole más global que limitarse a colocar los convertidores de tipos en determinados tipos o propiedades. Todas las extensiones de marcado de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usan los caracteres { y } en su sintaxis de atributo, que es la convención que permite que un procesador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reconozca que el atributo se debe procesar mediante una extensión de marcado. Para más información, vea [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Aplicar estilos y plantillas](../controls/styling-and-templating.md)
 - [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
 - [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md)

@@ -2,12 +2,12 @@
 title: Consideraciones de seguridad con metadatos
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: 2e1ad9f3c7d2a77ec6237bf1fc12c0d1a67181ad
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0dc060475f868923e8c7e4c87ef43ef5912c7ac5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172970"
 ---
 # <a name="security-considerations-with-metadata"></a>Consideraciones de seguridad con metadatos
 Al utilizar las funciones de metadatos de Windows Communication Foundation (WCF), tenga en cuenta las implicaciones de seguridad de publicar, recuperar y usar los metadatos del servicio.  
@@ -39,5 +39,6 @@ Al utilizar las funciones de metadatos de Windows Communication Foundation (WCF)
  El archivo de configuración de la aplicación de un servicio puede controlar si se publican metadatos y cómo. Es recomendable proteger el archivo de configuración de la aplicación con listas de control de acceso (ACL) adecuadas, para asegurarse de que un atacante no pueda modificar esos valores.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Proteger los extremos de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+
+- [Filtrar para proteger puntos de conexión de metadatos](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
 - [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)

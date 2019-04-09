@@ -24,25 +24,23 @@ helpviewer_keywords:
 - startup events [WPF]
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
-ms.openlocfilehash: b5f38492fff9aa87094542b174becc54ee324a78
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8ecc3f716061dfd08ac95652d1a9d8e06e26d949
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371494"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175799"
 ---
 # <a name="object-lifetime-events"></a>Eventos de duración de objetos
 En este tema se describen los eventos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] específicos que indican las fases de duración de la creación, el uso y la destrucción de objetos.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
  En este tema, se supone que entiende las propiedades de dependencia desde la perspectiva de un consumidor de propiedades de dependencia existentes en las clases [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] y que ha leído el tema [Información general sobre las propiedades de dependencia](dependency-properties-overview.md). Para seguir los ejemplos de este tema, también debe comprender [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (consulte [Información general sobre XAML (WPF)](xaml-overview-wpf.md)) y saber cómo escribir aplicaciones [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 <a name="intro"></a>   
 ## <a name="object-lifetime-events"></a>Eventos de duración de objetos  
- Todos los objetos en el código administrado de Microsoft .NET Framework que se van a través de un conjunto similar de fases de la vida, la creación, uso y destrucción. Además, muchos objetos tienen una fase de finalización de duración que se produce como parte de la fase de destrucción. Los objetos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], concretamente los objetos visuales que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] identifica como elementos, también tienen un conjunto de fases comunes de duración de objeto. Los modelos de programación y aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] exponen estas fases como una serie de eventos. Hay cuatro tipos principales de objetos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] con respecto a los eventos de duración: elementos en general, elementos de ventana, hosts de navegación y objetos de aplicación. Las ventanas y los hosts de navegación también se encuentran dentro de un grupo más grande de objetos visuales (elementos). En este tema se describen los eventos de duración que son comunes para todos los elementos y se indican los más específicos que se aplican a las definiciones de aplicación, las ventanas o los hosts de navegación.  
+ Todos los objetos en el código administrado de Microsoft .NET Framework que se van a través de un conjunto similar de fases de la vida, la creación, uso y destrucción. Además, muchos objetos tienen una fase de finalización de duración que se produce como parte de la fase de destrucción. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objetos, más concretamente los objetos visuales que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] identifica como elementos, también tienen un conjunto de fases comunes del ciclo de vida del objeto. Los modelos de programación y aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] exponen estas fases como una serie de eventos. Hay cuatro tipos principales de objetos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] con respecto a los eventos de duración: elementos en general, elementos de ventana, hosts de navegación y objetos de aplicación. Las ventanas y los hosts de navegación también se encuentran dentro de un grupo más grande de objetos visuales (elementos). En este tema se describen los eventos de duración que son comunes para todos los elementos y se indican los más específicos que se aplican a las definiciones de aplicación, las ventanas o los hosts de navegación.  
   
 <a name="common_events"></a>   
 ## <a name="common-lifetime-events-for-elements"></a>Eventos de duración comunes para elementos  
@@ -75,5 +73,6 @@ En este tema se describen los eventos [!INCLUDE[TLA2#tla_winclient](../../../../
 -   <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, y <xref:System.Windows.Controls.Frame>: [Información general sobre navegación](../app-development/navigation-overview.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Prioridad de los valores de propiedades de dependencia](dependency-property-value-precedence.md)
 - [Información general sobre eventos enrutados](routed-events-overview.md)

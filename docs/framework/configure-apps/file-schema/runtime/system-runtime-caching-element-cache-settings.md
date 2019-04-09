@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a68af0727e6f2fc92f9c6875ec6566dc969bd65d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: da059e1be7c685eba7792045abf4ffa691525d2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131370"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<System.Runtime.Caching > elemento (configuración de caché)
 Proporciona la configuración para la implementación predeterminada en memoria de la clase <xref:System.Runtime.Caching.ObjectCache> mediante la entrada `memoryCache` en el archivo de configuración.  
@@ -74,4 +74,5 @@ Proporciona la configuración para la implementación predeterminada en memoria 
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [\<memoryCache > elemento (configuración de caché)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

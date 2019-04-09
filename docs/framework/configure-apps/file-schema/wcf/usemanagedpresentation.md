@@ -2,12 +2,12 @@
 title: <useManagedPresentation>
 ms.date: 03/30/2017
 ms.assetid: 17a0dd77-af54-41db-a9d0-4b17ff42878f
-ms.openlocfilehash: 1134c4d5f18f60bb2986f4239a788b836fa9113e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: eedf0ce6cf75b8fb56daf98f2005e66162ce10d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155660"
 ---
 # <a name="usemanagedpresentation"></a>\<useManagedPresentation>
 Elemento de enlace utilizado para comunicarse con un Servicio de token de seguridad de CardSpace que admite el perfil CardSpace de WS-Trust. Este elemento no tiene ningún atributo y está presente como modificador vacío.  
@@ -43,6 +43,7 @@ Elemento de enlace utilizado para comunicarse con un Servicio de token de seguri
  Un proveedor de identidad utiliza este elemento para expresar en su directiva el hecho de que admite el perfil CardSpace de WS-Trust. Los proveedores de identidad que publican este tipo de aserción de directiva deberían poder emitir tokens basados en ese perfil CardSpace.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.UseManagedPresentationElement>
 - <xref:System.ServiceModel.Channels.UseManagedPresentationBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

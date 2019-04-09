@@ -6,18 +6,16 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 9457430ab61681ad154aba98d72850f19d30280d
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185446"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201304"
 ---
 # <a name="gridview-overview"></a>Información general sobre GridView
 <xref:System.Windows.Controls.GridView> modo de vista es uno de los modos de visualización para un <xref:System.Windows.Controls.ListView> control. La <xref:System.Windows.Controls.GridView> clase y sus clases auxiliares permiten que usted y a los usuarios ver colecciones de elementos en una tabla que normalmente utiliza botones como encabezados de columna interactivos. Este tema se presenta la <xref:System.Windows.Controls.GridView> clase y describe su uso.  
-  
-  
-  
+
 <a name="DefiningaListViewthatusesGridViewView"></a>   
 ## <a name="what-is-a-gridview-view"></a>¿Qué es una vista GridView?  
  El <xref:System.Windows.Controls.GridView> modo muestra una lista de elementos de datos por campos de datos de enlace a las columnas y mostrar un encabezado de columna para identificar el campo de vista. El valor predeterminado <xref:System.Windows.Controls.GridView> estilo implementa botones como encabezados de columna. Mediante los botones para los encabezados de columna, puede implementar capacidades de interacción de usuario importantes; Por ejemplo, los usuarios hacer clic en el encabezado de columna para ordenar <xref:System.Windows.Controls.GridView> datos según el contenido de una columna específica.  
@@ -75,13 +73,13 @@ ms.locfileid: "58185446"
   
  En la lista siguiente describe con más detalle las capacidades de <xref:System.Windows.Controls.GridView> para la interacción del usuario:  
   
--   **Reordenar columnas con el método de arrastrar y colocar.**  
+-   **Reordenar las columnas mediante el método de arrastrar y colocar.**  
   
      Los usuarios pueden reordenar las columnas de una <xref:System.Windows.Controls.GridView> al presionar el botón primario del mouse mientras se encuentra sobre un encabezado de columna y, a continuación, arrastrar la columna a una nueva posición. Mientras el usuario arrastra el encabezado de columna, se muestra una versión flotante del encabezado, así como una línea negra sólida que muestra dónde insertar la columna.  
   
      Especifique si desea modificar el estilo predeterminado para la versión flotante de un encabezado, un <xref:System.Windows.Controls.ControlTemplate> para un <xref:System.Windows.Controls.GridViewColumnHeader> tipo que se desencadena cuando el <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> propiedad está establecida en <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Para más información, consulte [Crear un estilo para un encabezado de columna de GridView arrastrado](how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
   
--   **Cambiar el tamaño de una columna para ajustarla a su contenido.**  
+-   **Cambiar el tamaño de una columna a su contenido.**  
   
      Los usuarios pueden hacer doble clic en la barra de redimensionamiento a la derecha de un encabezado de columna para cambiar el tamaño de una columna con el fin de ajustarla a su contenido.  
   
@@ -94,7 +92,7 @@ ms.locfileid: "58185446"
   
      Si desea cambiar la <xref:System.Windows.Style> de un elemento seleccionado, vea [utilizar desencadenadores para el estilo de los elementos seleccionados en un ListView](how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
   
--   **Desplazarse para ver el contenido que inicialmente no aparece en la pantalla.**  
+-   **Desplazarse para ver el contenido que no está visible inicialmente en la pantalla.**  
   
      Si el tamaño de la <xref:System.Windows.Controls.GridView> es no suficientemente grande como para mostrar todos los elementos, los usuarios pueden desplazarse horizontalmente o verticalmente mediante el uso de las barras de desplazamiento, que se proporciona un <xref:System.Windows.Controls.ScrollViewer> control. Un <xref:System.Windows.Controls.Primitives.ScrollBar> se oculta si todo el contenido está visible en una dirección específica. Los encabezados de columna no se desplazan con una barra de desplazamiento vertical, sino que se desplazan en horizontal.  
   
@@ -125,6 +123,7 @@ ms.locfileid: "58185446"
 -   <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Controls.GridViewColumn>
