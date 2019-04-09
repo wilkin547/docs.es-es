@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 712282153b79edc480ec387aa746e375ddd30d27
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9e0ec1ed73148b319217a70cc3be99b486be2f8e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208298"
 ---
 # <a name="subtypes-element-net-native"></a>\<Subtipos > elemento (.NET Native)
 Aplica la directiva en tiempo de ejecución a todas las clases heredadas del tipo contenedor.  
@@ -60,7 +60,7 @@ Aplica la directiva en tiempo de ejecución a todas las clases heredadas del tip
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
+|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
   
 ## <a name="remarks"></a>Comentarios  
  El elemento `<Subtypes>` aplica la directiva a todos los subtipos de su tipo contenedor. Se usa cuando se quieren aplicar directivas distintas a los tipos derivados y sus clases base.  
@@ -90,7 +90,8 @@ Aplica la directiva en tiempo de ejecución a todas las clases heredadas del tip
  [!code-csharp[ProjectN_Reflection#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#5)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos de directivas en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Configuración de directiva de la directiva en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

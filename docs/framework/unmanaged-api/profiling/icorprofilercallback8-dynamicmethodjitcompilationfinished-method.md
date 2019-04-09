@@ -10,12 +10,12 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0cb54a714b9da72e8620b39690b4dcc9a3c21c2e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9dbe8d4f7050b93ffb34280be6d63367ef294ae8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206595"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>Método ICorProfilerCallback8::DynamicMethodJITCompilationFinished
 [Se admite en .NET Framework 4.7 y versiones posteriores]  
@@ -59,5 +59,6 @@ Esta devolución de llamada se desencadena cada vez que ha finalizado la compila
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [DynamicMethodJITCompilationStarted (método)](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
-- [ICorProfilerCallback8 (interfaz)](icorprofilercallback8-interface.md)
+
+- [Método DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
+- [Interfaz ICorProfilerCallback8](icorprofilercallback8-interface.md)

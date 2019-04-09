@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: 32efbd44579622fddba95d162261633a1af6d277
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206413"
 ---
 # <a name="drawings"></a>Dibujos
 <xref:System.Windows.Media.Drawing> los objetos se usan para dibujar con eficacia formas, imágenes o texto. Dibujos se utilizan al pintar con un <xref:System.Windows.Media.DrawingBrush> o programación con <xref:System.Windows.Media.Visual> objetos.  
@@ -28,6 +28,7 @@ ms.locfileid: "57364585"
   [Temas "Cómo..."](drawings-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.Drawing>
 - [Imágenes y gráficos 2D](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md)

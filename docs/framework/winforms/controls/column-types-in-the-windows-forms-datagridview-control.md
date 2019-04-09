@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: 8fd3ad0da369702c2a5e27c0b8b9a39a71c372ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a33cf4cd865921c04ef10c7fccf3a67c3d22de73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115679"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Tipos de columnas en el control DataGridView de formularios Windows Forms
 El <xref:System.Windows.Forms.DataGridView> control usa varios tipos de columna para mostrar su información y permitir que los usuarios modificar o agregar información.  
@@ -81,6 +81,7 @@ El <xref:System.Windows.Forms.DataGridView> control usa varios tipos de columna 
  La <xref:System.Windows.Forms.DataGridViewLinkColumn> clase proporciona varias propiedades para modificar la apariencia de vínculos antes, durante y después se hace clic en.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
 - <xref:System.Windows.Forms.DataGridViewButtonColumn>
@@ -89,7 +90,7 @@ El <xref:System.Windows.Forms.DataGridView> control usa varios tipos de columna 
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
-- [DataGridView (control)](datagridview-control-windows-forms.md)
-- [Cómo: Mostrar imágenes en celdas del Control DataGridView de formularios Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [Cómo: Trabajar con columnas de imagen en el Control DataGridView de Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
-- [Personalizar el control DataGridView de Windows Forms](customizing-the-windows-forms-datagridview-control.md)
+- [Control DataGridView](datagridview-control-windows-forms.md)
+- [Filtrar para mostrar imágenes en celdas del control DataGridView de formularios Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Filtrar para trabajar con columnas de imágenes en el control DataGridView de formularios Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [Personalizar el control DataGridView de formularios Windows Forms](customizing-the-windows-forms-datagridview-control.md)

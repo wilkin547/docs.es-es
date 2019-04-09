@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576b60293ed53448f3829fdcc9f89ad8508599af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa84ca0defd173563817673aad183a8b64226d41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135816"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Funciones de hospedaje de CLR en desuso
 Esta sección describen las funciones estáticas globales no administradas que utiliza las versiones anteriores de la API de hospedaje.  
@@ -22,28 +22,28 @@ Esta sección describen las funciones estáticas globales no administradas que u
  A excepción de las funciones de infraestructura (`_Cor*` funciones), que se usa solo con .NET Framework, estas funciones han quedado obsoletas en la [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="activation-functions"></a>Funciones de activación  
- [ClrCreateManagedInstance (función)](../../../../docs/framework/unmanaged-api/hosting/clrcreatemanagedinstance-function.md)  
+ [ClrCreateManagedInstance (Función)](../../../../docs/framework/unmanaged-api/hosting/clrcreatemanagedinstance-function.md)  
  Desusado. Crea una instancia del tipo administrado especificado.  
   
- [CoInitializeCor (función)](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)  
+ [CoInitializeCor (Función)](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)  
  Obsoleto. Para inicializar common language runtime (CLR), use [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) o [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).  
   
- [CoInitializeEE (función)](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
+ [CoInitializeEE (Función)](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
  Desusado. Garantiza que el motor de ejecución de CLR se carga en un proceso. Use la [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) método en su lugar.  
   
- [CorBindToCurrentRuntime (función)](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  
+ [CorBindToCurrentRuntime (Función)](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  
  Desusado. Carga common language runtime (CLR) en un proceso mediante el uso de información de versión almacenada en un archivo XML.  
   
- [CorBindToRuntime (función)](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)  
+ [CorBindToRuntime (Función)](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)  
  Desusado. Habilita hosts no administrados cargar CLR en un proceso.  
   
- [CorBindToRuntimeByCfg (función)](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)  
+ [CorBindToRuntimeByCfg (Función)](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)  
  Desusado. Carga el CLR en un proceso mediante el uso de información de versión que se lee desde un archivo XML.  
   
- [CorBindToRuntimeEx (función)](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)  
+ [CorBindToRuntimeEx (Función)](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)  
  Desusado. Permite a los hosts no administrados cargar CLR en un proceso y le permite establecer marcas para especificar el comportamiento de CLR.  
   
- [CorBindToRuntimeHost (función)](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)  
+ [CorBindToRuntimeHost (Función)](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)  
  Desusado. Permite a los hosts cargar una versión especificada de CLR en un proceso.  
   
  [GetCORRequiredVersion (Función)](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md)  
@@ -80,43 +80,43 @@ Esta sección describen las funciones estáticas globales no administradas que u
  Desusado. Permite al host determinar qué versión de CLR que se usará dentro del proceso antes de inicializar CLR de forma explícita.  
   
 ## <a name="hosting-functions"></a>Funciones de hospedaje  
- [CallFunctionShim (función)](../../../../docs/framework/unmanaged-api/hosting/callfunctionshim-function.md)  
+ [CallFunctionShim (Función)](../../../../docs/framework/unmanaged-api/hosting/callfunctionshim-function.md)  
  Desusado. Realiza una llamada a la función que tiene el nombre especificado y los parámetros de la biblioteca especificada.  
   
- [CoEEShutDownCOM (función)](../../../../docs/framework/unmanaged-api/hosting/coeeshutdowncom-function.md)  
+ [CoEEShutDownCOM (Función)](../../../../docs/framework/unmanaged-api/hosting/coeeshutdowncom-function.md)  
  Desusado. Descarga un ensamblado COM del proceso.  
   
- [CorExitProcess (función)](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md)  
+ [CorExitProcess (Función)](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md)  
  Desusado. Se cierra el proceso no administrado actual.  
   
- [CorLaunchApplication (función)](../../../../docs/framework/unmanaged-api/hosting/corlaunchapplication-function.md)  
+ [CorLaunchApplication (Función)](../../../../docs/framework/unmanaged-api/hosting/corlaunchapplication-function.md)  
  Desusado. Inicia la aplicación en la ruta de acceso de red especificada, utilizando los manifiestos especificados y otros datos de aplicación.  
   
- [CorMarkThreadInThreadPool (función)](../../../../docs/framework/unmanaged-api/hosting/cormarkthreadinthreadpool-function.md)  
+ [CorMarkThreadInThreadPool (Función)](../../../../docs/framework/unmanaged-api/hosting/cormarkthreadinthreadpool-function.md)  
  Desusado. Marca el subproceso de grupo de subprocesos actualmente en ejecución para la ejecución de código administrado. A partir de la versión 2.0 de .NET Framework, esta función tiene ningún efecto. No es necesario y puede quitarse desde el código.  
   
- [CoUninitializeCor (función)](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md)  
+ [CoUninitializeCor (Función)](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md)  
  Obsoleto. El CLR no se puede descargar desde un proceso.  
   
- [CoUninitializeEE (función)](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)  
+ [CoUninitializeEE (Función)](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)  
  Obsoleto.  
   
  [CreateDebuggingInterfaceFromVersion (Función)](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)  
  Desusado. Crea un [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) objeto basándose en la información de versión especificada.  
   
- [CreateICeeFileGen (función)](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md)  
+ [CreateICeeFileGen (Función)](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md)  
  Desusado. Crea un [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) objeto.  
   
- [DestroyICeeFileGen (función)](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md)  
+ [DestroyICeeFileGen (Función)](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md)  
  Desusado. Destruye un [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) objeto.  
   
- [Puntero a la función FExecuteInAppDomainCallback](../../../../docs/framework/unmanaged-api/hosting/fexecuteinappdomaincallback-function-pointer.md)  
+ [puntero a la función FExecuteInAppDomainCallback](../../../../docs/framework/unmanaged-api/hosting/fexecuteinappdomaincallback-function-pointer.md)  
  Desusado. Señala una función que CLR llama para ejecutar código administrado.  
   
- [Puntero a la función FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)  
+ [puntero a la función FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)  
  Desusado. Señala una función que CLR llama para notificar al host que la inicialización se ha iniciado o completado.  
   
- [GetCLRIdentityManager (función)](../../../../docs/framework/unmanaged-api/hosting/getclridentitymanager-function.md)  
+ [GetCLRIdentityManager (Función)](../../../../docs/framework/unmanaged-api/hosting/getclridentitymanager-function.md)  
  Desusado. Obtiene un puntero a una interfaz que permite a CLR administrar identidades.  
   
  [LoadLibraryShim (Función)](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md)  
@@ -128,35 +128,36 @@ Esta sección describen las funciones estáticas globales no administradas que u
  [LoadStringRCEx (Función)](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
  Desusado. Convierte un valor HRESULT a un mensaje de error adecuado para la referencia cultural especificada.  
   
- [Puntero a la función LPOVERLAPPED_COMPLETION_ROUTINE](../../../../docs/framework/unmanaged-api/hosting/lpoverlapped-completion-routine-function-pointer.md)  
+ [puntero a la función LPOVERLAPPED_COMPLETION_ROUTINE](../../../../docs/framework/unmanaged-api/hosting/lpoverlapped-completion-routine-function-pointer.md)  
  Desusado. Señala a una función que notifica al host cuándo una superpuesta (es decir, asincrónica) se ha completado la E/S en un dispositivo.  
   
- [Puntero a la función LPTHREAD_START_ROUTINE](../../../../docs/framework/unmanaged-api/hosting/lpthread-start-routine-function-pointer.md)  
+ [puntero a la función LPTHREAD_START_ROUTINE](../../../../docs/framework/unmanaged-api/hosting/lpthread-start-routine-function-pointer.md)  
  Desusado. Señala una función que notifica al host que un subproceso ha empezado a ejecutar.  
   
  [RunDll32ShimW (Función)](../../../../docs/framework/unmanaged-api/hosting/rundll32shimw-function.md)  
  Desusado. Ejecuta el comando especificado.  
   
- [Puntero a la función WAITORTIMERCALLBACK](../../../../docs/framework/unmanaged-api/hosting/waitortimercallback-function-pointer.md)  
+ [puntero a la función WAITORTIMERCALLBACK](../../../../docs/framework/unmanaged-api/hosting/waitortimercallback-function-pointer.md)  
  Desusado. Señala una función que notifica al host que un identificador de espera se ha señalado o agotó el tiempo.  
   
 ## <a name="infrastructure-functions"></a>Funciones de infraestructura  
  Las funciones de esta sección son para uso exclusivo de .NET Framework.  
   
- [_CorDllMain (función)](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)  
+ [_CorDllMain (Función)](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)  
  Inicializa CLR, busca el punto de entrada administrado en el encabezado CLR del ensamblado DLL y comienza la ejecución.  
   
- [_CorExeMain (función)](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)  
+ [_CorExeMain (Función)](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)  
  Inicializa CLR, busca el punto de entrada administrado en el encabezado CLR del ensamblado ejecutable y comienza la ejecución.  
   
- [_CorExeMain2 (función)](../../../../docs/framework/unmanaged-api/hosting/corexemain2-function.md)  
+ [_CorExeMain2 (Función)](../../../../docs/framework/unmanaged-api/hosting/corexemain2-function.md)  
  Ejecuta el punto de entrada en el código asignado a memoria especificado. El cargador del sistema operativo llama a esta función.  
   
- [_CorImageUnloading (función)](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)  
+ [_CorImageUnloading (Función)](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)  
  Notifica al cargador cuándo se descargan las imágenes de módulo administrado.  
   
- [_CorValidateImage (función)](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)  
+ [_CorValidateImage (Función)](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)  
  Valida las imágenes de módulo administrado y notifica al cargador del sistema operativo después de que se han cargado.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Funciones estáticas globales de hospedaje de .NET Framework 4](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)

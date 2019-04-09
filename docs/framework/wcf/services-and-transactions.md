@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-ms.openlocfilehash: 5078e12ed5c68556a1d1d04d01c90440b57c1407
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9dfe34406bfda2c16bd2f0cd53796b2fcef07b57
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736408"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138338"
 ---
 # <a name="services-and-transactions"></a>Servicios y transacciones
 Las aplicaciones de Windows Communication Foundation (WCF) pueden iniciar una transacción desde dentro de un cliente y coordinar la transacción dentro de la operación de servicio. Los clientes pueden iniciar una transacción e invocación varias operaciones del servicio y garantizar que las operaciones del servicio se confirmen o reviertan como una unidad única.  
@@ -89,6 +89,7 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Compatibilidad transaccional en System.ServiceModel](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)
 - [Modelos de transacción](../../../docs/framework/wcf/feature-details/transaction-models.md)
 - [Flujo de la transacción WS](../../../docs/framework/wcf/samples/ws-transaction-flow.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: a9066054c82fdb2e25dace0b7611df4cbbf4ec93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3ac0f321a20624deea1fe382d04a8d4e1b6c510
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135205"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Especificación de transferencia de datos en contratos de servicio
 Windows Communication Foundation (WCF) puede considerarse como una infraestructura de mensajería. Las operaciones de servicio pueden recibir mensajes, procesarlos y enviarles mensajes. Los mensajes se describen mediante contratos de operaciones. Por ejemplo, considere el siguiente contrato:  
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>Especificación del uso y estilo  
  Al describir servicios mediante el lenguaje de descripción de servicios Web (WSDL), los dos estilos utilizados comúnmente son Documento y llamada a procedimiento remoto (RPC). En el estilo Documento, el cuerpo del mensaje completo se describe utilizando el esquema, y el WSDL describe las diversas partes del cuerpo del mensaje haciendo referencia a elementos dentro de ese esquema. En el estilo RPC, el WSDL hace referencia a un tipo de esquema para cada parte del mensaje en lugar de a un elemento. En algunos casos, tiene que seleccionar manualmente uno de estos estilos. Puede hacer esto aplicando el atributo <xref:System.ServiceModel.DataContractFormatAttribute> y estableciendo la propiedad `Style` (cuando se esté usando <xref:System.Runtime.Serialization.DataContractSerializer>), o estableciendo el `Style` en el atributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> (al usar el <xref:System.Xml.Serialization.XmlSerializer>).  
   
- Además, <xref:System.Xml.Serialization.XmlSerializer> admite dos formas de XML serializado: `Literal` y `Encoded`. `Literal` es la forma más aceptada y es el único formato que <xref:System.Runtime.Serialization.DataContractSerializer> admite. `Encoded` es un formato heredado descrito en la sección 5 de la especificación SOAP, y no se recomienda para los nuevos servicios. Para cambiar al modo `Encoded`, establezca la propiedad `Use` en el atributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> en `Encoded`.  
+ Además, <xref:System.Xml.Serialization.XmlSerializer> admite dos formas de XML serializado: `Literal` y `Encoded`. `Literal` es la forma más comúnmente aceptada y es la única forma la <xref:System.Runtime.Serialization.DataContractSerializer> admite. `Encoded` es una forma heredada descrita en la sección 5 de la especificación SOAP y no se recomienda para nuevos servicios. Para cambiar al modo `Encoded`, establezca la propiedad `Use` en el atributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> en `Encoded`.  
   
  En la mayoría de los casos, no debería cambiar la configuración predeterminada para el `Style` ni las propiedades `Use`.  
   
@@ -533,7 +533,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
  En el caso de hospedaje mediante web, debe crear una nueva clase derivada `ServiceHost` y utilizar un generador de host de servicio para conectarla.  
   
 ### <a name="controlling-serialization-settings-in-configuration"></a>Control de los ajustes de serialización en la configuración  
- El `MaxItemsInObjectGraph` e `IgnoreExtensionDataObject` se pueden controlar a través de la configuración utilizando el punto de conexión `dataContractSerializer` o comportamiento de servicio, tal y como se muestra en el ejemplo siguiente.  
+ El `MaxItemsInObjectGraph` e `IgnoreExtensionDataObject` se pueden controlar a través de la configuración utilizando el extremo `dataContractSerializer` o comportamiento de servicio, tal y como se muestra en el ejemplo siguiente.  
   
 ```xml  
 <configuration>  
@@ -575,6 +575,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
  Para obtener más información sobre los conceptos de serialización avanzada, consulte [serialización y deserialización](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Utilización de la clase XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
-- [Cómo: Habilitar el Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
-- [Cómo: Crear un contrato de datos básicos para una clase o estructura](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+- [Filtrar para habilitar el streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Filtrar para crear un contrato de datos básico para una clase o estructura](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

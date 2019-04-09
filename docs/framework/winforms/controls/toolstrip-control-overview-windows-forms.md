@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: c701ed6ff155ca507f827874a955b2361a3b2359
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144578"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Información sobre el control ToolStrip (formularios Windows Forms)
 Los formularios de Windows <xref:System.Windows.Forms.ToolStrip> control y sus clases asociadas proporcionan un marco común para combinar elementos de la interfaz de usuario en los menús, barras de estado y las barras de herramientas. <xref:System.Windows.Forms.ToolStrip> los controles ofrecen una experiencia de tiempo de diseño que incluye la edición y activación en contexto, el diseño personalizado y espacio compartido, que es la capacidad de las barras de herramientas para compartir el espacio horizontal o vertical.  
@@ -46,7 +46,7 @@ Los formularios de Windows <xref:System.Windows.Forms.ToolStrip> control y sus c
   
 ### <a name="important-toolstrip-members"></a>Miembros importantes de ToolStrip  
   
-|nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|Obtiene o establece el borde del contenedor primario un <xref:System.Windows.Forms.ToolStrip> está acoplado.|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|Obtiene o establece un valor que indica si la clase <xref:System.Windows.Forms.ToolStrip> controla la organización de elementos y las operaciones de arrastrar y colocar de forma privada|  
@@ -62,7 +62,7 @@ Los formularios de Windows <xref:System.Windows.Forms.ToolStrip> control y sus c
   
 ### <a name="important-toolstrip-companion-classes"></a>Clases complementarias importantes de ToolStrip  
   
-|nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|Reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.MainMenu> clase.|  
 |<xref:System.Windows.Forms.StatusStrip>|Reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.StatusBar> clase.|  
@@ -80,6 +80,7 @@ Los formularios de Windows <xref:System.Windows.Forms.ToolStrip> control y sus c
  Para obtener más información, consulte [resumen de la tecnología ToolStrip](toolstrip-technology-summary.md) y [arquitectura del Control ToolStrip](toolstrip-control-architecture.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

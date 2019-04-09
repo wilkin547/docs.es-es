@@ -1,15 +1,15 @@
 ---
-title: Filtrar Asegúrese de modelo y asignación de los recursos incrustados de archivos
+title: Filtrar para hacer que los archivos de asignación y de modelo sean recursos incrustados
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: 7827ecce0fe7f5c21291d3ba2edd925c6a8e5960
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b00ccdd0a1fc1cb22cf7cc0d0a3177dcc0e8017f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826530"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138598"
 ---
-# <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Filtrar Asegúrese de modelo y asignación de los recursos incrustados de archivos
+# <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Filtrar para hacer que los archivos de asignación y de modelo sean recursos incrustados
 El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] le permite implementar los archivos de asignación y modelo como recursos incrustados de una aplicación. El ensamblado con los archivos de asignación y de modelo incrustados se debe cargar en el mismo dominio de aplicación que la conexión de entidad. Para más información, consulte [Cadenas de conexión](../../../../../docs/framework/data/adonet/ef/connection-strings.md). De forma predeterminada, las herramientas de [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] incrustan los archivos de asignación y de modelo. Cuando defina los archivos de asignación y de modelo manualmente, use este procedimiento para asegurarse de que dichos archivos se implementan como recursos incrustados junto con una aplicación de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 > [!NOTE]
@@ -35,11 +35,10 @@ El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] le permite imp
   
 ## <a name="example"></a>Ejemplo  
  La cadena de conexión siguiente hace referencia a un modelo incrustado y archivos de asignación para el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Esta cadena de conexión está almacenada en el archivo App.config del proyecto.  
-  
-  
-  
+
 ## <a name="see-also"></a>Vea también
+
 - [Modelado y asignación](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
-- [Cómo: Definir la cadena de conexión](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)
-- [Cómo: Compilar una cadena de conexión EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)
-- [Herramientas de ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Filtrar para defina la cadena de conexión](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)
+- [Filtrar para compilar una cadena de conexión EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)
+- [Herramientas de Entity Data Model de ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

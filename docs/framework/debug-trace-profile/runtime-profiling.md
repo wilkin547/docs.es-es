@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17530537e6d74b247aaf8708efed28ef169f9d57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 036744362c414fe51c919b59c693d447c92a87c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141393"
 ---
 # <a name="runtime-profiling"></a>Generar perfiles en tiempo de ejecución
 La generación de perfiles es un método de recopilación de datos de rendimiento en cualquier escenario de desarrollo o implementación. Esta sección está dirigida a los desarrolladores y administradores del sistema que quieren recopilar información sobre el rendimiento de la aplicación.  
@@ -42,7 +42,7 @@ La generación de perfiles es un método de recopilación de datos de rendimient
   
 6.  En el cuadro de lista **Instancias del objeto seleccionado**, haga clic en **\<Todas las instancias>** para especificar que quiere supervisar el contador de rendimiento para Common Language Runtime globalmente (es decir, en todo el sistema).  
   
-     O bien  
+     -o bien-  
   
      En el cuadro de lista **Instancias del objeto seleccionado** , haga clic en el nombre de una aplicación para supervisar el contador de rendimiento de dicha aplicación.  
   
@@ -67,4 +67,5 @@ La generación de perfiles es un método de recopilación de datos de rendimient
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|Especifica la fórmula para calcular el método `NextValue` para un `PerformanceCounter`.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Contadores de rendimiento](../../../docs/framework/debug-trace-profile/performance-counters.md)

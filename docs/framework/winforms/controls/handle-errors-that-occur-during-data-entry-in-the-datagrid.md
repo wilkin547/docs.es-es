@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Controlar los errores que se producen durante la entrada de datos en el Control DataGridView de Windows Forms
+title: Filtrar para controlar los errores que se producen durante la entrada de datos en el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data entry [Windows Forms], error handling
 - error handling [Windows Forms], data entry
 ms.assetid: 9004e72f-fdec-4264-a37d-2c99764efc13
-ms.openlocfilehash: 57b4591dcca42ec1e864115239a6acc61e4de609
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e5ba42c2ff86f46e2722d0f4455c10ab7b85af1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724005"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204658"
 ---
-# <a name="how-to-handle-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Filtrar Controlar los errores que se producen durante la entrada de datos en el Control DataGridView de Windows Forms
+# <a name="how-to-handle-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Filtrar para controlar los errores que se producen durante la entrada de datos en el control DataGridView de formularios Windows Forms
 En el ejemplo de código siguiente, se muestra cómo utilizar el control <xref:System.Windows.Forms.DataGridView> para informar de errores de entrada de datos al usuario.  
   
  Para obtener una explicación completa de este ejemplo de código, vea [Tutorial: Controlar los errores que se producen durante la entrada de datos en la Windows Forms DataGridView Control](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
@@ -38,9 +38,10 @@ En el ejemplo de código siguiente, se muestra cómo utilizar el control <xref:S
  Almacenar información confidencial, como una contraseña, en la cadena de conexión puede afectar a la seguridad de la aplicación. El uso de la autenticación de Windows (también conocida como seguridad integrada) es un modo más seguro de controlar el acceso a una base de datos. Para más información, consulte [Proteger la información de conexión](../../data/adonet/protecting-connection-information.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Tutorial: Controlar los errores que se producen durante la entrada de datos en el Control DataGridView de Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
-- [Entrada de datos en el control DataGridView de Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Tutorial: Validar datos en el Control DataGridView de Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [Tutorial: Controlar los errores que se producen durante la entrada de datos en el control DataGridView de formularios Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Entrada de datos en el control DataGridView de formularios Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Tutorial: Validar datos en el control DataGridView de formularios Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
 - [Proteger la información de conexión](../../data/adonet/protecting-connection-information.md)

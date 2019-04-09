@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a6d5755507ca00de612677235912d86caf98553
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31208a63caaf9158f12742f1547b0e1e2781de4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137961"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>Clase MissingInteropDataException (.NET Native)
 **.NET para aplicaciones de Windows para Windows 10, solo [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -59,20 +59,20 @@ ms.locfileid: "54698068"
 |`public Exception GetBaseException()`|Devuelve la excepción que es la causa raíz de una o más excepciones posteriores. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
 |`public int GetHashCode()`|Devuelve un código hash de una instancia de `MissingInteropDataException`.   (Se hereda de <xref:System.Object>).|  
 |`public void GetObjectData(SerializationInfo info, StreamingContext context)`|Establece un objeto <xref:System.Runtime.Serialization.SerializationInfo> con información sobre la excepción.  (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
-|`public Type GetType()`|Obtiene el tipo en tiempo de ejecución de la instancia actual. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
+|`public Type GetType()`|Obtiene el tipo de tiempo de ejecución de la instancia actual. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
 |`protected Object MemberwiseClone()`|Crea una copia superficial del objeto actual. (Se hereda de <xref:System.Object>).|  
 |`public string ToString()`|Devuelve la representación de cadena de la excepción actual. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
   
 ## <a name="events"></a>Eventos  
   
-|Evento|Descripción|  
+|evento|Descripción|  
 |-----------|-----------------|  
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Ocurre cuando una excepción se serializa para crear un objeto de estado de excepción que contenga datos serializados sobre la excepción. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
   
 ## <a name="usage-details"></a>Detalles de uso  
- La excepción `MissingInteropDataException` se genera cuando una llamada de método a un componente COM o de Windows en tiempo de ejecución no se puede realizar correctamente porque no hay disponible información sobre el tipo.  
+ La excepción `MissingInteropDataException` se genera cuando una llamada de método a un componente COM o de Windows Runtime no se puede realizar correctamente porque no hay disponible información sobre el tipo.  
   
- Los metadatos que hay disponibles para una aplicación en tiempo de ejecución se definen mediante el archivo de directivas en tiempo de ejecución (configuración XML), *.rd.xml. Para evitar que la aplicación genere esta excepción, debe modificar este archivo para definir los metadatos que deben estar presentes en tiempo de ejecución. La forma más habitual de abordar este error consiste en agregar un atributo `MarshalObject`, `MarshalDelegate`, o `MarshalStructure` a un elemento de programa apropiado en el archivo de directivas en tiempo de ejecución. Para obtener información sobre el formato de este archivo, vea [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)).  
+ Los metadatos que están disponibles para una aplicación en tiempo de ejecución se definen mediante el archivo de directivas de tiempo de ejecución (configuración XML), *.rd.xml. Para evitar que la aplicación genere esta excepción, debe modificar este archivo para definir los metadatos que deben estar presentes en tiempo de ejecución. La forma más habitual de abordar este error consiste en agregar un atributo `MarshalObject`, `MarshalDelegate`, o `MarshalStructure` a un elemento de programa apropiado en el archivo de directivas en tiempo de ejecución. Para obtener información sobre el formato de este archivo, vea [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)).  
   
 > [!IMPORTANT]
 >  Puesto que esta excepción indica que los metadatos que la aplicación necesita no están disponibles en tiempo de ejecución, no debe controlar esta excepción en un bloque `try`/`catch`. En su lugar, debe diagnosticar la causa de la excepción y eliminarla. Para ello, agregue la entrada apropiada a un archivo de directivas en tiempo de ejecución.  
@@ -80,6 +80,7 @@ ms.locfileid: "54698068"
  La clase `MissingInteropDataException` contiene un único miembro (la propiedad `MissingType`), que señala el tipo cuyos metadatos son necesarios para poder realizar una llamada de método correctamente. El resto de miembros se hereda de la clase base, <xref:System.Exception?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Exception?displayProperty=nameWithType>
 - [Clase MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

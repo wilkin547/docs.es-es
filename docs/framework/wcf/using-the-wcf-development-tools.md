@@ -2,17 +2,17 @@
 title: Utilización de las herramientas de desarrollo de WCF
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: e9a398ac6914582d299658e3e45d17ea5468917d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ffa3be4a6b8976ab978ea995e8b2c1faaacf0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712095"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144643"
 ---
 # <a name="using-the-wcf-development-tools"></a>Utilización de las herramientas de desarrollo de WCF
 Esta sección describen las herramientas de desarrollo de Visual Studio que le ayudarán a desarrollar su WCFservice.  
   
- Puede utilizar las plantillas de Visual Studio como base para crear rápidamente su propio servicio y luego usar el Host de servicio WCF y el cliente de prueba WCF para depurar y probar el servicio. Todas estas herramientas proporcionan una depuración y un ciclo de prueba rápido y estable, y descartan la necesidad de adaptarse a un modelo de hospedaje en una fase temprana.  
+ Puede utilizar las plantillas de Visual Studio como base para crear rápidamente su propio servicio y luego usar el Host de servicio WCF y el cliente de prueba WCF para depurar y probar el servicio. Todas estas herramientas proporcionan una depuración y un ciclo de prueba rápido y estable, y descartan la necesidad de confirmar un modelo de hospedaje en una fase temprana.  
   
 ## <a name="the-wcf-developer-tools"></a>Herramientas de desarrollador de WCF  
  [Plantillas de Visual Studio para WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  
@@ -27,7 +27,7 @@ Esta sección describen las herramientas de desarrollo de Visual Studio que le a
   
  Cliente de prueba de WCF (WcfTestClient.exe) es una herramienta de GUI que permite introducir parámetros de tipos arbitrarios, enviar esa entrada al servicio y la respuesta del servicio que devuelve la vista. Proporciona un servicio sin problemas las pruebas cuando se combina con el Host de servicio WCF.  
   
- [Generación de clases de tipos de datos a partir de XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
+ [Generar clases de tipos de datos a partir de XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
   
  Los datos XML almacenados en el portapapeles se pueden pegar en una página de códigos. Las clases definidas en los datos se convertirán en tipos de código.  
   
@@ -43,6 +43,7 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  Para obtener más información sobre Netsh.exe, consulte [cómo usar la herramienta Netsh.exe y los modificadores de línea de comandos](https://go.microsoft.com/fwlink/?LinkId=97877).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Plantillas de Visual Studio para WCF](../../../docs/framework/wcf/wcf-vs-templates.md)
 - [Host de servicio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
 - [Cliente de prueba de WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

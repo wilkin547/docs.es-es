@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Definir una operación de servicio (WCF Data Services)
+title: Filtrar Definir una operación de servicio (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: fffc0efaea200a7b0aa26b0f273b3c0d99338bfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75691a49624c179166d18225fac9fdc6c17a2308
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586558"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138104"
 ---
-# <a name="how-to-define-a-service-operation-wcf-data-services"></a>Procedimiento Definir una operación de servicio (WCF Data Services)
+# <a name="how-to-define-a-service-operation-wcf-data-services"></a>Filtrar Definir una operación de servicio (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] expone métodos que se definen en el servidor como operaciones de servicio. Las operaciones de servicio permiten que un servicio de datos proporcionar acceso a través de un URI a un método que se define en el servidor. Para definir una operación de servicio, se aplican los [`WebGet]` o `[WebInvoke]` al método. Para admitir los operadores de consulta, la operación de servicio debe devolver un <xref:System.Linq.IQueryable%601> instancia. Las operaciones del servicio pueden tener acceso al origen de datos subyacente por medio de la propiedad <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> en <xref:System.Data.Services.DataService%601>. Para obtener más información, consulte [las operaciones de servicio](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
   
  En el ejemplo de este tema se define una operación del servicio denominada `GetOrdersByCity` que devuelve una instancia de <xref:System.Linq.IQueryable%601> filtrada de los objetos `Orders` y `Order_Details` relacionados. En el ejemplo se obtiene acceso a la instancia de <xref:System.Data.Objects.ObjectContext> que es el origen de datos del servicio de datos de ejemplo Northwind. Este servicio se crea al completar el [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
@@ -48,10 +48,11 @@ ms.locfileid: "54586558"
  En el ejemplo siguiente se implementa una operación del servicio denominada `GetOrderByCity` en el servicio de datos Northwind. Esta operación utiliza ADO.NET Entity Framework para devolver un conjunto de objetos `Orders` y `Order_Details` relacionados como una instancia de <xref:System.Linq.IQueryable%601> basada en el nombre de ciudad suministrado.  
   
 > [!NOTE]
->  Los operadores de consulta se admiten en este punto de conexión de la operación del servicio porque el método devuelve una instancia de <xref:System.Linq.IQueryable%601>.  
+>  Los operadores de consulta se admiten en este extremo de la operación del servicio porque el método devuelve una instancia de <xref:System.Linq.IQueryable%601>.  
   
  [!code-csharp[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperation)]
  [!code-vb[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperation)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Definir Servicios de datos de WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

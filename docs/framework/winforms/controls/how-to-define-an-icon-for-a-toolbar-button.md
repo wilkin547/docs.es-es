@@ -1,5 +1,5 @@
 ---
-title: Filtrar Definir un icono para un botón de barra de herramientas
+title: Filtrar para definir un icono para un botón de la barra de herramientas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: fb4a492b081cd9f9e3ccc1d47a4120c705058dd0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0d4a17528ca3eb81f93419491766e370be551b1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712752"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153132"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Procedimiento Definir un icono para un botón de barra de herramientas
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Filtrar para definir un icono para un botón de la barra de herramientas
 > [!NOTE]
 >  El control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar>; sin embargo, el control <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.  
   
@@ -116,7 +116,8 @@ ms.locfileid: "57712752"
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Cómo: Desencadenar eventos de menú para los botones de barra de herramientas](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [ToolBar (control)](toolbar-control-windows-forms.md)
-- [ImageList (componente)](imagelist-component-windows-forms.md)
+- [Filtrar para desencadenar eventos de menú para los botones de la barra de herramientas](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Barra de herramientas (Control)](toolbar-control-windows-forms.md)
+- [Componente ImageList](imagelist-component-windows-forms.md)

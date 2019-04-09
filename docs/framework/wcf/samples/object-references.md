@@ -2,12 +2,12 @@
 title: Referencias a objetos
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: 4965ddab23f0f6c64edd3d71e97ba3293d2f69ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 393a6cb446d8216659c2b2f63b21754c37291ca7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577639"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203007"
 ---
 # <a name="object-references"></a>Referencias a objetos
 En este ejemplo se muestra cómo pasar los objetos por referencias entre el servidor y cliente. El ejemplo utiliza simulado *redes sociales*. Una red social está compuesta de una clase `Person` que contiene una lista de amigos en la que cada amigo es una instancia de la clase `Person`, con su propia lista de amigos. Esto crea un gráfico de objetos. El servicio expone las operaciones en estas redes sociales.  
@@ -114,5 +114,6 @@ public List<Person> GetCommonFriends(List<Person> people)
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>
 - [Referencias a objetos interoperables](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 708dd1e13fd999f9a3a11ce36248e82c15000bfc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6cba7b4a34835eb2f394aa71be8b907973cb1cd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479056"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204723"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>ICLRGCManager2::SetGCStartupLimitsEx (Método)
 Establece el tamaño de un segmento de la colección de elementos no utilizados y el tamaño máximo de la generación 0 del sistema de recopilación de elementos no utilizados.  
@@ -73,7 +73,8 @@ HRESULT SetGCStartupLimitsEx (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Administración automática de la memoria](../../../../docs/standard/automatic-memory-management.md)
-- [Recolección de elementos no utilizados](../../../../docs/standard/garbage-collection/index.md)
-- [ICLRControl (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [ICLRGCManager2 (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)
+
+- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
+- [recolección de elementos no utilizados](../../../../docs/standard/garbage-collection/index.md)
+- [ICLRControl (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [ICLRGCManager2 (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)
