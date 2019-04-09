@@ -1,5 +1,5 @@
 ---
-title: ICorDebugInternalFrame (Interfaz)
+title: Interfaz ICorDebugInternalFrame
 ms.date: 03/30/2017
 api_name:
 - ICorDebugInternalFrame
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a1af92cbce84b674058ab2c8af2e15b0070dcd8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2f16b4628215bee2410708edeb337b41fbdc0311
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109829"
 ---
-# <a name="icordebuginternalframe-interface"></a>ICorDebugInternalFrame (Interfaz)
+# <a name="icordebuginternalframe-interface"></a>Interfaz ICorDebugInternalFrame
 
 Representa un marco en la pila interna del tiempo de ejecución. Esta interfaz es una subclase de ICorDebugFrame (interfaz).  
   
@@ -31,7 +31,7 @@ Representa un marco en la pila interna del tiempo de ejecución. Esta interfaz e
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetFrameType (método)](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|Obtiene el tipo de este marco interno.|  
+|[Método GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|Obtiene el tipo de este marco interno.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -48,4 +48,5 @@ Representa un marco en la pila interna del tiempo de ejecución. Esta interfaz e
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

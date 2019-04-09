@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 38166addf95679083932a4369d19b75421a64665
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83147c3f9d70434f5c8dd34e2e56f44f71adc53d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092908"
 ---
 # <a name="row-states-and-row-versions"></a>Estados y versiones de filas
 ADO.NET administra las filas de las tablas mediante estados de fila y versiones de fila. Un estado de fila indica el estado de una fila; las versiones de fila mantienen los valores almacenados en una fila en cuanto se modifica, incluyendo los valores actuales, originales y predeterminados. Por ejemplo, después de realizar una modificación en una columna de una fila, ésta adquiere el estado de fila `Modified` y dos versiones de fila:`Current`, que contiene los valores actuales de fila, y `Original`, que contiene los valores de fila antes de la modificación de la columna.  
@@ -23,7 +23,7 @@ ADO.NET administra las filas de las tablas mediante estados de fila y versiones 
 |<xref:System.Data.DataRowState.Added>|Se ha agregado la fila a la tabla, pero no se ha llamado a `AcceptChanges`.|  
 |<xref:System.Data.DataRowState.Modified>|Se ha cambiado algún elemento de la fila.|  
 |<xref:System.Data.DataRowState.Deleted>|Se ha eliminado la fila de una tabla y no se ha llamado a `AcceptChanges`.|  
-|<xref:System.Data.DataRowState.Detached>|La fila no forma parte de ninguna `DataRowCollection`. El valor de `RowState` de una fila recién creada se establece en `Detached`. Una vez que se ha agregado la nueva `DataRow` a `DataRowCollection` llamando al método `Add`, el valor de la propiedad `RowState` se establece en `Added`.<br /><br /> También se establece `Detached` en una fila que se ha quitado de una `DataRowCollection` con el método `Remove`, o mediante el método `Delete` seguido del método `AcceptChanges`.|  
+|<xref:System.Data.DataRowState.Detached>|La fila no forma parte de ninguna `DataRowCollection`. El valor de `RowState` de una fila recién creada se establece en `Detached`. Una vez que se ha agregado la nueva `DataRow` a `DataRowCollection` llamando al método `Add`, el valor de la propiedad `RowState` se establece en `Added`.<br /><br /> `Detached` También se establece para una fila que se ha quitado de un `DataRowCollection` utilizando el `Remove` método, o mediante el `Delete` método seguido por el `AcceptChanges` método.|  
   
  Si se llama a `AcceptChanges` en un objeto <xref:System.Data.DataSet>, <xref:System.Data.DataTable> o <xref:System.Data.DataRow>, se quitan todas las filas con el estado de fila `Deleted`. Las filas que quedan reciben el estado de fila `Unchanged` y los valores de la versión de fila `Original` se sobrescriben con los valores de la versión de fila `Current`. Si se llama a `RejectChanges`, se quitan todas las filas con el estado de fila `Added`. Las filas que quedan reciben el estado de fila `Unchanged` y los valores de la versión de fila `Current` se sobrescriben con los valores de la versión de fila `Original`.  
   
@@ -43,14 +43,14 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
   
 |Valor de DataRowVersion|Descripción|  
 |--------------------------|-----------------|  
-|<xref:System.Data.DataRowVersion.Current>|Valores actuales de la fila. Esta versión de fila no está disponible para filas con un valor `RowState` de `Deleted`.|  
+|<xref:System.Data.DataRowVersion.Current>|Valores actuales de la fila. Esta versión de fila no está disponible para filas con un valor `RowState` en `Deleted`.|  
 |<xref:System.Data.DataRowVersion.Default>|Ésta es la versión de fila predeterminada para una fila determinada. La versión de fila predeterminada para una fila `Added`, `Modified` o `Deleted` es `Current`. La versión de fila predeterminada para una fila `Detached` es `Proposed`.|  
 |<xref:System.Data.DataRowVersion.Original>|Valores originales de la fila. Esta versión de fila no está disponible para filas con un valor `RowState` en `Added`.|  
 |<xref:System.Data.DataRowVersion.Proposed>|Valores propuestos para la fila. Esta versión de fila existe mientras dura una operación de edición en una fila, o para una fila que no forma parte de una `DataRowCollection`.|  
   
  Se puede comprobar si una `DataRow` tiene una versión de fila concreta llamando al método <xref:System.Data.DataRow.HasVersion%2A> y pasando `DataRowVersion` como argumento. Por ejemplo, `DataRow.HasVersion(DataRowVersion.Original)` devolverá `false` para las filas recién agregadas antes de llamar a `AcceptChanges`.  
   
- En el siguiente ejemplo de código, se muestran los valores en todas las filas eliminadas de una tabla. Las filas `Deleted` no tienen una versión de fila `Current` y, por lo tanto, debe pasar `DataRowVersion.Original` cuando obtenga acceso a los valores de columna.  
+ En el siguiente ejemplo de código, se muestran los valores en todas las filas eliminadas de una tabla. `Deleted` las filas no tienen un `Current` versión de fila, lo que debe pasar `DataRowVersion.Original` al tener acceso a los valores de columna.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -95,7 +95,8 @@ foreach (DataRow delRow in delRows)
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Manipulación de datos en un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+
+- [Manipular datos en un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Objetos DataAdapter y DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

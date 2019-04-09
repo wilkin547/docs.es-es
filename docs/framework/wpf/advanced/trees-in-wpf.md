@@ -6,18 +6,16 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 581bd29de07697794e1e752c02068d31db9e0de8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354653"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197690"
 ---
 # <a name="trees-in-wpf"></a>Árboles en WPF
-En muchas tecnologías, los elementos y componentes se organizan en una estructura de árbol en la que los desarrolladores manipulan directamente los nodos de objeto en el árbol para modificar la representación o el comportamiento de una aplicación. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] también usa varias metáforas de la estructura de árbol para definir las relaciones entre los elementos de programa. En su mayor parte, los desarrolladores de WPF pueden crear una aplicación en código o definir partes de la aplicación en código XAML mientras piensan conceptualmente en la metáfora de árbol de objetos, pero estarán llamando a una API concreta o usando un marcado concreto para llamarla, en lugar de usar una API de manipulación de árbol de objetos general como se usaría en DOM XML. WPF expone dos clases auxiliares que proporcionan una vista de metáfora de árbol, <xref:System.Windows.LogicalTreeHelper> y <xref:System.Windows.Media.VisualTreeHelper>. Los términos árbol visual y árbol lógico también se usan en la documentación de WPF porque estos mismos árboles son útiles para entender el comportamiento de ciertas características clave de WPF. En este tema define lo que representan el árbol visual y árbol lógico, se describe cómo se relacionan estos árboles con un concepto de árbol de objetos general y presenta <xref:System.Windows.LogicalTreeHelper> y <xref:System.Windows.Media.VisualTreeHelper>s.  
-  
+En muchas tecnologías, los elementos y componentes se organizan en una estructura de árbol en la que los desarrolladores manipulan directamente los nodos de objeto en el árbol para modificar la representación o el comportamiento de una aplicación. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] También usa varias metáforas de la estructura de árbol para definir las relaciones entre elementos de programa. En su mayor parte, los desarrolladores de WPF pueden crear una aplicación en código o definir partes de la aplicación en código XAML mientras piensan conceptualmente en la metáfora de árbol de objetos, pero estarán llamando a una API concreta o usando un marcado concreto para llamarla, en lugar de usar una API de manipulación de árbol de objetos general como se usaría en DOM XML. WPF expone dos clases auxiliares que proporcionan una vista de metáfora de árbol, <xref:System.Windows.LogicalTreeHelper> y <xref:System.Windows.Media.VisualTreeHelper>. Los términos árbol visual y árbol lógico también se usan en la documentación de WPF porque estos mismos árboles son útiles para entender el comportamiento de ciertas características clave de WPF. En este tema define lo que representan el árbol visual y árbol lógico, se describe cómo se relacionan estos árboles con un concepto de árbol de objetos general y presenta <xref:System.Windows.LogicalTreeHelper> y <xref:System.Windows.Media.VisualTreeHelper>s.  
 
-  
 <a name="element_tree"></a>   
 ## <a name="trees-in-wpf"></a>Árboles en WPF  
  La estructura de árbol más completa de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] es el árbol de objetos. Si se define una página de aplicación en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y después se carga el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], se crea una estructura de árbol basada en las relaciones de anidamiento de los elementos del marcado. Si se define una aplicación o una parte de la aplicación en código, se crea la estructura de árbol en función de cómo se asignen los valores de propiedad de las propiedades que implementan el modelo de contenido para un objeto determinado. En [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], hay dos maneras de conceptualizar el árbol de objetos completo y de notificarlo a su API pública: como el árbol lógico y como el árbol visual. Las distinciones entre árbol lógico y árbol visual no son siempre importantes, pero en ocasiones pueden dar lugar a problemas con algunos subsistemas de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y afectar a las decisiones que se toman en el marcado o el código.  
@@ -87,6 +85,7 @@ En muchas tecnologías, los elementos y componentes se organizan en una estructu
  Pero la búsqueda de recursos también se puede extender más allá del árbol lógico inmediato. Para el marcado de la aplicación, la búsqueda de recursos puede continuar con los diccionarios de recursos de nivel de aplicación y, después, con los valores de compatibilidad y sistema de tema a los que se hace referencia como propiedades estáticas o claves. Los propios temas también pueden hacer referencia a valores del sistema situados fuera del árbol lógico del tema si las referencias de recurso son dinámicas. Para más información sobre los diccionarios de recursos y la lógica de búsqueda, vea [Recursos XAML](xaml-resources.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre acciones del usuario](input-overview.md)
 - [Información general sobre la representación de gráficos en WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [Información general sobre eventos enrutados](routed-events-overview.md)

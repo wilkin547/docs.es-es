@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Hacer una prueba de posicionamiento en Viewport3D
+title: Filtrar Hacer una prueba de posicionamiento en Viewport3D
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hit tests [WPF], for 3-D visuals
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
-ms.openlocfilehash: d795f5aa768c360b6e27a9a1114179a5c27f0b23
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c3238161a01df67b05be6284b8eed61981ff3974
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356577"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098070"
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a>Filtrar Hacer una prueba de posicionamiento en Viewport3D
 En este ejemplo se muestra cómo la objetos visuales 3D de prueba de posicionamiento un <xref:System.Windows.Controls.Viewport3D>.  
@@ -30,4 +30,5 @@ En este ejemplo se muestra cómo la objetos visuales 3D de prueba de posicionami
  [!code-vb[HitTest3D#HitTest3D3DN5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn5)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Ejemplo de pruebas de posicionamiento de 3D](https://go.microsoft.com/fwlink/?LinkID=159959)

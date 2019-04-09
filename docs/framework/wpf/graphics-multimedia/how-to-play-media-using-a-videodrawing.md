@@ -1,16 +1,16 @@
 ---
-title: Procedimiento Reproducir elementos multimedia con un objeto VideoDrawing
+title: Filtrar Reproducir elementos multimedia con un objeto VideoDrawing
 ms.date: 03/30/2017
 helpviewer_keywords:
 - playback of media [WPF]
 - classes [WPF], MediaPlayer
 ms.assetid: 165d47ed-22ce-4ded-aa6a-aa9b7467de87
-ms.openlocfilehash: 2397662c79af208f2528f6eedcd5995cfac9526c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 186c9ae8167dafd09f029418c1d23f81f7a9e906
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203618"
 ---
 # <a name="how-to-play-media-using-a-videodrawing"></a>Filtrar Reproducir elementos multimedia con un objeto VideoDrawing
 Para reproducir un archivo de audio o vídeo, usa un <xref:System.Windows.Media.VideoDrawing> y un <xref:System.Windows.Media.MediaPlayer>. Hay dos maneras de cargar y reproducir elementos multimedia. La primera consiste en utilizar un <xref:System.Windows.Media.MediaPlayer> y un <xref:System.Windows.Media.VideoDrawing> por su cuenta y la segunda manera consiste en crear sus propios <xref:System.Windows.Media.MediaTimeline> para usar con el <xref:System.Windows.Media.MediaPlayer> y <xref:System.Windows.Media.VideoDrawing>.  
@@ -33,5 +33,6 @@ Para reproducir un archivo de audio o vídeo, usa un <xref:System.Windows.Media.
  Tenga en cuenta que, cuando se usa un <xref:System.Windows.Media.MediaTimeline>, usa el modo interactivo <xref:System.Windows.Media.Animation.ClockController> devuelto desde el <xref:System.Windows.Media.Animation.Clock.Controller%2A> propiedad de la <xref:System.Windows.Media.MediaClock> para controlar la reproducción multimedia en lugar de los métodos interactivos de <xref:System.Windows.Media.MediaPlayer>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.VideoDrawing>
 - [Información general sobre objetos Drawing](drawing-objects-overview.md)

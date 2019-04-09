@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: cb7df844458be083adefa16421a7088bd1e74893
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 63631378911a9ba95713e68fb19d8d08176c7562
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195649"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Información general sobre formularios Windows Forms y aplicaciones no administradas
 Los controles y aplicaciones de Windows Forms pueden interoperar con aplicaciones no administradas, con algunas advertencias. En las secciones siguientes se describen los escenarios y las configuraciones que las aplicaciones y los controles de Windows Forms admiten y no admiten.  
@@ -27,7 +27,7 @@ Los controles y aplicaciones de Windows Forms pueden interoperar con aplicacione
   
  En la siguiente tabla se muestra que hosts ActiveX admiten controles de Windows Forms.  
   
-|Versión de Windows Forms|Compatibilidad|  
+|Versión de Windows Forms|Soporte técnico|  
 |---------------------------|-------------|  
 |.NET Framework versión 1.0|Internet Explorer 5.01 y versiones posteriores|  
 |.NET framework versión 1.1 y versiones posteriores|Internet Explorer 5.01 y versiones posteriores<br /><br /> Microsoft Foundation Classes (MFC) 7.0 y versiones posteriores|  
@@ -47,7 +47,7 @@ Los controles y aplicaciones de Windows Forms pueden interoperar con aplicacione
  El bucle de mensajes de una aplicación en un bucle de programa interno que recupera los mensajes de una cola de mensajes del subproceso, los traduce y, después, los envía a la aplicación para que los controle. El bucle de mensajes de un Windows Form no tiene la misma arquitectura que los bucles de mensajes que proporcionan aplicaciones anteriores, como las aplicaciones de Visual Basic 6.0 y las aplicaciones MFC. Es posible que los mensajes de ventana que se publican en el bucle de mensajes se controlen de una forma diferente a la que espera el Windows Form. Por lo tanto, se puede producir un comportamiento inesperado. Puede que algunas combinaciones de teclas no funcionen, que alguna actividad del mouse no funcione o que algunos eventos no se generen como se esperaba.  
   
 ## <a name="resolving-interoperability-issues"></a>Resolver problemas de interoperabilidad  
- Puede resolver estos problemas mostrando el formulario en un bucle de mensajes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], que se crea con el método <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>.  
+ Puede resolver estos problemas mostrando el formulario en un bucle de mensajes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , que se crea con el método <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> .  
   
  Para que un Windows Form funcione correctamente con una aplicación cliente COM, debe ejecutarlo en un bucle de mensajes de Windows Forms. Para ello, siga uno de estos procedimientos:  
   
@@ -56,7 +56,8 @@ Los controles y aplicaciones de Windows Forms pueden interoperar con aplicacione
 -   Muestre cada Windows Form en un nuevo subproceso. Para obtener más información, vea [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
+
+- [Aplicaciones de Windows Forms y aplicaciones no administradas](windows-forms-and-unmanaged-applications.md)
 - [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Interoperabilidad COM en aplicaciones .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Ejemplos de interoperabilidad COM](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
@@ -64,5 +65,5 @@ Los controles y aplicaciones de Windows Forms pueden interoperar con aplicacione
 - [Exponer componentes de .NET Framework en COM](../../interop/exposing-dotnet-components-to-com.md)
 - [Empaquetar un ensamblado para COM](../../interop/packaging-an-assembly-for-com.md)
 - [Registrar ensamblados con COM](../../interop/registering-assemblies-with-com.md)
-- [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms con el método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
-- [Cómo: Admitir la interoperabilidad COM al mostrar Windows Forms en su propio subproceso](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Filtrar para admitir la interoperabilidad COM mostrando un formulario Windows Forms con el método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Filtrar para admitir la interoperabilidad COM al mostrar formularios Windows Forms en sus propios subprocesos](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

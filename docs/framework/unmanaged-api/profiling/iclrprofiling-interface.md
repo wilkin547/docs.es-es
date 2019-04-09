@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2da802d410dd16381a86c8fdc358949eefe1d78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86d59c86df88bc1c17e27ad020aa2db10d3fae67
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593958"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144227"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling (Interfaz)
 Proporciona el [ICLRProfiling:: AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) método, que permite a un generador de perfiles adjuntar a un proceso en ejecución.  
@@ -30,7 +30,7 @@ Proporciona el [ICLRProfiling:: AttachProfiler](../../../../docs/framework/unman
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[AttachProfiler (método)](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|Asocia el generador de perfiles especificado al proceso especificado.|  
+|[Método AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|Asocia el generador de perfiles especificado al proceso especificado.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -44,5 +44,6 @@ Proporciona el [ICLRProfiling:: AttachProfiler](../../../../docs/framework/unman
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Interfaces para generación de perfiles](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [ICorProfilerInfo (interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo (Interfaz)](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

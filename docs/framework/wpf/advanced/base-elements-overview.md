@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: a7ed16690172f2720424807325150ea3db5d5caa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372835"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110063"
 ---
 # <a name="base-elements-overview"></a>Información general sobre elementos base
 Un porcentaje elevado de clases de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] deriva de cuatro clases a las que se hace referencia normalmente en la documentación de [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] como clases de elementos base. Estas clases son <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, y <xref:System.Windows.FrameworkContentElement>. El <xref:System.Windows.DependencyObject> clase también está relacionada, porque es una clase base común de ambos <xref:System.Windows.UIElement> y <xref:System.Windows.ContentElement>  
- 
-  
+
 <a name="base_apis"></a>   
 ## <a name="base-element-apis-in-wpf-classes"></a>API de elementos base en clases de WPF  
  Ambos <xref:System.Windows.UIElement> y <xref:System.Windows.ContentElement> se derivan de <xref:System.Windows.DependencyObject>, a través de rutas ligeramente distintas. La división en este nivel se ocupa de cómo un <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> se usan en una interfaz de usuario y su finalidad en una aplicación. <xref:System.Windows.UIElement> También tiene <xref:System.Windows.Media.Visual> en su jerarquía de clases, que es una clase que expone la compatibilidad con gráficos de nivel inferior subyacente el [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. <xref:System.Windows.Media.Visual> Proporciona un marco de trabajo de representación mediante la definición de regiones de pantalla rectangulares independientes. En la práctica, <xref:System.Windows.UIElement> es para los elementos que admitirán un modelo de objetos más grande son está previsto para representar y disponerse en regiones que pueden describirse como regiones de pantalla rectangulares, y donde el modelo de contenido es deliberadamente más abierto, para permitir diferentes combinaciones de elementos. <xref:System.Windows.ContentElement> no se deriva de <xref:System.Windows.Media.Visual>; su modelo consiste en que un <xref:System.Windows.ContentElement> sería consumido por otro valor, como un lector o visor que, a continuación, se podría interpretar los elementos y producir completo <xref:System.Windows.Media.Visual> para [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] para consumir. Ciertos <xref:System.Windows.UIElement> están diseñadas para ser hosts de contenido: proporcionan hospedaje y representación para uno o varios <xref:System.Windows.ContentElement> clases (<xref:System.Windows.Controls.DocumentViewer> es un ejemplo de este tipo de clase). <xref:System.Windows.ContentElement> se usa como clase base para elementos con modelos de objetos un poco más pequeños y que, más el texto, la información de direcciones o contenido de los documentos que podrían hospedarse en un <xref:System.Windows.UIElement>.  
@@ -98,6 +97,7 @@ Un porcentaje elevado de clases de [!INCLUDE[TLA#tla_winclient](../../../../incl
  <xref:System.Windows.Controls.Control> es la clase base deseada para el tipo de objeto que se denomina un control o componente, dependiendo de la tecnología. En general, las clases de control [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] son clases que representan directamente un control de interfaz de usuario o que participan estrechamente en la composición del control. La funcionalidad principal que <xref:System.Windows.Controls.Control> habilita es la creación de plantillas de control.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.Control>
 - [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)
 - [Información general sobre la creación de controles](../controls/control-authoring-overview.md)

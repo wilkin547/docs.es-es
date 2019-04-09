@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f8e189dce2e5141f7a0743b37ed892540f3bb46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3846e9e00158efbd4828053411b604dafc56e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656978"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091335"
 ---
 # <a name="controlling-net-framework-logging"></a>Controlar el registro de .NET Framework
 Se puede utilizar el seguimiento de eventos para Windows (ETW) para registrar los eventos de Common Language Runtime (CLR). Es posible crear y ver los seguimientos mediante las siguientes herramientas:  
@@ -53,7 +53,7 @@ Provider                                 GUID
   
     -   El parámetro `-p` identifica el GUID del proveedor.  
   
-    -   `0x1CCBD` especifica las categorías de eventos que se van a producir.  
+    -   `0x1CCBD` Especifica las categorías de eventos que se generará.  
   
     -   `0x5` establece el nivel de registro (en este caso, detallado (5)).  
   
@@ -109,5 +109,6 @@ Provider                                 GUID
      Este comando hace que XPerf vuelque los eventos en un archivo de valores separados por comas (CSV) que se puede consultar. Dado que los distintos eventos tienen campos distintos, este archivo CSV contiene más de una línea de encabezado antes de los datos. El primer campo de cada línea es el tipo de evento, que indica qué encabezado se debería utilizar para determinar el resto de los campos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Kit de herramientas de rendimiento de Windows](/windows-hardware/test/wpt/)
 - [Eventos ETW en Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

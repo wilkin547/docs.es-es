@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Crear un servicio que acepte datos arbitrarios mediante el modelo de programación WCF REST
+title: Filtrar para crear un servicio que acepte datos arbitrarios mediante el modelo de programación REST de WCF
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c03450c66cf8de14d6c638550a510a91593c45b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667003"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144084"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Procedimiento Crear un servicio que acepte datos arbitrarios mediante el modelo de programación WCF REST
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Filtrar para crear un servicio que acepte datos arbitrarios mediante el modelo de programación REST de WCF
 A veces los programadores deben tener un control absoluto de la forma en que se devuelven los datos desde una operación de un servicio. Esto sucede cuando una operación de servicio debe devolver datos en un formato no admiten byWCF. En este tema describe el uso del modelo de programación WCF REST para crear un servicio que recibe datos arbitrarios.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar el contrato de servicios  
@@ -69,7 +69,7 @@ A veces los programadores deben tener un control absoluto de la forma en que se 
     ServiceHost host = new ServiceHost(typeof(RawDataService), new Uri(baseAddress));  
     ```  
   
-4.  Agregue un extremo que especifique el contrato, <xref:System.ServiceModel.WebHttpBinding> y <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+4.  Agregue un punto de conexión que especifique el contrato, <xref:System.ServiceModel.WebHttpBinding> y <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
     ```csharp  
     host.AddServiceEndpoint(typeof(IReceiveData), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
@@ -194,6 +194,7 @@ namespace ReceiveRawData
 -   Al compilar el código, haga referencia a System.ServiceModel.dll y System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Vea también
+
 - [UriTemplate y UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
 - [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [Información general del modelo de programación web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

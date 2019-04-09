@@ -6,14 +6,14 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 9a6869b84746081df7917aca32042002b8b044c5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097231"
 ---
-# <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Procedimiento Enlazar a datos XML mediante XMLDataProvider y consultas XPath
+# <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Filtrar Enlazar a datos XML mediante XMLDataProvider y consultas XPath
 En este ejemplo se muestra cómo enlazar a [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] datos mediante un <xref:System.Windows.Data.XmlDataProvider>.  
   
  Con un <xref:System.Windows.Data.XmlDataProvider>, los datos que se pueden acceder mediante enlace de datos en la aplicación subyacentes pueden ser cualquier árbol de [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] nodos. En otras palabras, un <xref:System.Windows.Data.XmlDataProvider> proporciona una manera cómoda de utilizar cualquier árbol de [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] nodos como origen de enlace.  
@@ -38,11 +38,11 @@ En este ejemplo se muestra cómo enlazar a [!INCLUDE[TLA#tla_xml](../../../../in
   
 -   `XPath="Book[1]"` devolverá el primer elemento de libro ("XML in Action"). Tenga en cuenta que los índices de **XPath** se basan en 1, no en 0.  
   
--   `XPath="Book[@*]"` devolverá todos los elementos con cualquier atributo.  
+-   `XPath="Book[@*]"` devolverá todos los elementos del libro con cualquier atributo.  
   
--   `XPath="Book[last()-1]"` devolverá los elementos de libro del segundo al último ("Introducing Microsoft .NET").  
+-   `XPath="Book[last()-1]"` Devuelve al segundo al último elemento de libro ("Introducción a Microsoft. NET").  
   
--   `XPath="*[position()>3]"` devolverá todos los elementos de libro excepto los 3 primeros.  
+-   `XPath="*[position()>3]"` devolverá todos los elementos del libro excepto los 3 primeros.  
   
  Al ejecutar un **XPath** de consulta, devuelve un <xref:System.Xml.XmlNode> o una lista de XmlNodes. <xref:System.Xml.XmlNode> es un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objeto, lo que significa que puede usar el <xref:System.Windows.Data.Binding.Path%2A> se va a enlazar el [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] propiedades. Remítase de nuevo al ejemplo anterior. Si el resto del ejemplo permanece igual y cambia el <xref:System.Windows.Controls.TextBlock> enlace al siguiente, verá los nombres de los objetos XmlNodes devueltos en el <xref:System.Windows.Controls.ListBox>. En este caso, el nombre de todos los nodos devueltos es "*Book*".  
   
@@ -59,9 +59,10 @@ En este ejemplo se muestra cómo enlazar a [!INCLUDE[TLA#tla_xml](../../../../in
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Data.ObjectDataProvider>
 - [Enlazar a los resultados de una consulta LINQ to XML, XDocument o XElement](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
-- [Usar el patrón principal-detalle con datos XML jerárquicos](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
+- [Usar el patrón maestro y detalle con datos XML jerárquicos](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [Información general sobre orígenes de enlaces](binding-sources-overview.md)
 - [Información general sobre el enlace de datos](data-binding-overview.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Representar un elemento de estilo Visual
+title: Filtrar para representar un elemento de estilo visual
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - professional appearance [Windows Forms], applying to elements of Windows Forms applications
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
-ms.openlocfilehash: 33c73bf8faa9dfafe5f4889875887dc3aef5985c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 44218ee1f3879a3f9ac5a1e1b049c28a5463820e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714117"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099838"
 ---
-# <a name="how-to-render-a-visual-style-element"></a>Filtrar Representar un elemento de estilo Visual
+# <a name="how-to-render-a-visual-style-element"></a>Filtrar para representar un elemento de estilo visual
 El <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> expone el espacio de nombres <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> elementos (UI) compatibles con los estilos visuales de la interfaz de objetos que representan el usuario de Windows. En este tema se muestra cómo utilizar el <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> clase para representar el <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> que representa el **cerrar sesión** y **apagar** botones del menú Inicio.  
   
 ### <a name="to-render-a-visual-style-element"></a>Para representar un elemento de estilo visual  
@@ -44,4 +44,5 @@ El <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> expone 
 -   Las referencias a la <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, y <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> espacios de nombres.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Representar controles con estilos visuales](rendering-controls-with-visual-styles.md)

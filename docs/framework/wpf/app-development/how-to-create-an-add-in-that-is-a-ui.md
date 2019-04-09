@@ -9,14 +9,14 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100306"
 ---
-# <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procedimiento Crear un complemento que sea una interfaz de usuario
+# <a name="how-to-create-an-add-in-that-is-a-ui"></a>Filtrar Crear un complemento que sea una interfaz de usuario
 En este ejemplo se muestra cómo crear un complemento que es un Windows Presentation Foundation (WPF) que se hospeda en una aplicación independiente de WPF.  
   
  El complemento es una interfaz de usuario que es un control de usuario WPF. El contenido del control de usuario es un botón único que muestra un cuadro de mensaje cuando se hace clic en él. La aplicación de WPF independiente hospeda el complemento de la interfaz de usuario como el contenido de la ventana principal de la aplicación.  
@@ -31,8 +31,7 @@ En este ejemplo se muestra cómo crear un complemento que es un Windows Presenta
   
 ## <a name="example"></a>Ejemplo  
  Para crear un complemento que sea una UI de WPF necesita un código concreto para cada segmento de canalización, el complemento y la aplicación host.  
-    
-  
+
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>Implementar el segmento de canalización del contrato  
  Cuando un complemento es una interfaz de usuario, debe implementar el contrato para el complemento <xref:System.AddIn.Contract.INativeHandleContract>. En el ejemplo, `IWPFAddInContract` implementa <xref:System.AddIn.Contract.INativeHandleContract>, tal y como se muestra en el código siguiente.  
@@ -63,17 +62,13 @@ En este ejemplo se muestra cómo crear un complemento que es un Windows Presenta
 <a name="HostViewPipeline"></a>   
 ## <a name="implementing-the-host-view-pipeline-segment"></a>Implementar el segmento de canalización de la vista host  
  En este modelo, la aplicación host suele esperar que la vista del host sea un <xref:System.Windows.FrameworkElement> subclase. El adaptador del host debe convertir el <xref:System.AddIn.Contract.INativeHandleContract> a un <xref:System.Windows.FrameworkElement> después de que el <xref:System.AddIn.Contract.INativeHandleContract> cruza el límite de aislamiento. Dado que un método no llama a la aplicación host para obtener el <xref:System.Windows.FrameworkElement>, la vista host debe "return" la <xref:System.Windows.FrameworkElement> por que lo contiene. Por lo tanto, la vista host debe derivar de una subclase de <xref:System.Windows.FrameworkElement> que pueden contener otros [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], tales como <xref:System.Windows.Controls.UserControl>. El código siguiente muestra la vista de host del contrato, implementada como la `WPFAddInHostView` clase.  
-  
-  
-  
+
 <a name="HostSideAdapter"></a>   
 ## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Implementar el segmento de canalización del adaptador del host  
  Aunque el contrato es un <xref:System.AddIn.Contract.INativeHandleContract>, la aplicación host espera un <xref:System.Windows.Controls.UserControl> (tal y como especifica la vista del host). Por lo tanto, el <xref:System.AddIn.Contract.INativeHandleContract> deben convertirse a un <xref:System.Windows.FrameworkElement> después de cruzar el límite de aislamiento, antes de que se va a establecer como contenido de la vista de host (que se deriva de <xref:System.Windows.Controls.UserControl>).  
   
  Este trabajo lo realiza el adaptador del host, como se muestra en el código siguiente.  
-  
-  
-  
+
  Como puede ver, el adaptador del host adquiere la <xref:System.AddIn.Contract.INativeHandleContract> mediante una llamada a add en el lado del adaptador <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> (método) (este es el punto donde el <xref:System.AddIn.Contract.INativeHandleContract> cruza el límite de aislamiento).  
   
  El adaptador del host, a continuación, convierte el <xref:System.AddIn.Contract.INativeHandleContract> a un <xref:System.Windows.FrameworkElement> mediante una llamada a <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Por último, el <xref:System.Windows.FrameworkElement> se establece como el contenido de la vista del host.  
@@ -81,29 +76,24 @@ En este ejemplo se muestra cómo crear un complemento que es un Windows Presenta
 <a name="AddIn"></a>   
 ## <a name="implementing-the-add-in"></a>Implementar el complemento  
  Con el adaptador y la vista de conversión en su lugar, se puede implementar el complemento derivando de la vista de complemento, como se muestra en el código siguiente.  
-  
-  
-  
-  
-  
+
  En este ejemplo, puede ver una ventaja interesante de este modelo: los desarrolladores de complementos solamente necesitan implementar el complemento (ya que es la interfaz de usuario), en lugar de una clase de complemento tanto un complemento de la interfaz de usuario.  
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>Implementación de la aplicación host  
  Con el adaptador del host y la vista host creados, la aplicación host puede utilizar el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelo de complementos para abrir la canalización y adquirir una vista de host del complemento. Estos pasos se muestran en el código siguiente.  
-  
-  
-  
+
  La aplicación host utiliza código típico de modelo de complementos de .NET Framework para activar el complemento, lo que implícitamente devuelve la vista del host a la aplicación host. Posteriormente, la aplicación host muestra la vista de host (que es un <xref:System.Windows.Controls.UserControl>) desde un <xref:System.Windows.Controls.Grid>.  
   
  El código para procesar las interacciones con el complemento de la interfaz de usuario se ejecuta en dominio de aplicación del complemento. Estas interacciones incluyen lo siguiente:  
   
--   Controlar la <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
+-   Controlar la <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
   
 -   Mostrando el <xref:System.Windows.MessageBox>.  
   
  Esta actividad está completamente aislada de la aplicación host.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Información general sobre los complementos de WPF](wpf-add-ins-overview.md)

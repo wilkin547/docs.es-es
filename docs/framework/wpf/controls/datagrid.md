@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-ms.openlocfilehash: 86721592f632d6d77dbfa6bc4eac3c2872628b0d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dda712d58a4ff956de074ecd416402ba0aece5f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197157"
 ---
 # <a name="datagrid"></a>DataGrid
 El <xref:System.Windows.Controls.DataGrid> control permite mostrar y editar datos de muchos orígenes diferentes, como desde una base de datos SQL, consultas LINQ o cualquier otro origen de datos enlazables. Para más información, consulte [Binding Sources Overview](../data/binding-sources-overview.md) (Introducción a los orígenes de enlace).  
@@ -49,17 +49,18 @@ El <xref:System.Windows.Controls.DataGrid> control permite mostrar y editar dato
   
 |Título|Descripción|  
 |-----------|-----------------|  
-|[Tutorial: Mostrar los datos de una base de datos SQL Server en un Control DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Describe cómo configurar un nuevo proyecto WPF, agregue un elemento de Entity Framework, establezca el origen y mostrar los datos en un <xref:System.Windows.Controls.DataGrid>.|  
-|[Cómo: Agregar detalles de fila a un Control DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Describe cómo crear detalles de fila para un <xref:System.Windows.Controls.DataGrid>.|  
-|[Cómo: Implementar la validación con el Control DataGrid](how-to-implement-validation-with-the-datagrid-control.md)|Describe cómo validar los valores de <xref:System.Windows.Controls.DataGrid> celdas, filas y mostrar comentarios de validación.|  
+|[Tutorial: Mostrar los datos de una base de datos de SQL Server en un control DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Describe cómo configurar un nuevo proyecto WPF, agregue un elemento de Entity Framework, establezca el origen y mostrar los datos en un <xref:System.Windows.Controls.DataGrid>.|  
+|[Filtrar para agregar detalles de fila a un control DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Describe cómo crear detalles de fila para un <xref:System.Windows.Controls.DataGrid>.|  
+|[Filtrar para implementar la validación con el control DataGrid](how-to-implement-validation-with-the-datagrid-control.md)|Describe cómo validar los valores de <xref:System.Windows.Controls.DataGrid> celdas, filas y mostrar comentarios de validación.|  
 |[Comportamiento predeterminado de teclado y mouse en el control DataGridView](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Describe cómo interactuar con el <xref:System.Windows.Controls.DataGrid> control utilizando el teclado y mouse (ratón).|  
-|[Cómo: Agrupar, ordenar y filtrar datos en el Control DataGrid](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Describe cómo ver los datos en un <xref:System.Windows.Controls.DataGrid> de maneras diferentes mediante la agrupación, ordenación y filtrado de los datos.|  
+|[Filtrar para agrupar, ordenar y filtrar datos en el control DataGrid](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Describe cómo ver los datos en un <xref:System.Windows.Controls.DataGrid> de maneras diferentes mediante la agrupación, ordenación y filtrado de los datos.|  
 |[Opciones de ajuste de tamaño en el control DataGrid](sizing-options-in-the-datagrid-control.md)|Describe cómo controlar el ajuste de tamaño absoluto y automático en el <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.DataGrid>
 - [Aplicar estilos y plantillas](styling-and-templating.md)
 - [Información general sobre el enlace de datos](../data/data-binding-overview.md)
 - [Información general sobre plantillas de datos](../data/data-templating-overview.md)
 - [Controles](index.md)
-- [WPF Content Model](wpf-content-model.md) (Modelo de contenido de WPF)
+- [Modelo de contenido de WPF](wpf-content-model.md)

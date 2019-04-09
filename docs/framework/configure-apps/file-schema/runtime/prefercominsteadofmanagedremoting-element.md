@@ -1,5 +1,5 @@
 ---
-title: <PreferComInsteadOfManagedRemoting> (Elemento)
+title: <PreferComInsteadOfManagedRemoting> Elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <PreferComInsteadOfManagedRemoting> element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f143429c1f579ae98a03fd69a8cf3dcdd26ad2c2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c5b0a394500dbea0d557a33ea8d2e169c2c6561f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260373"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195675"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting > elemento
 Especifica si el runtime usará interoperabilidad COM en lugar de comunicación remota para todas las llamadas entre los límites del dominio de aplicación.  
@@ -74,5 +74,6 @@ Especifica si el runtime usará interoperabilidad COM en lugar de comunicación 
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)

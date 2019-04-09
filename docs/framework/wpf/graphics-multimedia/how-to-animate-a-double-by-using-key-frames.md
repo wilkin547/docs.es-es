@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Animar un objeto Double mediante fotogramas clave
+title: Filtrar Animar un objeto Double mediante fotogramas clave
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: fe2efdada43e5dd6aced730ab59d9dd004899822
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 33d567b1bb91060a5b0e1da67236a27815262474
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208789"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>Filtrar Animar un objeto Double mediante fotogramas clave
 En este ejemplo se muestra cómo animar el valor de una propiedad que toma un <xref:System.Double> mediante fotogramas clave.  
@@ -37,6 +37,7 @@ En este ejemplo se muestra cómo animar el valor de una propiedad que toma un <x
  Para mantener la coherencia con otros ejemplos de animación, las versiones de código de este ejemplo utiliza un <xref:System.Windows.Media.Animation.Storyboard> objeto al que aplicar el <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Como alternativa, al aplicar una animación única en código, es más fácil de usar el <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método en lugar de usar un <xref:System.Windows.Media.Animation.Storyboard>. Para obtener un ejemplo, vea [Animar una propiedad sin utilizar un guión gráfico](how-to-animate-a-property-without-using-a-storyboard.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>
 - <xref:System.Windows.Shapes.Rectangle>
 - <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>

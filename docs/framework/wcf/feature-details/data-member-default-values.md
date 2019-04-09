@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: 30836f7f1cbf742c621254ef92314d20a4fffd83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185697"
 ---
 # <a name="data-member-default-values"></a>Valores predeterminados de los miembros de datos
 En el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tipos tienen un concepto de *los valores predeterminados*. Por ejemplo, para cualquier tipo de referencia el valor predeterminado es `null`, y para un tipo entero es cero. En ocasiones es deseable omitir un miembro de datos de los datos serializados cuando está establecido en su valor predeterminado. Dado que el miembro tiene un valor predeterminado, no es necesario serializar un valor real; esto es una ventaja en cuanto al rendimiento.  
@@ -57,5 +57,6 @@ En el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tipos tie
  Al importar el esquema, el <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> propiedad se establece automáticamente en `false` cada vez que la anotación específica de WCF que se ha mencionado anteriormente se ha detectado. También está establecido en `false` para los tipos de referencia que tengan la propiedad `nillable` establecida en `false` para admitir escenarios de interoperabilidad concretos que normalmente tienen lugar al utilizar los servicios web de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>

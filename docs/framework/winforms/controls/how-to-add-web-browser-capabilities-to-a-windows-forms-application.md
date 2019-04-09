@@ -1,5 +1,5 @@
 ---
-title: Filtrar Agregar funciones de explorador Web a una aplicación de Windows Forms
+title: Filtrar para agregar funcionalidades de explorador web a una aplicación de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 - Windows Forms, adding Web browser functionality
 ms.assetid: 3871f072-b57a-435b-9976-e5da28df04a7
-ms.openlocfilehash: bb1eb057814b44e2fd184c14e0c7e16ecb2fbb3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 29422ad384240b017b279795d07e3c8100fae493
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208805"
 ---
-# <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Filtrar Agregar funciones de explorador Web a una aplicación de Windows Forms
+# <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Filtrar para agregar funcionalidades de explorador web a una aplicación de formularios Windows Forms
 Con el control <xref:System.Windows.Forms.WebBrowser>, puede agregar funcionalidades del explorador web a la aplicación. De forma predeterminada, el control funciona como un explorador web. Después de cargar una dirección URL inicial estableciendo la propiedad <xref:System.Windows.Forms.WebBrowser.Url%2A>, puede navegar haciendo clic en hipervínculos o utilizando métodos abreviados de teclado para avanzar y retroceder por el historial de navegación. De forma predeterminada, puede acceder a funcionalidades adicionales del explorador a través del menú contextual. También puede abrir documentos nuevos colocándolos en el control. El control <xref:System.Windows.Forms.WebBrowser> también tiene varias propiedades, métodos y eventos que puede utilizar para implementar características de interfaz de usuario similares a las que se encuentran en Internet Explorer.  
   
  En el ejemplo de código siguiente, se implementa una barra de direcciones, los botones de exploración típicos, un menú **Archivo**, una barra de estado y una barra de título que muestra el título de la página actual.  
@@ -37,5 +37,6 @@ Con el control <xref:System.Windows.Forms.WebBrowser>, puede agregar funcionalid
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.WebBrowser>
-- [WebBrowser (control)](webbrowser-control-windows-forms.md)
+- [WebBrowser (Control)](webbrowser-control-windows-forms.md)

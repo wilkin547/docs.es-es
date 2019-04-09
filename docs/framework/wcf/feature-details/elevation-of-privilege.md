@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: cf67f3c68acc4cd8838be56d7c814f9e287ce62c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658057"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099994"
 ---
 # <a name="elevation-of-privilege"></a>Elevación de privilegios
 *Elevación de privilegios* da como resultado de la concesión de permisos más allá de aquéllos concedidos inicialmente una autorización del atacante. Por ejemplo, un atacante con un conjunto de privilegios de permisos de "solo lectura" eleva de algún modo el conjunto para incluir la "lectura y escritura".  
@@ -18,7 +18,7 @@ ms.locfileid: "54658057"
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>El STS de confianza debería firmar las notificaciones de tokens de SAML  
  Un token del lenguaje de marcado de aserción de seguridad (SAML) es un token XML genérico que es del tipo predeterminado para tokens emitidos. Un servicio de tokens de seguridad (STS) puede construir un token SAML en el que confíe el servicio web final en un intercambio típico. Los tokens SAML contienen las notificaciones en declaraciones. Un atacante puede copiar las notificaciones desde un token válido, crear un nuevo token SAML y firmarlo con un emisor diferente. El objetivo es determinar si el servidor está validando a los emisores y, si no, utilizar esa debilidad para construir tokens SAML que concedan privilegios más allá de los proporcionados por un STS de confianza.  
   
- La clase <xref:System.IdentityModel.Tokens.SamlAssertion> comprueba la firma digital contenida dentro de un token de SAML y el <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> predeterminado necesita que los tokens de SAML estén firmados por un certificado X.509 que sea válido cuando el <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> de la clase <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> se establezca en <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. El modo `ChainTrust` solo no es suficiente para determinar si el emisor del token de SAML es de confianza. Los servicios que requieren un modelo de confianza más específico pueden usar directivas de autorización y cumplimiento para comprobar el emisor de los conjuntos de notificaciones producidos mediante la autenticación de tokens emitidos o usar los valores de validación X.509 en <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> para restringir el conjunto de certificados de firma permitidos. Para obtener más información, consulte [Administrar notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) y [federación y Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ La clase <xref:System.IdentityModel.Tokens.SamlAssertion> comprueba la firma digital contenida dentro de un token de SAML y el <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> predeterminado necesita que los tokens de SAML estén firmados por un certificado X.509 que sea válido cuando el <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> de la clase <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> se establezca en <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. `ChainTrust` modo por sí solo no es suficiente para determinar si el emisor del token SAML es de confianza. Los servicios que requieren un modelo de confianza más específico pueden usar directivas de autorización y cumplimiento para comprobar el emisor de los conjuntos de notificaciones producidos mediante la autenticación de tokens emitidos o usar los valores de validación X.509 en <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> para restringir el conjunto de certificados de firma permitidos. Para obtener más información, consulte [Administrar notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) y [federación y Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Intercambio de identidad sin un contexto de seguridad  
  Lo siguiente solo se aplica a [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
@@ -83,6 +83,7 @@ ms.locfileid: "54658057"
  Para mitigar esto, haga referencia al certificado X.509 de otra manera, como, por ejemplo, mediante <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Divulgación de información](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Denegación de servicio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)

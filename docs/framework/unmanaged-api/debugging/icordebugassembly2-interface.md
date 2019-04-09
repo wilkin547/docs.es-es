@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAssembly2 (Interfaz)
+title: Interfaz ICorDebugAssembly2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAssembly2
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6980b78dc416e03df578756b7a2ee45a48a4fd5a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 70eac63855f16205c3d5dbcb28305481b986484c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967144"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201174"
 ---
-# <a name="icordebugassembly2-interface"></a>ICorDebugAssembly2 (Interfaz)
+# <a name="icordebugassembly2-interface"></a>Interfaz ICorDebugAssembly2
 
 Representa un ensamblado. Esta interfaz es una extensión de ICorDebugAssembly (interfaz).  
   
@@ -31,7 +31,7 @@ Representa un ensamblado. Esta interfaz es una extensión de ICorDebugAssembly (
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[IsFullyTrusted (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly2-isfullytrusted-method.md)|Obtiene un valor que indica si el ensamblado se ha concedido confianza completa por el sistema de seguridad en tiempo de ejecución.|  
+|[Método IsFullyTrusted](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly2-isfullytrusted-method.md)|Obtiene un valor que indica si el ensamblado se ha concedido confianza completa por el sistema de seguridad en tiempo de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -48,4 +48,5 @@ Representa un ensamblado. Esta interfaz es una extensión de ICorDebugAssembly (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

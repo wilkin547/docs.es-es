@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: b2ef0cce293913fc7bd9d59baa91bd875823cbe2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 66e91190e68d9610dd95d677edb276e117ec6abb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353938"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098585"
 ---
-# <a name="how-to-bind-to-a-web-service"></a>Procedimiento Enlazar a un servicio web
+# <a name="how-to-bind-to-a-web-service"></a>Filtrar Enlazar a un servicio web
 En este ejemplo se muestra cómo enlazar a los objetos devueltos por llamadas al método de servicios Web.  
   
 ## <a name="example"></a>Ejemplo  
@@ -46,6 +46,7 @@ En este ejemplo se muestra cómo enlazar a los objetos devueltos por llamadas al
  Para obtener información sobre la estructura de **getContentResponse**, consulte [documentación del servicio contenido](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre el enlace de datos](data-binding-overview.md)
 - [Información general sobre orígenes de enlaces](binding-sources-overview.md)
 - [Hacer que los datos estén disponibles para el enlace en XAML](how-to-make-data-available-for-binding-in-xaml.md)

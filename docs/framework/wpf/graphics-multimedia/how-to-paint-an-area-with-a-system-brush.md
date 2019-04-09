@@ -6,12 +6,12 @@ helpviewer_keywords:
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-ms.openlocfilehash: 7beaf4370f115a3995c9ca23bb0022bd5b269193
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e713903e2cfbb63cb64ceb94621317f9e76dea70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364117"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195051"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>Filtrar Pintar un área con un pincel del sistema
 El <xref:System.Windows.SystemColors> clase proporciona acceso a los pinceles del sistema y los colores, como <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, y <xref:System.Windows.SystemColors.DesktopBrush%2A>. Un pincel del sistema es un <xref:System.Windows.Media.SolidColorBrush> objeto que pinta un área con el color del sistema especificado. Un pincel del sistema siempre produce un relleno sólido; no puede usarse para crear un degradado.  
@@ -48,5 +48,6 @@ El <xref:System.Windows.SystemColors> clase proporciona acceso a los pinceles de
  Para obtener un ejemplo que muestra cómo utilizar un color del sistema en un degradado, vea [usar colores del sistema en un degradado](how-to-use-system-colors-in-a-gradient.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Usar colores del sistema en un degradado](how-to-use-system-colors-in-a-gradient.md)
 - [Información general sobre el dibujo con colores sólidos y degradados](painting-with-solid-colors-and-gradients-overview.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: 2e93fe23a6084fec4e2a251b0361c29a4207e621
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dab836af8ba3d177719d910142cd93f8f6de0002
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352742"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099864"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Filtrar Detectar si un trabajo de impresión se puede imprimir en esta hora del día
 Las colas de impresión no están siempre disponibles durante 24 horas al día. Tienen propiedades de tiempo de inicio y finalización que se pueden establecer para que no esté disponible en determinados momentos del día. Esta característica, por ejemplo, puede usarse para reservar una impresora para uso exclusivo de un determinado departamento después de las 5 P.M.. Ese departamento tendría una cola diferente, mantenimiento de la impresora que otros departamentos usar. La cola para los otros departamentos se establecería en estar disponible después de 5 P.M., mientras que la cola del departamento favorecido podría establecerse como disponible en todo momento.  
@@ -75,6 +75,7 @@ Las colas de impresión no están siempre disponibles durante 24 horas al día. 
  [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.DateTime>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.Printing.PrintQueue>

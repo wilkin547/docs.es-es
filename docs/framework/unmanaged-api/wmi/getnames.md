@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f664edf29e5d2f9ec4e523aa7f7b204cf999e01b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202656"
 ---
-# <a name="getnames-function"></a>GetNames (función)
+# <a name="getnames-function"></a>Función GetNames
 Recupera un subconjunto o todos los nombres de las propiedades de un objeto. 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -80,7 +80,6 @@ Con el nombre devuelto se controla mediante una combinación de marcas y los par
 
 Valores de la marca de `lFlags` son campos de bits
 
-
 Las marcas que se pueden pasar como el `lEnumFlags` argumento son campos de bits que se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código.  Puede combinar una marca de todos los grupos con cualquier marca de cualquier otro grupo. Sin embargo, las marcas del mismo grupo se excluyen mutuamente. 
 
 | Marcas de grupo 1 |Valor  |Descripción  |
@@ -112,4 +111,5 @@ La función siempre asigna un nuevo `SAFEARRAY` si devuelve `WBEM_S_NO_ERROR`, y
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

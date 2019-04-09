@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear listas principal-detalle con el Control DataGrid de Windows Forms
+title: Filtrar Crear listas principal-detalle con el Control DataGrid de Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: 8f247fb3e61abe46b3bb9c74a3b984310d2b99b3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f1acfab747c2309a2860870f8bcec9c0cf3b7bf0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715469"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094988"
 ---
-# <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Procedimiento Crear listas principal-detalle con el Control DataGrid de Windows Forms
+# <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Filtrar para crear listas maestro y detalle con el control DataGrid de formularios Windows Forms
 > [!NOTE]
 >  El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
@@ -71,6 +71,7 @@ ms.locfileid: "57715469"
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [DataGrid (control)](datagrid-control-windows-forms.md)
-- [Información general del control DataGrid](datagrid-control-overview-windows-forms.md)
-- [Cómo: Enlazar el Control DataGrid de Windows Forms a un origen de datos](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+
+- [Control DataGrid](datagrid-control-windows-forms.md)
+- [Información general sobre el control DataGrid](datagrid-control-overview-windows-forms.md)
+- [Filtrar para enlazar el control DataGrid de formularios Windows Forms a un origen de datos](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

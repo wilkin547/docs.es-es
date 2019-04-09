@@ -1,13 +1,13 @@
 ---
-title: <schemeSettings> (Elemento, Configuración de Uri)
+title: <schemeSettings> Elemento (configuración de Uri)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 06cb07b1620a603f0c0cf67a9236be143c2ec4a2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8dc505d8a9de4e8939372af61b23652551c36530
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094241"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings > elemento (configuración de Uri)
 Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.  
@@ -31,15 +31,15 @@ Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|**Element**|**Descripción**|  
+|**Elemento**|**Descripción**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Agrega un valor de esquema para un nombre de esquema.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Borra todos los valores de esquema existente.|  
+|[agregar](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Agrega un valor de esquema para un nombre de esquema.|  
+|[desactivada](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Borra todos los valores de esquema existente.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Quita un valor de esquema para un nombre de esquema.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Element**|**Descripción**|  
+|**Elemento**|**Descripción**|  
 |-----------------|---------------------|  
 |[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Contiene valores que especifican cómo .NET Framework controla las direcciones web expresadas mediante identificadores uniformes de recursos (URI).|  
   
@@ -84,6 +84,7 @@ Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.
 |Puede estar vacío||  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: eefdb3b1205a64221e3e9352f70e3d06dc074eff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3950df8b6f4b48a035c6ebf37d8d65c18cb82e1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368550"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197222"
 ---
 # <a name="how-to-implement-binding-validation"></a>Filtrar Implementar la validación de enlaces
 En este ejemplo se muestra cómo usar un <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> y un desencadenador de estilo para proporcionar comentarios visuales para informar al usuario cuando se escribe un valor no válido, según una regla de validación personalizada.  
@@ -38,5 +38,6 @@ En este ejemplo se muestra cómo usar un <xref:System.Windows.Controls.Validatio
  Tenga en cuenta que si no proporcionas un personalizado <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> aparece de la plantilla de error predeterminada proporcionar comentarios visuales al usuario cuando hay un error de validación. Vea "Validación de datos" en [Información sobre el enlace de datos](data-binding-overview.md) para obtener más información. Además, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona una regla de validación incorporada que selecciona las excepciones que se producen durante la actualización de la propiedad del origen de enlace. Para obtener más información, consulta <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre el enlace de datos](data-binding-overview.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

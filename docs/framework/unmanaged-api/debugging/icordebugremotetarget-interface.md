@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3eb57295b72dade0bb396b3caa724b21722b26db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae31506d4ba34bf262f49bc2321c6cfcd30f1b60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743509"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197326"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget (Interfaz)
 Proporciona métodos que permiten a los desarrolladores depurar aplicaciones basadas en Silverlight en el entorno de Common Language Runtime (CLR).  
@@ -45,7 +45,7 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[ICorDebugRemoteTarget::GetHostName (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|Devuelve el nombre de host o la dirección IP de un equipo remoto.|  
+|[ICorDebugRemoteTarget::GetHostName (Método)](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|Devuelve el nombre de host o la dirección IP de un equipo remoto.|  
   
 ## <a name="remarks"></a>Comentarios  
  No se admite la depuración en modo mixto (es decir, código administrado y nativo) en Windows 95, Windows 98 o Windows ME, ni en plataformas que no sean x86 (como IA-64 y AMD64).  
@@ -60,6 +60,7 @@ interface ICorDebugRemoteTarget  : IUnknown
  **Versiones de .NET framework:** 3.5 SP1  
   
 ## <a name="see-also"></a>Vea también
-- [ICorDebugRemote (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebugRemote (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [ICorDebug (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

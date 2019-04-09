@@ -2,12 +2,12 @@
 title: Introducción a la autenticación HTTP
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: 77fbed8cae070285925bcdc13c76fe28c3cb13cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206400"
 ---
 # <a name="understanding-http-authentication"></a>Introducción a la autenticación HTTP
 La autenticación es el proceso de identificar si un cliente es elegible para tener acceso a un recurso. El protocolo HTTP soporta la autenticación como un medio de negociar el acceso a un recurso seguro.  
@@ -36,6 +36,7 @@ La autenticación es el proceso de identificar si un cliente es elegible para te
 -   Un servidor no debería presentar (en los encabezados de la autenticación de WWW) ningún esquema que no esté preparado para aceptar o que no proteja adecuadamente el recurso protegido. Los clientes son libres de elegir entre cualquiera de los esquemas de autenticación que el servidor presenta. Algunos clientes tienen como valor predeterminado un esquema de autenticación débil o el primer esquema de autenticación en la lista del servidor.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general de la seguridad del transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
 - [Utilización de la suplantación con la seguridad de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [Delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

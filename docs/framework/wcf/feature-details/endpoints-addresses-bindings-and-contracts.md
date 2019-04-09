@@ -1,24 +1,24 @@
 ---
-title: 'Puntos de conexión: Las direcciones, enlaces y contratos'
+title: 'Puntos de conexión: direcciones, enlaces y contratos'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: a10d9ac5718bf6b88a3a00902f90045c705f8431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721794"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207531"
 ---
-# <a name="endpoints-addresses-bindings-and-contracts"></a>Puntos de conexión: Las direcciones, enlaces y contratos
+# <a name="endpoints-addresses-bindings-and-contracts"></a>Puntos de conexión: direcciones, enlaces y contratos
 Toda la comunicación con un servicio de Windows Communication Foundation (WCF) se produce a través de la *extremos* del servicio. Los extremos proporcionan a los clientes acceso a la funcionalidad que ofrece un servicio WCF.  
   
  Cada punto de conexión está compuesto de cuatro propiedades:  
   
--   Una dirección que indica dónde se puede encontrar el extremo.  
+-   Una dirección que indica dónde se puede encontrar el punto de conexión.  
   
 -   Un enlace que especifica cómo un se puede comunicar un cliente con el punto de conexión.  
   
@@ -28,14 +28,14 @@ Toda la comunicación con un servicio de Windows Communication Foundation (WCF) 
   
  En este tema se describe esta estructura de punto de conexión y se explica cómo se representa en el modelo de objetos WCF.  
   
-## <a name="the-structure-of-an-endpoint"></a>Estructura de un punto de conexión  
+## <a name="the-structure-of-an-endpoint"></a>Estructura de un extremo  
  Cada punto de conexión está compuesto de lo siguiente:  
   
 -   Dirección: La dirección identifica el punto de conexión y le indica a posibles consumidores del servicio donde se encuentra. Se representa en el modelo de objetos WCF mediante el <xref:System.ServiceModel.EndpointAddress> clase. Una clase <xref:System.ServiceModel.EndpointAddress> contiene:  
   
     -   Una propiedad <xref:System.ServiceModel.EndpointAddress.Uri%2A>, que representa la dirección del servicio.  
   
-    -   Una propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A>, que representa la identidad de seguridad del servicio y una colección de encabezados de mensaje opcionales. Los encabezados de mensaje opcionales se utilizan para proporcionar información de direccionamiento adicional y más detallada para identificar o interactuar con el punto de conexión.  
+    -   Una propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A>, que representa la identidad de seguridad del servicio y una colección de encabezados de mensaje opcionales. Los encabezados de mensaje opcionales se utilizan para proporcionar información de direccionamiento adicional y más detallada para identificar o interactuar con el extremo.  
   
      Para obtener más información, consulte [especificando una dirección de extremo](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
@@ -63,11 +63,11 @@ Toda la comunicación con un servicio de Windows Communication Foundation (WCF) 
   
 -   Comportamientos: Puede utilizar los comportamientos de extremo para personalizar el comportamiento del extremo del servicio local. Para ello, los comportamientos de extremo que participan en el proceso de creación de un WCFruntime. Un ejemplo de un comportamiento de punto de conexión es la propiedad <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>, que permite especificar una dirección de escucha diferente que la dirección SOAP o la dirección del Lenguaje de descripción de servicios Web (WSDL). Para obtener más información, consulte [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
-## <a name="defining-endpoints"></a>Definición de puntos de conexión  
- Puede especificar el punto de conexión de un servicio de manera imperativa mediante código o de manera declarativa mediante configuración. Para obtener más información, vea [Cómo: Crear un punto de conexión de servicio en la configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) y [Cómo: Crear un punto de conexión de servicio en código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
+## <a name="defining-endpoints"></a>Definición de extremos  
+ Puede especificar el extremo de un servicio de manera imperativa mediante código o de manera declarativa mediante configuración. Para obtener más información, vea [Cómo: Crear un punto de conexión de servicio en la configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) y [Cómo: Crear un punto de conexión de servicio en código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
- En esta sección se explica el propósito de los enlaces, puntos de conexión y direcciones; se muestra cómo configurar un enlace y un punto de conexión; y cómo utilizar el comportamiento `ClientVia` y la propiedad `ListenUri`.  
+ En esta sección se explica el propósito de los enlaces, extremos y direcciones; se muestra cómo configurar un enlace y un extremo; y cómo utilizar el comportamiento `ClientVia` y la propiedad `ListenUri`.  
   
  [Direcciones](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)  
  Describe cómo se direccionan los puntos de conexión en WCF.  
@@ -78,15 +78,16 @@ Toda la comunicación con un servicio de Windows Communication Foundation (WCF) 
  [Contratos](../../../../docs/framework/wcf/feature-details/contracts.md)  
  Describe cómo los contratos definen los métodos de un servicio.  
   
- [Cómo: Crear un punto de conexión de servicio en la configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Filtrar para crear un punto de conexión de servicio en la configuración](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Describe cómo crear un punto de conexión de servicio mediante configuración  
   
- [Cómo: Crear un punto de conexión de servicio en código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
- Describe cómo crear un punto de conexión de servicio mediante código.  
+ [Filtrar para crear un punto de conexión de servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ Describe cómo crear un extremo de servicio mediante código.  
   
- [Cómo: Uso de Svcutil.exe para validar el código de servicio compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [Filtrar para usar Svcutil.exe para validar el código del servicio compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  Describe cómo detectar errores en las implementaciones de servicio y configuraciones sin hospedar el servicio mediante el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Configuración de servicios](../../../../docs/framework/wcf/configuring-services.md)
 - [Extensión de enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Establezca el valor mostrado por el Control ProgressBar de formularios de Windows
+title: Filtrar para establecer el valor que muestra el control ProgressBar de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: a889d6e5cd40833353c1b294031621b7b289ac4d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 292a70658e37839897b39d4d58fdf98903d2d963
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196884"
 ---
-# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Procedimiento Establezca el valor mostrado por el Control ProgressBar de formularios de Windows
+# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Filtrar para establecer el valor que muestra el control ProgressBar de formularios Windows Forms
 > [!IMPORTANT]
 >  El control <xref:System.Windows.Forms.ToolStripProgressBar> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ProgressBar>; sin embargo, el control <xref:System.Windows.Forms.ProgressBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.  
   
@@ -225,7 +225,8 @@ ms.locfileid: "57715898"
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>
-- [Información general sobre ProgressBar (Control)](progressbar-control-overview-windows-forms.md)
-- [ProgressBar (control)](progressbar-control-windows-forms.md)
+- [Información general sobre el control ProgressBar](progressbar-control-overview-windows-forms.md)
+- [Control ProgressBar](progressbar-control-windows-forms.md)

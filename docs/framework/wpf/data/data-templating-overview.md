@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 58d723ccf86e4195674c132f9fb1b76f689f57b2
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097556"
 ---
 # <a name="data-templating-overview"></a>Información general sobre plantillas de datos
 El modelo de plantillas de datos de WPF ofrece gran flexibilidad para definir la presentación de los datos. Los controles WPF tienen funcionalidad integrada que admite la personalización de la presentación de los datos. En este tema muestra primero cómo definir un <xref:System.Windows.DataTemplate> y, a continuación, presenta otras características de plantillas de datos, como la selección de plantillas basadas en la lógica personalizada y la compatibilidad con la presentación de datos jerárquicos.  
@@ -194,6 +194,7 @@ Con esto concluye la explicación de este ejemplo. Para obtener el ejemplo compl
  ![HierarchicalDataTemplate sample screenshot](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>Vea también
+
 - [Enlace de datos](../advanced/optimizing-performance-data-binding.md)
 - [Buscar elementos generados por una clase DataTemplate](how-to-find-datatemplate-generated-elements.md)
 - [Aplicar estilos y plantillas](../controls/styling-and-templating.md)

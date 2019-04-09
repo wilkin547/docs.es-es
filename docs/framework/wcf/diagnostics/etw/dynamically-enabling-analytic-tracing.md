@@ -2,12 +2,12 @@
 title: Habilitar dinámicamente la traza analítica
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: 42d238c704910c2406eb580c2ce102e5e84ed0f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719994"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197482"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Habilitar dinámicamente la traza analítica
 Con las herramientas que se distribuyen con el sistema operativo Windows, puede habilitar o deshabilitar la traza de forma dinámica mediante el Seguimiento de eventos para Windows (ETW). Para todos los [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] servicios Windows Communication Foundation (WCF), traza analítica puede habilitarse y deshabilitarse de forma dinámica sin modificar el archivo Web.config de la aplicación o reiniciar el servicio. Esto permite que la aplicación que emite los eventos de traza siga sin más.  
@@ -41,4 +41,5 @@ Con las herramientas que se distribuyen con el sistema operativo Windows, puede 
 |`WCFMessageLogging`|Eventos de registro de mensajes WCF.|  
   
 ## <a name="see-also"></a>Vea también
-- [Servicios WCF y Seguimiento de eventos para Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+
+- [Servicios de WCF y seguimiento de eventos para Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

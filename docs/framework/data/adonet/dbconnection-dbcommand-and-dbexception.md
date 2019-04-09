@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 58aab611-7e6f-4749-b983-28ab7ae87dbe
-ms.openlocfilehash: 31bd23d854afd10d0c292042ac3963978de5fd4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 759b2f36f9d38cdac0cfe4ff8e451b38012493e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143837"
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a>DbConnection, DbCommand y DbException
 Después de crear un objeto <xref:System.Data.Common.DbProviderFactory> y un objeto <xref:System.Data.Common.DbConnection>, puede trabajar con comandos y lectores de datos para recuperar datos del origen de datos.  
@@ -64,7 +64,8 @@ finally
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Objetos DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Obtención de un objeto DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
-- [Modificación de datos con un objeto DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Obtener un objeto DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
+- [Modificar datos con un objeto DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

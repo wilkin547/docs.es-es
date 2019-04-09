@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 162341ee8cb27e5edc455207bbe094356c5167e7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 274b91793cd51348c42661bf12a4e4385e17f630
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093974"
 ---
 # <a name="getappidauthority-function"></a>GetAppIdAuthority (Función)
 Obtiene un puntero a un [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) instancia que administra las claves para las identidades de aplicaciones y las referencias.  
@@ -47,5 +47,6 @@ HRESULT GetAppIdAuthority (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [IAppIdAuthority (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)
+
+- [IAppIdAuthority (Interfaz)](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)
 - [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

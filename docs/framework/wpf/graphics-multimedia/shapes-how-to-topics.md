@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: 5f1d22d2f7070bb93d175c28c166c434ff16ae19
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d304a411a92272315506a08a714ae1a5f9b6a000
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150168"
 ---
 # <a name="shapes-how-to-topics"></a>Temas "Cómo..." de formas
 Los temas de esta sección muestran cómo usar <xref:System.Windows.Shapes.Shape> objetos que se va a dibujar formas básicas en la pantalla.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Dibujar una forma cerrada utilizando el elemento Polygon](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [Dibujar una forma cerrada mediante el elemento Polygon](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
  [Dibujar una elipse o un círculo](how-to-draw-an-ellipse-or-a-circle.md)  
  [Dibujar una línea](how-to-draw-a-line.md)  
  [Dibujar una Polilínea mediante el uso del elemento Polyline](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
@@ -28,5 +28,6 @@ Los temas de esta sección muestran cómo usar <xref:System.Windows.Shapes.Shape
  [Modificar el extremo en el final de una línea o segmento](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Shapes.Shape>
 - [Gráficos y multimedia](index.md)

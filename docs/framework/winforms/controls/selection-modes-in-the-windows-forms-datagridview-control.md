@@ -5,12 +5,12 @@ helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-ms.openlocfilehash: 931df04bbe6b8448030e26cd2cc2c904865ac0d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79e13e65938252015e43b59a962d40f20963a5df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097283"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Modos de selección en el control DataGridView de formularios Windows Forms
 A veces desea que su aplicación para realizar acciones según las selecciones del usuario dentro de un <xref:System.Windows.Forms.DataGridView> control. Dependiendo de las acciones, puede restringir los tipos de selección que son posibles. Por ejemplo, suponga que la aplicación puede imprimir un informe para el registro seleccionado actualmente. En este caso, es posible que desee configurar el <xref:System.Windows.Forms.DataGridView> control para que al hacer clic en cualquier lugar dentro de una fila siempre selecciona la fila completa y, por lo que se puede seleccionar que sólo una fila a la vez.  
@@ -45,9 +45,10 @@ A veces desea que su aplicación para realizar acciones según las selecciones d
 >  Código de ejemplo que muestra el uso de las celdas seleccionadas mediante programación puede encontrarse en el <xref:System.Windows.Forms.DataGridView> información general de clases.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridViewSelectionMode>
-- [Selección y uso del Portapapeles con el control DataGridView de Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
-- [Cómo: Establecer el modo de selección del Control DataGridView de formularios Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+- [Selección y uso del Portapapeles con el control DataGridView de formularios Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [Filtrar para establecer el modo de selección del control DataGridView de formularios Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

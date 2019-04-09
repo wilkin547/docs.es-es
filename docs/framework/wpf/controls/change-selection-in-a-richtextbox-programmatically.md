@@ -8,12 +8,12 @@ helpviewer_keywords:
 - changing selections in a text box [WPF]
 - changing selections in a RichTextBox [WPF]
 ms.assetid: f1213205-1ad7-4cd2-b115-460173cc5aa3
-ms.openlocfilehash: a85dc4baa8a59d25f577996c541a422bbe2af24e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b8acfe7cde1fe5dae96cd6324f75c5b146be9ec9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096232"
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a>Cambiar mediante programación la selección en un control RichTextBox
 En este ejemplo se muestra cómo cambiar mediante programación la selección actual en un <xref:System.Windows.Controls.RichTextBox>. Esta selección es el mismo como si el usuario hubiera seleccionado el contenido mediante el uso de la interfaz de usuario.  
@@ -30,5 +30,6 @@ En este ejemplo se muestra cómo cambiar mediante programación la selección ac
  [!code-vb[RichTextBoxMiscSnippets_snip#ChangeSelectionProgrammaticalyCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/ChangeSelectionProgrammaticaly.xaml.vb#changeselectionprogrammaticalycodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Vea también
-- [RichTextBox Overview](richtextbox-overview.md) (Introducción a RichTextBox)
+
+- [Información general sobre el control RichTextBox](richtextbox-overview.md)
 - [Información general sobre TextBox](textbox-overview.md)

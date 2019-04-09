@@ -2,26 +2,26 @@
 title: Cómo Particionar datos de servicio
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 3755a9ecb61148bcc426e9d510dc2eab1c34eeb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5cfd56943c97b70ef12276f1bae47fa870366a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590635"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150103"
 ---
 # <a name="how-to-service-data-partitioning"></a>Cómo Particionar datos de servicio
 Este tema describe los pasos básicos necesarios para realizar particiones de los mensajes en múltiples instancias de un mismo servicio de destino. La partición de datos de servicio se suele utilizar cuando hay que ajustar un servicio para proporcionar una mayor calidad del servicio, o cuando hay que administrar solicitudes de diversos clientes de una manera determinada. Por ejemplo, los mensajes de gran importancia o clientes "Oro" que deba procesarse con una prioridad más alta que los mensajes de un cliente estándar.  
   
- En este ejemplo, los mensajes se enrutan a una de las dos instancias del servicio de regularCalc. Ambas instancias del servicio son idénticas; sin embargo, el servicio representado por el punto de conexión de calculator1 procesa mensajes recibidos de los clientes importantes, y el punto de conexión de calculator2 procesa los mensajes de otros clientes.  
+ En este ejemplo, los mensajes se enrutan a una de las dos instancias del servicio de regularCalc. Ambas instancias del servicio son idénticas; sin embargo, el servicio representado por el extremo de calculator1 procesa mensajes recibidos de los clientes importantes, y el extremo de calculator2 procesa los mensajes de otros clientes.  
   
- El mensaje enviado del cliente no tiene ningún dato único que se pueda usar para identificar a qué instancia de servicio debería enrutarse el mensaje. Para permitir que cada cliente enrute datos a un destino concreto, implementaremos dos extremos de servicio que se usarán para recibir mensajes.  
+ El mensaje enviado del cliente no tiene ningún dato único que se pueda usar para identificar a qué instancia de servicio debería enrutarse el mensaje. Para permitir que cada cliente enrute datos a un destino concreto, implementaremos dos puntos de conexión de servicio que se usarán para recibir mensajes.  
   
 > [!NOTE]
 >  Aunque este ejemplo utiliza puntos de conexión concretos para crear una partición de los datos, esto también se puede lograr mediante la información incluida en el propio mensaje, como el encabezado o la información del cuerpo del mensaje.  
   
 ### <a name="implement-service-data-partitioning"></a>Implementación de partición de datos de servicio  
   
-1.  Cree la configuración de servicio de enrutamiento básica especificando los puntos de conexión de servicio expuestos por el servicio. En el siguiente ejemplo, se definen dos puntos de conexión que se utilizarán para recibir mensajes. También se definen los puntos de conexión del cliente, que se utilizan para enviar mensajes a las instancias de servicio de regularCalc.  
+1.  Cree la configuración de servicio de enrutamiento básica especificando los extremos de servicio expuestos por el servicio. En el siguiente ejemplo, se definen dos puntos de conexión que se utilizarán para recibir mensajes. También se definen los puntos de conexión del cliente, que se utilizan para enviar mensajes a las instancias de servicio de regularCalc.  
   
     ```xml  
     <services>  
@@ -58,7 +58,7 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
      </client>  
     ```  
   
-2.  Defina los filtros usados para enrutar mensajes a los extremos del destino.  En este ejemplo, se usa el filtro EndpointName para determinar qué extremo de servicio recibe el mensaje. En el siguiente ejemplo, se definen los filtros y la sección de enrutamiento necesarios.  
+2.  Defina los filtros usados para enrutar mensajes a los extremos del destino.  En este ejemplo, se usa el filtro EndpointName para determinar qué punto de conexión de servicio recibe el mensaje. En el siguiente ejemplo, se definen los filtros y la sección de enrutamiento necesarios.  
   
     ```xml  
     <filters>  
@@ -174,4 +174,5 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)

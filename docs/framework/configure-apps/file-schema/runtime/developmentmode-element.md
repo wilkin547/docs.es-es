@@ -1,5 +1,5 @@
 ---
-title: <developmentMode> (Elemento)
+title: <developmentMode> Elemento
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/developmentMode
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 323bc5d18860c00609a92e33f4a2bd2c832b05a9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55290074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192061"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode > elemento
 Especifica si el runtime busca ensamblados en los directorios especificados por la variable de entorno DEVPATH.  
@@ -45,7 +45,7 @@ Especifica si el runtime busca ensamblados en los directorios especificados por 
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**true**|Busca los ensamblados en los directorios especificados por la variable de entorno DEVPATH.|  
-|**false**|No busca ensamblados en los directorios especificados por la variable de entorno DEVPATH. Este es el valor predeterminado|  
+|**False**|No busca ensamblados en los directorios especificados por la variable de entorno DEVPATH. Este es el valor predeterminado|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -72,6 +72,7 @@ Especifica si el runtime busca ensamblados en los directorios especificados por 
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Cómo: Buscar ensamblados mediante DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [Filtrar para buscar ensamblados mediante DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

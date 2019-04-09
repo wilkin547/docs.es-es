@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197846"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Opciones de ajuste de tamaño en el control DataGridView de formularios Windows Forms
 <xref:System.Windows.Forms.DataGridView> encabezados, columnas y filas pueden cambiar el tamaño causas muy distintas. En la tabla siguiente muestra estas causas.  
@@ -128,6 +128,7 @@ ms.locfileid: "57717913"
  Las enumeraciones utilizadas por los métodos y propiedades de tamaño tienen valores similares para el ajuste de tamaño basado en contenido. Con estos valores, puede limitar qué celdas se usan para calcular los tamaños preferidos. Para todas las enumeraciones de ajuste de tamaño, los valores con nombres que hacen referencia a las celdas mostradas limitan sus cálculos de celdas en filas mostradas. Son útil para evitar una reducción del rendimiento cuando se trabaja con una gran cantidad de filas excluidas las filas. También puede restringir los cálculos a los valores de celda de las celdas con o sin encabezado.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=nameWithType>
@@ -154,6 +155,6 @@ ms.locfileid: "57717913"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [Cambiar el tamaño de columnas y filas en el control DataGridView de Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Cambiar el tamaño de columnas y filas en el control DataGridView de formularios Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
 - [Modo de relleno de columnas en el control DataGridView de formularios Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [Cómo: Establecer modos de ajuste de tamaño del Control DataGridView de formularios Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [Filtrar para establecer modos de cambio de tamaño para el control DataGridView de formularios Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - PrintDocument component [Windows Forms], about PrintDocument component
 - printing [Windows Forms], PrintDocument component
 ms.assetid: b59b4b60-dce5-42ca-8421-3a54a2f7bab0
-ms.openlocfilehash: c35c60b651dd3becfeca0f07788efab9d1619117
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a3f08aa4bd5b63769cef35dbea2209d5d83261be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198639"
 ---
 # <a name="printdocument-component-overview-windows-forms"></a>Información general sobre el componente PrintDocument (formularios Windows Forms)
 El componente [PrintDocument](printdocument-component-windows-forms.md) de Windows Forms se usa para establecer las propiedades que describen lo que desea imprimir y la capacidad de imprimir el documento en aplicaciones basadas en Windows. Se puede utilizar junto con el componente [PrintDialog](printdialog-component-windows-forms.md) para controlar todos los aspectos de la impresión del documento.  
@@ -27,7 +27,8 @@ El componente [PrintDocument](printdocument-component-windows-forms.md) de Windo
  Cuando se agrega a un formulario, el <xref:System.Drawing.Printing.PrintDocument> componente aparece en la bandeja en la parte inferior del Diseñador de Windows Forms.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Windows Forms Print Support](../advanced/windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)
-- [PrintDocument (Componente, Windows Forms)](printdocument-component-windows-forms.md)
+- [Funcionalidad para imprimir en formularios Windows Forms](../advanced/windows-forms-print-support.md)
+- [Componente PrintDocument](printdocument-component-windows-forms.md)

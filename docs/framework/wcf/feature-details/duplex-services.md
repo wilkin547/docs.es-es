@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 9adbb4166d713cea0344c9fa58ce85e5afce086d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f8e13c6983b6c3a88bc1d9f559f7fac3d6342d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110089"
 ---
 # <a name="duplex-services"></a>Servicios dúplex
-Un contrato de servicios dúplex es un patrón de intercambio de mensajes en el que ambos extremos pueden enviar mensajes al otro de manera independiente. Un servicio dúplex, por tanto, puede enviar mensajes de vuelta al extremo del cliente, proporcionando un comportamiento parecido a los eventos. La comunicación dúplex se produce cuando un cliente se conecta a un servicio y proporciona al servicio un canal en el que el servicio puede devolver los mensajes al cliente. Tenga en cuenta que el comportamiento como evento de los servicios dúplex solo funciona dentro de una sesión.  
+Un contrato de servicios dúplex es un patrón de intercambio de mensajes en el que ambos puntos de conexión pueden enviar mensajes al otro de manera independiente. Un servicio dúplex, por tanto, puede enviar mensajes de vuelta al punto de conexión del cliente, proporcionando un comportamiento parecido a los eventos. La comunicación dúplex se produce cuando un cliente se conecta a un servicio y proporciona al servicio un canal en el que el servicio puede devolver los mensajes al cliente. Tenga en cuenta que el comportamiento como evento de los servicios dúplex solo funciona dentro de una sesión.  
   
  Para crear un contrato dúplex ha de crear un par de interfaces. La primera es la interfaz del contrato de servicio, que describe las operaciones que un cliente puede invocar. Ese contrato de servicio debe especificar un *contrato de devolución de llamada* en el <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> propiedad. El contrato de devolución de llamadas es la interfaz que define las operaciones a las que el servicio puede llamar en el punto de conexión del cliente. Un contrato dúplex no requiere una sesión, aunque los enlaces dúplex proporcionados por el sistema las utilizan.  
   
@@ -40,9 +40,7 @@ Un contrato de servicios dúplex es un patrón de intercambio de mensajes en el 
  La configuración del servicio debe realizarse para proporcionar un enlace que admita comunicación de la sesión y dúplex. El elemento `wsDualHttpBinding` admite la comunicación de la sesión y permite la comunicación dúplex proporcionando conexiones HTTP duales, una para cada dirección.  
   
  En el cliente, debe configurar una dirección que el servidor pueda utilizar para conectarse al cliente, como se muestra en la configuración del ejemplo siguiente.  
-  
-  
-  
+
 > [!NOTE]
 >  Además, los clientes que no sean dúplex y que no se autentiquen mediante una conversación segura, normalmente, producen una <xref:System.ServiceModel.Security.MessageSecurityException>. Sin embargo, si un cliente dúplex que utiliza una conversación segura no se autentica, el cliente recibe una <xref:System.TimeoutException>.  
   
@@ -66,7 +64,7 @@ Dim endptadr As New EndpointAddress("http://localhost:12000/DuplexTestUsingCode/
 binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/Client/")  
 ```
 
- El siguiente ejemplo de código muestra cómo especificar la dirección de punto de conexión de cliente mediante configuración.  
+ El siguiente ejemplo de código muestra cómo especificar la dirección de extremo de cliente mediante configuración.  
   
 ```xml  
 <client>  
@@ -90,6 +88,7 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 >  El modelo dúplex no detecta automáticamente cuando un servicio o cliente cierra su canal. Por tanto, si un cliente finaliza inesperadamente, de forma predeterminada no se notificará al servicio. Los clientes y los servicios pueden implementar su propio protocolo para notificarse si así lo deciden.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Dúplex](../../../../docs/framework/wcf/samples/duplex.md)
 - [Especificación del comportamiento de tiempo de ejecución del cliente](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Cómo: Crear un generador de canales y utilizarlo para crear y gestionar canales](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [Filtrar para crear un generador de canales y usarlo para crear y administrar canales](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

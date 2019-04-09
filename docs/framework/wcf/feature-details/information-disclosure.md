@@ -2,12 +2,12 @@
 title: Divulgación de información
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 267e0dc656e05ed6f95eef1c75e40c07108a164e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588254"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195909"
 ---
 # <a name="information-disclosure"></a>Divulgación de información
 La divulgación de información permite a un atacante ganar valiosa información sobre un sistema. Por consiguiente, siempre considere qué información divulga y si un usuario malintencionado puede utilizarla. A continuación se muestra una lista de los posibles ataques de divulgación de información y proporciona métodos paliativos para cada uno de ellos.  
@@ -21,8 +21,8 @@ La divulgación de información permite a un atacante ganar valiosa información
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Los volcados de memoria pueden revelar información de la demanda  
  Cuando se produce un error en una aplicación, los archivos de registro, como los generados por Dr. Watson, puede contener información de notificaciones. Esta información no se debería exportar a otras entidades, como equipos de compatibilidad; de lo contrario, se exporta también la información de la demanda que contiene los datos privados. Esto se puede paliar si no se envían los archivos de registro a entidades desconocidas. Para obtener más información, consulte [Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=89160).  
   
-## <a name="endpoint-addresses"></a>Direcciones de punto de conexión  
- Una dirección de extremo contiene la información necesaria para comunicarse con un extremo. La seguridad de SOAP debe incluir la dirección completa en los mensajes de negociación de seguridad que se intercambian para negociar una clave simétrica entre un cliente y un servidor. Dado que la negociación de seguridad es un proceso previo al arranque, los encabezados de dirección no se pueden cifrar durante este proceso. Por consiguiente, la dirección no debería contener datos confidenciales; de lo contrario, conduce a ataques de divulgación de la información.  
+## <a name="endpoint-addresses"></a>Direcciones de extremo  
+ Una dirección de punto de conexión contiene la información necesaria para comunicarse con un punto de conexión. La seguridad de SOAP debe incluir la dirección completa en los mensajes de negociación de seguridad que se intercambian para negociar una clave simétrica entre un cliente y un servidor. Dado que la negociación de seguridad es un proceso previo al arranque, los encabezados de dirección no se pueden cifrar durante este proceso. Por consiguiente, la dirección no debería contener datos confidenciales; de lo contrario, conduce a ataques de divulgación de la información.  
   
 ## <a name="certificates-transferred-unencrypted"></a>Certificados transferidos sin cifrar  
  Al utilizar un certificado X.509 para autenticar un cliente, el certificado se transfiere de manera abierta, dentro del encabezado SOAP. Considere esto como una divulgación potencial de la información de identificación personal (PII). Éste no es un problema para el modo `TransportWithMessageCredential`, donde se cifra el mensaje completo con seguridad de nivel de transporte.  
@@ -39,7 +39,7 @@ La divulgación de información permite a un atacante ganar valiosa información
 ## <a name="ntlm"></a>NTLM  
  De manera predeterminada, en el entorno de dominio de Windows, la autenticación de Windows utiliza el protocolo Kerberos para autenticar y autorizar a los usuarios. Si el protocolo Kerberos no se puede utilizar por alguna razón, NT LAN Manager (NTLM) se utiliza a modo de reserva. Este comportamiento se puede deshabilitar estableciendo la propiedad <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> en `false`. Entre los problemas que se deben tener en cuenta al permitir NTLM se incluyen:  
   
--   NTLM expone el nombre de usuario del cliente. Si es necesario mantener el nombre de usuario forma confidencial, establezca la propiedad `AllowNTLM` del enlace en `false`.  
+-   NTLM expone el nombre de usuario del cliente. Si es necesario mantener el nombre de usuario  forma confidencial, establezca la propiedad `AllowNTLM` del enlace en `false`.  
   
 -   NTLM no proporciona autenticación de servidor. Por consiguiente, el cliente no puede asegurar que se esté comunicando con el servicio adecuado al utilizar NTLM como protocolo de autenticación.  
   
@@ -57,6 +57,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
  Si se especifica el dominio, pero se especifica un nombre principal de servicio no válido mediante la característica de identidad de punto de conexión, se usará NTLM. Para obtener más información acerca de cómo se especifica la identidad de extremo, vea [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Elevación de privilegios](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [Denegación de servicio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)

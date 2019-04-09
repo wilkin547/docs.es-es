@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunction (Interfaz)
+title: Interfaz ICorDebugFunction
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunction
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c2a4dc823768b722e9069c411be787a66989b2a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ca21911f3d16b79887b9d6d8185f8fab17651321
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093220"
 ---
-# <a name="icordebugfunction-interface"></a>ICorDebugFunction (Interfaz)
+# <a name="icordebugfunction-interface"></a>Interfaz ICorDebugFunction
 
 Representa una función o un método administrado.  
   
@@ -31,14 +31,14 @@ Representa una función o un método administrado.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[CreateBreakpoint (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-createbreakpoint-method.md)|Crea un punto de interrupción al principio de esta función.|  
-|[GetClass (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getclass-method.md)|Obtiene un objeto ICorDebugClass que representa la clase de de que esta función es un miembro.|  
-|[GetCurrentVersionNumber (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)|Obtiene el número de versión de la edición más reciente realizada en esta función.|  
-|[GetILCode (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getilcode-method.md)|Obtiene el código de lenguaje intermedio (MSIL) de Microsoft para esta función.|  
-|[GetLocalVarSigToken (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getlocalvarsigtoken-method.md)|Obtiene los metadatos de token para la firma de variable local de la función que está representada por este `ICorDebugFunction` instancia.|  
-|[GetModule (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|Obtiene el módulo en el que se define esta función.|  
-|[GetNativeCode (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getnativecode-method.md)|Obtiene el código nativo para esta función.|  
-|[GetToken (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-gettoken-method.md)|Obtiene los metadatos de token para esta función.|  
+|[Método CreateBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-createbreakpoint-method.md)|Crea un punto de interrupción al principio de esta función.|  
+|[Método GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getclass-method.md)|Obtiene un objeto ICorDebugClass que representa la clase de de que esta función es un miembro.|  
+|[Método GetCurrentVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)|Obtiene el número de versión de la edición más reciente realizada en esta función.|  
+|[Método GetILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getilcode-method.md)|Obtiene el código de lenguaje intermedio (MSIL) de Microsoft para esta función.|  
+|[Método GetLocalVarSigToken](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getlocalvarsigtoken-method.md)|Obtiene los metadatos de token para la firma de variable local de la función que está representada por este `ICorDebugFunction` instancia.|  
+|[Método GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|Obtiene el módulo en el que se define esta función.|  
+|[Método GetNativeCode](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getnativecode-method.md)|Obtiene el código nativo para esta función.|  
+|[Método GetToken](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-gettoken-method.md)|Obtiene los metadatos de token para esta función.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `ICorDebugFunction` interfaz no representa una función con parámetros de tipo genérico. Por ejemplo, un `ICorDebugFunction` representaría instancia `Func<T>` pero no `Func<string>`. Llame a [Icordebugilframe2](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md) para obtener los parámetros de tipo genérico.  
@@ -62,4 +62,5 @@ Representa una función o un método administrado.
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

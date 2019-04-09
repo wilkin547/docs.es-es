@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Establecer modos de ordenación de columnas en el Control DataGridView de Windows Forms
+title: Filtrar para establecer modos de ordenación de columnas en el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sort mode
 - data grids [Windows Forms], sorting data
 ms.assetid: 57dfed60-a608-40d5-86f9-d65686ffb325
-ms.openlocfilehash: a0ef450559a1106de635c6d3b16891c23c41b050
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4894de00a323f70ca244ea877101a5af1cbb37e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725056"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096373"
 ---
-# <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>Filtrar Establecer modos de ordenación de columnas en el Control DataGridView de Windows Forms
+# <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>Filtrar para establecer modos de ordenación de columnas en el control DataGridView de formularios Windows Forms
 En el <xref:System.Windows.Forms.DataGridView> las columnas del cuadro de texto de control, utilizan la clasificación automática de forma predeterminada, mientras que otros tipos de columna no se ordenan automáticamente. A veces desea invalidar estos valores predeterminados. Por ejemplo, puede mostrar imágenes en lugar de texto, números o valores de celda de la enumeración. Mientras no se pueden ordenar las imágenes, se pueden ordenar los valores subyacentes que representan.  
   
  En el <xref:System.Windows.Forms.DataGridView> (control), el <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> valor de propiedad de una columna determina su comportamiento de ordenación.  
@@ -38,8 +38,9 @@ En el <xref:System.Windows.Forms.DataGridView> las columnas del cuadro de texto 
 -   Referencias a los ensamblados <xref:System?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
-- [Ordenar datos en el control DataGridView de Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Modos de ordenación de columnas del control DataGridView de Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
-- [Cómo: Personalizar la ordenación en el Control DataGridView de Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Ordenar datos en el control DataGridView de formularios Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [Modos de ordenación de columnas del control DataGridView de formularios Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
+- [Filtrar para personalizar la ordenación en el control DataGridView de formularios Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

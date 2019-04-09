@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6d246c56af191189fa775be3248d3099d2aa2544
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823472"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203696"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Tutorial: Crear una aplicación accesible basada en Windows
 Crear una aplicación accesible conlleva importantes implicaciones empresariales. Muchos gobiernos tienen normativas sobre accesibilidad aplicadas a la compra de software. El logotipo “Certificado para Windows” incluye requisitos de accesibilidad. Tan solo en EE. UU hay aproximadamente unos 30 millones de ciudadanos, muchos de ellos clientes potenciales, que se ven afectados por la accesibilidad del software.  
@@ -65,7 +65,7 @@ Crear una aplicación accesible conlleva importantes implicaciones empresariales
   
 -   Agregue los controles al formulario y establezca las propiedades como se describe a continuación. Consulte la imagen al final de la tabla para ver un modelo de cómo organizar los controles en el formulario.  
   
-    |Object|Property|Valor|  
+    |Object|Propiedad|Valor|  
     |------------|--------------|-----------|  
     |Form1|AccessibleDescription|Formulario de pedido|  
     ||AccessibleName|Formulario de pedido|  
@@ -141,7 +141,6 @@ Crear una aplicación accesible conlleva importantes implicaciones empresariales
     
       ![El formulario de pedido de pizza con una selección del nombre de cuadro de texto y el tamaño e ingredientes.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
-  
 ## <a name="supporting-high-contrast-mode"></a>Compatibilidad con el modo de contraste alto  
  El modo de contraste alto es una configuración de sistema de Windows que mejora la legibilidad mediante el uso de colores de contraste y tamaños de fuente que son beneficiosos para los usuarios con discapacidades visuales. El <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> propiedad se proporciona para determinar si se ha establecido el modo de contraste alto.  
   

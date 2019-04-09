@@ -2,12 +2,12 @@
 title: '|| (OR) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
-ms.openlocfilehash: 4d0bed2fb000e96e9fd0ceac6ea90e19b8fa7514
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ceaf33d8baba9776008cddcbe2e2d70f13fe089
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141289"
 ---
 # <a name="-or-entity-sql"></a>|| (OR) (Entity SQL)
 Combina dos expresiones `Boolean` .  
@@ -25,7 +25,7 @@ boolean_expression || boolean_expression
  Cualquier expresión válida que devuelve un valor `Boolean`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` cuando alguna de las condiciones es `true`; de lo contrario, `false`.  
+ `true` Cuando alguna de las condiciones es `true`; en caso contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
  OR es un operador lógico de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . Se usa para combinar dos condiciones. Cuando se utiliza más de un operador lógico en una instrucción, los operadores OR se evalúan después de los operadores AND. Sin embargo, se puede cambiar el orden de evaluación mediante paréntesis.  
@@ -36,9 +36,9 @@ boolean_expression || boolean_expression
   
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
-|`TRUE`|true|TRUE|TRUE|  
-|`FALSE`|TRUE|FALSE|NULL|  
-|`NULL`|TRUE|NULL|NULL|  
+|`TRUE`|true|true|true|  
+|`FALSE`|true|false|NULL|  
+|`NULL`|true|NULL|NULL|  
   
 ## <a name="example"></a>Ejemplo  
  La siguiente consulta de Entity SQL usa el operador OR para combinar dos expresiones `Boolean` . La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
@@ -50,4 +50,5 @@ boolean_expression || boolean_expression
  [!code-csharp[DP EntityServices Concepts 2#OR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#or)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

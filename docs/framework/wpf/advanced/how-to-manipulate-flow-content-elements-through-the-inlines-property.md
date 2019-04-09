@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Inlines property [WPF], manipulating flow Content elements
 - properties [WPF], Inlines [WPF], manipulating flow Content elements
 ms.assetid: 510780d2-3da1-4360-8763-7054bda22ea3
-ms.openlocfilehash: 2631d088d677c5edb1ae73a3cb40d15bf4beb71f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cfff958bb4c87e6bfecf2d280224cda233c31806
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361816"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186074"
 ---
-# <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Procedimiento Manipular elementos de contenido dinámico mediante la propiedad Inlines
+# <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Filtrar Manipular elementos de contenido dinámico mediante la propiedad Inlines
 Estos ejemplos muestran algunas de las operaciones más comunes que se pueden realizar en elementos de contenido dinámico insertado (y los contenedores de tales elementos, tales como <xref:System.Windows.Controls.TextBlock>) a través de la **Inlines** propiedad. Esta propiedad se utiliza para agregar y quitar elementos de <xref:System.Windows.Documents.InlineCollection>. Flujo de contenido de elementos de esa característica un **Inlines** propiedad incluyen:  
   
 -   <xref:System.Windows.Documents.Bold>  
@@ -65,6 +65,7 @@ Estos ejemplos muestran algunas de las operaciones más comunes que se pueden re
  [!code-vb[SpanSnippets#_SpanInlinesClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesclear)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Documents.BlockCollection>
 - <xref:System.Windows.Documents.InlineCollection>
 - <xref:System.Windows.Documents.ListItemCollection>

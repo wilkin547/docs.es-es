@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar mejoras a ToolStripMenuItems
+title: Filtrar para agregar mejoras a ToolStripMenuItems
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: 68a926eba184d12d58e537d8db0a5baefb0fbe95
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 458347df7e17aabc1e9e21d66ad1b5a96200fe28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198561"
 ---
-# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Procedimiento Agregar mejoras a ToolStripMenuItems
+# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Filtrar para agregar mejoras a ToolStripMenuItems
 Puede mejorar la facilidad de uso <xref:System.Windows.Forms.MenuStrip> y <xref:System.Windows.Forms.ContextMenuStrip> controles de las maneras siguientes:  
   
 -   Agregar marcas de verificación para designar si una característica está activada o desactivada, por ejemplo, si se muestra una regla a lo largo del margen de una aplicación de procesamiento de texto, o para indicar qué archivo en una lista de archivos se muestra, como en un **ventana** menú.  
@@ -114,6 +114,7 @@ Puede mejorar la facilidad de uso <xref:System.Windows.Forms.MenuStrip> y <xref:
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [Información general sobre el control MenuStrip](menustrip-control-overview-windows-forms.md)

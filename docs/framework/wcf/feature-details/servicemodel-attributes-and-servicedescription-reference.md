@@ -2,12 +2,12 @@
 title: Atributos ServiceModel y referencia ServiceDescription
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-ms.openlocfilehash: 3b1b10f34e300d77943a93d180b5be9e4a3366c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726632"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195350"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Atributos ServiceModel y referencia ServiceDescription
 El *árbol de descripción* es la jerarquía de tipos (a partir de la <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> clase) que juntos describen cada aspecto de un servicio. Windows Communication Foundation (WCF) usa un árbol de descripción para crear un servicio válido en tiempo de ejecución, para publicar en Web Services Description Language (WSDL), lenguaje de definición de esquemas XML (XSD) y las aserciones de directiva (metadatos) sobre el servicio que los clientes pueden usar para conectarse a y usar el servicio y para generar varias representaciones de archivo de código y la configuración de los valores de árbol de descripción.  
@@ -23,7 +23,7 @@ El *árbol de descripción* es la jerarquía de tipos (a partir de la <xref:Syst
   
 |Propiedad ServiceBehaviorAttribute|Valor del árbol de descripción afectado|  
 |---------------------------------------|-------------------------------------|  
-|nombre|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
+|Name|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
 |Espacio de nombres|<xref:System.ServiceModel.Description.ServiceDescription.Namespace%2A>|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ServiceDescription.ConfigurationName%2A>|  
 |IgnoreExtensionDataObject|Establece la propiedad <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.IgnoreExtensionDataObject%2A> para todas las operaciones.|  
@@ -31,7 +31,7 @@ El *árbol de descripción* es la jerarquía de tipos (a partir de la <xref:Syst
   
 |Propiedad ServiceContractAttribute|Valor del árbol de descripción afectado|  
 |---------------------------------------|-------------------------------------|  
-|CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription> agregó a todas las operaciones <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>.|  
+|CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription> agrega a todas las operaciones <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>.|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> y posiblemente niveles secundarios de protección. Para obtener más información acerca de la jerarquía de nivel de protección, consulte [Understanding Protection Level](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
@@ -42,20 +42,20 @@ El *árbol de descripción* es la jerarquía de tipos (a partir de la <xref:Syst
   
 |Valor OperationContractAttribute|Valor del árbol de descripción afectado|  
 |--------------------------------------|-------------------------------------|  
-|Acción|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> para el mensaje de salida o de entrada, dependiendo del contrato/contrato de devolución de llamada.|  
+|Acción|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> para el mensaje de salida o el mensaje de entrada, dependiendo del contrato de devolución de llamada/contrato.|  
 |AsyncPattern|Si es true, <xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> y <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>|  
 |IsOneWay|Se asigna a una sola <xref:System.ServiceModel.Description.MessageDescription> en <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
-|nombre|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
+|Name|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> y posiblemente niveles secundarios de protección. Para obtener más información acerca de la jerarquía de nivel de protección, consulte [Understanding Protection Level](../../../../docs/framework/wcf/understanding-protection-level.md).|  
-|ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> para el mensaje de salida o de entrada, dependiendo del contrato/contrato de devolución de llamada.|  
+|ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> para el mensaje de salida o el mensaje de entrada, dependiendo del contrato de devolución de llamada/contrato.|  
   
 |Valor FaultContractAttribute|Valor del árbol de descripción afectado|  
 |----------------------------------|-------------------------------------|  
-|Acción|<xref:System.ServiceModel.Description.FaultDescription.Action%2A> dependiendo del contrato/contrato de devolución de llamada.|  
+|Acción|<xref:System.ServiceModel.Description.FaultDescription.Action%2A> Dependiendo del contrato de devolución de llamada/contrato.|  
 |DetailType|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
-|nombre|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
+|Name|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
 |Espacio de nombres|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.FaultDescription.ProtectionLevel%2A>|  
   
@@ -82,36 +82,37 @@ El *árbol de descripción* es la jerarquía de tipos (a partir de la <xref:Syst
 |----------------------------------|-------------------------------------|  
 |Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> para el encabezado correspondiente en <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> para el encabezado correspondiente en <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|nombre|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> para el encabezado correspondiente en <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> para el encabezado correspondiente en <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |Espacio de nombres|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> para el encabezado correspondiente en <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> para el encabezado correspondiente en <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |Relé|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> para el encabezado correspondiente en <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
   
 |Valor MessageBodyMemberAttribute|Valor del árbol de descripción afectado|  
 |--------------------------------------|-------------------------------------|  
-|nombre|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> para el elemento correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|Espacio de nombres|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> para el elemento correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|Ordenar|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> para el elemento correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> para el elemento correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> para la parte correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|Espacio de nombres|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> para la parte correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|Ordenar|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> para la parte correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> para la parte correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
 |Valor MessageHeaderArrayAttribute|Valor del árbol de descripción afectado|  
 |---------------------------------------|-------------------------------------|  
 |Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>|  
-|nombre|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
 |Espacio de nombres|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>|  
 |Relé|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>|  
   
 |Valor MessagePropertyAttribute|Valor del árbol de descripción afectado|  
 |------------------------------------|-------------------------------------|  
-|nombre|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
   
 |Valor MessageParameterAttribute|Valor del árbol de descripción afectado|  
 |-------------------------------------|-------------------------------------|  
-|nombre|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> para el elemento correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> para la parte correspondiente en <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
  Para obtener más información acerca de cómo se convierten los valores de árbol de descripción en metadatos, vea [ServiceDescription y referencias WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [ServiceDescription y referencias WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

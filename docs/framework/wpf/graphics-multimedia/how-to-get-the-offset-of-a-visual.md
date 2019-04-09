@@ -1,5 +1,5 @@
 ---
-title: Filtrar Obtener el desplazamiento de un objeto Visual
+title: Filtrar Obtener el desplazamiento de un objeto visual
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - visual objects [WPF], retrieving offset values from
 - retrieving offset values from visual objects [WPF]
 ms.assetid: 889a1dd6-1b11-445a-b351-fbb04c53ee34
-ms.openlocfilehash: ea03f7b9c3fefde0efa3fa0daaa07a537618f37a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4787b771c7e59a8b033b9267079c068a5845a1e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093415"
 ---
-# <a name="how-to-get-the-offset-of-a-visual"></a>Filtrar Obtener el desplazamiento de un objeto Visual
+# <a name="how-to-get-the-offset-of-a-visual"></a>Filtrar Obtener el desplazamiento de un objeto visual
 Estos ejemplos muestran cómo recuperar el valor de desplazamiento de un objeto visual que es relativo a su elemento primario, o cualquier antecesor o descendiente.  
   
 ## <a name="example"></a>Ejemplo  
@@ -66,6 +66,7 @@ TextBlock anidado dentro de dos objetos StackPanel
  El desplazamiento tiene en cuenta el <xref:System.Windows.FrameworkElement.Margin%2A> para todos los objetos. En este caso, <xref:System.Windows.Vector.X%2A> es -4, y <xref:System.Windows.Vector.Y%2A> es -4. Los valores de desplazamiento son valores negativos, puesto que el objeto primario es un desplazamiento negativo respecto a su objeto secundario.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md)
