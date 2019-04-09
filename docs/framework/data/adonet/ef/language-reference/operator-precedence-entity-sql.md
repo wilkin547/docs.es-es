@@ -2,12 +2,12 @@
 title: Precedencia de operadores (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
-ms.openlocfilehash: c68ac6d89426896b708ac74de1268f8ea8f193c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 722ebe5f0ec530f8c7f86e9f9901451b060903f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159138"
 ---
 # <a name="operator-precedence-entity-sql"></a>Precedencia de operadores (Entity SQL)
 Cuando un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta tiene múltiples operadores, prioridad de operador determina la secuencia en que se realizan las operaciones. El orden de ejecución puede afectar de manera significativa al resultado de la consulta.  
@@ -30,4 +30,5 @@ Cuando un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta tiene
  Puede utilizar paréntesis para invalidar la prioridad definida de los operadores en una consulta. Todo lo que está dentro del paréntesis se evalúa en primer lugar para producir un resultado antes de que dicho resultado lo pueda utilizar cualquier otro operador que se encuentre fuera del paréntesis. Por ejemplo, `x+y*z` multiplica `y` por `z` y, a continuación, agrega `x`, pero `(x+y)*z` agrega `x` a `y` y, a continuación, multiplica el resultado por `z`.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

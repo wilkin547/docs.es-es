@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120983"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementar una transacción implícita mediante el ámbito de la transacción
 La clase <xref:System.Transactions.TransactionScope> proporciona una manera simple de marcar un bloque de código como participar en una transacción, sin exigirle que interactuara con la propia transacción. Un ámbito de la transacción puede seleccionar y administrar automáticamente la transacción ambiente. Debido a su facilidad de uso y eficacia, se recomienda que utilice la clase <xref:System.Transactions.TransactionScope> al desarrollar una aplicación de transacción.  
@@ -121,11 +121,11 @@ using(TransactionScope scope1 = new TransactionScope())
 }  
 ```  
   
- El ejemplo muestra un bloque de código sin cualquier transacción ambiente que crea un nuevo ámbito (`scope1`) con <xref:System.Transactions.TransactionScopeOption.Required>. El ámbito `scope1` es un ámbito raíz porque cuando crea una nueva transacción (la transacción A) y hace que la transacción A sea transacción ambiente. `Scope1` crea tres objetos más, cada uno con un valor diferente de <xref:System.Transactions.TransactionScopeOption> . Por ejemplo, `scope2` se crea con <xref:System.Transactions.TransactionScopeOption.Required>y hay subsecuentemente una transacción ambiente, que se une la primera transacción creada por `scope1`. Observe que `scope3` es el ámbito de la raíz de una nueva transacción, y `scope4` no tiene ninguna transacción ambiente.  
+ El ejemplo muestra un bloque de código sin cualquier transacción ambiente que crea un nuevo ámbito (`scope1`) con <xref:System.Transactions.TransactionScopeOption.Required>. El ámbito `scope1` es un ámbito raíz porque cuando crea una nueva transacción (la transacción A) y hace que la transacción A sea transacción ambiente. `Scope1` a continuación, crea tres objetos más, cada uno con otro <xref:System.Transactions.TransactionScopeOption> valor. Por ejemplo, `scope2` se crea con <xref:System.Transactions.TransactionScopeOption.Required>y hay subsecuentemente una transacción ambiente, que se une la primera transacción creada por `scope1`. Observe que `scope3` es el ámbito de la raíz de una nueva transacción, y `scope4` no tiene ninguna transacción ambiente.  
   
  Aunque el valor predeterminado y más comúnmente utilizado de <xref:System.Transactions.TransactionScopeOption> es <xref:System.Transactions.TransactionScopeOption.Required>, cada uno de los otros valores tiene su propósito único.  
   
- <xref:System.Transactions.TransactionScopeOption.Suppress> es útil al desear conservar las operaciones realizadas por la sección de código, y no desea anular la transacción ambiente si se produce un error en las operaciones. Por ejemplo, al desear realizar un registro u operaciones de la auditoría, o al desear publicar los eventos a los suscriptores sin tener en cuenta si su transacción ambiente se confirma o sufre interrupciones. Este valor le permite tener una sección de código no transaccional dentro de un ámbito de la transacción, como se muestra en el ejemplo siguiente.  
+ <xref:System.Transactions.TransactionScopeOption.Suppress> es útil cuando desea conservar las operaciones realizadas por la sección de código y no desea anular la transacción ambiente si se producen errores en las operaciones. Por ejemplo, al desear realizar un registro u operaciones de la auditoría, o al desear publicar los eventos a los suscriptores sin tener en cuenta si su transacción ambiente se confirma o sufre interrupciones. Este valor le permite tener una sección de código no transaccional dentro de un ámbito de la transacción, como se muestra en el ejemplo siguiente.  
   
 ```csharp  
 using(TransactionScope scope1 = new TransactionScope())  
@@ -169,5 +169,6 @@ using(TransactionScope scope1 = new TransactionScope())
  Al crear que una nueva instancia <xref:System.Transactions.TransactionScope>, se puede utilizar la enumeración <xref:System.Transactions.EnterpriseServicesInteropOption> en uno de los constructores para especificar cómo interactuar con COM+. Para obtener más información, consulte [interoperabilidad con Enterprise Services y transacciones de COM +](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Transactions.Transaction.Clone%2A>
 - <xref:System.Transactions.TransactionScope>

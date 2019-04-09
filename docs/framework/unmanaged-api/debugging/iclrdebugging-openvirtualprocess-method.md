@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4ed9526dc38d72b01798215bc602fb8298c2bc3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122582"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess (Método)
 Obtiene el ICorDebugProcess (interfaz) que corresponde a un módulo de runtime (CLR) de lenguaje común cargado en el proceso.  
@@ -74,7 +74,7 @@ HRESULT OpenVirtualProcess(
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|E_POINTER|El valor de `pDataTarget` es `null`.|  
+|E_POINTER|`pDataTarget` es `null`.|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|El [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) devolución de llamada devuelve un error o no proporciona un identificador válido.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` no implementa las interfaces de destino de datos necesarios para esta versión del tiempo de ejecución.|  
 |CORDBG_E_NOT_CLR|El módulo indicado no es un módulo CLR. Este resultado HRESULT también se devuelve cuando un módulo CLR no se puede detectar porque se ha dañado la memoria, el módulo no está disponible o la versión de CLR es posterior a la versión de correcciones de compatibilidad.|  
@@ -97,5 +97,6 @@ HRESULT OpenVirtualProcess(
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

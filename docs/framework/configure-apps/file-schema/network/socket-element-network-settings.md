@@ -1,5 +1,5 @@
 ---
-title: <socket> (Elemento, Configuración de red)
+title: <socket> Elemento (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 3f599d6ada288db861f69fc64e6b84ee326b5830
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256903"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160165"
 ---
 # <a name="socket-element-network-settings"></a>\<Socket > elemento (configuración de red)
 Especifica si las operaciones de socket utilizan puertos de terminación.  
@@ -38,7 +38,7 @@ Especifica si las operaciones de socket utilizan puertos de terminación.
   
 ### <a name="attributes"></a>Atributos  
   
-|**Attribute**|**Descripción**|  
+|**Atributo**|**Descripción**|  
 |-------------------|---------------------|  
 |`alwaysUseCompletionPortsForAccept`|Indica si el socket siempre debería utilizar los puertos de terminación para llamadas al método de aceptación. El valor predeterminado es `false`.|  
 |`alwaysUseCompletionPortsForConnect`|Indica si el socket siempre debería utilizar los puertos de terminación para llamadas al método Connect. El valor predeterminado es `false`.|  
@@ -49,9 +49,9 @@ Especifica si las operaciones de socket utilizan puertos de terminación.
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Element**|**Descripción**|  
+|**Elemento**|**Descripción**|  
 |-----------------|---------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
+|[configuración](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `alwaysUseCompletionPortsForAccept` y `alwaysUseCompletionPortsForConnect` atributos se usan para especificar el comportamiento predeterminado con respecto al uso de puertos de terminación de las clases en el <xref:System.Net.Sockets?displayProperty=nameWithType>.namespace. Se recomiendan los puertos de finalización para las aplicaciones de servidor de alto rendimiento.  
@@ -72,7 +72,7 @@ Especifica si las operaciones de socket utilizan puertos de terminación.
   
  Los valores posibles de la `ipProtectionLevel` configuración del atributo se corresponden con los niveles de protección especificados en la <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> enumeración como sigue:  
   
-|**Valor de atributo**|**Descripción**|  
+|**Valor del atributo**|**Descripción**|  
 |-|-|  
 |EdgeRestricted|El nivel de protección de IP tiene una restricción perimetral. Este valor lo usan las aplicaciones diseñadas para funcionar a través de Internet. Esta configuración no permite la exploración transversal de traducción de direcciones de red (NAT) mediante la implementación de Teredo de Windows. Estas aplicaciones pueden eludir los firewalls de IPv4, por lo que las aplicaciones deben protegerse frente a ataques de Internet dirigidos al puerto abierto. En Windows Server 2003 y Windows XP, el valor predeterminado para el nivel de protección de IP en un socket es la restricción perimetral.|  
 |Restringido|El nivel de protección de IP está restringido. Este valor lo usan las aplicaciones de intranet que no implementan escenarios de Internet. Estas aplicaciones son por lo general no probadas o protegidas contra ataques por Internet. Este valor limitará el tráfico recibido a las direcciones locales de vínculo.|  
@@ -104,6 +104,7 @@ Especifica si las operaciones de socket utilizan puertos de terminación.
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Net?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets?displayProperty=nameWithType>

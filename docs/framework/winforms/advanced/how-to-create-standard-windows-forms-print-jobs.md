@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear trabajos de impresión estándar de Windows Forms
+title: Filtrar para crear trabajos de impresión estándar de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: b0568472dadceb46257a8d35211034a718aef74c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 7ccebf128d533a0e0cf0a17e5702807371e1bea7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705234"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170981"
 ---
-# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Procedimiento Crear trabajos de impresión estándar de Windows Forms
+# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Filtrar para crear trabajos de impresión estándar de formularios Windows Forms
 La base de la impresión en Windows Forms es la <xref:System.Drawing.Printing.PrintDocument> componente, más concretamente, el <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos. Al escribir código para controlar la <xref:System.Drawing.Printing.PrintDocument.PrintPage> eventos, puede especificar lo que desea imprimir y cómo imprimirlo.  
   
 ### <a name="to-create-a-print-job"></a>Para crear un trabajo de impresión  
@@ -77,5 +77,6 @@ La base de la impresión en Windows Forms es la <xref:System.Drawing.Printing.Pr
      Para obtener más información sobre las características de Windows Forms, los trabajos de impresión, incluido cómo crear un trabajo de impresión mediante programación, vea <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Windows Forms Print Support](windows-forms-print-support.md) (Funcionalidad para imprimir en Windows Forms)
+- [Funcionalidad para imprimir en formularios Windows Forms](windows-forms-print-support.md)

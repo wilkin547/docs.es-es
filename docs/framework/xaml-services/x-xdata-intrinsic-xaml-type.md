@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: 68468c3c10fd884cf5fb92160e3cde41dbf7d529
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c8044bc341ded6ef7b03bbdf701e724654460d54
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58030267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125164"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData (Tipo XAML intrínseco)
 Habilita la posición de islas de datos XML dentro de una producción de XAML. Elementos XML dentro de `x:XData` no deben tratarse los procesadores XAML como si fueran una parte de la predeterminada que actúa el espacio de nombres XAML o cualquier otro espacio de nombres XAML. `x:XData` puede contener XML correcto arbitrario.  
@@ -50,6 +50,7 @@ Habilita la posición de islas de datos XML dentro de una producción de XAML. E
  Técnicamente, `x:XData` puede usarse como el contenido de cualquier propiedad de tipo <xref:System.Xml.Serialization.IXmlSerializable>. Sin embargo, <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> es la única implementación notable.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Data.XmlDataProvider>
 - [Información general sobre el enlace de datos](../wpf/data/data-binding-overview.md)
-- [Binding (extensión de marcado)](../wpf/advanced/binding-markup-extension.md)
+- [Enlazar extensión de marcado](../wpf/advanced/binding-markup-extension.md)

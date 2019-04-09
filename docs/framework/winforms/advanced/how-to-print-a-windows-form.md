@@ -1,5 +1,5 @@
 ---
-title: Filtrar Imprimir un formulario de Windows
+title: Filtrar para imprimir un formulario Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: 80bf88ad048e55a381d034d2a796de6f77f8691c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714156"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121971"
 ---
-# <a name="how-to-print-a-windows-form"></a>Filtrar Imprimir un formulario de Windows
+# <a name="how-to-print-a-windows-form"></a>Filtrar para imprimir un formulario Windows Forms
 Como parte del proceso de desarrollo, normalmente deseará imprimir una copia del formulario Windows Forms. El ejemplo de código siguiente muestra cómo imprimir una copia del formulario actual mediante el <xref:System.Drawing.Graphics.CopyFromScreen%2A> método.  
   
 ## <a name="example"></a>Ejemplo  
@@ -38,6 +38,7 @@ Como parte del proceso de desarrollo, normalmente deseará imprimir una copia de
  Para ejecutar este ejemplo de código, debe tener permiso para tener acceso a la impresora que utilice con el equipo.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Cómo: Representar imágenes con GDI +](how-to-render-images-with-gdi.md)
-- [Cómo: Imprimir gráficos en Windows Forms](how-to-print-graphics-in-windows-forms.md)
+- [Filtrar para representar imágenes con GDI+](how-to-render-images-with-gdi.md)
+- [Filtrar para imprimir gráficos en formularios Windows Forms](how-to-print-graphics-in-windows-forms.md)

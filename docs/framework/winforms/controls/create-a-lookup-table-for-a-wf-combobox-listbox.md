@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear una tabla de búsqueda para un Windows Forms control ComboBox, ListBox o CheckedListBox (Control)
+title: Filtrar para crear una tabla de búsqueda para un control ComboBox, ListBox o CheckedListBox de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: eaa92c2b95d8dd8578b46e44a948127e201bb351
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 95b1962b83a44a99ebc466e27c732917d63dc3c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724632"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125988"
 ---
-# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Filtrar Crear una tabla de búsqueda para un Windows Forms control ComboBox, ListBox o CheckedListBox (Control)
+# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Filtrar para crear una tabla de búsqueda para un control ComboBox, ListBox o CheckedListBox de formularios Windows Forms
 A veces resulta útil mostrar datos en un formato fácil de usar en un formulario de Windows Forms y, no obstante, almacenar los datos en un formato más coherente para su programa. Por ejemplo, un formulario de pedido de comida puede mostrar los elementos del menú por nombre en un cuadro de lista. Sin embargo, la tabla de datos que registra el pedido contendría los números de identificador únicos que representan la comida. En las siguientes tablas se proporciona un ejemplo en el que se indica cómo almacenar y mostrar datos de formulario de pedido de comida.  
   
 ### <a name="orderdetailstable"></a>OrderDetailsTable  
@@ -33,7 +33,7 @@ A veces resulta útil mostrar datos en un formato fácil de usar en un formulari
   
 ### <a name="itemtable"></a>ItemTable  
   
-|Id.|nombre|  
+|ID|Name|  
 |--------|----------|  
 |12|Patata|  
 |13|Pollo|  
@@ -54,7 +54,7 @@ A veces resulta útil mostrar datos en un formato fácil de usar en un formulari
   
 4.  Establezca las siguientes propiedades. Puede establecerse en código o en el diseñador.  
   
-    |Property|Parámetro|  
+    |Propiedad|Parámetro|  
     |--------------|-------------|  
     |<xref:System.Windows.Forms.ListControl.DataSource%2A>|La tabla que contiene la información sobre qué número de identificador equivale a qué elemento. En el escenario anterior, se trata de `ItemTable`.|  
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|La columna de la tabla de origen de datos que desea mostrar en el control. En el escenario anterior, se trata de `"Name"` (para establecer en el código, utilice las comillas).|  
@@ -71,8 +71,9 @@ A veces resulta útil mostrar datos en un formato fácil de usar en un formulari
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [Enlace de datos y Windows Forms](../data-binding-and-windows-forms.md)
-- [Información general sobre ListBox (Control)](listbox-control-overview-windows-forms.md)
+
+- [Enlace de datos y formularios Windows Forms](../data-binding-and-windows-forms.md)
+- [Información general sobre el control ListBox](listbox-control-overview-windows-forms.md)
 - [Información general sobre el control ComboBox](combobox-control-overview-windows-forms.md)
-- [CheckedListBox Control Overview](checkedlistbox-control-overview-windows-forms.md)
+- [Información general sobre el control CheckedListBox](checkedlistbox-control-overview-windows-forms.md)
 - [Controles de formularios Windows Forms usados para mostrar opciones](windows-forms-controls-used-to-list-options.md)

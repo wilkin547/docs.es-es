@@ -1,5 +1,5 @@
 ---
-title: Filtrar Ejecutar procedimientos a intervalos establecidos con el componente Timer de Windows Forms
+title: Filtrar para ejecutar procedimientos a intervalos establecidos con el componente Timer de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: 03f386917e554cfdf9d65778474ae809d81d1939
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ed433ee03bc82931e9b640f45ebd798e0ef73204
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127041"
 ---
-# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Filtrar Ejecutar procedimientos a intervalos establecidos con el componente Timer de Windows Forms
+# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Filtrar para ejecutar procedimientos a intervalos establecidos con el componente Timer de formularios Windows Forms
 A veces, conviene crear un procedimiento que se ejecuta a intervalos de tiempo específicos hasta que finaliza un bucle o que se ejecuta cuando ha transcurrido un intervalo de tiempo establecido. El componente <xref:System.Windows.Forms.Timer> hace posible este procedimiento.  
   
  Este componente está diseñado para un entorno de Windows Forms. Si necesita un temporizador que sea adecuado para un entorno de servidor, consulte [Introducción a los temporizadores basados en servidor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
@@ -243,6 +243,7 @@ private:
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.Timer>
-- [Timer (componente)](timer-component-windows-forms.md)
+- [Componente Timer](timer-component-windows-forms.md)
 - [Información general sobre el componente Timer](timer-component-overview-windows-forms.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88006703ba4a491ae458868a1431be618d37252a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0c6279c790e9b28e5f3bac93d5d0fdd411dd8c0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127275"
 ---
 # <a name="importfile2-method"></a>ImportFile2 (Método)
 Importa ensamblados y módulos no enlazados. Este método es similar a [ImportFile (método)](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), pero funciona incluso si no existe el archivo que se importa en el disco.  
@@ -69,6 +69,7 @@ HRESULT ImportFile2(
  Requiere alink.h.  
   
 ## <a name="see-also"></a>Vea también
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+
+- [IALink (Interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 (Interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

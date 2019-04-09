@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: b28f9c0575d1031c2f542ffa0de4ac5b848d3da1
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305550"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122309"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Conceptos básicos de Windows Communication Foundation
 Este documento proporciona una visión general de la arquitectura de Windows Communication Foundation (WCF). Pretende explicar los conceptos clave y cómo encajan entre ellos. Para ver un tutorial sobre la creación de la versión más simple de un servicio WCF y un cliente, consulte [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md). Para obtener información sobre la programación de WCF, vea [programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -135,7 +135,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
   
  Los metadatos expuestos por el servicio incluyen documentos de esquema XML, que definen el contrato de datos del servicio, y documentos WSDL, que describen los métodos del servicio.  
   
- Cuando se habilita, WCFG genera automáticamente los metadatos del servicio mediante la inspección del servicio y sus extremos. Para publicar los metadatos desde un servicio, debe permitir explícitamente al comportamiento de los metadatos.  
+ Cuando se habilita, WCFG genera automáticamente los metadatos del servicio mediante la inspección del servicio y sus puntos de conexión. Para publicar los metadatos desde un servicio, debe permitir explícitamente al comportamiento de los metadatos.  
   
  seguridad  
  En WCF, incluye confidencialidad (cifrado de mensajes para prevenir su interceptación), integridad (los recursos para la detección de manipulación del mensaje), autenticación (los recursos para la validación de clientes y servidores) y autorización (el control de acceso a recursos). Estas funciones se proporcionan mediante la reutilización de mecanismos de seguridad existentes, como TLS sobre HTTP (también conocido como HTTPS) o la implementación de una o más de las numerosas especificaciones de seguridad WS - *.  
@@ -153,5 +153,6 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Modo abreviado para el creciente conjunto de especificaciones de servicios Web (WS) que se implementan en WCF, tales como WS-Security, WS-ReliableMessaging, etc.  
   
 ## <a name="see-also"></a>Vea también
+
 - [¿Qué es Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)
 - [Arquitectura de Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)

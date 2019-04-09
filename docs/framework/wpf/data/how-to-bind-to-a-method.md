@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding [WPF], to methods
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
-ms.openlocfilehash: 8ccba42c3e16fdda73c087afde99e9864dc4ab0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cdad46fd6d9ef3bc4ce1a13fedb6ff1d639d93e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123245"
 ---
 # <a name="how-to-bind-to-a-method"></a>Filtrar Enlazar a un método
 El ejemplo siguiente muestra cómo enlazar a un método mediante <xref:System.Windows.Data.ObjectDataProvider>.  
@@ -32,5 +32,6 @@ El ejemplo siguiente muestra cómo enlazar a un método mediante <xref:System.Wi
  El `InvalidationCharacterRule` es un <xref:System.Windows.Controls.ValidationRule> que comprueba si hay caracteres no válidos. La plantilla de error predeterminada, que es un borde rojo alrededor del <xref:System.Windows.Controls.TextBox>, aparece para notificar a los usuarios cuando el valor de entrada no es un valor double.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Temas "Cómo..."](data-binding-how-to-topics.md)
 - [Enlazar a una enumeración](how-to-bind-to-an-enumeration.md)

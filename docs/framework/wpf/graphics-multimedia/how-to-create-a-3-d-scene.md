@@ -8,14 +8,14 @@ helpviewer_keywords:
 - scenes [WPF], 3-D
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
-ms.openlocfilehash: 8c9aec78bdda4f9f122b6dbefe0956ba649adf22
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8e176cb437055787da86d56770dd71323134fa33
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370753"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126235"
 ---
-# <a name="how-to-create-a-3-d-scene"></a>Procedimiento Crear una escena 3D
+# <a name="how-to-create-a-3-d-scene"></a>Filtrar Crear una escena 3D
 En este ejemplo se muestra cómo crear un objeto 3D que parece una hoja de papel que se ha girado plana. Un <xref:System.Windows.Controls.Viewport3D> junto con los siguientes componentes se usan para crear esta escena 3D sencilla:  
   
 -   Se crea una cámara mediante un <xref:System.Windows.Media.Media3D.PerspectiveCamera>. La cámara especifica qué parte de la escena 3D es visible.  
@@ -38,4 +38,5 @@ En este ejemplo se muestra cómo crear un objeto 3D que parece una hoja de papel
  [!code-vb[3DGallery_procedural_snip#Basic3DShapeCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre gráficos 3D](3-d-graphics-overview.md)

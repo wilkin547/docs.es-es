@@ -2,12 +2,12 @@
 title: Clase de canal
 ms.date: 03/30/2017
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-ms.openlocfilehash: 3fbf398cca7ae9adbbecb9439bf3cbd32eb03969
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f60a3946617b0994db1ba9e9ddf43be863be81f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128848"
 ---
 # <a name="channel-class"></a>Clase de canal
 Canal  
@@ -43,7 +43,7 @@ class Channel
   
  Tipo de acceso: De sólo lectura  
   
- Una referencia al punto de conexión al que se conecta el canal.  
+ Una referencia al extremo al que se conecta el canal.  
   
 ### <a name="remoteaddress"></a>RemoteAddress  
  Tipo de datos: cadena  
@@ -73,4 +73,5 @@ class Channel
 |Espacio de nombres|Se define en root\ServiceModel|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Channels.ChannelBase>
