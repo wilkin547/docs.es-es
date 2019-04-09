@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e84f2a5d8d57847ae7b4a8b06ce9fd296443ceba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31ad3032b50298e08f349049adab8aa18a09f12e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156382"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="6b902-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA (Método)</span><span class="sxs-lookup"><span data-stu-id="6b902-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
-<span data-ttu-id="6b902-103">`GetRwDataRVA` está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="6b902-103">`GetRwDataRVA` is obsolete.</span></span> <span data-ttu-id="6b902-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="6b902-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="15f7c-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA (Método)</span><span class="sxs-lookup"><span data-stu-id="15f7c-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
+`GetRwDataRVA` <span data-ttu-id="15f7c-103">está obsoleto.</span><span class="sxs-lookup"><span data-stu-id="15f7c-103">is obsolete.</span></span> <span data-ttu-id="15f7c-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="15f7c-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b902-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="6b902-105">See also</span></span>
-- [<span data-ttu-id="6b902-106">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="6b902-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="15f7c-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="15f7c-105">See also</span></span>
+
+- [<span data-ttu-id="15f7c-106">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="15f7c-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ef262fcae117b27f06d4dba3b2087028b5cfa65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f15a4557be0dc633fb9ecda5916896e340f00da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743262"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136895"
 ---
-# <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a><span data-ttu-id="e5911-102">CorDebugJITCompilerFlagsDeprecated (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="e5911-102">CorDebugJITCompilerFlagsDeprecated Enumeration</span></span>
-<span data-ttu-id="e5911-103">Esta enumeración está obsoleta.</span><span class="sxs-lookup"><span data-stu-id="e5911-103">This enumeration is obsolete.</span></span> <span data-ttu-id="e5911-104">Use la `CORDEBUG_JIT_DEFAULT` miembro de la [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeración en su lugar.</span><span class="sxs-lookup"><span data-stu-id="e5911-104">Use the `CORDEBUG_JIT_DEFAULT` member of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration instead.</span></span>  
+# <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a><span data-ttu-id="83c01-102">CorDebugJITCompilerFlagsDeprecated (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="83c01-102">CorDebugJITCompilerFlagsDeprecated Enumeration</span></span>
+<span data-ttu-id="83c01-103">Esta enumeración está obsoleta.</span><span class="sxs-lookup"><span data-stu-id="83c01-103">This enumeration is obsolete.</span></span> <span data-ttu-id="83c01-104">Use la `CORDEBUG_JIT_DEFAULT` miembro de la [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeración en su lugar.</span><span class="sxs-lookup"><span data-stu-id="83c01-104">Use the `CORDEBUG_JIT_DEFAULT` member of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e5911-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e5911-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="83c01-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="83c01-105">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugJITCompilerFlagsDeprecated {  
@@ -34,20 +34,21 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
 } CorDebugJITCompilerFlagsDeprecated;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e5911-106">Miembros</span><span class="sxs-lookup"><span data-stu-id="e5911-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="83c01-106">Miembros</span><span class="sxs-lookup"><span data-stu-id="83c01-106">Members</span></span>  
   
-|<span data-ttu-id="e5911-107">Miembro</span><span class="sxs-lookup"><span data-stu-id="e5911-107">Member</span></span>|<span data-ttu-id="e5911-108">Descripción</span><span class="sxs-lookup"><span data-stu-id="e5911-108">Description</span></span>|  
+|<span data-ttu-id="83c01-107">Miembro</span><span class="sxs-lookup"><span data-stu-id="83c01-107">Member</span></span>|<span data-ttu-id="83c01-108">Descripción</span><span class="sxs-lookup"><span data-stu-id="83c01-108">Description</span></span>|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_TRACK_DEBUG_INFO`|<span data-ttu-id="e5911-109">Utilice `CORDEBUG_JIT_DEFAULT` en su lugar.</span><span class="sxs-lookup"><span data-stu-id="e5911-109">Use `CORDEBUG_JIT_DEFAULT` instead.</span></span>|  
+|`CORDEBUG_JIT_TRACK_DEBUG_INFO`|<span data-ttu-id="83c01-109">Utilice `CORDEBUG_JIT_DEFAULT` en su lugar.</span><span class="sxs-lookup"><span data-stu-id="83c01-109">Use `CORDEBUG_JIT_DEFAULT` instead.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e5911-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e5911-110">Requirements</span></span>  
- <span data-ttu-id="e5911-111">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e5911-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="83c01-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="83c01-110">Requirements</span></span>  
+ <span data-ttu-id="83c01-111">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="83c01-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e5911-112">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e5911-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="83c01-112">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="83c01-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e5911-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e5911-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="83c01-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="83c01-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e5911-114">**Versiones de .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="e5911-114">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="83c01-114">**Versiones de .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="83c01-114">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e5911-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="e5911-115">See also</span></span>
-- [<span data-ttu-id="e5911-116">Enumeraciones de depuración</span><span class="sxs-lookup"><span data-stu-id="e5911-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="83c01-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="83c01-115">See also</span></span>
+
+- [<span data-ttu-id="83c01-116">Enumeraciones de depuración</span><span class="sxs-lookup"><span data-stu-id="83c01-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
