@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 621db5a1a6aaf42d585ffcf12bc6f4feba9f1397
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8875fb24512ddfea57d5f9249e58de3c12b8c507
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119169"
 ---
-# <a name="ihostiocompletionmanagergetmaxthreads-method"></a><span data-ttu-id="ad56f-102">IHostIoCompletionManager::GetMaxThreads (Método)</span><span class="sxs-lookup"><span data-stu-id="ad56f-102">IHostIoCompletionManager::GetMaxThreads Method</span></span>
-<span data-ttu-id="ad56f-103">Obtiene el número máximo de subprocesos que el host puede asignar para atender las solicitudes de E/S.</span><span class="sxs-lookup"><span data-stu-id="ad56f-103">Gets the maximum number of threads that the host can allot to service I/O requests.</span></span>  
+# <a name="ihostiocompletionmanagergetmaxthreads-method"></a><span data-ttu-id="fdcae-102">IHostIoCompletionManager::GetMaxThreads (Método)</span><span class="sxs-lookup"><span data-stu-id="fdcae-102">IHostIoCompletionManager::GetMaxThreads Method</span></span>
+<span data-ttu-id="fdcae-103">Obtiene el número máximo de subprocesos que el host puede asignar para atender las solicitudes de E/S.</span><span class="sxs-lookup"><span data-stu-id="fdcae-103">Gets the maximum number of threads that the host can allot to service I/O requests.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ad56f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ad56f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fdcae-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="fdcae-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMaxThreads (  
@@ -35,34 +35,35 @@ HRESULT GetMaxThreads (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ad56f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ad56f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fdcae-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="fdcae-105">Parameters</span></span>  
  `pdwMaxIoCompletionThreads`  
- <span data-ttu-id="ad56f-106">[out] Un puntero al número máximo de subprocesos en el grupo de subprocesos que el host puede asignar para atender las solicitudes de E/S.</span><span class="sxs-lookup"><span data-stu-id="ad56f-106">[out] A pointer to the maximum number of threads in the thread pool that the host can allot to service I/O requests.</span></span>  
+ <span data-ttu-id="fdcae-106">[out] Un puntero al número máximo de subprocesos en el grupo de subprocesos que el host puede asignar para atender las solicitudes de E/S.</span><span class="sxs-lookup"><span data-stu-id="fdcae-106">[out] A pointer to the maximum number of threads in the thread pool that the host can allot to service I/O requests.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ad56f-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="ad56f-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="fdcae-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="fdcae-107">Return Value</span></span>  
   
-|<span data-ttu-id="ad56f-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ad56f-108">HRESULT</span></span>|<span data-ttu-id="ad56f-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="ad56f-109">Description</span></span>|  
+|<span data-ttu-id="fdcae-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="fdcae-108">HRESULT</span></span>|<span data-ttu-id="fdcae-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="fdcae-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="ad56f-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="ad56f-110">S_OK</span></span>|<span data-ttu-id="ad56f-111">`GetMaxThreads` se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="ad56f-111">`GetMaxThreads` returned successfully.</span></span>|  
-|<span data-ttu-id="ad56f-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="ad56f-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="ad56f-113">Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="ad56f-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="ad56f-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="ad56f-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="ad56f-115">La llamada ha agotado el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="ad56f-115">The call timed out.</span></span>|  
-|<span data-ttu-id="ad56f-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="ad56f-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="ad56f-117">El llamador no posee el bloqueo.</span><span class="sxs-lookup"><span data-stu-id="ad56f-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="ad56f-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="ad56f-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="ad56f-119">Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.</span><span class="sxs-lookup"><span data-stu-id="ad56f-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="ad56f-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="ad56f-120">E_FAIL</span></span>|<span data-ttu-id="ad56f-121">Se ha producido un error irrecuperable desconocido.</span><span class="sxs-lookup"><span data-stu-id="ad56f-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="ad56f-122">Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso.</span><span class="sxs-lookup"><span data-stu-id="ad56f-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="ad56f-123">Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="ad56f-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="ad56f-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="ad56f-124">E_NOTIMPL</span></span>|<span data-ttu-id="ad56f-125">El host no proporciona una implementación de `GetMaxThreads`.</span><span class="sxs-lookup"><span data-stu-id="ad56f-125">The host does not provide an implementation of `GetMaxThreads`.</span></span>|  
+|<span data-ttu-id="fdcae-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="fdcae-110">S_OK</span></span>|`GetMaxThreads` <span data-ttu-id="fdcae-111">se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="fdcae-111">returned successfully.</span></span>|  
+|<span data-ttu-id="fdcae-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="fdcae-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="fdcae-113">Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="fdcae-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="fdcae-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="fdcae-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="fdcae-115">La llamada ha agotado el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="fdcae-115">The call timed out.</span></span>|  
+|<span data-ttu-id="fdcae-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="fdcae-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="fdcae-117">El llamador no posee el bloqueo.</span><span class="sxs-lookup"><span data-stu-id="fdcae-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="fdcae-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="fdcae-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="fdcae-119">Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.</span><span class="sxs-lookup"><span data-stu-id="fdcae-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="fdcae-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="fdcae-120">E_FAIL</span></span>|<span data-ttu-id="fdcae-121">Se ha producido un error irrecuperable desconocido.</span><span class="sxs-lookup"><span data-stu-id="fdcae-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="fdcae-122">Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso.</span><span class="sxs-lookup"><span data-stu-id="fdcae-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="fdcae-123">Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="fdcae-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="fdcae-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="fdcae-124">E_NOTIMPL</span></span>|<span data-ttu-id="fdcae-125">El host no proporciona una implementación de `GetMaxThreads`.</span><span class="sxs-lookup"><span data-stu-id="fdcae-125">The host does not provide an implementation of `GetMaxThreads`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ad56f-126">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ad56f-126">Remarks</span></span>  
- <span data-ttu-id="ad56f-127">Un host podría desear el control exclusivo sobre el número de subprocesos que se puede asignar para procesar las solicitudes de E/S, por motivos de implementación, rendimiento o escalabilidad.</span><span class="sxs-lookup"><span data-stu-id="ad56f-127">A host might want exclusive control over the number of threads that can be allotted to process I/O requests, for reasons such as implementation, performance, or scalability.</span></span> <span data-ttu-id="ad56f-128">Por este motivo, no es necesario implementar el host `GetMaxThreads`.</span><span class="sxs-lookup"><span data-stu-id="ad56f-128">For this reason, the host is not required to implement `GetMaxThreads`.</span></span> <span data-ttu-id="ad56f-129">En este caso, el host debe devolver E_NOTIMPL desde este método.</span><span class="sxs-lookup"><span data-stu-id="ad56f-129">In this case, the host should return E_NOTIMPL from this method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fdcae-126">Comentarios</span><span class="sxs-lookup"><span data-stu-id="fdcae-126">Remarks</span></span>  
+ <span data-ttu-id="fdcae-127">Un host podría desear el control exclusivo sobre el número de subprocesos que se puede asignar para procesar las solicitudes de E/S, por motivos de implementación, rendimiento o escalabilidad.</span><span class="sxs-lookup"><span data-stu-id="fdcae-127">A host might want exclusive control over the number of threads that can be allotted to process I/O requests, for reasons such as implementation, performance, or scalability.</span></span> <span data-ttu-id="fdcae-128">Por este motivo, no es necesario implementar el host `GetMaxThreads`.</span><span class="sxs-lookup"><span data-stu-id="fdcae-128">For this reason, the host is not required to implement `GetMaxThreads`.</span></span> <span data-ttu-id="fdcae-129">En este caso, el host debe devolver E_NOTIMPL desde este método.</span><span class="sxs-lookup"><span data-stu-id="fdcae-129">In this case, the host should return E_NOTIMPL from this method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ad56f-130">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ad56f-130">Requirements</span></span>  
- <span data-ttu-id="ad56f-131">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ad56f-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fdcae-130">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fdcae-130">Requirements</span></span>  
+ <span data-ttu-id="fdcae-131">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fdcae-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ad56f-132">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ad56f-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="fdcae-132">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="fdcae-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ad56f-133">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ad56f-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="fdcae-133">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fdcae-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ad56f-134">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad56f-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="fdcae-134">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="fdcae-134">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ad56f-135">Vea también</span><span class="sxs-lookup"><span data-stu-id="ad56f-135">See also</span></span>
-- [<span data-ttu-id="ad56f-136">ICLRIoCompletionManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ad56f-136">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
-- [<span data-ttu-id="ad56f-137">IHostIoCompletionManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ad56f-137">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="fdcae-135">Vea también</span><span class="sxs-lookup"><span data-stu-id="fdcae-135">See also</span></span>
+
+- [<span data-ttu-id="fdcae-136">ICLRIoCompletionManager (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="fdcae-136">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+- [<span data-ttu-id="fdcae-137">IHostIoCompletionManager (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="fdcae-137">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
