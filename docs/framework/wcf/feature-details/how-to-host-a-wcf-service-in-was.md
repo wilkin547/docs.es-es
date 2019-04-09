@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Hospedar un servicio WCF en WAS
+title: Filtrar para hospedar un servicio WCF en WAS
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 9094cf04ed1bc9fabe8d9df11b876007f322679a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c60248342c9cfa0e1b70d86df47a478dd34a60f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195454"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>Procedimiento Hospedar un servicio WCF en WAS
+# <a name="how-to-host-a-wcf-service-in-was"></a>Filtrar para hospedar un servicio WCF en WAS
 Servicio de Windows Communication Foundation (WCF) hospedado en este tema se describen los pasos básicos necesarios para crear un Windows Process Activation Services (también conocido como WAS). WAS es el nuevo servicio de activación de procesos que es una generalización de las características de Internet Information Services (IIS) que funcionan con protocolos de transporte no HTTP. WCF usa la interfaz de adaptador de escucha para comunicar las solicitudes de activación que se reciben a través de protocolos no HTTP admitidos por WCF, como TCP, canalizaciones con nombre y Message Queue Server.  
   
  Esta opción de hospedaje necesita que los componentes de activación WAS se instalen y configuren correctamente, pero no necesita que se escriba ningún código de hospedaje como parte de la aplicación. Para obtener más información sobre cómo instalar y configurar WAS, vea [Cómo: Instalar y configurar componentes de activación WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
@@ -17,7 +17,7 @@ Servicio de Windows Communication Foundation (WCF) hospedado en este tema se des
 > [!WARNING]
 >  La activación de WAS no se admite si la canalización de procesamiento de solicitudes del servidor web está establecida en el modo clásico. La canalización de procesamiento de solicitudes del servidor web debe estar establecida en el modo integrado si debe usarse la activación de WAS.  
   
- Cuando un servicio WCF se hospeda en WAS, se usan los enlaces estándar de la forma habitual. Sin embargo, al utilizar <xref:System.ServiceModel.NetTcpBinding> y <xref:System.ServiceModel.NetNamedPipeBinding> para configurar un servicio hospedado en WAS, se debe satisfacer una restricción. Cuando puntos de conexión diferentes utilizan el mismo transporte, las configuraciones del enlace tienen que coincidir en las siete propiedades siguientes:  
+ Cuando un servicio WCF se hospeda en WAS, se usan los enlaces estándar de la forma habitual. Sin embargo, al utilizar <xref:System.ServiceModel.NetTcpBinding> y <xref:System.ServiceModel.NetNamedPipeBinding> para configurar un servicio hospedado en WAS, se debe satisfacer una restricción. Cuando extremos diferentes utilizan el mismo transporte, las configuraciones del enlace tienen que coincidir en las siete propiedades siguientes:  
   
 -   ConnectionBufferSize  
   
@@ -33,7 +33,7 @@ Servicio de Windows Communication Foundation (WCF) hospedado en este tema se des
   
 -   ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
   
- De lo contrario, el punto de conexión que se inicializa primero siempre determina los valores de estas propiedades y los puntos de conexión agregados después producen una <xref:System.ServiceModel.ServiceActivationException> si no coinciden con esos valores.  
+ De lo contrario, el extremo que se inicializa primero siempre determina los valores de estas propiedades y los extremos agregados después producen una <xref:System.ServiceModel.ServiceActivationException> si no coinciden con esos valores.  
   
  Para la copia de origen de este ejemplo, vea [activación de TCP](../../../../docs/framework/wcf/samples/tcp-activation.md).  
   
@@ -47,7 +47,7 @@ Servicio de Windows Communication Foundation (WCF) hospedado en este tema se des
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3.  Cree un archivo Web.config para definir el enlace <xref:System.ServiceModel.NetTcpBinding> que van a usar los puntos de conexión `CalculatorService`.  
+3.  Cree un archivo Web.config para definir el enlace <xref:System.ServiceModel.NetTcpBinding> que van a usar los extremos `CalculatorService`.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -99,5 +99,6 @@ Servicio de Windows Communication Foundation (WCF) hospedado en este tema se des
 6.  Compile y ejecute el cliente.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Activación TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [Características de hospedaje de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6826ee1b94f9a1c48c19150271ebc84ac54dda25
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5d4723fbf2311316184cb77c90754d7e037badcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471789"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089598"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress (Función)
 Obtiene la dirección de la función especificada a la que se exporta desde la última versión instalada de common language runtime (CLR).  
@@ -63,4 +63,5 @@ HRESULT GetRealProcAddress (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: a88fd7b912063af5961a2bb366b42b0f67411f5f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 24d48a9dfdf10601099333e52073bb7fa3579beb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193062"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Orden de eventos en los formularios Windows Forms
 El orden en que se producen los eventos en las aplicaciones de Windows Forms es de particular interés para los programadores a los que les preocupa controlar cada uno de estos eventos uno por uno. Cuando una situación requiere un control minucioso de los eventos, por ejemplo, cuando se vuelven a dibujar partes del formulario, es necesario conocer el orden exacto en que los eventos se producen en tiempo de ejecución. En este tema se proporcionan algunos detalles sobre el orden de los eventos en varias fases importantes de la duración de las aplicaciones y los controles. Para obtener detalles concretos sobre el orden de los eventos de entrada del mouse, consulte [eventos del Mouse en Windows Forms](mouse-events-in-windows-forms.md). Para obtener información general de eventos en Windows Forms, consulte [información general sobre eventos](events-overview-windows-forms.md). Para obtener más información acerca de la creación de controladores de eventos, consulte [información general sobre controladores de eventos](event-handlers-overview-windows-forms.md).  
@@ -81,4 +81,5 @@ El orden en que se producen los eventos en las aplicaciones de Windows Forms es 
 -   <xref:System.Windows.Forms.Control.Validated>  
   
 ## <a name="see-also"></a>Vea también
-- [Crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md)
+
+- [Crear controladores de eventos en formularios Windows Forms](creating-event-handlers-in-windows-forms.md)

@@ -2,12 +2,12 @@
 title: N niveles de LINQ to SQL con servicios Web
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: e621063a2bd38b8ed473b8092c65a2aa9a645511
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092727"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107411"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N niveles de LINQ to SQL con servicios Web
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] está diseñado especialmente para su uso en el nivel intermedio en una capa de acceso de acoplamiento flexible de datos (DAL) como un servicio Web. Si el nivel de presentación es una página web ASP.NET, el control de servidor web <xref:System.Web.UI.WebControls.LinqDataSource> se utiliza para controlar la transferencia de datos entre la interfaz de usuario y [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en el de nivel intermedio. Si el nivel de presentación no es una página ASP.NET, entonces el nivel intermedio y el nivel de presentación deben realizar un trabajo adicional para administrar la serialización y deserialización de datos.  
@@ -30,12 +30,13 @@ ms.locfileid: "56092727"
  Al insertar datos, el nivel de presentación puede construir un nuevo objeto y enviarlo al nivel intermedio, o puede hacer que el nivel intermedio construya el objeto en función de los valores que proporciona. En general, la recuperación e inserción de datos en aplicaciones de n niveles no difiere mucho del proceso para aplicaciones de 2 niveles. Para obtener más información, consulte [consultar la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md) y [realización y envío de cambios de datos](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md).  
   
 ## <a name="tracking-changes-for-updates-and-deletes"></a>Seguimiento de cambios para actualizaciones y eliminaciones  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite simultaneidad optimista basada en marcas de tiempo (también denominadas RowVersions) y en valores originales. Si las tablas de base de datos tienen marcas de tiempo, entonces las actualizaciones y eliminaciones requieren poco trabajo adicional en el nivel intermedio o en el nivel de presentación. Sin embargo, si debe utilizar valores originales para las comprobaciones de simultaneidad optimista, entonces el nivel de presentación es el responsable de realizar el seguimiento de esos valores y devolverlos cuando realiza las actualizaciones. Esto es debido a que en el nivel intermedio no se hace un seguimiento de los cambios que se realizan en entidades en el nivel de presentación. De hecho, la recuperación original de una entidad y su posible actualización se realizan generalmente mediante dos instancias completamente independientes de <xref:System.Data.Linq.DataContext>.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite simultaneidad optimista basada en marcas de tiempo (también denominadas RowVersions) y en los valores originales. Si las tablas de base de datos tienen marcas de tiempo, entonces las actualizaciones y eliminaciones requieren poco trabajo adicional en el nivel intermedio o en el nivel de presentación. Sin embargo, si debe utilizar valores originales para las comprobaciones de simultaneidad optimista, entonces el nivel de presentación es el responsable de realizar el seguimiento de esos valores y devolverlos cuando realiza las actualizaciones. Esto es debido a que en el nivel intermedio no se hace un seguimiento de los cambios que se realizan en entidades en el nivel de presentación. De hecho, la recuperación original de una entidad y su posible actualización se realizan generalmente mediante dos instancias completamente independientes de <xref:System.Data.Linq.DataContext>.  
   
  Cuanto mayor es el número de cambios que realiza el nivel de presentación, más complejo se hace realizar el seguimiento de esos cambios y empaquetarlos de vuelta hacia el nivel intermedio. La implementación de un mecanismo para comunicar los cambios depende completamente de la aplicación. El único requisito es que se deben dar a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aquellos valores originales que se requieren para las comprobaciones de la simultaneidad optimista.  
   
  Para obtener más información, consulte [recuperación de datos y operaciones CUD en aplicaciones de N niveles (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Aplicaciones de n niveles y remotas con LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
 - [Información general sobre el Control de servidor Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))

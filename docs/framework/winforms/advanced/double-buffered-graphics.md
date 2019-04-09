@@ -7,12 +7,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing with double buffering
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
-ms.openlocfilehash: 71463d7db6ae18a3dd21d6a467f3963d836fc086
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103446"
 ---
 # <a name="double-buffered-graphics"></a>Gráficos de doble búfer
 El parpadeo es un problema frecuente al programar gráficos. Las operaciones gráficas que requieren varias operaciones de pintura complejas pueden hacer que las imágenes representadas parezcan parpadear o tengan un aspecto de algún modo inaceptable. Para resolver estos problemas, .NET Framework proporciona acceso al almacenamiento en doble búfer.  
@@ -33,10 +33,11 @@ El parpadeo es un problema frecuente al programar gráficos. Las operaciones gr�
  Para obtener más información sobre el uso de la <xref:System.Drawing.BufferedGraphics> de clases, vea [manualmente representación Buffered Graphics](how-to-manually-render-buffered-graphics.md). Para más información sobre la representación de gráficos, vea [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
-- [Cómo: Representar manualmente gráficos almacenados en búfer](how-to-manually-render-buffered-graphics.md)
-- [Cómo: Reducir el parpadeo de gráficos con un búfer doble en formularios y controles](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
-- [Cómo: Administrar manualmente gráficos almacenados en búfer](how-to-manually-manage-buffered-graphics.md)
+- [Filtrar para representar manualmente gráficos almacenados en búfer](how-to-manually-render-buffered-graphics.md)
+- [Filtrar para reducir el parpadeo de los gráficos con un búfer doble en formularios y controles](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [Filtrar para administrar manualmente gráficos almacenados en búfer](how-to-manually-manage-buffered-graphics.md)
 - [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)

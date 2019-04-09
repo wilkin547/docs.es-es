@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203020"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Funcionamiento de la entrada del mouse (ratón) en los formularios Windows Forms
 Recibir y controlar la entrada del mouse es una parte importante de cada aplicación de Windows. Puede controlar los eventos del mouse para llevar a cabo una acción en la aplicación, o usar la información de ubicación del mouse para realizar la prueba de posicionamiento u otras acciones. Además, puede cambiar la manera en que los controles en la aplicación controlan la entrada de mouse. En este tema se describe estos eventos del mouse en detalle y cómo obtener y cambiar la configuración del sistema para el mouse. Para obtener más información acerca de los datos proporcionados con el mouse se producen los eventos y el orden en que el mouse, haga clic en eventos, vea [eventos del Mouse en Windows Forms](mouse-events-in-windows-forms.md).  
@@ -38,7 +38,7 @@ Recibir y controlar la entrada del mouse es una parte importante de cada aplicac
 ## <a name="changing-mouse-input-and-detecting-system-settings"></a>Cambiar la entrada del Mouse y para detectar la configuración del sistema  
  Puede detectar y cambiar la forma en que un control controla la entrada de mouse derivando desde el control y utilizando el <xref:System.Windows.Forms.Control.GetStyle%2A> y <xref:System.Windows.Forms.Control.SetStyle%2A> métodos. El <xref:System.Windows.Forms.Control.SetStyle%2A> método toma una combinación bit a bit de <xref:System.Windows.Forms.ControlStyles> valores para determinar si el control tendrá estándar, haga clic en o haga doble clic en el comportamiento o si el control controlará su propio procesamiento de mouse. Además, el <xref:System.Windows.Forms.SystemInformation> clase incluye propiedades que describen las capacidades del mouse y especifican cómo interactúa el mouse con el sistema operativo. En la tabla siguiente se resume estas propiedades.  
   
-|Property|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>|Obtiene las dimensiones, en píxeles, del área en la que el usuario debe hacer clic dos veces para que el sistema operativo considere los dos clics como un doble clic.|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A>|Obtiene el número máximo de milisegundos que pueden pasar entre un primer clic y un segundo clic para que el sistema operativo, considere la acción del mouse en un doble clic.|  
@@ -53,6 +53,7 @@ Recibir y controlar la entrada del mouse es una parte importante de cada aplicac
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Obtiene el número de líneas de desplazamiento al girar la rueda del mouse.|  
   
 ## <a name="see-also"></a>Vea también
-- [Entradas mediante el mouse en una aplicación de Windows Forms](mouse-input-in-a-windows-forms-application.md)
-- [Captura del mouse en Windows Forms](mouse-capture-in-windows-forms.md)
-- [Punteros del mouse en Windows Forms](mouse-pointers-in-windows-forms.md)
+
+- [Entradas mediante el mouse (ratón) en una aplicación de Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Captura del mouse (ratón) en formularios Windows Forms](mouse-capture-in-windows-forms.md)
+- [Punteros del mouse (ratón) en formularios Windows Forms](mouse-pointers-in-windows-forms.md)

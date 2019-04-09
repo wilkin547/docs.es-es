@@ -2,17 +2,17 @@
 title: Terminología de Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 644c1f19c0dc87ea7a9ab5fabbbd85b63ad1d1b8
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: a4befe4c45f11a59982edc9f976258f795a18cde
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104174"
 ---
 # <a name="entity-framework-terminology"></a>Terminología de Entity Framework
 En este tema se define los términos que se hace referencia con frecuencia en [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentación. Se proporcionan vínculos a temas importantes donde hay información adicional.  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |----------|----------------|  
 |asociación|Definición de una relación entre tipos de entidad.<br /><br /> Para obtener más información, consulte [elemento Association (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#association-element-csdl) y [tipo de asociación](../../../../../docs/framework/data/adonet/association-type.md).|  
 |conjunto de asociaciones|Contenedor lógico para instancias de asociaciones del mismo tipo.<br /><br /> Para obtener más información, consulte [elemento AssociationSet (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#associationset-element-csdl) y [conjunto de asociaciones](../../../../../docs/framework/data/adonet/association-set.md).|  
@@ -76,6 +76,7 @@ En este tema se define los términos que se hace referencia con frecuencia en [!
 |tabla por tipo|Método de modelado de una jerarquía de tipos de una base de datos que usa varias tablas con relaciones uno a uno para modelar los distintos tipos.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Información general sobre Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)
 - [Introducción](../../../../../docs/framework/data/adonet/ef/getting-started.md)

@@ -1,15 +1,15 @@
 ---
-title: Filtrar Usar EdmGen.exe para generar código de nivel de objeto
+title: Filtrar para usar EdmGen.exe para generar código de capa de objeto
 ms.date: 03/30/2017
 ms.assetid: c44d2ebe-f66f-42cb-9741-4a3f0c2dcffb
-ms.openlocfilehash: 4acc60f324d41ed23ad3ef63907b031f003b07c1
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 04b35dbb5e487e573a2adfff196b79e10afdfb61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827167"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188235"
 ---
-# <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a>Filtrar Usar EdmGen.exe para generar código de nivel de objeto
+# <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a>Filtrar para usar EdmGen.exe para generar código de capa de objeto
 En este tema se muestra cómo usar el [EDM Generator (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md) herramienta para generar el código de capa de objeto basado en el archivo de CSDL.  
   
 ### <a name="to-generate-object-layer-code-for-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a>Para generar código del nivel de objeto para el modelo School en un proyecto de Visual Basic utilizando EdmGen.exe  
@@ -39,8 +39,9 @@ En este tema se muestra cómo usar el [EDM Generator (EdmGen.exe)](../../../../.
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Modelado y asignación](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
-- [Cómo: Configurar manualmente un proyecto de Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
-- [Herramientas de Entity Data Model de ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Cómo: Generar previamente vistas para mejorar el rendimiento de las consultas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
-- [Cómo: Usar EdmGen.exe para generar los archivos de asignación y modelo](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)
+- [Filtrar Configurar manualmente un proyecto de Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
+- [Herramientas de ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Filtrar Generar previamente vistas para mejorar el rendimiento de las consultas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
+- [Filtrar para usar EdmGen.exe para generar los archivos de asignación y de modelo](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)

@@ -1,16 +1,16 @@
 ---
-title: <applicationPool> (Elemento) (Configuración web)
+title: <applicationPool> Elemento (configuración Web)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: a9c81d98a5e531eaa547614c4d236b6c84526398
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184735"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > elemento (configuración Web)
 Especifica la configuración que se usa ASP.NET para administrar el comportamiento de todo el proceso cuando se ejecuta una aplicación ASP.NET en el modo integrado en [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o una versión posterior.  
@@ -95,4 +95,5 @@ Especifica la configuración que se usa ASP.NET para administrar el comportamien
 |Puede estar vacío||  
   
 ## <a name="see-also"></a>Vea también
-- [Elemento \<system.web> (configuración web)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)
+
+- [\<System.Web > elemento (configuración Web)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)

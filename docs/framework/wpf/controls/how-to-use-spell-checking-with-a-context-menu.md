@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar el corrector ortográfico con un menú contextual
+title: Filtrar Usar la revisión ortográfica con un menú contextual
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - reenabling spell checking in a text box [WPF]
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
-ms.openlocfilehash: 38d41aa6710fd13ffd2a5d13a6900a1a05303f35
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b24c386eb99140c9c2729688994b81f92e1a6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192984"
 ---
-# <a name="how-to-use-spell-checking-with-a-context-menu"></a>Procedimiento Usar el corrector ortográfico con un menú contextual
+# <a name="how-to-use-spell-checking-with-a-context-menu"></a>Filtrar Usar la revisión ortográfica con un menú contextual
 De forma predeterminada, cuando se habilita el corrector ortográfico en un control de edición como <xref:System.Windows.Controls.TextBox> o <xref:System.Windows.Controls.RichTextBox>, obtendrá las opciones de corrector ortográfico en el menú contextual. Por ejemplo, cuando los usuarios, haga clic en una palabra mal escrita, obtener un conjunto de sugerencias de ortografía o la opción de **omitir todas**. Sin embargo, cuando se reemplaza el menú contextual de forma predeterminada con su propio menú contextual personalizado, esta funcionalidad se pierde y necesita escribir código para volver a habilitar la característica de corrector ortográfico en el menú contextual. En el ejemplo siguiente se muestra cómo habilitar esto en un <xref:System.Windows.Controls.TextBox>.  
   
 ## <a name="example"></a>Ejemplo  
@@ -39,7 +39,8 @@ De forma predeterminada, cuando se habilita el corrector ortográfico en un cont
  `spellingError = myRichTextBox.GetSpellingError(myRichTextBox.CaretPosition);`  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre TextBox](textbox-overview.md)
-- [RichTextBox Overview](richtextbox-overview.md) (Introducción a RichTextBox)
-- [Habilitar el corrector ortográfico en un control de edición de texto](how-to-enable-spell-checking-in-a-text-editing-control.md)
+- [Información general sobre el control RichTextBox](richtextbox-overview.md)
+- [Habilitar la revisión ortográfica en un control de edición de texto](how-to-enable-spell-checking-in-a-text-editing-control.md)
 - [Usar un menú contextual personalizado con un control TextBox](how-to-use-a-custom-context-menu-with-a-textbox.md)

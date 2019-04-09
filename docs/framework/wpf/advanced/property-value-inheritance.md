@@ -6,18 +6,16 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186835"
 ---
 # <a name="property-value-inheritance"></a>Herencia de valores de propiedad
 La herencia de valores de propiedad es una característica del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. La herencia de valores de propiedad permite que los elementos secundarios de un árbol de elementos obtengan el valor de una propiedad determinada de los elementos principales y que hereden ese valor tal como se estableció en cualquier otro lugar del elemento principal más cercano. Es posible que el elemento principal también haya obtenido su valor a través de la herencia de valores de propiedad, por lo que el sistema se repite potencialmente hasta la raíz de la página. La herencia de valores de propiedad no es el comportamiento del sistema de propiedades predeterminado: es necesario establecer una propiedad con un valor de metadatos concreto para que inicie la herencia de valores de propiedad en elementos secundarios.  
-  
 
-  
 <a name="Property_Value_Inheritance_is_Containment_Inheritance"></a>   
 ## <a name="property-value-inheritance-is-containment-inheritance"></a>La herencia de valores de propiedad es la herencia de contención  
  "Herencia" como término aquí no es exactamente el mismo concepto que la herencia en el contexto de programación orientada a objetos generales y tipos, donde las clases derivadas heredan las definiciones de miembros de sus clases base. Ese significado de herencia también está activo en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: las propiedades definidas en varias clases base se exponen como atributos para clases [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] derivadas cuando se usan como elementos y se exponen como miembros para código. La herencia de valores de propiedad trata especialmente acerca de cómo los valores de propiedad se pueden heredar de un elemento a otro basándose en las relaciones entre elementos primarios y secundarios de un árbol de elementos. Este árbol de elementos es visible directamente al anidar elementos dentro de otros elementos cuando se definen aplicaciones en el marcado [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Los árboles de objetos también pueden crearse mediante programación si se agregan objetos a colecciones designadas de otros objetos. La herencia de valores de propiedad funciona del mismo modo en el árbol terminado en tiempo de ejecución.  
@@ -42,6 +40,7 @@ La herencia de valores de propiedad es una característica del sistema de propie
  La herencia de propiedades funciona al recorrer un árbol de elementos. Este árbol suele ser paralelo al árbol lógico. Sin embargo, cada vez que incluye un objeto de nivel de núcleo WPF en el marcado que define un árbol de elementos, como un <xref:System.Windows.Media.Brush>, ha creado un árbol lógico discontinuo. Un verdadero árbol lógico no se extiende conceptualmente a través de la <xref:System.Windows.Media.Brush>, ya que el árbol lógico es un concepto de nivel de marco WPF. Puede ver esto reflejado en los resultados al usar los métodos de <xref:System.Windows.LogicalTreeHelper>. Sin embargo, la herencia de valores de propiedad puede cerrar esta brecha en el árbol lógico y todavía se puede pasar valores heredados, siempre y cuando la propiedad heredable se registrara como una propiedad adjunta y ningún límite de bloqueo de herencia deliberado (como un <xref:System.Windows.Controls.Frame>) se encuentra.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Metadatos de las propiedades de dependencia](dependency-property-metadata.md)
 - [Información general sobre propiedades asociadas](attached-properties-overview.md)
 - [Prioridad de los valores de propiedades de dependencia](dependency-property-value-precedence.md)

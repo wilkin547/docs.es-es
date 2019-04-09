@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 32fbdd222e34f642d29255e6c594076b6d2a91e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711283"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188843"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>Información general sobre el control PrintPreviewDialog (formularios Windows Forms)
 Los formularios de Windows <xref:System.Windows.Forms.PrintPreviewDialog> control es un cuadro de diálogo preconfigurado que utiliza para mostrar cómo un [PrintDocument](printdocument-component-windows-forms.md) aparecerá cuando se imprima. Usar dentro de la aplicación basada en Windows como una solución sencilla, en lugar de configurar su propio cuadro de diálogo. El control contiene botones para imprimir, acercar, mostrar una o varias páginas y cerrar el cuadro de diálogo.  
@@ -52,7 +52,8 @@ Si el modificador no está presente o si se establece en cualquier otro valor, n
 Si usas el <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> eventos para modificar la configuración de impresora, el rendimiento de la <xref:System.Windows.Forms.PrintPreviewDialog> control no mejorará incluso si se establece un modificador de configuración de optimización.  
 
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [Información general sobre el control PrintPreviewControl](printpreviewcontrol-control-overview-windows-forms.md)
-- [PrintPreviewDialog (control)](printpreviewdialog-control-windows-forms.md)
+- [Control PrintPreviewDialog](printpreviewdialog-control-windows-forms.md)
 - [Controles y componentes de cuadros de diálogo](dialog-box-controls-and-components-windows-forms.md)

@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
-ms.openlocfilehash: 4119a762bd0db63108d08a9db9367e367adb6b58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372092"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109049"
 ---
-# <a name="how-to-create-a-routedcommand"></a>Procedimiento Crear un comando RoutedCommand
+# <a name="how-to-create-a-routedcommand"></a>Filtrar Crear un comando RoutedCommand
 En este ejemplo se muestra cómo crear una personalizada <xref:System.Windows.Input.RoutedCommand> y cómo implementar el comando personalizado mediante la creación de un <xref:System.Windows.Input.ExecutedRoutedEventHandler> y un <xref:System.Windows.Input.CanExecuteRoutedEventHandler> y adjuntarlos a un <xref:System.Windows.Input.CommandBinding>.  Para obtener más información sobre los comandos, consulte el [información general sobre comandos](commanding-overview.md).  
   
 ## <a name="example"></a>Ejemplo  
@@ -48,5 +48,6 @@ En este ejemplo se muestra cómo crear una personalizada <xref:System.Windows.In
  Cuando se hace clic en el botón, el <xref:System.Windows.Input.RoutedCommand.Execute%2A> método personalizado <xref:System.Windows.Input.RoutedCommand> se llama.  El <xref:System.Windows.Input.RoutedCommand> provoca la <xref:System.Windows.Input.CommandManager.PreviewExecuted> y <xref:System.Windows.Input.CommandManager.Executed> eventos enrutados.  Estos eventos recorren el árbol de elementos que busca un <xref:System.Windows.Input.CommandBinding> para ese comando concreto.  Si un <xref:System.Windows.Input.CommandBinding> se encuentra, el <xref:System.Windows.Input.ExecutedRoutedEventHandler> asociado <xref:System.Windows.Input.CommandBinding> se llama.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Input.RoutedCommand>
 - [Información general sobre comandos](commanding-overview.md)

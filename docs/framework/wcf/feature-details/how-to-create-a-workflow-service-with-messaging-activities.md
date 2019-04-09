@@ -1,15 +1,15 @@
 ---
-title: Filtrar Crear un servicio de flujo de trabajo con actividades de mensajería
+title: Filtrar para crear un servicio de flujo de trabajo con actividades de mensajería
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 83e96a91348cd8f703801252109bd474df58a679
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: d40273fe637e673456453ba72bdf6da282505488
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466210"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192839"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Filtrar Crear un servicio de flujo de trabajo con actividades de mensajería
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Filtrar para crear un servicio de flujo de trabajo con actividades de mensajería
 En este tema, se describe cómo crear un servicio de flujo de trabajo simple mediante actividades de mensajería. Este tema se centra en los sistemas de creación de un servicio de flujo de trabajo compuesto solo por actividades de mensajería. En un servicio real, el flujo de trabajo contiene muchas otras actividades. El servicio implementa una operación denominada Eco, que toma una cadena y la devuelve al autor de la llamada. Este tema es el primero en una serie de dos temas. El siguiente tema [How To: Obtener acceso a un servicio desde un flujo de trabajo de aplicación](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) describe cómo crear una aplicación de flujo de trabajo que se puede llamar al servicio creado en este tema.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Para crear un proyecto de servicio de flujo de trabajo  
@@ -90,6 +90,7 @@ En este tema, se describe cómo crear un servicio de flujo de trabajo simple med
 4.  Continúe con el [Cómo: Obtener acceso a un servicio desde un flujo de trabajo de aplicación](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) tema para crear un cliente de flujo de trabajo que llama a este servicio.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Hospedaje de información general de servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+- [Hospedar información general de servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
 - [Actividades de mensajería](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

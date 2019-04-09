@@ -2,12 +2,12 @@
 title: 'Simultaneidad optimista: Información general'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: 5395134a536969788252524ccd7c2936d3d9e2d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106553"
 ---
 # <a name="optimistic-concurrency-overview"></a>Simultaneidad optimista: Información general
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite el control de simultaneidad optimista. La tabla siguiente describen los términos que se aplican a la simultaneidad optimista en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentación:  
@@ -18,7 +18,7 @@ ms.locfileid: "54517466"
 |Conflicto de simultaneidad|Situación en la cual dos o más usuarios intentan enviar valores incompatibles a una o más columnas de una fila al mismo tiempo.|  
 |control de simultaneidad|Técnica utilizada para resolver los conflictos de simultaneidad.|  
 |control de simultaneidad optimista|Técnica que primero investiga si otras transacciones han cambiado los valores de una fila antes de permitir que se envíen los cambios.<br /><br /> Compare con *control de simultaneidad pesimista*, lo que bloquea el registro para evitar conflictos de simultaneidad.<br /><br /> *Optimista* control se denomina así porque considera que las posibilidades de una transacción interfiera con otra.|  
-|Resolución de conflictos|Proceso mediante el cual un elemento en conflicto se actualiza volviendo a consultar la base de datos y resolviendo las diferencias.<br /><br /> Cuando un objeto se actualiza, el seguimiento de cambios de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] conserva los datos siguientes:<br /><br /> -Comprobación los valores procedentes de la base de datos originalmente y utilizado para la actualización.<br />-Los nuevos valores de base de datos de la consulta subsiguiente.<br /><br /> Después, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] determina si el objeto está en conflicto (es decir, si uno o más de sus valores de miembro ha cambiado). Si el objeto está en conflicto, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] siguiente determina cuál de sus miembros están en conflicto.<br /><br /> Cualquier conflicto de miembro que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] detecta se agrega a una lista de conflictos.|  
+|Resolución de conflictos|Proceso mediante el cual un elemento en conflicto se actualiza volviendo a consultar la base de datos y resolviendo las diferencias.<br /><br /> Cuando un objeto se actualiza, el seguimiento de cambios de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] conserva los datos siguientes:<br /><br /> -Comprobación los valores procedentes de la base de datos originalmente y utilizado para la actualización.<br />-Los nuevos valores de base de datos de la consulta subsiguiente.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] a continuación, determina si el objeto está en conflicto (es decir, si uno o varios de sus valores de miembro ha cambiado). Si el objeto está en conflicto, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] siguiente determina cuál de sus miembros están en conflicto.<br /><br /> Cualquier conflicto de miembro que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] detecta se agrega a una lista de conflictos.|  
   
  En el [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelo de objetos, un *conflicto de simultaneidad optimista* se produce cuando se cumplen las condiciones siguientes:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54517466"
 |------|-------------|---------------|----------------|  
 |Estado original|Alfreds|Maria|Ventas|  
 |User1|Alfred||Marketing|  
-|User2||Mary|Servicio|  
+|User2||Mary|web de Office|  
   
  Puede resolver conflictos como estos de maneras diferentes. Para obtener más información, vea [Cómo: Administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
   
@@ -89,4 +89,5 @@ ms.locfileid: "54517466"
 -   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+
+- [Filtrar para administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

@@ -10,18 +10,16 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108971"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Inicialización de elementos de objeto no incluidos en un árbol de objetos
 Algunos aspectos de inicialización de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] se fraccionan en procesos que suelen depender de la conexión del elemento con el árbol lógico o visual. En este tema se describen los pasos que pueden ser necesarios para inicializar un elemento que no esté conectado a ninguno de estos árboles.  
-  
- 
-  
+
 ## <a name="elements-and-the-logical-tree"></a>Elementos y el árbol lógico  
  Cuando se crea una instancia de una clase de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] en el código, se debe tener en cuenta que varios aspectos de la inicialización de objetos para una clase de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] se excluyen deliberadamente del código que se ejecuta al llamar al constructor de la clase. En concreto, en el caso de las clases de control, el constructor no define la mayor parte de la representación visual del control, sino que es la plantilla del control la que define la representación visual. La plantilla puede proceder de diversos orígenes, pero, en la mayoría de casos, se obtiene a partir de estilos de tema. Las plantillas funcionan como enlace en tiempo de ejecución efectivo: la plantilla necesaria no se adjunta al control en cuestión hasta que este está listo para el diseño. Y el control no está listo para el diseño hasta que se adjunta a un árbol lógico que se conecta a una superficie de representación en la raíz. Este elemento de nivel de raíz inicia la representación de todos sus elementos secundarios, como se define en el árbol lógico.  
   
@@ -43,6 +41,7 @@ Algunos aspectos de inicialización de [!INCLUDE[TLA#tla_winclient](../../../../
  [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Árboles en WPF](trees-in-wpf.md)
 - [Información general sobre la representación de gráficos en WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [Información general sobre XAML (WPF)](xaml-overview-wpf.md)

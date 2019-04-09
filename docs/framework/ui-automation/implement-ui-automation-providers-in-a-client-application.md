@@ -8,12 +8,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation within applications
 - UI Automation, implementing client-side provider within application
 ms.assetid: f325f0d8-1715-41ea-85ca-45b82ffea8bc
-ms.openlocfilehash: 102a2fe1cb2598078af7246d5f88df928064693f
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: b368ab3bc842fda5a99a64e0220093ebd60698b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105929"
 ---
 # <a name="implement-ui-automation-providers-in-a-client-application"></a>Implementar proveedores de UI Automation en una aplicación cliente
 > [!NOTE]
@@ -30,7 +30,8 @@ ms.locfileid: "57676647"
  [!code-vb[UIAClientSideProvider_snip#201](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClientSideProvider_snip/visualbasic/clientimplementationprogram.vb#201)]  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre proveedores de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Registro de un ensamblado de proveedor del lado cliente](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)
-- [Creación de un proveedor de Automatización de la interfaz de usuario en el cliente](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
-- [Implementación del proveedor de Automatización de la interfaz de usuario en el cliente](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)
+
+- [Información general sobre proveedores de UI Automation](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [Registrar un ensamblado de proveedor de cliente](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)
+- [Crear un proveedor de UI Automation en el cliente](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
+- [Implementación del proveedor de UI Automation en el cliente](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)

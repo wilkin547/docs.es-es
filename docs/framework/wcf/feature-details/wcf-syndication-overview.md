@@ -2,12 +2,12 @@
 title: Información general de distribución de WCF
 ms.date: 03/30/2017
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
-ms.openlocfilehash: 82e8e1192b791dde1ca0ea7e030c7cfc82476b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef62c4460ff5dd4890de174afda671facee97f2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189843"
 ---
 # <a name="wcf-syndication-overview"></a>Información general de distribución de WCF
 Windows Communication Foundation (WCF) proporciona compatibilidad para exponer las fuentes de distribución desde un servicio WCF. La distribución es un mecanismo de integración de aplicaciones en el que un servidor expone algunos datos de la aplicación en un formato interoperable conocido como fuente. Una fuente es una colección de datos de la aplicación que está compuesta de algunos metadatos de fuente (título, autor, dirección URL y otros metadatos) y una serie de elementos de fuente. Dentro de la fuente, los elementos de fuente están ordenados normalmente en orden cronológico inverso. Un elemento de fuente está compuesto por un conjunto estándar de metadatos de elementos (título, dirección URL, fecha de creación, categoría y otros metadatos de elementos) y una cantidad arbitraria de datos específicos de la aplicación. Los dos tipos más comunes de las fuentes de distribución son Really Simple Syndication (RSS) 2.0 y Atom 1.0, que son compatibles con WCF.  
@@ -22,4 +22,5 @@ Windows Communication Foundation (WCF) proporciona compatibilidad para exponer l
  La plataforma de sindicación de WCF es compatible con RSS 2.0 y Atom 1.0.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089177"
 ---
 # <a name="types-of-bitmaps"></a>Tipos de mapas de bits
 Un mapa de bits es una matriz de bits que especifica el color de cada píxel en una matriz rectangular de píxeles. El número de bits asignado a un píxel individual determina el número de colores que se pueden asignar a ese píxel. Por ejemplo, si cada píxel se representa mediante 4 bits, a continuación, un píxel determinado puede asignarse uno de los 16 colores distintos (2 ^ 4 = 16). En la tabla siguiente se muestra algunos ejemplos del número de colores que se pueden asignar a un píxel representado por un número determinado de bits.  
@@ -86,6 +86,7 @@ Un mapa de bits es una matriz de bits que especifica el color de cada píxel en 
  TIFF es un formato flexible y extensible que admite una amplia variedad de plataformas y aplicaciones de procesamiento de imágenes. Archivos TIFF pueden almacenar las imágenes con un número arbitrario de bits por píxel y pueden emplear una variedad de algoritmos de compresión. En un único archivo TIFF de varias páginas se pueden almacenar varias imágenes. Información relacionada con la imagen (marca del escáner, equipo host, tipo de compresión, orientación, muestras por píxel etc.) se puede almacenar en el archivo y organizarse mediante el uso de etiquetas. El formato TIFF puede ampliarse según sea necesario para la aprobación y la adición de nuevas etiquetas.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7532c34dca070b07bd3124002eaf72a2f939238
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c4f33bb15a351be5fe8318dcc3339d429dec039e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183708"
 ---
 # <a name="icordebugclassgettoken-method"></a>ICorDebugClass::GetToken (Método)
 Obtiene el `TypeDef` token de metadatos que hace referencia a la definición de esta clase.  
@@ -49,4 +49,5 @@ HRESULT GetToken (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Interfaces de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Implementar un formulario que utiliza una operación en segundo plano
+title: Filtrar para implementar un formulario que usa una operación en segundo plano
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: 9fe514cce4d4aec386f9d61cb84f3a39273c35b0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 98d51f9c6465186e77784aba080130110545f399
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192165"
 ---
-# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Filtrar Implementar un formulario que utiliza una operación en segundo plano
+# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Filtrar para implementar un formulario que usa una operación en segundo plano
 El programa de ejemplo siguiente crea un formulario que calcula los números de Fibonacci. El cálculo se ejecuta en un subproceso independiente del subproceso de interfaz de usuario, por lo que la interfaz de usuario sigue ejecutándose sin retrasos mientras se realiza el cálculo.  
   
  Visual Studio es altamente compatible con esta tarea.  
@@ -48,6 +48,7 @@ El programa de ejemplo siguiente crea un formulario que calcula los números de 
 >  Cuando se usa multithreading de algún tipo, se expone a posibles errores muy graves y complejos. Vea [Procedimientos recomendados para el subprocesamiento administrado](../../../standard/threading/managed-threading-best-practices.md) antes de implementar cualquier solución que utilice multithreading.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
 - [Información general sobre el modelo asincrónico basado en eventos](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: e62b439926465aa1a61abd39c7c942acf26732c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367952"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107073"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Optimizar el rendimiento: Presentación y diseño
 El diseño de su aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] puede afectar a su rendimiento si se crea una sobrecarga innecesaria al calcular el diseño y validar las referencias de objeto. La construcción de objetos, especialmente en tiempo de ejecución, puede afectar a las características de rendimiento de la aplicación.  
@@ -70,6 +70,7 @@ El diseño de su aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/
  Para más información acerca del árbol lógico, consulte [Árboles en WPF](trees-in-wpf.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Optimizar WPF: Rendimiento de aplicaciones](optimizing-wpf-application-performance.md)
 - [Planear para mejorar el rendimiento de aplicaciones](planning-for-application-performance.md)
 - [Aprovechar el hardware](optimizing-performance-taking-advantage-of-hardware.md)

@@ -1,17 +1,17 @@
 ---
-title: <namedCaches> (Elemento, Configuración de caché)
+title: <namedCaches> Elemento (configuración de caché)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - namedCaches element
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: 1dedd3ca192b5fb0ee561ce138f0948c52581f89
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 36920a5e585c0c7581fbc4f84043d68550fbdac1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104941"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<namedCaches > elemento (configuración de caché)
 Especifica una colección de valores de configuración para la instancia con nombre <xref:System.Runtime.Caching.MemoryCache> instancias. El <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> propiedad hace referencia a la colección de valores de configuración de uno o varios `namedCaches` elementos del archivo de configuración.  
@@ -88,4 +88,5 @@ Especifica una colección de valores de configuración para la instancia con nom
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [\<memoryCache > elemento (configuración de caché)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

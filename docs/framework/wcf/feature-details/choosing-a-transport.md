@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d5fe4c92f0d456942219bc3f7014f09a005aa5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494449"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107853"
 ---
 # <a name="choosing-a-transport"></a>Elección del transporte
 En este tema se describe los criterios para elegir entre los tres transportes principales que se incluyen en Windows Communication Foundation (WCF): HTTP, TCP y canalizaciones con nombre. WCF también incluye un message Queue Server (también conocido como MSMQ) de transporte, pero este documento no cubre message Queue Server.  
@@ -18,7 +18,7 @@ En este tema se describe los criterios para elegir entre los tres transportes pr
   
  En WCF, especifica cómo transferir datos a través de una red entre los puntos de conexión mediante el uso de un *enlace*, que se compone de una secuencia de *elementos de enlace*. Un elemento de enlace del transporte, que forma parte del enlace, representa un transporte. Un enlace incluye los elementos de enlace de protocolo opcionales, como seguridad, un elemento de enlace de codificador de mensaje necesario y un elemento de enlace de transporte necesario. Un transporte envía o recibe el formulario serializado de un mensaje a otra aplicación o desde otra aplicación.  
   
- Si se debe conectar a un cliente existente o servidor, puede que no tenga elección a la hora de utilizar un transporte determinado. Sin embargo, los servicios de WCF pueden hacerse accesibles a través de varios extremos, cada uno con un transporte diferente. Cuando un transporte único no cubre el público previsto para su servicio, considere exponer el servicio sobre varios puntos de conexión. De este modo, las aplicaciones cliente pueden utilizar el punto de conexión que más les convenga.  
+ Si se debe conectar a un cliente existente o servidor, puede que no tenga elección a la hora de utilizar un transporte determinado. Sin embargo, los servicios de WCF pueden hacerse accesibles a través de varios extremos, cada uno con un transporte diferente. Cuando un transporte único no cubre el público previsto para su servicio, considere exponer el servicio sobre varios extremos. De este modo, las aplicaciones cliente pueden utilizar el punto de conexión que más les convenga.  
   
  Después de elegir un transporte, debe seleccionar un enlace que lo utilice. Puede elegir un enlace proporcionado por el sistema (consulte [System-provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)), o bien puede crear su propio enlace personalizado (vea [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)). Además, puede crear sus propios enlaces. Para obtener más información, consulte [crear enlaces](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
@@ -53,7 +53,7 @@ En este tema se describe los criterios para elegir entre los tres transportes pr
 |Atributo|Descripción|Transportes favorables|  
 |---------------|-----------------|------------------------|  
 |Diagnóstico|Los diagnósticos le permiten detectar automáticamente los problemas de conectividad de transporte. Todos los transportes admiten la capacidad de devolver la información del error que describe la conectividad. Sin embargo, WCF incluye herramientas de diagnóstico para investigar los problemas de red.|Ninguna|  
-|Hospedaje|Todos los extremos WCF se deben hospedar dentro de una aplicación. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] y las versiones anteriores solo admiten hospedar aplicaciones que usan el transporte HTTP. En [!INCLUDE[wv](../../../../includes/wv-md.md)], soporte técnico se agrega para hospedar todos los transportes WCF, incluido TCP y canalizaciones con nombre. Para obtener más información, consulte [hospedaje en Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) y [hospedaje en Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
+|Hospedaje|Todos los extremos WCF se deben hospedar dentro de una aplicación. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] y versiones anteriores admiten aplicaciones de hospedaje que utilizan el transporte HTTP. En [!INCLUDE[wv](../../../../includes/wv-md.md)], soporte técnico se agrega para hospedar todos los transportes WCF, incluido TCP y canalizaciones con nombre. Para obtener más información, consulte [hospedaje en Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) y [hospedaje en Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
 |Inspección|La inspección es la capacidad de extraer y procesar la información de los mensajes durante la transmisión. El protocolo HTTP separa el enrutamiento e información de control de los datos, de modo que facilita la creación de herramientas que inspeccionan y analizan los mensajes. Los transportes que son fáciles de inspeccionar también pueden requerir menos potencia de procesamiento en dispositivos de red. El nivel de seguridad utilizado afecta a la posibilidad de inspeccionar los mensajes.|HTTP|  
 |Latency|La latencia es el período de tiempo mínimo exigido para completar un intercambio de mensajes. Todas las operaciones de red tienen más o menos latencia, según la elección de transporte. El uso de dúplex o comunicación unidireccional con un transporte cuyo patrón de intercambio de mensajes nativo es la respuesta de la solicitud, como HTTP, puede producir la latencia adicional debido a la correlación forzada de mensajes. En esta situación, considere utilizar un transporte cuyo patrón de intercambio de mensajes nativo sea dúplex, como TCP.|TCP, con nombre<br /><br /> Canalización (|).|  
 |Reach|El alcance de un transporte refleja cómo es de capaz el transporte al conectar con otros sistemas. El transporte de canalización con nombre tiene un alcance muy pequeño; solo puede conectar a los servicios que se ejecutan en el mismo equipo. Los transportes HTTP y TCP tienen un alcance excelente y pueden penetrar algunas configuraciones de firewall y NAT. Para obtener más información, consulte [trabajar con NAT y Firewalls](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md).|HTTP, TCP|  
@@ -62,6 +62,7 @@ En este tema se describe los criterios para elegir entre los tres transportes pr
 |Tooling|Las herramientas representan soporte de aplicaciones de terceros para un protocolo para el desarrollo, diagnóstico, hospedaje y otras actividades. Desarrollar herramientas y software para trabajar con el protocolo HTTP implica una inversión particularmente grande.|HTTP|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSDualHttpBinding>

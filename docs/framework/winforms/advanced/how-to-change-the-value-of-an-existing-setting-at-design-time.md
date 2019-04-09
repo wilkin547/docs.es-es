@@ -1,18 +1,18 @@
 ---
-title: Cómo Cambie el valor de una configuración existente en tiempo de diseño
+title: Cómo cambiar el valor de una opción de configuración existente en tiempo de diseño
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
-ms.openlocfilehash: f9a7f5aefc07bb9700e0b0b59684e5882d7109b2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 00c1a58bd58b67f35d6e5782f53eb15693485ca5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722703"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194245"
 ---
-# <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Cómo Cambie el valor de una configuración existente en tiempo de diseño
+# <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Cómo cambiar el valor de una opción de configuración existente en tiempo de diseño
 Puede usar Visual Studio para editar los valores de configuración existente en el proyecto.  
   
 ### <a name="to-change-the-value-of-an-existing-setting-at-design-time-in-c"></a>Para cambiar el valor de una configuración existente en tiempo de diseño en C\#
@@ -32,6 +32,7 @@ Puede usar Visual Studio para editar los valores de configuración existente en 
 3.  En el Diseñador de configuración, busque la configuración para el que desea cambiar el valor y escriba el nuevo valor en la columna valor.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Utilizar valores de configuración de aplicación y de usuario](using-application-settings-and-user-settings.md)
-- [Cómo: Crear una nueva configuración en tiempo de diseño](how-to-create-a-new-setting-at-design-time.md)
+- [Cómo crear un valor de configuración en tiempo de diseño](how-to-create-a-new-setting-at-design-time.md)
 - [Introducción a la configuración de la aplicación](application-settings-overview.md)

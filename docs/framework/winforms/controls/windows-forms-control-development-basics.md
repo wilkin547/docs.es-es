@@ -6,12 +6,12 @@ helpviewer_keywords:
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-ms.openlocfilehash: 6a7009ead6ceba58c17579835d03254f259f8e51
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723076"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086447"
 ---
 # <a name="windows-forms-control-development-basics"></a>Fundamentos de desarrollo de controles de formularios Windows Forms
 Un control de Windows Forms es una clase que deriva directa o indirectamente de <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. En la lista siguiente se describe escenarios comunes para desarrollar controles de formularios Windows Forms:  
@@ -31,7 +31,8 @@ Un control de Windows Forms es una clase que deriva directa o indirectamente de 
  La clase base para controles de Windows Forms, <xref:System.Windows.Forms.Control>, proporciona la infraestructura necesaria para la presentación visual en aplicaciones de cliente basada en Windows. <xref:System.Windows.Forms.Control> Proporciona un identificador de ventana, controla el enrutamiento de mensajes y proporciona los eventos de interfaz de eventos del mouse y teclado, así como muchos otros usuarios. Proporciona un diseño avanzado y tiene propiedades específicas de presentación visual, como <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>y muchos otros. Además, proporciona seguridad, compatibilidad para subprocesos e interoperabilidad con controles ActiveX. Dado que la clase base proporciona gran parte de la infraestructura, es relativamente fácil desarrollar sus propios controles de Windows Forms.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Desarrollar un Control de formularios de Windows Simple](how-to-develop-a-simple-windows-forms-control.md)
+
+- [Filtrar para desarrollar un control sencillo de formularios Windows Forms](how-to-develop-a-simple-windows-forms-control.md)
 - [Desarrollar un control de formularios Windows Forms compuesto](developing-a-composite-windows-forms-control.md)
-- [Cómo: Crear un Control de Windows Forms que muestre el progreso](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Filtrar para crear un control de formularios Windows Forms que muestre el progreso](how-to-create-a-windows-forms-control-that-shows-progress.md)
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)

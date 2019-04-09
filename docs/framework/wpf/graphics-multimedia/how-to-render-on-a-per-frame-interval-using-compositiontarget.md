@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: 919e39dbe96a1a72ce517d59dcb239636f5aa692
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00b416d423a4bdc8bab576add2d77fd305ea6e0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353210"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089424"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Filtrar Representar un intervalo para cada fotograma mediante CompositionTarget
 El motor de animación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona muchas características para crear animaciones basadas en fotogramas. Sin embargo, hay escenarios de aplicación en el los que necesita un control específico sobre la representación según el fotograma. La <xref:System.Windows.Media.CompositionTarget> objeto proporciona la capacidad para crear animaciones personalizadas basándose en una devolución de llamada por fotograma.  
@@ -41,5 +41,6 @@ El motor de animación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sh
  Adición o eliminación de una representación <xref:System.EventHandler> delegado mientras se está activando el evento se retrasará hasta que una vez finalizado la el evento de activación. Esto es coherente con la forma <xref:System.MulticastDelegate>-basado en eventos se controlan en Common Language Runtime (CLR). Tenga en cuenta que no se garantiza que los eventos de representación se llamen en un orden determinado. Si tiene varios <xref:System.EventHandler> delegados que se basan en un orden determinado, debe registrar una sola <xref:System.Windows.Media.CompositionTarget.Rendering> eventos y multiplexado orden los delegados en el lugar correcto usted mismo.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.CompositionTarget>
 - [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md)

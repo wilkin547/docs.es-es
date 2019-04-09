@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08a9bc8aa4aa70ad6b01c58abccd145ae43d8a52
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60d3b22d8dc140bf16af7f59781d5ed103dafbf4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568303"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191710"
 ---
 # <a name="icordebugheapvalue3-interface"></a>ICorDebugHeapValue3 (Interfaz)
 Expone las propiedades de bloqueo de monitor de objetos. Esta interfaz extiende las interfaces del ICorDebugHeapValue y ICorDebugHeapValue2.  
@@ -30,8 +30,8 @@ Expone las propiedades de bloqueo de monitor de objetos. Esta interfaz extiende 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetThreadOwningMonitorLock (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getthreadowningmonitorlock-method.md)|Devuelve el subproceso administrado que posee el bloqueo de monitor en este objeto.|  
-|[GetMonitorEventWaitList (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getmonitoreventwaitlist-method.md)|Proporciona una lista ordenada de subprocesos que se ponen en cola en el evento que está asociado a un bloqueo de monitor.|  
+|[Método GetThreadOwningMonitorLock](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getthreadowningmonitorlock-method.md)|Devuelve el subproceso administrado que posee el bloqueo de monitor en este objeto.|  
+|[Método GetMonitorEventWaitList](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getmonitoreventwaitlist-method.md)|Proporciona una lista ordenada de subprocesos que se ponen en cola en el evento que está asociado a un bloqueo de monitor.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -48,5 +48,6 @@ Expone las propiedades de bloqueo de monitor de objetos. Esta interfaz extiende 
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

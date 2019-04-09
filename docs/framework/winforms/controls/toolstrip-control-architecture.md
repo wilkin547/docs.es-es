@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: bede247ca9e1c2c20ffc8fef9fd4fab89aa78453
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 1032b282801db485253da18536b448e8d3b65ae7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654775"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186672"
 ---
 # <a name="toolstrip-control-architecture"></a>Arquitectura del control ToolStrip
 El <xref:System.Windows.Forms.ToolStrip> y <xref:System.Windows.Forms.ToolStripItem> clases proporcionan un sistema flexible y extensible para mostrar la barra de herramientas, estado y elementos de menú. Estas clases están incluidas en el <xref:System.Windows.Forms> espacio de nombres y normalmente se denominan con el prefijo "ToolStrip" (como <xref:System.Windows.Forms.ToolStripOverflow>) o con el sufijo "Quitar" (como <xref:System.Windows.Forms.MenuStrip>).  
@@ -64,7 +64,7 @@ El <xref:System.Windows.Forms.ToolStrip> y <xref:System.Windows.Forms.ToolStripI
 -   <xref:System.Windows.Forms.ToolStripProgressBar>  
   
 ### <a name="contextmenustrip"></a>ContextMenuStrip  
- <xref:System.Windows.Forms.ContextMenuStrip> reemplaza a <xref:System.Windows.Forms.ContextMenu>. Puede asociar un <xref:System.Windows.Forms.ContextMenuStrip> con cualquier control y secundario del mouse haga clic en muestra automáticamente el menú contextual (o el menú contextual). Puede mostrar un <xref:System.Windows.Forms.ContextMenuStrip> mediante programación usando el <xref:System.Windows.Forms.ToolStripDropDown.Show%2A> método. <xref:System.Windows.Forms.ContextMenuStrip> admite cancelable <xref:System.Windows.Forms.ToolStripDropDown.Opening> y <xref:System.Windows.Forms.ToolStripDropDown.Closing> eventos para controlar el relleno dinámico y escenarios de varios clic. <xref:System.Windows.Forms.ContextMenuStrip> Comprobar estado de elemento de menú, admite imágenes, texto, las claves de acceso, accesos directos y menús en cascada.  
+ <xref:System.Windows.Forms.ContextMenuStrip> reemplaza <xref:System.Windows.Forms.ContextMenu>. Puede asociar un <xref:System.Windows.Forms.ContextMenuStrip> con cualquier control y secundario del mouse haga clic en muestra automáticamente el menú contextual (o el menú contextual). Puede mostrar un <xref:System.Windows.Forms.ContextMenuStrip> mediante programación usando el <xref:System.Windows.Forms.ToolStripDropDown.Show%2A> método. <xref:System.Windows.Forms.ContextMenuStrip> admite cancelable <xref:System.Windows.Forms.ToolStripDropDown.Opening> y <xref:System.Windows.Forms.ToolStripDropDown.Closing> eventos para controlar el relleno dinámico y escenarios de varios clic. <xref:System.Windows.Forms.ContextMenuStrip> Comprobar estado de elemento de menú, admite imágenes, texto, las claves de acceso, accesos directos y menús en cascada.  
   
  Los siguientes elementos están específicamente diseñados para funcionar perfectamente con ambos <xref:System.Windows.Forms.ToolStripSystemRenderer> y <xref:System.Windows.Forms.ToolStripProfessionalRenderer> en todas las orientaciones. Están disponibles de forma predeterminada en tiempo de diseño para el <xref:System.Windows.Forms.ContextMenuStrip> control:  
   
@@ -316,7 +316,7 @@ El <xref:System.Windows.Forms.ToolStrip> y <xref:System.Windows.Forms.ToolStripI
  <xref:System.Windows.Forms.ToolStripMenuItem> es un <xref:System.Windows.Forms.ToolStripDropDownItem> que funciona con <xref:System.Windows.Forms.ToolStripDropDownMenu> y <xref:System.Windows.Forms.ContextMenuStrip> para controlar la disposición de resaltado, el diseño y la columna especial para los menús.  
   
 ### <a name="toolstripdropdownbutton"></a>ToolStripDropDownButton  
- <xref:System.Windows.Forms.ToolStripDropDownButton> similar a <xref:System.Windows.Forms.ToolStripButton>, pero muestra un área desplegable cuando el usuario hace clic en él. Mostrar u ocultar la flecha de lista desplegable estableciendo el <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> propiedad. <xref:System.Windows.Forms.ToolStripDropDownButton> hosts de un <xref:System.Windows.Forms.ToolStripOverflowButton> que muestra los elementos que desbordan el <xref:System.Windows.Forms.ToolStrip>.  
+ <xref:System.Windows.Forms.ToolStripDropDownButton> similar a <xref:System.Windows.Forms.ToolStripButton>, pero muestra un área desplegable cuando el usuario hace clic en él. Mostrar u ocultar la flecha de lista desplegable estableciendo el <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> propiedad. <xref:System.Windows.Forms.ToolStripDropDownButton> Hosts de un <xref:System.Windows.Forms.ToolStripOverflowButton> que muestra los elementos que desbordan el <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="toolstripsplitbutton"></a>ToolStripSplitButton  
  <xref:System.Windows.Forms.ToolStripSplitButton> combina el botón y la funcionalidad del botón de lista desplegable.  
@@ -377,10 +377,11 @@ El <xref:System.Windows.Forms.ToolStrip> y <xref:System.Windows.Forms.ToolStripI
 -   <xref:System.Windows.Forms.ToolStripPanel> Proporciona espacio para mover y organizar <xref:System.Windows.Forms.ToolStrip> controles. Si lo prefiere, puede usar sólo un panel y <xref:System.Windows.Forms.ToolStripPanel> funciona bien en escenarios MDI.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información sobre el control ToolStrip](toolstrip-control-overview-windows-forms.md)
 - [Resumen de la tecnología ToolStrip](toolstrip-technology-summary.md)
-- [Control ToolStrip](toolstrip-control-windows-forms.md)
+- [ToolStrip](toolstrip-control-windows-forms.md)
 - [Control MenuStrip](menustrip-control-windows-forms.md)
-- [StatusStrip (control)](statusstrip-control.md)
+- [StatusStrip (Control)](statusstrip-control.md)
 - [ContextMenuStrip (Control)](contextmenustrip-control.md)
-- [BindingNavigator (control)](bindingnavigator-control-windows-forms.md)
+- [Control BindingNavigator](bindingnavigator-control-windows-forms.md)

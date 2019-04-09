@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2561307a5d0f38f66700c2455634e757efde2a09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f37278ecf7d7b97a1a4b2b7bfeb0a645495e6eee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745993"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190488"
 ---
 # <a name="iclrdataenummemoryregions-interface"></a>ICLRDataEnumMemoryRegions (Interfaz)
 Proporciona un método para enumerar las regiones de memoria especificadas por los llamadores.  
@@ -30,7 +30,7 @@ Proporciona un método para enumerar las regiones de memoria especificadas por l
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[EnumMemoryRegions (método)](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)|Enumera las áreas especificadas de la memoria.|  
+|[Método EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)|Enumera las áreas especificadas de la memoria.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -42,4 +42,5 @@ Proporciona un método para enumerar las regiones de memoria especificadas por l
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

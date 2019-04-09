@@ -2,12 +2,12 @@
 title: Privacidad y seguridad de datos
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: ed408cedbd686efd29472f6f7d19ec03390164f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3852e6034ff78b362bd67a05bd828d3033731a85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081858"
 ---
 # <a name="privacy-and-data-security"></a>Privacidad y seguridad de datos
 La protección y la administración de información confidencial en una aplicación de ADO.NET depende de los productos y las tecnologías utilizados para crearla. ADO.NET no proporciona de forma directa servicios para proteger ni cifrar datos.  
@@ -28,6 +28,7 @@ La protección y la administración de información confidencial en una aplicaci
  La clase <xref:System.Security.SecureString> proporciona métodos para cifrar texto con la API de protección de datos (DPAPI) en memoria. La cadena se elimina posteriormente de la memoria cuando ya no es necesaria. No existe ningún método `ToString` para leer rápidamente el contenido de un objeto <xref:System.Security.SecureString>. Puede inicializar una nueva instancia de `SecureString` sin ningún valor o pasándole un nuevo puntero a una matriz de objetos <xref:System.Char>. A continuación, puede usar los diferentes métodos de la clase para trabajar con la cadena. Para obtener más información, descargue el [ejemplo SecureString Application](https://go.microsoft.com/fwlink/?LinkId=120418), que muestra cómo utilizar el `SecureString` desde la clase.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Seguridad de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

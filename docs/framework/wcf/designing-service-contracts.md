@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: 37639bfc71918dd92a2334f4076dc2b4d6ff9698
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102744"
 ---
 # <a name="designing-service-contracts"></a>Diseño de contratos de servicios
 En este tema se describe qué son los contratos de servicios, cómo se definen, qué operaciones están disponibles (y las implicaciones para los intercambios de mensajes subyacentes), qué tipos de datos se usan y otras cuestiones que le ayudan a diseñar operaciones que satisfagan adecuadamente los requisitos de su escenario.  
@@ -175,7 +175,7 @@ End Interface
  Además, la utilización de los parámetros `out` o `ref` requiere que la operación tenga un mensaje de respuesta subyacente para devolver el objeto modificado. Si su operación es unidireccional, se inicia una excepción <xref:System.InvalidOperationException> en tiempo de ejecución.  
   
 ### <a name="specify-message-protection-level-on-the-contract"></a>Especificar el nivel de protección del mensaje en el contrato  
- Al diseñar su contrato, también debe decidir el nivel de protección del mensaje de los servicios que implementa su contrato. Esto solo es necesario si la seguridad del mensaje se aplica al enlace en el punto de conexión del contrato. Si el enlace tiene la seguridad desactivada (es decir, si el enlace proporcionado por el sistema establece <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType> en el valor <xref:System.ServiceModel.SecurityMode.None?displayProperty=nameWithType>) no tiene que decidir sobre el nivel de protección del mensaje para el contrato. En la mayoría de los casos, los enlaces proporcionados por el sistema a los que se aplica la seguridad del nivel de mensaje, ofrecen un nivel de protección suficiente que hace innecesario el nivel de protección para cada operación o mensaje.  
+ Al diseñar su contrato, también debe decidir el nivel de protección del mensaje de los servicios que implementa su contrato. Esto solo es necesario si la seguridad del mensaje se aplica al enlace en el extremo del contrato. Si el enlace tiene la seguridad desactivada (es decir, si el enlace proporcionado por el sistema establece <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType> en el valor <xref:System.ServiceModel.SecurityMode.None?displayProperty=nameWithType>) no tiene que decidir sobre el nivel de protección del mensaje para el contrato. En la mayoría de los casos, los enlaces proporcionados por el sistema a los que se aplica la seguridad del nivel de mensaje, ofrecen un nivel de protección suficiente que hace innecesario el nivel de protección para cada operación o mensaje.  
   
  El nivel de protección es un valor que especifica si los mensajes (o partes del mensaje) que soportan un servicio están firmados, firmados y cifrados, o si se envían sin firmar o cifrar. El nivel de protección se puede establecer en varios ámbitos: En el nivel de servicio, para una operación determinada, un mensaje dentro de esa operación, o una parte de mensaje. Los valores establecidos en un ámbito se convierten en el valor predeterminado para los ámbitos menores a menos que se invalide explícitamente. Si una configuración de enlace no puede proporcionar el nivel de protección mínimo necesario para el contrato, se produce una excepción. Y cuando ningún valor de nivel de protección se establece explícitamente en el contrato, la configuración de enlace controla el nivel de protección para todos los mensajes si el enlace tiene seguridad de mensajes. Éste es el comportamiento predeterminado.  
   
@@ -255,7 +255,7 @@ End Interface
   
 -   Los mensajes de operación `GetInt` se envían como texto sin cifrar ni firmar (es decir, texto sin formato).  
   
--   La operación `GetGuid` <xref:System.Guid?displayProperty=nameWithType> se devuelve en un mensaje que se cifra y se firma.  
+-   La operación `GetGuid`<xref:System.Guid?displayProperty=nameWithType> se devuelve en un mensaje que se cifra y se firma.  
   
  Para obtener más información acerca de los niveles de protección y cómo usarlas, vea [Understanding Protection Level](../../../docs/framework/wcf/understanding-protection-level.md). Para obtener más información acerca de la seguridad, consulte [Securing Services](../../../docs/framework/wcf/securing-services.md).  
   
@@ -270,11 +270,12 @@ End Interface
  Una de las consecuencias es que, si no se establecen explícitamente los nombres y espacios de nombres, el uso de la ofuscación de IL en el ensamblado modifica los nombres y espacios de nombres del tipo de contrato y, por lo tanto, los intercambios de conexión y WSDL modificados generan errores. Si no establece los nombres y espacios de nombres de contrato explícitamente pero tiene pensado utilizar la ofuscación, use los atributos <xref:System.Reflection.ObfuscationAttribute> y <xref:System.Reflection.ObfuscateAssemblyAttribute> para evitar la modificación de los nombres y espacios de nombres del tipo de contrato.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Crear un contrato de solicitud-respuesta](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
-- [Cómo: Crear un contrato unidireccional](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
-- [Cómo: Crear un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [Definición de transferencias de datos en contratos de servicio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
-- [Especificación y gestión de errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+
+- [Filtrar para crear un contrato de solicitud-respuesta](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+- [Filtrar para crear un contrato unidireccional](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
+- [Filtrar para crear un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Especificación de transferencia de datos en contratos de servicio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Especificación y administración de errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Uso de sesiones](../../../docs/framework/wcf/using-sessions.md)
 - [Operaciones sincrónicas y asincrónicas](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
 - [Servicios de confianza](../../../docs/framework/wcf/reliable-services.md)

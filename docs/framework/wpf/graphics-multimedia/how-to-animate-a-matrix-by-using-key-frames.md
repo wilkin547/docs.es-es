@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: 2c33fa1ebb3c9dd4f05c24db9de42ff47c84f983
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8cc94117cc26f44288835fd85c6ded429124d3c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370584"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107931"
 ---
-# <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Procedimiento Animar un objeto Matrix mediante fotogramas clave
+# <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Filtrar Animar un objeto Matrix mediante fotogramas clave
 En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.MatrixTransform.Matrix%2A> propiedad de un <xref:System.Windows.Media.MatrixTransform> mediante fotogramas clave.  
   
 ## <a name="example"></a>Ejemplo  
@@ -35,6 +35,7 @@ En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.MatrixTran
  Para consultar el ejemplo completo, vea [Ejemplo de animación mediante fotogramas clave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.MatrixTransform.Matrix%2A>
 - <xref:System.Windows.Media.MatrixTransform>
 - [Información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md)

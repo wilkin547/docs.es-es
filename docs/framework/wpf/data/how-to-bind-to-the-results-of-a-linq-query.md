@@ -5,12 +5,12 @@ helpviewer_keywords:
 - running a LINQ query [WPF], bind to results
 - binding to LINQ query results [WPF]
 ms.assetid: ff2844d9-17ed-4ea6-aab1-5111af0bc684
-ms.openlocfilehash: 9be0f95824c97456b50996f9cd6f010442b523f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5464ee9c59a7c99a83774a7535b9b3c422c1d2e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185905"
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>Filtrar Enlazar a los resultados de una consulta LINQ
 En este ejemplo se muestra cómo ejecutar una consulta LINQ y, a continuación, enlazar a los resultados.  
@@ -26,9 +26,10 @@ En este ejemplo se muestra cómo ejecutar una consulta LINQ y, a continuación, 
 [!code-csharp[LinqExample#Tasks](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#tasks)]  
 [!code-csharp[LinqExample#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#handler)]  
   
- El segundo cuadro de lista se enlaza a esa colección porque su <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> valor se establece en `{Binding}`. Como resultado, muestra la colección devuelta (según la `myTaskTemplate` <xref:System.Windows.DataTemplate>).  
+ El segundo cuadro de lista se enlaza a esa colección porque su <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> valor se establece en `{Binding}`. Como resultado, muestra la colección devuelta (según la `myTaskTemplate`<xref:System.Windows.DataTemplate>).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Hacer que los datos estén disponibles para el enlace en XAML](how-to-make-data-available-for-binding-in-xaml.md)
 - [Enlazar a una colección y mostrar información basada en la selección](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [Novedades de WPF versión 4.5](../getting-started/whats-new.md)

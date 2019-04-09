@@ -1,5 +1,5 @@
 ---
-title: Filtrar Dibujar una forma con contorno
+title: Filtrar para dibujar una forma con contorno
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - drawing [Windows Forms], circular shapes
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
-ms.openlocfilehash: 598706b381d12b8e820747ca872146bdb5e300c7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 019bbc19cc4b26c42f8539eccd93ec4ff87fab12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722638"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192214"
 ---
-# <a name="how-to-draw-an-outlined-shape"></a>Filtrar Dibujar una forma con contorno
+# <a name="how-to-draw-an-outlined-shape"></a>Filtrar para dibujar una forma con contorno
 En este ejemplo se dibuja elipses con contorno y rectángulos en un formulario.  
   
 ## <a name="example"></a>Ejemplo  
@@ -41,6 +41,7 @@ En este ejemplo se dibuja elipses con contorno y rectángulos en un formulario.
  Siempre debe llamar a <xref:System.IDisposable.Dispose%2A> en los objetos que consuman recursos del sistema, como <xref:System.Drawing.Pen> y <xref:System.Drawing.Graphics> objetos.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.Graphics.DrawEllipse%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Graphics.DrawRectangle%2A>

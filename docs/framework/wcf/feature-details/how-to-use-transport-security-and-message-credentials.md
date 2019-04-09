@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Usar la seguridad de transporte y credenciales de mensaje
+title: Filtrar para usar seguridad de transporte y credenciales de mensajes
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: 7af670210b39da93e9f3efb37a0bfddce84ed2a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea57012f9c09394824b7dbf919930c22fc17bd3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186821"
 ---
-# <a name="how-to-use-transport-security-and-message-credentials"></a>Procedimiento Usar la seguridad de transporte y credenciales de mensaje
+# <a name="how-to-use-transport-security-and-message-credentials"></a>Filtrar para usar seguridad de transporte y credenciales de mensajes
 Protección de un servicio con credenciales de mensajes y transporte usa lo mejor de los modos de seguridad de mensajes y transporte en Windows Communication Foundation (WCF). En suma, la seguridad de la capa de transporte proporciona integridad y confidencialidad, mientras que la seguridad de la capa de mensaje proporciona una variedad de credenciales que no son posibles con mecanismos de seguridad de transporte estrictos. En este tema se muestran los pasos básicos para implementar transporte con credenciales de mensaje usando los enlaces <xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.NetTcpBinding>. Para obtener más información acerca de cómo establecer el modo de seguridad, vea [Cómo: Establecer el modo de seguridad](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Al establecer el modo de seguridad en `TransportWithMessageCredential`, el transporte determina el mecanismo real que proporciona la seguridad de nivel de transporte. Para HTTP, el mecanismo es Secure Sockets Layer (SSL) sobre HTTP (HTTPS); para TCP, es SSL sobre TCP o Windows.  
@@ -33,7 +33,7 @@ Protección de un servicio con credenciales de mensajes y transporte usa lo mejo
   
 4.  Cree una instancia de la clase <xref:System.Uri> con una dirección base apropiada. Observe que la dirección debe utilizar el esquema "HTTPS" y contener el nombre real del equipo y el número de puerto al que se enlaza el certificado SSL. (De manera alternativa, puede establecer la dirección base mediante configuración.)  
   
-5.  Agregue un punto de conexión de servicio mediante el método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
+5.  Agregue un extremo de servicio mediante el método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
   
 6.  Cree la instancia del <xref:System.ServiceModel.ServiceHost> y llame al método <xref:System.ServiceModel.ICommunicationObject.Open%2A>, tal y como se muestra en el código siguiente.  
   
@@ -52,7 +52,7 @@ Protección de un servicio con credenciales de mensajes y transporte usa lo mejo
   
 5.  Utilice el método <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> de la clase <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> para establecer explícitamente el certificado X.509 para el servicio.  
   
-6.  Agregue un punto de conexión de servicio mediante el método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
+6.  Agregue un extremo de servicio mediante el método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
   
 7.  Llame al método <xref:System.ServiceModel.ICommunicationObject.Open%2A>, como se muestra en el siguiente código.  
   
@@ -73,7 +73,7 @@ Protección de un servicio con credenciales de mensajes y transporte usa lo mejo
   
 6.  Utilice el método <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> de la clase <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> para establecer explícitamente el certificado X.509 para el servicio.  
   
-7.  Agregue un punto de conexión de servicio mediante el método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
+7.  Agregue un extremo de servicio mediante el método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
   
 8.  Llame al método <xref:System.ServiceModel.ICommunicationObject.Open%2A>, como se muestra en el siguiente código.  
   
@@ -161,6 +161,7 @@ Protección de un servicio con credenciales de mensajes y transporte usa lo mejo
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Establecer el modo de seguridad](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+
+- [Filtrar para establecer el modo de seguridad](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
 - [Seguridad de servicios](../../../../docs/framework/wcf/securing-services.md)
 - [Protección de servicios y clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

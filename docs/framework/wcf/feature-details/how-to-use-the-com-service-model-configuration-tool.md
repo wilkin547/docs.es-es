@@ -1,17 +1,17 @@
 ---
-title: Procedimiento Use la herramienta de configuración del modelo de servicio COM +
+title: Filtrar para usar la herramienta configuración de modelos de servicio COM+
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 528e46a47daa6df865308592eb41658369a74b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0dc126cf6528504cacd18ae29c31541833ddb5f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196897"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Procedimiento Use la herramienta de configuración del modelo de servicio COM +
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Filtrar para usar la herramienta configuración de modelos de servicio COM+
 Cuando ha seleccionado un modo de hospedaje adecuado, utilice la herramienta de línea de comandos de configuración de modelos de servicio COM+ (ComSvcConfig.exe) para configurar las interfaces de aplicaciones que se expondrán como servicios web.  
   
 > [!NOTE]
@@ -69,7 +69,7 @@ Cuando ha seleccionado un modo de hospedaje adecuado, utilice la herramienta de 
   
      Para utilizar la configuración en proceso hospedada en Web, la aplicación COM+ se debe configurar para ejecutarse como una aplicación de biblioteca en lugar de una aplicación de servidor utilizando la consola de administración de Servicios de componentes. Las aplicaciones configuradas como aplicaciones de servidor utilizan el modo hospedado por Web estándar e incurren un salto de proceso para procesar cada solicitud.  
   
-     La opción `/mex` agrega un punto de conexión de servicio adicional de Intercambio de metadatos (MEX) que utiliza el mismo transporte que el punto de conexión de servicio de la aplicación para admitir clientes que desean recuperar una definición del contrato del servicio.  
+     La opción `/mex` agrega un extremo de servicio adicional de Intercambio de metadatos (MEX) que utiliza el mismo transporte que el extremo de servicio de la aplicación para admitir clientes que desean recuperar una definición del contrato del servicio.  
   
 ### <a name="to-remove-a-web-service-for-a-specified-interface"></a>Para quitar un servicio Web para una interfaz especificada  
   
@@ -110,4 +110,5 @@ Cuando ha seleccionado un modo de hospedaje adecuado, utilice la herramienta de 
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Integración en la información general de las aplicaciones COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

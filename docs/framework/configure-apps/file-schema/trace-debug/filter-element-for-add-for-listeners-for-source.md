@@ -1,5 +1,5 @@
 ---
-title: Elemento <filter> de <add> de <listeners> de <source>
+title: <filter> Elemento para <add> para <listeners> para <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: 7207e72c537e8338f8c646750016c9b6c810bf9a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3abfd0bdd40f98a9e4774677fc2cd5068c14333f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186737"
 ---
 # <a name="filter-element-for-add-for-listeners-for-source"></a>\<Filtro > (elemento) para \<Agregar > para \<los agentes de escucha > para \<origen >
 Agrega un filtro a un agente de escucha en la colección `Listeners` para un origen de seguimiento.  
@@ -91,6 +91,7 @@ Agrega un filtro a un agente de escucha en la colección `Listeners` para un ori
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>

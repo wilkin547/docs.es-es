@@ -1,5 +1,5 @@
 ---
-title: Filtrar Inmovilizar columnas en el Control DataGridView de formularios de Windows
+title: Filtrar para inmovilizar columnas en el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: 640b6a9128758edfc22b5c9be971034c9e45fc70
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a0b77a7356b09a5cc95ec165a62c45852f542b8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187432"
 ---
-# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Procedimiento Inmovilizar columnas en el Control DataGridView de formularios de Windows
+# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Filtrar para inmovilizar columnas en el control DataGridView de formularios Windows Forms
 Cuando los usuarios ven los datos mostrados en un control <xref:System.Windows.Forms.DataGridView> de Windows Forms, a veces deben hacer referencia a una sola columna o a un conjunto de columnas con frecuencia. Por ejemplo, cuando se muestra una tabla de información de clientes que contiene muchas columnas, resulta útil mostrar el nombre del cliente y dejar que otras columnas puedan desplazarse fuera del área visible.  
   
  Para conseguir este comportamiento, puede inmovilizar las columnas en el control. Al inmovilizar una columna, también se inmovilizan todas las columnas situadas a su izquierda (o a su derecha en los scripts de idioma de derecha a izquierda). Las columnas inmovilizadas permanecen en su lugar mientras que todas las demás columnas se pueden desplazar.  
@@ -43,7 +43,8 @@ Cuando los usuarios ven los datos mostrados en un control <xref:System.Windows.F
 -   Referencias a los ensamblados <xref:System?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
-- [Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Cómo: Habilitar la reordenación de columnas en el Control DataGridView de Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)
+- [Características básicas de columnas, filas y celdas en el control DataGridView de formularios Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Filtrar para habilitar la reordenación de columnas en el control DataGridView de formularios Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Dibujar una línea discontinua personalizada
+title: Filtrar para dibujar una línea discontinua personalizada
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 06555309b8432397e754bc9dfa717c89b052343f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 8dc1ad41cf8067bea5b811ca126ad29f5a600f69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410230"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109192"
 ---
-# <a name="how-to-draw-a-custom-dashed-line"></a>Filtrar Dibujar una línea discontinua personalizada
+# <a name="how-to-draw-a-custom-dashed-line"></a>Filtrar para dibujar una línea discontinua personalizada
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona varios estilos de guión que aparecen en la <xref:System.Drawing.Drawing2D.DashStyle> enumeración. Si los estilos de guión estándar no satisface sus necesidades, puede crear un modelo de guión personalizado.  
   
 ## <a name="example"></a>Ejemplo  
@@ -33,4 +33,5 @@ ms.locfileid: "58410230"
  Crear un formulario de Windows y controlar el formato <xref:System.Windows.Forms.Control.Paint> eventos. Pegue el código anterior en el <xref:System.Windows.Forms.Control.Paint> controlador de eventos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Utilizar lápiz para dibujar líneas y formas](using-a-pen-to-draw-lines-and-shapes.md)

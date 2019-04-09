@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Realizar una operación de arrastrar y colocar en Windows Forms'
+title: 'Tutorial: Llevar a cabo una operación de arrastrar y colocar en formularios Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: 664c78ce3fff9651acf6ad720360cdb077f23108
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e9b21d7bfa188ebb053f36e2637ffce5d6fa0dd7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189032"
 ---
-# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Tutorial: Realizar una operación de arrastrar y colocar en Windows Forms
+# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Tutorial: Llevar a cabo una operación de arrastrar y colocar en formularios Windows Forms
 Para realizar operaciones de arrastrar y colocar en aplicaciones basadas en Windows debe controlar una serie de eventos, sobre todo la <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, y <xref:System.Windows.Forms.Control.DragDrop> eventos. Trabajando con la información disponible en los argumentos de estos eventos, puede facilitar sin problemas las operaciones de arrastrar y colocar.  
   
 ## <a name="dragging-data"></a>Arrastrar datos  
@@ -107,6 +107,7 @@ Para realizar operaciones de arrastrar y colocar en aplicaciones basadas en Wind
     >  Además, puede trabajar con el <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> propiedad, por lo que, en función de las teclas presionadas durante la operación de arrastrar y colocar, tengan lugar ciertos efectos (por ejemplo, es estándar copiar los datos arrastrados cuando se presiona la tecla CTRL).  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Agregar datos al Portapapeles](how-to-add-data-to-the-clipboard.md)
-- [Cómo: Recuperar datos del Portapapeles](how-to-retrieve-data-from-the-clipboard.md)
+
+- [Filtrar para agregar datos al Portapapeles](how-to-add-data-to-the-clipboard.md)
+- [Filtrar para recuperar datos del Portapapeles](how-to-retrieve-data-from-the-clipboard.md)
 - [Compatibilidad con las operaciones de arrastrar y colocar y con el Portapapeles](drag-and-drop-operations-and-clipboard-support.md)

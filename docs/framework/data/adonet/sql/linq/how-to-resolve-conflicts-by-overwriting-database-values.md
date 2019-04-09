@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Resolver conflictos de simultaneidad sobrescribiendo valores de la base de datos
+title: Filtrar para resolver conflictos sobrescribiendo valores de base de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd6db0b8-c29c-48ff-b768-31d28e7a148c
-ms.openlocfilehash: 38129996949bcfbd938038743897d1db5910fdfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b8d7cf8ab2335c064062ed3ab4072d81e8042fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189123"
 ---
-# <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Procedimiento Resolver conflictos de simultaneidad sobrescribiendo valores de la base de datos
+# <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>Filtrar para resolver conflictos sobrescribiendo valores de base de datos
 Para conciliar las diferencias existentes entre los valores de base de datos esperados y reales antes de intentar reenviar los cambios, puede utilizar <xref:System.Data.Linq.RefreshMode.KeepCurrentValues> para sobrescribir los valores de base de datos. Para obtener más información, consulte [simultaneidad optimista: Información general sobre](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
@@ -25,7 +25,7 @@ Para conciliar las diferencias existentes entre los valores de base de datos esp
 |------|-------------|---------------|----------------|  
 |Estado de la base de datos original cuando la consultan User1 y User2.|Alfreds|Maria|Ventas|  
 |User1 se prepara para enviar los cambios.|Alfred||Marketing|  
-|User2 ya ha enviado los cambios.||Mary|Servicio|  
+|User2 ya ha enviado los cambios.||Mary|web de Office|  
   
  User1 decide resolver este conflicto sobrescribiendo los valores de la base de datos con los valores de miembro de cliente actuales.  
   
@@ -41,4 +41,5 @@ Para conciliar las diferencias existentes entre los valores de base de datos esp
  [!code-vb[System.Data.Linq.RefreshMode#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+
+- [Filtrar para administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

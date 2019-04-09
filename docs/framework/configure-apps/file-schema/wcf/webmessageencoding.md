@@ -2,12 +2,12 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: e13f23d6894083c8b507bdb73bea897c4845300f
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 7221f19dd131dbd60ef1a61625633d54dfdbe85a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191749"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
 Habilita XML de texto sin formato, codificaciones de mensajes de Notación de objetos JavaScript (JSON) y el contenido binario "sin procesar" que se va a leer y escribir cuando se use en un enlace de Windows Communication Foundation (WCF).  
@@ -58,7 +58,7 @@ Habilita XML de texto sin formato, codificaciones de mensajes de Notación de ob
   
  El elemento de enlace se puede configurar con una codificación de caracteres de escritura utilizando el atributo `writeEncoding`. El valor <xref:System.Text.Encoding> proporcionado especifica el comportamiento en escritura para los casos de texto XML y JSON. En lectura, cualquier codificación de mensajes válida y codificación de texto se entenderán.  
   
- `maxReadPoolSize` y `maxWritePoolSize` también se pueden utilizar para establecer el número máximo de lectores y escritores que se van a asignar respectivamente. De forma predeterminada se asignan 64 lectores y 16 escritores.  
+ `maxReadPoolSize` y `maxWritePoolSize` también puede utilizarse para establecer el número máximo de lectores y escritores que se va a asignar respectivamente. De forma predeterminada se asignan 64 lectores y 16 escritores.  
   
  Las restricciones de complejidad predeterminadas también se establecen mediante el [ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) ataques de elemento que se va a proteger contra una clase de denegación de servicio (DOS) que intentan utilizar la complejidad del mensaje para paralizar el procesamiento del punto de conexión recursos.  
   
@@ -72,6 +72,7 @@ Habilita XML de texto sin formato, codificaciones de mensajes de Notación de ob
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>

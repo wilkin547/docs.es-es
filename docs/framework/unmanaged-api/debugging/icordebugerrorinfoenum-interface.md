@@ -1,5 +1,5 @@
 ---
-title: ICorDebugErrorInfoEnum (Interfaz)
+title: Interfaz ICorDebugErrorInfoEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugErrorInfoEnum
@@ -16,16 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fed280e4192e900b02e7abe2b0550817645c1ba
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 88f3c270d2ab0adc0b683fda0e0f4bc1d474fb09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964952"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144149"
 ---
-# <a name="icordebugerrorinfoenum-interface"></a>ICorDebugErrorInfoEnum (Interfaz)
+# <a name="icordebugerrorinfoenum-interface"></a>Interfaz ICorDebugErrorInfoEnum
 
 `ICorDebugErrorInfoEnum` está obsoleto. No utilice esta interfaz.  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

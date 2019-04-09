@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d45a8bdebb296a33862f018308a7ef876e0cd64c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572362"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105747"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Palabras clave y niveles ETW de CLR
 <a name="top"></a> El Seguimiento de eventos para Windows (ETW) se puede filtrar por categoría y nivel. Las [Palabras clave ETW de CLR](#keywords) de evento permiten el filtrado de eventos por categoría; se usan en combinaciones para los proveedores de tiempo de ejecución y detención. Los [niveles de evento](#levels) se identifican mediante marcas.  
@@ -37,7 +37,7 @@ ms.locfileid: "54572362"
 ### <a name="clr-etw-runtime-keywords"></a>Palabras clave de runtime de ETW de CLR  
  En la tabla siguiente se enumeran las palabras clave de runtime de ETW de CLR, sus valores y se explica para qué se usan.  
   
-|Nombre de la palabra clave de runtime|Valor|Propósito|  
+|Nombre de la palabra clave de runtime|Valor|Finalidad|  
 |--------------------------|-----------|-------------|  
 |`GCKeyword`|0x00000001|Habilita la recopilación de [eventos de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md).|  
 |`LoaderKeyword`|0x00000008|Habilita la recopilación de [eventos de cargador](../../../docs/framework/performance/loader-etw-events.md).|  
@@ -62,7 +62,7 @@ ms.locfileid: "54572362"
 ### <a name="clr-etw-rundown-keywords"></a>Palabras clave de detención de ETW de CLR  
  En la tabla siguiente se enumeran las palabras clave de detención de ETW de CLR, sus valores y se explica para qué se usan.  
   
-|Nombre de la palabra clave de detención|Valor|Propósito|  
+|Nombre de la palabra clave de detención|Valor|Finalidad|  
 |--------------------------|-----------|-------------|  
 |`LoaderRundownKeyword`|0x00000008|Habilita la recopilación de eventos de cargador cuando se usa con `StartRundownKeyword` y `EndRundownKeyword`.|  
 |`JitRundownKeyword`|0x00000010|Habilita la recopilación de eventos de método `DCStart` y `DCEnd` para métodos compilados JIT cuando se usa con `StartRundownKeyword` y `EndRundownKeyword`.|  
@@ -95,12 +95,12 @@ ms.locfileid: "54572362"
   
 |Palabras clave y marcas|Dominio de aplicación, ensamblado, eventos DCStart/DCEnd de módulos|Eventos DCStart/DCEnd de método (incluidos los eventos de métodos dinámicos)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|Eventos`DCStart` .|Ninguno.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|Eventos`DCEnd` .|Ninguno.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Ninguno.|Eventos`DCStart` .|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Ninguno.|Eventos`DCEnd` .|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Ninguno.|Eventos`DCStart` .|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Ninguno.|Eventos`DCEnd` .|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` eventos.|Ninguno.|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` eventos.|Ninguno.|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Ninguno.|`DCStart` eventos.|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Ninguno.|`DCEnd` eventos.|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Ninguno.|`DCStart` eventos.|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Ninguno.|`DCEnd` eventos.|  
   
  [Volver al principio](#top)  
   
@@ -123,6 +123,7 @@ ms.locfileid: "54572362"
  0x0: LogAlways  
   
 ## <a name="see-also"></a>Vea también
+
 - [Proveedores ETW de CLR](../../../docs/framework/performance/clr-etw-providers.md)
-- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
+- [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md)
 - [Eventos ETW en Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

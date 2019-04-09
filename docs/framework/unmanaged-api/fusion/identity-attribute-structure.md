@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e26a90b6725d53774053293c04842b761da6ab12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb970d31fb5158adc7dbcbb7cc0175cc91c83c8c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717680"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107346"
 ---
 # <a name="identityattribute-structure"></a>IDENTITY_ATTRIBUTE (Estructura)
 Contiene información de atributos de metadatos sobre un [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) instancia.  
@@ -57,6 +57,7 @@ typedef struct _IDENTITY_ATTRIBUTE {
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [IDefinitionIdentity (interfaz)](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
-- [IDENTITY_ATTRIBUTE_BLOB (estructura)](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)
+
+- [IDefinitionIdentity (Interfaz)](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+- [IDENTITY_ATTRIBUTE_BLOB (Estructura)](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)
 - [Estructuras de fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

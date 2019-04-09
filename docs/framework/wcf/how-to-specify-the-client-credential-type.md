@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Especifique el tipo de credencial de cliente
+title: Filtrar para especificar el tipo de credencial de cliente
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: 9fe999c4ee27d4a78bfad185fa3bcc065d74708a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1138f0fe955782c71076d5c15c236d1d4ebbec01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643386"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185060"
 ---
-# <a name="how-to-specify-the-client-credential-type"></a>Procedimiento Especifique el tipo de credencial de cliente
+# <a name="how-to-specify-the-client-credential-type"></a>Filtrar para especificar el tipo de credencial de cliente
 Después de establecer un modo de seguridad (ya sea transporte o mensaje), tiene la opción de establecer el tipo de credencial de cliente. Esta propiedad especifica qué tipo de credencial debe proporcionar el cliente al servicio para la autenticación. Para obtener más información acerca de cómo establecer el modo de seguridad (un paso necesario antes de establecer tipo de credencial de cliente), consulte [Cómo: Establecer el modo de seguridad](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>Para establecer el tipo de credencial de cliente en el código  
@@ -58,5 +58,6 @@ Después de establecer un modo de seguridad (ya sea transporte o mensaje), tiene
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Seguridad de servicios](../../../docs/framework/wcf/securing-services.md)
-- [Cómo: Establecer el modo de seguridad](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Filtrar para establecer el modo de seguridad](../../../docs/framework/wcf/how-to-set-the-security-mode.md)

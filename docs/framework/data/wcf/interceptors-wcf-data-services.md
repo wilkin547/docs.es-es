@@ -1,5 +1,5 @@
 ---
-title: Interceptores (Data Services de WCF)
+title: Interceptores (Servicios de datos de WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 14212c9993d936138df70160e4e49152cd5ff958
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31308f8c2b031ec0efd77b41bc395d85e7e5307a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192867"
 ---
-# <a name="interceptors-wcf-data-services"></a>Interceptores (Data Services de WCF)
+# <a name="interceptors-wcf-data-services"></a>Interceptores (Servicios de datos de WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que una aplicación interceptar los mensajes de solicitud, lo que puede agregar lógica personalizada a una operación. Puede usar esta lógica personalizada para validar los datos en los mensajes entrantes. También puede utilizarla como restricción adicional del ámbito de una solicitud de consulta, por ejemplo, para insertar una directiva de autorización personalizada por solicitud.  
   
  Métodos con atributos especiales realizan la interceptación en el servicio de datos. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] llama a estos métodos en el punto adecuado del procesamiento de mensajes. Los interceptores se definen según el conjunto por entidad, y los métodos de interceptor no pueden aceptar parámetros de la solicitud, como las operaciones de servicio pueden. Los métodos de interceptor de consulta, que se llama al procesar una solicitud GET de HTTP, deben devolver los resultados de consulta debe devolver una expresión lambda que determina si se establece una instancia de entidad del interceptor. El servicio de datos utiliza esta expresión para perfeccionar más la operación solicitada. El ejemplo siguiente muestra una definición de un interceptor de consulta.  
@@ -49,4 +49,5 @@ ms.locfileid: "54626763"
  Para obtener más información, vea [Cómo: Interceptar mensajes de servicio de datos](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Operaciones de servicio](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)

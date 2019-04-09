@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Determinar si una página está hospedada de explorador
+title: Filtrar Determinar si una página se hospeda en un explorador
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hosted pages in browser [WPF]
 - pages [WPF], hosted in browser
 ms.assetid: 737e0f26-8371-49b4-9579-70879e51e1aa
-ms.openlocfilehash: ebc5612f059a6cf26f2568bbc08e705b4b3014c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d154de2f885101d1bd0c4613dfb1604be8acbe6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359996"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107151"
 ---
-# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Filtrar Determinar si una página está hospedada de explorador
+# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Filtrar Determinar si una página se hospeda en un explorador
 En este ejemplo se muestra cómo determinar si un <xref:System.Windows.Controls.Page> se hospeda en un explorador.  
   
 ## <a name="example"></a>Ejemplo  
@@ -27,5 +27,6 @@ En este ejemplo se muestra cómo determinar si un <xref:System.Windows.Controls.
  [!code-vb[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/visualbasic/page1.xaml.vb#isbrowserhostedcode)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.Frame>
 - <xref:System.Windows.Controls.Page>

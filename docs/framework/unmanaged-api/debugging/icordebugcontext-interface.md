@@ -1,5 +1,5 @@
 ---
-title: ICorDebugContext (Interfaz)
+title: Interfaz ICorDebugContext
 ms.date: 03/30/2017
 api_name:
 - ICorDebugContext
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a560726b81c382913c1f590b8681421641aebf2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 407bcad0101fabd0c65b0d27c97ef47a93902f6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102393"
 ---
-# <a name="icordebugcontext-interface"></a>ICorDebugContext (Interfaz)
+# <a name="icordebugcontext-interface"></a>Interfaz ICorDebugContext
 
 Representa un objeto de contexto. Esta interfaz no se ha implementado todavía.  
   
@@ -42,4 +42,5 @@ Representa un objeto de contexto. Esta interfaz no se ha implementado todavía.
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

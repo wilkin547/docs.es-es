@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: a4606b73835087a406d989960d7a6e24ad218769
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362986"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191593"
 ---
 # <a name="key-frame-animations-overview"></a>Información general sobre animaciones de fotogramas clave
 Este tema es una introducción a las animaciones de fotogramas clave. Las animaciones de fotogramas clave le permiten realizar animaciones con más de dos valores de destino y controlan el método de interpolación de una animación.  
@@ -46,7 +46,7 @@ Este tema es una introducción a las animaciones de fotogramas clave. Las animac
   
  Las clases de animación de fotogramas clave pertenecen a la <xref:System.Windows.Media.Animation> espacio de nombres y cumplen con la convención de nomenclatura siguiente:  
   
- *\<Tipo>* `AnimationUsingKeyFrames`  
+ *\<tipo >* `AnimationUsingKeyFrames`  
   
  Donde *\<Tipo>* es el tipo de valor que la clase anima.  
   
@@ -79,7 +79,7 @@ Este tema es una introducción a las animaciones de fotogramas clave. Las animac
 ## <a name="target-values-key-frames-and-key-times"></a>Valores de destino (fotogramas clave) y valores KeyTime  
  Del mismo modo que hay distintos tipos de animaciones de fotogramas clave para animar diferentes tipos de propiedades, también hay distintos tipos de objetos de fotogramas clave: uno para cada tipo de valor animado y método de interpolación admitido. Los tipos de fotogramas clave cumplen con la convención de nomenclatura siguiente:  
   
- *\<MétodoInterpolación>\<Tipo>* `KeyFrame`  
+ *\<Métodointerpolación >\<tipo >* `KeyFrame`  
   
  Donde *\<MétodoInterpolación>* es el método de interpolación que el fotograma clave usa y *\<Tipo>* es el tipo de valor que la clase anima. Una animación de fotogramas clave que admite los tres métodos de interpolación tendrá tres tipos de fotogramas clave que se pueden usar. Por ejemplo, puede usar tres tipos de fotogramas clave con un <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, y <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>. (Los métodos de interpolación se describen detalladamente en una sección posterior).  
   
@@ -284,12 +284,13 @@ Una curva spline clave con los puntos de control (0.25, 0.5) y (0.75, 1.0)
 8.  Ordene los fotogramas clave en tiempo de resolución (clave principal) y el orden de declaración (clave secundaria), es decir, utilice un orden estable basado en el fotograma clave resueltos <xref:System.Windows.Media.Animation.KeyTime> valores.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.Animation.KeyTime>
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>
 - [Ejemplo de animación de curva Spline clave](https://go.microsoft.com/fwlink/?LinkID=160011)
 - [Ejemplo de animación de fotogramas clave](https://go.microsoft.com/fwlink/?LinkID=160012)
 - [Información general sobre animaciones](animation-overview.md)
-- [Información general sobre objetos Storyboard ](storyboards-overview.md)
+- [Información general sobre objetos Storyboard](storyboards-overview.md)
 - [Temas de procedimientos de fotogramas clave](key-frame-animation-how-to-topics.md)
 - [Información general sobre comportamientos de control de tiempo](timing-behaviors-overview.md)

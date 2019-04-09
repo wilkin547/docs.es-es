@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GDI+, cardinal splines
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
-ms.openlocfilehash: 6cc57698c8e43aefff0e0a63b0384417483d3b48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4588f6f606f0f479aeae1d143f23175ec4be32a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705290"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200420"
 ---
 # <a name="cardinal-splines-in-gdi"></a>Curvas spline cardinales en GDI+
 Una curva spline cardinal es una secuencia de curvas individuales combinadas para formar una curva de mayor tamaño. La spline se especifica mediante una matriz de puntos y un parámetro de tensión. Una curva spline cardinal pasa suavemente por cada punto de la matriz; hay ningún esquinas en ángulo y no hay cambios bruscos en la tensión de la curva. La siguiente ilustración muestra un conjunto de puntos y una curva spline cardinal que pasa por cada punto en el conjunto.  
@@ -36,5 +36,6 @@ Una curva spline cardinal es una secuencia de curvas individuales combinadas par
  [!code-vb[LinesCurvesAndShapes#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Líneas, curvas y formas](lines-curves-and-shapes.md)
 - [Crear y dibujar curvas](constructing-and-drawing-curves.md)

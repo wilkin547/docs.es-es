@@ -2,12 +2,12 @@
 title: <add> de <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: 18b50ec2d848bc6bb920fb8f630ac7703654b286
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 85d09c920de2ca1ab4971551ff98ea58c4492f44
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280740"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109270"
 ---
 # <a name="add-of-protocolmapping"></a>\<Agregar > de \<protocolMapping >
 Representa una asignación de protocolo predeterminado entre un esquema de protocolo de transporte (por ejemplo, http, net.tcp, net.pipe, etc.) y un enlace de Windows Communication Foundation (WCF). Al crear puntos de conexión predeterminados en tiempo de ejecución, WCF examina las asignaciones configuradas y decide qué enlace usar para una determinada dirección base.  
@@ -35,7 +35,7 @@ Representa una asignación de protocolo predeterminado entre un esquema de proto
 |-------------|-----------------|  
 |enlace|Cadena que especifica el tipo de enlace que se va a usar para un extremo durante la creación del extremo predeterminado.|  
 |bindingConfiguration|Cadena que especifica el nombre de la sección de configuración de enlace a la que se va a hacer referencia.|  
-|scheme|Esquema de protocolos de transporte que se va a utilizar para el punto de conexión predeterminado.|  
+|scheme|Esquema de protocolos de transporte que se va a utilizar para el extremo predeterminado.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -63,5 +63,6 @@ Representa una asignación de protocolo predeterminado entre un esquema de proto
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

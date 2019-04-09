@@ -2,12 +2,12 @@
 title: Seguimiento de traza de un extremo a otro
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-ms.openlocfilehash: 4ffa97b2aa7b934a15ea676f28e527f4b8fbc8aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd2964b39c758e41620fb453ddd8f61a1aa550aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092146"
 ---
 # <a name="end-to-end-tracing"></a>Seguimiento de traza de un extremo a otro
 Extremo a otro (e2e) seguimiento permite a los desarrolladores seguir la ejecución de código en la infraestructura de Windows Communication Foundation (WCF) para investigar por qué ha fallado una ruta de acceso del código, o para proporcionar un seguimiento detallado para el análisis de rendimiento y planificación de capacidad. Windows Communication Foundation (WCF) proporciona tres mecanismos de correlación para ayudar a diagnosticar la causa del error: actividades, transferencias y propagación.  
@@ -26,7 +26,8 @@ Extremo a otro (e2e) seguimiento permite a los desarrolladores seguir la ejecuci
  Proporciona un resumen de todos los tipos de traza de la actividad  
   
 ## <a name="see-also"></a>Vea también
-- [Configuración de la traza](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+
+- [Configurar seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Escenarios de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Escenarios de seguimiento de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

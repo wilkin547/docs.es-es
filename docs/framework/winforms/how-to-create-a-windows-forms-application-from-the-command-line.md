@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5dc5c3425672dd71359edf61c5f8625d96ad09ce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 34c1843873e2f6a9a4ad78ed860a0115e0f02e7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716951"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102432"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Filtrar Crear una aplicación de Windows Forms desde la línea de comandos
 Los procedimientos siguientes describen los pasos básicos que debe seguir para crear y ejecutar una aplicación de Windows Forms desde la línea de comandos. Visual Studio es altamente compatible con estos procedimientos.  Consulte también [Tutorial: Control se hospeda en un Windows Forms en WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
@@ -114,8 +114,9 @@ Los procedimientos siguientes describen los pasos básicos que debe seguir para 
 -   Para compilar el código, siga las instrucciones del procedimiento siguiente que describen cómo compilar y ejecutar la aplicación.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
-- [Cambiar la apariencia de Windows Forms](changing-the-appearance-of-windows-forms.md)
+- [Cambiar la apariencia de formularios Windows Forms](changing-the-appearance-of-windows-forms.md)
 - [Mejorar las aplicaciones de Windows Forms](./advanced/index.md)
 - [Introducción a los formularios Windows Forms](getting-started-with-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Ataques por repetición
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-ms.openlocfilehash: bceaa1bb723144ee4e3b534aa1537acdc7f65fc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712082"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186763"
 ---
 # <a name="replay-attacks"></a>Ataques por repetición
 Un *ataque de reproducción* se produce cuando un atacante copia una secuencia de mensajes entre dos partes y reproduce la secuencia a una o varias de las partes. A menos que se mitigue, el equipo objeto del ataque procesa la secuencia como mensajes legítimos, produciendo una gama de malas consecuencias, como pedidos redundantes de un elemento.  
@@ -37,6 +37,7 @@ Un *ataque de reproducción* se produce cuando un atacante copia una secuencia d
 -   Configure el servicio para utilizar la seguridad de nivel de transporte.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Divulgación de información](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Elevación de privilegios](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)

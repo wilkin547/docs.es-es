@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212526"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145631"
 ---
 # <a name="service-identity-and-authentication"></a>Identidad del servicio y autenticación
 Un servicio *identidad de extremo* es un valor generado desde el servicio de lenguaje de descripción de servicios Web (WSDL). Este valor, propagado a cualquier cliente, se utiliza para autenticar el servicio. Después de que el cliente inicie una comunicación con un punto de conexión y el servicio se autentique a sí mismo ante el cliente, el cliente compara el valor de identidad del punto de conexión con el valor real devuelto por el proceso de autenticación del punto de conexión. Si coinciden, se asegura al cliente que se ha puesto en contacto con el punto de conexión de servicio esperado. Esto funciona como una protección frente a *"phishing"* al impedir que un cliente se redirige a un punto de conexión hospedado por un servicio malintencionado.  
@@ -54,13 +54,9 @@ Un servicio *identidad de extremo* es un valor generado desde el servicio de len
   
 ## <a name="using-the-identity-element-in-configuration"></a>Mediante el \<identidad > elemento de configuración  
  Si cambia el tipo de credencial de cliente en el enlace mostrado anteriormente a `Certificate,`, entonces el WSDL generado contiene un certificado X.509 serializado con Base64 para el valor de identidad en el código siguiente. Éste es el valor predeterminado para todos los tipos de credencial de cliente excepto Windows.  
-  
-  
-  
+
  Puede cambiar el valor de la identidad de servicio predeterminada o cambiar el tipo de la identidad mediante la `<identity>` elemento de configuración o estableciendo la identidad en el código. El código de configuración siguiente establece una identidad del sistema de nombres de dominio (DNS) con el valor `contoso.com`.  
-  
-  
-  
+
 ## <a name="setting-identity-programmatically"></a>Establecimiento mediante programación de la identidad  
  El servicio no tiene que especificar explícitamente una identidad, porque WCF determina automáticamente. Sin embargo, WCF permite especificar una identidad en un punto de conexión, si es necesario. El código siguiente agrega un nuevo punto de conexión de servicio con una identidad de DNS concreta.  
   
@@ -69,16 +65,12 @@ Un servicio *identidad de extremo* es un valor generado desde el servicio de len
   
 ## <a name="specifying-identity-at-the-client"></a>Especificación de la identidad en el cliente  
  En tiempo de diseño, un programador del cliente se utiliza normalmente el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar la configuración de cliente. El archivo de configuración generado (pensado para que lo utilice el cliente) contiene la identidad del servidor. Por ejemplo, el código siguiente se genera a partir de un servicio que especifica una identidad de DNS, tal y como se muestra en el ejemplo anterior. Observe que el valor de identidad de extremo del cliente coincide con el del servicio. En este caso, cuando el cliente recibe las credenciales de Windows (Kerberos) para el servicio, espera que el valor sea `contoso.com`.  
-  
-  
-  
+
  Si, en lugar de Windows, el servicio especifica un certificado como el tipo de credencial de cliente, se espera que la propiedad DNS del certificado sea el valor `contoso.com`. (O si la propiedad DNS es `null`, el nombre de sujeto del certificado debe ser `contoso.com`.)  
   
 #### <a name="using-a-specific-value-for-identity"></a>Uso de un valor específico de identidad  
  El siguiente archivo de configuración del cliente muestra cómo se espera que la identidad del servicio sea un valor concreto. En el ejemplo siguiente, el cliente puede comunicarse con dos puntos de conexión. El primero se identifica con una huella digital del certificado y el segundo con una clave RSA certificada. Es decir, un certificado que contiene solo un par de clave pública/clave privada, pero que no es emitido por una autoridad de confianza.  
-  
-  
-  
+
 ## <a name="identity-checking-at-run-time"></a>Comprobación de identidad en tiempo de ejecución  
  En la fase de diseño, un programador de cliente determina la identidad del servidor mediante sus metadatos. En tiempo de ejecución, la comprobación de identidad se realiza antes de llamar a ningún punto de conexión del servicio.  
   
@@ -113,11 +105,12 @@ Un servicio *identidad de extremo* es un valor generado desde el servicio de len
  Para obtener más información acerca de la pila de enlace elementos correctamente para un enlace personalizado, vea [crear enlaces](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). Para obtener más información acerca de cómo crear un enlace personalizado con el <xref:System.ServiceModel.Channels.SecurityBindingElement>, vea [Cómo: Crear un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Cómo: Crear un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
-- [Cómo: Crear un comprobador de identidad de cliente personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+
+- [Filtrar para crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Filtrar para crear un SecurityBindingElement para un modo de autenticación especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Filtrar para crear un comprobador de identidad de cliente personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [Selección de tipos de credenciales](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Trabajo con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Creación de enlaces definidos por el usuario](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
-- [Cómo: Recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Filtrar para recuperar la huella digital de un certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

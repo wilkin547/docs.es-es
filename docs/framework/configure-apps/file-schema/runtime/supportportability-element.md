@@ -1,5 +1,5 @@
 ---
-title: <supportPortability> (Elemento)
+title: <supportPortability> Elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - supportPortability element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1e1c3236ed2d79592bca46e925c9f67e5ac9c51
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 8cc26f9721e911e05c5b5d4092be21a4e1191c84
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183953"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > elemento
 Especifica que una aplicación puede hacer referencia al mismo ensamblado en dos implementaciones diferentes de .NET Framework, deshabilitando el comportamiento predeterminado que trata los ensamblados como equivalentes para los propósitos de portabilidad de aplicación.  
@@ -79,5 +79,6 @@ Especifica que una aplicación puede hacer referencia al mismo ensamblado en dos
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [/appconfig (opciones del compilador de C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [Información general de unificación de ensamblados de .NET framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
+
+- [/appconfig (Opciones del compilador de C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [Información general sobre la unificación de ensamblados de .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

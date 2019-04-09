@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdd90e3d10bc5f110622f11fd5bfd17853142ac2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b886bf16e5465d3faac5286457784712ac1b72e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516635"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081689"
 ---
 # <a name="imetadatatables2-interface"></a>IMetaDataTables2 (Interfaz)
 Extiende [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) para incluir métodos para trabajar con secuencias de metadatos.  
@@ -30,8 +30,8 @@ Extiende [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/ime
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetMetaDataStorage (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|Obtiene el tamaño y el contenido de los metadatos almacenados en la sección especificada.|  
-|[GetMetaDataStreamInfo (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|Obtiene el nombre, el tamaño y el contenido de la secuencia de metadatos en el índice especificado.|  
+|[Método GetMetaDataStorage](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|Obtiene el tamaño y el contenido de los metadatos almacenados en la sección especificada.|  
+|[Método GetMetaDataStreamInfo](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|Obtiene el nombre, el tamaño y el contenido de la secuencia de metadatos en el índice especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -43,5 +43,6 @@ Extiende [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/ime
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [IMetaDataTables (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+
+- [IMetaDataTables (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [Interfaces de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

@@ -1,13 +1,13 @@
 ---
-title: Filtrar Serializar y deserializar datos JSON
+title: Filtrar para serializar y deserializar datos JSON
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: c5da34b6ab7953dbff62ca757ba08d0c7364b4cf
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 6363a8e161969c188c5dd18c425ffd42969e9adc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465209"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106163"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>Filtrar Serializar y deserializar datos JSON
 JSON (notación de objetos JavaScript) es un formato de codificación de datos eficaz que permite intercambios rápidos de cantidades pequeñas de datos entre los exploradores de cliente y servicios web con AJAX (JavaScript asincrónico y XML) habilitado.  
@@ -136,5 +136,6 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Serialización independiente de JSON](stand-alone-json-serialization.md)
 - [Compatibilidad con JSON y otros datos de formatos de transferencia](support-for-json-and-other-data-transfer-formats.md)

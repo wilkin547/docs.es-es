@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54a1c8e06991729ea8556d82d31897c522f6d173
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188726"
 ---
 # <a name="creating-user-defined-bindings"></a>Creación de enlaces definidos por el usuario
 Hay varias maneras de crear enlaces no proporcionadas por el sistema:  
   
--   Cree un enlace personalizado, basado en la clase <xref:System.ServiceModel.Channels.CustomBinding>, que es un contenedor que rellena de elementos de enlace. El enlace personalizado se agrega a continuación a un extremo de servicio. Puede crear el enlace personalizado mediante programación o mediante un archivo de configuración de la aplicación. Para usar un elemento de enlace desde un archivo de configuración de la aplicación, el elemento de enlace debe extenderse <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Para obtener más información acerca de los enlaces personalizados, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md) y <xref:System.ServiceModel.Channels.CustomBinding>.  
+-   Cree un enlace personalizado, basado en la clase <xref:System.ServiceModel.Channels.CustomBinding>, que es un contenedor que rellena de elementos de enlace. El enlace personalizado se agrega a continuación a un punto de conexión de servicio. Puede crear el enlace personalizado mediante programación o mediante un archivo de configuración de la aplicación. Para usar un elemento de enlace desde un archivo de configuración de la aplicación, el elemento de enlace debe extenderse <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Para obtener más información acerca de los enlaces personalizados, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md) y <xref:System.ServiceModel.Channels.CustomBinding>.  
   
 -   Puede crear una clase que derive de un enlace estándar. Por ejemplo, puede derivar una clase de <xref:System.ServiceModel.WSHttpBinding> e invalidar el método <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> para obtener los elementos de enlace e insertar un elemento de enlace personalizado o establecer un valor determinado de seguridad.  
   
@@ -119,5 +119,6 @@ public override BindingElementCollection CreateBindingElements()
  En lugar de crear una clase de enlace completamente nueva, puede que sea posible extender uno de los enlaces existentes proporcionados por el sistema. De manera muy similar al caso anterior, debe invalidar el método <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> y la propiedad <xref:System.ServiceModel.Channels.Binding.Scheme%2A>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Channels.Binding>
 - [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)

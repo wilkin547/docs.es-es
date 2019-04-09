@@ -2,12 +2,12 @@
 title: Expresiones de consulta
 description: Obtenga información sobre la compatibilidad con expresiones de consulta de LINQ en el F# lenguaje de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1a6450bdcec4240fac58f6c27af2298dfd7f45a2
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 3e5be7f81d7e15953142186be3aca64e68ded2a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654827"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191573"
 ---
 # <a name="query-expressions"></a>Expresiones de consulta
 
@@ -501,9 +501,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Comparación de Transact-SQL y las expresiones de consulta de F#
 La tabla siguiente muestran algunas consultas de Transact-SQL comunes y sus equivalentes en F#. El código de esta tabla también asume la misma base de datos en la tabla anterior y el mismo código inicial para configurar el proveedor de tipos.
 
-
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>Tabla 2. Transact-SQL y expresiones de consulta de F#
-
 
 <table style="width:100%">
   <tr>
@@ -821,7 +819,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code> Con <code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> with <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -1277,7 +1275,6 @@ let num =
     }
 printfn "Last number: %d" num
 
-
 open Microsoft.FSharp.Linq
 
 printfn "\nlastOrDefault query operator."
@@ -1477,7 +1474,6 @@ query {
     select number
 }
 |> Seq.iter (fun number -> printfn "Number = %d" number)
-
 
 printfn "\n sumBy query operator"
 query {
@@ -1869,12 +1865,9 @@ Y aquí es el resultado completo cuando se ejecuta este código F# interactivo.
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
 
-
 --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Data.dll'
 
-
 --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Data.Linq.dll'
-
 
 contains query operator
 Binding session to 'C:\Users\ghogen\AppData\Local\Temp\tmp5E3C.dll'...
