@@ -7,12 +7,12 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 6004dad448b965d51be6543478cbd059fb7f4d87
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 714303569111f30d4cc03ab0ab7cb2acec4276c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072511"
 ---
 # <a name="path-animation-how-to-topics"></a>Temas "Cómo..." de animación de trazado
 Los temas de esta sección muestran cómo animar un objeto a lo largo de una ruta de acceso.  
@@ -22,8 +22,8 @@ Los temas de esta sección muestran cómo animar un objeto a lo largo de una rut
  [Animación de un objeto a lo largo de un trazado (animación en punto)](how-to-animate-an-object-along-a-path-point-animation.md)  
  [Animación de un objeto a lo largo de un trazado (animación de matriz)](how-to-animate-an-object-along-a-path-matrix-animation.md)  
  [Animar un objeto a lo largo de un trazado (animación en matriz con acumulación de desplazamiento)](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [Girar un objeto utilizando un trazado geométrico (animación en matriz)](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [Girar un objeto utilizando un trazado geométrico](how-to-rotate-an-object-by-using-a-geometric-path.md)  
+ [Girar un objeto mediante un trazado geométrico (animación en matriz)](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [Girar un objeto mediante un trazado geométrico](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
@@ -31,6 +31,7 @@ Los temas de esta sección muestran cómo animar un objeto a lo largo de una rut
  <xref:System.Windows.Media.Animation.Storyboard>  
   
 ## <a name="see-also"></a>Vea también
+
 - [Gráficos y multimedia](index.md)
 - [Información general sobre animaciones](animation-overview.md)
 - [Información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md)

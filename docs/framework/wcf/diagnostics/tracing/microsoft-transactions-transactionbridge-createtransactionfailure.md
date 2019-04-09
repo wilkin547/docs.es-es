@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.CreateTransactionFailure
 ms.date: 03/30/2017
 ms.assetid: c3468e23-49a9-4a84-972d-a79a658851b3
-ms.openlocfilehash: 947391e0594ffddba8235c519a076d330b73d4d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 968444947714315bae902d3d038129c5b8a04cf2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632639"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082521"
 ---
 # <a name="microsofttransactionstransactionbridgecreatetransactionfailure"></a>Microsoft.Transactions.TransactionBridge.CreateTransactionFailure
 No se pudo crear una transacción.  
@@ -19,6 +19,7 @@ No se pudo crear una transacción.
  Inspeccione la cadena de estado dentro del mensaje de seguimiento para determinar si existe cualquier elemento al que se le puede realizar alguna acción.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

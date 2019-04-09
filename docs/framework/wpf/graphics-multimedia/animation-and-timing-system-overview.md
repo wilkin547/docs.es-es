@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-ms.openlocfilehash: 36a71213b2c96d2ea1aa7597216f420f47493f43
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f64431e7804ba6e068a3d05f512c6ead089d7712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079323"
 ---
 # <a name="animation-and-timing-system-overview"></a>Información general sobre sistemas de temporización y animación
 Este tema describe cómo utiliza la animación, el sistema de temporización <xref:System.Windows.Media.Animation.Timeline>, y <xref:System.Windows.Media.Animation.Clock> clases para animar propiedades.  
@@ -83,6 +83,7 @@ Una cadena de composición
  Al animar una propiedad, el <xref:System.Windows.Media.Animation.AnimationClock> establece la propiedad *actual* valor. Recuperar el valor de propiedad a través de su descriptor de acceso CLR o el <xref:System.Windows.DependencyObject.GetValue%2A> método devuelve el resultado de la <xref:System.Windows.Media.Animation.AnimationClock> cuando el <xref:System.Windows.Media.Animation.AnimationClock> es <xref:System.Windows.Media.Animation.ClockState.Active> o <xref:System.Windows.Media.Animation.ClockState.Filling>. Puede recuperar el valor de la propiedad base mediante el <xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A> método.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre animaciones](animation-overview.md)
 - [Información general sobre eventos de control de tiempo](timing-events-overview.md)
 - [Información general sobre comportamientos de control de tiempo](timing-behaviors-overview.md)

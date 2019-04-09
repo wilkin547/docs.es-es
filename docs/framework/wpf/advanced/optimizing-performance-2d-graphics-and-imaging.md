@@ -1,5 +1,5 @@
 ---
-title: 'Optimizar el rendimiento: Imágenes y gráficos GDI+'
+title: 'Optimizar el rendimiento: Imágenes y gráficos 2D'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,24 +12,23 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 6ec03775f42e7f7a60d182eba134f9e1f7ba8466
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074994"
 ---
-# <a name="optimizing-performance-2d-graphics-and-imaging"></a>Optimizar el rendimiento: Imágenes y gráficos GDI+
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona una amplia gama de gráficos 2D y funcionalidad de creación de imágenes que se puede optimizar para los requisitos de la aplicación. Este tema proporciona información acerca de la optimización del rendimiento en esas áreas.  
-  
-  
+# <a name="optimizing-performance-2d-graphics-and-imaging"></a>Optimizar el rendimiento: Imágenes y gráficos 2D
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Proporciona una amplia gama de gráficos 2D y funcionalidad de creación de imágenes que se puede optimizar para sus requisitos de aplicación. Este tema proporciona información acerca de la optimización del rendimiento en esas áreas.  
+
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>Dibujo y formas  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona ambos <xref:System.Windows.Media.Drawing> y <xref:System.Windows.Shapes.Shape> objetos para representar el contenido de dibujo gráfico. Sin embargo, <xref:System.Windows.Media.Drawing> objetos son construcciones más sencillas que <xref:System.Windows.Shapes.Shape> objetos y proporcionan mejores características de rendimiento.  
   
  Un <xref:System.Windows.Shapes.Shape> permite dibujar una forma gráfica en la pantalla. Dado que se derivan los <xref:System.Windows.FrameworkElement> (clase), <xref:System.Windows.Shapes.Shape> objetos pueden usarse dentro de paneles y la mayoría de los controles.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ofrece varias capas de acceso a gráficos y servicios de representación. En la capa superior, <xref:System.Windows.Shapes.Shape> objetos son fáciles de usar y proporcionan numerosas características útiles, como diseño y control de eventos. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona un número de objetos de forma listos para usar. Todos los objetos de forma que se heredan de la <xref:System.Windows.Shapes.Shape> clase. Objetos de forma disponibles incluyen <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, y <xref:System.Windows.Shapes.Rectangle>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ofrece varios niveles de acceso a gráficos y servicios de representación. En la capa superior, <xref:System.Windows.Shapes.Shape> objetos son fáciles de usar y proporcionan numerosas características útiles, como diseño y control de eventos. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Proporciona una serie de objetos de forma listos para usar. Todos los objetos de forma que se heredan de la <xref:System.Windows.Shapes.Shape> clase. Objetos de forma disponibles incluyen <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, y <xref:System.Windows.Shapes.Rectangle>.  
   
  <xref:System.Windows.Media.Drawing> objetos, por otro lado, no se derivan de la <xref:System.Windows.FrameworkElement> clase y proporcionar una implementación más ligera para representar formas, imágenes y texto.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "57371403"
   
 <a name="Images"></a>   
 ## <a name="images"></a>Imágenes  
- La creación de imágenes de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ofrece una mejora considerable sobre las capacidades de creación de imágenes en versiones anteriores de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Las funciones de creación de imágenes, como mostrar un mapa de bits o usar una imagen en un control común, se administraban principalmente mediante la Interfaz de dispositivo gráfico de Microsoft Windows (GDI) o la interfaz de programación de aplicaciones (API) de Windows GDI+. Estas API proporcionan funciones de creación de imágenes de línea base, pero carecían de algunas características, como la compatibilidad con la extensibilidad de códec y con imágenes de alta fidelidad. WPF Imaging API se rediseñó para superar las limitaciones de GDI y GDI+ y proporcionar un nuevo conjunto de API para mostrar y usar imágenes en las aplicaciones.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] creación de imágenes ofrece una mejora considerable sobre las capacidades de creación de imágenes en versiones anteriores de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Las funciones de creación de imágenes, como mostrar un mapa de bits o usar una imagen en un control común, se administraban principalmente mediante la Interfaz de dispositivo gráfico de Microsoft Windows (GDI) o la interfaz de programación de aplicaciones (API) de Windows GDI+. Estas API proporcionan funciones de creación de imágenes de línea base, pero carecían de algunas características, como la compatibilidad con la extensibilidad de códec y con imágenes de alta fidelidad. WPF Imaging API se rediseñó para superar las limitaciones de GDI y GDI+ y proporcionar un nuevo conjunto de API para mostrar y usar imágenes en las aplicaciones.  
   
  Al usar imágenes, tenga en cuenta las siguientes recomendaciones para obtener un mejor rendimiento:  
   
@@ -100,6 +99,7 @@ ms.locfileid: "57371403"
  [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Optimizar WPF: Rendimiento de aplicaciones](optimizing-wpf-application-performance.md)
 - [Planear para mejorar el rendimiento de aplicaciones](planning-for-application-performance.md)
 - [Aprovechar el hardware](optimizing-performance-taking-advantage-of-hardware.md)

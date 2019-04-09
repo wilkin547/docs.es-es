@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1107fe12f5efa2b812f723568f5cb4fea1eddc8a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087903"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Proveedores de transmisión por secuencias (WCF Data Services)
 Un servicio de datos puede exponer datos binarios de objetos grandes. Estos datos binarios pueden representar secuencias de vídeo y audio, imágenes, archivos de documento u otros tipos de medios binarios. Cuando una entidad del modelo de datos incluye una o más propiedades binarias, el servicio de datos devuelve estos datos binarios codificados en base 64 en la entrada de la fuente de respuesta. Dado que carga y la serialización de datos binarios grandes de esta manera pueden afectar al rendimiento, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define un mecanismo para recuperar datos binarios independientemente de la entidad a la que pertenece. Para ello, se separan los datos binarios de la entidad en uno o varios flujos de datos.  
@@ -81,18 +81,14 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Habilitar flujos binarios grandes en el entorno de hospedaje  
  Al crear un servicio de datos en una aplicación web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], Windows Communication Foundation (WCF) se utiliza para proporcionar la implementación del protocolo HTTP. De forma predeterminada, WCF limita el tamaño de los mensajes HTTP a solo 65 kilobytes. Para poder transmitir datos binarios grandes por secuencias al servicio de datos y desde él, debe configurar también la aplicación web para habilitar archivos binarios grandes y utilizar secuencias para la transferencia. Para ello, en el elemento `<configuration />` del archivo Web.config de la aplicación agregue lo siguiente:  
-  
-  
-  
+
 > [!NOTE]
 >  Debe usar un <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> modo de transferencia para asegurarse de que los datos binarios en mensajes de solicitud y respuesta se transmite por secuencias y no almacena en búfer por WCF.  
   
  Para obtener más información, consulte [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) y [las cuotas de transporte](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
  De forma predeterminada, Internet Information Services (IIS) también limita el tamaño de las respuestas a 4 MB. Para habilitar el servicio de datos recibir flujos mayores que 4MB cuando se ejecuta en IIS, también debe establecer el `maxRequestLength` atributo de la [httpRuntime Element (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) en la `<system.web />` sección de configuración, como se muestra en el ejemplo siguiente:  
-  
-  
-  
+
 ## <a name="using-data-streams-in-a-client-application"></a>Usar flujos de datos en una aplicación cliente  
  La biblioteca cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite recuperar y actualizar estos recursos expuestos como flujos binarios en el cliente. Para obtener más información, consulte [trabajar con datos binarios](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
@@ -130,6 +126,7 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
  Para obtener más información, consulte [versiones del servicio de datos](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Proveedores de Data Services](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Proveedores de servicios de datos personalizados](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
-- [Trabajo con datos binarios](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+- [Trabajar con datos binarios](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
