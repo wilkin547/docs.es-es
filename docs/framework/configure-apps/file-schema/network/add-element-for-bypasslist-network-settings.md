@@ -1,5 +1,5 @@
 ---
-title: <add> (Elemento para bypasslist, Configuración de red)
+title: <add> Elemento para bypasslist (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 702aa8ccefcdddee1ffc5a7519a4f955b1dc5dfb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 904c8e23f7a09a975a6f3b9322ed6bc4148d9ba4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098291"
 ---
 # <a name="add-element-for-bypasslist-network-settings"></a>\<Agregar > elemento para bypasslist (configuración de red)
 Agrega una dirección IP o nombre DNS a la lista de omisión de proxy.  
@@ -39,16 +39,16 @@ Agrega una dirección IP o nombre DNS a la lista de omisión de proxy.
   
 ### <a name="attributes"></a>Atributos  
   
-|**Attribute**|**Descripción**|  
+|**Atributo**|**Descripción**|  
 |-------------------|---------------------|  
-|**address**|Una expresión regular que describe una dirección IP o nombre DNS.|  
+|**dirección**|Una expresión regular que describe una dirección IP o nombre DNS.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Element**|**Descripción**|  
+|**Elemento**|**Descripción**|  
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen direcciones que no se usa a un proxy.|  
   
@@ -81,5 +81,6 @@ Agrega una dirección IP o nombre DNS a la lista de omisión de proxy.
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

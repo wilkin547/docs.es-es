@@ -2,12 +2,12 @@
 title: Solución de problemas
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 62cc7a0567b9eb82c24c329a7ae8fb3e52f0f0c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586415"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105487"
 ---
 # <a name="troubleshooting"></a>Solución de problemas
 La siguiente información expone algunos problemas que podría encontrar en sus aplicaciones de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y proporciona sugerencias para evitar o reducir el efecto de estos problemas.  
@@ -26,7 +26,7 @@ La siguiente información expone algunos problemas que podría encontrar en sus 
  Para especificar un nombre de archivo de entrada, agregue el nombre a la línea de comandos como archivo de entrada. No se admite la inclusión del nombre de archivo en la cadena de conexión (mediante la opción **/conn** ). Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="class-library-projects"></a>Proyectos de biblioteca de clases  
- El [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] crea una cadena de conexión en el archivo `app.config` del proyecto. En proyectos de biblioteca de clases, el archivo `app.config` no se utiliza. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utiliza la cadena de conexión proporcionada en los archivos en tiempo de diseño. Al cambiar el valor en `app.config`, la base de datos a la que se conecta su aplicación no cambia.  
+ El [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] crea una cadena de conexión en el archivo `app.config` del proyecto. En proyectos de biblioteca de clases, el archivo `app.config` no se utiliza. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa la cadena de conexión proporcionada en los archivos en tiempo de diseño. Al cambiar el valor en `app.config`, la base de datos a la que se conecta su aplicación no cambia.  
   
 ## <a name="cascade-delete"></a>Eliminación en cascada  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite ni reconoce las operaciones de eliminación en cascada. Si desea eliminar una fila de una tabla que tiene restringidas las eliminaciones, deberá hacerlo mediante una de las siguientes opciones:  
@@ -60,7 +60,7 @@ La siguiente información expone algunos problemas que podría encontrar en sus 
  Este requisito no se aplica a [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)].  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
- Esta excepción se produce cuando un valor de columna es nulo en una consulta <xref:System.Linq.Enumerable.GroupBy%2A> que agrupa mediante una expresión `boolean`, como `group x by (Phone==@phone)`. Dado que la expresión es `boolean`, se deduce que la clave será `boolean`, no `nullable``boolean`. Cuando la comparación traducida genera un valor nulo (null), se realizará un intento de asignar un `nullable``boolean` a un `boolean`, y se producirá la excepción.  
+ Esta excepción se produce cuando un valor de columna es nulo en una consulta <xref:System.Linq.Enumerable.GroupBy%2A> que agrupa mediante una expresión `boolean`, como `group x by (Phone==@phone)`. Dado que la expresión es un `boolean`, la clave se infiere para ser `boolean`, no `nullable` `boolean`. Cuando la comparación traducida genera un valor null, se realiza un intento para asignar un `nullable` `boolean` a un `boolean`, y se produce la excepción.  
   
  Para evitar esta situación (suponiendo que desea tratar los valores null como falsos), utilice un enfoque como el siguiente:  
   
@@ -70,5 +70,6 @@ La siguiente información expone algunos problemas que podría encontrar en sus 
  Se llama al método generado `OnCreated()` cada vez que se llama al constructor de objeto, incluido el escenario en el que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] llama al constructor para realizar una copia para los valores originales. Tenga en cuenta este comportamiento si implementa el método `OnCreated()` en su propia clase parcial.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Capacidad de depuración](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
 - [Preguntas más frecuentes](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

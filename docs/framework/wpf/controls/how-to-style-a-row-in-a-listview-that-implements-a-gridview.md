@@ -6,15 +6,15 @@ helpviewer_keywords:
 - styling rows in ListViews implementing GridViews [WPF]
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
-ms.openlocfilehash: 0c8806c399959fdc1466e0839ba469881718092b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9af8d10c7db2d3bbe8b9443402cbb1cfeaa7edb3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361634"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091465"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Filtrar Aplicar un estilo a una fila en un control ListView que implementa una clase GridView
-En este ejemplo se muestra cómo aplicar un estilo una fila en un <xref:System.Windows.Controls.ListView> control que implementa un <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView.View%2A> modo.  
+En este ejemplo se muestra cómo aplicar un estilo una fila en un <xref:System.Windows.Controls.ListView> control que implementa un <xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A> modo.  
   
 ## <a name="example"></a>Ejemplo  
  Puedes aplicar estilo a una fila en un <xref:System.Windows.Controls.ListView> control estableciendo un <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> en el <xref:System.Windows.Controls.ListView> control. Establecer el estilo de sus elementos que se representan como <xref:System.Windows.Controls.ListViewItem> objetos. El <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> referencias el <xref:System.Windows.Controls.ControlTemplate> objetos que se usan para mostrar el contenido de la fila.  
@@ -34,6 +34,7 @@ En este ejemplo se muestra cómo aplicar un estilo una fila en un <xref:System.W
  [!code-xaml[ListViewItemStyleSnippet#GridView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#gridview)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
 - [Temas "Cómo..."](listview-how-to-topics.md)

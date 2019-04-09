@@ -1,5 +1,5 @@
 ---
-title: Filtrar Cambiar la apariencia del Control LinkLabel de formularios Windows Forms
+title: Filtrar para cambiar el aspecto del control LinkLabel de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: 451faf04e3a51e7dbcb992feb3f38025894be631
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: be2f6e8e10d9f9b23b4f57fa696f1fb88c4726c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717731"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105032"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Filtrar Cambiar la apariencia del Control LinkLabel de formularios Windows Forms
+# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Filtrar para cambiar el aspecto del control LinkLabel de formularios Windows Forms
 Puede cambiar el texto mostrado por el <xref:System.Windows.Forms.LinkLabel> control para adaptarse a una variedad de propósitos. Por ejemplo, es una práctica común para indicar al usuario que se puede hacer clic en texto estableciendo el texto que aparezca en un color específico con un carácter de subrayado. Después de que el usuario hace clic en el texto, el color cambia a un color diferente. Para controlar este comportamiento, puede establecer cinco propiedades diferentes: el <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, y <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propiedades.  
   
 ### <a name="to-change-the-appearance-of-a-linklabel-control"></a>Para cambiar la apariencia de un control LinkLabel  
@@ -122,10 +122,11 @@ Puede cambiar el texto mostrado por el <xref:System.Windows.Forms.LinkLabel> con
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
 - [Información general sobre el control LinkLabel](linklabel-control-overview-windows-forms.md)
-- [Cómo: Vincular a un objeto o página con el Control LinkLabel de formularios Windows Forms Web](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [LinkLabel (control)](linklabel-control-windows-forms.md)
+- [Filtrar para establecer vínculos con un objeto o página web mediante el control LinkLabel de formularios Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Control LinkLabel](linklabel-control-windows-forms.md)

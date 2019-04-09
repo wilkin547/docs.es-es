@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442729"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095872"
 ---
 # <a name="using-sessions"></a>Uso de sesiones
 En las aplicaciones de Windows Communication Foundation (WCF), un *sesión* correlaciona un grupo de mensajes en una conversación. Las sesiones WCF son diferentes del objeto de sesión disponible en [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] admiten comportamientos diferentes aplicaciones y se controlan de maneras diferentes. En este tema se describe las características que habilitan las sesiones en WCF aplicaciones y cómo usarlas.  
@@ -32,11 +32,11 @@ En las aplicaciones de Windows Communication Foundation (WCF), un *sesión* corr
   
  Si está familiarizado con el <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> clase [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplicaciones y la funcionalidad que proporciona, es posible que tenga en cuenta las siguientes diferencias entre ese tipo de sesión y las sesiones WCF:  
   
--   Las sesiones[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] siempre son iniciadas por servidor.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] las sesiones son siempre iniciadas por el servidor.  
   
--   Las sesiones[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] están implícitamente desordenadas.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] las sesiones están implícitamente desordenadas.  
   
--   Las sesiones[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] proporcionan un mecanismo del almacenamiento de datos general para todas las solicitudes.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] las sesiones proporcionan un mecanismo de almacenamiento de datos general en todas las solicitudes.  
   
  Este tema describe:  
   
@@ -108,7 +108,7 @@ En las aplicaciones de Windows Communication Foundation (WCF), un *sesión* corr
 > [!NOTE]
 >  Aunque el comportamiento predeterminado se parece algo a los constructores y destructores locales, solo es eso, un parecido. Cualquier operación de servicio WCF puede ser un inicio de la operación de finalización o ambos al mismo tiempo. Además, en el caso predeterminado, las operaciones de inicio pueden llamarse cualquier número de veces en cualquier orden; no se crean sesiones adicionales una vez que se establezca la sesión y se asocie a una instancia, a menos que controle explícitamente la duración de la instancia del servicio (manipulando el objeto <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> ). Finalmente, el estado se asocia a la sesión y no al objeto de servicio.  
   
- Por ejemplo, el `ICalculatorSession` contrato usado en el ejemplo anterior requiere que el cliente de WCF objeto primera llamada la `Clear` operación antes de cualquier otra operación y que la sesión con este objeto de cliente WCF debe finalizar cuando llama a la `Equals` operación. El ejemplo de código siguiente muestra un contrato que aplica estos requisitos. Se debe llamar primero a`Clear` para iniciar una sesión y esa sesión finaliza cuando se llama a `Equals` .  
+ Por ejemplo, el `ICalculatorSession` contrato usado en el ejemplo anterior requiere que el cliente de WCF objeto primera llamada la `Clear` operación antes de cualquier otra operación y que la sesión con este objeto de cliente WCF debe finalizar cuando llama a la `Equals` operación. El ejemplo de código siguiente muestra un contrato que aplica estos requisitos. `Clear` primero se debe llamar para iniciar una sesión, y esa sesión finaliza cuando `Equals` se llama.  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
@@ -146,5 +146,6 @@ En las aplicaciones de Windows Communication Foundation (WCF), un *sesión* corr
 >  MaxConcurrentSessions no influye en este caso porque solo hay una "sesión" disponible.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>
