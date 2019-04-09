@@ -1,21 +1,21 @@
 ---
-title: Procedimiento Crear un punto de conexión de servicio en código
+title: Filtrar para crear un punto de conexión de servicio mediante código
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 143a43545646e180bcfdedb60c64bbbb7c83ac2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b51018a5940e01b38b00addb762fa6504495a4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517479"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139872"
 ---
-# <a name="how-to-create-a-service-endpoint-in-code"></a>Procedimiento Crear un punto de conexión de servicio en código
-En este ejemplo, se define un contrato de `ICalculator` para un servicio de la calculadora, el servicio se implementa en la clase `CalculatorService` y a continuación, su punto de conexión se define mediante código, donde se especifica que el servicio debe utilizar la clase <xref:System.ServiceModel.BasicHttpBinding>.  
+# <a name="how-to-create-a-service-endpoint-in-code"></a>Filtrar para crear un punto de conexión de servicio mediante código
+En este ejemplo, se define un contrato de `ICalculator` para un servicio de la calculadora, el servicio se implementa en la clase `CalculatorService` y a continuación, su extremo se define mediante código, donde se especifica que el servicio debe utilizar la clase <xref:System.ServiceModel.BasicHttpBinding>.  
   
- Normalmente es el mejor procedimiento para especificar el enlace y la información de dirección de forma declarativa en configuración en lugar de hacerlo de forma imperativa en código. Normalmente, no resulta muy práctico definir los extremos en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio. Más generalmente, manteniendo el enlace y la información de dirección fuera del código permite cambiarlos sin tener que recompilar o implementar la aplicación.  
+ Normalmente es el mejor procedimiento para especificar el enlace y la información de dirección de forma declarativa en configuración en lugar de hacerlo de forma imperativa en código. Normalmente, no resulta muy práctico definir los puntos de conexión en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio. Más generalmente, manteniendo el enlace y la información de dirección fuera del código permite cambiarlos sin tener que recompilar o implementar la aplicación.  
   
 #### <a name="to-create-a-service-endpoint-in-code"></a>Creación de un extremo de servicio mediante código  
   
@@ -34,7 +34,7 @@ En este ejemplo, se define un contrato de `ICalculator` para un servicio de la c
      [!code-csharp[c_HowTo_CodeServiceBinding#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#3)]
      [!code-vb[c_HowTo_CodeServiceBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#3)]  
   
-4.  Cree el host y llame al método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%28System.Type%2CSystem.ServiceModel.Channels.Binding%2CSystem.String%29> o una de las otras sobrecargas para agregar el punto de conexión de servicio del host.  
+4.  Cree el host y llame al método <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%28System.Type%2CSystem.ServiceModel.Channels.Binding%2CSystem.String%29> o una de las otras sobrecargas para agregar el extremo de servicio del host.  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#6)]
      [!code-vb[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#6)]  
@@ -47,4 +47,5 @@ En este ejemplo, se define un contrato de `ICalculator` para un servicio de la c
      Para obtener más información sobre los puntos de conexión predeterminados, consulte [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Especificar un enlace de servicio en el código](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+
+- [Filtrar para especificar un enlace de servicio en el código](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)

@@ -2,15 +2,15 @@
 title: Participantes de seguimiento
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 343c2eea5d8e4cb7e90f2e2344cce9f3418c25dd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 334815c3c928790569846d02d87e9d1dbba889ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462999"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138832"
 ---
 # <a name="tracking-participants"></a>Participantes de seguimiento
-Los participantes de seguimiento son puntos de extensibilidad que permiten a un desarrollador de flujo de trabajo tener acceso a objetos <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> y procesarlos. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] incluye un participante de seguimiento estándar que escribe los registros de seguimiento como eventos de Seguimiento de eventos para Windows (ETW). Si eso no cumple sus requisitos, también puede escribir un participante de seguimiento personalizado.  
+Los participantes de seguimiento son puntos de extensibilidad que permiten a un desarrollador de flujo de trabajo tener acceso a objetos <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> y procesarlos. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] incluye a un participante de seguimiento estándar que escribe registros de seguimiento como eventos de seguimiento de eventos para Windows (ETW). Si eso no cumple sus requisitos, también puede escribir un participante de seguimiento personalizado.  
   
 ## <a name="tracking-participants"></a>Participantes de seguimiento  
  La infraestructura de seguimiento permite la aplicación de un filtro en los registros de seguimiento salientes de forma que un participante pueda suscribirse a un subconjunto de registros. El mecanismo para aplicar un filtro es a través de un perfil de seguimiento.  
@@ -18,7 +18,7 @@ Los participantes de seguimiento son puntos de extensibilidad que permiten a un 
  Windows Workflow Foundation (WF) en [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] proporciona un participante de seguimiento que escribe los registros de seguimiento en una sesión de ETW. El participante se configura en un servicio de flujo de trabajo agregando un comportamiento específico del seguimiento en un archivo de configuración. Habilitar un participante de seguimiento de ETW permite realizar un seguimiento de los registros que se van a ver en el visor de eventos. El ejemplo de SDK para el seguimiento basado en ETW es una buena manera de familiarizarse con el seguimiento de WF mediante el participante de seguimiento basado en ETW.  
   
 ## <a name="etw-tracking-participant"></a>Participante de seguimiento de ETW  
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] incluye un participante de seguimiento de ETW que escribe los registros de seguimiento en una sesión de ETW. Esto se realiza de una manera muy eficaz con un impacto mínimo en el rendimiento de la aplicación o en la capacidad de proceso del servidor. La ventaja de usar el participante de seguimiento de ETW estándar es que los registros de seguimiento que recibe se pueden ver en la otra aplicación y en los registros del sistema en el Visor de eventos de Windows.  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] incluye a un participante de seguimiento de ETW que escribe los registros de seguimiento en una sesión de ETW. Esto se realiza de una manera muy eficaz con un impacto mínimo en el rendimiento de la aplicación o en la capacidad de proceso del servidor. La ventaja de usar el participante de seguimiento de ETW estándar es que los registros de seguimiento que recibe se pueden ver en la otra aplicación y en los registros del sistema en el Visor de eventos de Windows.  
   
  El participante de seguimiento de ETW estándar está configurado en el archivo Web.config tal y como se muestra en el siguiente ejemplo.  
   
@@ -92,7 +92,7 @@ Los participantes de seguimiento son puntos de extensibilidad que permiten a un 
 ## <a name="custom-tracking-participant"></a>Participante de seguimiento personalizado  
  La API de participante de seguimiento permite la ampliación del tiempo de ejecución de seguimiento mediante un participante de seguimiento proporcionado por el usuario que puede incluir una lógica personalizada para controlar los registros de seguimiento emitidos por el tiempo de ejecución del flujo de trabajo. Para escribir un participante de seguimiento personalizado, el desarrollador de software debe implementar el método `Track` en la clase <xref:System.Activities.Tracking.TrackingParticipant>. Se llama a este método cuando el tiempo de ejecución emite un registro de seguimiento.  
   
- Los participantes de seguimiento se derivan de la clase <xref:System.Activities.Tracking.TrackingParticipant>. La clase <xref:System.Activities.Tracking.EtwTrackingParticipant> proporcionada por el sistema emite un evento ETW (Seguimiento de eventos para Windows) para cada registro de seguimiento que se haya recibido. Para crear un participante de seguimiento personalizado, se crea una clase que deriva de <xref:System.Activities.Tracking.TrackingParticipant>. Para proporcionar funcionalidad básica de seguimiento, invalide <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>. Se llama a <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> cuando el tiempo de ejecución envía un registro de seguimiento que se puede procesar de la manera deseada. En el siguiente ejemplo, se define una clase de participante de seguimiento personalizada que emite todos los registros de seguimiento en la ventana de la consola. También puede implementar un objeto <xref:System.Activities.Tracking.TrackingParticipant> que procesa los registros de seguimiento de forma asincrónica mediante los métodos `BeginTrack` y `EndTrack`.  
+ Los participantes de seguimiento se derivan de la clase <xref:System.Activities.Tracking.TrackingParticipant>. La clase <xref:System.Activities.Tracking.EtwTrackingParticipant> proporcionada por el sistema emite un evento ETW (Seguimiento de eventos para Windows) para cada registro de seguimiento que se haya recibido. Para crear un participante de seguimiento personalizado, se crea una clase que deriva de <xref:System.Activities.Tracking.TrackingParticipant>. Para proporcionar funcionalidad básica de seguimiento, invalide <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>. <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> se llama cuando un registro de seguimiento se envía el tiempo de ejecución y se puede procesar de la manera deseada. En el siguiente ejemplo, se define una clase de participante de seguimiento personalizada que emite todos los registros de seguimiento en la ventana de la consola. También puede implementar un objeto <xref:System.Activities.Tracking.TrackingParticipant> que procesa los registros de seguimiento de forma asincrónica mediante los métodos `BeginTrack` y `EndTrack`.  
   
 ```csharp  
 class ConsoleTrackingParticipant : TrackingParticipant  
@@ -141,5 +141,6 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

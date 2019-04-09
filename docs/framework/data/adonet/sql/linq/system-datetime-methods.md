@@ -2,12 +2,12 @@
 title: System.DateTime (Métodos)
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: edc1631536e1e30a324a0fdf0e7690b13639d7e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85af6f252362b811356d68a3ae220df2bb813882
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106332"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime (Métodos)
 Los métodos, operadores y propiedades siguientes admitidos en LINQ to SQL, están disponibles para su uso en las consultas de LINQ to SQL. Si no se admite un método, operador ni propiedad, LINQ to SQL no puede convertir el miembro para la ejecución en SQL Server. Puede usar estos miembros en el código, sin embargo, deben evaluarse antes de convertir la consulta a Transact-SQL o después de recuperar los resultados de la base de datos.  
@@ -65,7 +65,8 @@ Los métodos, operadores y propiedades siguientes admitidos en LINQ to SQL, est�
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear%2A>|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Creación del modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [Crear el modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [Asignación de tipos entre CLR y SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
 - [Tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

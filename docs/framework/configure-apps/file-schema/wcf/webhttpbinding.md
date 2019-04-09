@@ -2,12 +2,12 @@
 title: <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: f5955c20326cb9eaac77faae0b0d338660975a31
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 71b8255b9feda9854b0257528dcad85f6cf08d6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354874"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086031"
 ---
 # <a name="webhttpbinding"></a>\<webHttpBinding>
 Define un elemento de enlace que se usa para configurar extremos para servicios Web de Windows Communication Foundation (WCF) que responden a solicitudes HTTP en lugar de los mensajes SOAP.  
@@ -91,6 +91,7 @@ Define un elemento de enlace que se usa para configurar extremos para servicios 
  Se admiten en WCF para la sindicación e ASP. Integración de AJAX se crean en el modelo de programación Web. Para obtener más información sobre el modelo, vea [modelo de programación de WCF Web HTTP](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Configuration.WebHttpBindingElement>
 - [Modelo de programación de web HTTP de WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

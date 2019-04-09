@@ -2,12 +2,12 @@
 title: Consideraciones sobre el rendimiento (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 4b6d3d4dbf801a7b0cc378482ad4d0d29a915be3
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: d0ee92b96a22b0ecb59ee76fb2f2e9d64442ce22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087955"
 ---
 # <a name="performance-considerations-entity-framework"></a>Consideraciones sobre el rendimiento (Entity Framework)
 En este tema se describen las características de rendimiento de ADO.NET Entity Framework y se facilitan algunas consideraciones para ayudar a mejorar el rendimiento de las aplicaciones de Entity Framework.  
@@ -23,7 +23,7 @@ En este tema se describen las características de rendimiento de ADO.NET Entity 
 |Preparar la consulta|Moderado<sup>2</sup>|Una vez para cada consulta única.|Incluye los costos para crear el comando de consulta, generar un árbol de comandos basado en los metadatos de asignación y del modelo, y definir la forma de los datos devueltos. Dado que tanto los comandos de consulta de Entity SQL como las consultas LINQ se almacenan en memoria caché, las ejecuciones posteriores de la misma consulta tardarán menos tiempo. Todavía puede usar consultas LINQ compiladas para reducir este costo en ejecuciones posteriores y las consultas compiladas pueden ser más eficaces que las consultas LINQ que se almacenan en memoria caché automáticamente. Para obtener más información, consulte [consultas compiladas (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md). Para obtener información general sobre la ejecución de consultas LINQ, vea [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md). **Nota:**  Las consultas LINQ to Entities que aplican el operador `Enumerable.Contains` a colecciones en memoria no se almacenan en memoria caché automáticamente. Tampoco se permite parametrizar colecciones en memoria en consultas LINQ compiladas.|  
 |Ejecutar la consulta|Baja<sup>2</sup>|Una vez para cada consulta.|El costo de ejecutar el comando en el origen de datos usando el proveedor de datos de ADO.NET. Dado que la mayoría de los orígenes de datos almacenan en la caché los planes de consulta, las posteriores ejecuciones de la misma consulta pueden tardar menos tiempo.|  
 |Cargar y validar los tipos|Baja<sup>3</sup>|Una vez para cada instancia de <xref:System.Data.Objects.ObjectContext>.|Los tipos se cargan y se validan con los tipos definidos por el modelo conceptual.|  
-|Seguimiento|Baja<sup>3</sup>|Una vez para cada objeto devuelto por una consulta. <sup>4</sup>|Si una consulta usa la opción de fusión mediante combinación <xref:System.Data.Objects.MergeOption.NoTracking>, esta fase no afecta al rendimiento.<br /><br /> Si la consulta usa la opción de combinación <xref:System.Data.Objects.MergeOption.AppendOnly>, <xref:System.Data.Objects.MergeOption.PreserveChanges> o <xref:System.Data.Objects.MergeOption.OverwriteChanges>, el seguimiento de los resultados de la consulta se realiza en la instancia de <xref:System.Data.Objects.ObjectStateManager>. Se genera una instancia de <xref:System.Data.EntityKey> para cada objeto devuelto por la consulta al que se ha hecho un seguimiento y se usa para crear un objeto <xref:System.Data.Objects.ObjectStateEntry> en la instancia de <xref:System.Data.Objects.ObjectStateManager>. Si se encuentra un objeto <xref:System.Data.Objects.ObjectStateEntry> existente para la instancia de <xref:System.Data.EntityKey>, se devuelve dicho objeto. Si se usa la opción <xref:System.Data.Objects.MergeOption.PreserveChanges> o <xref:System.Data.Objects.MergeOption.OverwriteChanges>, el objeto se actualiza antes de ser devuelto.<br /><br /> Para obtener más información, consulte [resolución de identidades, administración de Estados y seguimiento de cambios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100)).|  
+|Seguimiento|Baja<sup>3</sup>|Una vez para cada objeto devuelto por una consulta. <sup>4</sup>|Si una consulta usa la opción de fusión mediante combinación <xref:System.Data.Objects.MergeOption.NoTracking>, esta fase no afecta al rendimiento.<br /><br /> Si la consulta usa la opción de fusión mediante combinación <xref:System.Data.Objects.MergeOption.AppendOnly>, <xref:System.Data.Objects.MergeOption.PreserveChanges> o <xref:System.Data.Objects.MergeOption.OverwriteChanges>, el seguimiento de los resultados de la consulta se realiza en la instancia de <xref:System.Data.Objects.ObjectStateManager>. Se genera una instancia de <xref:System.Data.EntityKey> para cada objeto devuelto por la consulta al que se ha hecho un seguimiento y se usa para crear un objeto <xref:System.Data.Objects.ObjectStateEntry> en la instancia de <xref:System.Data.Objects.ObjectStateManager>. Si se encuentra un objeto <xref:System.Data.Objects.ObjectStateEntry> existente para la instancia de <xref:System.Data.EntityKey>, se devuelve dicho objeto. Si se usa la opción <xref:System.Data.Objects.MergeOption.PreserveChanges> o <xref:System.Data.Objects.MergeOption.OverwriteChanges>, el objeto se actualiza antes de ser devuelto.<br /><br /> Para obtener más información, consulte [resolución de identidades, administración de Estados y seguimiento de cambios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100)).|  
 |Materializar los objetos|Moderado<sup>3</sup>|Una vez para cada objeto devuelto por una consulta. <sup>4</sup>|El proceso de leer el objeto <xref:System.Data.Common.DbDataReader> devuelto, crear los objetos y establecer valores de propiedad basados en los valores de cada instancia de la clase <xref:System.Data.Common.DbDataRecord>. Si el objeto ya existe en <xref:System.Data.Objects.ObjectContext> y la consulta usa las opciones de fusión mediante combinación <xref:System.Data.Objects.MergeOption.AppendOnly> o <xref:System.Data.Objects.MergeOption.PreserveChanges>, esta fase no afecta al rendimiento. Para obtener más información, consulte [resolución de identidades, administración de Estados y seguimiento de cambios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100)).|  
   
  <sup>1</sup> cuando un proveedor de origen de datos implementa la agrupación de conexiones, el costo de abrir una conexión se distribuye entre el grupo. El proveedor de datos .NET para SQL Server admite la agrupación de conexiones.  
@@ -147,11 +147,12 @@ En este tema se describen las características de rendimiento de ADO.NET Entity 
 ## <a name="performance-data"></a>Datos de rendimiento  
  Algunos datos de rendimiento para Entity Framework se publican en las entradas siguientes en el [blog del equipo de ADO.NET](https://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [Explorar el rendimiento de ADO.NET Entity Framework - parte 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
+-   [Explorar el rendimiento de ADO.NET Entity Framework - Parte 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [Explorar el rendimiento de ADO.NET Entity Framework – parte 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
+-   [Explorar el rendimiento de ADO.NET Entity Framework – Parte 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [Comparación de rendimiento de ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkID=123913)  
+-   [Comparación del rendimiento de ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consideraciones de desarrollo e implementación](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

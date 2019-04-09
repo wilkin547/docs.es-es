@@ -2,12 +2,12 @@
 title: Operaciones de copia masiva en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: 787fc283a258842b762923b620541b709b119894
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 086b3b997cf0915be7cfa603a651eb412d52e985
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194804"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Operaciones de copia masiva en SQL Server
 Microsoft SQL Server incluye una conocida utilidad de línea de comandos denominada **bcp** para rápidamente copie de forma masiva archivos grandes en tablas o vistas en bases de datos de SQL Server. La clase <xref:System.Data.SqlClient.SqlBulkCopy> permite escribir soluciones de código administrado que ofrecen una funcionalidad similar. Aunque existen otras formas de cargar datos en una tabla SQL Server (por ejemplo, mediante instrucciones INSERT), <xref:System.Data.SqlClient.SqlBulkCopy> tiene la ventaja sobre las demás de un rendimiento significativo.  
@@ -35,9 +35,10 @@ Microsoft SQL Server incluye una conocida utilidad de línea de comandos denomin
  [Varias operaciones de copia masiva](../../../../../docs/framework/data/adonet/sql/multiple-bulk-copy-operations.md)  
  Describe cómo realizar varias operaciones de copia masiva de datos en una instancia de SQL Server mediante la clase <xref:System.Data.SqlClient.SqlBulkCopy>.  
   
- [Transacción y operaciones de copia masiva](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)  
+ [Objeto Transaction y operaciones de copia masiva](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)  
  Describe cómo realizar una operación de copia masiva en una transacción, lo que incluye cómo confirmar o revertir la transacción.  
   
 ## <a name="see-also"></a>Vea también
+
 - [SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

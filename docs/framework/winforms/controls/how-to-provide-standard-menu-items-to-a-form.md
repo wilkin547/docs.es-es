@@ -1,5 +1,5 @@
 ---
-title: Filtrar Proporcionar elementos de menú estándar a un formulario
+title: Filtrar para proporcionar elementos de menú estándar a un formulario
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - menu items [Windows Forms], standard
 - ToolStrip control [Windows Forms]
 ms.assetid: 75db9126-e70c-4e81-921d-b83c0a4a9f50
-ms.openlocfilehash: 3cf53a6934190cd0e7cd7e18bc57fb5fbfb57a86
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb101c57cfb453e0419357741c5cf42dc29221b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086720"
 ---
-# <a name="how-to-provide-standard-menu-items-to-a-form"></a>Filtrar Proporcionar elementos de menú estándar a un formulario
+# <a name="how-to-provide-standard-menu-items-to-a-form"></a>Filtrar para proporcionar elementos de menú estándar a un formulario
 Puede proporcionar un menú estándar para los formularios con el control <xref:System.Windows.Forms.MenuStrip>.  
   
  Hay una amplia compatibilidad para esta característica en Visual Studio.  
@@ -37,6 +37,7 @@ Puede proporcionar un menú estándar para los formularios con el control <xref:
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>

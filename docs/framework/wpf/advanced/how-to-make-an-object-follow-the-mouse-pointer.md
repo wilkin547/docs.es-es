@@ -9,14 +9,14 @@ helpviewer_keywords:
 - mouse pointer (cursor), making objects follow
 - cursor (mouse pointer), making objects follow
 ms.assetid: 50b20415-14bc-405c-baf3-2fb254fffde3
-ms.openlocfilehash: 6b86cadba19e82c487be88bcfb08edb51f93c540
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b9b13b4eec3e42744ba2be6031ec841fb5f215e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358306"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107320"
 ---
-# <a name="how-to-make-an-object-follow-the-mouse-pointer"></a>Procedimiento Crear un objeto que siga el puntero del mouse
+# <a name="how-to-make-an-object-follow-the-mouse-pointer"></a>Filtrar Crear un objeto que siga el puntero del mouse
 En este ejemplo se muestra cómo cambiar las dimensiones de un objeto cuando el puntero del mouse se mueve en la pantalla.  
   
  El ejemplo incluye un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivo que crea el [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] y un archivo de código subyacente que crea el controlador de eventos.  
@@ -32,4 +32,5 @@ En este ejemplo se muestra cómo cambiar las dimensiones de un objeto cuando el 
  [!code-vb[mouseMoveWithPointer#MouseMovePointerGetPosition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/mouseMoveWithPointer/VisualBasic/Window1.xaml.vb#mousemovepointergetposition)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre acciones del usuario](input-overview.md)

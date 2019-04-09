@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45f16fd50880b5d2482be365f3c55e1427cc6eaa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d21bced214242866c47f40f392593f3f51cda02f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104720"
 ---
 # <a name="iclrdatatarget2-interface"></a>ICLRDataTarget2 (Interfaz)
 Una subclase de [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) que se usa la capa de servicios de acceso a datos para manipular las áreas de memoria virtual en el proceso de destino.  
@@ -30,8 +30,8 @@ Una subclase de [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugg
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[AllocVirtual (método)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)|Asigna memoria en el espacio de direcciones del proceso de destino.|  
-|[FreeVirtual (método)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)|Libera memoria previamente asignada en el espacio de direcciones del proceso de destino.|  
+|[Método AllocVirtual](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)|Asigna memoria en el espacio de direcciones del proceso de destino.|  
+|[Método FreeVirtual](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)|Libera memoria previamente asignada en el espacio de direcciones del proceso de destino.|  
   
 ## <a name="remarks"></a>Comentarios  
  El cliente API (es decir, el depurador) debe implementar esta interfaz según corresponda para el proceso de destino concreto. Por ejemplo, un proceso activo tendría una implementación diferente de la de un volcado de memoria. Puede que el destino no admita la modificación de sus áreas de memoria.  
@@ -46,5 +46,6 @@ Una subclase de [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugg
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICLRDataTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICLRDataTarget (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

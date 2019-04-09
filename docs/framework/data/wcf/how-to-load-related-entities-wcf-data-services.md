@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Cargar entidades relacionadas (WCF Data Services)
+title: Filtrar Cargar entidades relacionadas (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
-ms.openlocfilehash: a05d294f80943e771a298b4442a521de86ff2f19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7687378ae2a6c7d8021acc53b19544206ee0cc84
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092635"
 ---
-# <a name="how-to-load-related-entities-wcf-data-services"></a>Procedimiento Cargar entidades relacionadas (WCF Data Services)
+# <a name="how-to-load-related-entities-wcf-data-services"></a>Filtrar Cargar entidades relacionadas (WCF Data Services)
 Cuando necesite cargar entidades asociadas en [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede usar el método <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> de la clase <xref:System.Data.Services.Client.DataServiceContext>. También puede usar el <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> método en el <xref:System.Data.Services.Client.DataServiceQuery%601> para requerir que las entidades relacionadas se carguen rápidamente en la misma respuesta de consulta.  
   
  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean cuando se completa la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
@@ -33,4 +33,5 @@ Cuando necesite cargar entidades asociadas en [!INCLUDE[ssAstoria](../../../../i
  [!code-vb[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetails)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consultar el servicio de datos](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugCode4 (interfaz)
+title: Interfaz ICorDebugCode4
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCode4
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c38ce53ca1c02ead03ab9d1ff1e53cda772333f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d23f588b46eb452b7670085249938f7d10cea1ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108184"
 ---
-# <a name="icordebugcode4-interface"></a>ICorDebugCode4 (interfaz)
+# <a name="icordebugcode4-interface"></a>Interfaz ICorDebugCode4
 Proporciona un método que permite a un depurador enumerar las variables locales y los argumentos en una función.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[EnumerateVariableHomes (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md)|Obtiene un enumerador para los argumentos y variables locales en una función.|  
+|[Método EnumerateVariableHomes](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md)|Obtiene un enumerador para los argumentos y variables locales en una función.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -48,6 +48,5 @@ Proporciona un método que permite a un depurador enumerar las variables locales
   
 ## <a name="see-also"></a>Vea también
 
-
-- [ICorDebugCode3 (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugCode3 (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
