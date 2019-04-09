@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7666918cbff7a395a93a274629fe574ff20e170c
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545694"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308658"
 ---
 # <a name="c-operators"></a>Operadores de C#
 
@@ -75,7 +75,7 @@ Estos operadores tienen mayor precedencia que los de la sección siguiente y men
 
 [-x](subtraction-operator.md): negación numérica.
 
-[\!x](logical-negation-operator.md): negación lógica.
+[\!x](boolean-logical-operators.md#logical-negation-operator-): negación lógica.
 
 [~x](bitwise-complement-operator.md): complemento bit a bit.
 
@@ -163,13 +163,13 @@ Este operador tiene mayor precedencia que el de la sección siguiente y menor qu
 
 Este operador tiene mayor precedencia que el de la sección siguiente y menor que el de la anterior.
 
-[x && y](conditional-and-operator.md): AND lógico. Si el primer operando se evalúa como false, C# no evalúa el segundo operando.
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-): AND lógico. Si el primer operando se evalúa como false, C# no evalúa el segundo operando.
 
 ## <a name="conditional-or-operator"></a>Operador condicional OR
 
 Este operador tiene mayor precedencia que el de la sección siguiente y menor que el de la anterior.
 
-[x &#124;&#124; y](conditional-or-operator.md): OR lógico. Si el primer operando se evalúa como true, C# no evalúa el segundo operando.
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-): OR lógico. Si el primer operando se evalúa como true, C# no evalúa el segundo operando.
 
 ## <a name="null-coalescing-operator"></a>Operador de uso combinado de null
 

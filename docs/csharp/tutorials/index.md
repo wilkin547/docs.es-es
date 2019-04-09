@@ -2,12 +2,12 @@
 title: Tutoriales de C#
 description: Explore estos tutoriales de C# para obtener información sobre cómo compilar programas de C# y conocer las características de este lenguaje.
 ms.date: 10/25/2018
-ms.openlocfilehash: 54c05f2fcc80d21b10cbb6a2baee37014aa62d07
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214447"
 ---
 # <a name="c-tutorials"></a>Tutoriales de C#
 
@@ -61,5 +61,3 @@ Los siguientes tutoriales le permiten crear programas de C# mediante [.NET Core]
 * [Working with LINQ](working-with-linq.md) (Trabajar con LINQ): muestra muchas de las características de LINQ y los elementos del lenguaje compatibles.
 * [Uso de atributos](attributes.md): muestra cómo crear y usar atributos en C#.
 * En el tutorial [Interpolación de cadenas](exploration/interpolated-strings.yml) se muestra cómo insertar valores en una cadena. Aprenderá a crear una cadena interpolada con expresiones C# insertadas y a controlar la apariencia del texto de los resultados de expresión en la cadena de resultado. Este tutorial también está disponible [para ejecutarse localmente en su máquina](exploration/interpolated-strings-local.md).
-
-
