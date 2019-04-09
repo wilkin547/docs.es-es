@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: 8df63cb425f8e113a73fee1b0a6bd61683ed27ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2bc67b4130633fba3a6e42e2b6925fc09f835c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578853"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116235"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Insertar una imagen desde un archivo
 Un objeto binario grande (BLOB) se puede escribir en una base de datos en forma de datos binarios o de caracteres, según el tipo de campo del origen de datos. BLOB es un término genérico que hace referencia a los tipos de datos `text`, `ntext` e `image`, que suelen contener documentos e imágenes.  
@@ -131,8 +131,9 @@ public static byte[] GetPhoto(string filePath)
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Uso de comandos para modificar datos](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [Recuperación de datos binarios](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)
+
+- [Usar comandos para modificar datos](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
+- [Recuperar datos binarios](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)
 - [Datos binarios y datos de valores grandes de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [Asignaciones de tipos de datos de SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: <mexNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 193412fa-3260-414c-92c6-b32ed3b94a34
-ms.openlocfilehash: f9f6186cc88f2cc0fed8404f9e4d5776d41e2818
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9ac2b967e33571cbe0b4ad5ee81e13b009ffddd3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111369"
 ---
 # <a name="mexnamedpipebinding"></a>\<mexNamedPipeBinding>
 Especifica los valores para un enlace utilizado para el intercambio de mensajes de WS-MetadataExchange (WS-MEX) sobre una canalización con nombre.  
@@ -52,9 +52,10 @@ Especifica los valores para un enlace utilizado para el intercambio de mensajes 
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexNamedPipeBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexNamedPipeBindingElement>
-- [Cómo: Publicar metadatos para un servicio mediante un archivo de configuración](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Filtrar para publicar metadatos para un servicio mediante un archivo de configuración](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Publicación y recuperación de metadatos a través de un enlace personalizado](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
 - [Metadatos](../../../../../docs/framework/wcf/feature-details/metadata.md)
 - [Enlaces](../../../../../docs/framework/wcf/bindings.md)

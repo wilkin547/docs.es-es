@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac921bbe6250b039aba8527a1b9b5203af0972e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182304"
 ---
 # <a name="lazy-initialization"></a>Inicialización diferida
 La *inicialización diferida* de un objeto implica que su creación se aplaza hasta que se usa por primera vez. (En este tema, los términos *inicialización diferida* y *creación diferida de instancias* son sinónimos). La inicialización diferida se usa principalmente para mejorar el rendimiento, evitar la pérdida de tiempo en los cálculos y reducir los requisitos de memoria de los programas. Estos son los escenarios más comunes:  
@@ -23,7 +23,7 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
   
 -   Cuando hay un objeto costoso de crear y quiere diferir su creación hasta después de que se hayan completado otras operaciones costosas. Por ejemplo, supongamos que el programa carga varias instancias de objeto cuando se inicia, pero solo se necesitan de inmediato algunas de ellas. Puede mejorar el rendimiento de inicio del programa si difiere la inicialización de los objetos que no son necesarios hasta que se hayan creado los objetos necesarios.  
   
- Aunque puede escribir su propio código para llevar a cabo la inicialización diferida, recomendamos que use <xref:System.Lazy%601> en su lugar. <xref:System.Lazy%601> y sus tipos relacionados también admiten la seguridad para subprocesos y ofrecen una directiva coherente de propagación de excepciones.  
+ Aunque puede escribir su propio código para llevar a cabo la inicialización diferida, recomendamos que use <xref:System.Lazy%601> en su lugar. <xref:System.Lazy%601> y sus tipos relacionados también admiten la seguridad para subprocesos y proporcionan una directiva de propagación de excepciones coherente.  
   
  En la tabla siguiente se muestran los tipos que .NET Framework versión 4 proporciona para habilitar la inicialización diferida en distintos escenarios.  
   
@@ -75,7 +75,7 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
   
  Algunos constructores <xref:System.Lazy%601> tienen un parámetro <xref:System.Threading.LazyThreadSafetyMode> denominado `mode`. Estos constructores proporcionan un modo adicional de seguridad para subprocesos. En la tabla siguiente se muestra la manera en que la seguridad para subprocesos de un objeto <xref:System.Lazy%601> se ve afectada por los parámetros del constructor que especifican la seguridad para subprocesos. Cada constructor tiene como máximo un parámetro de este tipo.  
   
-|Seguridad para subprocesos del objeto|Parámetro `mode` de `LazyThreadSafetyMode`|Parámetro booleano `isThreadSafe`|Sin parámetros de seguridad para subprocesos|  
+|Seguridad para subprocesos del objeto|`LazyThreadSafetyMode` `mode` parámetro|Parámetro booleano `isThreadSafe`|Sin parámetros de seguridad para subprocesos|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Totalmente seguro para subprocesos; solo intenta inicializar el valor un subproceso de cada vez.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Sí.|  
 |No es seguro para subprocesos.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|No es aplicable.|  
@@ -126,7 +126,7 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601> encapsula el objeto de la misma manera que <xref:System.Lazy%601>, pero con estas diferencias básicas:  
+ <xref:System.Threading.ThreadLocal%601> encapsula el objeto de la misma manera que <xref:System.Lazy%601>, con estas diferencias básicas:  
   
 -   Cada subproceso inicializa la variable local de subproceso mediante sus propios datos privados, que no son accesibles desde otros subprocesos.  
   
@@ -140,7 +140,7 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Variables locales de subproceso en Parallel.For y ForEach  
- Cuando se usa el método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para iterar en los orígenes de datos en paralelo, puede usar las sobrecargas que tienen compatibilidad integrada con datos locales de subproceso. En estos métodos, la localidad del subproceso se logra mediante el uso de delegados locales para crear los datos, obtener acceso a ellos y limpiarlos. Para obtener más información, vea [Cómo: Escribir un bucle Parallel.For con Variables locales de subproceso](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) y [Cómo: Escribir un bucle Parallel.ForEach con Variables locales de partición](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+ Cuando se usa el método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para iterar en los orígenes de datos en paralelo, puede usar las sobrecargas que tienen compatibilidad integrada con datos locales de subproceso. En estos métodos, la localidad del subproceso se logra mediante el uso de delegados locales para crear los datos, obtener acceso a ellos y limpiarlos. Para obtener más información, vea [Cómo: Escribir un bucle Parallel.For con variables locales de subproceso](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) y [Cómo: Escribir un bucle Parallel.ForEach con variables locales de partición](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Usar la inicialización diferida para escenarios con poca sobrecarga  
  En los escenarios en los que tiene que inicializar de forma diferida un gran número de objetos, podría decidir que el proceso de encapsular cada objeto en un objeto <xref:System.Lazy%601> requiere demasiada memoria o demasiados recursos informáticos. O bien, es posible que tenga requisitos estrictos sobre cómo se expone la inicialización diferida. En tales casos, puede usar los métodos `static` (`Shared` en Visual Basic) de la clase <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> para inicializar de forma diferida cada objeto sin encapsularlo en una instancia de <xref:System.Lazy%601>.  
@@ -153,7 +153,8 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
  En este ejemplo, observe que el procedimiento de inicialización se invoca en cada iteración del bucle. En escenarios multiproceso, el primer subproceso que invoca el procedimiento de inicialización es aquel cuyo valor ven todos los subprocesos. Los subprocesos posteriores también invocan el procedimiento de inicialización, pero sus resultados no se usan. Si este tipo de condición de carrera potencial no es aceptable, use la sobrecarga de <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> que toma un argumento booleano y un objeto de sincronización.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Principios básicos del subprocesamiento administrado](../../../docs/standard/threading/managed-threading-basics.md)
 - [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)
-- [Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Cómo: Realizar la inicialización diferida de objetos](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Biblioteca de procesamiento paralelo basado en tareas (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Filtrar para realizar la inicialización diferida de objetos](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: f2aff8d5d8779e3c99644238ae54d30a13f00304
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42463249a6636e625729f90fc31fa7589ef7ef74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120034"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Generar comandos con objetos CommandBuilder
 Cuando la propiedad `SelectCommand` se especifica de forma dinámica en tiempo de ejecución, por ejemplo a través de una herramienta de consulta que acepta un comando de texto del usuario, existe la posibilidad de que no se pueda especificar adecuadamente en tiempo de diseño el comando `InsertCommand`, `UpdateCommand` o `DeleteCommand` correspondiente. Si el objeto <xref:System.Data.DataTable> se asigna a una única tabla de base de datos o se genera a partir de ella, puede utilizar el objeto <xref:System.Data.Common.DbCommandBuilder> para generar automáticamente las propiedades `DeleteCommand`, `InsertCommand` y `UpdateCommand` de <xref:System.Data.Common.DbDataAdapter>.  
@@ -113,7 +113,8 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Ejecución de un comando](../../../../docs/framework/data/adonet/executing-a-command.md)
+- [Ejecutar un comando](../../../../docs/framework/data/adonet/executing-a-command.md)
 - [DbConnection, DbCommand y DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

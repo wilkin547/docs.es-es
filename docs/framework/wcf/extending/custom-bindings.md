@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: e3954e90ed091d03656f25ce1a9b1ff35ffaa9ea
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 314409f5ac4ecb4b18f3b8d3f2aeb08a507ec9e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260730"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207271"
 ---
 # <a name="custom-bindings"></a>Enlaces personalizados
 Puede usar la clase <xref:System.ServiceModel.Channels.CustomBinding> cuando uno de los enlaces proporcionados por el sistema no cumple los requisitos de su servicio. Todos los enlaces se construyen a partir de un conjunto ordenado de elementos de enlace. Los enlaces personalizados pueden crearse a partir de un conjunto de elementos de enlace proporcionado por el sistema o incluir elementos de enlace personalizado definidos por el usuario. Puede utilizar elementos de enlaces personalizados, por ejemplo, para habilitar el uso de nuevos transportes o codificadores en un extremo de servicio. Para obtener ejemplos, vea [ejemplos de enlace personalizado](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Para obtener más información, consulte [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -73,9 +73,10 @@ Puede usar la clase <xref:System.ServiceModel.Channels.CustomBinding> cuando uno
  Además, puede definir sus propios elementos de enlace e insertarlos entre cualquiera de las capas definidas anteriores.  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre la creación de puntos finales](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+
+- [Información general acerca de la creación de puntos finales](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Utilización de enlaces para configurar servicios y clientes](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Cómo: Personalización de un enlace proporcionado por el sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+- [Filtrar para personalizar un enlace proporcionado por el sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
 - [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
 - [Enlace personalizado](../../../../docs/framework/wcf/samples/custom-binding.md)

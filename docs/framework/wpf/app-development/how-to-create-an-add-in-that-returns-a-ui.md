@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: bf69a22f60724513122b5f17c5dd55bffc1fe561
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115757"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Filtrar Crear un complemento que devuelva una interfaz de usuario
 En este ejemplo se muestra cómo crear un complemento que devuelve Windows Presentation Foundation (WPF) a un host de aplicación independiente de WPF.  
@@ -31,8 +31,7 @@ En este ejemplo se muestra cómo crear un complemento que devuelve Windows Prese
   
 ## <a name="example"></a>Ejemplo  
  Para crear un complemento que devuelva que una UI de WPF necesita un código concreto para cada segmento de canalización, el complemento y la aplicación host.  
-    
-  
+
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>Implementar el segmento de canalización del contrato  
  Se debe definir un método por el contrato para devolver una interfaz de usuario y su valor devuelto debe ser de tipo <xref:System.AddIn.Contract.INativeHandleContract>. Esto se demuestra el `GetAddInUI` método de la `IWPFAddInContract` de contrato en el código siguiente.  
@@ -90,5 +89,6 @@ En este ejemplo se muestra cómo crear un complemento que devuelve Windows Prese
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Complementos y extensibilidad](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Información general sobre los complementos de WPF](wpf-add-ins-overview.md)

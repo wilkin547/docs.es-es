@@ -1,17 +1,17 @@
 ---
-title: Procedimiento Instalar y configurar componentes de activación de WCF
+title: Filtrar para instalar y configurar los componentes de activación de WFC
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcd725963986d8a70584409e1ef15c42f04f0033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199224"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>Procedimiento Instalar y configurar componentes de activación de WCF
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>Filtrar para instalar y configurar los componentes de activación de WFC
 En este tema se describe los pasos necesarios para configurar Windows Process Activation Service (también conocido como WAS) en [!INCLUDE[wv](../../../../includes/wv-md.md)] para hospedar servicios de Windows Communication Foundation (WCF) protocolos de red de servicios que no se comunican a través de HTTP. Las siguientes secciones describen los pasos para realizar esta configuración:  
   
 -   Instale (o confirme la instalación de) los componentes de activación de WCF.  
@@ -101,6 +101,7 @@ En este tema se describe los pasos necesarios para configurar Windows Process Ac
     >  Este comando es una sola línea de texto.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Activación TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [Activación MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)
 - [Activación NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)

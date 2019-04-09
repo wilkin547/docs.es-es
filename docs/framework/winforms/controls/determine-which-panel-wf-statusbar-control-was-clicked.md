@@ -1,5 +1,5 @@
 ---
-title: Filtrar Determinar qué Panel de Control StatusBar de formularios Windows Forms se hizo clic
+title: Filtrar para determinar en qué panel del control StatusBar de formularios Windows Forms se hizo clic
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: adc54ace6ea7511f1f92945b9e0c8f44b5d8f4fe
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7900b010c460fd112acbe0ef35e6945939377e1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116589"
 ---
-# <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Filtrar Determinar qué Panel de Control StatusBar de formularios Windows Forms se hizo clic
+# <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Filtrar para determinar en qué panel del control StatusBar de formularios Windows Forms se hizo clic
 > [!IMPORTANT]
 >  El <xref:System.Windows.Forms.StatusStrip> y <xref:System.Windows.Forms.ToolStripStatusLabel> controles reemplazan y agregan funcionalidad a la <xref:System.Windows.Forms.StatusBar> y <xref:System.Windows.Forms.StatusBarPanel> controla; sin embargo, el <xref:System.Windows.Forms.StatusBar> y <xref:System.Windows.Forms.StatusBarPanel> controles se conservan por compatibilidad con versiones anteriores y uso futuro, si se Elija esta opción.  
   
@@ -94,8 +94,9 @@ ms.locfileid: "57712726"
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Cómo: Establecer el tamaño de los paneles de la barra de estado](how-to-set-the-size-of-status-bar-panels.md)
+- [Filtrar para establecer el tamaño de los paneles de la barra de estado](how-to-set-the-size-of-status-bar-panels.md)
 - [Tutorial: Actualizar la información de la barra de estado en tiempo de ejecución](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Información general sobre StatusBar (Control)](statusbar-control-overview-windows-forms.md)
+- [Información general sobre el control StatusBar](statusbar-control-overview-windows-forms.md)

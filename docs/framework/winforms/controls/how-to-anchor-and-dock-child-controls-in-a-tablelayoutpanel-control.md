@@ -1,5 +1,5 @@
 ---
-title: Filtrar Delimitar y acoplar controles secundarios en un Control TableLayoutPanel
+title: Filtrar para delimitar y acoplar controles secundarios en un control TableLayoutPanel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: a4fcb4e527825a9946861a46dc336db227e52296
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dbd5d04bc1a4505fd2cb75913110199080ca6323
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709632"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200264"
 ---
-# <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Filtrar Delimitar y acoplar controles secundarios en un Control TableLayoutPanel
+# <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Filtrar para delimitar y acoplar controles secundarios en un control TableLayoutPanel
 El control <xref:System.Windows.Forms.TableLayoutPanel> admite las propiedades <xref:System.Windows.Forms.Control.Anchor%2A> y <xref:System.Windows.Forms.Control.Dock%2A> en sus controles secundarios.  
   
 ### <a name="to-align-a-child-control-in-a-tablelayoutpanel-cell"></a>Para alinear un control secundario en una celda de TableLayoutPanel  
@@ -52,12 +52,12 @@ El control <xref:System.Windows.Forms.TableLayoutPanel> admite las propiedades <
   
 4.  Cambie el valor de la propiedad <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Anchor%2A> a `None`. El control <xref:System.Windows.Forms.Button> cambia de tamaño y se centra en la celda.  
   
-5.  Cambie el valor de la propiedad <xref:System.Windows.Forms.Control.Dock%2A> del control <xref:System.Windows.Forms.Button> a <xref:System.Windows.Forms.DockStyle.Left>. El control <xref:System.Windows.Forms.Button> se mueve para alinearse con el borde izquierdo de la celda. El control <xref:System.Windows.Forms.Button> conserva el ancho, pero el alto cambia para rellenar la celda verticalmente.  
+5.  Cambie el valor de la propiedad <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Dock%2A> a <xref:System.Windows.Forms.DockStyle.Left>. El control <xref:System.Windows.Forms.Button> se mueve para alinearse con el borde izquierdo de la celda. El control <xref:System.Windows.Forms.Button> conserva el ancho, pero el alto cambia para rellenar la celda verticalmente.  
   
     > [!NOTE]
     >  Este es el mismo comportamiento que se produce en otros controles del contenedor.  
   
-6.  Cambie el valor de la propiedad <xref:System.Windows.Forms.Control.Dock%2A> del control <xref:System.Windows.Forms.Button> a <xref:System.Windows.Forms.DockStyle.Fill>. El control <xref:System.Windows.Forms.Button> cambia de tamaño para rellenar la celda.  
+6.  Cambie el valor de la propiedad <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Dock%2A> a <xref:System.Windows.Forms.DockStyle.Fill>. El control <xref:System.Windows.Forms.Button> cambia de tamaño para rellenar la celda.  
   
 ## <a name="example"></a>Ejemplo  
  La ilustración siguiente muestra cinco botones delimitados en cinco celdas diferentes de <xref:System.Windows.Forms.TableLayoutPanel>.  
@@ -85,5 +85,6 @@ El control <xref:System.Windows.Forms.TableLayoutPanel> admite las propiedades <
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [Control TableLayoutPanel](tablelayoutpanel-control-windows-forms.md)

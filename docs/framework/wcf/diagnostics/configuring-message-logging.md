@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: f57385b930ce533de3ff12b0dbd363690f04082d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1d4c91ee282233e862ae14bf8d650ab2a754462
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636019"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112091"
 ---
 # <a name="configuring-message-logging"></a>Configuración del registro de mensajes
 En este tema se describe cómo puede configurar el registro de mensajes para distintos escenarios.  
@@ -78,7 +78,7 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
  Los mensajes registrados en este nivel están listos para ser codificados o descodificados para el transporte o para después de éste en tránsito. Si se han definido los filtros, solo se registrarán los mensajes que coincidan con los filtros. De lo contrario, se registrarán todos los mensajes en el nivel de transporte. Todos los mensajes de la infraestructura se registran en este nivel, incluidos los mensajes de la mensajería de confianza. En los mensajes transmitidos, solo se registran los encabezados. Además, los mensajes seguros se registran como cifrados en este nivel, excepto si se utiliza un transporte seguro como HTTPS.  
   
 ### <a name="malformed-level"></a>Nivel incorrecto  
- Los mensajes incorrectos son mensajes que son rechazados por la pila de WCF en cualquier etapa de procesamiento. Los mensajes con formato incorrecto se registran tal cual: cifrados si lo están, con XML inadecuado, etc. `maxSizeOfMessageToLog` definió el tamaño del mensaje que se debía registrar como CDATA. De forma predeterminada, `maxSizeOfMessageToLog` es igual a 256 K. Para obtener más información acerca de este atributo, vea la sección otras opciones.  
+ Los mensajes incorrectos son mensajes que son rechazados por la pila de WCF en cualquier etapa de procesamiento. Los mensajes con formato incorrecto se registran tal cual: cifrados si lo están, con XML inadecuado, etc. `maxSizeOfMessageToLog` define el tamaño del mensaje que se debía registrar como CDATA. De forma predeterminada, `maxSizeOfMessageToLog` es igual a 256 K. Para obtener más información acerca de este atributo, vea la sección otras opciones.  
   
 ### <a name="other-options"></a>Otras opciones  
  Además de los niveles del registro, el usuario puede especificar las opciones siguientes:  
@@ -104,7 +104,7 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
   
 ||Enviar solicitud|Recibir solicitud|Enviar respuesta|Recibir respuesta|  
 |-|------------------|---------------------|----------------|-------------------|  
-|Nivel de modelo de servicio|web de Office<br /><br /> Nivel<br /><br /> Enviar<br /><br /> Solicitud|web de Office<br /><br /> Nivel<br /><br /> Recibir<br /><br /> Solicitud|web de Office<br /><br /> Nivel<br /><br /> Enviar<br /><br /> Responder|web de Office<br /><br /> Nivel<br /><br /> Recibir<br /><br /> Responder|  
+|Nivel de modelo de servicio|web de Office<br /><br /> Nivel<br /><br /> Enviar<br /><br /> Request|web de Office<br /><br /> Nivel<br /><br /> Recibir<br /><br /> Request|web de Office<br /><br /> Nivel<br /><br /> Enviar<br /><br /> Responder|web de Office<br /><br /> Nivel<br /><br /> Recibir<br /><br /> Responder|  
 |Nivel de transporte|Transporte<br /><br /> Enviar|Transporte<br /><br /> Recibir|Transporte<br /><br /> Enviar|Transporte<br /><br /> Recibir|  
   
  Para solicitud unidireccional  
@@ -164,6 +164,7 @@ En este tema se describe cómo puede configurar el registro de mensajes para dis
  Debería tener en cuenta que el atributo `type` debería estar establecido en un nombre de ensamblado certificado del tipo.  
   
 ## <a name="see-also"></a>Vea también
+
 - [\<messageLogging>](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
 - [Registro de mensajes](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [Configuración recomendada para el seguimiento y el registro de mensajes](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

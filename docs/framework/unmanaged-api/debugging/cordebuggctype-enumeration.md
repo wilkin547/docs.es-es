@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe8be6a7c18fff54825f981672f0f640bb60c35c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 315d6dd522f3c6be2d36b1eb411d9f471350df60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482215"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182928"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType (Enumeración)
 Indica si el recolector de elementos no utilizados se está ejecutando en una estación de trabajo o en un servidor.  
@@ -56,4 +56,5 @@ typedef enum CorDebugGCType {
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Enumeraciones de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

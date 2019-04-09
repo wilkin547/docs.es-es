@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 6aaaa126a0b19300abc2c10b88b0e4ff39a3ad66
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54af7c2f449f8eb289841fb3eca357c6916404aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530444"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201213"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Correspondencias de DataTable y DataColumn en un objeto DataAdapter
 Un **DataAdapter** contiene una colección de cero o más <xref:System.Data.Common.DataTableMapping> objetos en su **TableMappings** propiedad. Un **DataTableMapping** proporciona una asignación principal entre los datos devueltos por una consulta en un origen de datos y un <xref:System.Data.DataTable>. El **DataTableMapping** puede pasar el nombre en lugar de la **DataTable** nombre a la **rellenar** método de la **DataAdapter**. En el ejemplo siguiente se crea un **DataTableMapping** denominado **AuthorsMapping** para el **autores** tabla.  
@@ -98,6 +98,7 @@ adapter.Fill(customersDataSet, "Customers")
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

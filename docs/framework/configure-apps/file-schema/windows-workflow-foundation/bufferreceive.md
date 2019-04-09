@@ -3,12 +3,12 @@ title: <bufferReceive>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: b23c3a54-10d4-4f13-ab6d-98b26b76f22a
-ms.openlocfilehash: 1e095e3da11277c6b7b3c24e98a769500e1a0c0b
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 360d26fda964fa33640e833ad22dab7e06e153f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759540"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203163"
 ---
 # <a name="bufferreceive"></a>\<bufferReceive>
 Un comportamiento del servicio que permite a un servicio usar procesamiento de recepción almacenado en búfer, lo que permite que un servicio de flujo de trabajo procese mensajes desordenados.  
@@ -50,5 +50,6 @@ Un comportamiento del servicio que permite a un servicio usar procesamiento de r
 |[\<comportamiento > de \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Especifica un elemento de comportamiento.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Activities.Description.BufferedReceiveServiceBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.BufferedReceiveElement>

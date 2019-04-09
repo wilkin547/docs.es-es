@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Ejecución de una operación en segundo plano'
+title: 'Tutorial: Ejecutar una operación en segundo plano'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 0ba4ca2589a61a9331308a816da6ddb5276adbc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cb06aa6bfa960a493090b67c8baa4d7b3b46756a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703665"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149089"
 ---
-# <a name="walkthrough-running-an-operation-in-the-background"></a>Tutorial: Ejecución de una operación en segundo plano
+# <a name="walkthrough-running-an-operation-in-the-background"></a>Tutorial: Ejecutar una operación en segundo plano
 Si tiene una operación que tarda mucho tiempo en completarse y no desea causar retrasos en la interfaz de usuario, puede utilizar la clase <xref:System.ComponentModel.BackgroundWorker> para ejecutar la operación en otro subproceso.  
   
  Para obtener una lista completa del código utilizado en este ejemplo, vea [Cómo: Ejecutar una operación en segundo plano](how-to-run-an-operation-in-the-background.md).  
@@ -32,7 +32,7 @@ Si tiene una operación que tarda mucho tiempo en completarse y no desea causar 
   
 1.  Con el formulario activo en el Diseñador de Windows Forms, arrastre dos <xref:System.Windows.Forms.Button> controla desde el **cuadro de herramientas** al formulario y, a continuación, establezca el `Name` y <xref:System.Windows.Forms.Control.Text%2A> las propiedades de los botones de acuerdo con la tabla siguiente.  
   
-    |Botón|nombre|Texto|  
+    |Botón|Name|Texto|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**Iniciar**|  
     |`button2`|`cancelBtn`|**Cancelar**|  
@@ -101,8 +101,9 @@ Si tiene una operación que tarda mucho tiempo en completarse y no desea causar 
 -   Implemente una clase que admita el modelo asincrónico para componentes. Para obtener más información, consulte [implementar el modelo asincrónico basado en eventos](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [Cómo: Implementar un formulario que usa una operación en segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Cómo: Ejecutar una operación en segundo plano](how-to-run-an-operation-in-the-background.md)
-- [Componente BackgroundWorker](backgroundworker-component.md)
+- [Filtrar para implementar un formulario que usa una operación en segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Filtrar para ejecutar una operación en segundo plano](how-to-run-an-operation-in-the-background.md)
+- [BackgroundWorker (Componente)](backgroundworker-component.md)

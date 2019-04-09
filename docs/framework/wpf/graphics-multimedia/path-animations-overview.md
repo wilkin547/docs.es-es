@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: c8e628e11debadb88c365ac95d355f1ee641bdbc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367861"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182473"
 ---
 # <a name="path-animations-overview"></a>Información general sobre animaciones en trazados
 <a name="introduction"></a> En este tema se presentan las animaciones de trazado, que permiten usar un trazado geométrico para generar valores de salida. Las animaciones de trazado son útiles para mover y girar objetos a lo largo de trazados complejos.  
@@ -45,11 +45,11 @@ ms.locfileid: "57367861"
   
  Clases de animación de trazado pertenecen a la <xref:System.Windows.Media.Animation> espacio de nombres y use la convención de nomenclatura siguiente:  
   
- *\<Tipo>* `AnimationUsingPath`  
+ *\<tipo >* `AnimationUsingPath`  
   
  Donde *\<Tipo>* es el tipo de valor que la clase anima.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona las siguientes clases de animación de trazado.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Proporciona clases de animación de la siguiente ruta de acceso.  
   
 |Tipo de propiedad|Clase de animación de trazado correspondiente|Ejemplo|  
 |-------------------|----------------------------------------|-------------|  
@@ -90,8 +90,9 @@ ms.locfileid: "57367861"
  Para obtener más información sobre la sintaxis de ruta de acceso que se usa en el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ejemplo, consulte el [sintaxis de marcado de trazados](path-markup-syntax.md) información general.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Ejemplo de animación de trazado](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [Sintaxis de marcado de trazados](path-markup-syntax.md)
-- [Temas de procedimientos de animación de trazado](path-animation-how-to-topics.md)
+- [Temas "Cómo..." de animación de trazado](path-animation-how-to-topics.md)
 - [Información general sobre animaciones](animation-overview.md)
 - [Información general sobre técnicas de animación de propiedades](property-animation-techniques-overview.md)

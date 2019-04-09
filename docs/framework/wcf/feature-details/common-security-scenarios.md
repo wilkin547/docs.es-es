@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: 094e71d2f84dff482c689ef1475697d93ce889b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af58d6b529fba32380bedb9a892a2b1fd4807d96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199276"
 ---
 # <a name="common-security-scenarios"></a>Escenarios de seguridad comunes
 Los temas de esta sección catalogan varias configuraciones posibles de seguridad de cliente y servicio. Las configuraciones varían según varios factores. Por ejemplo, si un servicio o cliente está en una intranet o si Windows o transporte (como HTTPS) proporciona la seguridad.  
@@ -21,7 +21,7 @@ Los temas de esta sección catalogan varias configuraciones posibles de segurida
  [Cliente y servicio de intranet no protegidos](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
  Un servicio básico de Windows Communication Foundation (WCF) desarrollado para proporcionar información sobre una red privada segura a una aplicación de WCF.  
   
- [Seguridad del transporte con la autenticación básica](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
+ [Seguridad de transporte con autenticación básica](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  La aplicación permite a los clientes iniciar sesión al utilizar autenticación personalizada.  
   
  [Seguridad del transporte con la autenticación de Windows](../../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)  
@@ -36,22 +36,22 @@ Los temas de esta sección catalogan varias configuraciones posibles de segurida
  [Seguridad de mensajes con clientes anónimos](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
  Muestra un cliente y servicio protegido por seguridad de mensajes WCF.  
   
- [Seguridad de mensajes con un cliente de nombres de usuario](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
+ [Seguridad de los mensajes con un cliente de nombres de usuario](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  El cliente es una aplicación de Windows Forms que permite a los clientes iniciar sesión al utilizar un nombre de usuario y contraseña del dominio.  
   
  [Seguridad de mensajes con un cliente de certificado](../../../../docs/framework/wcf/feature-details/message-security-with-a-certificate-client.md)  
  Los servidores tienen certificados y cada cliente tiene un certificado. Un contexto de seguridad se establece a través de la negociación de Seguridad de la capa de transporte (TLS).  
   
- [Seguridad de mensajes con un cliente de Windows](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md)  
+ [Seguridad del mensaje con un cliente de Windows](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md)  
  Una variación del cliente del certificado. Los servidores tienen certificados y cada cliente tiene un certificado. Un contexto de seguridad se establece a través de la negociación de TLS.  
   
- [Seguridad de mensajes con un cliente de Windows sin negociación de credenciales](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client-without-credential-negotiation.md)  
+ [Seguridad de los mensajes con un cliente de Windows sin negociación de credenciales](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client-without-credential-negotiation.md)  
  Muestra un cliente y el servicio protegidos por un dominio de Kerberos.  
   
  [Seguridad de mensajes con certificados mutuos](../../../../docs/framework/wcf/feature-details/message-security-with-mutual-certificates.md)  
  Los servidores tienen certificados y cada cliente tiene un certificado. El certificado de servidor se distribuye con la aplicación y está disponible fuera de banda.  
   
- [Seguridad de mensajes con tokens emitidos](../../../../docs/framework/wcf/feature-details/message-security-with-issued-tokens.md)  
+ [Seguridad de los mensajes con tokens emitidos](../../../../docs/framework/wcf/feature-details/message-security-with-issued-tokens.md)  
  La seguridad federada que permite el establecimiento de confianza entre dominios independientes.  
   
  [Subsistema de confianza](../../../../docs/framework/wcf/feature-details/trusted-subsystem.md)  
@@ -80,5 +80,6 @@ Los temas de esta sección catalogan varias configuraciones posibles de segurida
  [Auditoría](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - [Orientación de seguridad y procedimientos recomendados](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
-- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad para Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

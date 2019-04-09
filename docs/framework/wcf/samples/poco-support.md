@@ -2,12 +2,12 @@
 title: Compatibilidad con POCO
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: 8d94d6a9700c38014aa53ee9910b53239fc28b0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f81db536e3b57f733494283bbaaa9644ec4dac9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640036"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112702"
 ---
 # <a name="poco-support"></a>Compatibilidad con POCO
 En este ejemplo se muestra la compatibilidad para la serialización de los tipos sin marca; es decir, tipos a los que no se han aplicado atributos de serialización, a veces conocidos como tipos de objetos CLR antiguos sin formato (POCO). <xref:System.Runtime.Serialization.DataContractSerializer> deduce un contrato de datos para todos los tipos públicos sin marca que tienen un constructor predeterminado. Los contratos de datos le permiten pasar los datos estructurados hacia y desde los servicios. Para obtener más información acerca de los tipos no marcados, vea [tipos serializables](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
@@ -57,5 +57,6 @@ public class ComplexNumber
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\POCO`  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
 - [Tipos serializables](../../../../docs/framework/wcf/feature-details/serializable-types.md)

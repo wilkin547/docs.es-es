@@ -10,14 +10,14 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 2be08f5d3c2cd82e50569a105e3fa15f12ad352c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 750234a7073b3931b4f3ce5674f3989fe119c50c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355173"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199952"
 ---
-# <a name="how-to-validate-and-merge-printtickets"></a>Procedimiento Validar y combinar elementos PrintTicket
+# <a name="how-to-validate-and-merge-printtickets"></a>Filtrar Validar y combinar elementos PrintTicket
 El [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [esquema de impresión](https://go.microsoft.com/fwlink/?LinkId=186397) incluye flexible y extensible <xref:System.Printing.PrintCapabilities> y <xref:System.Printing.PrintTicket> elementos. El primero de ellos detalla las capacidades de un dispositivo de impresión y el segundo especifica cómo el dispositivo debe usar esas capacidades con respecto a una secuencia determinada de documentos, documentos individuales o una página individual.  
   
  Una secuencia de tareas para una aplicación que admite la impresión normal sería como sigue.  
@@ -57,6 +57,7 @@ El [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [esquema 
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintTicket>
 - <xref:System.Printing.PrintServer.GetPrintQueues%2A>

@@ -1,5 +1,5 @@
 ---
-title: <legacyCorruptedStateExceptionsPolicy> (Elemento)
+title: <legacyCorruptedStateExceptionsPolicy> Elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <legacyCorruptedStateExceptionsPolicy> element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a787315ff8b016beff8fb8457619a462e5f3180
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 777d496614435106b84b47b9aa3d35d964bc3e07
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264645"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115107"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > elemento
 Especifica si common language runtime permite código administrado para detectar infracciones de acceso y otras excepciones de estado dañado.  
@@ -60,7 +60,7 @@ Especifica si common language runtime permite código administrado para detectar
   
 -   Establecer el `<legacyCorruptedStateExceptionsPolicy>` del elemento `enabled` atributo `true`. Esta opción de configuración está aplicado a todo el proceso y afecta a todos los métodos.  
   
- O bien  
+ -o bien-  
   
 -   Aplicar el <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> al método que contiene las excepciones `catch` bloque.  
   
@@ -78,6 +78,7 @@ Especifica si common language runtime permite código administrado para detectar
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>
 - [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)

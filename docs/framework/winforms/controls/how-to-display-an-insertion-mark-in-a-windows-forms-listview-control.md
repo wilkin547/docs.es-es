@@ -1,5 +1,5 @@
 ---
-title: Filtrar Mostrar una marca de inserción en un Control ListView de formularios de Windows
+title: Filtrar para mostrar una marca de inserción en un control ListView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - drop and drag [Windows Forms], insertion marks
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
-ms.openlocfilehash: 1c588053f9603a796d74fd706254ea150d21573a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 60b775408f5c43ff08fc5c7de72a8302b20b2264
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145618"
 ---
-# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Filtrar Mostrar una marca de inserción en un Control ListView de formularios de Windows
+# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Filtrar para mostrar una marca de inserción en un control ListView de formularios Windows Forms
 La marca de inserción del control <xref:System.Windows.Forms.ListView> muestra a los usuarios el punto en el que se insertarán los elementos arrastrados. Cuando un usuario arrastra un elemento a un punto entre otros dos elementos, la marca de inserción muestra la nueva ubicación esperada del elemento.  
   
 > [!NOTE]
@@ -43,9 +43,10 @@ La marca de inserción del control <xref:System.Windows.Forms.ListView> muestra 
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.InsertionMark%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ListViewInsertionMark>
-- [ListView (Control)](listview-control-windows-forms.md)
-- [Información general del control ListView](listview-control-overview-windows-forms.md)
-- [Tutorial: Realizar una operación de arrastrar y colocar en Windows Forms](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+- [Control ListView](listview-control-windows-forms.md)
+- [Información general sobre el control ListView](listview-control-overview-windows-forms.md)
+- [Tutorial: Llevar a cabo una operación de arrastrar y colocar en formularios Windows Forms](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

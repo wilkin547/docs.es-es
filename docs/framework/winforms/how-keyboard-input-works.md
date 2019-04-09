@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204749"
 ---
 # <a name="how-keyboard-input-works"></a>Funcionamiento de las entradas mediante teclado
 Los Windows Forms procesan las entradas mediante teclado provocando eventos de teclado en respuesta a los mensajes de Windows. La mayoría de las aplicaciones de Windows Forms procesan exclusivamente las entradas mediante teclado controlando los eventos de teclado. No obstante, es necesario comprender cómo funcionan los mensajes del teclado de modo que pueda implementar escenarios de entrada mediante teclado más avanzados, como interceptar teclas antes de que lleguen a un control. En este tema se describen los tipos de datos de tecla que los Windows Forms reconocen y se proporciona información general de cómo se enrutan los mensajes del teclado. Para información sobre los eventos de teclado, vea [Utilizar eventos de teclado](using-keyboard-events.md).  
@@ -63,15 +63,16 @@ Los Windows Forms procesan las entradas mediante teclado provocando eventos de t
 |Tarea|Método|  
 |----------|------------|  
 |Intercepte una tecla de navegación y provoque un <xref:System.Windows.Forms.Control.KeyDown> eventos. Por ejemplo, desea controlar las teclas TAB y Retorno en un cuadro de texto.|Reemplace <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Nota:**  También puede controlar la <xref:System.Windows.Forms.Control.PreviewKeyDown> evento y establecer <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> de la <xref:System.Windows.Forms.PreviewKeyDownEventArgs> a `true` para la tecla o teclas deseadas.|  
-|Realice entradas especiales o ejecute el control de navegación en un control. Por ejemplo, desea que el uso de las teclas de flecha en el control de lista cambie el elemento seleccionado.|Invalide <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|Realice entradas especiales o ejecute el control de navegación en un control. Por ejemplo, desea que el uso de las teclas de flecha en el control de lista cambie el elemento seleccionado.|invalidar <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |Intercepte una tecla de navegación y provoque un <xref:System.Windows.Forms.Control.KeyPress> eventos. Por ejemplo, en un control de cuadro de número desea que al presionar varias veces una tecla de flecha se acelere la progresión por los elementos.|Reemplace <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
-|Realice el control de entrada o de navegación especial durante un <xref:System.Windows.Forms.Control.KeyPress> eventos. Por ejemplo, en un control de lista, si se mantiene presionada la tecla "r", se desplazará entre elementos que comienzan con la letra r.|Invalide <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|Realice el control de entrada o de navegación especial durante un <xref:System.Windows.Forms.Control.KeyPress> eventos. Por ejemplo, en un control de lista, si se mantiene presionada la tecla "r", se desplazará entre elementos que comienzan con la letra r.|invalidar <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |Realice un control de tecla de acceso personalizado; por ejemplo, desea controlar las teclas de acceso en botones dibujados por el propietario contenidos en una barra de herramientas.|Reemplace <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.Keys>
 - <xref:System.Windows.Forms.Control.WndProc%2A>
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
-- [My.Computer.Keyboard (objeto)](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
+- [My.Computer.Keyboard (Objeto)](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
 - [Acceso al teclado](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
 - [Utilizar eventos de teclado](using-keyboard-events.md)

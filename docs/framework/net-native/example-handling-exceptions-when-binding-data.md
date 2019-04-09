@@ -1,17 +1,17 @@
 ---
-title: 'Ejemplo: Control de excepciones al enlazar datos'
+title: 'Ejemplo: control de excepciones al enlazar datos'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9610eb6088a59e4f577ea6dfe679130b44988645
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199900"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a>Ejemplo: Control de excepciones al enlazar datos
+# <a name="example-handling-exceptions-when-binding-data"></a>Ejemplo: control de excepciones al enlazar datos
 > [!NOTE]
 >  En este tema se hace referencia a .NET Native Developer Preview, que es una versión preliminar del software. Puede descargar esta versión preliminar desde el [sitio web de Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (es necesario registrarse).  
   
@@ -38,7 +38,7 @@ Windows_UI_Xaml!DirectUI::PropertyAccessPathStep::GetValue+0x31
 Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113  
 ```  
   
-## <a name="what-was-the-app-doing"></a>¿Qué ha hecho la aplicación?  
+## <a name="what-was-the-app-doing"></a>¿Qué estaba haciendo la aplicación?  
  En la base de la pila, los marcos de la <xref:Windows.UI.Xaml?displayProperty=nameWithType> espacio de nombres indican que el motor de representación XAML se estaba ejecutando.   El uso del método <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> indica una búsqueda basada en la reflexión del valor de una propiedad en el tipo cuyos metadatos se han quitado.  
   
  El primer paso para proporcionar una directiva de metadatos sería agregar metadatos `serialize` para el tipo de forma que sus propiedades sean accesibles:  
@@ -47,7 +47,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 <Type Name="App.ViewModels.MainPageVM" Serialize="Required Public" />  
 ```  
   
-## <a name="is-this-an-isolated-case"></a>¿Se trata de un caso aislado?  
+## <a name="is-this-an-isolated-case"></a>¿Es un caso aislado?  
  En este escenario, si el enlace de datos tiene metadatos incompletos para un `ViewModel`, es posible que también los tenga para otros.  Si el código está estructurado de forma que todos los modelos de vista de la aplicación están incluidos en el espacio de nombres `App.ViewModels`, se podría usar una directiva en tiempo de ejecución más general:  
   
 ```xml  
@@ -60,5 +60,6 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
  Sin embargo, hay formas de especificar el `ViewModel` en la página XAML para que la cadena de herramientas pueda asociar enlaces de propiedad con el tipo correcto en tiempo de compilación y mantener los metadatos sin usar una directiva en tiempo de ejecución.  Por ejemplo, puede aplicar el <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> atributo en las propiedades. Esto hace que el compilador XAML genere la información de búsqueda necesaria y permite prescindir de una directiva en tiempo de ejecución en el archivo Default.rd.xml.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Ejemplo: Solución de problemas de programación dinámica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+- [Ejemplo: solucionar problemas de programación dinámica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

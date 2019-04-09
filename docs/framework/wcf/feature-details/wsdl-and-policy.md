@@ -2,12 +2,12 @@
 title: WSDL y directivas
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151910"
 ---
 # <a name="wsdl-and-policy"></a>WSDL y directivas
 En este tema se trata WSDL 1.1 de Windows Communication Foundation (WCF), los detalles de implementación de WS-Policy y WS-PolicyAttachment, así como las aserciones adicionales de WS-Policy y extensiones WSDL 1.1 introducidas por WCF.  
@@ -42,7 +42,7 @@ En este tema se trata WSDL 1.1 de Windows Communication Foundation (WCF), los de
 ### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1.x HTTPTransporte de enlace URIs  
  WCF usa a los URI siguientes para indicar qué transportes que se usará para los elementos de extensión de enlace de WSDL 1.1, SOAP 1.1 y SOAP 1.2.  
   
-|Transporte|URI|  
+|Transporte|Identificador URI|  
 |---------------|---------|  
 |HTTP|http://schemas.xmlsoap.org/soap/http|  
 |TCP|http://schemas.microsoft.com/soap/tcp|  
@@ -54,25 +54,26 @@ En este tema se trata WSDL 1.1 de Windows Communication Foundation (WCF), los de
   
 |Aserción de directiva|Asunto de directiva|Descripción|  
 |----------------------|--------------------|-----------------|  
-|http:HttpBasicAuthentication|Extremo|El extremo utiliza autenticación básica de Http.|  
-|http:HttpDigestAuthentication|Extremo|El extremo utiliza autenticación implícita de Http.|  
-|http:HttpNegotiateAuthentication|Extremo|El extremo utiliza autenticación de negociación de Http.|  
-|http:HttpNtlmAuthentication|Extremo|El extremo utiliza autenticación NTLM de Http.|  
-|msf:Streamed|Extremo|El extremo utiliza trama de mensajes transmitidos. Esta aserción se utiliza con el protocolo de trama de mensajes proporcionado para los transportes como TCP y canalizaciones con nombre.|  
-|msf:SslTransportSecurity|Extremo|El extremo utiliza la seguridad del nivel de transporte (TLS) con trama de mensaje.|  
-|msf:WindowsTransportSecurity|Extremo|El extremo utiliza Negociación de proveedor de seguridad (SPNEGO) con trama de mensaje.|  
-|msmq:MsmqBestEffort|Extremo|MSMQ con garantías de mejor esfuerzo.|  
-|msmq:MsmqSession|Extremo|MSMQ con garantías de sesión.|  
-|msmq:MsmqVolatile|Extremo|MSMQ Volatile.|  
-|msmq:Authenticated|Extremo|La autenticación se utiliza con transporte de MSMQ.|  
-|msmq:WindowsDomain|Extremo|MSMQ utiliza la autenticación de Dominio Windows.|  
-|cdp:CompositeDuplex|Extremo|El extremo utiliza dos conexiones de transporte de conversación independientes para mensajes de entrada y salida.|  
+|http:HttpBasicAuthentication|punto de conexión|El punto de conexión utiliza autenticación básica de Http.|  
+|http:HttpDigestAuthentication|punto de conexión|El punto de conexión utiliza autenticación implícita de Http.|  
+|http:HttpNegotiateAuthentication|punto de conexión|El punto de conexión utiliza autenticación de negociación de Http.|  
+|http:HttpNtlmAuthentication|punto de conexión|El extremo utiliza autenticación NTLM de Http.|  
+|msf:Streamed|punto de conexión|El extremo utiliza trama de mensajes transmitidos. Esta aserción se utiliza con el protocolo de trama de mensajes proporcionado para los transportes como TCP y canalizaciones con nombre.|  
+|msf:SslTransportSecurity|punto de conexión|El punto de conexión utiliza la seguridad del nivel de transporte (TLS) con trama de mensaje.|  
+|msf:WindowsTransportSecurity|punto de conexión|El punto de conexión utiliza Negociación de proveedor de seguridad (SPNEGO) con trama de mensaje.|  
+|msmq:MsmqBestEffort|punto de conexión|MSMQ con garantías de mejor esfuerzo.|  
+|msmq:MsmqSession|punto de conexión|MSMQ con garantías de sesión.|  
+|msmq:MsmqVolatile|punto de conexión|MSMQ Volatile.|  
+|msmq:Authenticated|punto de conexión|La autenticación se utiliza con transporte de MSMQ.|  
+|msmq:WindowsDomain|punto de conexión|MSMQ utiliza la autenticación de Dominio Windows.|  
+|cdp:CompositeDuplex|punto de conexión|El extremo utiliza dos conexiones de transporte de conversación independientes para mensajes de entrada y salida.|  
 |mssp:RsaToken|Anidadas|Aserción del token de clave RSA. En general, una clave RSA serializada directamente como parte de la información clave en una firma endosada cumple este requisito.|  
 |mssp:SslContextToken|Anidadas|Requiere que se utilice un SecurityContextToken obtenido mediante protocolo de enlace TLS binario y WS-Trust. Las aserciones anidadas incluyen: sp:RequireDerivedKeys, mssp:MustNotSendCancel, mssp:RequireClientCertificate.|  
 |mssp:MustNotSendCancel|Anidadas|Especifica un requisito que consiste en que un token de seguridad de solicitud (RST) solicite mensajes [WS-Trust] mediante el enlace de cancelación [WS-Trust, WS-SC] y no se envíe al emisor de un SecurityContextToken determinado. Si esta aserción está presente, no se deben enviar al emisor dichos mensajes de solicitud. Si esta aserción no está presente, se puede enviar al emisor dichos mensajes de solicitud.|  
 |mssp:RequireClientCertificate|Anidadas|Este elemento opcional especifica un requisito para un certificado de cliente que se proporcionará como parte del protocolo TLSNEGO. Si esta aserción está presente, se debe proporcionar un certificado de cliente. Si esta aserción no está presente, no se debe proporcionar un certificado de cliente. Esta aserción no se debe utilizar fuera de mssp:SslContextToken.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Publicación de WSDL personalizada](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Cómo: Exportación de WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Cómo: Importar el WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Filtrar para exportar el WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Filtrar para importar el WSDL personalizado](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

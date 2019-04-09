@@ -5,17 +5,16 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 25214a3c177975505713a444b69a7006c0fd523f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122920"
 ---
 # <a name="propertypath-xaml-syntax"></a>Sintaxis de PropertyPath de XAML
 El <xref:System.Windows.PropertyPath> objeto admite una insertada compleja [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sintaxis para establecer varias propiedades que toman el <xref:System.Windows.PropertyPath> tipo como su valor. Este tema se documenta el <xref:System.Windows.PropertyPath> sintaxis que se aplican a la sintaxis de enlace y animación.  
-    
-  
+
 <a name="where"></a>   
 ## <a name="where-propertypath-is-used"></a>Dónde se usa PropertyPath  
  <xref:System.Windows.PropertyPath> es un objeto común que se utiliza en varios [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] características. A pesar de usar común <xref:System.Windows.PropertyPath> para transmitir información de ruta de acceso de propiedad, los usos de cada área de características donde <xref:System.Windows.PropertyPath> se usa como un tipo varían. Por lo tanto, es más práctico documentar las sintaxis por característica.  
@@ -48,7 +47,7 @@ El <xref:System.Windows.PropertyPath> objeto admite una insertada compleja [!INC
 <Binding Path="[key]" .../>  
 ```  
   
- `key` debe ser el índice con tipo de un diccionario o una tabla hash, o el índice de entero de una matriz. Además, el valor de la clave debe ser un tipo que se pueda enlazar directamente a la propiedad donde se aplica. Por ejemplo, una tabla hash que contiene las claves de cadena y valores de cadena puede utilizarse de este modo para enlazar al texto para un <xref:System.Windows.Controls.TextBox>. O bien, si la clave apunta a una colección o un subíndice, puede usar esta sintaxis para enlazar a una propiedad de colección de destino. De lo contrario, deberá hacer referencia a una propiedad específica, mediante una sintaxis como `<Binding Path="[key].propertyName" .../>`.  
+ `key` debe ser el índice con tipo a un diccionario o tabla hash, o bien el índice de entero de una matriz. Además, el valor de la clave debe ser un tipo que se pueda enlazar directamente a la propiedad donde se aplica. Por ejemplo, una tabla hash que contiene las claves de cadena y valores de cadena puede utilizarse de este modo para enlazar al texto para un <xref:System.Windows.Controls.TextBox>. O bien, si la clave apunta a una colección o un subíndice, puede usar esta sintaxis para enlazar a una propiedad de colección de destino. De lo contrario, deberá hacer referencia a una propiedad específica, mediante una sintaxis como `<Binding Path="[key].propertyName" .../>`.  
   
  Puede especificar el tipo del índice, si es necesario. Para obtener más información sobre este aspecto de una ruta de acceso de propiedad indizada, vea <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>.  
   
@@ -68,7 +67,7 @@ El <xref:System.Windows.PropertyPath> objeto admite una insertada compleja [!INC
 <object property="(ownerType.propertyName)" .../>  
 ```  
   
- Los paréntesis indican que esta propiedad en un <xref:System.Windows.PropertyPath> deben crearse con una calificación parcial. Puede usar un espacio de nombres XML para buscar el tipo con la asignación adecuada. El `ownerType` busca tipos a los que un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesador tenga acceso a través del <xref:System.Windows.Markup.XmlnsDefinitionAttribute> declaraciones en cada ensamblado. La mayoría de las aplicaciones tienen el espacio de nombres XML predeterminado asignado al espacio de nombres [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], de modo que, normalmente, solo es necesario para los tipos personalizados o para tipos que queden fuera del espacio de nombres.  `propertyName` debe resolverse para ser el nombre de una propiedad que exista en `ownerType`. Esta sintaxis se usa, normalmente, para uno de los siguientes casos:  
+ Los paréntesis indican que esta propiedad en un <xref:System.Windows.PropertyPath> deben crearse con una calificación parcial. Puede usar un espacio de nombres XML para buscar el tipo con la asignación adecuada. El `ownerType` busca tipos a los que un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesador tenga acceso a través del <xref:System.Windows.Markup.XmlnsDefinitionAttribute> declaraciones en cada ensamblado. La mayoría de las aplicaciones tienen el espacio de nombres XML predeterminado asignado al espacio de nombres [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], de modo que, normalmente, solo es necesario para los tipos personalizados o para tipos que queden fuera del espacio de nombres.  `propertyName` debe resolverse para ser el nombre de una propiedad existente en el `ownerType`. Esta sintaxis se usa, normalmente, para uno de los siguientes casos:  
   
 -   Se especifica la ruta de acceso en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que tiene un estilo o plantilla sin un tipo de destino especificado. Un uso completo, normalmente, no es válido para otros casos que no sean este, porque en los casos sin estilo o sin plantilla, la propiedad existe en una instancia, no en un tipo.  
   
@@ -179,7 +178,7 @@ or
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>  
 ```  
   
- Los paréntesis indican que esta propiedad en un <xref:System.Windows.PropertyPath> deben crearse con una calificación parcial. Puede usar un espacio de nombres XML para buscar el tipo. El `ownerType` busca tipos a los que un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesador tenga acceso a través del <xref:System.Windows.Markup.XmlnsDefinitionAttribute> declaraciones en cada ensamblado. La mayoría de las aplicaciones tienen el espacio de nombres XML predeterminado asignado al espacio de nombres [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], de modo que, normalmente, solo es necesario para los tipos personalizados o para tipos que queden fuera del espacio de nombres. `propertyName` debe resolverse para ser el nombre de una propiedad que exista en `ownerType`. La propiedad especificada como `propertyName` debe ser un <xref:System.Windows.DependencyProperty>. (Todas las propiedades adjuntas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se implementan como propiedades de dependencia, por lo que este problema solo afecta a las propiedades adjuntas personalizadas).  
+ Los paréntesis indican que esta propiedad en un <xref:System.Windows.PropertyPath> deben crearse con una calificación parcial. Puede usar un espacio de nombres XML para buscar el tipo. El `ownerType` busca tipos a los que un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesador tenga acceso a través del <xref:System.Windows.Markup.XmlnsDefinitionAttribute> declaraciones en cada ensamblado. La mayoría de las aplicaciones tienen el espacio de nombres XML predeterminado asignado al espacio de nombres [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], de modo que, normalmente, solo es necesario para los tipos personalizados o para tipos que queden fuera del espacio de nombres. `propertyName` debe resolverse para ser el nombre de una propiedad existente en el `ownerType`. La propiedad especificada como `propertyName` debe ser un <xref:System.Windows.DependencyProperty>. (Todas las propiedades adjuntas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se implementan como propiedades de dependencia, por lo que este problema solo afecta a las propiedades adjuntas personalizadas).  
   
 <a name="indexanim"></a>   
 ### <a name="indexers"></a>Indizadores  
@@ -197,6 +196,7 @@ or
  En general, <xref:System.Windows.PropertyPath> está diseñado para usar dos constructores diferentes, uno para los usos de enlace y los usos de animación más simple y otro para los usos de animación complejos. Use el <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> firma para usos de enlace, donde el objeto es una cadena. Use la <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> firma para rutas de acceso de animación de un solo paso, donde el objeto es un <xref:System.Windows.DependencyProperty>. Use el <xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29> para animaciones complejas. Este último constructor usa una cadena de token para el primer parámetro y una matriz de objetos que rellenan las posiciones en la cadena de token para definir una relación de ruta de acceso de propiedad.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.PropertyPath>
 - [Información general sobre el enlace de datos](../data/data-binding-overview.md)
-- [Información general sobre objetos Storyboard ](../graphics-multimedia/storyboards-overview.md)
+- [Información general sobre objetos Storyboard](../graphics-multimedia/storyboards-overview.md)

@@ -2,12 +2,12 @@
 title: <workflow> de WCF
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
-ms.openlocfilehash: 9920a9b75a033515584f4108503faa45687b7203
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 190e66096cf2dfa2028c95b22526fc3c84712ab8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122075"
 ---
 # <a name="workflow-of-wcf"></a>\<flujo de trabajo > de WCF
 Configure un participante del seguimiento que escucha los registros de seguimiento que se emiten del tiempo de ejecución directamente y los procesa del modo en que cada uno esté configurado. Esto incluye la escritura en un resultado concreto (p. ej., un archivo, la consola o ETW), procesar o agregar los registros, o cualquier otra combinación que pueda resultar necesaria.  
@@ -40,7 +40,7 @@ Configure un participante del seguimiento que escucha los registros de seguimien
 |-------------|-----------------|  
 |name|Cadena que especifica el nombre de un participante de seguimiento.|  
 |profileName|Una cadena que especifica el nombre del perfil de seguimiento que define los registros de seguimiento a los que se ha suscrito el participante de seguimiento.|  
-|tipo|Una cadena que especifica el tipo de un participante de seguimiento.|  
+|type|Una cadena que especifica el tipo de un participante de seguimiento.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -89,8 +89,9 @@ Configure un participante del seguimiento que escucha los registros de seguimien
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [Participantes de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

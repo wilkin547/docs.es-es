@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd61c8133d9f155ae8e15bbc6aa90b2b9de1aadd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60a1546068ae6a8c8be1c0af1ef3c7d770c23d70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647677"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128685"
 ---
 # <a name="icordebugunmanagedcallback-interface"></a>ICorDebugUnmanagedCallback (Interfaz)
 Proporciona notificación de eventos nativos que no están directamente relacionadas con common language runtime (CLR).  
@@ -30,7 +30,7 @@ Proporciona notificación de eventos nativos que no están directamente relacion
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[DebugEvent (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md)|Notifica al depurador que se ha desencadenado un evento nativo.|  
+|[Método DebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md)|Notifica al depurador que se ha desencadenado un evento nativo.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -47,4 +47,5 @@ Proporciona notificación de eventos nativos que no están directamente relacion
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

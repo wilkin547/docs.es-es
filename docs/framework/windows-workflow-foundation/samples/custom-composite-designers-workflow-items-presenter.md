@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 13d1a76779877bc2ab6d1cbd9c892bf14781e788
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f4db3325081a820a37a8791849d2ad9697d15151
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118110"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> es un tipo clave en el modelo de programación de diseñador de WF que permite la edición de una colección de elementos incluidos. En este ejemplo se muestra cómo compilar un diseñador de actividad que muestra este tipo de colección modificable.
@@ -32,15 +32,15 @@ ms.locfileid: "54705948"
 ## <a name="sample-highlights"></a>Aspectos que se deben destacar del ejemplo
  El código de este ejemplo muestra lo siguiente:
 
--   La actividad para la que se compila un diseñador: `Parallel`
+-   Se ha creado la actividad de un diseñador para:  `Parallel`
 
 -   La creación de un diseñador de actividades personalizado con un objeto <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Elementos que se deben señalar:
 
-    -   Observe el uso de enlace de datos de WPF para enlazarse a `ModelItem.Branches`. `ModelItem` es la propiedad de `WorkflowElementDesigner` que hace referencia al objeto subyacente para el que se está usando el diseñador, en este caso nuestro `Parallel`.
+    -   Observe el uso de enlace de datos de WPF para enlazarse a `ModelItem.Branches`. `ModelItem` es la propiedad de `WorkflowElementDesigner` que hace referencia al objeto subyacente es usando el diseñador, en este caso, nuestro `Parallel`.
 
     -   La propiedad <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> se puede utilizar para colocar un elemento visual que se mostrará entre los elementos individuales de la colección.
 
-    -   La propiedad <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> es una plantilla que se puede proporcionar para determinar el diseño de los elementos de la colección. En este caso, se usa un panel de apilamiento horizontal.
+    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> es una plantilla que puede usarse para determinar el diseño de los elementos de la colección. En este caso, se usa un panel de apilamiento horizontal.
 
  El ejemplo de código siguiente muestra cómo hacerlo.
 
@@ -158,5 +158,6 @@ End Sub
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - [Desarrollar aplicaciones con el Diseñador de flujo de trabajo](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

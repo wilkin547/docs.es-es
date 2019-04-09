@@ -2,12 +2,12 @@
 title: <security> de <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: 964f2bf9571cd3c3b8668c7ab5306fab89de2ab0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f1e166bec2254ed6d2c306eaccfa13e9fba1d70d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261316"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118058"
 ---
 # <a name="security-of-basichttpbinding"></a>\<seguridad > de \<basicHttpBinding >
 Define las funciones de seguridad de la [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -66,6 +66,7 @@ Define las funciones de seguridad de la [ \<basicHttpBinding >](../../../../../d
  De forma predeterminada, no se protege el mensaje SOAP y no se autentica el cliente. Este elemento le permite establecer la configuración de seguridad adicional para el elemento `basicHttpBinding`.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.BasicHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>

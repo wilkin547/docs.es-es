@@ -2,17 +2,17 @@
 title: Información general sobre la seguridad de SQL Server
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 8000e88de70706c7bb8ec39a05beea4605208b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de0c79a95a786f33b05c88ce4ed298837f2a6923
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591722"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148595"
 ---
 # <a name="overview-of-sql-server-security"></a>Información general sobre la seguridad de SQL Server
 Una estrategia de defensa exhaustiva, con niveles superpuestos de seguridad, es la mejor manera de enfrentarse a las amenazas a la seguridad. SQL Server proporciona una arquitectura de seguridad diseñada para permitir a los administradores de bases de datos y desarrolladores crear aplicaciones de base de datos seguras y contrarrestar las amenazas. En cada versión de SQL Server se han introducido mejoras a las versiones anteriores con nuevas características y funcionalidades. No obstante, la seguridad no es una característica integrada más. Cada aplicación tiene requisitos de seguridad propios. Los desarrolladores tienen que saber cuál es la combinación de características y funcionalidades más apropiada para contrarrestar las amenazas conocidas, así como anticiparse a las que puedan ir apareciendo en el futuro.  
   
- Una instancia de SQL Server contiene un conjunto jerárquico de entidades, empezando por el servidor. Cada servidor contiene varias bases de datos y, a su vez, cada base de datos contiene una colección de objetos susceptibles de ser protegidos. Cada elemento protegible de SQL Server tiene asociados *permisos* que se pueden conceder a un *principal*, que es un individuo, grupo o proceso concedido acceso a SQL Server. El marco de seguridad de SQL Server administra el acceso a entidades protegidas mediante *autenticación* y *autorización*.  
+ Una instancia de SQL Server contiene un conjunto jerárquico de entidades, empezando por el servidor. Cada servidor contiene varias bases de datos y, a su vez, cada base de datos contiene un conjunto de objetos susceptibles de ser protegidos. Cada elemento protegible de SQL Server tiene asociados *permisos* que se pueden conceder a un *principal*, que es un individuo, grupo o proceso concedido acceso a SQL Server. El marco de seguridad de SQL Server administra el acceso a entidades protegidas mediante *autenticación* y *autorización*.  
   
 -   La autenticación es el proceso de inicio de sesión en SQL Server por el que una entidad de seguridad solicita el acceso mediante el envío de credenciales que el servidor evalúa. La autenticación establece la identidad del usuario o proceso que se autentica.  
   
@@ -40,7 +40,8 @@ Una estrategia de defensa exhaustiva, con niveles superpuestos de seguridad, es 
  Proporciona vínculos a recursos de seguridad de la integración CLR.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

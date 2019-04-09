@@ -9,17 +9,16 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: 935d86195acaca94b0115a8cdcf7289c23613f7f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125125"
 ---
 # <a name="textelement-content-model-overview"></a>Información general sobre el modelo de contenido de TextElement
 Esta introducción del modelo de contenido describe el contenido compatible con un <xref:System.Windows.Documents.TextElement>. El <xref:System.Windows.Documents.Paragraph> clase es un tipo de <xref:System.Windows.Documents.TextElement>. Un modelo de contenido describe qué objetos o elementos se pueden contener en otros. Esta información general resume el modelo de contenido que se usa para los objetos derivados de <xref:System.Windows.Documents.TextElement>. Para obtener más información, consulte [Flow Document Overview](flow-document-overview.md).  
-  
-  
+
 <a name="text_element_classes"></a>   
 ## <a name="content-model-diagram"></a>Diagrama del modelo de contenido  
  El diagrama siguiente resume el modelo de contenido para las clases derivadas de <xref:System.Windows.Documents.TextElement> , así como cómo otros que no sean de `TextElement` clases encajan en este modelo.  
@@ -58,9 +57,9 @@ Esta introducción del modelo de contenido describe el contenido compatible con 
 ## <a name="working-with-textelement-content-programmatically"></a>Trabajar con contenido de TextElement mediante programación  
  El contenido de un <xref:System.Windows.Documents.TextElement> está formado por las colecciones de modo que manipular mediante programación el contenido de <xref:System.Windows.Documents.TextElement> objetos se realiza cuando se trabaja con estas colecciones. Hay tres colecciones diferentes usadas por <xref:System.Windows.Documents.TextElement> -las clases derivadas:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Representa una colección de elementos <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> define el contenido secundario permitido de los elementos <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> y <xref:System.Windows.Controls.TextBlock>.  
+-   <xref:System.Windows.Documents.InlineCollection>: Representa una colección de elementos <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> define el contenido secundario permitido de la <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, y <xref:System.Windows.Controls.TextBlock> elementos.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Representa una colección de elementos <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> define el contenido secundario permitido de los elementos <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> y <xref:System.Windows.Documents.Figure>.  
+-   <xref:System.Windows.Documents.BlockCollection>: Representa una colección de elementos <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> define el contenido secundario permitido de la <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, y <xref:System.Windows.Documents.Figure> elementos.  
   
 -   <xref:System.Windows.Documents.ListItemCollection>: Un elemento de contenido dinámico que representa un elemento de contenido determinado en un ordenada o desordenada <xref:System.Windows.Documents.List>.  
   
@@ -102,6 +101,7 @@ Esta introducción del modelo de contenido describe el contenido compatible con 
  Consulte [modelo de contenido de WPF](../controls/wpf-content-model.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Manipular un objeto FlowDocument mediante la propiedad Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Manipular elementos de contenido dinámico mediante la propiedad Blocks](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)
 - [Manipular un objeto FlowDocument mediante la propiedad Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)

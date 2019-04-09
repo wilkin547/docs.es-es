@@ -13,12 +13,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 3a09657ee7a79b7f590adba0e4fb0c04a8e89043
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14aa25de78eb357f8474d3828aa45e48e7a4f9c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843648"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126118"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Filtrar Definir un operador (Visual Basic)
 Si ha definido una clase o estructura, puede definir el comportamiento de un operador estándar (como `*`, `<>`, o `And`) cuando uno o ambos de los operandos es del tipo de la clase o estructura.  
@@ -35,15 +35,14 @@ Si ha definido una clase o estructura, puede definir el comportamiento de un ope
  Puede probar la estructura `height` con el código siguiente.  
   
  [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
-  
-  
+
 ## <a name="see-also"></a>Vea también
 
-- [Procedimientos de operadores](./operator-procedures.md)
-- [Cómo: Definir un operador de conversión](./how-to-define-a-conversion-operator.md)
-- [Cómo: Llamar a un procedimiento de operador](./how-to-call-an-operator-procedure.md)
-- [Cómo: Usar una clase que define operadores](./how-to-use-a-class-that-defines-operators.md)
-- [Operator (instrucción)](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Structure (instrucción)](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Cómo: Declarar una estructura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [Mod (operador)](../../../../visual-basic/language-reference/operators/mod-operator.md)
+- [Procedimientos de operador](./operator-procedures.md)
+- [Filtrar para definir un operador de conversión](./how-to-define-a-conversion-operator.md)
+- [Filtrar para llamar a un procedimiento de operador](./how-to-call-an-operator-procedure.md)
+- [Filtrar para usar una clase que define operadores](./how-to-use-a-class-that-defines-operators.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Structure (Instrucción)](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Filtrar Declarar una estructura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Mod (Operador)](../../../../visual-basic/language-reference/operators/mod-operator.md)

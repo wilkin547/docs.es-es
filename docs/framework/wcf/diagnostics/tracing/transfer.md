@@ -2,18 +2,18 @@
 title: Transferir
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: d6ca1f8471fb1513263354e2369891bf9ffcb583
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8263093944cf01a38a49b52d71f7a6e54195a3c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145046"
 ---
 # <a name="transfer"></a>Transferir
 Este tema describe la transferencia en el modelo de seguimiento de actividad de Windows Communication Foundation (WCF).  
   
 ## <a name="transfer-definition"></a>Definición de transferencia  
- Las transferencias entre actividades representan relaciones causales entre eventos en las actividades relacionadas dentro de los extremos. Dos actividades se relacionan con transferencias cuando el control fluye entre estas actividades, como por ejemplo, una llamada al método que cruza límites de actividad. En WCF, cuando los bytes son entrantes en el servicio, la actividad escuchar a se transfiere a la actividad recibir Bytes donde se crea el objeto de mensaje. Para obtener una lista de escenarios de seguimiento de extremo a otro y su respectivo actividad y diseño de traza, consulte [escenarios de seguimiento-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
+ Las transferencias entre actividades representan relaciones causales entre eventos en las actividades relacionadas dentro de los puntos de conexión. Dos actividades se relacionan con transferencias cuando el control fluye entre estas actividades, como por ejemplo, una llamada al método que cruza límites de actividad. En WCF, cuando los bytes son entrantes en el servicio, la actividad escuchar a se transfiere a la actividad recibir Bytes donde se crea el objeto de mensaje. Para obtener una lista de escenarios de seguimiento de extremo a otro y su respectivo actividad y diseño de traza, consulte [escenarios de seguimiento-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
   
  Para emitir seguimientos de transferencia, use el valor `ActivityTracing` en el origen de seguimiento, tal y como se muestra en el código de configuración siguiente.  
   
@@ -21,7 +21,7 @@ Este tema describe la transferencia en el modelo de seguimiento de actividad de 
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
 ```  
   
-## <a name="using-transfer-to-correlate-activities-within-endpoints"></a>Uso de la transferencia para poner en correlación actividades dentro de los extremos  
+## <a name="using-transfer-to-correlate-activities-within-endpoints"></a>Uso de la transferencia para poner en correlación actividades dentro de los puntos de conexión  
  Las actividades y transferencias permiten al usuario ubicar probabilísticamente la causa principal de un error. Por ejemplo, si transferimos de uno a otro respectivamente entre las actividades M y N en componentes M y N, y se bloquea N justamente antes de realizarse la transferencia a M, podemos sacar la conclusión de que es probable que se deba a que N emita datos a M.  
   
  Se emite un seguimiento de transferencia de la actividad M a la actividad N cuando hay flujo de control entre M y N. Por ejemplo, N realiza algún trabajo para M debido a una llamada al método que cruza los límites de las actividades. N puede que ya exista o que se haya creado. M genera N cuando esta última es una nueva actividad que realiza algún trabajo para M.  
@@ -103,7 +103,8 @@ ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Configuración de la traza](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+
+- [Configurar seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Escenarios de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Escenarios de seguimiento de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

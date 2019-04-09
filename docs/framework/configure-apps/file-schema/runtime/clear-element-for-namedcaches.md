@@ -1,16 +1,16 @@
 ---
-title: <clear> (Elemento para <namedCaches>)
+title: <clear> (elemento) para <namedCaches>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <clear> element for <namedCaches>
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
-ms.openlocfilehash: aaf5c2360b53a1cd6e5775a195c89c96ed6440a3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: eb0a50919e163a795abc70d132bd45f1d05192ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146866"
 ---
 # <a name="clear-element-for-namedcaches"></a>\<Borrar > (elemento) para \<namedCaches >
 Todos los borra `namedCache` entradas en el `namedCaches` colección de una memoria caché.  
@@ -51,4 +51,5 @@ Todos los borra `namedCache` entradas en el `namedCaches` colección de una memo
  El `clear` elemento borra todo `namedCache` entradas de la colección de caché con nombre de una memoria caché. Puede usar el `clear` elemento antes de usar el `add` elemento para agregar una nueva entrada de caché con nombre para estar seguro de que hay ninguna otra denominada caché en la colección.  
   
 ## <a name="see-also"></a>Vea también
+
 - [\<namedCaches > elemento (configuración de caché)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

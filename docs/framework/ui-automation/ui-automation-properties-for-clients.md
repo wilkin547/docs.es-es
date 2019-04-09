@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: 0bfd07788bd8d2ebf028865478b0db6fb86c2f46
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a75b502dc02f0541b9debb6cd1ae23ba10eed8b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116368"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Propiedades de UI Automation para clientes
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "57677297"
   
  Los patrones de control también tienen propiedades. Las propiedades de los patrones de control son específicas para el modelo. Por ejemplo, <xref:System.Windows.Automation.ScrollPattern> tiene propiedades que permiten a una aplicación cliente detectar si una ventana es desplazable horizontal o verticalmente, y cuáles son los tamaños de la vista actual y las posiciones de desplazamiento. Los patrones de control exponen todas sus propiedades a través de una estructura; por ejemplo, <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>.  
   
- Las propiedades de[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] son de solo lectura. Para establecer las propiedades de un control, debe utilizar los métodos del patrón de control adecuado. Por ejemplo, utilice <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> para cambiar los valores de posición de una ventana desplazable.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] las propiedades son de solo lectura. Para establecer las propiedades de un control, debe utilizar los métodos del patrón de control adecuado. Por ejemplo, utilice <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> para cambiar los valores de posición de una ventana desplazable.  
   
  Para mejorar el rendimiento, los valores de propiedad de los controles y los patrones de control pueden almacenarse en caché cuando se recuperan objetos <xref:System.Windows.Automation.AutomationElement> . Para obtener más información, consulte [almacenamiento en caché en los clientes de automatización de interfaz de usuario](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
   
@@ -104,6 +104,7 @@ ms.locfileid: "57677297"
 |<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(Propiedad estática) El elemento <xref:System.Windows.Automation.AutomationElement>raíz.|  
   
 ## <a name="see-also"></a>Vea también
-- [Almacenamiento en caché en los clientes de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
-- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [Suscripción a eventos de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+
+- [Almacenar en caché en los clientes de automatización de la interfaz de usuario](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [Implementación del proveedor de UI Automation en el servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Suscribirse a eventos de UI Automation](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

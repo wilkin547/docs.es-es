@@ -8,17 +8,16 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: e002c07953320ac5e7c0854fe521896c3bca225c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353015"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180003"
 ---
 # <a name="geometry-overview"></a>Información general sobre geometría
 Esta introducción describe cómo usar el [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> clases para describir las formas. En este tema también se contrasta las diferencias entre <xref:System.Windows.Media.Geometry> objetos y <xref:System.Windows.Shapes.Shape> elementos.  
-  
-  
+
 <a name="wcpsdk_graphics_geometry_introduction"></a>   
 ## <a name="what-is-a-geometry"></a>¿Qué es una geometría?  
  El <xref:System.Windows.Media.Geometry> clase y las clases que derivan de ella, como <xref:System.Windows.Media.EllipseGeometry>, <xref:System.Windows.Media.PathGeometry>, y <xref:System.Windows.Media.CombinedGeometry>, le permiten describir la geometría de una forma 2D. Estas descripciones geométricas tiene muchos usos, como definir una forma para pintarla en la pantalla o definir regiones de recorte y pruebas de posicionamiento. Incluso se puede usar una geometría para definir un trazado de animación.  
@@ -42,7 +41,7 @@ Esta introducción describe cómo usar el [!INCLUDE[TLA#tla_winclient](../../../
 ## <a name="common-properties-that-take-a-geometry"></a>Propiedades comunes que aceptan un objeto Geometry  
  En las secciones anteriores se menciona que se pueden usar objetos Geometry con otros objetos con diversos fines, como dibujar formas, crear animaciones y efectuar recortes. La tabla siguiente enumeran varias clases que tienen propiedades que toman un <xref:System.Windows.Media.Geometry> objeto.  
   
-|Tipo|Property|  
+|Tipo|Propiedad|  
 |----------|--------------|  
 |<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.PathGeometry%2A>|  
 |<xref:System.Windows.Media.DrawingGroup>|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|  
@@ -217,6 +216,7 @@ Objeto PathGeometry con varias figuras
  Consulte la <xref:System.Windows.Media.Geometry> clase para obtener una lista completa de sus métodos.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.Geometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Shapes.Path>

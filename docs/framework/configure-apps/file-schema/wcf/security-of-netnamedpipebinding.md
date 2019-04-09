@@ -2,12 +2,12 @@
 title: <security> de <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: ee2c4161f70c01dc09ac36bbcf6a234f822682d0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fa31dda3274c9768694bdf5232f31554899e1d82
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203397"
 ---
 # <a name="security-of-netnamedpipebinding"></a>\<seguridad > de \<netNamedPipeBinding >
 Define la configuración de seguridad de un enlace.  
@@ -52,6 +52,7 @@ Define la configuración de seguridad de un enlace.
 |enlace|El elemento de enlace de la [ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.NetNamedPipeSecurity>
 - <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>

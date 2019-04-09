@@ -2,12 +2,12 @@
 title: <security> de <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: 552b28c4e4368ec4a01502a1df65cb46aa17c05d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ffe791d495a4e06c9649dd0c37d0fd010e2c64bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258063"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182044"
 ---
 # <a name="security-of-custombinding"></a>\<seguridad > de \<customBinding >
 Especifica las opciones de seguridad de un enlace personalizado.  
@@ -57,7 +57,7 @@ Especifica las opciones de seguridad de un enlace personalizado.
 |requireDerivedKeys|Un valor booleano que especifica si las claves se pueden derivar de las claves de prueba originales. De manera predeterminada, es `true`.|  
 |requireSecurityContextCancellation|Opcional. Un valor booleano que especifica si el contexto de seguridad debería ser cancelado y finalizado cuando no sea necesario. De manera predeterminada, es `true`.|  
 |requireSignatureConfirmation|Opcional. Un valor booleano que especifica si la confirmación de la firma de Seguridad del WS está habilitada. Cuando se establece en `true`, el respondedor confirma las firmas del mensaje.  Cuando se configura el enlace personalizado para certificados mutuos o para usar los tokens (enlaces de WSS 1.1) emitidos, el valor predeterminado de este atributo es `true`. De lo contrario, el valor predeterminado es `false`.<br /><br /> La confirmación de la firma se utiliza para confirmar que el servicio está respondiendo perfectamente a una solicitud.|  
-|securityHeaderLayout|Opcional. Especifica la clasificación de los elementos en el encabezado de seguridad. Los valores válidos son<br /><br /> -   `Strict`: Se agregan elementos al encabezado de seguridad según el principio general de "declarar antes de usar".<br />-   `Lax`: Los elementos se agregan al encabezado de seguridad en cualquier orden que confirme WSS: Seguridad del mensaje SOAP.<br />-   `LaxWithTimestampFirst`: Los elementos se agregan al encabezado de seguridad en cualquier orden que confirme WSS: Seguridad de mensajes SOAP excepto que el primer elemento en el encabezado de seguridad debe ser un elemento wsse: timestamp.<br />-   `LaxWithTimestampLast`: Los elementos se agregan al encabezado de seguridad en cualquier orden que confirme WSS: Seguridad de mensajes SOAP excepto que el último elemento en el encabezado de seguridad debe ser un elemento wsse: timestamp.<br /><br /> De manera predeterminada, es `Strict`.<br /><br /> Este elemento es del tipo <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
+|securityHeaderLayout|Opcional. Especifica la clasificación de los elementos en el encabezado de seguridad. Los valores válidos son<br /><br /> -   `Strict`: Se agregan elementos al encabezado de seguridad según el principio general de "declarar antes de usar".<br />-   `Lax`: Los elementos se agregan al encabezado de seguridad en cualquier orden que confirme WSS: Message Security de SOAP.<br />-   `LaxWithTimestampFirst`: Los elementos se agregan al encabezado de seguridad en cualquier orden que confirme WSS: Message Security de SOAP, solo que el primer elemento en el encabezado de seguridad debe ser un elemento wsse:Timestamp.<br />-   `LaxWithTimestampLast`: Los elementos se agregan al encabezado de seguridad en cualquier orden que confirme WSS: Message Security de SOAP, solo que el último elemento en el encabezado de seguridad debe ser un elemento wsse:Timestamp.<br /><br /> De manera predeterminada, es `Strict`.<br /><br /> Este elemento es del tipo <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
   
 ## <a name="authenticationmode-attribute"></a>Atributo authenticationMode  
   
@@ -167,6 +167,7 @@ Especifica las opciones de seguridad de un enlace personalizado.
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.SecurityElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
@@ -174,5 +175,5 @@ Especifica las opciones de seguridad de un enlace personalizado.
 - [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Filtrar para crear un enlace personalizado mediante SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Seguridad de enlace personalizado](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

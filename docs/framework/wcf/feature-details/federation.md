@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: f05d4a9348c12a29dc3cd7b93334ab1134eeb1a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af3e5c4c33936e809438019f1a8af823ffc3e52b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114047"
 ---
 # <a name="federation"></a>Federación
 En este tema se proporciona una información general breve sobre el concepto de seguridad federada. También se describe la compatibilidad de Windows Communication Foundation (WCF) para implementar una arquitectura de seguridad federada. Para una aplicación de ejemplo que demuestre la federación, consulte [ejemplo de federación](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -93,7 +93,7 @@ En este tema se proporciona una información general breve sobre el concepto de 
  ![Seguridad de la federación en WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
   
 ### <a name="example-myservice"></a>Ejemplo de MyService  
- El servicio `MyService` expone un extremo único a través de `MyServiceEndpoint`. La siguiente ilustración muestra la dirección, enlace y contrato asociados al punto de conexión.  
+ El servicio `MyService` expone un punto de conexión único a través de `MyServiceEndpoint`. La siguiente ilustración muestra la dirección, enlace y contrato asociados al extremo.  
   
  ![Federation](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
   
@@ -162,7 +162,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
   
  ![Federation](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
   
- El STS de B expone un punto de conexión único, denominado `STSEndpoint`, que puede ser de uso para solicitar tokens de seguridad. Específicamente, el STS de B emite tokens SAML con la demanda `accessAuthorized`, que puede presentarse en el sitio del servicio `MyService` para obtener acceso al servicio. Sin embargo, el STS de B requiere que los usuarios presenten un token SAML válido emitido por el STS de A que contiene la demanda `userAuthenticated`. Esto se especifica mediante declaración en la configuración del STS.  
+ El STS de B expone un extremo único, denominado `STSEndpoint`, que puede ser de uso para solicitar tokens de seguridad. Específicamente, el STS de B emite tokens SAML con la demanda `accessAuthorized`, que puede presentarse en el sitio del servicio `MyService` para obtener acceso al servicio. Sin embargo, el STS de B requiere que los usuarios presenten un token SAML válido emitido por el STS de A que contiene la demanda `userAuthenticated`. Esto se especifica mediante declaración en la configuración del STS.  
   
 ```xml  
 <system.serviceModel>  
@@ -224,7 +224,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
   
  ![Federation](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS_B")  
   
- Similar al STS de B, el STS de A también es un servicio web que emite tokens de seguridad y expone un punto de conexión único con este fin. Sin embargo, utiliza un enlace diferente (`wsHttpBinding`) y requiere que los usuarios presenten un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] válido con una demanda `emailAddress`. En respuesta, emite tokens SAML con la demanda `userAuthenticated`. Esto se especifica mediante declaración en la configuración del servicio.  
+ Similar al STS de B, el STS de A también es un servicio web que emite tokens de seguridad y expone un extremo único con este fin. Sin embargo, utiliza un enlace diferente (`wsHttpBinding`) y requiere que los usuarios presenten un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] válido con una demanda `emailAddress`. En respuesta, emite tokens SAML con la demanda `userAuthenticated`. Esto se especifica mediante declaración en la configuración del servicio.  
   
 ```xml  
 <system.serviceModel>  
@@ -290,4 +290,5 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  La seguridad federada proporciona una división limpia de responsabilidad y ayuda a crear arquitecturas de servicios seguras y escalables. Como una plataforma para compilar e implementar aplicaciones distribuidas, WCF proporciona compatibilidad nativa para implementar la seguridad federada.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Seguridad](../../../../docs/framework/wcf/feature-details/security.md)

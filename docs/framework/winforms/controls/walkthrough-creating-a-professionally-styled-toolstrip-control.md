@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear un Control ToolStrip de estilo profesional'
+title: 'Tutorial: Crear un control ToolStrip de estilo profesional'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 64624508a50eb6e28337baa1a3600298e2c83fd7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 22ec7b85973d606d329fe1c58f8cef7036fc1a8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710750"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115796"
 ---
-# <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Tutorial: Crear un Control ToolStrip de estilo profesional
+# <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Tutorial: Crear un control ToolStrip de estilo profesional
 Puedes usar la aplicación <xref:System.Windows.Forms.ToolStrip> controla un aspecto y comportamiento profesional escribiendo su propia clase derivada de la <xref:System.Windows.Forms.ToolStripProfessionalRenderer> tipo.  
   
  Este tutorial muestra cómo usar <xref:System.Windows.Forms.ToolStrip> controles para crear un control compuesto que es similar a la **panel de navegación** proporcionado por Microsoft® Outlook®. En este tutorial se muestran las tareas siguientes:  
@@ -62,9 +62,9 @@ Puedes usar la aplicación <xref:System.Windows.Forms.ToolStrip> controla un asp
   
 2.  En el **propiedades** ventana, establezca el <xref:System.Windows.Forms.ToolStrip> propiedades del control según la tabla siguiente.  
   
-    |Property|Valor|  
+    |Propiedad|Valor|  
     |--------------|-----------|  
-    |nombre|`stackStrip`|  
+    |Name|`stackStrip`|  
     |CanOverflow|`false`|  
     |Acoplar|<xref:System.Windows.Forms.DockStyle.Bottom>|  
     |Fuente|`Tahoma, 10pt, style=Bold`|  
@@ -77,9 +77,9 @@ Puedes usar la aplicación <xref:System.Windows.Forms.ToolStrip> controla un asp
   
 4.  En el **propiedades** ventana, establezca el <xref:System.Windows.Forms.ToolStripButton> propiedades del control según la tabla siguiente.  
   
-    |Property|Valor|  
+    |Propiedad|Valor|  
     |--------------|-----------|  
-    |nombre|`mailStackButton`|  
+    |Name|`mailStackButton`|  
     |CheckOnClick|true|  
     |CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
     |DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  
@@ -88,7 +88,7 @@ Puedes usar la aplicación <xref:System.Windows.Forms.ToolStrip> controla un asp
     |ImageTransparentColor|`238, 238, 238`|  
     |Margen|`0, 0, 0, 0`|  
     |Relleno|`3, 3, 3, 3`|  
-    |Texto|**Correo electrónico**|  
+    |Texto|**Correo**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
 5.  Repita el paso 7 para tres más <xref:System.Windows.Forms.ToolStripButton> controles.  
@@ -185,8 +185,9 @@ Puedes usar la aplicación <xref:System.Windows.Forms.ToolStrip> controla un asp
 -   Crear un formulario de múltiples documentos (MDI) de la interfaz con acoplamiento <xref:System.Windows.Forms.ToolStrip> controles. Para obtener más información, vea [Cómo: Crear un formulario MDI con combinación de menús y controles ToolStrip](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [Control ToolStrip](toolstrip-control-windows-forms.md)
-- [Cómo: Proporcionar elementos de menú estándar a un formulario](how-to-provide-standard-menu-items-to-a-form.md)
+- [ToolStrip](toolstrip-control-windows-forms.md)
+- [Filtrar para proporcionar elementos de menú estándar a un formulario](how-to-provide-standard-menu-items-to-a-form.md)

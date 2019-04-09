@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 48c95411d08aefc3ecb7d8a7041ac47d44e6b9ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127951"
 ---
 # <a name="standard-query-operator-translation"></a>Traslación del operador de consulta estándar
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] convierte los operadores de consulta estándar en comandos SQL. El procesador de consultas de la base de datos determina la semántica de ejecución de la traducción de SQL.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Operadores de consulta estándar se traduce en comandos SQL. El procesador de consultas de la base de datos determina la semántica de ejecución de la traducción de SQL.  
   
  Operadores de consulta estándar se definen en *secuencias*. Es una secuencia *ordenados* y se basa en la identidad de referencia para cada elemento de la secuencia. Para obtener más información, consulte [Standard Query Operators Overview (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) o [Standard Query Operators Overview (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
@@ -24,9 +24,9 @@ ms.locfileid: "56093936"
 ## <a name="operator-support"></a>Compatibilidad de los operadores  
   
 ### <a name="concat"></a>Concat  
- El método <xref:System.Linq.Enumerable.Concat%2A> se define para los conjuntos múltiples ordenados cuando el orden del receptor y el orden del argumento son iguales. <xref:System.Linq.Enumerable.Concat%2A> funciona como `UNION ALL` sobre los conjuntos múltiples después del orden común.  
+ El método <xref:System.Linq.Enumerable.Concat%2A> se define para los conjuntos múltiples ordenados cuando el orden del receptor y el orden del argumento son iguales. <xref:System.Linq.Enumerable.Concat%2A> funciona como `UNION ALL` a través de los conjuntos múltiples después del orden común.  
   
- El último paso es ordenar en SQL antes de que se generen los resultados. <xref:System.Linq.Enumerable.Concat%2A> no conserva el orden de sus argumentos. Para garantizar una ordenación correcta, debe ordenar explícitamente los resultados de <xref:System.Linq.Enumerable.Concat%2A>.  
+ El último paso es ordenar en SQL antes de que se generen los resultados. <xref:System.Linq.Enumerable.Concat%2A> no se conserva el orden de sus argumentos. Para garantizar una ordenación correcta, debe ordenar explícitamente los resultados de <xref:System.Linq.Enumerable.Concat%2A>.  
   
 ### <a name="intersect-except-union"></a>Intersect, Except, Union  
  Los métodos <xref:System.Linq.Enumerable.Intersect%2A> y <xref:System.Linq.Enumerable.Except%2A> se definen bien solo en los conjuntos. La semántica de conjuntos múltiples no está definida.  
@@ -37,7 +37,7 @@ ms.locfileid: "56093936"
  <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> métodos están bien definidos solo en *conjuntos ordenados*. La semántica para los conjuntos no ordenados o conjuntos múltiples no está definida.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> tienen ciertas limitaciones cuando se utilizan en consultas en SQL Server 2000. Para obtener más información, vea la entrada "Skip y Take excepciones en SQL Server 2000" en [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> tienen ciertas limitaciones cuando se usan en consultas en SQL Server 2000. Para obtener más información, vea la entrada "Skip y Take excepciones en SQL Server 2000" en [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
  Debido a las limitaciones de ordenación en SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] intenta trasladar la ordenación del argumento de estos métodos para el resultado del método. Por ejemplo, considere la siguiente consulta [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
   
@@ -71,7 +71,7 @@ ORDER BY [t0].[CustomerID]
   
 |Operadores|Razonamiento|  
 |---------------|---------------|  
-|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|Las consultas SQL funcionan con conjuntos múltiples, no con secuencias. `ORDER BY` debe ser la última cláusula aplicada a los resultados. Por esta razón, no hay ninguna conversión general para estos dos métodos.|  
+|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|Las consultas SQL funcionan con conjuntos múltiples, no con secuencias. `ORDER BY` debe ser la última cláusula aplicar a los resultados. Por esta razón, no hay ninguna conversión general para estos dos métodos.|  
 |<xref:System.Linq.Enumerable.Reverse%2A>|La conversión de este método es posible para un conjunto ordenado pero [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no la realiza actualmente.|  
 |<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|La conversión de estos métodos es posible para un conjunto ordenado pero [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no la realiza actualmente.|  
 |<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|Las consultas SQL funcionan en conjuntos múltiples, no en secuencias indizables.|  
@@ -80,7 +80,7 @@ ORDER BY [t0].[CustomerID]
 ## <a name="expression-translation"></a>Conversión de expresiones  
   
 ### <a name="null-semantics"></a>Semántica de valores null  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no impone las semántica de comparación de valores null en SQL. Los operadores de comparación se convierten sintácticamente en sus equivalentes SQL. Por esta razón, la semántica refleja la semántica de SQL definida según la configuración del servidor o la conexión. Por ejemplo, dos valores null se consideran distintos según la configuración de SQL Server de forma predeterminada, pero puede cambiar la configuración para cambiar la semántica. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no tiene en cuenta la configuración del servidor cuando convierte las consultas.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no se impone la semántica de comparación de valores null en SQL. Los operadores de comparación se convierten sintácticamente en sus equivalentes SQL. Por esta razón, la semántica refleja la semántica de SQL definida según la configuración del servidor o la conexión. Por ejemplo, dos valores null se consideran distintos según la configuración de SQL Server de forma predeterminada, pero puede cambiar la configuración para cambiar la semántica. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no se tiene en cuenta la configuración de servidor cuando convierte las consultas.  
   
  Una comparación con el literal null se convierte a la versión de SQL correcta (`is null` o `is not null`).  
   
@@ -89,8 +89,7 @@ ORDER BY [t0].[CustomerID]
 ### <a name="aggregates"></a>Agregados  
  El método de agregado del operador de consulta estándar <xref:System.Linq.Enumerable.Sum%2A> se evalúa como cero para una secuencia vacía o para una secuencia que solo contiene valores nulos. En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], la semántica de SQL se mantiene sin cambios, y <xref:System.Linq.Enumerable.Sum%2A> se evalúa como `null` en lugar de cero para una secuencia vacía o para una secuencia que solo contiene valores nulos.  
   
- En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] se aplican las restricciones de SQL para los agregados en los resultados intermedios. 
-  <xref:System.Linq.Enumerable.Sum%2A> para cantidades enteras de 32 bits no se calcula utilizando los resultados de 64 bits. Puede producirse un desbordamiento en la conversión de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que realiza <xref:System.Linq.Enumerable.Sum%2A> aun cuando la implementación del operador de consulta estándar no produce un desbordamiento para la secuencia en memoria correspondiente.  
+ En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] se aplican las restricciones de SQL para los agregados en los resultados intermedios. <xref:System.Linq.Enumerable.Sum%2A> para cantidades enteras de 32 bits no se calcula utilizando los resultados de 64 bits. Puede producirse un desbordamiento en la conversión de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que realiza <xref:System.Linq.Enumerable.Sum%2A> aun cuando la implementación del operador de consulta estándar no produce un desbordamiento para la secuencia en memoria correspondiente.  
   
  De igual forma, la conversión que realiza [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de <xref:System.Linq.Enumerable.Average%2A> de valores enteros se calcula como `integer`, no como `double`.  
   
@@ -113,7 +112,7 @@ ORDER BY [t0].[CustomerID]
   
  <xref:System.Linq.Enumerable.Except%2A>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite la igualdad y comparación para los argumentos *planos*, pero no para los argumentos que son secuencias o las contienen. Un argumento plano es un tipo que asignarse a una fila de SQL. Una proyección de uno o más tipos de entidad que se pueden determinar estáticamente que no contiene una secuencia se considera un argumento plano.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite la igualdad y comparación para *planos* argumentos, pero no para los argumentos que son secuencias o las contienen. Un argumento plano es un tipo que asignarse a una fila de SQL. Una proyección de uno o más tipos de entidad que se pueden determinar estáticamente que no contiene una secuencia se considera un argumento plano.  
   
  A continuación se ofrecen ejemplos de argumentos planos:  
   
@@ -126,7 +125,7 @@ ORDER BY [t0].[CustomerID]
  [!code-vb[DLinqSQOTranslation#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]  
   
 ### <a name="visual-basic-function-translation"></a>Conversión de funciones de Visual Basic  
- Las siguientes funciones auxiliares que utiliza el compilador de Visual Basic se convierten a las funciones y operadores de SQL correspondientes:  
+ Las siguientes funciones del asistente que utiliza el compilador de Visual Basic se convierten a las funciones y operadores de SQL correspondientes:  
   
  `CompareString`  
   
@@ -174,7 +173,7 @@ ORDER BY [t0].[CustomerID]
  Para obtener más información acerca de la asignación a estos tipos de fecha y hora de SQL Server, vea [asignación de tipos SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
 ## <a name="sql-server-2005-support"></a>Compatibilidad con SQL Server 2005  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite las características de SQL Server 2005 siguientes:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no se admiten las siguientes características de SQL Server 2005:  
   
 -   Procedimientos almacenados escritos para SQL CLR.  
   
@@ -199,7 +198,7 @@ ORDER BY [t0].[CustomerID]
  [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (hasta SP4) enlazador tiene algunas peculiaridades que son desencadenadas por las consultas anidadas. El conjunto de consultas SQL que las desencadenan no está bien definido. Por este motivo, no se puede definir el conjunto de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] las consultas que pueden producir excepciones de SQL Server.  
   
 ### <a name="skip-and-take-operators"></a>Operadores Skip y Take  
- <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> tienen ciertas limitaciones cuando se utilizan en consultas en [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Para obtener más información, vea la entrada "Skip y Take excepciones en SQL Server 2000" en [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+ <xref:System.Linq.Enumerable.Take%2A> y <xref:System.Linq.Enumerable.Skip%2A> tienen ciertas limitaciones cuando se usan en consultas con [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Para obtener más información, vea la entrada "Skip y Take excepciones en SQL Server 2000" en [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
 ## <a name="object-materialization"></a>Materialización de objetos  
  La materialización crea objetos CLR a partir de las filas devueltas por una o más consultas SQL.  
@@ -208,7 +207,7 @@ ORDER BY [t0].[CustomerID]
   
     -   Constructores  
   
-    -   Métodos `ToString` en las proyecciones  
+    -   `ToString` métodos en las proyecciones  
   
     -   Conversiones de tipos en las proyecciones  
   
@@ -227,9 +226,10 @@ ORDER BY [t0].[CustomerID]
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
 ## <a name="see-also"></a>Vea también
+
 - [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Devolución u omisión de elementos de una secuencia](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
-- [Concatenación de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
-- [Devolución de la diferencia de conjuntos entre dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)
-- [Devolución de la intersección de conjuntos de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)
-- [Devolución de la unión de conjuntos de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+- [Devolver u omitir elementos de una secuencia](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
+- [Concatenar dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
+- [Devolver la diferencia de conjuntos entre dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)
+- [Devolver la intersección de conjuntos de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)
+- [Devolver la unión de conjuntos de dos secuencias](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

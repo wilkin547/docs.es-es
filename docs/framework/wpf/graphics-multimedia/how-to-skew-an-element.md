@@ -1,17 +1,17 @@
 ---
-title: Procedimiento Sesgar un elemento
+title: Filtrar Sesgar un elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - skewing elements [WPF]
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: fec3ec38a19b552e988d26ea57c6f9beed6ce06e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 47f671f493e7b379c36f9bf4b50ec9d185d10b8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359381"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144968"
 ---
 # <a name="how-to-skew-an-element"></a>Filtrar Sesgar un elemento
 En este ejemplo se muestra cómo usar un <xref:System.Windows.Media.SkewTransform> para sesgar un elemento. Un sesgo, también conocido como distorsión, es una transformación que expande el espacio de coordenadas de una manera no uniforme. Un uso típico de un <xref:System.Windows.Media.SkewTransform> para simular [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] profundidad en [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] objetos.  
@@ -43,6 +43,7 @@ Los tres ejemplos de SkewTransform ilustrados
  Para ver el ejemplo completo, consulte [Ejemplo de transformaciones 2D](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.SkewTransform>
 - [Información general sobre transformaciones](transforms-overview.md)

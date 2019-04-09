@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7b336d1372bdbe0d6dbdcf79d94e14c30ad2ebe
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5ac7cf92fb9c57491ff45e664513c0e82f22db9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497345"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111727"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense (Función)
 Aplica marcas de hora a una licencia Authenticode XrML.  
@@ -44,7 +44,8 @@ HRESULT CertTimestampAuthenticodeLicense (
  La firma de marca de hora es en realidad un mensaje PKCS #7 SignedData cuyo contenido es el formato binario del SignatureValue de la firma de la licencia. Básicamente, actúa como contrafirma de la licencia.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK` si la función se realiza correctamente. De lo contrario, devuelve un código de error.  
+ `S_OK` Si la función se realiza correctamente. De lo contrario, devuelve un código de error.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
