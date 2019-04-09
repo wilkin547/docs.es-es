@@ -16,35 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d471d7a33a048315b3a7fd9107baa0ad95a865c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 118345f246de3d7ee68d51cf37e8cdea9de1fdba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094299"
 ---
-# <a name="iclrprobingassemblyenum-interface"></a><span data-ttu-id="938b3-102">ICLRProbingAssemblyEnum (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="938b3-102">ICLRProbingAssemblyEnum Interface</span></span>
-<span data-ttu-id="938b3-103">Proporciona métodos que permiten al host obtener las identidades de sondeo de un ensamblado mediante el uso de información de identidad del ensamblado que es interna de common language runtime (CLR), sin necesidad de crear o reconocer dicha identidad.</span><span class="sxs-lookup"><span data-stu-id="938b3-103">Provides methods that enable the host to get the probing identities of an assembly by using the assembly's identity information that is internal to the common language runtime (CLR), without needing to create or understand that identity.</span></span>  
+# <a name="iclrprobingassemblyenum-interface"></a><span data-ttu-id="5cb95-102">ICLRProbingAssemblyEnum (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="5cb95-102">ICLRProbingAssemblyEnum Interface</span></span>
+<span data-ttu-id="5cb95-103">Proporciona métodos que permiten al host obtener las identidades de sondeo de un ensamblado mediante el uso de información de identidad del ensamblado que es interna de common language runtime (CLR), sin necesidad de crear o reconocer dicha identidad.</span><span class="sxs-lookup"><span data-stu-id="5cb95-103">Provides methods that enable the host to get the probing identities of an assembly by using the assembly's identity information that is internal to the common language runtime (CLR), without needing to create or understand that identity.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="938b3-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="938b3-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="5cb95-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="5cb95-104">Methods</span></span>  
   
-|<span data-ttu-id="938b3-105">Método</span><span class="sxs-lookup"><span data-stu-id="938b3-105">Method</span></span>|<span data-ttu-id="938b3-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="938b3-106">Description</span></span>|  
+|<span data-ttu-id="5cb95-105">Método</span><span class="sxs-lookup"><span data-stu-id="5cb95-105">Method</span></span>|<span data-ttu-id="5cb95-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="5cb95-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="938b3-107">Get (método)</span><span class="sxs-lookup"><span data-stu-id="938b3-107">Get Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-get-method.md)|<span data-ttu-id="938b3-108">Obtiene la identidad del ensamblado en el índice especificado.</span><span class="sxs-lookup"><span data-stu-id="938b3-108">Gets the assembly identity at the specified index.</span></span>|  
+|[<span data-ttu-id="5cb95-107">Método Get</span><span class="sxs-lookup"><span data-stu-id="5cb95-107">Get Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-get-method.md)|<span data-ttu-id="5cb95-108">Obtiene la identidad del ensamblado en el índice especificado.</span><span class="sxs-lookup"><span data-stu-id="5cb95-108">Gets the assembly identity at the specified index.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="938b3-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="938b3-109">Remarks</span></span>  
- <span data-ttu-id="938b3-110">Los métodos como [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md) devolver un `ICLRProbingAssemblyEnum` instancia.</span><span class="sxs-lookup"><span data-stu-id="938b3-110">Methods such as [ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md) return an `ICLRProbingAssemblyEnum` instance.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5cb95-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5cb95-109">Remarks</span></span>  
+ <span data-ttu-id="5cb95-110">Los métodos como [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md) devolver un `ICLRProbingAssemblyEnum` instancia.</span><span class="sxs-lookup"><span data-stu-id="5cb95-110">Methods such as [ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md) return an `ICLRProbingAssemblyEnum` instance.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="938b3-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="938b3-111">Requirements</span></span>  
- <span data-ttu-id="938b3-112">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="938b3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5cb95-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5cb95-111">Requirements</span></span>  
+ <span data-ttu-id="5cb95-112">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5cb95-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="938b3-113">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="938b3-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5cb95-113">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5cb95-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="938b3-114">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="938b3-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5cb95-114">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5cb95-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="938b3-115">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="938b3-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="5cb95-115">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="5cb95-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="938b3-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="938b3-116">See also</span></span>
-- [<span data-ttu-id="938b3-117">ICLRAssemblyIdentityManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="938b3-117">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="938b3-118">ICLRAssemblyReferenceList (interfaz)</span><span class="sxs-lookup"><span data-stu-id="938b3-118">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [<span data-ttu-id="938b3-119">Interfaces de hospedaje</span><span class="sxs-lookup"><span data-stu-id="938b3-119">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="5cb95-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="5cb95-116">See also</span></span>
+
+- [<span data-ttu-id="5cb95-117">ICLRAssemblyIdentityManager (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="5cb95-117">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="5cb95-118">ICLRAssemblyReferenceList (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="5cb95-118">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="5cb95-119">Interfaces de hospedaje</span><span class="sxs-lookup"><span data-stu-id="5cb95-119">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

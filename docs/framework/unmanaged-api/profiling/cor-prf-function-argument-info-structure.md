@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bb92f9ba8ff0aed1c6eb1fa44fb4d7c9abc186a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 293ad30ebf47ca8684d158b1ae1772ab245d7981
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163122"
 ---
-# <a name="corprffunctionargumentinfo-structure"></a><span data-ttu-id="e243e-102">COR_PRF_FUNCTION_ARGUMENT_INFO (Estructura)</span><span class="sxs-lookup"><span data-stu-id="e243e-102">COR_PRF_FUNCTION_ARGUMENT_INFO Structure</span></span>
-<span data-ttu-id="e243e-103">Representa los argumentos de una función, ordenados de izquierda a derecha.</span><span class="sxs-lookup"><span data-stu-id="e243e-103">Represents a function's arguments, in left-to-right order.</span></span>  
+# <a name="corprffunctionargumentinfo-structure"></a><span data-ttu-id="1f285-102">COR_PRF_FUNCTION_ARGUMENT_INFO (Estructura)</span><span class="sxs-lookup"><span data-stu-id="1f285-102">COR_PRF_FUNCTION_ARGUMENT_INFO Structure</span></span>
+<span data-ttu-id="1f285-103">Representa los argumentos de una función, ordenados de izquierda a derecha.</span><span class="sxs-lookup"><span data-stu-id="1f285-103">Represents a function's arguments, in left-to-right order.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e243e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e243e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1f285-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1f285-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {  
@@ -36,29 +36,30 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
 } COR_PRF_FUNCTION_ARGUMENT_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e243e-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="e243e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="1f285-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="1f285-105">Members</span></span>  
   
-|<span data-ttu-id="e243e-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="e243e-106">Member</span></span>|<span data-ttu-id="e243e-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="e243e-107">Description</span></span>|  
+|<span data-ttu-id="1f285-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="1f285-106">Member</span></span>|<span data-ttu-id="1f285-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="1f285-107">Description</span></span>|  
 |------------|-----------------|  
-|`numRanges`|<span data-ttu-id="e243e-108">El número de bloques de argumentos.</span><span class="sxs-lookup"><span data-stu-id="e243e-108">The number of blocks of arguments.</span></span> <span data-ttu-id="e243e-109">Es decir, este valor es el número de [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) estructuras en el `ranges` matriz.</span><span class="sxs-lookup"><span data-stu-id="e243e-109">That is, this value is the number of [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures in the `ranges` array.</span></span>|  
-|`totalArgumentSize`|<span data-ttu-id="e243e-110">El tamaño total de todos los argumentos.</span><span class="sxs-lookup"><span data-stu-id="e243e-110">The total size of all arguments.</span></span> <span data-ttu-id="e243e-111">En otras palabras, este valor es la suma de las longitudes de argumento.</span><span class="sxs-lookup"><span data-stu-id="e243e-111">In other words, this value is the sum of the argument lengths.</span></span>|  
-|`ranges`|<span data-ttu-id="e243e-112">Una matriz de `COR_PRF_FUNCTION_ARGUMENT_RANGE` estructuras, cada uno de los cuales representa un bloque de argumentos de función.</span><span class="sxs-lookup"><span data-stu-id="e243e-112">An array of `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which represents one block of function arguments.</span></span>|  
+|`numRanges`|<span data-ttu-id="1f285-108">El número de bloques de argumentos.</span><span class="sxs-lookup"><span data-stu-id="1f285-108">The number of blocks of arguments.</span></span> <span data-ttu-id="1f285-109">Es decir, este valor es el número de [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) estructuras en el `ranges` matriz.</span><span class="sxs-lookup"><span data-stu-id="1f285-109">That is, this value is the number of [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structures in the `ranges` array.</span></span>|  
+|`totalArgumentSize`|<span data-ttu-id="1f285-110">El tamaño total de todos los argumentos.</span><span class="sxs-lookup"><span data-stu-id="1f285-110">The total size of all arguments.</span></span> <span data-ttu-id="1f285-111">En otras palabras, este valor es la suma de las longitudes de argumento.</span><span class="sxs-lookup"><span data-stu-id="1f285-111">In other words, this value is the sum of the argument lengths.</span></span>|  
+|`ranges`|<span data-ttu-id="1f285-112">Una matriz de `COR_PRF_FUNCTION_ARGUMENT_RANGE` estructuras, cada uno de los cuales representa un bloque de argumentos de función.</span><span class="sxs-lookup"><span data-stu-id="1f285-112">An array of `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which represents one block of function arguments.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e243e-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e243e-113">Remarks</span></span>  
- <span data-ttu-id="e243e-114">Una función puede tener muchos argumentos.</span><span class="sxs-lookup"><span data-stu-id="e243e-114">A function may have many arguments.</span></span> <span data-ttu-id="e243e-115">Estos argumentos no podrían almacenarse de forma contigua en la memoria.</span><span class="sxs-lookup"><span data-stu-id="e243e-115">Those arguments might not be stored contiguously in memory.</span></span> <span data-ttu-id="e243e-116">Podría tener un bloque de tres argumentos en un solo lugar, un bloque de dos argumentos en otro lugar y un bloque final de un argumento en un lugar diferente.</span><span class="sxs-lookup"><span data-stu-id="e243e-116">You might have a block of three arguments in one place, a block of two arguments in another place, and a final block of one argument in a different place.</span></span> <span data-ttu-id="e243e-117">Estos argumentos son todas de la misma función; simplemente se almacenan en distintos lugares.</span><span class="sxs-lookup"><span data-stu-id="e243e-117">These arguments are all for the same function; they're just stored in different places.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1f285-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="1f285-113">Remarks</span></span>  
+ <span data-ttu-id="1f285-114">Una función puede tener muchos argumentos.</span><span class="sxs-lookup"><span data-stu-id="1f285-114">A function may have many arguments.</span></span> <span data-ttu-id="1f285-115">Estos argumentos no podrían almacenarse de forma contigua en la memoria.</span><span class="sxs-lookup"><span data-stu-id="1f285-115">Those arguments might not be stored contiguously in memory.</span></span> <span data-ttu-id="1f285-116">Podría tener un bloque de tres argumentos en un solo lugar, un bloque de dos argumentos en otro lugar y un bloque final de un argumento en un lugar diferente.</span><span class="sxs-lookup"><span data-stu-id="1f285-116">You might have a block of three arguments in one place, a block of two arguments in another place, and a final block of one argument in a different place.</span></span> <span data-ttu-id="1f285-117">Estos argumentos son todas de la misma función; simplemente se almacenan en distintos lugares.</span><span class="sxs-lookup"><span data-stu-id="1f285-117">These arguments are all for the same function; they're just stored in different places.</span></span>  
   
- <span data-ttu-id="e243e-118">El `COR_PRF_FUNCTION_ARGUMENT_INFO` estructura representa todos los argumentos de una sola función.</span><span class="sxs-lookup"><span data-stu-id="e243e-118">The `COR_PRF_FUNCTION_ARGUMENT_INFO` structure represents all the arguments of a single function.</span></span> <span data-ttu-id="e243e-119">Usa una matriz para hacer referencia a todos los bloques de argumentos de función.</span><span class="sxs-lookup"><span data-stu-id="e243e-119">It uses an array to reference all the blocks of function arguments.</span></span> <span data-ttu-id="e243e-120">Por lo tanto, para una sola función, tiene una sola `COR_PRF_FUNCTION_ARGUMENT_INFO` estructura, que hace referencia a varios `COR_PRF_FUNCTION_ARGUMENT_RANGE` estructuras, cada uno de los cuales señala a uno o más argumentos de función.</span><span class="sxs-lookup"><span data-stu-id="e243e-120">So, for a single function, you have a single `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, which references multiple `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which points to one or more function arguments.</span></span>  
+ <span data-ttu-id="1f285-118">El `COR_PRF_FUNCTION_ARGUMENT_INFO` estructura representa todos los argumentos de una sola función.</span><span class="sxs-lookup"><span data-stu-id="1f285-118">The `COR_PRF_FUNCTION_ARGUMENT_INFO` structure represents all the arguments of a single function.</span></span> <span data-ttu-id="1f285-119">Usa una matriz para hacer referencia a todos los bloques de argumentos de función.</span><span class="sxs-lookup"><span data-stu-id="1f285-119">It uses an array to reference all the blocks of function arguments.</span></span> <span data-ttu-id="1f285-120">Por lo tanto, para una sola función, tiene una sola `COR_PRF_FUNCTION_ARGUMENT_INFO` estructura, que hace referencia a varios `COR_PRF_FUNCTION_ARGUMENT_RANGE` estructuras, cada uno de los cuales señala a uno o más argumentos de función.</span><span class="sxs-lookup"><span data-stu-id="1f285-120">So, for a single function, you have a single `COR_PRF_FUNCTION_ARGUMENT_INFO` structure, which references multiple `COR_PRF_FUNCTION_ARGUMENT_RANGE` structures, each of which points to one or more function arguments.</span></span>  
   
- <span data-ttu-id="e243e-121">Argumentos que se almacenan en los registros se vuelcan en la memoria para crear las estructuras.</span><span class="sxs-lookup"><span data-stu-id="e243e-121">Arguments that are stored in registers are spilled into memory to build the structures.</span></span>  
+ <span data-ttu-id="1f285-121">Argumentos que se almacenan en los registros se vuelcan en la memoria para crear las estructuras.</span><span class="sxs-lookup"><span data-stu-id="1f285-121">Arguments that are stored in registers are spilled into memory to build the structures.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e243e-122">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e243e-122">Requirements</span></span>  
- <span data-ttu-id="e243e-123">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e243e-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1f285-122">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1f285-122">Requirements</span></span>  
+ <span data-ttu-id="1f285-123">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1f285-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e243e-124">**Encabezado**: CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="e243e-124">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="1f285-124">**Encabezado**: CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="1f285-124">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="e243e-125">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e243e-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1f285-125">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1f285-125">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e243e-126">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e243e-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="1f285-126">Versiones de .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="1f285-126">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e243e-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="e243e-127">See also</span></span>
-- [<span data-ttu-id="e243e-128">Estructuras para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="e243e-128">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a><span data-ttu-id="1f285-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="1f285-127">See also</span></span>
+
+- [<span data-ttu-id="1f285-128">Estructuras para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="1f285-128">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

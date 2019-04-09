@@ -1,5 +1,5 @@
 ---
-title: <settings> (Elemento, Configuración de red)
+title: <settings> Elemento (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: 839907d9339d459070fff12dbca22d3c2df5b020
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1733803d1f5a5bf64aeb69d0360cef3de3b3a69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260624"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096932"
 ---
-# <a name="settings-element-network-settings"></a><span data-ttu-id="7e124-102">\<Configuración > elemento (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="7e124-102">\<settings> Element (Network Settings)</span></span>
-<span data-ttu-id="7e124-103">Configura opciones de red básicas para el espacio de nombres <xref:System.Net?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7e124-103">Configures basic network options for the <xref:System.Net?displayProperty=nameWithType> namespace.</span></span>  
+# <a name="settings-element-network-settings"></a><span data-ttu-id="d213b-102">\<Configuración > elemento (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="d213b-102">\<settings> Element (Network Settings)</span></span>
+<span data-ttu-id="d213b-103">Configura opciones de red básicas para el espacio de nombres <xref:System.Net?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d213b-103">Configures basic network options for the <xref:System.Net?displayProperty=nameWithType> namespace.</span></span>  
   
- <span data-ttu-id="7e124-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7e124-104">\<configuration></span></span>  
-<span data-ttu-id="7e124-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="7e124-105">\<system.net></span></span>  
-<span data-ttu-id="7e124-106">\<settings></span><span class="sxs-lookup"><span data-stu-id="7e124-106">\<settings></span></span>  
+ <span data-ttu-id="d213b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d213b-104">\<configuration></span></span>  
+<span data-ttu-id="d213b-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="d213b-105">\<system.net></span></span>  
+<span data-ttu-id="d213b-106">\<settings></span><span class="sxs-lookup"><span data-stu-id="d213b-106">\<settings></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e124-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7e124-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d213b-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d213b-107">Syntax</span></span>  
   
 ```xml  
 <settings>  
@@ -36,35 +36,36 @@ ms.locfileid: "55260624"
 </settings>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="7e124-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="7e124-108">Attributes and Elements</span></span>  
- <span data-ttu-id="7e124-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="7e124-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d213b-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="d213b-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="d213b-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="d213b-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="7e124-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="7e124-110">Attributes</span></span>  
- <span data-ttu-id="7e124-111">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="7e124-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="d213b-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="d213b-110">Attributes</span></span>  
+ <span data-ttu-id="d213b-111">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="d213b-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="7e124-112">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="7e124-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="d213b-112">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="d213b-112">Child Elements</span></span>  
   
-|<span data-ttu-id="7e124-113">Elemento</span><span class="sxs-lookup"><span data-stu-id="7e124-113">Element</span></span>|<span data-ttu-id="7e124-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="7e124-114">Description</span></span>|  
+|<span data-ttu-id="d213b-113">Elemento</span><span class="sxs-lookup"><span data-stu-id="d213b-113">Element</span></span>|<span data-ttu-id="d213b-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="d213b-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="7e124-115">httpListener</span><span class="sxs-lookup"><span data-stu-id="7e124-115">httpListener</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|<span data-ttu-id="7e124-116">Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> clase.</span><span class="sxs-lookup"><span data-stu-id="7e124-116">Customizes parameters used by the <xref:System.Net.HttpListener> class.</span></span>|  
-|[<span data-ttu-id="7e124-117">httpWebRequest</span><span class="sxs-lookup"><span data-stu-id="7e124-117">httpWebRequest</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|<span data-ttu-id="7e124-118">Personaliza los parámetros de solicitud Web.</span><span class="sxs-lookup"><span data-stu-id="7e124-118">Customizes Web request parameters.</span></span>|  
-|[<span data-ttu-id="7e124-119">ipv6</span><span class="sxs-lookup"><span data-stu-id="7e124-119">ipv6</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|<span data-ttu-id="7e124-120">Habilita el protocolo de Internet versión 6 (IPv6) admite.</span><span class="sxs-lookup"><span data-stu-id="7e124-120">Enables Internet Protocol version 6 (IPv6) support.</span></span>|  
-|[<span data-ttu-id="7e124-121">\<performanceCounter > elemento (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="7e124-121">\<performanceCounter> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|<span data-ttu-id="7e124-122">Habilita los contadores de rendimiento de red.</span><span class="sxs-lookup"><span data-stu-id="7e124-122">Enables network performance counters.</span></span>|  
-|[<span data-ttu-id="7e124-123">servicePointManager</span><span class="sxs-lookup"><span data-stu-id="7e124-123">servicePointManager</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|<span data-ttu-id="7e124-124">Configura las conexiones a los recursos de red.</span><span class="sxs-lookup"><span data-stu-id="7e124-124">Configures connections to network resources.</span></span>|  
-|[<span data-ttu-id="7e124-125">socket</span><span class="sxs-lookup"><span data-stu-id="7e124-125">socket</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|<span data-ttu-id="7e124-126">Especifica si las operaciones de socket utilizan puertos de terminación.</span><span class="sxs-lookup"><span data-stu-id="7e124-126">Specifies whether socket operations use completion ports.</span></span>|  
-|[<span data-ttu-id="7e124-127">\<webProxyScript > elemento (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="7e124-127">\<webProxyScript> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|<span data-ttu-id="7e124-128">Configura las características de la secuencia de comandos que se usa para detectar a servidores proxy Web.</span><span class="sxs-lookup"><span data-stu-id="7e124-128">Configures the characteristics of the script used to discover Web proxies.</span></span>|  
+|[<span data-ttu-id="d213b-115">httpListener</span><span class="sxs-lookup"><span data-stu-id="d213b-115">httpListener</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|<span data-ttu-id="d213b-116">Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> clase.</span><span class="sxs-lookup"><span data-stu-id="d213b-116">Customizes parameters used by the <xref:System.Net.HttpListener> class.</span></span>|  
+|[<span data-ttu-id="d213b-117">httpWebRequest</span><span class="sxs-lookup"><span data-stu-id="d213b-117">httpWebRequest</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|<span data-ttu-id="d213b-118">Personaliza los parámetros de solicitud Web.</span><span class="sxs-lookup"><span data-stu-id="d213b-118">Customizes Web request parameters.</span></span>|  
+|[<span data-ttu-id="d213b-119">ipv6</span><span class="sxs-lookup"><span data-stu-id="d213b-119">ipv6</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|<span data-ttu-id="d213b-120">Habilita el protocolo de Internet versión 6 (IPv6) admite.</span><span class="sxs-lookup"><span data-stu-id="d213b-120">Enables Internet Protocol version 6 (IPv6) support.</span></span>|  
+|[<span data-ttu-id="d213b-121">\<performanceCounter > elemento (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="d213b-121">\<performanceCounter> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|<span data-ttu-id="d213b-122">Habilita los contadores de rendimiento de red.</span><span class="sxs-lookup"><span data-stu-id="d213b-122">Enables network performance counters.</span></span>|  
+|[<span data-ttu-id="d213b-123">servicePointManager</span><span class="sxs-lookup"><span data-stu-id="d213b-123">servicePointManager</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|<span data-ttu-id="d213b-124">Configura las conexiones a los recursos de red.</span><span class="sxs-lookup"><span data-stu-id="d213b-124">Configures connections to network resources.</span></span>|  
+|[<span data-ttu-id="d213b-125">socket</span><span class="sxs-lookup"><span data-stu-id="d213b-125">socket</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|<span data-ttu-id="d213b-126">Especifica si las operaciones de socket utilizan puertos de terminación.</span><span class="sxs-lookup"><span data-stu-id="d213b-126">Specifies whether socket operations use completion ports.</span></span>|  
+|[<span data-ttu-id="d213b-127">\<webProxyScript > elemento (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="d213b-127">\<webProxyScript> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|<span data-ttu-id="d213b-128">Configura las características de la secuencia de comandos que se usa para detectar a servidores proxy Web.</span><span class="sxs-lookup"><span data-stu-id="d213b-128">Configures the characteristics of the script used to discover Web proxies.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="7e124-129">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="7e124-129">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="d213b-129">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="d213b-129">Parent Elements</span></span>  
   
-|<span data-ttu-id="7e124-130">Elemento</span><span class="sxs-lookup"><span data-stu-id="7e124-130">Element</span></span>|<span data-ttu-id="7e124-131">Descripción</span><span class="sxs-lookup"><span data-stu-id="7e124-131">Description</span></span>|  
+|<span data-ttu-id="d213b-130">Elemento</span><span class="sxs-lookup"><span data-stu-id="d213b-130">Element</span></span>|<span data-ttu-id="d213b-131">Descripción</span><span class="sxs-lookup"><span data-stu-id="d213b-131">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="7e124-132">system.net</span><span class="sxs-lookup"><span data-stu-id="7e124-132">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="7e124-133">Contiene valores que especifican cómo se conecta .NET Framework a la red.</span><span class="sxs-lookup"><span data-stu-id="7e124-133">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="d213b-132">system.net</span><span class="sxs-lookup"><span data-stu-id="d213b-132">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="d213b-133">Contiene valores que especifican cómo se conecta .NET Framework a la red.</span><span class="sxs-lookup"><span data-stu-id="d213b-133">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7e124-134">Comentarios</span><span class="sxs-lookup"><span data-stu-id="7e124-134">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d213b-134">Comentarios</span><span class="sxs-lookup"><span data-stu-id="d213b-134">Remarks</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="7e124-135">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="7e124-135">Configuration Files</span></span>  
- <span data-ttu-id="7e124-136">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="7e124-136">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="d213b-135">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="d213b-135">Configuration Files</span></span>  
+ <span data-ttu-id="d213b-136">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="d213b-136">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7e124-137">Vea también</span><span class="sxs-lookup"><span data-stu-id="7e124-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d213b-137">Vea también</span><span class="sxs-lookup"><span data-stu-id="d213b-137">See also</span></span>
+
 - <xref:System.Net?displayProperty=nameWithType>
-- [<span data-ttu-id="7e124-138">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="7e124-138">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="d213b-138">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="d213b-138">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

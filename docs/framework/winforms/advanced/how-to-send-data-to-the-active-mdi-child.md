@@ -1,5 +1,5 @@
 ---
-title: Filtrar Enviar datos al formulario secundario MDI activo
+title: Filtrar para enviar datos al formulario secundario MDI activo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: a89956595ff98e8cda717c90a3f96c95abc8118a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0ffe87d55f7325f77bd33bdbf5d5fbab9f321f93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203332"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a><span data-ttu-id="a9d07-102">Filtrar Enviar datos al formulario secundario MDI activo</span><span class="sxs-lookup"><span data-stu-id="a9d07-102">How to: Send Data to the Active MDI Child</span></span>
-<span data-ttu-id="a9d07-103">A menudo, en el contexto de [aplicaciones de interfaz de múltiples documentos (MDI)](multiple-document-interface-mdi-applications.md), deberá enviar datos a la ventana secundaria activa, por ejemplo, cuando el usuario pega datos desde el Portapapeles en una aplicación MDI.</span><span class="sxs-lookup"><span data-stu-id="a9d07-103">Often, within the context of [Multiple-Document Interface (MDI) Applications](multiple-document-interface-mdi-applications.md), you will need to send data to the active child window, such as when the user pastes data from the Clipboard into an MDI application.</span></span>  
+# <a name="how-to-send-data-to-the-active-mdi-child"></a><span data-ttu-id="fece2-102">Filtrar para enviar datos al formulario secundario MDI activo</span><span class="sxs-lookup"><span data-stu-id="fece2-102">How to: Send Data to the Active MDI Child</span></span>
+<span data-ttu-id="fece2-103">A menudo, en el contexto de [aplicaciones de interfaz de múltiples documentos (MDI)](multiple-document-interface-mdi-applications.md), deberá enviar datos a la ventana secundaria activa, por ejemplo, cuando el usuario pega datos desde el Portapapeles en una aplicación MDI.</span><span class="sxs-lookup"><span data-stu-id="fece2-103">Often, within the context of [Multiple-Document Interface (MDI) Applications](multiple-document-interface-mdi-applications.md), you will need to send data to the active child window, such as when the user pastes data from the Clipboard into an MDI application.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a9d07-104">Para obtener información sobre cómo comprobar qué ventana secundaria tiene el foco y enviar su contenido en el Portapapeles, consulte [determinar el formulario secundario MDI activo](how-to-determine-the-active-mdi-child.md).</span><span class="sxs-lookup"><span data-stu-id="a9d07-104">For information about verifying which child window has focus and sending its contents to the Clipboard, see [Determining the Active MDI Child](how-to-determine-the-active-mdi-child.md).</span></span>  
+>  <span data-ttu-id="fece2-104">Para obtener información sobre cómo comprobar qué ventana secundaria tiene el foco y enviar su contenido en el Portapapeles, consulte [determinar el formulario secundario MDI activo](how-to-determine-the-active-mdi-child.md).</span><span class="sxs-lookup"><span data-stu-id="fece2-104">For information about verifying which child window has focus and sending its contents to the Clipboard, see [Determining the Active MDI Child](how-to-determine-the-active-mdi-child.md).</span></span>  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a><span data-ttu-id="a9d07-105">Para enviar datos a la ventana secundaria MDI activa desde el Portapapeles</span><span class="sxs-lookup"><span data-stu-id="a9d07-105">To send data to the active MDI child window from the Clipboard</span></span>  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a><span data-ttu-id="fece2-105">Para enviar datos a la ventana secundaria MDI activa desde el Portapapeles</span><span class="sxs-lookup"><span data-stu-id="fece2-105">To send data to the active MDI child window from the Clipboard</span></span>  
   
-1.  <span data-ttu-id="a9d07-106">Dentro de un método, copie el texto del Portapapeles en el control activo del formulario secundario activo.</span><span class="sxs-lookup"><span data-stu-id="a9d07-106">Within a method, copy the text on the Clipboard to the active control of the active child form.</span></span>  
+1.  <span data-ttu-id="fece2-106">Dentro de un método, copie el texto del Portapapeles en el control activo del formulario secundario activo.</span><span class="sxs-lookup"><span data-stu-id="fece2-106">Within a method, copy the text on the Clipboard to the active control of the active child form.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="a9d07-107">En este ejemplo se da por supuesto que hay un formulario primario MDI (`Form1`) que tiene una o varias ventanas secundarias MDI que contiene un <xref:System.Windows.Forms.RichTextBox> control.</span><span class="sxs-lookup"><span data-stu-id="a9d07-107">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="a9d07-108">Para obtener más información, consulte [crear los formularios MDI primario](how-to-create-mdi-parent-forms.md).</span><span class="sxs-lookup"><span data-stu-id="a9d07-108">For more information, see [Creating MDI Parent Forms](how-to-create-mdi-parent-forms.md).</span></span>  
+    >  <span data-ttu-id="fece2-107">En este ejemplo se da por supuesto que hay un formulario primario MDI (`Form1`) que tiene una o varias ventanas secundarias MDI que contiene un <xref:System.Windows.Forms.RichTextBox> control.</span><span class="sxs-lookup"><span data-stu-id="fece2-107">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="fece2-108">Para obtener más información, consulte [crear los formularios MDI primario](how-to-create-mdi-parent-forms.md).</span><span class="sxs-lookup"><span data-stu-id="fece2-108">For more information, see [Creating MDI Parent Forms](how-to-create-mdi-parent-forms.md).</span></span>  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -91,9 +91,10 @@ ms.locfileid: "57707409"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a9d07-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="a9d07-109">See also</span></span>
-- [<span data-ttu-id="a9d07-110">Aplicaciones de interfaz de múltiples documentos (MDI)</span><span class="sxs-lookup"><span data-stu-id="a9d07-110">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
-- [<span data-ttu-id="a9d07-111">Cómo: Crear formularios principales MDI</span><span class="sxs-lookup"><span data-stu-id="a9d07-111">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
-- [<span data-ttu-id="a9d07-112">Cómo: Crear formularios MDI secundarios</span><span class="sxs-lookup"><span data-stu-id="a9d07-112">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
-- [<span data-ttu-id="a9d07-113">Cómo: Determinar el formulario secundario MDI activo</span><span class="sxs-lookup"><span data-stu-id="a9d07-113">How to: Determine the Active MDI Child</span></span>](how-to-determine-the-active-mdi-child.md)
-- [<span data-ttu-id="a9d07-114">Cómo: Organizar formularios MDI secundarios</span><span class="sxs-lookup"><span data-stu-id="a9d07-114">How to: Arrange MDI Child Forms</span></span>](how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a><span data-ttu-id="fece2-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="fece2-109">See also</span></span>
+
+- [<span data-ttu-id="fece2-110">Aplicaciones de interfaz de múltiples documentos (MDI)</span><span class="sxs-lookup"><span data-stu-id="fece2-110">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
+- [<span data-ttu-id="fece2-111">Filtrar para crear formularios principales MDI</span><span class="sxs-lookup"><span data-stu-id="fece2-111">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
+- [<span data-ttu-id="fece2-112">Filtrar para crear formularios secundarios MDI</span><span class="sxs-lookup"><span data-stu-id="fece2-112">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
+- [<span data-ttu-id="fece2-113">Filtrar para determinar el formulario secundario MDI activo</span><span class="sxs-lookup"><span data-stu-id="fece2-113">How to: Determine the Active MDI Child</span></span>](how-to-determine-the-active-mdi-child.md)
+- [<span data-ttu-id="fece2-114">Filtrar para organizar formularios secundarios MDI</span><span class="sxs-lookup"><span data-stu-id="fece2-114">How to: Arrange MDI Child Forms</span></span>](how-to-arrange-mdi-child-forms.md)
