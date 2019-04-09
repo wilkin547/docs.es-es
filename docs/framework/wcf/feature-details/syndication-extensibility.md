@@ -2,12 +2,12 @@
 title: Extensibilidad de la distribución
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-ms.openlocfilehash: eaa3c3644dc6ad6a749a24051064b04bfa43e284
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226ea682d8b17a818e6d5be2097a19315d106bda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170812"
 ---
 # <a name="syndication-extensibility"></a>Extensibilidad de la distribución
 La API de distribución está diseñada para proporcionar un modelo de programación neutral frente al formato que permita escribir el contenido distribuido en la conexión en una variedad de formatos. El modelo de datos abstracto está compuesto por las siguientes clases:  
@@ -32,7 +32,7 @@ La API de distribución está diseñada para proporcionar un modelo de programac
 ## <a name="deriving-a-new-class"></a>Derivación de una nueva clase  
  Puede derivar una nueva clase de cualquiera de las clases del modelo de datos abstracto existentes. Haga esto al implementar una aplicación en la que la mayoría de las fuentes con las que está trabajando tienen una extensión determinada. En este tema, la mayoría de las fuentes con las que el programa trabaja contienen una extensión `MyExtension`. Para proporcionar una experiencia de programación mejorada, realice los siguientes pasos:  
   
--   Cree una clase para retener los datos de las extensiones. En este caso, cree una clase llamada MyExtension.  
+-   Cree una clase para retener los datos de las extensión. En este caso, cree una clase llamada MyExtension.  
   
 -   Derive una clase llamada MyExtensionItem desde <xref:System.ServiceModel.Syndication.SyndicationItem> para exponer una propiedad de tipo MyExtension a efectos de la capacidad de programación.  
   
@@ -45,5 +45,6 @@ La API de distribución está diseñada para proporcionar un modelo de programac
 -   Invalide <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> en la clase MyExtensionFeed para crear instancias de MyExtensionItem en lugar del <xref:System.ServiceModel.Syndication.SyndicationItem>predeterminado. Una serie de métodos se define en <xref:System.ServiceModel.Syndication.SyndicationFeed> y <xref:System.ServiceModel.Syndication.SyndicationItem> que pueden crear <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory>y objetos <xref:System.ServiceModel.Syndication.SyndicationPerson> (por ejemplo, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory>y <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Todos los cuales se puede invalidar para crear una clase derivada personalizada.  
   
 ## <a name="see-also"></a>Vea también
-- [Información general de redifusión en WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
-- [Arquitectura de redifusión](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+
+- [Información general de distribución de WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+- [Arquitectura de distribución](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)

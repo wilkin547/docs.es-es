@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: eca3b597f556115adb34adc6507151e0bd03a53c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4f11f82b628ac020cbda70d65adf7813291c60a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677734"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168043"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementar el patrón de control Window de UI Automation
 > [!NOTE]
@@ -41,12 +41,12 @@ ms.locfileid: "57677734"
   
 |Miembro requerido|Tipo de miembro|Notas|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Property|Ninguna|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Property|Ninguna|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Property|Ninguna|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Property|Ninguna|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Property|Ninguna|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Property|Ninguna|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Propiedad|Ninguna|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Propiedad|Ninguna|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Propiedad|Ninguna|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Propiedad|Ninguna|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Propiedad|Ninguna|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Propiedad|Ninguna|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Método|Ninguna|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Método|Ninguna|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Método|Ninguna|  
@@ -64,8 +64,9 @@ ms.locfileid: "57677734"
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -Cuando el parámetro no es un número válido.|  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre los patrones de control de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Patrones de control compatibles en un proveedor de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [Patrones de control de Automatización de la interfaz de usuario para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Información general sobre el árbol de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Uso del almacenamiento en caché en la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+
+- [Información general acerca de los patrones de control de UI Automation](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Patrones de control compatibles en un proveedor de UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Patrones de controles de UI Automation para clientes](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Información general sobre el árbol de la UI Automation](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Utilizar el almacenamiento en caché en la UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

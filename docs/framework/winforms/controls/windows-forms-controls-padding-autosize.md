@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Diseñar Windows controles Forms con relleno, márgenes y la propiedad AutoSize'
+title: 'Tutorial: Diseñar controles de formularios Windows Forms con relleno, márgenes y la propiedad AutoSize'
 ms.date: 03/30/2017
 f1_keywords:
 - Margin.Bottom
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - layout [Windows Forms], margins and padding
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-ms.openlocfilehash: ca5f968364cd768b708616a867baee49775ca611
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c07afa1e408c2950ea45f206f43125fc9329ad14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167874"
 ---
-# <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Tutorial: Diseñar Windows controles Forms con relleno, márgenes y la propiedad AutoSize
+# <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Tutorial: Diseñar controles de formularios Windows Forms con relleno, márgenes y la propiedad AutoSize
 La posición precisa de los controles del formulario es de alta prioridad para muchas aplicaciones. El **Diseñador de Windows Forms** le ofrece muchas herramientas de diseño para realizar esta acción. Tres de las más importantes son la <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, y <xref:System.Windows.Forms.Control.AutoSize%2A> propiedades, que están presentes en todos los controles de Windows Forms.  
   
  La propiedad <xref:System.Windows.Forms.Control.Margin%2A> define el espacio alrededor del control que mantiene a los demás controles a una distancia especificada de los bordes del control.  
@@ -185,11 +185,12 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 -   Experimento con el acoplamiento de controles secundarios en un <xref:System.Windows.Forms.Panel> control. El <xref:System.Windows.Forms.Control.Padding%2A> propiedad es una realización más general de la <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> propiedad y se puede satisfacer por sí mismo que este es el caso al colocar un control secundario en un <xref:System.Windows.Forms.Panel> control y establecer el control secundario <xref:System.Windows.Forms.Control.Dock%2A> propiedad <xref:System.Windows.Forms.DockStyle.Fill>. Establecer el <xref:System.Windows.Forms.Panel> del control <xref:System.Windows.Forms.Control.Padding%2A> propiedad para distintos valores y tenga en cuenta el efecto.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>
 - <xref:System.Windows.Forms.Control.Padding%2A>
 - [Información general sobre la propiedad AutoSize](autosize-property-overview.md)
-- [Tutorial: Organizar controles en formularios de Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Tutorial: Organizar controles en formularios de Windows Forms mediante FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Tutorial: Organizar controles en formularios de Windows Forms mediante líneas de ajuste](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Tutorial: Organizar controles en formularios Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Tutorial: Organizar controles en formularios Windows Forms mediante FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Tutorial: Organizar controles en formularios Windows Forms mediante guías de alineación](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

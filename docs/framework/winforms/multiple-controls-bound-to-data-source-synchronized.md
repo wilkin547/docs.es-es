@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados
+title: Filtrar para garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721390"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170344"
 ---
-# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Procedimiento Garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados
+# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Filtrar para garantizar que varios controles enlazados al mismo origen de datos permanezcan sincronizados
 A menudo, cuando se trabaja con enlace de datos en Windows Forms, varios controles están enlazados al mismo origen de datos. En algunos casos, puede ser necesario realizar pasos adicionales para asegurarse de que permanezcan sincronizadas entre sí y el origen de datos con las propiedades de los controles enlazadas. Estos pasos son necesarios en dos situaciones:  
   
 -   Si el origen de datos no implementa <xref:System.ComponentModel.IBindingList>y por lo tanto, generar <xref:System.ComponentModel.IBindingList.ListChanged> eventos de tipo <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
@@ -41,7 +41,8 @@ A menudo, cuando se trabaja con enlace de datos en Windows Forms, varios control
 -   Un formulario con el <xref:System.Windows.Forms.Form.Load> evento como controlado y una llamada a la `InitializeControlsAndDataSource` método en el ejemplo desde el formulario <xref:System.Windows.Forms.Form.Load> controlador de eventos.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Compartir datos enlazados entre formularios mediante el componente BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+
+- [Filtrar para compartir datos enlazados entre formularios mediante el componente BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
 - [Notificación de cambios en el enlace de datos de Windows Forms](change-notification-in-windows-forms-data-binding.md)
 - [Interfaces relacionadas con el enlace de datos](interfaces-related-to-data-binding.md)
 - [Enlace de datos en Windows Forms](windows-forms-data-binding.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 86f7f485c289d1641605ab538f8500418b77cfd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122244"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegación y suplantación con WCF
 La*suplantación* es una técnica habitual que utilizan los servicios para restringir el acceso de los clientes a los recursos de un dominio de servicio. Los recursos de dominio de servicio pueden ser recursos de equipo, como archivos locales (suplantación), o un recurso en otro equipo, como un recurso compartido de archivos (delegación). Para obtener una aplicación de ejemplo, consulte [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obtener un ejemplo de cómo utilizar la suplantación, vea [Cómo: Suplantar un cliente en un servicio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -37,9 +37,9 @@ La*suplantación* es una técnica habitual que utilizan los servicios para restr
 ### <a name="cached-token-impersonation"></a>Suplantación del token almacenado en caché  
  Puede realizar la suplantación del token almacenado en caché con lo siguiente:  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>y <xref:System.ServiceModel.NetTcpBinding> con una credencial de cliente de Windows.  
+-   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, y <xref:System.ServiceModel.NetTcpBinding> con una credencial de cliente de Windows.  
   
--   <xref:System.ServiceModel.BasicHttpBinding> con <xref:System.ServiceModel.BasicHttpSecurityMode> definido en la credencial <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> , o cualquier otro enlace estándar donde el cliente presenta una credencial del nombre de usuario que el servicio puede asignar a una cuenta válida de Windows.  
+-   <xref:System.ServiceModel.BasicHttpBinding> con un <xref:System.ServiceModel.BasicHttpSecurityMode> establecido en el <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> credencial o cualquier otro enlace estándar donde el cliente presenta una credencial de nombre de usuario que el servicio puede asignar a una cuenta de Windows válida.  
   
 -   Cualquier <xref:System.ServiceModel.Channels.CustomBinding> que utiliza una credencial de cliente de Windows con `requireCancellation` definido en `true`. (La propiedad está disponible en las clases siguientes: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> y <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) Si se utiliza una conversación segura en el enlace, también debe tener la propiedad `requireCancellation` establecida en `true`.  
   
@@ -48,7 +48,7 @@ La*suplantación* es una técnica habitual que utilizan los servicios para restr
 ### <a name="s4u-based-impersonation"></a>Suplantación basada en S4U  
  Puede realizar la suplantación basada en S4U con lo siguiente:  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>y <xref:System.ServiceModel.NetTcpBinding> con una credencial de certificado de cliente que el servicio puede asignar a una cuenta de Windows válida.  
+-   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, y <xref:System.ServiceModel.NetTcpBinding> con una credencial de cliente de certificado que el servicio puede asignar a una cuenta de Windows válida.  
   
 -   Cualquier <xref:System.ServiceModel.Channels.CustomBinding> que utiliza una credencial de cliente de Windows con la propiedad `requireCancellation` definida en `false`.  
   
@@ -111,7 +111,7 @@ La*suplantación* es una técnica habitual que utilizan los servicios para restr
   
  La tabla siguiente especifica el nivel de suplantación que el servicio obtiene al suplantar un token almacenado en memoria caché.  
   
-|Valor de`AllowedImpersonationLevel` |El servicio tiene `SeImpersonatePrivilege`|El servicio y el cliente tienen capacidad de delegación| `ImpersonationLevel`|  
+|`AllowedImpersonationLevel` value|Servicio tiene `SeImpersonatePrivilege`|El servicio y el cliente tienen capacidad de delegación|Token almacenado en caché `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Anónimo|Sí|N/D|Suplantación|  
 |Anónimo|No|N/D|Identificación|  
@@ -125,7 +125,7 @@ La*suplantación* es una técnica habitual que utilizan los servicios para restr
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Nivel de suplantación obtenido a partir de las credenciales de nombre de usuario y suplantación de token almacenado en caché  
  Pasando el servicio de su nombre de usuario y contraseña, permite que un cliente WCF iniciar sesión como ese usuario, lo que es equivalente a establecer el `AllowedImpersonationLevel` propiedad <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. (`AllowedImpersonationLevel` está disponible en las clases <xref:System.ServiceModel.Security.WindowsClientCredential> y <xref:System.ServiceModel.Security.HttpDigestClientCredential>.) La tabla siguiente proporciona el nivel de suplantación obtenido cuando el servicio recibe las credenciales del nombre de usuario.  
   
-|`AllowedImpersonationLevel`|El servicio tiene `SeImpersonatePrivilege`|El servicio y el cliente tienen capacidad de delegación| `ImpersonationLevel`|  
+|`AllowedImpersonationLevel`|Servicio tiene `SeImpersonatePrivilege`|El servicio y el cliente tienen capacidad de delegación|Token almacenado en caché `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |N/D|Sí|Sí|Delegación|  
 |N/D|Sí|No|Suplantación|  
@@ -133,7 +133,7 @@ La*suplantación* es una técnica habitual que utilizan los servicios para restr
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>Nivel de suplantación obtenido de la suplantación basada en S4U  
   
-|El servicio tiene `SeTcbPrivilege`|El servicio tiene `SeImpersonatePrivilege`|El servicio y el cliente tienen capacidad de delegación| `ImpersonationLevel`|  
+|Servicio tiene `SeTcbPrivilege`|Servicio tiene `SeImpersonatePrivilege`|El servicio y el cliente tienen capacidad de delegación|Token almacenado en caché `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Sí|Sí|N/D|Suplantación|  
 |Sí|No|N/D|Identificación|  
@@ -206,6 +206,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 -   [Delegación restringida y transición del protocolo Kerberos](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>
 - <xref:System.ServiceModel.ImpersonationOption>
@@ -220,6 +221,6 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 - <xref:System.ServiceModel.ChannelFactory%601>
 - <xref:System.Security.Principal.TokenImpersonationLevel.Identification>
 - [Utilización de la suplantación con la seguridad de transporte](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
-- [Suplantación del cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
-- [Cómo: Suplantar a un cliente en un servicio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Suplantar el cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
+- [Filtrar para suplantar a un cliente en un servicio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

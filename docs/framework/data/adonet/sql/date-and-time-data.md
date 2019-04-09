@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 34d49416bb7d0da60624a1f60e4dbd01a1dff9cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a4bbed1f115ef5cfb6b7b63156f2d84b071cf224
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584550"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127119"
 ---
 # <a name="date-and-time-data"></a>Datos de fecha y hora
 SQL Server 2008 incluye nuevos tipos de datos para administrar la información de fecha y hora. Los nuevos tipos de datos incluyen tipos individuales de fecha y hora y tipos de datos expandidos con mayor intervalo, precisión y conocimiento de la zona horaria. A partir de .NET Framework versión 3.5 Service Pack (SP) 1, el proveedor de datos .NET Framework para SQL Server (<xref:System.Data.SqlClient>) proporciona compatibilidad total con todas las características nuevas del Motor de base de datos de SQL Server 2008. Debe instalar .NET Framework 3.5 SP1 (o posterior) para usar estas características nuevas con SqlClient.  
@@ -21,7 +21,7 @@ SQL Server 2008 incluye nuevos tipos de datos para administrar la información d
   
  **Libros en pantalla de SQL Server**  
   
-1.  [Uso de datos de fecha y hora](https://go.microsoft.com/fwlink/?LinkID=98361)  
+1.  [Usar datos de fecha y hora](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Tipos de datos de fecha y hora introducidos en SQL Server 2008  
  En la tabla siguiente se describen los tipos de datos de fecha y hora nuevos.  
@@ -77,7 +77,7 @@ Puede especificar el tipo de datos de un <xref:System.Data.SqlClient.SqlParamete
 |Tipo de datos de SQL Server|Tipo de .NET Framework|System.Data.SqlDbType|System.Data.DbType|  
 |--------------------------|-------------------------|---------------------------|------------------------|  
 |date|System.DateTime|Fecha|Fecha|  
-|hora|System.TimeSpan|Hora|Hora|  
+|hora|System.TimeSpan|Tiempo|Tiempo|  
 |datetime2|System.DateTime|DateTime2|DateTime2|  
 |datetimeoffset|System.DateTimeOffset|DateTimeOffset|DateTimeOffset|  
 |datetime|System.DateTime|DateTime|DateTime|  
@@ -99,7 +99,7 @@ Puede especificar el tipo de datos de un <xref:System.Data.SqlClient.SqlParamete
 >  Los valores de hora que son menores que cero o mayores o iguales que 24 horas producirán una excepción <xref:System.ArgumentException>.  
   
 ### <a name="creating-parameters"></a>Crear parámetros  
- Para crear un objeto <xref:System.Data.SqlClient.SqlParameter>, se puede usar su constructor o bien se puede agregar a una colección <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> mediante una llamada al método `Add` de la colección <xref:System.Data.SqlClient.SqlParameterCollection>. El método `Add` acepta como entrada argumentos del constructor o cualquier objeto de parámetro ya existente.  
+ Puede crear un <xref:System.Data.SqlClient.SqlParameter> objeto mediante su constructor, o al agregarlo a un <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> colección mediante una llamada a la `Add` método de la <xref:System.Data.SqlClient.SqlParameterCollection>. El método `Add` acepta como entrada argumentos del constructor o cualquier objeto de parámetro ya existente.  
   
  En las secciones siguientes de este tema se proporcionan ejemplos de cómo especificar los parámetros de fecha y hora. Para obtener más ejemplos de cómo trabajar con parámetros, vea [configurar parámetros y tipos de datos de parámetro](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) y [parámetros de DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   
@@ -235,12 +235,13 @@ command.Parameters.AddWithValue( _
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Datos de fecha y hora tipos y funciones (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Proporciona información general sobre todos los tipos de datos y funciones de fecha y hora de Transact-SQL.|  
-|[Uso de datos de fecha y hora](https://go.microsoft.com/fwlink/?LinkId=98361)|Proporciona información sobre funciones y tipos de datos de fecha y hora, y ejemplos de su uso.|  
+|[Tipos de datos y funciones de fecha y hora (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Proporciona información general sobre todos los tipos de datos y funciones de fecha y hora de Transact-SQL.|  
+|[Usar datos de fecha y hora](https://go.microsoft.com/fwlink/?LinkId=98361)|Proporciona información sobre funciones y tipos de datos de fecha y hora, y ejemplos de su uso.|  
 |[Tipos de datos (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Describe los tipos de datos de sistema de SQL Server 2008.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Asignaciones de tipos de datos de SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Configuración de parámetros y tipos de datos de parámetros](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Configurar parámetros y tipos de datos de parámetros](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Tipos de datos de SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

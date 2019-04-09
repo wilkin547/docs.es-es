@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: a22fc29d2cab21977c0411a440b847b426fb5915
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ec2a34deb25cd5f4cf492d92129ffc61d14001ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171527"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Estilos de celda en el control DataGridView de formularios Windows Forms
 Cada celda de la <xref:System.Windows.Forms.DataGridView> control puede tener su propio estilo, como formato de texto, color de fondo, color de primer plano y fuente. Por lo general, sin embargo, varias celdas compartirán las características de estilo determinado.  
@@ -48,7 +48,7 @@ Cada celda de la <xref:System.Windows.Forms.DataGridView> control puede tener su
   
  En la tabla siguiente se enumera las propiedades principales que obtienen o establecen <xref:System.Windows.Forms.DataGridViewCellStyle> objetos.  
   
-|Property|Clases|Descripción|  
+|Propiedad|Clases|Descripción|  
 |--------------|-------------|-----------------|  
 |`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn>, <xref:System.Windows.Forms.DataGridViewRow>y las clases derivadas|Obtiene o establece los estilos predeterminados utilizados por todas las celdas en el control completo (incluidas las celdas de encabezado), en una columna o en una fila.|  
 |<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Obtiene o establece los estilos de celda predeterminados utilizados por todas las filas del control. Esto no incluye las celdas de encabezado.|  
@@ -145,6 +145,7 @@ Cada celda de la <xref:System.Windows.Forms.DataGridView> control puede tener su
 >  Almacenamiento en caché los valores almacenados en la celda <xref:System.Windows.Forms.DataGridViewCell.Style%2A> propiedad es importante independientemente de si se establece un valor de estilo determinado. Si reemplaza temporalmente una configuración de estilo, restaurándola a su estado original de "sin establecer" garantiza que la celda volverá a heredar la configuración de estilo de un nivel más alto. Si necesita determinar el estilo actual en vigor para una celda, independientemente de si se hereda el estilo, utilice la celda <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> propiedad.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>
@@ -163,5 +164,5 @@ Cada celda de la <xref:System.Windows.Forms.DataGridView> control puede tener su
 - <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>
 - [Estilo y formato básicos del control DataGridView en formularios Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [Cómo: Establecer estilos de celda predeterminados para el Control DataGridView de Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
-- [Formato de datos en el control DataGridView de Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Filtrar para establecer estilos de celda predeterminados para el control DataGridView de formularios Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Formato de datos en el control DataGridView de formularios Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)

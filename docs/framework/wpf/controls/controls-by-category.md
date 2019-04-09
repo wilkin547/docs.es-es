@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: cf9a06c4604ee71e3e98de22c6729cc4a874e741
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 26488b76608aa46b56285581e7368bf24f8b1be7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127847"
 ---
 # <a name="controls-by-category"></a>Agrupar controles por categoría
 Controles de Windows Presentation Foundation (WPF) pueden agruparse lógicamente en varias categorías. Estas categorías se pueden usar para seleccionar el control adecuado para su escenario al ayudarle a ver qué controles tienen patrones de uso o funcionalidad similares.  
@@ -162,7 +162,7 @@ Controles de Windows Presentation Foundation (WPF) pueden agruparse lógicamente
 -   <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="media"></a>Multimedia  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] incluye compatibilidad integrada para hospedar contenido de audio y vídeo, así como [códecs] para la mayoría de los formatos de imagen más conocidos.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] incluye compatibilidad integrada para hospedar contenido de audio y vídeo, así como [códecs] para formatos de imagen más populares.  
   
 -   <xref:System.Windows.Controls.Image>  
   
@@ -178,4 +178,5 @@ Controles de Windows Presentation Foundation (WPF) pueden agruparse lógicamente
 -   <xref:System.Windows.Controls.InkPresenter>  
   
 ## <a name="see-also"></a>Vea también
+
 - [Biblioteca de controles](control-library.md)

@@ -1,17 +1,17 @@
 ---
-title: <memoryCache> (Elemento, Configuración de caché)
+title: <memoryCache> Elemento (configuración de caché)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <memoryCache> element
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 25e87aa9fa4e56c5042eb25c41f6cfe1b65aea24
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dbb46e7cf2580635add9d3100c8177c99cbae6bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126820"
 ---
 # <a name="memorycache-element-cache-settings"></a>\<memoryCache > elemento (configuración de caché)
 Define un elemento que se usa para configurar una memoria caché basada en la clase <xref:System.Runtime.Caching.MemoryCache> . La clase <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> define un elemento [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) que se puede usar para configurar la memoria caché. Se pueden usar varias instancias de la clase <xref:System.Runtime.Caching.MemoryCache> en una sola aplicación. Cada elemento `memoryCache` del archivo de configuración puede contener valores de configuración para una instancia de <xref:System.Runtime.Caching.MemoryCache> con nombre.  
@@ -31,7 +31,7 @@ Define un elemento que se usa para configurar una memoria caché basada en la cl
 ```  
   
 ## <a name="type"></a>Tipo  
- Clase<xref:System.Runtime.Caching.MemoryCache> .  
+ <xref:System.Runtime.Caching.MemoryCache> clase.  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
@@ -91,6 +91,7 @@ Define un elemento que se usa para configurar una memoria caché basada en la cl
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.Caching.MemoryCache>
 - [\<System.Runtime.Caching > elemento (configuración de caché)](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)
 - [\<namedCaches > elemento (configuración de caché)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Validar datos en el Control DataGridView de Windows Forms'
+title: 'Tutorial: Validar datos en el control DataGridView de formularios Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: 6bb46a9bc54652d781d3421051b7d6e09fc91772
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710035"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127353"
 ---
-# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Tutorial: Validar datos en el Control DataGridView de Windows Forms
+# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Tutorial: Validar datos en el control DataGridView de formularios Windows Forms
 Cuando se muestra la funcionalidad de entrada de datos a los usuarios, con frecuencia tendrá que validar los datos escritos en el formulario. La <xref:System.Windows.Forms.DataGridView> clase proporciona una manera cómoda para realizar la validación antes de datos se confirma en el almacén de datos. Puede validar los datos controlando el <xref:System.Windows.Forms.DataGridView.CellValidating> evento, que genera el <xref:System.Windows.Forms.DataGridView> cuando cambia la celda actual.  
   
  En este tutorial, va a recuperar las filas de la `Customers` de tabla en la base de datos de ejemplo Northwind y mostrarlos en un <xref:System.Windows.Forms.DataGridView> control. Cuando un usuario edita una celda en la `CompanyName` columna e intenta abandonar la celda, el <xref:System.Windows.Forms.DataGridView.CellValidating> controlador de eventos examinará la nueva cadena de nombre de empresa para asegurarse de que es no está vacío; si el nuevo valor es una cadena vacía, el <xref:System.Windows.Forms.DataGridView> impedirá que el cursor del usuario abandone la celda hasta que se especifique una cadena no vacía.  
@@ -89,9 +89,10 @@ Cuando se muestra la funcionalidad de entrada de datos a los usuarios, con frecu
 -   Personalizar la apariencia de celdas. Para obtener más información, vea [Cómo: Personalizar la apariencia de celdas en el Control DataGridView de formularios de Windows](customize-the-appearance-of-cells-in-the-datagrid.md) y [Cómo: Establecer estilos de colores y fuentes en el Control DataGridView de Windows Forms](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Entrada de datos en el control DataGridView de Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Cómo: Validar datos en el Control DataGridView de formularios de Windows](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
-- [Tutorial: Controlar los errores que se producen durante la entrada de datos en el Control DataGridView de Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Entrada de datos en el control DataGridView de formularios Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Filtrar para validar datos en el control DataGridView de formularios Windows Forms](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
+- [Tutorial: Controlar los errores que se producen durante la entrada de datos en el control DataGridView de formularios Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [Proteger la información de conexión](../../data/adonet/protecting-connection-information.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugValueEnum (Interfaz)
+title: Interfaz ICorDebugValueEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugValueEnum
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecbf1afb4443cd7c2b7a69028bc2baa42d1055ce
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9484f211ff31c4fa71692db646ef3c556df0acad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975646"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171943"
 ---
-# <a name="icordebugvalueenum-interface"></a>ICorDebugValueEnum (Interfaz)
+# <a name="icordebugvalueenum-interface"></a>Interfaz ICorDebugValueEnum
 Implementa métodos "ICorDebugEnum" y enumera las matrices de "ICorDebugValue".  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|Obtiene el número especificado de `ICorDebugValue` instancias de la enumeración, comenzando en la posición actual.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvalueenum-next-method.md)|Obtiene el número especificado de `ICorDebugValue` instancias de la enumeración, comenzando en la posición actual.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -48,5 +48,4 @@ Implementa métodos "ICorDebugEnum" y enumera las matrices de "ICorDebugValue".
   
 ## <a name="see-also"></a>Vea también
 
-
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

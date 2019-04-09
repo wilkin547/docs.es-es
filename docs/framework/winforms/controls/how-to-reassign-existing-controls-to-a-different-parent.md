@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Reasignar controles existentes en un elemento primario diferente
+title: Filtrar para reasignar los controles existentes en un elemento primario diferente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - container controls [Windows Forms], Windows Forms
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-ms.openlocfilehash: 650d10fd681a55dfb17425111ef9d81726551da9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 113afc642ca313f10062a496d2f170e3666d5043
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162251"
 ---
-# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Procedimiento Reasignar controles existentes en un elemento primario diferente
+# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Filtrar para reasignar los controles existentes en un elemento primario diferente
 Puede asignar controles que existen en el formulario a un nuevo control contenedor.  
   
 > [!NOTE]
@@ -44,8 +44,9 @@ Puede asignar controles que existen en el formulario a un nuevo control contened
      Observe que los tres controles <xref:System.Windows.Forms.Button> se insertan en el control <xref:System.Windows.Forms.FlowLayoutPanel> .  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
-- [Tutorial: Organizar controles en formularios de Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Tutorial: Organizar controles en formularios de Windows Forms mediante líneas de ajuste](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Tutorial: Organizar controles en formularios Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Tutorial: Organizar controles en formularios Windows Forms mediante guías de alineación](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

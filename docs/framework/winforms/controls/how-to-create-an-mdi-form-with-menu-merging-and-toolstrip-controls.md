@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear un formulario MDI con combinación de menús y controles ToolStrip
+title: Filtrar para crear un formulario MDI con combinación de menús y controles ToolStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 64992ed9-44af-4baf-b45f-863e6ab35711
-ms.openlocfilehash: 2942d0e92a0f58bef5533d69b27a646d284fef62
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a67298614b1985152c42577de14d2c5d295f672f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721117"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157535"
 ---
-# <a name="how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Procedimiento Crear un formulario MDI con combinación de menús y controles ToolStrip
+# <a name="how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Filtrar para crear un formulario MDI con combinación de menús y controles ToolStrip
 El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> es compatible con aplicaciones de interfaces de múltiples documentos (MDI) y el control <xref:System.Windows.Forms.MenuStrip> admite la combinación de menús. Los formularios MDI también pueden ser compatibles con los controles <xref:System.Windows.Forms.ToolStrip>.  
   
  Hay una amplia compatibilidad para esta característica en Visual Studio.  
@@ -38,4 +38,5 @@ El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> e
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
-- [Control ToolStrip](toolstrip-control-windows-forms.md)
+
+- [ToolStrip](toolstrip-control-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Secuencia
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: ca6c4a2f8bfd87982bc1b8574c65c5d5a2282a93
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e4e70a3bf4137169afa94a122225f27c25909713
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828100"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127314"
 ---
 # <a name="stream"></a>Secuencia
 El ejemplo de la secuencia muestra el uso de la comunicación de modos de transferencias por secuencia. El servicio expone varias operaciones que envían y reciben secuencias. Este ejemplo se autohospeda. Tanto el cliente como el servicio son los programas de la consola.  
@@ -36,7 +36,7 @@ public interface IStreamingSample
 }  
 ```  
   
- La operación `GetStream` recibe algunos datos de entrada como una cadena, que está almacenada en búfer, y devuelve `Stream`, que se transmite por secuencia. A la inversa, `UploadStream` admite una `Stream` (transmitida por secuencias) y devuelve un `bool` (almacenado en búfer). `EchoStream` toma y devuelve `Stream` y es un ejemplo de una operación cuyos mensajes de entrada y salida se transmiten por secuencias. Finalmente, `GetReversedStream` no toma ninguna entrada y devuelve un `Stream` (transmitido por secuencia).  
+ La operación `GetStream` recibe algunos datos de entrada como una cadena, que está almacenada en búfer, y devuelve `Stream`, que se transmite por secuencia. A la inversa, `UploadStream` admite una `Stream` (transmitida por secuencias) y devuelve un `bool` (almacenado en búfer). `EchoStream` toma y devuelve `Stream` y es un ejemplo de una operación cuya entrada y los mensajes de salida se transmiten. Finalmente, `GetReversedStream` no toma ninguna entrada y devuelve un `Stream` (transmitido por secuencia).  
   
 ## <a name="enabling-streamed-transfers"></a>Habilitación de transferencias por secuencias  
  Definir los contratos de operación tal y como se han descrito anteriormente proporciona una transmisión por secuencias en el nivel de modelo de programación. Si se detiene allí, el transporte todavía almacena en búfer el contenido completo del mensaje. Para habilitar la transmisión por secuencias de transporte, seleccione un modo de transferencia en el elemento de enlace del transporte. El elemento de enlace tiene una propiedad `TransferMode` que puede establecerse en `Buffered`, `Streamed`, `StreamedRequest`o `StreamedResponse`. Establecer el modo de transferencia en `Streamed` habilita la comunicación de transmisión por secuencias en ambas direcciones. Establecer el modo de transferencia en `StreamedRequest` o `StreamedResponse` habilita la comunicación de transmisión por secuencias en la solicitud o la respuesta, respectivamente.  
@@ -66,7 +66,7 @@ public interface IStreamingSample
 ## <a name="processing-data-as-it-is-streamed"></a>Procesamiento de datos cuando se transmiten por secuencias  
  Las operaciones `GetStream`, `UploadStream` y `EchoStream` tratan sobre enviar datos directamente desde un archivo o sobre guardar los datos recibidos directamente en un archivo. Sin embargo, en algunos casos, hay un requisito para enviar o recibir grandes cantidades de datos y realizar el procesamiento en fragmentos de datos cuando se envían o se reciben. Una manera de resolver tales escenarios es escribir una secuencia personalizada (una clase que deriva de <xref:System.IO.Stream>) que procesa los datos cuando se leen o se escriben. La operación `GetReversedStream` y la clase `ReverseStream` son un ejemplo de esto.  
   
- `GetReversedStream` crea y devuelve una nueva instancia de `ReverseStream`. El procesamiento real se produce cuando el sistema lee desde ese objeto `ReverseStream`. La implementación `ReverseStream.Read` lee un fragmento de bytes del archivo subyacente, los invierte y después devuelve los bytes invertidos. Esto no invierte el contenido del archivo completo, sino un fragmento de bytes cada vez. Se trata de un ejemplo para mostrar cómo puede realizar el procesamiento de la secuencia cuando el contenido se lee o escribe desde la secuencia y hacia ella.  
+ `GetReversedStream` Crea y devuelve una nueva instancia de `ReverseStream`. El procesamiento real se produce cuando el sistema lee desde ese objeto `ReverseStream`. La implementación `ReverseStream.Read` lee un fragmento de bytes del archivo subyacente, los invierte y después devuelve los bytes invertidos. Esto no invierte el contenido del archivo completo, sino un fragmento de bytes cada vez. Se trata de un ejemplo para mostrar cómo puede realizar el procesamiento de la secuencia cuando el contenido se lee o escribe desde la secuencia y hacia ella.  
   
 ```csharp
 class ReverseStream : Stream  
@@ -184,4 +184,3 @@ Press <ENTER> to terminate client.
 >  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  
-  

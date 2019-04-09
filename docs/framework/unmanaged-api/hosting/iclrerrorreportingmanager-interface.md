@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d10fe0240073464e3c2677343288e5379840885d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a20b79dd5eda9c431511cc49e7e3adaa9486b2aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155992"
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>ICLRErrorReportingManager (Interfaz)
 Proporciona métodos que permiten al host configurar volcados de pila personalizados para informes de errores.  
@@ -30,9 +30,9 @@ Proporciona métodos que permiten al host configurar volcados de pila personaliz
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[BeginCustomDump (método)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)|Especifica la configuración de los volcados de pila personalizados para informes de errores.|  
-|[EndCustomDump (método)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|Borra la configuración de volcado de pila personalizada que se ha establecido mediante una llamada anterior a `BeginCustomDump`.|  
-|[GetBucketParametersForCurrentException (método)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|Obtiene el depósito de Watson para la excepción actual en el subproceso que realiza la llamada.|  
+|[Método BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)|Especifica la configuración de los volcados de pila personalizados para informes de errores.|  
+|[Método EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md)|Borra la configuración de volcado de pila personalizada que se ha establecido mediante una llamada anterior a `BeginCustomDump`.|  
+|[Método GetBucketParametersForCurrentException](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|Obtiene el depósito de Watson para la excepción actual en el subproceso que realiza la llamada.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `BeginCustomDump` método establece la configuración de volcado de pila personalizada. El `EndCustomDump` método borra la configuración de volcado de pila personalizados y libera cualquier estado asociado. Debe llamarse una vez finalizado el volcado personalizado.  
@@ -50,5 +50,6 @@ Proporciona métodos que permiten al host configurar volcados de pila personaliz
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ECustomDumpItemKind (enumeración)](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)
+
+- [ECustomDumpItemKind (Enumeración)](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)
 - [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

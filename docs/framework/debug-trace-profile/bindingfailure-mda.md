@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 663ceda1c0621e1152e795db79c3953be0090d5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f23c2e03966bffccc9153e18e1b54e6847987d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127613"
 ---
 # <a name="bindingfailure-mda"></a>MDA de bindingFailure
 El asistente para la depuración administrada (MDA) `bindingFailure` se activa cuando no se puede cargar un ensamblado.  
@@ -48,7 +48,7 @@ El asistente para la depuración administrada (MDA) `bindingFailure` se activa c
   
 -   Resuelva la causa en función de la determinación anterior. Las opciones de resolución posibles son las siguientes:  
   
-    -   Instale el ensamblado solicitado en la caché global de ensamblados y llame al método <xref:System.Reflection.Assembly.Load%2A> para cargar el ensamblado por identidad.  
+    -   Instale el ensamblado solicitado en la caché global de ensamblados y llame al método <xref:System.Reflection.Assembly.Load%2A> método para cargar el ensamblado por identidad.  
   
     -   Copie el ensamblado solicitado en el directorio de la aplicación y llame al método <xref:System.Reflection.Assembly.Load%2A> para cargar el ensamblado por identidad.  
   
@@ -99,4 +99,5 @@ namespace ConsoleApplication1
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+
+- [Diagnóstico de errores con asistentes de depuraciones administradas](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

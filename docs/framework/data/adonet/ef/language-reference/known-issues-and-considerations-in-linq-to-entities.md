@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: ca67a01d8f1bc76773a7794169e93d026fe222d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191333"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Problemas conocidos y consideraciones en LINQ to Entities
 En esta sección se ofrece información sobre los problemas conocidos relacionados con las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
   
--   [Consultas LINQ que no se puede almacenar en caché](#LINQQueriesThatAreNotCached)  
+-   [Consultas LINQ que no se pueden almacenar en memoria caché](#LINQQueriesThatAreNotCached)  
   
 -   [Pérdida de información de ordenación](#OrderingInfoLost)  
   
 -   [Enteros sin signo no admitidos](#UnsignedIntsUnsupported)  
   
--   [Errores de conversión de tipo](#TypeConversionErrors)  
+-   [Errores de la conversión de tipos](#TypeConversionErrors)  
   
--   [Hacer referencia a Variables no escalares no admitidas](#RefNonScalarClosures)  
+-   [Referencia a variables no escalares no admitida](#RefNonScalarClosures)  
   
--   [Pueden producir un error de las consultas anidadas con SQL Server 2000](#NestedQueriesSQL2000)  
+-   [Se puede producir un error en consultas anidadas con SQL Server 2000](#NestedQueriesSQL2000)  
   
--   [Proyectar un tipo anónimo](#ProjectToAnonymousType)  
+-   [Proyectar a un tipo anónimo](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>Consultas LINQ que no se pueden almacenar en memoria caché  
@@ -80,4 +80,5 @@ En esta sección se ofrece información sobre los problemas conocidos relacionad
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

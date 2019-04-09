@@ -2,12 +2,12 @@
 title: <security> de <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 06c4b537c336804c28492124e6a4fa8cc4ff3091
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6348bc6f6c0d3a9656fbe57bf71f531d1287a949
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266306"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170097"
 ---
 # <a name="security-of-netpeerbinding"></a>\<seguridad > de \<netPeerBinding >
 Define la configuración de seguridad de la [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), incluido el tipo de autenticación utilizado y la seguridad utilizada para el transporte de mensajes.  
@@ -64,6 +64,7 @@ Define la configuración de seguridad de la [ \<netPeerTcpBinding >](../../../..
  La seguridad puede ser específica de los mensajes o del transporte.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement>
 - <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Security%2A>

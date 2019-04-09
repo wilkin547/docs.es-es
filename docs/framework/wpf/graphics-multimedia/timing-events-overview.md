@@ -8,12 +8,12 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 2ce4794c5f0abfc31ae9d6f813bcfd7a9d375611
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167172"
 ---
 # <a name="timing-events-overview"></a>Información general sobre eventos de control de tiempo
 Este tema describe cómo utilizar los cinco eventos de control de tiempo disponible en <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock> objetos.  
@@ -56,7 +56,7 @@ Este tema describe cómo utilizar los cinco eventos de control de tiempo disponi
   
 |evento|Operación interactiva desencadenante|Otros desencadenadores|  
 |-----------|--------------------------------------|--------------------|  
-|**Completed**|Omitir hasta completar|El reloj se completa.|  
+|**Completada**|Omitir hasta completar|El reloj se completa.|  
 |**CurrentGlobalSpeedInvalidated**|Pausar, reanudar, buscar, establecer la relación de velocidad, omitir hasta completar, detener|El reloj se invierte, acelera, inicia o detiene.|  
 |**CurrentStateInvalidated**|Comenzar, omitir hasta completar, detener|El reloj se inicia, detiene o completa.|  
 |**CurrentTimeInvalidated**|Comenzar, buscar, omitir hasta completar, detener|El reloj progresa.|  
@@ -77,6 +77,7 @@ Este tema describe cómo utilizar los cinco eventos de control de tiempo disponi
  Cuando se registra para el <xref:System.Windows.Media.Animation.Timeline.Completed> eventos en una escala de tiempo, por ejemplo, en realidad está indicando al sistema que se registre para el <xref:System.Windows.Media.Animation.Clock.Completed> eventos de cada reloj que se crea para la escala de tiempo. En el código, debe registrar para este evento antes de la <xref:System.Windows.Media.Animation.Clock> se crea para esta escala de tiempo; en caso contrario, no recibirá la notificación. Esto sucede automáticamente en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; el analizador se registra automáticamente para el evento antes de la <xref:System.Windows.Media.Animation.Clock> se crea.  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre sistemas de control de tiempo y animación ](animation-and-timing-system-overview.md)
+
+- [Información general sobre sistemas de temporización y animación](animation-and-timing-system-overview.md)
 - [Información general sobre animaciones](animation-overview.md)
 - [Información general sobre comportamientos de control de tiempo](timing-behaviors-overview.md)

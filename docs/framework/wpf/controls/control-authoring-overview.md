@@ -8,23 +8,21 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2007ee7680707cd1cc9628cc3900ca1068db8678
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4b0a37814e22260eaaa655dddca278a1f30af09e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171865"
 ---
 # <a name="control-authoring-overview"></a>Información general sobre la creación de controles
 La extensibilidad del modelo de control [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] reduce enormemente la necesidad de crear un nuevo control. Sin embargo, en ciertos casos, puede que necesite crear un control personalizado. En este tema se describen las características que reducen la necesidad de crear un control personalizado y los diferentes modelos de creación de controles en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. En este tema también se muestra cómo crear un nuevo control.  
-  
- 
-  
+
 <a name="when_to_write_a_new_control"></a>   
 ## <a name="alternatives-to-writing-a-new-control"></a>Alternativas a la escritura de un nuevo control  
  Históricamente, si quería obtener una experiencia personalizada con un control existente, estaba limitado a cambiar las propiedades estándar del control, como el color de fondo, el ancho del borde y el tamaño de la fuente. Si se deseara extender la apariencia o el comportamiento de un control más allá de estos parámetros predefinidos, necesitaría crear un nuevo control; para ello, lo que haría es heredarlo de un control existente e invalidar el método responsable de dibujar el control.  Aunque esto sigue siendo una opción, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite personalizar los controles existentes mediante su modelo de contenido enriquecido, sus estilos, plantillas y desencadenadores. En la lista siguiente se proporcionan ejemplos de cómo se pueden usar estas características para crear experiencias personalizadas y coherentes sin tener que crear un nuevo control.  
   
--   **Contenido enriquecido.** Muchos de los controles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estándar admiten contenido enriquecido. Por ejemplo, la propiedad de contenido de un <xref:System.Windows.Controls.Button> es de tipo <xref:System.Object>, por lo tanto, en teoría, nada se puede mostrar en un <xref:System.Windows.Controls.Button>.  Para que un botón Mostrar una imagen y texto, puede agregar una imagen y un <xref:System.Windows.Controls.TextBlock> a un <xref:System.Windows.Controls.StackPanel> y asignar la <xref:System.Windows.Controls.StackPanel> a la <xref:System.Windows.Controls.ContentControl.Content%2A> propiedad. Dado que los controles pueden mostrar elementos visuales [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y datos arbitrarios, no es tan necesario crear un nuevo control o modificar un control existente para admitir una visualización compleja. Para obtener más información sobre el modelo de contenido para <xref:System.Windows.Controls.Button> y otro contenido de los modelos en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [WPF Content Model](wpf-content-model.md).  
+-   **Rich Content.** Muchos de los controles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estándar admiten contenido enriquecido. Por ejemplo, la propiedad de contenido de un <xref:System.Windows.Controls.Button> es de tipo <xref:System.Object>, por lo tanto, en teoría, nada se puede mostrar en un <xref:System.Windows.Controls.Button>.  Para que un botón Mostrar una imagen y texto, puede agregar una imagen y un <xref:System.Windows.Controls.TextBlock> a un <xref:System.Windows.Controls.StackPanel> y asignar la <xref:System.Windows.Controls.StackPanel> a la <xref:System.Windows.Controls.ContentControl.Content%2A> propiedad. Dado que los controles pueden mostrar elementos visuales [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y datos arbitrarios, no es tan necesario crear un nuevo control o modificar un control existente para admitir una visualización compleja. Para obtener más información sobre el modelo de contenido para <xref:System.Windows.Controls.Button> y otro contenido de los modelos en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [WPF Content Model](wpf-content-model.md).  
   
 -   **Estilos.** Un <xref:System.Windows.Style> es una colección de valores que representan las propiedades de un control. Mediante el uso de estilos, puede crear una representación reutilizable de la apariencia y el comportamiento deseados de un control sin necesidad de escribir un nuevo control. Por ejemplo, supongamos que desea que todos los <xref:System.Windows.Controls.TextBlock> los controles tengan fuente Arial roja con un tamaño de fuente 14. Puede crear un estilo como un recurso y establecer las propiedades adecuadas según corresponda. A continuación, cada <xref:System.Windows.Controls.TextBlock> que agregue a la aplicación tendrá la misma apariencia.  
   
@@ -43,7 +41,7 @@ La extensibilidad del modelo de control [!INCLUDE[TLA#tla_winclient](../../../..
   
 <a name="models_for_control_authoring"></a>   
 ## <a name="models-for-control-authoring"></a>Modelos para crear controles  
- El modelo de contenido enriquecido, los estilos, las plantillas y los desencadenadores reducen la necesidad de crear un nuevo control. Sin embargo, si necesita crear un nuevo control, es importante comprender los diferentes modelos de creación de controles de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona tres modelos generales para la creación de un control, cada uno de los cuales proporciona un conjunto de características y un nivel de flexibilidad diferentes. Las clases base para los tres modelos son <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Controls.Control>, y <xref:System.Windows.FrameworkElement>.  
+ El modelo de contenido enriquecido, los estilos, las plantillas y los desencadenadores reducen la necesidad de crear un nuevo control. Sin embargo, si necesita crear un nuevo control, es importante comprender los diferentes modelos de creación de controles de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona tres modelos generales para crear un control, cada uno de los cuales proporciona un conjunto de características diferente y nivel de flexibilidad. Las clases base para los tres modelos son <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Controls.Control>, y <xref:System.Windows.FrameworkElement>.  
   
 ### <a name="deriving-from-usercontrol"></a>Derivación de UserControl  
  La manera más sencilla de crear un control en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] es derivar de <xref:System.Windows.Controls.UserControl>. Cuando compila un control que hereda de <xref:System.Windows.Controls.UserControl>, agregar componentes existentes a la <xref:System.Windows.Controls.UserControl>, nombra los componentes y hacer referencia a controladores de eventos en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Luego puede hacer referencia a los elementos con nombre y definir los controladores de eventos en el código. Este modelo de desarrollo es muy similar al modelo utilizado para el desarrollo de aplicaciones en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -184,7 +182,7 @@ La extensibilidad del modelo de control [!INCLUDE[TLA#tla_winclient](../../../..
   
 -   Implemente un par de métodos CLR `public` `static` denominados `Set`*NombreDePropiedad* y `Get`*NombreDePropiedad*. Ambos métodos deben aceptar una clase derivada de <xref:System.Windows.DependencyProperty> como su primer argumento. El método `Set`*NombreDePropiedad* también acepta un argumento cuyo tipo coincida con el tipo de datos registrado para la propiedad. El método `Get` *NombreDePropiedad* método debe devolver un valor del mismo tipo. Si falta el método `Set`*NombreDePropiedad*, la propiedad se marca como de solo lectura.  
   
--   `Set` *PropertyName* y `Get` *PropertyName* debe enrutar directamente a la <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A> objeto métodos en la dependencia de destino, respectivamente. Los diseñadores pueden tener acceso a la propiedad adjunta mediante una llamada a través del contenedor de método o una llamada directa al objeto de dependencia de destino.  
+-   `Set` **PropertyName* y `Get` *PropertyName* debe enrutar directamente a la <xref:System.Windows.DependencyObject.GetValue%2A> y <xref:System.Windows.DependencyObject.SetValue%2A> objeto métodos en la dependencia de destino, respectivamente.DLos diseñadores pueden tener acceso a la propiedad adjunta mediante una llamada a través del contenedor de método o una llamada directa al objeto de dependencia de destino.  
   
  Para más información sobre las propiedades adjuntas, consulte [Attached Properties Overview](../advanced/attached-properties-overview.md) (Introducción a las propiedades adjuntas).  
   
@@ -269,6 +267,7 @@ La extensibilidad del modelo de control [!INCLUDE[TLA#tla_winclient](../../../..
  [!code-vb[CustomControlNumericUpDown#ThemesSection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Diseño de XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Identificadores URI de paquete en WPF](../app-development/pack-uris-in-wpf.md)
-- [Control Customization](control-customization.md) (Personalización de controles)
+- [Pack URI en WPF](../app-development/pack-uris-in-wpf.md)
+- [Personalización de controles](control-customization.md)

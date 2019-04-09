@@ -2,12 +2,12 @@
 title: Registros de seguimiento
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: 753541814497b62cf05f0c22cc4e08c0d127e91b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f8b79cad7161e780f336a9c5902e69d9826b23d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676112"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163922"
 ---
 # <a name="tracking-records"></a>Registros de seguimiento
 El tiempo de ejecución del flujo de trabajo sirve para emitir los registros de seguimiento con el fin de seguir la ejecución de una instancia de flujo de trabajo.  
@@ -50,16 +50,17 @@ El tiempo de ejecución del flujo de trabajo sirve para emitir los registros de 
   
  Por ejemplo, podría haber una actividad <xref:System.Activities.Statements.Sequence> simple que contenga una operación <xref:System.Activities.Statements.WriteLine> con registros de seguimiento emitidos en el siguiente orden:  
   
-1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica que está comenzando el flujo de trabajo.  
+1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica que se está iniciando el flujo de trabajo.  
   
 2.  <xref:System.Activities.Tracking.ActivityScheduledRecord> indica que se ha programado una actividad. En este caso se trata de una actividad <xref:System.Activities.Statements.Sequence>.  
   
-3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> representa la actividad <xref:System.Activities.Statements.WriteLine>.  
+3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> representa la <xref:System.Activities.Statements.WriteLine> actividad.  
   
 4.  Hay dos registros <xref:System.Activities.Tracking.ActivityStateRecord> que representan las dos actividades que se están completando.  
   
-5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica que el flujo de trabajo se está completando.  
+5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> indica que se está completando el flujo de trabajo.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

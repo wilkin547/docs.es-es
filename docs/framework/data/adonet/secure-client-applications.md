@@ -2,12 +2,12 @@
 title: Aplicaciones cliente seguras
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: c8efdf4c4baceb22ee60bdcf333ad1fec9ebd2d0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092714"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119619"
 ---
 # <a name="secure-client-applications"></a>Aplicaciones cliente seguras
 Por lo general las aplicaciones constan de varios elementos que deben estar protegidos ante las vulnerabilidades que pueden provocar pérdidas de datos o poner en peligro el sistema de cualquier otro modo. La creación de interfaces de usuario seguras puede impedir un gran número de problemas ya que bloquea a los atacantes antes de que puedan tener acceso a los datos o a los recursos del sistema.  
@@ -24,7 +24,7 @@ Por lo general las aplicaciones constan de varios elementos que deben estar prot
  [Validar la entrada del usuario en ASP.NET Web Pages](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  Información general sobre la validación de datos introducidos por el usuario con controles de validación de ASP.NET.  
   
- [Datos proporcionados por el usuario en Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Datos proporcionados por el usuario en formularios Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
  Proporciona vínculos e información para validar entrada de mouse y teclado en aplicaciones de Windows Forms.  
   
  [Expresiones regulares de .NET Framework](../../../../docs/standard/base-types/regular-expressions.md)  
@@ -33,13 +33,13 @@ Por lo general las aplicaciones constan de varios elementos que deben estar prot
 ## <a name="windows-applications"></a>Aplicaciones para Windows  
  En versiones anteriores, las aplicaciones Windows normalmente se ejecutaban con todos los permisos. .NET Framework proporciona la infraestructura para restringir la ejecución del código en una aplicación Windows mediante la seguridad de acceso del código (CAS). Sin embargo, CAS no es suficiente por sí solo para proteger la aplicación.  
   
- [Windows Forms Security](../../../../docs/framework/winforms/windows-forms-security.md)  
+ [Seguridad en los formularios Windows Forms](../../../../docs/framework/winforms/windows-forms-security.md)  
  Describe cómo proteger las aplicaciones de Windows Forms y proporciona vínculos a temas relacionados.  
   
- [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Aplicaciones de Windows Forms y aplicaciones no administradas](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Describe cómo interactuar con aplicaciones no administradas en una aplicación de Windows Forms.  
   
- [Implementación de ClickOnce para Windows Forms](../../winforms/clickonce-deployment-for-windows-forms.md)  
+ [Implementación de ClickOnce para formularios Windows Forms](../../winforms/clickonce-deployment-for-windows-forms.md)  
  Describe cómo usar la implementación de `ClickOnce` en una aplicación de Windows Forms y describe las implicaciones en la seguridad.  
   
 ## <a name="aspnet-and-xml-web-services"></a>ASP.NET y servicios Web XML  
@@ -52,7 +52,7 @@ Por lo general las aplicaciones constan de varios elementos que deben estar prot
 |Recurso|Descripción|  
 |--------------|-----------------|  
 |[Protección de sitios Web de ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))|Describe cómo proteger aplicaciones ASP.NET.|  
-|[Protección de servicios Web XML creados con ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|Describe cómo implementar la seguridad en un servicio Web ASP.NET.|  
+|[Proteger servicios Web XML creados con ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|Describe cómo implementar la seguridad en un servicio Web ASP.NET.|  
 |[Información general de vulnerabilidades de seguridad de secuencia de comandos](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Describe cómo protegerse ante ataques de script, que intentan insertar caracteres malintencionados en una página web.|  
 |[Procedimientos recomendados de seguridad básica para aplicaciones Web](https://docs.microsoft.com/previous-versions/aspnet/zdh19h94(v=vs.100))|Información general sobre la seguridad y vínculos para profundizar en el tema.|  
   
@@ -62,12 +62,13 @@ Por lo general las aplicaciones constan de varios elementos que deben estar prot
 |Recurso|Descripción|  
 |--------------|-----------------|  
 |[Configuración de aplicaciones remotas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Describe cómo configurar aplicaciones de comunicación remota para evitar problemas habituales.|  
-|[Seguridad en la comunicación remota](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Describe la autenticación y el cifrado, así como temas adicionales de seguridad relacionados con la comunicación remota.|  
-|[Consideraciones de seguridad y comunicación remota](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Describe problemas de seguridad con objetos protegidos y con el cruce entre dominios de aplicación.|  
+|[Seguridad en comunicación remota](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Describe la autenticación y el cifrado, así como temas adicionales de seguridad relacionados con la comunicación remota.|  
+|[Consideraciones de seguridad y de interacción remota](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Describe problemas de seguridad con objetos protegidos y con el cruce entre dominios de aplicación.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Recomendaciones de estrategias de acceso a datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Proteger aplicaciones](/visualstudio/ide/securing-applications)
 - [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

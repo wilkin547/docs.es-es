@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Animar una propiedad usando un objeto AnimationClock
+title: Filtrar Animar una propiedad mediante un objeto AnimationClock
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], with AnimationClocks
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
-ms.openlocfilehash: d93f1eb352aef4f5e74512a8deeb0ec3fe7943c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201369"
 ---
-# <a name="how-to-animate-a-property-by-using-an-animationclock"></a>Procedimiento Animar una propiedad usando un objeto AnimationClock
+# <a name="how-to-animate-a-property-by-using-an-animationclock"></a>Filtrar Animar una propiedad mediante un objeto AnimationClock
 En este ejemplo se muestra cómo usar <xref:System.Windows.Media.Animation.Clock> objetos que se va a animar una propiedad.  
   
  Hay tres maneras de animar una propiedad de dependencia:  
@@ -37,6 +37,7 @@ En este ejemplo se muestra cómo usar <xref:System.Windows.Media.Animation.Clock
  Para obtener un ejemplo que muestra cómo controlar interactivamente un <xref:System.Windows.Media.Animation.Clock> después de iniciarse, vea [controlar interactivamente un reloj](how-to-interactively-control-a-clock.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Animar una propiedad utilizando un guión gráfico](how-to-animate-a-property-by-using-a-storyboard.md)
-- [Animar una propiedad sin utilizar un guión gráfico](how-to-animate-a-property-without-using-a-storyboard.md)
+
+- [Animar una propiedad mediante un guión gráfico](how-to-animate-a-property-by-using-a-storyboard.md)
+- [Animar una propiedad sin usar un guión gráfico](how-to-animate-a-property-without-using-a-storyboard.md)
 - [Información general sobre técnicas de animación de propiedades](property-animation-techniques-overview.md)

@@ -2,12 +2,12 @@
 title: Información general sobre ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170070"
 ---
 # <a name="adonet-overview"></a>Información general sobre ADO.NET
 ADO.NET proporciona acceso coherente a orígenes de datos como SQL Server y XML, así como a orígenes de datos expuestos mediante OLE DB y ODBC. Las aplicaciones de consumidor que comparten datos pueden utilizar ADO.NET para conectar a estos orígenes de datos y recuperar, controlar y actualizar los datos contenidos.  
@@ -58,6 +58,7 @@ ADO.NET proporciona acceso coherente a orígenes de datos como SQL Server y XML,
  Describe cómo conectarse a un origen de datos, y cómo recuperar y modificar datos. Incluye `DataReaders` y `DataAdapters`.  
   
 ## <a name="see-also"></a>Vea también
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Obtener acceso a los datos en Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Acceso a datos en Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Habilitar los márgenes de comprobación y de imagen en los controles ContextMenuStrip
+title: Filtrar para habilitar los márgenes de comprobación y de imagen en los controles ContextMenuStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: eb584e71-59da-4012-aaca-dbe1c7c7a156
-ms.openlocfilehash: 881590f74805c0acdac80a1c2779cd978af39b90
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 80a6b5a7e3ce354abdfbe330a378566d47c011ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170903"
 ---
-# <a name="how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls"></a>Procedimiento Habilitar los márgenes de comprobación y de imagen en los controles ContextMenuStrip
+# <a name="how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls"></a>Filtrar para habilitar los márgenes de comprobación y de imagen en los controles ContextMenuStrip
 Puede personalizar los objetos <xref:System.Windows.Forms.ToolStripMenuItem> de su control <xref:System.Windows.Forms.MenuStrip> con marcas de verificación e imágenes personalizadas.  
   
 ## <a name="example"></a>Ejemplo  
@@ -39,8 +39,9 @@ Puede personalizar los objetos <xref:System.Windows.Forms.ToolStripMenuItem> de 
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - <xref:System.Windows.Forms.ToolStripDropDownMenu>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
-- [Control ToolStrip](toolstrip-control-windows-forms.md)
+- [ToolStrip](toolstrip-control-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAppDomainEnum (Interfaz)
+title: Interfaz ICorDebugAppDomainEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomainEnum
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c340eb76f3c1c570aa0c9ffa1d461f33d330175
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: da1fc949109455cf50767191a99a8a727116f77c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981509"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155199"
 ---
-# <a name="icordebugappdomainenum-interface"></a>ICorDebugAppDomainEnum (Interfaz)
+# <a name="icordebugappdomainenum-interface"></a>Interfaz ICorDebugAppDomainEnum
 
 Proporciona el `Next` método, que devuelve un número especificado de `ICorDebugAppDomainEnum` valores a partir de la ubicación siguiente en la enumeración. Esta interfaz es una subclase de "ICorDebugEnum".  
   
@@ -31,7 +31,7 @@ Proporciona el `Next` método, que devuelve un número especificado de `ICorDebu
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|Obtiene el número especificado de dominios de aplicación de la colección, empezando en la posición actual del cursor.|  
+|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|Obtiene el número especificado de dominios de aplicación de la colección, empezando en la posición actual del cursor.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -48,5 +48,6 @@ Proporciona el `Next` método, que devuelve un número especificado de `ICorDebu
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICorDebug (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebug (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

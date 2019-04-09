@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Importar los metadatos en los puntos de conexión de servicio
+title: Filtrar para importar metadatos a puntos de conexión de servicio
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-ms.openlocfilehash: 5a6375f0a0b0f657401a1ac2254be942d4e618aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 05106295448c4682f07dd17295574ecdc39bf903
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548682"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126872"
 ---
-# <a name="how-to-import-metadata-into-service-endpoints"></a>Procedimiento Importar los metadatos en los puntos de conexión de servicio
+# <a name="how-to-import-metadata-into-service-endpoints"></a>Filtrar para importar metadatos a puntos de conexión de servicio
 En este tema se explica cómo importar los metadatos en una colección de extremos de servicio y usar el servicio definido en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). En este tema se muestra cómo crear una aplicación cliente que importa los metadatos desde el servicio y, a continuación, llama al método `Add` en el servicio.  
   
-### <a name="to-import-metadata-into-service-endpoints"></a>Para importar metadatos a extremos de servicio  
+### <a name="to-import-metadata-into-service-endpoints"></a>Para importar metadatos a puntos de conexión de servicio  
   
 1.  Declare un objeto <xref:System.ServiceModel.EndpointAddress> e inicialícelo con el Identificador uniforme de recursos (URI) para la dirección del servicio de intercambio de metadatos (MEX).  
   
@@ -38,5 +38,6 @@ En este tema se explica cómo importar los metadatos en una colección de extrem
      [!code-csharp[UE_ImportMetadata#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Metadatos](../../../../docs/framework/wcf/feature-details/metadata.md)
 - [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md)

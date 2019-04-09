@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Usar diferentes certificados X.509 para la firma y cifrado
+title: Filtrar para usar diferentes certificados X.509 para la firma y el cifrado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: 6910b7abeb6a97cce1da9655fdab99b5295cc346
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9a6b043420554e41d0804e32313b87f05cf54631
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500491"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160945"
 ---
-# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Procedimiento Usar diferentes certificados X.509 para la firma y cifrado
+# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Filtrar para usar diferentes certificados X.509 para la firma y el cifrado
 En este tema se muestra cómo configurar Windows Communication Foundation (WCF) para usar certificados diferentes para firmar los mensajes y el cifrado en el cliente y el servicio.  
   
  Para habilitar certificados independientes que se usará para la firma y cifrado, un cliente personalizado o servicio credenciales (o ambos) deben crearse porque WCF no proporciona una API para establecer varios certificados de cliente o servicio. Además, se debe proporcionar un administrador de tokens de seguridad para sacar el máximo partido a la información de varios certificados y crear un proveedor de tokens de seguridad adecuado para el uso de claves especificado y la dirección del mensaje.  
@@ -77,7 +77,7 @@ En este tema se muestra cómo configurar Windows Communication Foundation (WCF) 
 2.  Defina un objeto <xref:System.ServiceModel.Security.IdentityVerifier> personalizado. El servicio tiene varias identidades porque se usan certificados diferentes para cifrar la solicitud y firmar la respuesta.  
   
     > [!NOTE]
-    >  En el ejemplo siguiente, el comprobador de identidad personalizado proporcionado no realiza ninguna comprobación de identidad del extremo con fines de demostración. No se trata de una práctica recomendada para el código de producción.  
+    >  En el ejemplo siguiente, el comprobador de identidad personalizado proporcionado no realiza ninguna comprobación de identidad del punto de conexión con fines de demostración. No se trata de una práctica recomendada para el código de producción.  
   
      [!code-csharp[c_FourCerts#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#6)]
      [!code-vb[c_FourCerts#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#6)]  
@@ -90,9 +90,10 @@ En este tema se muestra cómo configurar Windows Communication Foundation (WCF) 
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [Tutorial: Creación de cliente personalizada y las credenciales de servicio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Tutorial: Crear credenciales de cliente y servicio personalizadas](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

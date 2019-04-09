@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-ms.openlocfilehash: f3fb2559510d85f6e55a4784f2b528f16737a2ab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8319e451268152e95326c02027157db72df631b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371117"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125151"
 ---
 # <a name="staticresource-markup-extension"></a>Extensión de marcado StaticResource
 Proporciona un valor para cualquier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atributo de propiedad mediante la búsqueda de una referencia a un recurso ya definido. Comportamiento de búsqueda de ese recurso es análogo a la búsqueda de tiempo de carga, que se va a buscar los recursos que se cargaron previamente desde el marcado del elemento actual [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] página, así como otros orígenes de la aplicación y generará el valor de ese recurso como el valor de propiedad en los objetos de tiempo de ejecución.  
@@ -55,7 +55,7 @@ Proporciona un valor para cualquier [!INCLUDE[TLA2#tla_xaml](../../../../include
   
  `StaticResource` se puede usar en la sintaxis de elemento de objeto. En este caso, especificando el valor de la <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> propiedad es obligatoria.  
   
- `StaticResource` también se puede utilizar en el uso de atributos detallado que especifica la propiedad <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> como un par de propiedad=valor:  
+ `StaticResource` También puede utilizarse en el uso de atributos detallado que especifica el <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> como propiedad = par de valor:  
   
 ```xml  
 <object property="{StaticResource ResourceKey=key}" .../>  
@@ -68,6 +68,7 @@ Proporciona un valor para cualquier [!INCLUDE[TLA2#tla_xaml](../../../../include
  `StaticResource` es una extensión de marcado. Las extensiones de marcado se suelen implementar cuando se necesita que los valores de los atributos de escape no sean valores literales o nombres de controladores, y este requisito es de índole más global que limitarse a colocar los convertidores de tipos en determinados tipos o propiedades. Todas las extensiones de marcado de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usan los caracteres { y } en su sintaxis de atributo, que es la convención que permite que un procesador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reconozca que el atributo se debe procesar mediante una extensión de marcado. Para más información, vea [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Aplicar estilos y plantillas](../controls/styling-and-templating.md)
 - [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
 - [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md)

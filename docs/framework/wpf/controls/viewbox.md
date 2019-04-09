@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Viewbox control [WPF]
 - scaling elements [WPF], Viewbox control
 ms.assetid: 00fc0a16-1078-4d55-9849-ffaf7da96531
-ms.openlocfilehash: 67c9277ba4a7ae0ee802c536699a765669ddf508
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 707375230acea3558b060f398add919370d352b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361920"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160724"
 ---
 # <a name="viewbox"></a>Viewbox
 El <xref:System.Windows.Controls.Viewbox> control se utiliza para ajustar o escalar un elemento secundario.  
@@ -28,4 +28,5 @@ El <xref:System.Windows.Controls.Viewbox> control se utiliza para ajustar o esca
  <xref:System.Windows.Controls.Image>  
   
 ## <a name="see-also"></a>Vea también
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053) (Ejemplo de galería de controles de WPF)
+
+- [Ejemplo de la Galería de controles de WPF](https://go.microsoft.com/fwlink/?LinkID=160053)

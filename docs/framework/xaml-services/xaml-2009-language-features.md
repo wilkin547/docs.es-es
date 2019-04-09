@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 6de103d9b5b59ec1a47098e44e07ee95a3db166e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162285"
 ---
 # <a name="xaml-2009-language-features"></a>Características del lenguaje XAML 2009
 XAML 2009 es el término abreviado para las nuevas características de lenguaje XAML que extienden la especificación del lenguaje XAML existente. XAML 2009 presenta varias nuevas directivas y construcciones. Estos incluyen el [x: Arguments (directiva)](x-arguments-directive.md); el [x: FactoryMethod Directive](x-factorymethod-directive.md); el [x: Reference Markup Extension](x-reference-markup-extension.md); el [x: TypeArguments (directiva) ](x-typearguments-directive.md); y tipos integrados para primitivas del lenguaje común (por ejemplo `x:Char`).  
@@ -33,4 +33,5 @@ XAML 2009 es el término abreviado para las nuevas características de lenguaje 
  En atributos respaldados por eventos, XAML 2006 presupone que la compilación de marcado está implicada y envía los eventos a la compilación de marcado. XAML 2009 admite un formato de marcado que se parece a una extensión de marcado, que pospone la conexión de eventos hasta el análisis y la carga en tiempo de ejecución de XAML. Sin embargo, las aplicaciones de WPF y los escenarios XAML para la interfaz de usuario de WPF generalmente no usan esta capacidad. WPF y su implementación de XAML 2006 usan la combinación de conexión del controlador de eventos para eventos enrutados que se definen en el nivel <xref:System.Windows.UIElement> y su paso del compilador de marcado durante gran parte del procesamiento del atributo de evento. El compilador de marcado también preprocesa los atributos de evento que se encuentren en XAML en los que las acciones de compilación declaren que se usa el compilador de marcado.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

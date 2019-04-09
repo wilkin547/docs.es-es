@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e44f84ed92f90a51ac1c5c7327d6de7b89887c7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 602abdce11188bc2f2f3f3c02d3a73ba6f6b52e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536521"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170422"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>ECustomDumpItemKind (Enumeración)
 Reservado para la futura extensión de la [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) estructura.  
@@ -50,5 +50,6 @@ typedef enum {
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICLRErrorReportingManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+
+- [ICLRErrorReportingManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
 - [Enumeraciones para hosts](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

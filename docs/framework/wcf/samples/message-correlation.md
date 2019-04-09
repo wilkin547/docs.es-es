@@ -2,12 +2,12 @@
 title: Correlación del mensaje
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: f60d34ba7348b75f10be326319738fd1555d42df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8db7793064cb94b21feee73353b9ab5e40290fb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520664"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157824"
 ---
 # <a name="message-correlation"></a>Correlación del mensaje
 Este ejemplo muestra cómo una aplicación de Message Queuing (MSMQ) puede enviar un mensaje de MSMQ a un servicio de Windows Communication Foundation (WCF) y cómo se pueden correlacionar los mensajes entre las aplicaciones de remitente y receptor en un escenario de solicitud/respuesta. Este ejemplo utiliza el enlace msmqIntegrationBinding. El servicio en este caso es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola. k  
@@ -125,7 +125,7 @@ public static void Main()
 }
 ```
 
- La cola de MSMQ a la que se envían las solicitudes de la orden se especifica en la sección appSettings del archivo de configuración. Los extremos de servicio y cliente se definen en la sección de system.ServiceModel del archivo de configuración. Ambos especifican el enlace `msmqIntegrationbinding`.
+ La cola de MSMQ a la que se envían las solicitudes de la orden se especifica en la sección appSettings del archivo de configuración. Los puntos de conexión de servicio y cliente se definen en la sección de system.ServiceModel del archivo de configuración. Ambos especifican el enlace `msmqIntegrationbinding`.
 
 ```xml
 <appSettings>
@@ -297,7 +297,7 @@ static void DisplayOrderStatus()
 
 3.  En el archivo Client.exe.config, cambie orderQueueName para especificar el nombre de equipo del servicio en lugar de ".".
 
-4.  En el archivo Service.exe.config, cambie la dirección del punto de conexión del cliente para especificar el nombre del equipo cliente en lugar de ".".
+4.  En el archivo Service.exe.config, cambie la dirección del extremo del cliente para especificar el nombre del equipo cliente en lugar de ".".
 
 5.  En el equipo del servicio, inicie Service.exe desde un símbolo del sistema.
 
@@ -313,5 +313,6 @@ static void DisplayOrderStatus()
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
 ## <a name="see-also"></a>Vea también
-- [Colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Message Queue Server](https://go.microsoft.com/fwlink/?LinkId=94968)
+
+- [Las colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94968)
