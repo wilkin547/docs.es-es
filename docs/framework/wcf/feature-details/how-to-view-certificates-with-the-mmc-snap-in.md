@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Ver certificados con el complemento de MMC
+title: Filtrar Ver certificados con el complemento de MMC
 ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 69f79b64250ff46524e7b4720d13351774875a3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167510"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Filtrar Ver certificados con el complemento de MMC
 Cuando se crea un cliente segura o el servicio, puede usar un [certificado](working-with-certificates.md) como la credencial. Por ejemplo, un tipo común de credencial es el certificado X.509, que se crea con el <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> método. 
@@ -22,7 +22,6 @@ Hay tres tipos diferentes de almacenes de certificados que se pueden examinar co
 
 - Cuenta de servicio: El almacén es un servicio determinado en el dispositivo local.
 
-  
 ## <a name="view-certificates-in-the-mmc-snap-in"></a>Ver los certificados en el complemento MMC 
 
 El siguiente procedimiento muestra cómo examinar los almacenes en el dispositivo local para buscar un certificado adecuado: 
@@ -57,7 +56,6 @@ El siguiente procedimiento muestra cómo examinar los almacenes en el dispositiv
 8. Para ver los certificados en el complemento de MMC, seleccione **raíz de consola** en el panel izquierdo, expanda **certificados (equipo Local)**.
 
     Aparece una lista de directorios para cada tipo de certificado. En cada directorio de certificado, puede ver, exportar, importar y eliminar sus certificados.
-  
 
 ## <a name="view-certificates-with-the-certificate-manager-tool"></a>Ver certificados con la herramienta Administrador de certificados
 
@@ -79,8 +77,8 @@ También puede ver, exportar, importar y eliminar certificados utilizando la her
   
 2. Para ver los certificados, en **certificados - usuario actual** en el panel izquierdo, expanda el directorio para el tipo de certificado que desea ver.
 
-  
 ## <a name="see-also"></a>Vea también
+
 - [Trabajar con certificados](working-with-certificates.md)
-- [Cómo: Crear certificados temporales para su uso durante el desarrollo](how-to-create-temporary-certificates-for-use-during-development.md)
-- [Cómo: Recuperar la huella digital de un certificado](how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Filtrar Crear certificados temporales para su uso durante el desarrollo](how-to-create-temporary-certificates-for-use-during-development.md)
+- [Filtrar Recuperar la huella digital de un certificado](how-to-retrieve-the-thumbprint-of-a-certificate.md)

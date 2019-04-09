@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd4d1be3ec3c64c7c6669a2c85ba6bf68db6da68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62064286fecc4736f39ad790f0fd7f0e6d84b149
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162350"
 ---
 # <a name="jitcompilationstart-mda"></a>MDA de jitCompilationStart
 El Asistente para la depuración administrada (MDA) `jitCompilationStart` se activa para informar del momento en el que el compilador Just-In-Time (JIT) empieza a compilar una función.  
@@ -158,6 +158,7 @@ namespace ns2
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

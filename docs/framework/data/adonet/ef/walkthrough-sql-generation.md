@@ -2,12 +2,12 @@
 title: 'Tutorial: Generación de SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 3210fb8872e1610c37070330082b11dddc37aa06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d88916b06dd1fc01f10889fc94d5bcf8c571c228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733446"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164585"
 ---
 # <a name="walkthrough-sql-generation"></a>Tutorial: Generación de SQL
 En este tema se muestra cómo se produce la generación de SQL en el [proveedor de ejemplo](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). La siguiente consulta de Entity SQL utiliza el modelo incluido con el proveedor de ejemplo:  
@@ -126,11 +126,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
- A continuación, se inserta "false" en la pila de IsParentAJoin y se procesa la condición de combinación Var(Extent1).CategoryID == Var(Extent2).CategoryID. Var(Extent1) se resuelve como <symbol_Extent1> después de una búsqueda en la tabla de símbolos. Dado que la instancia se resuelve como un símbolo simple, como resultado del procesamiento Var(Extent1). Id. de categoría, un objeto SqlBuilder con \<symbol1 >. " Se devuelve el CategoryID". De igual forma se procesa el otro lado de la comparación. El resultado de la visita de la condición de combinación se anexa a la cláusula FROM de SelectStatement1 y el valor "false" se extrae de la pila de IsParentAJoin.  
+ A continuación, se inserta "false" en la pila de IsParentAJoin y se procesa la condición de combinación Var(Extent1).CategoryID == Var(Extent2).CategoryID. Var (extent1) se resuelve como < symbol_Extent1 > después de una búsqueda de la tabla de símbolos. Dado que la instancia se resuelve como un símbolo simple, como resultado del procesamiento Var(Extent1). Id. de categoría, un objeto SqlBuilder con \<symbol1 >. " Se devuelve el CategoryID". De igual forma se procesa el otro lado de la comparación. El resultado de la visita de la condición de combinación se anexa a la cláusula FROM de SelectStatement1 y el valor "false" se extrae de la pila de IsParentAJoin.  
   
  Con esto, Join1 se ha procesado completamente y se ha extraído un ámbito de la tabla de símbolos.  
   
- El control vuelve a procesar Join4, el elemento primario de Join1. Dado que el elemento secundario reutilizó la instrucción Select, las extensiones de Join1 se reemplazan con un único símbolo de combinación <joinSymbol_Join1>. También se agrega una nueva entrada a la tabla de símbolos para asociar Join1 a <joinSymbol_Join1>.  
+ El control vuelve a procesar Join4, el elemento primario de Join1. Dado que el elemento secundario reutilizó la instrucción Select, las extensiones de Join1 se reemplazan con un único símbolo de combinación < joinSymbol_Join1 >. También se agrega una nueva entrada a la tabla de símbolos para asociar Join1 a < joinSymbol_Join1 >.  
   
  El nodo siguiente que se va a procesar es Join3, el segundo elemento secundario de Join4. Como es un elemento secundario derecho, se inserta "false" en la pila de IsParentAJoin. En la figura siguiente se muestra el estado del visitante en este punto.  
   
@@ -148,9 +148,9 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  La figura siguiente muestra el estado del visitante justo antes de procesar la expresión DbPropertyExpression "Var(Join2).Extent4.OrderID".  
   
- Observe cómo se visita "Var(Join2).Extent4.OrderID". En primer lugar, se visita la propiedad de instancia "Var(Join2).Extent4", que es otra expresión DbPropertyExpression y visita primero su instancia "Var(Join2)". En el ámbito de nivel superior de la tabla de símbolos, "Join2" se resuelve como <joinSymbol_join2>. En el método de visita en el que DbPropertyExpression procesa "Var(Join2).Extent4", observe que se devuelve un símbolo de combinación al visitar la instancia y que es preciso quitar información de estructura jerárquica.  
+ Observe cómo se visita "Var(Join2).Extent4.OrderID". En primer lugar, se visita la propiedad de instancia "Var(Join2).Extent4", que es otra expresión DbPropertyExpression y visita primero su instancia "Var(Join2)". En el ámbito de nivel superior en la tabla de símbolos, "Join2" se resuelve como < joinSymbol_join2 >. En el método de visita en el que DbPropertyExpression procesa "Var(Join2).Extent4", observe que se devuelve un símbolo de combinación al visitar la instancia y que es preciso quitar información de estructura jerárquica.  
   
- Dado que se trata de una combinación anidada, se busca la propiedad "Extent4" en el diccionario de NameToExtent del símbolo de combinación, se resuelve como <symbol_Extent4> y se devuelve un nuevo SymbolPair(<joinSymbol_join2>, <symbol_Extent4>). Puesto que se devuelve un par de símbolos del procesamiento de la instancia de "Var(Join2).Extent4.OrderID", la propiedad "OrderID" se resuelve a partir del valor ColumnPart de ese par de símbolos (<symbol_Extent4>), que tiene una lista de las columnas de la extensión que representa. Por tanto, "Var(Join2).Extent4.OrderID" se resuelve como {<joinSymbol_Join2>, ".", <symbol_OrderID>}.  
+ Puesto que es una combinación anidada, se busca la propiedad "Extent4" en el diccionario de NameToExtent del símbolo de combinación, resuelve como < symbol_Extent4 > y devuelve un nuevo SymbolPair (< joinSymbol_join2 >, < symbol_Extent4 >). Puesto que se devuelve un par de símbolos del procesamiento de la instancia de "join2. Extent4.OrderID", la propiedad"OrderID"se resuelve a partir del valor ColumnPart de ese par de símbolos (< symbol_Extent4 >), que muestra una lista de las columnas de la extensión que representa. Por lo tanto, "join2. Extent4.OrderID"se resuelve como {< joinSymbol_Join2 >,". ", < symbol_OrderID >}.  
   
  De igual forma se procesa la condición de combinación de Join4. El control vuelve al método VisitInputExpression que procesó el proyecto de nivel superior. Si se examina FromExtents de la instrucción SelectStatement0 devuelta, la entrada se identifica como una combinación, se quitan las extensiones originales y se reemplazan con una nueva extensión que únicamente incluye el símbolo de combinación. La tabla de símbolos también se actualiza y, a continuación, se procesa la parte de la proyección del proyecto. La resolución de las propiedades y la reducción de la extensión de la combinación se realizan como se ha descrito anteriormente.  
   
@@ -195,9 +195,10 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 ### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Segunda fase de generación de SQL: Generar el comando String  
  La segunda fase genera los nombres reales de los símbolos; únicamente nos centraremos en los símbolos que representan las columnas denominadas "OrderID", ya que en este caso es necesario resolver un conflicto. Estas columnas se resaltan en la instrucción SqlSelectStatement. Tenga en cuenta que los sufijos utilizados en la figura solo pretenden destacar que se trata de instancias diferentes y no representan ningún nuevo nombre, ya que en esta fase todavía no se han asignado sus nombres finales (posiblemente diferentes de los nombres originales).  
   
- El primer símbolo localizado que necesita cambiar de nombre es <symbol_OrderID>. Su nuevo nombre se asigna como "OrderID1", 1 se marca como el último sufijo utilizado para "OrderID" y el símbolo se marca como símbolo que no necesita cambio de nombre. A continuación se localiza el primer uso de <symbol_OrderID_2>. Se cambia el nombre para utilizar el siguiente sufijo disponible ("OrderID2") y de nuevo se marca como símbolo que no necesita cambio de nombre, para que la próxima vez que se utilice no se cambie el nombre. Esto también se lleva a cabo para <symbol_OrderID_3>.  
+ El primer símbolo localizado que necesita cambiar de nombre es < symbol_OrderID >. Su nuevo nombre se asigna como "OrderID1", 1 se marca como el último sufijo utilizado para "OrderID" y el símbolo se marca como símbolo que no necesita cambio de nombre. A continuación, se encuentra el primer uso de < symbol_OrderID_2 >. Se cambia el nombre para utilizar el siguiente sufijo disponible ("OrderID2") y de nuevo se marca como símbolo que no necesita cambio de nombre, para que la próxima vez que se utilice no se cambie el nombre. Esto se hace para < symbol_OrderID_3 > demasiado.  
   
  Al final de la segunda fase, se genera la instrucción SQL final.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Generación de SQL en el proveedor de ejemplo](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

@@ -5,15 +5,15 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 93365c109f015b2ec72b5216dcb8c46258d022e2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164364"
 ---
 # <a name="client"></a>\<client>
-El elemento `client` define una lista de puntos de conexión a los que un cliente puede conectarse.  
+El elemento `client` define una lista de extremos a los que un cliente puede conectarse.  
   
  \<system.ServiceModel>  
 \<client>  
@@ -41,7 +41,7 @@ El elemento `client` define una lista de puntos de conexión a los que un client
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Contiene una colección de elementos de punto de conexión, que especifica los puntos de conexión a los que este cliente puede conectarse.|  
+|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Contiene una colección de elementos de extremo, que especifica los extremos a los que este cliente puede conectarse.|  
 |[\<metadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Contiene los valores para procesar los metadatos.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -73,7 +73,8 @@ El elemento `client` define una lista de puntos de conexión a los que un client
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
-- [Configuración del cliente de WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [Configuración de cliente de WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
 - [Clientes](../../../../../docs/framework/wcf/feature-details/clients.md)

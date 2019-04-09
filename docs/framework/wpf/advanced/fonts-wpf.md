@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: fd3c815b3acd857b193aa02d632a33c96e324885
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb8a02445511935d64ebaa6d78d4b05c0b75167e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169252"
 ---
 # <a name="fonts-wpf"></a>Fuentes (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] incluye compatibilidad para la presentación de texto mediante [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fuentes. Un paquete de ejemplo de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fuentes se incluye con el [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].  
@@ -23,6 +23,7 @@ ms.locfileid: "57360984"
  [Temas "Cómo..."](fonts-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
 - [Documentos en WPF](documents-in-wpf.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc3f9e8c581bc95bea8cfeb549177966eae22a43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db933716cc0602ecda5da8a72726408ae4910179
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129810"
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback (Interfaz)
 Proporciona métodos para hacer que las devoluciones de llamada dentro de un apartamento. Un *apartamento* es un contenedor lógico dentro de un proceso para los objetos que comparten los mismos requisitos de acceso de subproceso.  
@@ -30,7 +30,7 @@ Proporciona métodos para hacer que las devoluciones de llamada dentro de un apa
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[DoCallback (método)](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|Ejecuta la función especificada dentro de un apartamento.|  
+|[Método DoCallback](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|Ejecuta la función especificada dentro de un apartamento.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -42,4 +42,5 @@ Proporciona métodos para hacer que las devoluciones de llamada dentro de un apa
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

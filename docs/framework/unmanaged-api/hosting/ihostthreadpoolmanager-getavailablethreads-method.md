@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f9eb28ea1a60991d047494336035aaf239b9edd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b4f16db1d35f8a0de1c755566e27b07bf9067dfe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129199"
 ---
 # <a name="ihostthreadpoolmanagergetavailablethreads-method"></a>IHostThreadPoolManager::GetAvailableThreads (Método)
 Obtiene el número de subprocesos en el grupo de subprocesos que no se están procesando actualmente elementos de trabajo.  
@@ -64,6 +64,7 @@ HRESULT GetAvailableThreads (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Threading.ThreadPool.GetAvailableThreads%2A>
 - <xref:System.Threading.ThreadPool>
-- [IHostThreadPoolManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+- [IHostThreadPoolManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)

@@ -2,12 +2,12 @@
 title: Seguimiento personalizado
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: a03c36c2f060651dd7b8b9e9aff103ad2a600a4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ca53d74f31059532118f3b5d96760a25ed72b3d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523745"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161850"
 ---
 # <a name="custom-tracking"></a>Seguimiento personalizado
 En este ejemplo se muestra cómo crear un participante de seguimiento personalizado y cómo escribir en la consola el contenido de los datos de seguimiento. Además, el ejemplo muestra cómo emitir objetos <xref:System.Activities.Tracking.CustomTrackingRecord> rellenados con datos definidos por el usuario. El participante de seguimiento basado en consola filtra los objetos <xref:System.Activities.Tracking.TrackingRecord> que emite el flujo de trabajo utilizando un objeto de perfil de seguimiento creado en código.
@@ -18,7 +18,7 @@ En este ejemplo se muestra cómo crear un participante de seguimiento personaliz
 |Componente|Descripción|
 |---------------|-----------------|
 |Tiempo de ejecución de seguimiento|Proporciona la infraestructura para emitir registros de seguimiento.|
-|Participantes de seguimiento|Usa los registros de seguimiento. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] se distribuye con un participante de seguimiento que escribe los eventos de seguimiento como eventos de Seguimiento de eventos para Windows (ETW).|
+|Participantes de seguimiento|Usa los registros de seguimiento. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] se distribuye con un participante de seguimiento que escribe registros de seguimiento como eventos de seguimiento de eventos para Windows (ETW).|
 |Perfil de seguimiento|Un mecanismo de filtrado que permite a un participante de seguimiento suscribirse a un subconjunto de los registros de seguimiento emitidos desde una instancia de flujo de trabajo.|
 
  En la siguiente tabla se detallan los registros de seguimiento que emite el tiempo de ejecución del flujo de trabajo.
@@ -149,4 +149,5 @@ context.Track(customRecord);
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>Vea también
+
 - [Ejemplos de supervisión de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

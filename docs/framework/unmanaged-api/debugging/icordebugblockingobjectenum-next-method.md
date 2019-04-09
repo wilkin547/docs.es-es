@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccab0f311e51c0e82998b58f75f38359271065e3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 889c3bb2d5e0cd1feb9e592e667d47dedd4ede36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493146"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171150"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next (Método)
 Obtiene el número especificado de [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) objetos de la enumeración, comenzando en la posición actual.  
@@ -52,7 +52,7 @@ HRESULT Next([in] ULONG  celt,
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|S_FALSE|`pceltFetched` no es igual a `celt`.|  
+|S_FALSE|`pceltFetched` No es igual a `celt`.|  
   
 ## <a name="remarks"></a>Comentarios  
  Este método funciona como un enumerador COM típico.  
@@ -72,6 +72,7 @@ HRESULT Next([in] ULONG  celt,
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICorDebugDataTarget (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebugDataTarget (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)

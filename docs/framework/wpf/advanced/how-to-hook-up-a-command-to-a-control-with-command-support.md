@@ -10,22 +10,22 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-ms.openlocfilehash: 2bb3e00cad1a629a405fa75ef32a289c4006f324
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 981fecf33b60c76ecab760185db7dab4bbb254d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364442"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165211"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Filtrar Enlazar un comando a un control con la compatibilidad de comandos
 En el ejemplo siguiente se muestra cómo enlazar un <xref:System.Windows.Input.RoutedCommand> a un <xref:System.Windows.Controls.Control> que tiene compatibilidad integrada para el comando.  Para obtener un ejemplo completo que enlace comandos a varios orígenes, consulte el ejemplo [Crear un objeto RoutedCommand personalizado](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
   
 ## <a name="example"></a>Ejemplo  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una biblioteca de comandos comunes que los programadores de aplicaciones se encuentran con regularidad.  Las clases que constituyen la biblioteca de comandos son: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands> y <xref:System.Windows.Documents.EditingCommands>.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Proporciona una biblioteca de comandos comunes que los programadores de aplicaciones se encuentran con regularidad.  Las clases que constituyen la biblioteca de comandos son: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands> y <xref:System.Windows.Documents.EditingCommands>.  
   
  Los objetos <xref:System.Windows.Input.RoutedCommand> estáticos que componen estas clases no proporcionan la lógica del comando.  La lógica del comando está asociada al comando con un objeto <xref:System.Windows.Input.CommandBinding>.  Algunos controles tienen integrados objetos CommandBindings para algunos comandos.  Este mecanismo permite que la semántica de un comando se mantenga, mientras que la implementación real puede cambiar.  Un <xref:System.Windows.Controls.TextBox>, por ejemplo, controla el comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A> de manera diferente a un control diseñado para admitir imágenes, pero la idea básica del significado de pegar algo permanece intacta.  La lógica de comando no puede proporcionarla el comando, sino que en su lugar debe proporcionarla el control o la aplicación.  
   
- Muchos controles de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tienen compatibilidad integrada para algunos de los comandos de la biblioteca de comandos.  <xref:System.Windows.Controls.TextBox>, por ejemplo, admite muchos de los comandos de edición de la aplicación, como <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A> y <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.  El desarrollador de aplicaciones no tiene que hacer nada especial para que estos comandos funcionen con estos controles.  Si <xref:System.Windows.Controls.TextBox> es el destino del comando cuando se ejecuta el comando, controlará el comando mediante el <xref:System.Windows.Input.CommandBinding> que está integrado en el control.  
+ Muchos controles de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tienen compatibilidad integrada para algunos de los comandos de la biblioteca de comandos.  <xref:System.Windows.Controls.TextBox>, por ejemplo, admite muchos de los comandos de edición de la aplicación, como <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, y <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.  El desarrollador de aplicaciones no tiene que hacer nada especial para que estos comandos funcionen con estos controles.  Si <xref:System.Windows.Controls.TextBox> es el destino del comando cuando se ejecuta el comando, controlará el comando mediante el <xref:System.Windows.Input.CommandBinding> que está integrado en el control.  
   
  A continuación se muestra cómo usar un <xref:System.Windows.Controls.MenuItem> como el origen del comando para el comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, donde un <xref:System.Windows.Controls.TextBox> es el destino del comando.  Toda la lógica que define cómo realiza <xref:System.Windows.Controls.TextBox> la operación de pegado está integrada en el control <xref:System.Windows.Controls.TextBox>.  
   
@@ -37,5 +37,6 @@ En el ejemplo siguiente se muestra cómo enlazar un <xref:System.Windows.Input.R
  [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre comandos](commanding-overview.md)
 - [Enlazar un comando a un control sin la compatibilidad de comandos](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)

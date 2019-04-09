@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: b17ebd3d9128bff40274d905606f1265afd0207d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5652c1f52d7cee4921d0c6b50973b494458ecd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367835"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170188"
 ---
 # <a name="printing-how-to-topics"></a>Temas "Cómo..." de impresión
 Los temas de esta sección muestran cómo usar la impresión y las características de administración del sistema de impresión incluyen con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , así como el nuevo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ruta de impresión.  
@@ -44,6 +44,7 @@ Los temas de esta sección muestran cómo usar la impresión y las característi
  Instrucciones para comprobar que una solicitud de impresión es válida y que no solicita todo lo que no es compatible con la impresora.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Printing>
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.Interop>

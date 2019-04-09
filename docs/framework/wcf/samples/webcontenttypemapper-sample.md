@@ -2,12 +2,12 @@
 title: Ejemplo de WebContentTypeMapper
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: f9da688d1ba77d5e9c3e7106138fd36c96d4fc81
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 7858b07c3da8684326b931b54f825c87a6e35717
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131513"
 ---
 # <a name="webcontenttypemapper-sample"></a>Ejemplo de WebContentTypeMapper
 Este ejemplo muestra cómo asignar nuevos tipos de contenido a los formatos de cuerpo de mensaje de Windows Communication Foundation (WCF).  
@@ -68,4 +68,3 @@ public class JsonContentTypeMapper : WebContentTypeMapper
 >  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  
-  

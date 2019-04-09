@@ -2,12 +2,12 @@
 title: Activación MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 0b3d90ed756b2bb2b9bebc0ac9e36789a80df1d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 80ce76d5cee8bb55bebdaeaea065aa41a0264bac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745446"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162833"
 ---
 # <a name="msmq-activation"></a>Activación MSMQ
 Este ejemplo muestra cómo hospedar aplicaciones en el servicio de activación del proceso de Windows (WAS) que se lee en una cola de mensajes. Este ejemplo se utiliza el `netMsmqBinding` y se basa en el [comunicación bidireccional](../../../../docs/framework/wcf/samples/two-way-communication.md) ejemplo. El servicio en este caso es una aplicación hospedada en web y el cliente es autohospedado y proporciona resultados a la consola para observar el estado de pedidos de compra enviados.  
@@ -30,7 +30,7 @@ Este ejemplo muestra cómo hospedar aplicaciones en el servicio de activación d
   
  El cliente envía los pedidos de compra al servicio desde dentro del ámbito de una transacción. El servicio recibe las órdenes en una transacción y las procesa. El servicio llama a continuación de nuevo al cliente con el estado del orden. Para facilitar la comunicación bidireccional, tanto el cliente como el servicio utilizan las colas para poner en cola los pedidos de compra y el estado de la orden.  
   
- El contrato de servicio `IOrderProcessor` define operaciones de servicio unidireccionales que funcionan en cola. La operación del servicio utiliza el extremo de respuesta para enviar estados de orden al cliente. La dirección de extremo de la respuesta es el URI de la cola utilizado para devolver el estado del orden al cliente. La aplicación de procesamiento de orden implementa este contrato.  
+ El contrato de servicio `IOrderProcessor` define operaciones de servicio unidireccionales que funcionan en cola. La operación del servicio utiliza el extremo de respuesta para enviar estados de orden al cliente. La dirección de punto de conexión de la respuesta es el URI de la cola utilizado para devolver el estado del orden al cliente. La aplicación de procesamiento de orden implementa este contrato.  
   
 ```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -82,7 +82,7 @@ public class OrderProcessorService : IOrderProcessor
   
  El enlace de cliente que se ha de utilizar se especifica utilizando un archivo de configuración.  
   
- El nombre de cola de MSMQ se especifica en una sección appSettings del archivo de configuración. El extremo para el servicio se define en la sección de System.ServiceModel del archivo de configuración.  
+ El nombre de cola de MSMQ se especifica en una sección appSettings del archivo de configuración. El punto de conexión para el servicio se define en la sección de System.ServiceModel del archivo de configuración.  
   
 > [!NOTE]
 >  El nombre de cola de MSMQ y la dirección de extremo utilizan convenciones de direccionamiento ligeramente diferentes. El nombre de la cola de MSMQ utiliza un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso. La dirección de extremo WCF especifica net.msmq: esquema utiliza "localhost" para el equipo local y utiliza barras diagonales en su ruta de acceso. Para leer de una cola que se hospeda en el equipo remoto, reemplace "." y “localhost” con el nombre del equipo remoto.  
@@ -351,4 +351,5 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [Ejemplos de persistencia y el hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+
+- [Ejemplos de hospedaje y persistencia de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

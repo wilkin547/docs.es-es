@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties, returned by UI Automation providers
 - UI Automation, providers returning properties
 ms.assetid: 5eba950e-b9e1-48eb-ab8e-b69db76bf589
-ms.openlocfilehash: 80f1dba9cd99caa2d9ebf059d80479e2fd701fd3
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: f3d5776441f1d4848adbb0a5f9435274f118a0da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678311"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167681"
 ---
 # <a name="return-properties-from-a-ui-automation-provider"></a>Devolución de propiedades por parte de un proveedor de UI Automation
 > [!NOTE]
@@ -29,5 +29,6 @@ ms.locfileid: "57678311"
  [!code-vb[UIAFragmentProvider_snip#117](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#117)]  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre proveedores de la Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Implementación del proveedor de automatización de la interfaz de usuario en el servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+
+- [Información general sobre proveedores de UI Automation](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [Implementación del proveedor de UI Automation en el servidor](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

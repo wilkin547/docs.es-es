@@ -11,12 +11,12 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 5de1068401dac61c5de5b86604da9417e18a94ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 237bdc097cd2a3fbfff6dd79bce401c2d091e211
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162233"
 ---
 # <a name="how-to-create-outlined-text"></a>Filtrar Crear texto con contorno
 En la mayoría de los casos, cuando se agregan adorno a cadenas de texto en su [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicación, que usa texto en términos de una colección de caracteres discretos, o glifos. Por ejemplo, podría crear un pincel de degradado lineal y se aplicará la <xref:System.Windows.Controls.Control.Foreground%2A> propiedad de un <xref:System.Windows.Controls.TextBox> objeto. Al mostrar o editar el cuadro de texto, el pincel de degradado lineal se aplica automáticamente al conjunto actual de caracteres de la cadena de texto.  
@@ -55,4 +55,5 @@ En la mayoría de los casos, cuando se agregan adorno a cadenas de texto en su [
   Para el origen del objeto de control de usuario personalizado de ejemplo, vea [OutlineTextControl.cs para C# ](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) y [OutlineTextControl.vb para Visual Basic](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb). 
   
 ## <a name="see-also"></a>Vea también
+
 - [Dibujar texto con formato](drawing-formatted-text.md)

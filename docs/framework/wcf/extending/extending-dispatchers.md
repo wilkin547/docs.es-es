@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: c34a923d70c9079a3736732d6815df0329dfd557
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: df726d71880d135adb883f834acfa9839641eae3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162729"
 ---
 # <a name="extending-dispatchers"></a>Extensión de distribuidores
 Los distribuidores son los responsables de extraer los mensajes entrantes de los canales subyacentes, de modo que los traducen en código de aplicación en las invocaciones de método y devuelven los resultados al autor de la llamada. Las extensiones de distribuidores le permiten modificar este procesamiento.  Puede implementar inspectores de parámetro o de mensaje que inspeccionen o modifiquen el contenido de los mensajes o los parámetros.  Puede cambiar la manera en la que se enrutan los mensajes a las operaciones o proporcionar otras funcionalidades.  
@@ -21,7 +21,7 @@ Los distribuidores son los responsables de extraer los mensajes entrantes de los
   
  El distribuidor de canales (y <xref:System.ServiceModel.Channels.IChannelListener> complementario) extrae los mensajes del canal del subordinado y pasa los mensajes a sus distribuidores de extremos respectivos. Cada distribuidor de extremos tiene un <xref:System.ServiceModel.Dispatcher.DispatchRuntime> que enruta los mensajes a la <xref:System.ServiceModel.Dispatcher.DispatchOperation> adecuada, que es responsable de llamar al método que implementa la operación. Durante el proceso, se invocan varias clases de extensiones opcionales y obligatorias. En este tema se explica cómo encajan estas piezas, y cómo podría modificar las propiedades e introducir su propio código para extender la funcionalidad básica.  
   
- Las propiedades del distribuidor y los objetos de personalización modificados se insertan utilizando objetos de comportamiento de operación, servicio, extremo, o contrato. En este tema no se describe cómo utilizar los comportamientos. Para obtener más información sobre los tipos utilizados para insertar las modificaciones de distribuidor, vea [configurar y extender el tiempo de ejecución con comportamientos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Las propiedades del distribuidor y los objetos de personalización modificados se insertan utilizando objetos de comportamiento de operación, servicio, punto de conexión, o contrato. En este tema no se describe cómo utilizar los comportamientos. Para obtener más información sobre los tipos utilizados para insertar las modificaciones de distribuidor, vea [configurar y extender el tiempo de ejecución con comportamientos](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
  El siguiente gráfico proporciona una vista de alto nivel de los elementos arquitectónicos de un servicio.  
   
@@ -32,8 +32,8 @@ Los distribuidores son los responsables de extraer los mensajes entrantes de los
   
  Todas las propiedades que controlan la duración y el comportamiento de una sesión de canal se pueden inspeccionar o modificar en el objeto <xref:System.ServiceModel.Dispatcher.ChannelDispatcher>. Entre ellos se incluyen los inicializadores de canales personalizados, el agente de escuchas de canal, el host, el <xref:System.ServiceModel.InstanceContext>asociado, etc.  
   
-### <a name="endpoint-dispatchers"></a>Distribuidores de extremos  
- El objeto <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> es responsable de procesar los mensajes de un objeto <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> cuando la dirección de destino de un mensaje coincide con la propiedad <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> y la acción del mensaje coincide con la propiedad <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>. Si dos objetos <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> pueden aceptar un mensaje, el valor de la propiedad <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A> determina el extremo de mayor prioridad.  
+### <a name="endpoint-dispatchers"></a>Distribuidores de puntos de conexión  
+ El objeto <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> es responsable de procesar los mensajes de un objeto <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> cuando la dirección de destino de un mensaje coincide con la propiedad <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> y la acción del mensaje coincide con la propiedad <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>. Si dos objetos <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> pueden aceptar un mensaje, el valor de la propiedad <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A> determina el punto de conexión de mayor prioridad.  
   
  Utilice el <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> para adquirir los dos puntos de extensión de modelo de servicio principales, las clases <xref:System.ServiceModel.Dispatcher.DispatchRuntime> y <xref:System.ServiceModel.Dispatcher.DispatchOperation>, que puede utilizar para personalizar el procesamiento del distribuidor. La clase <xref:System.ServiceModel.Dispatcher.DispatchRuntime> permite a los usuarios interceptar y extender el distribuidor en el ámbito del contrato (es decir, para todos los mensajes de un contrato). La clase <xref:System.ServiceModel.Dispatcher.DispatchOperation> permite a los usuarios interceptar y extender el distribuidor en un ámbito de operación (es decir, para todos los mensajes de una operación).  
   
@@ -42,9 +42,9 @@ Los distribuidores son los responsables de extraer los mensajes entrantes de los
   
 -   Validación personalizada del mensaje. Los usuarios pueden exigir que un mensaje sea válido para un determinado esquema. Esto se puede hacer implementando las interfaces del interceptor de mensajes. Para obtener un ejemplo, vea [inspectores de mensaje](../../../../docs/framework/wcf/samples/message-inspectors.md).  
   
--   Registro personalizado de mensajes. Los usuarios pueden inspeccionar y registrar un conjunto de mensajes de la aplicación que fluyen a través de un extremo. Esto también se puede lograr con las interfaces del interceptor de mensajes.  
+-   Registro personalizado de mensajes. Los usuarios pueden inspeccionar y registrar un conjunto de mensajes de la aplicación que fluyen a través de un punto de conexión. Esto también se puede lograr con las interfaces del interceptor de mensajes.  
   
--   Transformaciones personalizadas del mensaje. Los usuarios pueden aplicar ciertas transformaciones al mensaje en el tiempo de ejecución (por ejemplo, para el control de versiones). Esto también se puede lograr, de nuevo, con las interfaces del interceptor de mensajes.  
+-   Transformaciones personalizadas del mensaje. Los usuarios pueden aplicar ciertas transformaciones al mensaje en el runtime (por ejemplo, para el control de versiones). Esto también se puede lograr, de nuevo, con las interfaces del interceptor de mensajes.  
   
 -   Modelo de datos personalizado. Los usuarios pueden tener un modelo de serialización de datos no compatible de forma predeterminada en WCF (es decir, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>y los mensajes sin formato). Esto se puede hacer implementando las interfaces del formateador de mensajes. Para obtener un ejemplo, vea [formateador de operación y Selector de operación](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
   
@@ -66,7 +66,7 @@ Los distribuidores son los responsables de extraer los mensajes entrantes de los
 -   Validadores personalizados de WCF en tiempo de ejecución. Puede instalar validadores personalizados que examinen servicios, contratos y enlaces para aplicar las directivas de nivel empresarial con respecto a aplicaciones WCF. (Por ejemplo, vea [Cómo: Bloqueo de puntos de conexión de la empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
   
 ### <a name="using-the-dispatchruntime-class"></a>Uso de la clase DispatchRuntime  
- Utilice la clase <xref:System.ServiceModel.Dispatcher.DispatchRuntime> para modificar el comportamiento predeterminado de extremo individual o de servicio, o para insertar objetos que implementen modificaciones personalizadas en uno o ambos de los siguientes procesos de servicio (o procesos de cliente en el caso de un cliente dúplex):  
+ Utilice la clase <xref:System.ServiceModel.Dispatcher.DispatchRuntime> para modificar el comportamiento predeterminado de punto de conexión individual o de servicio, o para insertar objetos que implementen modificaciones personalizadas en uno o ambos de los siguientes procesos de servicio (o procesos de cliente en el caso de un cliente dúplex):  
   
 -   La transformación de mensajes entrantes en los objetos y la suelta de esos objetos como invocaciones de método en un objeto de servicio.  
   
@@ -86,15 +86,15 @@ Los distribuidores son los responsables de extraer los mensajes entrantes de los
   
     -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> indica donde se escriben los eventos de auditoría.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> controla si el servicio intenta suplantar mediante las credenciales proporcionadas por el mensaje entrante.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> Controla si el servicio intenta suplantar mediante las credenciales proporcionadas por el mensaje entrante.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> controla si los eventos de autenticación de mensajes correctos se escriben en el registro de eventos especificado por <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> Controla si los eventos de autenticación de mensajes correctos se escriben en el registro de eventos especificado por <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> controla cómo se establece la propiedad <xref:System.Threading.Thread.CurrentPrincipal%2A>.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> controles cómo <xref:System.Threading.Thread.CurrentPrincipal%2A> propiedad está establecida.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> especifica cómo se realiza la auditoría de eventos de autorización.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> Especifica cómo se realiza la auditoría de eventos de autorización.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> especifica si suprimir excepciones no críticas que producen durante el proceso del registro.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> Especifica si se suprimen las excepciones no críticas que se producen durante el proceso de registro.  
   
  Normalmente, un comportamiento de servicio (un objeto que implementa <xref:System.ServiceModel.Dispatcher.DispatchRuntime>), un comportamiento de contrato (un objeto que implementa <xref:System.ServiceModel.Description.IServiceBehavior>) o un comportamiento de extremo (un objeto que implementa <xref:System.ServiceModel.Description.IContractBehavior>) pueden asignar objetos de extensión a una propiedad <xref:System.ServiceModel.Description.IEndpointBehavior> o insertarlos en una colección. Entonces, el objeto de comportamiento de instalación se agrega a la colección adecuada de comportamientos mediante programación o implementando un objeto <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personalizado para permitir insertar el comportamiento con un archivo de configuración de la aplicación.  
   
@@ -128,8 +128,9 @@ Los distribuidores son los responsables de extraer los mensajes entrantes de los
 -   La propiedad <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> permite insertar un inspector de parámetros personalizado que se puede utilizar para inspeccionar o modificar parámetros y valores devueltos.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [Cómo: Inspeccionar y modificar los mensajes en el servicio](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
-- [Cómo: Inspeccionar o modificar parámetros](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [Cómo: Bloqueo de puntos de conexión de la empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [Filtrar para inspeccionar y modificar mensajes en el servicio](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
+- [Filtrar para inspeccionar o modificar parámetros](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [Filtrar para bloquear puntos de conexión en la empresa](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

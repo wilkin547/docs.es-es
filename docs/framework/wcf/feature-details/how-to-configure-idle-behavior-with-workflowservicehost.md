@@ -1,23 +1,23 @@
 ---
-title: Procedimiento Configurar el comportamiento inactivo con WorkflowServiceHost
+title: Filtrar para configurar el comportamiento inactivo con WorkflowServiceHost
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-ms.openlocfilehash: dff9145954084d0f299edc1e3f2f6c0d7ea1a80e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d3fc95e7e92d3fc7c149790d4af00a464ab427f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164026"
 ---
-# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Procedimiento Configurar el comportamiento inactivo con WorkflowServiceHost
-Los flujos de trabajo pasan a estar inactivos cuando encuentran un marcador que se debe reanudar mediante algún estímulo externo, por ejemplo cuando la instancia de flujo de trabajo está esperando la entrega de un mensaje usando una actividad <xref:System.ServiceModel.Activities.Receive> . <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> es un comportamiento que le permite especificar el tiempo transcurrido desde que una instancia de servicio pasa a estado inactivo hasta que la instancia se guarda o se descarga. Contiene dos propiedades que permiten establecer estas duraciones. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> especifica el período de tiempo entre el momento en el que una instancia de servicio del flujo de trabajo se inactiva y el momento en el que dicha instancia se guarda. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> especifica el intervalo de tiempo entre el momento en el que una instancia de servicio del flujo de trabajo se inactiva y el momento en el que dicha instancia se descarga, donde la descarga significa guardar la instancia en el almacén de instancia y eliminarla de la memoria. En este tema, se explica cómo configurar la clase <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> en un archivo de configuración.  
+# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Filtrar para configurar el comportamiento inactivo con WorkflowServiceHost
+Los flujos de trabajo pasan a estar inactivos cuando encuentran un marcador que se debe reanudar mediante algún estímulo externo, por ejemplo cuando la instancia de flujo de trabajo está esperando la entrega de un mensaje usando una actividad <xref:System.ServiceModel.Activities.Receive> . <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> es un comportamiento que le permite especificar el tiempo entre cuando una instancia de servicio pasa a estado inactiva, y cuando la instancia se conservan o descargan. Contiene dos propiedades que permiten establecer estas duraciones. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> Especifica el intervalo de tiempo entre cuando una instancia de servicio de flujo de trabajo se inactiva y el momento en que se guarda la instancia de servicio de flujo de trabajo. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> Especifica el intervalo de tiempo entre la instancia del servicio un flujo de trabajo se inactiva y cuando la instancia de servicio de flujo de trabajo se descarga, donde la descarga significa guardar la instancia en el almacén de instancias y quitarla de la memoria. En este tema, se explica cómo configurar la clase <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> en un archivo de configuración.  
   
 ### <a name="to-configure-workflowidlebehavior"></a>Para configurar WorkflowIdleBehavior  
   
-1.  Agregue un elemento <`workflowIdle`> al elemento <`behavior`> dentro del elemento <`serviceBehaviors`> como se muestra en el siguiente ejemplo.  
+1.  Agregar un <`workflowIdle`> elemento para el <`behavior`> elemento dentro de la <`serviceBehaviors`> elemento tal como se muestra en el ejemplo siguiente.  
   
     ```xml  
     <behaviors>  
@@ -42,6 +42,7 @@ Los flujos de trabajo pasan a estar inactivos cuando encuentran un marcador que 
      [!code-vb[Wf_SvcHost_Idle_persist#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/wf_svchost_idle_persist/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Extensibilidad de host de servicio de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
 - [Configuración simplificada](../../../../docs/framework/wcf/simplified-configuration.md)
 - [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)

@@ -8,18 +8,16 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: 745ac23d65248302940eed6db3b8b19748dfc00d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 08b30d8be83ef9d814d17c5d4ec0c95a26bacdad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170110"
 ---
 # <a name="tooltip-overview"></a>Información general de información sobre herramientas
 Información sobre herramientas es una pequeña ventana emergente que aparece cuando un usuario detiene el puntero del mouse sobre un elemento, tal como sobreutilizado un <xref:System.Windows.Controls.Button>. En este tema se presenta la información sobre herramientas y se explica cómo crear y personalizar el contenido de la información sobre herramientas.  
-  
- 
-  
+
 <a name="what_is_a_tooltip"></a>   
 ## <a name="what-is-a-tooltip"></a>¿Qué es la información sobre herramientas?  
  Cuando un usuario mueve el puntero del mouse sobre un elemento que tiene información sobre herramientas, aparece una ventana con información sobre herramientas (por ejemplo, texto que describe la función de un control) durante un período de tiempo especificado. Si el usuario mueve el puntero del mouse fuera del control, la ventana desaparece porque el contenido de la información sobre herramientas deja de recibir el foco.  
@@ -76,6 +74,7 @@ Información sobre herramientas es una pequeña ventana emergente que aparece cu
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.ToolTipService>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipEventArgs>

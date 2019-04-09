@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 2f6879f5e46e62db29e482444d55680d39dd8ccc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587182"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164377"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Especificación del comportamiento de tiempo de ejecución del cliente
 Los clientes de Windows Communication Foundation (WCF), como los servicios Windows Communication Foundation (WCF), pueden configurarse para modificar el comportamiento de tiempo de ejecución para que se adapte a la aplicación cliente. Tres atributos están disponibles para especificar el comportamiento de tiempo de ejecución del cliente. Los objetos de devolución de llamada de cliente dúplex pueden utilizar <xref:System.ServiceModel.CallbackBehaviorAttribute> y los atributos <xref:System.ServiceModel.Description.CallbackDebugBehavior> para modificar su comportamiento de tiempo de ejecución. El otro atributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, se puede utilizar para separar el destino lógico del destino de red inmediato. Además, los tipos de devolución de llamada de cliente dúplex pueden utilizar algunos de los comportamientos de lado del servicio. Para obtener más información, consulte [especificar el comportamiento de tiempo de ejecución de servicio](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -20,7 +20,7 @@ Los clientes de Windows Communication Foundation (WCF), como los servicios Windo
 ## <a name="using-the-callbackbehaviorattribute"></a>Utilizar CallbackBehaviorAttribute  
  Puede configurar o extender el comportamiento de ejecución de una implementación de contrato de devolución de llamada en una aplicación cliente utilizando la clase <xref:System.ServiceModel.CallbackBehaviorAttribute>. Este atributo realiza una función similar para la clase de devolución de llamada como la clase <xref:System.ServiceModel.ServiceBehaviorAttribute>, con la excepción de crear instancias del comportamiento y configuración de la transacción.  
   
- La clase <xref:System.ServiceModel.CallbackBehaviorAttribute> se debe aplicar a la clase que implementa el contrato de devolución de llamada. Si se aplica a una implementación de contrato de no dúplex, se produce una excepción <xref:System.InvalidOperationException> en tiempo de ejecución. El ejemplo de código siguiente muestra una clase <xref:System.ServiceModel.CallbackBehaviorAttribute> en un objeto de devolución de llamada que usa el objeto <xref:System.Threading.SynchronizationContext> para determinar el subproceso para calcular las referencias, la propiedad <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> para exigir la validación del mensaje y la propiedad <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> para devolver las excepciones como objetos <xref:System.ServiceModel.FaultException> al servicio para los propósitos de depuración.  
+ La clase <xref:System.ServiceModel.CallbackBehaviorAttribute> se debe aplicar a la clase que implementa el contrato de devolución de llamada. Si se aplica a una implementación de contrato de no dúplex, se produce una excepción <xref:System.InvalidOperationException> en tiempo de ejecución. El ejemplo de código siguiente muestra una clase <xref:System.ServiceModel.CallbackBehaviorAttribute> en un objeto de devolución de llamada que usa el objeto <xref:System.Threading.SynchronizationContext> para determinar el subproceso para serializar las referencias, la propiedad <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> para exigir la validación del mensaje y la propiedad <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> para devolver las excepciones como objetos <xref:System.ServiceModel.FaultException> al servicio para los propósitos de depuración.  
   
  [!code-csharp[CallbackBehaviorAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/callbackbehaviorattribute/cs/client.cs#3)]
  [!code-vb[CallbackBehaviorAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/callbackbehaviorattribute/vb/client.vb#3)]  
@@ -44,4 +44,5 @@ Los clientes de Windows Communication Foundation (WCF), como los servicios Windo
  Puede utilizar el comportamiento <xref:System.ServiceModel.Description.ClientViaBehavior> para especificar el Identificador uniforme de recursos para el cual se debería crear el canal de transporte. Utilice este comportamiento cuando el destino de la red inmediato no es el procesador de impresión previsto del mensaje. Esto habilita conversaciones de varios saltos cuando la aplicación que realiza la llamada no conoce necesariamente el destino último o cuando el encabezado de destino `Via` no es una dirección.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Especificación del comportamiento en tiempo de ejecución del servicio](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

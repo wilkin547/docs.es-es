@@ -2,12 +2,12 @@
 title: Validador de contraseña de nombre de usuario
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: df2340393544b0eaac8f2c6d4eae55846a604e40
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: d15a3753bbea023cd992ed50549ef2c7b0dad74f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162755"
 ---
 # <a name="user-name-password-validator"></a>Validador de contraseña de nombre de usuario
 Este ejemplo muestra cómo implementar un validador UserNamePassword personalizado. Esto es útil en casos donde ninguno de los modos de validación UserNamePassword integrados es apropiado para los requisitos de la aplicación; por ejemplo, cuando los pares nombre de usuario/contraseña se almacenan en un almacén externo, como una base de datos. Este ejemplo muestra un servicio que tiene un validador personalizado que comprueba dos pares de nombre de usuario y contraseña determinados. El cliente usa un par de nombre de usuario y contraseña para autenticar en el servicio.
@@ -320,4 +320,3 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 #### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
 1.  Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo. Así se elimina el certificado del servidor del almacén de certificados.  
-  

@@ -5,17 +5,16 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
-ms.openlocfilehash: d5f53603ea22b2ae12a9846ba6bdce525790ce15
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3250cfd3fd651cb4ed3c4fd6975f5b5c89195f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166379"
 ---
 # <a name="menu-overview"></a>Información general sobre menús
 La <xref:System.Windows.Controls.Menu> clase le permite organizar los elementos asociados a comandos y controladores de eventos en un orden jerárquico. Cada <xref:System.Windows.Controls.Menu> elemento contiene una colección de <xref:System.Windows.Controls.MenuItem> elementos.  
-  
-  
+
 <a name="menu_control"></a>   
 ## <a name="menu-control"></a>Control Menu  
  El <xref:System.Windows.Controls.Menu> control presenta una lista de elementos que especifican comandos u opciones para una aplicación. Normalmente, al hacer clic en un <xref:System.Windows.Controls.MenuItem> abre un submenú o provoca que una aplicación para llevar a cabo un comando.  
@@ -60,4 +59,5 @@ La <xref:System.Windows.Controls.Menu> clase le permite organizar los elementos 
  [!code-xaml[MenuStylesSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
   
 ## <a name="see-also"></a>Vea también
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053) (Ejemplo de galería de controles de WPF)
+
+- [Ejemplo de la Galería de controles de WPF](https://go.microsoft.com/fwlink/?LinkID=160053)

@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Agregar controles ActiveX a formularios de Windows
+title: Filtrar para agregar controles ActiveX a formularios Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, ActiveX controls
 - forms [Windows Forms], adding ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-ms.openlocfilehash: 68e25cb2cd7e1f1c63954b20d24f028a49431553
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 780411949c543a2178de5e7c531bd2202703f27a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707994"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166055"
 ---
-# <a name="how-to-add-activex-controls-to-windows-forms"></a>Filtrar Agregar controles ActiveX a formularios de Windows
+# <a name="how-to-add-activex-controls-to-windows-forms"></a>Filtrar para agregar controles ActiveX a formularios Windows Forms
 Aunque el Diseñador de Windows Forms está optimizado para hospedar controles de Windows Forms, también puede colocar controles ActiveX en Windows Forms.  
   
 > [!CAUTION]
@@ -34,9 +34,10 @@ Aunque el Diseñador de Windows Forms está optimizado para hospedar controles d
     >  El importador de controles de ActiveX de Windows Forms (AxImp.exe) crea argumentos de evento de un tipo diferente del esperado en las importaciones de bibliotecas de vínculos dinámicos de ActiveX. Los argumentos creados por AxImp.exe son similares a lo siguiente: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, cuando `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` se espera. Tenga en cuenta que este irregularidad no evita que código funciona con normalidad. Para obtener más información, consulte [importador de controles ActiveX de Windows Forms (Aximp.exe)](../../tools/aximp-exe-windows-forms-activex-control-importer.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Controles de formularios Windows Forms](index.md)
+
+- [Controles de Windows Forms](index.md)
 - [Comparación de los controles y objetos programables de distintos lenguajes y bibliotecas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
-- [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Filtrar para agregar controles a formularios Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

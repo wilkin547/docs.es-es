@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: eaa08ae1d708f2498f459519683b4ffa05be9e49
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4960740af9637a1743dc86965d7831b76828e58a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355043"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130044"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding>
 Define un enlace que proporciona la compatibilidad de uso de colas enrutando los mensajes a través de MSMQ.  
@@ -130,6 +130,7 @@ msmqIntegrationBinding
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Dibujar un Control ToolStrip personalizada
+title: Filtrar para dibujar un control ToolStrip de manera personalizada
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: d9a58dbaeae3f0cd165d72b8fd281b903ad9cca2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 74092fdcd72c09670db53dc79d43d9d52f0dcf4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172193"
 ---
-# <a name="how-to-custom-draw-a-toolstrip-control"></a>Filtrar Dibujar un Control ToolStrip personalizada
+# <a name="how-to-custom-draw-a-toolstrip-control"></a>Filtrar para dibujar un control ToolStrip de manera personalizada
 Los controles <xref:System.Windows.Forms.ToolStrip> tienen las siguientes clases de representación (dibujo) asociadas:  
   
 -   <xref:System.Windows.Forms.ToolStripSystemRenderer> proporciona la apariencia y el estilo del sistema operativo.  
@@ -134,9 +134,10 @@ Los controles <xref:System.Windows.Forms.ToolStrip> tienen las siguientes clases
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [Controles compatibles con dibujos propietarios integrados](controls-with-built-in-owner-drawing-support.md)
-- [Cómo: Crear y establecer a un representador personalizado para el Control ToolStrip de Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [Filtrar para crear y establecer un representador personalizado para el control ToolStrip de formularios Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [Información sobre el control ToolStrip](toolstrip-control-overview-windows-forms.md)

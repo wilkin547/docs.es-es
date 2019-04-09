@@ -1,5 +1,5 @@
 ---
-title: Elemento <mscorlib> para la configuración de criptografía
+title: <mscorlib> Elemento de configuración de criptografía
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: 84eb12916c2d1ec2d35830fae2c6ce07f1c7c664
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ec328bc4c63bd4754c6f975ac03e610718304245
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259646"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165157"
 ---
 # <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > (elemento) para la configuración de criptografía
 Contiene el [ \<cryptographySettings > elemento](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).  
@@ -69,9 +69,10 @@ Contiene el [ \<cryptographySettings > elemento](../../../../../docs/framework/c
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Esquema de la configuración de criptografía](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [servicios criptográficos](../../../../../docs/standard/security/cryptographic-services.md)
 - [Configurar clases de criptografía](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

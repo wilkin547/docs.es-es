@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: 68211babbce2e9512689fa329dcf33be0afa4a0c
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58027135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162274"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>Leer o escribir la clase XAMLServices y XAML básico
-<xref:System.Xaml.XamlServices> es una clase que proporcionan los servicios XAML de .NET Framework con la que puede administrar escenarios de XAML que no requieren acceso específico al flujo de nodo XAML, o a la información del sistema de tipo XAML que se obtiene de dichos nodos. La API de<xref:System.Xaml.XamlServices> se puede resumir de la siguiente manera: `Load` o `Parse` to suppot a XAML load path, `Save` to suppot a XAML save path, and `Transform` para proporcionar una técnica que una las rutas de acceso de carga y guardado. `Transform` permite cambiar entre esquemas XAML distintos. Este tema resume las distintas clasificaciones de API y describe las diferencias existentes entre las sobrecargas de método específicas.  
+<xref:System.Xaml.XamlServices> es una clase proporcionada por los servicios XAML de .NET Framework que se puede usar para abordar escenarios XAML que no requieren acceso específico a la secuencia de nodo XAML o información de sistema de tipos XAML obtenida de esos nodos. <xref:System.Xaml.XamlServices> API se puede resumir del modo siguiente: `Load` o `Parse` para admitir una ruta de acceso de la carga XAML, `Save` para admitir un XAML guardar ruta de acceso, y `Transform` para proporcionar una técnica que combina una ruta de acceso de carga y guarda la ruta de acceso. `Transform` puede utilizarse para cambiar de un esquema XAML a otro. Este tema resume las distintas clasificaciones de API y describe las diferencias existentes entre las sobrecargas de método específicas.  
   
 <a name="load"></a>   
 ## <a name="load"></a>Load  
@@ -21,9 +21,9 @@ ms.locfileid: "58027135"
   
  La sobrecarga más simple en la mayoría de los escenarios es <xref:System.Xaml.XamlServices.Load%28System.String%29>. Esta sobrecarga tiene un parámetro `fileName` que consiste simplemente en el nombre de un archivo de texto que contiene el XAML que se debe cargar. Resulta adecuada para escenarios de aplicación como los correspondientes a aplicaciones de plena confianza, que han serializado con anterioridad el estado o los datos en el equipo local. También resulta útil en marcos donde se define el modelo de aplicación y se desea cargar uno de los archivos estándar que establecen el comportamiento de la aplicación, la interfaz de usuario de inicio u otras capacidades definidas por el marco en las que se usa XAML.  
   
- Los escenarios de<xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> son similares. Esta sobrecarga puede resultar útil cuando es el usuario quien elige los archivos que se deben cargar, porque <xref:System.IO.Stream> es una salida frecuente de otras API de <xref:System.IO> , que pueden acceder a un sistema de archivos. O bien, podría acceder a los orígenes XAML a través de descargas asincrónicas u otras técnicas de red que también proporcionan un flujo (la carga desde un flujo o un origen seleccionado por el usuario puede conllevar implicaciones de seguridad. Para obtener más información, vea [XAML Security Considerations](xaml-security-considerations.md)).  
+ <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> tiene escenarios similares. Esta sobrecarga puede resultar útil cuando es el usuario quien elige los archivos que se deben cargar, porque <xref:System.IO.Stream> es una salida frecuente de otras API de <xref:System.IO> , que pueden acceder a un sistema de archivos. O bien, podría acceder a los orígenes XAML a través de descargas asincrónicas u otras técnicas de red que también proporcionan un flujo (la carga desde un flujo o un origen seleccionado por el usuario puede conllevar implicaciones de seguridad. Para obtener más información, vea [XAML Security Considerations](xaml-security-considerations.md)).  
   
- Las sobrecargas<xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> y <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> se basan en lectores de formatos de versiones anteriores de .NET Framework. Para usar estas sobrecargas, debe haber creado una instancia de lector y cargado XAML en el formulario pertinente (de texto o XML) con la API de `Create` . No es relevante si previamente ha movido los punteros de registro en los otros lectores o ha realizado con ellos otras operaciones. La lógica de la ruta de acceso de carga de <xref:System.Xaml.XamlServices.Load%2A> siempre procesa la entrada XAML completa desde la raíz. Entre los posibles escenarios de estas sobrecargas se encuentran los siguientes:  
+ <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> y <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> son sobrecargas que se basan en los lectores de formatos de versiones anteriores de .NET Framework. Para usar estas sobrecargas, debe haber creado una instancia de lector y cargado XAML en el formulario pertinente (de texto o XML) con la API de `Create` . No es relevante si previamente ha movido los punteros de registro en los otros lectores o ha realizado con ellos otras operaciones. La lógica de la ruta de acceso de carga de <xref:System.Xaml.XamlServices.Load%2A> siempre procesa la entrada XAML completa desde la raíz. Entre los posibles escenarios de estas sobrecargas se encuentran los siguientes:  
   
 -   Superficies de diseño a las que se proporciona la capacidad de edición de XAML simple desde un editor de texto específico de XML existente.  
   
@@ -43,10 +43,10 @@ ms.locfileid: "58027135"
   
 <a name="parse"></a>   
 ## <a name="parse"></a>Parse  
- <xref:System.Xaml.XamlServices.Parse%2A> es como `Load` en el sentido de que también es una API de ruta de acceso de carga, que crea un flujo de nodo XAML desde la entrada XAML. Sin embargo, en este caso, la entrada XAML se proporciona directamente como una cadena que incluye todo el contenido XAML que se debe cargar. <xref:System.Xaml.XamlServices.Parse%2A> ofrece un enfoque más ligero y apropiado para los escenarios de aplicación que los escenarios de marco. Para obtener más información, consulta <xref:System.Xaml.XamlServices.Parse%2A>. <xref:System.Xaml.XamlServices.Parse%2A> es en realidad una llamada de <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> ajustada que, de forma interna, implica un valor <xref:System.IO.StringReader> .  
+ <xref:System.Xaml.XamlServices.Parse%2A> es similar a `Load` porque es una API que crea un flujo de nodo XAML de entrada XAML de ruta de acceso de carga. Sin embargo, en este caso, la entrada XAML se proporciona directamente como una cadena que incluye todo el contenido XAML que se debe cargar. <xref:System.Xaml.XamlServices.Parse%2A> es un enfoque más ligero que es más apropiado para escenarios de aplicación que los escenarios de framework. Para obtener más información, consulta <xref:System.Xaml.XamlServices.Parse%2A>. <xref:System.Xaml.XamlServices.Parse%2A> es simplemente un ajustada <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> llamada que implica un <xref:System.IO.StringReader> internamente.  
   
 <a name="save"></a>   
-## <a name="save"></a>Save  
+## <a name="save"></a>Guardar  
  Son varias las sobrecargas de <xref:System.Xaml.XamlServices.Save%2A> que implementan la ruta de acceso de guardado. Todos los métodos <xref:System.Xaml.XamlServices.Save%2A> toman un gráfico de objetos como entrada y generan el resultado como un flujo, un archivo o una instancia de <xref:System.Xml.XmlWriter>/<xref:System.IO.TextWriter> .  
   
  Se espera que el objeto de entrada sea el objeto raíz de alguna representación de objeto. Podría tratarse de la raíz única de un objeto de negocios, de la raíz de un árbol de objetos de una página en un escenario de interfaz de usuario, de la superficie de edición de trabajo de una herramienta de diseño, o de otros conceptos de objeto raíz adecuados para los distintos escenarios.  
@@ -57,11 +57,12 @@ ms.locfileid: "58027135"
   
 <a name="transform"></a>   
 ## <a name="transform"></a>Transformación  
- Para convertir o transformar XAML,<xref:System.Xaml.XamlServices.Transform%2A> vincula una ruta de acceso de carga y otra de guardado como una única operación. Puede usarse un contexto de esquema o un sistema de tipos de respaldo diferentes para <xref:System.Xaml.XamlReader> y <xref:System.Xaml.XamlWriter>, lo que afectará a cómo se transforma el XAML resultante. Esto funciona bien para las operaciones de transformaciones amplias.  
+ <xref:System.Xaml.XamlServices.Transform%2A> convertir o transformar XAML mediante la vinculación de una ruta de acceso de carga y una operación de guardar ruta de acceso como una sola operación. Puede usarse un contexto de esquema o un sistema de tipos de respaldo diferentes para <xref:System.Xaml.XamlReader> y <xref:System.Xaml.XamlWriter>, lo que afectará a cómo se transforma el XAML resultante. Esto funciona bien para las operaciones de transformaciones amplias.  
   
  Por lo general, <xref:System.Xaml.XamlServices.Transform%2A>no se usa en las operaciones en las que se examina cada uno de los nodos de un flujo de nodo XAML. En su lugar, deberá definir su propia serie de operaciones de ruta de acceso de carga y guardado, e interponer su propia lógica. En una de las rutas de acceso, use un par lector XAML-escritor XAML en torno a su propio bucle de nodo. Por ejemplo, cargue el XAML inicial con <xref:System.Xaml.XamlXmlReader> y recorra los nodos con llamadas de <xref:System.Xaml.XamlXmlReader.Read%2A> sucesivas. Desde el nivel de flujo de nodo XAML ya puede ajustar los nodos individuales (tipos, miembros, etc.) para aplicar una transformación, o dejar el nodo tal cual. A continuación, envíe el nodo hacia adelante hasta la API de `Write` correspondiente de un elemento <xref:System.Xaml.XamlObjectWriter> y escriba el objeto. Para obtener más información, consulta [Understanding XAML Node Stream Structures and Concepts](understanding-xaml-node-stream-structures-and-concepts.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Xaml.XamlObjectWriter>
 - <xref:System.Xaml.XamlServices>
 - [Servicios XAML](index.md)

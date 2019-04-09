@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: e0a81915d35bc382cb4f51ec6d26a429c8a759c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210677"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Especificación y administración de errores en contratos y servicios
 Aplicaciones de Windows Communication Foundation (WCF) controlar situaciones de error mediante la asignación de objetos de excepción administrada a los objetos de error SOAP y objetos de error de SOAP a los objetos de excepción administrada. Los temas de esta sección describen cómo diseñar contratos para exponer condiciones de error como errores de SOAP personalizados, cómo devolver tales errores como parte de la implementación del servicio y cómo los clientes detectan tales errores.  
@@ -56,6 +56,7 @@ Aplicaciones de Windows Communication Foundation (WCF) controlar situaciones de 
  Cuando se deserializa un contrato de error, primero WCF intenta hacer coincidir el nombre del contrato de error del mensaje SOAP con el tipo de contrato de error. Si no puede encontrar una coincidencia exacta, buscará en orden alfabético un tipo compatible en la lista de contratos de error disponibles. Si dos contratos de error tienen tipos compatibles (uno es una subclase del otro, por ejemplo), se puede usar el tipo incorrecto para deserializar el error. Esto solo ocurre si el contrato de error no especifica ningún nombre, espacio de nombres ni acción. Para evitar que se produzca este problema, califique siempre completamente los contratos de error especificando los atributos de nombre, espacio de nombres y acción. Además, si ha definido muchos contratos de error relacionados derivados de una clase base compartida, asegúrese de marcar todos los miembros nuevos con `[DataMember(IsRequired=true)]`. Para obtener más información sobre este atributo `IsRequired`, vea <xref:System.Runtime.Serialization.DataMemberAttribute>. De esta forma, se evitará que una clase base sea de un tipo compatible y forzará la deserialización del error en el tipo derivado correcto.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.FaultException>

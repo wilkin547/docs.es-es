@@ -2,12 +2,12 @@
 title: Riesgos de seguridad relativos al registro de mensajes
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732003"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170669"
 ---
 # <a name="security-concerns-for-message-logging"></a>Riesgos de seguridad relativos al registro de mensajes
 En este tema se describe cómo puede proteger los datos confidenciales para que no se expongan en registros de mensajes, así como los eventos generados por el registro de mensajes.  
@@ -110,5 +110,6 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
  Estos eventos se pueden ver en la herramienta Visor de eventos que viene con Windows. Para obtener más información, consulte [Event Logging](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Registro de mensajes](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [Riesgos de seguridad y sugerencias útiles para el seguimiento](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

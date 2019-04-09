@@ -1,19 +1,19 @@
 ---
-title: <idn> (Elemento, Configuración de Uri)
+title: <idn> Elemento (configuración de Uri)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 6abbc70e16a6c9ff8e4a7b52df7a7c3d74c7498a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 3940f30f2ef90a77560a82edc909071f0ee8e130
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288917"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129407"
 ---
 # <a name="idn-element-uri-settings"></a>\<IDN > elemento (configuración de Uri)
 Especifica si el análisis de nombres de dominio internacionalizados (IDN) se aplican a un nombre de dominio.  
   
 ## <a name="schema-hierarchy"></a>Jerarquía del esquema  
- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<Configuración > elemento](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<URI > elemento (configuración de Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -32,7 +32,7 @@ Especifica si el análisis de nombres de dominio internacionalizados (IDN) se ap
   
 ### <a name="attributes"></a>Atributos  
   
-|**Element**|**Descripción**|  
+|**Elemento**|**Descripción**|  
 |-----------------|---------------------|  
 |`enabled`|Especifica que si se aplican el análisis de nombres de dominio internacionalizados (IDN) para un nombre de dominio, el valor predeterminado es none.|  
   
@@ -41,7 +41,7 @@ Especifica si el análisis de nombres de dominio internacionalizados (IDN) se ap
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Element**|**Descripción**|  
+|**Elemento**|**Descripción**|  
 |-----------------|---------------------|  
 |[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Contiene valores que especifican cómo .NET Framework controla las direcciones web expresadas mediante identificadores uniformes de recursos (URI).|  
   
@@ -94,6 +94,7 @@ Especifica si el análisis de nombres de dominio internacionalizados (IDN) se ap
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
 - [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
