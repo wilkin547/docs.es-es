@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: db3fdaa768e3d1b445f08c3964521570631f0965
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 752d87c5f4a6b8d854a06be8962ee754cdd4622d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132013"
 ---
 # <a name="dacpmoduledata-structure"></a>Estructura DacpModuleData
 
@@ -49,7 +49,6 @@ struct DacpModuleData
 | `ilBase`  | Básico de la dirección de la imagen cargada.                                 |
 | `payLoad` | Un búfer de carga para obtener información de módulos adicionales utilizado por el tiempo de ejecución. |
 
-
 ## <a name="remarks"></a>Comentarios
 
 Esta estructura reside en el tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para ello, defina la estructura según lo especificado anteriormente.
@@ -61,5 +60,6 @@ Esta estructura reside en el tiempo de ejecución y no se expone a través de lo
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también
+
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Estructuras de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95762cbda4a1a251dd64fd33b2815d474f1fe2b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149739"
 ---
 # <a name="garbage-collection-etw-events"></a>Eventos ETW de recolección de elementos no utilizados
 <a name="top"></a> Estos eventos recopilan información sobre la recolección de elementos no utilizados. Ayudan en el diagnóstico y depuración, así como en la determinación de cuántas veces se realizó la recolección de elementos no utilizados, cuánta memoria se liberó durante la recolección de elementos no utilizados, etc.  
@@ -58,7 +58,7 @@ ms.locfileid: "54685222"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`GCStart_V1`|1|Se ha iniciado una recolección de elementos no utilizados.|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "54685222"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`GCEnd_V1`|2|La recolección de elementos no utilizados ha finalizado.|  
   
@@ -108,7 +108,7 @@ ms.locfileid: "54685222"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Descripción|  
+|evento|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`GCHeapStats_V1`|4|Muestra las estadísticas del montón al final de cada recolección de elementos no utilizados.|  
   
@@ -143,7 +143,7 @@ ms.locfileid: "54685222"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`GCCreateSegment_V1`|5|Se ha creado un nuevo segmento de recopilación de elementos no utilizados. Además, si se habilita el seguimiento en un proceso que ya se está ejecutando, se genera este evento para cada segmento existente.|  
   
@@ -170,7 +170,7 @@ ms.locfileid: "54685222"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`GCFreeSegment_V1`|6|Se ha liberado un segmento de recolección de elementos no utilizados.|  
   
@@ -193,7 +193,7 @@ ms.locfileid: "54685222"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`GCRestartEEBegin_V1`|7|Ha comenzado la reanudación de la suspensión de Common Language Runtime.|  
   
@@ -211,7 +211,7 @@ ms.locfileid: "54685222"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`GCRestartEEEnd_V1`|3|Ha finalizado la reanudación de la suspensión de Common Language Runtime.|  
   
@@ -229,7 +229,7 @@ ms.locfileid: "54685222"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`GCSuspendEE_V1`|9|Inicio de la suspensión del motor de ejecución de la recolección de elementos no utilizados.|  
   
@@ -253,7 +253,7 @@ ms.locfileid: "54685222"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`GCSuspendEEEnd_V1`|8|Final de la suspensión del motor de ejecución de la recolección de elementos no utilizados.|  
   
@@ -271,7 +271,7 @@ ms.locfileid: "54685222"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`GCAllocationTick_V2`|10|Cada vez se asignan aproximadamente 100 KB.|  
   
@@ -299,7 +299,7 @@ ms.locfileid: "54685222"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`GCFinalizersBegin_V1`|14|Inicio de los finalizadores en ejecución.|  
   
@@ -317,7 +317,7 @@ ms.locfileid: "54685222"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`GCFinalizersEnd_V1`|13|Final de los finalizadores en ejecución.|  
   
@@ -341,7 +341,7 @@ ms.locfileid: "54685222"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`GCCreateConcurrentThread_V1`|11|El subproceso de recolección de elementos no utilizados simultánea se creó.|  
   
@@ -360,11 +360,12 @@ ms.locfileid: "54685222"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Se genera cuando|  
+|evento|Id. de evento|Se genera cuando|  
 |-----------|--------------|-----------------|  
 |`GCTerminateConcurrentThread_V1`|12|El subproceso de recolección de elementos no utilizados simultánea finalizó.|  
   
  Sin datos del evento.  
   
 ## <a name="see-also"></a>Vea también
-- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md)

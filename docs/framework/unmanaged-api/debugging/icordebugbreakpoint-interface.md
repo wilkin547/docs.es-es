@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBreakpoint (Interfaz)
+title: Interfaz ICorDebugBreakpoint
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBreakpoint
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7e454c15ddfa977a6d06921a5d80a6c05dca92f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a68e061c6def61746ee65f8a25818f8dbcd785b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159736"
 ---
-# <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint (Interfaz)
+# <a name="icordebugbreakpoint-interface"></a>Interfaz ICorDebugBreakpoint
 
 Representa un punto de interrupción en una función o un punto de inspección en un valor.  
   
@@ -31,8 +31,8 @@ Representa un punto de interrupción en una función o un punto de inspección e
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Activate (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|Establece el estado activo de este `ICorDebugBreakpoint`.|  
-|[IsActive (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Obtiene un valor que indica si este `ICorDebugBreakpoint` está activo.|  
+|[Método Activate](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|Establece el estado activo de este `ICorDebugBreakpoint`.|  
+|[Método IsActive](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Obtiene un valor que indica si este `ICorDebugBreakpoint` está activo.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los puntos de interrupción no admiten directamente las expresiones condicionales. Si se desea esa funcionalidad, un depurador debe implementarla en la parte superior de `ICorDebugBreakpoint`.  
@@ -52,4 +52,5 @@ Representa un punto de interrupción en una función o un punto de inspección e
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

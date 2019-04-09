@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8425b294328d4fc7546a372b329d8fa834a088d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62c25b14fa7b3867bbdbcb2f1e08cc16ce349e72
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567027"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156083"
 ---
 # <a name="security-transparent-code-level-2"></a>Código transparente en seguridad, nivel 2
 <a name="top"></a>
@@ -50,7 +50,7 @@ ms.locfileid: "54567027"
   
 -   [Reglas de herencia](#inheritance)  
   
--   [Información adicional y reglas](#additional)  
+-   [Información y reglas adicionales](#additional)  
   
 <a name="examples"></a>   
 ## <a name="usage-examples-and-behaviors"></a>Ejemplos de uso y comportamientos  
@@ -81,7 +81,7 @@ ms.locfileid: "54567027"
   
  En la tabla siguiente compara el comportamiento de nivel de ensamblado de nivel 2 y nivel 1.  
   
-|Assembly (atributo)|Nivel 2|Nivel 1|  
+|Assembly (atributo)|Nivel 2|nivel 1|  
 |------------------------|-------------|-------------|  
 |Ningún atributo en un ensamblado de confianza parcial|Los tipos y los miembros son transparentes de forma predeterminada, pero pueden ser críticos para la seguridad o bien críticos para la seguridad y disponibles desde código transparente.|Todos los tipos y los miembros son transparentes.|  
 |Ningún atributo|Si no se especifica ningún atributo, Common Language Runtime determina las reglas de transparencia automáticamente. Todos los tipos y los miembros son críticos para la seguridad, excepto cuando el hecho de ser críticos para la seguridad infringe una regla de herencia.|En un ensamblado de plena confianza (en la caché global de ensamblados, o identificado como de plena confianza en `AppDomain`), todos los tipos son transparentes y todos los miembros son críticos para la seguridad y disponibles desde código transparente.|  
@@ -192,5 +192,6 @@ ms.locfileid: "54567027"
  La propiedad <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> es `false` de forma predeterminada, por lo que la propiedad debe establecerse en `true` para omitir la comprobación. Esto debe hacerse únicamente con fines de optimización. Debe asegurarse de que el código transparente en el ensamblado sea comprobable usando la `transparent` opción el [herramienta PEVerify](../../../docs/framework/tools/peverify-exe-peverify-tool.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Código transparente en seguridad, nivel 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
 - [Cambios de seguridad](../../../docs/framework/security/security-changes.md)

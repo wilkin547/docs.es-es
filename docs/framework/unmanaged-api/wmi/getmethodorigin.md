@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76f449e52168001a2aaac6cbc3707361cf7f809a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 193caa894b8697a65e8821c01a63dde9cc5b5ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153717"
 ---
-# <a name="getmethodorigin-function"></a>GetMethodOrigin (función)
+# <a name="getmethodorigin-function"></a>Función GetMethodOrigin
 Determina la clase en la que se declara un método.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -79,4 +79,5 @@ El `pstrClassName` parámetro no debe apuntar a una `BSTR` antes de llama a la f
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Desplazarse por datos en Windows Forms
+title: Filtrar para desplazarse por los datos en formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 920f6d6206a8f33a912d8a7d1b46a3047ed874bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fb5747ec3c6b640821e4875d86273467eeb922df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154601"
 ---
-# <a name="how-to-navigate-data-in-windows-forms"></a>Procedimiento Desplazarse por datos en Windows Forms
+# <a name="how-to-navigate-data-in-windows-forms"></a>Filtrar para desplazarse por los datos en formularios Windows Forms
 En una aplicación de Windows, la manera más fácil de navegar por los registros de un origen de datos es enlazar un <xref:System.Windows.Forms.BindingSource> componente para el origen de datos y, a continuación, enlazar controles a la <xref:System.Windows.Forms.BindingSource>. A continuación, puede usar el método de exploración integrada en el <xref:System.Windows.Forms.BindingSource> tales un <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> y <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Uso de estos métodos se ajustará el <xref:System.Windows.Forms.BindingSource.Position%2A> y <xref:System.Windows.Forms.BindingSource.Current%2A> propiedades de la <xref:System.Windows.Forms.BindingSource> adecuadamente. También puede encontrar un elemento y establecerlo como el elemento actual estableciendo el <xref:System.Windows.Forms.BindingSource.Position%2A> propiedad.  
   
 ### <a name="to-increment-the-position-in-a-data-source"></a>Para incrementar la posición de un origen de datos  
@@ -51,7 +51,8 @@ En una aplicación de Windows, la manera más fácil de navegar por los registro
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
 ## <a name="see-also"></a>Vea también
-- [Orígenes de datos compatibles con Windows Forms](data-sources-supported-by-windows-forms.md)
+
+- [Orígenes de datos compatibles con formularios Windows Forms](data-sources-supported-by-windows-forms.md)
 - [Notificación de cambios en el enlace de datos de Windows Forms](change-notification-in-windows-forms-data-binding.md)
-- [Enlace de datos y Windows Forms](data-binding-and-windows-forms.md)
+- [Enlace de datos y formularios Windows Forms](data-binding-and-windows-forms.md)
 - [Enlace de datos en Windows Forms](windows-forms-data-binding.md)

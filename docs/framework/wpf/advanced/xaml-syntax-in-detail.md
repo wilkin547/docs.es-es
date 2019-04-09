@@ -29,18 +29,16 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: ecea2575503ad8fe4ff8a190a417bae75a7b31f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 98ca530da28591fec23a5036b421d02b393e83b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367965"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149310"
 ---
 # <a name="xaml-syntax-in-detail"></a>Detalles de la sintaxis XAML
 Este tema definen los términos que se utilizan para describir los elementos de sintaxis XAML. Estos términos se usan con frecuencia en el resto de esta documentación, tanto para la documentación de WPF específicamente y otros marcos que utilizan XAML o los conceptos básicos de XAML habilitados por la compatibilidad del lenguaje XAML en el nivel de System.Xaml. En este tema se amplía la terminología básica presentada en el tema [información general sobre XAML (WPF)](xaml-overview-wpf.md).  
-  
 
-  
 <a name="the_xaml_language_specification"></a>   
 ## <a name="the-xaml-language-specification"></a>La especificación del lenguaje XAML  
  La terminología de sintaxis XAML definida aquí también se define o hace referencia en la especificación del lenguaje XAML. XAML es un lenguaje basado en XML y sigue o lo expande reglas estructurales de XML. La terminología se comparte o se basa en la terminología utilizada normalmente al describir el lenguaje XML o el modelo de objetos de documento XML.  
@@ -316,8 +314,9 @@ Este tema definen los términos que se utilizan para describir los elementos de 
  Pero al igual que *typeName*. *memberName* formato de los atributos, *nombreDeTipoBase*. *memberName* un estilo pobre en el marcado, y se debe evitar.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
-- [XAML Namespace (x:) Características del lenguaje](../../xaml-services/xaml-namespace-x-language-features.md)
+- [Espacio de nombres de XAML (x:) Características del lenguaje](../../xaml-services/xaml-namespace-x-language-features.md)
 - [Extensiones XAML de WPF](wpf-xaml-extensions.md)
 - [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)
 - [Clases TypeConverter y XAML](typeconverters-and-xaml.md)

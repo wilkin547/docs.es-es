@@ -2,12 +2,12 @@
 title: Consideraciones de seguridad para sesiones seguras
 ms.date: 03/30/2017
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
-ms.openlocfilehash: 85b0f95606e1ca3d52d8c79dbe0042c51ce3f36e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2244ba42b1cf95f77424d32a19ebe11dd3a2a45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148712"
 ---
 # <a name="security-considerations-for-secure-sessions"></a>Consideraciones de seguridad para sesiones seguras
 Debe tener en cuenta los siguientes elementos que afectan a la seguridad al implementar sesiones seguras. Para obtener más información acerca de las consideraciones de seguridad, consulte [consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) y [prácticas recomendadas de seguridad](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
@@ -21,6 +21,7 @@ Debe tener en cuenta los siguientes elementos que afectan a la seguridad al impl
  Esto significa que, si se desea derivar un token personalizado, se debería incluir el tipo de cláusula en un elemento `SecurityTokenReference`. Hay una opción para desactivar la derivación, pero el valor predeterminado es derivar las claves. Si no se incluye la clave, la serialización del token de clave derivado se realiza correctamente, pero, al intentar deserializarlo, se produce una excepción.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Deshabilitar las sesiones seguras en WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+
+- [Filtrar para deshabilitar sesiones seguras en WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
 - [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Procedimientos recomendados de seguridad](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)

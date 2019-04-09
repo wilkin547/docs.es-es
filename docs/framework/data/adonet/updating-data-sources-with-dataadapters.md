@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: 6989204fac64fc18cae547e272f6d52004c3af69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728835"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153600"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Actualizar orígenes de datos con objetos DataAdapter
 El método `Update` de <xref:System.Data.Common.DataAdapter> se llama para reflejar en el origen de datos todos los cambios efectuados en <xref:System.Data.DataSet>. El método `Update`, al igual que el método `Fill`, acepta como argumentos una instancia de `DataSet` y, de forma opcional, un objeto <xref:System.Data.DataTable> o un nombre de `DataTable`. La instancia de `DataSet` es el `DataSet` que contiene los cambios efectuados, y `DataTable` identifica la tabla desde la que se pueden recuperar esos cambios. Si no se especifica `DataTable`, se utiliza el primer `DataTable` de `DataSet`.  
@@ -46,7 +46,7 @@ El método `Update` de <xref:System.Data.Common.DataAdapter> se llama para refle
   
  Para controlar las excepciones que se pueden producir al llamar a la `Update` método, puede usar el `RowUpdated` eventos para responder a errores de actualización de fila cuando se producen (vea [controlar eventos de DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)), o bien puede establecer `DataAdapter.ContinueUpdateOnError` a `true` antes de llamar a `Update`y responder a la información de error almacenada en la `RowError` propiedad de una determinada fila una vez completada la actualización (consulte [información de Error de fila](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)).  
   
- **Tenga en cuenta** una llamada a `AcceptChanges` en el `DataSet`, `DataTable`, o `DataRow` hará que todos los `Original` valores para un `DataRow` se sobrescribirán con los `Current` valores para el `DataRow`. Si se han modificado los valores de campo que identifican de forma única a una fila, los valores `AcceptChanges` dejarán de coincidir con los valores del origen de datos después de llamar a `Original`. Se llama automáticamente a `AcceptChanges` para cada fila durante una llamada al método Update de `DataAdapter`. Puede conservar los valores originales durante una llamada al método Update estableciendo primero la propiedad `AcceptChangesDuringUpdate` de `DataAdapter` en false o creando un controlador de eventos para el evento `RowUpdated` y estableciendo <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> en <xref:System.Data.UpdateStatus.SkipCurrentRow>. Para obtener más información, consulte [combinar contenido de DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) y [controlar eventos de DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ **Tenga en cuenta** una llamada a `AcceptChanges` en el `DataSet`, `DataTable`, o `DataRow` hará que todos los `Original` valores para un `DataRow` se sobrescribirán con los `Current` valores para el `DataRow`. Si se han modificado los valores de campo que identifican de forma única a una fila, los valores `AcceptChanges` dejarán de coincidir con los valores del origen de datos después de llamar a `Original`. `AcceptChanges` se llama automáticamente para cada fila durante una llamada al método Update de un `DataAdapter`. Puede conservar los valores originales durante una llamada al método Update estableciendo primero la propiedad `AcceptChangesDuringUpdate` de `DataAdapter` en false o creando un controlador de eventos para el evento `RowUpdated` y estableciendo <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> en <xref:System.Data.UpdateStatus.SkipCurrentRow>. Para obtener más información, consulte [combinar contenido de DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) y [controlar eventos de DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="example"></a>Ejemplo  
  Los ejemplos siguientes muestran cómo realizar actualizaciones en las filas modificadas estableciendo de forma explícita el `UpdateCommand` de un `DataAdapter` y llamar a su `Update` método. Observe cómo el parámetro especificado en la cláusula WHERE de la instrucción UPDATE tiene el valor adecuado para usar el valor `Original` de `SourceColumn`. Este hecho es muy importante ya que el valor `Current` puede haber sido modificado de forma que ya no coincida con el valor del origen de datos. El valor `Original` es el que se usó para rellenar la tabla `DataTable` a partir del origen de datos.  
@@ -369,9 +369,10 @@ class Program {
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Estados y versiones de filas](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [AcceptChange y RejectChange](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
+- [Objetos AcceptChange y RejectChange](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
 - [Combinar contenido de DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
-- [Recuperación de valores autonuméricos y de identidad](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Recuperar valores autonuméricos y de identidad](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - properties [WPF], FocusVisualStyle
 - FocusVisualStyle property [WPF]
 ms.assetid: 363de99e-8ecc-438c-ac4a-f9147432ebd6
-ms.openlocfilehash: c4b379d3c57b6d0ae29952c23a35d7cc2cdf7f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 53d4984946143c15c4a2b71095529fb5ee7de4b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133554"
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Filtrar Aplicar un FocusVisualStyle a un control
 En este ejemplo se muestra cómo crear un estilo visual de foco en recursos y aplicar el estilo a un control, mediante el <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propiedad.  
@@ -27,6 +27,7 @@ En este ejemplo se muestra cómo crear un estilo visual de foco en recursos y ap
  Los estilos visuales deben usarse de forma coherente en un tema o una interfaz de usuario, el foco en lugar de usar otro diferente para cada elemento puede recibir el foco. Para obtener más información, consulte [aplicar estilo a controles y FocusVisualStyle foco](styling-for-focus-in-controls-and-focusvisualstyle.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
 - [Aplicar estilos y plantillas](../controls/styling-and-templating.md)
 - [Aplicar estilo a los controles al recibir el foco y FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)

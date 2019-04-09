@@ -2,12 +2,12 @@
 title: Limitación de la distribución de mensajes
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 3f660294bf9acea3ac5df7e0b4250885645a0835
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d09a2be4a59a08a4bddbb1e0f4d038cd2c5ff3e2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130226"
 ---
 # <a name="limiting-message-distribution"></a>Limitación de la distribución de mensajes
 El canal del mismo nivel es, por diseño, una malla de difusión. Su modelo de distribución básico implica la distribución de cada mensaje enviado por cualquier miembro de una malla a todos los demás miembros de esa malla. Esto es ideal en situaciones en las que cada mensaje generado por un miembro es relevante y útil para todos los demás miembros (por ejemplo, en un salón de chat). Sin embargo, muchas aplicaciones tienen una necesidad ocasional de limitar la distribución de mensajes. Por ejemplo, si un nuevo miembro se une a una malla y desea recuperar el último mensaje enviado a través de la malla, esta solicitud no necesita ser distribuida a cada miembro. La solicitud podría limitarse a los vecinos próximos o podrían filtrarse los mensajes generados localmente. Los mensajes también se pueden enviar a un nodo individual de la malla. En este tema se analiza el uso del número de saltos, de un filtro de propagación de mensajes, de un filtro local o de una conexión directa para controlar la forma en que los mensajes se reenvían a lo largo de la malla, y se proporcionan instrucciones de carácter general para elegir un enfoque.  
@@ -20,9 +20,9 @@ El canal del mismo nivel es, por diseño, una malla de difusión. Su modelo de d
 -   Para los fragmentos de código e información relacionada, consulte el [Peer Channel blog](https://go.microsoft.com/fwlink/?LinkID=114531).  
   
 ## <a name="message-propagation-filter"></a>Filtro de propagación de mensajes  
- `MessagePropagationFilter` se puede utilizar para el control personalizado de la distribución de mensajes, sobre todo cuando el contenido del mensaje u otros escenarios concretos determinan la propagación. El filtro toma decisiones de propagación para cada mensaje que atraviesa el nodo. Así sucede en el caso de los mensajes originados en otra parte de la malla que el nodo ha recibido, así como los mensajes creados por la aplicación. El filtro tiene acceso tanto al mensaje como a su origen, por lo que las decisiones sobre el reenvío o la entrega del mensaje se pueden basar en toda la información disponible.  
+ `MessagePropagationFilter` puede usarse para el control personalizado de distribución de mensajes, especialmente cuando el contenido del mensaje o en otros escenarios concretos determinan la propagación. El filtro toma decisiones de propagación para cada mensaje que atraviesa el nodo. Así sucede en el caso de los mensajes originados en otra parte de la malla que el nodo ha recibido, así como los mensajes creados por la aplicación. El filtro tiene acceso tanto al mensaje como a su origen, por lo que las decisiones sobre el reenvío o la entrega del mensaje se pueden basar en toda la información disponible.  
   
- <xref:System.ServiceModel.PeerMessagePropagationFilter> es una clase base abstracta con una función única, <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. El primer argumento de la llamada al método pasa una copia completa del mensaje. Cualquier cambio realizado en el mensaje no afecta al mensaje real. El último argumento de la llamada al método identifica el origen del mensaje (`PeerMessageOrigination.Local` o `PeerMessageOrigination.Remote`). Las implementaciones concretas de este método deben devolver una constante de la enumeración <xref:System.ServiceModel.PeerMessagePropagation> que indique si el mensaje se debe reenviar a la aplicación local (`Local`), a clientes remotos (`Remote`), a ambos (`LocalAndRemote`) o a ninguno (`None`). Para aplicar este filtro, puede tener acceso al objeto `PeerNode` correspondiente y especificar una instancia de la clase de filtro de propagación derivada en la propiedad `PeerNode.MessagePropagationFilter`. Asegúrese de que el filtro de propagación está adjunto antes de abrir el canal del mismo nivel.  
+ <xref:System.ServiceModel.PeerMessagePropagationFilter> es una clase base abstracta con una sola función, <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. El primer argumento de la llamada al método pasa una copia completa del mensaje. Cualquier cambio realizado en el mensaje no afecta al mensaje real. El último argumento de la llamada al método identifica el origen del mensaje (`PeerMessageOrigination.Local` o `PeerMessageOrigination.Remote`). Las implementaciones concretas de este método deben devolver una constante de la enumeración <xref:System.ServiceModel.PeerMessagePropagation> que indique si el mensaje se debe reenviar a la aplicación local (`Local`), a clientes remotos (`Remote`), a ambos (`LocalAndRemote`) o a ninguno (`None`). Para aplicar este filtro, puede tener acceso al objeto `PeerNode` correspondiente y especificar una instancia de la clase de filtro de propagación derivada en la propiedad `PeerNode.MessagePropagationFilter`. Asegúrese de que el filtro de propagación está adjunto antes de abrir el canal del mismo nivel.  
   
 -   Para los fragmentos de código e información relacionada, consulte el [Peer Channel blog](https://go.microsoft.com/fwlink/?LinkID=114532).  
   
@@ -44,7 +44,7 @@ El canal del mismo nivel es, por diseño, una malla de difusión. Su modelo de d
   
  Las respuestas a estas preguntas pueden ayudarle a determinar si debe utilizar el número de saltos, un filtro de propagación de mensajes, un filtro local o una conexión directa. Considere las siguientes pautas de carácter general:  
   
--   **Who**  
+-   **Quién**  
   
     -   *Nodo individual*:  Filtro local o conexión directa.  
   
@@ -52,17 +52,18 @@ El canal del mismo nivel es, por diseño, una malla de difusión. Su modelo de d
   
     -   *Subconjunto complejo de la malla*:  MessagePropagationFilter.  
   
--   **¿Con qué frecuencia**  
+-   **Frecuencia**  
   
     -   *Con mucha frecuencia*:  Conexión directa, PeerHopCount, MessagePropagationFilter.  
   
     -   *Ocasional*:  Filtro local.  
   
--   **Uso de ancho de banda**  
+-   **Uso del ancho de banda**  
   
     -   *Alta*:  Conexión directa, menos aconsejable el uso de MessagePropagationFilter o filtro local.  
   
     -   *Baja*:  Cualquier, conexión directa probablemente no sea necesario.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Creación de una aplicación de canal del mismo nivel](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

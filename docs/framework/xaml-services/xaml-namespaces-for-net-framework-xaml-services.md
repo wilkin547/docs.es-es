@@ -2,12 +2,12 @@
 title: Espacios de nombres XAML para los servicios XAML de .NET Framework
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: e9d644f4f62d70a1feec0030a680067412baa5e6
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: dc2c424306b9ebd705f2541266e4b1e3afe94547
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58030526"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153561"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Espacios de nombres XAML para los servicios XAML de .NET Framework
 Un espacio de nombres XAML es un concepto que se expande en la definición de un espacio de nombres XML. Al igual que el espacio de nombres XML, puede definir un espacio de nombres XAML mediante una `xmlns` atributo en el marcado. Los espacios de nombres XAML también se representan en el flujo de nodo XAML y otras API de servicios de XAML. En este tema define el concepto de espacio de nombres XAML y se describe cómo los espacios de nombres XAML se pueden definir y utilizan los contextos de esquema XAML y otros aspectos de servicios XAML de .NET Framework.  
@@ -64,4 +64,5 @@ Un espacio de nombres XAML es un concepto que se expande en la definición de un
  Otra dos API que son relevantes para el espacio de nombres XAML de control en los servicios XAML de .NET Framework son los atributos <xref:System.Windows.Markup.XmlnsDefinitionAttribute> y <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Estos atributos se aplican a los ensamblados. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> está usando un contexto de esquema XAML para interpretar las declaraciones de espacio de nombres XAML que incluye un URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute> usa las herramientas que emiten XAML para que se puede serializar un espacio de nombres XAML determinado con un prefijo de predicción. Para obtener más información, consulte [Related atributos de CLR para tipos personalizados y bibliotecas](xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Introducción a las estructuras y conceptos de secuencias de nodo XAML](understanding-xaml-node-stream-structures-and-concepts.md)

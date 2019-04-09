@@ -2,20 +2,20 @@
 title: Propagación
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 680f732fa4e75eb1eaa82a861f0a0021dc9c974c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154042"
 ---
 # <a name="propagation"></a>Propagación
 Este tema describe la propagación de actividad en el modelo de seguimiento de Windows Communication Foundation (WCF).  
   
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>Utilización de la propagación para poner en correlación actividades entre los puntos de conexión  
- La propagación proporciona al usuario la correlación directa de las trazas de error de la misma unidad de procesamiento, entre los extremos de la aplicación, p. ej., una solicitud. Los errores emitidos en diferentes extremos de la misma unidad de procesamiento se agrupan en la misma actividad, incluso en todos los dominios de aplicación. Esto se realiza a través de la propagación del id. de actividad en los encabezados del mensaje. Por lo tanto, si a un cliente se le agota el tiempo de espera debido a un error interno del servidor, ambos errores aparecen en la misma actividad para una correlación directa.  
+ La propagación proporciona al usuario la correlación directa de las trazas de error de la misma unidad de procesamiento, entre los puntos de conexión de la aplicación, p. ej., una solicitud. Los errores emitidos en diferentes puntos de conexión de la misma unidad de procesamiento se agrupan en la misma actividad, incluso en todos los dominios de aplicación. Esto se realiza a través de la propagación del id. de actividad en los encabezados del mensaje. Por lo tanto, si a un cliente se le agota el tiempo de espera debido a un error interno del servidor, ambos errores aparecen en la misma actividad para una correlación directa.  
   
- Para ello, utilice el valor `ActivityTracing` como se mostró en el ejemplo anterior. Además, establezca el atributo `propagateActivity` para el origen de seguimiento de traza `System.ServiceModel` en todos los puntos de conexión.  
+ Para ello, utilice el valor `ActivityTracing` como se mostró en el ejemplo anterior. Además, establezca el atributo `propagateActivity` para el origen de seguimiento de traza `System.ServiceModel` en todos los extremos.  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
@@ -71,13 +71,14 @@ Este tema describe la propagación de actividad en el modelo de seguimiento de W
 ```  
   
 ## <a name="propagation-and-activity-boundaries"></a>Límites de la propagación y la actividad  
- Cuando el identificador de actividad se propaga por los extremos, el receptor del mensaje emite trazas de inicio y detención con ese identificador de actividad (propagado). Por lo tanto, existe una traza de inicio y una de detención con el gAId de cada origen de seguimiento de traza. Si los extremos están en el mismo proceso y utilizan el mismo nombre de origen de seguimiento, se crean varios inicios y detenciones con el mismo gAId (mismo gAId, mismo origen de seguimiento, mismo proceso).  
+ Cuando el identificador de actividad se propaga por los puntos de conexión, el receptor del mensaje emite trazas de inicio y detención con ese identificador de actividad (propagado). Por lo tanto, existe una traza de inicio y una de detención con el gAId de cada origen de seguimiento de traza. Si los puntos de conexión están en el mismo proceso y utilizan el mismo nombre de origen de seguimiento, se crean varios inicios y detenciones con el mismo gAId (mismo gAId, mismo origen de seguimiento, mismo proceso).  
   
 ## <a name="synchronization"></a>Sincronización  
- Para sincronizar los eventos a través de los extremos que se ejecutan en distintos equipos, CorrelationId se agrega al encabezado de ActivityId que se propaga en los mensajes. Las herramientas pueden utilizar este id. para sincronizar eventos entre equipos con discrepancia de reloj. En concreto, la herramienta Service Trace Viewer utiliza este identificador para mostrar los flujos de mensaje entre los puntos de conexión.  
+ Para sincronizar los eventos a través de los puntos de conexión que se ejecutan en distintos equipos, CorrelationId se agrega al encabezado de ActivityId que se propaga en los mensajes. Las herramientas pueden utilizar este id. para sincronizar eventos entre equipos con discrepancia de reloj. En concreto, la herramienta Service Trace Viewer utiliza este identificador para mostrar los flujos de mensaje entre los puntos de conexión.  
   
 ## <a name="see-also"></a>Vea también
-- [Configuración de la traza](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+
+- [Configurar seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Escenarios de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Escenarios de seguimiento de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

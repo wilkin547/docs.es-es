@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: d02705422b088800d9f2e081d6a28924d9b84078
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 57802cad0a75ed21bba02a11fec39f821835c5ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157814"
 ---
 # <a name="events-overview-windows-forms"></a>Información general sobre eventos (Formularios Windows Forms)
 Un evento es una acción a la que puede responder o que puede "controlar" en el código. Los eventos se pueden generar por una acción del usuario, como hacer clic con el mouse o presionar una tecla, por código de programa o por el sistema.  
@@ -44,5 +44,6 @@ Un evento es una acción a la que puede responder o que puede "controlar" en el 
  El mecanismo de enlace que se usa con los delegados es dinámico: un delegado se puede enlazar en tiempo de ejecución a cualquier método cuya firma coincida con la del controlador de eventos. Con esta característica, puede configurar o cambiar el método de enlace según una condición, y asociar dinámicamente un controlador de evento a un control.  
   
 ## <a name="see-also"></a>Vea también
-- [Crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md)
+
+- [Crear controladores de eventos en formularios Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Información general sobre controladores de eventos](event-handlers-overview-windows-forms.md)

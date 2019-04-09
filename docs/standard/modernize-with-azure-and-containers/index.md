@@ -4,12 +4,12 @@ description: Aprenda a elevación y desplazamiento y modernizar aplicaciones exi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 68d5ce7ad71fae5ed3e1460c56581dd69c3925f3
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
-ms.translationtype: MT
+ms.openlocfilehash: ed291309d04e3e5bfed6c73cdf8a67b79431a363
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156395"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizar aplicaciones .NET existentes con la nube de Azure y contenedores de Windows (2nd edition)
 
@@ -91,9 +91,9 @@ El tercer nivel de madurez es el objetivo final de la nube, pero es opcional par
 
 En la tabla 1-1 se describen las principales ventajas y motivos para elegir cada enfoque de migración o modernización.
 
-| **Infraestructura preparada para la nube** <br /> *Elevación y desplazamiento* | **Optimizada para la nube** <br /> *Modernizar* | **Cloud-Native** <br /> *Modernizar, rediseñar y volver a escribir* |
+| **En la nube de infraestructura listos** <br /> *Migración mediante lift- and -shift* | **Optimizada para la nube** <br /> *Modernizar* | **En la nube nativas** <br /> *Modernizar, rediseñar y volver a escribir* |
 |---|---|---|
-| **Destino de cálculo de la aplicación** |
+| **Destino de proceso de la aplicación** |
 | Aplicaciones implementadas en las máquinas virtuales de Azure | Monolítica o las aplicaciones de N niveles implementado en Azure App Service, instancia de contenedor de Azure (ACI), las máquinas virtuales con contenedores, Azure Service Fabric o AKS (Azure Kubernetes Service) | Microservicios en contenedores en Azure Kubernetes Service (AKS), Service Fabric o microservicios sin servidor basadas en funciones de Azure. |
 | **Destino de datos** |
 | SQL o cualquier base de datos relacional en una máquina virtual | Instancia administrada de Azure SQL Database o en otra base de datos administrado en la nube. | Bases de datos de grano multas por microservicio, en función de otra base de datos administrado en la nube, Azure Cosmos DB o Azure SQL Database |
@@ -154,7 +154,6 @@ A continuación, como el escenario ideal para muchas aplicaciones existentes de 
 > **Figura 1-6.** Ejemplo de escenario de aplicaciones optimizadas para la nube, con contenedores de Windows y los servicios administrados
 
 Va aún más, puede ampliar la aplicación optimizada para la nube existente mediante la adición de algunos microservicios para escenarios específicos. Esto, pasaría parcialmente al nivel de modelo de nativas de la nube, que no es el enfoque principal de esta guía.
-
 
 ## <a name="what-this-guide-does-not-cover"></a>Aspectos no tratados en esta guía
 

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Pintar un área con un vídeo
+title: Filtrar Pintar un área con un vídeo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - video [WPF], painting with
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
-ms.openlocfilehash: 0756a9e87840648b55ecad4b3f1ce6e0e5452eb7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151182"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Filtrar Pintar un área con un vídeo
 En este ejemplo se muestra cómo pintar un área con medios. Una manera de pintar un área con medios es usar un <xref:System.Windows.Controls.MediaElement> junto con un <xref:System.Windows.Media.VisualBrush>. Utilice la <xref:System.Windows.Controls.MediaElement> para cargar y reproducir el archivo multimedia y, a continuación, usarla para establecer el <xref:System.Windows.Media.VisualBrush.Visual%2A> propiedad de la <xref:System.Windows.Media.VisualBrush>. A continuación, puede usar el <xref:System.Windows.Media.VisualBrush> para pintar un área con el elemento multimedia cargado.  
@@ -38,6 +38,7 @@ En este ejemplo se muestra cómo pintar un área con medios. Una manera de pinta
  Para obtener información acerca de cómo agregar un archivo de contenido, como un archivo multimedia, a la aplicación, consulte [WPF Application Resource, contenido y los archivos de datos](../app-development/wpf-application-resource-content-and-data-files.md). Cuando se agrega un archivo multimedia, debe agregarlo como un archivo de contenido, no como un archivo de recursos.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.VisualBrush>
 - [Pintar con imágenes, dibujos y elementos visuales](painting-with-images-drawings-and-visuals.md)
 - [Información general sobre objetos TileBrush](tilebrush-overview.md)

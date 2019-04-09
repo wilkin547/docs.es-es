@@ -10,21 +10,19 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: e66841fe72281bf0562b2ce50925a5c3a6bb9b54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123804"
 ---
 # <a name="packaging-fonts-with-applications"></a>Empaquetar fuentes con aplicaciones
 Este tema proporciona información general sobre cómo empaquetar fuentes con su [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicación.  
   
 > [!NOTE]
 >  Como con la mayoría de los tipos de software, los archivos de fuentes se otorgan bajo licencia, no se venden. Licencias que rigen el uso de las fuentes varían según el proveedor, pero en general mayoría de las licencias, incluidos aquellos que abarcan las fuentes [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] con aplicaciones y [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], no se permiten las fuentes incrustadas dentro de las aplicaciones o en caso contrario redistribuir. Así pues, como programador, su responsabilidad es asegurarse de disponer de los derechos de licencia necesarios para cualquier fuente que incruste en una aplicación o redistribuya de cualquier otro modo.  
-  
 
-  
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Introducción al empaquetado de fuentes  
  Puede empaquetar fuentes fácilmente como recursos dentro de su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenido basado en aplicaciones para mostrar texto de la interfaz de usuario y otros tipos de texto. Las fuentes pueden ser independientes de los archivos de ensamblado de la aplicación o incrustadas en dichos archivos. También puede crear una biblioteca de fuentes solo de recursos, a la que puede hacer referencia la aplicación.  
@@ -173,9 +171,10 @@ Este tema proporciona información general sobre cómo empaquetar fuentes con su
 -   En casos donde hay una referencia incorrecta, la aplicación vuelve a usar una fuente disponible.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
-- [Tipografía de Microsoft: Vínculos, noticias y contactos](https://docs.microsoft.com/typography/)
+- [Microsoft Typography: Vínculos, noticias y contactos](https://docs.microsoft.com/typography/)
 - [Especificación OpenType](https://www.microsoft.com/typography/otspec/)
 - [Características de las fuentes OpenType](opentype-font-features.md)
 - [Paquete de fuentes OpenType de ejemplo](sample-opentype-font-pack.md)

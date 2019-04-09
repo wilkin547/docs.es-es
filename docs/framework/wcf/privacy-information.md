@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: f909b987da31a0a4af605d603d1c7b7a35615f19
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151507"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Información de privacidad de Windows Communication Foundation
 Microsoft se compromete a proteger la privacidad de usuarios finales. Al compilar una aplicación mediante Windows Communication Foundation (WCF), versión 3.0, la aplicación puede afectar la privacidad de sus usuarios finales. Por ejemplo, su aplicación puede recoger explícitamente información de contacto del usuario o puede solicitar o enviar información a través de Internet a su sitio web. Si incrusta la tecnología de Microsoft en su aplicación, esa tecnología puede tener su propio comportamiento que podría afectar a la privacidad. WCF no envía ninguna información a Microsoft desde su aplicación a menos que usted o el usuario final elija enviarla.  
@@ -24,7 +24,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
 ## <a name="messaging"></a>Mensajería  
  Cada mensaje WCF tiene un encabezado de dirección que especifica el destino del mensaje y donde debería ir la respuesta.  
   
- El componente de dirección de una dirección de extremo es un Identificador uniforme de recursos (URI) que identifica el extremo. La dirección puede ser una dirección de red o una dirección lógica. La dirección puede incluir nombre del equipo (nombre del host, nombre de dominio completo) y una dirección IP. La dirección del extremo también puede contener un identificador único global (GUID) o una colección de GUID para el direccionamiento temporal utilizado para discernir cada dirección. Cada mensaje contiene un id. de mensaje que es un GUID. Esta característica sigue la regla de referencia WS-Addressing.  
+ El componente de dirección de una dirección de extremo es un Identificador uniforme de recursos (URI) que identifica el extremo. La dirección puede ser una dirección de red o una dirección lógica. La dirección puede incluir nombre del equipo (nombre del host, nombre de dominio completo) y una dirección IP. La dirección del punto de conexión también puede contener un identificador único global (GUID) o una colección de GUID para el direccionamiento temporal utilizado para discernir cada dirección. Cada mensaje contiene un id. de mensaje que es un GUID. Esta característica sigue la regla de referencia WS-Addressing.  
   
  La capa de mensajería de WCF no escribe información personal en el equipo local. Sin embargo, podría propagar información personal en el nivel de la red si un programador del servicio ha creado un servicio que expone dicha información (por ejemplo, utilizando el nombre de una persona en un nombre de extremo o incluso información personal en el Lenguaje de descripción de servicios Web (WSDL) del extremo pero no requiero que los clientes utilicen http para tener acceso al WSDL). Además, si un programador ejecuta la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) herramienta contra un extremo que expone información personal, la salida podría contener esa información y el archivo de salida se escribe en el disco duro local.  
   
@@ -48,7 +48,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
 |----------|-------------|  
 |Las credenciales de presentación, como el nombre de usuario, certificados X.509, tokens de Kerberos, y referencias a las credenciales.|Mecanismos de administración de credencial de Windows estándar como el almacén de certificados de Windows.|  
 |Información de pertenencia del usuario, como nombres de usuario y contraseñas.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] proveedores de pertenencia.|  
-|Información de identidad sobre el servicio utilizado para autenticar el servicio a los clientes.|La dirección del extremo del servicio.|  
+|Información de identidad sobre el servicio utilizado para autenticar el servicio a los clientes.|La dirección del punto de conexión del servicio.|  
 |Información del agente de llamada.|Registros de auditoría.|  
   
 ## <a name="auditing"></a>Auditoría  
@@ -61,7 +61,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
   
  Los encabezados de las transacciones utilizados en la propagación de la transacción pueden contener los id. de transacción o id. de inscripción, que son GUID.  
   
- La característica de las transacciones utiliza el Administrador de transacciones (un componente de Windows) de Microsoft DTC (Coordinador de transacciones distribuidas) para administrar el estado de la transacción. De forma predeterminada, se cifran las comunicaciones entre Administradores de las Transacciones. Los administradores de transacciones pueden registrar referencias de extremo, id. de transacción e id. de inscripción como parte de su estado duradero. La duración del archivo de registro del Administrador de la Transacción determina la duración de este estado. El servicio de MSDTC posee y mantiene este registro.  
+ La característica de las transacciones utiliza el Administrador de transacciones (un componente de Windows) de Microsoft DTC (Coordinador de transacciones distribuidas) para administrar el estado de la transacción. De forma predeterminada, se cifran las comunicaciones entre Administradores de las Transacciones. Los administradores de transacciones pueden registrar referencias de punto de conexión, id. de transacción e id. de inscripción como parte de su estado duradero. La duración del archivo de registro del Administrador de la Transacción determina la duración de este estado. El servicio de MSDTC posee y mantiene este registro.  
   
  La característica Transacciones implementa los estándares WS-Coordination y WS-Atomic Transaction.  
   
@@ -374,7 +374,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
 ### <a name="other-features-for-it-professionals"></a>Otras características para profesionales de TI  
  WCF tiene un proveedor WMI que expone la información de configuración de la infraestructura WCF a través de WMI (incluido con Windows). De forma predeterminada, la interfaz WMI está disponible para los administradores.  
   
- Configuración de WCF utiliza el mecanismo de configuración de .NET Framework. Los archivos de configuración están almacenados en el equipo. El desarrollador de aplicaciones y el administrador crean los archivos de configuración y ACL para cada uno de los requisitos de la aplicación. Un archivo de configuración puede contener las direcciones del extremo y vínculos a los certificados en el almacén de certificados. Los certificados se pueden usar para proporcionar los datos de la aplicación con el fin de configurar varias propiedades de las características utilizadas por la aplicación.  
+ Configuración de WCF utiliza el mecanismo de configuración de .NET Framework. Los archivos de configuración están almacenados en el equipo. El desarrollador de aplicaciones y el administrador crean los archivos de configuración y ACL para cada uno de los requisitos de la aplicación. Un archivo de configuración puede contener las direcciones del punto de conexión y vínculos a los certificados en el almacén de certificados. Los certificados se pueden usar para proporcionar los datos de la aplicación con el fin de configurar varias propiedades de las características utilizadas por la aplicación.  
   
  WCF también usa la funcionalidad de volcado de memoria del proceso de .NET Framework mediante una llamada a la <xref:System.Environment.FailFast%2A> método.  
   
@@ -402,5 +402,6 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
  El Lenguaje de descripción de servicios Web (WSDL) contiene una definición del puerto. Cada puerto tiene una dirección del extremo y un enlace que representa los servicios utilizados por la aplicación. Exponer WSDL se puede desactivar utilizando la configuración. No se retiene información en el equipo.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Windows Communication Foundation](index.md)
 - [Seguridad](../../../docs/framework/wcf/feature-details/security.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 1f9881cd1a63e00aaf414f93c91885e57ea0b145
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155095"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Administración de notificaciones y autorización con el modelo de identidad
 La autorización es el proceso de determinar qué entidades tienen permiso para cambiar, ver o tener acceso a un recurso informático. Por ejemplo, en una empresa, solo se puede permitir a los administradores el acceso a los archivos de sus empleados. Windows Communication Foundation (WCF) admite dos mecanismos para realizar el procesamiento de autorización. El primer mecanismo le permite controlar la autorización utilizando construcciones de Common Language Runtime (CLR). El segundo es un modelo basado en notificaciones conocido como el *modelo de identidad*. WCF usa el modelo de identidad para crear notificaciones de los mensajes entrantes. Las clases de modelo de identidad pueden ampliarse para admitir nuevos tipos de notificación para esquemas de autorización personalizada. En este tema se presenta información general de los conceptos de programación principales de la característica Modelo de identidad, así como una lista de las clases más importantes que la característica utiliza.  
@@ -160,6 +160,7 @@ La autorización es el proceso de determinar qué entidades tienen permiso para 
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|La colección de directivas de autorización personalizadas especificada para el servicio. Se evalúan estas directivas además de esas directivas asociadas con las credenciales en mensajes entrantes.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Policy.EvaluationContext>
@@ -173,9 +174,9 @@ La autorización es el proceso de determinar qué entidades tienen permiso para 
 - [Notificaciones y tokens](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
 - [Notificaciones y denegación de acceso a los recursos](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
 - [Creación de notificaciones y valores de recursos](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
-- [Cómo: Crear una demanda personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
-- [Cómo: Comparar las notificaciones](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Cómo: Crear una directiva de autorización personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
-- [Cómo: Crear un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Filtrar para crear una notificación personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Filtrar para comparar notificaciones](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Filtrar para crear una directiva de autorización personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [Filtrar para crear un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Autorización](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

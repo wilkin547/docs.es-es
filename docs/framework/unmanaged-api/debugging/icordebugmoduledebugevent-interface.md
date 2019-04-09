@@ -1,24 +1,24 @@
 ---
-title: ICorDebugModuleDebugEvent (Interfaz)
+title: Interfaz ICorDebugModuleDebugEvent
 ms.date: 03/30/2017
 ms.assetid: 41950c52-1ac8-4212-b814-c77e20879f91
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 399f27db0a2d18e3bcd90b87f4470a77cb50595d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bf1fa21872c710ebc69c45e9980aeaa577a45fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160919"
 ---
-# <a name="icordebugmoduledebugevent-interface"></a>ICorDebugModuleDebugEvent (Interfaz)
+# <a name="icordebugmoduledebugevent-interface"></a>Interfaz ICorDebugModuleDebugEvent
 Extiende la [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) interfaz para admitir los eventos de nivel de módulo.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetModule (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-getmodule-method.md)|Obtiene el módulo combinado que se acaba de cargar o descargar.|  
+|[Método GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-getmodule-method.md)|Obtiene el módulo combinado que se acaba de cargar o descargar.|  
   
 ## <a name="remarks"></a>Comentarios  
  El [MODULE_LOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) y [MODULE_UNLOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) tipos de eventos implementan esta interfaz.  
@@ -36,5 +36,6 @@ Extiende la [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debug
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Depuración](../../../../docs/framework/unmanaged-api/debugging/index.md)
