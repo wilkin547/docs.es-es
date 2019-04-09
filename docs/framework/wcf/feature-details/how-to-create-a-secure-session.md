@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear una sesión segura
+title: Filtrar para crear una sesión segura
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-ms.openlocfilehash: d484bb6d11e7e81ebd14586450f16d8a18bcaa54
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 4464100012fe9b3e1f0e8743707b1dc9a477c3d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205893"
 ---
-# <a name="how-to-create-a-secure-session"></a>Filtrar Crear una sesión segura
+# <a name="how-to-create-a-secure-session"></a>Filtrar para crear una sesión segura
 Con la excepción de la [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) enlace, los enlaces proporcionados por el sistema en Windows Communication Foundation (WCF) utilizan automáticamente sesiones seguras cuando está habilitada la seguridad del mensaje.  
   
  De forma predeterminada, las sesiones seguras no permanecen en ningún servidor reciclado. Cuando se establece una sesión segura, el cliente y el servicio almacenan en memoria caché la clave asociada a la sesión segura. Cuando se intercambian los mensajes, se intercambia solo un identificador de la clave almacenada en memoria caché. Si se recicla el servidor web, también se recicla la memoria en caché, de manera que el servidor web no puede recuperar la clave almacenada en memoria caché para el identificador. Si ocurre esto, se produce una excepción que se devuelve al cliente. Las sesiones seguras que usan un token de contexto de seguridad (SCT) con estado pueden sobrevivir en un servidor web que se recicle. Para obtener más información acerca de cómo utilizar un SCT con estado en una sesión segura, consulte [Cómo: Crear un contexto de seguridad para una sesión segura Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
@@ -84,4 +84,5 @@ Con la excepción de la [ \<basicHttpBinding >](../../../../docs/framework/confi
      [!code-vb[c_CreateSecureSession#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#2)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre enlaces WCF](../../../../docs/framework/wcf/bindings-overview.md)

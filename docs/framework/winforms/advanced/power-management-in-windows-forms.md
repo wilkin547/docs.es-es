@@ -8,12 +8,12 @@ helpviewer_keywords:
 - battery states
 - power states
 ms.assetid: ad04a801-5682-4d88-92c5-26eb9cdb209a
-ms.openlocfilehash: 77d2096239ec70f98ebfc299f1eda75ad4490be9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6bb9b4f30a88ece93b17ff2510087b220d538738
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712427"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154679"
 ---
 # <a name="power-management-in-windows-forms"></a>Administración de energía en formularios Windows Forms
 Las aplicaciones de Windows Forms pueden aprovechar las ventajas de las características de administración de energía en el sistema operativo de Windows. Las aplicaciones pueden supervisar el estado de alimentación de un equipo y actuar cuando se produce un cambio de estado. Por ejemplo, si la aplicación se ejecuta en un equipo portátil, es posible que desee deshabilitar determinadas características de la aplicación cuando la carga de batería del equipo cae por debajo de un nivel determinado.  
@@ -33,6 +33,7 @@ Las aplicaciones de Windows Forms pueden aprovechar las ventajas de las caracter
  [!code-vb[PowerMode#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#2)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:Microsoft.Win32.SystemEvents.PowerModeChanged>
 - <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>
 - <xref:System.Windows.Forms.Application.SetSuspendState%2A>

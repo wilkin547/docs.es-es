@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Organizar controles en formularios de Windows Forms mediante líneas de ajuste'
+title: 'Tutorial: Organizar controles en formularios Windows Forms mediante guías de alineación'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4d352ee5c431ba43bbe338a9caf7bd0716e91834
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139794"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Tutorial: Organizar controles en formularios de Windows Forms mediante líneas de ajuste
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Tutorial: Organizar controles en formularios Windows Forms mediante guías de alineación
 La posición precisa de los controles del formulario es de alta prioridad para muchas aplicaciones. El Diseñador de Windows Forms ofrece muchas herramientas de diseño para realizar esta acción. Una de las más importantes es la <xref:System.Windows.Forms.Design.Behavior.SnapLine> característica.  
   
  Las guías de alineación muestran exactamente dónde alinear los controles con otros controles. También muestra las distancias recomendadas para los márgenes entre los controles, como se especifica mediante las directrices de interfaz de usuario de Windows. Para obtener más información, consulte [desarrollo y diseño de la interfaz de usuario](https://go.microsoft.com/FWLink/?LinkId=83878).  
@@ -240,8 +240,9 @@ La posición precisa de los controles del formulario es de alta prioridad para m
  Para obtener información sobre el diseño de interfaz de usuario de Windows, consulte el libro *Microsoft Windows User Experience, Official Guidelines para diseñadores y desarrolladores de interfaz de usuario* Redmond, Washington: Microsoft Press, 1999. (USBN: 0-7356-0566-1).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [Tutorial: Organizar controles en formularios de Windows Forms mediante FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Tutorial: Organizar controles en formularios de Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Tutorial: Diseñar Windows controles Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)
+- [Tutorial: Organizar controles en formularios Windows Forms mediante FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Tutorial: Organizar controles en formularios Windows Forms mediante TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Tutorial: Diseñar controles de formularios Windows Forms con relleno, márgenes y la propiedad AutoSize](windows-forms-controls-padding-autosize.md)
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)

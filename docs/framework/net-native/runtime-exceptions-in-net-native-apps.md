@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed019dc4f1e6b99c9fa1d001c94af45802336ba6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06e07c41d398c0792094b4481a38c69b2ba73004
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715521"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208285"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Excepciones de tiempo de ejecución en las aplicaciones nativas de .NET
 Es importante probar las versiones de lanzamiento de la aplicación de la Plataforma universal de Windows en las plataformas de destino, ya que las configuraciones de depuración y de lanzamiento son completamente diferentes. De forma predeterminada, la configuración de depuración utiliza el tiempo de ejecución de .NET Core para compilar la aplicación, pero la configuración de lanzamiento usa .NET Native para compilar la aplicación en código nativo.  
@@ -60,5 +60,6 @@ Additional information: Value does not fall within the expected range.
  Para obtener la pila completa, ejecute la compilación de depuración en su lugar.  
   
 ## <a name="see-also"></a>Vea también
-- [Depuración de aplicaciones universales de Windows nativas de .NET](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
+
+- [Depuración de aplicaciones universales de Windows de .NET Native](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
 - [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)

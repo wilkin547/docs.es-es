@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
-ms.openlocfilehash: db38d42e9c7dc1657e06030599ae2b8ba66ef6b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e19e4e7cc0ea92e9d93e45c2a50d009e46b78c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175505"
 ---
 # <a name="creating-expression-columns"></a>Crear columnas de expresión
 Se puede definir una expresión para una columna, a fin de que pueda contener un valor calculado a partir de los valores de otra columna de la misma fila o de los valores de columna de varias filas de la tabla. Para definir la expresión que se va a evaluar, utilice la propiedad <xref:System.Data.DataColumn.Expression%2A> de la columna de destino y la propiedad <xref:System.Data.DataColumn.ColumnName%2A> para hacer referencia a otras columnas en la expresión. El <xref:System.Data.DataColumn.DataType%2A> para la columna de expresión debe ser adecuado para el valor que dicha expresión devuelve.  
@@ -19,7 +19,7 @@ Se puede definir una expresión para una columna, a fin de que pueda contener un
   
 |Tipo de expresión|Ejemplo|  
 |---------------------|-------------|  
-|Comparación|"Total >= 500"|  
+|Comparación|"Total > = 500"|  
 |Cálculo|"UnitPrice * Quantity"|  
 |Agregación|Sum(Precio)|  
   
@@ -39,9 +39,10 @@ workTable.Columns.Add("SalesTax", typeof(Double), "Total * 0.086");
  Las expresiones pueden hacer referencia a otras columnas de expresión; sin embargo, una referencia circular, en la que dos expresiones se hacen referencia una a otra, generará una excepción. Las reglas de escritura de expresiones, vea el <xref:System.Data.DataColumn.Expression%2A> propiedad de la **DataColumn** clase.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Data.DataColumn>
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [Definición del esquema de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
 - [Objetos DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

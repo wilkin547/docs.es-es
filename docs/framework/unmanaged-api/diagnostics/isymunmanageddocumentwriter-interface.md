@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52b2c46fbcbf89bdcf1100f41e0ba7553d1f0b0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 70828b8d4ebcc17fa178a53806ef7f55f7ba33e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635057"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147321"
 ---
 # <a name="isymunmanageddocumentwriter-interface"></a>ISymUnmanagedDocumentWriter (Interfaz)
 Proporciona métodos para escribir en un documento al que hace referencia un almacén de símbolos.  
@@ -30,11 +30,12 @@ Proporciona métodos para escribir en un documento al que hace referencia un alm
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[SetCheckSum (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|Establece la información de suma de comprobación.|  
-|[SetSource (método)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Conjuntos de código fuente incrustan para un documento que se va a escribir.|  
+|[Método SetCheckSum](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|Establece la información de suma de comprobación.|  
+|[Método SetSource](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Conjuntos de código fuente incrustan para un documento que se va a escribir.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado**: CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
+
 - [Interfaces de almacén de símbolos de diagnósticos](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

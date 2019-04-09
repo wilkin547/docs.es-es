@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Crear un servicio que requiere sesiones
+title: Filtrar para crear un servicio que requiere sesiones
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
-ms.openlocfilehash: fa151d472dbd27a62f91cd3a43339c66787dc456
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c104798fa3ef0e8b9dc43ad9cc68599b71de4011
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615447"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140496"
 ---
-# <a name="how-to-create-a-service-that-requires-sessions"></a>Procedimiento Crear un servicio que requiere sesiones
-Las sesiones crean un estado compartido entre dos o más puntos de conexión que habilita características útiles como las devoluciones de llamada, la seguridad de saltos múltiples y asociaciones entre clientes e instancias de servicio. Para obtener más información acerca de las sesiones en aplicaciones de Windows Communication Foundation (WCF), consulte [mediante sesiones](../../../../docs/framework/wcf/using-sessions.md).  
+# <a name="how-to-create-a-service-that-requires-sessions"></a>Filtrar para crear un servicio que requiere sesiones
+Las sesiones crean un estado compartido entre dos o más extremos que habilita características útiles como las devoluciones de llamada, la seguridad de saltos múltiples y asociaciones entre clientes e instancias de servicio. Para obtener más información acerca de las sesiones en aplicaciones de Windows Communication Foundation (WCF), consulte [mediante sesiones](../../../../docs/framework/wcf/using-sessions.md).  
   
 ### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a>Especificar que un contrato requiere su enlace para admitir sesiones  
   
@@ -21,13 +21,13 @@ Las sesiones crean un estado compartido entre dos o más puntos de conexión que
   
 2.  Modifique el <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> que declara el contrato estableciendo la propiedad <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> en:  
   
-    -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> si este contrato se debe ejecutar dentro de una sesión.  
+    -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> Si este contrato se debe ejecutar dentro de una sesión.  
   
-    -   <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> si este contrato puede ejecutarse dentro de una sesión.  
+    -   <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> Si este contrato se puede ejecutar dentro de una sesión.  
   
-    -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> si este contrato no se debe ejecutar dentro de una sesión.  
+    -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> Si este contrato no se debe ejecutar dentro de una sesión.  
   
-3.  Configure su punto de conexión de servicio para que use un enlace que admita sesiones. El siguiente ejemplo de configuración muestra el uso de <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, que admite una sesión WS`-`ReliableMessaging.  
+3.  Configure su extremo de servicio para que use un enlace que admita sesiones. El siguiente ejemplo de configuración muestra el uso de <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, que admite una sesión WS`-`ReliableMessaging.  
   
      [!code-xml[SCA.Session#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/hostapplication.exe.config#2)]   
   
@@ -39,6 +39,7 @@ Las sesiones crean un estado compartido entre dos o más puntos de conexión que
  [!code-xml[SCA.Session#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/hostapplication.exe.config#2)]     
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType>

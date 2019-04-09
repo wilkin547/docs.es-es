@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb6a9721549087900083b0d5455054abf07362df
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5a0f5dbdb8f5102f776cbe9231d5b8e79313c099
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476292"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171550"
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile (Método)
 Genera un archivo de base de código que contiene el código base actualmente cargado en esta [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfaz.  
@@ -48,4 +48,5 @@ HRESULT GenerateCeeFile ();
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICeeGen (interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+
+- [ICeeGen (Interfaz)](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

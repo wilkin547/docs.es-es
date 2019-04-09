@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Manipular grupos de filas de una tabla mediante la propiedad RowGroups
+title: Filtrar Manipular grupos de filas de una tabla mediante la propiedad RowGroups
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], manipulating row groups through RowGroups property
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
-ms.openlocfilehash: e456aab0d36ae611f3bfe4974aa3603efff27379
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209975"
 ---
 # <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>Filtrar Manipular grupos de filas de una tabla mediante la propiedad RowGroups
 En este ejemplo muestra algunas de las operaciones más comunes que se pueden realizar en grupos de filas de una tabla mediante el <xref:System.Windows.Documents.Table.RowGroups%2A> propiedad.  
@@ -84,6 +84,7 @@ En este ejemplo muestra algunas de las operaciones más comunes que se pueden re
  [!code-vb[TableSnippets2#_Table_RowGroups_Clear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_clear)]  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Manipular elementos de contenido dinámico mediante la propiedad Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+
+- [Colaboración Manipular elementos de contenido dinámico mediante la propiedad Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
 - [Manipular un objeto FlowDocument mediante la propiedad Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Manipular las columnas de una tabla mediante la propiedad Columns](how-to-manipulate-table-columns-through-the-columns-property.md)

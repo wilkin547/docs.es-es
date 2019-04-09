@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: c1dd2587fb3642fb930fb7d5d6855a6e48c2ad2b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141562"
 ---
 # <a name="optimizing-wpf-application-performance"></a>Optimizar WPF: Rendimiento de aplicaciones
 En esta sección sirve como referencia para [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] los desarrolladores de aplicaciones que están buscando maneras de mejorar el rendimiento de sus aplicaciones. Si es un desarrollador que está familiarizado con Microsoft .NET Framework y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], primero debe familiarizarse con ambas plataformas. En esta sección se da por supuesto conocimientos prácticos de ambos y se escribe para los programadores que ya sabe lo suficiente para ponerse en marcha sus aplicaciones.  
@@ -44,6 +44,7 @@ En esta sección sirve como referencia para [!INCLUDE[TLA#tla_winclient](../../.
  [Tiempo de inicio de una aplicación](application-startup-time.md)  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>
 - [Niveles de representación de gráficos](graphics-rendering-tiers.md)
@@ -61,4 +62,4 @@ En esta sección sirve como referencia para [!INCLUDE[TLA#tla_winclient](../../.
 - [Información general sobre el enlace de datos](../data/data-binding-overview.md)
 - [Información general sobre navegación](../app-development/navigation-overview.md)
 - [Sugerencias y trucos para animaciones](../graphics-multimedia/animation-tips-and-tricks.md)
-- [Tutorial: Almacenamiento en caché datos de la aplicación en una aplicación WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

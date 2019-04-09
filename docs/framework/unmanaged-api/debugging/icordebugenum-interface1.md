@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEnum (Interfaz)
+title: Interfaz ICorDebugEnum
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEnum
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38aaa21b655136c63a45a7d36c097769882d8c37
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9afaeebfdb98a404ea53b0b5ec147f8c8104e14d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148816"
 ---
-# <a name="icordebugenum-interface"></a>ICorDebugEnum (Interfaz)
+# <a name="icordebugenum-interface"></a>Interfaz ICorDebugEnum
 
 Sirve como la interfaz base abstracta para los enumeradores utilizados por una aplicación de depuración.  
   
@@ -31,10 +31,10 @@ Sirve como la interfaz base abstracta para los enumeradores utilizados por una a
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Clone (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Crea una copia de este `ICorDebugEnum` objeto.|  
-|[GetCount (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Obtiene el número de elementos de la enumeración.|  
-|[Reset (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Mueve el cursor al principio de la enumeración.|  
-|[Skip (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Mueve el cursor hacia delante en la enumeración por el número especificado de elementos.|  
+|[Método Clone](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Crea una copia de este `ICorDebugEnum` objeto.|  
+|[Método GetCount](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Obtiene el número de elementos de la enumeración.|  
+|[Método Reset](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Mueve el cursor al principio de la enumeración.|  
+|[Método Skip](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Mueve el cursor hacia delante en la enumeración por el número especificado de elementos.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los enumeradores siguientes derivan de `ICorDebugEnum`:  
@@ -94,4 +94,5 @@ Sirve como la interfaz base abstracta para los enumeradores utilizados por una a
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

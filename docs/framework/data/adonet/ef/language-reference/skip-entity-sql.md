@@ -2,12 +2,12 @@
 title: SKIP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
-ms.openlocfilehash: b17f73f97d32f151ed4f51b025c0c5a7a97393bb
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: e8ef529ea8d2be2ef8eb3a2eb606e7ca8bf13f0a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904176"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147880"
 ---
 # <a name="skip-entity-sql"></a>SKIP (Entity SQL)
 Puede realizar la paginación física utilizando la subcláusula SKIP en la cláusula ORDER BY. SKIP no se puede utilizar por separado de la cláusula ORDER BY.  
@@ -36,7 +36,8 @@ Puede realizar la paginación física utilizando la subcláusula SKIP en la clá
  El [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consultar en [Cómo: Resultados de consulta a través de la página](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)) usa el operador ORDER BY con SKIP para especificar el criterio de ordenación utilizado en los objetos devueltos en una instrucción SELECT.  
   
 ## <a name="see-also"></a>Vea también
+
 - [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
-- [Cómo: Página de resultados de la consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
+- [Filtrar Página de resultados de la consulta](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [Paginación](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)
 - [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

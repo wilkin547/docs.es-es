@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], cubic Bezier curves
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
-ms.openlocfilehash: da5472408caf8db92fd025730de48b820397f372
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 36544abc774b7fe82c2ff47483cfedd6fb13e344
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115575"
 ---
 # <a name="how-to-create-a-cubic-bezier-curve"></a>Filtrar Crear una curva Bézier cúbica
 En este ejemplo se muestra cómo crear una curva Bézier cúbica. Para crear una curva Bézier cúbica, use el <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, y <xref:System.Windows.Media.BezierSegment> clases.  Para mostrar la geometría resultante, utilice un <xref:System.Windows.Shapes.Path> elemento, o utilizarlo con un <xref:System.Windows.Media.GeometryDrawing> o <xref:System.Windows.Media.DrawingContext>. En los ejemplos siguientes, se dibuja una curva Bézier cúbica desde (10, 100) a (300, 100). La curva tiene puntos de control de (100, 0) y (200, 200).  
@@ -33,6 +33,7 @@ En este ejemplo se muestra cómo crear una curva Bézier cúbica. Para crear una
  Este ejemplo forma parte de un ejemplo más extenso; para obtener el ejemplo completo, vea [Ejemplo de geometrías](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Crear un arco elíptico](how-to-create-an-elliptical-arc.md)
 - [Crear un LineSegment en una clase PathGeometry](how-to-create-a-linesegment-in-a-pathgeometry.md)
 - [Crear una curva Bézier cúbica](how-to-create-a-cubic-bezier-curve.md)

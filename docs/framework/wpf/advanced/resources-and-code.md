@@ -11,18 +11,16 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: 12f9acccfc23364795cd18ef1da2ced5b442c6f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d36d30dd336bbe50b192b10a6a60d2c7e382adb8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367990"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137714"
 ---
 # <a name="resources-and-code"></a>Recursos y código
 Esta información general se centra en cómo obtener acceso a los recursos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] o crearlos mediante código en lugar de sintaxis [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Para obtener más información sobre el uso de recursos generales y recursos desde una perspectiva de la sintaxis [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consulte [Recursos XAML](xaml-resources.md).  
-  
-  
-  
+
 <a name="accessing"></a>   
 ## <a name="accessing-resources-from-code"></a>Obtener acceso a recursos desde código  
  Las claves que identifican los recursos si se definen mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] también se usan para recuperar recursos específicos si solicita el recurso en el código. Es la manera más sencilla de recuperar un recurso de código llamar a la <xref:System.Windows.FrameworkElement.FindResource%2A> o <xref:System.Windows.FrameworkElement.TryFindResource%2A> método desde los objetos de nivel de marco en la aplicación. La diferencia de comportamiento entre estos métodos es lo que ocurre si no se encuentra la clave solicitada. <xref:System.Windows.FrameworkElement.FindResource%2A> genera una excepción; <xref:System.Windows.FrameworkElement.TryFindResource%2A> no producirá una excepción, pero devuelve `null`. Cada método obtiene la clave de recurso como parámetro de entrada y devuelve un objeto escrito de manera imprecisa. Normalmente, una clave de recurso es una cadena, pero hay usos ocasionales en los que no. Consulte la sección [Usar objetos como claves](#objectaskey) para obtener más información. Normalmente, convertiría el objeto devuelto al tipo que necesita la propiedad que está estableciendo al solicitar el recurso. La lógica de búsqueda para la resolución de recursos de código es la misma que la del caso [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de referencia de recursos dinámicos. La búsqueda de recursos comienza desde el elemento que realiza la llamada y continúa hasta los elementos principales sucesivos del árbol lógico. La búsqueda continúa hasta los recursos de la aplicación, los temas y los recursos del sistema, si es necesario. Una solicitud de código para un recurso representará correctamente los cambios en tiempo de ejecución en diccionarios de recursos que puedan haberse realizado después de que se cargara el diccionario desde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y también para cambios de recursos del sistema en tiempo real.  
@@ -47,5 +45,6 @@ Esta información general se centra en cómo obtener acceso a los recursos de [!
  La mayoría de los usos de recursos establecen la clave de recurso en una cadena. Sin embargo, varias características de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no usan deliberadamente un tipo de cadena para especificar las claves. En su lugar, este parámetro es un objeto. La compatibilidad de temas y estilos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aprovecha la funcionalidad de que un objeto asigne la clave a un recurso. Entre los estilos de temas que se convierten en el estilo predeterminado para un control sin estilo están organizados según el <xref:System.Type> del control que se debe aplicar. Asignar claves por tipo proporciona un mecanismo de búsqueda confiable que funciona en instancias predeterminadas de cada tipo de control. La reflexión puede detectar el tipo y usarlo para clases derivadas de estilo aunque el tipo derivado no tenga ningún estilo predeterminado. Puede especificar un <xref:System.Type> clave para un recurso definido en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] utilizando el [x: Type Markup Extension](../../xaml-services/x-type-markup-extension.md). Existen extensiones similares para otros usos de clave que no son cadenas que admiten características de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], como [ComponentResourceKey (extensión de marcado)](componentresourcekey-markup-extension.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Recursos XAML](xaml-resources.md)
 - [Aplicar estilos y plantillas](../controls/styling-and-templating.md)

@@ -2,12 +2,12 @@
 title: Actividad
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 970f2978f65b2c1a2585a207d66e4b97fbe4af1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505593"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170214"
 ---
 # <a name="activity"></a>Actividad
 En este tema describe los seguimientos de actividad en el modelo de seguimiento de Windows Communication Foundation (WCF). Las actividades procesan unidades que ayudan al usuario a reducir el ámbito de un error. Los errores que se producen en la misma actividad están directamente relacionados. Por ejemplo, se produce un error en una operación porque se ha producido un error en el descifrado del mensaje. Los seguimientos para el error de descifrado del mensaje y la operación aparecen en la misma actividad, mostrando una correlación directa entre el error del descifrado y el error de la solicitud.  
@@ -38,14 +38,14 @@ En este tema describe los seguimientos de actividad en el modelo de seguimiento 
 ## <a name="defining-the-scope-of-an-activity"></a>Definición del ámbito de una actividad  
  Una actividad se define durante el diseño y denota una unidad lógica de trabajo. Los seguimientos emitidos con el mismo identificador de actividad están directamente relacionados, forman parte de la misma actividad. Debido a que una actividad puede cruzar los límites de extremos (una solicitud), se definen dos ámbitos para una actividad.  
   
--   Ámbito `Global`, por aplicación. En este ámbito, la actividad se identifica por su identificador de actividad único globalmente de 128 bits, el gAId. El gAId es lo que se propaga por los puntos de conexión.  
+-   `Global` ámbito, por aplicación. En este ámbito, la actividad se identifica por su identificador de actividad único globalmente de 128 bits, el gAId. El gAId es lo que se propaga por los puntos de conexión.  
   
--   Ámbito `Local`, por extremo. En este ámbito, GAId identifica la actividad, junto con el nombre del origen de seguimiento que emite los seguimientos de actividad y el identificador de proceso. Este triplete constituye el id. de actividad local, lAId. El lAId se utiliza para definir los límites (locales) de una actividad.  
+-   `Local` ámbito, cada punto de conexión. En este ámbito, GAId identifica la actividad, junto con el nombre del origen de seguimiento que emite los seguimientos de actividad y el identificador de proceso. Este triplete constituye el id. de actividad local, lAId. El lAId se utiliza para definir los límites (locales) de una actividad.  
   
 ## <a name="trace-schema"></a>Esquema de seguimiento  
  Los seguimientos se pueden emitir utilizando cualquier esquema y entre plataformas de Microsoft. "e2e" (para "to End") es un esquema comúnmente utilizado. Este esquema incluye un identificador de 128 bits (gAId), el nombre del origen de seguimiento y el identificador de proceso. En código administrado, <xref:System.Diagnostics.XmlWriterTraceListener> emite seguimientos en el esquema E2E.  
   
- Los programadores pueden establecer el AID que se emite con un seguimiento estableciendo la propiedad <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> con un Guid en Almacenamiento local de subprocesos (TLS). En el siguiente ejemplo se muestra cómo hacerlo.  
+ Los programadores pueden establecer el AID que se emite con un seguimiento estableciendo la propiedad <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> con un Guid en Almacenamiento local para el subproceso (TLS). En el siguiente ejemplo se muestra cómo hacerlo.  
   
 ```csharp
 // set the current Activity ID to a new GUID.  
@@ -64,9 +64,9 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 ## <a name="activity-lifetime"></a>Duración de una actividad  
  En términos estrictos, la evidencia de una actividad se inicia la primera vez que se utiliza el identificador de actividad en un seguimiento emitido y finaliza la última vez que se utiliza en un seguimiento emitido. <xref:System.Diagnostics> proporciona un conjunto predefinido de tipos de seguimiento, incluyendo Iniciar y Detener, para marcar explícitamente los límites de duración de la actividad.  
   
--   Inicio: Indica el principio de una actividad. Un seguimiento "Iniciar" proporciona un registro de comienzo de un nuevo hito de procesamiento. Contiene un nuevo id. de actividad para un origen de seguimiento determinado en un proceso determinado, excepto cuando el id. de actividad se propaga por los puntos de conexión, en cuyo caso vemos un "Iniciar" por punto de conexión. Ejemplos de comienzo de una nueva actividad incluyen la creación de un nuevo subproceso para el procesamiento o la entrada en un nuevo método público.  
+-   Inicio: Indica el principio de una actividad. Un seguimiento "Iniciar" proporciona un registro de comienzo de un nuevo hito de procesamiento. Contiene un nuevo id. de actividad para un origen de seguimiento determinado en un proceso determinado, excepto cuando el id. de actividad se propaga por los extremos, en cuyo caso vemos un "Iniciar" por extremo. Ejemplos de comienzo de una nueva actividad incluyen la creación de un nuevo subproceso para el procesamiento o la entrada en un nuevo método público.  
   
--   Detener: Indica el final de una actividad. Un seguimiento "Detener" proporciona un registro de finalización de un hito de procesamiento existente. Contiene un id. de actividad existente para un origen de seguimiento de traza determinado en un proceso concreto, excepto cuando el id. de actividad se propaga por los puntos de conexión, en cuyo caso vemos un "Stop" por cada punto de conexión.  Terminar un subproceso de procesamiento o salir de un método cuyo comienzo se denotó con un seguimiento "Iniciar" son ejemplos de detención de una actividad.  
+-   Detener: Indica el final de una actividad. Un seguimiento "Detener" proporciona un registro de finalización de un hito de procesamiento existente. Contiene un id. de actividad existente para un origen de seguimiento de traza determinado en un proceso concreto, excepto cuando el id. de actividad se propaga por los extremos, en cuyo caso vemos un "Stop" por cada extremo.  Terminar un subproceso de procesamiento o salir de un método cuyo comienzo se denotó con un seguimiento "Iniciar" son ejemplos de detención de una actividad.  
   
 -   Suspender: Indica la suspensión del procesamiento de una actividad. Un seguimiento "Suspender" contiene un identificador de actividad existente cuyo procesamiento se espera que se reanude más adelante. Ningún seguimiento se emite con este id. entre los eventos Suspender y Reanudar del origen de seguimientos actual. Entre los ejemplos se incluye la detención de una actividad al llamar una función de biblioteca externa o al esperar un recurso como un puerto de finalización de E/S.  
   
@@ -98,8 +98,9 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 -   Las actividades representan actividades, no necesariamente objetos. Una actividad debe interpretarse como "Esto sucedía cuando. . . (se produjo una emisión de seguimientos significativa)”.  
   
 ## <a name="see-also"></a>Vea también
-- [Configuración de la traza](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+
+- [Configurar seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Escenarios de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Escenarios de seguimiento de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Emisión de trazas del código de usuario](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

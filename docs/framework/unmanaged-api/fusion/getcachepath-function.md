@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc29c5f975424e3dbe91e206f6a05f830d760398
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cf23a8f1893aa0f992d554d3c7533c3dc42f4e95
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472660"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150987"
 ---
 # <a name="getcachepath-function"></a>GetCachePath (Función)
 Obtiene la ruta de acceso al ensamblado almacenado en caché, con las marcas especificadas.  
@@ -56,5 +56,6 @@ HRESULT GetCachePath (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ASM_CACHE_FLAGS (enumeración)](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
+
+- [ASM_CACHE_FLAGS (Enumeración)](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
 - [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

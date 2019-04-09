@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear imágenes en miniatura
+title: Filtrar para crear imágenes en miniatura
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 3ed1fb6a9a7fc8e7ded6ae0e124ca7dcbf0f3c98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716964"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144019"
 ---
-# <a name="how-to-create-thumbnail-images"></a>Filtrar Crear imágenes en miniatura
+# <a name="how-to-create-thumbnail-images"></a>Filtrar para crear imágenes en miniatura
 Una imagen en miniatura es una versión reducida de una imagen. Puede crear una imagen en miniatura mediante una llamada a la <xref:System.Drawing.Image.GetThumbnailImage%2A> método de un <xref:System.Drawing.Image> objeto.  
   
 ## <a name="example"></a>Ejemplo  
@@ -32,7 +32,7 @@ Una imagen en miniatura es una versión reducida de una imagen. Puede crear una 
  [!code-vb[System.Drawing.WorkingWithImages#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>. Para ejecutar el ejemplo, siga estos pasos:  
+ El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos. Para ejecutar el ejemplo, siga estos pasos:  
   
 1.  Cree una nueva aplicación de Windows Forms.  
   
@@ -51,5 +51,6 @@ Una imagen en miniatura es una versión reducida de una imagen. Puede crear una 
      Aparece una imagen en miniatura del 100 por 100 en el formulario.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Imágenes, mapas de bits y metarchivos](images-bitmaps-and-metafiles.md)
 - [Trabajar con imágenes, mapas de bits, iconos y metarchivos](working-with-images-bitmaps-icons-and-metafiles.md)

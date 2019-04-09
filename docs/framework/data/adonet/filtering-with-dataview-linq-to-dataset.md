@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: c4c6c01839294e134b0961059a4c165a67c1ecf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176935"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtrar con DataView (LINQ to DataSet)
 La capacidad de filtrar datos utilizando criterios específicos y después presentarlos a un cliente mediante un control de IU es un aspecto importante del enlace de datos. <xref:System.Data.DataView> proporciona varias maneras de filtrar datos y devolver subconjuntos de filas de datos que reúnan determinados criterios. Además de basado en la cadena de las capacidades de filtrado <xref:System.Data.DataView> también proporciona la capacidad de usar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expresiones para los criterios de filtrado. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] las expresiones que se permiten para las operaciones de filtrado más complejas y eficaces que el filtrado basado en cadena.  
@@ -93,5 +93,6 @@ La capacidad de filtrar datos utilizando criterios específicos y después prese
  [!code-vb[DP DataView Samples#LDVClearRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearrowfilter)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Enlace de datos y LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
 - [Ordenación con DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

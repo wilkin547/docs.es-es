@@ -9,17 +9,16 @@ helpviewer_keywords:
 - DateTime XAML text [WPF]
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
-ms.openlocfilehash: 8180064d1a500ea17568f6790e13398524eb5f36
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d7fe5f15f79ab068e88c3fb6f7b7cac0986aa636
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146502"
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime (Sintaxis XAML)
 Algunos controles, como <xref:System.Windows.Controls.Calendar> y <xref:System.Windows.Controls.DatePicker>, tienen propiedades que usan el <xref:System.DateTime> tipo. Aunque normalmente se especifica una fecha y hora inicial para estos controles en el código subyacente en tiempo de ejecución, puede especificar una fecha u hora inicial en XAML. El analizador de WPF XAML controla el análisis de <xref:System.DateTime> valores mediante una sintaxis de texto XAML integrada. En este tema se describe los detalles de la <xref:System.DateTime> sintaxis de texto XAML.  
-  
-  
+
 <a name="where_datetime_xaml_syntax_is_used"></a>   
 ## <a name="when-to-use-datetime-xaml-syntax"></a>Cuándo usar la sintaxis XAML de DateTime  
  Establecer fechas en XAML no siempre es necesario y puede incluso no ser deseable. Por ejemplo, podría utilizar el <xref:System.DateTime.Now%2A?displayProperty=nameWithType> propiedad para inicializar una fecha en tiempo de ejecución, o podría hacer todos los ajustes de fecha de un calendario en el código subyacente en función de entrada del usuario. Sin embargo, hay escenarios donde es posible que desee fechas de codificar de forma rígida en un <xref:System.Windows.Controls.Calendar> y <xref:System.Windows.Controls.DatePicker> en una plantilla de control. El <xref:System.DateTime> deben utilizarse la sintaxis XAML para estos escenarios.  
@@ -75,4 +74,5 @@ Algunos controles, como <xref:System.Windows.Controls.Calendar> y <xref:System.W
  Como se indicó anteriormente, un <xref:System.DateTime> en XAML se puede especificar como cualquier cadena que es aceptable como entrada para <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. Esto incluye otros formatos formalizados (por ejemplo <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>) y formatos no formalizados como un determinado <xref:System.Globalization.DateTimeFormatInfo> formulario. Por ejemplo, el formulario `YYYY/mm/dd` es aceptable como entrada para <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. En este tema no se intentan describir todos los formatos posibles que funcionan, sino que se recomienda el patrón de fecha corta como procedimiento estándar.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre XAML (WPF)](xaml-overview-wpf.md)

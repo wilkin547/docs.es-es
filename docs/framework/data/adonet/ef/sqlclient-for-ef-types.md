@@ -2,12 +2,12 @@
 title: SqlClient para tipos de Entity Framework
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
-ms.openlocfilehash: b121020c8779cfb3959425b1019eaf085b97d6cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb12bde1e319fde5adf20ad6cd54f8776aeda31d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147665"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>SqlClient para tipos de Entity Framework
 El archivo del manifiesto del proveedor correspondiente al Proveedor de datos .NET Framework para SQL Server (SqlClient) incluye la lista de tipos primitivos del proveedor, las facetas de cada tipo, las asignaciones entre los tipos primitivos de los modelos conceptual y de almacenamiento, y las reglas de conversión y de promoción entre los tipos primitivos de los modelos conceptual y de almacenamiento.  
@@ -16,13 +16,13 @@ El archivo del manifiesto del proveedor correspondiente al Proveedor de datos .N
   
 |Tipo de proveedor<br /><br /> name|Tipo de proveedor<br /><br /> atributos|`EDMSimpleType`<br /><br /> name|Facets|  
 |----------------------------|----------------------------------|------------------------------|------------|  
-|`bit`|no disponible|`Edm.Boolean`|no disponible|  
-|`tinyint`|no disponible|`Edm.Byte`|no disponible|  
-|`smallint`|no disponible|`Edm.Int16`|no disponible|  
-|`int`|no disponible|`Edm.Int32`|no disponible|  
-|`bigint`|no disponible|`Edm.Int64`|no disponible|  
-|`float`|no disponible|`Edm.Double`|no disponible|  
-|`real`|no disponible|`Edm.Double`|no disponible|  
+|`bit`|N/D|`Edm.Boolean`|N/D|  
+|`tinyint`|N/D|`Edm.Byte`|N/D|  
+|`smallint`|N/D|`Edm.Int16`|N/D|  
+|`int`|N/D|`Edm.Int32`|N/D|  
+|`bigint`|N/D|`Edm.Int64`|N/D|  
+|`float`|N/D|`Edm.Double`|N/D|  
+|`real`|N/D|`Edm.Double`|N/D|  
 |`decimal`|N/D|`Edm.Decimal`|Precisión:<br /><br /> -Como mínimo: 1<br /><br /> -Máximo: 38<br /><br /> -Default: 18<br /><br /> -Constante: False<br /><br /> Escala:<br /><br /> -Como mínimo: 0<br /><br /> -Máximo: 38<br /><br /> -Default: 0<br /><br /> -Constante: False|  
 |`numeric`|N/D|`Edm.Decimal`|Precisión:<br /><br /> -Como mínimo: 1<br /><br /> -Máximo: 38<br /><br /> -Default: 18<br /><br /> -Constante: False<br /><br /> Escala:<br /><br /> -Como mínimo: 0<br /><br /> -Máximo: 38<br /><br /> -Default: 0<br /><br /> -Constante: False|  
 |`smallmoney`|N/D|`Edm.Decimal`|Precisión:<br /><br /> -Default: 10<br /><br /> -Constante: True<br /><br /> Escala:<br /><br /> -Default: 4<br /><br /> -Constante: True|  
@@ -51,4 +51,5 @@ El archivo del manifiesto del proveedor correspondiente al Proveedor de datos .N
 |`xml`|Igual comparable: False<br /><br /> Comparable en orden: False|`Edm.String`|MaxLength:<br /><br /> -Default: 1073741823<br /><br /> -Constante: True<br /><br /> Unicode:<br /><br /> -Default: True<br /><br /> -Constante: True<br /><br /> FixedLength:<br /><br /> -Default: False<br /><br /> -Constante: True|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Especificaciones CSDL, SSDL MSL](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

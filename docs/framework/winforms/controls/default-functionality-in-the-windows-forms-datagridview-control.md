@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-ms.openlocfilehash: 0c0d24111a2fdf856ff1f4ce154ec85afbbd61ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 26633b0abaa8c1c2916153b2236ecf9e4982fd68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208870"
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Funcionalidad predeterminada en el control DataGridView de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.DataGridView> control proporciona a los usuarios con una cantidad considerable de funcionalidad de forma predeterminada.  
@@ -47,5 +47,6 @@ Los formularios de Windows <xref:System.Windows.Forms.DataGridView> control prop
 -   Se ordena automáticamente las filas basándose en los datos subyacentes cuando el usuario hace clic en un encabezado de columna.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
-- [DataGridView (control)](datagridview-control-windows-forms.md)
+- [Control DataGridView](datagridview-control-windows-forms.md)

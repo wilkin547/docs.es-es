@@ -2,12 +2,12 @@
 title: Crear consultas anidadas de Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: b5fc39a25b5b8592117348b150da9d82454a1562
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4d6892e96cfbc9c5ba9d389aa03588c5133c7943
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137987"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Crear consultas anidadas de Entity SQL
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] es un lenguaje funcional enriquecido. El bloque de creación de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] es una expresión. A diferencia del SQL convencional, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no se limita a un conjunto de resultados tabular: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permite crear expresiones complejas que pueden tener literales, parámetros o expresiones anidadas. Un valor de la expresión se puede parametrizar o formado por alguna otra expresión.  
@@ -76,4 +76,5 @@ SELECT C2.FirstName, C2.LastName
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

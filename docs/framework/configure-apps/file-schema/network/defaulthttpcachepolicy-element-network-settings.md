@@ -1,5 +1,5 @@
 ---
-title: <defaultHttpCachePolicy> (Elemento, Configuración de red)
+title: <defaultHttpCachePolicy> Elemento (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: a48fa5e4a5768f97d3aeabebe4d594ec9f498ca2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 20d9b92ca2bbffd6b98b8641e5cef5e567cb84cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177389"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy > elemento (configuración de red)
 Describe si el almacenamiento en caché de HTTP está activo y describe la directiva de caché de predeterminada.  
@@ -81,6 +81,7 @@ Describe si el almacenamiento en caché de HTTP está activo y describe la direc
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>

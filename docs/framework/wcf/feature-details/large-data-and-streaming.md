@@ -2,12 +2,12 @@
 title: Datos de gran tamaño y secuencias
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 8fa49f9da7caf9146f73017ec051381a8e9ef9e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411062"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176337"
 ---
 # <a name="large-data-and-streaming"></a>Datos de gran tamaño y secuencias
 Windows Communication Foundation (WCF) es una infraestructura de comunicaciones basado en XML. Dado que los datos XML se codifican habitualmente en el formato de texto estándar definido en el [especificación XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838)conectados los arquitectos y desarrolladores de sistemas normalmente están preocupados por la superficie de la conexión (o tamaño) de los mensajes enviados a través de la red y la codificación basada en texto de XML plantea desafíos especiales para la transferencia eficaz de los datos binarios.  
@@ -173,7 +173,7 @@ class MyData
      …  
     <bindings>  
       <basicHttpBinding>  
-        <binding name="ExampleBinding" transferMode="Streaming"/>  
+        <binding name="ExampleBinding" transferMode="Streamed"/>  
       </basicHttpBinding>  
     </bindings>  
      …  
@@ -203,8 +203,7 @@ public interface IStreamedService
 }  
 ```  
   
- 
-  `Echo` en el ejemplo anterior recibe y devuelve una secuencia y se debería utilizar por consiguiente en un enlace con <xref:System.ServiceModel.TransferMode.Streamed>. Para `RequestInfo` de la operación, <xref:System.ServiceModel.TransferMode.StreamedResponse> se adapta mejor, porque solo devuelve <xref:System.IO.Stream>. La operación unidireccional se adapta mejor para <xref:System.ServiceModel.TransferMode.StreamedRequest>.  
+ `Echo` en el ejemplo anterior recibe y devuelve una secuencia y se debería utilizar por consiguiente en un enlace con <xref:System.ServiceModel.TransferMode.Streamed>. Para `RequestInfo` de la operación, <xref:System.ServiceModel.TransferMode.StreamedResponse> se adapta mejor, porque solo devuelve <xref:System.IO.Stream>. La operación unidireccional se adapta mejor para <xref:System.ServiceModel.TransferMode.StreamedRequest>.  
   
  Tenga en cuenta que si se agrega un segundo parámetro a las operaciones `Echo` o `ProvideInfo` siguientes, se hace que el modelo de servicio se revierta a una estrategia con almacenamiento en búfer y se utilice la representación de serialización en tiempo de ejecución de la secuencia. Solo las operaciones con un parámetro de flujo de entrada único son compatibles con la transmisión por secuencias de solicitud de principio a fin.  
   
@@ -240,4 +239,5 @@ public class UploadStreamMessage
 >  La decisión de utilizar transferencias almacenadas en búfer o transmitidas es una decisión local del punto de conexión. Para los transportes HTTP, el modo de transferencia no se propaga a través de una conexión o a los servidores proxy y otros intermediarios. Establecer el modo de transferencia no se refleja en la descripción de la interfaz de servicio. Después de generar a un cliente WCF para un servicio, debe editar el archivo de configuración para los servicios pensados para ser utilizado con transferencias transmitidas para establecer el modo. En los transportes con canalizaciones con nombre y TCP, el modo de transferencia se propaga como una aserción de directiva.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Habilitar el Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [Filtrar para habilitar el streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: 1f98dac8b9d14cac01e109627d40fe01c37c6954
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720831"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172788"
 ---
 # <a name="matrix-representation-of-transformations"></a>Representación matricial de transformaciones
 Una matriz m × n es un conjunto de números organizados en millones de filas y columnas n. La ilustración siguiente muestra varias matrices.  
@@ -104,5 +104,6 @@ Una matriz m × n es un conjunto de números organizados en millones de filas y 
  ![Transformations](./media/aboutgdip05-art13.gif "AboutGdip05_art13")  
   
 ## <a name="see-also"></a>Vea también
+
 - [Sistemas de coordenadas y transformaciones](coordinate-systems-and-transformations.md)
 - [Usar transformaciones en la interfaz GDI+ administrada](using-transformations-in-managed-gdi.md)

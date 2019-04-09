@@ -2,12 +2,12 @@
 title: <add> de <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: 9179abfb26229a845d9618afe30b088252c9c2db
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a58a29e44fff3d653d04da271e3b240f2969611f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267664"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143902"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<Agregar > de \<baseAddressPrefixFilter >
 Representa un elemento de configuración que especifica un filtro de paso a través, que proporciona un mecanismo para escoger los enlaces adecuados de Internet Information Services (IIS) al hospedar una aplicación de Windows Communication Foundation (WCF) en IIS.  
@@ -80,7 +80,8 @@ http://test2.fabrikam.com/Service.svc
 >  El filtro no admite ningún carácter comodín. Además, las direcciones base proporcionadas por IIS pueden tener direcciones enlazadas a otros esquemas no presentes en la lista `baseAddressPrefixFilters`. Estas direcciones no se filtran.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [Hospedar aplicaciones de WPF](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [Hospedaje](../../../../../docs/framework/wcf/feature-details/hosting.md)

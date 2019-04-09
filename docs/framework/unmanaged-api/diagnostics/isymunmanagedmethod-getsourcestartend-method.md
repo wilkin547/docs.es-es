@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d9a02ea338dd2c1366256434eacda51327b7d5f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d32e3ac0ff3179a9bb32f82e5ca33fd89c4ec410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479472"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151195"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd (Método)
 Obtiene las posiciones de documento de inicio y finalización para el origen de este método. La primera posición de la matriz es el inicio y la segunda posición de la matriz es el final.  
@@ -57,4 +57,5 @@ HRESULT GetSourceStartEnd(
  **Encabezado**: CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Vea también
-- [ISymUnmanagedMethod (interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+
+- [ISymUnmanagedMethod (Interfaz)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

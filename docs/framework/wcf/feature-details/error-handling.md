@@ -2,12 +2,12 @@
 title: Control de errores
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261159"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136440"
 ---
 # <a name="error-handling"></a>Control de errores
 ## <a name="error-handling-in-windows-communication-foundation"></a>Error de control en Windows Communication Foundation  
@@ -68,4 +68,5 @@ ms.locfileid: "56261159"
  Un error de envío de conversión de tipo se puede inspeccionar igual que muchos otros tipos de errores de envío instalando un controlador de errores. El punto de extensibilidad de IErrorHandler se llama para controlar excepciones de nivel de servicio. Desde allí se puede elegir la respuesta que se va a devolver al que llama, así como realizar las tareas personalizadas y de envío de informes.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Programación básica de WCF](../basic-wcf-programming.md)

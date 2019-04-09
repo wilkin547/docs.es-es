@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1001777f00524f3a183e1641718b9d3121c94e66
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a70b8c3509b785d70b041b449c759e7994e5984
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148725"
 ---
 # <a name="loaderlock-mda"></a>loaderLock (MDA)
 El Asistente para la depuración administrada (MDA) `loaderLock` detecta los intentos de ejecutar código administrado en un subproceso que contiene el bloqueo del cargador del sistema operativo Microsoft Windows.  Cualquier ejecución de este tipo no es válida porque puede causar interbloqueos y el uso de archivos DLL antes de que se hayan inicializado por el cargador del sistema operativo.  
@@ -56,4 +56,5 @@ El Asistente para la depuración administrada (MDA) `loaderLock` detecta los int
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+
+- [Diagnóstico de errores con asistentes de depuraciones administradas](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 27ff9d027f5ff5155543097b7f0f0c2839387fe5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042451"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144552"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier (Directiva)
 Modifica el comportamiento de compilación de XAML para que se definen los campos para las referencias a objetos con nombre con <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> acceso en lugar de la <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> comportamiento predeterminado.  
@@ -51,6 +51,7 @@ Modifica el comportamiento de compilación de XAML para que se definen los campo
  De forma predeterminada, la clase parcial para el elemento raíz es pública. Sin embargo, puede hacerlo no públicos mediante el uso de la [x: ClassModifier Directive](x-classmodifier-directive.md). El [x: ClassModifier Directive](x-classmodifier-directive.md) también afecta al nivel de acceso de la instancia de la clase de elemento raíz. Puede colocar ambos `x:Name` y `x:FieldModifier` en la raíz del elemento, pero esto sólo realiza una copia de campo público del elemento raíz, con el nivel de acceso de raíz true elemento clase todavía controlada por [x: ClassModifier Directive](x-classmodifier-directive.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Clases XAML y personalizadas para WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [Código subyacente y XAML en WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [x:Name (Directiva)](x-name-directive.md)

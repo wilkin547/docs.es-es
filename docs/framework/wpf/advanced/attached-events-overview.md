@@ -12,18 +12,16 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8f0b5109dd569791ca8f45dbe969b1c9e2f6407b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140860"
 ---
 # <a name="attached-events-overview"></a>Información general sobre eventos adjuntos
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] define un componente de lenguaje y un tipo de evento denominado *evento adjunto*. El concepto de un evento adjunto permite agregar un controlador de un evento determinado a un elemento arbitrario, en lugar de agregarlo a un elemento que realmente define o hereda el evento. En este caso, ni el objeto que genera potencialmente el evento ni la instancia de control del destino definen ni "poseen" de otro modo el evento.  
-  
- 
-  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] define un componente de lenguaje y tipo de evento denominado un *evento adjunto*. El concepto de un evento adjunto permite agregar un controlador de un evento determinado a un elemento arbitrario, en lugar de agregarlo a un elemento que realmente define o hereda el evento. En este caso, ni el objeto que genera potencialmente el evento ni la instancia de control del destino definen ni "poseen" de otro modo el evento.  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
  En este tema se da por supuesto que ha leído [Información general sobre eventos enrutados](routed-events-overview.md) e [Información general sobre XAML (WPF)](xaml-overview-wpf.md).  
@@ -92,6 +90,7 @@ ms.locfileid: "57371676"
  Sin embargo, si va a definir un evento adjunto personalizado basado en la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelo de basar los eventos adjuntos en <xref:System.Windows.RoutedEvent>, puede usar <xref:System.Windows.UIElement.RaiseEvent%2A> para generar un evento adjunto desde cualquier <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement>. Generar un evento enrutado (adjunto o no) requiere que se declare un elemento determinado en el árbol de elementos como el origen del evento; se notifica ese origen como el <xref:System.Windows.UIElement.RaiseEvent%2A> llamador. Determinar qué elemento se notifica como el origen del árbol es responsabilidad del servicio.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre eventos enrutados](routed-events-overview.md)
 - [Detalles de la sintaxis XAML](xaml-syntax-in-detail.md)
 - [Clases XAML y personalizadas para WPF](xaml-and-custom-classes-for-wpf.md)

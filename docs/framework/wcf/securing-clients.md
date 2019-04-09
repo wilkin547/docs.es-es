@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: fb8d2161800b336cd7f605dda79f28dbb5b91848
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 42c87f7b427af775784f8bf1c49ecabde2572823
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333474"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135790"
 ---
 # <a name="securing-clients"></a>Protección de clientes
 En Windows Communication Foundation (WCF), el servicio dicta los requisitos de seguridad para los clientes. Es decir, el servicio especifica qué modo de seguridad utilizar, y si el cliente debe proporcionar una credencial o no. El proceso de protección de un cliente, por consiguiente, es simple: utilice los metadatos obtenidos del servicio (si se publica) y cree un cliente. Los metadatos especifican cómo configurar el cliente. Si el servicio requiere que el cliente suministre una credencial, debe obtener una credencial que se ajuste al requisito. Este tema explica el proceso con más detalle. Para obtener más información acerca de cómo crear un servicio seguro, consulte [Securing Services](../../../docs/framework/wcf/securing-services.md).  
@@ -80,13 +80,13 @@ En Windows Communication Foundation (WCF), el servicio dicta los requisitos de s
   
 |Propiedad ClientCredential|Descripción|Notas|  
 |-------------------------------|-----------------|-----------|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|Devuelve una <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>.|Representa un certificado X.509 proporcionado por el cliente para autenticarse en el servicio.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Devuelve una <xref:System.ServiceModel.Security.HttpDigestClientCredential>.|Representa una credencial de sintaxis de HTTP. La credencial es un hash del nombre de usuario y contraseña.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|Devuelve una <xref:System.ServiceModel.Security.IssuedTokenClientCredential>.|Representa un token de seguridad personalizado emitido por un servicio de tokens de seguridad, utilizado normalmente en escenarios de federación.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|Devuelve una <xref:System.ServiceModel.Security.PeerCredential>|Representa una credencial del mismo nivel para la participación en una malla del mismo nivel en un dominio de Windows.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|Devuelve una <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>.|Representa un certificado X.509 proporcionado por el servicio en una negociación fuera de banda.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|Devuelve una <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>|Representa un par de nombre de usuario y contraseña.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|Devuelve una <xref:System.ServiceModel.Security.WindowsClientCredential>|Representa una credencial de cliente de Windows (una credencial de Kerberos). Las propiedades de la clase son de solo lectura.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|Devuelve un <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|Representa un certificado X.509 proporcionado por el cliente para autenticarse en el servicio.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Devuelve un <xref:System.ServiceModel.Security.HttpDigestClientCredential>|Representa una credencial de sintaxis de HTTP. La credencial es un hash del nombre de usuario y contraseña.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|Devuelve un <xref:System.ServiceModel.Security.IssuedTokenClientCredential>|Representa un token de seguridad personalizado emitido por un servicio de tokens de seguridad, utilizado normalmente en escenarios de federación.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|Devuelve un <xref:System.ServiceModel.Security.PeerCredential>|Representa una credencial del mismo nivel para la participación en una malla del mismo nivel en un dominio de Windows.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|Devuelve un <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>|Representa un certificado X.509 proporcionado por el servicio en una negociación fuera de banda.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|Devuelve un <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>|Representa un par de nombre de usuario y contraseña.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|Devuelve un <xref:System.ServiceModel.Security.WindowsClientCredential>|Representa una credencial de cliente de Windows (una credencial de Kerberos). Las propiedades de la clase son de solo lectura.|  
   
 #### <a name="setting-a-clientcredentials-value-in-configuration"></a>Establecer un \<clientCredentials > valor de configuración  
  Los valores de credenciales se especifican mediante un comportamiento de extremo como elementos secundarios de la [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento. El elemento utilizado depende del tipo de credencial de cliente. Por ejemplo, en el ejemplo siguiente se muestra la configuración para establecer un certificado X.509 mediante el <[\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
@@ -129,7 +129,7 @@ En Windows Communication Foundation (WCF), el servicio dicta los requisitos de s
  Para obtener más información acerca de cómo establecer la credencial del cliente, consulte [Cómo: Especificar los valores de credencial de cliente](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 > [!NOTE]
->  Se omite `ClientCredentialType` cuando `SecurityMode` está establecido en `"TransportWithMessageCredential",` tal y como se muestra en la configuración del ejemplo siguiente.  
+>  `ClientCredentialType` se omite cuando `SecurityMode` está establecido en `"TransportWithMessageCredential",` tal como se muestra en el siguiente ejemplo de configuración.  
   
 ```xml  
 <wsHttpBinding>  
@@ -145,6 +145,7 @@ En Windows Communication Foundation (WCF), el servicio dicta los requisitos de s
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.ClientBase%601>
 - <xref:System.ServiceModel.Description.ClientCredentials>
@@ -154,6 +155,6 @@ En Windows Communication Foundation (WCF), el servicio dicta los requisitos de s
 - [Herramienta del editor de configuración (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
 - [Seguridad de servicios](../../../docs/framework/wcf/securing-services.md)
 - [Acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [Cómo: Especificar los valores de credencial de cliente](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Filtrar para especificar valores de credenciales de cliente](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Cómo: Especifique el tipo de credencial de cliente](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [Filtrar para especificar el tipo de credencial de cliente](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

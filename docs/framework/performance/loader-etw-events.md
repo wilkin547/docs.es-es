@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141536"
 ---
 # <a name="loader-etw-events"></a>Eventos ETW de cargador
 <a name="top"></a> Estos eventos recopilan información relativa a la carga y descarga de dominios de aplicación, ensamblados y módulos.  
@@ -43,9 +43,9 @@ ms.locfileid: "54579009"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Descripción|  
+|evento|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` (registrado para todos los dominios de aplicación)|156|Se genera cuando se crea un dominio de aplicación durante un proceso.|  
+|`AppDomainLoad_V1` (se registra para todos los dominios de aplicación)|156|Se genera cuando se crea un dominio de aplicación durante un proceso.|  
 |`AppDomainUnLoad_V1`|157|Se genera cuando se destruye un dominio de aplicación durante un proceso.|  
 |`AppDomainDCStart_V1`|157|Enumera los dominios de aplicación durante una detención de inicio.|  
 |`AppDomainDCEnd_V1`|158|Enumera los dominios de aplicación durante una detención de finalización.|  
@@ -74,7 +74,7 @@ ms.locfileid: "54579009"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Descripción|  
+|evento|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|Se genera cuando se carga un ensamblado.|  
 |`AssemblyUnload_V1`|155|Se genera cuando se descarga un ensamblado.|  
@@ -107,7 +107,7 @@ ms.locfileid: "54579009"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Descripción|  
+|evento|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|Se genera cuando se carga un módulo durante la duración de un proceso.|  
 |`ModuleUnload_V2`|153|Se genera cuando se descarga un módulo durante la duración de un proceso.|  
@@ -154,7 +154,7 @@ ms.locfileid: "54579009"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Descripción|  
+|evento|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|Se genera cuando se carga un módulo para un dominio de aplicación.|  
 |`DomainModuleDCStart_V1`|151|Enumera los módulos cargados para un dominio de aplicación durante una detención de inicio y se registra para todos los dominios de aplicación.|  
@@ -187,7 +187,7 @@ ms.locfileid: "54579009"
   
  En la siguiente tabla se muestra la información del evento.  
   
-|Evento|Id. de evento|Descripción|  
+|evento|Id. de evento|Descripción|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|Este evento está presente si una imagen cargada del generador de imágenes nativas (NGen) se ha optimizado con IBC y contiene información sobre las secciones activas de la imagen de NGen.|  
 |`ModuleRangeDCStart`|160|Un evento `ModuleRange` se desencadenó al principio de una detención.|  
@@ -213,4 +213,5 @@ ms.locfileid: "54579009"
  Los eventos del intervalo de módulo se desencadenan en cualquier nivel ETW mayor o igual que 4 y se clasifican como eventos informativos.  
   
 ## <a name="see-also"></a>Vea también
-- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md)

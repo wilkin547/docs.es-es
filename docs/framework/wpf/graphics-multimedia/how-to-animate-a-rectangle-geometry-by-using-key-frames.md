@@ -9,12 +9,12 @@ helpviewer_keywords:
 - RectangleGeometry objects [WPF], animating with key frames
 - animation [WPF], RectangleGeometry objects with key frames
 ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
-ms.openlocfilehash: 30bd09ac61c855e0cda81261ca652f0574aa73e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7a4ba4e682ad5880e7059b1a5babe3094bd1770a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375940"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139625"
 ---
 # <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>Filtrar Animar la geometría de un rectángulo mediante fotogramas clave
 En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.RectangleGeometry.Rect%2A> propiedad de un <xref:System.Windows.Media.RectangleGeometry> mediante fotogramas clave.  
@@ -35,6 +35,7 @@ En este ejemplo se muestra cómo animar la <xref:System.Windows.Media.RectangleG
  Para consultar el ejemplo completo, vea [Ejemplo de animación mediante fotogramas clave](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.RectangleGeometry>
 - <xref:System.Windows.Media.RectangleGeometry.Rect%2A>
 - <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>

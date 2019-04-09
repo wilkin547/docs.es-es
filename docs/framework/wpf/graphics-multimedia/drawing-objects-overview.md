@@ -9,18 +9,16 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 3589ba1d13c4ec57cfcec8c52b61556344e8def2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 51ff0317172d545c746d35808d7c672e9586eeae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144032"
 ---
 # <a name="drawing-objects-overview"></a>Información general sobre objetos Drawing
 Este tema se presentan <xref:System.Windows.Media.Drawing> objetos y se describe cómo se usan para dibujar con eficacia formas, mapas de bits, texto y multimedia. Usar <xref:System.Windows.Media.Drawing> objetos al crear imágenes prediseñadas, pintar con un <xref:System.Windows.Media.DrawingBrush>, o use <xref:System.Windows.Media.Visual> objetos.  
-  
- 
-  
+
 <a name="whatisadrawingsection"></a>   
 ## <a name="what-is-a-drawing-object"></a>¿Qué es un objeto Drawing?  
  Un <xref:System.Windows.Media.Drawing> objeto describe contenido visible, como una forma, mapa de bits, vídeo o una línea de texto. Distintos tipos de dibujo describen tipos de contenido diferentes. La siguiente lista muestra los distintos tipos de objetos de dibujo.  
@@ -178,7 +176,7 @@ Orden de las operaciones de DrawingGroup
   
  En la tabla siguiente se describe las propiedades que puede usar para manipular un <xref:System.Windows.Media.DrawingGroup> contenido del objeto.  
   
-|Property|Descripción|Ilustración|  
+|Propiedad|Descripción|Ilustración|  
 |--------------|-----------------|------------------|  
 |<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Modifica la opacidad de partes seleccionadas de la <xref:System.Windows.Media.DrawingGroup> contenido. Como ejemplo, vea [Cómo: Controlar la opacidad de un dibujo](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms748242(v=vs.90)).|![DrawingGroup con una máscara de opacidad](./media/graphicsmm-opmask.png "graphicsmm_opmask")|  
 |<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Cambia de manera uniforme la opacidad de la <xref:System.Windows.Media.DrawingGroup> contenido. Utilice esta propiedad para realizar un <xref:System.Windows.Media.Drawing> total o parcialmente transparentes. Como ejemplo, vea [Cómo: Aplicar una máscara de opacidad a un dibujo](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms753195(v=vs.90)).|![DrawingGroups con diferentes valores de opacidad](./media/graphicsmm-opacity.png "graphicsmm_opacity")|  
@@ -234,6 +232,7 @@ Uso de GeometryDrawing con un objeto DrawingBrush
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.DrawingGroup>
 - [Imágenes y gráficos 2D](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
