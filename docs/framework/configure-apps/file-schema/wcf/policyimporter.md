@@ -2,12 +2,12 @@
 title: <policyImporter>
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: ab9193d5974ccffcbfa3e741ac4d32ff357ed372
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 81f38d2a163163ca7255ca546bbddbbb58fa3a1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094182"
 ---
 # <a name="policyimporter"></a>\<policyImporter>
 Especifica un importador de directivas que controla la importación de aserciones de directivas personalizadas de los enlaces.  
@@ -50,9 +50,10 @@ Especifica un importador de directivas que controla la importación de asercione
  Un importador de directiva se usa para buscar en las aserciones de directivas personalizadas sobre características de enlace, así como para adjuntar un elemento de enlace personalizado que implementa las características que la aserción requiere.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>
 - <xref:System.ServiceModel.Configuration.PolicyImporterElement>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - <xref:System.ServiceModel.Description.MetadataImporter>
-- [Configuración del cliente de WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [Configuración de cliente de WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
 - [Clientes](../../../../../docs/framework/wcf/feature-details/clients.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Freezable objects [WPF], determining if frozen
 ms.assetid: 92e58baa-ee12-4a9e-ac3a-ca458807a8b2
-ms.openlocfilehash: 005bb27803830a2e38a7b143d2c4cff669ad1da6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6a63862d35f2c40289ea6445eb3dab8a2abe4a61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362518"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197066"
 ---
 # <a name="how-to-determine-whether-a-freezable-is-frozen"></a>Filtrar Determinar si un elemento Freezable está inmovilizado
 En este ejemplo se muestra cómo determinar si un <xref:System.Windows.Freezable> objeto está inmovilizado. Si intenta modificar inmovilizado <xref:System.Windows.Freezable> objeto, produce un <xref:System.InvalidOperationException>. Para evitar que se produzca esta excepción, use el <xref:System.Windows.Freezable.IsFrozen%2A> propiedad de la <xref:System.Windows.Freezable> objeto para determinar si se encuentra inmovilizado.  
@@ -26,6 +26,7 @@ En este ejemplo se muestra cómo determinar si un <xref:System.Windows.Freezable
  Para obtener más información acerca de <xref:System.Windows.Freezable> objetos, vea el [Freezable Objects Overview](freezable-objects-overview.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.IsFrozen%2A>
 - [Información general sobre objetos Freezable](freezable-objects-overview.md)

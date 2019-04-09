@@ -2,12 +2,12 @@
 title: Seguridad de integración de CLR en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 489fe096-fd1d-42de-8438-bf7aed46aea2
-ms.openlocfilehash: af3ec1f8dba375082a9838f10fa63c9348f725b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 946401211d515df9ba5b9e38d7cfd10730973b64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165820"
 ---
 # <a name="clr-integration-security-in-sql-server"></a>Seguridad de integración de CLR en SQL Server
 Microsoft SQL Server proporciona la integración del componente Common Language Runtime (CLR) de .NET Framework. La integración de CLR permite escribir procedimientos almacenados, desencadenadores, tipos definidos por el usuario, funciones definidas por el usuario, agregados definidos por el usuario y funciones con valores de tabla de secuencias, mediante el uso de cualquier lenguaje de .NET Framework, como Microsoft Visual Basic .NET o Microsoft Visual C#.  
@@ -23,6 +23,7 @@ Microsoft SQL Server proporciona la integración del componente Common Language 
 |[Seguridad de la integración CLR](/sql/relational-databases/clr-integration/security/clr-integration-security)|Describe el modelo de seguridad para el código administrado que se ejecuta en SQL Server.|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Integración con Common Language Runtime de SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)

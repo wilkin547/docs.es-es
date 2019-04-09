@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 1e0050dbf6ec5ade22e3f09ceee66f69826e56df
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163181"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optimizar el rendimiento: Aprovechar el hardware
 La arquitectura interna de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tiene dos canalizaciones de representación, hardware y software. En este tema se proporciona información sobre estas canalizaciones de representación que le ayudarán a tomar decisiones acerca de las optimizaciones del rendimiento de las aplicaciones.  
@@ -55,6 +55,7 @@ La arquitectura interna de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tl
  Para obtener más información sobre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] niveles de representación, vea [niveles de representación de gráficos](graphics-rendering-tiers.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Optimizar WPF: Rendimiento de aplicaciones](optimizing-wpf-application-performance.md)
 - [Planear para mejorar el rendimiento de aplicaciones](planning-for-application-performance.md)
 - [Presentación y diseño](optimizing-performance-layout-and-design.md)

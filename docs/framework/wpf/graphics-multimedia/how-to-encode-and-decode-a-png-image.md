@@ -13,14 +13,14 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - encoding PNG images [WPF]
 ms.assetid: 3d31d186-af73-47f0-b5a7-c26ae46409a6
-ms.openlocfilehash: 132ccc2fca4b1b3984c88f1e75d3fd1934d8bf24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 46d4a7ffbfe7a6a620c26447cce30f3a0bd35adc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358098"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090860"
 ---
-# <a name="how-to-encode-and-decode-a-png-image"></a>Procedimiento Codificar y descodificar una imagen PNG
+# <a name="how-to-encode-and-decode-a-png-image"></a>Filtrar Codificar y descodificar una imagen PNG
 Los ejemplos siguientes muestran cómo descodificar y codificar una [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] específico de imagen <xref:System.Windows.Media.Imaging.PngBitmapDecoder> y <xref:System.Windows.Media.Imaging.PngBitmapEncoder> objetos.  
   
 ## <a name="example"></a>Ejemplo  
@@ -38,4 +38,5 @@ Los ejemplos siguientes muestran cómo descodificar y codificar una [!INCLUDE[TL
  [!code-vb[PngBitmapDecoderEncoder#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PngBitmapDecoderEncoder/VB/PngEncoderDecoder.vb#4)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre imágenes](imaging-overview.md)

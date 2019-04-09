@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 0e3dd33e740d7e9f0b59b8568b35a83303e8b592
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517700"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172814"
 ---
 # <a name="configuring-system-provided-bindings"></a>Configuración de enlaces proporcionados por el sistema
 Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al hablar con un punto de conexión e indican cómo conectarse a un punto de conexión. Los enlaces están compuestos de elementos que definen cómo los canales de Windows Communication Foundation (WCF) se disponen en capa para proporcionar las características de comunicación necesaria. Un enlace contiene tres tipos de elementos:  
@@ -78,6 +78,7 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
 |Streaming|Especifica si se admite la transmisión por secuencias del mensaje.|  
   
 ## <a name="see-also"></a>Vea también
-- [Información general sobre la creación de puntos finales](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+
+- [Información general acerca de la creación de puntos finales](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Utilización de enlaces para configurar servicios y clientes](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)

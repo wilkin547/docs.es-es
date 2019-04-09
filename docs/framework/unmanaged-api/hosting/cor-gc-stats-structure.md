@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3fc212321b28545f62f0a1c2965281d02ac73e40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d335a62545f06a66d4044b59aa9499d3f7ede515
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208480"
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS (Estructura)
 Proporciona estadísticas sobre el mecanismo de recopilación de elementos no utilizados de common language runtime (CLR).  
@@ -87,6 +87,7 @@ pCLRGCManager->GetStats(&GCStats);
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Estructuras de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [Administración automática de la memoria](../../../../docs/standard/automatic-memory-management.md)
-- [Recolección de elementos no utilizados](../../../../docs/standard/garbage-collection/index.md)
+- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
+- [recolección de elementos no utilizados](../../../../docs/standard/garbage-collection/index.md)

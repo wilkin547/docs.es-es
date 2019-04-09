@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe2f683ae46d1ee6205f97536976a358e86fc53d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37f1f6055ec8fa68fe804780d2893d20c978e6bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720384"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188635"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError (Interfaz)
 Proporciona un mecanismo de devolución de llamada para notificar errores durante la combinación de metadatos.  
@@ -33,7 +33,7 @@ Proporciona un mecanismo de devolución de llamada para notificar errores durant
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[OnError (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Proporciona notificación de errores que se producen durante la combinación de metadatos.|  
+|[Método OnError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Proporciona notificación de errores que se producen durante la combinación de metadatos.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -45,4 +45,5 @@ Proporciona un mecanismo de devolución de llamada para notificar errores durant
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Interfaces de metadatos](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

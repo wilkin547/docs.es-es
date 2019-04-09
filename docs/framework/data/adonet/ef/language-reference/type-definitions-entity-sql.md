@@ -2,12 +2,12 @@
 title: Definiciones de tipo (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 7ac27c3dd43cb83272bff991dbd713e8269ccbb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e068db0ce202c26cad36c8ed7adf0acdfb8e363
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096028"
 ---
 # <a name="type-definitions-entity-sql"></a>Definiciones de tipo (Entity SQL)
 Las definiciones de tipo se usan en la instrucción de declaración de una función inline de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
@@ -31,13 +31,13 @@ Las definiciones de tipo se usan en la instrucción de declaración de una funci
   
  Las opciones de definiciones de tipo son:  
   
--   `IdentifierName supported_type` o  
+-   `IdentifierName supported_type`, o  
   
--   `IdentifierName` COLLECTION(`type_definition`) o  
+-   `IdentifierName` COLECCIÓN (`type_definition`), o  
   
--   `IdentifierName` ROW(`property_definition`) o  
+-   `IdentifierName` FILA (`property_definition`), o  
   
--   `IdentifierName` REF(`supported_entity_type`)  
+-   `IdentifierName` REF (`supported_entity_type`)  
   
  La opción de definición de propiedad es `IdentifierName type_definition`.  
   
@@ -87,5 +87,6 @@ select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

@@ -1,19 +1,19 @@
 ---
-title: Filtrar Establecer la máscara de entrada
+title: Filtrar para establecer la máscara de entrada
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.MaskPropertyEditor
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 53bb8d0e301f83c25ab292b1cb6324dd5f21f100
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 14591b313b0ba4fc2a0a30a45c693147f00050b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207550"
 ---
-# <a name="how-to-set-the-input-mask"></a>Procedimiento Establecer la máscara de entrada
+# <a name="how-to-set-the-input-mask"></a>Filtrar para establecer la máscara de entrada
 El control de cuadro de texto enmascarado es un control de cuadro de texto mejorado que admite una sintaxis declarativa para aceptar o rechazar la intervención del usuario. Al establecer la propiedad Mask, puede especificar la entrada del usuario permitido sin escribir ninguna lógica de validación personalizada en la aplicación. Para obtener más información, vea la sección Comentarios de la <xref:System.Windows.Forms.MaskedTextBox> clase.  
   
 ## <a name="setting-the-mask-property-manually"></a>Establecer la propiedad Mask manualmente  
@@ -64,4 +64,5 @@ El control de cuadro de texto enmascarado es un control de cuadro de texto mejor
      La máscara se especifica en el **máscara** propiedad en el **propiedades** ventana.  
   
 ## <a name="see-also"></a>Vea también
-- [Tutorial: Trabajar con el Control MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)
+
+- [Tutorial: Trabajar con el control MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)

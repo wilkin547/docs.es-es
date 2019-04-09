@@ -10,17 +10,16 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: eef28a178f11ea23ac23183c9ec7eb06b7f18a29
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58af8848a6b8a5e4ded453831f5a7ef985548492
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355417"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209169"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Información general sobre alineación, márgenes y relleno
 La <xref:System.Windows.FrameworkElement> clase expone varias propiedades que se usan para posicionar elementos secundarios. En este tema se analiza cuatro de las propiedades más importantes: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, y <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Es importante comprender los efectos de estas propiedades, ya que proporcionan la base para controlar la posición de los elementos de las aplicaciones de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
-  
-  
+
 <a name="wcpsdk_layout_amp_introduction"></a>   
 ## <a name="introduction-to-element-positioning"></a>Introducción al posicionamiento de elementos  
  Existen numerosas maneras de posicionar elementos mediante [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Sin embargo, lograr el diseño ideal va más allá de simplemente elegir el derecho <xref:System.Windows.Controls.Panel> elemento. Control exhaustivo del posicionamiento requiere una comprensión de la <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, y <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> propiedades.  
@@ -56,7 +55,7 @@ La <xref:System.Windows.FrameworkElement> clase expone varias propiedades que se
 |<xref:System.Windows.HorizontalAlignment.Left>|Los elementos secundarios se alinean a la izquierda del espacio de diseño asignado del elemento primario.|  
 |<xref:System.Windows.HorizontalAlignment.Center>|Los elementos secundarios se alinean en el centro del espacio de diseño asignado del elemento primario.|  
 |<xref:System.Windows.HorizontalAlignment.Right>|Los elementos secundarios se alinean a la derecha del espacio de diseño asignado del elemento primario.|  
-|<xref:System.Windows.HorizontalAlignment.Stretch> (Valor predeterminado)|Los elementos secundarios se ajustan para rellenar el espacio de diseño asignado del elemento primario. Explícita <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> valores tienen prioridad.|  
+|<xref:System.Windows.HorizontalAlignment.Stretch> (Predeterminado)|Los elementos secundarios se ajustan para rellenar el espacio de diseño asignado del elemento primario. Explícita <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> valores tienen prioridad.|  
   
  El ejemplo siguiente muestra cómo aplicar el <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> propiedad <xref:System.Windows.Controls.Button> elementos. Se muestran todos los valores de atributo para ilustrar mejor los distintos comportamientos de representación.  
   
@@ -76,7 +75,7 @@ La <xref:System.Windows.FrameworkElement> clase expone varias propiedades que se
 |<xref:System.Windows.VerticalAlignment.Top>|Los elementos secundarios se alinean en la parte superior del espacio de diseño asignado del elemento primario.|  
 |<xref:System.Windows.VerticalAlignment.Center>|Los elementos secundarios se alinean en el centro del espacio de diseño asignado del elemento primario.|  
 |<xref:System.Windows.VerticalAlignment.Bottom>|Los elementos secundarios se alinean en la parte inferior del espacio de diseño asignado del elemento primario.|  
-|<xref:System.Windows.VerticalAlignment.Stretch> (Valor predeterminado)|Los elementos secundarios se ajustan para rellenar el espacio de diseño asignado del elemento primario. Explícita <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> valores tienen prioridad.|  
+|<xref:System.Windows.VerticalAlignment.Stretch> (Predeterminado)|Los elementos secundarios se ajustan para rellenar el espacio de diseño asignado del elemento primario. Explícita <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> valores tienen prioridad.|  
   
  El ejemplo siguiente muestra cómo aplicar el <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> propiedad <xref:System.Windows.Controls.Button> elementos. Se muestran todos los valores de atributo para ilustrar mejor los distintos comportamientos de representación. Para fines de este ejemplo, un <xref:System.Windows.Controls.Grid> elemento con las líneas de cuadrícula visibles se usa como el elemento primario, para ilustrar mejor el comportamiento de diseño de cada valor de propiedad.  
   
@@ -142,6 +141,7 @@ La <xref:System.Windows.FrameworkElement> clase expone varias propiedades que se
  Existen recursos adicionales que explican el diseño de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] con mayor detalle. El [información general sobre](../controls/panels-overview.md) tema contiene información más detallada sobre los distintos <xref:System.Windows.Controls.Panel> elementos. El tema [Tutorial: Mi primera aplicación de escritorio de WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md) presenta técnicas avanzadas que usan elementos de diseño para posicionar componentes y enlazar sus acciones a orígenes de datos.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>

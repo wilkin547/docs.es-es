@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 5360a7bce1b5470271bc6b512484964ebb9fd8d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164741"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Sincronización de DataSet y XmlDataDocument
 El <xref:System.Data.DataSet> de ADO.NET proporciona una representación relacional de datos. Para el acceso a datos jerárquicos puede utilizar las clases XML disponibles en .NET Framework. Históricamente, estas dos representaciones de datos se han utilizado independientemente. Sin embargo, .NET Framework permite el acceso sincrónico en tiempo real a las representaciones relacionales y jerárquicas de los datos a través de la **DataSet** objeto y el <xref:System.Xml.XmlDataDocument> objeto, respectivamente.  
@@ -90,20 +90,20 @@ El <xref:System.Data.DataSet> de ADO.NET proporciona una representación relacio
  Al sincronizar un **DataSet** con un **XmlDataDocument**, los resultados pueden diferir dependiendo de si su <xref:System.Data.DataRelation> se anidan objetos. Para obtener más información, consulte [anidar objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Sincronización de un objeto DataSet con un objeto XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ [Sincronizar un objeto DataSet con un objeto XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
  Muestra cómo sincronizar un fuertemente tipado **DataSet**, con un esquema mínimo con un **XmlDataDocument**.  
   
- [Realización de una consulta XPath en un objeto DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
+ [Realizar una consulta XPath en un objeto DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
  Muestra cómo realizar una consulta XPath en el contenido de un **DataSet**.  
   
- [Aplicación de una transformación XSL a un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
+ [Aplicar una transformación XSL a un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
  Muestra cómo aplicar una transformación XSLT al contenido de un **DataSet**.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Describe cómo el **DataSet** interactúa con XML como origen de datos, incluidas la carga y hacer persistente el contenido de un **DataSet** como datos XML.  
   
- [Anidado de objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ [Anidar objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  Explica la importancia de anidada **DataRelation** objetos al representar el contenido de un **DataSet** como datos XML y se describe cómo crear estas relaciones.  
   
  [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
@@ -113,4 +113,5 @@ El <xref:System.Data.DataSet> de ADO.NET proporciona una representación relacio
  Contiene información de referencia sobre la **XmlDataDocument** clase.  
   
 ## <a name="see-also"></a>Vea también
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

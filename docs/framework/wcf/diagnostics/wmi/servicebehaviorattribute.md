@@ -2,12 +2,12 @@
 title: ServiceBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 5faa266f-587f-4e03-828d-1c7dd5acfe65
-ms.openlocfilehash: 420686ebda7f23a5d883deece251b034147fafa4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6221e93f10b87a368bd594932a8c36ae14df8f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654586"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206881"
 ---
 # <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 ServiceBehaviorAttribute  
@@ -89,7 +89,7 @@ Tipo de acceso: De sólo lectura
   
  El número máximo de elementos permitido en un objeto serializado.  
   
-### <a name="name"></a>nombre  
+### <a name="name"></a>Name  
  Tipo de datos: cadena  
   
  Tipo de acceso: De sólo lectura  
@@ -152,4 +152,5 @@ Tipo de acceso: De sólo lectura
 |Espacio de nombres|Se define en root\ServiceModel|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.ServiceBehaviorAttribute>

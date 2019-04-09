@@ -2,12 +2,12 @@
 title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 9f41c99ab40a74a2c17e8dac207cc7887c77ba91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65d038564683e0a97939cabc7081be3341f4542d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162807"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 Evalúa un conjunto de expresiones `Boolean` para determinar el resultado.  
@@ -29,13 +29,13 @@ END
  Es un marcador de posición que indica que se pueden usar varias cláusulas WHEN `Boolean_expression` THEN `result_expression` .  
   
  THEN `result_expression`  
- Es la expresión devuelta cuando `Boolean_expression` se evalúa como `true`. `result expression` es cualquier expresión válida.  
+ Es la expresión devuelta cuando `Boolean_expression` se evalúa como `true`. `result expression` Es cualquier expresión válida.  
   
  ELSE `else_result_expression`  
- Expresión que se devuelve si ninguna operación de comparación se evalúa como `true`. Si se omite este argumento y ninguna comparación se evalúa como `true`, CASE devuelve NULL. `else_result_expression` es cualquier expresión válida. Los tipos de datos de `else_result_expression` y cualquier `result_expression` deben ser iguales o deben ser una conversión implícita.  
+ Expresión que se devuelve si ninguna operación de comparación se evalúa como `true`. Si se omite este argumento y ninguna comparación se evalúa como `true`, CASE devuelve NULL. `else_result_expression` Es cualquier expresión válida. Los tipos de datos de `else_result_expression` y cualquier `result_expression` deben ser iguales o deben ser una conversión implícita.  
   
  WHEN `Boolean_expression`  
- Es la expresión `Boolean` que se evalúa cuando se usa el formato CASE buscado. `Boolean_expression` es cualquier expresión `Boolean` válida.  
+ Es la expresión `Boolean` que se evalúa cuando se usa el formato CASE buscado. `Boolean_expression` se trata de cualquier `Boolean` expresión.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve el tipo de prioridad más alto del conjunto de tipos de `result_expression` y de la expresión `else_result_expression`opcional.  
@@ -57,6 +57,7 @@ END
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)
 - [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
 - [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

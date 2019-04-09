@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear configuración de la aplicación
+title: Filtrar para crear la configuración de la aplicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: d540715c0b4c69b2981cc65f55b0fa950c5a4eaf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a6b63e5e48e64491e5f33e7aec4abf92ccf48708
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166405"
 ---
-# <a name="how-to-create-application-settings"></a>Filtrar Crear configuración de la aplicación
+# <a name="how-to-create-application-settings"></a>Filtrar para crear la configuración de la aplicación
 Usando código administrado, puede crear una nueva opción de configuración de la aplicación y enlazarla a las propiedades o a los controles del formulario para que esta opción de configuración se cargue y se guarde automáticamente en tiempo de ejecución.  
   
  En el siguiente procedimiento, creará manualmente una clase contenedora que deriva de <xref:System.Configuration.ApplicationSettingsBase>. A esta clase se agrega una propiedad públicamente accesible para cada opción de configuración de la aplicación que desee exponer.  
@@ -47,7 +47,8 @@ Usando código administrado, puede crear una nueva opción de configuración de 
  El proveedor de configuración predeterminado, <xref:System.Configuration.LocalFileSettingsProvider>, conserva la información en archivos de configuración como texto sin formato. Esto limita la seguridad a la seguridad de acceso a archivos proporcionada por el sistema operativo para el usuario actual. Por este motivo, debe tener cuidado con la información almacenada en los archivos de configuración. Por ejemplo, un uso común de la configuración de la aplicación es almacenar cadenas de conexión que apuntan al almacén de datos de la aplicación. Sin embargo, por motivos de seguridad, esas cadenas no deberían incluir contraseñas. Para obtener más información sobre las cadenas de conexión, consulte <xref:System.Configuration.SpecialSetting>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [Introducción a la configuración de la aplicación](application-settings-overview.md)
-- [Cómo: Validar la configuración de la aplicación](how-to-validate-application-settings.md)
+- [Filtrar para validar la configuración de la aplicación](how-to-validate-application-settings.md)

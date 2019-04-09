@@ -2,12 +2,12 @@
 title: Literales (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 71c77a3cb91d0981614e83221ad82d17067dc321
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bff9b1907d3424dc2e3df80480b6ab12f5ab9261
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643109"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209780"
 ---
 # <a name="literals-entity-sql"></a>Literales (Entity SQL)
 En este tema se describe la compatibilidad con los literales en [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
@@ -56,7 +56,7 @@ DATETIME'2006-10-1 23:11'
 DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'  
 ```  
   
-## <a name="time"></a>Hora  
+## <a name="time"></a>Tiempo  
  Un literal time es independiente de la configuración regional y está compuesto de una hora exclusivamente. La hora debe aparecer y no hay ningún valor predeterminado. Debe tener el formato HH:MM[:SS[.fffffff]], donde HH es el valor correspondiente a la hora comprendido entre 0 y 23, MM es el valor correspondiente a los minutos comprendido entre 0 y 59, SS es el valor correspondiente a los segundos comprendido entre 0 y 59, y fffffff es el valor correspondiente a la fracción de segundo comprendido entre 0 y 9999999. Todos los intervalos de valores incluyen los valores extremos. Las fracciones de segundo son opcionales. Los segundos son opcionales a menos que se especifiquen fracciones de segundo; en este caso, los segundos son necesarios. Cuando no se especifican segundos o fracciones de segundo, se usa el valor cero predeterminado.  
   
  Puede haber cualquier número de espacios entre el símbolo TIME y la carga del literal, pero no puede haber líneas nuevas.  
@@ -91,7 +91,7 @@ BINARY    '0f0f0f0F0F0F0F0F0F0F'
 X'' –- empty binary string  
 ```  
   
-## <a name="guid"></a>Guid  
+## <a name="guid"></a>GUID  
  Un literal `GUID` representa un identificador único global. Es una secuencia formada por la palabra clave `GUID` seguida de dígitos hexadecimales en formato conocido como *registro* formato: 8-4-4-4-12 encerrados entre comillas simples. Los dígitos hexadecimales no distinguen mayúsculas de minúsculas.  
   
  Puede haber cualquier número de espacios entre el símbolo GUID y la carga del literal, pero no puede haber líneas nuevas.  
@@ -102,4 +102,5 @@ GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

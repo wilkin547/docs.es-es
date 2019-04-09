@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: 1c615e2bdff0f361bef305157f635c86782c6039
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166132"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Procedimientos recomendados acerca de seguridad en WCF
 En las secciones siguientes se enumeran los procedimientos recomendados que tener en cuenta a la hora de crear aplicaciones seguras mediante Windows Communication Foundation (WCF). Para obtener más información sobre la seguridad, vea [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) y [Consideraciones de seguridad con metadatos](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -48,7 +48,7 @@ En las secciones siguientes se enumeran los procedimientos recomendados que tene
  Para evitar la modificación de los metadatos publicados de un servicio, proteja el punto de conexión de intercambio de metadatos mediante seguridad de mensajes o de transporte. Para obtener más información, consulte [extremos de metadatos de publicación](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) y [Cómo: Publicación de metadatos para un servicio mediante código](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Asegure el uso de un emisor local  
- Si se especifica una dirección y un enlace del emisor para un enlace determinado, el emisor local no se utiliza para los puntos de conexión que utilizan ese enlace. Los clientes que esperan utilizar siempre el emisor local deberían asegurarse de que no utilizan dicho enlace o de que modifican el enlace de manera que la dirección del emisor sea null.  
+ Si se especifica una dirección y un enlace del emisor para un enlace determinado, el emisor local no se utiliza para los extremos que utilizan ese enlace. Los clientes que esperan utilizar siempre el emisor local deberían asegurarse de que no utilizan dicho enlace o de que modifican el enlace de manera que la dirección del emisor sea null.  
   
 ## <a name="saml-token-size-quotas"></a>Cuotas de tamaño de tokens de SAML  
  Cuando los tokens de Security Assertions Markup Language (SAML) se serializan en mensajes, cuando los emite un servicio de tokens de seguridad (STS) o cuando son presentados por clientes a servicios como parte de la autenticación, la cuota de tamaño máximo del mensaje debe ser suficientemente grande para alojar el token SAML y las otras partes del mensaje. En casos normales, las cuotas de tamaño del mensaje predeterminadas son suficientes. Sin embargo, en los casos en los que un token de SAML sea grande porque contiene cientos de notificaciones, se deberían incrementar las cuotas para alojar al token serializado. Para obtener más información sobre las cuotas, vea [Consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
@@ -57,6 +57,7 @@ En las secciones siguientes se enumeran los procedimientos recomendados que tene
  Al crear un enlace personalizado, debe establecer <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> en `true`. De lo contrario, si <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> se establece en `false` y el cliente usa un token basado en clave asimétrica, como un certificado X509, el mensaje no se firmará.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consideraciones de seguridad](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Consideraciones de seguridad para datos](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
 - [Consideraciones de seguridad con metadatos](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

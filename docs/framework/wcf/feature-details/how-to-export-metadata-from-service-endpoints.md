@@ -1,21 +1,21 @@
 ---
-title: Procedimiento Exportar metadatos desde puntos de conexión de servicio
+title: Filtrar para exportar metadatos desde puntos de conexión de servicio
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 86ad062f7b7ee3dd2927f8b5b103adfd719a963d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd6543e1e22b7a2cb0b870fe2fdb34011f0d2a4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530001"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162794"
 ---
-# <a name="how-to-export-metadata-from-service-endpoints"></a>Procedimiento Exportar metadatos desde puntos de conexión de servicio
-En este tema se explica cómo exportar los metadatos desde los puntos de conexión de servicio.  
+# <a name="how-to-export-metadata-from-service-endpoints"></a>Filtrar para exportar metadatos desde puntos de conexión de servicio
+En este tema se explica cómo exportar los metadatos desde los extremos de servicio.  
   
-### <a name="to-export-metadata-from-service-endpoints"></a>Exportar metadatos desde extremos de servicio  
+### <a name="to-export-metadata-from-service-endpoints"></a>Exportar metadatos desde puntos de conexión de servicio  
   
 1.  Cree un nuevo Proyecto App de Consola de Visual Studio. Agregue el código que se muestra en los pasos siguientes en el archivo Program.cs generado dentro del método main().  
   
@@ -34,7 +34,7 @@ En este tema se explica cómo exportar los metadatos desde los puntos de conexi�
      [!code-csharp[S_UEWsdlExporter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#3)]
      [!code-vb[S_UEWsdlExporter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#3)]  
   
-5.  Exporte los metadatos para cada extremo de servicio.  
+5.  Exporte los metadatos para cada punto de conexión de servicio.  
   
      [!code-csharp[S_UEWsdlExporter#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#4)]
      [!code-vb[S_UEWsdlExporter#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#4)]  
@@ -56,6 +56,7 @@ En este tema se explica cómo exportar los metadatos desde los puntos de conexi�
  Al compilar Program.cs, haga referencia a System.ServiceModel.dll.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general de la arquitectura de metadatos](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Utilización de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Puntos de conexión: Las direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Puntos de conexión: direcciones, enlaces y contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

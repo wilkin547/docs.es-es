@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Dibujar una elipse con relleno en un formulario de Windows
+title: Filtrar para dibujar una elipse con relleno en un formulario Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 - forms [Windows Forms], drawing ellipses
 ms.assetid: 781db806-950d-4c5b-b022-493f7fd0c4a8
-ms.openlocfilehash: 42316cd0d55b5154b21b4462157e044b30674ebd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2e7be3f2c4c710bb24568dd2e70f6f5cc4706c63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171014"
 ---
-# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>Procedimiento Dibujar una elipse con relleno en un formulario de Windows
+# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>Filtrar para dibujar una elipse con relleno en un formulario Windows Forms
 En este ejemplo se dibuja una elipse con relleno en un formulario.  
   
 ## <a name="example"></a>Ejemplo  
@@ -37,7 +37,8 @@ En este ejemplo se dibuja una elipse con relleno en un formulario.
  Siempre debe llamar a <xref:System.IDisposable.Dispose%2A> en los objetos que consuman recursos del sistema, como <xref:System.Drawing.Brush> y <xref:System.Drawing.Graphics> objetos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Introducción a la programación de gráficos](getting-started-with-graphics-programming.md)
-- [Líneas y rellenos con combinación alfa](alpha-blending-lines-and-fills.md)
+- [Líneas y rellenos con mezcla alfa](alpha-blending-lines-and-fills.md)
 - [Utilizar un pincel para rellenar formas](using-a-brush-to-fill-shapes.md)

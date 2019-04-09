@@ -2,12 +2,12 @@
 title: Flujos de trabajo de procedimiento
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-ms.openlocfilehash: fcf50296a8ce3e7e2e0631057467af8a8efd9215
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 05942418038ca4349e32973aeefdfc4a50e49f46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715716"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164754"
 ---
 # <a name="procedural-workflows"></a>Flujos de trabajo de procedimiento
 Los flujos de trabajo de procedimiento usan métodos de control de flujo similares a los que se encuentren en lenguajes de procedimiento. Estas construcciones incluyen `While` y `If`. Estos flujos de trabajo se pueden crear libremente con otras actividades de control de flujo como <xref:System.Activities.Statements.Flowchart> y <xref:System.Activities.Statements.Sequence>.  
@@ -37,4 +37,5 @@ Los flujos de trabajo de procedimiento usan métodos de control de flujo similar
 >  Si se usa [!INCLUDE[dublin](../../../includes/dublin-md.md)] para hospedar flujos de trabajo en una granja de servidores web, AppFabric moverá instancias entre diferentes servidores de AppFabric. Esto necesita que los recursos se puedan compartir entre todos los nodos.  Ninguna de las actividades de flujo de trabajo predeterminadas de .NET 4 contiene ninguna operación que tenga acceso a recursos locales. Puesto que AppFabric no ofrece ningún mecanismo para marcar un flujo de trabajo como inamovible, un desarrollador no debe crear actividades personalizadas que produzcan errores cuando se mueva un flujo de trabajo.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Flujos de trabajo del diagrama de flujo](flowchart-workflows.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MainMenu control [Windows Forms], about MainMenu control
 - menus
 ms.assetid: b41cc5a3-cc59-4996-aa3c-8dd9c17d3c90
-ms.openlocfilehash: 6c2c33c8c03751e87d71e65523b82d92b18f31c4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: da1b76a7019f364e7463a8345aa80d9a9bd6089e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168485"
 ---
 # <a name="mainmenu-component-overview-windows-forms"></a>Información general sobre MainMenu (Componente, formularios Windows Forms)
 > [!IMPORTANT]
@@ -25,6 +25,7 @@ ms.locfileid: "57709887"
  Un elemento de menú puede designarse como el elemento predeterminado estableciendo la <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> propiedad `true`. El elemento predeterminado aparece en negrita cuando se hace clic en el menú. El elemento de menú <xref:System.Windows.Forms.MenuItem.Checked%2A> propiedad `true` o `false`e indica si se selecciona el elemento de menú. El elemento de menú <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> propiedad personaliza la apariencia del elemento seleccionado: si <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> está establecido en `true`, aparece un botón de radio junto al elemento; si <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> está establecido en `false`, aparece una marca de verificación situada junto al elemento.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.MainMenu>
 - <xref:System.Windows.Forms.Menu>
 - <xref:System.Windows.Forms.MenuItem>

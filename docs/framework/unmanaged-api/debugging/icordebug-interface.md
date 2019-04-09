@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05c95d47d57525aa2aebe16d536b771042600000
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 193232ce1006a9cf209db9330343386404948440
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168290"
 ---
 # <a name="icordebug-interface"></a>ICorDebug (Interfaz)
 Proporciona métodos que permiten a los desarrolladores depurar aplicaciones en el entorno de common language runtime (CLR).  
@@ -33,15 +33,15 @@ Proporciona métodos que permiten a los desarrolladores depurar aplicaciones en 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[CanLaunchOrAttach (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|Determina si inicia un proceso nuevo o asociar al proceso especificado es posible dentro del contexto de la configuración actual de la máquina y en tiempo de ejecución.|  
-|[CreateProcess (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|Inicia un proceso y su subproceso principal bajo el control del depurador.|  
-|[DebugActiveProcess (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|Asocia al depurador a un proceso existente.|  
-|[EnumerateProcesses (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-enumerateprocesses-method.md)|Obtiene un enumerador para los procesos que se están depurando.|  
-|[GetProcess (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|Devuelve el objeto "ICorDebugProcess" con el identificador de proceso determinado.|  
-|[Initialize (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|Inicializa el objeto `ICorDebug`.|  
-|[SetManagedHandler (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|Especifica el objeto de controlador de eventos para eventos administrados.|  
-|[SetUnmanagedHandler (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|Especifica el objeto de controlador de eventos para eventos no administrados.|  
-|[Terminate (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Finaliza el `ICorDebug` objeto.|  
+|[Método CanLaunchOrAttach](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|Determina si inicia un proceso nuevo o asociar al proceso especificado es posible dentro del contexto de la configuración actual de la máquina y en tiempo de ejecución.|  
+|[Método CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|Inicia un proceso y su subproceso principal bajo el control del depurador.|  
+|[Método DebugActiveProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|Asocia al depurador a un proceso existente.|  
+|[Método EnumerateProcesses](../../../../docs/framework/unmanaged-api/debugging/icordebug-enumerateprocesses-method.md)|Obtiene un enumerador para los procesos que se están depurando.|  
+|[Método GetProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|Devuelve el objeto "ICorDebugProcess" con el identificador de proceso determinado.|  
+|[Método Initialize](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|Inicializa el objeto `ICorDebug`.|  
+|[Método SetManagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|Especifica el objeto de controlador de eventos para eventos administrados.|  
+|[Método SetUnmanagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|Especifica el objeto de controlador de eventos para eventos no administrados.|  
+|[Método Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Finaliza el `ICorDebug` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
  `ICorDebug` Representa un bucle de procesamiento de eventos para un proceso de depuración. El depurador debe esperar el [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) de todos los procesos que se está depurando antes de liberar esta interfaz de devolución de llamada.  
@@ -61,4 +61,5 @@ Proporciona métodos que permiten a los desarrolladores depurar aplicaciones en 
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

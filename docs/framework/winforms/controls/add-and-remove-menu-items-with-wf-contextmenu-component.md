@@ -1,5 +1,5 @@
 ---
-title: Filtrar Agregar y quitar elementos de menú con el componente ContextMenu de formularios Windows Forms
+title: Filtrar para agregar y quitar elementos de menú con el componente ContextMenu de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: 8b63182bdb37e47a71bee2d22500263cd4889ac9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e02a187edc1392f15fe98354bb2e5c43843e430c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725069"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094468"
 ---
-# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Filtrar Agregar y quitar elementos de menú con el componente ContextMenu de formularios Windows Forms
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Filtrar para agregar y quitar elementos de menú con el componente ContextMenu de formularios Windows Forms
 Explica cómo agregar y quitar elementos del menú contextual en Windows Forms.  
   
  Los formularios de Windows <xref:System.Windows.Forms.ContextMenu> componente proporciona un menú de comandos usados frecuentemente que son relevantes para el objeto seleccionado. Puede agregar elementos al menú contextual mediante la adición de <xref:System.Windows.Forms.MenuItem> objetos a la <xref:System.Windows.Forms.Menu.MenuItems%2A> colección.  
@@ -58,7 +58,7 @@ Explica cómo agregar y quitar elementos del menú contextual en Windows Forms.
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     O bien  
+     -o bien-  
   
 2.  Use la `Clear` método de la `MenuItems` colección de los <xref:System.Windows.Forms.ContextMenu> componente para quitar todos los elementos del menú.  
   
@@ -75,6 +75,7 @@ Explica cómo agregar y quitar elementos del menú contextual en Windows Forms.
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ContextMenu>
-- [ContextMenu (componente)](contextmenu-component-windows-forms.md)
-- [Información general sobre ContextMenu](contextmenu-component-overview-windows-forms.md)
+- [Componente ContextMenu](contextmenu-component-windows-forms.md)
+- [Información general sobre el componente ContextMenu](contextmenu-component-overview-windows-forms.md)

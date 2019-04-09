@@ -2,12 +2,12 @@
 title: Proveedor WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 938eb4fd376c699ddbfedf80f05ef62f81232ca2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c20fd6804761dd472a8accd25ab98f662b0292a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162298"
 ---
 # <a name="wmi-provider"></a>Proveedor WMI
 Este ejemplo muestra cómo recopilar datos de servicios de Windows Communication Foundation (WCF) en tiempo de ejecución mediante el proveedor de Instrumental de administración de Windows (WMI) que está integrado en WCF. Asimismo, este ejemplo muestra cómo agregar un objeto WMI definido por el usuario a un servicio. El ejemplo activa el proveedor WMI para la [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) y muestra cómo recopilar datos de la `ICalculator` servicio en tiempo de ejecución.  
@@ -115,7 +115,7 @@ cscript EnumerateCustomObjects.js
 |-WMIInfo:       User Defined WMI Information.  
 ```  
   
- El resultado muestra que hay un único servicio que se ejecuta en el equipo. El servicio expone un extremo que implementa el contrato `ICalculator`. Los valores del comportamiento y enlace que el punto de conexión implementa se muestran como la suma de elementos individuales de la pila de mensajería.  
+ El resultado muestra que hay un único servicio que se ejecuta en el equipo. El servicio expone un extremo que implementa el contrato `ICalculator`. Los valores del comportamiento y el enlace que el punto de conexión implementa se muestran como la suma de elementos individuales de la pila de mensajería.  
   
  WMI no se limita a exponer el Instrumental de administración de la infraestructura de WCF. La aplicación puede exponer sus propios elementos de datos específicos del dominio a través del mismo mecanismo. WMI es un mecanismo unificado para la inspección y control de un servicio Web.  
   
@@ -144,4 +144,5 @@ cscript EnumerateCustomObjects.js
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
 ## <a name="see-also"></a>Vea también
+
 - [Ejemplos de supervisión de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

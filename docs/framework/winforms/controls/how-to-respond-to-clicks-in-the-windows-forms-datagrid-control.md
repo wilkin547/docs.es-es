@@ -1,5 +1,5 @@
 ---
-title: Filtrar Responder a clics en el Control DataGrid de Windows Forms
+title: Filtrar para responder a clics en el control DataGrid de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 7310557bad7e845c4b193debdefba68db2e1d116
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191905"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Filtrar Responder a clics en el Control DataGrid de Windows Forms
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Filtrar para responder a clics en el control DataGrid de formularios Windows Forms
 > [!NOTE]
 >  El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
@@ -141,5 +141,6 @@ ms.locfileid: "57708220"
     ```  
   
 ## <a name="see-also"></a>Vea también
-- [DataGrid (control)](datagrid-control-windows-forms.md)
-- [Cómo: Cambiar los datos mostrados en tiempo de ejecución en el Control DataGrid de Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)
+
+- [Control DataGrid](datagrid-control-windows-forms.md)
+- [Filtrar para cambiar los datos mostrados en tiempo de ejecución en el control DataGrid de formularios Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)

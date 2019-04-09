@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Enlazar un Control de Windows Forms a un tipo
+title: Filtrar para enlazar un control de formularios Windows Forms a un tipo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 94faeebb-d2bc-45d6-86d7-96a42661b43d
-ms.openlocfilehash: 8d6522f12944e2f1571fa6cbf0773991c54965c4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f47090f5d0765833f7ac17a947691a4693d9923b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162495"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Filtrar Enlazar un Control de Windows Forms a un tipo
+# <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Filtrar para enlazar un control de formularios Windows Forms a un tipo
 Al crear controles que interactúan con datos, a veces necesitará enlazar un control a un tipo en lugar de a un objeto. Estas situaciones se producen especialmente en tiempo de diseño, cuando puede que los datos no estén disponibles pero los controles enlazados a datos necesitan mostrar la información de una interfaz pública del tipo. Por ejemplo, puede enlazar un control <xref:System.Windows.Forms.DataGridView> a un objeto expuesto por un servicio Web y quiere que el control <xref:System.Windows.Forms.DataGridView> etiquete sus columnas en tiempo de diseño con los nombres de miembro de un tipo personalizado.  
   
  Puede enlazar fácilmente un control a un tipo con el componente <xref:System.Windows.Forms.BindingSource>.  
@@ -35,6 +35,7 @@ Al crear controles que interactúan con datos, a veces necesitará enlazar un co
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

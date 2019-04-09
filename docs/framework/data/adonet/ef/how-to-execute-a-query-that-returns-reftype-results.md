@@ -1,18 +1,18 @@
 ---
-title: Filtrar Ejecutar una consulta que devuelve resultados RefType
+title: Filtrar para ejecutar una consulta que devuelve resultados RefType
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7dbbfbcd-93f5-4546-9dbf-e5fa290b69fa
-ms.openlocfilehash: 3005465b3c6b974dc06c4a40abf22ee2bbed47aa
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 7a8f08717743971c0378d9130d4fcea0621dae97
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209702"
 ---
-# <a name="how-to-execute-a-query-that-returns-reftype-results"></a>Filtrar Ejecutar una consulta que devuelve resultados RefType
+# <a name="how-to-execute-a-query-that-returns-reftype-results"></a>Filtrar para ejecutar una consulta que devuelve resultados RefType
 En este tema se muestra cómo ejecutar un comando contra un modelo conceptual usando un objeto <xref:System.Data.EntityClient.EntityCommand>, y cómo recuperar los resultados de <xref:System.Data.Metadata.Edm.RefType> usando un <xref:System.Data.EntityClient.EntityDataReader>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  
@@ -37,5 +37,6 @@ En este tema se muestra cómo ejecutar un comando contra un modelo conceptual us
  [!code-vb[DP EntityServices Concepts#eSQLRefTypes](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#esqlreftypes)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Referencia de Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Proveedor de EntityClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
