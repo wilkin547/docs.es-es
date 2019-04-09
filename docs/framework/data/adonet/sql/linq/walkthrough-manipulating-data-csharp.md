@@ -2,12 +2,12 @@
 title: 'Tutorial: Manipular datos (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: a4346479337820f33cc908c0fd191ee7258a3db6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2a4b9fc5bf9afcace373a3f09b246e2bffd49e3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637312"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143291"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Tutorial: Manipular datos (C#)
 Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para agregar, modificar y eliminar datos en una base de datos. Utilizará una copia de la base de datos de ejemplo Northwind para agregar un cliente, cambiar el nombre de un cliente y eliminar un pedido.  
@@ -162,4 +162,5 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
 >  Después de haber agregado el nuevo cliente al enviar los cambios, no puede ejecutar de nuevo esta solución tal como está. Para ejecutar de nuevo la solución, cambie el nombre del cliente y el identificador de cliente que se debe agregar.  
   
 ## <a name="see-also"></a>Vea también
-- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+
+- [Aprender con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

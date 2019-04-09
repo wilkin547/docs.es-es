@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77bae0de732fc8847650b9ce03f8228111a76334
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: eb4096b0ae083e0b6c0598ea18cc8b33c2fdfe3e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116300"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses (Método)
 Obtiene un enumerador para los procesos administrados que se ejecutan en este equipo.  
@@ -58,4 +58,5 @@ HRESULT EnumProcesses (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICorPublish (interfaz)](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)
+
+- [ICorPublish (Interfaz)](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)

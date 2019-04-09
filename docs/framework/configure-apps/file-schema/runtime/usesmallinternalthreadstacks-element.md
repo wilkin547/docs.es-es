@@ -1,5 +1,5 @@
 ---
-title: <UseSmallInternalThreadStacks> (Elemento)
+title: <UseSmallInternalThreadStacks> Elemento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UseSmallInternalThreadStacks element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d78d03956db3f50b4d01f06c9a6438afd62fac5d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b9833d768b84faaf6e1dcf8c9cb8b00b92adc3d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144834"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > elemento
 Usan las solicitudes que common language runtime (CLR) Reduzca la memoria mediante la especificación de tamaños de pila explícitos al crear determinados subprocesos que utiliza internamente, en lugar de usar el tamaño de pila predeterminado para esos subprocesos.  
@@ -73,5 +73,6 @@ Usan las solicitudes que common language runtime (CLR) Reduzca la memoria median
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -1,19 +1,19 @@
 ---
-title: Filtrar Agrupar elementos en un Control de ListView de Windows Forms mediante el diseñador
+title: Filtrar para agrupar elementos en un control ListView de formularios Windows Forms mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView control [Windows Forms], grouping items
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 4c3e20ad7a09cc21e6c1d2a6d8fbbc47d11c903d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 223c2a639fdb7a05506eca333a44ca31c0dae75f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136661"
 ---
-# <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Filtrar Agrupar elementos en un Control de ListView de Windows Forms mediante el diseñador
+# <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Filtrar para agrupar elementos en un control ListView de formularios Windows Forms mediante el diseñador
 La característica de agrupación de la <xref:System.Windows.Forms.ListView> control permite mostrar conjuntos relacionados de elementos en grupos. Estos grupos se separan en la pantalla con los encabezados de grupo horizontal que contienen los títulos de grupo. Puede usar <xref:System.Windows.Forms.ListView> grupos para facilitar la navegación sea más fácil de listas grandes mediante la agrupación de elementos por orden alfabético, por fecha, o por cualquier otra agrupación lógica. La imagen siguiente muestra algunos elementos agrupados.  
   
  ![Grupos ListView](./media/listviewgroups.gif "ListViewGroups")  
@@ -46,9 +46,10 @@ La característica de agrupación de la <xref:System.Windows.Forms.ListView> con
 3.  Seleccione el <xref:System.Windows.Forms.ListViewItem.Group%2A> propiedad y elija un grupo en la lista desplegable.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>
 - <xref:System.Windows.Forms.ListViewGroup>
-- [ListView (Control)](listview-control-windows-forms.md)
-- [Información general del control ListView](listview-control-overview-windows-forms.md)
-- [Cómo: Agregar y quitar elementos con el Control ListView de formularios de Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Control ListView](listview-control-windows-forms.md)
+- [Información general sobre el control ListView](listview-control-overview-windows-forms.md)
+- [Filtrar para agregar y quitar elementos con el control ListView de formularios Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

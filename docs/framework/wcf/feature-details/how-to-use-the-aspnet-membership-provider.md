@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Usar el proveedor de pertenencia ASP.NET
+title: Filtrar para usar el proveedor de pertenencia de ASP.NET
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 4653a4b4ae90f391eac559210deb611e2a83d0f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: df86f87bfc2456d77e3c1ee209cb8b4c61f53b21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634511"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140613"
 ---
-# <a name="how-to-use-the-aspnet-membership-provider"></a>Procedimiento Usar el proveedor de pertenencia ASP.NET
+# <a name="how-to-use-the-aspnet-membership-provider"></a>Filtrar para usar el proveedor de pertenencia de ASP.NET
 El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] es una característica que permite a los programadores de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] crear sitios web que permiten a los usuarios crear combinaciones únicas de nombre de usuario y contraseña. Con esta función, cualquier usuario puede establecer una cuenta en el sitio e iniciar sesión para obtener acceso exclusivo al sitio y a sus servicios. Esto contrasta con la seguridad de Windows, que exige a los usuarios que tengan cuentas en un dominio de Windows. En su lugar, cualquier usuario que proporcione sus credenciales (la combinación de nombre de usuario/contraseña) puede utilizar el sitio y sus servicios.  
   
  Para una aplicación de ejemplo, vea [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Para obtener información sobre el uso de la [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] característica de proveedor de roles, consulte [Cómo: Usar el proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
@@ -155,5 +155,6 @@ El proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Usar el proveedor de funciones ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+
+- [Filtrar para usar el proveedor de roles ASP.NET con un servicio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
 - [Proveedor de pertenencia y roles](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)

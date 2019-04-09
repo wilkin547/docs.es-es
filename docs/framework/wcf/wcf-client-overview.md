@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: d67da4cedc4bd9bad468197db4a2ad60d054894a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 34abe6b07cebc446324785bde1061c7aa2b04e4a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492603"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115926"
 ---
 # <a name="wcf-client-overview"></a>Introducción a un cliente WCF
 Esta sección describe cómo proteger las aplicaciones cliente, cómo configurar, crear y usar a un cliente de Windows Communication Foundation (WCF) y qué hacer las aplicaciones cliente.  
@@ -20,7 +20,7 @@ Esta sección describe cómo proteger las aplicaciones cliente, cómo configurar
 ## <a name="using-wcf-client-objects"></a>Utilización de objetos cliente WCF  
  Una aplicación cliente es una aplicación administrada que utiliza a un cliente de WCF para comunicarse con otra aplicación. Para crear a un cliente de aplicación para un servicio WCF requiere los siguientes pasos:  
   
-1.  Obtenga la información del contrato de servicio, el enlace y la dirección del punto de conexión del servicio.  
+1.  Obtenga la información del contrato de servicio, el enlace y la dirección del extremo del servicio.  
   
 2.  Crear a un cliente WCF mediante esa información.  
   
@@ -75,7 +75,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
 ### <a name="contracts-bindings-and-addresses"></a>Contratos, enlaces y direcciones  
  Antes de poder crear un objeto de cliente WCF, debe configurar el objeto de cliente. En concreto, debe tener un servicio *extremo* a usar. Un punto de conexión es la combinación de un contrato de servicio, un enlace y una dirección. (Para obtener más información acerca de los puntos de conexión, consulte [puntos de conexión: Las direcciones, enlaces y contratos](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) Normalmente, esta información se encuentra en la [ \<punto de conexión >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) elemento en un archivo de configuración de aplicación de cliente, como el que la herramienta Svcutil.exe genera y se carga automáticamente al crear el cliente objeto. Ambos tipos de cliente WCF también tienen sobrecargas que le permiten especificar mediante programación esta información.  
   
- Por ejemplo, un archivo de configuración generado para el `ISampleService` utilizado en los ejemplos anteriores, contiene la información de punto de conexión siguiente.  
+ Por ejemplo, un archivo de configuración generado para el `ISampleService` utilizado en los ejemplos anteriores, contiene la información de extremo siguiente.  
   
  [!code-xml[C_GeneratedCodeFiles#19](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
   
@@ -172,5 +172,6 @@ End Interface
  Los tipos de cliente WCF amplían <xref:System.ServiceModel.ClientBase%601>, que a su vez se deriva de <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> interfaz para exponer el sistema del canal subyacente. Puede invocar los servicios utilizando el contrato de servicios de destino con la clase <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Para obtener más información, consulte [arquitectura de cliente de WCF](../../../docs/framework/wcf/feature-details/client-architecture.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>

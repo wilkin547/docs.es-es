@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Dibujar texto en un formulario de Windows
+title: Filtrar para dibujar texto en un formulario Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - forms [Windows Forms], drawing text
 - text [Windows Forms], drawing
 ms.assetid: 5d2447a9-21a1-4adc-b954-5516f2bb9b2c
-ms.openlocfilehash: ed7aa89c3bd3751ed93f5bda33a26a8309d39143
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ae7749deedba03f0a63bb74099d071d5da4fe27e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703509"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172983"
 ---
-# <a name="how-to-draw-text-on-a-windows-form"></a>Filtrar Dibujar texto en un formulario de Windows
+# <a name="how-to-draw-text-on-a-windows-form"></a>Filtrar para dibujar texto en un formulario Windows Forms
 En el ejemplo de código siguiente se muestra cómo utilizar el <xref:System.Drawing.Graphics.DrawString%2A> método de la <xref:System.Drawing.Graphics> para dibujar texto en un formulario. Como alternativa, puede usar <xref:System.Windows.Forms.TextRenderer> para dibujar texto en un formulario. Para obtener más información, vea [Cómo: Dibujar texto con GDI](how-to-draw-text-with-gdi.md).  
   
 ## <a name="example"></a>Ejemplo  
@@ -33,6 +33,7 @@ En el ejemplo de código siguiente se muestra cómo utilizar el <xref:System.Dra
 -   La fuente Arial no está instalada.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.Graphics.DrawString%2A>
 - <xref:System.Windows.Forms.TextRenderer.DrawText%2A>
 - <xref:System.Drawing.StringFormat.FormatFlags%2A>
@@ -40,4 +41,4 @@ En el ejemplo de código siguiente se muestra cómo utilizar el <xref:System.Dra
 - <xref:System.Windows.Forms.TextFormatFlags>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - [Introducción a la programación de gráficos](getting-started-with-graphics-programming.md)
-- [Cómo: Dibujar texto con GDI](how-to-draw-text-with-gdi.md)
+- [Filtrar para dibujar texto con GDI](how-to-draw-text-with-gdi.md)

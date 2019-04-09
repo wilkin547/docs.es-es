@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: 5bbae7e54160923e973ff6a8adb655587adf1002
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d13cb3e732d0276902def5de6ca7c007f61b0ec9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708836"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115991"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP
 En este tema se resume las diferencias en la característica de colas de Windows Communication Foundation (WCF) entre [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
@@ -19,7 +19,7 @@ En este tema se resume las diferencias en la característica de colas de Windows
   
  Normalmente, existe una cola de mensajes no enviados única para todo el sistema para todas las aplicaciones en cola que comparten un administrador de cola. Una cola de mensajes no enviados para cada aplicación permite un mejor aislamiento entre las aplicaciones en cola que comparten un administrador de cola, de modo que permiten que estas aplicaciones especifiquen su propia cola de mensajes no enviados específica de la aplicación. Una aplicación que comparte una cola de mensajes no enviados con otras aplicaciones tiene que examinar la cola para encontrar mensajes que son aplicables. Con una cola de mensajes con problemas de entrega específica de la aplicación, la aplicación puede estar segura de que todos los mensajes de su cola de mensajes con problemas de entrega le corresponden.  
   
- [!INCLUDE[wv](../../../../includes/wv-md.md)] proporciona colas de mensajes con problemas de entrega específicas de la aplicación. Las colas de mensajes no enviados específicas de la aplicación no están disponibles en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)]y las aplicaciones deben utilizar la cola de mensajes no enviados para todo el sistema.  
+ [!INCLUDE[wv](../../../../includes/wv-md.md)] se proporciona para las colas de mensajes no enviados específica de la aplicación. Las colas de mensajes no enviados específicas de la aplicación no están disponibles en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)]y las aplicaciones deben utilizar la cola de mensajes no enviados para todo el sistema.  
   
 ## <a name="poison-message-handling"></a>Administración de mensajes dudosos  
  Un mensaje dudoso es un mensaje que ha superado el número máximo de intentos de entrega a la aplicación receptora. Esta situación se puede presentar cuando una aplicación que lee un mensaje de una cola transaccional no puede procesar inmediatamente el mensaje debido a los errores. Si la aplicación anula la transacción en la que se recibió el mensaje en cola, devuelve el mensaje a la cola. La aplicación intenta a continuación recuperar de nuevo el mensaje en una nueva transacción. Si no se corrige el problema que produce el error, la aplicación receptora puede entrar en un bucle recibiendo y anulando el mismo mensaje hasta que supere el número máximo de intentos de entrega, y ello provoca un mensaje dudoso.  
@@ -36,5 +36,6 @@ En este tema se resume las diferencias en la característica de colas de Windows
  MSMQ en [!INCLUDE[wv](../../../../includes/wv-md.md)] admite lecturas transaccionales remotas. Esto permite que una aplicación que lea de una cola se hospede en un equipo diferente de aquel en el que se hospeda la cola. Así se garantiza la posibilidad de que un conjunto de servicios lea en una cola central, lo que aumenta el rendimiento total del sistema. También se garantiza que, si se produce un error al leer y procesar el mensaje, la transacción se revierte y el mensaje permanece en la cola para su posterior procesamiento.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Utilización de las colas de mensajes no enviados para administrar los errores en la transferencia de mensajes](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
 - [Control de mensajes dudosos](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

@@ -3,12 +3,12 @@ title: <sqlWorkflowInstanceStore>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
-ms.openlocfilehash: 9808d5f1f5053f8b68603e03d44b502aee6f5f0c
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 8601f1c7f4e1dbf911020c328652c371bf039124
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412024"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119085"
 ---
 # <a name="sqlworkflowinstancestore"></a>\<sqlWorkflowInstanceStore>
 Un comportamiento del servicio que le permite configurar el <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> característica, que admite conservar información de estado para las instancias de servicio de flujo de trabajo en una base de datos de SQL Server 2005 o SQL Server 2008. Para obtener más información sobre esta característica, consulte [Store de instancia de flujo de trabajo de SQL](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
@@ -43,8 +43,7 @@ Un comportamiento del servicio que le permite configurar el <xref:System.Activit
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|
-  connectionString|Una cadena que contiene una cadena de conexión utilizada para conectarse a una base de datos de persistencia subyacente.|  
+|connectionString|Una cadena que contiene una cadena de conexión utilizada para conectarse a una base de datos de persistencia subyacente.|  
 |connectionStringName|Una cadena que contiene una cadena de conexión con nombre en el servidor de base de datos. Un ejemplo de una cadena de conexión con nombre es "DefaultConnectionString".|  
 |honstLockRenewalPeriod|Valor de Timespan que especifica el período de tiempo en el que el host debe renovar el bloqueo en una instancia. Si el host no renueva el bloqueo en el período de tiempo especificado, la instancia se desbloquea y se puede escoger a por otro host.<br /><br /> Descargar un flujo de trabajo implica que también se conserva. Si este atributo se establece en cero se conservan y se descargan inmediatamente después de la instancia de flujo de trabajo el flujo de trabajo se vuelve inactiva. Establecer este atributo en TimeSpan.MaxValue eficazmente, deshabilita la operación de descarga. Las instancias de flujo de trabajo inactivas nunca se descargan.|  
 |instanceCompletionAction|Un valor que especifica si los datos de la instancia de flujo de trabajo se mantienen en el almacén de persistencia después de que la instancia de flujo de trabajo se complete o si se ha eliminado en ese punto. Este valor es del tipo <xref:System.Activities.DurableInstancing.InstanceCompletionAction>.<br /><br /> Las acciones enumeradas consisten en eliminar los datos de instancia del almacén de persistencia o en no eliminar los datos de instancia del almacén de persistencia cuando la instancia haya completado su operación.<br /><br /> Mantener las instancias una vez completadas provoca que la base de datos de persistencia crezca rápidamente y esto afecta al rendimiento de la base de datos. Debería configurar una directiva de purga de base de datos para eliminar estos registros de forma periódica para asegurarse de que el rendimiento de la base de datos está en el nivel que satisface sus requisitos de rendimiento.|  
@@ -62,6 +61,7 @@ Un comportamiento del servicio que le permite configurar el <xref:System.Activit
 |[\<comportamiento > de \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Especifica un elemento de comportamiento.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.SqlWorkflowInstanceStoreElement>
 - <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>

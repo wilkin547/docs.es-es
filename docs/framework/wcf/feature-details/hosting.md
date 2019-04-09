@@ -2,12 +2,12 @@
 title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-ms.openlocfilehash: 3216b578ffed23091a27c4449abfe1aa6a2a97c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 575b2a3e34246e1082d34545baaf812203a1dde1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503019"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209117"
 ---
 # <a name="hosting"></a>Hospedaje
 Los temas de esta sección describen el hospedaje de servicios. Se puede hospedar un servicio de Internet Information Services (IIS), servicio de activación de proceso de Windows (WAS), Windows Server AppFabric, un servicio de Windows o una aplicación administrada, esta opción se conoce a menudo como *autohospedaje*.  
@@ -30,9 +30,10 @@ Los temas de esta sección describen el hospedaje de servicios. Se puede hospeda
  [Activación basada en la configuración en IIS y WAS](../../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
  Describe cómo un servicio WCF se hospeda en IIS o WAS sin utilizar un archivo .svc.  
   
- [Compatibilidad con múltiples enlaces de sitios de IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)  
+ [Soportar múltiples enlaces de sitios de IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)  
  Describe cómo especificar varias direcciones base de un servicio con el mismo esquema de URI en un único sitio web.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md)
 - [Características de hospedaje de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

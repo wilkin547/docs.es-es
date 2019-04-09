@@ -2,12 +2,12 @@
 title: <security> de <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: aadf2058c66cea4919d5dc9aa5aeab7850fcc395
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1aff79bf5867a3a1ebe05e3f812475dac4b413e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116868"
 ---
 # <a name="security-of-peertransport"></a>\<seguridad > de \<peerTransport >
 Contiene la configuración de seguridad asociada con un canal del mismo nivel, incluido el tipo de autenticación utilizado y la seguridad utilizada para el transporte del mensaje.  
@@ -58,6 +58,7 @@ Contiene la configuración de seguridad asociada con un canal del mismo nivel, i
 |[\<peerTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|Define un transporte del mismo nivel para un enlace personalizado.|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>

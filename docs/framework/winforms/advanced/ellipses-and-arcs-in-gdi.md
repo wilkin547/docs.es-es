@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ellipses
 - drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
-ms.openlocfilehash: 9f6969f9ad838ae913f049c4fc65d987e1aff9fa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8bbc2eda6450128eac55576259880e83f07099ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117461"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>Elipses y arcos en GDI+
 Dibujar elipses y arcos utilizando el <xref:System.Drawing.Graphics.DrawEllipse%2A> y <xref:System.Drawing.Graphics.DrawArc%2A> métodos de la <xref:System.Drawing.Graphics> clase.  
@@ -48,9 +48,10 @@ Dibujar elipses y arcos utilizando el <xref:System.Drawing.Graphics.DrawEllipse%
  ![Elipses y arcos](./media/aboutgdip02-art06.gif "Aboutgdip02_art06")  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Líneas, curvas y formas](lines-curves-and-shapes.md)
-- [Cómo: Crear objetos Graphics para dibujar](how-to-create-graphics-objects-for-drawing.md)
-- [Cómo: Crear un lápiz](how-to-create-a-pen.md)
-- [Cómo: Dibujar una forma con contorno](how-to-draw-an-outlined-shape.md)
+- [Filtrar para crear objetos gráficos para dibujar](how-to-create-graphics-objects-for-drawing.md)
+- [Filtrar para crear un lápiz](how-to-create-a-pen.md)
+- [Filtrar para dibujar una forma con contorno](how-to-draw-an-outlined-shape.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28be714a70229b8a4628db2efff0dc2d890e231b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 051b5f47db05301f3a3326a2cc4cc5cf5c8b1ec2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485504"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137831"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest (Método)
 Emite el manifiesto final. Llame a este método después de importar todos los demás archivos y establecer todas las opciones. No llame a este método para módulos no enlazados.  
@@ -54,6 +54,7 @@ HRESULT EmitManifest(
  Requiere alink.h.  
   
 ## <a name="see-also"></a>Vea también
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+
+- [IALink (Interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 (Interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

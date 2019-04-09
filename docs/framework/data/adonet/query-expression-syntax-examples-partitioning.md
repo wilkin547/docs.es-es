@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: beb5f361-1ac8-44fb-afa1-2aacea15f166
-ms.openlocfilehash: a4782566136a8698ed40fd34c0a8a442503c20cb
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 35c9c0346c84be7002800c8bf0c7e5eb8f1381e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116706"
 ---
 # <a name="query-expression-syntax-examples-partitioning-linq-to-dataset"></a>Ejemplos de sintaxis de expresiones de consulta: Creación de particiones (LINQ to DataSet)
 Los ejemplos de este tema muestran cómo usar los métodos <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Take%2A> para consultar un <xref:System.Data.DataSet> usando la sintaxis de expresión de consultas.  
@@ -43,7 +43,8 @@ Los ejemplos de este tema muestran cómo usar los métodos <xref:System.Linq.Enu
  [!code-vb[DP LINQ to DataSet Examples#TakeNested](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#takenested)]  
   
 ## <a name="see-also"></a>Vea también
-- [Carga de datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+
+- [Cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Ejemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Standard Query Operators Overview (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
+- [Información general sobre operadores de consulta estándar (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Información general sobre operadores de consulta estándar (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

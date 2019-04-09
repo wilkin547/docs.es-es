@@ -2,12 +2,12 @@
 title: Desarrollo de canales
 ms.date: 03/30/2017
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
-ms.openlocfilehash: 74a54972ffa7d00d702a2339665d18acdcbf93ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1922f5158d72bc5bc443e92c6eabb28510dec0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175206"
 ---
 # <a name="developing-channels"></a>Desarrollo de canales
 Para desarrollar un canal de transporte o protocolo que se puede usar con Windows Communication Foundation (WCF), capa de aplicación requiere varios pasos. En este tema se describen esos pasos y se le dirige a temas con información específica. Para entender el modelo del canal y los distintos tipos que se mencionan en este tema, consulte [información general del modelo de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md). Para obtener un ejemplo de canal de transporte completo, vea [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
@@ -27,11 +27,12 @@ Para desarrollar un canal de transporte o protocolo que se puede usar con Window
   
 1.  Agregue una sección de extensión de elemento de enlace para exponer el nuevo elemento de enlace al sistema de configuración. Para obtener más información, consulte [configuración y compatibilidad con metadatos](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
   
-2.  Agregue las extensiones de metadatos para comunicar las funciones a otros extremos. Para obtener más información, consulte [configuración y compatibilidad con metadatos](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
+2.  Agregue las extensiones de metadatos para comunicar las funciones a otros puntos de conexión. Para obtener más información, consulte [configuración y compatibilidad con metadatos](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
   
 3.  Agregue un enlace que configura previamente una pila de elementos de enlace según un perfil bien determinado. Para obtener más información, consulte [crear enlaces](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
 4.  Agregue una sección de enlace y un elemento de configuración de enlace para exponer el enlace al sistema de configuración. Para obtener más información, consulte [configuración y compatibilidad con metadatos](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Extensión de enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md)

@@ -2,18 +2,18 @@
 title: Elegir un filtro
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: f634363a3f8b69b38fd4d313c42de4d742d94acc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76875cd56f74bd555133253beda97b30ee3fa90a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174036"
 ---
 # <a name="choosing-a-filter"></a>Elegir un filtro
 Al configurar el servicio de enrutamiento, es importante seleccionar filtros de mensajes adecuados y configurarlos para poder obtener coincidencias exactas con los mensajes que recibe. Si los filtros que selecciona son demasiado anchos en sus coincidencias o se configuran incorrectamente, los mensajes se enrutan de forma incorrecta. Si los filtros son demasiado restrictivos, puede que no tenga ninguna ruta válida disponible para algunos de sus mensajes.  
   
 ## <a name="filter-types"></a>Tipos de filtros  
- Al seleccionar los filtros que utiliza el servicio de enrutamiento, es importante que entienda cómo funciona cada filtro, así como qué información está disponible como parte de los mensajes entrantes. Por ejemplo, si todos los mensajes se reciben en el mismo extremo, los filtros EndpointName y de dirección no son útiles porque todos los mensajes coinciden con dichos filtros.  
+ Al seleccionar los filtros que utiliza el servicio de enrutamiento, es importante que entienda cómo funciona cada filtro, así como qué información está disponible como parte de los mensajes entrantes. Por ejemplo, si todos los mensajes se reciben en el mismo punto de conexión, los filtros EndpointName y de dirección no son útiles porque todos los mensajes coinciden con dichos filtros.  
   
 ### <a name="action"></a>Acción  
  El filtro de acción inspecciona la propiedad <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Si el contenido del encabezado de acción en el mensaje coincide con el valor de datos de filtro especificado en la configuración del filtro, este filtro devuelve `true`. En el ejemplo siguiente se define un `FilterElement` que utiliza el filtro de acción para que coincida con los mensajes con un encabezado de acción que contiene un valor de `http://namespace/contract/operation/`.
@@ -108,7 +108,7 @@ EndpointNameMessageFilter name1 = new EndpointNameMessageFilter("SvcEndpoint");
  Aunque a menudo pueda usar una dirección completa coincidente para determinar en qué punto de conexión se ha recibido un mensaje, el uso del nombre de punto de conexión definido es un método abreviado recomendable que suele originar menos errores, sobre todo al configurar un servicio de enrutamiento mediante un archivo de configuración (donde los nombres de puntos de conexión son un atributo necesario).  
   
 ### <a name="matchall"></a>MatchAll  
- El filtro MatchAll coincide con cualquier mensaje recibido. Es útil si siempre debe enrutar todos los mensajes recibidos a un punto de conexión concreto, como un servicio del registro que almacena una copia de todos los mensajes recibidos. En el siguiente ejemplo, se define un `FilterElement` que utiliza el filtro MatchAll.  
+ El filtro MatchAll coincide con cualquier mensaje recibido. Es útil si siempre debe enrutar todos los mensajes recibidos a un extremo concreto, como un servicio del registro que almacena una copia de todos los mensajes recibidos. En el siguiente ejemplo, se define un `FilterElement` que utiliza el filtro MatchAll.  
   
 ```xml  
 <filter name="matchAll1" filterType="MatchAll" />  
@@ -136,5 +136,6 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
  Para obtener más información sobre el diseño de las consultas XPath, vea [sintaxis de XPath](https://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Filtros de mensajes](../../../../docs/framework/wcf/feature-details/message-filters.md)
-- [Cómo: Uso de filtros](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+- [Cómo usar los filtros](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

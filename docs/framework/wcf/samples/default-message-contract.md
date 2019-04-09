@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: c65004189c43e4838c9131f61aaa09a41191b702
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 219e96555a7b9a6ae82b3cea8bd112ddf6e27602
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116459"
 ---
 # <a name="default-message-contract"></a>Contrato de mensaje predeterminado
 El ejemplo de contrato de mensaje predeterminado muestra un servicio donde un mensaje personalizado definido por el usuario se pasa a las operaciones de servicio y desde ellas. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa una interfaz de calculadora como un servicio con tipo. En lugar de las operaciones de servicio individuales de suma, resta, multiplicación y división utilizadas en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), este ejemplo pasa un mensaje personalizado que contiene los operandos y el operador y devuelve el resultado del cálculo aritmético.  
@@ -184,4 +184,3 @@ Press <ENTER> to terminate client.
 >  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  
-  

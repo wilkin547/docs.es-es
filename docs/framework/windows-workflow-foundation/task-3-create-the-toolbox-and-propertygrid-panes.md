@@ -1,15 +1,15 @@
 ---
-title: 'Tarea 3: Crear el cuadro de herramientas y PropertyGrid paneles'
+title: 'Tarea 3: Crear los paneles de Cuadro de herramientas y PropertyGrid'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 45819577c39185a5d95da81521cd541087a64efc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a03a4204d6f112d8a94b48dd5a295dc4ff8354a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721231"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175050"
 ---
-# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tarea 3: Crear el cuadro de herramientas y PropertyGrid paneles
+# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tarea 3: Crear los paneles de Cuadro de herramientas y PropertyGrid
 En esta tarea, creará el **cuadro de herramientas** y **PropertyGrid** paneles y agregarlos a rehospedado [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
  Como referencia, el código que debe estar en el archivo MainWindow.xaml.cs después de completar las tres tareas en el [Rehospedar el Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md) serie de temas se proporciona al final de este tema.  
@@ -213,6 +213,7 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Rehospedaje del Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md)
-- [Tarea 1: Crear una nueva aplicación de Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
-- [Tarea 2: Hospedar el Diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md)
+
+- [Rehospedar el Diseñador de flujo de trabajo](rehosting-the-workflow-designer.md)
+- [Tarea 1: Crear una aplicación de Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Tarea 2: Hospedar el diseñador de flujo de trabajo](task-2-host-the-workflow-designer.md)

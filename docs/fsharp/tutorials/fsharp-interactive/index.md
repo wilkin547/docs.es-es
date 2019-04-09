@@ -2,12 +2,12 @@
 title: Referencia de F# Interactive (fsi.exe)
 description: Obtenga información sobre cómo F# Interactive (fsi.exe) se usa para ejecutar F# interactivamente en la consola o para ejecutar el código F# secuencias de comandos.
 ms.date: 05/16/2016
-ms.openlocfilehash: dde65a4fa4bd41895716344fc67823366c73c5d4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9ec780ca51eaa5ae0aa791eb509d8ad0865dc26f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172268"
 ---
 # <a name="interactive-programming-with-f"></a>Programación interactiva con F\#
 
@@ -43,10 +43,8 @@ Si tiene un proyecto abierto que hace referencia a algunas bibliotecas, puede ha
 
 Puede controlar los argumentos (opciones) de la línea de comandos de F# Interactive ajustando la configuración. En el menú **Herramientas**, seleccione **Opciones...** y, después, expanda **Herramientas de F#**. Las dos configuraciones que puede cambiar son las opciones de F# Interactive y la opción **F# Interactive de 64 bits**, que solo es relevante si ejecuta F# Interactive en un equipo de 64 bits. Este valor determina si desea ejecutar la versión de 64 bits dedicada de fsi.exe o de fsianycpu.exe, que usa la arquitectura del equipo para determinar si debe ejecutarse como un proceso de 32 o de 64 bits.
 
-
 ## <a name="scripting-with-f"></a>Scripting con F\#
 Los scripts usan la extensión de archivo **.fsx** o **.fsscript**. En lugar de compilar el código fuente y después ejecutar el ensamblado compilado, se puede ejecutar simplemente **fsi.exe** y especificar el nombre de archivo del script de código fuente de F#. F# Interactive lee el código y lo ejecuta en tiempo real.
-
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Diferencias entre los entornos interactivo, compilado y de scripting
 Al compilar código en F# Interactive, tanto si se ejecuta de forma interactiva como si ejecuta un script, se define el símbolo **INTERACTIVE**. Al compilar código en el compilador, se define el símbolo **COMPILED**. Por consiguiente, si el código debe ser diferente en modo interactivo y en modo compilado, se pueden usar las directivas de preprocesador de la compilación condicional para determinar cuál se va a usar.
@@ -60,7 +58,7 @@ Cuando se ejecutan scripts en F# Interactive, están disponibles algunas directi
 |**#load**|Lee un archivo de código fuente, lo compila y lo ejecuta.|
 |**#quit**|Termina una sesión de F# Interactive.|
 |**#r**|Hace referencia a un ensamblado.|
-|**#time ["on"&#124;"off"]**|Por sí solo, **#time** activa y desactiva la presentación de información sobre el rendimiento. Cuando está habilitado, F# Interactive mide el tiempo real, el tiempo de CPU y la información sobre recolección de elementos no utilizados que se interpreta y ejecuta.|
+|**#time ["activado"&#124;"desactivado"]**|Por sí solo, **#time** activa y desactiva la presentación de información sobre el rendimiento. Cuando está habilitado, F# Interactive mide el tiempo real, el tiempo de CPU y la información sobre recolección de elementos no utilizados que se interpreta y ejecuta.|
 
 Al especificar los archivos o rutas de acceso en F# Interactive, se espera un literal de cadena. Por tanto, los archivos y las rutas de acceso deben estar entre comillas y se aplicarán los caracteres de escape habituales. Asimismo, puede usar el carácter @ para hacer que F# Interactive interprete una cadena que contenga una ruta de acceso como una cadena textual. Esto hace que F# Interactive pase por alto cualquier carácter de escape.
 

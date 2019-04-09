@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de formularios de Windows
+title: Filtrar para agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 04f6b98a2206371a2838b3a6952feeafcd788309
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 18a78b7ecb5268463607508869e77fa163cbd06f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714260"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146450"
 ---
-# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Filtrar Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de formularios de Windows
+# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Filtrar para agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de formularios Windows Forms
 Los formularios de Windows <xref:System.Windows.Forms.NotifyIcon> componente muestra un solo icono en el área de notificación de estado de la barra de tareas. Para mostrar varios iconos en el área de estado, debe tener varios <xref:System.Windows.Forms.NotifyIcon> componentes en el formulario. Para establecer el icono que aparece para un control, utilice el <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propiedad. También puede escribir código el <xref:System.Windows.Forms.NotifyIcon.DoubleClick> controlador de eventos, por lo que algo se produce cuando el usuario hace doble clic en el icono. Por ejemplo, podría hacer que un cuadro de diálogo aparecen para que el usuario configurar el proceso en segundo plano representado por el icono.  
   
 > [!NOTE]
@@ -72,8 +72,9 @@ Los formularios de Windows <xref:System.Windows.Forms.NotifyIcon> componente mue
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Cómo: Asociar un menú contextual con un componente NotifyIcon de formularios Windows Forms](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
-- [NotifyIcon (componente)](notifyicon-component-windows-forms.md)
+- [Filtrar para asociar un menú contextual con un componente NotifyIcon de formularios Windows Forms](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [Componente NotifyIcon](notifyicon-component-windows-forms.md)
 - [Información general sobre el componente NotifyIcon](notifyicon-component-overview-windows-forms.md)

@@ -2,17 +2,17 @@
 title: Validación de cliente
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: b033695065dfeb130f041563909704acb84bb3be
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 637b6bd26407feb3213503310396a20bf1c8bdcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333305"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177338"
 ---
 # <a name="client-validation"></a>Validación de cliente
-Los servicios publican frecuentemente los metadatos para habilitar la generación automática y la configuración de tipos de proxy de cliente. Cuando no se confía en el servicio, las aplicaciones cliente deberían comprobar y validar que los metadatos cumplen con la directiva de la aplicación cliente con respecto a la seguridad, transacciones, el tipo de contrato de servicios etc. El siguiente ejemplo muestra cómo escribir un comportamiento de extremo de cliente que valide el extremo de servicio para asegurarse de que el extremo de servicio puede utilizarse con seguridad.  
+Los servicios publican frecuentemente los metadatos para habilitar la generación automática y la configuración de tipos de proxy de cliente. Cuando no se confía en el servicio, las aplicaciones cliente deberían comprobar y validar que los metadatos cumplen con la directiva de la aplicación cliente con respecto a la seguridad, transacciones, el tipo de contrato de servicios etc. El siguiente ejemplo muestra cómo escribir un comportamiento de punto de conexión de cliente que valide el punto de conexión de servicio para asegurarse de que el punto de conexión de servicio puede utilizarse con seguridad.  
   
- El servicio expone cuatro extremos de servicio. El primer extremo utiliza WSDualHttpBinding, el segundo extremo utiliza la autenticación NTLM, el tercer extremo habilita el flujo de la transacción y el cuarto extremo utiliza la autenticación basada en certificados.  
+ El servicio expone cuatro puntos de conexión de servicio. El primer punto de conexión utiliza WSDualHttpBinding, el segundo punto de conexión utiliza la autenticación NTLM, el tercer punto de conexión habilita el flujo de la transacción y el cuarto punto de conexión utiliza la autenticación basada en certificados.  
   
  El cliente utiliza la clase <xref:System.ServiceModel.Description.MetadataResolver> para recuperar los metadatos para el servicio. El cliente exige una directiva que prohíba los enlaces dúplex, la autenticación NTLM y el flujo de la transacción mediante un comportamiento que se encargue de validar. Para cada <xref:System.ServiceModel.Description.ServiceEndpoint> instancia importada desde los metadatos del servicio, la aplicación cliente agrega una instancia de la `InternetClientValidatorBehavior` comportamiento de punto de conexión para el <xref:System.ServiceModel.Description.ServiceEndpoint> antes de intentar usar un cliente de Windows Communication Foundation (WCF) para conectarse a el punto de conexión. El método `Validate` de comportamiento se ejecuta antes de llamar cualquier operación en el servicio y exige la directiva del cliente iniciando `InvalidOperationExceptions`.  
   
@@ -64,4 +64,5 @@ Los servicios publican frecuentemente los metadatos para habilitar la generació
     >  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado los ejemplos de WCF que usan certificados en varios equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser - TrustedPeople almacenar. Para ello, utilice el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Utilización de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)

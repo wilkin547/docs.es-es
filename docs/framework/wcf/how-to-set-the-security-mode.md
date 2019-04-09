@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Establecer el modo de seguridad
+title: Filtrar para establecer el modo de seguridad
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: c5e6d26fd665fa750b5608002d7abc938075a6ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 652fcef75f8d5a8dee824bb89bf4695f1629fed8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663042"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116407"
 ---
-# <a name="how-to-set-the-security-mode"></a>Procedimiento Establecer el modo de seguridad
+# <a name="how-to-set-the-security-mode"></a>Filtrar para establecer el modo de seguridad
 Seguridad de Windows Communication Foundation (WCF) tiene tres modos de seguridad comunes que se encuentran en los enlaces más predefinidos: transporte, mensaje y "transporte con credencial de mensaje". Dos modos adicionales son específicos para dos enlaces: el modo “solo credencial de transporte” encontrado en el <xref:System.ServiceModel.BasicHttpBinding>y el modo “Ambos” encontrado en el <xref:System.ServiceModel.NetMsmqBinding>. Sin embargo, este tema se concentra en los tres modos de seguridad comunes: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>y <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
  Tenga en cuenta que no todos los enlaces predefinidos admiten todos estos modos. Este tema establece el modo con las clases <xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.NetTcpBinding> y muestra cómo establecer el modo mediante programación y configuración.  
@@ -114,8 +114,9 @@ Seguridad de Windows Communication Foundation (WCF) tiene tres modos de segurida
  Para obtener más información, vea [Cómo: Usar la seguridad de transporte y credenciales de mensaje](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Configurar un puerto con un certificado SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Cómo: Usar la seguridad de transporte y credenciales de mensaje](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+
+- [Filtrar para configurar un puerto con un certificado SSL](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Filtrar para usar seguridad de transporte y credenciales de mensajes](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
 - [Seguridad de transporte](../../../docs/framework/wcf/feature-details/transport-security.md)
 - [Seguridad de los mensajes](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [Información general sobre seguridad](../../../docs/framework/wcf/feature-details/security-overview.md)

@@ -2,12 +2,12 @@
 title: Agregar referencia de servicio en un proyecto de subconjuntos portátiles
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: dd07ab5623a66f7ad4b666955027adcaea232db4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: e1d65df46c0ed6d9d271727ad04a661c5e34a1ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681019"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145436"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Agregar referencia de servicio en un proyecto de subconjuntos portátiles
 Proyectos de subconjuntos portátiles permiten a los programadores de ensamblado de .NET mantener un único árbol de origen y el sistema de compilación mientras se mantiene la compatibilidad con varias implementaciones de .NET (escritorio, Silverlight, Windows Phone y XBOX). Proyectos de subconjuntos portátiles solo hacen referencia a bibliotecas portátiles de .NET que son un ensamblado de .NET framework que se puede usar en cualquier implementación. NET.  
@@ -19,7 +19,7 @@ Proyectos de subconjuntos portátiles permiten a los programadores de ensamblado
   
 2.  Para los servicios que usan escenarios <xref:System.Runtime.Serialization.DataContractSerializer>, se proporciona un suplente de contrato de datos para asegurarse de que los tipos reutilizados proceden únicamente del subconjunto portátil.  
   
-3.  Se omiten los puntos de conexión que confían en enlaces no admitidos en las bibliotecas portátiles (todos los enlaces excepto <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> sin flujo de transacción, sesiones confiables o codificación de MTOM y enlaces personalizados equivalentes).  
+3.  Se omiten los extremos que confían en enlaces no admitidos en las bibliotecas portátiles (todos los enlaces excepto <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> sin flujo de transacción, sesiones confiables o codificación de MTOM y enlaces personalizados equivalentes).  
   
 4.  Los encabezados de mensaje se eliminan de todas las descripciones de mensaje en todas las operaciones antes de la importación.  
   
@@ -44,5 +44,6 @@ Proyectos de subconjuntos portátiles permiten a los programadores de ensamblado
 14. <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> no se admite en proyectos de subconjuntos portátiles.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
 - [Biblioteca de clases portable](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

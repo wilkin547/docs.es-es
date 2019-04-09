@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fad069a15cb4079dac2b4ee65ca3d9669a53cac0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 452104939acf5de7bb151cba00d65fb6631c98d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124090"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess (Función)
 Obtiene el número de versión de common language runtime (CLR) que está asociado con el identificador de proceso especificado.  
@@ -59,7 +59,7 @@ HRESULT GetVersionFromProcess (
 |Código devuelto|Descripción|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|E_INVALIDARG|`pVersion` es null y `cchBuffer` no es null, o viceversa.<br /><br /> O bien<br /><br /> `hProcess` no es un identificador válido para un proceso.<br /><br /> O bien<br /><br /> No se carga el CLR.|  
+|E_INVALIDARG|`pVersion` es null y `cchBuffer` no es null, o viceversa.<br /><br /> -o bien-<br /><br /> `hProcess` no es un identificador válido para un proceso.<br /><br /> -o bien-<br /><br /> No se carga el CLR.|  
 |ERROR_INSUFFICIENT_BUFFER|`cchBuffer` es nulo o menor que la longitud de la cadena de versión.|  
 |E_NOTIMPL|Este método no está disponible en el sistema operativo Microsoft Windows 95, Microsoft Windows 98 o Windows Millennium Edition de Microsoft.|  
   
@@ -73,6 +73,7 @@ HRESULT GetVersionFromProcess (
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [GetRequestedRuntimeInfo (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
 - [GetRequestedRuntimeVersion (Función)](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
 - [Funciones de hospedaje de CLR en desuso](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

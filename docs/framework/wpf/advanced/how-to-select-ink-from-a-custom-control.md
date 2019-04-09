@@ -1,5 +1,5 @@
 ---
-title: Filtrar Seleccionar entradas manuscritas desde un control personalizado
+title: Filtrar Seleccionar entradas de lápiz desde un control personalizado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ink [WPF], selecting from custom control
 - custom controls [WPF], ink selection
 ms.assetid: 5f3a45c6-6d40-4017-9b47-933f134ceba3
-ms.openlocfilehash: 8517041fd9a1864abfb32851314a2926ddab5a3e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c9b2f3d64e4cbb309772d6a1d9fa88f589df84c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363788"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173606"
 ---
-# <a name="how-to-select-ink-from-a-custom-control"></a>Filtrar Seleccionar entradas manuscritas desde un control personalizado
+# <a name="how-to-select-ink-from-a-custom-control"></a>Filtrar Seleccionar entradas de lápiz desde un control personalizado
 Agregando un <xref:System.Windows.Ink.IncrementalLassoHitTester> al control personalizado, puede habilitar el control para que un usuario puede seleccionar entradas manuscritas con una herramienta de lazo, similar a la forma en que el <xref:System.Windows.Controls.InkCanvas> selecciona la entrada de lápiz con un lazo.  
   
  En este ejemplo se da por supuesto que está familiarizado con la creación de un control personalizado habilitado para tinta.  Para crear un control personalizado que acepta la entrada de lápiz, consulte [creación de un Control entrada manuscrita](creating-an-ink-input-control.md).  
@@ -87,7 +87,8 @@ Agregando un <xref:System.Windows.Ink.IncrementalLassoHitTester> al control pers
  [!code-vb[HowToSelectInk#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Ink.IncrementalLassoHitTester>
 - <xref:System.Windows.Ink.StrokeCollection>
 - <xref:System.Windows.Input.StylusPointCollection>
-- [Creación de un control de entrada a mano](creating-an-ink-input-control.md)
+- [Creación de un control de entrada manuscrita](creating-an-ink-input-control.md)

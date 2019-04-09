@@ -1,5 +1,5 @@
 ---
-title: Filtrar Unir líneas
+title: Filtrar para combinar líneas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - lines [Windows Forms], joining
 - graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
-ms.openlocfilehash: a43cfb8a51435aa0c5c3f7aae673d38d3f7792ab
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 445d7f12f57137c6b06a074eeaf0574eb027a723
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410880"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174920"
 ---
-# <a name="how-to-join-lines"></a>Filtrar Unir líneas
+# <a name="how-to-join-lines"></a>Filtrar para combinar líneas
 Una unión de líneas es el área común que está formado por dos líneas cuyos extremos se juntan o se superponen. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona tres estilos de unión de línea: ángulo, bisel y redondo. Estilo de línea de combinación es una propiedad de la <xref:System.Drawing.Pen> clase. Cuando se especifica un estilo de unión de línea para un <xref:System.Drawing.Pen> objeto, que se aplicará a todas las líneas conectadas en cualquier estilo de unión <xref:System.Drawing.Drawing2D.GraphicsPath> dibujado con ese lápiz del objeto.  
   
  La siguiente ilustración muestra los resultados del ejemplo de unión de línea biselada.  
@@ -38,4 +38,5 @@ Una unión de líneas es el área común que está formado por dos líneas cuyos
  El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de la <xref:System.Windows.Forms.Control.Paint> controlador de eventos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Utilizar lápiz para dibujar líneas y formas](using-a-pen-to-draw-lines-and-shapes.md)

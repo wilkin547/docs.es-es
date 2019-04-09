@@ -1,15 +1,15 @@
 ---
-title: Filtrar Migrar los servicios Web de ASP.NET con AJAX habilitado a WCF
+title: Filtrar para migrar servicios web de ASP.NET con AJAX habilitado a WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: 3c7052a67e756ae0c3fa1692c3ed746419384de4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: dfbb32a751623fb1e3753cfd8bbbaf5910d571b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410945"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143005"
 ---
-# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Procedimiento Migrar los servicios Web de ASP.NET con AJAX habilitado a WCF
+# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Filtrar para migrar servicios web de ASP.NET con AJAX habilitado a WCF
 En este tema se describe los procedimientos para migrar un servicio AJAX de ASP.NET básico a un servicio de Windows Communication Foundation (WCF) con AJAX habilitado equivalente. Muestra cómo crear una versión WCF funcionalmente equivalente de un servicio AJAX de ASP.NET. Los dos servicios, a continuación, se pueden usar en paralelo, o el servicio de WCF puede utilizarse para reemplazar el servicio de AJAX de ASP.NET.
 
  Migración de ASP.NET AJAX existente servicio a un servicio AJAX de WCF le ofrece las siguientes ventajas:
@@ -193,12 +193,11 @@ d.Add("two", 2);
 
  Este diccionario se representa en objetos JSON como se muestra en la siguiente lista:
 
--   [{"Clave":"uno","Valor":1}, {"Clave":"dos","Valor":2}] por <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
+-   [{"Clave": "Uno", "Value": 1}, {"Clave": "Dos", "Value": 2}] por la <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 
 -   {"uno": 1, "dos": 2} por el AJAX de ASP.NET <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
- 
-  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> es más eficaz en el sentido de que puede controlar los diccionarios cuyo tipo de clave no es de cadena, mientras que <xref:System.Web.Script.Serialization.JavaScriptSerializer> no puede. Pero el último es más compatible con JSON.
+ <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> es más eficaz en el sentido de que puede controlar los diccionarios cuyo tipo de clave no es de cadena, mientras que <xref:System.Web.Script.Serialization.JavaScriptSerializer> no puede. Pero el último es más compatible con JSON.
 
  Las diferencias significativas entre estos serializadores se resumen en la siguiente tabla.
 
@@ -209,9 +208,10 @@ d.Add("two", 2);
 |Serialización de los miembros privados de tipos [Serializable].|serialized|not serialized|
 |Serialización de las propiedades públicas de los tipos <xref:System.Runtime.Serialization.ISerializable>.|not serialized|serialized|
 |"Extensiones" de JSON|Conforme con la especificación de JSON, que requiere comillas en los nombres de miembro de objetos ({"a":"hola"}).|Admite los nombres de miembros de objeto sin comillas ({a:"hola"}).|
-|<xref:System.DateTime>Hora universal coordinada (UTC)|No es compatible con el formato "\\/Date(123456789U)\\/" o "\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\\\/)".|Admite el formato "\\/Date(123456789U)\\/" y "\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\ \\/) "como valores de fecha y hora.|
+|<xref:System.DateTime> Hora Universal coordinada (UTC)|No es compatible con el formato "\\/Date(123456789U)\\/" o "\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\\\/)".|Admite el formato "\\/Date(123456789U)\\/" y "\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\ \\/) "como valores de fecha y hora.|
 |Representación de diccionarios|Una matriz de KeyValuePair\<K, V >, administra tipos clave que no son cadenas.|Como objetos JSON reales, pero solo controla los tipos clave que son cadenas.|
 |Caracteres con escape|Siempre con una barra diagonal de escape (/); nunca permite caracteres de JSON no válidos sin escape, como "\n".|Con una barra diagonal de escape (/) para los valores DateTime .|
 
 ## <a name="see-also"></a>Vea también
-- [Cómo: Usar la configuración para agregar un extremo de AJAX de ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+
+- [Filtrar para usar la configuración para agregar un punto de conexión AJAX de ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 1f024ddd0be023f77408e3106bc0a4465d068074
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2d51f06da31482c46b04d1eb86172c3eda246c20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358293"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145371"
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>Filtrar Hacer que los datos estén disponibles para el enlace en XAML
 Este tema describen varias maneras de hacer que datos disponibles para enlace en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], según las necesidades de su aplicación.  
@@ -43,5 +43,6 @@ Este tema describen varias maneras de hacer que datos disponibles para enlace en
  Para obtener información acerca de muchas maneras puede especificar los datos que se va a enlazar a, vea [especificar el origen de enlace](how-to-specify-the-binding-source.md). Para obtener información sobre qué tipos de datos se puede enlazar o cómo implementar su propio [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objetos para el enlace, consulte [Binding Sources Overview](binding-sources-overview.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre el enlace de datos](data-binding-overview.md)
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

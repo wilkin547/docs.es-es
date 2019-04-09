@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Implementar una aplicación cliente que utiliza al Proxy de detección para buscar un servicio
+title: Filtrar para implementar una aplicación cliente que usa el proxy de detección para buscar un servicio
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 3f78ad8436ae1132eb48057f027d10ef191a6ad9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 42dc2e8269e36161904f69880712924d4789333e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115978"
 ---
-# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Procedimiento Implementar una aplicación cliente que utiliza al Proxy de detección para buscar un servicio
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Filtrar para implementar una aplicación cliente que usa el proxy de detección para buscar un servicio
 Este tema es el tercero de tres temas y describe cómo implementar un proxy de detección. En el tema anterior, [Cómo: Implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), implementa un servicio WCF que se registra con el proxy de detección. En este tema se creará a un cliente WCF que usa al proxy de detección para encontrar el servicio WCF.  
   
 ### <a name="implement-the-client"></a>Implementar el cliente  
@@ -27,7 +27,7 @@ Este tema es el tercero de tres temas y describe cómo implementar un proxy de d
     > [!NOTE]
     >  Este archivo se suele generar mediante una herramienta como Svcutil.exe. Dicha herramienta se proporciona en este tema para simplificar la tarea.  
   
-4.  Abra el archivo Program.cs y agregue el siguiente método. Este método toma una dirección del punto de conexión y lo utiliza para inicializar el cliente del servicio (proxy).  
+4.  Abra el archivo Program.cs y agregue el siguiente método. Este método toma una dirección del extremo y lo utiliza para inicializar el cliente del servicio (proxy).  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -282,6 +282,7 @@ namespace Microsoft.Samples.Discovery
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Cómo: Implementar a un Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Cómo: Implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Filtrar para implementar un proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Filtrar para implementar un servicio reconocible que se registra con el proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

@@ -2,8 +2,14 @@
 title: Registro de eventos en WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'event logging [WCF]'
+- event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
+ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175284"
 ---
 # <a name="event-logging-in-wcf"></a>Registro de eventos en WCF
 Windows Communication Foundation (WCF) realiza un seguimiento de eventos internos en el registro de eventos de Windows.  
@@ -42,5 +48,6 @@ Windows Communication Foundation (WCF) realiza un seguimiento de eventos interno
  Al hacer clic en "más información" al ver un evento en el Visor de eventos, el Visor de eventos puede enviar información a través de Internet. Para obtener más información, consulte ayuda de Visor de eventos.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
 - [Referencia general de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

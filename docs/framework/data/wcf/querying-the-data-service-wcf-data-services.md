@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: da015fcd20745ef67831b7133242d66392f923e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3283ec1661138a636914d6b1ca5e7adb5d5d52d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175986"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Consultar el servicio de datos (Data Services de WCF)
 La biblioteca de cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite ejecutar consultas en un servicio de datos mediante los conocidos patrones de programación de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], incluido el uso de Language Integrated Query (LINQ). La biblioteca de cliente traduce una consulta, que se define en el cliente como instancia de la clase <xref:System.Data.Services.Client.DataServiceQuery%601>, en un mensaje de solicitud HTTP GET. La biblioteca recibe el mensaje de respuesta y lo traduce en instancias de clases de servicio de datos de cliente. El seguimiento de estas clases lo realiza la clase <xref:System.Data.Services.Client.DataServiceContext> a la que pertenece <xref:System.Data.Services.Client.DataServiceQuery%601>.  
@@ -63,7 +63,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  Para obtener más información, consulte [consideraciones sobre LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md).  
   
 ## <a name="adding-query-options"></a>Agregar opciones de consulta  
- Las consultas del servicio de datos admiten todas las opciones de consulta que proporciona [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Puede llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> para anexar opciones de consulta a una instancia de <xref:System.Data.Services.Client.DataServiceQuery%601>. El método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> devuelve una nueva instancia de <xref:System.Data.Services.Client.DataServiceQuery%601> que es equivalente a la consulta original pero con el nuevo conjunto de opciones de consulta. Cuando se ejecuta la siguiente consulta, devuelve el valor `Orders` filtrado por el valor `Freight` y ordenado por `OrderID`, en orden descendente:  
+ Las consultas del servicio de datos admiten todas las opciones de consulta que proporciona [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Puede llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> para anexar opciones de consulta a una instancia de <xref:System.Data.Services.Client.DataServiceQuery%601>. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> Devuelve un nuevo <xref:System.Data.Services.Client.DataServiceQuery%601> instancia que es equivalente a la consulta original pero con la nueva consulta de conjunto de opciones. Cuando se ejecuta la siguiente consulta, devuelve el valor `Orders` filtrado por el valor `Freight` y ordenado por `OrderID`, en orden descendente:  
   
  [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionsspecific)]  
  [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionsspecific)]  
@@ -99,17 +99,17 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  <xref:System.Data.Services.Client.QueryOperationResponse%601> también tiene los siguientes miembros que le permiten tener acceso a información adicional sobre el resultado de una consulta:  
   
--   La propiedad <xref:System.Data.Services.Client.OperationResponse.Error%2A>: obtiene un error provocado por la operación, si se ha producido alguna.  
+-   <xref:System.Data.Services.Client.OperationResponse.Error%2A> -Obtiene un error producido por la operación, si se ha producido alguna.  
   
--   La propiedad <xref:System.Data.Services.Client.OperationResponse.Headers%2A>: contiene una colección de encabezados de respuesta HTTP asociados con la respuesta de la consulta.  
+-   <xref:System.Data.Services.Client.OperationResponse.Headers%2A> -contiene la colección de encabezados de respuesta HTTP asociados a la respuesta de consulta.  
   
--   La propiedad <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A>: obtiene el objeto <xref:System.Data.Services.Client.DataServiceQuery%601> original generado por <xref:System.Data.Services.Client.QueryOperationResponse%601>.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> -Obtiene original <xref:System.Data.Services.Client.DataServiceQuery%601> que generó el <xref:System.Data.Services.Client.QueryOperationResponse%601>.  
   
--   La propiedad <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A>: obtiene el código de respuesta HTTP para la respuesta de la consulta.  
+-   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> -Obtiene el código de respuesta HTTP para la respuesta de consulta.  
   
--   La propiedad <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A>: obtiene el número total de entidades establecidas cuando se llamó al método <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> en <xref:System.Data.Services.Client.DataServiceQuery%601>.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> -Obtiene el número total de entidades de la entidad conjunto cuando el <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> se llamó al método en el <xref:System.Data.Services.Client.DataServiceQuery%601>.  
   
--   La propiedad <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A>: devuelve un objeto <xref:System.Data.Services.Client.DataServiceQueryContinuation> que contiene el URI de la siguiente página de resultados.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> -Devuelve un <xref:System.Data.Services.Client.DataServiceQueryContinuation> objeto que contiene el URI de la página siguiente de resultados.  
   
  De forma predeterminada, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] solo devuelve los datos que se selecciona de forma explícita el URI de consulta. De esta forma, puede cargar explícitamente datos desde el servicio de datos cuando sea necesario. Se envía una solicitud al servicio de datos cada vez que carga datos explícitamente desde el servicio de datos. Los datos que se pueden cargar explícitamente incluyen entidades relacionadas, datos de respuesta paginados y flujos de datos binarios.  
   
@@ -130,17 +130,18 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  [Consideraciones sobre LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)  
   
- [Cómo: Ejecutar consultas de servicios de datos](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
+ [Filtrar para ejecutar consultas de servicios de datos](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
   
- [Cómo: Agregar opciones de consulta a una consulta de servicio de datos](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
+ [Filtrar para agregar opciones de consulta a una consulta de servicio de datos](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
   
- [Cómo: Determinar el número de entidades devueltas por una consulta](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
+ [Filtrar para determinar el número de entidades devueltas por una consulta](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
   
- [Cómo: Especifique las credenciales del cliente para un servicio de datos de solicitud](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
+ [Filtrar para especificar las credenciales del cliente para una solicitud de servicio de datos](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
   
- [Cómo: Establecer los encabezados en la solicitud de cliente](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
+ [Filtrar para establecer encabezados en la solicitud de cliente](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
   
- [Cómo: Resultados de la consulta](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
+ [Filtrar relativo a los resultados de la consulta del proyecto](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
   
 ## <a name="see-also"></a>Vea también
-- [Biblioteca cliente de Servicios de datos de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+- [Biblioteca cliente de Data Services de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

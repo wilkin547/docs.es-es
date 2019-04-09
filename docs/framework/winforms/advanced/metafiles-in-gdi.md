@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GDI+, metafiles
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-ms.openlocfilehash: 25ce3fdd98560aba0918431bb77d6f3f23a04784
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722469"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119865"
 ---
 # <a name="metafiles-in-gdi"></a>Metarchivos en GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona el <xref:System.Drawing.Imaging.Metafile> clase por lo que puede grabar y mostrar metarchivos. Un metarchivo, también denominado imagen vectorial, es una imagen que se almacena como una secuencia de comandos y valores de dibujo. Los comandos y valores que se registran en un <xref:System.Drawing.Imaging.Metafile> objeto se pueda almacenar en memoria o guardado en un archivo o secuencia.  
@@ -38,4 +38,5 @@ ms.locfileid: "57722469"
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#21)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Imágenes, mapas de bits y metarchivos](images-bitmaps-and-metafiles.md)

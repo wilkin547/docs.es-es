@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b7b64874-c3c8-4bdb-862c-89a168d07827
-ms.openlocfilehash: 181564de997e9a799aafa660a16b32a6ceb91d4a
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: eaf98dc21499817446efca2f10edf7faea15761c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141666"
 ---
 # <a name="method-based-query-syntax-examples-partitioning"></a>Ejemplos de sintaxis de consulta basada en métodos: Particionamiento
 Los ejemplos de este tema muestran cómo usar el <xref:System.Linq.Enumerable.Skip%2A>, y <xref:System.Linq.Enumerable.Take%2A> métodos para consultar el [modelo AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) con la sintaxis de expresión de consulta. El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo de AdventureWorks.  
@@ -49,4 +49,5 @@ Los ejemplos de este tema muestran cómo usar el <xref:System.Linq.Enumerable.Sk
  [!code-vb[DP L2E Examples#TakeNested](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#takenested)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Consultas en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Hospedar un servicio WCF en IIS
+title: Filtrar para hospedar un servicio WCF en IIS
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 44c1b489897a25d293644c5a3ef7d446dd8d4a3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8b2ebc108bf3eef60e8877e617acec782da38fa4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651128"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124558"
 ---
-# <a name="how-to-host-a-wcf-service-in-iis"></a>Procedimiento Hospedar un servicio WCF en IIS
+# <a name="how-to-host-a-wcf-service-in-iis"></a>Filtrar para hospedar un servicio WCF en IIS
 En este tema se describe los pasos básicos necesarios para crear un servicio de Windows Communication Foundation (WCF) que se hospeda en Internet Information Services (IIS). Este tema da por hecho que está familiarizado con IIS y sabe cómo usar la herramienta de administración de IIS para crear y administrar aplicaciones IIS. Para obtener más información acerca de IIS, consulte [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Un servicio WCF que se ejecuta en el entorno de IIS aprovecha plenamente las características IIS, como el reciclaje de procesos, cierre por inactividad, supervisión del estado de proceso y la activación basada en mensajes. Esta opción de hospedaje requiere que se configure correctamente IIS, pero no requiere que se escriba ningún código de hospedaje como parte de la aplicación. Sólo puede utilizar el hospedaje de IIS con un transporte HTTP.  
   
  Para obtener más información acerca de cómo WCF y [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] interactuar, consulte [servicios WCF y ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md). Para obtener más información sobre la configuración de seguridad, consulte [seguridad](../../../../docs/framework/wcf/feature-details/security.md).  
@@ -66,7 +66,7 @@ En este tema se describe los pasos básicos necesarios para crear un servicio de
   
      Este ejemplo especifica puntos de conexión explícitamente en el archivo de configuración. Si no agrega ningún punto de conexión al servicio, el tiempo de ejecución agregará los puntos de conexión predeterminados. Para obtener más información acerca de los extremos, enlaces y comportamientos vea [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-11. Para asegurarse de que el servicio está hospedado correctamente, abra una instancia de Internet Explorer y vaya a la dirección URL del servicio: `http://localhost/IISHostedCalc/Service.svc`  
+11. Para asegurarse de que el servicio está hospedado correctamente, abra una instancia de Internet Explorer y vaya a la URL del servicio: `http://localhost/IISHostedCalc/Service.svc`  
   
 ## <a name="example"></a>Ejemplo  
  A continuación, se muestra el código completo del servicio de calculadora hospedado en IIS.  
@@ -76,6 +76,7 @@ En este tema se describe los pasos básicos necesarios para crear un servicio de
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Hospedaje en Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
 - [Servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md)
 - [Servicios WCF y ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)

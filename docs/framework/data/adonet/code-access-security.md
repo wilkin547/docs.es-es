@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: af3fe9a233972e939dc14117fc08343bca9d5fd6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174114"
 ---
 # <a name="code-access-security-and-adonet"></a>Seguridad de acceso del código y ADO.NET
 .NET Framework ofrece seguridad basada en roles y seguridad de acceso del código (CAS); ambas se implementan utilizando una infraestructura común proporcionada por Common Language Runtime (CLR). En el mundo del código no administrado, la mayoría de las aplicaciones se ejecutan mediante los permisos del usuario o de la entidad de seguridad. Por consiguiente, los sistemas de equipos pueden resultar dañados y se pueden poner en peligro los datos privados si un usuario con un nivel elevado de privilegios ejecuta software malintencionado o que contenga errores.  
@@ -27,11 +27,11 @@ ms.locfileid: "58411569"
   
  Hay tres tipos de permisos de acceso a código:  
   
--   Los `Code access permissions` derivan de la clase <xref:System.Security.CodeAccessPermission>. Se requieren permisos para tener acceso a recursos protegidos, como archivos y variables de entorno, y para realizar operaciones protegidas, como el acceso a código no administrado.  
+-   `Code access permissions` derivar de la <xref:System.Security.CodeAccessPermission> clase. Se requieren permisos para tener acceso a recursos protegidos, como archivos y variables de entorno, y para realizar operaciones protegidas, como el acceso a código no administrado.  
   
--   Los `Identity permissions` representan características que identifican un ensamblado. Los permisos se conceden al ensamblado en función de la evidencia, que puede incluir elementos como una firma digital o el origen del código. Los permisos de identidad también derivan de la clase base <xref:System.Security.CodeAccessPermission>.  
+-   `Identity permissions` representan características que identifican un ensamblado. Los permisos se conceden al ensamblado en función de la evidencia, que puede incluir elementos como una firma digital o el origen del código. Los permisos de identidad también derivan de la clase base <xref:System.Security.CodeAccessPermission>.  
   
--   Los `Role-based security permissions` se basan en el hecho de si una entidad de seguridad tiene una identidad especificada o si es miembro de una función especificada. La clase <xref:System.Security.Permissions.PrincipalPermission> permite comprobar los permisos declarativos e imperativos con la entidad de seguridad activa.  
+-   `Role-based security permissions` se basan en que una entidad de seguridad tiene una identidad especificada o es miembro de un rol especificado. La clase <xref:System.Security.Permissions.PrincipalPermission> permite comprobar los permisos declarativos e imperativos con la entidad de seguridad activa.  
   
  Para determinar si el código tiene autorización para el acceso a un recurso o para ejecutar una operación, el sistema de seguridad en tiempo de ejecución atraviesa la pila de llamadas y compara los permisos concedidos a cada llamador con el permiso que se exige. Si algún llamador de la pila de llamadas no tiene el permiso exigido, se iniciará clase <xref:System.Security.SecurityException> y se rechazará el acceso.  
   
@@ -190,12 +190,13 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilidad de código no administrado  
- El código que se ejecuta fuera de CLR se denomina código no administrado. Por lo tanto, los mecanismos de seguridad como CAS no se pueden aplicar en código no administrado. Componentes COM, las interfaces ActiveX y funciones de la API de Windows son ejemplos de código no administrado. Cuando se ejecuta código no administrado se aplican consideraciones de seguridad especiales, de forma que no se ponga en peligro la seguridad global de la aplicación. Para más información, consulte [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md) (Interoperar con código no administrado)  
+ El código que se ejecuta fuera de CLR se denomina código no administrado. Por lo tanto, los mecanismos de seguridad como CAS no se pueden aplicar en código no administrado. Los componentes COM, las interfaces ActiveX y las funciones de la API de Windows son ejemplos de código no administrado. Cuando se ejecuta código no administrado se aplican consideraciones de seguridad especiales, de forma que no se ponga en peligro la seguridad global de la aplicación. Para más información, consulte [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md) (Interoperar con código no administrado)  
   
  .NET Framework también es compatible con versiones anteriores de componentes COM existentes mediante el acceso a través de la interoperabilidad COM. Se pueden incluir componentes COM en una aplicación de .NET Framework usando las herramientas de la interoperabilidad COM para importar los tipos COM necesarios. Una vez que se han importado, los tipos COM están listos para su uso. La interoperabilidad COM también permite que los clientes COM tengan acceso a código administrado mediante la exportación de metadatos de ensamblado a una biblioteca de tipos y mediante el registro del componente administrado como un componente COM. Para obtener más información, consulte [interoperabilidad COM avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Seguridad del código nativo y código de .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [Seguridad del código nativo y del código de .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Seguridad basada en roles](../../../../docs/standard/security/role-based-security.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

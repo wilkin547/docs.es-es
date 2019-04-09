@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Crear un contrato unidireccional
+title: Filtrar para crear un contrato unidireccional
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-ms.openlocfilehash: f7636d7013c236e0c51e5326a84ae47f2f98e283
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a4996dc963c572e2aeb14b9b366af33b8f23d480
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693628"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208662"
 ---
-# <a name="how-to-create-a-one-way-contract"></a>Procedimiento Crear un contrato unidireccional
+# <a name="how-to-create-a-one-way-contract"></a>Filtrar para crear un contrato unidireccional
 En este tema se muestran los pasos básicos para crear métodos que utilizan un contrato unidireccional. Tales métodos invocan operaciones en un servicio de Windows Communication Foundation (WCF) desde un cliente pero no esperan una respuesta. Se puede utilizar este tipo de contrato, por ejemplo, para publicar notificaciones a muchos suscriptores. También puede utilizar los contratos unidireccionales al crear un contrato dúplex (bidireccional), que permita a los clientes y servidores comunicarse entre sí independientemente de modo que cualquiera de ellos pueda iniciar una llamada al otro. Esto puede permitir, en particular, al servidor que realice llamadas unidireccionales al cliente que el cliente puede tratar como eventos. Para obtener información detallada sobre cómo especificar métodos unidireccionales, vea la propiedad <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> y la clase <xref:System.ServiceModel.OperationContractAttribute>.  
   
  Para obtener más información acerca de cómo crear una aplicación cliente para un contrato dúplex, vea [Cómo: Obtener acceso a servicios con unidireccional y contratos de solicitud-respuesta](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Para obtener un ejemplo funcional, vea el [unidireccional](../../../../docs/framework/wcf/samples/one-way.md) ejemplo.  
@@ -32,9 +32,10 @@ En este tema se muestran los pasos básicos para crear métodos que utilizan un 
  [!code-vb[S_Service_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_service_session/vb/service.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - [Diseño e implementación de servicios](../../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Cómo: Definir un contrato de servicio](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Filtrar Definir un contrato de servicio](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
 - [Sesión](../../../../docs/framework/wcf/samples/session.md)
-- [Cómo: Crear un contrato dúplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Filtrar para crear un contrato dúplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

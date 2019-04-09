@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Crear una directiva de autorización personalizada
+title: Filtrar para crear una directiva de autorización personalizada
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: ba5d8d02d0c8d5993e1b072298aadcaa5fe0fe35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 78cc77a5491e50d718a53efff1c6f99acf23cf27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115393"
 ---
-# <a name="how-to-create-a-custom-authorization-policy"></a>Procedimiento Crear una directiva de autorización personalizada
+# <a name="how-to-create-a-custom-authorization-policy"></a>Filtrar para crear una directiva de autorización personalizada
 La infraestructura del modelo de identidad en Windows Communication Foundation (WCF) admite un modelo de autorización basado en notificaciones. Las notificaciones se extraen de los tokens, procesados opcionalmente por la directiva de autorización personalizada. Después se colocan en un <xref:System.IdentityModel.Policy.AuthorizationContext> que se puede examinar a continuación para tomar las decisiones de autorización. Se puede utilizar una directiva personalizada para transformar las notificaciones de tokens entrantes en notificaciones esperadas por la aplicación. De este modo, se puede aislar la capa de aplicación de los detalles en las distintas notificaciones servidas por los distintos tipos de token que WCF admite. En este tema se muestra cómo implementar una directiva de autorización personalizada y cómo agregarla a la colección de directivas utilizada por un servicio.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Para implementar una directiva de autorización personalizada  
@@ -76,7 +76,8 @@ La infraestructura del modelo de identidad en Windows Communication Foundation (
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Cómo: Comparar las notificaciones](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Cómo: Crear un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Filtrar para comparar notificaciones](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Filtrar para crear un administrador de autorización personalizado para un servicio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Directiva de autorización](../../../../docs/framework/wcf/samples/authorization-policy.md)

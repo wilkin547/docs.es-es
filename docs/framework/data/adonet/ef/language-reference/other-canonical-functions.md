@@ -2,15 +2,15 @@
 title: Otras funciones canónicas
 ms.date: 03/30/2017
 ms.assetid: 729bd47b-8e41-494c-a9a9-dcabf8b74312
-ms.openlocfilehash: cff709b7e5e2853bb00b9a056085b92a92910782
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05eea547b8c1ad4adf39faa5def5f25c9d45d767
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684221"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146372"
 ---
 # <a name="other-canonical-functions"></a>Otras funciones canónicas
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] incluye funciones canónicas no clasificadas como funciones bit a bit, de agregado, matemáticas, de fecha y hora o de cadena.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] incluye funciones canónicas no clasificadas como bit a bit, de agregado, matemáticas, de fecha y hora o cadena.  
   
  En la tabla siguiente se muestran las demás funciones canónicas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
@@ -19,4 +19,5 @@ ms.locfileid: "54684221"
 |`NewGuid()`|Devuelve un nuevo GUID.<br /><br /> **Ejemplo**<br /><br /> `NewGuid()`|  
   
 ## <a name="see-also"></a>Vea también
+
 - [Funciones canónicas](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

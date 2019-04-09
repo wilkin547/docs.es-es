@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar una marca de agua a un TextBox
+title: Filtrar Agregar una marca de agua a un control TextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - displaying a background image inside a text box to aid user input [WPF]
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-ms.openlocfilehash: 5a2b48c6f580def98a47913c4909d0c57aca0974
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142420"
 ---
-# <a name="how-to-add-a-watermark-to-a-textbox"></a>Filtrar Agregar una marca de agua a un TextBox
+# <a name="how-to-add-a-watermark-to-a-textbox"></a>Filtrar Agregar una marca de agua a un control TextBox
 El ejemplo siguiente muestra cómo facilitar el uso de un <xref:System.Windows.Controls.TextBox> al mostrar una imagen de fondo explicativa dentro de la <xref:System.Windows.Controls.TextBox> hasta que el usuario escribe texto, momento en que se quita la imagen. Además, la imagen de fondo se puede restaurar de nuevo si el usuario quita los datos proporcionados. Consulte la siguiente ilustración.  
   
  ![Un cuadro de texto con una imagen de fondo](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")  
@@ -30,5 +30,6 @@ El ejemplo siguiente muestra cómo facilitar el uso de un <xref:System.Windows.C
  [!code-vb[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/visualbasic/textbox_with_background_image.xaml.vb#textboxbackgroundcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre TextBox](textbox-overview.md)
-- [RichTextBox Overview](richtextbox-overview.md) (Introducción a RichTextBox)
+- [Información general sobre el control RichTextBox](richtextbox-overview.md)

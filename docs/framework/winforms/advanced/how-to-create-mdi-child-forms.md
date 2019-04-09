@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear formularios MDI secundarios
+title: Filtrar para crear formularios secundarios MDI
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 02e19470aaac76e7bcab5a324138bb50dedb212f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 83f94830eec1d82112719a48e8ea98e2503f4542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124532"
 ---
-# <a name="how-to-create-mdi-child-forms"></a>Procedimiento Crear formularios MDI secundarios
+# <a name="how-to-create-mdi-child-forms"></a>Filtrar para crear formularios secundarios MDI
 Formularios secundarios MDI son un elemento esencial de [aplicaciones de interfaz de múltiples documentos (MDI)](multiple-document-interface-mdi-applications.md), ya que estos formularios son el centro de la interacción del usuario.  
   
  En el siguiente procedimiento, va a crear formulario MDI secundario que muestra un control <xref:System.Windows.Forms.RichTextBox>, similar a la mayoría de las aplicaciones de procesamiento de texto. Sustituir el control <xref:System.Windows.Forms> por otros controles, como el control <xref:System.Windows.Forms.DataGridView>, o por una mezcla de controles permite crear ventanas secundarias MDI (y, por extensión, aplicaciones MDI) con diversas posibilidades.  
@@ -107,8 +107,9 @@ Formularios secundarios MDI son un elemento esencial de [aplicaciones de interfa
     >  Cuando un formulario MDI secundario tiene un componente <xref:System.Windows.Forms.MainMenu> (por lo general, con una estructura de menús con elementos de menú) y se abre dentro de un formulario MDI primario que tiene un componente <xref:System.Windows.Forms.MainMenu> (por lo general, con una estructura de menús con elementos de menú), los elementos de menú se combinan automáticamente si ha establecido la propiedad <xref:System.Windows.Forms.MenuItem.MergeType%2A> (y, opcionalmente, la propiedad <xref:System.Windows.Forms.MenuItem.MergeOrder%2A>). Establezca la propiedad <xref:System.Windows.Forms.MenuItem.MergeType%2A> de ambos componentes <xref:System.Windows.Forms.MainMenu> y todos los elementos de menú del formulario secundario en <xref:System.Windows.Forms.MenuMerge.MergeItems>. Además, establezca la propiedad <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> para que los elementos de ambos menús aparezcan en el orden deseado. Tenga en cuenta también que, cuando se cierra un formulario MDI primario, cada uno de los formularios MDI secundarios genera un evento <xref:System.Windows.Forms.Form.Closing> antes de que se produzca el evento <xref:System.Windows.Forms.Form.Closing> para el formulario MDI primario. Cancelar el evento <xref:System.Windows.Forms.Form.Closing> de un elemento MDI secundario no impedirá que se produzca el evento <xref:System.Windows.Forms.Form.Closing> del elemento MDI primario; sin embargo, el argumento <xref:System.ComponentModel.CancelEventArgs> del evento <xref:System.Windows.Forms.Form.Closing> del elemento MDI primario ahora se establecerá en `true`. Puede forzar el cierre del formularios MDI primario y de todos los formularios MDI secundarios estableciendo el argumento <xref:System.ComponentModel.CancelEventArgs> en `false`.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Aplicaciones de interfaz de múltiples documentos (MDI)](multiple-document-interface-mdi-applications.md)
-- [Cómo: Crear formularios principales MDI](how-to-create-mdi-parent-forms.md)
-- [Cómo: Determinar el formulario secundario MDI activo](how-to-determine-the-active-mdi-child.md)
-- [Cómo: Enviar datos al formulario secundario MDI activo](how-to-send-data-to-the-active-mdi-child.md)
-- [Cómo: Organizar formularios MDI secundarios](how-to-arrange-mdi-child-forms.md)
+- [Filtrar para crear formularios principales MDI](how-to-create-mdi-parent-forms.md)
+- [Filtrar para determinar el formulario secundario MDI activo](how-to-determine-the-active-mdi-child.md)
+- [Filtrar para enviar datos al formulario secundario MDI activo](how-to-send-data-to-the-active-mdi-child.md)
+- [Filtrar para organizar formularios secundarios MDI](how-to-arrange-mdi-child-forms.md)

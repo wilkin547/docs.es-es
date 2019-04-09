@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 2e3e46c9d4cf118bb846e5d9efefeb0d57fea567
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0477f68aaf67d4b29c491052999ff7784e736669
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176415"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Información general sobre Splitter (Control, formularios Windows Forms)
 > [!IMPORTANT]
@@ -23,6 +23,7 @@ ms.locfileid: "57703204"
  Cuando el usuario sitúa el puntero del mouse sobre el borde de un control que se puede cambiar el tamaño de un control divisor desacoplado, el puntero cambia de apariencia para indicar que se puede cambiar el tamaño del control. Con el control divisor, el usuario puede cambiar el tamaño del control acoplado inmediatamente anterior. Por lo tanto, para permitir al usuario cambiar el tamaño de un control acoplado en tiempo de ejecución, acople el control para cambiar de tamaño a un borde de un contenedor y, a continuación, acoplar un control divisor en el mismo lado de ese contenedor.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.SplitContainer>
-- [Cómo: Acoplar controles en Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Filtrar para acoplar controles en formularios Windows Forms](how-to-dock-controls-on-windows-forms.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

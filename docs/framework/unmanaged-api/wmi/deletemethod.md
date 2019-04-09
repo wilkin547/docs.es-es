@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb7b800bca1957c8c324ddb9c11cb4eabb49cd24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9eb96a75686a14182b9526a0832223c2b9abfc34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136921"
 ---
-# <a name="deletemethod-function"></a>DeleteMethod (función)
+# <a name="deletemethod-function"></a>Función DeleteMethod
 Elimina el método especificado de una definición de clase CIM.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -73,4 +73,5 @@ No se admite la eliminación de método para [IWbemClassObject](/windows/desktop
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

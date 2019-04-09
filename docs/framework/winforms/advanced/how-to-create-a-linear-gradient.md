@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear un degradado lineal
+title: Filtrar para crear un degradado lineal
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: e47707d040cd7bf67008fab33ac482706963ce39
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 540b6d422be5d5c0898f019592a755258145d14d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125026"
 ---
-# <a name="how-to-create-a-linear-gradient"></a>Procedimiento Crear un degradado lineal
+# <a name="how-to-create-a-linear-gradient"></a>Filtrar para crear un degradado lineal
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona degradados lineales horizontales, verticales y diagonales. De forma predeterminada, el color de un degradado lineal cambia de manera uniforme. Sin embargo, puede personalizar un degradado lineal por lo que cambia el color de manera no uniforme.  
   
  El siguiente ejemplo rellena una línea, una elipse y un rectángulo con un pincel de degradado lineal horizontal.  
@@ -78,5 +78,6 @@ ms.locfileid: "57725251"
      [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Utilizar un pincel degradado para rellenar formas](using-a-gradient-brush-to-fill-shapes.md)
 - [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Personalizar el formato de datos en el Control DataGridView de Windows Forms
+title: Filtrar para personalizar el formato de los datos en el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], substituting cell values for display
 - data grids [Windows Forms], formatting data
 ms.assetid: a6e72c70-ce18-425f-828d-d57be6f96ab6
-ms.openlocfilehash: 4a7e74afa985d36281994078bd0ea464f084cfa9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5ce43054130db88792acab852b1e886285ff34d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116056"
 ---
-# <a name="how-to-customize-data-formatting-in-the-windows-forms-datagridview-control"></a>Procedimiento Personalizar el formato de datos en el Control DataGridView de Windows Forms
+# <a name="how-to-customize-data-formatting-in-the-windows-forms-datagridview-control"></a>Filtrar para personalizar el formato de los datos en el control DataGridView de formularios Windows Forms
 En el ejemplo de código siguiente, se muestra cómo implementar un controlador para el evento <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> que cambia la manera en que se muestran las celdas según sus valores y columnas.  
   
  Las celdas de la columna `Balance` que contienen números negativos tienen un fondo rojo. También puede dar formato a estas celdas como moneda para que se muestren paréntesis alrededor de los valores negativos. Para obtener más información, vea [Cómo: Formato de datos en la Windows Forms DataGridView Control](how-to-format-data-in-the-windows-forms-datagridview-control.md).  
@@ -39,17 +39,18 @@ En el ejemplo de código siguiente, se muestra cómo implementar un controlador 
   
 -   Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
   
--   Las imágenes <xref:System.Drawing.Bitmap> denominadas `highPri.bmp`, `mediumPri.bmp` y `lowPri.bmp` que residen en el mismo directorio que el archivo ejecutable.  
+-   <xref:System.Drawing.Bitmap> imágenes denominadas `highPri.bmp`, `mediumPri.bmp`, y `lowPri.bmp` que residen en el mismo directorio que el archivo ejecutable.  
   
  Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Drawing.Bitmap>
-- [Mostrar datos en el control DataGridView de Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Cómo: Formato de datos en la Windows Forms DataGridView Control](how-to-format-data-in-the-windows-forms-datagridview-control.md)
-- [Estilos de celda en el control DataGridView de Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Formato de datos en el control DataGridView de Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Mostrar datos en el control DataGridView de formularios Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Filtrar para dar formato a datos en el control DataGridView de formularios Windows Forms](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [Estilos de celda en el control DataGridView de formularios Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Formato de datos en el control DataGridView de formularios Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
