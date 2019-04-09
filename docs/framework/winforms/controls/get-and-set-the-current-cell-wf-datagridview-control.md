@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Obtener y establecer la celda actual en el Control DataGridView de formularios de Windows
+title: Filtrar para obtener y establecer la celda actual en el control DataGridView de formularios Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], setting current cell
 - cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
-ms.openlocfilehash: 712340e6fbc081cbac9ecfb516bffb7a58bf0c12
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fb71a6e3259d3007e11f528377c95a9c4cbeb023
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096984"
 ---
-# <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Filtrar Obtener y establecer la celda actual en el Control DataGridView de formularios de Windows
+# <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Filtrar para obtener y establecer la celda actual en el control DataGridView de formularios Windows Forms
 Interacción con el <xref:System.Windows.Forms.DataGridView> a menudo requiere que detectar mediante programación la celda que está actualmente activa. También es posible que deba cambiar la celda actual. Puede realizar estas tareas con el <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> propiedad.  
   
 > [!NOTE]
@@ -48,7 +48,8 @@ Interacción con el <xref:System.Windows.Forms.DataGridView> a menudo requiere q
 -   Referencias a los ensamblados <xref:System?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CurrentCell%2A?displayProperty=nameWithType>
-- [Características básicas de columnas, filas y celdas en el control DataGridView de Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Características básicas de columnas, filas y celdas en el control DataGridView de formularios Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
 - [Modos de selección en el control DataGridView de formularios Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md)

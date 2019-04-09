@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703925"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184826"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Utilizar la fila de nuevos registros en el control DataGridView de formularios Windows Forms
 Cuando se usa un <xref:System.Windows.Forms.DataGridView> para modificar los datos en la aplicación, a menudo desea ofrecer a los usuarios la capacidad de agregar nuevas filas de datos al almacén de datos. El <xref:System.Windows.Forms.DataGridView> control admite esta funcionalidad proporcionando una fila para los nuevos registros, siempre se muestra como la última fila. Se marca con un símbolo de asterisco (*) en el encabezado de fila. Las secciones siguientes tratan algunas de las cosas que debe considerar cuando se programa con la fila de nuevos registros habilitada.  
@@ -58,7 +58,8 @@ Cuando se usa un <xref:System.Windows.Forms.DataGridView> para modificar los dat
  Si está implementando el modo virtual, deberá hacer un seguimiento cuando se necesita una fila para los nuevos registros en el modelo de datos y cuándo se debe deshacer la adición de la fila. La implementación exacta de esta funcionalidad depende de la implementación del modelo de datos y la semántica de transacción, por ejemplo, si el ámbito de confirmación está en el nivel de celda o fila. Para obtener más información, consulte [el modo Virtual en el DataGridView Control de Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Entrada de datos en el control DataGridView de Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Cómo: Especificar valores predeterminados para nuevas filas en el Control DataGridView de formularios de Windows](specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Entrada de datos en el control DataGridView de formularios Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Filtrar para especificar valores predeterminados para nuevas filas en el control DataGridView de formularios Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)

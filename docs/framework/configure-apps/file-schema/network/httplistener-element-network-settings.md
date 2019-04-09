@@ -1,13 +1,13 @@
 ---
-title: <httpListener> (Elemento, Configuración de red)
+title: <httpListener> Elemento (configuración de red)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: ff5e4ad2788ab3df621beb52b1703647df068a7f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099749"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > elemento (configuración de red)
 Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> clase.  
@@ -41,9 +41,9 @@ Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> cla
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|**Element**|**Descripción**|  
+|**Elemento**|**Descripción**|  
 |-----------------|---------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
+|[configuración](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentarios  
  El **unescapeRequestUrl** atributo indica si <xref:System.Net.HttpListener> usa el URI sin secuencias de escape de formato en lugar del URI convertido donde se convierten los valores codificados por porcentaje y se realizan otros pasos de normalización.  
@@ -138,6 +138,7 @@ Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> cla
 |Puede estar vacío||  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Net.Configuration.HttpListenerElement>
 - <xref:System.Net.HttpListener>
 - <xref:System.Net.HttpListenerRequest.Url%2A>

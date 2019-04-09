@@ -8,18 +8,16 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: f56a8435b1cdebe0e0af6531c37dccfbe6617a0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5924ff9336bc6e93022caf1b85d5fd98f7a617d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357526"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197391"
 ---
 # <a name="graphics-rendering-tiers"></a>Niveles de representación de gráficos
 Un nivel de representación define un nivel de funcionalidad y rendimiento de hardware gráfico para un dispositivo que ejecuta un aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
-  
 
-  
 <a name="graphics_hardware"></a>   
 ## <a name="graphics-hardware"></a>Hardware gráfico  
  Las características del hardware gráfico que más afectan a los niveles de representación son:  
@@ -58,7 +56,7 @@ Un nivel de representación define un nivel de funcionalidad y rendimiento de ha
   
 |Característica|Nivel 1|Nivel 2|  
 |-------------|------------|------------|  
-|Versión de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]|Debe ser mayor o igual que 9.0.|Debe ser mayor o igual que 9.0.|  
+|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version|Debe ser mayor o igual que 9.0.|Debe ser mayor o igual que 9.0.|  
 |RAM de vídeo|Debe ser mayor o igual que 60MB.|Debe ser mayor o igual a 120MB.|  
 |Sombreador de píxeles|Nivel de versión debe ser mayor o igual a 2.0.|Nivel de versión debe ser mayor o igual a 2.0.|  
 |Sombreador de vértices|Ningún requisito.|Nivel de versión debe ser mayor o igual a 2.0.|  
@@ -98,7 +96,7 @@ Un nivel de representación define un nivel de funcionalidad y rendimiento de ha
  Los siguientes recursos pueden ayudarle a analizar las características de rendimiento de su aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ### <a name="graphics-rendering-registry-settings"></a>Configuración del Registro en la representación de gráficos  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona cuatro valores de configuración del Registro para controlar la representación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona cuatro valores del registro para controlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] representación:  
   
 |Parámetro|Descripción|  
 |-------------|-----------------|  
@@ -110,7 +108,7 @@ Un nivel de representación define un nivel de funcionalidad y rendimiento de ha
  Es posible acceder a estos parámetros mediante una utilidad de configuración externa que pueda hacer referencia a la configuración del Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Estos valores de configuración también pueden crearse o modificarse mediante el acceso a los valores directamente a través del Editor del Registro de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Para obtener más información, consulte [Configuración del Registro en la representación de gráficos](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>Herramientas de generación de perfiles de rendimiento para WPF  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ofrece un conjunto de herramientas de generación de perfiles de rendimiento que le permiten analizar el comportamiento en tiempo de ejecución de la aplicación y determinar los tipos de optimizaciones de rendimiento que puede aplicar. En la tabla siguiente se muestran las herramientas de generación de perfiles de rendimiento que se incluyen en la herramienta de [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)], WPF Performance Suite:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Proporciona un conjunto de herramientas que le permiten analizar el comportamiento en tiempo de ejecución de la aplicación y determinar los tipos de optimizaciones de rendimiento que se puede aplicar de generación de perfiles. En la tabla siguiente se muestran las herramientas de generación de perfiles de rendimiento que se incluyen en la herramienta de [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)], WPF Performance Suite:  
   
 |Herramienta|Descripción|  
 |----------|-----------------|  
@@ -130,6 +128,7 @@ Un nivel de representación define un nivel de funcionalidad y rendimiento de ha
 Ventana principal de la Herramienta de diagnóstico de DirectX  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [Optimizar WPF: Rendimiento de aplicaciones](optimizing-wpf-application-performance.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Animar una propiedad sin utilizar un guión gráfico
+title: Filtrar Animar una propiedad sin usar un guión gráfico
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - local animation [WPF]
 - animation [WPF], non-Storyboard (local)
 ms.assetid: d411db70-4df7-487d-82bc-95a7c1b2e7f8
-ms.openlocfilehash: b76afeb0187065ff07c832363d3a52896aa36822
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 93609cdeb4d879cbec0f90096e4fa2c131a2ec5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371173"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091712"
 ---
-# <a name="how-to-animate-a-property-without-using-a-storyboard"></a>Filtrar Animar una propiedad sin utilizar un guión gráfico
+# <a name="how-to-animate-a-property-without-using-a-storyboard"></a>Filtrar Animar una propiedad sin usar un guión gráfico
 En este ejemplo se muestra una manera de aplicar una animación a una propiedad sin utilizar un <xref:System.Windows.Media.Animation.Storyboard>.  
   
 > [!NOTE]
@@ -37,6 +37,7 @@ En este ejemplo se muestra una manera de aplicar una animación a una propiedad 
  Hay otras maneras de animar sin utilizar <xref:System.Windows.Media.Animation.Storyboard> objetos; para obtener más información, consulte [técnicas de animación de información general sobre propiedades](property-animation-techniques-overview.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>
 - <xref:System.Windows.Media.Animation>

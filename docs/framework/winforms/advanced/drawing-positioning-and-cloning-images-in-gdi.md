@@ -15,12 +15,12 @@ helpviewer_keywords:
 - GDI+, cloning images
 - GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
-ms.openlocfilehash: 9682c7be5956680556defd698cb97e8f4b1a7f50
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b5f98e7bdef9ff8ed0a4cd0e040cb92a31f30503
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724675"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188453"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>Dibujar, colocar y clonar imágenes en GDI+
 Puede usar el <xref:System.Drawing.Bitmap> clase para cargar y mostrar imágenes de trama y se puede usar el <xref:System.Drawing.Imaging.Metafile> clase para cargar y mostrar imágenes vectoriales. El <xref:System.Drawing.Bitmap> y <xref:System.Drawing.Imaging.Metafile> clases heredan de la <xref:System.Drawing.Image> clase. Para mostrar una imagen de vector, se necesita una instancia de la <xref:System.Drawing.Graphics> clase y un <xref:System.Drawing.Imaging.Metafile>. Para mostrar una imagen de trama, necesita una instancia de la <xref:System.Drawing.Graphics> clase y un <xref:System.Drawing.Bitmap>. La instancia de la <xref:System.Drawing.Graphics> clase proporciona el <xref:System.Drawing.Graphics.DrawImage%2A> método, que recibe el <xref:System.Drawing.Imaging.Metafile> o <xref:System.Drawing.Bitmap> como argumento.  
@@ -52,6 +52,7 @@ Puede usar el <xref:System.Drawing.Bitmap> clase para cargar y mostrar imágenes
  ![Cropping](./media/aboutgdip03-art05.gif "AboutGdip03_Art05")  
   
 ## <a name="see-also"></a>Vea también
+
 - [Imágenes, mapas de bits y metarchivos](images-bitmaps-and-metafiles.md)
-- [Cómo: Crear objetos Graphics para dibujar](how-to-create-graphics-objects-for-drawing.md)
+- [Filtrar para crear objetos gráficos para dibujar](how-to-create-graphics-objects-for-drawing.md)
 - [Trabajar con imágenes, mapas de bits, iconos y metarchivos](working-with-images-bitmaps-icons-and-metafiles.md)

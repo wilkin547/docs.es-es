@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Repetir un sonido reproducido en un formulario de Windows
+title: Filtrar para repetir un sonido reproducido en un formulario Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 43fcc472960cc3f2432d3872160d9ace4c617836
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719278"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188518"
 ---
-# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Procedimiento Repetir un sonido reproducido en un formulario de Windows
+# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Filtrar para repetir un sonido reproducido en un formulario Windows Forms
 En el ejemplo de código siguiente, se reproduce repetidamente un sonido. Cuando se ejecuta el código en el controlador de eventos `stopPlayingButton_Click`, todos los sonidos que se estén reproduciendo se detienen. Si no se está reproduciendo ningún sonido, no ocurre nada.  
   
 ## <a name="example"></a>Ejemplo  
@@ -54,6 +54,7 @@ En el ejemplo de código siguiente, se reproduce repetidamente un sonido. Cuando
  No tome ninguna decisión sobre el contenido del archivo basándose en su nombre. Por ejemplo, es posible que el archivo Form1.vb no sea un archivo de código fuente de Visual Basic. Compruebe todas las entradas antes de utilizar los datos en la aplicación.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [Cómo: Reproducir un sonido desde Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
+- [Filtrar para reproducir un sonido desde un formulario Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
 - [Información general sobre la clase SoundPlayer](soundplayer-class-overview.md)

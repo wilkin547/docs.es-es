@@ -2,12 +2,12 @@
 title: <serviceCertificate> de <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-ms.openlocfilehash: 7134e8b3d253575bf26f26490372aa94549c73b7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4fe196ef8737c7abde939e36c2bb7afd5a0d86b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145345"
 ---
 # <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate > de \<clientCredentials > elemento
 Especifica el certificado que se va a utilizar al autenticar un servicio al cliente.  
@@ -51,6 +51,7 @@ Especifica el certificado que se va a utilizar al autenticar un servicio al clie
  Los atributos de la `serviceCertificate` son idénticos a los atributos del elemento de la [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ServiceCertificate%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials>
@@ -59,5 +60,5 @@ Especifica el certificado que se va a utilizar al autenticar un servicio al clie
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)
-- [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

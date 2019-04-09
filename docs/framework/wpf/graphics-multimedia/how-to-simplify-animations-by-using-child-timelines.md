@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], simplifying by child timelines
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
-ms.openlocfilehash: 933ba2dff86b99bddd8d8f75bafcd94833b2e066
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 21a297208be045eea79d6f5ca6c8eac016d26345
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370363"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096399"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Filtrar Simplificar las animaciones mediante escalas de tiempo secundarias
 En este ejemplo se muestra cómo simplificar animaciones utilizando secundarios <xref:System.Windows.Media.Animation.ParallelTimeline> objetos. Un <xref:System.Windows.Media.Animation.Storyboard> es un tipo de <xref:System.Windows.Media.Animation.Timeline> que proporciona información de destino para las escalas de tiempo contiene. Use un <xref:System.Windows.Media.Animation.Storyboard> para proporcionar información, incluida la información de objeto y propiedad de destino de la escala de tiempo.  
@@ -26,5 +26,6 @@ En este ejemplo se muestra cómo simplificar animaciones utilizando secundarios 
  [!code-xaml[Timelines_snip#ParallelTimelineWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre animaciones](animation-overview.md)
 - [Especificar HandoffBehavior entre animaciones de guión gráfico](how-to-specify-handoffbehavior-between-storyboard-animations.md)

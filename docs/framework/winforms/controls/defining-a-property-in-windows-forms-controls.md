@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: 84273d2fab36df287eaca70f5f32fd8024a9204d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 905578454b0bc6b5e74202d15c91645fed0fd461
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143252"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Definir una propiedad en los controles de formularios Windows Forms
 Para información general de propiedades, vea [Información general sobre propiedades](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Hay que hacer algunas consideraciones importantes al definir una propiedad:  
@@ -121,7 +121,8 @@ public int Value {
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Propiedades de los controles de Windows Forms](properties-in-windows-forms-controls.md)
+
+- [Propiedades de los controles de formularios Windows Forms](properties-in-windows-forms-controls.md)
 - [Definir valores predeterminados con los métodos ShouldSerialize y Reset](defining-default-values-with-the-shouldserialize-and-reset-methods.md)
 - [Eventos de cambio de propiedades](property-changed-events.md)
-- [Atributos en controles de Windows Forms](attributes-in-windows-forms-controls.md)
+- [Atributos en controles de formularios Windows Forms](attributes-in-windows-forms-controls.md)

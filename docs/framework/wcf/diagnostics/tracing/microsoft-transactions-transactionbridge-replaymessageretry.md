@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.ReplayMessageRetry
 ms.date: 03/30/2017
 ms.assetid: e5b820ae-504d-405a-926a-9effa41d2369
-ms.openlocfilehash: bb7f6fcf95d1ff253fa0e2963610bee2b65ef3c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c9e79709f5929e1fa123a8d1695ca720046e9e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597117"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190878"
 ---
 # <a name="microsofttransactionstransactionbridgereplaymessageretry"></a>Microsoft.Transactions.TransactionBridge.ReplayMessageRetry
 Se envió un reintento de mensaje de reproducción a un coordinador que no responde.  
@@ -19,6 +19,7 @@ Se envió un reintento de mensaje de reproducción a un coordinador que no respo
  Investigue los posibles problemas de red o del producto que impiden la entrega puntual de la respuesta.  Si estos mensajes son frecuentes, puede indicar problemas de infraestructura o tiempos de respuesta anormalmente largos. Ambos problemas reducirán drásticamente el rendimiento de las transacciones dentro del sistema.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

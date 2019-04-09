@@ -10,12 +10,12 @@ helpviewer_keywords:
 - event handling [Windows Forms], Windows Forms
 - event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
-ms.openlocfilehash: 6dbcffadfd484dc33db2fcd3ee3f680dcc0740e5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 05acbfaf427060d015c2445360a7d73ebe97d070
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186087"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>Información general sobre controladores de eventos (Formularios Windows Forms)
 Un controlador de eventos es un método que está enlazado a un evento. Cuando se provoca el evento, se ejecuta el código del controlador de eventos. Cada controlador de eventos proporciona dos parámetros que permiten controlar el evento correctamente. El ejemplo siguiente muestra un controlador de eventos para un <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Click> eventos.  
@@ -49,5 +49,6 @@ private:
  También puede usar el mismo controlador de eventos para controlar el mismo evento para los distintos controles. Por ejemplo, si tiene un grupo de <xref:System.Windows.Forms.RadioButton> controles en un formulario, puede crear un único controlador de eventos para el <xref:System.Windows.Forms.Control.Click> eventos y tener cada control <xref:System.Windows.Forms.Control.Click> eventos enlazados al controlador de eventos único. Para obtener más información, vea [Cómo: Conectar varios eventos con un único controlador de eventos en Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Vea también
-- [Crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md)
+
+- [Crear controladores de eventos en formularios Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Información general sobre eventos](events-overview-windows-forms.md)

@@ -1,16 +1,16 @@
 ---
-title: 'Dentro de CustomPeerResolverService: Registros de cliente'
+title: 'Dentro de CustomPeerResolverService: registros de cliente'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: 90d40eb11dbfebf4a19ba4c42e0fd4b45a2b1e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095794"
 ---
-# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Dentro de CustomPeerResolverService: Registros de cliente
-Cada nodo de la malla publica su información de punto de conexión en el servicio de resolución a través de la función `Register`. El servicio de resolución almacena esta información como un registro. Este registro contiene un identificador único (RegistrationID) e información de extremo (PeerNodeAddress) para el nodo.  
+# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Dentro de CustomPeerResolverService: registros de cliente
+Cada nodo de la malla publica su información de punto de conexión en el servicio de resolución a través de la función `Register`. El servicio de resolución almacena esta información como un registro. Este registro contiene un identificador único (RegistrationID) e información de punto de conexión (PeerNodeAddress) para el nodo.  
   
 ## <a name="stale-records-and-expiration-time"></a>Registros obsoletos y tiempo de expiración  
  Lo ideal es que, cuando un nodo deja la malla, llame a la función `Unregister`, que hace que el servicio de resolución quite la entrada de registro. A veces, los nodos se cierran o dejan de estar accesibles antes de llamar a `Unregister`, dejando un registro obsoleto.  
@@ -34,4 +34,5 @@ Cada nodo de la malla publica su información de punto de conexión en el servic
  Cuando un nodo se registra con un servicio de resolución, recibe un objeto <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> desde el servicio. Este objeto tiene una propiedad `RegistrationLifetime` que indica al nodo cuánto tiempo tiene antes de que el registro expire y el servicio de resolución lo quite. Por ejemplo, si `RegistrationLifetime` es 2 minutos, el nodo necesita llamar a `Refresh` en menos de 2 minutos para asegurarse de que el registro se mantiene actualizado y no se elimina. Cuando el servicio de resolución recibe una solicitud `Refresh`, busca el registro y restablece el tiempo de expiración. Refresh devuelve un objeto <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> con una propiedad `RegistrationLifetime`.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Resoluciones del mismo nivel](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

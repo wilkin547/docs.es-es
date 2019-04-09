@@ -1,5 +1,5 @@
 ---
-title: AddImport (Método)
+title: Método AddImport
 ms.date: 03/30/2017
 api_name:
 - AddImport
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 261d80caa43ec478d3a3a33acdebcc1bfcfde8cf
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bbe8a43f44d59249abc713c95fce31f1fb9a5993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148673"
 ---
-# <a name="addimport-method"></a>AddImport (Método)
+# <a name="addimport-method"></a>Método AddImport
 Agrega las importaciones al ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -58,6 +58,7 @@ HRESULT AddImport(
  Requiere alink.h  
   
 ## <a name="see-also"></a>Vea también
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+
+- [IALink (Interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 (Interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

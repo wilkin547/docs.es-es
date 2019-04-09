@@ -2,12 +2,12 @@
 title: Usar el seguimiento para resolver problemas de las aplicaciones
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: 1ed95a26f682fcdb609b410251fdb3f8b647016a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62c46ca36c89c023bfc775eb76ba454c9a4162c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734427"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142069"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Usar el seguimiento para resolver problemas de las aplicaciones
 Windows Workflow Foundation (WF) le permite realizar un seguimiento de información relacionada con el flujo de trabajo para proporcionar detalles en la ejecución de un servicio o aplicación de Windows Workflow Foundation. Hosts de Windows Workflow Foundation pueden capturar eventos de flujo de trabajo durante la ejecución de una instancia de flujo de trabajo. Si el flujo de trabajo genera errores o excepciones, puede usar los detalles de seguimiento para solucionar problemas de procesamiento de Windows Workflow Foundation.  
@@ -52,5 +52,6 @@ Windows Workflow Foundation (WF) le permite realizar un seguimiento de informaci
  Si el seguimiento se habilita mediante el participante de seguimiento de ETW, los eventos de error se emiten en una sesión ETW. Los eventos pueden verse con el Visor de eventos. Esto se puede encontrar bajo el nodo **aplicaciones -> el Visor de eventos y registros de servicios -> Microsoft -> Windows -> servidor de aplicaciones-aplicaciones** en el canal analítico.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Supervisión de aplicaciones con App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

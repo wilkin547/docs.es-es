@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 9ea8960b74cd44734eb68a07c6959727bf1ac797
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 3dcc6f763acfff076bb03076a17e3a8f8916267c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097257"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementar la lógica de negocios (LINQ to SQL)
 El término "lógica empresarial" de este tema se refiere a cualquier regla personalizada o prueba de validación que se aplica a los datos antes de insertarlos, actualizarlos o eliminarlos de la base de datos. La lógica empresarial también se conoce a veces como "reglas de empresa" o "lógica del dominio". En aplicaciones de n niveles, se diseña generalmente como una capa lógica para que se pueda modificar independientemente de la capa de presentación o de la capa de acceso a datos. La capa de acceso a datos puede invocar la lógica empresarial antes o después de cualquier actualización, inserción o eliminación de datos en la base de datos.  
@@ -177,14 +177,15 @@ partial class Customer
   
  Para obtener más información sobre cómo agregar lógica empresarial a su aplicación utilizando métodos parciales, vea los temas siguientes:  
   
- [Cómo: Agregar validación a clases de entidad](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
+ [Filtrar Agregar validación a clases de entidad](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
   
- [Tutorial: Personalizar el comportamiento de inserción, actualización y eliminación de clases de entidad](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
+ [Tutorial: Personalización del comportamiento de inserción, actualización y eliminación de clases de entidad](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
  [Tutorial: Agregar validación a clases de entidad](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
   
 ## <a name="see-also"></a>Vea también
+
 - [Clases y métodos parciales](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
 - [Métodos Partial](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
-- [Herramientas LINQ to SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
+- [LINQ to SQL Tools en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
 - [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

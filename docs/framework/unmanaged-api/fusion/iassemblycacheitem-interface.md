@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d89a531ad09e6865bd9c7dad00c1d8c1840fab8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fba17a2ffad9220acdbc79726efe0d3d4184978a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662171"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188557"
 ---
 # <a name="iassemblycacheitem-interface"></a>IAssemblyCacheItem (Interfaz)
 Representa un único ensamblado en la caché global de ensamblados.  
@@ -30,9 +30,9 @@ Representa un único ensamblado en la caché global de ensamblados.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[AbortItem (método)](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|Permite que el ensamblado en la caché global de ensamblados realizar operaciones de limpieza antes de su lanzamiento.|  
-|[Commit (método)](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|Confirma la referencia de ensamblado en la caché en memoria.|  
-|[CreateStream (método)](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|Crea una secuencia con el nombre especificado y el formato.|  
+|[Método AbortItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|Permite que el ensamblado en la caché global de ensamblados realizar operaciones de limpieza antes de su lanzamiento.|  
+|[Método Commit](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|Confirma la referencia de ensamblado en la caché en memoria.|  
+|[Método CreateStream](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|Crea una secuencia con el nombre especificado y el formato.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -42,6 +42,7 @@ Representa un único ensamblado en la caché global de ensamblados.
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Interfaces de Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
 - [Caché global de ensamblados](../../../../docs/framework/app-domains/gac.md)
-- [IAssemblyCache (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [IAssemblyCache (Interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

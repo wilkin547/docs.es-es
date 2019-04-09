@@ -2,12 +2,12 @@
 title: Control de mensajes dudosos
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: ec7603e547c065b4b86f2c81650c6e8a2ce09e6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146528"
 ---
 # <a name="poison-message-handling"></a>Control de mensajes dudosos
 Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos de entrega a la aplicación. Esta situación se puede presentar cuando una aplicación basada en cola no puede procesar un mensaje debido a los errores. Para satisfacer la confiabilidad que exige, una aplicación en cola recibe los mensajes bajo una transacción. Anular la transacción en la que un mensaje en cola se recibió deja el mensaje en la cola para que el mensaje se vuelva a intentar con una nueva transacción. Si no se corrige el problema que produjo la anulación de la transacción, la aplicación receptora se puede atascar en una recepción de bucle y anulando el mismo mensaje hasta que supere el número máximo de intentos de entrega, y se produzca un mensaje dudoso.  
@@ -23,7 +23,7 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
   
 -   `MaxRetryCycles`. Un valor entero que indica el número máximo de ciclos de reintento. Un ciclo de reintento consiste en transferir un mensaje de la cola de la aplicación a una subcola de intento y, después de un retraso configurable, de la subcola de intento de vuelta a la cola de la aplicación para reintentar la entrega. El valor predeterminado es 2. En [!INCLUDE[wv](../../../../includes/wv-md.md)], el mensaje se intenta un máximo de (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1) veces. `MaxRetryCycles` se omite en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   `RetryCycleDelay`. El tiempo de retardo entre los ciclos de reintento. El valor predeterminado es de 30 minutos. `MaxRetryCycles` y `RetryCycleDelay` proporcionan juntos un mecanismo para resolver el problema donde un reintento después de un retraso periódico corrige el problema. Por ejemplo, esto controla un conjunto de filas bloqueado en confirmación de la transacción pendiente de SQL Server.  
+-   `RetryCycleDelay`. El tiempo de retardo entre los ciclos de reintento. El valor predeterminado es de 30 minutos. `MaxRetryCycles` y `RetryCycleDelay` juntos proporcionan un mecanismo para resolver el problema donde un reintento después de un retraso periódico corrige el problema. Por ejemplo, esto controla un conjunto de filas bloqueado en confirmación de la transacción pendiente de SQL Server.  
   
 -   `ReceiveErrorHandling`. Una enumeración que indica la acción a realizar para un mensaje en el que se ha producido un error tras intentar el número máximo de reintentos. Los valores pueden ser Fault, Drop, Reject, y Move. La opción de unidad predeterminada es Fault.  
   
@@ -77,9 +77,7 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
 4.  Asegúrese de que su servicio se anote con el atributo de comportamiento de mensajes venenosos.  
-  
-  
-  
+
  Además, si `ReceiveErrorHandling` se establece en `Fault`, `ServiceHost` genera un error al encontrar el mensaje dudoso. Puede enlazarlo con el evento que ha generado el error y cerrar el servicio, tomar medidas correctivas y reiniciarlo. Por ejemplo, puede tomar nota del `LookupId` de la <xref:System.ServiceModel.MsmqPoisonMessageException> propagada a `IErrorHandler` y, cuando el host de servicio genere el error, puede utilizar la API `System.Messaging` para recibir el mensaje de la cola, utilizando el `LookupId` para quitarlo de la cola y almacenarlo en algún almacén externo u otra cola. Puede reiniciar a continuación `ServiceHost` para reanudar el procesamiento normal. El [control de mensajes dudosos en MSMQ 4.0](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md) demuestra este comportamiento.  
   
 ## <a name="transaction-time-out-and-poison-messages"></a>Tiempo de espera de la transacción y mensajes dudosos  
@@ -94,7 +92,7 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
  Si un mensaje se vuelve un mensaje dudoso y es parte de un lote, se deshace el lote completo y el canal vuelve a leer un mensaje cada vez. Para obtener más información sobre el procesamiento por lotes, vea [mensajes por lotes en una transacción](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>Control de mensajes dudosos para mensajes en una cola de mensajes dudosos  
- El control de mensajes dudosos no finaliza cuando un mensaje se coloca en la cola de mensajes dudosos. Los mensajes de la cola de mensajes dudosos también se deben leer y controlar. Puede utilizar un subconjunto de los valores de control de mensajes dudosos al leer mensajes de la subcola final de mensajes dudosos. La configuración aplicable es `ReceiveRetryCount` y `ReceiveErrorHandling`. Puede establecer `ReceiveErrorHandling` en Drop, Reject o Fault. Se omite `MaxRetryCycles` y se produce una excepción si `ReceiveErrorHandling` se establece en Move.  
+ El control de mensajes dudosos no finaliza cuando un mensaje se coloca en la cola de mensajes dudosos. Los mensajes de la cola de mensajes dudosos también se deben leer y controlar. Puede utilizar un subconjunto de los valores de control de mensajes dudosos al leer mensajes de la subcola final de mensajes dudosos. La configuración aplicable es `ReceiveRetryCount` y `ReceiveErrorHandling`. Puede establecer `ReceiveErrorHandling` en Drop, Reject o Fault. `MaxRetryCycles` se omite y se produce una excepción si `ReceiveErrorHandling` se establece en Move.  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Diferencias entre Windows Vista, Windows Server 2003, y Windows XP  
  Como se ha apuntado anteriormente, no todos los valores de control de mensajes dudosos son aplicables a [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Las siguientes diferencias clave entre Message Queuing (MSMQ) en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], [!INCLUDE[wxp](../../../../includes/wxp-md.md)] y [!INCLUDE[wv](../../../../includes/wv-md.md)] son pertinentes para el control de mensajes dudosos:  
@@ -106,6 +104,7 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
 -   Message Queuing en [!INCLUDE[wv](../../../../includes/wv-md.md)] admite una propiedad de mensaje que mantiene un recuento del número de veces que se intenta la entrega del mensaje. Esta propiedad de recuento de anulación no está disponible en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF mantiene el recuento de anulación en memoria, por lo que es posible que esta propiedad no puede contener un valor preciso cuando el mismo mensaje es leído por más de un servicio WCF en una granja de servidores.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
-- [Especificación y gestión de errores en contratos y servicios](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Especificación y administración de errores en contratos y servicios](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

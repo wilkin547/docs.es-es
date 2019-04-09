@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: 320d0ab4f90c446632225f3d3aabbfc2767f19a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f69fb25df4ed2af79cc5ffa59f0969a1616d38ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185444"
 ---
 # <a name="exporting-schemas-from-classes"></a>Exportación de esquemas desde las clases
 Para generar esquemas (XSD) de lenguaje de definición de esquemas XML a partir de las clases utilizadas en el modelo de contrato de datos, utilice la clase <xref:System.Runtime.Serialization.XsdDataContractExporter> . En este tema se describe el proceso para crear los esquemas.  
@@ -21,7 +21,7 @@ Para generar esquemas (XSD) de lenguaje de definición de esquemas XML a partir 
 ## <a name="the-export-process"></a>Proceso de exportación  
  El proceso de exportación de esquema se inicia con uno o más tipos y genera un <xref:System.Xml.Schema.XmlSchemaSet> que describe la proyección de XML de estos tipos.  
   
- `XmlSchemaSet` forma parte del Modelo de objetos de esquemas  (SOM)[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] que representa un conjunto de documentos esquema XSD. Para crear documentos XSD a partir de `XmlSchemaSet`, utilice la colección de esquemas de la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> de la clase `XmlSchemaSet` . A continuación, serialice cada objeto <xref:System.Xml.Schema.XmlSchema> mediante <xref:System.Xml.Serialization.XmlSerializer>.  
+ `XmlSchemaSet` forma parte del Modelo de objetos de esquemas  (SOM) [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]que representa un conjunto de documentos esquema XSD. Para crear documentos XSD a partir de `XmlSchemaSet`, utilice la colección de esquemas de la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> de la clase `XmlSchemaSet` . A continuación, serialice cada objeto <xref:System.Xml.Schema.XmlSchema> mediante <xref:System.Xml.Serialization.XmlSerializer>.  
   
 #### <a name="to-export-schemas"></a>Exportar esquemas  
   
@@ -50,15 +50,16 @@ Para generar esquemas (XSD) de lenguaje de definición de esquemas XML a partir 
 ## <a name="helper-methods"></a>métodos del asistente  
  Además de su función primaria de exportar el esquema, `XsdDataContractExporter` proporciona varios métodos del asistente útiles que proporcionan información sobre los tipos. Se incluyen los siguientes:  
   
--   Método<xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> . Este método toma `Type` y devuelve <xref:System.Xml.XmlQualifiedName> que representa el nombre del elemento raíz y espacio de nombres que se utilizarían si este tipo se serializara como objeto raíz.  
+-   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> . Este método toma `Type` y devuelve <xref:System.Xml.XmlQualifiedName> que representa el nombre del elemento raíz y espacio de nombres que se utilizarían si este tipo se serializara como objeto raíz.  
   
--   Método<xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> . Este método toma `Type` y devuelve <xref:System.Xml.XmlQualifiedName> que representa el nombre del tipo de esquema XSD que se utilizaría si este tipo se exportara al esquema. Para los tipos <xref:System.Xml.Serialization.IXmlSerializable> representados como tipos anónimos en el esquema, este método devuelve `null`.  
+-   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> . Este método toma `Type` y devuelve <xref:System.Xml.XmlQualifiedName> que representa el nombre del tipo de esquema XSD que se utilizaría si este tipo se exportara al esquema. Para los tipos <xref:System.Xml.Serialization.IXmlSerializable> representados como tipos anónimos en el esquema, este método devuelve `null`.  
   
--   Método<xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> . Este método solo funciona con tipos <xref:System.Xml.Serialization.IXmlSerializable> representados como tipos anónimos en el esquema y devuelve `null` para el resto de tipos. Para los tipos anónimos, este método devuelve <xref:System.Xml.Schema.XmlSchemaType> que representa un `Type`determinado.  
+-   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> . Este método solo funciona con tipos <xref:System.Xml.Serialization.IXmlSerializable> representados como tipos anónimos en el esquema y devuelve `null` para el resto de tipos. Para los tipos anónimos, este método devuelve <xref:System.Xml.Schema.XmlSchemaType> que representa un `Type`determinado.  
   
  Las opciones de exportación afectan a todos estos métodos.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Cargar un sonido de forma asincrónica en un formulario de Windows
+title: Filtrar para cargar un sonido de forma asincrónica en un formulario Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], loading on separate threads
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
-ms.openlocfilehash: 8240e26ea0133aa091354d29f52d0692499d7765
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1d710f1e6d3b208365d5b1eb2524fbeeaa673c2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718303"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185762"
 ---
-# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Filtrar Cargar un sonido de forma asincrónica en un formulario de Windows
+# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Filtrar para cargar un sonido de forma asincrónica en un formulario Windows Forms
 En el ejemplo de código siguiente, se carga un sonido de forma asincrónica desde una dirección URL y, a continuación, se reproduce en un nuevo subproceso.  
   
 ## <a name="example"></a>Ejemplo  
@@ -53,7 +53,8 @@ En el ejemplo de código siguiente, se carga un sonido de forma asincrónica des
  No tome ninguna decisión sobre el contenido del archivo basándose en su nombre. Por ejemplo, es posible que el archivo `Form1.vb` no sea un archivo de código fuente de Visual Basic. Compruebe todas las entradas antes de utilizar los datos en la aplicación.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Media.SoundPlayer.LoadAsync%2A>
 - <xref:System.Media.SoundPlayer.LoadCompleted>
 - <xref:System.Media.SoundPlayer.Play%2A>
-- [Cómo: Reproducir un sonido desde Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
+- [Filtrar para reproducir un sonido desde un formulario Windows Forms](how-to-play-a-sound-from-a-windows-form.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b2fe4a5a2886fdbbd36ee491ea66dbce353fb034
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 628790bb8229dc519589c122235f07a38ba57c1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100241"
 ---
 # <a name="raceonrcwcleanup-mda"></a>MDA de raceOnRCWCleanup
 El asistente para la depuración administrada (MDA) de `raceOnRCWCleanup` se activa cuando Common Language Runtime (CLR) detecta que un [contenedor RCW](../../../docs/framework/interop/runtime-callable-wrapper.md) está en uso al realizar una llamada para liberarlo mediante un comando como el método <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>.  
@@ -27,13 +27,13 @@ El asistente para la depuración administrada (MDA) de `raceOnRCWCleanup` se act
 ## <a name="cause"></a>Motivo  
  RCW está en otro subproceso o en la pila de subprocesos de liberación.  No se puede liberar un RCW que esté en uso.  
   
-## <a name="resolution"></a>Solución  
+## <a name="resolution"></a>Resolución  
  No libere ningún RCW que pudiera estar en uso en este o en otros subprocesos.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Resultado  
+## <a name="output"></a>Salida  
  Un mensaje que describe el error.  
   
 ## <a name="configuration"></a>Configuración  
@@ -47,6 +47,7 @@ El asistente para la depuración administrada (MDA) de `raceOnRCWCleanup` se act
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnóstico de errores con asistentes de depuraciones administradas](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

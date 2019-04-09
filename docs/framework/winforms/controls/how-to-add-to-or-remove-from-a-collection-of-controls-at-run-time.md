@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Agregar o quitar de una colección de controles en tiempo de ejecución
+title: Filtrar para agregar o quitar controles de una colección en tiempo de ejecución
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 6ec4e41f5a3bee6302996f21afa81f2b5eeb9568
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5c963976dd787b40c3e5c6180538051cfe419540
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143148"
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Filtrar Agregar o quitar de una colección de controles en tiempo de ejecución
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Filtrar para agregar o quitar controles de una colección en tiempo de ejecución
 Tareas comunes de desarrollo de aplicaciones son agregar controles a y quitar controles de un control contenedor en los formularios (como el <xref:System.Windows.Forms.Panel> o <xref:System.Windows.Forms.GroupBox> control, o incluso el propio formulario). En tiempo de diseño, los controles se pueden arrastrar directamente al panel o grupo de cuadro. En tiempo de ejecución, estos controles mantienen una colección `Controls`, que realiza un seguimiento de los controles que se colocan en ellos.  
   
 > [!NOTE]
@@ -101,5 +101,6 @@ Tareas comunes de desarrollo de aplicaciones son agregar controles a y quitar co
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.Panel>
-- [Panel (control)](panel-control-windows-forms.md)
+- [Control Panel](panel-control-windows-forms.md)

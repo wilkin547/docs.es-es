@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 10cea133651739df8bb8e27c58221b34067782f5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188440"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Filtrar Crear y enlazar a una colección ObservableCollection
 En este ejemplo se muestra cómo crear y enlazar a una colección que se deriva el <xref:System.Collections.ObjectModel.ObservableCollection%601> (clase), que es una clase de colección que proporciona notificaciones cuando se agregan o quitan elementos.  
@@ -141,6 +141,7 @@ End Class
  Para más información, consulte la sección Enlace a colecciones en [Información general sobre el enlace de datos](data-binding-overview.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Ordenar datos en una vista](how-to-sort-data-in-a-view.md)
 - [Filtrar datos en una vista](how-to-filter-data-in-a-view.md)
 - [Ordenar y agrupar datos mediante una vista en XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)

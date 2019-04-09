@@ -1,5 +1,5 @@
 ---
-title: 'Optimizar el rendimiento: Recursos de aplicación'
+title: 'Optimizar el rendimiento: Recursos de la aplicación'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application resources [WPF], performance
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139430"
 ---
-# <a name="optimizing-performance-application-resources"></a>Optimizar el rendimiento: Recursos de aplicación
+# <a name="optimizing-performance-application-resources"></a>Optimizar el rendimiento: Recursos de la aplicación
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le permite compartir recursos de la aplicación para que pueda admitir un comportamiento o aspecto coherente entre los elementos de tipo similar. Este tema se proporcionan algunas recomendaciones de esta área que puede ayudarle a mejoran el rendimiento de las aplicaciones.  
   
  Para más información sobre los recursos, vea [Recursos XAML](xaml-resources.md).  
@@ -43,6 +43,7 @@ ms.locfileid: "57352404"
  [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Optimizar WPF: Rendimiento de aplicaciones](optimizing-wpf-application-performance.md)
 - [Planear para mejorar el rendimiento de aplicaciones](planning-for-application-performance.md)
 - [Aprovechar el hardware](optimizing-performance-taking-advantage-of-hardware.md)

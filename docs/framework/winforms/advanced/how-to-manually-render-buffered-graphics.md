@@ -1,5 +1,5 @@
 ---
-title: Filtrar Representar manualmente gráficos almacenados en búfer
+title: Filtrar para representar manualmente gráficos almacenados en búfer
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually rendering graphics
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
-ms.openlocfilehash: f9763620d5fe56a0720d5d5f4ad53ec2ef18531c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b01e10ff0f65b3abfe1e60d84d66447968a310c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097956"
 ---
-# <a name="how-to-manually-render-buffered-graphics"></a>Filtrar Representar manualmente gráficos almacenados en búfer
+# <a name="how-to-manually-render-buffered-graphics"></a>Filtrar para representar manualmente gráficos almacenados en búfer
 Si administra sus propios gráficos almacenados en búfer, deberá poder crear y representar búferes de gráficos. Puede crear instancias de la clase <xref:System.Drawing.BufferedGraphics> que está asociada con las superficies de dibujo en pantalla mediante llamadas al método <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A>. Este método crea una instancia <xref:System.Drawing.BufferedGraphics> que está asociada a una superficie de representación determinada, como un formulario o un control. Después de crear una instancia de <xref:System.Drawing.BufferedGraphics>, puede dibujar gráficos en el búfer que se representan mediante la propiedad <xref:System.Drawing.BufferedGraphics.Graphics%2A>. Después de haber realizado todas las operaciones de gráficos, puede copiar el contenido del búfer en la pantalla llamando al método <xref:System.Drawing.BufferedGraphics.Render%2A>.  
   
 > [!NOTE]
@@ -46,7 +46,8 @@ Si administra sus propios gráficos almacenados en búfer, deberá poder crear y
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#24](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#24)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphics>
 - [Gráficos de doble búfer](double-buffered-graphics.md)
-- [Cómo: Administrar manualmente gráficos almacenados en búfer](how-to-manually-manage-buffered-graphics.md)
+- [Filtrar para administrar manualmente gráficos almacenados en búfer](how-to-manually-manage-buffered-graphics.md)

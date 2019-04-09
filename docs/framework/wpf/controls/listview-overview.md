@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 33f4cc55a52a67381c1fbf0d0a92bfad5e50b1ec
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186503"
 ---
 # <a name="listview-overview"></a>Información general sobre ListView
 El <xref:System.Windows.Controls.ListView> control proporciona la infraestructura para mostrar un conjunto de elementos de datos en distintos diseños o vistas. Por ejemplo, es posible que un usuario quiera mostrar elementos de datos en una tabla y, además, ordenar las columnas.  
-  
-  
+
 <a name="WhatisaListView"></a>   
 ## <a name="what-is-a-listview"></a>¿Qué es ListView?  
  El <xref:System.Windows.Controls.ListView> control es un <xref:System.Windows.Controls.ItemsControl> que se deriva <xref:System.Windows.Controls.ListBox>. Normalmente, sus elementos son miembros de una colección de datos y se representan como <xref:System.Windows.Controls.ListViewItem> objetos. Un <xref:System.Windows.Controls.ListViewItem> es un <xref:System.Windows.Controls.ContentControl> y puede contener sólo un único elemento secundario. Sin embargo, el elemento secundario puede ser cualquier elemento visual.  
@@ -82,6 +81,7 @@ El <xref:System.Windows.Controls.ListView> control proporciona la infraestructur
  Personalizar las vistas como <xref:System.Windows.Controls.GridView> se derivan de la <xref:System.Windows.Controls.ViewBase> clase, que proporciona las herramientas para mostrar los elementos de datos que se representan como abstracta <xref:System.Windows.Controls.ListViewItem> objetos.    
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Controls.GridView>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>

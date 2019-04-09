@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Utilizar SystemParameters
+title: Filtrar Usar SystemParameters
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-ms.openlocfilehash: a05e2d08c989da70dd7763ad2df238aac03fded4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 344fb54b48bcbf188b36a29d8205c21deff713c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375160"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199861"
 ---
-# <a name="how-to-use-systemparameters"></a>Filtrar Utilizar SystemParameters
+# <a name="how-to-use-systemparameters"></a>Filtrar Usar SystemParameters
 En este ejemplo se muestra cómo obtener acceso y usar las propiedades de <xref:System.Windows.SystemParameters> con el fin de estilo de un botón o personalizarlo.  
   
 ## <a name="example"></a>Ejemplo  
@@ -32,6 +32,7 @@ En este ejemplo se muestra cómo obtener acceso y usar las propiedades de <xref:
  [!code-vb[SystemRes_snip#ParameterResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.SystemParameters>
 - [Pintar un área con un pincel del sistema](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [Usar SystemFonts](how-to-use-systemfonts.md)

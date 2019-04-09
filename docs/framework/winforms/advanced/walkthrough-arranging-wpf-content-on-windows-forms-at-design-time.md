@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Organizar el contenido WPF en Windows Forms en tiempo de diseño'
+title: 'Tutorial: Organizar contenido de WPF en formularios Windows Forms en tiempo de diseño'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in a layout panel
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 0738d1522c8ade8f026a3bf69fbff0bc2c2d6d85
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a9c549a9014e328e8083704971dfd5323adcea41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193205"
 ---
-# <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Tutorial: Organizar el contenido WPF en Windows Forms en tiempo de diseño
+# <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Tutorial: Organizar contenido de WPF en formularios Windows Forms en tiempo de diseño
 Este tutorial muestra cómo usar las características de diseño de Windows Forms, como la delimitación y las líneas de ajuste, para organizar los controles de Windows Presentation Foundation (WPF).
 
  En este tutorial, realizará las tareas siguientes:
@@ -148,11 +148,12 @@ Este tutorial muestra cómo usar las características de diseño de Windows Form
      Para obtener más información, vea [Cómo: Delimitar y acoplar controles secundarios en un Control TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Cómo: Delimitar y acoplar controles secundarios en un Control TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Cómo: Alinear un Control con los bordes de formularios en tiempo de diseño](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [Tutorial: Organizar controles en formularios de Windows Forms mediante líneas de ajuste](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Filtrar para delimitar y acoplar controles secundarios en un control TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Filtrar para alinear un control con los bordes de los formularios en tiempo de diseño](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [Tutorial: Organizar controles en formularios Windows Forms mediante guías de alineación](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Migración e interoperabilidad](../../wpf/advanced/migration-and-interoperability.md)
 - [Utilizar controles WPF](using-wpf-controls.md)
 - [Diseño de XAML en Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

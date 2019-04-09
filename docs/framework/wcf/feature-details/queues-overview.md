@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 1fd2809af805c641484545b1c3606898e0bc3e2d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466171"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099773"
 ---
 # <a name="queues-overview"></a>Información general de colas
 En esta sección se presentan los conceptos generales y básicos detrás de la comunicación puesta en la cola. Secciones subsiguientes no entran en detalles acerca de cómo los conceptos de puesta en cola descritos aquí se manifiestan en Windows Communication Foundation (WCF).  
@@ -74,11 +74,12 @@ En esta sección se presentan los conceptos generales y básicos detrás de la c
  Una vez el mensaje alcance la cola de destino, puede que el servicio no pueda procesar el mensaje repetidamente. Por ejemplo, una aplicación que lee un mensaje desde la cola de una transacción y actualiza una base de datos puede encontrar la base de datos temporalmente desconectada. En este caso, la transacción se deshace, se crea una nueva transacción y se relee el mensaje de la cola. Puede que un segundo intento funcione o no. En algunos casos, dependiendo de la causa del error, el mensaje puede producir un error repetidamente en la entrega a la aplicación. En este caso, el mensaje se considera "dudoso." Estos mensajes se mueven a una cola de mensajes dudosos, que se puede leer por una aplicación de administración de mensajes dudosos.  
   
 ## <a name="see-also"></a>Vea también
-- [Colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+
+- [Las colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Sesiones y colas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
-- [Colas de mensajes fallidos](../../../../docs/framework/wcf/samples/dead-letter-queues.md)
+- [Colas con problemas de entrega](../../../../docs/framework/wcf/samples/dead-letter-queues.md)
 - [Comunicación en cola volátil](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)
 - [Windows Communication Foundation a Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
-- [Instalación de Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
+- [Instalar Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [Message Queuing a Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
 - [Seguridad de mensajes mediante Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

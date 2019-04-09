@@ -7,12 +7,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: b488997558d81c05307411d8b7fbf5b59100f9ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5dc734997917af7ec4a20a6c12ae04825507c7ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717714"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098460"
 ---
 # <a name="control-type-recommendations"></a>Recomendaciones sobre tipos de controles
 .NET Framework ofrece la posibilidad de desarrollar e implementar nuevos controles. Además de los controles de usuario conocidos, verá que ahora puede escribir controles personalizados que realizan su propia representación y que incluso pueden ampliar la funcionalidad de los controles existentes mediante herencia. Decidir qué tipo de control va a crear puede resultar confuso. En esta sección se indican las diferencias entre los distintos tipos de controles de los que puede heredar, y ofrece consideraciones sobre el tipo que deberá elegir para su proyecto.  
@@ -45,40 +45,41 @@ ms.locfileid: "57717714"
   
 -   Necesita implementar funcionalidad personalizada que no está disponible en los controles estándar.  
   
--   [Cómo: Mostrar un Control en la elija el cuadro de diálogo de elementos de cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+-   [Filtrar para mostrar un control en el cuadro de diálogo Elegir elementos del cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
   
 -   [Tutorial: Serializar colecciones de tipos estándar con DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [Tutorial: Heredar de un Control de Windows Forms con VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+-   [Tutorial: Heredar de un control de formularios Windows Forms con Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
   
--   [Cómo: Proporcionar un mapa de bits del cuadro de herramientas para un Control](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
+-   [Filtrar para proporcionar un mapa de bits del cuadro de herramientas para un control](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
   
--   [Cómo: Heredar de Windows existente controles de formularios](how-to-inherit-from-existing-windows-forms-controls.md)  
+-   [Filtrar para heredar de controles de formularios Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)  
   
--   [Tutorial: Depurar controles personalizados de Windows Forms en tiempo de diseño](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+-   [Tutorial: Depurar controles personalizados de formularios Windows Forms en tiempo de diseño](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
   
--   [Cómo: Heredar de la clase de Control](how-to-inherit-from-the-control-class.md)  
+-   [Filtrar para heredar de la clase Control](how-to-inherit-from-the-control-class.md)  
   
--   [Cómo: Probar el comportamiento de tiempo de ejecución de una clase UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+-   [Filtrar para comprobar el comportamiento de UserControl en tiempo de ejecución](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [Cómo: Alinear un Control con los bordes de formularios en tiempo de diseño](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+-   [Filtrar para alinear un control con los bordes de los formularios en tiempo de diseño](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
   
--   [Cómo: Heredar de la clase UserControl](how-to-inherit-from-the-usercontrol-class.md)  
+-   [Filtrar para heredar de la clase UserControl](how-to-inherit-from-the-usercontrol-class.md)  
   
--   [Cómo: Crear controles de Windows Forms](how-to-author-controls-for-windows-forms.md)  
+-   [Filtrar para crear controles de formularios Windows Forms](how-to-author-controls-for-windows-forms.md)  
   
--   [Cómo: Crear controles compuestos](how-to-author-composite-controls.md)  
+-   [Filtrar para crear controles compuestos](how-to-author-composite-controls.md)  
   
--   [Tutorial: Crear un Control compuesto con Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+-   [Tutorial: Crear un control compuesto con Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
   
--   [Tutorial: Crear un Control compuesto con VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+-   [Tutorial: Crear un control compuesto con Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
   
--   [Tutorial: Heredar de un Control de Windows Forms con Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+-   [Tutorial: Heredar de un control de formularios Windows Forms con Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
   
--   [Tutorial: Crear un Control de Windows Forms que aproveche las características de tiempo de diseño de Visual Studio](creating-a-wf-control-design-time-features.md)  
+-   [Tutorial: Crear un control de formularios Windows Forms que aproveche las características en tiempo de diseño de Visual Studio](creating-a-wf-control-design-time-features.md)  
   
--   [Cómo: Crear un Control de Windows Forms que aproveche las características en tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
+-   [Filtrar Crear un Control de Windows Forms que aproveche las características en tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Desarrollar un Control de formularios de Windows Simple](how-to-develop-a-simple-windows-forms-control.md)
+
+- [Filtrar para desarrollar un control sencillo de formularios Windows Forms](how-to-develop-a-simple-windows-forms-control.md)
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)

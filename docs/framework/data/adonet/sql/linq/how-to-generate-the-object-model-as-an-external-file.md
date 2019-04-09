@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Generar el modelo de objetos como un archivo externo
+title: Filtrar para generar el modelo de objetos como un archivo externo
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 44b123130b79026ed7638ccc7abeb13d8a5f55ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e439cd6628daa5b574be2049393dc2964896679
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499176"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095587"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a>Procedimiento Generar el modelo de objetos como un archivo externo
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a>Filtrar para generar el modelo de objetos como un archivo externo
 Como alternativa a la asignación basada en atributos, puede generar su modelo de objetos como un archivo XML externo mediante la herramienta de línea de comandos SQLMetal. Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Utilizando un archivo de asignación XML externo, se reduce el desorden en su código. También puede cambiar el comportamiento modificando el archivo externo sin recompilar los binarios de su aplicación. Para obtener más información, consulte [asignaciones externas](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 > [!NOTE]
@@ -49,6 +49,7 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 ```  
   
 ## <a name="see-also"></a>Vea también
-- [Creación del modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+
+- [Crear el modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [Asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Cómo: Generación del modelo de objetos en Visual Basic o C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [Filtrar para generar el modelo de objetos en Visual Basic o C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

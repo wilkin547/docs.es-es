@@ -2,15 +2,15 @@
 title: Cómo actualización dinámica
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: a021e6b550baf8fb7034a163179e0626bf42cfb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ae446da5e19b0c4c0c121d44892e4a13ec70dd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736603"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190995"
 ---
 # <a name="how-to-dynamic-update"></a>Cómo actualización dinámica
-Este tema describe los pasos básicos necesarios para crear y actualizar dinámicamente la configuración de enrutamiento. En este ejemplo, la configuración de enrutamiento inicial se obtiene del archivo de configuración y enruta todos los mensajes al servicio de calculadora de regularCalc; sin embargo, se actualiza posteriormente mediante programación para cambiar el extremo de destino del servicio de roundingCalc.  
+Este tema describe los pasos básicos necesarios para crear y actualizar dinámicamente la configuración de enrutamiento. En este ejemplo, la configuración de enrutamiento inicial se obtiene del archivo de configuración y enruta todos los mensajes al servicio de calculadora de regularCalc; sin embargo, se actualiza posteriormente mediante programación para cambiar el punto de conexión de destino del servicio de roundingCalc.  
   
 > [!NOTE]
 >  En muchas implementaciones, la configuración será totalmente dinámica y no se basará en una configuración predeterminada; sin embargo, hay algunos casos, como el de este tema, en los que es deseable tener un estado de configuración predeterminada al iniciar el servicio.  
@@ -92,7 +92,7 @@ Este tema describe los pasos básicos necesarios para crear y actualizar dinámi
     using System.ServiceModel.Routing;  
     ```  
   
-2.  El siguiente código se usa para auto-hospedar el servicio de enrutamiento como una aplicación de consola. Esto inicializa el servicio de enrutamiento mediante la configuración descrita en el paso anterior, que se incluye en el archivo de configuración de la aplicación. El bucle while contiene el código usado para cambiar la configuración de enrutamiento.  
+2.  El siguiente código se usa para probar internamente el servicio de enrutamiento como una aplicación de consola. Esto inicializa el servicio de enrutamiento mediante la configuración descrita en el paso anterior, que se incluye en el archivo de configuración de la aplicación. El bucle while contiene el código usado para cambiar la configuración de enrutamiento.  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -297,4 +297,5 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)

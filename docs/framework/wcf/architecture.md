@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: f152ac48c2897259d07222fafd33d17d5287a870
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0e4f9af0ff84a8d560b332d227b1ba9ae18bd4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099708"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Arquitectura de Windows Communication Foundation
 El siguiente gráfico ilustra las capas principales de la arquitectura de Windows Communication Foundation (WCF).  
@@ -46,5 +46,6 @@ El siguiente gráfico ilustra las capas principales de la arquitectura de Window
  Los servicios también pueden ser *hospedado*, o ejecutar en un ejecutable administrado por un agente externo, como IIS o Windows Activation Service (WAS). ERA era WCF permite a las aplicaciones que se active automáticamente cuando se implementa en un equipo que ejecuta. Los servicios también se pueden ejecutar manualmente como ejecutables (archivos .exe). Un servicio también se puede ejecutar automáticamente como un servicio de Windows. Los componentes COM + también se pueden hospedar como servicios WCF.  
   
 ## <a name="see-also"></a>Vea también
+
 - [¿Qué es Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)
 - [Conceptos básicos de Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)

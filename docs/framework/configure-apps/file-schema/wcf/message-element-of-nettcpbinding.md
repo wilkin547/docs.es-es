@@ -2,12 +2,12 @@
 title: <message> elemento de <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 09ff567e73791151350288f6e5ddb5f9aff36e80
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ac6977a8422055f998c7ed932c853992b7809911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161023"
 ---
 # <a name="message-element-of-nettcpbinding"></a>\<mensaje > elemento de \<netTcpBinding >
 Define el tipo de requisitos de seguridad de nivel de mensaje para un extremo configurado con el [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -33,7 +33,7 @@ Define el tipo de requisitos de seguridad de nivel de mensaje para un extremo co
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`algorithmSuite`|Establece el cifrado de mensajes y los algoritmos de encapsulado de claves. La clase <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> determina los algoritmos y los tamaños de clave. Estos algoritmos se asignan a los indicados en la especificación Lenguaje de directiva de seguridad (WS-SecurityPolicy).<br /><br /> En la siguiente tabla se muestran los valores posibles. El valor predeterminado es `Basic256`.<br /><br /> Si el enlace de servicio especifica un valor `algorithmSuite` que no es igual al valor predeterminado, y genera el archivo de configuración mediante Svcutil.exe, éste no se genera correctamente y debe editar manualmente el archivo de configuración  para establecer este atributo con el valor deseado.|  
+|`algorithmSuite`|Establece el cifrado de mensajes y los algoritmos de encapsulado de claves. La clase <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> determina los algoritmos y los tamaños de clave. Estos algoritmos se asignan a los indicados en la especificación Lenguaje de directiva de seguridad (WS-SecurityPolicy).<br /><br /> En la siguiente tabla se muestran los valores posibles. El valor predeterminado es `Basic256`.<br /><br /> Si el enlace de servicio especifica un valor `algorithmSuite` que no es igual al valor predeterminado, y genera el archivo de configuración mediante Svcutil.exe, éste no se genera correctamente y debe editar manualmente el archivo de configuración para establecer este atributo con el valor deseado.|  
 |`clientCredentialType`|Especifica el tipo de credenciales que se van a usar al realizar la autenticación del cliente mediante seguridad basada en mensaje. En la siguiente tabla se muestran los valores posibles. El valor predeterminado es `UserName`. Este atributo es del tipo <xref:System.ServiceModel.MessageCredentialType>.|  
   
 ## <a name="algorithmsuite-attribute"></a>atributo algorithmSuite  
@@ -80,6 +80,7 @@ Define el tipo de requisitos de seguridad de nivel de mensaje para un extremo co
  Seguridad de nivel del mensaje para la integridad y confidencialidad del mensaje SOAP, así como para la autenticación mutua de los sistemas de comunicación del mismo nivel. Si este modo de seguridad está seleccionado en un enlace, la pila del canal se configura con elementos de enlace de seguridad de mensaje. Los mensajes SOAP se protegen conforme a los estándares de WS-Security*.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.MessageSecurityOverTcp>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Message%2A>

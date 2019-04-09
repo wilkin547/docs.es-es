@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: 3c96275f3e5db24446b030ec007f23e9035242c8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095495"
 ---
 # <a name="data-binding-and-windows-forms"></a>Enlace de datos y formularios Windows Forms
 Windows Forms permite enlazar no solo a orígenes de datos tradicionales, sino también a prácticamente cualquier estructura que contenga datos. Se puede enlazar a una matriz de valores que se calcula en tiempo de ejecución, se lee de un archivo o se deriva de los valores de otros controles.  
@@ -54,7 +54,8 @@ Windows Forms permite enlazar no solo a orígenes de datos tradicionales, sino t
 |Tabla de búsqueda|Otro escenario común de presentación o manipulación de datos es la tabla de búsqueda. A menudo, como parte de una presentación de datos mayor, se usa un control <xref:System.Windows.Forms.ComboBox> para mostrar y manipular datos. La clave es que los datos que se muestran en el control <xref:System.Windows.Forms.ComboBox> son diferentes de los datos escritos en la base de datos. Por ejemplo, si tiene un control <xref:System.Windows.Forms.ComboBox> que muestra los elementos disponibles en una tienda de comestibles, probablemente desee ver los nombres de los productos (pan, leche, huevos). Sin embargo, para facilitar la recuperación de la información en la base de datos y para lograr la normalización de la base de datos, probablemente almacene la información de los elementos específicos de un determinado pedido como códigos de artículo (501, 603, etc.). Por lo tanto, existe una conexión implícita entre el “nombre descriptivo” del artículo de alimentación en el control <xref:System.Windows.Forms.ComboBox> de su formulario y el número de artículo relacionado presente en un pedido. Esta es la esencia de una tabla de búsqueda. Para obtener más información, vea [Cómo: Crear una tabla de búsqueda con el componente BindingSource de formularios de Windows](./controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md).|  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Forms.Binding>
 - [Enlace de datos en Windows Forms](windows-forms-data-binding.md)
-- [Cómo: Enlazar el Control DataGrid de Windows Forms a un origen de datos](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Filtrar para enlazar el control DataGrid de formularios Windows Forms a un origen de datos](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Componente BindingSource](./controls/bindingsource-component.md)

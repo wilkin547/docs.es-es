@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-ms.openlocfilehash: bf65844cda195847989d1eb8ef752fe87c9de22c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83fdc77bd17115f9952f2ca6c494ed0eb873cd9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193660"
 ---
 # <a name="configuring-client-behaviors"></a>Configuración de los comportamientos del cliente
 Windows Communication Foundation (WCF) configura los comportamientos de dos formas: haciendo referencia a las configuraciones de comportamiento, que se definen en el `<behavior>` sección de un archivo de configuración de aplicación de cliente, o mediante programación en la llamada a aplicación. En este tema se describen ambos métodos.  
   
- Al usar un archivo de configuración, la configuración del comportamiento es una colección con nombre de valores de configuración. El nombre de cada configuración de comportamiento debe ser único. Esta cadena se usa en el atributo `behaviorConfiguration` de una configuración de extremo para vincular el extremo al comportamiento.  
+ Al usar un archivo de configuración, la configuración del comportamiento es una colección con nombre de valores de configuración. El nombre de cada configuración de comportamiento debe ser único. Esta cadena se usa en el atributo `behaviorConfiguration` de una configuración de punto de conexión para vincular el punto de conexión al comportamiento.  
   
 ## <a name="example"></a>Ejemplo  
- El código de configuración siguiente define un comportamiento llamado `myBehavior`. El extremo de cliente hace referencia a este comportamiento en el atributo `behaviorConfiguration`.  
+ El código de configuración siguiente define un comportamiento llamado `myBehavior`. El punto de conexión de cliente hace referencia a este comportamiento en el atributo `behaviorConfiguration`.  
   
 ```xml  
 <configuration>  
@@ -52,4 +52,5 @@ Windows Communication Foundation (WCF) configura los comportamientos de dos form
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
 ## <a name="see-also"></a>Vea también
-- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+
+- [\<comportamientos >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

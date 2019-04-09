@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 0d74e94aed00d480459aec3c63d961c82af42ef1
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 4fe21bb5b91143dff4d0a9f24bbc39be5e529985
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443015"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097536"
 ---
 # <a name="specifying-an-endpoint-address"></a>Especificación de una dirección de punto de conexión
 Toda la comunicación con un servicio de Windows Communication Foundation (WCF) se produce a través de sus puntos de conexión. Cada <xref:System.ServiceModel.Description.ServiceEndpoint> contiene un <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, un <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>y un <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. El contrato especifica qué operaciones están disponibles. El enlace especifica cómo comunicarse con el servicio y la dirección especifica dónde encontrar el servicio. Cada punto de conexión debe tener una dirección única. La clase <xref:System.ServiceModel.EndpointAddress> representa la dirección de extremo, que contiene un Identificador uniforme de recursos (URI) que representa la dirección del servicio, una <xref:System.ServiceModel.EndpointAddress.Identity%2A>, que representa la identidad de seguridad del servicio, y una colección de <xref:System.ServiceModel.EndpointAddress.Headers%2A>opcional. Los encabezados opcionales proporcionan información más detallada de direccionamiento para identificar o interactuar con el punto de conexión. Por ejemplo, los encabezados pueden indicar cómo procesar un mensaje entrante, dónde debería enviar el punto de conexión un mensaje de respuesta o qué instancia de un servicio se va a usar para procesar un mensaje entrante de un usuario determinado cuando hay varias instancias disponibles.  
@@ -56,9 +56,7 @@ Toda la comunicación con un servicio de Windows Communication Foundation (WCF) 
   
 ## <a name="endpoint-address-in-metadata"></a>Dirección del punto de conexión en metadatos  
  Una dirección de extremo se representa en el Lenguaje de descripción de servicios Web (WSDL) como un elemento `EndpointReference` (EPR) de WS-Addressing dentro del elemento `wsdl:port` del extremo correspondiente. El EPR contiene la dirección del extremo, así como todas las propiedades de la dirección. Observe que la EPR dentro de `wsdl:port` reemplaza a `soap:Address`, como se observa en el siguiente ejemplo.  
-  
-  
-  
+
 ## <a name="defining-endpoint-addresses-in-code"></a>Definición de direcciones del punto de conexión mediante código  
  Una dirección de punto de conexión se puede crear mediante código con la clase <xref:System.ServiceModel.EndpointAddress>. El URI especificado para la dirección del extremo puede ser una ruta de acceso completa o una ruta de acceso relativa a la dirección base del servicio. En el siguiente ejemplo observaremos cómo crear una nueva instancia de la clase <xref:System.ServiceModel.EndpointAddress> y agregarla a la instancia <xref:System.ServiceModel.ServiceHost> que hospeda el servicio.  
   
@@ -83,7 +81,8 @@ Toda la comunicación con un servicio de Windows Communication Foundation (WCF) 
  Si se proporcionan puntos de conexión de forma explícita, es posible agregar puntos de conexión predeterminados llamando a <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> en el objeto <xref:System.ServiceModel.ServiceHost> antes de llamar a <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Para obtener más información sobre los puntos de conexión, enlaces y comportamientos predeterminados, vea [Configuración simplificada](../../../docs/framework/wcf/simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.EndpointAddress>
 - [Identidad del servicio y autenticación](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Información general sobre la creación de puntos finales](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Hospedar aplicaciones de WPF](../../../docs/framework/wcf/feature-details/hosting.md)
+- [Información general acerca de la creación de puntos finales](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Hospedaje](../../../docs/framework/wcf/feature-details/hosting.md)

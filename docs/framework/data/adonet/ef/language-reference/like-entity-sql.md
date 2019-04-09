@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 406e660efcc351df3fd2720a5d13d8398d1a8216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f210c83a8220f11a5e0a461c8b72466f00a4e37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536976"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197716"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 Determina si un elemento `String` de caracteres específico coincide con un patrón especificado.  
@@ -32,7 +32,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
  Especifica que el resultado de LIKE se niega.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` si el elemento `string` coincide con el patrón; de lo contrario, `false`.  
+ `true` Si el `string` coincide con el patrón; en caso contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] las expresiones que utilizan el operador LIKE se evalúan en gran parte del mismo modo que las expresiones que utilizan la igualdad como criterios de filtro. Sin embargo, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] las expresiones que utilizan el operador LIKE pueden incluir literales y caracteres comodín.  
@@ -57,7 +57,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 >  Puede utilizar extensiones específicas del proveedor si el destino es un proveedor concreto. Sin embargo, otros proveedores pueden tratar de manera diferente este tipo de estructuras. SqlServer admite patrones [primero-último] y [^primero-último] donde el primero coincide exactamente con un carácter entre el primero y el último, y el segundo coincide exactamente con un carácter que no está entre el primero y el último.  
   
 ### <a name="escape"></a>Escape  
- El uso de la cláusula ESCAPE permite buscar cadenas de caracteres que incluyen uno o más de los caracteres comodín especiales que se describen en la tabla de la sección anterior. Por ejemplo, suponga que varios documentos incluyen el literal "100%" en el título y desea buscar todos esos documentos. Dado que el carácter de porcentaje (%) es un carácter comodín, debe evitarlo utilizando la [!INCLUDE[esql](../../../../../../includes/esql-md.md)] cláusulas de ESCAPE para ejecutar correctamente la búsqueda. A continuación se muestra un ejemplo de este filtro.  
+ El uso de la cláusula ESCAPE permite buscar cadenas de caracteres que incluyen uno o más de los caracteres comodín especiales que se describen en la tabla de la sección anterior. Por ejemplo, suponga que varios documentos incluyen el literal "100%" en el título y desea buscar todos esos documentos. Dado que el porcentaje (%) es un carácter comodín, debe evitarlo utilizando la [!INCLUDE[esql](../../../../../../includes/esql-md.md)] cláusulas de ESCAPE para ejecutar correctamente la búsqueda. A continuación se muestra un ejemplo de este filtro.  
   
 ```  
 "title like '%100!%%' escape '!'"  
@@ -75,4 +75,5 @@ match [NOT] LIKE pattern [ESCAPE escape]
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

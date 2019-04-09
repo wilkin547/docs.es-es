@@ -17,18 +17,16 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378853"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172112"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Marcar eventos enrutados como controlados y control de clases
 Los controladores de un evento enrutado pueden marcar el evento como controlado en los datos del evento. Controlar el evento acorta de forma efectiva la ruta. El control de clases es un concepto de programación que admiten los eventos enrutados. Un controlador de clases tiene la oportunidad de controlar un evento enrutado determinado en un nivel de clase con un controlador que se invoca antes que cualquier controlador de instancias de cualquier instancia de la clase.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
  En este tema se profundiza sobre los conceptos presentados en [Información general sobre eventos enrutados](routed-events-overview.md).  
@@ -99,6 +97,7 @@ Los controladores de un evento enrutado pueden marcar el evento como controlado 
  La segunda técnica solo funciona para los eventos de entrada, donde se emparejan las versiones de tunelización y propagación del evento enrutado. Para estos eventos enrutados, también puede agregar controladores al evento enrutado equivalente de tunelización/vista previa. El evento enrutado se tunelizará por la ruta partiendo de la raíz, por lo que el código de control de clase del botón no lo interceptaría, siempre que haya adjuntado el controlador Preview en algún nivel de elemento antecesor en el árbol de elementos de la aplicación. Si usa este enfoque, tenga cuidado al marcar cualquier evento Preview como controlado. Para el ejemplo proporcionado con <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> controlado en el elemento raíz, si marcara el evento como <xref:System.Windows.RoutedEventArgs.Handled%2A> en la implementación del controlador, suprimiría el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos. Normalmente, no es un comportamiento deseable.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.EventManager>
 - [Eventos de vista previa](preview-events.md)
 - [Crear un evento enrutado personalizado](how-to-create-a-custom-routed-event.md)

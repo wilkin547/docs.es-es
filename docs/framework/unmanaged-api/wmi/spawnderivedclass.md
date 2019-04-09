@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b996cf848de968d71cc1d325d3bbda7bd5386f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81f4d5219865bf7f7c9e6d284d74d0c249729dfc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715563"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194427"
 ---
 # <a name="spawnderivedclass-function"></a>Función SpawnDerivedClass
 Crea un objeto de clase recién derivado a partir de un objeto específico.    
@@ -62,7 +62,7 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Se solicitó una operación no válida, como la creación de una clase a partir de una instancia. |
 | `WBEM_E_INCOMPLETE_CLASS` | La clase de origen completamente no se ha definido o registrado con la administración de Windows, por lo que no se permite una nueva clase derivada. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para completar la operación. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | El valor de `ppNewClass` es `null`. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` es `null`. |
 | `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   
 ## <a name="remarks"></a>Comentarios
@@ -81,4 +81,5 @@ El nuevo objeto devuelto en `ppNewClass` se convierte automáticamente en una su
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 0ab553f6ac22813533710e8b2ed7a3be31f6914d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 78c32c8aa1cf63ad6b9c9c51d856b02ccec68384
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190735"
 ---
 # <a name="custom-animations-overview"></a>Información general sobre animaciones personalizadas
 En este tema se describe cómo y cuándo extender el sistema de animación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] creando fotogramas clave personalizados o clases de animación, o utilizando la devolución de llamada por fotograma para omitirlo.  
@@ -124,12 +124,13 @@ En este tema se describe cómo y cuándo extender el sistema de animación de [!
  Para obtener más información, consulte la <xref:System.Windows.Media.CompositionTarget.Rendering> página.  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.IKeyFrame>
 - [Información general sobre técnicas de animación de propiedades](property-animation-techniques-overview.md)
 - [Información general sobre objetos Freezable](../advanced/freezable-objects-overview.md)
 - [Información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md)
-- [Información general sobre animaciones en trazados ](path-animations-overview.md)
+- [Información general sobre animaciones en trazados](path-animations-overview.md)
 - [Información general sobre animaciones](animation-overview.md)
-- [Información general sobre sistemas de control de tiempo y animación ](animation-and-timing-system-overview.md)
+- [Información general sobre sistemas de temporización y animación](animation-and-timing-system-overview.md)
 - [Ejemplo de animación personalizada](https://go.microsoft.com/fwlink/?LinkID=159981)

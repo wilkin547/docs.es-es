@@ -1,13 +1,13 @@
 ---
-title: <add> (Elemento para schemeSettings, Configuración de URI)
+title: <add> Elemento para schemeSettings (configuración de Uri)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 672d279f35db64bec7f5b26bd1930d7048c406f1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e7606a1185d406384a926ca4dcb7c42586461574
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139937"
 ---
 # <a name="add-element-for-schemesettings-uri-settings"></a>\<Agregar > elemento para schemeSettings (configuración de Uri)
 Agrega un valor de esquema para un nombre de esquema.  
@@ -48,7 +48,7 @@ Agrega un valor de esquema para un nombre de esquema.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[Elemento \<schemeSettings> (configuración de URI)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.|  
+|[\<schemeSettings > elemento (configuración de Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.|  
   
 ## <a name="remarks"></a>Comentarios  
  De forma predeterminada, el <xref:System.Uri?displayProperty=nameWithType> delimitadores de ruta de acceso de codificación de porcentaje de anular los caracteres de escape de clase antes de ejecutar la compresión de la ruta de acceso. Esto se implementó como un mecanismo de seguridad frente a ataques similar al siguiente:  
@@ -82,6 +82,7 @@ Agrega un valor de esquema para un nombre de esquema.
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

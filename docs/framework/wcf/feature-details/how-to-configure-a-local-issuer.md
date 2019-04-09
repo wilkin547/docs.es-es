@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Configurar a un emisor Local
+title: Filtrar para configurar un emisor local
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 3fb4577e6a79bc6b42cb0ef6f24648d1b016214f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb4a2bcc6f62fac5d0dde82ab32ed6e04e8a9b7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095560"
 ---
-# <a name="how-to-configure-a-local-issuer"></a>Procedimiento Configurar a un emisor Local
+# <a name="how-to-configure-a-local-issuer"></a>Filtrar para configurar un emisor local
 En este tema se describe cómo configurar un cliente para utilizar un emisor local para los tokens emitidos.  
   
  A menudo, cuando un cliente se comunica con un servicio federado, el servicio especifica la dirección del servicio de token de seguridad que se espera que emita el token y que el cliente utilizará para autenticarse con el servicio federado. En determinadas situaciones, el cliente puede configurarse para usar un *emisor local*.  
@@ -65,7 +65,7 @@ En este tema se describe cómo configurar un cliente para utilizar un emisor loc
   
 2.  Establezca el atributo `address` en la dirección del emisor local que aceptará las solicitudes del token.  
   
-3.  Establezca los atributos `binding` y `bindingConfiguration` en valores que hacen referencia al enlace adecuado que se debe usar cuando se comunica con el punto de conexión del emisor local.  
+3.  Establezca los atributos `binding` y `bindingConfiguration` en valores que hacen referencia al enlace adecuado que se debe usar cuando se comunica con el extremo del emisor local.  
   
 4.  Opcional. Establecer el [ \<identidad >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) como elemento secundario de la <`localIssuer`> elemento y especifique la información de identidad para el emisor local.  
   
@@ -75,6 +75,7 @@ En este tema se describe cómo configurar un cliente para utilizar un emisor loc
  Tenga en cuenta que si se especifica una dirección y un enlace del emisor para un enlace determinado, el emisor local no se utiliza para los puntos de conexión que utilizan ese enlace. Los clientes que siempre esperan utilizar el emisor local deberían asegurarse de que no utilizan este enlace o que modifican el enlace de manera que la dirección del emisor sea `null`.  
   
 ## <a name="see-also"></a>Vea también
-- [Cómo: Configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Cómo: Crear a un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Cómo: Create a WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+
+- [Filtrar para configurar las credenciales en un servicio de federación](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Filtrar para crear un cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Filtrar para crear un WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

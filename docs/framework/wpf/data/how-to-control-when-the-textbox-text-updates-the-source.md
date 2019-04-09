@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 28c1e0e23247cfaf48343bf10bb79c4862623fb6
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143278"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Filtrar Controlar cuándo el texto de TextBox actualiza el origen
 Este tema describe cómo usar el <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propiedad para controlar la temporización de las actualizaciones del origen de enlace. Este tema se usa el <xref:System.Windows.Controls.TextBox> control como un ejemplo.  
@@ -46,4 +46,5 @@ Este tema describe cómo usar el <xref:System.Windows.Data.Binding.UpdateSourceT
 >  El <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> se ocupa de las actualizaciones del origen de propiedad y, por tanto, solo es pertinente para <xref:System.Windows.Data.BindingMode.TwoWay> o <xref:System.Windows.Data.BindingMode.OneWayToSource> enlaces. Para <xref:System.Windows.Data.BindingMode.TwoWay> y <xref:System.Windows.Data.BindingMode.OneWayToSource> enlaces funcione, el objeto de origen debe proporcionar notificaciones de cambio de propiedad. Puede consultar los ejemplos citados en este tema para obtener más información. Además, puede consultar [Implementar la notificación de cambio de propiedad](how-to-implement-property-change-notification.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Temas "Cómo..."](data-binding-how-to-topics.md)

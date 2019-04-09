@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b35a901586a4e0951b9915330f974dc48e931c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75bf52fbf9552dc464d9c646f0a2b1bc01cf89c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632184"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193101"
 ---
 # <a name="getqualifierset-function"></a>Función GetQualifierSet
 Recupera el calificador establecido para una instancia o una definición de clase.
@@ -47,7 +47,7 @@ HRESULT GetQualifierSet (
 [in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
 
 `ppQualSet`  
-[out] Recibe el puntero de interfaz que permite el acceso a los calificadores del objeto de clase. El valor de `ppQualSet` no puede ser `null`. Si se produce un error, no se devuelve un nuevo objeto y el puntero se deja sin modificar. 
+[out] Recibe el puntero de interfaz que permite el acceso a los calificadores del objeto de clase. `ppQualSet` No puede ser `null`. Si se produce un error, no se devuelve un nuevo objeto y el puntero se deja sin modificar. 
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -75,4 +75,5 @@ El [IWbemQualifierSet puntero](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqual
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

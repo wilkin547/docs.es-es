@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Recuperar metadatos e implementar un servicio conforme
+title: Filtrar para recuperar metadatos e implementar un servicio conforme
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: a043672ad564341209bc179f9d1596c228fe19cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ddc50e2851217002c825163761855d649b56db1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608500"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095976"
 ---
-# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Procedimiento Recuperar metadatos e implementar un servicio conforme
+# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Filtrar para recuperar metadatos e implementar un servicio conforme
 A menudo, no es el mismo rol quien diseña e implementa los servicios. En entornos donde las aplicaciones que interoperan son importantes, los contratos pueden diseñarse o describirse en lenguaje de descripción de servicios Web (WSDL), y un desarrollador deberá implementar un servicio compatible con el contrato proporcionado. También puede migrar un servicio existente a Windows Communication Foundation (WCF), pero conservar el formato. Además, los contratos dúplex exigen a los autores de llamadas que también implementen un contrato de devolución de llamada.  
   
  En estos casos, debe usar el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (o una herramienta equivalente) para generar una interfaz de contrato de servicio en un lenguaje administrado que puede implementar para cumplir los requisitos de la contrato. Normalmente el [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) se usa para adquirir un contrato de servicio que se usa con un generador de canales o un tipo de cliente WCF, así como con un archivo de configuración de cliente que configura el enlace correcto y la dirección. Para utilizar el archivo de configuración generado, debe cambiarlo a un archivo de configuración de servicio. También puede ser necesario modificar el contrato de servicios.  
@@ -18,7 +18,7 @@ A menudo, no es el mismo rol quien diseña e implementa los servicios. En entorn
   
 1.  Use la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) frente a los archivos de metadatos o un extremo de metadatos para generar un archivo de código.  
   
-2.  Busque la parte del archivo de código de salida que contiene la interfaz de interés (en caso de que haya más de una) y que se marca con el atributo <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>. El ejemplo de código siguiente muestra las dos interfaces generadas por [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). La primera (`ISampleService`) es la interfaz del contrato de servicio que se implementa para crear un servicio conforme. La segunda (`ISampleServiceChannel`) es una interfaz auxiliar, para uso del cliente, que extiende tanto la interfaz del contrato de servicio como <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, y que se utiliza en una aplicación cliente.  
+2.  Busque la parte del archivo de código de salida que contiene la interfaz de interés (en caso de que haya más de una) y que se marca con el atributo <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>. El ejemplo de código siguiente muestra las dos interfaces generadas por [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). La primera (`ISampleService`) es la interfaz del contrato de servicio que se implementa para crear un servicio conforme. La segunda (`ISampleServiceChannel`) es una interfaz del asistente, para uso del cliente, que extiende tanto la interfaz del contrato de servicio como <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, y que se utiliza en una aplicación cliente.  
   
      [!code-csharp[ClientProxyCodeSample#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/proxycode.cs#2)]  
   
@@ -43,7 +43,7 @@ A menudo, no es el mismo rol quien diseña e implementa los servicios. En entorn
   
 -   La interfaz del asistente para uso del cliente que extiende tanto la interfaz de contrato del servicio como <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, y que se utiliza en una aplicación cliente (`ISampleServiceChannel`).  
   
--   La clase auxiliar que extiende <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, y que se utiliza en una aplicación cliente (`SampleServiceClient`).  
+-   La clase del asistente que extiende <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, y que se utiliza en una aplicación cliente (`SampleServiceClient`).  
   
 -   El archivo de configuración generado desde el servicio.  
   
@@ -60,4 +60,5 @@ A menudo, no es el mismo rol quien diseña e implementa los servicios. En entorn
 [!code-xml[ClientProxyCodeSample#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.exe.config#20)]    
   
 ## <a name="see-also"></a>Vea también
+
 - [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

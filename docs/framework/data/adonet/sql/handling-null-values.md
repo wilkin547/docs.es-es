@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: cd3a9cd8cf7862bfa3128b81f5ecf6d380e20c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191476"
 ---
 # <a name="handling-null-values"></a>Controlar valores Null
 Los valores NULL se utilizan en bases de datos relacionales cuando el valor de una columna se desconoce o falta. Un NULL no es ni una cadena vacía (en los tipos de datos de caracteres o de fecha y hora) ni un valor cero (en los tipos de datos numéricos). La especificación ANSI SQL-92 afirma que un NULL debe ser igual en todos los tipos de datos; por lo tanto, todos los NULL se tratan de forma coherente. El espacio de nombres <xref:System.Data.SqlTypes> proporciona semántica para valores NULL mediante la implementación de la interfaz <xref:System.Data.SqlTypes.INullable>. Cada uno de los tipos de datos de <xref:System.Data.SqlTypes> tiene su propia propiedad  `IsNull` y un valor `Null` que se puede asignar a una instancia de ese tipo de datos.  
@@ -35,7 +35,7 @@ Los valores NULL se utilizan en bases de datos relacionales cuando el valor de u
  ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>Descripción de la opción ANSI_NULLS  
- <xref:System.Data.SqlTypes> proporciona la misma semántica que cuando se establece la opción ANSI_NULLS en ON en SQL Server. Todos los operadores aritméticos (+, -, *, /, %), operadores bit a bit (~ &, &#124;), y la mayoría de las funciones devuelve null si alguno de los operandos o argumentos es null, excepto la propiedad `IsNull`.  
+ <xref:System.Data.SqlTypes> proporciona la misma semántica que cuando la opción ANSI_NULLS está activada en SQL Server. Todos los operadores aritméticos (+, -, *, /, %), operadores bit a bit (~ &, &#124;), y la mayoría de las funciones devuelve null si alguno de los operandos o argumentos es null, excepto la propiedad `IsNull`.  
   
  No se admite el estándar ANSI SQL-92 *columnName* = NULL en una cláusula WHERE. En SQL Server, la opción ANSI_NULLS controla la posibilidad de aceptar NULL predeterminada en la base de datos y la evaluación de comparaciones con respecto a valores NULL. Si ANSI_NULLS está activado (el valor predeterminado), al comprobar la existencia de valores NULL se debe utilizar el operador IS NULL en las expresiones. Por ejemplo, la siguiente comparación siempre produce UNKNOWN cuando ANSI_NULLS está activado:  
   
@@ -83,7 +83,7 @@ WHERE TerritoryID IN (1, 2, 3)
 >  La estructura `Nullable<T>` o <xref:System.Nullable> no se admite actualmente en `DataSet`.  
   
 ### <a name="multiple-column-row-assignment"></a>Asignación de varias columnas (filas)  
- `DataTable.Add`, `DataTable.LoadDataRow` u otras API que aceptan <xref:System.Data.DataRow.ItemArray%2A> que se asigna a una fila, asignan 'null' al valor predeterminado de DataColumn. Si un objeto de la matriz contiene `DbNull.Value` o su equivalente fuertemente tipado, se aplican las mismas reglas que se han descrito anteriormente.  
+ `DataTable.Add`, `DataTable.LoadDataRow`, u otras API que aceptan un <xref:System.Data.DataRow.ItemArray%2A> que se asigna a una fila, asignan 'null' al valor predeterminado de DataColumn. Si un objeto de la matriz contiene `DbNull.Value` o su equivalente fuertemente tipado, se aplican las mismas reglas que se han descrito anteriormente.  
   
  Además, las siguientes reglas se aplican para una instancia de asignaciones de NULL de `DataRow.["columnName"]`:  
   
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Comparación de valores NULL con SqlTypes y tipos CLR  
- Al comparar valores NULL, es importante comprender la diferencia entre la forma en que el método `Equals` evalúa los valores NULL en <xref:System.Data.SqlTypes> por contraposición a cómo funciona con tipos CLR. Todos los <xref:System.Data.SqlTypes> `Equals` métodos utilizan la semántica de base de datos para evaluar valores null: si uno o ambos de los valores es null, la comparación produce null. Por otra parte, el uso del método `Equals` de CLR en dos <xref:System.Data.SqlTypes> producirá TRUE si ambos son NULL. Esto refleja la diferencia entre el uso de un método de instancia como el método `String.Equals` de CLR y el uso del método estático o compartido `SqlString.Equals`.  
+ Al comparar valores NULL, es importante comprender la diferencia entre la forma en que el método `Equals` evalúa los valores NULL en <xref:System.Data.SqlTypes> por contraposición a cómo funciona con tipos CLR. Todos los <xref:System.Data.SqlTypes>`Equals` métodos utilizan la semántica de base de datos para evaluar valores null: si uno o ambos de los valores es null, la comparación produce null. Por otra parte, el uso del método `Equals` de CLR en dos <xref:System.Data.SqlTypes> producirá TRUE si ambos son NULL. Esto refleja la diferencia entre el uso de un método de instancia como el método `String.Equals` de CLR y el uso del método estático o compartido `SqlString.Equals`.  
   
  En el siguiente ejemplo se muestra la diferencia entre los resultados del método `SqlString.Equals` y del método `String.Equals` cuando se pasa a cada uno un par de valores NULL y, a continuación, un par de cadenas vacías.  
   
@@ -142,5 +142,6 @@ String.Equals instance method:
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Tipos de datos de SQL Server y ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-ms.openlocfilehash: 8ec59ef316bfa19046082a8ee0a4052c69d5c323
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092285"
 ---
 # <a name="administration-and-diagnostics"></a>Administración y diagnóstico
 Windows Communication Foundation (WCF) proporciona un amplio conjunto de funcionalidades que pueden ayudarle a supervisar las distintas fases del ciclo de vida de la aplicación. Por ejemplo, puede usar la configuración para configurar servicios y clientes en la implementación. WCF incluye un conjunto grande de contadores de rendimiento para ayudarle a calibrar el rendimiento de su aplicación. WCF también expone datos de inspección de un servicio en tiempo de ejecución a través de un proveedor de Instrumental de administración de Windows (WMI) de WCF. Cuando la aplicación experimenta un error o comienza a actuar incorrectamente, puede utilizar el Registro de eventos para ver si algo significativo ha sucedido. También puede utilizar el registro y seguimiento de mensajes para ver qué eventos están pasando de un extremo a otro en su aplicación. Estas características ayudan a los desarrolladores y profesionales de TI a solucionar problemas de aplicaciones WCF cuando no se comporta correctamente.  
@@ -40,8 +40,9 @@ Windows Communication Foundation (WCF) proporciona un amplio conjunto de funcion
  WCF también proporciona varias herramientas de línea de comandos y GUI para que sea más fácil para que pueda crear, implementar y administrar aplicaciones de WCF. Para obtener más información, consulte [herramientas de Windows Communication Foundation](../../../../docs/framework/wcf/tools.md). Por ejemplo, puede usar el [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) para crear y editar los valores de configuración de WCF mediante un asistente, en lugar de editar XML directamente. También puede usar el [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) para ver, agrupar y filtrar los mensajes de seguimiento de modo que pueda diagnosticar, reparar y comprobar los problemas con los servicios WCF.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Configuración de su aplicación](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
-- [Implementación de servicios](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
+- [Desarrollo de servicios](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
 - [Referencia de excepciones](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
 - [Registro de eventos](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
 - [Registro de mensajes](../../../../docs/framework/wcf/diagnostics/message-logging.md)
@@ -49,6 +50,6 @@ Windows Communication Foundation (WCF) proporciona un amplio conjunto de funcion
 - [Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Herramienta de registro ServiceModel](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
 - [Traza](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Utilización del Instrumental de administración de Windows (WMI) para diagnósticos](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [Utilización del instrumental de administración de Windows (WMI) para diagnósticos](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
 - [Contadores de rendimiento](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
 - [Herramientas de Windows Communication Foundation](../../../../docs/framework/wcf/tools.md)

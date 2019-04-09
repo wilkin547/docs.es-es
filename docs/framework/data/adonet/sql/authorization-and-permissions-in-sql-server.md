@@ -2,12 +2,12 @@
 title: Autorización y permisos en SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 5d1ea7a9ad451db67e7a51c3485f98e03fd40690
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185866"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorización y permisos en SQL Server
 Al crear objetos de base de datos, se deben conceder permisos de forma explícita para que los usuarios tengan acceso a ellos. Cada objeto susceptible de protegerse tiene permisos que se pueden otorgar a una entidad de seguridad mediante instrucciones de permiso.  
@@ -18,7 +18,7 @@ Al crear objetos de base de datos, se deben conceder permisos de forma explícit
  Cuando conceda permisos a usuarios de base de datos, siga siempre el principio de los privilegios mínimos. Otorgue a usuarios y roles los mínimos permisos necesarios para que puedan realizar una tarea concreta.  
   
 > [!IMPORTANT]
->  Cuado se desarrolla o prueba una aplicación utilizando el enfoque LUA, se aumenta el grado de dificultad del proceso de desarrollo. Resulta más fácil crear objetos y escribir código cuando se inicia sesión como administrador del sistema o propietario de la base de datos que cuando se utiliza una cuenta LUA. Sin embargo, el desarrollo de aplicaciones con cuentas de privilegios elevados puede entorpecer el impacto de funcionalidades reducidas cuando usuarios con privilegios de nivel bajo intentan ejecutar una aplicación que requiere permisos elevados para funcionar correctamente. Otorgar a los usuarios permisos excesivos para recuperar funcionalidades perdidas puede exponer a la aplicación a posibles ataques. El diseño, desarrollo y prueba de una aplicación en la que se ha iniciado sesión con una cuenta LUA impone un enfoque disciplinado del planeamiento de la seguridad que evita sorpresas desagradables, así como la tentación de recurrir a la solución rápida de otorgar privilegios elevados. Puede utilizar un inicio de sesión de SQL Server para realizar pruebas, incluso aunque la aplicación esté pensada para implementarse con autenticación de Windows.  
+>  Cuado se desarrolla o prueba una aplicación utilizando el enfoque LUA, se aumenta el grado de dificultad del proceso de desarrollo. Resulta más fácil crear objetos y escribir código cuando se inicia sesión como administrador del sistema o propietario de la base de datos que cuando se utiliza una cuenta LUA. Sin embargo, el desarrollo de aplicaciones con cuentas de privilegios elevados puede ofuscar el impacto de funcionalidades reducidas cuando usuarios con privilegios de nivel bajo intentan ejecutar una aplicación que requiere permisos elevados para funcionar correctamente. Otorgar a los usuarios permisos excesivos para recuperar funcionalidades perdidas puede exponer a la aplicación a posibles ataques. El diseño, desarrollo y prueba de una aplicación en la que se ha iniciado sesión con una cuenta LUA impone un enfoque disciplinado del planeamiento de la seguridad que evita sorpresas desagradables, así como la tentación de recurrir a la solución rápida de otorgar privilegios elevados. Puede utilizar un inicio de sesión de SQL Server para realizar pruebas, incluso aunque la aplicación esté pensada para implementarse con autenticación de Windows.  
   
 ## <a name="role-based-permissions"></a>Permisos basados en roles  
  Otorgar permisos a roles en lugar de a usuarios simplifica la administración de la seguridad. Los conjuntos de permisos asignados a roles los heredan todos los miembros del rol. Es más fácil agregar o quitar usuarios de un rol que volver a crear conjuntos de permisos distintos para cada usuario. Las roles se pueden anidar. Sin embargo, la existencia de demasiados niveles de anidamiento puede reducir el rendimiento. También puede agregar usuarios a roles fijos de bases de datos para simplificar los permisos de asignación.  
@@ -59,9 +59,10 @@ Al crear objetos de base de datos, se deben conceder permisos de forma explícit
 |[Permisos](/sql/relational-databases/security/permissions-database-engine)|Contiene temas que describen la jerarquía de permisos, las vistas de catálogo y permisos de servidores fijos y roles de bases de datos.|
   
 ## <a name="see-also"></a>Vea también
+
 - [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Autenticación en SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [Roles de servidor y base de datos en SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
 - [Propiedad y separación de esquemas de usuario en SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Proveedores administrados de ADO.NET y centro de desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

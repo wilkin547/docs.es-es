@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunctionBreakpoint (Interfaz)
+title: Interfaz ICorDebugFunctionBreakpoint
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunctionBreakpoint
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c3c11d3b6a6daec7b35377ef24557dd5077af21
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0f15b9f5961699f905e765426576bdf6f3416793
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141159"
 ---
-# <a name="icordebugfunctionbreakpoint-interface"></a>ICorDebugFunctionBreakpoint (Interfaz)
+# <a name="icordebugfunctionbreakpoint-interface"></a>Interfaz ICorDebugFunctionBreakpoint
 
 Extiende la interfaz ICorDebugBreakpoint para admitir puntos de interrupción dentro de las funciones.  
   
@@ -31,8 +31,8 @@ Extiende la interfaz ICorDebugBreakpoint para admitir puntos de interrupción de
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetFunction (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|Obtiene un puntero de interfaz a un ICorDebugFunction que hace referencia a la función en el que se establece el punto de interrupción.|  
-|[GetOffset (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|Obtiene el desplazamiento del punto de interrupción dentro de la función.|  
+|[Método GetFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|Obtiene un puntero de interfaz a un ICorDebugFunction que hace referencia a la función en el que se establece el punto de interrupción.|  
+|[Método GetOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|Obtiene el desplazamiento del punto de interrupción dentro de la función.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -49,4 +49,5 @@ Extiende la interfaz ICorDebugBreakpoint para admitir puntos de interrupción de
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

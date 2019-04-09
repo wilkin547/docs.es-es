@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 33f6e5f7929c5a4231c0779964db177f45af6743
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189318"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Información general del control DataGrid (Formularios Windows Forms)
 > [!NOTE]
@@ -140,6 +140,7 @@ La ilustración siguiente muestra los objetos incluidos en el control DataGrid.
  Además de los eventos de control comunes como <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.Enter> y <xref:System.Windows.Forms.DataGrid.Scroll>, el control <xref:System.Windows.Forms.DataGrid> admite eventos asociados con la edición y navegación dentro de la cuadrícula. La propiedad <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> determina la celda seleccionada. El evento <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> se genera cuando el usuario navega a una nueva celda. Cuando el usuario navega a una nueva tabla a través de relaciones de elementos primarios y secundarios, se genera el evento <xref:System.Windows.Forms.DataGrid.Navigate>. El evento <xref:System.Windows.Forms.DataGrid.BackButtonClick> se genera cuando el usuario hace clic en el botón Atrás mientras mira una tabla secundaria y el evento <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> se genera cuando se hace clic en el icono de mostrar u ocultar las filas primarias.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Control DataGrid](datagrid-control-windows-forms.md)
 - [Filtrar para enlazar el control DataGrid de formularios Windows Forms a un origen de datos](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Filtrar para agregar tablas y columnas al control DataGrid de Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

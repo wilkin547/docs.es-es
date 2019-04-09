@@ -2,12 +2,12 @@
 title: Arquitectura y diseño
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576335"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096142"
 ---
 # <a name="architecture-and-design"></a>Arquitectura y diseño
 El módulo de generación de SQL en el [proveedor de ejemplo](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) se implementa como un visitante en el árbol de expresión que representa el árbol de comandos. La generación se realiza en un paso único al árbol de expresión.  
@@ -214,13 +214,13 @@ private bool IsParentAJoin{get}
   
  Para explicar la redirección de alias de entrada, consulte el primer ejemplo de [generar SQL de árboles de comandos: procedimientos recomendados](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).  En él, "a" necesita redirigirse a "b" en la proyección.  
   
- Cuando se crea un objeto SqlSelectStatement, la extensión que representa la entrada al nodo se coloca en la propiedad From del objeto SqlSelectStatement. Se crea un objeto Symbol (<symbol_b>) basado en el nombre del enlace de entrada ("b") para representar esa extensión y se anexa "AS" + <symbol_b> a la cláusula From.  El símbolo también se agrega a la propiedad FromExtents.  
+ Cuando se crea un objeto SqlSelectStatement, la extensión que representa la entrada al nodo se coloca en la propiedad From del objeto SqlSelectStatement. Un símbolo (< symbol_b >) se crea en función del nombre de enlace de entrada ("b") para representar esa extensión y "AS" + < symbol_b > se anexa a la cláusula From.  El símbolo también se agrega a la propiedad FromExtents.  
   
- El símbolo también se agrega a la tabla de símbolos para vincularle el nombre del enlace de entrada ("b", <symbol_b>).  
+ El símbolo también se agrega a la tabla de símbolos para vincularle el nombre de enlace de entrada a él ("b", < symbol_b >).  
   
  Si un nodo posterior vuelve a utilizar esa instrucción SqlSelectStatement, agrega una entrada a la tabla de símbolos para vincular su nombre de enlace de entrada a ese símbolo. En nuestro ejemplo, podría volver a usar la instrucción SqlSelectStatement y agregue la expresión DbProjectExpression con el nombre de enlace de entrada de "a" ("a", \< symbol_b >) a la tabla.  
   
- Cuando las expresiones hacen referencia al nombre de enlace de entrada del nodo que está reutilizando la instrucción SqlSelectStatement, esa referencia se resuelve usando la tabla de símbolos como el símbolo redirigido correcto. Cuando "a" de "a.x" se resuelva al visitar la expresión DbVariableReferenceExpression que representa "a", lo hará como el objeto Symbol <symbol_b>.  
+ Cuando las expresiones hacen referencia al nombre de enlace de entrada del nodo que está reutilizando la instrucción SqlSelectStatement, esa referencia se resuelve usando la tabla de símbolos como el símbolo redirigido correcto. Cuando "a" de "a.x" se resuelva al visitar la expresión DbVariableReferenceExpression que representa "a", lo se resolverá como el objeto Symbol < symbol_b >.  
   
 ### <a name="join-alias-flattening"></a>Eliminación de la información de estructura jerárquica de los alias de combinación  
  La eliminación de la información de estructura jerárquica de los alias de combinación se logra al visitar una expresión DbPropertyExpression, como se describe en la sección titulada DbPropertyExpression.  
@@ -270,7 +270,7 @@ private bool IsParentAJoin{get}
   
 4.  Agregue un nuevo ámbito SymbolTable.  
   
-5.  Visite la parte que no es de entrada de la expresión (por ejemplo, Projection y Predicate).  
+5.  Visite la parte que no es de entrada de la expresión (por ejemplo, Projection y Predicado).  
   
 6.  Extraiga todos los objetos agregados a las pilas globales.  
   
@@ -412,7 +412,8 @@ IsEmpty(inut) = Not Exists(input)
   
  El cambio de nombre de una columna se produce cuando se escribe un objeto Symbol en una cadena. AddDefaultColumns en la primera fase ha determinado si debe cambiarse el nombre de un determinado símbolo de columna. En la segunda fase, el cambio de nombre solamente se produce tras asegurarse de que el nombre generado no estará en conflicto con ninguno de los nombres utilizados en AllColumnNames  
   
- Para generar nombres únicos tanto para los alias de extensión como para las columnas, utilice <nombre_existente>_n, donde n es el alias más pequeño que no se ha utilizado todavía. La lista global de todos los alias aumenta la necesidad de realizar cambios de nombre en cascada.  
+ Para generar nombres únicos tanto para los alias de extensión para las columnas, utilice < nombre_existente > _n, donde n es el alias más pequeño que no se ha utilizado todavía. La lista global de todos los alias aumenta la necesidad de realizar cambios de nombre en cascada.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Generación de SQL en el proveedor de ejemplo](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

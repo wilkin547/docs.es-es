@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 0d336a55ee849ea3e9584cdcfd87e5d6c4befe25
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374653"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188648"
 ---
 # <a name="dependency-properties-overview"></a>Información general sobre las propiedades de dependencia
 
@@ -197,7 +197,8 @@ Por lo general, no querrá que los estilos siempre apliquen ni oculten siquiera 
 - Por lo general, las propiedades de dependencia deben considerarse propiedades públicas, accesibles o al menos reconocibles para cualquier llamador que tenga acceso a una instancia. Para obtener más información, consulte [Seguridad de las propiedades de dependencia](dependency-property-security.md).
 
 ## <a name="see-also"></a>Vea también
+
 - [Propiedades de dependencia personalizadas](custom-dependency-properties.md)
-- [Propiedades de dependencia de solo lectura](read-only-dependency-properties.md)
+- [Propiedades de dependencia de sólo lectura](read-only-dependency-properties.md)
 - [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
 - [Arquitectura de WPF](wpf-architecture.md)

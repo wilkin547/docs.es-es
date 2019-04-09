@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375108"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098967"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Personalizar la apariencia de un control existente creando una clase ControlTemplate
 <a name="introduction"></a> Un <xref:System.Windows.Controls.ControlTemplate> especifica la estructura visual y el comportamiento visual de un control. Puede personalizar la apariencia de un control proporcionando una nueva <xref:System.Windows.Controls.ControlTemplate>. Cuando creas un <xref:System.Windows.Controls.ControlTemplate>, reemplace la apariencia de un control existente sin cambiar su funcionalidad. Por ejemplo, puede que los botones de la aplicación redondos en lugar de la forma cuadrada predeterminada, pero el botón seguirá generando el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
@@ -31,8 +31,7 @@ Un botón que usa una plantilla de control personalizado.
   
  ![Botón con un borde rojo. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 Un botón que usa una plantilla de control personalizado y tiene el puntero del mouse sobre él.  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
  En este tema se supone que sabe cómo crear y usar controles y estilos, como se describe en [Controls](index.md) (Controles). Los conceptos tratados en este tema se aplican a los elementos que heredan de la <xref:System.Windows.Controls.Control> (clase), excepto para el <xref:System.Windows.Controls.UserControl>. No se puede aplicar un <xref:System.Windows.Controls.ControlTemplate> a un <xref:System.Windows.Controls.UserControl>.  
@@ -92,7 +91,7 @@ Un control CheckBox que usa una plantilla de control personalizado
   
  En la tabla siguiente se enumera las propiedades visuales heredadas por un control desde el <xref:System.Windows.Controls.Control> clase. También se indica si la plantilla de control predeterminado de un control usa el valor de propiedad heredado o si debe estar enlazado a plantilla.  
   
-|Property|Método de uso|  
+|Propiedad|Método de uso|  
 |--------------|------------------|  
 |<xref:System.Windows.Controls.Control.Background%2A>|Enlace a plantilla|  
 |<xref:System.Windows.Controls.Control.BorderThickness%2A>|Enlace a plantilla|  
@@ -257,9 +256,10 @@ Un botón que usa una plantilla de control personalizado en el estado presionado
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>Ejemplo completo  
- El ejemplo siguiente muestra toda <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> que se describe en este tema.  
+ El ejemplo siguiente muestra toda <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.ControlTemplate> que se describe en este tema.  
   
  [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Aplicar estilos y plantillas](styling-and-templating.md)

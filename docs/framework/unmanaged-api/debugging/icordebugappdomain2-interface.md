@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAppDomain2 (Interfaz)
+title: Interfaz ICorDebugAppDomain2
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomain2
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82b58780472443874f2dae93c2d8568006db2e8a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5c6ef901f43cd6568f17657ed8e58bc2cc2cc0a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186061"
 ---
-# <a name="icordebugappdomain2-interface"></a>ICorDebugAppDomain2 (Interfaz)
+# <a name="icordebugappdomain2-interface"></a>Interfaz ICorDebugAppDomain2
 
 Proporciona métodos para trabajar con matrices, punteros, punteros a función y tipos de referencia. Esta interfaz es una extensión de ICorDebugAppDomain (interfaz).  
   
@@ -31,7 +31,7 @@ Proporciona métodos para trabajar con matrices, punteros, punteros a función y
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetArrayOrPointerType (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|Obtiene una matriz de tipo especificado, o un puntero o referencia al tipo especificado.|  
+|[Método GetArrayOrPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|Obtiene una matriz de tipo especificado, o un puntero o referencia al tipo especificado.|  
 |[GetFunctionPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|Obtiene un puntero a una función que tiene una firma dada.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -49,4 +49,5 @@ Proporciona métodos para trabajar con matrices, punteros, punteros a función y
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [Interfaces de depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfaces para depuración](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

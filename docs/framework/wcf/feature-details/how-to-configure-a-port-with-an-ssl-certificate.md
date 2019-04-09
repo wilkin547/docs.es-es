@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Configurar un puerto con un certificado SSL
+title: Filtrar para configurar un puerto con un certificado SSL
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 3aa32e54643ffb8e2e4e40f730ab3f5c084b8cd9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 533c329bed7b1cb9b07805032c839d3f5ff10634
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139820"
 ---
-# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procedimiento Configurar un puerto con un certificado SSL
+# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Filtrar para configurar un puerto con un certificado SSL
 Al crear un servicio de Windows Communication Foundation (WCF) alojados en sí mismos con el <xref:System.ServiceModel.WSHttpBinding> que utiliza seguridad de transporte de clase, también debe configurar un puerto con un certificado X.509. Si no está creando un servicio autohospedado, puede hospedar su servicio en Servicios de Internet Information Server (IIS). Para obtener más información, consulte [seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  La herramienta que se usa para configurar un puerto depende del sistema operativo que se esté ejecutando en el equipo.  
@@ -130,4 +130,5 @@ Al crear un servicio de Windows Communication Foundation (WCF) alojados en sí m
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>Vea también
+
 - [Seguridad de transporte HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

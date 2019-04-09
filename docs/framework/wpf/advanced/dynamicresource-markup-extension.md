@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a7b754ce3fb77314539e6391376b188fe9b15859
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091413"
 ---
 # <a name="dynamicresource-markup-extension"></a>Extensión de marcado DynamicResource
 Proporciona un valor para cualquier [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atributo de propiedad aplazando ese valor para que sea una referencia a un recurso definido. Comportamiento de búsqueda de ese recurso es análogo a la búsqueda de tiempo de ejecución.  
@@ -60,7 +60,7 @@ Proporciona un valor para cualquier [!INCLUDE[TLA2#tla_xaml](../../../../include
   
  `DynamicResource` se puede usar en la sintaxis de elemento de objeto. En este caso, especificando el valor de la <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> propiedad es obligatoria.  
   
- `DynamicResource` también se puede utilizar en el uso de atributos detallado que especifica la propiedad <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> como un par de propiedad=valor:  
+ `DynamicResource` También puede utilizarse en el uso de atributos detallado que especifica el <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> como propiedad = par de valor:  
   
 ```xml  
 <object property="{DynamicResource ResourceKey=key}" .../>  
@@ -73,10 +73,11 @@ Proporciona un valor para cualquier [!INCLUDE[TLA2#tla_xaml](../../../../include
  `DynamicResource` es una extensión de marcado. Las extensiones de marcado se suelen implementar cuando se necesita que los valores de los atributos de escape no sean valores literales o nombres de controladores, y este requisito es de índole más global que limitarse a colocar los convertidores de tipos en determinados tipos o propiedades. Todas las extensiones de marcado de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usan los caracteres { y } en su sintaxis de atributo, que es la convención que permite que un procesador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reconozca que el atributo se debe procesar mediante una extensión de marcado. Para más información, vea [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Vea también
+
 - [Recursos XAML](xaml-resources.md)
 - [Recursos y código](resources-and-code.md)
 - [x:Key (Directiva)](../../xaml-services/x-key-directive.md)
 - [Información general sobre XAML (WPF)](xaml-overview-wpf.md)
 - [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md)
-- [StaticResource (extensión de marcado)](staticresource-markup-extension.md)
+- [Extensión de marcado StaticResource](staticresource-markup-extension.md)
 - [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md)

@@ -1,5 +1,5 @@
 ---
-title: Filtrar Enviar datos al formulario secundario MDI activo
+title: Filtrar para enviar datos al formulario secundario MDI activo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: a89956595ff98e8cda717c90a3f96c95abc8118a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0ffe87d55f7325f77bd33bdbf5d5fbab9f321f93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203332"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a>Filtrar Enviar datos al formulario secundario MDI activo
+# <a name="how-to-send-data-to-the-active-mdi-child"></a>Filtrar para enviar datos al formulario secundario MDI activo
 A menudo, en el contexto de [aplicaciones de interfaz de múltiples documentos (MDI)](multiple-document-interface-mdi-applications.md), deberá enviar datos a la ventana secundaria activa, por ejemplo, cuando el usuario pega datos desde el Portapapeles en una aplicación MDI.  
   
 > [!NOTE]
@@ -92,8 +92,9 @@ A menudo, en el contexto de [aplicaciones de interfaz de múltiples documentos (
     ```  
   
 ## <a name="see-also"></a>Vea también
+
 - [Aplicaciones de interfaz de múltiples documentos (MDI)](multiple-document-interface-mdi-applications.md)
-- [Cómo: Crear formularios principales MDI](how-to-create-mdi-parent-forms.md)
-- [Cómo: Crear formularios MDI secundarios](how-to-create-mdi-child-forms.md)
-- [Cómo: Determinar el formulario secundario MDI activo](how-to-determine-the-active-mdi-child.md)
-- [Cómo: Organizar formularios MDI secundarios](how-to-arrange-mdi-child-forms.md)
+- [Filtrar para crear formularios principales MDI](how-to-create-mdi-parent-forms.md)
+- [Filtrar para crear formularios secundarios MDI](how-to-create-mdi-child-forms.md)
+- [Filtrar para determinar el formulario secundario MDI activo](how-to-determine-the-active-mdi-child.md)
+- [Filtrar para organizar formularios secundarios MDI](how-to-arrange-mdi-child-forms.md)

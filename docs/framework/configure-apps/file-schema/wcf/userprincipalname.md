@@ -2,12 +2,12 @@
 title: <userPrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-ms.openlocfilehash: 19ea7e940fc7013fc526629a8aac4361ff3fb8bc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9e7b845d39495dba1d1a19af95faf308b8b8c0fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188255"
 ---
 # <a name="userprincipalname"></a>\<userPrincipalName>
 Especifica el Nombre principal de usuario (UPN) de un servicio que va a autenticar el cliente.  
@@ -54,6 +54,7 @@ Especifica el Nombre principal de usuario (UPN) de un servicio que va a autentic
 ```  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>

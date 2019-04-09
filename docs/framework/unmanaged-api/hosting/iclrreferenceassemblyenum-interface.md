@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9f2f2a31247bae19d3cbb3dc667007c1cbc8acb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32f27d6c15a99282eee20d2563a4ca741238d846
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187411"
 ---
 # <a name="iclrreferenceassemblyenum-interface"></a>ICLRReferenceAssemblyEnum (Interfaz)
 Proporciona métodos que permiten al host manipular el conjunto de ensamblados que se hace referencia a un archivo o secuencia utilizando los datos de identidad de ensamblado que están internas de common language runtime (CLR), sin necesidad de crear o entender esas identidades.  
@@ -30,7 +30,7 @@ Proporciona métodos que permiten al host manipular el conjunto de ensamblados q
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Get (método)](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-get-method.md)|Obtiene la identidad del ensamblado en el índice proporcionado.|  
+|[Método Get](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-get-method.md)|Obtiene la identidad del ensamblado en el índice proporcionado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -42,6 +42,7 @@ Proporciona métodos que permiten al host manipular el conjunto de ensamblados q
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
-- [ICLRAssemblyIdentityManager (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [ICLRAssemblyReferenceList (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+
+- [ICLRAssemblyIdentityManager (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyReferenceList (Interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
 - [Interfaces de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 63a761b4a79743b0d4a03392ced465c3105db9bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602538"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195064"
 ---
 # <a name="sending-and-receiving-faults"></a>Envío y recepción de errores
 Los errores de SOAP transportan información de condición de errores desde un servicio a un cliente y, en caso de comunicación dúplex, desde un cliente a un servicio de manera interoperable. Normalmente, un servicio define el contenido del error personalizado y especifica qué operaciones pueden devolverlos. (Para obtener más información, consulte [definir y especificar los errores](../../../docs/framework/wcf/defining-and-specifying-faults.md).) Este tema discute cómo un servicio o cliente dúplex puede enviar esos errores cuando la condición de error correspondiente se ha producido y cómo una aplicación de cliente o servicio administra estos errores. Para obtener información general de control de errores en las aplicaciones de Windows Communication Foundation (WCF), consulte [especificar y controlar errores en contratos y servicios](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -51,15 +51,15 @@ Los errores de SOAP transportan información de condición de errores desde un s
   
 -   <xref:System.ServiceModel.CommunicationException>  
   
- Los objetos <xref:System.TimeoutException> se producen cuando una operación supera el período de tiempo de espera especificado.  
+ <xref:System.TimeoutException> los objetos se producen cuando una operación supera el período de tiempo de espera especificado.  
   
- Los objetos <xref:System.ServiceModel.CommunicationException> se producen cuando hay alguna condición de error de comunicación recuperable en el servicio o el cliente.  
+ <xref:System.ServiceModel.CommunicationException> los objetos se producen cuando hay alguna condición de error de comunicación recuperable en el servicio o el cliente.  
   
  La clase <xref:System.ServiceModel.CommunicationException> tiene dos tipos derivados importantes: <xref:System.ServiceModel.FaultException> y el tipo <xref:System.ServiceModel.FaultException%601> genérico  
   
- Las excepciones <xref:System.ServiceModel.FaultException> se producen cuando un agente de escucha recibe un error que no se espera o especifica en el contrato de operación; normalmente esto sucede cuando se depura la aplicación y el servicio tiene la propiedad <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> establecida en `true`.  
+ <xref:System.ServiceModel.FaultException> las excepciones se producen cuando un agente de escucha recibe un error que no se espera o especificado en el contrato de operación; Esto ocurre normalmente cuando se está depurando la aplicación y el servicio tiene la <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> propiedad establecida en `true`.  
   
- Las excepciones <xref:System.ServiceModel.FaultException%601> se producen en el cliente cuando se recibe un error de SOAP especificado en el contrato de la operación en respuesta a una operación bidireccional (es decir, un método con un atributo <xref:System.ServiceModel.OperationContractAttribute> con <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> establecido en `false`).  
+ <xref:System.ServiceModel.FaultException%601> las excepciones se producen en el cliente cuando se recibe un error que se especifica en el contrato de operación en respuesta a una operación bidireccional (es decir, un método con un <xref:System.ServiceModel.OperationContractAttribute> con el atributo <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> establecido en `false`).  
   
 > [!NOTE]
 >  Cuando un servicio WCF tiene el <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> propiedad establecida en `true` el cliente experimenta esto como un no declarado <xref:System.ServiceModel.FaultException%601> de tipo <xref:System.ServiceModel.ExceptionDetail>. Los clientes pueden detectar este error concreto o administrar el error en un bloque de detección de <xref:System.ServiceModel.FaultException>.  
@@ -105,8 +105,9 @@ Los errores de SOAP transportan información de condición de errores desde un s
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [Excepciones esperadas](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [Utilizar cierre y anulación para liberar los recursos del cliente WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [Uso de Close y Abort para liberar los recursos del cliente WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

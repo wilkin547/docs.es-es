@@ -10,12 +10,12 @@ helpviewer_keywords:
 - paths [Windows Forms], drawing
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
-ms.openlocfilehash: b6f0ebd500aa3503c0c0d473ebe21a61f4438862
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140509"
 ---
 # <a name="graphics-paths-in-gdi"></a>Trazados de gráficos en GDI+
 Las rutas de acceso se crean mediante la combinación de líneas, rectángulos y curvas simples. Recuerde que en el [información general sobre gráficos de Vector](vector-graphics-overview.md) que los siguientes bloques de creación básicos han demostrado para ser útiles para dibujar imágenes:  
@@ -67,8 +67,9 @@ Las rutas de acceso se crean mediante la combinación de líneas, rectángulos y
  ![Paths](./media/aboutgdip02-art16.gif "Aboutgdip02_Art16")  
   
 ## <a name="see-also"></a>Vea también
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
 - <xref:System.Drawing.Point?displayProperty=nameWithType>
 - [Líneas, curvas y formas](lines-curves-and-shapes.md)
-- [Cómo: Crear objetos Graphics para dibujar](how-to-create-graphics-objects-for-drawing.md)
+- [Filtrar para crear objetos gráficos para dibujar](how-to-create-graphics-objects-for-drawing.md)
 - [Crear y dibujar trazados](constructing-and-drawing-paths.md)

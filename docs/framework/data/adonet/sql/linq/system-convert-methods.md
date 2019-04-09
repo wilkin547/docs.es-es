@@ -2,15 +2,15 @@
 title: System.Convert (Métodos)
 ms.date: 03/30/2017
 ms.assetid: 3ca6c5b6-ea5d-4ab0-b675-f082135b342c
-ms.openlocfilehash: c3b8c7105578c57547b79bc95b633bcc6449a0ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d98d159c24e1a47723aeb07a9654fe22b1d9464
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198223"
 ---
 # <a name="systemconvert-methods"></a>System.Convert (Métodos)
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite los métodos <xref:System.Convert> siguientes.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite los siguientes <xref:System.Convert> métodos.  
   
 -   Versiones con un parámetro <xref:System.IFormatProvider>.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "54591726"
   
     -   `public static <Type2> To<Type2>(<Type1> value);` donde  
   
-         `Type1` y `Type2` son `sbyte`, `uint`, `ulong` o `ushort`.  
+         `Type1` y `Type2` son cada uno de `sbyte`, `uint`, `ulong`, o `ushort`.  
   
     -   C#:  
   
@@ -49,4 +49,5 @@ ms.locfileid: "54591726"
     -   <xref:System.Convert.ChangeType%2A>  
   
 ## <a name="see-also"></a>Vea también
+
 - [Tipos de datos y funciones](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

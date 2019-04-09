@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0911132a705f3de89d771324cbb63e8db31bdfdb
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188609"
 ---
 # <a name="clr-etw-providers"></a>Proveedores ETW de CLR
 El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime y el proveedor del informe detallado.  
@@ -92,4 +92,5 @@ El Common Language Runtime (CLR) tiene dos proveedores: el proveedor de runtime 
  Una herramienta puede ejecutar los pasos 2 y 3 (iniciando una sesión de informe detallado y finalizando la generación de perfiles) en lugar de desactivar la generación de perfiles de inmediato cuando un usuario solicita la detención de dicha generación. Una herramienta también puede ejecutar el paso 4.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Eventos ETW en Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

@@ -8,18 +8,16 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: 578c8061271e08e4eac1ec5f11c84e63a3fa37bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbb3c413148bd2e2ab8de8a1a725f2d9a8acf2f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361894"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190638"
 ---
 # <a name="3-d-transformations-overview"></a>Información general sobre transformaciones de modelos 3D
 En este tema se describe cómo aplicar las transformaciones a los modelos 3D del sistema de gráficos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Las transformaciones permiten que el desarrollador cambie la posición y el tamaño de los modelos, así como que los vuelva a orientar sin cambiar los valores base que los definen.  
-  
 
-  
 ## <a name="3-d-coordinate-space"></a>Espacio de coordenadas 3D  
  Gráficos 3D contenidos en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] se encapsula en un elemento, <xref:System.Windows.Controls.Viewport3D>, que puede participar en la estructura de elementos bidimensionales. El sistema de gráficos trata los objetos Viewport3D como elementos visuales bidimensionales, al igual que ocurre con muchos otros elementos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Viewport3D funciona como ventana (una ventanilla) de una escena tridimensional. Más concretamente, es una superficie en la que se proyecta una escena 3D.  Aunque puede usar Viewport3D con otros objetos de dibujo 2D en el mismo gráfico de escena, no puede interpenetrar objetos 2D y 3D en un Viewport3D. El elemento Viewport3D contiene el espacio de coordenadas descrito en la siguiente descripción.  
   
@@ -106,6 +104,7 @@ Ejemplo de giro
  Puesto que las cámaras también son modelos, igualmente se pueden transformar las propiedades de la cámara.  Aunque puede cambiar el aspecto de la escena transformando la ubicación de la cámara o las distancias de los planos (de hecho, transformando toda la proyección de la escena), tenga en cuenta que muchos de los efectos obtenidos de esta forma quizá no tengan tanto "sentido visual" para el lector como las transformaciones aplicadas a la ubicación o posición de los modelos de la escena.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Información general sobre gráficos 3D](3-d-graphics-overview.md)
 - [Información general sobre transformaciones](transforms-overview.md)
 - [Ejemplo de transformaciones 2D](https://go.microsoft.com/fwlink/?LinkID=158252)

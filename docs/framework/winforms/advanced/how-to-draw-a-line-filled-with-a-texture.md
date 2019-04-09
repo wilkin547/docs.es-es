@@ -1,5 +1,5 @@
 ---
-title: Filtrar Dibujar una línea rellenada con una textura
+title: Filtrar para dibujar una línea rellena con una textura
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - lines [Windows Forms], texture
 - drawing lines [Windows Forms], texture
 ms.assetid: dc9118cc-f3c2-42e5-8173-f46d41d18fd5
-ms.openlocfilehash: 82fc553e2a2fc9d1e8161c0f0dfef9190668e48c
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: c0f90c298f48aeb96893bb09241faddc08d8a49d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186912"
 ---
-# <a name="how-to-draw-a-line-filled-with-a-texture"></a>Filtrar Dibujar una línea rellenada con una textura
+# <a name="how-to-draw-a-line-filled-with-a-texture"></a>Filtrar para dibujar una línea rellena con una textura
 En lugar de dibujar una línea con un color sólido, puede dibujar una línea con una textura. Para dibujar líneas y curvas con una textura, cree un <xref:System.Drawing.TextureBrush> de objetos y pasar ese <xref:System.Drawing.TextureBrush> objeto a un <xref:System.Drawing.Pen.%23ctor%2A> constructor. El mapa de bits asociado con el pincel de textura se usa para el plano de mosaico (de manera invisible) y, cuando el lápiz dibuja una línea o curva, el trazo del lápiz revela ciertas píxeles de la textura en mosaico.  
   
 ## <a name="example"></a>Ejemplo  
@@ -33,5 +33,6 @@ En lugar de dibujar una línea con un color sólido, puede dibujar una línea co
  Crear un formulario de Windows y controlar el formato <xref:System.Windows.Forms.Control.Paint> eventos. Pegue el código anterior en el <xref:System.Windows.Forms.Control.Paint> controlador de eventos. Reemplace `Texture.jpg` con una imagen válida en su sistema.  
   
 ## <a name="see-also"></a>Vea también
+
 - [Utilizar lápiz para dibujar líneas y formas](using-a-pen-to-draw-lines-and-shapes.md)
 - [Gráficos y dibujos en Windows Forms](graphics-and-drawing-in-windows-forms.md)
